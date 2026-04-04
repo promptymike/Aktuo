@@ -9,24 +9,23 @@ from core.rag import RagResult
 
 def render_user_message(question: str) -> None:
     with st.chat_message("user"):
-        st.markdown("**User**")
+        st.markdown("**Ty**")
         st.write(question)
 
 
 def render_assistant_message(result: RagResult) -> None:
     with st.chat_message("assistant"):
-        st.markdown("**Assistant**")
+        st.markdown("**Aktuo**")
         st.write(result.answer)
         if result.chunks:
-            st.caption("Retrieved context")
-            for chunk in result.chunks:
-                st.markdown(
-                    f"- **{chunk.law_name} {chunk.article_number}** "
-                    f"({chunk.category}, verified {chunk.verified_date}): {chunk.content}"
-                )
-        st.caption(
-            f"Audit: grounded={result.audit['grounded']} | context_count={result.audit['context_count']}"
-        )
+            with st.expander("Pokaż źródła prawne", expanded=False):
+                for chunk in result.chunks:
+                    verified = f" | weryfikacja: {chunk.verified_date}" if chunk.verified_date else ""
+                    st.markdown(
+                        f"**{chunk.law_name} {chunk.article_number}**\n\n"
+                        f"{chunk.content}\n\n"
+                        f"_Kategoria: {chunk.category}{verified}_"
+                    )
 
 
 def render_chat_history(history: Sequence[dict[str, object]]) -> None:

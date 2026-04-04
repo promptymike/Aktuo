@@ -16,36 +16,154 @@ from core.generator import AnthropicAPIError
 from core.rag import answer_query
 
 
+def render_styles() -> None:
+    st.markdown(
+        """
+        <style>
+            :root {
+                --aktuo-navy: #1a2744;
+                --aktuo-border: #d7dfeb;
+                --aktuo-surface: #f7f9fc;
+                --aktuo-text: #122033;
+                --aktuo-muted: #5f6d84;
+            }
+
+            .stApp {
+                background: #ffffff;
+                color: var(--aktuo-text);
+            }
+
+            [data-testid="stHeader"] {
+                background: rgba(255, 255, 255, 0.92);
+            }
+
+            [data-testid="stSidebar"] {
+                background: #f8fafc;
+                border-right: 1px solid var(--aktuo-border);
+            }
+
+            .aktuo-hero {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.2rem 1.3rem;
+                margin-bottom: 1.25rem;
+                border: 1px solid var(--aktuo-border);
+                border-radius: 18px;
+                background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+            }
+
+            .aktuo-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 14px;
+                background: var(--aktuo-navy);
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 1.15rem;
+                letter-spacing: 0.04em;
+            }
+
+            .aktuo-title {
+                margin: 0;
+                color: var(--aktuo-navy);
+                font-size: 1.9rem;
+                font-weight: 700;
+                line-height: 1.1;
+            }
+
+            .aktuo-subtitle {
+                margin: 0.2rem 0 0;
+                color: var(--aktuo-muted);
+                font-size: 0.98rem;
+            }
+
+            .aktuo-footer {
+                margin-top: 1.5rem;
+                padding-top: 0.8rem;
+                color: var(--aktuo-muted);
+                font-size: 0.82rem;
+                border-top: 1px solid var(--aktuo-border);
+            }
+
+            .stChatMessage {
+                border: 1px solid var(--aktuo-border);
+                border-radius: 16px;
+                background: #ffffff;
+            }
+
+            .stChatMessage [data-testid="stMarkdownContainer"] p {
+                color: var(--aktuo-text);
+            }
+
+            .stChatInputContainer {
+                background: #ffffff;
+            }
+
+            .stExpander {
+                border: 1px solid var(--aktuo-border);
+                border-radius: 14px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_header() -> None:
+    st.markdown(
+        """
+        <section class="aktuo-hero">
+            <div class="aktuo-logo">A</div>
+            <div>
+                <h1 class="aktuo-title">Aktuo</h1>
+                <p class="aktuo-subtitle">Asystent prawno-podatkowy dla księgowych</p>
+            </div>
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_footer() -> None:
+    st.markdown(
+        """
+        <div class="aktuo-footer">
+            Aktuo nie zastępuje porady prawnej. Zawsze weryfikuj z doradcą podatkowym.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def main() -> None:
-    st.set_page_config(page_title="Aktuo MVP", layout="wide")
+    st.set_page_config(page_title="Aktuo", layout="wide")
+    render_styles()
 
     try:
         settings = get_settings()
     except MissingEnvironmentError as exc:
-        st.title("Aktuo MVP")
-        st.error(str(exc))
-        st.info("Set the required variables in your shell and rerun the app.")
-        st.code(
-            "$env:AKTUO_APP_NAME='Aktuo MVP'\n"
-            "$env:AKTUO_SYSTEM_PROMPT='You are Aktuo, a cautious legal information assistant.'\n"
-            "$env:AKTUO_LAW_KNOWLEDGE_PATH='data/seeds/law_knowledge.json'\n"
-            "$env:ANTHROPIC_API_KEY='your_anthropic_api_key'"
-        )
+        render_header()
+        st.error("Brakuje wymaganej konfiguracji aplikacji.")
+        st.info(f"Szczegóły: {exc}")
         st.stop()
 
     render_sidebar(settings)
-    st.title(settings.app_name)
-    st.caption("Minimal stateless MVP scaffold for legal retrieval and response generation.")
+    render_header()
 
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
     render_chat_history(st.session_state.chat_history)
 
-    question = st.chat_input("Ask a legal workflow question")
+    question = st.chat_input("Zadaj pytanie o prawo podatkowe...")
     if not question:
         if not st.session_state.chat_history:
-            st.write("Try: What rights does a tenant have when a deposit is withheld?")
+            st.write("Na przykład: Od kiedy KSeF będzie obowiązkowy dla mojej firmy?")
+        render_footer()
         return
 
     try:
@@ -57,11 +175,11 @@ def main() -> None:
         )
     except FileNotFoundError as exc:
         render_user_message(question)
-        st.error(f"Knowledge file not found: {exc}")
+        st.error(f"Nie udało się odnaleźć bazy wiedzy: {exc}")
         st.stop()
     except AnthropicAPIError as exc:
         render_user_message(question)
-        st.error(str(exc))
+        st.error(f"Nie udało się pobrać odpowiedzi: {exc}")
         st.stop()
 
     st.session_state.chat_history.extend(
@@ -70,6 +188,7 @@ def main() -> None:
             {"role": "assistant", "result": result},
         ]
     )
+    render_footer()
     st.rerun()
 
 
