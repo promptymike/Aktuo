@@ -1,0 +1,2857 @@
+[
+  {
+    "id": "vat-106e-faktura-bez-nip-nabywcy",
+    "question_intent": "Czy mogę wystawić fakturę bez NIP nabywcy?",
+    "question_patterns": [
+      "Czy mogę wystawić fakturę bez NIP nabywcy?",
+      "Kiedy nie trzeba podawać NIP-u nabywcy na fakturze?",
+      "Czy faktura może nie zawierać numeru identyfikacyjnego nabywcy?",
+      "W jakich przypadkach faktura nie wymaga NIP-u klienta?"
+    ],
+    "answer": "Faktura może nie zawierać NIP-u nabywcy w określonych przypadkach. Gdy kwota należności ogółem nie przekracza 450 zł lub 100 euro, można pominąć dane dotyczące nabywcy, pod warunkiem że faktura zawiera dane pozwalające określić kwotę podatku dla poszczególnych stawek. Wyjątek ten nie dotyczy wewnątrzwspólnotowej sprzedaży towarów na odległość, importu, wewnątrzwspólnotowej dostawy oraz niektórych innych szczególnych przypadków.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106e ust. 5 pkt 3",
+        "quote": "w przypadku gdy kwota należności ogółem nie przekracza kwoty 450 zł albo kwoty 100 euro, jeżeli kwota ta określona jest w euro – danych określonych w ust. 1 pkt 3 dotyczących nabywcy"
+      }
+    ],
+    "conditions": [
+      "kwota należności ogółem nie przekracza 450 zł lub 100 euro",
+      "faktura zawiera dane pozwalające określić kwotę podatku dla poszczególnych stawek"
+    ],
+    "exceptions": [
+      "wewnątrzwspólnotowa sprzedaż towarów na odległość",
+      "sprzedaż na odległość towarów importowanych",
+      "wewnątrzwspólnotowa dostawa towarów",
+      "przypadki gdy nie podaje się numeru nabywcy z art. 106e ust. 1 pkt 5"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106h-faktura-do-paragonu",
+    "question_intent": "Kiedy mogę wystawić fakturę do paragonu?",
+    "question_patterns": [
+      "Kiedy mogę wystawić fakturę do paragonu?",
+      "W jakich przypadkach można wystawić fakturę na podstawie paragonu?",
+      "Czy można wystawić fakturę do sprzedaży z kasy fiskalnej?"
+    ],
+    "answer": "Fakturę można wystawić do sprzedaży zarejestrowanej na kasie fiskalnej. W takiej sytuacji trzeba zachować w dokumentacji albo numer dokumentu i numer unikatowy kasy z paragonu fiskalnego, albo sam paragon fiskalny w wersji papierowej. Nie dotyczy to sytuacji, gdy faktura jest wystawiana bezpośrednio przez kasę rejestrującą i sprzedaż jest zapisana w raporcie fiskalnym dobowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106h ust. 1",
+        "quote": "W przypadku gdy faktura dotyczy sprzedaży zaewidencjonowanej przy zastosowaniu kasy rejestrującej, podatnik wraz z danymi identyfikującymi tę fakturę zostawia w dokumentacji"
+      }
+    ],
+    "conditions": [
+      "sprzedaż musi być zarejestrowana na kasie fiskalnej",
+      "należy zachować numer dokumentu i numer unikatowy kasy z paragonu lub paragon papierowy"
+    ],
+    "exceptions": [
+      "nie dotyczy faktur wystawianych przez kasę rejestrującą, gdy sprzedaż jest w raporcie fiskalnym dobowym"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-pomylka-nip",
+    "question_intent": "Co zrobić jak pomyliłem NIP na fakturze?",
+    "question_patterns": [
+      "Co zrobić jak pomyliłem NIP na fakturze?",
+      "Jak skorygować błędny NIP w fakturze?",
+      "Pomyłka w NIP-ie na fakturze - jak poprawić?"
+    ],
+    "answer": "Pomyłka w NIP-ie na fakturze wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5, który obejmuje pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca musi zawierać prawidłową treść korygowanych pozycji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 5",
+        "quote": "stwierdzono pomyłkę w jakiejkolwiek pozycji faktury"
+      }
+    ],
+    "conditions": [
+      "stwierdzenie pomyłki w pozycji faktury"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-bledna-data-sprzedazy",
+    "question_intent": "Czy faktura z błędną datą sprzedaży wymaga korekty?",
+    "question_patterns": [
+      "Czy faktura z błędną datą sprzedaży wymaga korekty?",
+      "Pomyłka w dacie sprzedaży - czy korygować?",
+      "Błędna data na fakturze - co robić?"
+    ],
+    "answer": "Tak, błędna data sprzedaży na fakturze stanowi pomyłkę w pozycji faktury i wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5. W takim przypadku faktura korygująca powinna zawierać prawidłową treść korygowanych pozycji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 5",
+        "quote": "stwierdzono pomyłkę w jakiejkolwiek pozycji faktury"
+      }
+    ],
+    "conditions": [
+      "stwierdzenie pomyłki w dacie sprzedaży"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-potwierdzenie-odbioru",
+    "question_intent": "Czy faktura korygująca wymaga potwierdzenia odbioru?",
+    "question_patterns": [
+      "Czy faktura korygująca wymaga potwierdzenia odbioru?",
+      "Potrzebne potwierdzenie faktury korygującej?",
+      "Czy odbiorca musi potwierdzić korektę?"
+    ],
+    "answer": "Artykuł 106j nie zawiera wymagań dotyczących potwierdzenia odbioru faktury korygującej. Przepis określa jedynie sytuacje, w których należy wystawić fakturę korygującą oraz jej wymagane elementy, ale nie reguluje kwestii potwierdzania przez odbiorców.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j",
+        "quote": "podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-in-plus",
+    "question_intent": "Jak ująć fakturę korygującą in plus?",
+    "question_patterns": [
+      "Jak ująć fakturę korygującą in plus?",
+      "Korekta zwiększająca",
+      "Faktura korygująca podwyższająca wartość"
+    ],
+    "answer": "Faktura korygująca in plus jest wystawiana gdy podstawa opodatkowania lub kwota podatku ulegnie zmianie w górę zgodnie z art. 106j ust. 1 pkt 1. Korekta musi zawierać kwotę korekty podstawy opodatkowania lub kwotę korekty podatku należnego z podziałem na kwoty dotyczące poszczególnych stawek podatku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 2 pkt 5",
+        "quote": "kwotę korekty podstawy opodatkowania lub kwotę korekty podatku należnego z podziałem na kwoty dotyczące poszczególnych stawek podatku"
+      }
+    ],
+    "conditions": [
+      "zmiana podstawy opodatkowania lub kwoty podatku w górę"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-deklaracji",
+    "question_intent": "Jak skorygować deklarację VAT za poprzedni miesiąc?",
+    "question_patterns": [
+      "Jak skorygować deklarację VAT za poprzedni miesiąc?",
+      "Korekta deklaracji VAT",
+      "Błąd w deklaracji VAT - jak poprawić?"
+    ],
+    "answer": "Artykuł 106j reguluje wyłącznie faktury korygujące, a nie korekty deklaracji VAT. Przepis określa sytuacje i wymagania dla faktur korygujących, ale nie zawiera informacji o korektach deklaracji podatkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j",
+        "quote": "podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-do-zera",
+    "question_intent": "Co zrobić gdy wystawiłem korektę do zera?",
+    "question_patterns": [
+      "Co zrobić gdy wystawiłem korektę do zera?",
+      "Faktura korygująca do zera",
+      "Korekta anulująca całkowicie"
+    ],
+    "answer": "Artykuł 106j pozwala na wystawienie faktury korygującej w sytuacjach wymienionych w ust. 1, w tym przy zwrocie towarów lub całości zapłaty. Korekta do zera jest możliwa jeśli wynika z jednej z tych sytuacji. Faktura korygująca musi zawierać kwotę korekty podstawy opodatkowania lub podatku z odpowiednim podziałem na stawki.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 3-4",
+        "quote": "dokonano zwrotu podatnikowi towarów i opakowań, dokonano zwrotu nabywcy całości lub części zapłaty"
+      }
+    ],
+    "conditions": [
+      "zwrot towarów",
+      "zwrot całości zapłaty",
+      "inna sytuacja z art. 106j ust. 1"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-stawki-vat",
+    "question_intent": "Jak skorygować błędną stawkę VAT na fakturze?",
+    "question_patterns": [
+      "Jak skorygować błędną stawkę VAT na fakturze?",
+      "Jak poprawić nieprawidłową stawkę podatkową w fakturze?",
+      "Co zrobić gdy źle wpisałem stawkę VAT na fakturze?"
+    ],
+    "answer": "Aby skorygować błędną stawkę VAT na fakturze, należy wystawić fakturę korygującą na podstawie art. 106j ust. 1 pkt 5. Faktura korygująca musi zawierać kwotę korekty podstawy opodatkowania lub kwotę korekty podatku należnego z podziałem na kwoty dotyczące poszczególnych stawek podatku. Obowiązkowo należy wskazać dane z pierwotnej faktury i prawidłową treść korygowanych pozycji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 5",
+        "quote": "stwierdzono pomyłkę w jakiejkolwiek pozycji faktury – podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [
+      "stwierdzenie pomyłki w fakturze",
+      "faktura korygująca musi zawierać dane z pierwotnej faktury"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-termin-deklaracji",
+    "question_intent": "Ile mam czasu na korektę deklaracji VAT?",
+    "question_patterns": [
+      "Ile mam czasu na korektę deklaracji VAT?",
+      "Jaki jest termin na korektę deklaracji podatkowej?",
+      "Kiedy można skorygować deklarację VAT?"
+    ],
+    "answer": "Podany artykuł 106j dotyczy wyłącznie wystawiania faktur korygujących, a nie korekt deklaracji VAT. Przepis nie zawiera informacji o terminach korygowania deklaracji podatkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j",
+        "quote": "W przypadku gdy po wystawieniu faktury"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-zbiorcza-faktura-korygujaca",
+    "question_intent": "Jak zrobić zbiorczą fakturę korygującą?",
+    "question_patterns": [
+      "Jak zrobić zbiorczą fakturę korygującą?",
+      "Czy można wystawić jedną fakturę korygującą na wiele faktur?",
+      "Jak skorygować wiele faktur jednocześnie?"
+    ],
+    "answer": "Zbiorczą fakturę korygującą można wystawić tylko w przypadku udzielania opustu lub obniżki ceny dla dostaw na rzecz jednego odbiorcy w danym okresie. Taka faktura musi dodatkowo wskazać okres, do którego odnosi się opust lub obniżka. Może nie zawierać nazwy towaru lub usługi, jeśli korekta dotyczy wszystkich dostaw.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 3",
+        "quote": "W przypadku gdy podatnik udziela opustu lub obniżki ceny, może wystawić fakturę korygującą dotyczącą dostaw towarów lub świadczenia usług na rzecz jednego odbiorcy w danym okresie"
+      }
+    ],
+    "conditions": [
+      "udzielanie opustu lub obniżki ceny",
+      "dostawy na rzecz jednego odbiorcy",
+      "w danym okresie"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-termin-wystawienia-faktury-korygujacej",
+    "question_intent": "Jaki jest termin na wystawienie faktury korygującej?",
+    "question_patterns": [
+      "Jaki jest termin na wystawienie faktury korygującej?",
+      "Ile czasu mam na korektę faktury?",
+      "Kiedy należy wystawić fakturę korygującą?"
+    ],
+    "answer": "Artykuł 106j nie określa konkretnego terminu na wystawienie faktury korygującej. Przepis wskazuje tylko okoliczności, w których podatnik wystawia fakturę korygującą oraz jej zawartość, ale nie precyzuje ram czasowych dla tego obowiązku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1",
+        "quote": "W przypadku gdy po wystawieniu faktury"
+      }
+    ],
+    "conditions": [
+      "wystąpienie przesłanek z art. 106j ust. 1"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujące",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-112-czas-przechowywania-faktur",
+    "question_intent": "Jak długo trzeba przechowywać faktury?",
+    "question_patterns": [
+      "Jak długo trzeba przechowywać faktury?",
+      "Jaki jest okres przechowywania faktur VAT?",
+      "Do kiedy należy przechowywać dokumenty związane z VAT?",
+      "Ile lat trzeba trzymać faktury?"
+    ],
+    "answer": "Faktury należy przechowywać do czasu upływu terminu przedawnienia zobowiązania podatkowego. Dotyczy to zarówno faktur wystawionych przez podatnika, jak i otrzymanych od innych podmiotów. Przechowywanie musi odbywać się w podziale na okresy rozliczeniowe, w sposób zapewniający łatwe odszukanie, autentyczność pochodzenia, integralność treści i czytelność dokumentów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 112",
+        "quote": "Podatnicy są obowiązani przechowywać ewidencje prowadzone dla celów rozliczania podatku oraz wszystkie dokumenty, w szczególności faktury, związane z tym rozliczaniem do czasu upływu terminu przedawnienia zobowiązania podatkowego"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 112a ust. 1",
+        "quote": "Podatnicy przechowują wystawione przez siebie lub w swoim imieniu faktury oraz otrzymane faktury w podziale na okresy rozliczeniowe"
+      }
+    ],
+    "conditions": [
+      "przechowywanie w podziale na okresy rozliczeniowe",
+      "zapewnienie łatwego odszukania dokumentów",
+      "zachowanie autentyczności pochodzenia, integralności treści i czytelności"
+    ],
+    "exceptions": [
+      "zastrzeżenia określone w art. 109b ust. 7, art. 130d ust. 3, art. 134 ust. 3, art. 138h ust. 3 i art. 138i ust. 8"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "dokumentacja_vat",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106i-faktura-przed-dostawa",
+    "question_intent": "Czy faktura wystawiona przed dostawą jest ważna?",
+    "question_patterns": [
+      "Czy mogę wystawić fakturę przed dostawą?",
+      "Czy faktura wystawiona przed dostawą jest ważna?",
+      "Kiedy najwcześniej można wystawić fakturę?",
+      "Czy można wystawić fakturę z wyprzedzeniem?"
+    ],
+    "answer": "Tak, faktura może być wystawiona przed dostawą, ale nie wcześniej niż 60 dni przed dokonaniem dostawy towaru lub wykonaniem usługi. Można też wystawić fakturę nie wcześniej niż 60 dni przed otrzymaniem całości lub części zapłaty, jeśli nastąpi przed dostawą.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106i ust. 7",
+        "quote": "Faktury nie mogą być wystawione wcześniej niż 60. dnia przed dokonaniem dostawy towaru lub wykonaniem usługi"
+      }
+    ],
+    "conditions": [
+      "nie wcześniej niż 60 dni przed dostawą lub usługą",
+      "nie wcześniej niż 60 dni przed otrzymaniem zapłaty"
+    ],
+    "exceptions": [
+      "dostawy i usługi z art. 19a ust. 3, 4 i ust. 5 pkt 4, jeżeli faktura zawiera informację o okresie rozliczeniowym"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106i-termin-wystawienia-faktury",
+    "question_intent": "Ile czasu mam na wystawienie faktury po sprzedaży?",
+    "question_patterns": [
+      "Ile czasu mam na wystawienie faktury po sprzedaży?",
+      "Kiedy należy wystawić fakturę po dostawie?",
+      "Jaki jest termin wystawienia faktury?",
+      "Do kiedy muszę wystawić fakturę?"
+    ],
+    "answer": "Fakturę należy wystawić nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Jeśli otrzymano zapłatę przed dostawą, termin jest taki sam - do 15. dnia miesiąca następującego po miesiącu otrzymania zapłaty.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106i ust. 1",
+        "quote": "Fakturę wystawia się nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę"
+      }
+    ],
+    "conditions": [
+      "dokonanie dostawy towaru lub wykonanie usługi",
+      "otrzymanie zapłaty przed dostawą"
+    ],
+    "exceptions": [
+      "szczególne terminy dla usług z art. 19a ust. 5 pkt 3 i 4",
+      "przypadki opakowań zwrotnych",
+      "dostawy z art. 8a ust. 1 i 3"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106b-obowiazek-faktury",
+    "question_intent": "Kiedy muszę wystawić fakturę a kiedy mogę paragon?",
+    "question_patterns": [
+      "kiedy wystawiam fakturę a kiedy paragon",
+      "czy mogę wystawić paragon zamiast faktury",
+      "różnica między fakturą a paragonem",
+      "obowiązek wystawiania faktury vs paragon"
+    ],
+    "answer": "Fakturę musisz wystawić przy sprzedaży na rzecz podatników VAT lub osób prawnych niebędących podatnikami, przy wewnątrzwspólnotowych dostawach oraz przy otrzymaniu przedpłaty. Paragon fiskalny wystawiasz przy sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych. Jeśli nabywca-podatnik chce fakturę na transakcję sprzedawaną paragonem, musisz ją wystawić na jego żądanie w ciągu 3 miesięcy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106b ust. 1 pkt 1",
+        "quote": "sprzedaż dokonywane przez niego na rzecz innego podatnika podatku, podatku od wartości dodanej lub podatku o podobnym charakterze lub na rzecz osoby prawnej niebędącej podatnikiem"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 111 ust. 1",
+        "quote": "Podatnicy dokonujący sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych są obowiązani prowadzić ewidencję sprzedaży przy zastosowaniu kas rejestrujących"
+      }
+    ],
+    "conditions": [
+      "nabywca jest podatnikiem VAT lub osobą prawną niebędącą podatnikiem - faktura obowiązkowa",
+      "nabywca to osoba fizyczna nieprowadząca działalności lub rolnik ryczałtowy - paragon fiskalny",
+      "podatnik otrzymał przedpłatę - faktura obowiązkowa"
+    ],
+    "exceptions": [
+      "sprzedaż zwolniona od podatku nie wymaga faktury z urzędu",
+      "na żądanie nabywcy można wystawić fakturę na transakcję paragonową w ciągu 3 miesięcy"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "dokumentowanie_sprzedazy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106b-kasa-a-faktury",
+    "question_intent": "Czy muszę mieć kasę fiskalną przy fakturach?",
+    "question_patterns": [
+      "czy przy fakturach potrzebna kasa fiskalna",
+      "obowiązek kasy fiskalnej przy wystawianiu faktur",
+      "kasa fiskalna a faktury VAT",
+      "czy faktury wymagają kasy rejestrującej"
+    ],
+    "answer": "Nie musisz mieć kasy fiskalnej przy wystawianiu faktur. Obowiązek prowadzenia ewidencji przy zastosowaniu kas rejestrujących dotyczy sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych (sprzedaż paragonowa). Przy sprzedaży dokumentowanej fakturami na rzecz podatników VAT i osób prawnych kasa fiskalna nie jest wymagana.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 111 ust. 1",
+        "quote": "Podatnicy dokonujący sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych są obowiązani prowadzić ewidencję sprzedaży przy zastosowaniu kas rejestrujących"
+      }
+    ],
+    "conditions": [
+      "kasa fiskalna wymagana tylko przy sprzedaży na rzecz osób fizycznych nieprowadzących działalności",
+      "kasa fiskalna wymagana przy sprzedaży na rzecz rolników ryczałtowych"
+    ],
+    "exceptions": [
+      "sprzedaż dokumentowana fakturami nie wymaga kasy fiskalnej",
+      "minister może zwolnić niektóre grupy podatników z obowiązku kasy"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "kasy_fiskalne",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106f-faktura-koncowa-po-zaliczkowej",
+    "question_intent": "Jak wystawić fakturę końcową po zaliczkowej?",
+    "question_patterns": [
+      "jak wystawić fakturę końcową po zaliczkowej",
+      "faktura końcowa po otrzymaniu zaliczki",
+      "jak dokumentować dostawę po fakturze zaliczkowej",
+      "pomniejszenie faktury końcowej o zaliczkę"
+    ],
+    "answer": "W fakturze końcowej wystawianej po wydaniu towaru lub wykonaniu usługi należy pomniejszyć sumę wartości towarów lub usług o wartość otrzymanych części zapłaty (zaliczek). Równocześnie kwotę podatku pomniejsza się o sumę kwot podatku wykazanego w fakturach zaliczkowych. Faktura końcowa musi zawierać numery identyfikujące w Krajowym Systemie e-Faktur wszystkie faktury wystawione przed wydaniem towaru (faktury zaliczkowe).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106f ust. 3",
+        "quote": "w fakturze wystawianej po wydaniu towaru lub wykonaniu usługi sumę wartości towarów lub usług pomniejsza się o wartość otrzymanych części zapłaty, a kwotę podatku pomniejsza się o sumę kwot podatku wykazanego w fakturach dokumentujących otrzymanie części zapłaty"
+      }
+    ],
+    "conditions": [
+      "faktura zaliczkowa nie obejmuje całej zapłaty",
+      "towar został wydany lub usługa wykonana",
+      "wcześniej wystawiono faktury dokumentujące otrzymanie części zapłaty"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie_zaliczki",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106o-faktura-uproszczona",
+    "question_intent": "Co to jest faktura uproszczona i kiedy ją stosować?",
+    "question_patterns": [
+      "Co to jest faktura uproszczona i kiedy ją stosować?",
+      "Kiedy można wystawić fakturę uproszczoną?",
+      "W jakich przypadkach dopuszczalne są faktury z ograniczonym zakresem danych?",
+      "Czy można wystawić fakturę z mniejszą ilością danych niż standardowo?"
+    ],
+    "answer": "Minister finansów może określić w rozporządzeniu przypadki, w których faktury mogą zawierać mniej danych niż standardowo wymagane w art. 106e. Dotyczy to głównie transakcji o niskiej wartości lub specyficznych rodzajów działalności związanych z dużą liczbą lub szczególnym rodzajem wykonywanych czynności. Konkretne przypadki i zakres wymaganych danych określa rozporządzenie ministra.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106o",
+        "quote": "Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, przypadki, w których faktury mogą zawierać zakres danych węższy niż określony w art. 106e"
+      }
+    ],
+    "conditions": [
+      "określenie przez ministra w rozporządzeniu",
+      "konieczność zapewnienia odpowiedniego dokumentowania dostawy towarów lub świadczenia usług"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dokumentacja_vat",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-pelne-odliczenie-warunki",
+    "question_intent": "Kiedy przysługuje 100% odliczenia VAT od auta?",
+    "question_patterns": [
+      "kiedy 100% vat od samochodu",
+      "pełne odliczenie vat auto warunki",
+      "kiedy cały vat od pojazdu"
+    ],
+    "answer": "100% VAT od samochodu możesz odliczyć gdy pojazd jest wykorzystywany wyłącznie do działalności gospodarczej lub jest konstrukcyjnie przeznaczony do przewozu co najmniej 10 osób. Wyłączne użytkowanie biznesowe musisz udokumentować ewidencją przebiegu lub konstrukcja pojazdu musi wykluczać użycie prywatne.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 3 pkt 1",
+        "quote": "Przepis ust. 1 nie ma zastosowania w przypadku gdy pojazdy samochodowe są wykorzystywane wyłącznie do działalności gospodarczej podatnika"
+      }
+    ],
+    "conditions": [
+      "wykorzystywanie wyłącznie do działalności gospodarczej",
+      "pojazd konstrukcyjnie przeznaczony do przewozu min. 10 osób"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-ewidencja-przebiegu-obowiazek",
+    "question_intent": "Czy muszę prowadzić ewidencję przebiegu pojazdu do pełnego VAT?",
+    "question_patterns": [
+      "ewidencja przebiegu pojazdu obowiązek",
+      "czy prowadzić ewidencję do 100% vat",
+      "dokumentowanie użytkowania biznesowego auta"
+    ],
+    "answer": "Tak, do pełnego odliczenia VAT musisz prowadzić ewidencję przebiegu pojazdu, chyba że konstrukcja pojazdu wyklucza użycie prywatne. Ewidencja nie jest wymagana dla pojazdów przeznaczonych wyłącznie do odprzedaży, sprzedaży lub wynajmu w ramach działalności.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 4 pkt 1",
+        "quote": "sposób wykorzystywania tych pojazdów przez podatnika dodatkowo potwierdzony prowadzoną przez podatnika dla tych pojazdów ewidencją przebiegu pojazdu"
+      }
+    ],
+    "conditions": [
+      "pojazd wykorzystywany wyłącznie do działalności gospodarczej"
+    ],
+    "exceptions": [
+      "konstrukcja pojazdu wyklucza użycie prywatne",
+      "pojazdy do odprzedaży/sprzedaży/wynajmu",
+      "pojazdy z 50% odliczeniem VAT"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "ewidencja_pojazdow",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-paliwo-odliczenie",
+    "question_intent": "Jak odliczyć VAT od paliwa do samochodu firmowego?",
+    "question_patterns": [
+      "vat od paliwa do samochodu",
+      "odliczenie vat paliwo firmowe",
+      "ile vat od benzyny do auta"
+    ],
+    "answer": "VAT od paliwa do samochodu firmowego odliczasz według tych samych zasad co od samochodu. Jeśli pojazd nie jest wykorzystywany wyłącznie do działalności gospodarczej - odliczasz 50% VAT. Jeśli jest używany wyłącznie biznesowo i prowadzisz ewidencję przebiegu - odliczasz 100% VAT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 2 pkt 3",
+        "quote": "Do wydatków związanych z pojazdami samochodowymi zalicza się wydatki dotyczące nabycia lub importu paliw silnikowych, oleju napędowego i gazu"
+      }
+    ],
+    "conditions": [
+      "paliwo musi być wykorzystywane do napędu pojazdów samochodowych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-leasing-odliczenie",
+    "question_intent": "Czy od leasingu samochodu mogę odliczyć cały VAT?",
+    "question_patterns": [
+      "vat od leasingu samochodu",
+      "odliczenie vat leasing auto",
+      "ile vat od raty leasingowej"
+    ],
+    "answer": "Od leasingu samochodu odliczasz VAT według standardowych zasad - 50% jeśli pojazd nie jest używany wyłącznie do działalności gospodarczej, lub 100% jeśli jest wykorzystywany wyłącznie biznesowo i spełnia odpowiednie warunki dokumentacyjne.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 2 pkt 2",
+        "quote": "Do wydatków związanych z pojazdami samochodowymi zalicza się wydatki dotyczące używania tych pojazdów na podstawie umowy najmu, dzierżawy, leasingu"
+      }
+    ],
+    "conditions": [
+      "umowa leasingu, najmu lub dzierżawy pojazdu samochodowego"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-naprawa-odliczenie",
+    "question_intent": "Ile VAT odliczam od naprawy samochodu?",
+    "question_patterns": [
+      "vat od naprawy samochodu",
+      "odliczenie vat serwis auto",
+      "ile vat od konserwacji pojazdu"
+    ],
+    "answer": "VAT od naprawy i konserwacji samochodu odliczasz według standardowych zasad dla pojazdów - 50% jeśli pojazd nie jest używany wyłącznie do działalności gospodarczej, lub 100% jeśli jest wykorzystywany wyłącznie biznesowo i spełniasz odpowiednie warunki.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 2 pkt 3",
+        "quote": "Do wydatków związanych z pojazdami samochodowymi zalicza się wydatki dotyczące usług naprawy lub konserwacji tych pojazdów"
+      }
+    ],
+    "conditions": [
+      "usługi naprawy lub konserwacji pojazdów samochodowych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-samochod-ciezarowy-pelne-odliczenie",
+    "question_intent": "Czy od samochodu ciężarowego jest pełne odliczenie VAT?",
+    "question_patterns": [
+      "vat samochód ciężarowy",
+      "pełne odliczenie vat ciężarówka",
+      "100% vat pojazd dostawczy"
+    ],
+    "answer": "Od niektórych samochodów ciężarowych możesz odliczyć 100% VAT jeśli spełniają określone warunki konstrukcyjne. Dotyczy to pojazdów z jednym rzędem siedzeń oddzielonych ścianą od części ładunkowej (vany, wielozadaniowe) lub pojazdów z oddzielną kabiną kierowcy i nadwoziem ładunkowym, potwierdzone odpowiednim zaświadczeniem.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 9 pkt 1-2",
+        "quote": "pojazdy samochodowe, inne niż samochody osobowe, mające jeden rząd siedzeń, który oddzielony jest od części przeznaczonej do przewozu ładunków ścianą lub trwałą przegrodą"
+      }
+    ],
+    "conditions": [
+      "jeden rząd siedzeń oddzielony od części ładunkowej",
+      "kabina kierowcy konstrukcyjnie oddzielona od nadwozia",
+      "zaświadczenie z okręgowej stacji kontroli pojazdów"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-wynajem-samochodu",
+    "question_intent": "Czy od wynajmu samochodu odliczam 50% czy 100% VAT?",
+    "question_patterns": [
+      "vat od wynajmu samochodu",
+      "wynajem auta 50% czy 100% vat",
+      "odliczenie vat rental car"
+    ],
+    "answer": "Od wynajmu samochodu standardowo odliczasz 50% VAT, chyba że wynajęty pojazd jest wykorzystywany wyłącznie do działalności gospodarczej i prowadzisz dla niego ewidencję przebiegu - wtedy możesz odliczyć 100% VAT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 2 pkt 2",
+        "quote": "Do wydatków związanych z pojazdami samochodowymi zalicza się wydatki dotyczące używania tych pojazdów na podstawie umowy najmu"
+      }
+    ],
+    "conditions": [
+      "umowa najmu pojazdu samochodowego"
+    ],
+    "exceptions": [
+      "wykorzystywanie wyłącznie do działalności gospodarczej z ewidencją przebiegu"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-samochod-kratka-pelne-odliczenie",
+    "question_intent": "Kiedy samochód z kratką daje pełne odliczenie VAT?",
+    "question_patterns": [
+      "samochód z kratką 100% vat",
+      "van z przegrodą pełne odliczenie",
+      "kiedy kratka w aucie daje pełny vat"
+    ],
+    "answer": "Samochód z kratką (przegrodą) daje pełne odliczenie VAT gdy ma jeden rząd siedzeń oddzielony od części ładunkowej ścianą lub trwałą przegrodą, jest klasyfikowany jako wielozadaniowy/van lub ma otwartą część ładunkową. Wymagane jest zaświadczenie z okręgowej stacji kontroli pojazdów i odpowiednia adnotacja w dowodzie rejestracyjnym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 9 pkt 1",
+        "quote": "pojazdy samochodowe mające jeden rząd siedzeń, który oddzielony jest od części przeznaczonej do przewozu ładunków ścianą lub trwałą przegrodą"
+      }
+    ],
+    "conditions": [
+      "jeden rząd siedzeń",
+      "przegroda oddzielająca od części ładunkowej",
+      "zaświadczenie ze stacji kontroli pojazdów",
+      "adnotacja w dowodzie rejestracyjnym"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_pojazdy",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86a-zgloszenie-firmowe",
+    "question_intent": "Jak zgłosić samochód jako używany wyłącznie firmowo?",
+    "question_patterns": [
+      "Jak zgłosić samochód jako używany wyłącznie firmowo?",
+      "Jakie dokumenty złożyć do urzędu skarbowego na samochód firmowy?",
+      "Kiedy zgłosić pojazd wykorzystywany wyłącznie do działalności?"
+    ],
+    "answer": "Musisz złożyć informację o pojeździe do naczelnika urzędu skarbowego do 25. dnia miesiąca następującego po miesiącu poniesienia pierwszego wydatku związanego z pojazdem. Bez złożenia tej informacji w terminie, pojazd będzie uznany za wykorzystywany wyłącznie firmowo dopiero od pierwszego dnia miesiąca złożenia informacji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 12",
+        "quote": "mają obowiązek złożyć naczelnikowi urzędu skarbowego informację o tych pojazdach w terminie do 25. dnia miesiąca następującego po miesiącu, w którym poniosą pierwszy wydatek"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86a ust. 13",
+        "quote": "uznaje się, że pojazd samochodowy jest wykorzystywany wyłącznie do działalności gospodarczej podatnika dopiero od pierwszego dnia miesiąca, w którym podatnik złoży tę informację"
+      }
+    ],
+    "conditions": [
+      "pojazd wykorzystywany wyłącznie do działalności gospodarczej",
+      "obowiązek prowadzenia ewidencji przebiegu"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "formalności VAT pojazdy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-prawo-do-odliczenia-vat",
+    "question_intent": "Kiedy mogę odliczyć VAT od faktury zakupowej?",
+    "question_patterns": [
+      "Kiedy mogę odliczyć VAT od faktury zakupowej?",
+      "Jakie warunki muszę spełnić żeby odliczyć VAT naliczony?",
+      "Kiedy przysługuje prawo do odliczenia VAT?"
+    ],
+    "answer": "Prawo do odliczenia VAT przysługuje tylko podatnikom VAT w zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych. Prawo to powstaje w rozliczeniu za okres, w którym powstał obowiązek podatkowy, ale nie wcześniej niż w okresie, gdy otrzymasz fakturę. Możesz odliczyć VAT wynikający z faktur otrzymanych z tytułu nabycia towarów i usług oraz z tytułu zapłaty przed nabyciem towaru lub wykonaniem usługi.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 1",
+        "quote": "W zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi przysługuje prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego"
+      }
+    ],
+    "conditions": [
+      "towary i usługi muszą być wykorzystywane do wykonywania czynności opodatkowanych",
+      "podatnik musi być podatnikiem VAT",
+      "musi otrzymać fakturę"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-odliczenie-przed-rejestracj",
+    "question_intent": "Czy mogę odliczyć VAT z faktury sprzed rejestracji?",
+    "question_patterns": [
+      "Czy mogę odliczyć VAT z faktury sprzed rejestracji?",
+      "VAT z zakupów przed rozpoczęciem działalności",
+      "Odliczenie VAT przed rejestracją"
+    ],
+    "answer": "Artykuł nie zawiera bezpośrednich przepisów dotyczących odliczania VAT z faktur sprzed rejestracji jako podatnika VAT. Prawo do odliczenia przysługuje podatnikowi VAT w zakresie towarów i usług wykorzystywanych do czynności opodatkowanych, ale przepisy nie precyzują możliwości odliczania VAT z okresu przed uzyskaniem statusu podatnika.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 1",
+        "quote": "podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego"
+      }
+    ],
+    "conditions": [
+      "status podatnika VAT",
+      "towary i usługi wykorzystywane do czynności opodatkowanych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-zakupy-przed-firma",
+    "question_intent": "Czy mogę odliczyć VAT od zakupów przed założeniem firmy?",
+    "question_patterns": [
+      "Czy mogę odliczyć VAT od zakupów przed założeniem firmy?",
+      "VAT z zakupów przed działalnością gospodarczą",
+      "Odliczenie VAT przed rozpoczęciem biznesu"
+    ],
+    "answer": "Artykuł nie zawiera szczegółowych regulacji dotyczących odliczania VAT z zakupów dokonanych przed formalnym rozpoczęciem działalności gospodarczej. Prawo do odliczenia przysługuje podatnikowi VAT w zakresie towarów i usług wykorzystywanych do czynności opodatkowanych, jednak przepisy wymagają doprecyzowania w kontekście zakupów przedbiznesowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 1",
+        "quote": "podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego"
+      }
+    ],
+    "conditions": [
+      "status podatnika VAT",
+      "wykorzystanie do czynności opodatkowanych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-zakupy-olx",
+    "question_intent": "Czy od zakupów z OLX mogę odliczyć VAT?",
+    "question_patterns": [
+      "Czy od zakupów z OLX mogę odliczyć VAT?",
+      "VAT z zakupów od osób prywatnych",
+      "Odliczenie VAT bez faktury VAT"
+    ],
+    "answer": "Kwotę podatku naliczonego stanowią sumy kwot podatku wynikających z faktur otrzymanych przez podatnika z tytułu nabycia towarów i usług. Artykuł nie zawiera przepisów dotyczących odliczania VAT z transakcji, w których sprzedający nie jest podatnikiem VAT lub nie wystawia faktur VAT, co wymaga analizy dodatkowych przepisów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 2 pkt 1",
+        "quote": "suma kwot podatku wynikających z faktur otrzymanych przez podatnika z tytułu nabycia towarów i usług"
+      }
+    ],
+    "conditions": [
+      "otrzymanie faktury z wykazanym VAT"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-szkolenie-pracownika",
+    "question_intent": "Czy od szkolenia pracownika mogę odliczyć VAT?",
+    "question_patterns": [
+      "Czy od szkolenia pracownika mogę odliczyć VAT?",
+      "VAT od szkoleń biznesowych",
+      "Odliczenie VAT za rozwój zawodowy"
+    ],
+    "answer": "Możesz odliczyć VAT w zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych. Jeśli szkolenie pracownika służy działalności gospodarczej i masz fakturę VAT, możesz odliczyć VAT naliczony. Prawo powstaje w rozliczeniu za okres, gdy powstał obowiązek podatkowy, ale nie wcześniej niż gdy otrzymasz fakturę.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 1",
+        "quote": "W zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi przysługuje prawo do obniżenia kwoty podatku należnego"
+      }
+    ],
+    "conditions": [
+      "wykorzystanie do czynności opodatkowanych",
+      "otrzymanie faktury VAT",
+      "prowadzenie działalności gospodarczej"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-nieruchomosc",
+    "question_intent": "Czy mogę odliczyć VAT od zakupu nieruchomości?",
+    "question_patterns": [
+      "Czy mogę odliczyć VAT od zakupu nieruchomości?",
+      "VAT od nieruchomości biznesowej",
+      "Odliczenie VAT przy zakupie biura"
+    ],
+    "answer": "W przypadku nakładów na nabycie nieruchomości wykorzystywanej zarówno do działalności gospodarczej, jak i celów osobistych, kwotę podatku naliczonego oblicza się według udziału procentowego, w jakim nieruchomość jest wykorzystywana do celów działalności gospodarczej. Jeśli nieruchomość służy wyłącznie działalności gospodarczej, możesz odliczyć pełną kwotę VAT naliczonego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 7b",
+        "quote": "W przypadku nakładów ponoszonych na nabycie nieruchomości wykorzystywanej zarówno do celów wykonywanej przez tego podatnika działalności gospodarczej, jak i do celów osobistych, kwotę podatku naliczonego oblicza się według udziału procentowego"
+      }
+    ],
+    "conditions": [
+      "wykorzystanie do działalności gospodarczej",
+      "otrzymanie faktury VAT"
+    ],
+    "exceptions": [
+      "przy wykorzystaniu mieszanym - proporcjonalnie do udziału biznesowego"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-kontrahent-wykreslony",
+    "question_intent": "Czy VAT z faktury od kontrahenta wykreślonego z rejestru mogę odliczyć?",
+    "question_patterns": [
+      "Czy VAT z faktury od kontrahenta wykreślonego z rejestru mogę odliczyć?",
+      "VAT od nieaktywnego podatnika",
+      "Odliczenie VAT gdy kontrahent stracił status"
+    ],
+    "answer": "Artykuł nie zawiera szczegółowych przepisów dotyczących odliczania VAT od kontrahentów wykreślonych z rejestru podatników VAT. Ogólna zasada stanowi, że kwotę podatku naliczonego stanowią sumy kwot podatku wynikających z otrzymanych faktur, jednak kwestia ważności takich faktur wymaga analizy dodatkowych przepisów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 2 pkt 1",
+        "quote": "suma kwot podatku wynikających z faktur otrzymanych przez podatnika z tytułu nabycia towarów i usług"
+      }
+    ],
+    "conditions": [
+      "otrzymanie faktury",
+      "wykazanie VAT na fakturze"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-zapomniane-odliczenie",
+    "question_intent": "Co zrobić gdy zapomniałem odliczyć VAT naliczony w terminie?",
+    "question_patterns": [
+      "Co zrobić gdy zapomniałem odliczyć VAT?",
+      "Jak odliczyć VAT po terminie?",
+      "Czy mogę odliczyć VAT z opóźnieniem?",
+      "Zapomniałem odliczyć podatek naliczony - co robić?",
+      "Można odliczyć VAT po upływie terminu?"
+    ],
+    "answer": "Jeśli zapomniałeś odliczyć VAT w terminie, możesz to nadal zrobić na trzy sposoby. Najpierw możesz obniżyć kwotę podatku należnego w deklaracji za jeden z trzech następnych okresów rozliczeniowych (lub dwóch dla podatników kwartalnych). Jeśli i ten termin upłynie, możesz skorygować deklarację za okres, w którym powstało prawo do odliczenia, lub za jeden z następnych okresów - ale nie później niż w ciągu 5 lat od początku roku, w którym powstało prawo do odliczenia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 11",
+        "quote": "może obniżyć kwotę podatku należnego w deklaracji podatkowej za jeden z trzech następnych okresów rozliczeniowych"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 13",
+        "quote": "może on obniżyć kwotę podatku należnego przez dokonanie korekty deklaracji podatkowej [...] nie później jednak niż w ciągu 5 lat"
+      }
+    ],
+    "conditions": [
+      "Posiadanie prawa do odliczenia VAT naliczonego",
+      "Nieprzekroczenie 5-letniego terminu liczonego od początku roku powstania prawa"
+    ],
+    "exceptions": [
+      "Podatnicy kwartalni mają tylko dwa następne okresy zamiast trzech"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-88-gastronomia-odliczenie",
+    "question_intent": "Czy od usług gastronomicznych mogę odliczyć VAT?",
+    "question_patterns": [
+      "Czy od usług gastronomicznych mogę odliczyć VAT?",
+      "Czy można odliczyć VAT od restauracji?",
+      "Odliczenie VAT od wydatków gastronomicznych"
+    ],
+    "answer": "Co do zasady od usług gastronomicznych nie można odliczyć VAT. Jedyny wyjątek dotyczy nabycia gotowych posiłków przeznaczonych dla pasażerów przez podatników świadczących usługi przewozu osób. Obejmuje to np. linie lotnicze kupujące catering dla pasażerów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 88 ust. 1 pkt 4",
+        "quote": "Obniżenia kwoty lub zwrotu różnicy podatku należnego nie stosuje się do nabywanych przez podatnika usług noclegowych i gastronomicznych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [
+      "nabycie gotowych posiłków przeznaczonych dla pasażerów przez podatników świadczących usługi przewozu osób"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-88-nocleg-odliczenie",
+    "question_intent": "Czy od noclegu w hotelu odliczam VAT?",
+    "question_patterns": [
+      "Czy od noclegu w hotelu odliczam VAT?",
+      "Odliczenie VAT od usług noclegowych",
+      "Czy można odliczyć VAT od hotelu?"
+    ],
+    "answer": "Co do zasady od usług noclegowych nie można odliczyć VAT. Wyjątek stanowią tylko usługi noclegowe nabywane w celu ich odprzedaży, które są opodatkowane u podatnika na podstawie art. 8 ust. 2a. Dotyczy to np. biur podróży kupujących noclegi do dalszej sprzedaży w ramach pakietów turystycznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 88 ust. 1 pkt 4",
+        "quote": "Obniżenia kwoty lub zwrotu różnicy podatku należnego nie stosuje się do nabywanych przez podatnika usług noclegowych i gastronomicznych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [
+      "usługi noclegowe nabywane w celu ich odprzedaży, opodatkowane u podatnika na podstawie art. 8 ust. 2a"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-wydatki-mieszane",
+    "question_intent": "Jak odliczyć VAT od wydatków mieszanych używanych zarówno do działalności gospodarczej jak i do celów prywatnych?",
+    "question_patterns": [
+      "Jak odliczyć VAT od wydatków mieszanych?",
+      "VAT od wydatków używanych do działalności i prywatnie",
+      "Odliczenie VAT od towarów użytkowanych mieszanie"
+    ],
+    "answer": "Przy wydatkach mieszanych (używanych do działalności gospodarczej i celów prywatnych) VAT naliczony oblicza się zgodnie ze \"sposobem określenia proporcji\". Ten sposób powinien najbardziej odpowiadać specyfice Twojej działalności i obiektywnie odzwierciedlać część wydatków przypadającą na działalność gospodarczą. Możesz wykorzystać dane jak liczba godzin roboczych, powierzchnia, obrót czy liczba pracowników.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 2a",
+        "quote": "kwotę podatku naliczonego oblicza się zgodnie ze sposobem określenia zakresu wykorzystywania nabywanych towarów i usług do celów działalności gospodarczej"
+      }
+    ],
+    "conditions": [
+      "Towary i usługi używane zarówno do działalności gospodarczej jak i celów innych niż działalność",
+      "Przypisanie w całości do działalności gospodarczej nie jest możliwe",
+      "Sposób określenia proporcji musi najbardziej odpowiadać specyfice działalności"
+    ],
+    "exceptions": [
+      "Nie dotyczy celów osobistych objętych art. 7 ust. 2 i art. 8 ust. 2",
+      "Nie dotyczy celów objętych art. 8 ust. 5"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-86-mieszkanie-firma",
+    "question_intent": "Jak odliczyć VAT od nieruchomości używanej zarówno do działalności gospodarczej jak i celów osobistych?",
+    "question_patterns": [
+      "Jak odliczyć VAT jeśli używam mieszkania do firmy?",
+      "VAT od nieruchomości używanej do działalności i prywatnie",
+      "Odliczenie VAT od nakładów na nieruchomość mieszaną"
+    ],
+    "answer": "W przypadku nakładów na nabycie lub wytworzenie nieruchomości wykorzystywanej zarówno do działalności gospodarczej jak i celów osobistych, VAT naliczony oblicza się według udziału procentowego wykorzystania nieruchomości do celów działalności gospodarczej. Musisz określić jaka część powierzchni lub czasu jest wykorzystywana wyłącznie do prowadzenia działalności.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 7b",
+        "quote": "kwotę podatku naliczonego oblicza się według udziału procentowego, w jakim dana nieruchomość jest wykorzystywana do celów działalności gospodarczej"
+      }
+    ],
+    "conditions": [
+      "Nieruchomość stanowi majątek przedsiębiorstwa",
+      "Wykorzystywana zarówno do działalności gospodarczej jak i celów osobistych",
+      "Przypisanie nakładów w całości do działalności gospodarczej nie jest możliwe"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenie_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-90-proporcja-obliczanie",
+    "question_intent": "Co to jest proporcja VAT i jak ją liczyć?",
+    "question_patterns": [
+      "Co to jest proporcja VAT?",
+      "Jak obliczyć proporcję VAT?",
+      "Jak ustalić proporcję odliczenia VAT?",
+      "Wzór na proporcję VAT"
+    ],
+    "answer": "Proporcja VAT to udział rocznego obrotu z czynności, od których można odliczyć VAT, w całkowitym obrocie podatnika. Liczy się ją jako stosunek obrotu z czynności opodatkowanych do sumy obrotu z czynności opodatkowanych i zwolnionych. Proporcję określa się procentowo na podstawie obrotu z roku poprzedzającego i zaokrągla w górę do najbliższej liczby całkowitej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 90 ust. 3",
+        "quote": "Proporcję ustala się jako udział rocznego obrotu z tytułu czynności, w związku z którymi przysługuje prawo do obniżenia kwoty podatku należnego, w całkowitym obrocie"
+      }
+    ],
+    "conditions": [
+      "proporcję określa się na podstawie obrotu z roku poprzedzającego",
+      "proporcję zaokrągla się w górę do najbliższej liczby całkowitej"
+    ],
+    "exceptions": [
+      "do obrotu nie wlicza się środków trwałych i wartości niematerialnych",
+      "nie wlicza się pomocniczych transakcji nieruchomościowych i finansowych"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-90-dzialalnosc-mieszana",
+    "question_intent": "Jak odliczyć VAT przy działalności mieszanej?",
+    "question_patterns": [
+      "Jak odliczyć VAT przy działalności mieszanej?",
+      "Odliczenie VAT przy czynnościach opodatkowanych i zwolnionych",
+      "VAT przy działalności częściowo zwolnionej"
+    ],
+    "answer": "Przy działalności mieszanej podatnik musi odrębnie określić kwoty VAT naliczonego związane z czynnościami opodatkowanymi. Jeśli nie można wyodrębnić tych kwot, stosuje się proporcję - można odliczyć taką część VAT naliczonego, którą proporcjonalnie można przypisać do czynności opodatkowanych. Gdy proporcja przekroczy 98% i kwota nieodliczonego VAT w skali roku jest mniejsza niż 10 000 zł, można przyjąć proporcję 100%.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 90 ust. 1",
+        "quote": "podatnik jest obowiązany do odrębnego określenia kwot podatku naliczonego związanych z czynnościami, w stosunku do których podatnikowi przysługuje prawo do obniżenia kwoty podatku należnego"
+      }
+    ],
+    "conditions": [
+      "dotyczy towarów i usług wykorzystywanych do czynności opodatkowanych i zwolnionych",
+      "stosuje się gdy nie można wyodrębnić kwot VAT naliczonego"
+    ],
+    "exceptions": [
+      "proporcja 100% gdy przekroczy 98% i nieodliczony VAT < 10 000 zł rocznie",
+      "proporcja 0% gdy nie przekroczy 2%"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-91-korekta-proporcji",
+    "question_intent": "Kiedy trzeba robić korektę proporcji VAT?",
+    "question_patterns": [
+      "Kiedy robić korektę proporcji VAT?",
+      "Korekta VAT po zakończeniu roku",
+      "Czy trzeba korygować proporcję VAT?"
+    ],
+    "answer": "Korektę proporcji VAT robi się po zakończeniu roku podatkowego, porównując proporcję stosowaną w ciągu roku z rzeczywistą proporcją za ten rok. Można nie robić korekty, jeśli różnica między proporcjami nie przekracza 2 punktów procentowych. Korektę składa się w deklaracji za pierwszy okres następnego roku. Dla środków trwałych powyżej 15 000 zł korekta rozłożona jest na 5 lat (nieruchomości - 10 lat).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 91 ust. 1",
+        "quote": "Po zakończeniu roku jest on obowiązany dokonać korekty kwoty podatku odliczonego z uwzględnieniem proporcji obliczonej dla zakończonego roku podatkowego"
+      }
+    ],
+    "conditions": [
+      "dotyczy podatników stosujących proporcję",
+      "korekta po zakończeniu roku podatkowego"
+    ],
+    "exceptions": [
+      "brak korekty gdy różnica proporcji ≤ 2 punkty procentowe",
+      "korekta rozłożona na 5-10 lat dla środków trwałych powyżej 15 000 zł"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-113-kiedy-oplaca-sie-vatowiec",
+    "question_intent": "Kiedy opłaca się być VATowcem (rezygnować ze zwolnienia z VAT)?",
+    "question_patterns": [
+      "Kiedy opłaca się być VATowcem?",
+      "Kiedy warto rezygnować ze zwolnienia z VAT?",
+      "Czy opłaca się zostać czynnym podatnikiem VAT?",
+      "Kiedy lepiej płacić VAT niż być zwolnionym?"
+    ],
+    "answer": "Może się opłacać zostać VATowcem, gdy prowadzisz działalność z obrotem poniżej 240 000 zł rocznie, ale ponosisz wysokie koszty zakupu towarów i usług obciążonych VAT. Jako czynny podatnik VAT będziesz mógł odliczać VAT naliczony od zakupów, co może dać korzyść finansową. Możesz zrezygnować ze zwolnienia zawiadamiając na piśmie naczelnika urzędu skarbowego przed początkiem miesiąca, w którym chcesz rezygnować.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 113 ust. 1",
+        "quote": "Zwalnia się od podatku sprzedaż dokonywaną przez podatnika posiadającego siedzibę działalności gospodarczej na terytorium kraju, u którego wartość sprzedaży, z wyłączeniem podatku, nie przekroczyła w poprzednim ani bieżącym roku podatkowym kwoty 240 000 zł."
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 113 ust. 4",
+        "quote": "Podatnicy, o których mowa w ust. 1 i 9, mogą zrezygnować ze zwolnienia określonego w ust. 1 i 9 pod warunkiem zawiadomienia na piśmie o tym zamiarze naczelnika urzędu skarbowego przed początkiem miesiąca"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 86 ust. 1",
+        "quote": "W zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego"
+      }
+    ],
+    "conditions": [
+      "Obrót nie przekracza 240 000 zł rocznie",
+      "Zawiadomienie naczelnika urzędu skarbowego na piśmie przed początkiem miesiąca rezygnacji",
+      "Towary i usługi wykorzystywane do czynności opodatkowanych"
+    ],
+    "exceptions": [
+      "Nie można ponownie skorzystać ze zwolnienia wcześniej niż po upływie roku od rezygnacji",
+      "Zwolnienie nie dotyczy niektórych rodzajów działalności wymienionych w art. 113 ust. 13"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zwolnienie_z_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-96-rejestracja-vat",
+    "question_intent": "Jak zarejestrować się do VAT?",
+    "question_patterns": [
+      "Jak zarejestrować się do VAT?",
+      "Jak zostać podatnikiem VAT?",
+      "Procedura rejestracji VAT"
+    ],
+    "answer": "Aby zarejestrować się do VAT, należy złożyć naczelnikowi urzędu skarbowego zgłoszenie rejestracyjne przed dniem wykonania pierwszej czynności określonej w art. 5 (czyli przed pierwszą sprzedażą towaru lub usługi). Urząd skarbowy po weryfikacji danych rejestruje podatnika jako \"podatnika VAT czynnego\" lub \"podatnika VAT zwolnionego\" i na wniosek potwierdza to zarejestrowanie. W przypadku zmian danych zawartych w zgłoszeniu, podatnik ma obowiązek zgłosić zmianę w terminie 7 dni od dnia jej wystąpienia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 96 ust. 1",
+        "quote": "Podmioty, o których mowa w art. 15 i art. 15a, są obowiązane przed dniem wykonania pierwszej czynności określonej w art. 5 złożyć naczelnikowi urzędu skarbowego zgłoszenie rejestracyjne"
+      }
+    ],
+    "conditions": [
+      "obowiązek rejestracji przed wykonaniem pierwszej czynności z art. 5",
+      "wymóg weryfikacji danych przez naczelnika urzędu skarbowego"
+    ],
+    "exceptions": [
+      "podmioty zwolnione od podatku mogą złożyć zgłoszenie rejestracyjne (nie mają obowiązku)",
+      "podatnicy z przedstawicielem podatkowym nie składają zgłoszenia"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "rejestracja_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-96-terminy-rejestracji",
+    "question_intent": "Do kiedy muszę zarejestrować się jako podatnik VAT?",
+    "question_patterns": [
+      "Do kiedy muszę zarejestrować się jako podatnik VAT?",
+      "Jaki termin rejestracji VAT?",
+      "Kiedy najpozniej zarejestrować się do VAT?"
+    ],
+    "answer": "Zgłoszenie rejestracyjne do VAT należy złożyć przed dniem wykonania pierwszej czynności określonej w art. 5 (sprzedaży). W przypadku podatników zwolnionych, którzy rozpoczynają opodatkowaną sprzedaż - przed dniem pierwszej sprzedaży nieobjętej zwolnieniem. Przy utracie zwolnienia - przed dniem utraty prawa do zwolnienia. W przypadku rezygnacji ze zwolnienia - przed początkiem miesiąca rezygnacji (art. 113) lub przed pierwszą czynnością (art. 113 ust. 9).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 96 ust. 5",
+        "quote": "przed dniem dokonania pierwszej sprzedaży towaru lub usługi, innych niż zwolnione od podatku"
+      }
+    ],
+    "conditions": [
+      "wykonanie pierwszej czynności z art. 5",
+      "rozpoczęcie sprzedaży opodatkowanej przez podatnika zwolnionego",
+      "utrata zwolnienia",
+      "rezygnacja ze zwolnienia"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "rejestracja_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-96-wykreslenie-rejestru",
+    "question_intent": "Kiedy urząd wykreśla z rejestru VAT?",
+    "question_patterns": [
+      "Kiedy urząd wykreśla z rejestru VAT?",
+      "Przyczyny wykreślenia z VAT",
+      "Za co można stracić rejestrację VAT?"
+    ],
+    "answer": "Urząd wykreśla z rejestru VAT bez zawiadamiania gdy: podatnik nie istnieje, nie ma możliwości kontaktu z podatnikiem, dane w zgłoszeniu są niezgodne z prawdą, podatnik nie stawia się na wezwania, prowadzi działania związane z wyłudzeniami, ma sądowy zakaz prowadzenia działalności. Dodatkowo wykreśla podatników którzy: zawiesili działalność na 6+ miesięcy, nie złożyli deklaracji za 3 miesiące/kwartał, przez 6 miesięcy nie wykazywali sprzedaży/zakupów, wystawiali faktury bez podstawy, uczestniczyli w nierzetelnym rozliczaniu podatku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 96 ust. 9",
+        "quote": "Naczelnik urzędu skarbowego wykreśla z urzędu podatnika z rejestru jako podatnika VAT bez konieczności zawiadamiania o tym podatnika"
+      }
+    ],
+    "conditions": [
+      "zaistnienie przesłanek wymienionych w art. 96 ust. 9 lub 9a",
+      "dokumentacja prób kontaktu z podatnikiem"
+    ],
+    "exceptions": [
+      "możliwość przywrócenia rejestracji na wniosek w terminie 2 miesięcy",
+      "wyłączenia przy pomyłkach lub specyfice działalności"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "rejestracja_vat",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-96-brak-kary-niezarejestrowanie",
+    "question_intent": "Jaka kara za niezarejestrowanie się do VAT?",
+    "question_patterns": [
+      "Jaka kara za niezarejestrowanie się do VAT?",
+      "Sankcje za brak rejestracji VAT",
+      "Konsekwencje niezarejestrowania do VAT"
+    ],
+    "answer": "W art. 96 ustawy o VAT nie są określone konkretne kary za niezarejestrowanie się do VAT. Artykuł reguluje jedynie obowiązek rejestracji i procedury związane z rejestracją podatników VAT. Sankcje za niezarejestrowanie się mogą wynikać z innych przepisów, które nie są zawarte w tym artykule.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 96",
+        "quote": "Podmioty, o których mowa w art. 15 i art. 15a, są obowiązane przed dniem wykonania pierwszej czynności określonej w art. 5 złożyć naczelnikowi urzędu skarbowego zgłoszenie rejestracyjne"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "rejestracja_vat",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-sprzedazy-okres",
+    "question_intent": "W jakim okresie rozliczeniowym ująć korektę sprzedaży?",
+    "question_patterns": [
+      "W jakim okresie ująć korektę sprzedaży?",
+      "Kiedy rozliczyć korektę faktury w VAT?",
+      "W którym miesiącu pokazać korektę sprzedaży?"
+    ],
+    "answer": "Ustawa o VAT nie określa konkretnego terminu ujmowania korekty sprzedaży w rozliczeniu podatkowym. Przepis art. 106j reguluje jedynie obowiązek wystawienia faktury korygującej w przypadkach zmiany podstawy opodatkowania, kwoty podatku, zwrotu towarów, zwrotu zapłaty lub stwierdzenia pomyłki w fakturze.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1",
+        "quote": "podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [
+      "zmiana podstawy opodatkowania lub kwoty podatku",
+      "zwrot towarów i opakowań",
+      "zwrot całości lub części zapłaty",
+      "stwierdzenie pomyłki w jakiejkolwiek pozycji faktury"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "korekta_faktury",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-deklaracje-miesieczne-podstawowe",
+    "question_intent": "Kto składa deklaracje VAT miesięczne i w jakim terminie",
+    "question_patterns": [
+      "Kto składa deklaracje VAT miesięczne",
+      "Jaki termin deklaracji VAT miesięcznej",
+      "Do kiedy złożyć deklarację VAT miesięczną"
+    ],
+    "answer": "Podatnicy VAT czynni składają deklaracje podatkowe za okresy miesięczne w terminie do 25. dnia miesiąca następującego po każdym kolejnym miesiącu. Obowiązek ten dotyczy podatników określonych w art. 15 ustawy o VAT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 1",
+        "quote": "Podatnicy, o których mowa w art. 15, są obowiązani składać w urzędzie skarbowym deklaracje podatkowe za okresy miesięczne w terminie do 25. dnia miesiąca następującego po każdym kolejnym miesiącu"
+      }
+    ],
+    "conditions": [
+      "podatnik musi być określony w art. 15 ustawy o VAT"
+    ],
+    "exceptions": [
+      "mali podatnicy z metodą kasową mogą składać deklaracje kwartalne",
+      "niektórzy mali podatnicy mogą składać deklaracje kwartalne po zawiadomieniu"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "deklaracje VAT",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-deklaracje-kwartalne-mali",
+    "question_intent": "Kto może składać deklaracje VAT kwartalne",
+    "question_patterns": [
+      "Kto składa deklaracje VAT kwartalne",
+      "Mali podatnicy deklaracje kwartalne",
+      "Deklaracje VAT co kwartał"
+    ],
+    "answer": "Mali podatnicy, którzy wybrali metodę kasową, składają deklaracje podatkowe za okresy kwartalne w terminie do 25. dnia miesiąca następującego po każdym kolejnym kwartale. Mali podatnicy bez metody kasowej i niektórzy podatnicy ryczałtu od dochodów spółek także mogą składać deklaracje kwartalne po zawiadomieniu urzędu skarbowego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 2",
+        "quote": "Mali podatnicy, którzy wybrali metodę kasową, składają w urzędzie skarbowym deklaracje podatkowe za okresy kwartalne w terminie do 25. dnia miesiąca następującego po każdym kolejnym kwartale"
+      }
+    ],
+    "conditions": [
+      "mali podatnicy z metodą kasową",
+      "zawiadomienie urzędu skarbowego dla innych uprawnionych"
+    ],
+    "exceptions": [
+      "podatnicy zarejestrowani jako VAT czynni przez 12 miesięcy od rejestracji",
+      "podatnicy dokonujący dostaw z załącznika nr 15"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "deklaracje VAT",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-zwolnienie-bezczynni",
+    "question_intent": "Kto nie składa deklaracji VAT",
+    "question_patterns": [
+      "Kto nie składa deklaracji VAT",
+      "Zwolnienie z deklaracji VAT",
+      "Podatnicy zwolnieni nie składają deklaracji"
+    ],
+    "answer": "Podatnicy zwolnieni od VAT na podstawie art. 113 lub 113a oraz podmioty wykonujące wyłącznie czynności zwolnione od podatku nie składają deklaracji VAT. Wyjątek stanowią sytuacje, gdy przysługuje im zwrot podatku, są obowiązani do korekty podatku odliczonego lub korekty innych rozliczeń.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 7",
+        "quote": "Przepisu ust. 1 nie stosuje się do podatników, u których sprzedaż jest zwolniona od podatku na podstawie art. 113 albo art. 113a, oraz podmiotów wykonujących wyłącznie czynności zwolnione od podatku"
+      }
+    ],
+    "conditions": [
+      "sprzedaż zwolniona od VAT",
+      "wykonywanie wyłącznie czynności zwolnionych"
+    ],
+    "exceptions": [
+      "przysługuje zwrot podatku",
+      "obowiązek korekty podatku odliczonego",
+      "obowiązek innych korekt rozliczeń"
+    ],
+    "taxpayer_type": [
+      "vat_zwolniony"
+    ],
+    "topic": "deklaracje VAT",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-kwartalne-rozliczenia",
+    "question_intent": "Kiedy mogę rozliczać VAT kwartalnie?",
+    "question_patterns": [
+      "kiedy mogę rozliczać VAT kwartalnie",
+      "kto może składać deklaracje kwartalne",
+      "warunki rozliczeń kwartalnych VAT"
+    ],
+    "answer": "Deklaracje kwartalne mogą składać mali podatnicy, którzy wybrali metodę kasową, oraz mali podatnicy, którzy nie wybrali metody kasowej (po zawiadomieniu urzędu). Także podatnicy podlegający ryczałtowi od dochodów spółek, jeżeli ich sprzedaż nie przekroczyła 4 mln euro w poprzednim roku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 2-3",
+        "quote": "Mali podatnicy, którzy wybrali metodę kasową, składają w urzędzie skarbowym deklaracje podatkowe za okresy kwartalne"
+      }
+    ],
+    "conditions": [
+      "zawiadomienie urzędu do 25. dnia drugiego miesiąca kwartału",
+      "nieprzekroczenie limitów sprzedaży"
+    ],
+    "exceptions": [
+      "podatnicy zarejestrowani jako VAT czynni przez pierwsze 12 miesięcy",
+      "dostawy towarów z załącznika 15 powyżej 50 tys. zł miesięcznie"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "okresy_rozliczeniowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-przejscie-na-miesieczny",
+    "question_intent": "Kiedy mogę przejść z VAT kwartalnego na miesięczny?",
+    "question_patterns": [
+      "kiedy przejść na miesięczny VAT",
+      "zmiana z kwartalnego na miesięczny",
+      "powrót do miesięcznych rozliczeń"
+    ],
+    "answer": "Podatnicy rozliczający się kwartalnie mogą przejść na deklaracje miesięczne nie wcześniej niż po upływie 4 kwartałów składania deklaracji kwartalnych. Wymagane jest uprzednie zawiadomienie naczelnika urzędu skarbowego w terminie do dnia złożenia pierwszej deklaracji miesięcznej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 4",
+        "quote": "mogą ponownie składać deklaracje podatkowe za okresy miesięczne, nie wcześniej jednak niż po upływie 4 kwartałów"
+      }
+    ],
+    "conditions": [
+      "upływ 4 kwartałów rozliczeń kwartalnych",
+      "zawiadomienie urzędu skarbowego"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "okresy_rozliczeniowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-przejscie-na-miesieczny-sposob",
+    "question_intent": "Jak przejść z kwartalnego na miesięczny VAT?",
+    "question_patterns": [
+      "jak przejść z kwartalnego na miesięczny VAT",
+      "procedura zmiany na miesięczne rozliczenia",
+      "formalności przy zmianie okresu rozliczeniowego"
+    ],
+    "answer": "Aby przejść z rozliczeń kwartalnych na miesięczne, należy po upływie 4 kwartałów rozliczeń kwartalnych zawiadomić na piśmie naczelnika urzędu skarbowego. Zawiadomienie składa się w terminie do dnia złożenia pierwszej deklaracji miesięcznej, ale nie później niż z dniem upływu terminu złożenia tej deklaracji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 4",
+        "quote": "po uprzednim zawiadomieniu na piśmie naczelnika urzędu skarbowego w terminie do dnia złożenia deklaracji podatkowej za pierwszy miesięczny okres rozliczeniowy"
+      }
+    ],
+    "conditions": [
+      "upływ 4 kwartałów rozliczeń kwartalnych",
+      "pisemne zawiadomienie urzędu"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "okresy_rozliczeniowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-90a-korekta-nieruchomosci",
+    "question_intent": "Jak zrobić korektę VAT od nieruchomości stanowiącej środek trwały?",
+    "question_patterns": [
+      "Jak zrobić korektę VAT od środka trwałego nieruchomości?",
+      "Korekta VAT nieruchomość środek trwały",
+      "Jak skorygować VAT od budynków środki trwałe?"
+    ],
+    "answer": "W przypadku nieruchomości będącej częścią przedsiębiorstwa podatnika, gdy w ciągu 120 miesięcy od oddania do użytkowania nastąpi zmiana stopnia wykorzystania do celów działalności gospodarczej, dokonuje się korekty VAT naliczonego odliczonego przy nabyciu lub wytworzeniu. Korektę wykonuje się w deklaracji za okres, w którym nastąpiła zmiana, w kwocie proporcjonalnej do pozostałego okresu korekty. Jeśli nieruchomość jest wykorzystywana także do czynności zwolnionych od VAT, korekta musi uwzględniać odpowiednią proporcję określoną w art. 90.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 90a ust. 1",
+        "quote": "gdy w ciągu 120 miesięcy, licząc od miesiąca, w którym nieruchomość stanowiąca część przedsiębiorstwa podatnika została przez niego oddana do użytkowania, nastąpi zmiana w stopniu wykorzystania tej nieruchomości do celów działalności gospodarczej, dokonuje się korekty podatku naliczonego odliczonego przy jej nabyciu lub wytworzeniu"
+      }
+    ],
+    "conditions": [
+      "nieruchomość musi stanowić część przedsiębiorstwa podatnika",
+      "zmiana wykorzystania musi nastąpić w ciągu 120 miesięcy od oddania do użytkowania",
+      "musi nastąpić zmiana w stopniu wykorzystania do celów działalności gospodarczej"
+    ],
+    "exceptions": [
+      "nie stosuje się przepisu art. 8 ust. 2"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "korekty_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-89a-termin-90-dni",
+    "question_intent": "Po jakim czasie mogę zastosować ulgę na złe długi?",
+    "question_patterns": [
+      "Po jakim czasie mogę zastosować ulgę na złe długi?",
+      "Kiedy mogę skorzystać z ulgi na złe długi?",
+      "Jaki termin dla ulgi na nieściągalne wierzytelności?",
+      "Po ilu dniach niespłacania można skorygować VAT?"
+    ],
+    "answer": "Ulgę na złe długi możesz zastosować po 90 dniach od dnia upływu terminu płatności określonego w umowie lub na fakturze. Korekta może nastąpić w rozliczeniu za okres, w którym upłynął 90 dzień, pod warunkiem że do dnia złożenia deklaracji wierzytelność nie została uregulowana lub zbyta.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89a ust. 1a",
+        "quote": "Nieściągalność wierzytelności uważa się za uprawdopodobnioną, w przypadku gdy wierzytelność nie została uregulowana lub zbyta w jakiejkolwiek formie w ciągu 90 dni od dnia upływu terminu jej płatności"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89a ust. 3",
+        "quote": "Korekta może nastąpić w rozliczeniu za okres, w którym nieściągalność wierzytelności uznaje się za uprawdopodobnioną"
+      }
+    ],
+    "conditions": [
+      "Musi upłynąć 90 dni od terminu płatności określonego w umowie lub na fakturze",
+      "Do dnia złożenia deklaracji wierzytelność nie może być uregulowana lub zbyta",
+      "Korekta w rozliczeniu za okres gdy upłynęło 90 dni"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "ulga_na_zle_dlugi",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-89b-korekta-vat-naliczony",
+    "question_intent": "Czy dłużnik musi korygować VAT naliczony przy niespłaceniu faktury?",
+    "question_patterns": [
+      "Czy dłużnik musi korygować VAT naliczony?",
+      "Korekta VAT naliczony przy niespłaceniu faktury",
+      "Obowiązek korekty VAT dla dłużnika",
+      "VAT naliczony gdy nie płacę faktury w terminie"
+    ],
+    "answer": "Tak, jeśli jako dłużnik nie uregulowałeś należności w terminie 90 dni od upływu terminu płatności, musisz skorygować odliczony VAT naliczony z tej faktury. Korekty dokonujesz w rozliczeniu za okres, w którym upłynął 90 dzień od terminu płatności. Jeśli jednak uregulowałeś należność najpóźniej w ostatnim dniu tego okresu rozliczeniowego, korekty nie musisz dokonywać.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89b ust. 1",
+        "quote": "W przypadku nieuregulowania należności wynikającej z faktury w terminie 90 dni od dnia upływu terminu jej płatności, dłużnik jest obowiązany do korekty odliczonej kwoty podatku wynikającej z tej faktury"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89b ust. 1a",
+        "quote": "Przepisu ust. 1 nie stosuje się, jeżeli dłużnik uregulował należność najpóźniej w ostatnim dniu okresu rozliczeniowego, w którym upłynął 90 dzień"
+      }
+    ],
+    "conditions": [
+      "Nieuregulowanie należności w terminie 90 dni od upływu terminu płatności",
+      "Korekta w rozliczeniu za okres gdy upłynął 90 dzień"
+    ],
+    "exceptions": [
+      "Brak obowiązku korekty gdy należność uregulowana najpóźniej w ostatnim dniu okresu rozliczeniowego"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "korekta_vat_naliczony",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-89a-korekta-in-minus-warunki",
+    "question_intent": "Czy korekta in minus wymaga uzgodnienia warunków?",
+    "question_patterns": [
+      "Czy korekta in minus wymaga uzgodnienia warunków?",
+      "Jakie warunki trzeba spełnić dla korekty in minus?",
+      "Kiedy można zrobić korektę obniżającą podstawę opodatkowania?",
+      "Jakie są wymogi dla korekty należności nieściągalnej?"
+    ],
+    "answer": "Korekta in minus z tytułu nieściągalności wymaga spełnienia konkretnych warunków. Wierzytelność musi pozostać nieuregulowana przez 90 dni od terminu płatności, wierzyciel musi być czynnym podatnikiem VAT na dzień złożenia deklaracji, a od wystawienia faktury nie może upłynąć więcej niż 3 lata. Dla dłużników niebędących czynnymi podatnikami VAT dodatkowo wymagane jest orzeczenie sądu, wpis do rejestru długów lub upadłość konsumencka.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89a ust. 1a",
+        "quote": "Nieściągalność wierzytelności uważa się za uprawdopodobnioną, w przypadku gdy wierzytelność nie została uregulowana lub zbyta w jakiejkolwiek formie w ciągu 90 dni od dnia upływu terminu jej płatności"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89a ust. 2 pkt 3 lit. a",
+        "quote": "wierzyciel jest podatnikiem zarejestrowanym jako podatnik VAT czynny"
+      }
+    ],
+    "conditions": [
+      "Wierzytelność nie została uregulowana lub zbyta przez 90 dni od terminu płatności",
+      "Wierzyciel jest czynnym podatnikiem VAT na dzień złożenia deklaracji",
+      "Od wystawienia faktury nie upłynęły 3 lata licząc od końca roku wystawienia",
+      "Dla dłużników niebędących czynnymi podatnikami VAT - wymaga orzeczenia sądu, wpisu do rejestru długów lub upadłości konsumenckiej"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "korekty_faktur",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-19a-obowiazek-podatkowy-podstawy",
+    "question_intent": "Kiedy powstaje obowiązek podatkowy w VAT?",
+    "question_patterns": [
+      "Kiedy powstaje obowiązek podatkowy w VAT?",
+      "Moment powstania obowiązku podatkowego VAT",
+      "Kiedy muszę rozliczyć VAT?"
+    ],
+    "answer": "Obowiązek podatkowy VAT powstaje z chwilą dokonania dostawy towarów lub wykonania usługi. To jest zasada główna, ale ustawa przewiduje liczne wyjątki i szczególne przypadki. Istnieją też sytuacje, gdy obowiązek może powstać wcześniej, np. przy otrzymaniu zaliczki, albo z momentem wystawienia faktury w określonych przypadkach.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 19a ust. 1",
+        "quote": "Obowiązek podatkowy powstaje z chwilą dokonania dostawy towarów lub wykonania usługi"
+      }
+    ],
+    "conditions": [
+      "dokonanie dostawy towarów lub wykonanie usługi"
+    ],
+    "exceptions": [
+      "liczne wyjątki wymienione w art. 19a ust. 1a, 1b, 5 i 7–11, art. 14 ust. 6, art. 20, art. 21 ust. 1 i art. 138f"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "obowiązek podatkowy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-19a-zaliczka-obowiazek",
+    "question_intent": "Kiedy powstaje obowiązek podatkowy przy zaliczce?",
+    "question_patterns": [
+      "Kiedy powstaje obowiązek podatkowy przy zaliczce?",
+      "VAT od zaliczki kiedy rozliczyć?",
+      "Obowiązek VAT przy przedpłacie"
+    ],
+    "answer": "Jeżeli przed dokonaniem dostawy towaru lub wykonaniem usługi otrzymasz całość lub część zapłaty (przedpłatę, zaliczkę, zadatek, ratę), obowiązek podatkowy VAT powstaje z chwilą jej otrzymania w odniesieniu do otrzymanej kwoty. Wyjątkiem są niektóre dostawy towarów i usługi, gdzie obowiązek powstaje z momentem wystawienia faktury.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 19a ust. 8",
+        "quote": "obowiązek podatkowy powstaje z chwilą jej otrzymania w odniesieniu do otrzymanej kwoty"
+      }
+    ],
+    "conditions": [
+      "otrzymanie całości lub części zapłaty przed dokonaniem dostawy/wykonaniem usługi"
+    ],
+    "exceptions": [
+      "dostawy towarów z ust. 1b",
+      "dostawy towarów i usługi z ust. 5 pkt 4"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "obowiązek podatkowy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-19a-dostawa-vs-faktura",
+    "question_intent": "Czy obowiązek VAT powstaje przy dostawie towaru czy wystawieniu faktury?",
+    "question_patterns": [
+      "Czy obowiązek VAT powstaje przy dostawie towaru czy wystawieniu faktury?",
+      "Moment obowiązku VAT - dostawa czy faktura?",
+      "Kiedy VAT przy dostawie towarów?"
+    ],
+    "answer": "Zasadniczo obowiązek podatkowy VAT powstaje z chwilą dokonania dostawy towarów. Wyjątkiem są szczególne przypadki, gdzie obowiązek powstaje z momentem wystawienia faktury, np. przy dostawie książek, gazet lub energii. W większości przypadków to fizyczna dostawa towaru decyduje o momencie powstania obowiązku podatkowego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 19a ust. 1",
+        "quote": "Obowiązek podatkowy powstaje z chwilą dokonania dostawy towarów"
+      }
+    ],
+    "conditions": [
+      "dokonanie dostawy towarów"
+    ],
+    "exceptions": [
+      "szczególne przypadki z ust. 5 pkt 3 i 4, np. dostawy energii, książek"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "obowiązek podatkowy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-19a-import-uslug",
+    "question_intent": "Kiedy rozliczam VAT od importu usług?",
+    "question_patterns": [
+      "Kiedy rozliczam VAT od importu usług?",
+      "VAT import usług moment obowiązku",
+      "Obowiązek podatkowy usługi zagraniczne"
+    ],
+    "answer": "Z podanego tekstu artykułu wynika tylko, że niektóre usługi mogą stanowić import usług według art. 28b i wtedy nie stosują się przepisy o obowiązku podatkowym z momentem wystawienia faktury. Artykuł 19a nie określa szczegółowo momentu powstania obowiązku podatkowego dla importu usług.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 19a ust. 5 pkt 3 lit. d, pkt 4 lit. b",
+        "quote": "z wyjątkiem usług, do których stosuje się art. 28b, stanowiących import usług"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [
+      "usługi stanowiące import usług według art. 28b"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "import usług",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-19a-eksport-obowiazek",
+    "question_intent": "Kiedy powstaje obowiązek VAT przy eksporcie?",
+    "question_patterns": [
+      "Kiedy powstaje obowiązek VAT przy eksporcie?",
+      "VAT eksport moment obowiązku",
+      "Obowiązek podatkowy przy sprzedaży zagranicznej"
+    ],
+    "answer": "Artykuł 19a nie zawiera szczegółowych przepisów dotyczących momentu powstania obowiązku podatkowego przy eksporcie towarów. Wymienia jedynie ogólną zasadę o powstaniu obowiązku z chwilą dokonania dostawy towarów, ale eksport może podlegać odrębnym regulacjom.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 19a ust. 1",
+        "quote": "Obowiązek podatkowy powstaje z chwilą dokonania dostawy towarów"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "eksport",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-19a-moment-dostawy-towarow",
+    "question_intent": "Jak ustalić moment dostawy towarów dla VAT?",
+    "question_patterns": [
+      "Jak ustalić moment dostawy towarów dla VAT?",
+      "Kiedy powstaje obowiązek podatkowy przy dostawie towarów?",
+      "Gdy powstaje obowiązek VAT od dostawy towarów?"
+    ],
+    "answer": "Obowiązek podatkowy w VAT powstaje z chwilą dokonania dostawy towarów. Dostawę towarów rozumie się jako przeniesienie prawa do rozporządzania towarami jak właściciel. Oznacza to, że kluczowy jest moment rzeczywistego przekazania towaru kupującemu, a nie moment wystawienia faktury czy podpisania umowy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 19a ust. 1",
+        "quote": "Obowiązek podatkowy powstaje z chwilą dokonania dostawy towarów"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 7 ust. 1",
+        "quote": "Przez dostawę towarów rozumie się przeniesienie prawa do rozporządzania towarami jak właściciel"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [
+      "zastrzeżenia określone w art. 19a ust. 1a, 1b, 5 i 7-11",
+      "specyficzne przypadki jak transfer bonów jednego przeznaczenia",
+      "dostawy w ramach platform cyfrowych"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "obowiazek_podatkowy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-41-stawki-budowlane",
+    "question_intent": "Jaka jest stawka VAT na usługi budowlane?",
+    "question_patterns": [
+      "Jaka jest stawka VAT na usługi budowlane?",
+      "Ile VAT na roboty budowlane?",
+      "Stawka podatku VAT dla budownictwa",
+      "VAT na remonty i modernizacje"
+    ],
+    "answer": "Stawka VAT na usługi budowlane wynosi standardowo 22%. Stawka 7% ma zastosowanie do dostaw, budowy, remontu, modernizacji, termomodernizacji, przebudowy oraz robót konserwacyjnych obiektów objętych społecznym programem mieszkaniowym. Obejmuje to głównie budownictwo mieszkaniowe (z wykluczeniem lokali użytkowych) oraz roboty konserwacyjne w lokalach mieszkalnych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 41 ust. 1",
+        "quote": "Stawka podatku wynosi 22 %"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 41 ust. 12",
+        "quote": "Stawkę podatku, o której mowa w ust. 2, stosuje się do: 1) dostawy, budowy, remontu, modernizacji, termomodernizacji, przebudowy lub robót konserwacyjnych dotyczących obiektów budowlanych"
+      }
+    ],
+    "conditions": [
+      "obiekt musi być objęty społecznym programem mieszkaniowym dla stawki 7%",
+      "powierzchnia użytkowa budynku jednorodzinnego nie może przekraczać 300 m²",
+      "powierzchnia użytkowa lokalu mieszkalnego nie może przekraczać 150 m²"
+    ],
+    "exceptions": [
+      "lokale użytkowe nie podlegają stawce 7%"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "stawki_vat_budownictwo",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-41-stawki-ksiazki",
+    "question_intent": "Jaka stawka VAT na książki?",
+    "question_patterns": [
+      "Jaka stawka VAT na książki?",
+      "VAT na publikacje",
+      "Stawka VAT wydawnictwa",
+      "Ile VAT na literaturę"
+    ],
+    "answer": "Artykuł nie zawiera szczegółowych informacji o stawce VAT na książki. Jeśli książki nie są wymienione w załączniku nr 3 (stawka 7%) lub załączniku nr 10 (stawka 5%), to stosuje się podstawową stawkę 22%. Dokładna stawka zależy od klasyfikacji książek w odpowiednich załącznikach do ustawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 41 ust. 1",
+        "quote": "Stawka podatku wynosi 22 %"
+      }
+    ],
+    "conditions": [
+      "stawka zależy od klasyfikacji w załącznikach do ustawy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "stawki_vat_towary",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-42-wwd-dokumenty-wywoz",
+    "question_intent": "Jakie dokumenty są wymagane do zastosowania stawki 0% VAT przy wewnątrzwspólnotowej dostawie?",
+    "question_patterns": [
+      "jakie dokumenty potrzebuję do stawki 0%",
+      "dokumenty do wywozu VAT",
+      "dowody wywozu towaru stawka zero"
+    ],
+    "answer": "Do stawki 0% VAT przy wewnątrzwspólnotowej dostawie potrzebne są dokumenty przewozowe od przewoźnika potwierdzające dostarczenie towaru do państwa UE oraz specyfikacja ładunku. Przy transporcie własnym dodatkowo wymagany jest dokument z danymi stron, adresem dostawy, opisem towaru, potwierdzeniem odbioru i numerem pojazdu. W przypadku braku głównych dokumentów można użyć dokumentów pomocniczych jak korespondencja, ubezpieczenie, potwierdzenie zapłaty.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 42 ust. 3",
+        "quote": "Dowodami są dokumenty przewozowe otrzymane od przewoźnika oraz specyfikacja poszczególnych sztuk ładunku"
+      }
+    ],
+    "conditions": [
+      "dokumenty muszą potwierdzać dostarczenie do państwa UE",
+      "posiadanie przed terminem składania deklaracji"
+    ],
+    "exceptions": [
+      "możliwość użycia dokumentów pomocniczych gdy główne nie potwierdzają jednoznacznie dostawy"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dokumentacja_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-43-wynajem-mieszkania",
+    "question_intent": "Czy wynajem mieszkania jest zwolniony z VAT?",
+    "question_patterns": [
+      "Czy wynajem mieszkania jest zwolniony z VAT?",
+      "Czy najem lokalu mieszkalnego podlega VAT?",
+      "Czy wynajmowanie nieruchomości mieszkalnej jest opodatkowane VAT?"
+    ],
+    "answer": "Wynajem mieszkania jest zwolniony z VAT. Zwolnienie obejmuje usługi wynajmowania lub wydzierżawiania nieruchomości o charakterze mieszkalnym lub części nieruchomości, na własny rachunek, wyłącznie na cele mieszkaniowe. Zwolnienie nie ma jednak zastosowania do usług wymienionych w pozycji 47 załącznika nr 3 do ustawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 43 ust. 1 pkt 36",
+        "quote": "usługi w zakresie wynajmowania lub wydzierżawiania nieruchomości o charakterze mieszkalnym lub części nieruchomości, na własny rachunek, wyłącznie na cele mieszkaniowe"
+      }
+    ],
+    "conditions": [
+      "Nieruchomość musi mieć charakter mieszkalny",
+      "Wynajem musi być na własny rachunek",
+      "Wynajem musi być wyłącznie na cele mieszkaniowe"
+    ],
+    "exceptions": [
+      "Nie dotyczy usług wymienionych w poz. 47 załącznika nr 3 do ustawy"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "wynajem nieruchomości",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-43-uslugi-medyczne",
+    "question_intent": "Czy usługi medyczne są zwolnione z VAT?",
+    "question_patterns": [
+      "Czy usługi medyczne są zwolnione z VAT?",
+      "Czy opieka medyczna podlega VAT?",
+      "Czy lekarz musi naliczać VAT od swoich usług?"
+    ],
+    "answer": "Usługi medyczne są zwolnione z VAT. Zwolnienie obejmuje usługi w zakresie opieki medycznej służące profilaktyce, zachowaniu, ratowaniu, przywracaniu i poprawie zdrowia oraz dostawę towarów ściśle z tymi usługami związane. Dotyczy to usług wykonywanych przez podmioty lecznicze oraz usług świadczonych przez lekarzy, lekarzy dentystów, pielęgniarki, położne i psychologów w ramach wykonywania zawodu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 43 ust. 1 pkt 18 i 19",
+        "quote": "usługi w zakresie opieki medycznej, służące profilaktyce, zachowaniu, ratowaniu, przywracaniu i poprawie zdrowia"
+      }
+    ],
+    "conditions": [
+      "Usługi muszą służyć profilaktyce, zachowaniu, ratowaniu, przywracaniu i poprawie zdrowia",
+      "Dla pkt 18: wykonywanie w ramach działalności leczniczej przez podmioty lecznicze",
+      "Dla pkt 19: świadczenie w ramach wykonywania zawodów medycznych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "usługi medyczne",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-5-sprzedaz-internetowa-vat",
+    "question_intent": "Czy sprzedaż przez internet podlega VAT?",
+    "question_patterns": [
+      "Czy sprzedaż przez internet podlega VAT?",
+      "Czy e-commerce jest opodatkowany VAT?",
+      "Czy handel internetowy to czynność opodatkowana VAT?"
+    ],
+    "answer": "Sprzedaż przez internet podlega VAT, jeśli stanowi odpłatną dostawę towarów lub odpłatne świadczenie usług na terytorium kraju. Zgodnie z przepisami VAT, opodatkowaniu podlegają takie czynności niezależnie od sposobu ich wykonania - także przez internet.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 5 ust. 1 pkt 1",
+        "quote": "odpłatna dostawa towarów i odpłatne świadczenie usług na terytorium kraju"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 5 ust. 2",
+        "quote": "Czynności określone w ust. 1 podlegają opodatkowaniu niezależnie od tego, czy zostały wykonane z zachowaniem warunków oraz form określonych przepisami prawa"
+      }
+    ],
+    "conditions": [
+      "czynność musi być odpłatna",
+      "czynność musi odbywać się na terytorium kraju",
+      "musi być to dostawa towarów lub świadczenie usług"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "zakres_opodatkowania_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-7-darowizna-towarow",
+    "question_intent": "Jak rozliczyć VAT od darowizny towaru?",
+    "question_patterns": [
+      "Jak rozliczyć VAT od darowizny towaru?",
+      "Czy darowizna towarów podlega VAT?",
+      "VAT od przekazania towarów nieodpłatnie",
+      "Opodatkowanie VAT darowizn towarów"
+    ],
+    "answer": "Darowizny towarów podlegają VAT jako dostawa towarów, jeżeli podatnikowi przysługiwało prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego z tytułu nabycia, importu lub wytworzenia tych towarów. Dotyczy to zarówno przekazania towarów na cele osobiste podatnika, pracowników czy wspólników, jak i wszelkich innych darowizn. VAT należy naliczyć od wartości przekazywanych towarów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 7 ust. 2",
+        "quote": "Przez dostawę towarów rozumie się również przekazanie nieodpłatnie przez podatnika towarów należących do jego przedsiębiorstwa, w szczególności wszelkie inne darowizny – jeżeli podatnikowi przysługiwało prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego"
+      }
+    ],
+    "conditions": [
+      "podatnikowi przysługiwało prawo do obniżenia kwoty podatku należnego o kwotę podatku naliczonego z tytułu nabycia, importu lub wytworzenia tych towarów"
+    ],
+    "exceptions": [
+      "prezenty o małej wartości przekazywane na cele związane z działalnością gospodarczą",
+      "próbki przekazywane na cele związane z działalnością gospodarczą"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dostawa_towarow",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-7-probki-towarow",
+    "question_intent": "Czy muszę naliczać VAT od próbek towaru?",
+    "question_patterns": [
+      "Czy muszę naliczać VAT od próbek towaru?",
+      "VAT od próbek towarów",
+      "Opodatkowanie VAT próbek promocyjnych",
+      "Czy próbki towaru podlegają VAT?"
+    ],
+    "answer": "Próbki towaru nie podlegają VAT, jeżeli ich przekazanie następuje na cele związane z działalnością gospodarczą podatnika. Próbka musi być identyfikowalna jako próbka, pozwalać na ocenę cech towaru i służyć promocji towaru, a nie zasadniczo zaspokajać potrzeb odbiorcy końcowego (chyba że jest to nieodłączny element promocji).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 7 ust. 3",
+        "quote": "Przepisu ust. 2 nie stosuje się do przekazywanych próbek, jeżeli przekazanie to następuje na cele związane z działalnością gospodarczą podatnika"
+      }
+    ],
+    "conditions": [
+      "przekazanie próbek następuje na cele związane z działalnością gospodarczą podatnika",
+      "próbka jest identyfikowalna jako próbka",
+      "próbka pozwala na ocenę cech i właściwości towaru w jego końcowej postaci",
+      "przekazanie ma na celu promocję towaru",
+      "nie służy zasadniczo zaspokojeniu potrzeb odbiorcy końcowego"
+    ],
+    "exceptions": [
+      "zaspokojenie potrzeb odbiorcy jest nieodłącznym elementem promocji i ma skłaniać do zakupu promowanego towaru"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dostawa_towarow",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-17-import-uslug-ue",
+    "question_intent": "Jak rozliczyć import usług z UE?",
+    "question_patterns": [
+      "jak rozliczyć import usług z UE",
+      "rozliczenie VAT od usług z Unii Europejskiej",
+      "mechanizm odwróconego obciążenia dla usług z UE"
+    ],
+    "answer": "Jeśli nabywasz usługi od podatnika z UE, który nie ma siedziby na terytorium Polski, to Ty stajesz się podatnikiem VAT od tych usług (mechanizm odwróconego obciążenia). Usługodawca z UE nie rozlicza polskiego VAT. Ty musisz naliczyć VAT należny i jednocześnie możesz odliczyć VAT naliczony, pod warunkiem że usługi wykorzystujesz do czynności opodatkowanych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 17 ust. 1 pkt 4",
+        "quote": "nabywające usługi, jeżeli łącznie spełnione są następujące warunki: usługodawcą jest podatnik nieposiadający siedziby działalności gospodarczej oraz stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju"
+      }
+    ],
+    "conditions": [
+      "usługodawca nie ma siedziby ani stałego miejsca prowadzenia działalności w Polsce",
+      "usługobiorca jest podatnikiem zarejestrowanym w Polsce"
+    ],
+    "exceptions": [
+      "gdy usługodawca z UE jest zarejestrowany do VAT w Polsce"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "mechanizm_odwroconego_obciazenia",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-17-podatnicy-import",
+    "question_intent": "Kto jest podatnikiem VAT przy imporcie towarów",
+    "question_patterns": [
+      "kto jest podatnikiem przy imporcie",
+      "kto płaci VAT od importu",
+      "podatnik VAT import towarów"
+    ],
+    "answer": "Podatnikami VAT przy imporcie są osoby prawne, jednostki organizacyjne niemające osobowości prawnej oraz osoby fizyczne, na których ciąży obowiązek uiszczenia cła - również gdy towar jest zwolniony od cła, cło zostało zawieszone lub zastosowano preferencyjną stawkę celną. Dotyczy to także osób uprawnionych do procedury uszlachetniania czynnego lub odprawy czasowej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 17 ust. 1 pkt 1",
+        "quote": "na których ciąży obowiązek uiszczenia cła, również w przypadku, gdy na podstawie przepisów celnych importowany towar jest zwolniony od cła"
+      }
+    ],
+    "conditions": [
+      "obowiązek uiszczenia cła",
+      "import towaru na terytorium Polski"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "import_towarow",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-30b-podstawa-opodatkowania-import",
+    "question_intent": "Jaka jest podstawa opodatkowania VAT przy imporcie towarów",
+    "question_patterns": [
+      "podstawa opodatkowania import",
+      "jak obliczyć VAT od importu",
+      "wartość celna plus cło VAT"
+    ],
+    "answer": "Podstawą opodatkowania VAT z tytułu importu towarów jest wartość celna powiększona o należne cło. Gdy importowane towary są opodatkowane podatkiem akcyzowym, podstawę stanowi wartość celna plus cło plus akcyza. Do podstawy dolicza się również koszty dodatkowe jak prowizja, opakowanie, transport i ubezpieczenie do pierwszego miejsca przeznaczenia w Polsce.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 30b ust. 1",
+        "quote": "Podstawą opodatkowania z tytułu importu towarów jest wartość celna powiększona o należne cło"
+      }
+    ],
+    "conditions": [
+      "import towarów",
+      "ustalona wartość celna"
+    ],
+    "exceptions": [
+      "różne zasady dla uszlachetniania biernego",
+      "inne zasady dla odprawy czasowej"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "import_towarow",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-135-transakcja-trojstronna",
+    "question_intent": "Co to jest transakcja trójstronna w VAT?",
+    "question_patterns": [
+      "Co to jest transakcja trójstronna w VAT?",
+      "Jak definiuje się transakcję trójstronną wewnątrzwspólnotową?",
+      "Czym charakteryzuje się transakcja trójstronna w podatku VAT?"
+    ],
+    "answer": "Wewnątrzwspólnotowa transakcja trójstronna to transakcja, w której trzech podatników VAT z trzech różnych państw członkowskich uczestniczy w dostawie towaru. Pierwszy podatnik wydaje towar bezpośrednio ostatniemu w kolejności, ale dostawa jest realizowana między pierwszym i drugim oraz między drugim i ostatnim podatnikiem. Dodatkowo przedmiot dostawy musi być wysyłany lub transportowany z terytorium jednego państwa członkowskiego na terytorium innego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 135 ust. 1 pkt 2",
+        "quote": "trzech podatników VAT zidentyfikowanych na potrzeby transakcji wewnątrzwspólnotowych w trzech różnych państwach członkowskich uczestniczy w dostawie towaru"
+      }
+    ],
+    "conditions": [
+      "Trzech podatników VAT z trzech różnych państw członkowskich",
+      "Pierwszy wydaje towar bezpośrednio ostatniemu w kolejności",
+      "Dostawa jest dokonana między pierwszym i drugim oraz drugim i ostatnim",
+      "Przedmiot dostawy wysyłany lub transportowany między państwami członkowskimi"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "transakcje_wewnatrzwspolnotowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-99-jpk-import-uslug",
+    "question_intent": "Jak raportować import usług w Jednolitym Pliku Kontrolnym VAT (JPK_VAT)?",
+    "question_patterns": [
+      "Jak raportować import usług w JPK?",
+      "Jak wykazać import usług w JPK_VAT?",
+      "Jak rozliczać import usług w JPK?"
+    ],
+    "answer": "Przepisy art. 99 nie zawierają szczegółowych informacji o raportowaniu importu usług w JPK_VAT. Artykuł 99 ust. 11c wskazuje jedynie, że deklaracje podatkowe są składane zgodnie z wzorem dokumentu elektronicznego, który obejmuje deklarację i ewidencję. Szczegółowy zakres danych w deklaracjach podatkowych określa minister w drodze rozporządzenia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 99 ust. 11c",
+        "quote": "deklaracje podatkowe są składane zgodnie z wzorem dokumentu elektronicznego który obejmuje deklarację i ewidencję"
+      }
+    ],
+    "conditions": [
+      "składanie deklaracji w formie elektronicznej"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "JPK_VAT",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106i-faktura-zaliczkowa-jpk",
+    "question_intent": "Jak oznaczyć fakturę zaliczkową w JPK VAT",
+    "question_patterns": [
+      "Jak oznaczyć fakturę zaliczkową w JPK?",
+      "Oznaczenie faktury zaliczkowej w JPK VAT",
+      "Faktura za zaliczkę w JPK - jak oznaczyć?"
+    ],
+    "answer": "Artykuł 106i nie zawiera przepisów dotyczących oznaczeń faktur zaliczkowych w JPK VAT. Ustawa reguluje jedynie terminy wystawiania faktur, w tym faktur wystawianych po otrzymaniu zaliczki przed dokonaniem dostawy lub świadczeniem usługi.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106i ust. 2",
+        "quote": "Jeżeli przed dokonaniem dostawy towaru lub wykonaniem usługi otrzymano całość lub część zapłaty, o której mowa w art. 106b ust. 1 pkt 4, fakturę wystawia się nie później niż 15. dnia miesiąca następującego po miesiącu, w którym otrzymano całość lub część zapłaty od nabywcy."
+      }
+    ],
+    "conditions": [
+      "otrzymanie całości lub części zapłaty przed dokonaniem dostawy towaru lub wykonaniem usługi"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-89a-ulga-zle-dlugi-jpk",
+    "question_intent": "Jak wykazać ulgę na złe długi w JPK_VAT",
+    "question_patterns": [
+      "Jak wykazać ulgę na złe długi w JPK?",
+      "Gdzie w JPK VAT wpisać korektę na złe długi?",
+      "Jak oznaczyć ulgę na złe długi w deklaracji VAT?"
+    ],
+    "answer": "Tekst artykułu 89a nie określa sposobu wykazywania ulgi na złe długi w JPK_VAT. Przepis wskazuje jedynie, że wierzyciel informuje o korekcie w deklaracji podatkowej, w której dokonuje tej korekty, ale nie precyzuje konkretnego miejsca lub oznaczenia w strukturze JPK.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 89a ust. 5",
+        "quote": "Wierzyciel informuje o korekcie, o której mowa w ust. 1, właściwego dla niego naczelnika urzędu skarbowego w deklaracji podatkowej, w której dokonuje tej korekty."
+      }
+    ],
+    "conditions": [
+      "Nieściągalność wierzytelności musi być uprawdopodobniona",
+      "Wierzytelność nie została uregulowana lub zbyta w ciągu 90 dni od upływu terminu płatności",
+      "Wierzyciel musi być podatnikiem VAT czynnym na dzień przed złożeniem deklaracji z korektą"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "ulga_na_zle_dlugi",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-109-jpk-zwolnienie",
+    "question_intent": "Czy podatnik zwolniony z VAT na podstawie art. 113 musi wysyłać JPK_VAT?",
+    "question_patterns": [
+      "Czy zwolniony z VAT musi wysyłać JPK?",
+      "JPK dla podatników zwolnionych z VAT",
+      "Obowiązek przesyłania JPK przy zwolnieniu z VAT"
+    ],
+    "answer": "Podatnicy zwolnieni z VAT na podstawie art. 113 ust. 1 i 9 oraz art. 113a ust. 1 NIE mają obowiązku przesyłania JPK_VAT. Art. 109 ust. 3 wyraźnie wyklucza z obowiązku prowadzenia szczegółowej ewidencji (podstawy JPK) podatników, których sprzedaż jest zwolniona od podatku na podstawie tych przepisów. Zamiast tego prowadzą tylko uproszczoną ewidencję sprzedaży za dany dzień.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 109 ust. 3",
+        "quote": "Podatnicy, z wyjątkiem podatników wykonujących wyłącznie czynności zwolnione od podatku na podstawie art. 43 ust. 1 lub przepisów wydanych na podstawie art. 82 ust. 3 oraz podatników, u których sprzedaż jest zwolniona od podatku na podstawie art. 113 ust. 1 i 9 albo art. 113a ust. 1, są obowiązani prowadzić ewidencję"
+      }
+    ],
+    "conditions": [
+      "Zwolnienie z VAT na podstawie art. 113 ust. 1 (limit obrotu 240 000 zł)",
+      "Zwolnienie z VAT na podstawie art. 113 ust. 9 (rozpoczęcie działalności)",
+      "Zwolnienie z VAT na podstawie art. 113a ust. 1"
+    ],
+    "exceptions": [
+      "Obowiązek prowadzenia uproszczonej ewidencji sprzedaży za dany dzień zgodnie z art. 109 ust. 1"
+    ],
+    "taxpayer_type": [
+      "vat_zwolniony"
+    ],
+    "topic": "ewidencja_jpk",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-100-vat-ue-termin",
+    "question_intent": "Do kiedy składam VAT-UE (informację podsumowującą)?",
+    "question_patterns": [
+      "Do kiedy składam VAT-UE?",
+      "Jaki jest termin składania VAT-UE?",
+      "Kiedy złożyć informację podsumowującą?",
+      "Termin na VAT-UE"
+    ],
+    "answer": "Informacje podsumowujące (VAT-UE) składa się za okresy miesięczne w terminie do 25. dnia miesiąca następującego po miesiącu, w którym powstał obowiązek podatkowy z tytułu transakcji lub dokonano przemieszczenia towarów. Informacje składa się za pomocą środków komunikacji elektronicznej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 100 ust. 3",
+        "quote": "Informacje podsumowujące składa się za okresy miesięczne, za pomocą środków komunikacji elektronicznej, w terminie do 25. dnia miesiąca następującego po miesiącu"
+      }
+    ],
+    "conditions": [
+      "dotyczy podatników zarejestrowanych jako podatnicy VAT UE",
+      "składa się za okresy miesięczne",
+      "składa się elektronicznie"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "informacje_podsumowujace",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-87-terminy-zwrot-podstawowy",
+    "question_intent": "Jaki jest podstawowy termin na zwrot różnicy VAT?",
+    "question_patterns": [
+      "Kiedy jest termin na zwrot VAT?",
+      "W jakim terminie urząd zwraca VAT?",
+      "Ile trwa zwrot różnicy VAT?"
+    ],
+    "answer": "Podstawowy termin na zwrot różnicy VAT to 40 dni od dnia złożenia rozliczenia przez podatnika. Zwrot następuje na rachunek bankowy podatnika w banku mającym siedzibę na terytorium kraju lub w spółdzielczej kasie oszczędnościowo-kredytowej. Urząd skarbowy może przedłużyć ten termin do czasu zakończenia weryfikacji rozliczenia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 87 ust. 2",
+        "quote": "Zwrot różnicy podatku następuje w terminie 40 dni od dnia złożenia rozliczenia przez podatnika na rachunek bankowy podatnika"
+      }
+    ],
+    "conditions": [
+      "złożenie rozliczenia przez podatnika",
+      "posiadanie rachunku bankowego w banku na terytorium kraju lub w SKOK"
+    ],
+    "exceptions": [
+      "możliwość przedłużenia terminu w przypadku konieczności weryfikacji"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "zwrot_vat",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-97-termin-rejestracji-vat-ue",
+    "question_intent": "Ile czasu mam na rejestrację do VAT-UE?",
+    "question_patterns": [
+      "Ile czasu mam na rejestrację do VAT-UE?",
+      "Jaki jest termin rejestracji jako podatnik VAT UE?",
+      "Kiedy muszę się zarejestrować do VAT-UE przed pierwszą transakcją?"
+    ],
+    "answer": "Musisz zawiadomić naczelnika urzędu skarbowego o zamiarze rozpoczęcia wewnątrzwspólnotowych dostaw lub nabyć PRZED dniem dokonania pierwszej takiej transakcji. Ustawa nie określa konkretnego terminu z wyprzedzeniem - wymagane jest tylko, żeby zawiadomienie nastąpiło przed pierwszą czynnością objętą obowiązkiem rejestracji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 97 ust. 1",
+        "quote": "są obowiązani przed dniem dokonania pierwszej wewnątrzwspólnotowej dostawy lub pierwszego wewnątrzwspólnotowego nabycia zawiadomić naczelnika urzędu skarbowego"
+      }
+    ],
+    "conditions": [
+      "przed pierwszą wewnątrzwspólnotową dostawą",
+      "przed pierwszym wewnątrzwspólnotowym nabyciem",
+      "dotyczy podatników już czynnych VAT lub przekraczających próg nabyć"
+    ],
+    "exceptions": [
+      "nie dotyczy podatników, którzy ustanowili przedstawiciela podatkowego"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "rejestracja_vat_ue",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-112b-kara-za-spoznienie-deklaracji",
+    "question_intent": "Jaka jest kara za spóźnienie z deklaracją VAT?",
+    "question_patterns": [
+      "Jaka jest kara za spóźnienie z deklaracją VAT?",
+      "Ile wynosi kara za nie złożenie deklaracji VAT?",
+      "Jakie konsekwencje za niezłożenie deklaracji VAT w terminie?"
+    ],
+    "answer": "Za nie złożenie deklaracji podatkowej VAT i niewpłacenie zobowiązania podatkowego, naczelnik urzędu ustala dodatkowe zobowiązanie podatkowe do 30% kwoty zaniżonego zobowiązania. Jeśli podatnik po kontroli złoży deklarację i najpóźniej w tym dniu wpłaci należny podatek, kara obniża się do 20%.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 112b ust. 1 pkt 2",
+        "quote": "nie złożył deklaracji podatkowej oraz nie wpłacił kwoty zobowiązania podatkowego – naczelnik urzędu skarbowego określa wysokość tych kwot oraz ustala dodatkowe zobowiązanie podatkowe w wysokości do 30%"
+      }
+    ],
+    "conditions": [
+      "nie złożono deklaracji podatkowej",
+      "nie wpłacono zobowiązania podatkowego"
+    ],
+    "exceptions": [
+      "złożenie deklaracji przed kontrolą wraz z wpłatą i odsetkami za zwłokę"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "obowiązki_deklaracyjne",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-112c-sankcja-100-procent",
+    "question_intent": "Co to jest sankcja 100% w VAT?",
+    "question_patterns": [
+      "Co to jest sankcja 100% w VAT?",
+      "Kiedy grozi sankcja 100% VAT?",
+      "Za jakie faktury można dostać sankcję 100%?",
+      "Jaka jest najwyższa sankcja VAT za faktury?"
+    ],
+    "answer": "Sankcja 100% to dodatkowe zobowiązanie podatkowe w pełnej wysokości podatku naliczonego z niewłaściwych faktur. Stosuje się ją gdy nieprawidłowość wynikała z celowego działania podatnika lub kontrahenta, o którym podatnik wiedział. Dotyczy faktur od podmiotów nieistniejących, potwierdzających niewykonane czynności, zawierających kwoty niezgodne z rzeczywistością lub dokumentujących czynności nieważne.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 112c ust. 1",
+        "quote": "wysokość dodatkowego zobowiązania podatkowego w części dotyczącej podatku naliczonego wynikającego z powyższej faktury wynosi 100%"
+      }
+    ],
+    "conditions": [
+      "celowe działanie podatnika lub kontrahenta ze świadomością podatnika",
+      "faktura od podmiotu nieistniejącego",
+      "faktura potwierdzająca czynności niewykonane",
+      "kwoty w fakturze niezgodne z rzeczywistością",
+      "czynności nieważne według Kodeksu cywilnego"
+    ],
+    "exceptions": [
+      "osoby fizyczne ponoszące odpowiedzialność za wykroczenie lub przestępstwo skarbowe"
+    ],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "sankcje_podatkowe_vat",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-108-obowiazek-platnosc-bez-vat",
+    "question_intent": "Co grozi za wystawianie faktur bez bycia VATowcem?",
+    "question_patterns": [
+      "Co grozi za wystawianie faktur bez bycia VATowcem?",
+      "Jakie konsekwencje ma wystawienie faktury z VATem bez bycia podatnikiem VAT?",
+      "Czy mogę wystawić fakturę z podatkiem nie będąc czynnym VATowcem?",
+      "Co się dzieje gdy wystawi się fakturę z VATem bez rejestracji VAT?"
+    ],
+    "answer": "Jeśli wystawisz fakturę z podatkiem VAT nie będąc podatnikiem VAT, musisz ten podatek zapłacić do urzędu skarbowego. Dotyczy to każdej osoby prawnej, jednostki organizacyjnej niemającej osobowości prawnej lub osoby fizycznej, która wystawi fakturę z wykazaną kwotą podatku. To oznacza, że stajesz się zobowiązany do zapłaty tego VAT-u, mimo że nie jesteś zarejestrowanym podatnikiem.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 108 ust. 1",
+        "quote": "W przypadku gdy osoba prawna, jednostka organizacyjna niemająca osobowości prawnej lub osoba fizyczna wystawi fakturę, w której wykaże kwotę podatku, jest obowiązana do jego zapłaty."
+      }
+    ],
+    "conditions": [
+      "wystawienie faktury z wykazaną kwotą podatku VAT"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_zwolniony"
+    ],
+    "topic": "wystawianie_faktur",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106h-faktura-do-paragonu-2",
+    "question_intent": "Kiedy mogę wystawić fakturę do paragonu fiskalnego?",
+    "question_patterns": [
+      "Kiedy mogę wystawić fakturę do paragonu?",
+      "Czy można wystawić fakturę na podstawie paragonu?",
+      "Jak wystawić fakturę do sprzedaży z kasy fiskalnej?",
+      "Faktura na podstawie paragonu - kiedy możliwa?"
+    ],
+    "answer": "Fakturę można wystawić do sprzedaży zaewidencjonowanej przy zastosowaniu kasy rejestrującej. W takim przypadku w dokumentacji należy zostawić numer dokumentu oraz numer unikatowy kasy rejestrującej zawarte na paragonie fiskalnym lub sam paragon fiskalny w postaci papierowej. Przepis ten nie dotyczy przypadków, gdy faktura jest wystawiana bezpośrednio przy zastosowaniu kasy rejestrującej i wartości są zaewidencjonowane w raporcie fiskalnym dobowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106h ust. 1",
+        "quote": "W przypadku gdy faktura dotyczy sprzedaży zaewidencjonowanej przy zastosowaniu kasy rejestrującej, podatnik wraz z danymi identyfikującymi tę fakturę zostawia w dokumentacji"
+      }
+    ],
+    "conditions": [
+      "sprzedaż musi być zaewidencjonowana przy zastosowaniu kasy rejestrującej",
+      "konieczność pozostawienia numeru dokumentu i numeru unikatowego kasy lub paragonu papierowego w dokumentacji"
+    ],
+    "exceptions": [
+      "nie dotyczy sprzedaży dokumentowanej fakturą wystawianą przy zastosowaniu kasy rejestrującej, gdy wartość i kwota podatku są w raporcie fiskalnym dobowym"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dokumentacja_vat",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  }
+]

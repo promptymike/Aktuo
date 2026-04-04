@@ -15,6 +15,7 @@ import time
 from pathlib import Path
 
 import anthropic
+from env_utils import get_env_value
 
 MODEL = "claude-sonnet-4-20250514"
 BATCH_SIZE = 20  # pytań na jedno wywołanie
@@ -123,7 +124,7 @@ def main():
     if "--output" in sys.argv:
         output_path = sys.argv[sys.argv.index("--output") + 1]
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = get_env_value("ANTHROPIC_API_KEY")
     if not api_key:
         print("ERROR: Ustaw ANTHROPIC_API_KEY")
         sys.exit(1)

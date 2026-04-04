@@ -2,6 +2,20 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+load_dotenv(PROJECT_ROOT / ".env", override=False, encoding="utf-8")
+
+PLACEHOLDER_VALUES = {
+    "",
+    "your_anthropic_api_key",
+    "sk-ant-...",
+    "sk-ant-TwojKlucz",
+    "sk-ant-TwójKlucz",
+}
 
 
 class MissingEnvironmentError(ValueError):
@@ -16,12 +30,23 @@ class Settings:
     anthropic_api_key: str
 
 
+def _is_usable(value: str | None) -> bool:
+    return bool(value and value.strip() and value.strip() not in PLACEHOLDER_VALUES)
+
+
+def _get_env_value(name: str) -> str | None:
+    value = os.getenv(name)
+    if _is_usable(value):
+        return value
+    return value
+
+
 def get_settings() -> Settings:
     required = {
-        "AKTUO_APP_NAME": os.getenv("AKTUO_APP_NAME"),
-        "AKTUO_SYSTEM_PROMPT": os.getenv("AKTUO_SYSTEM_PROMPT"),
-        "AKTUO_LAW_KNOWLEDGE_PATH": os.getenv("AKTUO_LAW_KNOWLEDGE_PATH"),
-        "ANTHROPIC_API_KEY": os.getenv("ANTHROPIC_API_KEY"),
+        "AKTUO_APP_NAME": _get_env_value("AKTUO_APP_NAME"),
+        "AKTUO_SYSTEM_PROMPT": _get_env_value("AKTUO_SYSTEM_PROMPT"),
+        "AKTUO_LAW_KNOWLEDGE_PATH": _get_env_value("AKTUO_LAW_KNOWLEDGE_PATH"),
+        "ANTHROPIC_API_KEY": _get_env_value("ANTHROPIC_API_KEY"),
     }
     missing = [name for name, value in required.items() if not value]
     if missing:

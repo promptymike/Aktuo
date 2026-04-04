@@ -18,8 +18,9 @@ import time
 from pathlib import Path
 
 import anthropic
+from env_utils import get_env_value
 
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-haiku-3-5-20251001"
 BATCH_SIZE = 5  # unitów na wywołanie — mniejsze batche = lepsza jakość audytu
 
 SYSTEM_PROMPT = """Jesteś audytorem prawnym. Weryfikujesz answer units dla systemu AI dla księgowych.
@@ -141,7 +142,7 @@ def main():
     if "--output" in sys.argv:
         output_path = sys.argv[sys.argv.index("--output") + 1]
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = get_env_value("ANTHROPIC_API_KEY")
     if not api_key:
         print("ERROR: Ustaw ANTHROPIC_API_KEY")
         sys.exit(1)

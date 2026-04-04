@@ -15,8 +15,12 @@ import time
 from pathlib import Path
 
 import anthropic
+from env_utils import get_env_value
 
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-haiku-3-5-20251001"
+REQUEST_TIMEOUT_SECONDS = 180.0
+TIMEOUT_RETRIES = 3
+CHECKPOINT_VERSION = 2
 
 # System prompt — cachowany, identyczny dla każdego wywołania
 SYSTEM_PROMPT = """Jesteś ekspertem od polskiego prawa podatkowego. Generujesz ANSWER UNITS dla systemu RAG.
@@ -82,7 +86,6 @@ def generate_units_for_group(
     article_text: str,
 ) -> tuple[list[dict], dict]:
     """Generuje answer units dla grupy pytań z tym samym zestawem artykułów."""
-
     questions_formatted = "\n".join(
         f"- {q['question']}" for q in questions
     )
@@ -135,7 +138,7 @@ Wygeneruj answer units. WYŁĄCZNIE JSON.""",
     return units, cache_info
 
 
-def group_by_articles(matches: list[dict]) -> dict:
+def group_by_articles(matches: list[dict]) -> dict[str, dict]:
     """Grupuje pytania po zestawie artykułów — minimalizuje wywołania API."""
     groups = {}
     for m in matches:
@@ -153,6 +156,110 @@ def group_by_articles(matches: list[dict]) -> dict:
     return groups
 
 
+def deduplicate_units(units: list[dict]) -> list[dict]:
+    """Deduplikuje unity po ID zachowując stabilne, unikalne identyfikatory."""
+    seen_ids: set[str] = set()
+    unique_units = []
+    for unit in units:
+        normalized = dict(unit)
+        uid = str(normalized.get("id", "") or "")
+        if uid:
+            original_uid = uid
+            suffix = 1
+            while uid in seen_ids:
+                suffix += 1
+                uid = f"{original_uid}-{suffix}"
+            normalized["id"] = uid
+            seen_ids.add(uid)
+        unique_units.append(normalized)
+    return unique_units
+
+
+def load_checkpoint(output_path: Path) -> tuple[list[dict], list[dict], float, set[str]]:
+    """Ładuje checkpoint, jeśli istnieje."""
+    if not output_path.exists():
+        return [], [], 0.0, set()
+
+    payload = json.loads(output_path.read_text(encoding="utf-8"))
+    units = payload.get("units", [])
+    errors = payload.get("errors", [])
+    metadata = payload.get("metadata", {})
+
+    if not isinstance(units, list) or not isinstance(errors, list) or not isinstance(metadata, dict):
+        raise ValueError(f"Nieprawidłowy checkpoint: {output_path}")
+
+    completed_groups = set(metadata.get("completed_group_keys", []))
+    total_cost = float(metadata.get("total_cost_usd", 0.0) or 0.0)
+    return units, errors, total_cost, completed_groups
+
+
+def save_checkpoint(
+    output_path: Path,
+    *,
+    units: list[dict],
+    errors: list[dict],
+    total_cost: float,
+    completed_group_keys: set[str],
+    total_groups: int,
+    processed_subbatches: int,
+    total_subbatches: int,
+    articles_metadata: dict,
+) -> int:
+    """Zapisuje checkpoint po każdej ukończonej grupie."""
+    unique_units = deduplicate_units(units)
+    payload = {
+        "metadata": {
+            "checkpoint_version": CHECKPOINT_VERSION,
+            "checkpoint_saved_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "completed_groups": len(completed_group_keys),
+            "total_groups": total_groups,
+            "processed_subbatches": processed_subbatches,
+            "total_subbatches": total_subbatches,
+            "total_units": len(unique_units),
+            "total_cost_usd": round(total_cost, 4),
+            "errors": len(errors),
+            "completed_group_keys": sorted(completed_group_keys),
+            "law": articles_metadata,
+        },
+        "units": unique_units,
+        "errors": errors,
+    }
+    output_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return len(unique_units)
+
+
+def format_elapsed(started_at: float) -> str:
+    elapsed = int(time.time() - started_at)
+    minutes, seconds = divmod(elapsed, 60)
+    hours, minutes = divmod(minutes, 60)
+    if hours:
+        return f"{hours}h {minutes:02d}m {seconds:02d}s"
+    return f"{minutes}m {seconds:02d}s"
+
+
+def generate_units_with_retry(
+    client: anthropic.Anthropic,
+    questions: list[dict],
+    article_text: str,
+) -> tuple[list[dict], dict]:
+    last_error: Exception | None = None
+    for attempt in range(1, TIMEOUT_RETRIES + 1):
+        try:
+            return generate_units_for_group(client, questions, article_text)
+        except anthropic.APITimeoutError as exc:
+            last_error = exc
+            print(
+                f"  TIMEOUT {attempt}/{TIMEOUT_RETRIES}: Claude nie odpowiedział w {REQUEST_TIMEOUT_SECONDS:.0f}s"
+            )
+            if attempt < TIMEOUT_RETRIES:
+                time.sleep(attempt)
+    assert last_error is not None
+    raise last_error
+
+
 def main():
     if len(sys.argv) < 3:
         print("Użycie: python generate_units.py articles.json matched.json [--output draft_units.json]")
@@ -163,8 +270,9 @@ def main():
     output_path = "draft_units.json"
     if "--output" in sys.argv:
         output_path = sys.argv[sys.argv.index("--output") + 1]
+    output_file = Path(output_path)
 
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = get_env_value("ANTHROPIC_API_KEY")
     if not api_key:
         print("ERROR: Ustaw ANTHROPIC_API_KEY")
         sys.exit(1)
@@ -177,31 +285,63 @@ def main():
 
     # Grupuj pytania po artykułach
     groups = group_by_articles(matches)
-    print(f"Pytań z dopasowaniem: {sum(len(g['questions']) for g in groups.values())}")
-    print(f"Grup artykułów: {len(groups)} (= tyle wywołań API)")
+    total_questions = sum(len(group["questions"]) for group in groups.values())
+    total_groups = len(groups)
+    total_subbatches = sum(max(1, (len(group["questions"]) + 9) // 10) for group in groups.values())
+    print(f"Pytań z dopasowaniem: {total_questions}")
+    print(f"Grup artykułów: {total_groups}")
+    print(f"Szacowana liczba wywołań API (sub-batche): {total_subbatches}")
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
 
-    all_units = []
-    total_cost = 0
-    errors = []
+    try:
+        all_units, errors, total_cost, completed_group_keys = load_checkpoint(output_file)
+    except ValueError as exc:
+        print(f"ERROR: {exc}")
+        sys.exit(1)
 
-    for i, (key, group) in enumerate(groups.items()):
+    if completed_group_keys:
+        print(
+            f"Resume z checkpointu: {len(completed_group_keys)}/{total_groups} grup, "
+            f"{len(all_units)} unitów, koszt ${total_cost:.4f}"
+        )
+    else:
+        print("Start od zera — brak checkpointu.")
+
+    processed_subbatches = sum(
+        max(1, (len(groups[group_key]["questions"]) + 9) // 10)
+        for group_key in completed_group_keys
+        if group_key in groups
+    )
+    started_at = time.time()
+
+    for i, (key, group) in enumerate(groups.items(), start=1):
+        if key in completed_group_keys:
+            print(
+                f"[{i}/{total_groups}] SKIP art. {', '.join(group['articles'])} "
+                f"(checkpoint, elapsed {format_elapsed(started_at)})"
+            )
+            continue
+
         article_nums = group["articles"]
         questions = group["questions"]
         article_text = get_article_text(articles, article_nums)
+        sub_batches = [questions[j:j + 10] for j in range(0, len(questions), 10)] or [questions]
 
-        print(f"\n[{i+1}/{len(groups)}] art. {', '.join(article_nums)} — {len(questions)} pytań ({len(article_text)} znaków)...")
-
-        # Jeśli tekst artykułu za długi, split na sub-batche pytań
-        if len(questions) > 10:
-            sub_batches = [questions[j:j+10] for j in range(0, len(questions), 10)]
-        else:
-            sub_batches = [questions]
+        print(
+            f"\n[{i}/{total_groups}] art. {', '.join(article_nums)} | "
+            f"pytania: {len(questions)} | sub-batche: {len(sub_batches)} | "
+            f"tekst: {len(article_text)} znaków | elapsed {format_elapsed(started_at)}"
+        )
 
         for sb_idx, sub_batch in enumerate(sub_batches):
             try:
-                units, cache_info = generate_units_for_group(client, sub_batch, article_text)
+                print(
+                    f"  -> Sub-batch {sb_idx + 1}/{len(sub_batches)} "
+                    f"(globalnie {processed_subbatches + 1}/{total_subbatches}) "
+                    f"| {len(sub_batch)} pytań"
+                )
+                units, cache_info = generate_units_with_retry(client, sub_batch, article_text)
 
                 # Dodaj source metadata do każdego unitu
                 for u in units:
@@ -216,46 +356,62 @@ def main():
                 batch_cost = input_cost + cached_cost + output_cost
                 total_cost += batch_cost
 
-                print(f"  {'Sub-batch '+str(sb_idx+1)+': ' if len(sub_batches)>1 else ''}{len(units)} units | ${batch_cost:.4f} | cache: {cache_info['cache_read']} tokens")
+                print(
+                    f"     OK: {len(units)} unitów | koszt ${batch_cost:.4f} | "
+                    f"cache: {cache_info['cache_read']} | razem ${total_cost:.4f}"
+                )
 
             except Exception as e:
-                print(f"  ERROR: {e}")
-                errors.append({"articles": article_nums, "error": str(e)[:200]})
+                print(f"     ERROR: {e}")
+                errors.append(
+                    {
+                        "articles": article_nums,
+                        "group_key": key,
+                        "sub_batch_index": sb_idx + 1,
+                        "questions": [q["question"] for q in sub_batch],
+                        "error": str(e)[:200],
+                    }
+                )
 
+            processed_subbatches += 1
             time.sleep(0.5)  # rate limiting
 
-    # Deduplikacja po ID
-    seen_ids = set()
-    unique_units = []
-    for u in all_units:
-        uid = u.get("id", "")
-        if uid and uid in seen_ids:
-            uid = uid + f"-{len(seen_ids)}"
-            u["id"] = uid
-        seen_ids.add(uid)
-        unique_units.append(u)
+        completed_group_keys.add(key)
+        total_units = save_checkpoint(
+            output_file,
+            units=all_units,
+            errors=errors,
+            total_cost=total_cost,
+            completed_group_keys=completed_group_keys,
+            total_groups=total_groups,
+            processed_subbatches=processed_subbatches,
+            total_subbatches=total_subbatches,
+            articles_metadata=articles_data["metadata"],
+        )
+        print(
+            f"  CHECKPOINT: grupy {len(completed_group_keys)}/{total_groups} | "
+            f"unity {total_units} | błędy {len(errors)} | "
+            f"elapsed {format_elapsed(started_at)} | zapisano {output_file}"
+        )
 
-    output = {
-        "metadata": {
-            "total_units": len(unique_units),
-            "total_cost_usd": round(total_cost, 4),
-            "errors": len(errors),
-            "law": articles_data["metadata"],
-        },
-        "units": unique_units,
-        "errors": errors,
-    }
-
-    Path(output_path).write_text(
-        json.dumps(output, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+    unique_units_count = save_checkpoint(
+        output_file,
+        units=all_units,
+        errors=errors,
+        total_cost=total_cost,
+        completed_group_keys=completed_group_keys,
+        total_groups=total_groups,
+        processed_subbatches=processed_subbatches,
+        total_subbatches=total_subbatches,
+        articles_metadata=articles_data["metadata"],
     )
 
     print(f"\n{'='*50}")
-    print(f"Wygenerowano {len(unique_units)} draft answer units")
+    print(f"Wygenerowano {unique_units_count} draft answer units")
     print(f"Błędy: {len(errors)}")
     print(f"Koszt: ${total_cost:.4f}")
-    print(f"Zapisano: {output_path}")
+    print(f"Czas:  {format_elapsed(started_at)}")
+    print(f"Zapisano: {output_file}")
 
 
 if __name__ == "__main__":

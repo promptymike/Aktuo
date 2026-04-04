@@ -17,7 +17,7 @@ class IngestedChunk:
 
 def load_seed_laws(seed_path: str | Path) -> list[dict[str, str]]:
     path = Path(seed_path)
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def split_text_into_chunks(text: str, max_chunk_length: int = 220) -> list[str]:

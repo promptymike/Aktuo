@@ -15,6 +15,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from env_utils import get_env_value
+
 
 def run_step(step_name: str, cmd: list[str]) -> bool:
     """Uruchamia krok pipeline'u."""
@@ -41,7 +43,8 @@ def main():
     pdf_path = sys.argv[1]
     questions_path = sys.argv[2]
 
-    if not os.environ.get("ANTHROPIC_API_KEY"):
+    api_key = get_env_value("ANTHROPIC_API_KEY")
+    if not api_key:
         print("ERROR: Ustaw ANTHROPIC_API_KEY")
         print("  export ANTHROPIC_API_KEY='sk-ant-...'")
         sys.exit(1)

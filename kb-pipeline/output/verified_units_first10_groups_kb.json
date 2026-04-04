@@ -1,0 +1,492 @@
+[
+  {
+    "id": "vat-106j-blad-nip",
+    "question_intent": "Co zrobić jak pomyliłem NIP na fakturze?",
+    "question_patterns": [
+      "Co zrobić jak pomyliłem NIP na fakturze?",
+      "Jak skorygować błędny NIP?",
+      "Czy błędny NIP wymaga korekty?"
+    ],
+    "answer": "Błędny NIP na fakturze to pomyłka wymagająca wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5. Faktura korygująca musi zawierać prawidłową treść korygowanych pozycji zgodnie z art. 106j ust. 2 pkt 6.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 5",
+        "quote": "stwierdzono pomyłkę w jakiejkolwiek pozycji faktury"
+      }
+    ],
+    "conditions": [
+      "stwierdzenie pomyłki w pozycji faktury"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-blad-data-sprzedazy",
+    "question_intent": "Czy faktura z błędną datą sprzedaży wymaga korekty?",
+    "question_patterns": [
+      "Czy faktura z błędną datą sprzedaży wymaga korekty?",
+      "Jak skorygować błędną datę sprzedaży?",
+      "Błędna data na fakturze - co robić?"
+    ],
+    "answer": "Tak, błędna data sprzedaży na fakturze to pomyłka wymagająca wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5. Faktura korygująca musi zawierać prawidłową treść korygowanych pozycji zgodnie z art. 106j ust. 2 pkt 6.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 5",
+        "quote": "stwierdzono pomyłkę w jakiejkolwiek pozycji faktury"
+      }
+    ],
+    "conditions": [
+      "stwierdzenie pomyłki w pozycji faktury"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-nota-vs-faktura",
+    "question_intent": "Kiedy wystawić notę korygującą a kiedy fakturę korygującą?",
+    "question_patterns": [
+      "Kiedy wystawić notę korygującą a kiedy fakturę korygującą?",
+      "Różnica między notą a fakturą korygującą",
+      "Czy wystawić notę czy fakturę korygującą?"
+    ],
+    "answer": "Artykuł 106j reguluje wyłącznie faktury korygujące, które wystawia się w przypadku zmiany podstawy opodatkowania, zwrotu towarów, zwrotu zapłaty lub pomyłki w fakturze. Przepis nie odnosi się do not korygujących, więc nie można na jego podstawie określić różnic między tymi dokumentami.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1",
+        "quote": "podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [
+      "wystąpienie przesłanek z art. 106j ust. 1"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-potwierdzenie-odbioru",
+    "question_intent": "Czy faktura korygująca wymaga potwierdzenia odbioru?",
+    "question_patterns": [
+      "Czy faktura korygująca wymaga potwierdzenia odbioru?",
+      "Czy muszę potwierdzić odbiór faktury korygującej?",
+      "Potwierdzenie odbioru korekty faktury"
+    ],
+    "answer": "Artykuł 106j nie zawiera przepisów dotyczących wymogu potwierdzenia odbioru faktury korygującej. Przepis reguluje jedynie treść i przesłanki wystawienia faktury korygującej, nie określając procedury jej doręczenia czy potwierdzenia odbioru.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j",
+        "quote": "podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-in-minus",
+    "question_intent": "Kiedy mogę ująć fakturę korygującą in minus?",
+    "question_patterns": [
+      "Kiedy mogę ująć fakturę korygującą in minus?",
+      "Korekta zmniejszająca VAT",
+      "Faktura korygująca na minus"
+    ],
+    "answer": "Fakturę korygującą zmniejszającą (in minus) można wystawić gdy zmienia się podstawa opodatkowania lub kwota podatku, dokonano zwrotu towarów, zwrotu zapłaty lub stwierdzono pomyłkę. Korekta musi zawierać kwotę korekty podstawy opodatkowania lub podatku z podziałem na stawki zgodnie z art. 106j ust. 2 pkt 5.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1",
+        "quote": "podstawa opodatkowania lub kwota podatku wskazana w fakturze uległa zmianie"
+      }
+    ],
+    "conditions": [
+      "wystąpienie przesłanek z art. 106j ust. 1",
+      "wpływ na zmianę podstawy opodatkowania lub kwoty podatku"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-in-plus",
+    "question_intent": "Jak ująć fakturę korygującą in plus?",
+    "question_patterns": [
+      "Jak ująć fakturę korygującą in plus?",
+      "Korekta zwiększająca VAT",
+      "Faktura korygująca na plus"
+    ],
+    "answer": "Fakturę korygującą zwiększającą (in plus) wystawia się gdy podstawa opodatkowania lub kwota podatku uległa zmianie lub stwierdzono pomyłkę. Korekta musi zawierać kwotę korekty podstawy opodatkowania lub podatku z podziałem na stawki zgodnie z art. 106j ust. 2 pkt 5.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 2 pkt 5",
+        "quote": "kwotę korekty podstawy opodatkowania lub kwotę korekty podatku należnego z podziałem na kwoty dotyczące poszczególnych stawek"
+      }
+    ],
+    "conditions": [
+      "wystąpienie przesłanek z art. 106j ust. 1",
+      "wpływ na zmianę podstawy opodatkowania lub kwoty podatku"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-deklaracji",
+    "question_intent": "Jak skorygować deklarację VAT za poprzedni miesiąc?",
+    "question_patterns": [
+      "Jak skorygować deklarację VAT za poprzedni miesiąc?",
+      "Korekta deklaracji VAT",
+      "Poprawka w deklaracji podatkowej"
+    ],
+    "answer": "Artykuł 106j reguluje wyłącznie faktury korygujące, nie zawiera przepisów dotyczących korekty deklaracji VAT. Przepis określa przesłanki i treść faktur korygujących, ale nie odnosi się do procedur korygowania deklaracji podatkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j",
+        "quote": "podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "deklaracje",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-do-zera",
+    "question_intent": "Co zrobić gdy wystawiłem korektę do zera?",
+    "question_patterns": [
+      "Co zrobić gdy wystawiłem korektę do zera?",
+      "Korekta faktury do kwoty zero",
+      "Faktura korygująca anulująca"
+    ],
+    "answer": "Artykuł 106j nie zawiera szczególnych przepisów dotyczących korekty do zera. Korekta zmniejszająca podstawę opodatkowania lub kwotę podatku do zera jest możliwa w przypadku wystąpienia przesłanek z art. 106j ust. 1, np. przy zwrocie towarów lub stwierdzeniu pomyłki. Musi zawierać kwotę korekty z podziałem na stawki.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 3",
+        "quote": "dokonano zwrotu podatnikowi towarów i opakowań"
+      }
+    ],
+    "conditions": [
+      "wystąpienie przesłanek z art. 106j ust. 1"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "fakturowanie",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-korekta-stawki-vat",
+    "question_intent": "Jak skorygować błędną stawkę VAT na fakturze?",
+    "question_patterns": [
+      "Jak skorygować błędną stawkę VAT na fakturze?",
+      "Co zrobić gdy pomylę się w stawce VAT na fakturze?",
+      "Korekta faktury przy błędnej stawce podatku"
+    ],
+    "answer": "Błędną stawkę VAT można skorygować wystawiając fakturę korygującą. Podstawą do jej wystawienia jest stwierdzenie pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca musi zawierać kwotę korekty podstawy opodatkowania lub kwotę korekty podatku należnego z podziałem na kwoty dotyczące poszczególnych stawek podatku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 1 pkt 5",
+        "quote": "stwierdzono pomyłkę w jakiejkolwiek pozycji faktury – podatnik wystawia fakturę korygującą"
+      }
+    ],
+    "conditions": [
+      "stwierdzenie pomyłki w pozycji faktury"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujace",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106j-zbiorcza-faktura-korygujaca",
+    "question_intent": "Jak zrobić zbiorczą fakturę korygującą?",
+    "question_patterns": [
+      "Jak zrobić zbiorczą fakturę korygującą?",
+      "Można wystawić jedną fakturę korygującą na wiele dostaw?",
+      "Korekta zbiorcza dla jednego odbiorcy"
+    ],
+    "answer": "Zbiorczą fakturę korygującą można wystawić tylko przy udzielaniu opustu lub obniżki ceny. Dotyczy ona dostaw towarów lub świadczenia usług na rzecz jednego odbiorcy w danym okresie. Musi zawierać wskazanie okresu, którego dotyczy opust lub obniżka, ale może nie zawierać nazwy towaru gdy korekta dotyczy wszystkich dostaw.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106j ust. 3",
+        "quote": "podatnik udziela opustu lub obniżki ceny, może wystawić fakturę korygującą dotyczącą dostaw towarów lub świadczenia usług na rzecz jednego odbiorcy w danym okresie"
+      }
+    ],
+    "conditions": [
+      "udzielenie opustu lub obniżki ceny",
+      "jeden odbiorca",
+      "określony okres"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury_korygujace",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-112-czas-przechowywania-faktur",
+    "question_intent": "Jak długo trzeba przechowywać faktury?",
+    "question_patterns": [
+      "Jak długo przechowywać faktury?",
+      "Ile czasu należy przechowywać dokumenty VAT?",
+      "Jaki jest termin przechowywania faktur?",
+      "Do kiedy przechowywać ewidencje VAT?"
+    ],
+    "answer": "Podatnicy muszą przechowywać wszystkie faktury (wystawione i otrzymane) do czasu upływu terminu przedawnienia zobowiązania podatkowego. Faktury należy przechowywać w podziale na okresy rozliczeniowe, w sposób zapewniający łatwe ich odszukanie oraz autentyczność, integralność i czytelność. Obowiązek dotyczy zarówno faktur wystawionych przez podatnika, jak i otrzymanych od kontrahentów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 112",
+        "quote": "Podatnicy są obowiązani przechowywać ewidencje prowadzone dla celów rozliczania podatku oraz wszystkie dokumenty, w szczególności faktury, związane z tym rozliczaniem do czasu upływu terminu przedawnienia zobowiązania podatkowego"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 112a ust. 1",
+        "quote": "Podatnicy przechowują wystawione przez siebie lub w swoim imieniu faktury oraz otrzymane faktury do czasu upływu terminu przedawnienia zobowiązania podatkowego"
+      }
+    ],
+    "conditions": [
+      "faktury muszą być przechowywane w podziale na okresy rozliczeniowe",
+      "sposób przechowywania musi zapewniać łatwe odszukanie faktur",
+      "musi być zachowana autentyczność pochodzenia, integralność treści i czytelność"
+    ],
+    "exceptions": [
+      "zastrzeżenia określone w art. 109b ust. 7, art. 130d ust. 3, art. 134 ust. 3, art. 138h ust. 3 i art. 138i ust. 8"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "dokumentacja_vat",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106i-faktura-przed-dostawa",
+    "question_intent": "Czy faktura wystawiona przed dostawą jest ważna?",
+    "question_patterns": [
+      "Czy faktura wystawiona przed dostawą jest ważna?",
+      "Czy można wystawić fakturę przed sprzedażą?",
+      "Czy faktura przed dokonaniem dostawy jest legalna?"
+    ],
+    "answer": "Faktura może być wystawiona przed dostawą, ale nie wcześniej niż na 60 dni przed dokonaniem dostawy towaru lub wykonaniem usługi. Można ją również wystawić przed otrzymaniem całości lub części zapłaty, ale również nie wcześniej niż 60 dni przed tym momentem.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106i ust. 7",
+        "quote": "Faktury nie mogą być wystawione wcześniej niż 60. dnia przed dokonaniem dostawy towaru lub wykonaniem usługi"
+      }
+    ],
+    "conditions": [
+      "maksymalnie 60 dni przed dostawą lub usługą",
+      "maksymalnie 60 dni przed otrzymaniem zapłaty"
+    ],
+    "exceptions": [
+      "nie dotyczy dostaw i usług z art. 19a ust. 3, 4 i ust. 5 pkt 4, jeśli faktura zawiera informację o okresie rozliczeniowym"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106i-termin-wystawienia",
+    "question_intent": "Ile czasu mam na wystawienie faktury po sprzedaży?",
+    "question_patterns": [
+      "Ile czasu mam na wystawienie faktury po sprzedaży?",
+      "Jaki jest termin wystawienia faktury?",
+      "Kiedy muszę wystawić fakturę po dostawie?"
+    ],
+    "answer": "Fakturę należy wystawić nie później niż do 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Jeśli otrzymano zapłatę przed dostawą, fakturę wystawia się nie później niż do 15. dnia miesiąca następującego po miesiącu otrzymania zapłaty.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106i ust. 1",
+        "quote": "Fakturę wystawia się nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę"
+      }
+    ],
+    "conditions": [
+      "termin 15. dnia miesiąca następującego po dostawie/usłudze",
+      "w przypadku przedpłaty - 15. dnia miesiąca następującego po otrzymaniu zapłaty"
+    ],
+    "exceptions": [
+      "szczególne terminy dla niektórych rodzajów dostaw określone w ust. 3-5"
+    ],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "faktury",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106e-podpis-waznosc",
+    "question_intent": "Czy faktura bez podpisu jest ważna?",
+    "question_patterns": [
+      "Czy faktura bez podpisu jest ważna?",
+      "Czy faktura musi być podpisana?",
+      "Czy brak podpisu na fakturze unieważnia dokument?"
+    ],
+    "answer": "W art. 106e nie ma wymogu podpisu na fakturze. Przepis wymienia wszystkie obowiązkowe elementy faktury, a podpis nie jest jednym z nich. Faktura bez podpisu jest zatem ważna pod względem prawa podatkowego, o ile zawiera wszystkie wymagane elementy określone w przepisie.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106e ust. 1",
+        "quote": "Faktura powinna zawierać: datę wystawienia; kolejny numer nadany w ramach jednej lub więcej serii..."
+      }
+    ],
+    "conditions": [
+      "faktura musi zawierać wszystkie elementy wymienione w art. 106e ust. 1"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dokumentacja",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106e-numerowanie-faktury",
+    "question_intent": "Jak numerować faktury w nowym roku?",
+    "question_patterns": [
+      "Jak numerować faktury w nowym roku?",
+      "Czy można zacząć numerację od 1 w nowym roku?",
+      "Numeracja faktur po roku"
+    ],
+    "answer": "Przepis wymaga jedynie, aby faktura miała kolejny numer nadany w ramach jednej lub więcej serii, który jednoznacznie identyfikuje fakturę. Nie określa szczegółowych zasad numerowania faktur w nowym roku kalendarzowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106e ust. 1 pkt 2",
+        "quote": "kolejny numer nadany w ramach jednej lub więcej serii, który w sposób jednoznaczny identyfikuje fakturę"
+      }
+    ],
+    "conditions": [
+      "numer musi jednoznacznie identyfikować fakturę"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "dokumentacja",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106b-obowiazek-wystawienia-faktury",
+    "question_intent": "Kiedy podatnik ma obowiązek wystawienia faktury a kiedy może wystawić paragon",
+    "question_patterns": [
+      "Kiedy muszę wystawić fakturę a kiedy mogę paragon?",
+      "W jakich przypadkach obowiązkowa jest faktura?",
+      "Czy mogę wystawić paragon zamiast faktury?"
+    ],
+    "answer": "Obowiązek wystawienia faktury powstaje przy sprzedaży na rzecz podatników VAT lub osób prawnych niebędących podatnikami. Na żądanie nabywcy fakturę wystawia się również przy sprzedaży na rzecz osób fizycznych nieprowadzących działalności. W przypadku sprzedaży na rzecz konsumentów (osoby fizyczne nieprowadzące działalności) wystarczy paragon fiskalny, chyba że nabywca zażąda faktury.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106b ust. 1 pkt 1",
+        "quote": "podatnik jest obowiązany wystawić fakturę dokumentującą sprzedaż na rzecz innego podatnika podatku lub podatku od wartości dodanej lub na rzecz osoby prawnej niebędącej podatnikiem"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 106b ust. 3",
+        "quote": "na żądanie nabywcy towaru lub usługi podatnik jest obowiązany wystawić fakturę"
+      }
+    ],
+    "conditions": [
+      "sprzedaż na rzecz podatnika VAT lub osoby prawnej",
+      "żądanie wystawienia faktury przez nabywcę"
+    ],
+    "exceptions": [
+      "czynności zwolnione od podatku (art. 43 ust. 1, art. 113 ust. 1 i 9, art. 113a ust. 1)"
+    ],
+    "taxpayer_type": [
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "faktury_i_paragony",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  }
+]
