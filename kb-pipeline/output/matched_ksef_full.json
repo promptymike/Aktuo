@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "total_questions": 50,
+    "matched": 32,
+    "unmatched": 18,
+    "total_cost_usd": 0.1179
+  },
+  "matches": [
+    {
+      "question": "Jak zarejestrować firmę do KSeF?",
+      "matched_articles": [
+        "5"
+      ],
+      "primary_article": "5",
+      "reasoning": "Formularz ZAW-FA służy do nadawania uprawnień do korzystania z KSeF, co jest procesem rejestracji"
+    },
+    {
+      "question": "Kto może nadać uprawnienia w KSeF?",
+      "matched_articles": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuły definiują kto posiada uprawnienia i może je nadawać - podatnik, podmioty z art. 106c oraz osoby przez nich wskazane"
+    },
+    {
+      "question": "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+      "matched_articles": [
+        "4",
+        "6",
+        "5"
+      ],
+      "primary_article": "4",
+      "reasoning": "Artykuł 4 dotyczy nadawania uprawnień nabywcy towarów lub usług, formularz ZAW-FA służy do nadawania uprawnień"
+    },
+    {
+      "question": "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+      "matched_articles": [
+        "3",
+        "5"
+      ],
+      "primary_article": "3",
+      "reasoning": "Artykuł 3 mówi o odebraniu uprawnień, formularz ZAW-FA służy do odebrania uprawnień"
+    },
+    {
+      "question": "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuły definiują kto może posiadać uprawnienia, w tym osoby fizyczne wskazane przez podatnika"
+    },
+    {
+      "question": "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+      "matched_articles": [
+        "4",
+        "5"
+      ],
+      "primary_article": "4",
+      "reasoning": "Artykuł 4 dotyczy kwalifikowanych podpisów elektronicznych i weryfikacji uprawnień"
+    },
+    {
+      "question": "Czy można korzystać z KSeF przez Profil Zaufany?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 mówi o uwierzytelnieniu przez Profil Zaufany jako alternatywie dla certyfikatu KSeF"
+    },
+    {
+      "question": "Jak wygenerować token do KSeF?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 definiuje certyfikat KSeF i jego ważność, artykuł 3 zawiera specyfikację techniczną"
+    },
+    {
+      "question": "Czy token KSeF można ograniczyć do konkretnej roli?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 mówi o dacie początkowej obowiązywania certyfikatu, co może odnosić się do ograniczeń"
+    },
+    {
+      "question": "Co zrobić, gdy zgubiłem token do KSeF?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 mówi o odnowieniu certyfikatu KSeF w okresie jego ważności"
+    },
+    {
+      "question": "Jak wysłać fakturę do KSeF z programu księgowego?",
+      "matched_articles": [
+        "3"
+      ],
+      "primary_article": "3",
+      "reasoning": "Artykuł 3 zawiera specyfikację oprogramowania interfejsowego dla wymagań technicznych"
+    },
+    {
+      "question": "Kiedy faktura jest uznana za wystawioną w KSeF?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 dotyczy wystawiania i przesyłania faktur do KSeF oraz statusu zgłoszenia"
+    },
+    {
+      "question": "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 mówi o numerze faktury jako elemencie kodu weryfikującego"
+    },
+    {
+      "question": "Jak pobrać numer KSeF dla wystawionej faktury?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 dotyczy sposobu oznaczania faktury ustrukturyzowanej po przesłaniu do KSeF"
+    },
+    {
+      "question": "Czy można wysłać do KSeF fakturę korygującą?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 wprost mówi o dostępie do faktury korygującej w KSeF"
+    },
+    {
+      "question": "Jak wystawić fakturę zaliczkową w KSeF?",
+      "matched_articles": [
+        "3"
+      ],
+      "primary_article": "3",
+      "reasoning": "Artykuł 3 zawiera specyfikację oprogramowania interfejsowego dla wymagań technicznych wystawiania faktur"
+    },
+    {
+      "question": "Czy fakturę dla zagranicznego kontrahenta też trzeba wysłać do KSeF?",
+      "matched_articles": [
+        "3",
+        "4"
+      ],
+      "primary_article": "3",
+      "reasoning": "Artykuł 3 dotyczy faktur udostępnianych nabywcy w sposób inny niż przez KSeF, co może dotyczyć zagranicy"
+    },
+    {
+      "question": "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+      "matched_articles": [
+        "3"
+      ],
+      "primary_article": "3",
+      "reasoning": "Artykuł 3 dotyczy nadawania uprawnień gdy nabywca nie posługuje się NIP"
+    },
+    {
+      "question": "Czy można anulować fakturę wysłaną do KSeF?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 mówi o zgłoszeniu o zamiarze zaprzestania wystawiania faktur, co może odnosić się do anulowania"
+    },
+    {
+      "question": "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 dotyczy dostępu do faktury korygującej, która służy do poprawiania błędów"
+    },
+    {
+      "question": "[wymagania techniczne] Jaki format pliku akceptuje KSeF?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Szczegółowe wymagania techniczne określa specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Czy KSeF przyjmuje tylko faktury XML?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Format przyjmowanych faktur określa specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Jakie dane są obowiązkowe w schemie FA(2) dla KSeF?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Wymagania techniczne dla schematów określa specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Co oznacza walidacja schemy w KSeF?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Proces walidacji opisuje specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Jak sprawdzić, dlaczego KSeF odrzucił fakturę?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Komunikaty o błędach i procedury obsługi określa specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Czy można wysyłać załączniki razem z fakturą do KSeF?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Faktura może posiadać tylko jeden załącznik stanowiący integralną część"
+    },
+    {
+      "question": "[wymagania techniczne] Jak działa środowisko testowe KSeF?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Specyfikacja oprogramowania interfejsowego zawiera opis środowisk"
+    },
+    {
+      "question": "[wymagania techniczne] Czy KSeF działa przez API czy przez stronę WWW?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Sposoby dostępu do systemu określa specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Jakie są limity techniczne wysyłki do KSeF?",
+      "matched_articles": [
+        "3",
+        "14"
+      ],
+      "primary_article": "3",
+      "reasoning": "Limity i ograniczenia techniczne określa specyfikacja oprogramowania interfejsowego"
+    },
+    {
+      "question": "[wymagania techniczne] Co zrobić, gdy API KSeF zwraca błąd autoryzacji?",
+      "matched_articles": [
+        "4",
+        "5",
+        "3"
+      ],
+      "primary_article": "4",
+      "reasoning": "Błędy autoryzacji związane z podpisami kwalifikowanymi i certyfikatami"
+    },
+    {
+      "question": "[terminy] Od kiedy KSeF jest obowiązkowy dla czynnych podatników VAT?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Terminy obowiązywania nie są określone w dostępnych artykułach rozporządzenia"
+    },
+    {
+      "question": "[terminy] Od kiedy KSeF obejmuje podatników zwolnionych z VAT?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Terminy obowiązywania nie są określone w dostępnych artykułach rozporządzenia"
+    },
+    {
+      "question": "[terminy] Jaki jest termin przesłania faktury do KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Terminy przesyłania nie są określone w dostępnych artykułach rozporządzenia"
+    },
+    {
+      "question": "[terminy] Czy można wystawić fakturę wcześniej i wysłać ją do KSeF później?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Relacja czasowa między wystawieniem a wysłaniem nie jest określona w rozporządzeniu"
+    },
+    {
+      "question": "[terminy] Jak liczyć termin wystawienia faktury przy awarii KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Procedury przy awariach nie są określone w dostępnych artykułach rozporządzenia"
+    },
+    {
+      "question": "[terminy] Kiedy nabywca uznaje fakturę za otrzymaną w KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Momentu otrzymania faktury nie określają dostępne artykuły rozporządzenia"
+    },
+    {
+      "question": "[terminy] Czy numer KSeF trzeba podać przed terminem płatności?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Oznaczanie faktur kodami weryfikującymi - może dotyczyć podawania numerów"
+    },
+    {
+      "question": "[terminy] Jakie terminy obowiązują przy fakturach offline do KSeF?",
+      "matched_articles": [
+        "3",
+        "4",
+        "5"
+      ],
+      "primary_article": "3",
+      "reasoning": "Faktury używane poza KSeF ale przesyłane do systemu - terminy w specyfikacji"
+    },
+    {
+      "question": "[kary i sankcje] Jakie kary grożą za niewystawienie faktury w KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Sankcje karne nie są określone w dostępnych artykułach rozporządzenia"
+    },
+    {
+      "question": "[kary i sankcje] Czy za spóźnione wysłanie faktury do KSeF grozi sankcja?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Sankcje za spóźnienia nie są określone w dostępnych artykułach rozporządzenia"
+    },
+    {
+      "question": "Jakie kary są za wystawienie faktury poza KSeF bez podstawy?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów nie ma przepisów dotyczących kar i sankcji za naruszenie obowiązków związanych z KSeF. Indeks zawiera głównie przepisy techniczne i proceduralne."
+    },
+    {
+      "question": "Czy błędna struktura faktury w KSeF może skutkować karą?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów nie ma przepisów dotyczących kar za błędną strukturę faktury w KSeF. Indeks zawiera przepisy techniczne, ale nie sankcje."
+    },
+    {
+      "question": "Kiedy urząd może nałożyć karę za problemy z KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów brak jest przepisów określających podstawy do nakładania kar przez urząd w związku z KSeF."
+    },
+    {
+      "question": "Czy awaria po stronie MF zwalnia z odpowiedzialności za brak faktury w KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów nie ma przepisów dotyczących awarii systemu i ich wpływu na odpowiedzialność podatników."
+    },
+    {
+      "question": "Kto jest zwolniony z obowiązku wystawiania faktur w KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów brak jest przepisów określających zwolnienia z obowiązku korzystania z KSeF. Indeks zawiera głównie przepisy techniczne dotyczące funkcjonowania systemu."
+    },
+    {
+      "question": "Czy faktury konsumenckie B2C są objęte KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów nie ma przepisów określających zakres przedmiotowy KSeF w kontekście faktur B2C."
+    },
+    {
+      "question": "Czy faktury uproszczone będą trafiać do KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów brak jest przepisów dotyczących faktur uproszczonych w kontekście KSeF."
+    },
+    {
+      "question": "Czy paragony z NIP do 450 zł trzeba wystawiać w KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów nie ma przepisów dotyczących paragonów z NIP i ich relacji do KSeF."
+    },
+    {
+      "question": "Czy faktury wystawiane w trybie awaryjnym są zwolnione z natychmiastowej wysyłki do KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów brak jest przepisów dotyczących trybu awaryjnego wystawiania faktur."
+    },
+    {
+      "question": "Czy zagraniczny podmiot bez siedziby w Polsce musi korzystać z KSeF?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "W podanym indeksie artykułów nie ma przepisów określających obowiązki podmiotów zagranicznych w zakresie KSeF."
+    }
+  ]
+}

@@ -614,5 +614,208 @@
         "category": "dokumentacja_vat",
         "verified_date": "",
         "content": "Fakturę można wystawić do sprzedaży zaewidencjonowanej przy zastosowaniu kasy rejestrującej. W takim przypadku w dokumentacji należy zostawić numer dokumentu oraz numer unikatowy kasy rejestrującej zawarte na paragonie fiskalnym lub sam paragon fiskalny w postaci papierowej. Przepis ten nie dotyczy przypadków, gdy faktura jest wystawiana bezpośrednio przy zastosowaniu kasy rejestrującej i wartości są zaewidencjonowane w raporcie fiskalnym dobowym."
+    },
+    {
+        "law_name": "Rozporz?dzenie KSeF",
+        "article_number": "§ 4 ust. 1",
+        "category": "krajowy_system_e-faktur",
+        "verified_date": "",
+        "content": "Podany tekst artykułu reguluje uprawnienia do korzystania z KSeF i sposób ich nadawania/odbierania za pośrednictwem oprogramowania interfejsowego, ale nie zawiera szczegółowych instrukcji procedury rejestracji firmy. Tekst wskazuje, że uprawnienia są nadawane po weryfikacji, ale brakuje konkretnych kroków rejestracyjnych."
+    },
+    {
+        "law_name": "Rozporz?dzenie KSeF",
+        "article_number": "§ 4 ust. 1",
+        "category": "Krajowy System e-Faktur",
+        "verified_date": "",
+        "content": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur odbiera się za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania. Procedura wymaga weryfikacji posiadanych uprawnień. Szczegółowy proces powinien być dostępny w dokumentacji technicznej KSeF lub instrukcjach do oprogramowania interfejsowego."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 2 ust. 2 pkt 3 lit. a",
+        "category": "uprawnienia_ksef",
+        "verified_date": "",
+        "content": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będzie miała uprawnienie do nadawania i odbierania uprawnień w KSeF. Ta osoba może być reprezentantem zakładu, oddziału lub jednostki wewnętrznej podatnika, lub być wskazana bezpośrednio przez podatnika."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 2 ust. 1, § 3",
+        "category": "uprawnienia_ksef",
+        "verified_date": "",
+        "content": "Przepis nie opisuje procedury technicznej generowania tokena do KSeF. Informacja o sposobie generowania tokena wykracza poza zakres art. § 2-3, które regulują jedynie uprawnienia osób i podmiotów do korzystania z systemu."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 2 ust. 1, § 3",
+        "category": "wymagania_techniczne_ksef",
+        "verified_date": "",
+        "content": "Przepisy dotyczące uprawnień do KSeF (§ 2-3) nie zawierają informacji o możliwości przesyłania załączników. Kwestia wysyłania załączników wymaga weryfikacji w dokumentacji technicznej systemu lub innych przepisach regulacyjnych."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 2 ust. 1, § 3",
+        "category": "terminy_ksef",
+        "verified_date": "",
+        "content": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania numeru KSeF wymaga weryfikacji w innych przepisach."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 4 ust. 1",
+        "category": "autentykacja_ksef",
+        "verified_date": "",
+        "content": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie uprawnień do wystawiania faktur ustrukturyzowanych i sposobu nadawania/odbierania uprawnień poprzez oprogramowanie interfejsowe."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2 (przepisy ogólne o uprawnieniach)",
+        "category": "autoryzacja_ksef",
+        "verified_date": "",
+        "content": "Przepis definiuje uprawnienia do korzystania z KSeF dla podatnika, podmiotów, osób fizycznych wskazanych przez te podmioty oraz osób fizycznych wskazanych przez osoby posiadające uprawnienia. Tekst artykułu nie zawiera informacji o Profilu Zaufanym ani konkretnych sposobach autoryzacji, dlatego wymagana jest veryfikacja w regulaminie KSeF lub dokumentacji systemu."
+    },
+    {
+        "law_name": "Rozporz?dzenie KSeF",
+        "article_number": "art. 2 ust. 2 pkt 3 i 4",
+        "category": "zarządzanie_dostępem",
+        "verified_date": "",
+        "content": "Przepis przewiduje, że osoby fizyczne mogą być wskazane przez podatnika lub inne uprawnione podmioty do korzystania z KSeF, jednak tekst artykułu nie zawiera szczegółów dotyczących technicznych ograniczeń tokenów ani przyznawania konkretnych ról. Wymagana jest weryfikacja w regulaminie KSeF."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "bezpieczeństwo_ksef",
+        "verified_date": "",
+        "content": "Artykuł define uprawnienia do korzystania z KSeF, ale nie zawiera procedury postępowania w przypadku utraty tokenu. Instrukcje dotyczące bezpieczeństwa i odzyskiwania tokenów znajdują się w regulaminie KSeF lub na stronie Ministerstwa Finansów."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "procedury_ksef",
+        "verified_date": "",
+        "content": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinna być zawarta w artykułach normujących procedury wystawiania faktur w KSeF."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "procedury_ksef",
+        "verified_date": "",
+        "content": "Przepis artykułu 2 nie zawiera regulacji dotyczących numeracji faktur w KSeF. Wymagania dotyczące numerów faktur powinny być określone w artykułach normujących zasady wystawiania i identyfikacji faktur w systemie."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "procedury_ksef",
+        "verified_date": "",
+        "content": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie zawiera informacji o numerach czy identyfikatorach faktur przypisywanych przez system. Szczegóły dotyczące pobrania numeru KSeF znajdują się w regulaminie systemu lub dokumentacji procedurowej."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "procedury_ksef",
+        "verified_date": "",
+        "content": "Przepis artykułu 2 nie zawiera informacji o obsłudze faktur korygujących w KSeF. Szczegóły dotyczące typów dokumentów obsługiwanych przez system, w tym faktur korygujących, powinny być określone w artykułach normujących procedury wystawiania dokumentów."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "procedury_ksef",
+        "verified_date": "",
+        "content": "Artykuł 2 nie zawiera regulacji dotyczących anulacji lub usuwania faktur z KSeF. Procedury dotyczące modyfikacji lub usuwania dokumentów powinny być określone w artykułach normujących operacje na fakturach w systemie."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "category": "procedury_ksef",
+        "verified_date": "",
+        "content": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie reguluje procedur korygowania błędów w wysłanych fakturach. Szczegółowe procedury korygowania dokumentów powinny być określone w artykułach normujących operacje na fakturach lub w regulaminie systemu."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 3",
+        "category": "KSeF - wysyłanie faktur",
+        "verified_date": "",
+        "content": "Tekst artykułu wskazuje tylko podmioty uprawnione do wystawiania faktur w KSeF, ale nie zawiera instrukcji technicznych dotyczących wysyłania faktur z programów księgowych. Wymaga to weryfikacji w dokumentacji KSeF i wytycznych dotyczących integracji systemów."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 3",
+        "category": "KSeF - rodzaje faktur",
+        "verified_date": "",
+        "content": "Artykuł 3 dotyczy wyłącznie uprawnień do wystawiania elektronicznych faktur ustrukturyzowanych, ale nie zawiera przepisów dotyczących faktur zaliczkowych ani specjalnych zasad ich wystawiania w KSeF. Wymagana jest weryfikacja w odrębnych przepisach o fakturach zaliczkowych."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 3 i 4",
+        "category": "KSeF - przesyłanie faktur",
+        "verified_date": "",
+        "content": "Na podstawie podanego tekstu artykułów nie można stwierdzić, czy przepisy KSeF mają zastosowanie do faktur dla kontrahentów zagranicznych. Artykuły 3 i 4 zawierają wyłącznie definicje uprawnień do wystawiania faktur i wymagan technicznych, ale nie określają zakresu podmiotowego ani terytorialnego obowiązku przesłania faktury do KSeF."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 14",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera specyfikacja oprogramowania interfejsowego. Wymagane jest sprawdzenie szczegółowej specyfikacji technicznej KSeF."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 10 ust. 1 pkt 7b",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Tekst artykułu nie zawiera informacji o formatach danych. Przepis § 10 reguluje wyłącznie proces zgłoszenia zamiaru wystawiania faktur z załącznikiem do KSeF, wymagając oświadczenia, że faktury będą zawierać dane określone w art. 106e ustawy o VAT."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 10 ust. 1 pkt 7b",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Tekst artykułu nie zawiera szczegółów dotyczących danych obowiązkowych. Przepis § 10 ust. 1 pkt 7b wymaga, aby faktury z załącznikiem zawierały wyłącznie dane określone w art. 106e ustawy o VAT lub dane ściśle z nimi powiązane, ale szczegółowy wykaz tych danych znajduje się w samym art. 106e, który nie został podany w tekście."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 14",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Artykuł nie zawiera informacji o procesie walidacji schemy. Tekst § 10 dotyczy wyłącznie procedury zgłoszenia zamiaru wystawiania faktur z załącznikiem, a § 14 powołuje się na specyfikację oprogramowania interfejsowego dla szczegółów technicznych."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 10",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Artykuł nie zawiera informacji o procedurze obsługi błędów lub komunikatach odrzucenia. Przepisy § 10 i § 14 regulują wyłącznie proces zgłoszenia i wymagania techniczne kodu weryfikującego, bez opisania mechanizmu raportowania błędów przez KSeF."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 10 ust. 1 pkt 9",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Artykuł nie zawiera informacji o środowisku testowym KSeF. Przepisy § 10 i § 14 regulują procedury produkcyjne wystawiania i przesyłania faktur z załącznikiem, bez odwołania do możliwości testowania systemu."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 14",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Artykuł nie zawiera informacji o sposobach technicznych połączenia z KSeF (API, portal WWW). Przepisy § 10 i § 14 powołują się na specyfikację oprogramowania interfejsowego, która zawiera szczegóły techniczne dostępu do systemu."
+    },
+    {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 10 ust. 1 pkt 10-11",
+        "category": "wymagania_techniczne_kseff",
+        "verified_date": "",
+        "content": "Artykuł wymaga zgłoszenia przewidywanej średniej liczby faktur w miesiącu (§ 10 ust. 1 pkt 10) oraz przewidywanego średniego rozmiaru faktury w kilobajtach (§ 10 ust. 1 pkt 11), ale nie zawiera konkretnych limitów technicznych. Szczegółowe wymagania znajdują się w specyfikacji oprogramowania interfejsowego."
+    },
+    {
+        "law_name": "Rozporz?dzenie KSeF",
+        "article_number": "§ 4 ust. 1",
+        "category": "system_e-faktur_wymagania_techniczne",
+        "verified_date": "",
+        "content": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie zawierają wytycznych dla błędów autoryzacji."
+    },
+    {
+        "law_name": "Rozporz?dzenie KSeF",
+        "article_number": "§ 4 ust. 1",
+        "category": "system_e-faktur_terminy",
+        "verified_date": "",
+        "content": "Dostarczone fragmenty ustawy o VAT nie zawierają informacji na temat terminów przesyłania faktur offline do Krajowego Systemu e-Faktur. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie regulują terminów przesyłania dokumentów."
     }
 ]

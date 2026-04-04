@@ -1,0 +1,817 @@
+[
+  {
+    "id": "vat-5-ksef-rejestracja",
+    "question_intent": "Jak zarejestrować firmę do Krajowego Systemu e-Faktur (KSeF)?",
+    "question_patterns": [
+      "Jak zarejestrować firmę do KSeF?",
+      "Procedura rejestracji w KSeF",
+      "Jak się rejestruje w Krajowym Systemie e-Faktur?",
+      "Etapy rejestracji do e-Faktur"
+    ],
+    "answer": "Podany tekst artykułu reguluje uprawnienia do korzystania z KSeF i sposób ich nadawania/odbierania za pośrednictwem oprogramowania interfejsowego, ale nie zawiera szczegółowych instrukcji procedury rejestracji firmy. Tekst wskazuje, że uprawnienia są nadawane po weryfikacji, ale brakuje konkretnych kroków rejestracyjnych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 4 ust. 1",
+        "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania, po weryfikacji posiadanych uprawnień."
+      }
+    ],
+    "conditions": [
+      "Posiadanie uprawnień do korzystania z KSeF",
+      "Weryfikacja posiadanych uprawnień",
+      "Użycie oprogramowania interfejsowego zgodnie ze specyfikacją"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "krajowy_system_e-faktur",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-4-odbieranie-uprawnien-ksef",
+    "question_intent": "Jak odebrać (usunąć) uprawnienia użytkownikowi w Krajowym Systemie e-Faktur?",
+    "question_patterns": [
+      "Jak odebrać uprawnienia w KSeF?",
+      "Jak usunąć uprawnienia użytkownikowi do e-faktur?",
+      "Procedura odbierania uprawnień do KSeF",
+      "Jak wycofać dostęp do Krajowego Systemu e-Faktur?"
+    ],
+    "answer": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur odbiera się za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania. Procedura wymaga weryfikacji posiadanych uprawnień. Szczegółowy proces powinien być dostępny w dokumentacji technicznej KSeF lub instrukcjach do oprogramowania interfejsowego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 4 ust. 1",
+        "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania, po weryfikacji posiadanych uprawnień."
+      }
+    ],
+    "conditions": [
+      "Wykorzystanie oprogramowania interfejsowego dostarczonego do systemu KSeF",
+      "Procedura musi być zgodna ze specyfikacją oprogramowania",
+      "Wymagana weryfikacja posiadanych uprawnień"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "Krajowy System e-Faktur",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-2-pelnomnick-ksef",
+    "question_intent": "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+    "question_patterns": [
+      "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+      "Czy reprezentant podatnika może mieć dostęp do KSeF?",
+      "Kto może być wskazany do obsługi Krajowego Systemu e-Faktur?"
+    ],
+    "answer": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będzie miała uprawnienie do nadawania i odbierania uprawnień w KSeF. Ta osoba może być reprezentantem zakładu, oddziału lub jednostki wewnętrznej podatnika, lub być wskazana bezpośrednio przez podatnika.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 2 ust. 2 pkt 3 lit. a",
+        "quote": "osoba fizyczna wskazana przez podatnika"
+      },
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 2 ust. 2 pkt 3 lit. b",
+        "quote": "podatnika jako przedstawiciel zakładu (oddziału) osoby prawnej lub innej wyodrębnionej jednostki wewnętrznej podatnika"
+      }
+    ],
+    "conditions": [
+      "osoba fizyczna musi być wskazana przez podatnika",
+      "może być przedstawicielem zakładu lub wyodrębnionej jednostki wewnętrznej"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny",
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "uprawnienia_ksef",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-2-token-ksef",
+    "question_intent": "Jak wygenerować token do KSeF?",
+    "question_patterns": [
+      "Jak wygenerować token do KSeF?",
+      "Gdzie uzyskać token dostępu do Krajowego Systemu e-Faktur?",
+      "Procedura generowania tokena KSeF"
+    ],
+    "answer": "Przepis nie opisuje procedury technicznej generowania tokena do KSeF. Informacja o sposobie generowania tokena wykracza poza zakres art. § 2-3, które regulują jedynie uprawnienia osób i podmiotów do korzystania z systemu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 2 ust. 1, § 3",
+        "quote": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "uprawnienia_ksef",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-2-zalaczniki-ksef",
+    "question_intent": "Czy można wysyłać załączniki razem z fakturą do KSeF?",
+    "question_patterns": [
+      "Czy można wysyłać załączniki razem z fakturą do KSeF?",
+      "Czy KSeF obsługuje transmisję załączników do faktur?",
+      "Wymogi techniczne dotyczące załączników w KSeF"
+    ],
+    "answer": "Przepisy dotyczące uprawnień do KSeF (§ 2-3) nie zawierają informacji o możliwości przesyłania załączników. Kwestia wysyłania załączników wymaga weryfikacji w dokumentacji technicznej systemu lub innych przepisach regulacyjnych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 2 ust. 1, § 3",
+        "quote": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_ksef",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-2-numer-ksef-termin",
+    "question_intent": "Czy numer KSeF trzeba podać przed terminem płatności?",
+    "question_patterns": [
+      "Czy numer KSeF trzeba podać przed terminem płatności?",
+      "Kiedy należy podać numer KSeF na fakturze?",
+      "Termin podania numeru z KSeF"
+    ],
+    "answer": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania numeru KSeF wymaga weryfikacji w innych przepisach.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 2 ust. 1, § 3",
+        "quote": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "terminy_ksef",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-ksef-autentykacja-podpis",
+    "question_intent": "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+    "question_patterns": [
+      "Jak się zalogować do KSeF podpisem kwalifikowanym?",
+      "Autentykacja w KSeF za pomocą podpisu kwalifikowanego",
+      "Procedura uwierzytelniania się podpisem kwalifikowanym w systemie e-Faktur"
+    ],
+    "answer": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie uprawnień do wystawiania faktur ustrukturyzowanych i sposobu nadawania/odbierania uprawnień poprzez oprogramowanie interfejsowe.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 4 ust. 1",
+        "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "autentykacja_ksef",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-profil-zaufany",
+    "question_intent": "Czy można korzystać z KSeF przez Profil Zaufany?",
+    "question_patterns": [
+      "Czy Profil Zaufany umożliwia dostęp do KSeF?",
+      "Czy mogę logować się do KSeF za pomocą Profilu Zaufanego?",
+      "Jakie sposoby autoryzacji do KSeF są dostępne?"
+    ],
+    "answer": "Przepis definiuje uprawnienia do korzystania z KSeF dla podatnika, podmiotów, osób fizycznych wskazanych przez te podmioty oraz osób fizycznych wskazanych przez osoby posiadające uprawnienia. Tekst artykułu nie zawiera informacji o Profilu Zaufanym ani konkretnych sposobach autoryzacji, dlatego wymagana jest veryfikacja w regulaminie KSeF lub dokumentacji systemu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2 (przepisy ogólne o uprawnieniach)",
+        "quote": "Uprawnienia posiadają podatnik, podmioty o których mowa w art. 106c oraz osoby fizyczne wskazane przez te podmioty"
+      }
+    ],
+    "conditions": [
+      "Osoba musi posiadać uprawnienia do korzystania z KSeF",
+      "Uprawnienia mogą być nadawane przez podatnika lub inny uprawniony podmiot"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "autoryzacja_ksef",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-token-rola",
+    "question_intent": "Czy token KSeF można ograniczyć do konkretnej roli?",
+    "question_patterns": [
+      "Czy mogę ograniczyć token tylko do konkretnych uprawnień?",
+      "Czy token KSeF może mieć ograniczone uprawnienia?",
+      "Czy można nadać token z ograniczoną rolą?"
+    ],
+    "answer": "Przepis przewiduje, że osoby fizyczne mogą być wskazane przez podatnika lub inne uprawnione podmioty do korzystania z KSeF, jednak tekst artykułu nie zawiera szczegółów dotyczących technicznych ograniczeń tokenów ani przyznawania konkretnych ról. Wymagana jest weryfikacja w regulaminie KSeF.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2 ust. 2 pkt 3 i 4",
+        "quote": "Osoba fizyczna wskazana przez podatnika może korzystać z uprawnień do KSeF"
+      }
+    ],
+    "conditions": [
+      "Wskazanie musi być dokonane przez podatnika lub uprawniony podmiot",
+      "Dotyczy osób fizycznych upoważnionych do korzystania z systemu"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "zarządzanie_dostępem",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-token-zgubiony",
+    "question_intent": "Co zrobić, gdy zgubiłem token do KSeF?",
+    "question_patterns": [
+      "Jak postępować po stracie tokenu KSeF?",
+      "Gdzie zgłosić zgubienie tokenu do KSeF?",
+      "Jak odzyskać token KSeF?"
+    ],
+    "answer": "Artykuł define uprawnienia do korzystania z KSeF, ale nie zawiera procedury postępowania w przypadku utraty tokenu. Instrukcje dotyczące bezpieczeństwa i odzyskiwania tokenów znajdują się w regulaminie KSeF lub na stronie Ministerstwa Finansów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Uprawnienia do korzystania z KSeF są nadawane przez podatnika lub uprawnione podmioty"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "bezpieczeństwo_ksef",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-moment-wystawienia",
+    "question_intent": "Kiedy faktura jest uznana za wystawioną w KSeF?",
+    "question_patterns": [
+      "Jaki jest moment wystawienia faktury w KSeF?",
+      "Kiedy uważa się, że faktura została wystawiona w systemie KSeF?",
+      "Od kiedy faktura w KSeF jest ważna?"
+    ],
+    "answer": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinna być zawarta w artykułach normujących procedury wystawiania faktur w KSeF.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Artykuł definiuje uprawnienia, nie procedury wystawiania faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_ksef",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-numer-faktury",
+    "question_intent": "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+    "question_patterns": [
+      "Czy numer faktury w KSeF musi być zgodny z numerem w moim systemie?",
+      "Jakie wymagania dotyczą numeru faktury w KSeF?",
+      "Czy mogę używać własnego numeru faktury w KSeF?"
+    ],
+    "answer": "Przepis artykułu 2 nie zawiera regulacji dotyczących numeracji faktur w KSeF. Wymagania dotyczące numerów faktur powinny być określone w artykułach normujących zasady wystawiania i identyfikacji faktur w systemie.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Artykuł dotyczy uprawnień do korzystania z KSeF"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_ksef",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-pobranie-numeru",
+    "question_intent": "Jak pobrać numer KSeF dla wystawionej faktury?",
+    "question_patterns": [
+      "Gdzie znaleźć numer KSeF faktury?",
+      "Jak uzyskać numer KSeF dla faktury?",
+      "Jakie dane identyfikacyjne przypisuje KSeF fakturze?"
+    ],
+    "answer": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie zawiera informacji o numerach czy identyfikatorach faktur przypisywanych przez system. Szczegóły dotyczące pobrania numeru KSeF znajdują się w regulaminie systemu lub dokumentacji procedurowej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Artykuł definiuje uprawnienia, nie identyfikatory faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_ksef",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-faktura-korygujaca",
+    "question_intent": "Czy można wysłać do KSeF fakturę korygującą?",
+    "question_patterns": [
+      "Czy KSeF obsługuje faktury korygujące?",
+      "Jak wysłać fakturę korygującą do KSeF?",
+      "Czy mogę korekty przesyłać do systemu KSeF?"
+    ],
+    "answer": "Przepis artykułu 2 nie zawiera informacji o obsłudze faktur korygujących w KSeF. Szczegóły dotyczące typów dokumentów obsługiwanych przez system, w tym faktur korygujących, powinny być określone w artykułach normujących procedury wystawiania dokumentów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Artykuł definiuje uprawnienia do korzystania z KSeF"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_ksef",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-anulacja-faktury",
+    "question_intent": "Czy można anulować fakturę wysłaną do KSeF?",
+    "question_patterns": [
+      "Jak usunąć fakturę z KSeF?",
+      "Czy mogę anulować fakturę już przesłaną do systemu?",
+      "Jakie są procedury usuwania faktur z KSeF?"
+    ],
+    "answer": "Artykuł 2 nie zawiera regulacji dotyczących anulacji lub usuwania faktur z KSeF. Procedury dotyczące modyfikacji lub usuwania dokumentów powinny być określone w artykułach normujących operacje na fakturach w systemie.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Artykuł dotyczy uprawnień do korzystania z KSeF"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_ksef",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-korekta-bledu",
+    "question_intent": "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+    "question_patterns": [
+      "Jak skorygować błędne dane w fakturze w KSeF?",
+      "Czy mogę edytować fakturę wysłaną do systemu?",
+      "Jakie są procedury poprawiania błędów w fakturach KSeF?"
+    ],
+    "answer": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie reguluje procedur korygowania błędów w wysłanych fakturach. Szczegółowe procedury korygowania dokumentów powinny być określone w artykułach normujących operacje na fakturach lub w regulaminie systemu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 2",
+        "quote": "Artykuł definiuje uprawnienia, nie procedury edycji faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_ksef",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-3-ksef-wysylanie-program",
+    "question_intent": "Jak wysłać fakturę do KSeF z programu księgowego?",
+    "question_patterns": [
+      "jak wysłać fakturę do KSeF z programu",
+      "wysyłanie faktury do KSeF programem",
+      "integracja programu księgowego z KSeF"
+    ],
+    "answer": "Tekst artykułu wskazuje tylko podmioty uprawnione do wystawiania faktur w KSeF, ale nie zawiera instrukcji technicznych dotyczących wysyłania faktur z programów księgowych. Wymaga to weryfikacji w dokumentacji KSeF i wytycznych dotyczących integracji systemów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 3",
+        "quote": "podmiot upoważniony do wystawiania elektronicznych faktur ustrukturyzowanych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "KSeF - wysyłanie faktur",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-3-faktura-zaliczkowa-ksef",
+    "question_intent": "Jak wystawić fakturę zaliczkową w KSeF?",
+    "question_patterns": [
+      "faktura zaliczkowa w KSeF",
+      "czy można wystawić zaliczką w KSeF",
+      "wystawienie faktury zaliczkowej elektronicznie"
+    ],
+    "answer": "Artykuł 3 dotyczy wyłącznie uprawnień do wystawiania elektronicznych faktur ustrukturyzowanych, ale nie zawiera przepisów dotyczących faktur zaliczkowych ani specjalnych zasad ich wystawiania w KSeF. Wymagana jest weryfikacja w odrębnych przepisach o fakturach zaliczkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 3",
+        "quote": "podmiot upoważniony do wystawiania elektronicznych faktur ustrukturyzowanych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "KSeF - rodzaje faktur",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-ksef-zagranica-faktura",
+    "question_intent": "Czy obowiązek przesłania faktury do KSeF dotyczy faktur dla kontrahentów zagranicznych",
+    "question_patterns": [
+      "Czy fakturę dla zagranicznego kontrahenta trzeba wysłać do KSeF?",
+      "Czy faktury dla odbiorców zagranicznych muszą trafiać do KSeF?",
+      "Jaki jest obowiązek przesłania faktury zagranicznej do KSeF?"
+    ],
+    "answer": "Na podstawie podanego tekstu artykułów nie można stwierdzić, czy przepisy KSeF mają zastosowanie do faktur dla kontrahentów zagranicznych. Artykuły 3 i 4 zawierają wyłącznie definicje uprawnień do wystawiania faktur i wymagan technicznych, ale nie określają zakresu podmiotowego ani terytorialnego obowiązku przesłania faktury do KSeF.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "art. 3 i 4",
+        "quote": "Artykuły zawierają definicje uprawnień do wystawiania faktur ustrukturyzowanych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "KSeF - przesyłanie faktur",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-14-format-pliku",
+    "question_intent": "Jaki format pliku akceptuje KSeF?",
+    "question_patterns": [
+      "Jaki format pliku akceptuje KSeF?",
+      "W jakim formacie wysyłać faktury do KSeF?",
+      "Czy KSeF akceptuje PDF?"
+    ],
+    "answer": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera specyfikacja oprogramowania interfejsowego. Wymagane jest sprawdzenie szczegółowej specyfikacji technicznej KSeF.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 14",
+        "quote": "Szczegółowy opis wymagań technicznych dla kodu weryfikującego i kodu, o którym mowa w ust. 10 pkt 1, zawiera specyfikacja oprogramowania interfejsowego."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-10-faktury-zalacznik-xml",
+    "question_intent": "Czy KSeF przyjmuje tylko faktury XML?",
+    "question_patterns": [
+      "Czy KSeF przyjmuje tylko XML?",
+      "Jakie formaty danych akceptuje KSeF?",
+      "Czy mogę wysłać fakturę w innym formacie niż XML?"
+    ],
+    "answer": "Tekst artykułu nie zawiera informacji o formatach danych. Przepis § 10 reguluje wyłącznie proces zgłoszenia zamiaru wystawiania faktur z załącznikiem do KSeF, wymagając oświadczenia, że faktury będą zawierać dane określone w art. 106e ustawy o VAT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 10 ust. 1 pkt 7b",
+        "quote": "faktury z załącznikiem nie zawierają wyłącznie danych, o których mowa w art. 106e ustawy o podatku od towarów i usług, lub danych ściśle powiązanych z tymi danymi"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-106e-dane-obowiązkowe",
+    "question_intent": "Jakie dane są obowiązkowe w schemie FA(2) dla KSeF?",
+    "question_patterns": [
+      "Jakie dane są obowiązkowe w KSeF?",
+      "Jakie pola muszą zawierać faktury do KSeF?",
+      "Co to jest schemat FA(2)?"
+    ],
+    "answer": "Tekst artykułu nie zawiera szczegółów dotyczących danych obowiązkowych. Przepis § 10 ust. 1 pkt 7b wymaga, aby faktury z załącznikiem zawierały wyłącznie dane określone w art. 106e ustawy o VAT lub dane ściśle z nimi powiązane, ale szczegółowy wykaz tych danych znajduje się w samym art. 106e, który nie został podany w tekście.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 10 ust. 1 pkt 7b",
+        "quote": "faktury z załącznikiem nie zawierają wyłącznie danych, o których mowa w art. 106e ustawy o podatku od towarów i usług, lub danych ściśle powiązanych z tymi danymi"
+      }
+    ],
+    "conditions": [
+      "Faktury muszą dotyczyć czynności o złożonej liczbie danych w zakresie jednostek miary i ilości lub cen jednostkowych netto"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-10-walidacja-schematu",
+    "question_intent": "Co oznacza walidacja schemy w KSeF?",
+    "question_patterns": [
+      "Co to jest walidacja schematu?",
+      "Jak działa walidacja w KSeF?",
+      "Czy KSeF sprawdza strukturę faktury?"
+    ],
+    "answer": "Artykuł nie zawiera informacji o procesie walidacji schemy. Tekst § 10 dotyczy wyłącznie procedury zgłoszenia zamiaru wystawiania faktur z załącznikiem, a § 14 powołuje się na specyfikację oprogramowania interfejsowego dla szczegółów technicznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 14",
+        "quote": "Szczegółowy opis wymagań technicznych dla kodu weryfikującego i kodu, o którym mowa w ust. 10 pkt 1, zawiera specyfikacja oprogramowania interfejsowego."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-10-bład-odrzucenia",
+    "question_intent": "Jak sprawdzić, dlaczego KSeF odrzucił fakturę?",
+    "question_patterns": [
+      "Co zrobić, gdy KSeF odrzuci fakturę?",
+      "Gdzie znaleźć kod błędu z KSeF?",
+      "Jak interpretować błędy z KSeF?"
+    ],
+    "answer": "Artykuł nie zawiera informacji o procedurze obsługi błędów lub komunikatach odrzucenia. Przepisy § 10 i § 14 regulują wyłącznie proces zgłoszenia i wymagania techniczne kodu weryfikującego, bez opisania mechanizmu raportowania błędów przez KSeF.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 10",
+        "quote": "Zgłoszenie o zamiarze wystawiania i przesyłania do Krajowego Systemu e-Faktur faktur z załącznikiem jest składane przez podatników przed rozpoczęciem wystawiania tego rodzaju faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-10-srodowisko-testowe",
+    "question_intent": "Jak działa środowisko testowe KSeF?",
+    "question_patterns": [
+      "Czy mogę testować KSeF w środowisku testowym?",
+      "Jak uzyskać dostęp do testowego KSeF?",
+      "Czy istnieje sandbox KSeF?"
+    ],
+    "answer": "Artykuł nie zawiera informacji o środowisku testowym KSeF. Przepisy § 10 i § 14 regulują procedury produkcyjne wystawiania i przesyłania faktur z załącznikiem, bez odwołania do możliwości testowania systemu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 10 ust. 1 pkt 9",
+        "quote": "przewidywaną datę rozpoczęcia wystawiania i przesyłania do Krajowego Systemu e-Faktur faktur z załącznikiem"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-10-api-www",
+    "question_intent": "Czy KSeF działa przez API czy przez stronę WWW?",
+    "question_patterns": [
+      "Jak połączyć się z KSeF - przez API czy portal?",
+      "Czy mogę wysyłać faktury przez API do KSeF?",
+      "Jakie są kanały dostępu do KSeF?"
+    ],
+    "answer": "Artykuł nie zawiera informacji o sposobach technicznych połączenia z KSeF (API, portal WWW). Przepisy § 10 i § 14 powołują się na specyfikację oprogramowania interfejsowego, która zawiera szczegóły techniczne dostępu do systemu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 14",
+        "quote": "Szczegółowy opis wymagań technicznych dla kodu weryfikującego i kodu, o którym mowa w ust. 10 pkt 1, zawiera specyfikacja oprogramowania interfejsowego."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "vat-10-limity-wysyłki",
+    "question_intent": "Jakie są limity techniczne wysyłki do KSeF?",
+    "question_patterns": [
+      "Ile fakttur mogę wysłać dziennie do KSeF?",
+      "Jaki jest maksymalny rozmiar faktury w KSeF?",
+      "Jakie są ograniczenia techniczne KSeF?",
+      "Ile linii może mieć faktury w KSeF?"
+    ],
+    "answer": "Artykuł wymaga zgłoszenia przewidywanej średniej liczby faktur w miesiącu (§ 10 ust. 1 pkt 10) oraz przewidywanego średniego rozmiaru faktury w kilobajtach (§ 10 ust. 1 pkt 11), ale nie zawiera konkretnych limitów technicznych. Szczegółowe wymagania znajdują się w specyfikacji oprogramowania interfejsowego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 10 ust. 1 pkt 10-11",
+        "quote": "przewidywaną średnią liczbę wystawianych i przesyłanych do Krajowego Systemu e-Faktur faktur z załącznikiem w miesiącu; przewidywany średni rozmiar wystawianej i przesyłanej do Krajowego Systemu e-Faktur faktury z załącznikiem wyrażony w kilobajtach (kB)"
+      }
+    ],
+    "conditions": [
+      "Podatnik musi podać przewidywaną średnią liczbę faktur w miesiącu",
+      "Podatnik musi wskazać przewidywany średni rozmiar faktury w kB"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "wymagania_techniczne_kseff",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-api-error-authorization",
+    "question_intent": "Co zrobić, gdy API KSeF zwraca błąd autoryzacji?",
+    "question_patterns": [
+      "API KSeF zwraca błąd autoryzacji",
+      "Błąd autoryzacji w systemie e-Faktur",
+      "Jak rozwiązać problem z autoryzacją w KSeF"
+    ],
+    "answer": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie zawierają wytycznych dla błędów autoryzacji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 4 ust. 1",
+        "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania, po weryfikacji posiadanych uprawnień."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "system_e-faktur_wymagania_techniczne",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "ksef-terminy-faktury-offline",
+    "question_intent": "Jakie terminy obowiązują przy fakturach offline do KSeF?",
+    "question_patterns": [
+      "Terminy dla faktur offline w KSeF",
+      "Kiedy wysłać fakturę offline do systemu e-Faktur",
+      "Jaki termin na przesłanie faktury offline"
+    ],
+    "answer": "Dostarczone fragmenty ustawy o VAT nie zawierają informacji na temat terminów przesyłania faktur offline do Krajowego Systemu e-Faktur. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie regulują terminów przesyłania dokumentów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o VAT",
+        "article": "§ 4 ust. 1",
+        "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "system_e-faktur_terminy",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  }
+]

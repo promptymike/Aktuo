@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "checkpoint_version": 2,
+    "checkpoint_saved_at": "2026-04-04 21:54:25",
+    "completed_groups": 5,
+    "total_groups": 5,
+    "processed_subbatches": 5,
+    "total_subbatches": 5,
+    "total_units": 8,
+    "total_cost_usd": 0.0853,
+    "errors": 0,
+    "completed_group_keys": [
+      "2|3",
+      "2|3|4|5",
+      "3|5",
+      "4|5|6",
+      "5"
+    ],
+    "law": {
+      "law_name": "Rozporz?dzenie w sprawie korzystania z Krajowego Systemu e-Faktur",
+      "short_name": "Rozporz?dzenie KSeF",
+      "date": "2025-12-12",
+      "isap_id": "Dz.U.2025.1815"
+    }
+  },
+  "units": [
+    {
+      "id": "vat-5-ksef-rejestracja",
+      "question_intent": "Jak zarejestrować firmę do Krajowego Systemu e-Faktur (KSeF)?",
+      "question_patterns": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Procedura rejestracji w Krajowym Systemie e-Faktur",
+        "Jak włączyć się do KSeF?",
+        "Rejestracja w KSeF - procedura"
+      ],
+      "answer": "Podany tekst artykułu nie zawiera informacji o procedurze rejestracji firmy do Krajowego Systemu e-Faktur. Artykuł § 4 ust. 1 opisuje tylko techniczny sposób nadawania i odbierania uprawnień (za pomocą oprogramowania interfejsowego), ale nie opisuje samej procedury rejestracyjnej. Do udzielenia pełnej odpowiedzi wymagana jest weryfikacja w innych przepisach lub wytycznych KSeF.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 4 ust. 1",
+          "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "KSeF - Krajowy System e-Faktur",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "5"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-ksef-uprawnienia-nadawcy",
+      "question_intent": "Kto może nadać uprawnienia do korzystania z Krajowego Systemu e-Faktur?",
+      "question_patterns": [
+        "Kto może nadać uprawnienia w KSeF?",
+        "Kto ma prawo do nadawania uprawnień do e-Faktur?",
+        "Jakie podmioty mogą udzielać uprawnień w Krajowym Systemie e-Faktur?",
+        "Kto jest uprawniony do nadawania uprawnień KSeF?"
+      ],
+      "answer": "Uprawnienia w Krajowym Systemie e-Faktur mogą nadawać: podatnik VAT, podmioty z art. 106c ustawy, jednostki samorządu terytorialnego (dla swoich jednostek budżetowych, urzędów), grupy VAT (dla swoich członków), nabywcy towarów/usług (wskazani przez podatnika), oraz rolnicy ryczałtowi. Każdy z tych podmiotów nadaje uprawnienia wskazanym osobom fizycznym lub innym podmiotom zgodnie z przydzieloną mu rolą.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 2 ust. 2 pkt 1-4",
+          "quote": "Uprawnienia posiadają: podatnik; podmioty o których mowa w art. 106c ustawy; osoba fizyczna wskazana przez podatnika; osoba fizyczna wskazana przez osobę posiadającą uprawnienie"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 3 ust. 3",
+          "quote": "Uprawnienie posiada również: podmiot wskazany przez podatnika; osoba fizyczna wskazana przez ten podmiot; podmiot upoważniony do wystawiania elektronicznych faktur ustrukturyzowanych"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 4 ust. 1",
+          "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego"
+        }
+      ],
+      "conditions": [
+        "Uprawnienia nadawane są wyłącznie za pośrednictwem oprogramowania interfejsowego KSeF",
+        "Proces nadawania uprawnień wymaga weryfikacji posiadanych uprawnień przez nadającego",
+        "Uprawnienia mogą być nadane osobom fizycznym wskazanym przez podmioty posiadające uprawnienia"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny",
+        "ryczalt",
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "all"
+      ],
+      "topic": "uprawnienia_ksef",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "_generated_from": [
+        "Kto może nadać uprawnienia w KSeF?"
+      ]
+    },
+    {
+      "id": "vat-4-uprawnieniaKSeF-biuro-rachunkowe",
+      "question_intent": "Jak nadać uprawnienia biuru rachunkowemu do wystawiania faktur w Krajowym Systemie e-Faktur",
+      "question_patterns": [
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak upoważnić biuro rachunkowe do wystawiania faktur w KSeF?",
+        "Procedura nadania uprawnień do KSeF dla biura rachunkowowego",
+        "Na czym polega nadanie uprawnień do e-faktur biuru rachunkowemu?"
+      ],
+      "answer": "Nadawanie uprawnień biuru rachunkowemu do wystawiania faktur ustrukturyzowanych w KSeF odbywa się za pomocą oprogramowania interfejsowego, po weryfikacji posiadanych uprawnień. Podatnik wskazuje biuro rachunkowe (podmiot upoważniony) i podaje jego nazwę lub imię i nazwisko oraz unikalny identyfikator w sieci Peppol. Procedura wykonywana jest w sposób określony w specyfikacji oprogramowania interfejsowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 4 ust. 1",
+          "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania, po weryfikacji posiadanych uprawnień."
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 6",
+          "quote": "Nadawanie oraz odebranie uprawnień podmiotowi upoważnionemu do wystawiania elektronicznych faktur ustrukturyzowanych wymaga podania nazwy podmiotu lub imienia i nazwiska osoby fizycznej oraz ich unikalnego identyfikatora w sieci Peppol."
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 4 ust. 4",
+          "quote": "Uprawnienie nadane przez podatnika nabywcy towarów lub usług posiada wskazany nabywca oraz osoby fizyczne i inne podmioty uprawnione wskazane przez tego nabywcę do wystawiania faktur ustrukturyzowanych."
+        }
+      ],
+      "conditions": [
+        "Uprawnienia nadawane są za pośrednictwem oprogramowania interfejsowego KSeF",
+        "Wymagana jest weryfikacja posiadanych uprawnień",
+        "Biuro rachunkowe musi posiadać unikalny identyfikator w sieci Peppol",
+        "Konieczne jest podanie nazwy podmiotu lub imienia i nazwiska osoby fizycznej"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny",
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Krajowy System e-Faktur (KSeF)",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "4",
+        "6",
+        "5"
+      ],
+      "_generated_from": [
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-4-1-odbieranie-uprawnien-ksef",
+      "question_intent": "Jak odebrać uprawnienia użytkownikowi w Krajowym Systemie e-Faktur?",
+      "question_patterns": [
+        "Jak odebrać uprawnienia w KSeF?",
+        "W jaki sposób odbiera się uprawnienia do KSeF?",
+        "Procedura odbierania uprawnień KSeF",
+        "Gdzie i jak odebrać uprawnienia użytkownikowi?"
+      ],
+      "answer": "Odbieranie uprawnień do Krajowego Systemu e-Faktur dokonywane jest za pomocą oprogramowania interfejsowego, zgodnie ze specyfikacją tego oprogramowania, po weryfikacji posiadanych uprawnień. Procedura odbywa się w systemie informatycznym, którego szczegółowe warunki techniczne określa specyfikacja oprogramowania interfejsowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "§ 4 ust. 1",
+          "quote": "Nadawanie oraz odbieranie uprawnień do korzystania z Krajowego Systemu e-Faktur jest dokonywane za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania, po weryfikacji posiadanych uprawnień."
+        }
+      ],
+      "conditions": [
+        "Procedura musi być dokonana za pomocą oprogramowania interfejsowego",
+        "Wymagana weryfikacja posiadanych uprawnień",
+        "Procedura musi być zgodna ze specyfikacją oprogramowania"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "KSeF_uprawnienia_techniczne",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "3",
+        "5"
+      ],
+      "_generated_from": [
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?"
+      ]
+    },
+    {
+      "id": "vat-2-pelnomocnik-ksef",
+      "question_intent": "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+      "question_patterns": [
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Czy osoba fizyczna może być upoważniona do KSeF?",
+        "Czy można wskazać reprezentanta do obsługi Krajowego Systemu e-Faktur?"
+      ],
+      "answer": "Tak, podatnik może wskazać osobę fizyczną jako swojego przedstawiciela do obsługi KSeF. Możliwe jest również wskazanie pełnomocnika pośredniego — osoby fizycznej wskazanej przez osobę uprawnioną do nadawania uprawnień. Przepis dopuszcza wiele poziomów delegacji uprawnień, w zależności od struktury organizacyjnej podatnika.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 2 ust. 2 pkt 3",
+          "quote": "osoba fizyczna wskazana przez podatnika"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 2 ust. 2 pkt 4",
+          "quote": "osoba fizyczna wskazana przez osobę fizyczną posiadającą uprawnienie do nadawania i odbierania uprawnień do korzystania z Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [
+        "Musi to być osoba fizyczna",
+        "Musi być wskazana (upoważniona) przez podatnika lub podmiot do tego uprawniony",
+        "Podatnik może delegować uprawnienia na kolejne poziomy"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "uprawnienia_do_ksef",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "2",
+        "3"
+      ],
+      "_generated_from": [
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak wygenerować token do KSeF?",
+        "[wymagania techniczne] Czy można wysyłać załączniki razem z fakturą do KSeF?",
+        "[terminy] Czy numer KSeF trzeba podać przed terminem płatności?"
+      ]
+    },
+    {
+      "id": "vat-token-ksef-generowanie",
+      "question_intent": "Jak wygenerować token do KSeF?",
+      "question_patterns": [
+        "Jak wygenerować token do KSeF?",
+        "W jaki sposób uzyskać token do Krajowego Systemu e-Faktur?",
+        "Jakie są procedury techniczne generowania tokenu KSeF?"
+      ],
+      "answer": "Przepis nie zawiera informacji o procedurze technicznej generowania tokenu do KSeF. Szczegóły techniczne dotyczące generowania tokenów znajdują się poza zakresem regulacji ustawy o VAT i wymagają weryfikacji w dokumentacji technicznej systemu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 2-3",
+          "quote": "przepisy regulują uprawnienia do korzystania z KSeF, ale nie opisują procedur technicznych"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "procedury_techniczne_ksef",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "2",
+        "3"
+      ],
+      "_generated_from": [
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak wygenerować token do KSeF?",
+        "[wymagania techniczne] Czy można wysyłać załączniki razem z fakturą do KSeF?",
+        "[terminy] Czy numer KSeF trzeba podać przed terminem płatności?"
+      ]
+    },
+    {
+      "id": "vat-zalaczniki-faktura-ksef",
+      "question_intent": "Czy można wysyłać załączniki razem z fakturą do KSeF?",
+      "question_patterns": [
+        "Czy można wysyłać załączniki razem z fakturą do KSeF?",
+        "Czy fatura w KSeF może zawierać załączniki?",
+        "Jakie warunki techniczne wysyłania dokumentów do Krajowego Systemu e-Faktur?"
+      ],
+      "answer": "Przepis ustawy o VAT nie zawiera regulacji dotyczących możliwości dołączania załączników do faktur w KSeF. Szczegóły dotyczące formatu i zawartości dokumentów elektronicznych w systemie wymaga weryfikacji w dokumentacji technicznej i rozporządzeniach wykonawczych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 2-3",
+          "quote": "przepisy ustawy nie regulują technicznych aspektów zawartości faktury w KSeF"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "wymogi_techniczne_ksef",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "2",
+        "3"
+      ],
+      "_generated_from": [
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak wygenerować token do KSeF?",
+        "[wymagania techniczne] Czy można wysyłać załączniki razem z fakturą do KSeF?",
+        "[terminy] Czy numer KSeF trzeba podać przed terminem płatności?"
+      ]
+    },
+    {
+      "id": "vat-numer-ksef-termin-platnosci",
+      "question_intent": "Czy numer KSeF trzeba podać przed terminem płatności?",
+      "question_patterns": [
+        "Czy numer KSeF trzeba podać przed terminem płatności?",
+        "Kiedy podać numer potwierdzenia KSeF na fakturze?",
+        "Jaki jest termin dla podania numeru KSeF na dokumencie?"
+      ],
+      "answer": "Przepis ustawy o VAT reguluje uprawnienia do korzystania z KSeF, ale nie zawiera informacji o terminach podawania numeru potwierdzenia systemu. Wymogi dotyczące momentu i miejsca umieszczenia numeru KSeF mogą być określone w rozporządzeniach wykonawczych lub wytycznych do systemu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 2-3",
+          "quote": "przepisy regulują uprawnienia, nie harmonogramy procedurowe dla numerów potwierdzenia"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "terminy_procedury_ksef",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "2",
+        "3"
+      ],
+      "_generated_from": [
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak wygenerować token do KSeF?",
+        "[wymagania techniczne] Czy można wysyłać załączniki razem z fakturą do KSeF?",
+        "[terminy] Czy numer KSeF trzeba podać przed terminem płatności?"
+      ]
+    }
+  ],
+  "errors": []
+}

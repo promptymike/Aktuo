@@ -17,7 +17,7 @@ from pathlib import Path
 import anthropic
 from env_utils import get_env_value
 
-MODEL = "claude-haiku-3-5-20251001"
+MODEL = "claude-haiku-4-5-20251001"
 REQUEST_TIMEOUT_SECONDS = 180.0
 TIMEOUT_RETRIES = 3
 CHECKPOINT_VERSION = 2

@@ -20,7 +20,7 @@ from pathlib import Path
 import anthropic
 from env_utils import get_env_value
 
-MODEL = "claude-haiku-3-5-20251001"
+MODEL = "claude-haiku-4-5-20251001"
 BATCH_SIZE = 5  # unitów na wywołanie — mniejsze batche = lepsza jakość audytu
 
 SYSTEM_PROMPT = """Jesteś audytorem prawnym. Weryfikujesz answer units dla systemu AI dla księgowych.

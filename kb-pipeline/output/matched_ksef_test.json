@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "source_total_questions": 50,
+    "source_matched": 32,
+    "selected_groups": 5,
+    "selected_questions": 8,
+    "selected_group_keys": [
+      "5",
+      "2|3|4|5",
+      "4|5|6",
+      "3|5",
+      "2|3"
+    ]
+  },
+  "matches": [
+    {
+      "question": "Jak zarejestrować firmę do KSeF?",
+      "matched_articles": [
+        "5"
+      ],
+      "primary_article": "5",
+      "reasoning": "Formularz ZAW-FA służy do nadawania uprawnień do korzystania z KSeF, co jest procesem rejestracji"
+    },
+    {
+      "question": "Kto może nadać uprawnienia w KSeF?",
+      "matched_articles": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuły definiują kto posiada uprawnienia i może je nadawać - podatnik, podmioty z art. 106c oraz osoby przez nich wskazane"
+    },
+    {
+      "question": "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+      "matched_articles": [
+        "4",
+        "6",
+        "5"
+      ],
+      "primary_article": "4",
+      "reasoning": "Artykuł 4 dotyczy nadawania uprawnień nabywcy towarów lub usług, formularz ZAW-FA służy do nadawania uprawnień"
+    },
+    {
+      "question": "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+      "matched_articles": [
+        "3",
+        "5"
+      ],
+      "primary_article": "3",
+      "reasoning": "Artykuł 3 mówi o odebraniu uprawnień, formularz ZAW-FA służy do odebrania uprawnień"
+    },
+    {
+      "question": "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuły definiują kto może posiadać uprawnienia, w tym osoby fizyczne wskazane przez podatnika"
+    },
+    {
+      "question": "Jak wygenerować token do KSeF?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Artykuł 2 definiuje certyfikat KSeF i jego ważność, artykuł 3 zawiera specyfikację techniczną"
+    },
+    {
+      "question": "[wymagania techniczne] Czy można wysyłać załączniki razem z fakturą do KSeF?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Faktura może posiadać tylko jeden załącznik stanowiący integralną część"
+    },
+    {
+      "question": "[terminy] Czy numer KSeF trzeba podać przed terminem płatności?",
+      "matched_articles": [
+        "2",
+        "3"
+      ],
+      "primary_article": "2",
+      "reasoning": "Oznaczanie faktur kodami weryfikującymi - może dotyczyć podawania numerów"
+    }
+  ]
+}
