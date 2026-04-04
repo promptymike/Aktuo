@@ -1,0 +1,1345 @@
+{
+  "metadata": {
+    "checkpoint_version": 2,
+    "checkpoint_saved_at": "2026-04-04 22:22:11",
+    "completed_groups": 5,
+    "total_groups": 5,
+    "processed_subbatches": 8,
+    "total_subbatches": 8,
+    "total_units": 32,
+    "total_cost_usd": 0.2855,
+    "errors": 1,
+    "completed_group_keys": [
+      "106gb",
+      "106gb|106gd",
+      "106gd",
+      "106ng|106nh",
+      "145l"
+    ],
+    "law": {
+      "law_name": "Ustawa o podatku od towarów i usług",
+      "short_name": "Ustawa o VAT",
+      "date": "2004-03-11",
+      "isap_id": "Dz.U.2023.1598"
+    }
+  },
+  "units": [
+    {
+      "id": "vat-106gb-rejestracja-ksefbrak",
+      "question_intent": "Jak zarejestrować firmę do KSeF?",
+      "question_patterns": [
+        "Jak zarejestrować firmę do Krajowego Systemu e-Faktur?",
+        "Procedura rejestracji w KSeF",
+        "Gdzie się zarejestrować do e-Faktur?"
+      ],
+      "answer": "Artykuł 106gb nie zawiera informacji o procedurze rejestracji firmy do Krajowego Systemu e-Faktur. Przepis reguluje wyłącznie techniczne warunki wystawiania i otrzymywania faktur ustrukturyzowanych oraz dostęp do nich za pomocą oprogramowania interfejsowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur za pomocą oprogramowania interfejsowego"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-uprawnienia-rejestracja-brak",
+      "question_intent": "Kto może nadać uprawnienia w KSeF?",
+      "question_patterns": [
+        "Kto nadaje uprawnienia w Krajowym Systemie e-Faktur?",
+        "Jak przydzielić rolę użytkownika w KSeF?",
+        "Czy właściciel może nadać uprawnienia innym użytkownikom?"
+      ],
+      "answer": "Artykuł 106gb nie zawiera przepisów dotyczących przydzielania uprawnień i zarządzania dostępem użytkowników w Krajowym Systemie e-Faktur. Przepis dotyczy wyłącznie wystawiania faktur i ich dostępności dla nabywcy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Oprogramowanie interfejsowe jest dostępne na stronie podanej w Biuletynie Informacji Publicznej"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-biuro-rachunkowe-uprawnienia-brak",
+      "question_intent": "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+      "question_patterns": [
+        "Jak umożliwić biuru rachunkowemu dostęp do KSeF?",
+        "Procedura przydzielenia uprawnień księgowości do e-Faktur",
+        "Czy biuro rachunkowe może samodzielnie obsługiwać KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie reguluje procedury przydzielania uprawnień biurom rachunkowym lub innym podmiotom trzecim. Przepis zawiera wyłącznie wymagania techniczne dotyczące struktury faktur i dostępu do nich.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 1",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur za pomocą oprogramowania interfejsowego"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-odebranie-uprawnien-brak",
+      "question_intent": "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+      "question_patterns": [
+        "Procedura usunięcia użytkownika z KSeF",
+        "Jak wycofać dostęp pracownika do e-Faktur?",
+        "Gdzie zarządzić dostępem użytkowników KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie zawiera informacji na temat zarządzania uprawnieniami użytkowników ani procedury ich wycofania. Przepis reguluje wyłącznie techniczne aspekty faktur ustrukturyzowanych i ich dostępności.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Dostęp do faktury ustrukturyzowanej jest możliwy za pośrednictwem kodu umożliwiającego zidentyfikowanie tej faktury"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-pelnomonnik-ksefbrak",
+      "question_intent": "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+      "question_patterns": [
+        "Czy pełnomocnik ma dostęp do KSeF?",
+        "Pełnomocnictwo w Krajowym Systemie e-Faktur",
+        "Czy trzeba pełnomocnictwo do obsługi KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie reguluje kwestii pełnomocnictwa i obsługi Krajowego Systemu e-Faktur przez pełnomocników. Przepis dotyczy wyłącznie wymagań dotyczących struktury i dostępności faktur.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Oprogramowanie interfejsowe jest dostępne na stronie, której adres jest podany w Biuletynie Informacji Publicznej"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-uwierzytelnienie-podpis-brak",
+      "question_intent": "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+      "question_patterns": [
+        "Podpis kwalifikowany w KSeF",
+        "Czy można logować się do e-Faktur podpisem cyfrowym?",
+        "Uwierzytelnienie w Krajowym Systemie e-Faktur"
+      ],
+      "answer": "Artykuł 106gb wspomina o uwierzytelnianiu w kontekście dostępu do faktury (art. 106nb), ale nie zawiera szczegółów na temat metod uwierzytelniania ani użycia podpisu kwalifikowanego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 3",
+          "quote": "Dostęp do faktury jest możliwy bez konieczności uwierzytelniania, o którym mowa w art. 106nb"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-profil-zaufany-brak",
+      "question_intent": "Czy można korzystać z KSeF przez Profil Zaufany?",
+      "question_patterns": [
+        "Logowanie do KSeF przez Profil Zaufany",
+        "Czy Profil Zaufany działa w e-Fakturach?",
+        "Metody logowania do Krajowego Systemu e-Faktur"
+      ],
+      "answer": "Artykuł 106gb nie zawiera informacji na temat możliwości korzystania z Profilu Zaufanego do dostępu do Krajowego Systemu e-Faktur.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 2",
+          "quote": "Oprogramowanie interfejsowe jest dostępne na stronie, której adres jest podany w Biuletynie Informacji Publicznej"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-token-generowanie-brak",
+      "question_intent": "Jak wygenerować token do KSeF?",
+      "question_patterns": [
+        "Generowanie tokenu w Krajowym Systemie e-Faktur",
+        "Jak uzyskać token dostępu do KSeF?",
+        "Token API do e-Faktur"
+      ],
+      "answer": "Artykuł 106gb nie reguluje procedury generowania tokenów dostępu do Krajowego Systemu e-Faktur. Przepis dotyczy wyłącznie struktury i dostępności faktur ustrukturyzowanych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 5",
+          "quote": "Podatnik jest obowiązany do oznaczenia faktury ustrukturyzowanej kodem umożliwiającym dostęp do tej faktury w Krajowym Systemie e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-token-rola-brak",
+      "question_intent": "Czy token KSeF można ograniczyć do konkretnej roli?",
+      "question_patterns": [
+        "Token z ograniczonymi uprawnieniami w KSeF",
+        "Czy można ustawić role dla tokenu?",
+        "Uprawnienia tokenu w Krajowym Systemie e-Faktur"
+      ],
+      "answer": "Artykuł 106gb nie zawiera informacji na temat możliwości ograniczania tokenu do konkretnych ról lub uprawnień w Krajowym Systemie e-Faktur.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Kod umożliwia dostęp do faktury w Krajowym Systemie e-Faktur oraz umożliwia weryfikację danych zawartych na tej fakturze"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-token-zgubienie-brak",
+      "question_intent": "Co zrobić, gdy zgubiłem token do KSeF?",
+      "question_patterns": [
+        "Jak postępować po utracie tokenu dostępu?",
+        "Procedura resetowania tokenu KSeF",
+        "Co zrobić, gdy zapomniałem tokenu dostępu?"
+      ],
+      "answer": "Artykuł 106gb nie reguluje procedury postępowania w przypadku utraty lub zapomnienia tokenu dostępu do Krajowego Systemu e-Faktur.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 5",
+          "quote": "Podatnik jest obowiązany do oznaczenia faktury ustrukturyzowanej kodem umożliwiającym dostęp do tej faktury"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksefprocedury",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak zarejestrować firmę do KSeF?",
+        "Kto może nadać uprawnienia w KSeF?",
+        "Jak nadać uprawnienia biuru rachunkowemu do KSeF?",
+        "Jak odebrać uprawnienia użytkownikowi w KSeF?",
+        "Czy pełnomocnik może obsługiwać KSeF za podatnika?",
+        "Jak uwierzytelnić się w KSeF podpisem kwalifikowanym?",
+        "Czy można korzystać z KSeF przez Profil Zaufany?",
+        "Jak wygenerować token do KSeF?",
+        "Czy token KSeF można ograniczyć do konkretnej roli?",
+        "Co zrobić, gdy zgubiłem token do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-wysylanie-ksefs",
+      "question_intent": "Jak wysłać fakturę do KSeF z programu księgowego?",
+      "question_patterns": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "W jaki sposób przesłać fakturę do Krajowego Systemu e-Faktur?",
+        "Jaki program do wysyłania faktur do KSeF?"
+      ],
+      "answer": "Faktura ustrukturyzowana jest wysyłana do KSeF przy użyciu oprogramowania interfejsowego dostępnego na stronie urzędu obsługującego ministra finansów publicznych. Oprogramowanie to umożliwia wysyłanie faktury w postaci elektronicznej zgodnie z wzorem dokumentu elektronicznego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 1",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur za pomocą oprogramowania interfejsowego"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 2",
+          "quote": "Oprogramowanie interfejsowe jest dostępne na stronie, której adres jest podany w Biuletynie Informacji Publicznej na stronie podmiotowej urzędu"
+        }
+      ],
+      "conditions": [
+        "Oprogramowanie musi być interfejsowe",
+        "Faktura musi być w postaci elektronicznej",
+        "Musi być zgodna z wzorem dokumentu elektronicznego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "procedura_wysylania_faktur_do_ksefs",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-moment-wystawienia",
+      "question_intent": "Kiedy faktura jest uznana za wystawioną w KSeF?",
+      "question_patterns": [
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Jaki jest moment wystawienia faktury w Krajowym Systemie e-Faktur?",
+        "Kiedy zaistnieje obowiązek wystawienia faktury w KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie określa dokładnego momentu uznania faktury za wystawioną. Artykuł odnosi się do wystawienia faktury ustrukturyzowanej przy użyciu KSeF, ale szczegółowe zasady dotyczące momentu wystawienia wymagają zapoznania się z innymi postanowieniami ustawy o VAT.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "moment_wystawienia_faktury",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-numer-wlasny",
+      "question_intent": "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+      "question_patterns": [
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Czy mogę używać własnych numerów faktury w KSeF?",
+        "Czy KSeF przydziela numer faktury czy używam własny?"
+      ],
+      "answer": "Artykuł 106gb mówi, że KSeF przydziela numer identyfikujący fakturę w systemie (numer KSeF), ale nie uregulowuje bezpośrednio kwestii własnego numeru faktury podatnika. Szczegóły dotyczące numeracji faktury w KSeF wymagają zapoznania się z pełnymi rozporządzeniami.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 7",
+          "quote": "przydzieleniu numeru identyfikującego fakturę w Krajowym Systemie e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "numeracja_faktury_ksefs",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-pobranie-numeru",
+      "question_intent": "Jak pobrać numer KSeF dla wystawionej faktury?",
+      "question_patterns": [
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Gdzie znaleźć numer identyfikujący fakturę w KSeF?",
+        "Jaki jest numer identyfikacyjny faktury w Krajowym Systemie e-Faktur?"
+      ],
+      "answer": "Artykuł 106gb nie zawiera szczegółowych informacji o procedurze pobierania numeru KSeF. Numer identyfikujący fakturę w Krajowym Systemie e-Faktur jest przydzielany przy przesłaniu faktury, ale procedura techniczna pobierania tego numeru nie jest uregulowana w tym artykule.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 7",
+          "quote": "przydzieleniu numeru identyfikującego fakturę w Krajowym Systemie e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "numer_ksefs",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-faktura-korygujaca",
+      "question_intent": "Czy można wysłać do KSeF fakturę korygującą?",
+      "question_patterns": [
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jakie są zasady wysyłania faktury VAT RR KOREKTA do KSeF?",
+        "Czy w KSeF można wystawić korektę faktury?"
+      ],
+      "answer": "Tak, faktura VAT RR KOREKTA może być wystawiana przy użyciu Krajowego Systemu e-Faktur. Artykuł wspomina dostęp do faktury VAT RR KOREKTA wystawionych przy użyciu KSeF, co oznacza, że korekty są obsługiwane przez system.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 3",
+          "quote": "faktury VAT RR i faktury VAT RR KOREKTA wystawionych przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [
+        "Korekta musi być w postaci faktury VAT RR KOREKTA",
+        "Musi być wystawiona przy użyciu KSeF"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "korekty_faktury_ksefs",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-zaliczka",
+      "question_intent": "Jak wystawić fakturę zaliczkową w KSeF?",
+      "question_patterns": [
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Czy można wystawić fakturę zaliczkową w Krajowym Systemie e-Faktur?",
+        "Jakie są zasady wystawienia faktury pro forma w KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie zawiera informacji na temat wystawiania faktur zaliczkowych lub pro forma w KSeF. Przepis odnosi się do faktury ustrukturyzowanej, faktury VAT RR i faktury VAT RR KOREKTA, ale nie wspomina o fakturach zaliczkowych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "faktury_zaliczkowe_ksefs",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-osoba-fizyczna",
+      "question_intent": "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+      "question_patterns": [
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy mogę wystawić fakturę dla osoby fizycznej bez CEIDG w KSeF?",
+        "Jakie są zasady wystawiania faktury dla osób fizycznych w KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie uregulowuje bezpośrednio wystawiania faktur dla osób fizycznych. Przepis dotyczy ogólnie faktury ustrukturyzowanej wystawianych w KSeF, ale szczegółowe warunki dotyczące wystawiania faktury dla różnych kategorii nabywców wymagają analizy innych przepisów ustawy o VAT.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "wystawianie_faktury_dla_osob_fizycznych",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-anulowanie-faktury",
+      "question_intent": "Czy można anulować fakturę wysłaną do KSeF?",
+      "question_patterns": [
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jaka jest procedura usunięcia faktury z Krajowego Systemu e-Faktur?",
+        "Czy mogę usunąć już wysłaną fakturę z KSeF?"
+      ],
+      "answer": "Artykuł 106gb nie zawiera informacji na temat anulowania lub usuwania faktury po wysłaniu do KSeF. Przepis dotyczy wystawiania i otrzymywania faktury, ale nie uregulowuje procedury anulowania już przesłanych dokumentów.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "anulowanie_faktury_ksefs",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-poprawianie-bledu",
+      "question_intent": "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+      "question_patterns": [
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaka jest procedura poprawiania błędów w Krajowym Systemie e-Faktur?",
+        "Czy mogę zmienić dane na fakturze już wysłanej do KSeF?"
+      ],
+      "answer": "Artykuł 106gb wspomina o fakturze VAT RR KOREKTA, która wskazuje na procedurę korekty, ale nie zawiera szczegółowych informacji na temat procedury poprawiania błędów. Korekta faktury powinna być dokonana poprzez wystawienie faktury korygującej.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 3",
+          "quote": "faktury VAT RR i faktury VAT RR KOREKTA wystawionych przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "korekty_faktury_ksefs",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-format-pliku",
+      "question_intent": "Jaki format pliku akceptuje KSeF?",
+      "question_patterns": [
+        "Jaki format pliku akceptuje KSeF?",
+        "W jakim formacie powinienem wysyłać fakturę do KSeF?",
+        "Czy KSeF przyjmuje PDF, XML czy inne formaty?"
+      ],
+      "answer": "Artykuł 106gb określa, że faktura musi być w postaci elektronicznej i zgodna z wzorem dokumentu elektronicznego w rozumieniu ustawy o informatyzacji, ale nie precyzuje konkretnych formatów plików (PDF, XML itp.). Szczegółowe wymagania techniczne dotyczące formatów plików powinny być określone w rozporządzeniach wykonawczych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 1",
+          "quote": "w postaci elektronicznej i zgodnie z wzorem dokumentu elektronicznego w rozumieniu ustawy z dnia 17 lutego 2005 r. o informatyzacji działalności podmiotów realizujących zadania publiczne"
+        }
+      ],
+      "conditions": [
+        "Format elektroniczny",
+        "Zgodność z wzorem dokumentu elektronicznego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "format_faktury_ksefs",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Jak wysłać fakturę do KSeF z programu księgowego?",
+        "Kiedy faktura jest uznana za wystawioną w KSeF?",
+        "Czy faktura w KSeF musi mieć numer z mojego systemu?",
+        "Jak pobrać numer KSeF dla wystawionej faktury?",
+        "Czy można wysłać do KSeF fakturę korygującą?",
+        "Jak wystawić fakturę zaliczkową w KSeF?",
+        "Jak wystawić fakturę w KSeF dla osoby fizycznej nieprowadzącej działalności?",
+        "Czy można anulować fakturę wysłaną do KSeF?",
+        "Jak poprawić błąd w fakturze już przesłanej do KSeF?",
+        "Jaki format pliku akceptuje KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-faktury-uproszczone-ksef",
+      "question_intent": "Czy faktury uproszczone będą trafiać do KSeF?",
+      "question_patterns": [
+        "Czy faktury uproszczone trzeba wysyłać do KSeF?",
+        "Czy faktury uproszczone muszą być w Krajowym Systemie e-Faktur?",
+        "Jak są traktowane faktury uproszczone w KSeF?"
+      ],
+      "answer": "Artykuł 106gb reguluje wystawienie i odbór faktur ustrukturyzowanych w Krajowym Systemie e-Faktur, ale nie zawiera informacji o faktach uproszczonych. Aby poznać wymogi dotyczące faktur uproszczonych, konieczne jest sprawdzenie innych przepisów ustawy o VAT.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [
+        "Artykuł 106gb mówi tylko o faktach ustrukturyzowanych"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksef",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Czy faktury uproszczone będą trafiać do KSeF?",
+        "Czy paragony z NIP do 450 zł trzeba wystawiać w KSeF?",
+        "Czy zagraniczny podmiot bez siedziby w Polsce musi korzystać z KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-paragony-nip-450zl-ksef",
+      "question_intent": "Czy paragony z NIP do 450 zł trzeba wystawiać w KSeF?",
+      "question_patterns": [
+        "Czy paragony poniżej 450 zł muszą być w KSeF?",
+        "Czy paragony na kwotę do 450 zł z numerem NIP wymuszają raportowanie do KSeF?",
+        "Jakie są wymogi dla paragonów do 450 zł z NIP?"
+      ],
+      "answer": "Artykuł 106gb nie reguluje wymagań dotyczących paragonów ani limitów kwotowych dla paragonu. Przepis dotyczy wyłącznie faktur ustrukturyzowanych wystawianych w Krajowym Systemie e-Faktur.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 1",
+          "quote": "Faktura ustrukturyzowana jest wystawiana i otrzymywana przy użyciu Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [
+        "Przepis dotyczy tylko faktur ustrukturyzowanych, nie paragonów"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "all"
+      ],
+      "topic": "e-faktury_ksef",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Czy faktury uproszczone będą trafiać do KSeF?",
+        "Czy paragony z NIP do 450 zł trzeba wystawiać w KSeF?",
+        "Czy zagraniczny podmiot bez siedziby w Polsce musi korzystać z KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-zagraniczny-podmiot-ksef",
+      "question_intent": "Czy zagraniczny podmiot bez siedziby w Polsce musi korzystać z KSeF?",
+      "question_patterns": [
+        "Czy obcokrajowiec bez siedziby w Polsce jest obowiązany wysyłać faktury do KSeF?",
+        "Jaki jest obowiązek zagranicznego sprzedawcy wobec KSeF?",
+        "Czy podatnik z siedzibą zagraniczną musi korzystać z KSeF?"
+      ],
+      "answer": "Artykuł 106gb ust. 4 pkt 2 stanowi, że gdy nabywcą jest podmiot nieposiadający siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju, faktura ustrukturyzowana jest udostępniana nabywcy w sposób z nim uzgodniony (czyli nie przez KSeF). To oznacza, że wymóg przesłania faktury do KSeF nie dotyczy transakcji ze sprzedawcą zagranicznym w tym scenariuszu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 4 pkt 2",
+          "quote": "nabywcą jest podmiot nieposiadający siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju – faktura ustrukturyzowana jest udostępniana nabywcy w sposób z nim uzgodniony"
+        }
+      ],
+      "conditions": [
+        "Nabywca nie posiada siedziby działalności gospodarczej w Polsce",
+        "Nabywca nie ma stałego miejsca prowadzenia działalności w Polsce"
+      ],
+      "exceptions": [
+        "Jeśli zagraniczny sprzedawca ma stałe miejsce prowadzenia działalności w Polsce, które uczestniczy w sprzedaży, może być zobowiązany do normalnych wymogów KSeF"
+      ],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "e-faktury_ksef",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106gb"
+      ],
+      "_generated_from": [
+        "Czy faktury uproszczone będą trafiać do KSeF?",
+        "Czy paragony z NIP do 450 zł trzeba wystawiać w KSeF?",
+        "Czy zagraniczny podmiot bez siedziby w Polsce musi korzystać z KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gb-zagranica-ksef",
+      "question_intent": "Czy faktura dla zagranicznego kontrahenta musi być wysłana do Krajowego Systemu e-Faktur?",
+      "question_patterns": [
+        "Czy zagranicznego odborcę trzeba wysyłać fakturę przez KSeF?",
+        "Czy faktura dla kontrahenta spoza Polski musi trafiać do KSeF?",
+        "Czy obowiązek e-faktury dotyczy faktur zagranicznych?",
+        "Czy faktura dla nabywcy z innego kraju UE musi być w KSeF?"
+      ],
+      "answer": "Nie zawsze. Faktura ustrukturyzowana dla nabywcy zagranicznego nie musi być wysyłana do KSeF, jeśli miejscem świadczenia jest inny kraj lub nabywca nie ma siedziby działalności na terenie Polski. W takim przypadku faktura jest udostępniana nabywcy w sposób z nim uzgodniony, a podatnik musi oznaczyć ją specjalnym kodem umożliwiającym weryfikację danych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 4",
+          "quote": "W przypadku gdy: 1) miejscem świadczenia jest terytorium państwa członkowskiego inne niż terytorium kraju lub terytorium państwa trzeciego lub 2) nabywcą jest podmiot nieposiadający siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju – faktura ustrukturyzowana jest udostępniana nabywcy w sposób z nim uzgodniony."
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gb ust. 5",
+          "quote": "Podatnik jest obowiązany do oznaczenia faktury ustrukturyzowanej kodem umożliwiającym dostęp do tej faktury w Krajowym Systemie e-Faktur oraz umożliwiającym weryfikację danych zawartych na tej fakturze, w przypadku udostępnienia jej nabywcy, o którym mowa w ust. 4, w sposób inny niż przy użyciu Krajowego Systemu e-Faktur."
+        }
+      ],
+      "conditions": [
+        "Miejscem świadczenia jest inny kraj UE lub kraj trzeci",
+        "Nabywca nie ma siedziby działalności na terenie Polski",
+        "Nabywca nie ma stałego miejsca prowadzenia działalności na terenie Polski"
+      ],
+      "exceptions": [
+        "Jeśli nabywca ma siedziby lub stałe miejsce prowadzenia działalności na terenie Polski, które uczestniczy w nabyciu towaru/usługi – faktury mogą być wysyłane do KSeF na zasadach ogólnych"
+      ],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "Krajowy System e-Faktur - zagranica",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106gb",
+        "106gd"
+      ],
+      "_generated_from": [
+        "Czy fakturę dla zagranicznego kontrahenta też trzeba wysłać do KSeF?",
+        "Czy można wystawić fakturę wcześniej i wysłać ją do KSeF później?"
+      ]
+    },
+    {
+      "id": "vat-106nf-termin-wysylki-ksef",
+      "question_intent": "Czy można wystawić fakturę wcześniej i wysłać ją do KSeF później?",
+      "question_patterns": [
+        "Jaki jest termin wysłania faktury do KSeF po wystawieniu?",
+        "Czy mogę wystawić fakturę dzisiaj a przesłać do KSeF jutro?",
+        "Czy data wystawienia i data wysłania do KSeF mogą się różnić?",
+        "Kiedy muszę wysłać fakturę do Krajowego Systemu e-Faktur?"
+      ],
+      "answer": "Przepisy nie określają wprost, że faktura musi być wysłana do KSeF w określonym terminie od wystawienia. Jednak w sytuacji awarii KSeF, podatnik ma 7 dni roboczych od dnia zakończenia awarii na przesłanie faktur wystawionych w czasie awarii. W normalnych warunkach data wystawienia na fakturze i data wysłania do KSeF to dwie różne sprawy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106nf ust. 4",
+          "quote": "W terminie 7 dni roboczych od dnia zakończenia awarii Krajowego Systemu e-Faktur podatnik jest obowiązany do przesłania do Krajowego Systemu e-Faktur faktur, o których mowa w ust. 1, w celu przydzielenia numerów identyfikujących te faktury."
+        }
+      ],
+      "conditions": [
+        "Przepis dotyczący terminu 7 dni roboczych dotyczy sytuacji awaryjnej KSeF",
+        "Data wystawienia faktury to ta, którą podatnik wskaże na dokumencie (art. 106e)"
+      ],
+      "exceptions": [
+        "Jeśli w terminie 7 dni roboczych od zakończenia awarii wystąpi kolejna awaria – termin liczy się od zakończenia tej kolejnej awarii"
+      ],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "Krajowy System e-Faktur - terminy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106gb",
+        "106gd"
+      ],
+      "_generated_from": [
+        "Czy fakturę dla zagranicznego kontrahenta też trzeba wysłać do KSeF?",
+        "Czy można wystawić fakturę wcześniej i wysłać ją do KSeF później?"
+      ]
+    },
+    {
+      "id": "vat-145l-ksef-obowiazek-data",
+      "question_intent": "Od kiedy KSeF jest obowiązkowy dla czynnych podatników VAT?",
+      "question_patterns": [
+        "Od kiedy obowiązek KSeF dla czynnych podatników VAT?",
+        "Kiedy wchodzi w życie obowiązek wystawiania faktur w KSeF?",
+        "Jaka data rozpoczęcia obowiązku KSeF dla podatników czynnych?"
+      ],
+      "answer": "Artykuł 145l dotyczy okresu od 1 lipca 2024 r. do 31 grudnia 2024 r., kiedy niektórzy podatnicy mogą wystawiać faktury elektroniczne lub papierowe zamiast ustrukturyzowanych. Jednak artykuł nie zawiera informacji o dacie wprowadzenia obowiązku KSeF dla czynnych podatników VAT — wymaga to weryfikacji w innych przepisach ustawy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 145l ust. 1-3",
+          "quote": "W okresie od dnia 1 lipca 2024 r. do dnia 31 grudnia 2024 r. podatnicy obowiązani do wystawiania faktur ustrukturyzowanych mogą wystawiać faktury elektroniczne lub faktury w postaci papierowej."
+        }
+      ],
+      "conditions": [
+        "Przepis dotyczy okresu przejściowego (1 lipca - 31 grudnia 2024 r.)"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "KSeF - obowiązek i terminy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "145l"
+      ],
+      "_generated_from": [
+        "Od kiedy KSeF jest obowiązkowy dla czynnych podatników VAT?",
+        "Od kiedy KSeF obejmuje podatników zwolnionych z VAT?",
+        "Kto jest zwolniony z obowiązku wystawiania faktur w KSeF?"
+      ]
+    },
+    {
+      "id": "vat-145l-ksef-zwolnieni",
+      "question_intent": "Od kiedy KSeF obejmuje podatników zwolnionych z VAT?",
+      "question_patterns": [
+        "Czy podatnicy zwolnieni z VAT mają obowiązek KSeF?",
+        "Kiedy KSeF dla podatników zwolnionych?",
+        "Czy osoby zwolnione ze sprzedaży wystawiają faktury w KSeF?"
+      ],
+      "answer": "W okresie od 1 lipca 2024 r. do 31 grudnia 2024 r. podatnicy, u których sprzedaż jest zwolniona od podatku na podstawie art. 113 ust. 1 i 9, mogą wystawiać faktury elektroniczne lub papierowe zamiast ustrukturyzowanych. Artykuł nie precyzuje, co będzie obowiązkowe po 31 grudnia 2024 r.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 145l ust. 1 pkt 1",
+          "quote": "podatnicy u których sprzedaż jest zwolniona od podatku na podstawie art. 113 ust. 1 i 9 mogą wystawiać faktury elektroniczne lub faktury w postaci papierowej"
+        }
+      ],
+      "conditions": [
+        "Okres przejściowy: 1 lipca - 31 grudnia 2024 r.",
+        "Zwolnienie na podstawie art. 113 ust. 1 lub 9"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_zwolniony"
+      ],
+      "topic": "KSeF - podatnicy zwolnieni",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "145l"
+      ],
+      "_generated_from": [
+        "Od kiedy KSeF jest obowiązkowy dla czynnych podatników VAT?",
+        "Od kiedy KSeF obejmuje podatników zwolnionych z VAT?",
+        "Kto jest zwolniony z obowiązku wystawiania faktur w KSeF?"
+      ]
+    },
+    {
+      "id": "vat-145l-zwolnienie-paragony",
+      "question_intent": "Kto jest zwolniony z obowiązku wystawiania faktur w KSeF?",
+      "question_patterns": [
+        "Kto ma zwolnienie z KSeF?",
+        "Czy paragon fiskalny to alternatywa dla KSeF?",
+        "Jakie czynności nie wymagają faktur w KSeF?"
+      ],
+      "answer": "W okresie od 1 lipca do 31 grudnia 2024 r. podatnicy zwolnieni z VAT (art. 113) i ci dokonujący czynności zwolnionych (art. 43) mogą wystawiać faktury papierowe lub elektroniczne. Ponadto czynności przy kasach rejestrujących mogą być dokumentowane paragonami fiskalnymi zamiast faktur ustrukturyzowanych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 145l ust. 1 pkt 1-2 i ust. 3",
+          "quote": "podatnicy u których sprzedaż jest zwolniona od podatku lub wykonujący wyłącznie czynności zwolnione mogą wystawiać faktury elektroniczne lub papierowe; paragon fiskalny uznany za fakturę może być wydany zamiast faktury ustrukturyzowanej"
+        }
+      ],
+      "conditions": [
+        "Okres: 1 lipca - 31 grudnia 2024 r.",
+        "Zwolnienie na podstawie art. 113 ust. 1 i 9 lub art. 43 ust. 1",
+        "Czynności przy kasach rejestrujących"
+      ],
+      "exceptions": [
+        "Paragon fiskalny nie zastępuje faktury ustrukturyzowanej — jest to uprawnienie do wystawiania paragonu zamiast faktury ustrukturyzowanej"
+      ],
+      "taxpayer_type": [
+        "vat_zwolniony"
+      ],
+      "topic": "KSeF - zwolnienia i wyjątki",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "145l"
+      ],
+      "_generated_from": [
+        "Od kiedy KSeF jest obowiązkowy dla czynnych podatników VAT?",
+        "Od kiedy KSeF obejmuje podatników zwolnionych z VAT?",
+        "Kto jest zwolniony z obowiązku wystawiania faktur w KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106gd-termin-ksef",
+      "question_intent": "Jaki jest termin przesłania faktury do Krajowego Systemu e-Faktur?",
+      "question_patterns": [
+        "Jaki jest termin przesłania faktury do KSeF?",
+        "W jakim terminie trzeba przesłać fakturę do Krajowego Systemu e-Faktur?",
+        "Ile dni mam na przesłanie faktury do systemu e-Faktur?",
+        "Czy są różne terminy przesłania faktury do KSeF?"
+      ],
+      "answer": "Termin przesłania faktury do KSeF wynosi 14 dni od dnia dokonania dostawy. Wyjątek stanowią faktury ustrukturyzowane oraz faktury wydane w okresie awarii systemu, które są przesyłane przed upływem tego terminu. W przypadku awarii KSeF podatnik ma 7 dni roboczych od ogłoszenia zakończenia awarii na przesłanie faktur wydanych w jej okresie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gd ust. 1",
+          "quote": "podatnik, w terminie 14 dni od dnia dokonania dostawy, przesyła egzemplarz wystawionej faktury lub dane na niej zawarte do wyznaczonej jednostki"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106gd ust. 2",
+          "quote": "Przepisu ust. 1 nie stosuje się do faktur ustrukturyzowanych oraz faktur, o których mowa w art. 106nf ust. 1 i art. 106nh ust. 1, przesłanych do Krajowego Systemu e-Faktur przed upływem terminu 14 dni"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106nf ust. 4",
+          "quote": "W terminie 7 dni roboczych od dnia zakończenia awarii Krajowego Systemu e-Faktur podatnik jest obowiązany do przesłania do Krajowego Systemu e-Faktur faktur"
+        }
+      ],
+      "conditions": [
+        "Termin 14 dni liczy się od dnia dokonania wewnątrzwspólnotowej dostawy nowych środków transportu",
+        "Dotyczy faktury przesyłanej do wyznaczonej jednostki (art. 97 ust. 17)",
+        "W przypadku awarii systemu termin wynosi 7 dni roboczych od ogłoszenia zakończenia awarii"
+      ],
+      "exceptions": [
+        "Faktury ustrukturyzowane są przesyłane przed upływem 14 dni",
+        "Faktury wydane w okresie awarii KSeF podlegają innemu terminowi (7 dni roboczych od zakończenia awarii)",
+        "Jeśli w trakcie 7-dniowego terminu nastąpi kolejna awaria, termin liczy się od nowa"
+      ],
+      "taxpayer_type": [
+        "vat_czynny",
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "fakturowanie_i_dokumentacja",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106gd"
+      ],
+      "_generated_from": [
+        "Jaki jest termin przesłania faktury do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106nf-termin-awaria",
+      "question_intent": "Jaki jest termin przesłania faktury do KSeF w okresie awarii systemu?",
+      "question_patterns": [
+        "Kiedy przesłać fakturę do KSeF gdy system nie działa?",
+        "Ile dni mam na przesłanie faktury wydanej w okresie awarii KSeF?",
+        "Co robić z fakturami wydanymi podczas awarii systemu e-Faktur?"
+      ],
+      "answer": "Faktura wydana w okresie awarii KSeF musi być przesłana do systemu w terminie 7 dni roboczych od dnia zakończenia awarii wskazanego w komunikacie ministerstwa. Jeśli w trakcie tego 7-dniowego terminu nastąpi kolejna awaria, termin liczy się ponownie od zakończenia tej kolejnej awarii.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106nf ust. 4",
+          "quote": "W terminie 7 dni roboczych od dnia zakończenia awarii Krajowego Systemu e-Faktur podatnik jest obowiązany do przesłania do Krajowego Systemu e-Faktur faktur"
+        },
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106nf ust. 5",
+          "quote": "W przypadku gdy w terminie, o którym mowa w ust. 4, zostanie zamieszczony kolejny komunikat o wystąpieniu awarii, termin liczy się od dnia zakończenia tej kolejnej awarii"
+        }
+      ],
+      "conditions": [
+        "Faktura musi być wydana w okresie trwania awarii KSeF ogłoszonej przez ministra finansów",
+        "Termin rozpoczyna się od dnia wskazanego w komunikacie o zakończeniu awarii",
+        "Liczy się dni robocze (bez weekendów i świąt)"
+      ],
+      "exceptions": [
+        "Jeśli zaraz po awarii nastąpi kolejna awaria, termin nie upływa - liczy się od nowa",
+        "Jeśli awaria będzie trwać lub wznowi się w trakcie 7-dniowego okresu, przepisy o 7-dniowym terminie nie mają zastosowania"
+      ],
+      "taxpayer_type": [
+        "vat_czynny",
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "fakturowanie_i_dokumentacja",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106gd"
+      ],
+      "_generated_from": [
+        "Jaki jest termin przesłania faktury do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106nh-termin-awaria",
+      "question_intent": "Jak liczyć termin wystawienia faktury przy awarii KSeF?",
+      "question_patterns": [
+        "Jaki jest termin na wystawienie faktury w przypadku awarii Krajowego Systemu e-Faktur?",
+        "Czy mogę wystawiać faktury w trybie awaryjnym podczas niedostępności KSeF?",
+        "Na ile dni mogę przesunąć wysyłkę faktury do KSeF w przypadku awarii?"
+      ],
+      "answer": "Podczas niedostępności KSeF możesz wystawić fakturę w postaci elektronicznej zgodnie ze wzorem udostępnionym przez system. Fakturę tę musisz przesłać do KSeF nie później niż następny dzień roboczy po zakończeniu awarii. Termin liczony jest od dnia, w którym dostęp do systemu zostanie przywrócony, a nie od dnia wystawienia faktury.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106nh ust. 1 i 2",
+          "quote": "podatnik wystawia faktury w postaci elektronicznej zgodnie z wzorem udostępnionym na podstawie art. 106gb ust. 8. Podatnik jest obowiązany przesłać faktury do Krajowego Systemu e-Faktur nie później niż w następnym dniu roboczym po dniu zakończenia okresu niedostępności Krajowego Systemu e-Faktur"
+        }
+      ],
+      "conditions": [
+        "Niedostępność Krajowego Systemu e-Faktur musi być zarejestrowana w systemie (art. 106ne ust. 4)",
+        "Faktura wystawiona w trybie awaryjnym musi być w postaci elektronicznej",
+        "Faktura musi być przesłana w następny dzień roboczy po zakończeniu awarii"
+      ],
+      "exceptions": [
+        "Jeśli w terminie przesłania faktury zostanie zamieszczony komunikat o nowej awarii systemu głównego, stosuje się przepisy art. 106nf ust. 4 i 5 (art. 106nh ust. 3 pkt 1)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "faktury_elektroniczne_ksef",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ng",
+        "106nh"
+      ],
+      "_generated_from": [
+        "Jak liczyć termin wystawienia faktury przy awarii KSeF?",
+        "Czy faktury wystawiane w trybie awaryjnym są zwolnione z natychmiastowej wysyłki do KSeF?"
+      ]
+    },
+    {
+      "id": "vat-106nh-wysylka-awaryjne",
+      "question_intent": "Czy faktury wystawiane w trybie awaryjnym są zwolnione z natychmiastowej wysyłki do KSeF?",
+      "question_patterns": [
+        "Czy w przypadku awarii KSeF mogę nie wysyłać faktury do systemu od razu?",
+        "Czy faktury awaryjne mają inny termin przesłania do Krajowego Systemu e-Faktur?",
+        "Kiedy muszę wysłać do KSeF fakturę wystawioną podczas niedostępności systemu?"
+      ],
+      "answer": "Tak, faktury wystawione w trybie awaryjnym nie są wysyłane do KSeF natychmiast. Musisz je przesłać nie później niż następny dzień roboczy po zakończeniu awarii (lub następny dzień roboczy po ich wystawieniu, jeśli przyczyna nie była awarią systemu głównego). To jedyna sytuacja, w której wysyłka faktury do KSeF jest opóźniona.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT",
+          "article": "art. 106nh ust. 2",
+          "quote": "Podatnik jest obowiązany przesłać faktury do Krajowego Systemu e-Faktur w celu przydzielenia numeru identyfikującego te faktury w Krajowym Systemie e-Faktur nie później niż w następnym dniu roboczym po dniu zakończenia okresu niedostępności"
+        }
+      ],
+      "conditions": [
+        "Musi trwać niewystarczalna dostępność Krajowego Systemu e-Faktur (art. 106ne ust. 4)",
+        "Lub podatnik nie ma możliwości wystawienia faktury ustrukturyzowanej z innego powodu niż awaria KSeF (art. 106nh ust. 1)"
+      ],
+      "exceptions": [
+        "Jeśli w terminie przesłania pojawi się komunikat o awarii, przepisy zmieniają się odpowiednio (art. 106nh ust. 3)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "faktury_elektroniczne_ksef",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ng",
+        "106nh"
+      ],
+      "_generated_from": [
+        "Jak liczyć termin wystawienia faktury przy awarii KSeF?",
+        "Czy faktury wystawiane w trybie awaryjnym są zwolnione z natychmiastowej wysyłki do KSeF?"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "articles": [
+        "106gb"
+      ],
+      "group_key": "106gb",
+      "sub_batch_index": 3,
+      "questions": [
+        "Czy KSeF przyjmuje tylko faktury XML?",
+        "Jakie dane są obowiązkowe w schemie FA(2) dla KSeF?",
+        "Co oznacza walidacja schemy w KSeF?",
+        "Jak sprawdzić, dlaczego KSeF odrzucił fakturę?",
+        "Czy można wysyłać załączniki razem z fakturą do KSeF?",
+        "Jak działa środowisko testowe KSeF?",
+        "Czy KSeF działa przez API czy przez stronę WWW?",
+        "Jakie są limity techniczne wysyłki do KSeF?",
+        "Co zrobić, gdy API KSeF zwraca błąd autoryzacji?",
+        "Czy faktury konsumenckie B2C są objęte KSeF?"
+      ],
+      "error": "Expecting ',' delimiter: line 11 column 138 (char 455)"
+    }
+  ]
+}
