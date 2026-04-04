@@ -21,6 +21,20 @@ def _tokenize(text: str) -> set[str]:
     return set(re.findall(r"[a-z0-9]+", text.lower()))
 
 
+def _category_matches(query_category: str, chunk: LawChunk) -> bool:
+    if chunk.category == query_category:
+        return True
+
+    if query_category == "ksef":
+        haystack = " ".join([chunk.category, chunk.law_name, chunk.content]).lower()
+        return any(
+            keyword in haystack
+            for keyword in ("ksef", "krajowy system e-faktur", "e-faktur", "ustrukturyz")
+        )
+
+    return False
+
+
 def load_chunks(knowledge_path: str | Path) -> list[LawChunk]:
     return [
         LawChunk(
@@ -45,7 +59,7 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 3) -> l
         )
         chunk_tokens = _tokenize(searchable_text)
         score = len(query_tokens & chunk_tokens)
-        if chunk.category == query_category:
+        if _category_matches(query_category, chunk):
             score += 2
         if score > 0:
             scored.append((score, chunk))

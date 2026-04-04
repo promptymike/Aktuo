@@ -8,6 +8,16 @@ def categorize_query(query: str) -> str:
         "employment": ("employee", "employer", "salary", "wage", "termination"),
         "privacy": ("privacy", "data", "gdpr", "personal data", "consent"),
         "contracts": ("contract", "breach", "clause", "agreement", "invoice"),
+        "ksef": (
+            "ksef",
+            "krajowy system e-faktur",
+            "e-faktur",
+            "e-faktura",
+            "faktura ustrukturyzowana",
+            "faktury ustrukturyzowane",
+            "token ksef",
+            "uprawnienia ksef",
+        ),
     }
     for category, keywords in keyword_map.items():
         if any(keyword in lowered for keyword in keywords):
