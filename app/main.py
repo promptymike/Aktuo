@@ -106,12 +106,87 @@ def render_styles() -> None:
             }
 
             .stChatInputContainer {
-                background: #ffffff;
+                position: sticky;
+                bottom: 0;
+                z-index: 30;
+                padding: 0.75rem 0 calc(0.75rem + env(safe-area-inset-bottom));
+                background: rgba(255, 255, 255, 0.97);
+                border-top: 1px solid var(--aktuo-border);
             }
 
             .stExpander {
                 border: 1px solid var(--aktuo-border);
                 border-radius: 14px;
+            }
+
+            [data-testid="stForm"] {
+                max-width: 500px;
+                margin: 1rem auto 0;
+                padding: 1rem;
+                border: 1px solid var(--aktuo-border);
+                border-radius: 16px;
+                background: #ffffff;
+            }
+
+            [data-testid="stForm"] [data-baseweb="input"] > div {
+                border: 1px solid var(--aktuo-border);
+                border-radius: 8px;
+                background: #ffffff;
+            }
+
+            [data-testid="stForm"] input {
+                color: var(--aktuo-text);
+            }
+
+            [data-testid="stForm"] [data-testid="stFormSubmitButton"] > button {
+                background: var(--aktuo-navy);
+                color: #ffffff;
+                border: 1px solid var(--aktuo-navy);
+                border-radius: 10px;
+                padding: 0.6rem 1.5rem;
+                font-weight: 600;
+                transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+            }
+
+            [data-testid="stForm"] [data-testid="stFormSubmitButton"] > button:hover {
+                background: #243558;
+                border-color: #243558;
+                box-shadow: 0 10px 24px rgba(26, 39, 68, 0.14);
+                transform: translateY(-1px);
+            }
+
+            @media (max-width: 768px) {
+                .aktuo-hero {
+                    gap: 0.75rem;
+                    padding: 0.95rem 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                .aktuo-title {
+                    font-size: 1.4rem;
+                }
+
+                .stChatMessage {
+                    padding: 0.75rem !important;
+                }
+
+                .stChatInputContainer {
+                    padding: 0.6rem 0 calc(0.75rem + env(safe-area-inset-bottom));
+                }
+
+                [data-testid="stForm"] {
+                    max-width: 100%;
+                    margin: 1rem auto 0;
+                    padding: 0.9rem;
+                }
+
+                [data-testid="stForm"] [data-baseweb="input"] > div {
+                    width: 100%;
+                }
+
+                [data-testid="stForm"] [data-testid="stFormSubmitButton"] > button {
+                    width: 100%;
+                }
             }
         </style>
         """,
