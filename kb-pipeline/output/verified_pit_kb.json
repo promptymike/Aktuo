@@ -1,0 +1,2745 @@
+[
+  {
+    "id": "law-27-skala-podatkowa",
+    "question_intent": "Jaka jest podstawowa forma opodatkowania działalności gospodarczej dla osób fizycznych?",
+    "question_patterns": [
+      "Jakie są formy opodatkowania jednoosobowej działalności gospodarczej w PIT?",
+      "Na jakiej skali podatkowej opodatkowana jest działalność gospodarcza?",
+      "Ile wynosi stawka podatku dochodowego dla działalności gospodarczej?",
+      "Jakie przedziały podatkowe obowiązują dla osób fizycznych prowadzących działalność?"
+    ],
+    "answer": "Podstawową formą opodatkowania działalności gospodarczej osób fizycznych jest podatek dochodowy według progresywnej skali podatkowej. Dla dochodów do 120 000 zł stawka wynosi 12% minus kwota zmniejszająca podatek 3600 zł, a dla dochodów powyżej 120 000 zł stawka to 10 800 zł plus 32% nadwyżki ponad 120 000 zł.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 27 ust. 1",
+        "quote": "Podatek dochodowy pobiera się od podstawy jego obliczenia według następującej skali podatkowej"
+      }
+    ],
+    "conditions": [
+      "Zastrzeżenie art. 29-30f (wyjątki od standardowej skali)",
+      "Podatek obliczany od całkowitej podstawy dochodów podlegających opodatkowaniu"
+    ],
+    "exceptions": [
+      "art. 29-30f określają wyjątki od standardowej skali podatkowej",
+      "Możliwe są inne formy opodatkowania dla określonych podatników (art. 30c - stawka 19%)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "skala_podatkowa_pit",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30c-podatek-liniowy-19-procent",
+    "question_intent": "Na jakich warunkach podatnik może opodatkować działalność gospodarczą stawką 19%?",
+    "question_patterns": [
+      "Kiedy można wybrać podatek liniowy 19% dla działalności gospodarczej?",
+      "Kto może zastosować stawkę 19% do dochodów z pozarolniczej działalności?",
+      "Jaka jest stawka podatku dochodowego dla działalności gospodarczej?",
+      "Czy mogę płacić 19% podatku od dochodów z biznesu?"
+    ],
+    "answer": "Podatek dochodowy od dochodów z pozarolniczej działalności gospodarczej wynosi 19%, zgodnie z art. 30c ust. 1. Przepis ten dotyczy podatników wymienonych w art. 9a ust. 2 lub 7 (osoby fizyczne prowadzące działalność gospodarczą). Wybór tej formy opodatkowania zależy od spełnienia warunków określonych w art. 9a — szczegóły znajdują się w tym artykule, który nie jest tu przytoczony w pełni.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30c ust. 1",
+        "quote": "Podatek dochodowy od dochodów z pozarolniczej działalności gospodarczej wynosi 19 % podstawy obliczenia podatku"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 9a ust. 2, 7",
+        "quote": "podatnicy, o których mowa w art. 9a ust. 2 lub 7"
+      }
+    ],
+    "conditions": [
+      "podatnik musi być osobą fizyczną, o której mowa w art. 9a ust. 2 lub 7",
+      "dochód musi pochodzić z pozarolniczej działalności gospodarczej lub działów specjalnych produkcji rolnej",
+      "z zastrzeżeniem art. 29 i art. 30"
+    ],
+    "exceptions": [
+      "nie dotyczy dochodów zwolnionych z opodatkowania na podstawie art. 29 i art. 30"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "opodatkowanie_działalności_gospodarczej",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30c-zmiana-formy-opodatkowania",
+    "question_intent": "Czy można zmienić formę opodatkowania działalności w trakcie roku podatkowego?",
+    "question_patterns": [
+      "Czy można zmienić formę opodatkowania działalności w trakcie roku?",
+      "Czy mogę przejść z innej formy opodatkowania na 19% w połowie roku?",
+      "Kiedy można zmienić stawkę podatku na 19%?",
+      "Czy zmiana formy opodatkowania jest możliwa w ciągu roku podatkowego?"
+    ],
+    "answer": "Przepis art. 30c nie zawiera informacji o możliwości zmiany formy opodatkowania w trakcie roku podatkowego. Dokumentacja podatkowa wymaga pełnych regulacji zawartych w art. 9a i procedurach zmian wyboru formy opodatkowania, które nie są przytoczone w artykule 30c.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30c",
+        "quote": "brak wyraźnych przepisów dotyczących zmiany formy opodatkowania w trakcie roku"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zmiana_opodatkowania",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-skala-podatkowa-2",
+    "question_intent": "Kiedy przedsiębiorca może rozliczać się według skali 12% i 32%?",
+    "question_patterns": [
+      "Kto rozlicza się według skali 12% i 32%?",
+      "Na jakiej podstawie stosuje się skalę podatkową 12% i 32%?",
+      "Dla jakich podatników obowiązuje skala 12% i 32%?",
+      "Czy przedsiębiorca musi rozliczać się według skali 12% i 32%?"
+    ],
+    "answer": "Skala podatkowa 12% i 32% to skala obligatoryjna określona w art. 27 ust. 1 ustawy o podatku dochodowym od osób fizycznych. Podatnicy są zobowiązani stosować tę skalę od podstawy obliczenia podatku - do przychodu 120 000 zł stosuje się 12% minus kwota zmniejszająca podatek (3600 zł), a od nadwyżki powyżej 120 000 zł stosuje się 32%. Nie ma okresu warunkowego - to uniwersalna skala dla wszystkich podatników objętych podatkiem dochodowym od osób fizycznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 27 ust. 1",
+        "quote": "Podatek dochodowy, z zastrzeżeniem art. 29–30f, pobiera się od podstawy jego obliczenia według następującej skali podatkowej: ponad 0 do 120 000 zł - 12% minus kwota zmniejszająca podatek 3600 zł; 120 000 zł - 10 800 zł + 32% nadwyżki ponad 120 000 zł"
+      }
+    ],
+    "conditions": [
+      "Podatnik jest objęty podatkiem dochodowym od osób fizycznych",
+      "Brak zastosowania wyjątków określonych w art. 29-30f"
+    ],
+    "exceptions": [
+      "Podatnicy mogą być objęci specjalnymi rozwiązaniami wskazanymi w art. 29-30f"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "skala_podatkowa",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-14-przychod-moment-powstania",
+    "question_intent": "Kiedy powstaje przychód z działalności gospodarczej?",
+    "question_patterns": [
+      "Kiedy powstaje przychód z działalności gospodarczej?",
+      "Na jaki dzień zaliczam przychód z działalności?",
+      "Jaka jest data powstania przychodu?",
+      "Kiedy przychód jest recognize'owany podatkowo?"
+    ],
+    "answer": "Przychód z działalności gospodarczej powstaje w dniu wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi – ale nie później niż w dniu wystawienia faktury albo w dniu uregulowania należności (art. 14 ust. 1c). Jeśli usługa jest rozliczana w okresach rozliczeniowych określonych w umowie, za datę powstania przychodu uważa się ostatni dzień danego okresu (art. 14 ust. 1e). W przypadku przychodu, do którego nie stosują się te przepisy, moment powstania przychodu przypada na dzień otrzymania zapłaty (art. 14 ust. 1i).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1c",
+        "quote": "Za datę powstania przychodu uznaje się dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykonania usługi, nie później niż dzień wystawienia faktury albo uregulowania należności."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1e",
+        "quote": "Jeżeli strony ustalą, że usługa jest rozliczana w okresach rozliczeniowych, za datę powstania przychodu uznaje się ostatni dzień okresu rozliczeniowego określonego w umowie lub na wystawionej fakturze."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1i",
+        "quote": "W przypadku otrzymania przychodu z działalności gospodarczej, do którego nie stosuje się ust. 1c, 1e i 1h, za datę powstania przychodu uznaje się dzień otrzymania zapłaty."
+      }
+    ],
+    "conditions": [
+      "Przychód powstaje najwcześniej w dniu wydania rzeczy/wykonania usługi",
+      "Przychód nie może powstać później niż w dniu wystawienia faktury lub uregulowania należności",
+      "Dla usług rozliczanych okresowo – ostatni dzień okresu rozliczeniowego"
+    ],
+    "exceptions": [
+      "Usługi rozliczane w okresach rozliczeniowych (ust. 1e)",
+      "Dostawa energii, ciepła, gazu (ust. 1h stosuje się odpowiednio)",
+      "Przychody, do których nie stosują się ust. 1c, 1e, 1h – moment zapłaty (ust. 1i)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "moment-powstania-przychodu",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-14-zaliczka-przychod",
+    "question_intent": "Czy zaliczka od klienta jest przychodem z działalności gospodarczej?",
+    "question_patterns": [
+      "Czy zaliczka od klienta to przychód?",
+      "Kiedy zaliczka staje się przychodem?",
+      "Czy wpłata na poczet przyszłych dostaw to przychód?",
+      "Jak podatkowo traktować zaliczki otrzymane od nabywcy?"
+    ],
+    "answer": "Zaliczki pobrane na poczet dostaw towarów i usług, które będą wykonane w przyszłych okresach, NIE są przychodem z działalności gospodarczej (art. 14 ust. 3 pkt 1). Jednak podatnik może wybrać inny sposób – uznać zaliczkę za przychód w dniu jej pobrania, ale musi stosować tę metodę przez cały rok podatkowy i poinformować o tym wyborze w zeznaniu (art. 14 ust. 1j). Dotyczy to przychodu podlegającego zarejestrowaniu przy kasie rejestrującej zgodnie z ustawą o VAT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 3 pkt 1",
+        "quote": "Do przychodów nie zalicza się pobranych wpłat lub zarachowanych należności na poczet dostaw towarów i usług, które zostaną wykonane w następnych okresach sprawozdawczych."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1j",
+        "quote": "W przypadku pobrania wpłat na poczet dostaw towarów i usług, które zostaną wykonane w następnych okresach sprawozdawczych, podlegających zarejestrowaniu przy zastosowaniu kasy rejestrującej, za datę powstania przychodu podatnik może uznać dzień pobrania wpłaty."
+      }
+    ],
+    "conditions": [
+      "Zaliczka dotyczy dostaw towarów lub usług wykonywanych w następnych okresach",
+      "Przychód musi podlegać rejestrowaniu przy kasie rejestrującej",
+      "Jeśli podatnik wybierze metodę zaliczki – musi ją stosować przez cały rok podatkowy",
+      "Podatnik musi poinformować o wyborze w zeznaniu za dany rok"
+    ],
+    "exceptions": [
+      "Podatnik może wybrać inny moment uznania zaliczki za przychód – dzień pobrania (ust. 1j)",
+      "Skapitalizowane odsetki od pożyczek/kredytów zaliczane do przychodów"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "vat_czynny"
+    ],
+    "topic": "zaliczki-przedpłaty",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-14-przychod-sprzedaz-towaru",
+    "question_intent": "Jak ustalić moment powstania przychodu przy sprzedaży towaru?",
+    "question_patterns": [
+      "Kiedy przychód z sprzedaży towaru?",
+      "Na jaki dzień zaliczam przychód ze sprzedaży produktu?",
+      "Moment powstania przychodu – sprzedaż towaru",
+      "Czy przychód to dzień wydania towaru czy faktury?"
+    ],
+    "answer": "Przychód z sprzedaży towaru powstaje w dniu wydania rzeczy, ale nie może być później niż dzień wystawienia faktury lub uregulowania należności (art. 14 ust. 1c pkt 1–2). Jeśli podatnik sprzedaje towary i usługi opodatkowane VAT, przychód jest pomniejszony o należny podatek od towarów i usług (art. 14 ust. 1). Zastosowanie ma zasada, że przychód powstaje najwcześniej przy wydaniu towaru, najpóźniej przy wystawaniu faktury lub zapłacie.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1c",
+        "quote": "Za datę powstania przychodu, o którym mowa w ust. 1, uznaje się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykonania usługi, nie później niż dzień wystawienia faktury albo uregulowania należności."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1",
+        "quote": "U podatników dokonujących sprzedaży towarów i usług opodatkowanych podatkiem od towarów i usług za przychód z tej sprzedaży uważa się przychód pomniejszony o należny podatek od towarów i usług."
+      }
+    ],
+    "conditions": [
+      "Przychód powstaje w dniu wydania towaru",
+      "Przychód nie może powstać później niż w dniu wystawienia faktury",
+      "Przychód nie może powstać później niż w dniu uregulowania należności",
+      "Dla sprzedaży opodatkowanej VAT – przychód pomniejszony o VAT"
+    ],
+    "exceptions": [
+      "Towary zwrócone – wyłączane z przychodu",
+      "Udzielone bonifikaty i skonta – wyłączane z przychodu"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "vat_czynny"
+    ],
+    "topic": "przychod-sprzedaz-towarow",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-14-przychod-uslugi-okresowe",
+    "question_intent": "Jak ustalić moment powstania przychodu przy usługach rozliczanych okresowo?",
+    "question_patterns": [
+      "Kiedy przychód z usług rozliczanych miesięcznie/okresowo?",
+      "Moment powstania przychodu – usługi abonamentowe",
+      "Jak rozliczać przychód z umowy usługi o charakterze bieżącym?",
+      "Data przychodu – usługi dostarczone w ratach/okresach"
+    ],
+    "answer": "Jeśli strony umowy ustalą, że usługa jest rozliczana w okresach rozliczeniowych, przychód powstaje w ostatnim dniu danego okresu rozliczeniowego określonego w umowie lub wystawionej fakturze (art. 14 ust. 1e). Przepis ten dotyczy również dostaw energii elektrycznej, cieplnej oraz gazu przewodowego (art. 14 ust. 1h). Okresy rozliczeniowe nie mogą być rzadsze niż raz w roku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1e",
+        "quote": "Jeżeli strony ustalą, że usługa jest rozliczana w okresach rozliczeniowych, za datę powstania przychodu uznaje się ostatni dzień okresu rozliczeniowego określonego w umowie lub na wystawionej fakturze, nie rzadziej niż raz w roku."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 14 ust. 1h",
+        "quote": "Przepis ust. 1e stosuje się odpowiednio do dostawy energii elektrycznej i cieplnej oraz gazu przewodowego."
+      }
+    ],
+    "conditions": [
+      "Strony muszą wyraźnie ustalić w umowie, że usługa rozliczana w okresach",
+      "Okres rozliczeniowy musi być określony w umowie lub fakturze",
+      "Okresy nie mogą być rzadsze niż raz w roku",
+      "Przychód powstaje na ostatni dzień okresu rozliczeniowego"
+    ],
+    "exceptions": [
+      "Dostawa energii, ciepła, gazu – to samo reguła (ust. 1h)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "przychod-uslugi-okresowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22-kup-definicja",
+    "question_intent": "Co jest kosztem uzyskania przychodu w działalności gospodarczej?",
+    "question_patterns": [
+      "Co to jest koszt uzyskania przychodu?",
+      "Jakie wydatki stanowią koszty uzyskania przychodu?",
+      "Jak zdefiniować koszt uzyskania przychodu w biznesie?"
+    ],
+    "answer": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów lub zachowania albo zabezpieczenia źródła przychodów (art. 22 ust. 1). W praktyce oznacza to wszystkie uzasadnione wydatki biznesowe związane z prowadzeniem działalności i generowaniem dochodów, z wyłączeniem wydatków wymienionych w art. 23.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22 ust. 1",
+        "quote": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów lub zachowania albo zabezpieczenia źródła przychodów, z wyjątkiem kosztów wymienionych w art. 23."
+      }
+    ],
+    "conditions": [
+      "Koszt musi być poniesiony w celu osiągnięcia lub zabezpieczenia przychodu",
+      "Nie może być wydatkiem wymienionym w art. 23 (wydatkami niedofinansowalnymi)"
+    ],
+    "exceptions": [
+      "Koszty wymienione w art. 23 nie stanowią kosztów uzyskania przychodu"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "definicja_kosztów_uzyskania_przychodu",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22-kup-dokumentacja",
+    "question_intent": "Jak udokumentować koszt uzyskania przychodu w firmie?",
+    "question_patterns": [
+      "Jakie dokumenty potwierdzają koszty uzyskania przychodu?",
+      "Jak udokumentować wydatki w działalności gospodarczej?",
+      "Jakie dowody muszą być do kosztów firmowych?"
+    ],
+    "answer": "Dla podatników prowadzących księgi rachunkowe dzień poniesienia kosztu to dzień, na który ujęto koszt w księgach na podstawie faktury lub rachunku, albo na podstawie innego dowodu w braku faktury (art. 22 ust. 5d). Dla podatników prowadzących podatkowe księgi przychodów i rozchodów dzień poniesienia to dzień wystawienia faktury lub innego dowodu stanowiącego podstawę ujęcia kosztu (art. 22 ust. 6b). Koszty nabycia rzeczy zbywanych wymagają dokumentacji w postaci faktur VAT (art. 22 ust. 6e).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22 ust. 5d, 6b, 6e",
+        "quote": "Za dzień poniesienia kosztu uważa się dzień, na który ujęto koszt w księgach rachunkowych na podstawie otrzymanej faktury (rachunku), albo dzień, na który ujęto koszt na podstawie innego dowodu w przypadku braku faktury."
+      }
+    ],
+    "conditions": [
+      "Dla księgowych: koszty na podstawie faktury/rachunku lub innego dowodu",
+      "Dla podatkowych ksiąg: dzień wystawienia faktury lub innego dowodu",
+      "Koszty nabycia nieruchomości: dokumentacja faktur VAT"
+    ],
+    "exceptions": [
+      "Biernych rozliczeń międzyokresowych i rezerw - inne zasady daty"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "dokumentacja_kosztów",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22-kup-pracownik-250",
+    "question_intent": "Jakie koszty uzyskania przychodu stosuje się pracownikowi na etacie?",
+    "question_patterns": [
+      "Jakie są koszty dla pracownika zatrudnionego?",
+      "Ile wynoszą koszty uzyskania przychodu z pracy?",
+      "Jaki koszt pracownika w podatku dochodowym?"
+    ],
+    "answer": "Pracownik zatrudniony w jednym stosunku pracy (lub spółdzielczym stosunku pracy, pracy nakładczej) może odliczyć 250 zł miesięcznie, maksymalnie 3000 zł rocznie (art. 22 ust. 2 pkt 1). Jeśli jest zatrudniony u więcej niż jednego pracodawcy, łączny limit kosztów wynosi maksymalnie 4500 zł za rok podatkowy (art. 22 ust. 2 pkt 2).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22 ust. 2 pkt 1 i 2",
+        "quote": "Koszty uzyskania przychodów z tytułu stosunku służbowego, stosunku pracy, spółdzielczego stosunku pracy oraz pracy nakładczej wynoszą 250 zł miesięcznie, a za rok podatkowy łącznie nie więcej niż 3000 zł – w przypadku gdy podatnik uzyskuje przychody z tytułu jednego stosunku służbowego."
+      }
+    ],
+    "conditions": [
+      "Pracownik zatrudniony w jednym stosunku pracy",
+      "Roczny limit wynosi 3000 zł niezależnie od liczby miesięcy"
+    ],
+    "exceptions": [
+      "Jeśli pracownik ma miejsce zamieszkania poza miejscowością pracy i nie otrzymuje dodatku za rozłąkę - zwiększona stawka 300 zł/miesiąc (max 3600 zł/rok)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "koszty_pracownicze_standardowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22-kup-pracownik-300",
+    "question_intent": "Kiedy stosuje się podwyższone koszty pracownicze 300 zł miesięcznie?",
+    "question_patterns": [
+      "Kiedy pracownik ma 300 zł kosztów zamiast 250 zł?",
+      "W jakich warunkach koszty pracownika wynoszą 300 zł?",
+      "Jak uzyskać zwiększone koszty pracownicze?"
+    ],
+    "answer": "Koszt 300 zł miesięcznie (max 3600 zł rocznie) stosuje się, gdy pracownik ma miejsce stałego lub czasowego zamieszkania poza miejscowością, w której znajduje się zakład pracy, i nie otrzymuje dodatku za rozłąkę (art. 22 ust. 2 pkt 3). Jeśli pracownik jest zatrudniony u więcej niż jednego pracodawcy w takich warunkach, łączny roczny limit wynosi 5400 zł (art. 22 ust. 2 pkt 4).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22 ust. 2 pkt 3 i 4",
+        "quote": "Koszty wynoszą 300 zł miesięcznie, a za rok podatkowy łącznie nie więcej niż 3600 zł – w przypadku gdy miejsce stałego lub czasowego zamieszkania podatnika jest położone poza miejscowością, w której znajduje się zakład pracy, i podatnik nie uzyskuje dodatku za rozłąkę."
+      }
+    ],
+    "conditions": [
+      "Miejsce zamieszkania (stałe lub czasowe) poza miejscowością zakładu pracy",
+      "Pracownik NIE otrzymuje dodatku za rozłąkę",
+      "Trzeba wykazać faktyczne ponoszenie kosztów dojazdów"
+    ],
+    "exceptions": [
+      "Jeśli pracownik otrzymuje dodatek za rozłąkę - nie stosuje się podwyższonych kosztów"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "koszty_pracownicze_podwyższone",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-23-wydatki-prywatne",
+    "question_intent": "Czy wydatek prywatny przedsiębiorcy może być kosztem podatkowym?",
+    "question_patterns": [
+      "Czy wydatki osobiste przedsiębiorcy stanowią koszt podatkowy?",
+      "Czy wydatki prywatne mogą być zaliczone do kosztów uzyskania przychodów?",
+      "Czy wydatek na cele osobiste przedsiębiorcy jest kosztem?"
+    ],
+    "answer": "Wydatki prywatne przedsiębiorcy nie mogą być kosztem uzyskania przychodów. Zgodnie z art. 23 ust. 1 pkt 49 ustawy o PIT, wydatki niezaliczane do kosztów obejmują zakup rzeczowych składników majątku, jeśli stwierdzono, że nie są wykorzystywane dla celów działalności, lecz służą celom osobistym podatnika lub jego pracowników. Kosztem mogą być wyłącznie wydatki związane z prowadzeniem działalności gospodarczej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 23 ust. 1 pkt 49",
+        "quote": "wydatków poniesionych na zakup zużywających się stopniowo rzeczowych składników majątku przedsiębiorstwa, niezaliczanych do środków trwałych – w przypadku stwierdzenia, że składniki te nie są wykorzystywane dla celów prowadzonej działalności gospodarczej, lecz służą celom osobistym"
+      }
+    ],
+    "conditions": [
+      "wydatek nie może być przeznaczony na cele osobiste podatnika",
+      "wydatek musi mieć bezpośredni związek z prowadzeniem działalności gospodarczej"
+    ],
+    "exceptions": [
+      "wydatek może być kosztem, jeśli zostanie udowodnione jego związek z działalnością gospodarczą"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "koszty uzyskania przychodów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-23-wydatki-niekosztem",
+    "question_intent": "Jakie wydatki nie stanowią kosztów uzyskania przychodu według art. 23 ustawy o PIT?",
+    "question_patterns": [
+      "Które wydatki nigdy nie są kosztem podatkowym?",
+      "Jakie Categories wydatków wyklucza art. 23?",
+      "Jaki jest katalog wydatków niestanowiących kosztów?"
+    ],
+    "answer": "Art. 23 ust. 1 definiuje wydatki, które NIE są kosztem uzyskania przychodów. Należą do nich m.in.: nabycie gruntów, nabycie środków trwałych (poza sprzedażą), grzywny i kary pieniężne, podatek dochodowy, odsety za zwłokę wobec urzędu, darowizny, rezervy (poza ustawowymi), koszty reprezentacji, udzielone pożyczki, składki dobrowolne oraz wiele innych. Szczegółowy katalog zawiera 66 punktów artykułu 23 ust. 1.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 23 ust. 1 pkt 1-66",
+        "quote": "Nie uważa się za koszty uzyskania przychodów: 1) wydatków na nabycie gruntów... 15) grzywien i kar pieniężnych... 12) podatku dochodowego..."
+      }
+    ],
+    "conditions": [
+      "katalog w art. 23 ust. 1 jest wyłączny i zawiera wydatki niestanowiące kosztów"
+    ],
+    "exceptions": [
+      "wiele punktów art. 23 ust. 1 zawiera zastrzeżenia i wyjątki (np. 'z tym że kosztem są...')",
+      "niektóre wydatki stanowią koszt jedynie w określonych sytuacjach"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "katalog wydatków niekosztem",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-23-odsety-zwloka",
+    "question_intent": "Czy odsetki za zwłokę wobec urzędu skarbowego są kosztem podatkowym?",
+    "question_patterns": [
+      "Czy odsety za zwłokę w zapłacie podatku to koszt?",
+      "Czy odsetki przeterminowania należności budżetowych są kosztem?",
+      "Czy odsetki za zwłokę w opłacie podatków można zaliczyć do kosztów?"
+    ],
+    "answer": "Nie, odsetki za zwłokę wobec urzędu skarbowego NIE stanowią kosztu uzyskania przychodów. Art. 23 ust. 1 pkt 18 wyłącza z kosztów 'odsety za zwłokę z tytułu nieterminowych wpłat należności budżetowych i innych należności, do których stosuje się przepisy ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa'. Jest to penalizacja za opóźnienie w zapłacie podatków lub innych zobowiązań publicznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 23 ust. 1 pkt 18",
+        "quote": "odsetek za zwłokę z tytułu nieterminowych wpłat należności budżetowych i innych należności, do których stosuje się przepisy ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa"
+      }
+    ],
+    "conditions": [
+      "dotyczy odsetek od należności budżetowych (podatków, ceł, opłat)",
+      "dotyczy również innych należności regulowanych przepisami Ordynacji podatkowej"
+    ],
+    "exceptions": [
+      "brak wyjątków - przepis jest bezwzględny"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wydatki niestanowiące kosztów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-23-grzywny-kary",
+    "question_intent": "Czy grzywny i kary pieniężne można zaliczyć do kosztów podatkowych?",
+    "question_patterns": [
+      "Czy grzywna jest kosztem podatkowym?",
+      "Czy kara pieniężna stanowi koszt uzyskania przychodów?",
+      "Czy można odliczyć grzywnę od podatku?"
+    ],
+    "answer": "Nie, grzywny i kary pieniężne NIE są kosztem uzyskania przychodów. Art. 23 ust. 1 pkt 15 wyłącza z kosztów 'grzywien i kar pieniężnych orzeczonych w postępowaniu karnym, karnym skarbowym, administracyjnym i w sprawach o wykroczenia oraz odsetek od tych grzywien i kar'. Jest to sankcja za naruszenie prawa, a tym samym nie może zmniejszać podstawy opodatkowania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 23 ust. 1 pkt 15",
+        "quote": "grzywien i kar pieniężnych orzeczonych w postępowaniu karnym, karnym skarbowym, administracyjnym i w sprawach o wykroczenia oraz odsetek od tych grzywien i kar"
+      }
+    ],
+    "conditions": [
+      "dotyczy grzywien i kar orzeczonych w postępowaniu karnym",
+      "dotyczy kar w postępowaniu karnym skarbowym",
+      "dotyczy kar w postępowaniu administracyjnym",
+      "dotyczy grzywien w sprawach o wykroczenia"
+    ],
+    "exceptions": [
+      "brak wyjątków - przepis jest bezwzględny"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wydatki niestanowiące kosztów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22a-srodek-trwaly-amortyzacja",
+    "question_intent": "Jakie są warunki, aby środek trwały podlegał amortyzacji w PIT?",
+    "question_patterns": [
+      "Kiedy środek trwały podlega amortyzacji w PIT?",
+      "Jakie warunki muszą być spełnione, aby składnik majątku podlegał amortyzacji?",
+      "Czy każdy mój majątek podlega amortyzacji?",
+      "Od kiedy mogę amortyzować nabytą maszynę?"
+    ],
+    "answer": "Środek trwały podlega amortyzacji, jeśli jest Twojej własności lub współwłasności, jest kompletny i zdatny do użytku w dniu przyjęcia do używania, oraz ma przewidywany okres używania dłuższy niż rok. Musi być wykorzystywany na potrzeby Twojej działalności gospodarczej albo oddany do używania na podstawie umowy najmu, dzierżawy lub umowy określonej w art. 23a pkt 1.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22a ust. 1",
+        "quote": "Amortyzacji podlegają, z zastrzeżeniem art. 22c, stanowiące własność lub współwłasność podatnika, nabyte lub wytworzone we własnym zakresie, kompletne i zdatne do użytku w dniu przyjęcia do używania [...] o przewidywanym okresie używania dłuższym niż rok, wykorzystywane przez podatnika na potrzeby związane z prowadzoną przez niego działalnością gospodarczą"
+      }
+    ],
+    "conditions": [
+      "Składnik majątku stanowi własność lub współwłasność podatnika",
+      "Składnik jest kompletny i zdatny do użytku w dniu przyjęcia do używania",
+      "Przewidywany okres używania jest dłuższy niż rok",
+      "Składnik jest wykorzystywany na potrzeby działalności gospodarczej albo oddany do używania na podstawie umowy najmu, dzierżawy lub umowy określonej w art. 23a pkt 1"
+    ],
+    "exceptions": [
+      "Art. 22c zawiera zastrzeżenia dotyczące przedmiotów, które mimo spełnienia warunków mogą być wyłączone z amortyzacji"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "amortyzacja_środki_trwałe",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22b-wartosci-niematerialne",
+    "question_intent": "Kiedy wartości niematerialne i prawne podlegają amortyzacji?",
+    "question_patterns": [
+      "Kiedy wartości niematerialne podlegają amortyzacji?",
+      "Czy mogę amortyzować licencję, którą kupiłem?",
+      "Kiedy amortyzuję autorskie prawa majątkowe?",
+      "Czy know-how podlega amortyzacji?",
+      "Na jakich warunkach mogę amortyzować prawa własności przemysłowej?"
+    ],
+    "answer": "Wartości niematerialne i prawne (takie jak licencje, autorskie prawa majątkowe, prawa własności przemysłowej, know-how) podlegają amortyzacji, jeśli są nabyte od innego podmiotu, nadają się do gospodarczego wykorzystania w dniu przyjęcia do używania, mają przewidywany okres używania dłuższy niż rok oraz są wykorzystywane na potrzeby Twojej działalności gospodarczej lub oddane do używania na podstawie umowy licencyjnej, najmu, dzierżawy lub umowy określonej w art. 23a pkt 1.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22b ust. 1",
+        "quote": "Amortyzacji podlegają, z zastrzeżeniem art. 22c, nabyte od innego podmiotu, nadające się do gospodarczego wykorzystania w dniu przyjęcia do używania [...] o przewidywanym okresie używania dłuższym niż rok, wykorzystywane przez podatnika na potrzeby związane z prowadzoną przez niego działalnością gospodarczą albo oddane przez niego do używania na podstawie umowy licencyjnej"
+      }
+    ],
+    "conditions": [
+      "Wartości muszą być nabyte od innego podmiotu",
+      "Muszą nadawać się do gospodarczego wykorzystania w dniu przyjęcia do używania",
+      "Przewidywany okres używania musi być dłuższy niż rok",
+      "Muszą być wykorzystywane na potrzeby działalności gospodarczej lub oddane do używania na podstawie umowy licencyjnej, najmu, dzierżawy lub umowy określonej w art. 23a pkt 1"
+    ],
+    "exceptions": [
+      "Art. 22c zawiera zastrzeżenia dotyczące wyłączenia z amortyzacji",
+      "Wartości wytworzone we własnym zakresie nie podlegają amortyzacji na podstawie art. 22b ust. 1"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "amortyzacja_wartości_niematerialne",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22b-koszty-prac-rozwojowych",
+    "question_intent": "Na jakich warunkach koszty prac rozwojowych podlegają amortyzacji?",
+    "question_patterns": [
+      "Czy mogę amortyzować koszty prac rozwojowych?",
+      "Jakie warunki muszą być spełnione dla amortyzacji prac R&D?",
+      "Kiedy mogę amortyzować koszty rozwojowe projektu?",
+      "Na jakich warunkach amortyzuję koszty prac badawczo-rozwojowych?"
+    ],
+    "answer": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określone, (2) techniczna przydatność został przez Ciebie odpowiednio udokumentowana i na tej podstawie podjąłeś decyzję o wytwarzaniu produktów lub stosowaniu technologii, oraz (3) z dokumentacji wynika, że koszty zostaną pokryte spodziewanymi przychodami ze sprzedaży lub zastosowania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22b ust. 2 pkt 2",
+        "quote": "koszty prac rozwojowych zakończonych wynikiem pozytywnym, który może być wykorzystany na potrzeby działalności gospodarczej podatnika, jeżeli: a) produkt lub technologia wytwarzania są ściśle ustalone, a dotyczące ich koszty prac rozwojowych wiarygodnie określone, oraz b) techniczna przydatność produktu lub technologii została przez podatnika odpowiednio udokumentowana i na tej podstawie podatnik podjął decyzję o wytwarzaniu tych produktów lub stosowaniu technologii, oraz c) z dokumentacji dotyczącej prac rozwojowych wynika, że koszty prac rozwojowych zostaną pokryte spodziewanymi przychodami ze sprzedaży tych produktów lub zastosowania technologii"
+      }
+    ],
+    "conditions": [
+      "Produkt lub technologia wytwarzania muszą być ściśle ustalone",
+      "Dotyczące ich koszty prac rozwojowych muszą być wiarygodnie określone",
+      "Techniczna przydatność musi być odpowiednio udokumentowana",
+      "Na podstawie dokumentacji podjąłeś decyzję o wytwarzaniu produktów lub stosowaniu technologii",
+      "Z dokumentacji musi wynikać, że koszty zostaną pokryte spodziewanymi przychodami"
+    ],
+    "exceptions": [
+      "Art. 22c zawiera zastrzeżenia dotyczące wyłączenia z amortyzacji"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "amortyzacja_prace_rozwojowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22k-jednorazowa-amortyzacja-100000",
+    "question_intent": "Kiedy można zastosować jednorazową amortyzację do 100 000 zł?",
+    "question_patterns": [
+      "Jednorazowy odpis amortyzacyjny 100 000 zł - kiedy to możliwe?",
+      "Amortyzacja jednorazowa do 100 000 zł - warunki",
+      "Który podatnik może zastosować limit 100 000 zł na jednorazową amortyzację?",
+      "Jednorazowy odpis 100 tys. zł - dla kogo?"
+    ],
+    "answer": "Każdy podatnik prowadzący działalność gospodarczą (nie tylko mali podatnicy) może dokonać jednorazowego odpisu amortyzacyjnego od fabrycznie nowych środków trwałych (grupy 3–6 i 8, bez samochodów osobowych) do 100 000 zł w roku, w którym zostały wprowadzone do ewidencji. Limit obejmuje zarówno sam odpis amortyzacyjny, jak i wpłatę na poczet nabycia (art. 22 ust. 1s). Musi być spełniony warunek minimalnej wartości: jeden środek min. 10 000 zł lub co najmniej dwa środki min. 10 000 zł łącznie, każdy powyżej 3500 zł.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22k ust. 14",
+        "quote": "Podatnicy prowadzący działalność gospodarczą mogą dokonywać jednorazowo odpisów amortyzacyjnych od wartości początkowej nabytych fabrycznie nowych środków trwałych zaliczonych do grupy 3–6 i 8 Klasyfikacji do wysokości nieprzekraczającej w roku podatkowym kwoty 100 000 zł"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22k ust. 15",
+        "quote": "Przepis ust. 14 stosuje się, pod warunkiem że wartość początkowa jednego środka trwałego wynosi co najmniej 10 000 zł lub łączna wartość początkowa co najmniej dwóch środków wynosi co najmniej 10 000 zł, a wartość każdego z nich przekracza 3500 zł"
+      }
+    ],
+    "conditions": [
+      "Podatnik musi prowadzić działalność gospodarczą",
+      "Środki muszą być fabrycznie nowe",
+      "Grupy 3–6 i 8 Klasyfikacji (bez samochodów osobowych)",
+      "Wprowadzone do ewidencji w tym roku podatkowym",
+      "Spełnienie warunku minimalnej wartości: jeden środek min. 10 000 zł LUB co najmniej dwa środki: łącznie min. 10 000 zł, każdy powyżej 3500 zł",
+      "Limit 100 000 zł łącznie w roku (obejmuje odpis i wpłatę na poczet nabycia)"
+    ],
+    "exceptions": [
+      "Nie dotyczy samochodów osobowych",
+      "Nie dotyczy środków zaliczonych do grup 1–2 i 7 Klasyfikacji",
+      "Limit 100 000 zł nie dotyczy amortyzacji sprzed pierwszego roku podatkowego"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "amortyzacja_jednorazowa",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22k-wybor-odpisu-7-lub-14",
+    "question_intent": "Co zrobić, jeśli podatnik ma prawo do obu limitów jednorazowej amortyzacji (50 000 euro i 100 000 zł)?",
+    "question_patterns": [
+      "Limit 50 000 euro czy 100 000 zł? Który wybrać?",
+      "Podatnik ma prawo do jednorazowej amortyzacji - artykuł 22k ust. 7 i 14",
+      "Czy mogę łączyć limity jednorazowej amortyzacji?"
+    ],
+    "answer": "Jeśli podatnik ma prawo do obu limitów jednorazowej amortyzacji (50 000 euro dla małych podatników/rozpoczynających + 100 000 zł dla prowadzących działalność), musi wybrać JEDEN z nich. Odpis dokonuje się na podstawie ust. 7 albo ust. 14, nie można ich sumować. Wybór powinien być dokonany z uwzględnieniem, która opcja jest dla podatnika bardziej korzystna.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22k ust. 20",
+        "quote": "Jeżeli w związku z nabyciem środka trwałego podatnik ma prawo do dokonania jednorazowego odpisu amortyzacyjnego, o którym mowa w ust. 7 i 14, to dokonuje on odpisu amortyzacyjnego na podstawie ust. 7 albo 14"
+      }
+    ],
+    "conditions": [
+      "Podatnik spełnia warunki dla jednorazowej amortyzacji ust. 7 (50 000 euro)",
+      "Podatnik spełnia warunki dla jednorazowej amortyzacji ust. 14 (100 000 zł)",
+      "Musi dokonać wyboru dla danego środka trwałego"
+    ],
+    "exceptions": [
+      "Przepis stanowi, że stosuje się JEDEN z limitów, nie można ich łączyć"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "amortyzacja_jednorazowa",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-23b-leasing-przychod-finansujacy",
+    "question_intent": "Czy opłaty z umowy leasingu stanowią przychód dla finansującego",
+    "question_patterns": [
+      "Opłaty leasingu przychód finansującego",
+      "Czy finansujący ma przychód z leasingu?",
+      "Czy opłaty leasingu to dochód finansującego?",
+      "Przychód z tytułu leasingu dla wynajmującego"
+    ],
+    "answer": "Opłaty z umowy leasingu stanowią przychód finansującego (wynajmującego), a są kosztem uzyskania przychodów dla korzystającego. Dotyczy to opłat ustalonych w umowie leasingu za używanie środków trwałych, wartości niematerialnych i prawnych, pod warunkiem że umowa spełnia określone warunki (wymagany czas trwania, suma opłat odpowiada co najmniej wartości początkowej lub rynkowej przedmiotu umowy). Przepisy mogą się różnić w zależności od statusu korzystającego (osoba fizyczna prowadząca działalność, osoba fizyczna nieprowadząca działalności itp.).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 23b ust. 1",
+        "quote": "Opłaty ustalone w umowie leasingu, ponoszone przez korzystającego w podstawowym okresie umowy z tytułu używania środków trwałych oraz wartości niematerialnych i prawnych stanowią przychód finansującego i odpowiednio koszt uzyskania przychodów korzystającego"
+      }
+    ],
+    "conditions": [
+      "Umowa leasingu musi być zawarta na czas oznaczony — co najmniej 40% normatywnego okresu amortyzacji dla rzeczy ruchomych/wartości niematerialnych lub co najmniej 5 lat dla nieruchomości (chyba że korzystającym jest osoba fizyczna nieprowadząca działalności)",
+      "Suma ustalonych opłat pomniejszona o VAT musi odpowiadać co najmniej wartości początkowej lub rynkowej przedmiotu umowy",
+      "Przepis art. 19 stosuje się odpowiednio (dot. aktualizacji wartości)"
+    ],
+    "exceptions": [
+      "Jeśli finansujący korzysta ze zwolnień w podatku dochodowym (art. 6 ustawy o PIT-u osób prawnych, przepisy o specjalnych strefach ekonomicznych itp.) — stosują się zasady opodatkowania z art. 23f–23h",
+      "Dla spółek niebędących osobą prawną ograniczenia obejmują także wspólników"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "leasing_przychod",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-44-zaliczki-miesiczne-dzialalnosc",
+    "question_intent": "Jak rozliczać miesięczne zaliczki na PIT w działalności gospodarczej?",
+    "question_patterns": [
+      "Jak obliczać zaliczki na PIT w działalności gospodarczej?",
+      "Jaki jest sposób rozliczenia zaliczek miesięcznych od dochodu z działalności?",
+      "Jak przedsiębiorca powinien wpłacać zaliczki na podatek dochodowy?"
+    ],
+    "answer": "Przedsiębiorca jest obowiązany wpłacać miesięczne zaliczki na PIT od dochodu z działalności gospodarczej. Zaliczka powstaje od miesiąca, w którym dochody przekroczą określoną kwotę progową (iloraz kwoty zmniejszającej podatek oraz najniższej stawki podatku z pierwszego przedziału skali). Zaliczka za pierwszy miesiąc stanowi podatek obliczony od tego dochodu zgodnie ze skalą podatkową, a za kolejne miesiące stanowi różnicę między podatkiem od dochodu od początku roku a sumą zaliczek za poprzednie miesiące.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 44 ust. 1 pkt 1",
+        "quote": "Podatnicy osiągający dochody z działalności gospodarczej są obowiązani bez wezwania wpłacać w ciągu roku podatkowego zaliczki na podatek dochodowy"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 44 ust. 3",
+        "quote": "Podatnicy, o których mowa w ust. 1, są obowiązani wpłacać zaliczki miesięczne. Wysokość zaliczek ustala się w następujący sposób: obowiązek wpłacania zaliczki powstaje, poczynając od miesiąca, w którym dochody te przekroczyły kwotę stanowiącą iloraz kwoty zmniejszającej podatek oraz najniższej stawki podatku"
+      }
+    ],
+    "conditions": [
+      "Podatnik musi osiągać dochody z działalności gospodarczej",
+      "Obowiązek powstaje od miesiąca, w którym dochód przekroczy próg wynoszący iloraz kwoty zmniejszającej podatek i najniższej stawki podatkowej",
+      "Zaliczka za pierwszy miesiąc stanowi podatek od tego dochodu",
+      "Zaliczka za kolejne miesiące to różnica między podatkiem od dochodu od początku roku a sumą zaliczek poprzednich"
+    ],
+    "exceptions": [
+      "Małe podatniki i podatnicy rozpoczynający działalność mogą wpłacać zaliczki kwartalne (art. 44 ust. 3g)",
+      "Podatnicy mogą wpłacać zaliczki w uproszczonej formie (art. 44 ust. 6b)",
+      "Podatnicy opodatkowani na zasadach art. 30c wpłacają zaliczki według innych zasad (art. 44 ust. 3f)",
+      "Podatnik może nie wpłacić zaliczki, jeśli różnica między podatkiem należnym a sumą wpłaconych zaliczek nie przekracza 1000 zł (art. 44 ust. 15)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zaliczki-miesiczne-pit",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-44-termin-wplaty-zaliczki",
+    "question_intent": "Do kiedy trzeba wpłacić zaliczkę na PIT za dany miesiąc?",
+    "question_patterns": [
+      "Jaki jest termin płatności miesięcznej zaliczki na PIT?",
+      "Do jakiego dnia miesiąca należy wpłacić zaliczkę?",
+      "Kiedy płatna jest zaliczka za ostatni miesiąc roku?",
+      "Do kiedy wpłacić zaliczki na PIT?"
+    ],
+    "answer": "Zaliczki miesięczne należy wpłacić do 20 dnia każdego miesiąca za miesiąc poprzedni. Zaliczka za ostatni miesiąc roku podatkowego (grudzień) jest płatna do 20 stycznia następnego roku podatkowego. W przypadku zaliczek kwartalnych termin to 20 dzień miesiąca następującego po każdym kwartale.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 44 ust. 6",
+        "quote": "Zaliczki miesięczne od dochodów wymienionych w ust. 1, wpłaca się w terminie do 20 dnia każdego miesiąca za miesiąc poprzedni. Zaliczki kwartalne podatnicy wpłacają w terminie do 20 dnia każdego miesiąca następującego po kwartale. Zaliczkę za ostatni miesiąc lub ostatni kwartał roku podatkowego podatnik wpłaca w terminie do 20 stycznia następnego roku podatkowego"
+      }
+    ],
+    "conditions": [
+      "Termin 20-ty dzień każdego miesiąca dotyczy zaliczek za miesiąc poprzedni",
+      "Ostatnia zaliczka za grudzień (lub ostatni kwartał) płatna do 20 stycznia następnego roku",
+      "Termin może ulec zmianie w zależności od sposobu wpłacania (miesięczny/kwartalny)",
+      "Obowiązek dotyczy podatników osiągających dochody z działalności gospodarczej"
+    ],
+    "exceptions": [
+      "Podatnicy wpłacający zaliczki w uproszczonej formie stosują te same terminy (art. 44 ust. 6c)",
+      "Podatnicy opodatkowani na zasadach art. 30c mogą mieć inne zasady (art. 44 ust. 3f)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "terminy-wplaty-zaliczek",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-9a-strata-ubiegle-lata",
+    "question_intent": "Czy w PIT można rozliczyć stratę z lat ubiegłych i na jakich zasadach?",
+    "question_patterns": [
+      "Czy mogę odliczyć stratę z poprzednich lat?",
+      "Na jakich zasadach rozliczam stratę z lat ubiegłych w PIT?",
+      "Jak przenoszę stratę z roku poprzedniego?"
+    ],
+    "answer": "Artykuł 9a nie zawiera żadnych przepisów dotyczących rozliczania strat z lat ubiegłych. Aby odpowiedzieć na to pytanie, konieczne jest zapoznanie się z innymi artykułami ustawy o podatku dochodowym od osób fizycznych, które regulują zasady przenoszenia i rozliczania strat z poprzednich lat podatkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 9a",
+        "quote": "Artykuł 9a zawiera wyłącznie regulacje dotyczące sposobów opodatkowania dochodów z pozarolniczej działalności gospodarczej"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "straty_z_lat_ubiegłych",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30ca-ip-box-essence",
+    "question_intent": "Na czym polega ulga IP Box w PIT?",
+    "question_patterns": [
+      "Co to jest IP Box?",
+      "Jak działa preferencyjna stawka dla dochodów z własności intelektualnej?",
+      "Jakie są podstawy IP Box w podatku dochodowym?"
+    ],
+    "answer": "IP Box to preferencyjne opodatkowanie dochodów osiągniętych z kwalifikowanych praw własności intelektualnej stawką 5% zamiast zwykłej progresywnej. Podatnik może skorzystać z tej ulgi, jeśli osiąga dochód z patentu, programu komputerowego, wzoru przemysłowego lub innych wymienionych praw ochronnych, które sam opracował lub ulepszył w ramach działalności badawczo-rozwojowej. Wysokość dochodu podlegającego 5% stawce jest jednak zmniejszana o wskaźnik uwzględniający koszty, które podatnik sam poniósł na B+R (art. 30ca ust. 4).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30ca ust. 1",
+        "quote": "Podatek od osiągniętego przez podatnika w ramach pozarolniczej działalności gospodarczej kwalifikowanego dochodu z kwalifikowanych praw własności intelektualnej wynosi 5 % podstawy opodatkowania."
+      }
+    ],
+    "conditions": [
+      "Podatnik prowadzi pozarolniczą działalność gospodarczą",
+      "Dochód pochodzi z kwalifikowanego prawa własności intelektualnej",
+      "Prawo własności intelektualnej zostało wytworzone, rozwinięte lub ulepszone przez podatnika w ramach działalności badawczo-rozwojowej"
+    ],
+    "exceptions": [
+      "Przepisy art. 30ca nie stosują się do dochodów z praw własności intelektualnej niewymienionych w art. 30ca ust. 2"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "preferencyjna_stawka_opodatkowania",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30ca-jdg-estonski-cit",
+    "question_intent": "Czy JDG może wybrać estoński CIT?",
+    "question_patterns": [
+      "Czy jednoosobowa działalność gospodarcza może stosować estoński CIT?",
+      "JDG a estoński CIT - czy jest to możliwe?",
+      "Czy osoba fizyczna może wybrać estoński podatek dochodowy?"
+    ],
+    "answer": "Artykuł 30ca ustawy o podatku dochodowym od osób fizycznych nie zawiera informacji o estońskim CIT. Estoński CIT jest odrębnym systemem opodatkowania, który nie wynika z przepisów tego artykułu. Aby uzyskać odpowiedź na pytanie dotyczące możliwości stosowania estońskiego CIT przez JDG, wymagane jest przeanalizowanie innych ustaw podatkowych lub odpowiednich przepisów ustawy o podatku dochodowym od osób fizycznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30ca",
+        "quote": "Przepisy art. 30ca dotyczą opodatkowania kwalifikowanego dochodu z praw własności intelektualnej stawką 5%."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "estoński_cit",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-26e-wages-qualified-costs",
+    "question_intent": "Czy wynagrodzenia pracowników stanowią koszty kwalifikowane?",
+    "question_patterns": [
+      "Czy mogę odliczyć pensje pracowników zaangażowanych w B+R?",
+      "Jak odliczyć wynagrodzenia w uldze badawczo-rozwojowej?",
+      "Czy należności z wynagrodzeń mogą być kosztami kwalifikowanymi?"
+    ],
+    "answer": "Tak, wynagrodzenia pracowników (i składki ubezpieczeniowe finansowane przez pracodawcę) stanowią koszty kwalifikowane, ale tylko w proporcji, w jakiej czas pracy poświęcony działalności badawczo-rozwojowej pozostaje w ogólnym czasie pracy pracownika w danym miesiącu. Podobnie dla zleceniobiorców – koszty zlecenia stanowią koszty kwalifikowane w proporcji czasu faktycznie poświęconego na wykonanie usługi B+R.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26e ust. 2 pkt 1",
+        "quote": "należności z tytułów wynagrodzeń oraz sfinansowane przez płatnika składki, w takiej części, w jakiej czas przeznaczony na realizację działalności badawczo-rozwojowej pozostaje w ogólnym czasie pracy pracownika w danym miesiącu"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26e ust. 2 pkt 1a",
+        "quote": "należności z tytułów umowy zlecenia lub umowy o dzieło, w takiej części, w jakiej czas przeznaczony na wykonanie usługi w zakresie działalności badawczo-rozwojowej pozostaje w całości czasu przeznaczonego na wykonanie usługi"
+      }
+    ],
+    "conditions": [
+      "Proporcja czasu pracy musi być ustalona w danym miesiącu",
+      "Dotyczy wynagrodzeń pracowników i składek finansowanych przez pracodawcę",
+      "Dotyczy także zmiennych form zatrudnienia (zlecenia, umowy o dzieło)"
+    ],
+    "exceptions": [
+      "Jeśli pracownik pracuje wyłącznie na działalności B+R, stosuje się 100% kosztu bez proporcji"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ulga_badawczo_rozwojowa",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-26e-carryforward-losses",
+    "question_intent": "Co się dzieje, jeśli nie mogę w całości odliczyć kosztów kwalifikowanych w roku?",
+    "question_patterns": [
+      "Czy mogę przenieść nieodliczone koszty B+R na kolejne lata?",
+      "Na jak długo mogę przenoszić koszty kwalifikowane B+R?",
+      "Jak odliczyć koszty B+R, gdy mam stratę lub niedostatek dochodu?"
+    ],
+    "answer": "Jeśli w roku podatnika wykazał stratę lub dochód poniżej przydzielonych odliczeń, może przenieść nieodliczone koszty na kolejne 6 lat podatkowych następujących bezpośrednio po roku, w którym mógł (ale nie musiał) skorzystać z odliczenia. Warunkiem jest uwzględnienie pomniejszeń z art. 26eb ust. 1.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26e ust. 8 zdanie drugie i trzecie",
+        "quote": "W przypadku gdy podatnik poniósł za rok podatkowy stratę albo wielkość dochodu podatnika jest niższa od kwoty przysługujących mu odliczeń, odliczenia – odpowiednio w całej kwocie lub w pozostałej części – dokonuje się w zeznaniach za kolejno następujące po sobie sześć lat podatkowych"
+      }
+    ],
+    "conditions": [
+      "Przenoszenie dotyczy tylko sytuacji straty lub niedostatecznego dochodu",
+      "Okres przenoszenia to 6 lat następujących bezpośrednio po roku straty",
+      "Musi być uwzględniona kumulacja z art. 26eb ust. 1"
+    ],
+    "exceptions": [
+      "Jeśli podatnik wykaże kwotę przysługującą mu wg art. 26ea, przepis o 6-letnim okresie nie obowiązuje"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ulga_badawczo_rozwojowa",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30h-termin-platnosci",
+    "question_intent": "Kiedy przedsiębiorca płaci daninę solidarnościową?",
+    "question_patterns": [
+      "Kiedy trzeba zapłacić daninę solidarnościową?",
+      "Jaki jest termin płatności daniny solidarnościowej?",
+      "Do kiedy trzeba wpłacić daninę solidarnościową?",
+      "Kiedy przedsiębiorca musi zapłacić daninę solidarnościową?"
+    ],
+    "answer": "Danina solidarnościowa musi być wpłacona do dnia 30 kwietnia roku kalendarzowego. W tym samym terminie należy złożyć urzędowi skarbowemu deklarację o wysokości daniny solidarnościowej według udzielonego wzoru.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30h ust. 4",
+        "quote": "Osoby fizyczne są obowiązane składać urzędom skarbowym deklarację o wysokości daniny solidarnościowej, według udostępnionego wzoru, w terminie do dnia 30 kwietnia roku kalendarzowego i w tym terminie wpłacić daninę solidarnościową."
+      }
+    ],
+    "conditions": [
+      "Przedsiębiorca uzyskał dochody podlegające opodatkowaniu na zasadach art. 27 ust. 1, 9 i 9a, art. 30b, art. 30c oraz art. 30f",
+      "Suma dochodów po pomniejszeniu przekracza próg 1 000 000 zł",
+      "Termin do 30 kwietnia danego roku kalendarzowego"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "danina_solidarnościowa",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-24a-kpir-voluntary-books",
+    "question_intent": "Czy podatnik z przychodami poniżej progu może dobrowolnie prowadzić księgi rachunkowe zamiast KPiR?",
+    "question_patterns": [
+      "Czy mogę prowadzić księgi rachunkowe mimo że nie osiągnęłem progu?",
+      "Czy można dobrowolnie przejść na ksiąg rachunkowe poniżej progów?"
+    ],
+    "answer": "Tak, osoba fizyczna z przychodami poniżej progu może dobrowolnie prowadzić księgi rachunkowe od początku następnego roku podatkowego, jeśli przychody za poprzedni rok były niższe niż równowartość kwoty z przepisów o rachunkowości. O takim wyborze podatnik informuje w zeznaniu rocznym za rok, w którym były prowadzone.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 24a ust. 5",
+        "quote": "Osoba fizyczna, spółka cywilna osób fizycznych, spółka jawna osób fizycznych lub spółka partnerska może prowadzić księgi rachunkowe również od początku następnego roku podatkowego, jeżeli przychody, w rozumieniu art. 14, za poprzedni rok podatkowy są niższe niż równowartość w walucie polskiej kwoty określonej w euro w przepisach o rachunkowości."
+      }
+    ],
+    "conditions": [
+      "Przychody za poprzedni rok muszą być poniżej progu",
+      "Księgi rachunkowe mogą być prowadzone od początku następnego roku podatkowego",
+      "Podatnik musi złożyć informację w zeznaniu rocznym"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ewidencja i dokumentacja przychodów",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-32-platnik-pit-wynagrodzenia",
+    "question_intent": "Kto jest odpowiedzialny za obliczanie i pobieranie zaliczek PIT od wynagrodzeń pracowników?",
+    "question_patterns": [
+      "Kto jest płatnikiem PIT od wynagrodzeń pracowników?",
+      "Kto musi pobierać zaliczki na PIT od pracowników?",
+      "Czy pracodawca musi obliczać zaliczki PIT?",
+      "Jakie podmioty są płatnikami zaliczek PIT?"
+    ],
+    "answer": "Płatnikami zaliczek PIT są: zakłady pracy będące osobami fizycznymi, osobami prawnymi oraz jednostkami organizacyjnymi nieposiadającymi osobowości prawnej. Obowiązek ten dotyczy wynagrodzeń ze stosunku pracy, stosunku służbowego, pracy nakładczej, spółdzielczego stosunku pracy, a także zasiłków z ubezpieczenia społecznego i udziału w nadwyżce bilansowej wypłacanej w spółdzielniach pracy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 32 ust. 1",
+        "quote": "Zakłady pracy będące osobami fizycznymi, osobami prawnymi oraz jednostkami organizacyjnymi nieposiadającymi osobowości prawnej są obowiązane jako płatnicy obliczać i pobierać w ciągu roku zaliczki na podatek dochodowy"
+      }
+    ],
+    "conditions": [
+      "Pracownik uzyskuje dochody ze stosunku pracy lub służbowego",
+      "Pracownik uzyskuje dochody z pracy nakładczej lub spółdzielczego stosunku pracy",
+      "Pracownik otrzymuje zasiłki z ubezpieczenia społecznego od zakładu pracy"
+    ],
+    "exceptions": [
+      "Brak poboru zaliczek na dochodach z pracy poza terytorium Polski, jeśli będą tam opodatkowane (art. 32 ust. 9)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zaliczki_pit_pracodawca",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-32-obowiazki-platnika",
+    "question_intent": "Jakie są główne obowiązki pracodawcy jako płatnika podatku dochodowego?",
+    "question_patterns": [
+      "Jakie obowiązki ma pracodawca jako płatnik PIT?",
+      "Co musi robić pracodawca w roli płatnika podatku?",
+      "Jakie są obowiązki płatnika podatku dochodowego?",
+      "Co zawiera rola płatnika u pracodawcy?"
+    ],
+    "answer": "Pracodawca jako płatnik PIT jest obowiązany obliczać i pobierać zaliczki na podatek dochodowy w ciągu roku od pracowników uzyskujących wynagrodzenie ze stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy oraz zasiłków z ubezpieczenia społecznego. Zaliczki należy pobierać co miesiąc według stawek określonych w art. 32 ust. 2, czyli 12% do kwoty 120 000 zł dochodu rocznego, oraz 32% od nadwyżki ponad tę kwotę.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 32 ust. 1",
+        "quote": "Zakłady pracy będące osobami fizycznymi, osobami prawnymi oraz jednostkami organizacyjnymi nieposiadającymi osobowości prawnej są obowiązane jako płatnicy obliczać i pobierać w ciągu roku zaliczki na podatek dochodowy"
+      }
+    ],
+    "conditions": [
+      "Obowiązek dotyczy wynagrodzenia ze stosunku pracy, stosunku służbowego, pracy nakładczej, spółdzielczego stosunku pracy",
+      "Obowiązek dotyczy zasiłków pieniężnych z ubezpieczenia społecznego wypłacanych przez zakład pracy",
+      "Obowiązek dotyczy wynagrodzeń z tytułu udziału w nadwyżce bilansowej w spółdzielniach pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "obowiązki_płatnika_pit",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-38-przekazywanie-zaliczek",
+    "question_intent": "Jakie są obowiązki pracodawcy dotyczące przekazywania pobranych zaliczek podatkowych?",
+    "question_patterns": [
+      "Kiedy pracodawca musi przekazać zaliczki na podatek?",
+      "Gdzie i do kiedy należy wpłacić pobrane zaliczki?",
+      "Jaki jest termin przekazania zaliczek przez pracodawcę?",
+      "Jakie obowiązki sprawozdawcze ma pracodawca?"
+    ],
+    "answer": "Pracodawca musi przekazać pobrane zaliczki na rachunek urzędu skarbowego do 20. dnia miesiąca następującego po miesiącu, w którym zaliczki zostały pobrane. Dodatkowo, do końca stycznia roku następującego po roku podatkowym, pracodawca musi przesłać roczną deklarację do właściwego urzędu skarbowego. Jeśli zaprzestanie działalności przed końcem stycznia, deklarację przekazuje do dnia zaprzestania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 38 ust. 1",
+        "quote": "Płatnicy przekazują kwoty pobranych zaliczek na podatek w terminie do 20 dnia miesiąca następującego po miesiącu, w którym pobrano zaliczki"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 38 ust. 1a",
+        "quote": "W terminie do końca stycznia roku następującego po roku podatkowym płatnicy są obowiązani przesłać do urzędu skarbowego roczną deklarację"
+      }
+    ],
+    "conditions": [
+      "Wpłata na rachunek właściwego urzędu skarbowego (według siedziby lub miejsca prowadzenia działalności)",
+      "Termin: 20. dzień miesiąca następującego",
+      "Roczna deklaracja do końca stycznia następnego roku",
+      "Jeśli różnica między potrąconymi a wpłaconymi zaliczkami - wyjaśnienie w deklaracji"
+    ],
+    "exceptions": [
+      "Jeśli płatnik zaprzestanie działalności — deklaracja do dnia zaprzestania"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "obowiązki_sprawozdawcze_płatnika",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-32-stawki-zaliczek",
+    "question_intent": "Jakie stawki zaliczek PIT musi stosować pracodawca?",
+    "question_patterns": [
+      "Ile procent powinno być pobierane jako zaliczka od wynagrodzenia?",
+      "Jakie są stawki zaliczek na PIT dla pracowników?",
+      "Jak oblicza się zaliczkę na podatek dochodowy?",
+      "Kiedy stosuje się 12%, a kiedy 32%?"
+    ],
+    "answer": "Pracodawca pobiera zaliczki w wysokości 12% dochodu, dopóki dochód pracownika od początku roku nie przekroczy 120 000 zł. Od miesiąca, w którym ta kwota zostanie przekroczona, zaliczka wynosi 12% od części do 120 000 zł i 32% od nadwyżki. W kolejnych miesiącach roku pracodawca pobiera już tylko 32% zaliczki.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 32 ust. 2",
+        "quote": "Zaliczki za miesiące wynoszą: 1) za miesiące, w których dochód nie przekroczył 120 000 zł – 12%, 2) za miesiąc przekroczenia – 12% do 120 000 zł i 32% od nadwyżki, 3) za miesiące następujące – 32%"
+      }
+    ],
+    "conditions": [
+      "Stawka 12% — gdy dochód od początku roku nie przekroczył 120 000 zł",
+      "Stawka 12% + 32% — w miesiącu przekroczenia granicy 120 000 zł",
+      "Stawka 32% — od miesiąca następującego po przekroczeniu",
+      "Dochód = przychody minus koszty uzyskania i potrącone składki społeczne (art. 32 ust. 4)"
+    ],
+    "exceptions": [
+      "Pracownik może złożyć oświadczenie o opodatkowaniu na zasadach art. 6 ust. 2 lub 4d — wtedy zaliczki mogą być obniżone (art. 32 ust. 3)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "stawki_zaliczek_pit",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-przychod-stosunek-pracy",
+    "question_intent": "Co stanowi przychód ze stosunku pracy według ustawy o PIT?",
+    "question_patterns": [
+      "Co uważa się za przychód ze stosunku pracy?",
+      "Jakie wypłaty są przychodem ze stosunku pracy?",
+      "Co wchodzi w skład przychodów pracownika?"
+    ],
+    "answer": "Przychodem ze stosunku pracy są wszelkiego rodzaju wypłaty pieniężne oraz wartość świadczeń w naturze bądź ich ekwiwalenty, niezależnie od źródła finansowania. Obejmuje to: wynagrodzenia zasadnicze, dodatki, nagrody, ekwiwalenty za niewykorzystany urlop, świadczenia pieniężne ponoszone za pracownika oraz wartość nieodpłatnych lub częściowo odpłatnych świadczeń.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 12 ust. 1",
+        "quote": "Za przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej oraz spółdzielczego stosunku pracy uważa się wszelkiego rodzaju wypłaty pieniężne oraz wartość pieniężną świadczeń w naturze bądź ich ekwiwalenty, bez względu na źródło finansowania tych wypłat i świadczeń"
+      }
+    ],
+    "conditions": [
+      "Pracownik musi pozostawać w stosunku służbowym, stosunku pracy, pracy nakładczej lub spółdzielczym stosunku pracy",
+      "Wypłaty mogą pochodzić z dowolnego źródła finansowania"
+    ],
+    "exceptions": [
+      "W przypadku pracy nakładczej nie wlicza się wartości surowców i materiałów dostarczonych przez pracownika oraz zwrotu poniesionych kosztów transportu, energii, opału, konserwacji, jeśli wypłacane są w wyodrębnionej pozycji"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "przychody_ze_stosunku_pracy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-premie-nagrody",
+    "question_intent": "Czy premie i nagrody pracownicze są przychodem ze stosunku pracy?",
+    "question_patterns": [
+      "Czy premia jest przychodem?",
+      "Czy nagroda pracownicza wchodzi w przychody?",
+      "Czy dodatki i bonusy stanowią przychód ze stosunku pracy?"
+    ],
+    "answer": "Tak, premie, nagrody i różnego rodzaju dodatki stanowią przychód ze stosunku pracy. Są one wymieniane w art. 12 ust. 1 jako część przychodów pracownika, niezależnie od tego, czy ich wysokość została z góry ustalona.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 12 ust. 1",
+        "quote": "wynagrodzenia zasadnicze, wynagrodzenia za godziny nadliczbowe, różnego rodzaju dodatki, nagrody, ekwiwalenty za niewykorzystany urlop i wszelkie inne kwoty niezależnie od tego, czy ich wysokość została z góry ustalona"
+      }
+    ],
+    "conditions": [
+      "Premie i nagrody muszą być wypłacane pracownikowi z tytułu stosunku pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "przychody_ze_stosunku_pracy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-32-zaliczka-pit-obliczenie",
+    "question_intent": "Jak obliczyć zaliczkę na PIT od wynagrodzenia pracownika?",
+    "question_patterns": [
+      "Jak płatnik oblicza zaliczki na PIT?",
+      "Jaki procent zaliczki od wynagrodzenia?",
+      "Ile procent zaliczki pobiera pracodawca?",
+      "Jak się liczy zaliczkę na podatek dochodowy od pracownika?"
+    ],
+    "answer": "Zaliczka na PIT obliczana jest na podstawie dochodu pracownika z danego miesiąca. Gdy dochód od początku roku nie przekroczył 120 000 zł, zaliczka wynosi 12% dochodu z miesiąca. Gdy przekroczy tę kwotę, do 120 000 zł stosuje się 12%, a powyżej tej kwoty 32%. W miesiącach następnych (po przekroczeniu 120 000 zł) zaliczka wynosi już stale 32%. Za dochód uważa się przychody pomniejszone o koszty uzyskania i potrącone składki na ubezpieczenie społeczne.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 32 ust. 2",
+        "quote": "Zaliczki za miesiące od stycznia do grudnia wynoszą: 1) za miesiące, w których dochód podatnika uzyskany od początku roku od danego płatnika nie przekroczył kwoty 120 000 zł – 12 % dochodu uzyskanego w danym miesiącu; 2) za miesiąc, w którym dochód podatnika uzyskany od początku roku od danego płatnika przekroczył kwotę 120 000 zł – 12 % od tej części dochodu uzyskanego w tym miesiącu, która nie przekroczyła tej kwoty, i 32 % od nadwyżki ponad kwotę 120 000 zł; 3) za miesiące następujące po miesiącu, o którym mowa w pkt 2 – 32 % dochodu uzyskanego w danym miesiącu od danego płatnika."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 32 ust. 4",
+        "quote": "Za dochód, o którym mowa w ust. 2 i 3, uważa się uzyskane w ciągu miesiąca przychody, o których mowa w ust. 1, po odliczeniu kosztów uzyskania i po odliczeniu potrąconych przez płatnika w danym miesiącu składek na ubezpieczenie społeczne."
+      }
+    ],
+    "conditions": [
+      "Zaliczka obliczana jest na bieżąco w ciągu roku",
+      "Koszty uzyskania przychodów odpowiadają wysokości określonej w art. 22 ust. 2 pkt 1 lub 3 albo ust. 9 pkt 1–3",
+      "Od dochodu odliczane są składki na ubezpieczenie społeczne potrącane przez płatnika",
+      "Próg 120 000 zł liczony jest kumulacyjnie od początkuroku"
+    ],
+    "exceptions": [
+      "Pracownik może złożyć oświadczenie o zamiarze opodatkowania dochodów w inny sposób (art. 32 ust. 3), co zmienia algorytm obliczenia",
+      "Pracownik może żądać obliczania zaliczek bez zwolnień lub kosztów (art. 32 ust. 6)",
+      "Dochodów z pracy poza terytorium Polski nie opodatkuje się zaliczkami, chyba że pracownik złoży wniosek (art. 32 ust. 9)",
+      "Świadczenia w naturze za okres dłuższy niż miesiąc mogą być rozłożone na kolejne miesiące na wniosek pracownika (art. 32 ust. 5)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zaliczki_na_pit",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-32-zaliczka-pit-zmiana",
+    "question_intent": "Kiedy pracownik może zmienić zasady obliczania zaliczki?",
+    "question_patterns": [
+      "Jak zmienić obliczanie zaliczki na PIT?",
+      "Kiedy pracownik powinien złożyć oświadczenie o zaliczkach?",
+      "Czy mogę zmienić swoje oświadczenie dotyczące zaliczek?"
+    ],
+    "answer": "Pracownik może zmienić lub wycofać złożone wcześniej oświadczenie i wnioski o zaliczkach, wypełniając nowe oświadczenie lub wniosek. Zmiana wchodzi w życie najpóźniej od miesiąca następującego po miesiącu otrzymania zmian przez płatnika (dla zwykłych płatników), lub od drugiego miesiąca następującego dla płatników z art. 34. Pracownik jest obowiązany wycofać lub zmienić oświadczenie, jeśli uległy zmianie okoliczności wpływające na zaliczkę.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31a ust. 3-5",
+        "quote": "Podatnik jest obowiązany wycofać lub zmienić złożone uprzednio oświadczenie lub wniosek, jeżeli uległy zmianie okoliczności mające wpływ na obliczenie zaliczki. Wycofanie i zmiana następuje w drodze nowego oświadczenia lub wniosku. Płatnik uwzględnia to oświadczenie lub wniosek najpóźniej od miesiąca następującego po miesiącu, w którym je otrzymał."
+      }
+    ],
+    "conditions": [
+      "Oświadczenie i wnioski mają obowiązkowy wymóg formy pisemnej lub innej formy przyjętej u płatnika (art. 31a ust. 1)",
+      "Zmiana wymaga formalnego dokumentu (nowego oświadczenia/wniosku) złożonego płatnikowi",
+      "Zmieniające się okoliczności muszą istnieć, aby uzasadnić wycofanie/zmianę"
+    ],
+    "exceptions": [
+      "Po ustaniu stosunku prawnego płatnik pomija wcześniejsze oświadczenia/wnioski, z wyjątkiem wniosków o rezygnacji ze zwolnień lub kosztów (art. 31a ust. 7)",
+      "Oświadczenia i wnioski obowiązują kolejne lata podatkowe, chyba że przepis stanowi inaczej (art. 31a ust. 6)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zaliczki_na_pit",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-31a-pit2-zaliczka",
+    "question_intent": "Jakie znaczenie ma PIT-2 przy obliczaniu zaliczek na PIT pracownika?",
+    "question_patterns": [
+      "Co to jest PIT-2 i do czego służy?",
+      "Jak PIT-2 wpływa na wyliczenie zaliczki?",
+      "Czy PIT-2 zmienia sposób obliczania zaliczek?",
+      "Jakie oświadczenia pracownik powinien złożyć do płatnika?"
+    ],
+    "answer": "Art. 31a nie zawiera bezpośredniego odwołania do formularza PIT-2. Artykuł reguluje zasadę, że podatnik musi złożyć płatnikowi na piśmie oświadczenia i wnioski mające wpływ na obliczenie zaliczki (art. 31a ust. 1). Płatnik uwzględnia takie oświadczenia najpóźniej od miesiąca następującego po miesiącu ich otrzymania. Konkretne rodzaje oświadczeń regulują art. 31b, 32, 41 i inne artykuły ustawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31a ust. 1",
+        "quote": "Podatnik składa płatnikowi na piśmie albo w inny sposób przyjęty u danego płatnika oświadczenia i wnioski mające wpływ na obliczenie zaliczki."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31a ust. 2",
+        "quote": "Oświadczenia i wnioski mogą być składane według ustalonego wzoru."
+      }
+    ],
+    "conditions": [
+      "Oświadczenie lub wniosek musi być złożone na piśmie lub w sposób przyjęty u danego płatnika",
+      "Oświadczenie musi mieć wpływ na obliczenie zaliczki",
+      "Płatnik uwzględnia oświadczenie od miesiąca następującego po jego otrzymaniu"
+    ],
+    "exceptions": [
+      "Po ustaniu stosunku prawnego płatnik pomija poprzednie oświadczenia i wnioski, z wyjątkiem wniosków z art. 32 ust. 6 i 8 oraz art. 41 ust. 11"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zaliczki-na-pit",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "note": "Art. 31a odnosi się do procedury składania oświadczeń, ale nie wskazuje wprost na PIT-2. Szczegóły dotyczące konkretnego formularza PIT-2 wymagają weryfikacji w odniesieniu do odrębnych przepisów wykonawczych lub rozporządzeń ministra.",
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-31a-oswiadczenia-zaliczka",
+    "question_intent": "Jakie oświadczenia pracownika wpływają na pobór zaliczki PIT?",
+    "question_patterns": [
+      "Jakie oświadczenia wpływają na obliczenie zaliczki?",
+      "Co pracownik musi zadeklarować płatnikowi aby zmienić zaliczkę?",
+      "Które oświadczenia pracownika zmniejszają lub zwiększają zaliczkę PIT?",
+      "Jakie wnioski i oświadczenia dotyczą zaliczki na PIT?"
+    ],
+    "answer": "Pracownik składa płatnikowi oświadczenia i wnioski mające wpływ na obliczenie zaliczki, np. dotyczące zwolnień z podatku (art. 21 ust. 1 pkt 152–154) lub pomniejszenia zaliczki. Oświadczenia mogą być składane na piśmie lub w inny sposób przyjęty u danego płatnika. Są one obowiązkowe, gdy zmieniają się okoliczności mające wpływ na wysokość zaliczki — pracownik musi wówczas wycofać lub zmienić poprzednie oświadczenie.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31a ust. 1",
+        "quote": "Podatnik składa płatnikowi na piśmie albo w inny sposób przyjęty u danego płatnika oświadczenia i wnioski mające wpływ na obliczenie zaliczki."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31a ust. 3",
+        "quote": "Podatnik jest obowiązany wycofać lub zmienić złożone uprzednio oświadczenie lub wniosek, jeżeli uległy zmianie okoliczności mające wpływ na obliczenie zaliczki."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31a ust. 8",
+        "quote": "Jeżeli podatnik złoży płatnikowi oświadczenie, że spełnia warunki do stosowania zwolnień, o których mowa w art. 21 ust. 1 pkt 152–154, płatnik oblicza zaliczkę z uwzględnieniem tych zwolnień."
+      }
+    ],
+    "conditions": [
+      "Oświadczenia muszą być złożone na piśmie lub w inny sposób przyjęty u danego płatnika",
+      "Oświadczenie dotyczące zwolnień (art. 21 ust. 1 pkt 152–154) musi być złożone pod rygorem odpowiedzialności karnej",
+      "Oświadczenie dotyczące zwolnienia pkt 152 musi zawierać rok rozpoczęcia i zakończenia stosowania zwolnienia",
+      "Zmiany w oświadczeniach wchodzą w życie najpóźniej od miesiąca następującego po otrzymaniu przez płatnika"
+    ],
+    "exceptions": [
+      "Po ustaniu stosunku prawnego płatnik pomija poprzednie oświadczenia pracownika, z wyjątkiem wniosków o pomniejszenie zaliczki (art. 32 ust. 6 i 8 oraz art. 41 ust. 11)",
+      "Oświadczenia dotyczą kolejnych lat podatkowych, chyba że odrębny przepis stanowi inaczej"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zaliczka-na-pit",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-39-pit11-termin",
+    "question_intent": "Jaki jest termin na sporządzenie i przekazanie PIT-11?",
+    "question_patterns": [
+      "Do kiedy trzeba sporządzić PIT-11?",
+      "Jaki jest termin na przekazanie PIT-11?",
+      "Kiedy płatnik musi przesłać PIT-11?"
+    ],
+    "answer": "PIT-11 należy przesłać podatnikowi i urzędowi skarbowemu w terminie wynikającym z przepisów ogólnych (art. 39 ust. 1 wskazuje obowiązek przesłania, ale konkretny termin wymaga weryfikacji w przepisach wykonawczych lub rozporządzeniach). Wyjątek stanowi sytuacja, gdy obowiązek poboru zaliczek ustał w ciągu roku — wtedy na wniosek podatnika płatnik ma 14 dni na sporządzenie i przekazanie informacji (art. 39 ust. 2).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 39 ust. 1",
+        "quote": "Płatnicy są obowiązani przesłać podatnikowi i urzędowi skarbowemu imienne informacje sporządzone według ustalonego wzoru."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 39 ust. 2",
+        "quote": "Płatnicy na sporządzony na piśmie wniosek podatnika, w terminie 14 dni od dnia złożenia tego wniosku, są obowiązani do sporządzenia i przekazania imiennej informacji."
+      }
+    ],
+    "conditions": [
+      "Informacja dotyczy płatników z art. 32, 33 i 35",
+      "Termin 14 dni ma zastosowanie tylko gdy obowiązek poboru zaliczek ustał w ciągu roku"
+    ],
+    "exceptions": [
+      "Skrócony termin 14 dni nie dotyczy zawsze — ma zastosowanie na wniosek podatnika"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "PIT-11 i informacje od płatników",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-39-pit11-zawartosc",
+    "question_intent": "Co powinna zawierać informacja PIT-11?",
+    "question_patterns": [
+      "Jakie dane musi zawierać PIT-11?",
+      "Co musi być wykazane w PIT-11?",
+      "Jakie informacje muszą się znaleźć w PIT-11?"
+    ],
+    "answer": "PIT-11 powinien zawierać dane sporządzone według ustalonego wzoru (art. 39 ust. 1). W informacji należy wykazać dochody zwolnione od podatku na podstawie umów o unikaniu podwójnego opodatkowania lub innych umów międzynarodowych. Konkretny zakres danych definiuje ustalony wzór — tekst artykułu nie szczegółuje pełnego katalogu pozycji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 39 ust. 1",
+        "quote": "Imienne informacje sporządzone według ustalonego wzoru. W informacji tej wykazuje się również dochody zwolnione od podatku na podstawie umów o unikaniu podwójnego opodatkowania lub innych umów międzynarodowych."
+      }
+    ],
+    "conditions": [
+      "Dane muszą być wykazane w szczególnym wzozie",
+      "Obligatoryjna informacja o dochodach zwolnionych z umów międzynarodowych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "PIT-11 i informacje od płatników",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-39-pit11-korekta",
+    "question_intent": "Jak skorygować lub zmienić przekazany PIT-11?",
+    "question_patterns": [
+      "Jak skorygować błędny PIT-11?",
+      "Czy można poprawić już przekazany PIT-11?",
+      "Jaka procedura korekty PIT-11?"
+    ],
+    "answer": "Artykuł 39 nie zawiera przepisów dotyczących procedury korekty lub zmiany już przekazanego PIT-11. Zasady dotyczące korekty informacji wymagają weryfikacji w przepisach wykonawczych lub rozporządzeniach ministra finansów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 39",
+        "quote": "Artykuł dotyczy obowiązku sporządzenia i przekazania informacji, ale nie reguluje procedury korekty."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "PIT-11 i informacje od płatników",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-45-termin-skladania-pit",
+    "question_intent": "Jaki jest termin składania rocznego zeznania PIT?",
+    "question_patterns": [
+      "Do kiedy składa się zeznanie PIT?",
+      "Jaki jest termin złożenia PIT?",
+      "Kiedy trzeba złożyć roczne zeznanie podatkowe?",
+      "Do jakiej daty składa się PIT?"
+    ],
+    "answer": "Zeznanie roczne o dochodach należy złożyć w terminie od 15 lutego do 30 kwietnia roku następującego po roku podatkowym. Zeznania złożone przed 15 lutego uznaje się za złożone w dniu 15 lutego roku następującego po roku podatkowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45 ust. 1",
+        "quote": "Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o wysokości osiągniętego dochodu (poniesionej straty) w roku podatkowym, w terminie od dnia 15 lutego do dnia 30 kwietnia roku następującego po roku podatkowym."
+      }
+    ],
+    "conditions": [
+      "Termin liczony od roku następującego po roku podatkowym",
+      "Zeznania złożone wcześniej uznaje się za złożone 15 lutego"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "terminy_skladania_zeznań",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-45-pit36-skladanie",
+    "question_intent": "Kto powinien złożyć PIT-36?",
+    "question_patterns": [
+      "Co to jest PIT-36 i kto go składa?",
+      "Kiedy złożyć PIT-36?",
+      "PIT-36 — dla kogo obowiązkowy?"
+    ],
+    "answer": "Artykuł 45 nie zawiera konkretnych informacji o formularzu PIT-36. Przepis mówi ogólnie o zeznaniu rocznym, ale dokładną definicję i zastosowanie poszczególnych formularzy (PIT-36, PIT-36L, PIT-37) określają inne przepisy lub rozporządzenia wykonawcze, które nie są zawarte w podanym tekście.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45 ust. 1",
+        "quote": "Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "formularze_pit",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-45-pit36l-skladanie",
+    "question_intent": "Kto powinien złożyć PIT-36L?",
+    "question_patterns": [
+      "PIT-36L — kto go składa?",
+      "Do kogo należy formularz PIT-36L?",
+      "Kiedy trzeba złożyć PIT-36L?"
+    ],
+    "answer": "Artykuł 45 nie zawiera szczegółowych informacji o formularzu PIT-36L. Przepis reguluje ogólny obowiązek składania zeznania rocznego, ale konkretne formusze i ich zastosowanie określane są w rozporządzeniach wykonawczych niestanowiących części podanego tekstu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45 ust. 1a",
+        "quote": "W terminie określonym w ust. 1 podatnicy są obowiązani składać urzędom skarbowym odrębne zeznania, według ustalonych wzorów, o wysokości osiągniętego w roku podatkowym dochodu (poniesionej straty)"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "formularze_pit",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-45-pit37-skladanie",
+    "question_intent": "Kto powinien złożyć PIT-37?",
+    "question_patterns": [
+      "PIT-37 — dla kogo?",
+      "Kto jest obowiązany do złożenia PIT-37?",
+      "Kiedy trzeba złożyć formularz PIT-37?"
+    ],
+    "answer": "Artykuł 45 nie definiuje konkretnie formularza PIT-37. Przepis mówi o obowiązku składania odrębnych zeznań dla dochodów z kapitałów, działalności gospodarczej i zbywania nieruchomości (art. 45 ust. 1a), ale szczegółowe informacje o poszczególnych formularzach znajdują się w rozporządzeniach wykonawczych spoza podanego tekstu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45 ust. 1a",
+        "quote": "W terminie określonym w ust. 1 podatnicy są obowiązani składać urzędom skarbowym odrębne zeznania, według ustalonych wzorów"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "formularze_pit",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-45-pit-z-zaliczkami",
+    "question_intent": "Czy zawsze trzeba składać PIT, jeżeli pracodawca pobierał zaliczki?",
+    "question_patterns": [
+      "Czy muszę składać PIT jeśli już płaciłem zaliczki?",
+      "Czy pracodawca pobierający zaliczki zwalnia z obowiązku PIT?",
+      "Czy zaliczki zastępują obowiązek złożenia zeznania rocznego?"
+    ],
+    "answer": "Tak, obowiązek złożenia zeznania rocznego istnieje niezależnie od tego, czy pracodawca pobierał zaliczki. W zeznaniu rocznym podatnik wykazuje różnicę między podatkiem należnym a sumą już zapłaconych zaliczek — jeśli zaliczki były wystarczające, różnica może wynosić zero, ale zeznanie musi być złożone.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45 ust. 1",
+        "quote": "Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o wysokości osiągniętego dochodu (poniesionej straty) w roku podatkowym"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45 ust. 4 pkt 1",
+        "quote": "Przed upływem terminu określonego na złożenie zeznania podatnicy są obowiązani wpłacić różnicę między podatkiem należnym wynikającym z zeznania, a sumą zapłaconych za dany rok zaliczek"
+      }
+    ],
+    "conditions": [
+      "Obowiązek składania zeznania istnieje bez względu na wysokość zaliczek",
+      "W zeznaniu wykazuje się różnicę między podatkiem należnym a zaliczkami"
+    ],
+    "exceptions": [
+      "art. 45 ust. 3 — dochody opodatkowane ryczałtem nie są objęte zeznaniem, z zastrzeżeniem ust. 3c"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "obowiazek_skladania_zeznań",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-42a-pit8ar-rolnik",
+    "question_intent": "Czy rolnik ma obowiązek złożenia PIT-8AR?",
+    "question_patterns": [
+      "Czy rolnik składa PIT-8AR?",
+      "Kiedy rolnik ma obowiązek PIT-8AR?",
+      "PIT-8AR dla rolnika - kiedy?",
+      "Rolnik umowa o pomocy przy zbiorach - PIT-8AR"
+    ],
+    "answer": "Tak, rolnik dokonujący wypłaty wynagrodzenia na podstawie umowy o pomocy przy zbiorach ma obowiązek złożenia informacji PIT-8AR na zasadach określonych w art. 42a ust. 1. Przepis art. 42a ust. 2 rozszerza obowiązek informacyjny również na rolników w tym konkretnym przypadku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 42a ust. 2",
+        "quote": "Przepis ust. 1 ma zastosowanie również do rolnika, który dokonuje wypłaty wynagrodzenia z tytułu umowy o pomocy przy zbiorach"
+      }
+    ],
+    "conditions": [
+      "Rolnik dokonuje wypłaty wynagrodzenia",
+      "Wypłata następuje z tytułu umowy o pomocy przy zbiorach"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "obowiązki informacyjne płatnika - rolnik",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-31c-umowa-zlecenia-200zl",
+    "question_intent": "Jak opodatkować umowę zlecenia do 200 zł i czy płatnik musi pobierać zaliczki",
+    "question_patterns": [
+      "Jak opodatkować umowę zlecenia do 200 zł?",
+      "Czy płatnik pobiera zaliczki na umowie zlecenia 200 zł?",
+      "Jaki podatek od umowy zlecenia poniżej 200 zł?"
+    ],
+    "answer": "Przepisy art. 31c pozwalają podatnikowi złożyć wniosek o niepobieranie zaliczek, jeśli jego całkowite dochody podlegające opodatkowaniu na zasadach art. 27 nie przekroczą 30 000 zł rocznie. Sama umowa do 200 zł nie stanowi podstawy do zwolnienia z zaliczek — liczy się suma wszystkich dochodów w roku. Jeśli podatnik spełni warunek 30 000 zł, płatnik nie będzie pobierać zaliczek po złożeniu wniosku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 31c ust. 1-2",
+        "quote": "Płatnik nie pobiera zaliczek, jeżeli podatnik złoży wniosek o niepobieranie zaliczek w danym roku podatkowym, gdy przewiduje, że dochody nie przekroczą 30 000 zł"
+      }
+    ],
+    "conditions": [
+      "Podatnik musi złożyć wniosek o niepobieranie zaliczek",
+      "Całkowite dochody podlegające opodatkowaniu na zasadach art. 27 w roku nie mogą przekroczyć 30 000 zł",
+      "Wniosek dotyczy konkretnego płatnika w danym roku podatkowym"
+    ],
+    "exceptions": [
+      "Jeśli dochody przekroczą 30 000 zł u danego płatnika, zaliczki będą obliczane bez zmniejszeń (art. 31c ust. 3)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zaliczki_na_podatek",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-zwolnienie-mlodzi-26",
+    "question_intent": "Jakie są zasady zwolnienia z PIT dla osób do 26 roku życia?",
+    "question_patterns": [
+      "zwolnienie dla młodych do 26 lat",
+      "PIT dla osób poniżej 26 roku życia",
+      "jak działa ulga dla osób do 26 roku życia",
+      "zwolnienie dla pracujących do 26 roku"
+    ],
+    "answer": "Osoby do ukończenia 26. roku życia mogą otrzymać zwolnienie z PIT na przychody ze stosunku pracy, umów zlecenia, praktyk absolwenckich, stażu uczniowskiego i zasiłku macierzyńskiego, do maksymalnie 85 528 zł rocznie. Zwolnienie stosuje się także do przychodów z pozarolniczej działalności gospodarczej opodatkowanej na zasadach skalowych lub ryczałtem. Limit dotyczy łącznych przychodów z wszystkich tych źródeł w roku podatkowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 21 ust. 1 pkt 148",
+        "quote": "przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy, z umów zlecenia, z tytułu odbywania praktyki absolwenckiej, z tytułu odbywania stażu uczniowskiego, z zasiłku macierzyńskiego otrzymane przez podatnika do ukończenia 26. roku życia, do wysokości nieprzekraczającej w roku podatkowym kwoty 85 528 zł"
+      }
+    ],
+    "conditions": [
+      "podatnik musi być poniżej 26. roku życia",
+      "przychody muszą pochodzić z wymienionych źródeł",
+      "zwolnienie obejmuje максимум 85 528 zł w roku podatkowym",
+      "limit łączny dla wszystkich źródeł przychodów"
+    ],
+    "exceptions": [
+      "zwolnienie nie dotyczy przychodów opodatkowanych ryczałtem spoza wymienionych źródeł",
+      "nie uwzględnia się przychodów zwolnionych i opodatkowanych zryczałtowanym podatkiem"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zwolnienia_wiekowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-ulga-mieszkaniowa-sprzedaz",
+    "question_intent": "Na czym polega zwolnienie od PIT dla przychodów ze sprzedaży nieruchomości przeznaczonych na cele mieszkaniowe?",
+    "question_patterns": [
+      "ulga mieszkaniowa sprzedaż nieruchomości",
+      "zwolnienie PIT przy sprzedaży domu",
+      "przychód ze sprzedaży mieszkania czy opodatkowany",
+      "art. 21 pkt 131 zwolnienie mieszkaniowe",
+      "jak działa zwolnienie na cele mieszkaniowe"
+    ],
+    "answer": "Podatnik uzyskuje zwolnienie od PIT na przychód ze sprzedaży nieruchomości, jeżeli w ciągu 3 lat od sprzedaży przychód zostanie wydatkowany na własne cele mieszkaniowe, takie jak zakup, budowę, rozbudowę lub remont domu/mieszkania. Zwolnienie obejmuje tylko tę część przychodu, która odpowiada udziałowi wydatków na cele mieszkaniowe w całym przychodzie. Wydatki muszą być udokumentowane i poniesione w Polsce lub w krajach UE/EOG.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 21 ust. 1 pkt 131",
+        "quote": "dochody z odpłatnego zbycia nieruchomości i praw majątkowych w wysokości, która odpowiada iloczynowi tego dochodu i udziału wydatków poniesionych na własne cele mieszkaniowe w przychodzie z odpłatnego zbycia nieruchomości i praw majątkowych, jeżeli począwszy od dnia odpłatnego zbycia, nie później niż w okresie trzech lat od końca roku podatkowego, w którym nastąpiło odpłatne zbycie, przychód uzyskany ze zbycia tej nieruchomości lub tego prawa majątkowego został wydatkowany na własne cele mieszkaniowe"
+      }
+    ],
+    "conditions": [
+      "wydatkami są zakup, budowę, rozbudowę, remont domu lub mieszkania",
+      "wydatkami są także spłaty kredytów zaciągniętych na cele mieszkaniowe",
+      "wydatkami mogą być też wydatki na nabycie gruntu pod budowę",
+      "okres realizacji wydatków: od dnia sprzedaży do 3 lat od końca roku sprzedaży",
+      "zwolnienie proporcjonalne do udziału wydatków mieszkaniowych w całym przychodzie",
+      "wydatkami mogą być również spłaty poprzednich kredytów na te same cele"
+    ],
+    "exceptions": [
+      "zwolnienie nie dotyczy wydatków na cele rekreacyjne",
+      "nie dotyczy wydatków już uwzględnionych przy korzystaniu z innych ulg podatkowych",
+      "nie obejmuje wydatków na bieżące remonty związane z ubezpieczeniami",
+      "limit 3 lat od końca roku sprzedaży do wyłożenia wydatków"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zwolnienia_mieszkaniowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-52j-ulga-nie-dotyczy",
+    "question_intent": "Jak działa ulga na powrót w PIT?",
+    "question_patterns": [
+      "Co to jest ulga na powrót w PIT?",
+      "Jak się stosuje ulgę na powrót?",
+      "Gdzie znaleźć regulacje dotyczące ulgi na powrót?"
+    ],
+    "answer": "Artykuł 52j nie reguluje ulgi na powrót w PIT. Ten przepis dotyczy wyłącznie odliczenia wydatków na podłączenie do Elektronicznej Platformy Gromadzenia, Analizy i Udostępnienia Zasobów Cyfrowych o Zdarzeniach Medycznych dla podatników prowadzących apteki ogólnodostępne lub punkty apteczne. Aby znaleźć informacje o ulodze na powrót, należy poszukać w innych artykułach ustawy o podatku dochodowym od osób fizycznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 52j",
+        "quote": "Przepis reguluje odliczenie wydatków na nabycie towarów lub usług umożliwiających podłączenie do Elektronicznej Platformy Gromadzenia, Analizy i Udostępnienia Zasobów Cyfrowych o Zdarzeniach Medycznych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zwolnienia_i_ulgi_podatkowe",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-6-wspolne-rozliczenie-malzonkow",
+    "question_intent": "Jakie są warunki wspólnego rozliczenia małżonków w PIT?",
+    "question_patterns": [
+      "Kiedy małżonkowie mogą się rozliczyć łącznie?",
+      "Jakie warunki muszą spełnić małżonkowie do wspólnego opodatkowania?",
+      "Czy mogą się rozliczyć wspólnie jeśli jeden nie ma przychodów?",
+      "Na jakich zasadach opodatkowanie łączne małżonków?"
+    ],
+    "answer": "Małżonkowie podlegający obowiązkowi podatkowemu mogą być opodatkowani łącznie od sumy swoich dochodów, gdy pozostają w związku małżeńskim i we wspólności majątkowej przez cały rok podatkowy (lub od zawarcia małżeństwa do końca roku, jeśli ślub był w trakcie roku). Warunkiem jest złożenie wspólnego wniosku w zeznaniu podatkowym. Przepis stosuje się również gdy jeden z małżonków w roku nie uzyskał przychodów lub dochodów niepowodujących obowiązku zapłaty podatku. Podatek oblicza się w podwójnej wysokości od połowy łącznych dochodów małżonków.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6 ust. 2",
+        "quote": "Małżonkowie podlegający obowiązkowi podatkowemu, pozostający w związku małżeńskim i we wspólności majątkowej mogą być na wspólny wniosek wyrażony w zeznaniu podatkowym opodatkowani łącznie od sumy swoich dochodów"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6 ust. 3",
+        "quote": "Zasada ta ma zastosowanie również, jeżeli jeden z małżonków w roku podatkowym nie uzyskał przychodów lub osiągnął dochody niepowodujące obowiązku uiszczenia podatku"
+      }
+    ],
+    "conditions": [
+      "Oboje małżonkowie podlegają obowiązkowi podatkowemu",
+      "Pozostają w związku małżeńskim w roku podatkowym",
+      "Pozostają we wspólności majątkowej przez cały rok (lub od zawarcia do końca roku)",
+      "Złożą wspólny wniosek w zeznaniu podatkowym"
+    ],
+    "exceptions": [
+      "Przepis nie ma zastosowania gdy chociażby jeden z małżonków stosuje przepisy art. 30c lub ustawy o ryczałcie (z wyjątkiem art. 6 ust. 1a tej ustawy) - art. 6 ust. 8 pkt 1",
+      "Przepis nie ma zastosowania gdy któryś z małżonków podlega opodatkowaniu na zasadach ustawy o podatku tonażowym lub ustawy o aktywizacji przemysłu okrętowego - art. 6 ust. 8 pkt 2"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "opodatkowanie wspólne małżonków",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-6-wniosek-jeden-malzonek",
+    "question_intent": "Czy wniosek o wspólne opodatkowanie może złożyć jeden z małżonków?",
+    "question_patterns": [
+      "Czy wystarczy wniosek od jednego małżonka?",
+      "Jak złożyć wspólne opodatkowanie gdy drugi małżonek nie może?"
+    ],
+    "answer": "Wniosek o łączne opodatkowanie może złożyć jeden z małżonków. Traktuje się to na równi z oświadczeniem o upoważnieniu przez drugiego małżonka do złożenia wniosku o wspólne opodatkowanie. Oświadczenie takie musi być złożone pod rygorem odpowiedzialności karnej za fałszywe zeznania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6 ust. 2a",
+        "quote": "Wniosek może być wyrażony przez jednego z małżonków. Wyrażenie wniosku przez jednego traktuje się na równi ze złożeniem oświadczenia o upoważnieniu przez drugiego małżonka, złożone pod rygorem odpowiedzialności karnej za fałszywe zeznania"
+      }
+    ],
+    "conditions": [
+      "Wniosek wyrażony w zeznaniu podatkowym",
+      "Osób składająca wniosek oświadcza pod odpowiedzialnością karną, że ma upoważnienie drugiego małżonka"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "procedura wspólnego rozliczenia małżonków",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-6-rozliczenie-po-smieci-malzonka",
+    "question_intent": "Czy można się rozliczyć wspólnie jeśli małżonek zmarł?",
+    "question_patterns": [
+      "Wspólne rozliczenie gdy małżonek zmarł w trakcie roku",
+      "Czy można złożyć wspólne opodatkowanie po śmierci małżonka?",
+      "Małżonek zmarł po roku podatkowego - jak się rozliczyć?"
+    ],
+    "answer": "Podatnik, którego małżonek zmarł w trakcie roku podatkowego lub po jego upływie, ale przed złożeniem zeznania za ten rok, może złożyć wniosek o łączne opodatkowanie dochodów małżonków. Do takiego podatnika stosuje się sposób opodatkowania z art. 6 ust. 2 oraz przepisy art. 6 ust. 3, 3a, 8 i 11-13.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6a ust. 1 i 2",
+        "quote": "Wniosek o łączne opodatkowanie dochodów małżonków może być złożony przez podatnika, którego małżonek zmarł w trakcie roku podatkowego albo zmarł po upływie roku podatkowego przed złożeniem zeznania, a do takiego podatnika stosuje się sposób opodatkowania z art. 6 ust. 2"
+      }
+    ],
+    "conditions": [
+      "Podatnik pozostawał w związku małżeńskim w roku podatkowym",
+      "Małżonek zmarł w trakcie roku podatkowego lub po jego upływie, ale przed złożeniem zeznania",
+      "Między małżonkami istniała wspólność majątkowa w roku podatkowym"
+    ],
+    "exceptions": [
+      "Nie stosuje się przepisów art. 6 ust. 4c-4h (przepisy dotyczące samotnego rodzica)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "rozliczenie wspólne małżonków - śmierć małżonka",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-6-samotny-rodzic-preferencja",
+    "question_intent": "Kiedy osoba samotnie wychowująca dziecko może skorzystać z preferencyjnego rozliczenia?",
+    "question_patterns": [
+      "Kiedy mogę skorzystać z ulgi dla samotnego rodzica?",
+      "Jakie warunki muszę spełnić, aby rozliczyć się jako samotny rodzic?",
+      "Czy mam prawo do podwójnej ulgi jako samotny rodzic?",
+      "Na jakiej zasadzie rozlicza się samotny rodzic?"
+    ],
+    "answer": "Osoba samotnie wychowująca dziecko może skorzystać z preferencyjnego rozliczenia (podatek w podwójnej wysokości od połowy dochodów) pod warunkiem spełnienia trzech wymogów: (1) posiadania statusu panny, kawalera, wdowy, wdowca, rozwódki, rozwodnika, osoby w separacji lub osoby, której małżonek został pozbawiony praw rodzicielskich albo odbywa karę pozbawienia wolności, (2) samotnego wychowywania w roku podatkowym dzieci małoletnich, pełnoletnich do 25 lat uczących się lub pełnoletnich otrzymujących świadczenia opiekuńcze, oraz (3) złożenia wniosku w rocznym zeznaniu podatkowym. Jednak ulga nie przysługuje, jeśli wychowujesz dziecko wspólnie z drugim rodzicem (nawet przy opiece naprzemiennej).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6 ust. 4c",
+        "quote": "podatek może być określony zgodnie z ust. 4d na wniosek wyrażony w rocznym zeznaniu podatkowym"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6 ust. 4d",
+        "quote": "podatek jest określany w podwójnej wysokości podatku obliczonego od połowy dochodów osoby samotnie wychowującej dzieci"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 6 ust. 4f",
+        "quote": "Sposób opodatkowania, o którym mowa w ust. 4d, nie ma zastosowania do osoby, która wychowuje wspólnie z drugim rodzicem albo opiekunem prawnym co najmniej jedno dziecko"
+      }
+    ],
+    "conditions": [
+      "Status panna/kawaler/wdowa/wdowiec/rozwódka/rozwodnik/separacja/małżonek pozbawiony praw rodzicielskich",
+      "Samotne wychowywanie dziecka w roku podatkowym",
+      "Dziecko spełnia warunki: małoletnie LUB pełnoletnie do 25 lat uczące się LUB pełnoletnie otrzymujące zasiłek/dodatek pielęgnacyjny/rentę socjalną",
+      "Złożenie wniosku w rocznym zeznaniu podatkowym",
+      "Podatnik jest osobą fizyczną podlegającą obowiązkowi podatkowemu"
+    ],
+    "exceptions": [
+      "Ulga nie przysługuje, jeśli wychowujesz dziecko wspólnie z drugim rodzicem (w tym przy opiece naprzemiennej)",
+      "Ulga nie przysługuje, jeśli dziecko uzyskało dochody/przychody przekraczające dwunastokrotność kwoty renty socjalnej (z wyjątkiem renty rodzinnej)",
+      "Ulga nie stosuje się, jeśli podatnik stosuje przepisy art. 30c lub ustawy o ryczałcie dochodowym (z wyjątkiem art. 6 ust. 1a tej ustawy)",
+      "Ulga nie stosuje się, jeśli podatnik podlega opodatkowaniu na zasadach ustawy o podatku tonażowym lub aktywizacji przemysłu okrętowego"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "Preferencyjne rozliczenie - samotny rodzic",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27f-ulga-na-dzieci-mechanizm",
+    "question_intent": "Jak funkcjonuje ulga na dzieci w podatku PIT",
+    "question_patterns": [
+      "Jak działa ulga na dzieci w PIT?",
+      "Na czym polega odliczenie na dzieci?",
+      "Jaki jest mechanizm ulgi na dzieci?"
+    ],
+    "answer": "Ulga na dzieci polega na prawie odliczenia od podatku dochodowego kwot uzależnionych od liczby małoletnich dzieci, na które podatnik wykonuje władzę rodzicielską, pełni funkcję opiekuna prawnego lub sprawuje opiekę jako rodzina zastępcza. Odliczenie przysługuje za każdy miesiąc roku podatkowego, w którym podatnik sprawuje opiekę nad dzieckiem, w konkretnych wysokościach: 92,67 zł na jedno dziecko, 92,67 zł na każde z dwojga dzieci, a dla trojga i więcej dzieci kwoty wzrastają (92,67 zł na pierwsze i drugie, 166,67 zł na trzecie, 225 zł na czwarte i kolejne).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 27f ust. 1-2",
+        "quote": "Od podatku dochodowego obliczonego zgodnie z art. 27 podatnik ma prawo odliczyć kwotę obliczoną zgodnie z ust. 2 na każde małoletnie dziecko, w stosunku do którego w roku podatkowym wykonywał władzę rodzicielską"
+      }
+    ],
+    "conditions": [
+      "Dziecko musi być małoletnie",
+      "Podatnik musi wykonywać władzę rodzicielską, pełnić funkcję opiekuna prawnego lub sprawować opiekę rodziny zastępczej",
+      "Odliczenie dotyczy każdego miesiąca kalendarzowego, w którym była sprawowana opieka"
+    ],
+    "exceptions": [
+      "Odliczenie nie przysługuje od miesiąca, w którym dziecko zostało umieszczone w instytucji zapewniającej całodobowe utrzymanie",
+      "Odliczenie nie przysługuje od miesiąca, w którym dziecko wstąpiło w związek małżeński"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "ulgi_i_odliczenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27f-1-5-procent-opp",
+    "question_intent": "Jak przekazać 1,5% podatku na OPP",
+    "question_patterns": [
+      "Jak przekazać 1,5% podatku na OPP?",
+      "Gdzie w art. 27f jest informacja o 1,5% na OPP?",
+      "Jak darować 1,5% podatku organizacji pożytku publicznego?"
+    ],
+    "answer": "Przepis art. 27f nie zawiera regulacji dotyczącej przekazywania 1,5% podatku na organizacje pożytku publicznego (OPP). To pytanie wymaga weryfikacji w innych artykułach ustawy o podatku dochodowym od osób fizycznych, które regularnie zawierają przepisy dotyczące darowizn na OPP.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 27f",
+        "quote": "Artykuł 27f dotyczy wyłącznie ulgi na dzieci i nie zawiera postanowień dotyczących przekazywania podatku na OPP"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "darowizny_i_cele_spoleczne",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-26-ulga-rehabilitacyjna-uprawnionych",
+    "question_intent": "Kto może skorzystać z ulgi rehabilitacyjnej w PIT?",
+    "question_patterns": [
+      "Kto ma prawo do odliczenia wydatków rehabilitacyjnych?",
+      "Jakie osoby mogą korzystać z ulgi na wydatki rehabilitacyjne?",
+      "Kto może odliczyć wydatki na cele rehabilitacyjne?"
+    ],
+    "answer": "Z ulgi rehabilitacyjnej mogą korzystać podatnicy będący osobami niepełnosprawnymi oraz podatnicy, na których utrzymaniu pozostają osoby niepełnosprawne (dzieci własne, osoby zaliczone do I grupy podatkowej lub dzieci obce przyjęte na wychowanie). Wymogiem jest posiadanie orzeczenia o niepełnosprawności, decyzji o rencie z tytułu niezdolności do pracy lub orzeczenia dla osób do 16 lat wydanego na podstawie odrębnych przepisów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26 ust. 1 pkt 6",
+        "quote": "wydatków na cele rehabilitacyjne oraz wydatków związanych z ułatwieniem wykonywania czynności życiowych, poniesionych w roku podatkowym przez podatnika będącego osobą niepełnosprawną lub podatnika, na którego utrzymaniu są osoby niepełnosprawne"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26 ust. 7d",
+        "quote": "Warunkiem odliczenia wydatków jest posiadanie przez osobę orzeczenia o zakwalifikowaniu do stopnia niepełnosprawności, decyzji przyznającej rentę z tytułu niezdolności do pracy lub orzeczenia o niepełnosprawności osoby do 16 lat"
+      }
+    ],
+    "conditions": [
+      "Podatnik musi być osobą niepełnosprawną lub mieć na utrzymaniu osobę niepełnosprawną",
+      "Osoba niepełnosprawna musi posiadać orzeczenie o niepełnosprawności, decyzję o rencie lub orzeczenie dla osób do 16 lat",
+      "Dla osób na utrzymaniu: dochód nieprzekraczający dwunastokrotności kwoty renty socjalnej obowiązującej w grudniu roku podatkowego"
+    ],
+    "exceptions": [
+      "Wydatki sfinansowane ze środków zakładowego funduszu rehabilitacji, PFRON, NFZ lub zwrócone podatnikowi nie podlegają odliczeniu"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ulgi_podatkowe_wydatki_rehabilitacyjne",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-26h-ulga-termomodernizacyjna",
+    "question_intent": "Wyjaśnienie istoty i warunków uzyskania ulgi termomodernizacyjnej w PIT",
+    "question_patterns": [
+      "Na czym polega ulga termomodernizacyjna w PIT?",
+      "Czym jest ulga termomodernizacyjna?",
+      "Jak działa odliczenie wydatków na termomodernizację?"
+    ],
+    "answer": "Ulga termomodernizacyjna to prawo do odliczenia od podstawy obliczenia podatku wydatków poniesionych na materiały budowlane, urządzenia i usługi związane z realizacją przedsięwzięcia termomodernizacyjnego w budynku mieszkalnym jednorodzinnym. Maksymalnie można odliczyć 53 000 zł dla wszystkich przedsięwzięć w poszczególnych budynkach. Wydatki muszą być poniesione przez właściciela lub współwłaściciela budynku, a przedsięwzięcie musi być zakończone w ciągu 3 lat od końca roku, w którym poniesiono pierwszy wydatek. Jeśli wydatek nie zostanie pokryty dochodem w danym roku, można go odliczać przez kolejne lata, ale nie dłużej niż 6 lat.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26h ust. 1",
+        "quote": "Podatnik będący właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego ma prawo odliczyć od podstawy obliczenia podatku wydatki poniesione na materiały budowlane, urządzenia i usługi, związane z realizacją przedsięwzięcia termomodernizacyjnego"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26h ust. 2",
+        "quote": "Kwota odliczenia nie może przekroczyć 53 000 zł w odniesieniu do wszystkich realizowanych przedsięwzięć termomodernizacyjnych w poszczególnych budynkach"
+      }
+    ],
+    "conditions": [
+      "Podatnik musi być właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego",
+      "Wydatki muszą dotyczyć materiałów budowlanych, urządzeń i usług określonych w rozporządzeniu ministra",
+      "Przedsięwzięcie termomodernizacyjne musi być zakończone w ciągu 3 lat od końca roku poniesienia pierwszego wydatku",
+      "Wydatki muszą być wykazane na podstawie faktur wystawionych przez podatników VAT niekorzystających ze zwolnienia"
+    ],
+    "exceptions": [
+      "Nie można odliczyć wydatków sfinansowanych lub dofinansowanych ze środków Narodowego Funduszu Ochrony Środowiska lub wojewódzkich funduszy ochrony środowiska",
+      "Nie można odliczyć wydatków już zaliczonych do kosztów uzyskania przychodów lub odliczonych na podstawie ustawy o ryczałcie"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ulgi_i_odliczenia",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-26h-brak-regulacji-internet",
+    "question_intent": "Sprawdzenie, czy artykuł 26h reguluje ulgę na internet",
+    "question_patterns": [
+      "Czy ulga na internet nadal obowiązuje i na jakich zasadach?",
+      "Czy mogę odliczyć wydatki na internet?",
+      "Jaka jest ulga na internet w PIT?"
+    ],
+    "answer": "Artykuł 26h dotyczy wyłącznie ustawy termomodernizacyjnej i nie zawiera żadnych regulacji dotyczących ulgi na internet. Przepisy na temat ulgi internetowej znajdują się w innych artykułach ustawy o podatku dochodowym od osób fizycznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 26h",
+        "quote": "Artykuł 26h reguluje wyłącznie odliczenie wydatków na termomodernizację budynków mieszkalnych jednorodzinnych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "ulgi_i_odliczenia",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-45cd-nadplata-termin",
+    "question_intent": "Kiedy urząd zwraca nadpłatę wynikającą z zeznania PIT",
+    "question_patterns": [
+      "Kiedy otrzymam zwrot nadpłaty z PIT?",
+      "Jaki jest termin zwrotu nadpłaty podatkowej?",
+      "Kiedy urząd skarbowy zwraca mi pieniądze z zeznania?",
+      "Termin zwrotu nadpłaty PIT"
+    ],
+    "answer": "W artykule 45cd brak jest regulacji dotyczącej terminu zwrotu nadpłaty wynikającej z zeznania PIT. Artykuł zawiera wyłącznie zasady dotyczące udostępniania zeznań przez urząd podatkowy (od 15 lutego roku następującego) oraz procedury akceptacji/odrzucenia tych zeznań przez podatnika. Informacja o terminie zwrotu nadpłaty znajduje się w innych artykułach ustawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 45cd",
+        "quote": "Z dniem 15 lutego roku następującego po roku podatkowym organ podatkowy udostępnia podatnikowi zeznania za pośrednictwem konta w e-Urzędzie Skarbowym"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "procedury_administracyjne",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-10-najem-przychod",
+    "question_intent": "Jak opodatkować dochód z najmu prywatnego (nieruchomości)?",
+    "question_patterns": [
+      "Jak opodatkować najem nieruchomości?",
+      "Czy najem prywatny to przychód podatkowy?",
+      "Jaki jest przychód z wynajmowania mieszkania?",
+      "Opodatkowanie najmu mieszkania",
+      "Dochód z najmu nieruchomości"
+    ],
+    "answer": "Najem, podnajem, dzierżawa i umowy o podobnym charakterze są źródłem przychodów wymienianym w art. 10 ust. 1 pkt 6. Przychody z najmu opodatkowane są podatkiem dochodowym od osób fizycznych. Do przychodów z najmu można zaliczyć koszty uzyskania przychodów zgodnie z art. 22, takie jak remonty, ubezpieczenie czy podatki majątkowe.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 10 ust. 1 pkt 6",
+        "quote": "najem, podnajem, dzierżawa, poddzierżawa oraz inne umowy o podobnym charakterze, z wyjątkiem składników majątku związanych z działalnością gospodarczą"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 22 ust. 1",
+        "quote": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów lub zachowania albo zabezpieczenia źródła przychodów"
+      }
+    ],
+    "conditions": [
+      "Najem musi być umową o charakterze cywilnoprawnym",
+      "Przychody z najmu podlegają opodatkowaniu podatkiem dochodowym",
+      "Dotyczy to najmu nieruchomości oraz praw majątkowych",
+      "Wyjątek: składniki majątku związane z działalnością gospodarczą nie wchodzą w zakres tego przepisu"
+    ],
+    "exceptions": [
+      "Przepis nie dotyczy składników majątku związanych z działalnością gospodarczą",
+      "Jeśli najem stanowi część prowadzonej działalności gospodarczej, stosuje się inne przepisy"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "źródła przychodów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30e-sprzedaz-nieruchomosci-pit",
+    "question_intent": "Określenie, kiedy przychód ze sprzedaży nieruchomości podlega opodatkowaniu podatkiem dochodowym od osób fizycznych",
+    "question_patterns": [
+      "Kiedy sprzedaż nieruchomości podlega opodatkowaniu PIT?",
+      "Czy każda sprzedaż nieruchomości jest opodatkowana?",
+      "Jakie warunki muszą być spełnione aby sprzedaż nieruchomości była opodatkowana?",
+      "Kiedy przychód ze sprzedaży nieruchomości nie podlega zwolnieniu?",
+      "Czy zawsze muszę zapłacić PIT od sprzedaży domu?"
+    ],
+    "answer": "Sprzedaż nieruchomości podlega opodatkowaniu PIT stawką 19%, chyba że przychód zostaje zwolniony na podstawie art. 21 ust. 1 pkt 131 (wydatkowanie przychodu na własne cele mieszkaniowe w określonym terminie). Opodatkowanie nie ma zastosowania również, gdy sprzedaż nieruchomości jest przedmiotem działalności gospodarczej podatnika lub dotyczy gruntów utraciających charakter rolny. Dochód oblicza się jako różnicę między przychodem ze sprzedaży a kosztami ustalonymi oraz powiększoną o odpisy amortyzacyjne.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30e ust. 1",
+        "quote": "Od dochodu z odpłatnego zbycia nieruchomości i praw określonych w art. 10 ust. 1 pkt 8 lit. a–c podatek dochodowy wynosi 19 % podstawy obliczenia podatku."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30e ust. 6",
+        "quote": "Przepisy ust. 1–4 nie mają zastosowania, jeżeli: 1) budowa i sprzedaż budynków mieszkalnych lub lokali mieszkalnych oraz sprzedaż gruntów i prawa wieczystego użytkowania gruntów są przedmiotem działalności gospodarczej podatnika"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 21 ust. 1 pkt 131",
+        "quote": "dochody z odpłatnego zbycia nieruchomości i praw majątkowych, o których mowa w art. 30e, w wysokości, która odpowiada iloczynowi tego dochodu i udziału wydatków poniesionych na własne cele mieszkaniowe w przychodzie"
+      }
+    ],
+    "conditions": [
+      "Przychód pochodzi ze sprzedaży nieruchomości lub praw określonych w art. 10 ust. 1 pkt 8 lit. a–c",
+      "Sprzedaż nie jest przedmiotem działalności gospodarczej podatnika",
+      "Przychód nie został zwolniony na podstawie art. 21 ust. 1 pkt 131 (warunek wydatkowania na cele mieszkaniowe)",
+      "Podatnik jest osobą fizyczną o nieograniczonym obowiązku podatkowym"
+    ],
+    "exceptions": [
+      "Zwolnienie na podstawie art. 21 ust. 1 pkt 131 - jeśli przychód ze sprzedaży wydatkowany będzie na własne cele mieszkaniowe w ciągu trzech lat",
+      "Sprzedaż w ramach działalności gospodarczej (opodatkowanie wg art. 27)",
+      "Sprzedaż gruntów utraciających charakter rolny (zwolnienie na podstawie art. 21 ust. 1 pkt 28)",
+      "Sprzedaż w drodze zamiany - zasady ustawane odrębnie dla każdej strony umowy"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "opodatkowanie_sprzedazy_nieruchomosci",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-dochody-zagranica-proporcjonalne",
+    "question_intent": "Jak rozliczyć dochody z zagranicy w PIT według metody proporcjonalnego odliczenia?",
+    "question_patterns": [
+      "Jak stosuje się proporcjonalne odliczenie do dochodów zagranicznych?",
+      "Metoda proporcjonalnego odliczenia dla dochodów ze źródeł zagranicznych",
+      "Proporcjonalne odliczenie w PIT dla dochodów międzynarodowych"
+    ],
+    "answer": "Ustawa o PIT nie zawiera przepisów dotyczących metody proporcjonalnego odliczenia dla dochodów z zagranicy. Art. 3 reguluje jedynie obowiązek podatkowy od dochodów zagranicznych dla osób fizycznych mających miejsce zamieszkania w Polsce (podatnik podlega opodatkowaniu od całości dochodów) i nie określa sposobu ich rozliczania przy użyciu metody proporcjonalnej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 1 i 2a",
+        "quote": "Osoby fizyczne, jeżeli mają miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów (przychodów) bez względu na miejsce położenia źródeł przychodów"
+      }
+    ],
+    "conditions": [
+      "Podatnik ma miejsce zamieszkania na terenie RP",
+      "Uzyskuje dochody ze źródeł zagranicznych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "dochody_zagranice",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-certyfikat-rezydencji",
+    "question_intent": "Co to jest certyfikat rezydencji podatkowej i kiedy ma znaczenie w PIT?",
+    "question_patterns": [
+      "Certyfikat rezydencji podatkowej w PIT",
+      "Kiedy stosuje się certyfikat rezydencji w podatku dochodowym?",
+      "Znaczenie certyfikatu rezydencji w rozliczeniach PIT"
+    ],
+    "answer": "Ustawa o PIT nie zawiera definicji ani regulacji dotyczącej certyfikatu rezydencji podatkowej. Przepisy art. 3 określają status rezydenta podatkowego w oparciu o miejsce zamieszkania (art. 3 ust. 1a) – czyli centrum interesów osobistych lub pobytu dłuższy niż 183 dni w roku, ale nie wskazują na certyfikat rezydencji jako instrument PIT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 1a",
+        "quote": "Za osobę mającą miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej uważa się osobę fizyczną, która posiada na terytorium Rzeczypospolitej Polskiej centrum interesów osobistych lub gospodarczych lub przebywa na terytorium Rzeczypospolitej Polskiej dłużej niż 183 dni w roku podatkowym"
+      }
+    ],
+    "conditions": [
+      "Podatnik ma miejsce zamieszkania w RP lub przebywa w RP ponad 183 dni rocznie"
+    ],
+    "exceptions": [
+      "Członkowie personelu dyplomatycznego zwolnieni na podstawie art. 3 ust. 3"
+    ],
+    "taxpayer_type": [
+      "all"
+    ],
+    "topic": "rezydencja_podatkowa",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30b-kryptowaluty-podatek",
+    "question_intent": "Jaka stawka podatku dochodowego obowiązuje dla dochodów z kryptowalut?",
+    "question_patterns": [
+      "Jak opodatkować dochody z kryptowalut w PIT?",
+      "Jaki podatek od kryptowalut?",
+      "Stawka podatku od walut wirtualnych",
+      "Opodatkowanie sprzedaży kryptowalut"
+    ],
+    "answer": "Dochody z odpłatnego zbycia walut wirtualnych opodatkowane są stawką 19% na zasadach ogólnych. Dochodem jest różnica między sumą przychodów uzyskanych ze sprzedaży kryptowalut a kosztami uzyskania przychodów, osiągnięta w roku podatkowym. Podatnik wykazuje dochód w zeznaniu rocznym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30b ust. 1a",
+        "quote": "Od dochodów uzyskanych z odpłatnego zbycia walut wirtualnych podatek dochodowy wynosi 19% uzyskanego dochodu."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30b ust. 1b",
+        "quote": "Dochodem z odpłatnego zbycia walut wirtualnych jest osiągnięta w roku podatkowym różnica między sumą przychodów uzyskanych z tytułu odpłatnego zbycia walut wirtualnych a kosztami uzyskania przychodów."
+      }
+    ],
+    "conditions": [
+      "Przychód pochodzić musi z odpłatnego zbycia (wymiana na środek płatniczy, towary, usługi lub prawo majątkowe)",
+      "Dochód ustalany jest w roku podatkowym, w którym nastąpiła wymiana",
+      "Zastosowanie umów o unikaniu podwójnego opodatkowania wymaga certyfikatu rezydencji",
+      "Dochody z kryptowalut nie łączą się z dochodami z papierów wartościowych czy pochodnych instrumentów finansowych"
+    ],
+    "exceptions": [
+      "Przepis nie stosuje się, jeśli handel kryptowalutami stanowi działalność gospodarczą (art. 30b ust. 1g)",
+      "Dochody z działalności w branży przeciwdziałania praniu pieniędzy są zaliczane do przychodów z działalności gospodarczej"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "opodatkowanie_kryptowalut",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30b-waluta-wirtualna-definicja",
+    "question_intent": "Co rozumiane jest pod pojęciem odpłatnego zbycia waluty wirtualnej?",
+    "question_patterns": [
+      "Czym jest odpłatne zbycie kryptowaluty?",
+      "Definicja zbycia waluty wirtualnej",
+      "Kiedy powstaje przychód z kryptowalut?"
+    ],
+    "answer": "Odpłatnym zbyciem waluty wirtualnej jest wymiana kryptowaluty na prawny środek płatniczy (pieniądze), towar, usługę lub prawo majątkowe inne niż kryptowaluta, a także regulowanie zobowiązań kryptowalutą. Przychód powstaje w momencie takiej wymiany lub regulacji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 17 ust. 1f",
+        "quote": "Przez odpłatne zbycie waluty wirtualnej rozumie się wymianę waluty wirtualnej na prawny środek płatniczy, towar, usługę lub prawo majątkowe inne niż waluta wirtualna lub regulowanie innych zobowiązań walutą wirtualną."
+      }
+    ],
+    "conditions": [
+      "Musi dojść do wymiany kryptowaluty na inny zasób",
+      "Przychód powstaje w momencie realizacji wymiany"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "opodatkowanie_kryptowalut",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30b-kryptowaluty-za-granica",
+    "question_intent": "Jak opodatkować dochody z kryptowalut uzyskane za granicą?",
+    "question_patterns": [
+      "Kryptowaluty zarobione za granicą",
+      "Ulga zagraniczna przy kryptowalutach",
+      "Łączenie dochodów z kryptowalut z Polski i za granicy"
+    ],
+    "answer": "Jeśli podatnik uzyskuje dochody z kryptowalut zarówno w Polsce, jak i za granicą, dochody te łączy się i stosuje 19%. Od podatku obliczonego od łącznej sumy można odliczyć podatek zapłacony za granicą, ale odliczenie nie może przekroczyć części podatku, która proporcjonalnie przypada na dochód zagraniczny. Wymaga to certyfikatu rezydencji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30b ust. 5e",
+        "quote": "Jeżeli podatnik osiąga dochody z odpłatnego zbycia walut wirtualnych zarówno na terytorium Rzeczypospolitej Polskiej, jak i poza jej granicami, dochody te łączy się i od podatku obliczonego od łącznej sumy dochodów odlicza się kwotę równą podatkowi dochodowemu zapłaconemu za granicą."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30b ust. 3",
+        "quote": "Przepisy ust. 1 i 1a stosuje się z uwzględnieniem umów o unikaniu podwójnego opodatkowania. Zastosowanie stawki podatku wynikającej z właściwej umowy albo niezapłacenie podatku jest możliwe pod warunkiem udokumentowania dla celów podatkowych miejsca zamieszkania podatnika uzyskanym od niego certyfikatem rezydencji."
+      }
+    ],
+    "conditions": [
+      "Dochody z Polski i za granicy należy łączyć",
+      "Odliczenie podatku zagranicznego ograniczone do proporcjonalnej części",
+      "Wymagany certyfikat rezydencji do zastosowania umów o unikaniu podwójnego opodatkowania"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "opodatkowanie_kryptowalut",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30b-strata-kryptowaluty",
+    "question_intent": "Czy stratę na kryptowalutach można odliczyć w kolejnych latach?",
+    "question_patterns": [
+      "Czy mogę odliczyć stratę z kryptowalut w przyszłych latach?",
+      "Czy strata na walutach wirtualnych przenosi się na kolejny rok podatkowy?",
+      "Czy mogę przenosić straty z kryptowalut na następne lata?"
+    ],
+    "answer": "Artykuł 30b nie zawiera regulacji dotyczących przenoszenia strat z walut wirtualnych na kolejne lata podatkowe. Przepis mówi jedynie, że dochodem z odpłatnego zbycia walut wirtualnych jest różnica między przychodami a kosztami uzyskania przychodów osiągnięta w roku podatkowym. Aby poznać zasady rozliczania strat, konieczna jest weryfikacja innych przepisów ustawy lub interpretacji podatkowej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30b ust. 1a, 1b",
+        "quote": "Od dochodów uzyskanych z odpłatnego zbycia walut wirtualnych podatek dochodowy wynosi 19 % uzyskanego dochodu. Dochodem z odpłatnego zbycia walut wirtualnych jest osiągnięta w roku podatkowym różnica między sumą przychodów uzyskanych z tytułu odpłatnego zbycia walut wirtualnych a kosztami uzyskania przychodów."
+      }
+    ],
+    "conditions": [
+      "podatnik musi wykazać dochód osiągnięty w roku podatkowym",
+      "dochód to różnica między przychodami a kosztami uzyskania przychodów"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "kryptowaluty_dochody_kapitałowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30a-dywidendy-pit",
+    "question_intent": "Jaka stawka podatku i jakie zasady obowiązują przy opodatkowaniu dywidend w PIT?",
+    "question_patterns": [
+      "Jak opodatkować dywidendy w PIT?",
+      "Jaka stawka podatku od dywidend?",
+      "Czy dywidendy podlegają PIT i na jakiej zasadzie?",
+      "Opodatkowanie dochodów z dywidend",
+      "Zryczałtowany podatek od dywidend"
+    ],
+    "answer": "Dywidendy podlegają zryczałtowanemu podatkowi dochodowemu w wysokości 19% od uzyskanego dochodu (art. 30a ust. 1 pkt 4). Podatek oblicza się bez pomniejszania przychodu o koszty uzyskania. Dochodami z dywidend są dywidendy i inne przychody z tytułu udziału w zyskach osób prawnych faktycznie uzyskane z tego udziału (art. 17 ust. 1 pkt 4). Przepis nie łączy się z dochodami opodatkowanymi na zasadach ogólnych (art. 30a ust. 7).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30a ust. 1 pkt 4",
+        "quote": "Od uzyskanych dochodów (przychodów) pobiera się 19% zryczałtowany podatek dochodowy z dywidend i innych przychodów z tytułu udziału w zyskach osób prawnych"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 17 ust. 1 pkt 4",
+        "quote": "Za przychody z kapitałów pieniężnych uważa się dywidendy i inne przychody z tytułu udziału w zyskach osób prawnych faktycznie uzyskane z tego udziału"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30a ust. 6",
+        "quote": "Zryczałtowany podatek pobiera się bez pomniejszania przychodu o koszty uzyskania"
+      }
+    ],
+    "conditions": [
+      "Przychód musi być faktycznie uzyskany z udziału w zyskach osób prawnych",
+      "Podatek pobierany jest od przychodów uzyskanych na terenie RP i za granicą (z możliwością odliczenia podatku zagranicznego do wysokości 19%)",
+      "Dotyczy dywidend ze wszystkich rodzajów kapitałów udziałowych w osobach prawnych"
+    ],
+    "exceptions": [
+      "Przepis art. 17 ust. 1 pkt 4 lit. a dotyczy szczególnie dywidend z akcji złożonych przez członków pracowniczych funduszy emerytalnych",
+      "Przepis art. 17 ust. 1 pkt 4 lit. b dotyczy oprocentowania udziałów członkowskich w spółdzielniach",
+      "Do przychodów z dywidend przekazywanych przez posiadaczy rachunków zbiorczych, gdzie nie ujawniona jest tożsamość podatnika, stosuje się odrębne reguły (art. 30a ust. 2a)",
+      "Do komplementariuszy spółek cywilnych stosuje się specjalne zasady pomniejszenia podatku (art. 30a ust. 6a-6e)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "opodatkowanie_dochodów_z_kapitałów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30da-exit-tax-stawka",
+    "question_intent": "Jaka jest stawka podatku od dochodów z niezrealizowanych zysków (exit tax) w PIT?",
+    "question_patterns": [
+      "Jaka jest stawka exit tax w PIT?",
+      "Ile wynosi podatek od niezrealizowanych zysków?",
+      "Jakie są stawki podatku od dochodów z niezrealizowanych zysków?",
+      "Stawka exit tax dla osób fizycznych",
+      "Ile procent wynosi podatek od niezrealizowanych zysków?"
+    ],
+    "answer": "Exit tax (podatek od dochodów z niezrealizowanych zysków) ma dwie stawki: 19% podstawy opodatkowania, gdy ustala się wartość podatkową składnika majątku, oraz 3% podstawy opodatkowania, gdy wartość podatkowa nie jest ustalana. Wybór stawki zależy od tego, czy możliwe jest określenie wartości podatkowej przenoszanego składnika majątku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30da ust. 1",
+        "quote": "Podatek od dochodów z niezrealizowanych zysków wynosi: 1) 19 % podstawy opodatkowania – gdy ustalana jest wartość podatkowa składnika majątku; 2) 3 % podstawy opodatkowania – gdy nie ustala się wartości podatkowej składnika majątku."
+      }
+    ],
+    "conditions": [
+      "Stawka 19% stosuje się gdy możliwe jest ustalenie wartości podatkowej składnika majątku",
+      "Stawka 3% stosuje się gdy nie można ustalić wartości podatkowej składnika majątku"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "podatek_od_dochodów_z_niezrealizowanych_zysków",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30cb-zmiana-formy-opodatkowania",
+    "question_intent": "Jak zmienić formę opodatkowania działalności na kolejny rok podatkowy?",
+    "question_patterns": [
+      "Jak zmienić formę opodatkowania na następny rok?",
+      "Procedura zmiany formy opodatkowania",
+      "Kiedy mogę zmienić sposób opodatkowania działalności?"
+    ],
+    "answer": "Artykuł 30cb nie zawiera regulacji dotyczących procedury zmiany formy opodatkowania na kolejny rok podatkowy. Ten artykuł dotyczy wyłącznie wymagań dokumentacyjnych i księgowych dla podatników opodatkowanych zgodnie z art. 30ca (preferencyjna stawka na dochód z praw własności intelektualnej). Aby uzyskać odpowiedź na pytanie o zmianę formy opodatkowania, należy zapoznać się z innymi artykułami ustawy regulującymi przejścia między poszczególnymi formami opodatkowania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 30cb",
+        "quote": "Podatnicy podlegający opodatkowaniu na podstawie art. 30ca są obowiązani: wyodrębnić każde kwalifikowane prawo własności intelektualnej w prowadzonych księgach rachunkowych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "formy opodatkowania",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-rezydencja-praca-zdalna",
+    "question_intent": "Jak ustalić rezydencję podatkową osoby pracującej zdalnie z zagranicy",
+    "question_patterns": [
+      "Jak ustalić rezydencję podatkową przy pracy zdalnej z zagranicy?",
+      "Czy praca zdalna z zagranicy wpływa na rezydencję podatkową?",
+      "Jaka jest rezydencja podatkowa pracownika pracującego zdalnie poza Polską?",
+      "Czy pracownik pracujący zdalnie z zagranicy jest rezydentem podatkowym Polski?"
+    ],
+    "answer": "Rezydencję podatkową ustala się na podstawie miejsca zamieszkania, a nie miejsca wykonywania pracy. Osobę traktuje się jako rezydenta Polski, jeśli ma na terytorium Polski centrum interesów osobistych lub gospodarczych, lub przebywa tu dłużej niż 183 dni w roku podatkowym. Praca zdalna z zagranicy nie zmienia tego stanu — liczy się, gdzie faktycznie mieszkasz i gdzie są Twoje główne życiowe powiązania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 1a",
+        "quote": "Za osobę mającą miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej uważa się osobę fizyczną, która posiada na terytorium Rzeczypospolitej Polskiej centrum interesów osobistych lub gospodarczych (ośrodek interesów życiowych) lub przebywa na terytorium Rzeczypospolitej Polskiej dłużej niż 183 dni w roku podatkowym."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 1",
+        "quote": "Osoby fizyczne, jeżeli mają miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów (przychodów) bez względu na miejsce położenia źródeł przychodów."
+      }
+    ],
+    "conditions": [
+      "Rezydencja zależy od posiadania centrum interesów osobistych/gospodarczych w Polsce",
+      "Rezydencja zależy od liczby dni pobytu w Polsce (powyżej 183 dni w roku podatkowym)",
+      "Miejsce wykonywania pracy (zdalne z zagranicy) nie jest decydujące dla rezydencji"
+    ],
+    "exceptions": [
+      "Pracownicy personelu dyplomatycznego i urzędów konsularnych korzystający z przywilejów i immunitetów mogą być zwolnieni z opodatkowania dochodów ze źródeł zagraniczych (art. 3 ust. 3)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "Rezydencja podatkowa",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-nieograniczony-vs-ograniczony",
+    "question_intent": "Jaka jest różnica między nieograniczonym a ograniczonym obowiązkiem podatkowym w PIT?",
+    "question_patterns": [
+      "Czym różni się nieograniczony i ograniczony obowiązek podatkowy?",
+      "Jaka jest różnica między nieograniczonym obowiązkiem a ograniczonym?",
+      "Kiedy podatnik ma nieograniczony obowiązek podatkowy, a kiedy ograniczony?",
+      "Co to jest nieograniczony obowiązek podatkowy a co to ograniczony obowiązek podatkowy?"
+    ],
+    "answer": "Nieograniczony obowiązek podatkowy dotyczy osób fizycznych mających miejsce zamieszkania w Polsce — podlegają opodatkowanie od CAŁOŚCI dochodów z każdego źródła na świecie. Ograniczony obowiązek dotyczy osób bez miejsca zamieszkania w Polsce — podlegają opodatkowaniu TYLKO od dochodów osiąganych na terytorium Polski. Miejscem zamieszkania jest ten, kto ma w Polsce centrum interesów osobistych/gospodarczych lub przebywa tam ponad 183 dni w roku podatkowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 1",
+        "quote": "Osoby fizyczne, jeżeli mają miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów (przychodów) bez względu na miejsce położenia źródeł przychodów (nieograniczony obowiązek podatkowy)."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 2a",
+        "quote": "Osoby fizyczne, jeżeli nie mają na terytorium Rzeczypospolitej Polskiej miejsca zamieszkania, podlegają obowiązkowi podatkowemu tylko od dochodów (przychodów) osiąganych na terytorium Rzeczypospolitej Polskiej (ograniczony obowiązek podatkowy)."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 3 ust. 1a",
+        "quote": "Za osobę mającą miejsce zamieszkania na terytorium Rzeczypospolitej Polskiej uważa się osobę fizyczną, która: 1) posiada na terytorium Rzeczypospolitej Polskiej centrum interesów osobistych lub gospodarczych (ośrodek interesów życiowych) lub 2) przebywa na terytorium Rzeczypospolitej Polskiej dłużej niż 183 dni w roku podatkowym."
+      }
+    ],
+    "conditions": [
+      "Nieograniczony obowiązek: osoba fizyczna ma miejsce zamieszkania w Polsce",
+      "Miejsce zamieszkania istnieje jeśli: ma centrum interesów osobistych/gospodarczych w Polsce LUB przebywa w Polsce ponad 183 dni w roku podatkowym",
+      "Ograniczony obowiązek: osoba fizyczna NIE ma miejsca zamieszkania w Polsce"
+    ],
+    "exceptions": [
+      "art. 3 ust. 3 — członkowie personelu dyplomatycznego mogą być zwolnieni z podatku od dochodów ze źródeł zagranicznych (jeśli nie są obywatelami polskimi i nie mają stałego pobytu w Polsce)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "all"
+    ],
+    "topic": "obowiązek_podatkowy_zasadniczy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-7-dochody-maloletnich-dzieci",
+    "question_intent": "Kiedy dochody małoletnich dzieci dolicza się do dochodów rodziców?",
+    "question_patterns": [
+      "Kiedy dochody małoletnich dzieci dolicza się do dochodów rodziców?",
+      "W jakich sytuacjach dochód dziecka zwiększa dochód rodzica?",
+      "Jakie dochody małoletniego syna/córki trzeba dodać do mojego dochodu?",
+      "Czy dochody mojego małoletniego dziecka podlegają łączeniu z moim dochodem?"
+    ],
+    "answer": "Dochody małoletnich dzieci własnych i przysposobionych dolicza się do dochodów rodziców, jednak POZA dochodami z ich pracy, rent, stypendiów oraz dochodów z przedmiotów oddanych im do swobodnego użytku. Warunkiem jest, że dochody dziecka podlegają opodatkowaniu na terenie Polski oraz rodzicom przysługuje prawo pobierania pożytków ze źródeł przychodów dziecka. W przypadku oddzielnego opodatkowania małżonków, dochody dziecka dolicza się po równo każdemu z małżonków.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 7 ust. 1",
+        "quote": "Dochody małoletnich dzieci własnych i przysposobionych, z wyjątkiem dochodów z ich pracy, rent, stypendiów oraz dochodów z przedmiotów oddanych im do swobodnego użytku, podlegające opodatkowaniu na terytorium Rzeczypospolitej Polskiej, dolicza się do dochodów rodziców, chyba że rodzicom nie przysługuje prawo pobierania pożytków ze źródeł przychodów dzieci."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article": "art. 7 ust. 2",
+        "quote": "Jeżeli małżonkowie podlegają odrębnemu opodatkowaniu, dochody małoletnich dzieci dolicza się po połowie do dochodu każdego z małżonków."
+      }
+    ],
+    "conditions": [
+      "dochody muszą być małoletnich dzieci własnych lub przysposobionych",
+      "dochody muszą podlegać opodatkowaniu na terytorium Polski",
+      "rodzicom musi przysługiwać prawo pobierania pożytków ze źródeł przychodów dziecka",
+      "w przypadku separacji małżonków przepisy dotyczące podziału po połowie nie mają zastosowania"
+    ],
+    "exceptions": [
+      "dochody z pracy małoletniego dziecka",
+      "renty otrzymywane przez dziecko",
+      "stypendia",
+      "dochody z przedmiotów oddanych dziecku do swobodnego użytku",
+      "jeśli rodzicom nie przysługuje prawo pobierania pożytków ze źródeł przychodów dziecka"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "dochody_rodziny_podatek_dochodowy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  }
+]

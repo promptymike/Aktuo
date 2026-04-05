@@ -274,206 +274,235 @@
   },
   {
     "law_name": "Rozporządzenie KSeF",
-    "article_number": "art. 2 ust. 2 pkt 3 i 4",
-    "category": "zarządzanie_dostępem",
-    "verified_date": "",
-    "content": "Przepis przewiduje, że osoby fizyczne mogą być wskazane przez podatnika lub inne uprawnione podmioty do korzystania z KSeF, jednak tekst artykułu nie zawiera szczegółów dotyczących technicznych ograniczeń tokenów ani przyznawania konkretnych ról. Wymagana jest weryfikacja w regulaminie KSeF."
-  },
-  {
-    "law_name": "Rozporządzenie KSeF",
-    "article_number": "§ 4 ust. 1",
-    "category": "system_e-faktur_terminy",
-    "verified_date": "",
-    "content": "Dostarczone fragmenty ustawy o VAT nie zawierają informacji na temat terminów przesyłania faktur offline do Krajowego Systemu e-Faktur. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie regulują terminów przesyłania dokumentów."
-  },
-  {
-    "law_name": "Rozporządzenie KSeF",
-    "article_number": "§ 4 ust. 1",
-    "category": "system_e-faktur_wymagania_techniczne",
-    "verified_date": "",
-    "content": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie zawierają wytycznych dla błędów autoryzacji."
-  },
-  {
-    "law_name": "Rozporządzenie KSeF",
-    "article_number": "§ 4 ust. 1",
-    "category": "krajowy_system_e-faktur",
-    "verified_date": "",
-    "content": "Podany tekst artykułu reguluje uprawnienia do korzystania z KSeF i sposób ich nadawania/odbierania za pośrednictwem oprogramowania interfejsowego, ale nie zawiera szczegółowych instrukcji procedury rejestracji firmy. Tekst wskazuje, że uprawnienia są nadawane po weryfikacji, ale brakuje konkretnych kroków rejestracyjnych."
-  },
-  {
-    "law_name": "Rozporządzenie KSeF",
-    "article_number": "§ 4 ust. 1",
-    "category": "Krajowy System e-Faktur",
-    "verified_date": "",
-    "content": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur odbiera się za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania. Procedura wymaga weryfikacji posiadanych uprawnień. Szczegółowy proces powinien być dostępny w dokumentacji technicznej KSeF lub instrukcjach do oprogramowania interfejsowego."
-  },
-  {
-    "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "procedury_ksef",
     "verified_date": "",
-    "content": "Artykuł 2 nie zawiera regulacji dotyczących anulacji lub usuwania faktur z KSeF. Procedury dotyczące modyfikacji lub usuwania dokumentów powinny być określone w artykułach normujących operacje na fakturach w systemie."
+    "content": "Artykuł 2 nie zawiera regulacji dotyczących anulacji lub usuwania faktur z KSeF. Procedury dotyczące modyfikacji lub usuwania dokumentów powinny być określone w artykułach normujących operacje na fakturach w systemie.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "bezpieczeństwo_ksef",
     "verified_date": "",
-    "content": "Artykuł define uprawnienia do korzystania z KSeF, ale nie zawiera procedury postępowania w przypadku utraty tokenu. Instrukcje dotyczące bezpieczeństwa i odzyskiwania tokenów znajdują się w regulaminie KSeF lub na stronie Ministerstwa Finansów."
+    "content": "Artykuł define uprawnienia do korzystania z KSeF, ale nie zawiera procedury postępowania w przypadku utraty tokenu. Instrukcje dotyczące bezpieczeństwa i odzyskiwania tokenów znajdują się w regulaminie KSeF lub na stronie Ministerstwa Finansów.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "procedury_ksef",
     "verified_date": "",
-    "content": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie reguluje procedur korygowania błędów w wysłanych fakturach. Szczegółowe procedury korygowania dokumentów powinny być określone w artykułach normujących operacje na fakturach lub w regulaminie systemu."
+    "content": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie reguluje procedur korygowania błędów w wysłanych fakturach. Szczegółowe procedury korygowania dokumentów powinny być określone w artykułach normujących operacje na fakturach lub w regulaminie systemu.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "procedury_ksef",
     "verified_date": "",
-    "content": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie zawiera informacji o numerach czy identyfikatorach faktur przypisywanych przez system. Szczegóły dotyczące pobrania numeru KSeF znajdują się w regulaminie systemu lub dokumentacji procedurowej."
+    "content": "Przepis artykułu 2 definiuje jedynie uprawnienia do korzystania z KSeF i nie zawiera informacji o numerach czy identyfikatorach faktur przypisywanych przez system. Szczegóły dotyczące pobrania numeru KSeF znajdują się w regulaminie systemu lub dokumentacji procedurowej.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "procedury_ksef",
     "verified_date": "",
-    "content": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinna być zawarta w artykułach normujących procedury wystawiania faktur w KSeF."
+    "content": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinna być zawarta w artykułach normujących procedury wystawiania faktur w KSeF.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "procedury_ksef",
     "verified_date": "",
-    "content": "Przepis artykułu 2 nie zawiera informacji o obsłudze faktur korygujących w KSeF. Szczegóły dotyczące typów dokumentów obsługiwanych przez system, w tym faktur korygujących, powinny być określone w artykułach normujących procedury wystawiania dokumentów."
+    "content": "Przepis artykułu 2 nie zawiera informacji o obsłudze faktur korygujących w KSeF. Szczegóły dotyczące typów dokumentów obsługiwanych przez system, w tym faktur korygujących, powinny być określone w artykułach normujących procedury wystawiania dokumentów.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2",
     "category": "procedury_ksef",
     "verified_date": "",
-    "content": "Przepis artykułu 2 nie zawiera regulacji dotyczących numeracji faktur w KSeF. Wymagania dotyczące numerów faktur powinny być określone w artykułach normujących zasady wystawiania i identyfikacji faktur w systemie."
+    "content": "Przepis artykułu 2 nie zawiera regulacji dotyczących numeracji faktur w KSeF. Wymagania dotyczące numerów faktur powinny być określone w artykułach normujących zasady wystawiania i identyfikacji faktur w systemie.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 2 (przepisy ogólne o uprawnieniach)",
     "category": "autoryzacja_ksef",
     "verified_date": "",
-    "content": "Przepis definiuje uprawnienia do korzystania z KSeF dla podatnika, podmiotów, osób fizycznych wskazanych przez te podmioty oraz osób fizycznych wskazanych przez osoby posiadające uprawnienia. Tekst artykułu nie zawiera informacji o Profilu Zaufanym ani konkretnych sposobach autoryzacji, dlatego wymagana jest veryfikacja w regulaminie KSeF lub dokumentacji systemu."
+    "content": "Przepis definiuje uprawnienia do korzystania z KSeF dla podatnika, podmiotów, osób fizycznych wskazanych przez te podmioty oraz osób fizycznych wskazanych przez osoby posiadające uprawnienia. Tekst artykułu nie zawiera informacji o Profilu Zaufanym ani konkretnych sposobach autoryzacji, dlatego wymagana jest veryfikacja w regulaminie KSeF lub dokumentacji systemu.",
+    "source": "legacy"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "art. 2 ust. 2 pkt 3 i 4",
+    "category": "zarządzanie_dostępem",
+    "verified_date": "",
+    "content": "Przepis przewiduje, że osoby fizyczne mogą być wskazane przez podatnika lub inne uprawnione podmioty do korzystania z KSeF, jednak tekst artykułu nie zawiera szczegółów dotyczących technicznych ograniczeń tokenów ani przyznawania konkretnych ról. Wymagana jest weryfikacja w regulaminie KSeF.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 3",
     "category": "KSeF - rodzaje faktur",
     "verified_date": "",
-    "content": "Artykuł 3 dotyczy wyłącznie uprawnień do wystawiania elektronicznych faktur ustrukturyzowanych, ale nie zawiera przepisów dotyczących faktur zaliczkowych ani specjalnych zasad ich wystawiania w KSeF. Wymagana jest weryfikacja w odrębnych przepisach o fakturach zaliczkowych."
+    "content": "Artykuł 3 dotyczy wyłącznie uprawnień do wystawiania elektronicznych faktur ustrukturyzowanych, ale nie zawiera przepisów dotyczących faktur zaliczkowych ani specjalnych zasad ich wystawiania w KSeF. Wymagana jest weryfikacja w odrębnych przepisach o fakturach zaliczkowych.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 3",
     "category": "KSeF - wysyłanie faktur",
     "verified_date": "",
-    "content": "Tekst artykułu wskazuje tylko podmioty uprawnione do wystawiania faktur w KSeF, ale nie zawiera instrukcji technicznych dotyczących wysyłania faktur z programów księgowych. Wymaga to weryfikacji w dokumentacji KSeF i wytycznych dotyczących integracji systemów."
+    "content": "Tekst artykułu wskazuje tylko podmioty uprawnione do wystawiania faktur w KSeF, ale nie zawiera instrukcji technicznych dotyczących wysyłania faktur z programów księgowych. Wymaga to weryfikacji w dokumentacji KSeF i wytycznych dotyczących integracji systemów.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "art. 3 i 4",
     "category": "KSeF - przesyłanie faktur",
     "verified_date": "",
-    "content": "Na podstawie podanego tekstu artykułów nie można stwierdzić, czy przepisy KSeF mają zastosowanie do faktur dla kontrahentów zagranicznych. Artykuły 3 i 4 zawierają wyłącznie definicje uprawnień do wystawiania faktur i wymagan technicznych, ale nie określają zakresu podmiotowego ani terytorialnego obowiązku przesłania faktury do KSeF."
+    "content": "Na podstawie podanego tekstu artykułów nie można stwierdzić, czy przepisy KSeF mają zastosowanie do faktur dla kontrahentów zagranicznych. Artykuły 3 i 4 zawierają wyłącznie definicje uprawnień do wystawiania faktur i wymagan technicznych, ale nie określają zakresu podmiotowego ani terytorialnego obowiązku przesłania faktury do KSeF.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 10",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Artykuł nie zawiera informacji o procedurze obsługi błędów lub komunikatach odrzucenia. Przepisy § 10 i § 14 regulują wyłącznie proces zgłoszenia i wymagania techniczne kodu weryfikującego, bez opisania mechanizmu raportowania błędów przez KSeF."
+    "content": "Artykuł nie zawiera informacji o procedurze obsługi błędów lub komunikatach odrzucenia. Przepisy § 10 i § 14 regulują wyłącznie proces zgłoszenia i wymagania techniczne kodu weryfikującego, bez opisania mechanizmu raportowania błędów przez KSeF.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 10 ust. 1 pkt 10-11",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Artykuł wymaga zgłoszenia przewidywanej średniej liczby faktur w miesiącu (§ 10 ust. 1 pkt 10) oraz przewidywanego średniego rozmiaru faktury w kilobajtach (§ 10 ust. 1 pkt 11), ale nie zawiera konkretnych limitów technicznych. Szczegółowe wymagania znajdują się w specyfikacji oprogramowania interfejsowego."
+    "content": "Artykuł wymaga zgłoszenia przewidywanej średniej liczby faktur w miesiącu (§ 10 ust. 1 pkt 10) oraz przewidywanego średniego rozmiaru faktury w kilobajtach (§ 10 ust. 1 pkt 11), ale nie zawiera konkretnych limitów technicznych. Szczegółowe wymagania znajdują się w specyfikacji oprogramowania interfejsowego.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 10 ust. 1 pkt 7b",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Tekst artykułu nie zawiera informacji o formatach danych. Przepis § 10 reguluje wyłącznie proces zgłoszenia zamiaru wystawiania faktur z załącznikiem do KSeF, wymagając oświadczenia, że faktury będą zawierać dane określone w art. 106e ustawy o VAT."
+    "content": "Tekst artykułu nie zawiera informacji o formatach danych. Przepis § 10 reguluje wyłącznie proces zgłoszenia zamiaru wystawiania faktur z załącznikiem do KSeF, wymagając oświadczenia, że faktury będą zawierać dane określone w art. 106e ustawy o VAT.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 10 ust. 1 pkt 7b",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Tekst artykułu nie zawiera szczegółów dotyczących danych obowiązkowych. Przepis § 10 ust. 1 pkt 7b wymaga, aby faktury z załącznikiem zawierały wyłącznie dane określone w art. 106e ustawy o VAT lub dane ściśle z nimi powiązane, ale szczegółowy wykaz tych danych znajduje się w samym art. 106e, który nie został podany w tekście."
+    "content": "Tekst artykułu nie zawiera szczegółów dotyczących danych obowiązkowych. Przepis § 10 ust. 1 pkt 7b wymaga, aby faktury z załącznikiem zawierały wyłącznie dane określone w art. 106e ustawy o VAT lub dane ściśle z nimi powiązane, ale szczegółowy wykaz tych danych znajduje się w samym art. 106e, który nie został podany w tekście.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 10 ust. 1 pkt 9",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Artykuł nie zawiera informacji o środowisku testowym KSeF. Przepisy § 10 i § 14 regulują procedury produkcyjne wystawiania i przesyłania faktur z załącznikiem, bez odwołania do możliwości testowania systemu."
+    "content": "Artykuł nie zawiera informacji o środowisku testowym KSeF. Przepisy § 10 i § 14 regulują procedury produkcyjne wystawiania i przesyłania faktur z załącznikiem, bez odwołania do możliwości testowania systemu.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 14",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Artykuł nie zawiera informacji o procesie walidacji schemy. Tekst § 10 dotyczy wyłącznie procedury zgłoszenia zamiaru wystawiania faktur z załącznikiem, a § 14 powołuje się na specyfikację oprogramowania interfejsowego dla szczegółów technicznych."
+    "content": "Artykuł nie zawiera informacji o procesie walidacji schemy. Tekst § 10 dotyczy wyłącznie procedury zgłoszenia zamiaru wystawiania faktur z załącznikiem, a § 14 powołuje się na specyfikację oprogramowania interfejsowego dla szczegółów technicznych.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 14",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Artykuł nie zawiera informacji o sposobach technicznych połączenia z KSeF (API, portal WWW). Przepisy § 10 i § 14 powołują się na specyfikację oprogramowania interfejsowego, która zawiera szczegóły techniczne dostępu do systemu."
+    "content": "Artykuł nie zawiera informacji o sposobach technicznych połączenia z KSeF (API, portal WWW). Przepisy § 10 i § 14 powołują się na specyfikację oprogramowania interfejsowego, która zawiera szczegóły techniczne dostępu do systemu.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 14",
     "category": "wymagania_techniczne_kseff",
     "verified_date": "",
-    "content": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera specyfikacja oprogramowania interfejsowego. Wymagane jest sprawdzenie szczegółowej specyfikacji technicznej KSeF."
+    "content": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera specyfikacja oprogramowania interfejsowego. Wymagane jest sprawdzenie szczegółowej specyfikacji technicznej KSeF.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 2 ust. 1, § 3",
     "category": "uprawnienia_ksef",
     "verified_date": "",
-    "content": "Przepis nie opisuje procedury technicznej generowania tokena do KSeF. Informacja o sposobie generowania tokena wykracza poza zakres art. § 2-3, które regulują jedynie uprawnienia osób i podmiotów do korzystania z systemu."
+    "content": "Przepis nie opisuje procedury technicznej generowania tokena do KSeF. Informacja o sposobie generowania tokena wykracza poza zakres art. § 2-3, które regulują jedynie uprawnienia osób i podmiotów do korzystania z systemu.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 2 ust. 1, § 3",
     "category": "wymagania_techniczne_ksef",
     "verified_date": "",
-    "content": "Przepisy dotyczące uprawnień do KSeF (§ 2-3) nie zawierają informacji o możliwości przesyłania załączników. Kwestia wysyłania załączników wymaga weryfikacji w dokumentacji technicznej systemu lub innych przepisach regulacyjnych."
+    "content": "Przepisy dotyczące uprawnień do KSeF (§ 2-3) nie zawierają informacji o możliwości przesyłania załączników. Kwestia wysyłania załączników wymaga weryfikacji w dokumentacji technicznej systemu lub innych przepisach regulacyjnych.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 2 ust. 1, § 3",
     "category": "terminy_ksef",
     "verified_date": "",
-    "content": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania numeru KSeF wymaga weryfikacji w innych przepisach."
+    "content": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania numeru KSeF wymaga weryfikacji w innych przepisach.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 2 ust. 2 pkt 3 lit. a",
     "category": "uprawnienia_ksef",
     "verified_date": "",
-    "content": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będzie miała uprawnienie do nadawania i odbierania uprawnień w KSeF. Ta osoba może być reprezentantem zakładu, oddziału lub jednostki wewnętrznej podatnika, lub być wskazana bezpośrednio przez podatnika."
+    "content": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będzie miała uprawnienie do nadawania i odbierania uprawnień w KSeF. Ta osoba może być reprezentantem zakładu, oddziału lub jednostki wewnętrznej podatnika, lub być wskazana bezpośrednio przez podatnika.",
+    "source": "legacy"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 4 ust. 1",
+    "category": "system_e-faktur_terminy",
+    "verified_date": "",
+    "content": "Dostarczone fragmenty ustawy o VAT nie zawierają informacji na temat terminów przesyłania faktur offline do Krajowego Systemu e-Faktur. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie regulują terminów przesyłania dokumentów.",
+    "source": "legacy"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 4 ust. 1",
+    "category": "system_e-faktur_wymagania_techniczne",
+    "verified_date": "",
+    "content": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą uprawnień do korzystania z systemu i procedury weryfikacji uprawnień, ale nie zawierają wytycznych dla błędów autoryzacji.",
+    "source": "legacy"
   },
   {
     "law_name": "Rozporządzenie KSeF",
     "article_number": "§ 4 ust. 1",
     "category": "autentykacja_ksef",
     "verified_date": "",
-    "content": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie uprawnień do wystawiania faktur ustrukturyzowanych i sposobu nadawania/odbierania uprawnień poprzez oprogramowanie interfejsowe."
+    "content": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie uprawnień do wystawiania faktur ustrukturyzowanych i sposobu nadawania/odbierania uprawnień poprzez oprogramowanie interfejsowe.",
+    "source": "legacy"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 4 ust. 1",
+    "category": "krajowy_system_e-faktur",
+    "verified_date": "",
+    "content": "Podany tekst artykułu reguluje uprawnienia do korzystania z KSeF i sposób ich nadawania/odbierania za pośrednictwem oprogramowania interfejsowego, ale nie zawiera szczegółowych instrukcji procedury rejestracji firmy. Tekst wskazuje, że uprawnienia są nadawane po weryfikacji, ale brakuje konkretnych kroków rejestracyjnych.",
+    "source": "legacy"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 4 ust. 1",
+    "category": "Krajowy System e-Faktur",
+    "verified_date": "",
+    "content": "Uprawnienia do korzystania z Krajowego Systemu e-Faktur odbiera się za pomocą oprogramowania interfejsowego w sposób określony w specyfikacji tego oprogramowania. Procedura wymaga weryfikacji posiadanych uprawnień. Szczegółowy proces powinien być dostępny w dokumentacji technicznej KSeF lub instrukcjach do oprogramowania interfejsowego.",
+    "source": "legacy"
   },
   {
     "law_name": "Ustawa o VAT",
@@ -1824,20 +1853,569 @@
     "article_number": "art. 106ga",
     "category": "ksef",
     "verified_date": "",
-    "content": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podstawa: ustawa z 5 sierpnia 2025 r. (Dz.U. 2025 poz. 1203)."
+    "content": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podstawa: ustawa z 5 sierpnia 2025 r. (Dz.U. 2025 poz. 1203).",
+    "source": "legacy"
   },
   {
     "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
     "article_number": "art. 145l",
     "category": "ksef",
     "verified_date": "",
-    "content": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r. odroczony jest obowiązek podawania numeru KSeF przy płatnościach (art. 108g). Faktury z kas rejestrujących i paragony z NIP do 450 zł mogą być wystawiane poza KSeF do końca 2026 r."
+    "content": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r. odroczony jest obowiązek podawania numeru KSeF przy płatnościach (art. 108g). Faktury z kas rejestrujących i paragony z NIP do 450 zł mogą być wystawiane poza KSeF do końca 2026 r.",
+    "source": "legacy"
   },
   {
     "law_name": "Ustawa o VAT - KSeF zwolnienia",
     "article_number": "art. 106ga ust. 2",
     "category": "ksef",
     "verified_date": "",
-    "content": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działalności (B2C). Faktury B2C mogą być wystawiane w KSeF dobrowolnie."
+    "content": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działalności (B2C). Faktury B2C mogą być wystawiane w KSeF dobrowolnie.",
+    "source": "legacy"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 10 ust. 1 pkt 6",
+    "category": "źródła przychodów",
+    "verified_date": "",
+    "content": "Najem, podnajem, dzierżawa i umowy o podobnym charakterze są źródłem przychodów wymienianym w art. 10 ust. 1 pkt 6. Przychody z najmu opodatkowane są podatkiem dochodowym od osób fizycznych. Do przychodów z najmu można zaliczyć koszty uzyskania przychodów zgodnie z art. 22, takie jak remonty, ubezpieczenie czy podatki majątkowe."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 12 ust. 1",
+    "category": "przychody_ze_stosunku_pracy",
+    "verified_date": "",
+    "content": "Przychodem ze stosunku pracy są wszelkiego rodzaju wypłaty pieniężne oraz wartość świadczeń w naturze bądź ich ekwiwalenty, niezależnie od źródła finansowania. Obejmuje to: wynagrodzenia zasadnicze, dodatki, nagrody, ekwiwalenty za niewykorzystany urlop, świadczenia pieniężne ponoszone za pracownika oraz wartość nieodpłatnych lub częściowo odpłatnych świadczeń."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 12 ust. 1",
+    "category": "przychody_ze_stosunku_pracy",
+    "verified_date": "",
+    "content": "Tak, premie, nagrody i różnego rodzaju dodatki stanowią przychód ze stosunku pracy. Są one wymieniane w art. 12 ust. 1 jako część przychodów pracownika, niezależnie od tego, czy ich wysokość została z góry ustalona."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 14 ust. 1c",
+    "category": "moment-powstania-przychodu",
+    "verified_date": "",
+    "content": "Przychód z działalności gospodarczej powstaje w dniu wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi – ale nie później niż w dniu wystawienia faktury albo w dniu uregulowania należności (art. 14 ust. 1c). Jeśli usługa jest rozliczana w okresach rozliczeniowych określonych w umowie, za datę powstania przychodu uważa się ostatni dzień danego okresu (art. 14 ust. 1e). W przypadku przychodu, do którego nie stosują się te przepisy, moment powstania przychodu przypada na dzień otrzymania zapłaty (art. 14 ust. 1i)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 14 ust. 1c",
+    "category": "przychod-sprzedaz-towarow",
+    "verified_date": "",
+    "content": "Przychód z sprzedaży towaru powstaje w dniu wydania rzeczy, ale nie może być później niż dzień wystawienia faktury lub uregulowania należności (art. 14 ust. 1c pkt 1–2). Jeśli podatnik sprzedaje towary i usługi opodatkowane VAT, przychód jest pomniejszony o należny podatek od towarów i usług (art. 14 ust. 1). Zastosowanie ma zasada, że przychód powstaje najwcześniej przy wydaniu towaru, najpóźniej przy wystawaniu faktury lub zapłacie."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 14 ust. 1e",
+    "category": "przychod-uslugi-okresowe",
+    "verified_date": "",
+    "content": "Jeśli strony umowy ustalą, że usługa jest rozliczana w okresach rozliczeniowych, przychód powstaje w ostatnim dniu danego okresu rozliczeniowego określonego w umowie lub wystawionej fakturze (art. 14 ust. 1e). Przepis ten dotyczy również dostaw energii elektrycznej, cieplnej oraz gazu przewodowego (art. 14 ust. 1h). Okresy rozliczeniowe nie mogą być rzadsze niż raz w roku."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 14 ust. 3 pkt 1",
+    "category": "zaliczki-przedpłaty",
+    "verified_date": "",
+    "content": "Zaliczki pobrane na poczet dostaw towarów i usług, które będą wykonane w przyszłych okresach, NIE są przychodem z działalności gospodarczej (art. 14 ust. 3 pkt 1). Jednak podatnik może wybrać inny sposób – uznać zaliczkę za przychód w dniu jej pobrania, ale musi stosować tę metodę przez cały rok podatkowy i poinformować o tym wyborze w zeznaniu (art. 14 ust. 1j). Dotyczy to przychodu podlegającego zarejestrowaniu przy kasie rejestrującej zgodnie z ustawą o VAT."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 17 ust. 1f",
+    "category": "opodatkowanie_kryptowalut",
+    "verified_date": "",
+    "content": "Odpłatnym zbyciem waluty wirtualnej jest wymiana kryptowaluty na prawny środek płatniczy (pieniądze), towar, usługę lub prawo majątkowe inne niż kryptowaluta, a także regulowanie zobowiązań kryptowalutą. Przychód powstaje w momencie takiej wymiany lub regulacji."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 21 ust. 1 pkt 131",
+    "category": "zwolnienia_mieszkaniowe",
+    "verified_date": "",
+    "content": "Podatnik uzyskuje zwolnienie od PIT na przychód ze sprzedaży nieruchomości, jeżeli w ciągu 3 lat od sprzedaży przychód zostanie wydatkowany na własne cele mieszkaniowe, takie jak zakup, budowę, rozbudowę lub remont domu/mieszkania. Zwolnienie obejmuje tylko tę część przychodu, która odpowiada udziałowi wydatków na cele mieszkaniowe w całym przychodzie. Wydatki muszą być udokumentowane i poniesione w Polsce lub w krajach UE/EOG."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 21 ust. 1 pkt 148",
+    "category": "zwolnienia_wiekowe",
+    "verified_date": "",
+    "content": "Osoby do ukończenia 26. roku życia mogą otrzymać zwolnienie z PIT na przychody ze stosunku pracy, umów zlecenia, praktyk absolwenckich, stażu uczniowskiego i zasiłku macierzyńskiego, do maksymalnie 85 528 zł rocznie. Zwolnienie stosuje się także do przychodów z pozarolniczej działalności gospodarczej opodatkowanej na zasadach skalowych lub ryczałtem. Limit dotyczy łącznych przychodów z wszystkich tych źródeł w roku podatkowym."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22 ust. 1",
+    "category": "definicja_kosztów_uzyskania_przychodu",
+    "verified_date": "",
+    "content": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów lub zachowania albo zabezpieczenia źródła przychodów (art. 22 ust. 1). W praktyce oznacza to wszystkie uzasadnione wydatki biznesowe związane z prowadzeniem działalności i generowaniem dochodów, z wyłączeniem wydatków wymienionych w art. 23."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22 ust. 2 pkt 1 i 2",
+    "category": "koszty_pracownicze_standardowe",
+    "verified_date": "",
+    "content": "Pracownik zatrudniony w jednym stosunku pracy (lub spółdzielczym stosunku pracy, pracy nakładczej) może odliczyć 250 zł miesięcznie, maksymalnie 3000 zł rocznie (art. 22 ust. 2 pkt 1). Jeśli jest zatrudniony u więcej niż jednego pracodawcy, łączny limit kosztów wynosi maksymalnie 4500 zł za rok podatkowy (art. 22 ust. 2 pkt 2)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22 ust. 2 pkt 3 i 4",
+    "category": "koszty_pracownicze_podwyższone",
+    "verified_date": "",
+    "content": "Koszt 300 zł miesięcznie (max 3600 zł rocznie) stosuje się, gdy pracownik ma miejsce stałego lub czasowego zamieszkania poza miejscowością, w której znajduje się zakład pracy, i nie otrzymuje dodatku za rozłąkę (art. 22 ust. 2 pkt 3). Jeśli pracownik jest zatrudniony u więcej niż jednego pracodawcy w takich warunkach, łączny roczny limit wynosi 5400 zł (art. 22 ust. 2 pkt 4)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22 ust. 5d, 6b, 6e",
+    "category": "dokumentacja_kosztów",
+    "verified_date": "",
+    "content": "Dla podatników prowadzących księgi rachunkowe dzień poniesienia kosztu to dzień, na który ujęto koszt w księgach na podstawie faktury lub rachunku, albo na podstawie innego dowodu w braku faktury (art. 22 ust. 5d). Dla podatników prowadzących podatkowe księgi przychodów i rozchodów dzień poniesienia to dzień wystawienia faktury lub innego dowodu stanowiącego podstawę ujęcia kosztu (art. 22 ust. 6b). Koszty nabycia rzeczy zbywanych wymagają dokumentacji w postaci faktur VAT (art. 22 ust. 6e)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22a ust. 1",
+    "category": "amortyzacja_środki_trwałe",
+    "verified_date": "",
+    "content": "Środek trwały podlega amortyzacji, jeśli jest Twojej własności lub współwłasności, jest kompletny i zdatny do użytku w dniu przyjęcia do używania, oraz ma przewidywany okres używania dłuższy niż rok. Musi być wykorzystywany na potrzeby Twojej działalności gospodarczej albo oddany do używania na podstawie umowy najmu, dzierżawy lub umowy określonej w art. 23a pkt 1."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22b ust. 1",
+    "category": "amortyzacja_wartości_niematerialne",
+    "verified_date": "",
+    "content": "Wartości niematerialne i prawne (takie jak licencje, autorskie prawa majątkowe, prawa własności przemysłowej, know-how) podlegają amortyzacji, jeśli są nabyte od innego podmiotu, nadają się do gospodarczego wykorzystania w dniu przyjęcia do używania, mają przewidywany okres używania dłuższy niż rok oraz są wykorzystywane na potrzeby Twojej działalności gospodarczej lub oddane do używania na podstawie umowy licencyjnej, najmu, dzierżawy lub umowy określonej w art. 23a pkt 1."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22b ust. 2 pkt 2",
+    "category": "amortyzacja_prace_rozwojowe",
+    "verified_date": "",
+    "content": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określone, (2) techniczna przydatność został przez Ciebie odpowiednio udokumentowana i na tej podstawie podjąłeś decyzję o wytwarzaniu produktów lub stosowaniu technologii, oraz (3) z dokumentacji wynika, że koszty zostaną pokryte spodziewanymi przychodami ze sprzedaży lub zastosowania."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22k ust. 14",
+    "category": "amortyzacja_jednorazowa",
+    "verified_date": "",
+    "content": "Każdy podatnik prowadzący działalność gospodarczą (nie tylko mali podatnicy) może dokonać jednorazowego odpisu amortyzacyjnego od fabrycznie nowych środków trwałych (grupy 3–6 i 8, bez samochodów osobowych) do 100 000 zł w roku, w którym zostały wprowadzone do ewidencji. Limit obejmuje zarówno sam odpis amortyzacyjny, jak i wpłatę na poczet nabycia (art. 22 ust. 1s). Musi być spełniony warunek minimalnej wartości: jeden środek min. 10 000 zł lub co najmniej dwa środki min. 10 000 zł łącznie, każdy powyżej 3500 zł."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 22k ust. 20",
+    "category": "amortyzacja_jednorazowa",
+    "verified_date": "",
+    "content": "Jeśli podatnik ma prawo do obu limitów jednorazowej amortyzacji (50 000 euro dla małych podatników/rozpoczynających + 100 000 zł dla prowadzących działalność), musi wybrać JEDEN z nich. Odpis dokonuje się na podstawie ust. 7 albo ust. 14, nie można ich sumować. Wybór powinien być dokonany z uwzględnieniem, która opcja jest dla podatnika bardziej korzystna."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 23 ust. 1 pkt 1-66",
+    "category": "katalog wydatków niekosztem",
+    "verified_date": "",
+    "content": "Art. 23 ust. 1 definiuje wydatki, które NIE są kosztem uzyskania przychodów. Należą do nich m.in.: nabycie gruntów, nabycie środków trwałych (poza sprzedażą), grzywny i kary pieniężne, podatek dochodowy, odsety za zwłokę wobec urzędu, darowizny, rezervy (poza ustawowymi), koszty reprezentacji, udzielone pożyczki, składki dobrowolne oraz wiele innych. Szczegółowy katalog zawiera 66 punktów artykułu 23 ust. 1."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 23 ust. 1 pkt 15",
+    "category": "wydatki niestanowiące kosztów",
+    "verified_date": "",
+    "content": "Nie, grzywny i kary pieniężne NIE są kosztem uzyskania przychodów. Art. 23 ust. 1 pkt 15 wyłącza z kosztów 'grzywien i kar pieniężnych orzeczonych w postępowaniu karnym, karnym skarbowym, administracyjnym i w sprawach o wykroczenia oraz odsetek od tych grzywien i kar'. Jest to sankcja za naruszenie prawa, a tym samym nie może zmniejszać podstawy opodatkowania."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 23 ust. 1 pkt 18",
+    "category": "wydatki niestanowiące kosztów",
+    "verified_date": "",
+    "content": "Nie, odsetki za zwłokę wobec urzędu skarbowego NIE stanowią kosztu uzyskania przychodów. Art. 23 ust. 1 pkt 18 wyłącza z kosztów 'odsety za zwłokę z tytułu nieterminowych wpłat należności budżetowych i innych należności, do których stosuje się przepisy ustawy z dnia 29 sierpnia 1997 r. – Ordynacja podatkowa'. Jest to penalizacja za opóźnienie w zapłacie podatków lub innych zobowiązań publicznych."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 23 ust. 1 pkt 49",
+    "category": "koszty uzyskania przychodów",
+    "verified_date": "",
+    "content": "Wydatki prywatne przedsiębiorcy nie mogą być kosztem uzyskania przychodów. Zgodnie z art. 23 ust. 1 pkt 49 ustawy o PIT, wydatki niezaliczane do kosztów obejmują zakup rzeczowych składników majątku, jeśli stwierdzono, że nie są wykorzystywane dla celów działalności, lecz służą celom osobistym podatnika lub jego pracowników. Kosztem mogą być wyłącznie wydatki związane z prowadzeniem działalności gospodarczej."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 23b ust. 1",
+    "category": "leasing_przychod",
+    "verified_date": "",
+    "content": "Opłaty z umowy leasingu stanowią przychód finansującego (wynajmującego), a są kosztem uzyskania przychodów dla korzystającego. Dotyczy to opłat ustalonych w umowie leasingu za używanie środków trwałych, wartości niematerialnych i prawnych, pod warunkiem że umowa spełnia określone warunki (wymagany czas trwania, suma opłat odpowiada co najmniej wartości początkowej lub rynkowej przedmiotu umowy). Przepisy mogą się różnić w zależności od statusu korzystającego (osoba fizyczna prowadząca działalność, osoba fizyczna nieprowadząca działalności itp.)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 24a ust. 5",
+    "category": "ewidencja i dokumentacja przychodów",
+    "verified_date": "",
+    "content": "Tak, osoba fizyczna z przychodami poniżej progu może dobrowolnie prowadzić księgi rachunkowe od początku następnego roku podatkowego, jeśli przychody za poprzedni rok były niższe niż równowartość kwoty z przepisów o rachunkowości. O takim wyborze podatnik informuje w zeznaniu rocznym za rok, w którym były prowadzone."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 26 ust. 1 pkt 6",
+    "category": "ulgi_podatkowe_wydatki_rehabilitacyjne",
+    "verified_date": "",
+    "content": "Z ulgi rehabilitacyjnej mogą korzystać podatnicy będący osobami niepełnosprawnymi oraz podatnicy, na których utrzymaniu pozostają osoby niepełnosprawne (dzieci własne, osoby zaliczone do I grupy podatkowej lub dzieci obce przyjęte na wychowanie). Wymogiem jest posiadanie orzeczenia o niepełnosprawności, decyzji o rencie z tytułu niezdolności do pracy lub orzeczenia dla osób do 16 lat wydanego na podstawie odrębnych przepisów."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 26e ust. 2 pkt 1",
+    "category": "ulga_badawczo_rozwojowa",
+    "verified_date": "",
+    "content": "Tak, wynagrodzenia pracowników (i składki ubezpieczeniowe finansowane przez pracodawcę) stanowią koszty kwalifikowane, ale tylko w proporcji, w jakiej czas pracy poświęcony działalności badawczo-rozwojowej pozostaje w ogólnym czasie pracy pracownika w danym miesiącu. Podobnie dla zleceniobiorców – koszty zlecenia stanowią koszty kwalifikowane w proporcji czasu faktycznie poświęconego na wykonanie usługi B+R."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 26e ust. 8 zdanie drugie i trzecie",
+    "category": "ulga_badawczo_rozwojowa",
+    "verified_date": "",
+    "content": "Jeśli w roku podatnika wykazał stratę lub dochód poniżej przydzielonych odliczeń, może przenieść nieodliczone koszty na kolejne 6 lat podatkowych następujących bezpośrednio po roku, w którym mógł (ale nie musiał) skorzystać z odliczenia. Warunkiem jest uwzględnienie pomniejszeń z art. 26eb ust. 1."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 26h",
+    "category": "ulgi_i_odliczenia",
+    "verified_date": "",
+    "content": "Artykuł 26h dotyczy wyłącznie ustawy termomodernizacyjnej i nie zawiera żadnych regulacji dotyczących ulgi na internet. Przepisy na temat ulgi internetowej znajdują się w innych artykułach ustawy o podatku dochodowym od osób fizycznych."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 26h ust. 1",
+    "category": "ulgi_i_odliczenia",
+    "verified_date": "",
+    "content": "Ulga termomodernizacyjna to prawo do odliczenia od podstawy obliczenia podatku wydatków poniesionych na materiały budowlane, urządzenia i usługi związane z realizacją przedsięwzięcia termomodernizacyjnego w budynku mieszkalnym jednorodzinnym. Maksymalnie można odliczyć 53 000 zł dla wszystkich przedsięwzięć w poszczególnych budynkach. Wydatki muszą być poniesione przez właściciela lub współwłaściciela budynku, a przedsięwzięcie musi być zakończone w ciągu 3 lat od końca roku, w którym poniesiono pierwszy wydatek. Jeśli wydatek nie zostanie pokryty dochodem w danym roku, można go odliczać przez kolejne lata, ale nie dłużej niż 6 lat."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 27 ust. 1",
+    "category": "skala_podatkowa_pit",
+    "verified_date": "",
+    "content": "Podstawową formą opodatkowania działalności gospodarczej osób fizycznych jest podatek dochodowy według progresywnej skali podatkowej. Dla dochodów do 120 000 zł stawka wynosi 12% minus kwota zmniejszająca podatek 3600 zł, a dla dochodów powyżej 120 000 zł stawka to 10 800 zł plus 32% nadwyżki ponad 120 000 zł."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 27 ust. 1",
+    "category": "skala_podatkowa",
+    "verified_date": "",
+    "content": "Skala podatkowa 12% i 32% to skala obligatoryjna określona w art. 27 ust. 1 ustawy o podatku dochodowym od osób fizycznych. Podatnicy są zobowiązani stosować tę skalę od podstawy obliczenia podatku - do przychodu 120 000 zł stosuje się 12% minus kwota zmniejszająca podatek (3600 zł), a od nadwyżki powyżej 120 000 zł stosuje się 32%. Nie ma okresu warunkowego - to uniwersalna skala dla wszystkich podatników objętych podatkiem dochodowym od osób fizycznych."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 27f",
+    "category": "darowizny_i_cele_spoleczne",
+    "verified_date": "",
+    "content": "Przepis art. 27f nie zawiera regulacji dotyczącej przekazywania 1,5% podatku na organizacje pożytku publicznego (OPP). To pytanie wymaga weryfikacji w innych artykułach ustawy o podatku dochodowym od osób fizycznych, które regularnie zawierają przepisy dotyczące darowizn na OPP."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 27f ust. 1-2",
+    "category": "ulgi_i_odliczenia",
+    "verified_date": "",
+    "content": "Ulga na dzieci polega na prawie odliczenia od podatku dochodowego kwot uzależnionych od liczby małoletnich dzieci, na które podatnik wykonuje władzę rodzicielską, pełni funkcję opiekuna prawnego lub sprawuje opiekę jako rodzina zastępcza. Odliczenie przysługuje za każdy miesiąc roku podatkowego, w którym podatnik sprawuje opiekę nad dzieckiem, w konkretnych wysokościach: 92,67 zł na jedno dziecko, 92,67 zł na każde z dwojga dzieci, a dla trojga i więcej dzieci kwoty wzrastają (92,67 zł na pierwsze i drugie, 166,67 zł na trzecie, 225 zł na czwarte i kolejne)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 3 ust. 1",
+    "category": "obowiązek_podatkowy_zasadniczy",
+    "verified_date": "",
+    "content": "Nieograniczony obowiązek podatkowy dotyczy osób fizycznych mających miejsce zamieszkania w Polsce — podlegają opodatkowanie od CAŁOŚCI dochodów z każdego źródła na świecie. Ograniczony obowiązek dotyczy osób bez miejsca zamieszkania w Polsce — podlegają opodatkowaniu TYLKO od dochodów osiąganych na terytorium Polski. Miejscem zamieszkania jest ten, kto ma w Polsce centrum interesów osobistych/gospodarczych lub przebywa tam ponad 183 dni w roku podatkowym."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 3 ust. 1 i 2a",
+    "category": "dochody_zagranice",
+    "verified_date": "",
+    "content": "Ustawa o PIT nie zawiera przepisów dotyczących metody proporcjonalnego odliczenia dla dochodów z zagranicy. Art. 3 reguluje jedynie obowiązek podatkowy od dochodów zagranicznych dla osób fizycznych mających miejsce zamieszkania w Polsce (podatnik podlega opodatkowaniu od całości dochodów) i nie określa sposobu ich rozliczania przy użyciu metody proporcjonalnej."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 3 ust. 1a",
+    "category": "Rezydencja podatkowa",
+    "verified_date": "",
+    "content": "Rezydencję podatkową ustala się na podstawie miejsca zamieszkania, a nie miejsca wykonywania pracy. Osobę traktuje się jako rezydenta Polski, jeśli ma na terytorium Polski centrum interesów osobistych lub gospodarczych, lub przebywa tu dłużej niż 183 dni w roku podatkowym. Praca zdalna z zagranicy nie zmienia tego stanu — liczy się, gdzie faktycznie mieszkasz i gdzie są Twoje główne życiowe powiązania."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 3 ust. 1a",
+    "category": "rezydencja_podatkowa",
+    "verified_date": "",
+    "content": "Ustawa o PIT nie zawiera definicji ani regulacji dotyczącej certyfikatu rezydencji podatkowej. Przepisy art. 3 określają status rezydenta podatkowego w oparciu o miejsce zamieszkania (art. 3 ust. 1a) – czyli centrum interesów osobistych lub pobytu dłuższy niż 183 dni w roku, ale nie wskazują na certyfikat rezydencji jako instrument PIT."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30a ust. 1 pkt 4",
+    "category": "opodatkowanie_dochodów_z_kapitałów",
+    "verified_date": "",
+    "content": "Dywidendy podlegają zryczałtowanemu podatkowi dochodowemu w wysokości 19% od uzyskanego dochodu (art. 30a ust. 1 pkt 4). Podatek oblicza się bez pomniejszania przychodu o koszty uzyskania. Dochodami z dywidend są dywidendy i inne przychody z tytułu udziału w zyskach osób prawnych faktycznie uzyskane z tego udziału (art. 17 ust. 1 pkt 4). Przepis nie łączy się z dochodami opodatkowanymi na zasadach ogólnych (art. 30a ust. 7)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30b ust. 1a",
+    "category": "opodatkowanie_kryptowalut",
+    "verified_date": "",
+    "content": "Dochody z odpłatnego zbycia walut wirtualnych opodatkowane są stawką 19% na zasadach ogólnych. Dochodem jest różnica między sumą przychodów uzyskanych ze sprzedaży kryptowalut a kosztami uzyskania przychodów, osiągnięta w roku podatkowym. Podatnik wykazuje dochód w zeznaniu rocznym."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30b ust. 1a, 1b",
+    "category": "kryptowaluty_dochody_kapitałowe",
+    "verified_date": "",
+    "content": "Artykuł 30b nie zawiera regulacji dotyczących przenoszenia strat z walut wirtualnych na kolejne lata podatkowe. Przepis mówi jedynie, że dochodem z odpłatnego zbycia walut wirtualnych jest różnica między przychodami a kosztami uzyskania przychodów osiągnięta w roku podatkowym. Aby poznać zasady rozliczania strat, konieczna jest weryfikacja innych przepisów ustawy lub interpretacji podatkowej."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30b ust. 5e",
+    "category": "opodatkowanie_kryptowalut",
+    "verified_date": "",
+    "content": "Jeśli podatnik uzyskuje dochody z kryptowalut zarówno w Polsce, jak i za granicą, dochody te łączy się i stosuje 19%. Od podatku obliczonego od łącznej sumy można odliczyć podatek zapłacony za granicą, ale odliczenie nie może przekroczyć części podatku, która proporcjonalnie przypada na dochód zagraniczny. Wymaga to certyfikatu rezydencji."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30c",
+    "category": "zmiana_opodatkowania",
+    "verified_date": "",
+    "content": "Przepis art. 30c nie zawiera informacji o możliwości zmiany formy opodatkowania w trakcie roku podatkowego. Dokumentacja podatkowa wymaga pełnych regulacji zawartych w art. 9a i procedurach zmian wyboru formy opodatkowania, które nie są przytoczone w artykule 30c."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30c ust. 1",
+    "category": "opodatkowanie_działalności_gospodarczej",
+    "verified_date": "",
+    "content": "Podatek dochodowy od dochodów z pozarolniczej działalności gospodarczej wynosi 19%, zgodnie z art. 30c ust. 1. Przepis ten dotyczy podatników wymienonych w art. 9a ust. 2 lub 7 (osoby fizyczne prowadzące działalność gospodarczą). Wybór tej formy opodatkowania zależy od spełnienia warunków określonych w art. 9a — szczegóły znajdują się w tym artykule, który nie jest tu przytoczony w pełni."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30ca",
+    "category": "estoński_cit",
+    "verified_date": "",
+    "content": "Artykuł 30ca ustawy o podatku dochodowym od osób fizycznych nie zawiera informacji o estońskim CIT. Estoński CIT jest odrębnym systemem opodatkowania, który nie wynika z przepisów tego artykułu. Aby uzyskać odpowiedź na pytanie dotyczące możliwości stosowania estońskiego CIT przez JDG, wymagane jest przeanalizowanie innych ustaw podatkowych lub odpowiednich przepisów ustawy o podatku dochodowym od osób fizycznych."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30ca ust. 1",
+    "category": "preferencyjna_stawka_opodatkowania",
+    "verified_date": "",
+    "content": "IP Box to preferencyjne opodatkowanie dochodów osiągniętych z kwalifikowanych praw własności intelektualnej stawką 5% zamiast zwykłej progresywnej. Podatnik może skorzystać z tej ulgi, jeśli osiąga dochód z patentu, programu komputerowego, wzoru przemysłowego lub innych wymienionych praw ochronnych, które sam opracował lub ulepszył w ramach działalności badawczo-rozwojowej. Wysokość dochodu podlegającego 5% stawce jest jednak zmniejszana o wskaźnik uwzględniający koszty, które podatnik sam poniósł na B+R (art. 30ca ust. 4)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30cb",
+    "category": "formy opodatkowania",
+    "verified_date": "",
+    "content": "Artykuł 30cb nie zawiera regulacji dotyczących procedury zmiany formy opodatkowania na kolejny rok podatkowy. Ten artykuł dotyczy wyłącznie wymagań dokumentacyjnych i księgowych dla podatników opodatkowanych zgodnie z art. 30ca (preferencyjna stawka na dochód z praw własności intelektualnej). Aby uzyskać odpowiedź na pytanie o zmianę formy opodatkowania, należy zapoznać się z innymi artykułami ustawy regulującymi przejścia między poszczególnymi formami opodatkowania."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30da ust. 1",
+    "category": "podatek_od_dochodów_z_niezrealizowanych_zysków",
+    "verified_date": "",
+    "content": "Exit tax (podatek od dochodów z niezrealizowanych zysków) ma dwie stawki: 19% podstawy opodatkowania, gdy ustala się wartość podatkową składnika majątku, oraz 3% podstawy opodatkowania, gdy wartość podatkowa nie jest ustalana. Wybór stawki zależy od tego, czy możliwe jest określenie wartości podatkowej przenoszanego składnika majątku."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30e ust. 1",
+    "category": "opodatkowanie_sprzedazy_nieruchomosci",
+    "verified_date": "",
+    "content": "Sprzedaż nieruchomości podlega opodatkowaniu PIT stawką 19%, chyba że przychód zostaje zwolniony na podstawie art. 21 ust. 1 pkt 131 (wydatkowanie przychodu na własne cele mieszkaniowe w określonym terminie). Opodatkowanie nie ma zastosowania również, gdy sprzedaż nieruchomości jest przedmiotem działalności gospodarczej podatnika lub dotyczy gruntów utraciających charakter rolny. Dochód oblicza się jako różnicę między przychodem ze sprzedaży a kosztami ustalonymi oraz powiększoną o odpisy amortyzacyjne."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 30h ust. 4",
+    "category": "danina_solidarnościowa",
+    "verified_date": "",
+    "content": "Danina solidarnościowa musi być wpłacona do dnia 30 kwietnia roku kalendarzowego. W tym samym terminie należy złożyć urzędowi skarbowemu deklarację o wysokości daniny solidarnościowej według udzielonego wzoru."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 31a ust. 1",
+    "category": "zaliczki-na-pit",
+    "verified_date": "",
+    "content": "Art. 31a nie zawiera bezpośredniego odwołania do formularza PIT-2. Artykuł reguluje zasadę, że podatnik musi złożyć płatnikowi na piśmie oświadczenia i wnioski mające wpływ na obliczenie zaliczki (art. 31a ust. 1). Płatnik uwzględnia takie oświadczenia najpóźniej od miesiąca następującego po miesiącu ich otrzymania. Konkretne rodzaje oświadczeń regulują art. 31b, 32, 41 i inne artykuły ustawy."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 31a ust. 1",
+    "category": "zaliczka-na-pit",
+    "verified_date": "",
+    "content": "Pracownik składa płatnikowi oświadczenia i wnioski mające wpływ na obliczenie zaliczki, np. dotyczące zwolnień z podatku (art. 21 ust. 1 pkt 152–154) lub pomniejszenia zaliczki. Oświadczenia mogą być składane na piśmie lub w inny sposób przyjęty u danego płatnika. Są one obowiązkowe, gdy zmieniają się okoliczności mające wpływ na wysokość zaliczki — pracownik musi wówczas wycofać lub zmienić poprzednie oświadczenie."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 31a ust. 3-5",
+    "category": "zaliczki_na_pit",
+    "verified_date": "",
+    "content": "Pracownik może zmienić lub wycofać złożone wcześniej oświadczenie i wnioski o zaliczkach, wypełniając nowe oświadczenie lub wniosek. Zmiana wchodzi w życie najpóźniej od miesiąca następującego po miesiącu otrzymania zmian przez płatnika (dla zwykłych płatników), lub od drugiego miesiąca następującego dla płatników z art. 34. Pracownik jest obowiązany wycofać lub zmienić oświadczenie, jeśli uległy zmianie okoliczności wpływające na zaliczkę."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 31c ust. 1-2",
+    "category": "zaliczki_na_podatek",
+    "verified_date": "",
+    "content": "Przepisy art. 31c pozwalają podatnikowi złożyć wniosek o niepobieranie zaliczek, jeśli jego całkowite dochody podlegające opodatkowaniu na zasadach art. 27 nie przekroczą 30 000 zł rocznie. Sama umowa do 200 zł nie stanowi podstawy do zwolnienia z zaliczek — liczy się suma wszystkich dochodów w roku. Jeśli podatnik spełni warunek 30 000 zł, płatnik nie będzie pobierać zaliczek po złożeniu wniosku."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 32 ust. 1",
+    "category": "obowiązki_płatnika_pit",
+    "verified_date": "",
+    "content": "Pracodawca jako płatnik PIT jest obowiązany obliczać i pobierać zaliczki na podatek dochodowy w ciągu roku od pracowników uzyskujących wynagrodzenie ze stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy oraz zasiłków z ubezpieczenia społecznego. Zaliczki należy pobierać co miesiąc według stawek określonych w art. 32 ust. 2, czyli 12% do kwoty 120 000 zł dochodu rocznego, oraz 32% od nadwyżki ponad tę kwotę."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 32 ust. 1",
+    "category": "zaliczki_pit_pracodawca",
+    "verified_date": "",
+    "content": "Płatnikami zaliczek PIT są: zakłady pracy będące osobami fizycznymi, osobami prawnymi oraz jednostkami organizacyjnymi nieposiadającymi osobowości prawnej. Obowiązek ten dotyczy wynagrodzeń ze stosunku pracy, stosunku służbowego, pracy nakładczej, spółdzielczego stosunku pracy, a także zasiłków z ubezpieczenia społecznego i udziału w nadwyżce bilansowej wypłacanej w spółdzielniach pracy."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 32 ust. 2",
+    "category": "stawki_zaliczek_pit",
+    "verified_date": "",
+    "content": "Pracodawca pobiera zaliczki w wysokości 12% dochodu, dopóki dochód pracownika od początku roku nie przekroczy 120 000 zł. Od miesiąca, w którym ta kwota zostanie przekroczona, zaliczka wynosi 12% od części do 120 000 zł i 32% od nadwyżki. W kolejnych miesiącach roku pracodawca pobiera już tylko 32% zaliczki."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 32 ust. 2",
+    "category": "zaliczki_na_pit",
+    "verified_date": "",
+    "content": "Zaliczka na PIT obliczana jest na podstawie dochodu pracownika z danego miesiąca. Gdy dochód od początku roku nie przekroczył 120 000 zł, zaliczka wynosi 12% dochodu z miesiąca. Gdy przekroczy tę kwotę, do 120 000 zł stosuje się 12%, a powyżej tej kwoty 32%. W miesiącach następnych (po przekroczeniu 120 000 zł) zaliczka wynosi już stale 32%. Za dochód uważa się przychody pomniejszone o koszty uzyskania i potrącone składki na ubezpieczenie społeczne."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 38 ust. 1",
+    "category": "obowiązki_sprawozdawcze_płatnika",
+    "verified_date": "",
+    "content": "Pracodawca musi przekazać pobrane zaliczki na rachunek urzędu skarbowego do 20. dnia miesiąca następującego po miesiącu, w którym zaliczki zostały pobrane. Dodatkowo, do końca stycznia roku następującego po roku podatkowym, pracodawca musi przesłać roczną deklarację do właściwego urzędu skarbowego. Jeśli zaprzestanie działalności przed końcem stycznia, deklarację przekazuje do dnia zaprzestania."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 39",
+    "category": "PIT-11 i informacje od płatników",
+    "verified_date": "",
+    "content": "Artykuł 39 nie zawiera przepisów dotyczących procedury korekty lub zmiany już przekazanego PIT-11. Zasady dotyczące korekty informacji wymagają weryfikacji w przepisach wykonawczych lub rozporządzeniach ministra finansów."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 39 ust. 1",
+    "category": "PIT-11 i informacje od płatników",
+    "verified_date": "",
+    "content": "PIT-11 należy przesłać podatnikowi i urzędowi skarbowemu w terminie wynikającym z przepisów ogólnych (art. 39 ust. 1 wskazuje obowiązek przesłania, ale konkretny termin wymaga weryfikacji w przepisach wykonawczych lub rozporządzeniach). Wyjątek stanowi sytuacja, gdy obowiązek poboru zaliczek ustał w ciągu roku — wtedy na wniosek podatnika płatnik ma 14 dni na sporządzenie i przekazanie informacji (art. 39 ust. 2)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 39 ust. 1",
+    "category": "PIT-11 i informacje od płatników",
+    "verified_date": "",
+    "content": "PIT-11 powinien zawierać dane sporządzone według ustalonego wzoru (art. 39 ust. 1). W informacji należy wykazać dochody zwolnione od podatku na podstawie umów o unikaniu podwójnego opodatkowania lub innych umów międzynarodowych. Konkretny zakres danych definiuje ustalony wzór — tekst artykułu nie szczegółuje pełnego katalogu pozycji."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 42a ust. 2",
+    "category": "obowiązki informacyjne płatnika - rolnik",
+    "verified_date": "",
+    "content": "Tak, rolnik dokonujący wypłaty wynagrodzenia na podstawie umowy o pomocy przy zbiorach ma obowiązek złożenia informacji PIT-8AR na zasadach określonych w art. 42a ust. 1. Przepis art. 42a ust. 2 rozszerza obowiązek informacyjny również na rolników w tym konkretnym przypadku."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 44 ust. 1 pkt 1",
+    "category": "zaliczki-miesiczne-pit",
+    "verified_date": "",
+    "content": "Przedsiębiorca jest obowiązany wpłacać miesięczne zaliczki na PIT od dochodu z działalności gospodarczej. Zaliczka powstaje od miesiąca, w którym dochody przekroczą określoną kwotę progową (iloraz kwoty zmniejszającej podatek oraz najniższej stawki podatku z pierwszego przedziału skali). Zaliczka za pierwszy miesiąc stanowi podatek obliczony od tego dochodu zgodnie ze skalą podatkową, a za kolejne miesiące stanowi różnicę między podatkiem od dochodu od początku roku a sumą zaliczek za poprzednie miesiące."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 44 ust. 6",
+    "category": "terminy-wplaty-zaliczek",
+    "verified_date": "",
+    "content": "Zaliczki miesięczne należy wpłacić do 20 dnia każdego miesiąca za miesiąc poprzedni. Zaliczka za ostatni miesiąc roku podatkowego (grudzień) jest płatna do 20 stycznia następnego roku podatkowego. W przypadku zaliczek kwartalnych termin to 20 dzień miesiąca następującego po każdym kwartale."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 45 ust. 1",
+    "category": "formularze_pit",
+    "verified_date": "",
+    "content": "Artykuł 45 nie zawiera konkretnych informacji o formularzu PIT-36. Przepis mówi ogólnie o zeznaniu rocznym, ale dokładną definicję i zastosowanie poszczególnych formularzy (PIT-36, PIT-36L, PIT-37) określają inne przepisy lub rozporządzenia wykonawcze, które nie są zawarte w podanym tekście."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 45 ust. 1",
+    "category": "obowiazek_skladania_zeznań",
+    "verified_date": "",
+    "content": "Tak, obowiązek złożenia zeznania rocznego istnieje niezależnie od tego, czy pracodawca pobierał zaliczki. W zeznaniu rocznym podatnik wykazuje różnicę między podatkiem należnym a sumą już zapłaconych zaliczek — jeśli zaliczki były wystarczające, różnica może wynosić zero, ale zeznanie musi być złożone."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 45 ust. 1",
+    "category": "terminy_skladania_zeznań",
+    "verified_date": "",
+    "content": "Zeznanie roczne o dochodach należy złożyć w terminie od 15 lutego do 30 kwietnia roku następującego po roku podatkowym. Zeznania złożone przed 15 lutego uznaje się za złożone w dniu 15 lutego roku następującego po roku podatkowym."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 45 ust. 1a",
+    "category": "formularze_pit",
+    "verified_date": "",
+    "content": "Artykuł 45 nie definiuje konkretnie formularza PIT-37. Przepis mówi o obowiązku składania odrębnych zeznań dla dochodów z kapitałów, działalności gospodarczej i zbywania nieruchomości (art. 45 ust. 1a), ale szczegółowe informacje o poszczególnych formularzach znajdują się w rozporządzeniach wykonawczych spoza podanego tekstu."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 45 ust. 1a",
+    "category": "formularze_pit",
+    "verified_date": "",
+    "content": "Artykuł 45 nie zawiera szczegółowych informacji o formularzu PIT-36L. Przepis reguluje ogólny obowiązek składania zeznania rocznego, ale konkretne formusze i ich zastosowanie określane są w rozporządzeniach wykonawczych niestanowiących części podanego tekstu."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 45cd",
+    "category": "procedury_administracyjne",
+    "verified_date": "",
+    "content": "W artykule 45cd brak jest regulacji dotyczącej terminu zwrotu nadpłaty wynikającej z zeznania PIT. Artykuł zawiera wyłącznie zasady dotyczące udostępniania zeznań przez urząd podatkowy (od 15 lutego roku następującego) oraz procedury akceptacji/odrzucenia tych zeznań przez podatnika. Informacja o terminie zwrotu nadpłaty znajduje się w innych artykułach ustawy."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 52j",
+    "category": "zwolnienia_i_ulgi_podatkowe",
+    "verified_date": "",
+    "content": "Artykuł 52j nie reguluje ulgi na powrót w PIT. Ten przepis dotyczy wyłącznie odliczenia wydatków na podłączenie do Elektronicznej Platformy Gromadzenia, Analizy i Udostępnienia Zasobów Cyfrowych o Zdarzeniach Medycznych dla podatników prowadzących apteki ogólnodostępne lub punkty apteczne. Aby znaleźć informacje o ulodze na powrót, należy poszukać w innych artykułach ustawy o podatku dochodowym od osób fizycznych."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 6 ust. 2",
+    "category": "opodatkowanie wspólne małżonków",
+    "verified_date": "",
+    "content": "Małżonkowie podlegający obowiązkowi podatkowemu mogą być opodatkowani łącznie od sumy swoich dochodów, gdy pozostają w związku małżeńskim i we wspólności majątkowej przez cały rok podatkowy (lub od zawarcia małżeństwa do końca roku, jeśli ślub był w trakcie roku). Warunkiem jest złożenie wspólnego wniosku w zeznaniu podatkowym. Przepis stosuje się również gdy jeden z małżonków w roku nie uzyskał przychodów lub dochodów niepowodujących obowiązku zapłaty podatku. Podatek oblicza się w podwójnej wysokości od połowy łącznych dochodów małżonków."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 6 ust. 2a",
+    "category": "procedura wspólnego rozliczenia małżonków",
+    "verified_date": "",
+    "content": "Wniosek o łączne opodatkowanie może złożyć jeden z małżonków. Traktuje się to na równi z oświadczeniem o upoważnieniu przez drugiego małżonka do złożenia wniosku o wspólne opodatkowanie. Oświadczenie takie musi być złożone pod rygorem odpowiedzialności karnej za fałszywe zeznania."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 6 ust. 4c",
+    "category": "Preferencyjne rozliczenie - samotny rodzic",
+    "verified_date": "",
+    "content": "Osoba samotnie wychowująca dziecko może skorzystać z preferencyjnego rozliczenia (podatek w podwójnej wysokości od połowy dochodów) pod warunkiem spełnienia trzech wymogów: (1) posiadania statusu panny, kawalera, wdowy, wdowca, rozwódki, rozwodnika, osoby w separacji lub osoby, której małżonek został pozbawiony praw rodzicielskich albo odbywa karę pozbawienia wolności, (2) samotnego wychowywania w roku podatkowym dzieci małoletnich, pełnoletnich do 25 lat uczących się lub pełnoletnich otrzymujących świadczenia opiekuńcze, oraz (3) złożenia wniosku w rocznym zeznaniu podatkowym. Jednak ulga nie przysługuje, jeśli wychowujesz dziecko wspólnie z drugim rodzicem (nawet przy opiece naprzemiennej)."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 6a ust. 1 i 2",
+    "category": "rozliczenie wspólne małżonków - śmierć małżonka",
+    "verified_date": "",
+    "content": "Podatnik, którego małżonek zmarł w trakcie roku podatkowego lub po jego upływie, ale przed złożeniem zeznania za ten rok, może złożyć wniosek o łączne opodatkowanie dochodów małżonków. Do takiego podatnika stosuje się sposób opodatkowania z art. 6 ust. 2 oraz przepisy art. 6 ust. 3, 3a, 8 i 11-13."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 7 ust. 1",
+    "category": "dochody_rodziny_podatek_dochodowy",
+    "verified_date": "",
+    "content": "Dochody małoletnich dzieci własnych i przysposobionych dolicza się do dochodów rodziców, jednak POZA dochodami z ich pracy, rent, stypendiów oraz dochodów z przedmiotów oddanych im do swobodnego użytku. Warunkiem jest, że dochody dziecka podlegają opodatkowaniu na terenie Polski oraz rodzicom przysługuje prawo pobierania pożytków ze źródeł przychodów dziecka. W przypadku oddzielnego opodatkowania małżonków, dochody dziecka dolicza się po równo każdemu z małżonków."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 9a",
+    "category": "straty_z_lat_ubiegłych",
+    "verified_date": "",
+    "content": "Artykuł 9a nie zawiera żadnych przepisów dotyczących rozliczania strat z lat ubiegłych. Aby odpowiedzieć na to pytanie, konieczne jest zapoznanie się z innymi artykułami ustawy o podatku dochodowym od osób fizycznych, które regulują zasady przenoszenia i rozliczania strat z poprzednich lat podatkowych."
   }
 ]
