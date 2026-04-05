@@ -21,6 +21,7 @@ def test_log_query_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
 
     logger.log_query(
         session_id="session-123",
+        user_email="beta@aktuo.pl",
         question="Od kiedy KSeF jest obowiązkowy?",
         redacted_query="Od kiedy KSeF jest obowiązkowy?",
         category="ksef",
@@ -35,6 +36,7 @@ def test_log_query_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
 
     entry = json.loads(lines[0])
     assert entry["session_id"] == "session-123"
+    assert entry["user_email"] == "beta@aktuo.pl"
     assert entry["category"] == "ksef"
     assert entry["chunks_returned"] == 2
     assert entry["grounded"] is True

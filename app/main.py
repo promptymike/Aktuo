@@ -18,6 +18,10 @@ from core.logger import log_query
 from core.rag import answer_query
 
 
+def normalize_email(value: str) -> str:
+    return value.strip().lower()
+
+
 def render_styles() -> None:
     st.markdown(
         """
@@ -141,6 +145,21 @@ def render_footer() -> None:
     )
 
 
+def render_login_gate() -> None:
+    st.markdown("### Zaloguj się do wersji beta")
+    st.write("Podaj adres e-mail, aby korzystać z Aktuo i zapisywać historię zapytań na potrzeby testów beta.")
+    with st.form("login_form", clear_on_submit=False):
+        email = st.text_input("Adres e-mail", placeholder="jan@firma.pl")
+        submitted = st.form_submit_button("Zaloguj", use_container_width=True)
+    if submitted:
+        normalized = normalize_email(email)
+        if not normalized or "@" not in normalized:
+            st.error("Podaj prawidłowy adres e-mail.")
+            return
+        st.session_state.user_email = normalized
+        st.rerun()
+
+
 def main() -> None:
     st.set_page_config(page_title="Aktuo", layout="wide")
     render_styles()
@@ -153,13 +172,23 @@ def main() -> None:
         st.info(f"Szczegóły: {exc}")
         st.stop()
 
-    render_sidebar(settings)
-    render_header()
-
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
     if "session_id" not in st.session_state:
         st.session_state.session_id = str(uuid.uuid4())
+    user_email = st.session_state.get("user_email")
+
+    logout_requested = render_sidebar(settings, user_email)
+    if logout_requested:
+        st.session_state.clear()
+        st.rerun()
+
+    render_header()
+
+    if not user_email:
+        render_login_gate()
+        render_footer()
+        return
 
     render_chat_history(st.session_state.chat_history)
 
@@ -188,6 +217,7 @@ def main() -> None:
 
     log_query(
         session_id=st.session_state.session_id,
+        user_email=user_email,
         question=question,
         redacted_query=result.redacted_query,
         category=result.category,

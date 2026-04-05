@@ -23,6 +23,7 @@ def _write_log_entry(entry: dict[str, Any]) -> None:
 def log_query(
     *,
     session_id: str,
+    user_email: str,
     question: str,
     redacted_query: str,
     category: str,
@@ -34,6 +35,7 @@ def log_query(
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "session_id": session_id,
+        "user_email": user_email,
         "question": question,
         "redacted_query": redacted_query,
         "category": category,

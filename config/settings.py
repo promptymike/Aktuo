@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(PROJECT_ROOT / ".env", override=False, encoding="utf-8")
+DEFAULT_SYSTEM_PROMPT_PATH = PROJECT_ROOT / "data" / "prompts" / "system_prompt_pl.txt"
 
 PLACEHOLDER_VALUES = {
     "",
@@ -41,10 +42,15 @@ def _get_env_value(name: str) -> str | None:
     return value
 
 
+def _load_default_system_prompt() -> str:
+    return DEFAULT_SYSTEM_PROMPT_PATH.read_text(encoding="utf-8").strip()
+
+
 def get_settings() -> Settings:
+    system_prompt = _get_env_value("AKTUO_SYSTEM_PROMPT") or _load_default_system_prompt()
     required = {
         "AKTUO_APP_NAME": _get_env_value("AKTUO_APP_NAME"),
-        "AKTUO_SYSTEM_PROMPT": _get_env_value("AKTUO_SYSTEM_PROMPT"),
+        "AKTUO_SYSTEM_PROMPT": system_prompt,
         "AKTUO_LAW_KNOWLEDGE_PATH": _get_env_value("AKTUO_LAW_KNOWLEDGE_PATH"),
         "ANTHROPIC_API_KEY": _get_env_value("ANTHROPIC_API_KEY"),
     }

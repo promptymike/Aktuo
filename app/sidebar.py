@@ -5,14 +5,20 @@ import streamlit as st
 from config.settings import Settings
 
 
-def render_sidebar(_settings: Settings) -> None:
+def render_sidebar(_settings: Settings, user_email: str | None) -> bool:
     with st.sidebar:
         st.markdown("### Aktuo")
-        st.caption("Wsparcie dla polskich ksi\u0119gowych i doradc\u00f3w podatkowych.")
-        st.markdown("**Jak zadawa\u0107 pytania**")
+        st.caption("Wsparcie dla polskich księgowych i doradców podatkowych.")
+        st.markdown("**Jak zadawać pytania**")
         st.write(
-            "Pisz konkretnie: opisz stan faktyczny, rodzaj dokumentu, termin lub obowi\u0105zek, kt\u00f3ry chcesz zweryfikowa\u0107."
+            "Pisz konkretnie: opisz stan faktyczny, rodzaj dokumentu, termin lub obowiązek, który chcesz zweryfikować."
         )
-        st.markdown("**Przyk\u0142adowe tematy**")
-        st.write("KSeF, faktury, korekty, terminy podatkowe, obowi\u0105zki dokumentacyjne.")
-        st.caption("Odpowiedzi maj\u0105 charakter informacyjny i powinny by\u0107 dalej weryfikowane.")
+        st.markdown("**Przykładowe tematy**")
+        st.write("KSeF, faktury, korekty, terminy podatkowe, obowiązki dokumentacyjne.")
+        st.caption("Odpowiedzi mają charakter informacyjny i powinny być dalej weryfikowane.")
+        st.divider()
+        if user_email:
+            st.caption(f"Zalogowano jako: {user_email}")
+            return st.button("Wyloguj", use_container_width=True)
+        st.caption("Zaloguj się adresem e-mail, aby korzystać z wersji beta.")
+        return False

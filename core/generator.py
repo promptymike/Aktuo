@@ -63,7 +63,7 @@ def generate_answer(
 
     payload = {
         "model": ANTHROPIC_MODEL,
-        "max_tokens": 400,
+        "max_tokens": 1024,
         "system": [
             {
                 "type": "text",

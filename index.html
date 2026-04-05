@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aktuo</title>
+    <meta
+      name="description"
+      content="Aktuo odpowiada na pytania o prawo podatkowe i wskazuje konkretne przepisy dla księgowych i doradców podatkowych."
+    />
+    <style>
+      :root {
+        --navy: #1a2744;
+        --bg: #ffffff;
+        --surface: #f7f9fc;
+        --border: #d9e0ea;
+        --text: #142136;
+        --muted: #5b6780;
+        --shadow: 0 18px 50px rgba(26, 39, 68, 0.08);
+        --radius: 22px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(26, 39, 68, 0.05), transparent 35%),
+          var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 28px 0 60px;
+      }
+
+      .hero-shell {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 32px;
+        background: linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
+        box-shadow: var(--shadow);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 56px;
+      }
+
+      .logo {
+        width: 52px;
+        height: 52px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        background: var(--navy);
+        color: #ffffff;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .brand-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--navy);
+      }
+
+      .brand-subtitle {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+        gap: 28px;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(2.2rem, 5vw, 4.4rem);
+        line-height: 1.02;
+        letter-spacing: -0.03em;
+        max-width: 12ch;
+      }
+
+      .lead {
+        margin: 0 0 28px;
+        max-width: 58ch;
+        font-size: 1.08rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 24px;
+        border-radius: 999px;
+        background: var(--navy);
+        color: #ffffff;
+        font-weight: 600;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+        box-shadow: 0 12px 24px rgba(26, 39, 68, 0.2);
+      }
+
+      .cta:hover,
+      .cta:focus-visible {
+        transform: translateY(-1px);
+        background: #14203a;
+      }
+
+      .preview {
+        padding: 22px;
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        background: var(--surface);
+      }
+
+      .preview-label {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(26, 39, 68, 0.08);
+        color: var(--navy);
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .preview-card {
+        padding: 18px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+      }
+
+      .preview-question {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .preview-answer {
+        margin: 0 0 16px;
+        line-height: 1.65;
+      }
+
+      .preview-source {
+        padding-top: 14px;
+        border-top: 1px solid var(--border);
+        color: var(--navy);
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+
+      .section {
+        padding: 28px 0;
+      }
+
+      .section-heading {
+        margin: 0 0 18px;
+        font-size: clamp(1.7rem, 3vw, 2.4rem);
+        letter-spacing: -0.02em;
+      }
+
+      .section-copy {
+        margin: 0 0 28px;
+        max-width: 62ch;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .feature {
+        padding: 24px;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        background: #ffffff;
+        box-shadow: var(--shadow);
+      }
+
+      .feature-title {
+        margin: 0 0 10px;
+        font-size: 1.12rem;
+        color: var(--navy);
+      }
+
+      .feature-text {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .signup {
+        padding: 8px 0 48px;
+      }
+
+      .signup-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+        gap: 28px;
+        padding: 28px;
+        border-radius: 30px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+      }
+
+      .signup-copy {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-self: center;
+      }
+
+      input[type="email"] {
+        width: 100%;
+        min-height: 54px;
+        padding: 0 16px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        background: #ffffff;
+        color: var(--text);
+        font: inherit;
+      }
+
+      input[type="email"]:focus-visible {
+        outline: 2px solid rgba(26, 39, 68, 0.2);
+        outline-offset: 2px;
+      }
+
+      button {
+        min-height: 54px;
+        padding: 0 22px;
+        border: 0;
+        border-radius: 16px;
+        background: var(--navy);
+        color: #ffffff;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      button:hover,
+      button:focus-visible {
+        background: #14203a;
+      }
+
+      .form-note {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      footer {
+        padding: 18px 0 36px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid,
+        .signup-shell,
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        form {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero-shell,
+        .signup-shell,
+        .feature,
+        .preview {
+          border-radius: 22px;
+        }
+
+        .topbar {
+          margin-bottom: 36px;
+        }
+
+        .footer-row {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-shell">
+          <div class="topbar">
+            <div class="logo" aria-hidden="true">A</div>
+            <div class="brand">
+              <span class="brand-name">Aktuo</span>
+              <span class="brand-subtitle">Asystent prawno-podatkowy dla księgowych</span>
+            </div>
+          </div>
+
+          <div class="hero-grid">
+            <div>
+              <h1>Wpisz pytanie o prawo podatkowe. Dostaniesz odpowiedź z dokładnym przepisem.</h1>
+              <p class="lead">
+                Aktuo przeszukuje ustawy podatkowe i cytuje konkretne artykuły. Dla księgowych
+                i doradców podatkowych.
+              </p>
+              <div class="cta-row">
+                <a class="cta" href="https://aktuo-mvp.streamlit.app" target="_blank" rel="noreferrer">
+                  Wypróbuj za darmo
+                </a>
+              </div>
+            </div>
+
+            <aside class="preview" aria-label="Przykład odpowiedzi">
+              <span class="preview-label">Przykład</span>
+              <div class="preview-card">
+                <p class="preview-question">Pytanie: Kiedy przedawnia się zobowiązanie podatkowe?</p>
+                <p class="preview-answer">
+                  Zobowiązanie podatkowe przedawnia się z upływem 5 lat, licząc od końca roku
+                  kalendarzowego, w którym upłynął termin płatności podatku.
+                </p>
+                <div class="preview-source">Źródło: Ordynacja podatkowa, art. 70 § 1</div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="dlaczego-aktuo">
+        <h2 id="dlaczego-aktuo" class="section-heading">Dla codziennej pracy z przepisami</h2>
+        <p class="section-copy">
+          Zamiast przeklikiwać ustawy i komentarze, możesz zacząć od jednego pytania i od razu
+          zobaczyć, na jakim przepisie opiera się odpowiedź.
+        </p>
+
+        <div class="features">
+          <article class="feature">
+            <h3 class="feature-title">Cytuje przepisy</h3>
+            <p class="feature-text">
+              Każda odpowiedź wskazuje konkretny artykuł ustawy. Nie zgaduje.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature-title">Polski system prawny</h3>
+            <p class="feature-text">
+              VAT, KSeF, Ordynacja Podatkowa. Baza rośnie co tydzień.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature-title">Dla praktyków</h3>
+            <p class="feature-text">
+              Zaprojektowane dla codziennych pytań księgowych, nie dla prawników.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="signup" aria-labelledby="early-access">
+        <div class="signup-shell">
+          <div>
+            <h2 id="early-access" class="section-heading">Dołącz do early access — dostaniesz info o nowych funkcjach</h2>
+            <p class="signup-copy">
+              Zostaw adres e-mail, jeśli chcesz otrzymać informację o nowych obszarach bazy
+              wiedzy, zmianach w produkcie i kolejnych wersjach Aktuo.
+            </p>
+          </div>
+
+          <div>
+            <form action="https://formspree.io/f/PLACEHOLDER" method="post">
+              <input
+                type="email"
+                name="email"
+                placeholder="Twój adres e-mail"
+                autocomplete="email"
+                required
+              />
+              <button type="submit">Dołącz</button>
+            </form>
+            <p class="form-note">Podmień `action` formularza na swój adres Formspree lub embed Mailchimp.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page">
+      <div class="footer-row">
+        <span>Aktuo nie zastępuje porady prawnej.</span>
+        <span>© 2026 Aktuo</span>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var form = document.querySelector("form");
+        if (!form) return;
+
+        form.addEventListener("submit", function () {
+          var emailInput = form.querySelector('input[type="email"]');
+          if (emailInput) {
+            emailInput.value = emailInput.value.trim();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
