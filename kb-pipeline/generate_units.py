@@ -22,9 +22,10 @@ REQUEST_TIMEOUT_SECONDS = 180.0
 TIMEOUT_RETRIES = 3
 CHECKPOINT_VERSION = 2
 
-# System prompt — cachowany, identyczny dla każdego wywołania
-SYSTEM_PROMPT = """Jesteś ekspertem od polskiego prawa podatkowego. Generujesz ANSWER UNITS dla systemu RAG.
+def build_system_prompt(law_name: str) -> str:
+    return f"""Jesteś ekspertem od polskiego prawa podatkowego. Generujesz ANSWER UNITS dla systemu RAG.
 
+Pracujesz na ustawie: {law_name}.
 Answer unit to strukturalna jednostka wiedzy, która odpowiada na JEDNO konkretne pytanie księgowego/podatkowca.
 
 TWARDE ZASADY:
@@ -36,19 +37,19 @@ TWARDE ZASADY:
 6. Warunki i wyjątki MUSZĄ wynikać z tekstu, nie z Twojej wiedzy.
 
 FORMAT ODPOWIEDZI — WYŁĄCZNIE JSON, bez markdown:
-{
+{{
   "units": [
-    {
-      "id": "vat-{numer_artykulu}-{krótki-slug}",
+    {{
+      "id": "law-{{numer_artykulu}}-{{krótki-slug}}",
       "question_intent": "Pytanie w formie naturalnej",
       "question_patterns": ["wariant 1", "wariant 2", "wariant 3"],
       "answer": "Odpowiedź 2-5 zdań. Praktyczna, konkretna.",
       "legal_basis": [
-        {
-          "law": "Ustawa o VAT",
+        {{
+          "law": "{law_name}",
           "article": "art. 86a ust. 1",
           "quote": "kluczowy fragment z tekstu artykułu (max 1 zdanie)"
-        }
+        }}
       ],
       "conditions": ["warunek 1 z tekstu", "warunek 2"],
       "exceptions": ["wyjątek 1 z tekstu"],
@@ -56,9 +57,9 @@ FORMAT ODPOWIEDZI — WYŁĄCZNIE JSON, bez markdown:
       "topic": "kategoria tematu",
       "difficulty": "easy|medium|hard",
       "requires_verification": false
-    }
+    }}
   ]
-}
+}}
 
 taxpayer_type — wybierz TYLKO te, do których odnosi się przepis:
 - "osoba_fizyczna_dg" — osoba fizyczna prowadząca działalność gospodarczą
@@ -84,6 +85,7 @@ def generate_units_for_group(
     client: anthropic.Anthropic,
     questions: list[dict],
     article_text: str,
+    law_name: str,
 ) -> tuple[list[dict], dict]:
     """Generuje answer units dla grupy pytań z tym samym zestawem artykułów."""
     questions_formatted = "\n".join(
@@ -95,12 +97,12 @@ def generate_units_for_group(
         max_tokens=8192,
         system=[{
             "type": "text",
-            "text": SYSTEM_PROMPT,
+            "text": build_system_prompt(law_name),
             "cache_control": {"type": "ephemeral"},
         }],
         messages=[{
             "role": "user",
-            "content": f"""TEKST ARTYKUŁÓW USTAWY O VAT:
+            "content": f"""TEKST ARTYKUŁÓW USTAWY: {law_name}
 
 {article_text}
 
@@ -244,11 +246,12 @@ def generate_units_with_retry(
     client: anthropic.Anthropic,
     questions: list[dict],
     article_text: str,
+    law_name: str,
 ) -> tuple[list[dict], dict]:
     last_error: Exception | None = None
     for attempt in range(1, TIMEOUT_RETRIES + 1):
         try:
-            return generate_units_for_group(client, questions, article_text)
+            return generate_units_for_group(client, questions, article_text, law_name)
         except anthropic.APITimeoutError as exc:
             last_error = exc
             print(
@@ -281,6 +284,7 @@ def main():
     matched_data = json.loads(Path(matched_path).read_text(encoding="utf-8"))
 
     articles = articles_data["articles"]
+    law_name = articles_data.get("metadata", {}).get("short_name") or articles_data.get("metadata", {}).get("law_name", "ustawa")
     matches = matched_data["matches"]
 
     # Grupuj pytania po artykułach
@@ -341,7 +345,7 @@ def main():
                     f"(globalnie {processed_subbatches + 1}/{total_subbatches}) "
                     f"| {len(sub_batch)} pytań"
                 )
-                units, cache_info = generate_units_with_retry(client, sub_batch, article_text)
+                units, cache_info = generate_units_with_retry(client, sub_batch, article_text, law_name)
 
                 # Dodaj source metadata do każdego unitu
                 for u in units:

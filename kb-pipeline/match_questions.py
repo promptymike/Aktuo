@@ -9,7 +9,6 @@ Wymaga: ANTHROPIC_API_KEY w env
 """
 
 import json
-import os
 import sys
 import time
 from pathlib import Path
@@ -18,7 +17,9 @@ import anthropic
 from env_utils import get_env_value
 
 MODEL = "claude-sonnet-4-20250514"
-BATCH_SIZE = 20  # pytań na jedno wywołanie
+BATCH_SIZE = 8  # pytań na jedno wywołanie
+PREVIEW_LENGTH = 70
+RATE_LIMIT_RETRIES = 4
 
 
 def build_article_index(articles: list[dict]) -> str:
@@ -27,14 +28,19 @@ def build_article_index(articles: list[dict]) -> str:
     for a in articles:
         if a["is_repealed"]:
             continue
-        # Pierwsze 200 znaków raw_text jako podgląd
-        preview = a["raw_text"][:200].replace("\n", " ")
-        lines.append(f"[{a['full_id']}] {a['division']} | {preview}")
+        preview = " ".join(a["raw_text"].split())
+        preview = preview[:PREVIEW_LENGTH]
+        context = " | ".join(part for part in (a["division"], a["chapter"]) if part)
+        if context:
+            lines.append(f"[{a['full_id']}] {context} | {preview}")
+        else:
+            lines.append(f"[{a['full_id']}] {preview}")
     return "\n".join(lines)
 
 
-SYSTEM_PROMPT = """Jesteś ekspertem od polskiej ustawy o VAT.
-Dostajesz listę pytań użytkowników i indeks artykułów ustawy.
+def build_system_prompt(law_name: str) -> str:
+    return f"""Jesteś ekspertem od polskiego prawa podatkowego.
+Dostajesz listę pytań użytkowników i indeks artykułów ustawy: {law_name}.
 Dla KAŻDEGO pytania wskaż od 1 do 5 artykułów, które są potrzebne do odpowiedzi.
 
 ZASADY:
@@ -45,12 +51,12 @@ ZASADY:
 
 Format odpowiedzi (JSON array):
 [
-  {
+  {{
     "question": "treść pytania",
     "matched_articles": ["86a", "86"],
     "primary_article": "86a",
     "reasoning": "krótkie uzasadnienie po polsku"
-  }
+  }}
 ]"""
 
 
@@ -58,6 +64,7 @@ def match_batch(
     client: anthropic.Anthropic,
     questions: list[dict],
     article_index: str,
+    law_name: str,
 ) -> list[dict]:
     """Wysyła batch pytań do Claude i zwraca dopasowania."""
     questions_text = "\n".join(
@@ -70,12 +77,12 @@ def match_batch(
         max_tokens=4096,
         system=[{
             "type": "text",
-            "text": SYSTEM_PROMPT,
+            "text": build_system_prompt(law_name),
             "cache_control": {"type": "ephemeral"},
         }],
         messages=[{
             "role": "user",
-            "content": f"""INDEKS ARTYKUŁÓW USTAWY O VAT:
+            "content": f"""INDEKS ARTYKUŁÓW USTAWY: {law_name}
 {article_index}
 
 PYTANIA DO DOPASOWANIA:
@@ -113,6 +120,24 @@ Odpowiedz JSON array z dopasowaniami dla KAŻDEGO pytania.""",
     return matches, cache_info
 
 
+def match_batch_with_retry(
+    client: anthropic.Anthropic,
+    questions: list[dict],
+    article_index: str,
+    law_name: str,
+) -> tuple[list[dict], dict]:
+    for attempt in range(1, RATE_LIMIT_RETRIES + 1):
+        try:
+            return match_batch(client, questions, article_index, law_name)
+        except anthropic.RateLimitError as exc:
+            if attempt == RATE_LIMIT_RETRIES:
+                raise
+            wait_seconds = attempt * 20
+            print(f"  RATE LIMIT {attempt}/{RATE_LIMIT_RETRIES}: czekam {wait_seconds}s")
+            time.sleep(wait_seconds)
+    raise RuntimeError("Nie udało się dopasować pytań po ponownych próbach.")
+
+
 def main():
     if len(sys.argv) < 3:
         print("Użycie: python match_questions.py articles.json questions.json [--output matched.json]")
@@ -134,6 +159,7 @@ def main():
     questions = json.loads(Path(questions_path).read_text(encoding="utf-8"))
 
     articles = articles_data["articles"]
+    law_name = articles_data.get("metadata", {}).get("short_name") or articles_data.get("metadata", {}).get("law_name", "ustawa")
     article_index = build_article_index(articles)
     print(f"Indeks artykułów: {len(article_index)} znaków ({len([a for a in articles if not a['is_repealed']])} aktywnych)")
     print(f"Pytań do dopasowania: {len(questions)}")
@@ -151,7 +177,7 @@ def main():
         print(f"\n[Batch {batch_num}/{total_batches}] {len(batch)} pytań...")
 
         try:
-            matches, cache_info = match_batch(client, batch, article_index)
+            matches, cache_info = match_batch_with_retry(client, batch, article_index, law_name)
             all_matches.extend(matches)
 
             # Kalkulacja kosztu

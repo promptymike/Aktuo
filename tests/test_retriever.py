@@ -5,74 +5,75 @@ import json
 from core.retriever import retrieve_chunks
 
 
-def test_retrieve_chunks_prefers_matching_category(tmp_path) -> None:
+def test_retrieve_chunks_prefers_matching_polish_category(tmp_path) -> None:
     seed_file = tmp_path / "law_knowledge.json"
     seed_file.write_text(
         json.dumps(
             [
                 {
-                    "law_name": "Housing Act",
-                    "article_number": "Art. 10",
-                    "category": "housing",
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 106e",
+                    "category": "fakturowanie",
                     "verified_date": "2026-04-01",
-                    "content": "A landlord should explain security deposit deductions after move out.",
+                    "content": "Faktura powinna zawierać podstawowe dane sprzedawcy i nabywcy.",
                 },
                 {
-                    "law_name": "Labor Code",
-                    "article_number": "Art. 3",
-                    "category": "employment",
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 99",
+                    "category": "terminy",
                     "verified_date": "2026-04-01",
-                    "content": "An employer should explain wage deductions to an employee.",
+                    "content": "Deklarację JPK_V7 składa się w ustawowym terminie za dany okres.",
                 },
             ]
         ),
         encoding="utf-8",
     )
 
-    chunks = retrieve_chunks("My landlord kept my deposit after the lease ended.", seed_file, limit=1)
+    chunks = retrieve_chunks("Jaki jest termin złożenia deklaracji JPK_V7?", seed_file, limit=1)
 
     assert len(chunks) == 1
-    assert chunks[0].law_name == "Housing Act"
+    assert chunks[0].article_number == "art. 99"
 
 
-def test_retrieve_chunks_returns_top_three_results(tmp_path) -> None:
+def test_retrieve_chunks_returns_top_three_results_for_polish_query(tmp_path) -> None:
     seed_file = tmp_path / "law_knowledge.json"
     seed_file.write_text(
         json.dumps(
             [
                 {
-                    "law_name": "Housing Act",
-                    "article_number": "Art. 10",
-                    "category": "housing",
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 106e",
+                    "category": "fakturowanie",
                     "verified_date": "2026-04-01",
-                    "content": "A landlord should explain deposit deductions after move out.",
+                    "content": "Faktura powinna zawierać numer oraz datę wystawienia.",
                 },
                 {
-                    "law_name": "Tenant Guidance",
-                    "article_number": "Art. 11",
-                    "category": "housing",
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 106h",
+                    "category": "faktury",
                     "verified_date": "2026-04-02",
-                    "content": "A tenant can request deposit records and receipts.",
+                    "content": "Fakturę można wystawić do paragonu fiskalnego w określonych przypadkach.",
                 },
                 {
-                    "law_name": "Lease Rules",
-                    "article_number": "Art. 12",
-                    "category": "housing",
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 106i",
+                    "category": "fakturowanie",
                     "verified_date": "2026-04-03",
-                    "content": "Lease disputes can involve withheld deposit funds.",
+                    "content": "Termin wystawienia faktury zależy od rodzaju transakcji.",
                 },
                 {
-                    "law_name": "Labor Code",
-                    "article_number": "Art. 3",
-                    "category": "employment",
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 99",
+                    "category": "terminy",
                     "verified_date": "2026-04-01",
-                    "content": "Wage deductions should be explained to employees.",
+                    "content": "Deklaracje podatkowe składa się miesięcznie albo kwartalnie.",
                 },
             ]
         ),
         encoding="utf-8",
     )
 
-    chunks = retrieve_chunks("My landlord kept my deposit after the lease ended.", seed_file)
+    chunks = retrieve_chunks("Kiedy trzeba wystawić fakturę i co powinna zawierać?", seed_file)
 
     assert len(chunks) == 3
+    assert all(chunk.category in {"fakturowanie", "faktury"} for chunk in chunks)

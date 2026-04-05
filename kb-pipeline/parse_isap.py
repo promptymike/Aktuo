@@ -16,6 +16,15 @@ import sys
 from pathlib import Path
 
 
+def _decode_pdf_text(raw: bytes) -> str:
+    for encoding in ("utf-8", "utf-8-sig", "cp1250", "iso-8859-2"):
+        try:
+            return raw.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+    return raw.decode("utf-8", errors="replace")
+
+
 def _extract_with_pdftotext(pdf_path: str) -> str:
     """Ekstrahuje tekst z PDF za pomocą systemowego pdftotext."""
     pdftotext_path = shutil.which("pdftotext")
@@ -26,14 +35,11 @@ def _extract_with_pdftotext(pdf_path: str) -> str:
     result = subprocess.run(
         [pdftotext_path, pdf_path, "-"],
         capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
     )
     if result.returncode != 0:
-        stderr = (result.stderr or "").strip()
+        stderr = _decode_pdf_text(result.stderr or b"").strip()
         raise RuntimeError(f"pdftotext error: {stderr or 'unknown error'}")
-    return result.stdout
+    return _decode_pdf_text(result.stdout)
 
 
 def _extract_with_python_parser(pdf_path: str) -> str:
@@ -138,11 +144,61 @@ def rejoin_broken_lines(text: str) -> str:
 def extract_metadata(text: str) -> dict:
     """Wyciąga metadane ustawy z początku tekstu."""
     meta = {
-        "law_name": "Ustawa o podatku od towarów i usług",
-        "short_name": "Ustawa o VAT",
-        "date": "2004-03-11",
+        "law_name": "",
+        "short_name": "",
+        "date": "",
         "isap_id": "",
     }
+
+    def normalize_whitespace(value: str) -> str:
+        return re.sub(r"\s+", " ", value).strip()
+
+    def clean_title(value: str) -> str:
+        cleaned = normalize_whitespace(re.sub(r"\d+\)\s*$", "", value))
+        if cleaned.lower().startswith("ustawa "):
+            return cleaned
+        if cleaned.lower().startswith(("ordynacja", "prawo", "kodeks")):
+            return cleaned
+        return f"Ustawa {cleaned}"
+
+    month_map = {
+        "stycznia": "01",
+        "lutego": "02",
+        "marca": "03",
+        "kwietnia": "04",
+        "maja": "05",
+        "czerwca": "06",
+        "lipca": "07",
+        "sierpnia": "08",
+        "września": "09",
+        "października": "10",
+        "listopada": "11",
+        "grudnia": "12",
+    }
+
+    header_match = re.search(
+        r"U\s*S\s*T\s*A\s*W\s*A\s*\n\s*z dnia\s+([^\n]+)\n(.+?)(?:\nDZIAŁ|\nRozdział|\nArt\.)",
+        text,
+        re.IGNORECASE | re.DOTALL,
+    )
+    if header_match:
+        date_text = normalize_whitespace(header_match.group(1))
+        title_text = clean_title(header_match.group(2))
+        meta["law_name"] = title_text
+        if "ordynacja podatkowa" in title_text.lower():
+            meta["short_name"] = "Ordynacja podatkowa"
+        elif "podatku od towarów i usług" in title_text.lower():
+            meta["short_name"] = "Ustawa o VAT"
+        else:
+            meta["short_name"] = title_text
+
+        parsed_date = re.match(r"(\d{1,2})\s+([a-ząćęłńóśźż]+)\s+(\d{4})\s*r\.", date_text, re.IGNORECASE)
+        if parsed_date:
+            day, month_name, year = parsed_date.groups()
+            month = month_map.get(month_name.lower())
+            if month:
+                meta["date"] = f"{year}-{month}-{int(day):02d}"
+
     m = re.search(r"Dz\.\s*U\.\s*(?:z\s*)?(\d{4})\s*(?:r\.\s*)?(?:Nr\s*\d+\s*)?poz\.\s*(\d+)", text)
     if m:
         meta["isap_id"] = f"Dz.U.{m.group(1)}.{m.group(2)}"
@@ -150,6 +206,11 @@ def extract_metadata(text: str) -> dict:
     m2 = re.search(r"t\.j\.\s*\n?\s*Dz\.\s*U\.\s*z\s*(\d{4})\s*r\.\s*\n?\s*poz\.\s*([\d,\s]+)", text[:500])
     if m2:
         meta["consolidated_id"] = f"Dz.U.{m2.group(1)}.{m2.group(2).split(',')[0].strip()}"
+
+    if not meta["law_name"]:
+        meta["law_name"] = "Ustawa"
+    if not meta["short_name"]:
+        meta["short_name"] = meta["law_name"]
     return meta
 
 

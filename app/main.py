@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import uuid
 from pathlib import Path
 
 import streamlit as st
@@ -13,6 +14,7 @@ from app.chat import render_chat_history, render_user_message
 from app.sidebar import render_sidebar
 from config.settings import MissingEnvironmentError, get_settings
 from core.generator import AnthropicAPIError
+from core.logger import log_query
 from core.rag import answer_query
 
 
@@ -156,6 +158,8 @@ def main() -> None:
 
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
+    if "session_id" not in st.session_state:
+        st.session_state.session_id = str(uuid.uuid4())
 
     render_chat_history(st.session_state.chat_history)
 
@@ -181,6 +185,17 @@ def main() -> None:
         render_user_message(question)
         st.error(f"Nie udało się pobrać odpowiedzi: {exc}")
         st.stop()
+
+    log_query(
+        session_id=st.session_state.session_id,
+        question=question,
+        redacted_query=result.redacted_query,
+        category=result.category,
+        chunks_returned=len(result.chunks),
+        chunk_ids=[f"{chunk.law_name} {chunk.article_number}" for chunk in result.chunks],
+        answer_length=len(result.answer),
+        grounded=bool(result.audit.get("grounded", False)),
+    )
 
     st.session_state.chat_history.extend(
         [
