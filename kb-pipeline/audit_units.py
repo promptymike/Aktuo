@@ -4,15 +4,12 @@ Weryfikuje każdy unit względem tekstu artykułu:
 - Czy answer wynika z tekstu?
 - Czy legal_basis jest poprawny?
 - Czy nie dodano wiedzy spoza źródła?
-
-Użycie:
-    python audit_units.py articles.json draft_units.json --output verified_units.json
-
-Wymaga: ANTHROPIC_API_KEY w env
 """
 
+from __future__ import annotations
+
 import json
-import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -21,7 +18,7 @@ import anthropic
 from env_utils import get_env_value
 
 MODEL = "claude-haiku-4-5-20251001"
-BATCH_SIZE = 5  # unitów na wywołanie — mniejsze batche = lepsza jakość audytu
+BATCH_SIZE = 5
 
 SYSTEM_PROMPT = """Jesteś audytorem prawnym. Weryfikujesz answer units dla systemu AI dla księgowych.
 
@@ -32,20 +29,24 @@ Dostajesz:
 Sprawdź KAŻDY unit według tych kryteriów:
 
 A) GROUNDING — Czy KAŻDE twierdzenie w "answer" wynika z tekstu artykułu?
-   - Jeśli answer dodaje informacje spoza tekstu → REJECT
-   - Jeśli answer upraszcza tekst, ale sens jest poprawny → PASS
+   - Jeśli answer dodaje informacje spoza tekstu -> REJECTED
+   - Jeśli answer upraszcza tekst, ale sens jest poprawny -> PASS
 
 B) LEGAL_BASIS — Czy cytowany artykuł/ustęp/punkt jest poprawny?
    - Sprawdź czy podany "art. X ust. Y" faktycznie istnieje w tekście
    - Sprawdź czy quote jest wierny (nie musi być identyczny, ale sens musi się zgadzać)
 
-C) COMPLETENESS — Czy answer nie pomija KLUCZOWYCH warunków lub wyjątków z tekstu?
-   - Drobne pominięcia → PASS z komentarzem
-   - Pominięcie istotnego warunku → NEEDS_FIX
+C) COMPLETENESS — Czy answer nie pomija kluczowych warunków lub wyjątków z tekstu?
+   - Drobne pominięcia -> PASS z komentarzem
+   - Pominięcie istotnego warunku -> NEEDS_FIX
 
 D) ACCURACY — Czy kwoty, procenty, terminy są poprawne?
-   - "50%" gdy tekst mówi "50 %" → PASS
-   - "100%" gdy tekst mówi "50 %" → REJECT
+   - "50%" gdy tekst mówi "50 %" -> PASS
+   - "100%" gdy tekst mówi "50 %" -> FAIL
+
+E) RELEVANCE — Czy pytanie użytkownika faktycznie dotyczy tego artykułu?
+   - Jeśli pytanie dotyczy zupełnie innego tematu niż artykuł -> FAIL i REJECTED
+   - Jeśli pytanie jest powiązane, ale artykuł nie odpowiada bezpośrednio -> NEEDS_FIX
 
 Odpowiedz WYŁĄCZNIE JSON:
 {
@@ -57,6 +58,7 @@ Odpowiedz WYŁĄCZNIE JSON:
       "legal_basis_check": "PASS | FAIL",
       "completeness": "PASS | NEEDS_FIX",
       "accuracy": "PASS | FAIL",
+      "relevance": "PASS | FAIL",
       "issues": ["opis problemu 1", "opis problemu 2"],
       "suggested_fix": "sugerowana poprawka (jeśli NEEDS_FIX)",
       "confidence": 0.95
@@ -69,12 +71,11 @@ W domenie podatkowej błędna informacja jest gorsza niż brak informacji."""
 
 
 def get_article_text(articles: list[dict], article_numbers: list[str]) -> str:
-    """Pobiera tekst artykułów."""
     texts = []
     for num in article_numbers:
-        for a in articles:
-            if a["article_number"] == num:
-                texts.append(f"--- {a['full_id']} ---\n{a['raw_text']}")
+        for article in articles:
+            if article["article_number"] == num:
+                texts.append(f"--- {article['full_id']} ---\n{article['raw_text']}")
                 break
     return "\n\n".join(texts)
 
@@ -84,21 +85,22 @@ def audit_batch(
     units: list[dict],
     article_text: str,
 ) -> tuple[list[dict], dict]:
-    """Audytuje batch unitów."""
-
     units_formatted = json.dumps(units, ensure_ascii=False, indent=2)
 
     response = client.messages.create(
         model=MODEL,
         max_tokens=4096,
-        system=[{
-            "type": "text",
-            "text": SYSTEM_PROMPT,
-            "cache_control": {"type": "ephemeral"},
-        }],
-        messages=[{
-            "role": "user",
-            "content": f"""TEKST ARTYKUŁÓW USTAWY (ŹRÓDŁO PRAWDY):
+        system=[
+            {
+                "type": "text",
+                "text": SYSTEM_PROMPT,
+                "cache_control": {"type": "ephemeral"},
+            }
+        ],
+        messages=[
+            {
+                "role": "user",
+                "content": f"""TEKST ARTYKUŁÓW USTAWY (ŹRÓDŁO PRAWDY):
 
 {article_text}
 
@@ -107,7 +109,8 @@ ANSWER UNITS DO AUDYTU:
 {units_formatted}
 
 Zaudytuj KAŻDY unit. WYŁĄCZNIE JSON.""",
-        }],
+            }
+        ],
     )
 
     raw = response.content[0].text.strip()
@@ -121,7 +124,6 @@ Zaudytuj KAŻDY unit. WYŁĄCZNIE JSON.""",
         result = json.loads(raw[start:end])
 
     audits = result.get("audits", [])
-
     usage = response.usage
     cache_info = {
         "input_tokens": usage.input_tokens,
@@ -131,7 +133,18 @@ Zaudytuj KAŻDY unit. WYŁĄCZNIE JSON.""",
     return audits, cache_info
 
 
-def main():
+def normalize_audit(audit: dict) -> dict:
+    normalized = dict(audit)
+    relevance = str(normalized.get("relevance", "PASS")).strip().upper() or "PASS"
+    verdict = str(normalized.get("verdict", "REJECTED")).strip().upper() or "REJECTED"
+    if relevance == "FAIL":
+        verdict = "REJECTED"
+    normalized["relevance"] = relevance
+    normalized["verdict"] = verdict
+    return normalized
+
+
+def main() -> None:
     if len(sys.argv) < 3:
         print("Użycie: python audit_units.py articles.json draft_units.json [--output verified_units.json]")
         sys.exit(1)
@@ -156,51 +169,42 @@ def main():
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    # Grupuj unity po artykułach źródłowych (żeby oszczędzić tokeny na tekst artykułu)
-    groups = {}
-    for u in units:
-        source_arts = u.get("_source_articles", [])
-        # Fallback: wyciągnij numer artykułu z legal_basis
-        if not source_arts and u.get("legal_basis"):
-            for lb in u["legal_basis"]:
-                art = lb.get("article", "")
-                # Wyciągnij numer: "art. 86a ust. 1" → "86a"
-                import re
-                m = re.search(r"art\.\s*(\d+[a-z]*)", art)
-                if m:
-                    source_arts.append(m.group(1))
-        key = "|".join(sorted(set(source_arts))) or "unknown"
+    groups: dict[str, dict] = {}
+    for unit in units:
+        source_articles = list(unit.get("_source_articles", []))
+        if not source_articles and unit.get("legal_basis"):
+            for legal_basis in unit["legal_basis"]:
+                article_ref = legal_basis.get("article", "")
+                match = re.search(r"art\.\s*(\d+[a-z]*)", article_ref, re.IGNORECASE)
+                if match:
+                    source_articles.append(match.group(1))
+        key = "|".join(sorted(set(source_articles))) or "unknown"
         if key not in groups:
-            groups[key] = {"articles": list(set(source_arts)), "units": []}
-        groups[key]["units"].append(u)
+            groups[key] = {"articles": list(set(source_articles)), "units": []}
+        groups[key]["units"].append(unit)
 
-    all_audits = {}  # unit_id → audit result
-    total_cost = 0
+    all_audits: dict[str, dict] = {}
+    total_cost = 0.0
     call_count = 0
 
-    for group_key, group in groups.items():
-        art_nums = group["articles"]
+    for group in groups.values():
+        article_numbers = group["articles"]
         group_units = group["units"]
-        article_text = get_article_text(articles, art_nums) if art_nums else "BRAK TEKSTU ARTYKUŁU"
+        article_text = get_article_text(articles, article_numbers) if article_numbers else "BRAK TEKSTU ARTYKUŁU"
 
-        # Przetwarzaj w batchach po BATCH_SIZE
-        for i in range(0, len(group_units), BATCH_SIZE):
-            batch = group_units[i:i + BATCH_SIZE]
+        for start in range(0, len(group_units), BATCH_SIZE):
+            batch = group_units[start:start + BATCH_SIZE]
             call_count += 1
-            print(f"\n[Call {call_count}] art. {', '.join(art_nums)} — {len(batch)} unitów...")
+            print(f"\n[Call {call_count}] art. {', '.join(article_numbers)} — {len(batch)} unitów...")
 
-            # Przygotuj unity bez wewnętrznych metadanych
-            clean_units = []
-            for u in batch:
-                cu = {k: v for k, v in u.items() if not k.startswith("_")}
-                clean_units.append(cu)
+            clean_units = [{key: value for key, value in unit.items() if not key.startswith("_")} for unit in batch]
 
             try:
                 audits, cache_info = audit_batch(client, clean_units, article_text)
 
                 for audit in audits:
-                    uid = audit.get("unit_id", "")
-                    all_audits[uid] = audit
+                    normalized_audit = normalize_audit(audit)
+                    all_audits[normalized_audit.get("unit_id", "")] = normalized_audit
 
                 cost = (
                     cache_info["input_tokens"] * 3 / 1_000_000
@@ -208,37 +212,41 @@ def main():
                     + cache_info["output_tokens"] * 15 / 1_000_000
                 )
                 total_cost += cost
-                verdicts = [a.get("verdict", "?") for a in audits]
+                verdicts = [audit.get("verdict", "?") for audit in audits]
                 print(f"  {', '.join(verdicts)} | ${cost:.4f}")
 
-            except Exception as e:
-                print(f"  ERROR: {e}")
-                for u in batch:
-                    all_audits[u.get("id", "")] = {
-                        "unit_id": u.get("id", ""),
+            except Exception as exc:
+                print(f"  ERROR: {exc}")
+                for unit in batch:
+                    all_audits[unit.get("id", "")] = {
+                        "unit_id": unit.get("id", ""),
                         "verdict": "ERROR",
-                        "issues": [str(e)[:200]],
+                        "grounding": "FAIL",
+                        "legal_basis_check": "FAIL",
+                        "completeness": "NEEDS_FIX",
+                        "accuracy": "FAIL",
+                        "relevance": "FAIL",
+                        "issues": [str(exc)[:200]],
                     }
 
             time.sleep(0.5)
 
-    # Rozdziel unity na verified / needs_fix / rejected
     verified = []
     needs_fix = []
     rejected = []
 
-    for u in units:
-        uid = u.get("id", "")
-        audit = all_audits.get(uid, {"verdict": "NO_AUDIT"})
-        u["_audit"] = audit
+    for unit in units:
+        unit_id = unit.get("id", "")
+        audit = normalize_audit(all_audits.get(unit_id, {"unit_id": unit_id, "verdict": "NO_AUDIT", "relevance": "FAIL"}))
+        unit["_audit"] = audit
         verdict = audit.get("verdict", "NO_AUDIT")
 
         if verdict == "VERIFIED":
-            verified.append(u)
+            verified.append(unit)
         elif verdict == "NEEDS_FIX":
-            needs_fix.append(u)
+            needs_fix.append(unit)
         else:
-            rejected.append(u)
+            rejected.append(unit)
 
     output = {
         "metadata": {
@@ -254,26 +262,19 @@ def main():
         "rejected_units": rejected,
     }
 
-    Path(output_path).write_text(
-        json.dumps(output, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    Path(output_path).write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    # Zapisz też czystą bazę (tylko verified, bez metadanych wewnętrznych)
     clean_kb_path = output_path.replace(".json", "_kb.json")
     clean_kb = []
-    for u in verified:
-        clean = {k: v for k, v in u.items() if not k.startswith("_")}
+    for unit in verified:
+        clean = {key: value for key, value in unit.items() if not key.startswith("_")}
         clean["verified"] = True
         clean["verified_date"] = articles_data["metadata"].get("consolidated_id", "")
         clean_kb.append(clean)
 
-    Path(clean_kb_path).write_text(
-        json.dumps(clean_kb, ensure_ascii=False, indent=2),
-        encoding="utf-8"
-    )
+    Path(clean_kb_path).write_text(json.dumps(clean_kb, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"\n{'='*50}")
+    print(f"\n{'=' * 50}")
     print(f"VERIFIED:  {len(verified)}")
     print(f"NEEDS_FIX: {len(needs_fix)}")
     print(f"REJECTED:  {len(rejected)}")

@@ -13,3 +13,11 @@ def test_categorize_query_returns_polish_deadlines_category() -> None:
 
 def test_categorize_query_falls_back_to_ogolne() -> None:
     assert categorize_query("Potrzebuję ogólnej informacji podatkowej.") == "ogólne"
+
+
+def test_categorize_query_returns_pit_category() -> None:
+    assert categorize_query("Jak obliczyć zaliczkę na podatek i kiedy złożyć PIT-37?") == "pit"
+
+
+def test_categorize_query_returns_ordynacja_category_without_diacritics() -> None:
+    assert categorize_query("Jakie sa odsetki za zwloke i kiedy jest przedawnienie?") == "ordynacja"

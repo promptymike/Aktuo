@@ -22,6 +22,48 @@ REQUEST_TIMEOUT_SECONDS = 180.0
 TIMEOUT_RETRIES = 3
 CHECKPOINT_VERSION = 2
 
+
+def validate_generated_units(
+    units: list[dict],
+    *,
+    group_key: str,
+    article_nums: list[str],
+    source_questions: list[str],
+) -> tuple[list[dict], list[dict]]:
+    valid_units: list[dict] = []
+    rejected_units: list[dict] = []
+    for idx, unit in enumerate(units, start=1):
+        issues: list[str] = []
+        unit_id = str(unit.get("id", "")).strip()
+        question_intent = str(unit.get("question_intent", "")).strip()
+        answer = str(unit.get("answer", "")).strip()
+        legal_basis = unit.get("legal_basis")
+
+        if not unit_id:
+            issues.append("missing id")
+        if not question_intent:
+            issues.append("missing question_intent")
+        if len(answer) < 20:
+            issues.append("answer too short")
+        if not isinstance(legal_basis, list) or not legal_basis:
+            issues.append("missing legal_basis")
+
+        if issues:
+            rejected_units.append(
+                {
+                    "articles": article_nums,
+                    "group_key": group_key,
+                    "sub_batch_index": None,
+                    "questions": source_questions,
+                    "error": f"Invalid generated unit #{idx}: {', '.join(issues)}",
+                }
+            )
+            continue
+
+        valid_units.append(unit)
+
+    return valid_units, rejected_units
+
 def build_system_prompt(law_name: str) -> str:
     return f"""Jesteś ekspertem od polskiego prawa podatkowego. Generujesz ANSWER UNITS dla systemu RAG.
 
@@ -79,6 +121,10 @@ def get_article_text(articles: list[dict], article_numbers: list[str]) -> str:
                 texts.append(f"--- {a['full_id']} ({a['division']}) ---\n{a['raw_text']}")
                 break
     return "\n\n".join(texts)
+
+
+def make_group_key(article_numbers: list[str]) -> str:
+    return "|".join(sorted(str(num) for num in article_numbers if num))
 
 
 def generate_units_for_group(
@@ -147,7 +193,7 @@ def group_by_articles(matches: list[dict]) -> dict[str, dict]:
         arts = m.get("matched_articles", [])
         if not arts:
             continue
-        key = "|".join(sorted(arts))
+        key = make_group_key(arts)
         if key not in groups:
             groups[key] = {"articles": arts, "questions": []}
         groups[key]["questions"].append({
@@ -177,10 +223,17 @@ def deduplicate_units(units: list[dict]) -> list[dict]:
     return unique_units
 
 
-def load_checkpoint(output_path: Path) -> tuple[list[dict], list[dict], float, set[str]]:
+def unit_group_key(unit: dict) -> str:
+    source_articles = unit.get("_source_articles", [])
+    if isinstance(source_articles, list):
+        return make_group_key(source_articles)
+    return ""
+
+
+def load_checkpoint(output_path: Path) -> tuple[list[dict], list[dict], float, set[str], set[str]]:
     """Ładuje checkpoint, jeśli istnieje."""
     if not output_path.exists():
-        return [], [], 0.0, set()
+        return [], [], 0.0, set(), set()
 
     payload = json.loads(output_path.read_text(encoding="utf-8"))
     units = payload.get("units", [])
@@ -192,7 +245,18 @@ def load_checkpoint(output_path: Path) -> tuple[list[dict], list[dict], float, s
 
     completed_groups = set(metadata.get("completed_group_keys", []))
     total_cost = float(metadata.get("total_cost_usd", 0.0) or 0.0)
-    return units, errors, total_cost, completed_groups
+    retry_group_keys = {
+        str(error.get("group_key", "")).strip()
+        for error in errors
+        if str(error.get("group_key", "")).strip()
+    }
+
+    if retry_group_keys:
+        units = [unit for unit in units if unit_group_key(unit) not in retry_group_keys]
+        errors = [error for error in errors if str(error.get("group_key", "")).strip() not in retry_group_keys]
+        completed_groups -= retry_group_keys
+
+    return units, errors, total_cost, completed_groups, retry_group_keys
 
 
 def save_checkpoint(
@@ -200,6 +264,7 @@ def save_checkpoint(
     *,
     units: list[dict],
     errors: list[dict],
+    invalid_units_rejected: int,
     total_cost: float,
     completed_group_keys: set[str],
     total_groups: int,
@@ -220,6 +285,7 @@ def save_checkpoint(
             "total_units": len(unique_units),
             "total_cost_usd": round(total_cost, 4),
             "errors": len(errors),
+            "invalid_units_rejected": invalid_units_rejected,
             "completed_group_keys": sorted(completed_group_keys),
             "law": articles_metadata,
         },
@@ -299,12 +365,17 @@ def main():
     client = anthropic.Anthropic(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
 
     try:
-        all_units, errors, total_cost, completed_group_keys = load_checkpoint(output_file)
+        all_units, errors, total_cost, completed_group_keys, retry_group_keys = load_checkpoint(output_file)
     except ValueError as exc:
         print(f"ERROR: {exc}")
         sys.exit(1)
 
-    if completed_group_keys:
+    if retry_group_keys:
+        print(
+            f"Resume z checkpointu: ponawiam {len(retry_group_keys)} grup z błędami, "
+            f"zachowano {len(completed_group_keys)} ukończonych grup i {len(all_units)} unitów."
+        )
+    elif completed_group_keys:
         print(
             f"Resume z checkpointu: {len(completed_group_keys)}/{total_groups} grup, "
             f"{len(all_units)} unitów, koszt ${total_cost:.4f}"
@@ -316,6 +387,9 @@ def main():
         max(1, (len(groups[group_key]["questions"]) + 9) // 10)
         for group_key in completed_group_keys
         if group_key in groups
+    )
+    invalid_units_rejected = sum(
+        1 for error in errors if str(error.get("error", "")).startswith("Invalid generated unit #")
     )
     started_at = time.time()
 
@@ -346,6 +420,14 @@ def main():
                     f"| {len(sub_batch)} pytań"
                 )
                 units, cache_info = generate_units_with_retry(client, sub_batch, article_text, law_name)
+                units, rejected_units = validate_generated_units(
+                    units,
+                    group_key=key,
+                    article_nums=article_nums,
+                    source_questions=[q["question"] for q in sub_batch],
+                )
+                errors.extend(rejected_units)
+                invalid_units_rejected += len(rejected_units)
 
                 # Dodaj source metadata do każdego unitu
                 for u in units:
@@ -361,7 +443,7 @@ def main():
                 total_cost += batch_cost
 
                 print(
-                    f"     OK: {len(units)} unitów | koszt ${batch_cost:.4f} | "
+                    f"     OK: {len(units)} unitów | odrzucone: {len(rejected_units)} | koszt ${batch_cost:.4f} | "
                     f"cache: {cache_info['cache_read']} | razem ${total_cost:.4f}"
                 )
 
@@ -385,6 +467,7 @@ def main():
             output_file,
             units=all_units,
             errors=errors,
+            invalid_units_rejected=invalid_units_rejected,
             total_cost=total_cost,
             completed_group_keys=completed_group_keys,
             total_groups=total_groups,
@@ -394,7 +477,7 @@ def main():
         )
         print(
             f"  CHECKPOINT: grupy {len(completed_group_keys)}/{total_groups} | "
-            f"unity {total_units} | błędy {len(errors)} | "
+            f"unity {total_units} | błędy {len(errors)} | odrzucone unity {invalid_units_rejected} | "
             f"elapsed {format_elapsed(started_at)} | zapisano {output_file}"
         )
 
@@ -402,6 +485,7 @@ def main():
         output_file,
         units=all_units,
         errors=errors,
+        invalid_units_rejected=invalid_units_rejected,
         total_cost=total_cost,
         completed_group_keys=completed_group_keys,
         total_groups=total_groups,
@@ -413,6 +497,7 @@ def main():
     print(f"\n{'='*50}")
     print(f"Wygenerowano {unique_units_count} draft answer units")
     print(f"Błędy: {len(errors)}")
+    print(f"Odrzucone unity po walidacji: {invalid_units_rejected}")
     print(f"Koszt: ${total_cost:.4f}")
     print(f"Czas:  {format_elapsed(started_at)}")
     print(f"Zapisano: {output_file}")

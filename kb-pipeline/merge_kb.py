@@ -57,14 +57,25 @@ def normalize_record(record: dict) -> dict[str, str] | None:
     return {
         "law_name": law_name,
         "article_number": article_number,
-        "category": str(record.get("topic", "ogólne")).strip(),
+        "category": str(record.get("topic", "ogolne")).strip(),
         "verified_date": str(record.get("verified_date", "")).strip(),
         "content": content,
     }
 
 
+def normalize_article_number(article_number: str) -> str:
+    normalized = " ".join(str(article_number).strip().split())
+    if normalized.lower().startswith("art."):
+        normalized = "art." + normalized[4:]
+    return normalized
+
+
 def record_key(record: dict[str, str]) -> tuple[str, str, str]:
-    return (record["law_name"], record["article_number"], record["content"])
+    return (
+        record["law_name"],
+        normalize_article_number(record["article_number"]),
+        record["content"],
+    )
 
 
 def backup_seed() -> None:
@@ -130,7 +141,11 @@ def main() -> None:
 
     final_records = sorted(
         merged_records,
-        key=lambda item: (item["law_name"], item["article_number"], item["content"]),
+        key=lambda item: (
+            item["law_name"],
+            normalize_article_number(item["article_number"]),
+            item["content"],
+        ),
     )
 
     for record in final_records:

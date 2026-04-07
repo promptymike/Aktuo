@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import re
-from threading import Lock
 from dataclasses import dataclass
 from pathlib import Path
+from threading import Lock
 
 from core.categorizer import categorize_query
 from data.ingest import ingest_seed_chunks
@@ -23,7 +23,7 @@ _CHUNK_CACHE: dict[str, tuple[int, tuple[LawChunk, ...]]] = {}
 
 
 def _tokenize(text: str) -> set[str]:
-    return set(re.findall(r"[a-z0-9]+", text.lower()))
+    return set(re.findall(r"[a-z0-9]+", _normalize(text)))
 
 
 def _normalize(text: str) -> str:
@@ -119,6 +119,70 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
             "sankcje_podatkowe_vat",
             "stawki_vat",
         ),
+        "pit": (
+            "pit",
+            "podatek dochodowy",
+            "pit-36",
+            "pit-37",
+            "pit-11",
+            "kwota wolna",
+            "skala podatkowa",
+            "podatek liniowy",
+        ),
+        "cit": (
+            "cit",
+            "podatek dochodowy od osob prawnych",
+            "estonski cit",
+            "ryczalt od dochodow spolek",
+        ),
+        "zus": (
+            "zus",
+            "skladki",
+            "skladka zdrowotna",
+            "skladka spoleczna",
+            "maly zus",
+            "preferencyjne skladki",
+            "dra",
+            "rca",
+        ),
+        "kadry": (
+            "kodeks pracy",
+            "umowa o prace",
+            "urlop",
+            "wynagrodzenie minimalne",
+            "nadgodziny",
+            "wypowiedzenie",
+            "swiadectwo pracy",
+            "l4",
+            "zasilek chorobowy",
+        ),
+        "ordynacja": (
+            "ordynacja podatkowa",
+            "przedawnienie",
+            "kontrola podatkowa",
+            "interpretacja indywidualna",
+            "nadplata",
+            "zaleglosc podatkowa",
+            "odsetki za zwloke",
+            "pelnomocnictwo",
+        ),
+        "jpk": (
+            "jpk",
+            "jpk_v7",
+            "jpk_vat",
+            "gtu",
+            "oznaczenia jpk",
+        ),
+        "rachunkowosc": (
+            "bilans",
+            "rachunek zyskow i strat",
+            "sprawozdanie finansowe",
+            "ksiegi rachunkowe",
+            "kpir",
+            "srodki trwale",
+            "amortyzacja",
+            "inwentaryzacja",
+        ),
     }
 
     return any(alias in haystack for alias in category_aliases.get(query_category, ()))
@@ -157,9 +221,7 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 3) -> l
     scored: list[tuple[int, LawChunk]] = []
 
     for chunk in load_chunks(knowledge_path):
-        searchable_text = " ".join(
-            [chunk.content, chunk.law_name, chunk.article_number, chunk.category]
-        )
+        searchable_text = " ".join([chunk.content, chunk.law_name, chunk.article_number, chunk.category])
         chunk_tokens = _tokenize(searchable_text)
         score = len(query_tokens & chunk_tokens)
         if _category_matches(query_category, chunk):
