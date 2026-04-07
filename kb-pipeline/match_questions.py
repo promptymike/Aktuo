@@ -2,11 +2,11 @@
 Krok 2: Matcher pytań do artykułów.
 Wysyła pytania w batchach do Claude, który wskazuje trafne artykuły.
 
-Użycie:
-    python match_questions.py articles.json questions.json --output matched.json
-
-Wymaga: ANTHROPIC_API_KEY w env
+Wspiera checkpoint/resume per batch. Przy błędzie kredytów zapisuje postęp
+i kończy się czysto, aby kolejny run mógł kontynuować od miejsca przerwania.
 """
+
+from __future__ import annotations
 
 import json
 import sys
@@ -17,22 +17,26 @@ import anthropic
 from env_utils import get_env_value
 
 MODEL = "claude-haiku-4-5-20251001"
-BATCH_SIZE = 20  # pytań na jedno wywołanie
+BATCH_SIZE = 20
 PREVIEW_LENGTH = 70
 RATE_LIMIT_RETRIES = 4
+CHECKPOINT_VERSION = 1
 INPUT_TOKEN_COST_PER_M = 0.25
 OUTPUT_TOKEN_COST_PER_M = 1.25
 CACHE_HIT_COST_PER_M = 0.03
 
 
+def is_credit_balance_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    return "credit balance too low" in message or "insufficient credit" in message
+
+
 def build_article_index(articles: list[dict]) -> str:
-    """Buduje skrócony indeks artykułów do promptu."""
     lines = []
     for article in articles:
         if article["is_repealed"]:
             continue
-        preview = " ".join(article["raw_text"].split())
-        preview = preview[:PREVIEW_LENGTH]
+        preview = " ".join(article["raw_text"].split())[:PREVIEW_LENGTH]
         context = " | ".join(part for part in (article["division"], article["chapter"]) if part)
         if context:
             lines.append(f"[{article['full_id']}] {context} | {preview}")
@@ -69,10 +73,9 @@ def match_batch(
     article_index: str,
     law_name: str,
 ) -> tuple[list[dict], dict]:
-    """Wysyła batch pytań do Claude i zwraca dopasowania."""
     questions_text = "\n".join(
-        f"{i + 1}. [{question.get('topic', question.get('cat', 'fb'))}] {question['question']}"
-        for i, question in enumerate(questions)
+        f"{index + 1}. [{question.get('topic', question.get('cat', 'fb'))}] {question['question']}"
+        for index, question in enumerate(questions)
     )
 
     response = client.messages.create(
@@ -120,7 +123,6 @@ Odpowiedz JSON array z dopasowaniami dla KAŻDEGO pytania.""",
         "cache_read": getattr(usage, "cache_read_input_tokens", 0),
         "cache_creation": getattr(usage, "cache_creation_input_tokens", 0),
     }
-
     return matches, cache_info
 
 
@@ -142,6 +144,55 @@ def match_batch_with_retry(
     raise RuntimeError("Nie udało się dopasować pytań po ponownych próbach.")
 
 
+def load_checkpoint(output_file: Path) -> tuple[dict[int, list[dict]], set[int], float]:
+    if not output_file.exists():
+        return {}, set(), 0.0
+
+    payload = json.loads(output_file.read_text(encoding="utf-8"))
+    metadata = payload.get("metadata", {})
+    raw_batch_results = payload.get("batch_results", {})
+
+    batch_results = {
+        int(batch_index): matches
+        for batch_index, matches in raw_batch_results.items()
+        if isinstance(matches, list)
+    }
+    completed_batches = {int(index) for index in metadata.get("completed_batches", list(batch_results.keys()))}
+    total_cost = float(metadata.get("total_cost_usd", 0.0) or 0.0)
+    return batch_results, completed_batches, total_cost
+
+
+def save_checkpoint(
+    output_file: Path,
+    *,
+    batch_results: dict[int, list[dict]],
+    completed_batches: set[int],
+    total_cost: float,
+    total_questions: int,
+    total_batches: int,
+) -> None:
+    flattened_matches: list[dict] = []
+    for batch_index in sorted(batch_results):
+        flattened_matches.extend(batch_results[batch_index])
+
+    payload = {
+        "metadata": {
+            "checkpoint_version": CHECKPOINT_VERSION,
+            "checkpoint_saved_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "total_questions": total_questions,
+            "completed_batches_count": len(completed_batches),
+            "total_batches": total_batches,
+            "completed_batches": sorted(completed_batches),
+            "matched": sum(1 for match in flattened_matches if match.get("matched_articles")),
+            "unmatched": sum(1 for match in flattened_matches if not match.get("matched_articles")),
+            "total_cost_usd": round(total_cost, 4),
+        },
+        "batch_results": {str(index): matches for index, matches in sorted(batch_results.items())},
+        "matches": flattened_matches,
+    }
+    output_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def main() -> None:
     if len(sys.argv) < 3:
         print("Użycie: python match_questions.py articles.json questions.json [--output matched.json]")
@@ -152,6 +203,7 @@ def main() -> None:
     output_path = "matched.json"
     if "--output" in sys.argv:
         output_path = sys.argv[sys.argv.index("--output") + 1]
+    output_file = Path(output_path)
 
     api_key = get_env_value("ANTHROPIC_API_KEY")
     if not api_key:
@@ -165,23 +217,33 @@ def main() -> None:
     law_name = articles_data.get("metadata", {}).get("short_name") or articles_data.get("metadata", {}).get("law_name", "ustawa")
     article_index = build_article_index(articles)
     active_articles = len([article for article in articles if not article["is_repealed"]])
+    total_batches = (len(questions) + BATCH_SIZE - 1) // BATCH_SIZE
+
     print(f"Indeks artykułów: {len(article_index)} znaków ({active_articles} aktywnych)")
     print(f"Pytania do dopasowania: {len(questions)}")
+    print(f"Batch size: {BATCH_SIZE}, liczba batchy: {total_batches}")
 
     client = anthropic.Anthropic(api_key=api_key)
+    batch_results, completed_batches, total_cost = load_checkpoint(output_file)
+    if completed_batches:
+        print(f"Resume z checkpointu: {len(completed_batches)}/{total_batches} batchy, koszt ${total_cost:.4f}")
+    else:
+        print("Start od zera — brak checkpointu.")
 
-    all_matches = []
-    total_cost = 0.0
+    for batch_index, start in enumerate(range(0, len(questions), BATCH_SIZE)):
+        batch_number = batch_index + 1
+        batch = questions[start:start + BATCH_SIZE]
 
-    for i in range(0, len(questions), BATCH_SIZE):
-        batch = questions[i:i + BATCH_SIZE]
-        batch_num = i // BATCH_SIZE + 1
-        total_batches = (len(questions) + BATCH_SIZE - 1) // BATCH_SIZE
-        print(f"\n[Batch {batch_num}/{total_batches}] {len(batch)} pytań...")
+        if batch_index in completed_batches:
+            print(f"\n[Batch {batch_number}/{total_batches}] SKIP (checkpoint)")
+            continue
+
+        print(f"\n[Batch {batch_number}/{total_batches}] {len(batch)} pytań...")
 
         try:
             matches, cache_info = match_batch_with_retry(client, batch, article_index, law_name)
-            all_matches.extend(matches)
+            batch_results[batch_index] = matches
+            completed_batches.add(batch_index)
 
             input_cost = cache_info["input_tokens"] * INPUT_TOKEN_COST_PER_M / 1_000_000
             cached_cost = cache_info["cache_read"] * CACHE_HIT_COST_PER_M / 1_000_000
@@ -195,41 +257,60 @@ def main() -> None:
                 f"{cache_info['output_tokens']} out, cache read: {cache_info['cache_read']}"
             )
             print(f"  Koszt: ${batch_cost:.4f}")
+            save_checkpoint(
+                output_file,
+                batch_results=batch_results,
+                completed_batches=completed_batches,
+                total_cost=total_cost,
+                total_questions=len(questions),
+                total_batches=total_batches,
+            )
 
         except Exception as exc:
-            print(f"  ERROR: {exc}")
-            for question in batch:
-                all_matches.append(
-                    {
-                        "question": question["question"],
-                        "matched_articles": [],
-                        "primary_article": None,
-                        "reasoning": f"ERROR: {str(exc)[:100]}",
-                    }
+            if is_credit_balance_error(exc):
+                print(f"  CREDIT ERROR: {exc}")
+                save_checkpoint(
+                    output_file,
+                    batch_results=batch_results,
+                    completed_batches=completed_batches,
+                    total_cost=total_cost,
+                    total_questions=len(questions),
+                    total_batches=total_batches,
                 )
+                print("Zapisano checkpoint po błędzie kredytów. Możesz wznowić od tego miejsca.")
+                return
 
-        if i + BATCH_SIZE < len(questions):
+            print(f"  ERROR: {exc}")
+            batch_results[batch_index] = [
+                {
+                    "question": question["question"],
+                    "matched_articles": [],
+                    "primary_article": None,
+                    "reasoning": f"ERROR: {str(exc)[:100]}",
+                }
+                for question in batch
+            ]
+            completed_batches.add(batch_index)
+            save_checkpoint(
+                output_file,
+                batch_results=batch_results,
+                completed_batches=completed_batches,
+                total_cost=total_cost,
+                total_questions=len(questions),
+                total_batches=total_batches,
+            )
+
+        if batch_number < total_batches:
             time.sleep(1)
 
-    output = {
-        "metadata": {
-            "total_questions": len(questions),
-            "matched": sum(1 for match in all_matches if match.get("matched_articles")),
-            "unmatched": sum(1 for match in all_matches if not match.get("matched_articles")),
-            "total_cost_usd": round(total_cost, 4),
-        },
-        "matches": all_matches,
-    }
-
-    Path(output_path).write_text(
-        json.dumps(output, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    flattened_matches = []
+    for index in sorted(batch_results):
+        flattened_matches.extend(batch_results[index])
 
     print(f"\n{'=' * 50}")
-    print(f"Gotowe! {output['metadata']['matched']}/{len(questions)} pytań dopasowanych")
+    print(f"Gotowe! {sum(1 for match in flattened_matches if match.get('matched_articles'))}/{len(questions)} pytań dopasowanych")
     print(f"Koszt całkowity: ${total_cost:.4f}")
-    print(f"Zapisano: {output_path}")
+    print(f"Zapisano: {output_file}")
 
 
 if __name__ == "__main__":
