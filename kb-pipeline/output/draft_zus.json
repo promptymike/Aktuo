@@ -1,0 +1,3491 @@
+{
+  "metadata": {
+    "checkpoint_version": 3,
+    "checkpoint_saved_at": "2026-04-09 19:59:52",
+    "completed_groups": 59,
+    "total_groups": 59,
+    "completed_subbatches": 59,
+    "total_subbatches": 59,
+    "completed_subbatch_keys": [
+      "112a::subbatch::1",
+      "112a|18aa::subbatch::1",
+      "112a|22::subbatch::1",
+      "11|22::subbatch::1",
+      "11|6::subbatch::1",
+      "15|22::subbatch::1",
+      "16|17::subbatch::1",
+      "16|18|22::subbatch::1",
+      "16|22::subbatch::1",
+      "17a|17b|18aa::subbatch::1",
+      "17a|17b|36e::subbatch::1",
+      "18::subbatch::1",
+      "18aa::subbatch::1",
+      "18aa|19::subbatch::1",
+      "18aa|43|44::subbatch::1",
+      "18aa|44::subbatch::1",
+      "18aa|44|47a::subbatch::1",
+      "18|18a|18aa|20::subbatch::1",
+      "18|19::subbatch::1",
+      "18|20::subbatch::1",
+      "18|6::subbatch::1",
+      "19|50::subbatch::1",
+      "20::subbatch::1",
+      "22::subbatch::1",
+      "22|40c::subbatch::1",
+      "23|46::subbatch::1",
+      "28|77a::subbatch::1",
+      "32::subbatch::1",
+      "36a::subbatch::1",
+      "36a|43::subbatch::1",
+      "36a|44::subbatch::1",
+      "40c::subbatch::1",
+      "40d|40e::subbatch::1",
+      "41a|41e::subbatch::1",
+      "41b|47::subbatch::1",
+      "41|47::subbatch::1",
+      "41|47|48::subbatch::1",
+      "41|47|6::subbatch::1",
+      "43::subbatch::1",
+      "43a|44::subbatch::1",
+      "43a|47::subbatch::1",
+      "43|43a|44::subbatch::1",
+      "43|46::subbatch::1",
+      "44::subbatch::1",
+      "45|50b::subbatch::1",
+      "47a|47b::subbatch::1",
+      "47a|50d::subbatch::1",
+      "47b::subbatch::1",
+      "47c::subbatch::1",
+      "47|48::subbatch::1",
+      "47|48c::subbatch::1",
+      "47|49::subbatch::1",
+      "48d::subbatch::1",
+      "48d|49::subbatch::1",
+      "6a|6c::subbatch::1",
+      "6|6a|6b::subbatch::1",
+      "83d::subbatch::1",
+      "83e|83g::subbatch::1",
+      "83g::subbatch::1"
+    ],
+    "total_units": 84,
+    "errors": 0,
+    "invalid_units_rejected": 0,
+    "total_cost_usd": 1.4439,
+    "exited_due_to_credit_error": false,
+    "law": {
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "short_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "date": "1998-10-13",
+      "isap_id": "Dz.U.1998.887"
+    }
+  },
+  "units": [
+    {
+      "id": "law-16-skladki-dra-ubezpieczony-platnik",
+      "question_intent": "Kto finansuje składki społeczne: ubezpieczony czy płatnik składek w działalności gospodarczej bez pracowników?",
+      "question_patterns": [
+        "Składki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "DRA bez pracowników - kto płaci składki ZUS?",
+        "Kto opłaca składki emerytalne i rentowe w działalności gospodarczej?",
+        "Składki ZUS właściciela działalności - czy to koszt pracodawcy czy pracownika?"
+      ],
+      "answer": "Osoba prowadząca pozarolniczą działalność (w tym DRA bez pracowników) finansuje składki na ubezpieczenia emerytalne, rentowe, chorobowe i wypadkowe w całości ze swoich własnych środków. Nie ma podziału na część ubezpieczonego i część płatnika - to zawsze koszt samego ubezpieczonego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 4",
+          "quote": "Składki na ubezpieczenia emerytalne, rentowe, chorobowe i wypadkowe osób prowadzących pozarolniczą działalność finansują w całości, z własnych środków, sami ubezpieczeni."
+        }
+      ],
+      "conditions": [
+        "Dotyczy osób prowadzących pozarolniczą działalność",
+        "Obejmuje wszystkie cztery rodzaje ubezpieczeń: emerytalne, rentowe, chorobowe i wypadkowe",
+        "Finansowanie ze 100% z własnych środków ubezpieczonego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "finansowanie_skladek_osoby_fizyczne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "16",
+        "18",
+        "22"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Zaczynam swoją przygodę na pełnej księgowości. Jak ksiegujecie skladki ZUS właściciela oraz zapłacone skladke zdrowotną? Na jakie konta?"
+      ],
+      "_source_subbatch_key": "16|18|22::subbatch::1"
+    },
+    {
+      "id": "law-16-18-podstawa-wymiaru-skladek-dra",
+      "question_intent": "Jaka jest podstawa wymiaru składek społecznych dla osoby prowadzącej działalność gospodarczą?",
+      "question_patterns": [
+        "Od czego liczyć składki ZUS właściciela DRA?",
+        "Jak określić podstawę wymiaru składek dla prowadzącego pozarolniczą działalność?",
+        "Ile wynosi minimalnie podstawa wymiaru składek dla DRA?",
+        "Od jakiej kwoty płacę składki społeczne jako prowadzący działalność?"
+      ],
+      "answer": "Dla osoby prowadzącej pozarolniczą działalność podstawę wymiaru składek emerytalno-rentowych stanowi zadeklarowana kwota, ale nie niższa niż kwota minimalnego wynagrodzenia za pracę. Ubezpieczony sam deklaruje wysokość podstawy, ale musi wynosić co najmniej PMW (ustalone na podstawie odrębnych przepisów).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18 ust. 7",
+          "quote": "Podstawę wymiaru składek na ubezpieczenia emerytalne i rentowe ubezpieczonych, o których mowa w art. 6 ust. 1 pkt 4, stanowi zadeklarowana kwota, nieniższa jednak niż kwota minimalnego wynagrodzenia."
+        }
+      ],
+      "conditions": [
+        "Osoba musi zadeklarować podstawę wymiaru",
+        "Minimalnie: kwota minimalnego wynagrodzenia za pracę",
+        "Maksymalnie: brak limitu górnego"
+      ],
+      "exceptions": [
+        "Do deklaracji stosują się zasady zmniejszania najniższej podstawy proporcjonalnie za miesiące, w których nie przez cały miesiąc trwały ubezpieczenia"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "podstawa_wymiaru_skladek",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "16",
+        "18",
+        "22"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Zaczynam swoją przygodę na pełnej księgowości. Jak ksiegujecie skladki ZUS właściciela oraz zapłacone skladke zdrowotną? Na jakie konta?"
+      ],
+      "_source_subbatch_key": "16|18|22::subbatch::1"
+    },
+    {
+      "id": "law-22-stopy-skladek-dra",
+      "question_intent": "Jakie są stawki procentowe składek społecznych dla działalności gospodarczej?",
+      "question_patterns": [
+        "Ile procent wynoszą składki ZUS dla DRA?",
+        "Jaki procent od dochodu to składka emerytalna, rentowa i chorobowa?",
+        "Stawki składek dla osób prowadzących działalność - ile procent podstawy wymiaru?",
+        "Ile płaci się zdrowotną przy prowadzeniu działalności?"
+      ],
+      "answer": "Dla osób prowadzących działalność gospodarczą obowiązują następujące stopy: 19,52% na ubezpieczenie emerytalne, 8,00% na ubezpieczenie rentowe, 2,45% na ubezpieczenie chorobowe, oraz 0,40%-8,12% na ubezpieczenie wypadkowe (w zależności od grupy ryzyka). Wszystkie te składki stanowią koszt ubezpieczonego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 22 ust. 1",
+          "quote": "Stopy procentowe składek wynoszą: 1) 19,52 % podstawy wymiaru – na ubezpieczenie emerytalne, 2) 8,00 % podstawy wymiaru – na ubezpieczenia rentowe, 3) 2,45 % podstawy wymiaru – na ubezpieczenie chorobowe, 4) od 0,40 % do 8,12 % podstawy wymiaru – na ubezpieczenie wypadkowe."
+        }
+      ],
+      "conditions": [
+        "Stosuje się do wszystkich ubezpieczonych, w tym osób prowadzących działalność",
+        "Stopa na ubezpieczenie wypadkowe różnicowana w zależności od ryzyka zawodowego",
+        "Składka emerytalna podlegać może rozdzieleniu na część trafiającą do OFE i część na subkonto (jeśli ubezpieczony ma umowę z OFE)"
+      ],
+      "exceptions": [
+        "Dla osób mających ustalone prawo do emerytury składki nie są odprowadzane do OFE"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "stopy_skladek",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "16",
+        "18",
+        "22"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Zaczynam swoją przygodę na pełnej księgowości. Jak ksiegujecie skladki ZUS właściciela oraz zapłacone skladke zdrowotną? Na jakie konta?"
+      ],
+      "_source_subbatch_key": "16|18|22::subbatch::1"
+    },
+    {
+      "id": "law-16-skladki-pracowników-rozdzial",
+      "question_intent": "Jak rozdzielona jest opłata składek emerytalno-rentowych między pracownika a pracodawcę?",
+      "question_patterns": [
+        "Kto płaci składki emerytalne i rentowe pracownika - on czy pracodawca?",
+        "Jak rozkładają się składki emerytalne na pracownika i płatnika?",
+        "Ile procent składki płaci pracownik a ile pracodawca?",
+        "Czy pracodawca i pracownik dzielą się składkami emerytalno-rentowymi?"
+      ],
+      "answer": "Składki na ubezpieczenia emerytalne i rentowe pracowników finansują w równych częściach (po 50%) zarówno pracownik (ubezpieczony) jak i pracodawca (płatnik składek). Natomiast składkę chorobową finansuje w całości pracownik, a wypadkową w całości pracodawca.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 1 pkt 1",
+          "quote": "Składki na ubezpieczenia emerytalne pracowników finansują z własnych środków, w równych częściach, ubezpieczeni i płatnicy składek."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 2",
+          "quote": "Składki na ubezpieczenie chorobowe podlegających temu ubezpieczeniu osób wymienionych w ust. 1 pkt 1–4, 7a–9 i 11 finansują w całości, z własnych środków, sami ubezpieczeni."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 3",
+          "quote": "Składki na ubezpieczenie wypadkowe osób wymienionych w ust. 1 pkt 1 i 3–10 finansują w całości, z własnych środków, płatnicy składek."
+        }
+      ],
+      "conditions": [
+        "Równy podział (50%-50%) dotyczy składek emerytalno-rentowych",
+        "Całość składki chorobowej obciąża pracownika",
+        "Całość składki wypadkowej obciąża pracodawcę"
+      ],
+      "exceptions": [
+        "Art. 16 ust. 1e - w przypadku stwierdzenia nielegalnego zatrudnienia lub zaniżenia podstawy wymiaru, składki emerytalne, rentowe i chorobowe opłaca w całości pracodawca"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna"
+      ],
+      "topic": "finansowanie_skladek_pracownicy",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "16",
+        "18",
+        "22"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Zaczynam swoją przygodę na pełnej księgowości. Jak ksiegujecie skladki ZUS właściciela oraz zapłacone skladke zdrowotną? Na jakie konta?"
+      ],
+      "_source_subbatch_key": "16|18|22::subbatch::1"
+    },
+    {
+      "id": "law-16-18-zleceniobiorcy-skladki",
+      "question_intent": "Jak rozkładają się składki społeczne dla zleceniobiorców między ubezpieczonego a płatnika?",
+      "question_patterns": [
+        "Czy zleceniobiorca płaci sam składki czy dzieli się z zamawiającym?",
+        "Kto finansuje składki zleceniobiorcy?",
+        "Rozkład składek na ubezpieczenia dla umów zlecenia",
+        "Czy pracodawca i zleceniobiorca dzielą się składkami?"
+      ],
+      "answer": "Składki na ubezpieczenia emerytalne i rentowe zleceniobiorców finansują w równych częściach (50%-50%) zarówno zleceniobiorca (ubezpieczony) jak i zamawiający pracę (płatnik składek). Składki chorobowe natomiast finansuje w całości sam ubezpieczony zleceniobiorca.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 1 pkt 4",
+          "quote": "Składki na ubezpieczenia emerytalne zleceniobiorców finansują z własnych środków, w równych częściach, ubezpieczeni i płatnicy składek."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 1b",
+          "quote": "Składki na ubezpieczenia rentowe osób, o których mowa w ust. 1 i 1a, finansują z własnych środków, w wysokości 1,5 % podstawy wymiaru ubezpieczeni i w wysokości 6,5 % podstawy wymiaru płatnicy składek."
+        }
+      ],
+      "conditions": [
+        "Dotyczy umowy agencyjnej, umowy zlecenia lub innej umowy o świadczenie usług gdzie określono odpłatność kwotowo, stawką godzinową, akordową lub prowizyjnie",
+        "Składka emerytalna dzielona 50%-50%",
+        "Składka rentowa: ubezpieczony 1,5%, płatnik 6,5%"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "finansowanie_skladek_zleceniobiorcy",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "16",
+        "18",
+        "22"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Zaczynam swoją przygodę na pełnej księgowości. Jak ksiegujecie skladki ZUS właściciela oraz zapłacone skladke zdrowotną? Na jakie konta?"
+      ],
+      "_source_subbatch_key": "16|18|22::subbatch::1"
+    },
+    {
+      "id": "law-47b-profil-informacyjny",
+      "question_intent": "Czy system e-płatnika działa na portalu PUE ZUS",
+      "question_patterns": [
+        "Czy działa e-płatnik na PUE ZUS",
+        "Czy mogę korzystać z profilu informacyjnego w PUE ZUS",
+        "Czy profil informacyjny w ZUS jest dostępny"
+      ],
+      "answer": "Płatnik składek musi założyć profil informacyjny w systemie teleinformatycznym ZUS w terminie określonym w art. 43 ust. 1. Jeśli tego nie zrobi, profil założy mu ZUS. System profilu informacyjnego musi pozostać aktywny przez całą długość rozliczeń z ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47b ust. 1, 2, 3",
+          "quote": "Płatnik składek jest obowiązany założyć profil informacyjny w systemie teleinformatycznym Zakładu. W przypadku niedopełnienia obowiązku, profil informacyjny zakłada płatnikowi składek Zakład."
+        }
+      ],
+      "conditions": [
+        "Profil musi być założony w terminie określonym w art. 43 ust. 1",
+        "Profil musi pozostać aktywny w czasie prowadzenia rozliczeń z ZUS"
+      ],
+      "exceptions": [
+        "Jeśli płatnik nie założy profilu, ZUS założy go automatycznie"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "systemy teleinformatyczne ZUS",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "47b"
+      ],
+      "_generated_from": [
+        "PUE ZUS] Czy działa Wam „ e płatnik „ na pue ZUS?",
+        "PUE ZUS] Muszę złożyć ZUS ZZA. Czy ktoś z Państwa pokieruje mnie gdzie znaleźć na nowym PUE ZUS?"
+      ],
+      "_source_subbatch_key": "47b::subbatch::1"
+    },
+    {
+      "id": "law-47b-skladanie-zza",
+      "question_intent": "Gdzie znaleźć formularz ZZA w nowym portalu PUE ZUS",
+      "question_patterns": [
+        "Gdzie złożyć ZUS ZZA w PUE",
+        "Jak znaleźć formularz ZZA na portalu PUE",
+        "Gdzie jest ZZA na nowym PUE ZUS"
+      ],
+      "answer": "Ustawa o systemie ubezpieczeń społecznych zobowiązuje do założenia profilu informacyjnego w systemie teleinformatycznym ZUS i utrzymania go aktywnego. Szczegółowe instrukcje dotyczące lokalizacji i składania poszczególnych formularzy (w tym ZZA) na portalu PUE znajdują się w dokumentacji portalu lub na stronie ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47b ust. 1",
+          "quote": "Płatnik składek jest obowiązany założyć profil informacyjny w systemie teleinformatycznym Zakładu"
+        }
+      ],
+      "conditions": [
+        "Profil informacyjny musi być aktywny"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "systemy teleinformatyczne ZUS",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "47b"
+      ],
+      "_generated_from": [
+        "PUE ZUS] Czy działa Wam „ e płatnik „ na pue ZUS?",
+        "PUE ZUS] Muszę złożyć ZUS ZZA. Czy ktoś z Państwa pokieruje mnie gdzie znaleźć na nowym PUE ZUS?"
+      ],
+      "_source_subbatch_key": "47b::subbatch::1"
+    },
+    {
+      "id": "law-22-skladki-wysokosc",
+      "question_intent": "Jaka jest wysokość składek ZUS (łącznie wszystkie obowiązkowe składki)?",
+      "question_patterns": [
+        "Ile wynoszą składki na ZUS łącznie?",
+        "Jaka jest całkowita stopa składek?",
+        "Jakie są obecne stawki składek ZUS?",
+        "Ile procent podstawy wymiaru to wszystkie składki?"
+      ],
+      "answer": "Łączna stopa składek wynosi 29,97% podstawy wymiaru (19,52% emerytalne + 8,00% rentowe + 2,45% chorobowe). Do tego dochodzi składka wypadkowa od 0,40% do 8,12% w zależności od klasy ryzyka. Pytanie o ryczałt 60k-300k wymaga rozpatrzenia odrębnych przepisów dotyczących podatkowców na ryczałcie, które nie są zawarte w art. 22.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 22 ust. 1",
+          "quote": "Stopy procentowe składek wynoszą: 19,52% na ubezpieczenie emerytalne, 8,00% na ubezpieczenia rentowe, 2,45% na ubezpieczenie chorobowe, od 0,40% do 8,12% na ubezpieczenie wypadkowe"
+        }
+      ],
+      "conditions": [
+        "Stopa na ubezpieczenie emerytalne wynosi 19,52% z zastrzeżeniem ust. 3 i 4",
+        "Stopa na ubezpieczenie wypadkowe różnicuje się w zależności od klasy ryzyka (0,40%-8,12%)"
+      ],
+      "exceptions": [
+        "Art. 22 ust. 3-3h zawierają wyjątki dotyczące osobnego traktowania składek dla osób otrzymujących określone rodzaje emerytur"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "wysokość_skladek_zus",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "22"
+      ],
+      "_generated_from": [
+        "PUE ZUS] W pue wyskakują mi jakieś błędy,Podpowie dobra duszyczka ile wynoszą łącznie teraz składki na ZUS preferencyjny ryczałt 60k-300k?"
+      ],
+      "_source_subbatch_key": "22::subbatch::1"
+    },
+    {
+      "id": "law-22-rzyczalt-60k-300k",
+      "question_intent": "Jakie są składki ZUS dla podatkowca na ryczałcie dochodów 60k-300k?",
+      "question_patterns": [
+        "Składki ZUS ryczałt 60k-300k",
+        "Ile procent składek na ryczałcie dochodów?",
+        "Stopa składek dla ryczałtu dochodów",
+        "PUE ZUS ryczałt preferencyjny"
+      ],
+      "answer": "Artykuł 22 określa ogólne stopy składek ZUS, ale nie zawiera szczególnych regulacji dotyczących ryczałtu dochodów ani przedziału 60k-300k. Przepisy dotyczące preferencyjnych stawek dla podatkowców na ryczałcie znajdują się w odrębnych artykułach ustawy, których brakuje w dostępnym tekście.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 22 ust. 1",
+          "quote": "Stopy procentowe składek wynoszą: 19,52% na ubezpieczenie emerytalne, 8,00% na ubezpieczenia rentowe, 2,45% na ubezpieczenie chorobowe"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "ryczalt"
+      ],
+      "topic": "skladki_zus_rzyczalt",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "22"
+      ],
+      "_generated_from": [
+        "PUE ZUS] W pue wyskakują mi jakieś błędy,Podpowie dobra duszyczka ile wynoszą łącznie teraz składki na ZUS preferencyjny ryczałt 60k-300k?"
+      ],
+      "_source_subbatch_key": "22::subbatch::1"
+    },
+    {
+      "id": "law-17a-zwolnienie-skladki-seus",
+      "question_intent": "Czy można uzyskać zwolnienie ze składek ZUS (mały ZUS) w danym roku kalendarzowym?",
+      "question_patterns": [
+        "Jak uzyskać zwolnienie ze składek ZUS w tym roku?",
+        "Czy mogę skorzystać z małego ZUS?",
+        "Zrobienia tak żeby jednak w tym roku miał mały ZUS?",
+        "Warunki do otrzymania ulgi ZUS"
+      ],
+      "answer": "Zwolnienie ze składek na ubezpieczenia emerytalne, rentowe i wypadkowe przysługuje za JEDEN miesiąc w danym roku kalendarzowym (art. 17b ust. 1). Musisz złożyć wniosek do ZUS i spełnić cztery warunki: mieć nie więcej niż 10 ubezpieczonych, osiągnąć przychód poniżej 2 mln euro, nie pracować dla byłego pracodawcy, oraz podlegać ubezpieczeniom społecznym w miesiącu poprzedzającym złożenie wniosku. ZUS rozstrzyga o zwolnieniu przez system teleinformatyczny.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 17b ust. 1",
+          "quote": "Zwolnienie z opłacenia składek przysługuje wyłącznie za jeden miesiąc kalendarzowy w danym roku kalendarzowym."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 17a ust. 1",
+          "quote": "Na wniosek płatnika składek zwalnia się go z opłacenia należnych składek na jego własne obowiązkowe ubezpieczenia emerytalne, rentowe i wypadkowe, za wskazany we wniosku miesiąc kalendarzowy, jeżeli spełnia warunki."
+        }
+      ],
+      "conditions": [
+        "Złożenie wniosku do ZUS z wskazaniem konkretnego miesiąca",
+        "Nie więcej niż 10 ubezpieczonych w miesiącu poprzedzającym złożenie wniosku",
+        "Przychód z działalności poniżej równowartości 2 mln euro lub brak przychodu w ostatnich 2 latach",
+        "Nieprowadzenie działalności dla byłego pracodawcy",
+        "Podleganie ubezpieczeniom społecznym w miesiącu poprzedzającym złożenie wniosku",
+        "Posiadanie limitu pomocy de minimis wystarczającego na wysokość składek"
+      ],
+      "exceptions": [
+        "Zwolnienie przysługuje tylko za jeden miesiąc w roku kalendarzowym",
+        "Wniosek rozstrzygnięty przez ZUS nie podlega wycofaniu ani korekcie (art. 36e ust. 3)",
+        "Zwolnienie stanowi pomoc de minimis i wymaga dostępnego limitu tej pomocy"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "zwolnienia_skladki_suas_male_zus",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "17a",
+        "17b",
+        "36e"
+      ],
+      "_generated_from": [
+        "ulgi ZUS] Zrobienia tak żeby jednak w tym roku miał maly ZUS?"
+      ],
+      "_source_subbatch_key": "17a|17b|36e::subbatch::1"
+    },
+    {
+      "id": "law-48d-dra-duplikat-procedure",
+      "question_intent": "Czy Zakład automatycznie odrzuca duplikat deklaracji rozliczeniowej (DRA) czy płatnik musi złożyć pismo o odrzucenie?",
+      "question_patterns": [
+        "Wysłałem duplikat DRA przez pomyłkę - czy Zakład go automatycznie odrzuci?",
+        "Czy ZUS przyjmuje dwa identyczne DRA czy trzeba pismo napisać?",
+        "Jak postępować gdy wysłanie DRA dwa razy przez pomyłkę?"
+      ],
+      "answer": "Przepisy ustawy nie precyzują procedury obsługi duplikatów złożonych deklaracji rozliczeniowych. Art. 48d reguluje terminy składania DRA i konsekwencje przekroczenia terminu, ale nie zawiera wytycznych dotyczących przyjęcia lub odrzucenia dokumentów powtórzonych. Rekomenduje się skontaktowanie się bezpośrednio z ZUS w celu wyjaśnienia procedury w Twojej konkretnej sytuacji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 48d ust. 7",
+          "quote": "Zakład nie przyjmuje deklaracji rozliczeniowej i imiennego raportu miesięcznego złożonych po terminie określonym w ust. 1"
+        }
+      ],
+      "conditions": [
+        "Dokumenty zostały złożone w terminie (w ciągu 5 lat od dnia upływu terminu opłacenia składek)",
+        "Chodzi o identyczne lub niemal identyczne deklaracje"
+      ],
+      "exceptions": [
+        "Przepisy ustawy nie omawiają sytuacji duplikatów złożonych celowo lub przez pomyłkę"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "deklaracje_składek",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "48d"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] Wysłałem przez przypadek dwa razy takie samo DRA 2 - pisać pismo o odrzucenie jednego przez pomyłkę czy sami odrzuca?"
+      ],
+      "_source_subbatch_key": "48d::subbatch::1"
+    },
+    {
+      "id": "law-47c-dra-pismo-elektroniczne",
+      "question_intent": "Jakie wymagania techniczne muszę spełnić, aby wysłać pismo do ZUS w postaci elektronicznej (np. deklarację DRA)?",
+      "question_patterns": [
+        "Jak wysłać pismo do ZUS elektronicznie?",
+        "Jakie podpisy są wymagane do wysyłki dokumentów do ZUS?",
+        "Czy mogę wysłać deklarację DRA przez profil informacyjny ZUS?",
+        "Co zrobić, gdy mam problem z wysyłką dokumentu do ZUS elektronicznie?"
+      ],
+      "answer": "Pismo wysłane do ZUS na profil informacyjny (system teleinformatyczny Zakładu) musi być opatrzone jednym z czterech sposobów: kwalifikowanym podpisem elektronicznym, podpisem zaufanym, podpisem osobistym albo wykorzystać sposób potwierdzania pochodzenia i integralności danych udostępniony bezpłatnie przez ZUS. Jeśli masz problem z wysyłką, sprawdź, czy posługujesz się jednym z tych autoryzowanych sposobów.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47c",
+          "quote": "Pismo, które jest doręczane do Zakładu w postaci elektronicznej na profilu informacyjnym założonym w systemie teleinformatycznym Zakładu, opatruje się kwalifikowanym podpisem elektronicznym, podpisem zaufanym, podpisem osobistym albo wykorzystuje się sposób potwierdzania pochodzenia oraz integralności danych udostępniony bezpłatnie przez Zakład"
+        }
+      ],
+      "conditions": [
+        "Pismo musi być wysłane na profil informacyjny w systemie teleinformatycznym ZUS",
+        "Dokument musi być opatrzony jednym z czterech sposobów autoryzacji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Korespondencja z ZUS - procedury elektroniczne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "47c"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] Czy ktoś też ma problem z wysyłką i odbiorem potwierdzenia przy składaniu deklaracji DRA ,od tygodnia nie mogę wysłać a do ZUS się dodzwonić do graniczy z cudem?"
+      ],
+      "_source_subbatch_key": "47c::subbatch::1"
+    },
+    {
+      "id": "law-18-przychod-dra-ryczalt",
+      "question_intent": "Jaki przychód wykazujemy w deklaracji rocznej (DRA) przy ryczałcie - surowy czy pomniejszony o składki społeczne",
+      "question_patterns": [
+        "DRA przychód ryczałt składki",
+        "Co wykazać w DRA przy ryczałcie - brutto czy netto",
+        "Przychód DRA pomniejszony o składki ZUS",
+        "Moment kosztu składek w DRA ryczałt"
+      ],
+      "answer": "Artykuł 18 określa przychód jako PODSTAWĘ WYMIARU SKŁADEK, nie reguluje natomiast sprawozdawczości w DRA. Podana ustawa nie zawiera przepisów dotyczących rozliczenia w deklaracji rocznej ani momentu ujęcia kosztów składek. Do prawidłowego wykazania przychodu w DRA niezbędna jest analiza przepisów kodeksu podatku dochodowego, co wykracza poza zakres tej ustawy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18 ust. 1",
+          "quote": "Podstawę wymiaru składek na ubezpieczenia emerytalne i rentowe ubezpieczonych stanowi przychód, o którym mowa w art. 4 pkt 9 i 10"
+        }
+      ],
+      "conditions": [
+        "Przepisy dotyczą wyłącznie podstawy wymiaru składek ZUS",
+        "Nie zawierają regulacji dotyczących sprawozdawczości podatkowej"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "ryczalt"
+      ],
+      "topic": "przychód_podstawa_wymiaru",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18",
+        "20"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] Jaki przychód wykazujemy w dra II przy ryczałcie do ZUS plus ten co przesyłamy zawsze w dra czy surowy nie pomniejszony o składki?",
+        "przychod kup adki] Przychod - KUP - składki społeczne?"
+      ],
+      "_source_subbatch_key": "18|20::subbatch::1"
+    },
+    {
+      "id": "law-18-przychod-minus-skladki",
+      "question_intent": "Czy przychód do celów składek społecznych pomniejsza się o składki społeczne (przychód = KUP - składki)",
+      "question_patterns": [
+        "Przychód minus składki społeczne",
+        "Czy KUP zmniejszamy o składki",
+        "Podstawa wymiaru składek - czy netto czy brutto",
+        "Przychód pomniejszony o ubezpieczenia społeczne"
+      ],
+      "answer": "Nie. Artykuł 18 stanowi, że podstawę wymiaru składek stanowi przychód bez zmniejszenia o składki społeczne. Składki nie są kosztami zmniejszającymi przychód dla celów ustalenia ich podstawy - przychód pozostaje brutto, a składki oblicza się od całej kwoty przychodu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18 ust. 1",
+          "quote": "Podstawę wymiaru składek na ubezpieczenia emerytalne i rentowe ubezpieczonych wymienionych w art. 6 ust. 1 pkt 1–3 stanowi przychód"
+        }
+      ],
+      "conditions": [
+        "Dotyczy podstawy wymiaru składek emerytalno-rentowych",
+        "Przychód nie jest zmniejszany o składki przy ustalaniu podstawy"
+      ],
+      "exceptions": [
+        "art. 18 ust. 2 - zasiłki i wynagrodzenie za niezdolność do pracy nie uwzględnia się",
+        "art. 18 ust. 12 - w niektórych grupach nie uwzględnia się określonych dodatków"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "ryczalt"
+      ],
+      "topic": "przychód_składki",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "18",
+        "20"
+      ],
+      "_generated_from": [
+        "DRA i moment kosztu składek] Jaki przychód wykazujemy w dra II przy ryczałcie do ZUS plus ten co przesyłamy zawsze w dra czy surowy nie pomniejszony o składki?",
+        "przychod kup adki] Przychod - KUP - składki społeczne?"
+      ],
+      "_source_subbatch_key": "18|20::subbatch::1"
+    },
+    {
+      "id": "law-22-skladka-zdrowotna-ryczalt",
+      "question_intent": "Jaka wysokość składki zdrowotnej obowiązuje na ryczałcie w danym miesiącu",
+      "question_patterns": [
+        "Składka zdrowotna na ryczałcie za styczeń 2026 - stara czy nowa?",
+        "Kiedy zmienia się wysokość składki zdrowotnej na ryczałcie",
+        "Jaka stawka składki zdrowotnej obowiązuje w dacie płatności"
+      ],
+      "answer": "Artykuł 22 Ustawy o systemie ubezpieczeń społecznych określa jedynie składki: emerytalne (19,52%), rentowe (8,00%), chorobowe (2,45%) i wypadkowe (0,40%-8,12%). Składka zdrowotna nie jest regulowana w tym artykule. Aby udzielić odpowiedzi o wysokości składki zdrowotnej na ryczałcie za styczeń 2026, wymagana jest weryfikacja innych przepisów prawa podatkowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 22 ust. 1",
+          "quote": "Stopy procentowe składek wynoszą: 19,52% na ubezpieczenie emerytalne, 8,00% na ubezpieczenia rentowe, 2,45% na ubezpieczenie chorobowe, od 0,40% do 8,12% na ubezpieczenie wypadkowe"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "ryczalt"
+      ],
+      "topic": "Składki ubezpieczeniowe",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "22",
+        "40c"
+      ],
+      "_generated_from": [
+        "adka zdrowotna rycza] Składka zdrowotna na ryczałcie za styczeń 26 to jeszcze ta stara czy już nowa?"
+      ],
+      "_source_subbatch_key": "22|40c::subbatch::1"
+    },
+    {
+      "id": "law-47-deklaracja-kody",
+      "question_intent": "Jakie są wymagania dotyczące kodów w deklaracjach ZUS przy wakacjach składkowych i małym ZUS plus?",
+      "question_patterns": [
+        "Co robię nie tak ze składaniem deklaracji z kodami wakacji i małego ZUS plus?",
+        "Jakie kody należy używać w deklaracjach ZUS przy wakacjach składkowych?",
+        "Dlaczego deklaracja przechodzi weryfikację ale ma błędy krytyczne przy zatwierdzeniu?"
+      ],
+      "answer": "Pytanie dotyczy kodów i sposobu składania deklaracji ZUS przy wakacjach składkowych i programie Mały ZUS plus. Tekst artykułu 47 ustawy określa ogólne terminy i formy składania deklaracji rozliczeniowych oraz imiennych raportów miesięcznych, ale nie zawiera szczegółowych wytycznych dotyczących kodów składek czy warunków walidacji dokumentów płatniczych. Aby uzyskać odpowiedź na to pytanie, konieczna jest weryfikacja w wytycznych ZUS dotyczących kodowania składek i warunków zatwierdzania deklaracji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1",
+          "quote": "Płatnik składek przesyła w tym samym terminie deklarację rozliczeniową, imienne raporty miesięczne oraz opłaca składki za dany miesiąc"
+        }
+      ],
+      "conditions": [
+        "Deklaracja musi być przesłana w terminie określonym w art. 47 ust. 1",
+        "Deklaracja musi zawierać dane określone w art. 46 ust. 4"
+      ],
+      "exceptions": [
+        "Zwolnienie z obowiązku składania deklaracji może dotyczyć określonych kategorii płatników (art. 47 ust. 2c-2fb)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "deklaracje_rozliczeniowe",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "47",
+        "48"
+      ],
+      "_generated_from": [
+        "dokumenty ZUS i kody] Co ja robię nie tak. Składam deklaracje ZUS wakacje składkowe ( 2x Rca: 1 z kodem wakacji, 2 z kodem małego zusu plus) na weryfikacji status OK a przy zatwierdzeniu błędy krytyczne m.in?"
+      ],
+      "_source_subbatch_key": "47|48::subbatch::1"
+    },
+    {
+      "id": "law-6a-dzialal-gosp-ubezp",
+      "question_intent": "Czy prowadzący jednoosobową działalność gospodarczą podlega obowiązkowym ubezpieczeniom emerytalnym i rentowym podczas opieki nad dzieckiem?",
+      "question_patterns": [
+        "Czy mogę być ubezpieczony w systemie emerytalnym i rentowym jako prowadzący działalność gospodarczą opiekujący się dzieckiem?",
+        "Jakie warunki muszę spełnić jako przedsiębiorca, aby podlegać ubezpieczeniom społecznym podczas opieki nad dzieckiem?",
+        "Czy działalność gospodarcza zapewnia mi prawo do ubezpieczeń emerytalnych i rentowych gdy sprawuję opiekę nad dzieckiem?"
+      ],
+      "answer": "Jako osoba prowadząca działalność gospodarczą podlegasz obowiązkowym ubezpieczeniom emerytalnym i rentowym podczas opieki nad dzieckiem, jeśli: (1) prowadziłeś działalność co najmniej 6 miesięcy i ją zaprzestałeś lub zawiesiłeś, oraz (2) podlegałeś tym ubezpieczeniom bezpośrednio przed rozpoczęciem opieki i opłacałeś składki. Prawo to przysługuje jednemu z rodziców pod warunkiem, że drugi rodzic nie jest już objęty takimi ubezpieczeniami.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 1 pkt 1",
+          "quote": "osobami, które prowadziły pozarolniczą działalność gospodarczą przez okres co najmniej 6 miesięcy i zaprzestały jej prowadzenia albo zawiesiły wykonywanie działalności gospodarczej"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 2",
+          "quote": "Warunek prowadzenia pozarolniczej działalności przez okres co najmniej 6 miesięcy uważa się za spełniony, jeżeli osoby podlegały z tego tytułu nieprzerwanie ubezpieczeniom emerytalnym i rentowym bezpośrednio przed dniem rozpoczęcia sprawowania osobistej opieki"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 3",
+          "quote": "Prawo do objęcia obowiązkowymi ubezpieczeniami emerytalnym i rentowymi przysługuje jednemu z rodziców, pod warunkiem że drugi rodzic nie jest objęty ubezpieczeniami emerytalnym i rentowymi z tego tytułu"
+        }
+      ],
+      "conditions": [
+        "Prowadziłeś pozarolniczą działalność gospodarczą przez okres co najmniej 6 miesięcy",
+        "Zaprzestałeś prowadzenia działalności lub zawiesiłeś jej wykonywanie",
+        "Podlegałeś ubezpieczeniom emerytalnym i rentowym bezpośrednio przed rozpoczęciem opieki nad dzieckiem",
+        "Opłacałeś składki na te ubezpieczenia",
+        "Drugi rodzic nie jest objęty ubezpieczeniami emerytalnym i rentowymi z tego tytułu",
+        "Sprawujesz osobistą opiekę nad dzieckiem na terenie Polski"
+      ],
+      "exceptions": [
+        "Przepisy art. 8 i 9 ustawy mogą wyłączać niektóre osoby z obowiązkowości ubezpieczeń"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia_emerytalne_rentowe_rodzice_opiekunowie",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "6a",
+        "6c"
+      ],
+      "_generated_from": [
+        "formularz A1] Dotyczące formularza A1.Prowadzę jednoosobową działalność gospodarczą w branży budowlanej w Polsce. —?"
+      ],
+      "_source_subbatch_key": "6a|6c::subbatch::1"
+    },
+    {
+      "id": "law-6a-czy-wypelnia-warunki",
+      "question_intent": "Jakie konkretne warunki muszę spełnić jako prowadzący działalność budowlaną, aby zostać ubezpieczonym podczas opieki nad dzieckiem?",
+      "question_patterns": [
+        "Jakie dokumenty potrzebne, aby udowodnić 6 miesięcy prowadzenia działalności?",
+        "Co oznacza 'zaprzestanie' lub 'zawieszenie' działalności w kontekście ubezpieczeń?",
+        "Czy zawieszenie działalności na podstawie art. 36aa pozwala na ubezpieczenie przy opiece nad dzieckiem?"
+      ],
+      "answer": "Jako prowadzący działalność budowlaną musisz wykazać, że: (1) prowadziłeś ją nieprzerwanie przez co najmniej 6 miesięcy, (2) podlegałeś ubezpieczeniom emerytalnym i rentowym w tym okresie i opłacałeś składki, (3) zaprzestałeś lub zawiesiłeś działalność (zawieszenie dotyczy działalności zawieszonej na podstawie art. 36aa), oraz (4) drugi rodzic dziecka nie jest już objęty tymi ubezpieczeniami. Dokumenty z ZUS powinny potwierdzić okresy ubezpieczenia i opłacone składki.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 1 pkt 1",
+          "quote": "osobami, które prowadziły pozarolniczą działalność gospodarczą przez okres co najmniej 6 miesięcy i zaprzestały jej prowadzenia albo zawiesiły wykonywanie"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 2",
+          "quote": "podlegały z tych tytułów nieprzerwanie ubezpieczeniom emerytalnym i rentowym bezpośrednio przed dniem rozpoczęcia sprawowania osobistej opieki i opłacały składki"
+        }
+      ],
+      "conditions": [
+        "Nieprzerwane prowadzenie działalności przez co najmniej 6 miesięcy",
+        "Bycie objętym ubezpieczeniami emerytalnym i rentowym w całym tym okresie",
+        "Opłacanie składek w całym tym okresie",
+        "Bezpośrednio przed opiką - ciągłe ubezpieczenie bez przerw",
+        "Zaprzestanie lub zawieszenie działalności (zawieszenie wg art. 36aa ust. 1)"
+      ],
+      "exceptions": [
+        "Jeżeli drugi rodzic jest już objęty ubezpieczeniami emerytalnym i rentowymi z tego tytułu - wówczas prawo do ubezpieczenia nie przysługuje"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia_emerytalne_rentowe_warunki_spelnienia",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "6a",
+        "6c"
+      ],
+      "_generated_from": [
+        "formularz A1] Dotyczące formularza A1.Prowadzę jednoosobową działalność gospodarczą w branży budowlanej w Polsce. —?"
+      ],
+      "_source_subbatch_key": "6a|6c::subbatch::1"
+    },
+    {
+      "id": "law-44-zmiana-forma-opodatkowania",
+      "question_intent": "Czy zmiana formy opodatkowania jest zgłaszana tylko do urzędu skarbowego?",
+      "question_patterns": [
+        "Czy zmiana formy opodatkowania to zgłoszenie do US?",
+        "Gdzie zgłaszam zmianę formy opodatkowania?",
+        "Zmiana formy opodatkowania - czy do Zakładu czy do US?"
+      ],
+      "answer": "Zgodnie z art. 44 ust. 2, płatnicy wpisani do Krajowego Rejestru Sądowego dokonują zgłoszenia zmian danych uzupełniających (w tym formy opodatkowania) wyłącznie do naczelnika urzędu skarbowego w terminie 7 dni. Zmiana w systemie ZUS następuje automatycznie po przekazaniu danych z Centralnego Rejestru Podmiotów przez urząd skarbowy (art. 44 ust. 3). Nie musisz osobno zgłaszać do ZUS - wysyłasz tylko do US.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 2",
+          "quote": "Płatnicy składek wpisani do Krajowego Rejestru Sądowego dokonują zgłoszenia aktualizacyjnego wyłącznie w zakresie zmiany danych uzupełniających określonych w art. 43 ust. 5b pkt 2 do właściwego naczelnika urzędu skarbowego, w terminie 7 dni od zaistnienia zmian."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 3",
+          "quote": "Zmiana zewidencjonowanych danych na koncie płatnika wpisanego do Krajowego Rejestru Sądowego następuje automatycznie za pośrednictwem systemu teleinformatycznego po przekazaniu z Centralnego Rejestru Podmiotów danych."
+        }
+      ],
+      "conditions": [
+        "Płatnik musi być wpisany do Krajowego Rejestru Sądowego",
+        "Zgłoszenie musi być dokonane w terminie 7 dni od zaistnienia zmian"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna"
+      ],
+      "topic": "zgłoszenia_zmian_danych_platnika",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "43a",
+        "44"
+      ],
+      "_generated_from": [
+        "formy opodatkowania] Czy zmiana formy opodatkowania jest zgłaszana tylko do US?",
+        "Czy jeżeli klientka od 01.01.2022 jest ma 0590 i nie przekroczyła limitu więc po zmianach może dalej być na 0590 to muszę zrobić zwua i zua od nowa?"
+      ],
+      "_source_subbatch_key": "43a|44::subbatch::1"
+    },
+    {
+      "id": "law-44-ryczalt-pozostanie-0590",
+      "question_intent": "Czy jeśli podatnik na ryczałcie 0590 nie przekroczył limitu i chce pozostać na tym systemie, musi złożyć nowe zgłoszenia ZUA i ZUS?",
+      "question_patterns": [
+        "Ryczałt 0590 - pozostanie bez zmiany - czy nowy ZUA i ZUS?",
+        "Pozostanie na 0590 - czy musze przedłużyć deklaracje?",
+        "Nie zmieniam formy opodatkowania - czy potrzebne nowe zgłoszenia?"
+      ],
+      "answer": "Tekst art. 43a i art. 44 reguluje zgłaszanie zmian danych, ale nie rozstrzyga kwestii, czy pozostanie na tym samym systemie opodatkowania (bez zmian) wymaga nowych zgłoszeń. To pytanie wymaga weryfikacji w przepisach dotyczących ryczałtu ewidencjonowanego i terminów ich obowiązywania poza zakresem artykułów regulujących procedurę zgłaszania zmian.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 1",
+          "quote": "O zmianach danych wykazanych w zgłoszeniu płatnik składek zawiadamia wskazaną przez Zakład jednostkę organizacyjną Zakładu, w terminie 7 dni od zaistnienia zmian."
+        }
+      ],
+      "conditions": [
+        "Zmiana musi zaistnieć i być zgłoszona w terminie 7 dni"
+      ],
+      "exceptions": [
+        "Przepisy o ryczałcie ewidencjonowanym mogą określać inne warunki odnowienia deklaracji"
+      ],
+      "taxpayer_type": [
+        "ryczalt"
+      ],
+      "topic": "ryczalt_ewidencjonowany",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "43a",
+        "44"
+      ],
+      "_generated_from": [
+        "formy opodatkowania] Czy zmiana formy opodatkowania jest zgłaszana tylko do US?",
+        "Czy jeżeli klientka od 01.01.2022 jest ma 0590 i nie przekroczyła limitu więc po zmianach może dalej być na 0590 to muszę zrobić zwua i zua od nowa?"
+      ],
+      "_source_subbatch_key": "43a|44::subbatch::1"
+    },
+    {
+      "id": "law-40c-waloryzacja-subkonta",
+      "question_intent": "Czy kwoty na subkoncie (kod 0590) są waloryzowane każdego roku automatycznie bez konieczności jakichkolwiek dodatkowych działań?",
+      "question_patterns": [
+        "Czy zostaje ciągiem kod 0590 od 2023 do 2026?",
+        "Czy subkonto jest waloryzowane automatycznie każdego roku?",
+        "Czy kwoty na subkoncie rosną automatycznie co roku?"
+      ],
+      "answer": "Tak, waloryzacja kwot na subkoncie przeprowadzana jest automatycznie corocznie od dnia 1 czerwca każdego roku. Kwoty z lat ubiegłych (w tym od 2023) podlegają tej waloryzacji każdorazowo, przy czym stan subkonta nie może ulec obniżeniu. Waloryzacja polega na pomnożeniu kwoty zewidencjonowanej na dzień 31 stycznia danego roku przez wskaźnik rocznej waloryzacji ogłoszony przez Prezesa GUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 40c ust. 1",
+          "quote": "Waloryzację kwot składek, środków, odsetek za zwłokę i opłaty prolongacyjnej, zewidencjonowanych na subkoncie, przeprowadza się corocznie, od dnia 1 czerwca każdego roku."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 40c ust. 2",
+          "quote": "Waloryzacji podlega kwota składek, środków, odsetek za zwłokę i opłaty prolongacyjnej, zewidencjonowanych na subkoncie na dzień 31 stycznia roku, za który jest przeprowadzana waloryzacja, powiększona o kwoty z tytułu przeprowadzonych waloryzacji."
+        }
+      ],
+      "conditions": [
+        "Waloryzacja przeprowadzana jest od dnia 1 czerwca każdego roku",
+        "Podstawą waloryzacji jest stan na dzień 31 stycznia danego roku",
+        "Stan subkonta nie może ulec obniżeniu w wyniku waloryzacji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "waloryzacja_subkonta",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "40c"
+      ],
+      "_generated_from": [
+        "prostu zostaje ciagiem] Czy po prostu zostaje ciągiem kod 0590 od tego 2023 i dalej aktualnie 2026?"
+      ],
+      "_source_subbatch_key": "40c::subbatch::1"
+    },
+    {
+      "id": "law-50-rozliczenie-roczne-skladki",
+      "question_intent": "Czy przy rozliczeniu rocznym składki zdrowotne i społeczne odlicza się na podstawie informacji z EZUS czy z deklaracji?",
+      "question_patterns": [
+        "Czy przy rozliczeniu rocznym bierze się informacje z EZUS czy z deklaracji?",
+        "Jakie dokumenty są podstawą do rozliczenia rocznego składek?",
+        "Na podstawie czego rozliczane są składki w rozliczeniu rocznym - EZUS czy deklaracja?",
+        "Rozliczenie roczne składek - jakie dokumenty brane pod uwagę?"
+      ],
+      "answer": "Przepisy art. 50 ustawy o systemie ubezpieczeń społecznych nie regulują bezpośrednio procedury rozliczenia rocznego składek ani nie wskazują, czy jako podstawę należy przyjąć dane z EZUS czy z deklaracji. Artykuł 50 dotyczy przede wszystkim udostępniania informacji o stanie konta ubezpieczonego i płatnika składek. Rozliczenie roczne składek podatkowych regulują przepisy podatkowe, a nie ustawa o systemie ubezpieczeń społecznych. Wymagana jest weryfikacja odpowiednich przepisów ustawy o podatku dochodowym od osób fizycznych lub od osób prawnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 50 ust. 1-2",
+          "quote": "Zakład jest zobowiązany udostępnić ubezpieczonemu informację o zewidencjonowanych na koncie ubezpieczonego składkach ogółem oraz wysokości składek na ubezpieczenie emerytalne"
+        }
+      ],
+      "conditions": [
+        "Pytanie dotyczy rozliczenia podatkowego, a nie procedur wymiaru składek ubezpieczeń społecznych",
+        "Art. 50 reguluje udostępnianie informacji o stanie konta, a nie rozliczenie roczne"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "informacje_o_stanie_konta",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "19",
+        "50"
+      ],
+      "_generated_from": [
+        "rozliczeniu rocznym] Przy rozliczeniu rocznym, odliczając zapłacone składki zdrowotne i społeczne bierzecie pod uwagę informacje roczna z EZUS czy wg deklaracji?"
+      ],
+      "_source_subbatch_key": "19|50::subbatch::1"
+    },
+    {
+      "id": "law-36a-zawieszenie-data-skladek",
+      "question_intent": "Od którego dnia przedsiębiorca przestaje płacić składki ZUS przy zawieszeniu działalności — od dnia zawieszenia czy od dnia następnego?",
+      "question_patterns": [
+        "Zawieszenie działalności od 1 lutego, aby nie płacić ZUS czy od 31 stycznia?",
+        "Od jakiego dnia ustają obowiązki składkowe przy zawieszeniu działalności?",
+        "Czy składki są należne za dzień zawieszenia działalności?",
+        "Kiedy dokładnie rozpoczyna się zwolnienie ze składek przy zawieszeniu?"
+      ],
+      "answer": "Obowiązek ubezpieczeń społecznych ustaje od dnia, w którym zawieszasz działalność. Jeśli zawiesisz działalność 1 lutego, składki będą należne do 31 stycznia włącznie, a od 1 lutego już ich nie będziesz opłacać. W okresie zawieszenia nie opłacasz ubezpieczeń chorobowego i wypadkowego, a ubezpieczenia emerytalne i rentowe są dobrowolne.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 36a ust. 2",
+          "quote": "Zawieszenie wykonywania działalności gospodarczej powoduje ustanie obowiązku ubezpieczeń społecznych od dnia, w którym rozpoczyna się zawieszenie wykonywania działalności gospodarczej, do dnia poprzedzającego dzień wznowienia wykonywania działalności gospodarczej."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 36a ust. 1",
+          "quote": "Przedsiębiorca w okresie zawieszenia wykonywania działalności gospodarczej nie opłaca ubezpieczenia chorobowego i wypadkowego."
+        }
+      ],
+      "conditions": [
+        "Zawieszenie musi być wykonane zgodnie z Prawem przedsiębiorców (art. 23 ust. 1–3)",
+        "Dotyczy osób prowadzących pozarolniczą działalność gospodarczą",
+        "Obowiązek ustaje od dnia rozpoczęcia zawieszenia"
+      ],
+      "exceptions": [
+        "Ubezpieczenia emerytalne i rentowe pozostają dobrowolne w okresie zawieszenia"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zawieszenie_działalności_skladki",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "36a",
+        "43"
+      ],
+      "_generated_from": [
+        "Zawieszenie działalności od 1 lutego, aby nie płacić ZUS czy 31 stycznia?"
+      ],
+      "_source_subbatch_key": "36a|43::subbatch::1"
+    },
+    {
+      "id": "law-6-rca-dra-rpa-obowiazek",
+      "question_intent": "Czy osoba prowadząca pozarolniczą działalność, która nie zatrudnia pracowników, musi opłacać RPA czy tylko RCA i DRA?",
+      "question_patterns": [
+        "Robię tylko RCA i DRA, nie muszę robić RPA gdyż to się tyczy tylko pracowników?",
+        "Czy RPA dotyczy tylko pracowników?",
+        "Czy osoba prowadząca działalność musi płacić RPA?"
+      ],
+      "answer": "RPA (ubezpieczenie wypadkowe) dotyczy pracowników, natomiast Ty jako osoba prowadząca pozarolniczą działalność obowiązkowo podlegasz ubezpieczeniom emerytalnemu i rentowym (RCA i DRA). Jeśli nie zatrudniasz pracowników, rzeczywiście nie masz obowiązku opłacania RPA, ponieważ ta składka jest wymagana tylko od płatników mających pracowników.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6 ust. 1 pkt 5",
+          "quote": "Obowiązkowo ubezpieczeniom emerytalnemu i rentowym podlegają osoby prowadzące pozarolniczą działalność oraz osobami z nimi współpracującymi"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6 ust. 1 pkt 1",
+          "quote": "Obowiązkowo ubezpieczeniom emerytalnemu i rentowym podlegają pracownikami"
+        }
+      ],
+      "conditions": [
+        "Osoba prowadzi pozarolniczą działalność",
+        "Nie zatrudnia pracowników"
+      ],
+      "exceptions": [
+        "Brak obowiązku opłacania RPA jeśli nie ma pracowników"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "obowiązkowe ubezpieczenia społeczne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "6",
+        "41",
+        "47"
+      ],
+      "_generated_from": [
+        "Robię tylko RCA i DRA, nie muszę robić RPA gdyż to się tyczy tylko pracowników?"
+      ],
+      "_source_subbatch_key": "41|47|6::subbatch::1"
+    },
+    {
+      "id": "law-47-dra2-procedura",
+      "question_intent": "Jak wygenerować raport DRA2 i wysłać go razem z DRA w zestawie?",
+      "question_patterns": [
+        "Jak wygenerować DRA2 i wysłać razem z DRA?",
+        "Procedura wysyłania DRA2 z DRA w jednym zestawie",
+        "Gdzie w Małej Księgowości Rzeczpospolitej wygenerować DRA2?"
+      ],
+      "answer": "Ustawa o systemie ubezpieczeń społecznych nie reguluje procedur technicznych generowania raportów w systemach informatycznych ani nie wspomina o programie 'Mała Księgowość Rzeczpospolitej' czy formularzach DRA/DRA2. Pytanie dotyczy procedur informatycznych, które wykraczają poza zakres ustawy. Należy sprawdzić dokumentację techniczną konkretnego programu księgowego lub skontaktować się z jego dostawcą.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1-3",
+          "quote": "Płatnik składek przesyła w tym samym terminie deklarację rozliczeniową, imienne raporty miesięczne oraz opłaca składki za dany miesiąc"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "procedury_raportowania",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "41b",
+        "47"
+      ],
+      "_generated_from": [
+        "Jak wygenerować w Małej Księgowości Rzeczpospolitej DRA2 i wysłać razem w zestawie z DRA za 01.2026?"
+      ],
+      "_source_subbatch_key": "41b|47::subbatch::1"
+    },
+    {
+      "id": "law-22-skladka-zdrowotna-ulga-start",
+      "question_intent": "Jaka jest wysokość składki zdrowotnej dla osoby na ulzie na start w deklaracji ZUS DRA za styczeń 2026?",
+      "question_patterns": [
+        "Ile wynosi składka zdrowotna na ulgi na start w ZUS DRA za styczeń 2026?",
+        "Czy składka zdrowotna to 314,96 zł czy 432,54 zł dla ulgi na start?",
+        "Jaka kwota składki zdrowotnej w deklaracji za styczeń 2026 przy ulzie na start?"
+      ],
+      "answer": "Nie można określić wysokości składki zdrowotnej na podstawie dostarczonych artykułów ustawy o systemie ubezpieczeń społecznych. Artykuł 22 reguluje jedynie stopy procentowe składek na ubezpieczenia emerytalne, rentowe, chorobowe i wypadkowe, a nie składki zdrowotnej. Wysokość składki zdrowotnej oraz zasady ulgi na start wymagają sprawdzenia odrębnych przepisów.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 22",
+          "quote": "Stopy procentowe składek wynoszą: 19,52% – ubezpieczenie emerytalne, 8,00% – ubezpieczenia rentowe, 2,45% – ubezpieczenie chorobowe, od 0,40% do 8,12% – ubezpieczenie wypadkowe"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "składki_ubezpieczeniowe",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "22",
+        "112a"
+      ],
+      "_generated_from": [
+        "Czy robiąc deklarację ZUS DRA za styczeń 2026 (ulga na start) kwota składki zdrowotnej to jeszcze 314,96 zł czy 432,54 zł?"
+      ],
+      "_source_subbatch_key": "112a|22::subbatch::1"
+    },
+    {
+      "id": "law-47-deklaracja-II-termin",
+      "question_intent": "Za który miesiąc składam deklarację rozliczeniową (DRA II), jeśli opłacam składki wyłącznie za siebie?",
+      "question_patterns": [
+        "A składam tylko dra II, a drą II za który miesiąc?",
+        "Za który miesiąc składam deklarację rozliczeniową jeśli opłacam tylko za siebie?",
+        "Kiedy złożyć DRA II jako płatnik opłacający tylko za siebie?"
+      ],
+      "answer": "Jeśli opłacasz składki wyłącznie za siebie, składasz tylko deklarację rozliczeniową (bez imiennych raportów miesięcznych). Deklarację tę przesyłasz w tym samym terminie, w którym opłacasz składki za dany miesiąc — czyli do 20. dnia następnego miesiąca (lub wcześniej, jeśli jesteś jednostką budżetową lub osobą prawną).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 2",
+          "quote": "Płatnik składek, który opłaca składki wyłącznie za siebie, przesyła jedynie deklarację rozliczeniową"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1 pkt 4",
+          "quote": "do 20 dnia następnego miesiąca – dla pozostałych płatników składek"
+        }
+      ],
+      "conditions": [
+        "Opłacasz składki wyłącznie za siebie (nie zgłaszasz pracowników)",
+        "Nie jesteś jednostką budżetową (wtedy termin do 5. dnia)",
+        "Nie posiadasz osobowości prawnej (wtedy termin do 15. dnia)"
+      ],
+      "exceptions": [
+        "Jeśli otrzymałeś zwolnienie z obowiązku składania DRA za kolejny miesiąc (art. 47 ust. 2d-2fb)",
+        "Jeśli zmiana dotyczy wyłącznie minimalnego wynagrodzenia — wtedy zwolnienie z DRA (art. 47 ust. 2c)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "duchowni",
+        "artyści",
+        "osoby_z_art_7"
+      ],
+      "topic": "terminy_i_procedury_skladania",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "47",
+        "49"
+      ],
+      "_generated_from": [
+        "A składam tylko dra II, a drą II za który miesiąc?",
+        "Czy jest szansa uzyskac tu potwierdzenie że kontynuacja małego zusu plus w 2026 wymaga tylko druku dra ll do 20 lutego razem z rozliczeniem a nie jak do tej pory do 15 stycznia danego roku?"
+      ],
+      "_source_subbatch_key": "47|49::subbatch::1"
+    },
+    {
+      "id": "law-47-mal-zusu-2026-dra-II-20-lutego",
+      "question_intent": "Czy w 2026 roku kontynuacja małego ZUS Plus wymaga tylko DRA II do 20 lutego razem z rozliczeniem, a nie jak dotychczas do 15 stycznia?",
+      "question_patterns": [
+        "Czy jest szansa uzyskac tu potwierdzenie że kontynuacja małego zusu plus w 2026 wymaga tylko druku dra ll do 20 lutego razem z rozliczeniem a nie jak do tej pory do 15 stycznia danego roku?",
+        "Czy małe ZUS Plus w 2026 ma inny termin DRA II?",
+        "Zmienił się termin dla małego ZUS Plus na 20 lutego 2026?",
+        "Kiedy złożyć DRA II dla małego ZUS Plus w 2026?"
+      ],
+      "answer": "Artykuł 47 ustawy nie zawiera szczegółowych informacji dotyczących terminu DRA II dla małego ZUS Plus w 2026 roku ani zasad jego kontynuacji. Tekst artykułu określa ogólne terminy dla płatników: do 20. dnia następnego miesiąca dla pozostałych płatników. Wymaga to weryfikacji w aktualnych przepisach dotyczących małego ZUS Plus lub komunikatach ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1 pkt 4",
+          "quote": "do 20 dnia następnego miesiąca – dla pozostałych płatników składek"
+        }
+      ],
+      "conditions": [
+        "Przepisy dotyczą ogólnych terminów składania DRA II"
+      ],
+      "exceptions": [
+        "Brak szczegółowych regulacji w przytoczonym tekście dla małego ZUS Plus"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "terminy_i_procedury_skladania",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "47",
+        "49"
+      ],
+      "_generated_from": [
+        "A składam tylko dra II, a drą II za który miesiąc?",
+        "Czy jest szansa uzyskac tu potwierdzenie że kontynuacja małego zusu plus w 2026 wymaga tylko druku dra ll do 20 lutego razem z rozliczeniem a nie jak do tej pory do 15 stycznia danego roku?"
+      ],
+      "_source_subbatch_key": "47|49::subbatch::1"
+    },
+    {
+      "id": "law-47-deklaracja-zmiana-podstawy",
+      "question_intent": "Czy zmiana podstawy wymiaru składek na ubezpieczenia zdrowotne (MZ+) wykazana w deklaracji rozliczeniowej za miesiąc poprzedni (DRA cz. II) jest wystarczająca, czy trzeba wcześniej powiadomić ZUS",
+      "question_patterns": [
+        "Czy wystarczy wykazać nową podstawę MZ+ w lutowej DRA za styczeń",
+        "Czy zmiana podstawy zdrowotnej w deklaracji to wystarczające powiadomienie ZUS",
+        "Kiedy ulga MZ+ obowiązuje jeśli złożę DRA ze zmianą podstawy"
+      ],
+      "answer": "Ustawa nie określa obowiązku wcześniejszego powiadomienia ZUS o zmianie podstawy wymiaru składek przed złożeniem deklaracji rozliczeniowej. Zmiana podstawy powinna być wykazana w DRA za dany miesiąc, złożonej w terminie określonym w art. 47 ust. 1 (do 20 dnia dla pozostałych płatników). Faktyczne zastosowanie ulgi będzie zależeć od interpretacji ZUS co do momentu jej wejścia w życie — wymaga to weryfikacji z ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1 pkt 4",
+          "quote": "do 20 dnia następnego miesiąca – dla pozostałych płatników składek"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1",
+          "quote": "Płatnik składek przesyła w tym samym terminie deklarację rozliczeniową, imienne raporty miesięczne oraz opłaca składki za dany miesiąc"
+        }
+      ],
+      "conditions": [
+        "Zmiana podstawy powinna być wykazana w deklaracji rozliczeniowej za miesiąc, w którym następuje zmiana",
+        "Deklaracja musi być złożona w terminie określonym dla danego typu płatnika"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Terminy i procedury składania deklaracji rozliczeniowych",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "47",
+        "48c"
+      ],
+      "_generated_from": [
+        "Czy w takim razie wystarczy jeśli w lutym, składając deklaracje za styczeń złoże DRA cz.II i wykaże tam nową podstawę do MZ+ czy muszę coś złożyć/wysłać do ZUS wcześniej żeby miec tę ulgę?"
+      ],
+      "_source_subbatch_key": "47|48c::subbatch::1"
+    },
+    {
+      "id": "law-47b-profil-informacyjny-dostep",
+      "question_intent": "Czy mogę korzystać z panelu e-płatnik na PUE ZUS, jeśli mam problemy z dostępem?",
+      "question_patterns": [
+        "Czy możecie przejść do panelu e-płatnik na PUE ZUS, bo mnie wywala do strony głównej?",
+        "Mam problem z zalogowaniem do systemu ZUS",
+        "Nie mogę wejść do profilu informacyjnego w ZUS",
+        "Dlaczego nie mam dostępu do panelu ZUS?"
+      ],
+      "answer": "Prawo podatkowe nie reguluje technicznych problemów z dostępem do systemu ZUS — to kwestia techniczna obsługiwana bezpośrednio przez Infolinię ZUS. Musisz mieć założony profil informacyjny w systemie ZUS (art. 47b ust. 1) i utrzymywać go w aktywnym stanie (art. 47b ust. 3). Jeśli sam nie założyłeś profilu, ZUS może go założyć automatycznie (art. 47b ust. 2). Skontaktuj się z Centrum Obsługi Infolinii ZUS — to techniczny problem wymagający diagnozy sprzętu lub konta.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47b ust. 1",
+          "quote": "Płatnik składek jest obowiązany założyć profil informacyjny w systemie teleinformatycznym Zakładu w terminie, o którym mowa w art. 43 ust. 1."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47b ust. 3",
+          "quote": "Płatnik składek jest obowiązany do utrzymania aktywnego profilu informacyjnego w systemie teleinformatycznym Zakładu w czasie prowadzenia z Zakładem rozliczeń z tytułu składek."
+        }
+      ],
+      "conditions": [
+        "Musisz mieć założony profil informacyjny w systemie ZUS",
+        "Profil musi być w aktywnym stanie w czasie rozliczeń ze składkami",
+        "ZUS może automatycznie założyć profil, jeśli sam tego nie zrobisz"
+      ],
+      "exceptions": [
+        "Jeśli nie założysz profilu, ZUS może go założyć za ciebie (art. 47b ust. 2)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Procedury elektroniczne i systemy ZUS",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "47a",
+        "47b"
+      ],
+      "_generated_from": [
+        "Czy możecie przejść do panelu e-płatnik na PUE ZUS, bo mnie wywala do strony głównej?"
+      ],
+      "_source_subbatch_key": "47a|47b::subbatch::1"
+    },
+    {
+      "id": "law-45-zagleglosci-firma",
+      "question_intent": "Gdzie znaleźć informacje o zaległościach firmy w systemie",
+      "question_patterns": [
+        "Gdzie w PUE mogę sprawdzić zaległości firmy?",
+        "Gdzie znajduje się informacja o zaległościach płatnika składek?",
+        "Jak sprawdzić zaległości w rachunku składkowym firmy?",
+        "Gdzie w nowoczesnym PUE znajdę wiadomość o zaległościach danej firmy?"
+      ],
+      "answer": "Ustawa o systemie ubezpieczeń społecznych nie określa szczegółowo, w której sekcji PUE wyświetlane są informacje o zaległościach. Artykuł 45 mówi jedynie, że na koncie płatnika składek prowadzone są rozliczenia należnych składek (art. 45 ust. 1 pkt 2), ale nie precyzuje interfejsu użytkownika ani lokalizacji tej informacji w systemie. Szczegóły techniczne znajdują się w regulaminach PUE lub instrukcjach ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 45 ust. 1 pkt 2",
+          "quote": "prowadzone są rozliczenia należnych składek, wypłacanych przez płatnika zasiłków oraz zasiłków rodzinnych i pielęgnacyjnych podlegających zaliczeniu na poczet składek oraz innych składek pobieranych przez Zakład"
+        }
+      ],
+      "conditions": [
+        "Pytanie dotyczy funkcjonalności systemu PUE (Portal Usług Elektronicznych ZUS), a nie bezpośrednio przepisów ustawy"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "system_ewidencji_skladek",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "45",
+        "50b"
+      ],
+      "_generated_from": [
+        "Gdzie w tym nowoczesnym PUE znajdę wiadomość o zaległościach danej firmy?"
+      ],
+      "_source_subbatch_key": "45|50b::subbatch::1"
+    },
+    {
+      "id": "law-11-chorobowe-dobrowolne",
+      "question_intent": "Czy można opłacać ubezpieczenie chorobowe bez obowiązkowych ubezpieczeń emerytalnych i rentowych?",
+      "question_patterns": [
+        "Czy można opłacać samo wyższe chorobowe?",
+        "Czy ubezpieczenie chorobowe można opłacać samodzielnie?",
+        "Czy chorobowe jest niezależne od emerytalnego i rentowych?",
+        "Czy można mieć tylko ubezpieczenie chorobowe?"
+      ],
+      "answer": "Nie, ubezpieczenie chorobowe można opłacać dobrowolnie tylko jako uzupełnienie do obowiązkowych ubezpieczeń emerytalnych i rentowych. Zgodnie z art. 11 ust. 2, dobrowolne ubezpieczenie chorobowe przysługuje wyłącznie osobom, które są już objęte obowiązkowymi ubezpieczeniami emerytalnym i rentowymi. Stanowi ono uzupełnienie, a nie samodzielny gatunek ubezpieczenia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 11 ust. 2",
+          "quote": "Dobrowolnie ubezpieczeniu chorobowemu podlegają na swój wniosek osoby objęte obowiązkowo ubezpieczeniami emerytalnym i rentowymi"
+        }
+      ],
+      "conditions": [
+        "Osoba musi być już objęta obowiązkowym ubezpieczeniem emerytalnym",
+        "Osoba musi być już objęta obowiązkowym ubezpieczeniem rentowym",
+        "Wymaga złożenia wniosku na chorobowe"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ubezpieczenie_chorobowe",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "11",
+        "22"
+      ],
+      "_generated_from": [
+        "Czy można opłacać samo wyższe chorobowe?"
+      ],
+      "_source_subbatch_key": "11|22::subbatch::1"
+    },
+    {
+      "id": "law-23-odsetki-zwloka-termin",
+      "question_intent": "Czy od składek ZUS opłaconych w terminie naliczane są odsetki za zwłokę?",
+      "question_patterns": [
+        "ZUS opłacono w terminie - czy w ogóle?",
+        "Czy od składek zapłaconych na czas trzeba zapłacić odsetki za zwłokę?",
+        "Jeśli opłacam składki w terminie, czy grożą mi odsetki?",
+        "Co się dzieje gdy opłacę składki na czas?"
+      ],
+      "answer": "Nie. Odsetki za zwłokę naliczane są wyłącznie od nieopłaconych w terminie składek. Jeśli opłacisz składki w wymagalnym terminie, nie będą ci naliczane żadne odsetki za zwłokę. Zasady obliczania odsetek za zwłokę określone są w Ordynacji podatkowej, ale mają zastosowanie tylko do zalegających płatności.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 23 ust. 1",
+          "quote": "Od nieopłaconych w terminie składek należne są od płatnika składek odsetki za zwłokę"
+        }
+      ],
+      "conditions": [
+        "Składki muszą być opłacone w wymaganym terminie",
+        "Termin wymagalności określony jest w przepisach ustawy"
+      ],
+      "exceptions": [
+        "Odsetki za zwłokę nie są naliczane w kilku przypadkach wyszczególnionych w art. 23 ust. 1a-1d (m.in. kwota poniżej 1% minimalnego wynagrodzenia, wina Zakładu, błędne zawiadomienie)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt"
+      ],
+      "topic": "odsetki_skladki",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "23",
+        "46"
+      ],
+      "_generated_from": [
+        "ZUS opłacono w terminie - czy w ogóle?"
+      ],
+      "_source_subbatch_key": "23|46::subbatch::1"
+    },
+    {
+      "id": "law-46-rozliczenie-skladek-termin",
+      "question_intent": "Jaki jest obowiązek płatnika składek dotyczący opłacania składek ZUS?",
+      "question_patterns": [
+        "Kiedy muszę opłacić składki ZUS?",
+        "Jaki jest termin opłacenia składek za miesiąc?",
+        "Co muszę zrobić ze składkami każdego miesiąca?",
+        "Czy mogę opóźnić opłatę składek ZUS?"
+      ],
+      "answer": "Płatnik składek jest zobowiązany każdego miesiąca kalendarzowego obliczać, potrącać z wynagrodzeń pracowników, rozliczać oraz opłacać należne składki. Rozliczenie składek następuje poprzez złożenie deklaracji rozliczeniowej do wskazanej przez ZUS (Zakład) jednostki organizacyjnej. Dokładny termin opłacenia wynika z odrębnych przepisów, ale nieopłacenie w terminie prowadzi do naliczenia odsetek za zwłokę.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 46 ust. 1",
+          "quote": "Płatnik składek jest obowiązany według zasad wynikających z przepisów ustawy obliczać, potrącać z dochodów ubezpieczonych, rozliczać oraz opłacać należne składki za każdy miesiąc kalendarzowy"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 46 ust. 2-3",
+          "quote": "Rozliczenie składek następuje w deklaracji rozliczeniowej. Deklarację rozliczeniową płatnik składek przekazuje do wskazanej przez Zakład jednostki organizacyjnej"
+        }
+      ],
+      "conditions": [
+        "Obowiązek dotyczy każdego miesiąca kalendarzowego",
+        "Składki muszą być obliczone prawidłowo",
+        "Składki muszą być potrącone z dochodów ubezpieczonych",
+        "Deklaracja rozliczeniowa musi być złożona w wymaganym terminie"
+      ],
+      "exceptions": [
+        "Przepisy nie stosują się do składek opłacanych ze środków Funduszu Gwarantowanych Świadczeń Pracowniczych (art. 23 ust. 4)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "obowiazki_platnika_skladek",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "23",
+        "46"
+      ],
+      "_generated_from": [
+        "ZUS opłacono w terminie - czy w ogóle?"
+      ],
+      "_source_subbatch_key": "23|46::subbatch::1"
+    },
+    {
+      "id": "law-16-miejsce-wykazania-skladek",
+      "question_intent": "Gdzie wykazać składki społeczne - po stronie ubezpieczonego czy płatnika składek",
+      "question_patterns": [
+        "Składki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Po której stronie wykazać składki - ubezpieczonego czy płatnika?",
+        "Gdzie wpisać składki w sprawozdaniu - u ubezpieczonego czy u płatnika?"
+      ],
+      "answer": "Tekst artykułu 16 określa, kto finansuje składki (ubezpieczony czy płatnik), ale nie zawiera przepisów o miejscu wykazania tych składek w dokumentacji lub sprawozdaniach. To jest kwestia proceduralna regulowana innymi przepisami (np. ordynacja podatkowa, przepisy ZUS). Bez dodatkowego tekstu nie można udzielić odpowiedzi na to pytanie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16",
+          "quote": "Przepis określa, kto finansuje składki (ubezpieczeni czy płatnicy), ale nie reguluje miejsca ich wykazania."
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt"
+      ],
+      "topic": "procedura-wykazywania-skladek",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "16",
+        "22"
+      ],
+      "_generated_from": [
+        "Składki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?"
+      ],
+      "_source_subbatch_key": "16|22::subbatch::1"
+    },
+    {
+      "id": "law-6-wlaczenie-ubezpieczenia",
+      "question_intent": "Czy właściciel biznesu/przedsiębiorstwa jest automatycznie objęty ubezpieczeniami emerytalnymi i rentowymi?",
+      "question_patterns": [
+        "Czy właściciel firmy musi być ubezpieczony?",
+        "Czy przedsiębiorca jest obowiązkowo ubezpieczony?",
+        "Jeśli właściciel nie wliczony to wyjdzie IWA?",
+        "Czy mogę nie być ubezpieczony jako właściciel?",
+        "Kiedy właściciel podlega obowiązkowemu ubezpieczeniu?"
+      ],
+      "answer": "Właściciel osoby fizycznej prowadzący pozarolniczą działalność podlega obowiązkowym ubezpieczeniom emerytalnym i rentowym na podstawie art. 6 ust. 1 pkt 5. Ubezpieczenie jest obowiązkowe i nie można go ominąć — niedopłacenie składek spowoduje konsekwencje majątkowe (IWA — Inkaso Wierzytelności Zalegaków) i utratę okresu ubezpieczenia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6 ust. 1 pkt 5",
+          "quote": "osobami prowadzącymi pozarolniczą działalność oraz osobami z nimi współpracującymi"
+        }
+      ],
+      "conditions": [
+        "Osoba fizyczna musi prowadzić pozarolniczą działalność",
+        "Działalność musi być na terenie Rzeczypospolitej Polskiej"
+      ],
+      "exceptions": [
+        "Brak wyjątków — ubezpieczenie jest obowiązkowe dla wszystkich prowadzących pozarolniczą działalność"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia emerytalne i rentowe",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "6",
+        "18"
+      ],
+      "_generated_from": [
+        "Jeśli właściciel nie wliczony to wyjdzie IWA?"
+      ],
+      "_source_subbatch_key": "18|6::subbatch::1"
+    },
+    {
+      "id": "law-112a-mali-zus-plus-przejscie",
+      "question_intent": "Czy przedsiębiorca będący na dużym ZUS może przejść na mały ZUS plus w następnym roku",
+      "question_patterns": [
+        "Czy mogę przejść z dużego ZUS na mały ZUS plus od stycznia następnego roku",
+        "Czy będąc na ZUS ogólnym od lutego 2026, mogę stosować mały ZUS plus od stycznia 2027",
+        "Kiedy mogę zmienić system ubezpieczenia z ogólnego na mały ZUS plus"
+      ],
+      "answer": "Podane artykuły nie regulują warunków przejścia z dużego ZUS na mały ZUS plus ani nie określają, czy i kiedy taka zmiana jest możliwa. Artykuł 112a dotyczy wyłącznie przejściowych uprawnień dla ubezpieczonych, którzy w 2023 roku stosowali system z art. 18c. Konieczna jest weryfikacja w art. 18c i innych artykułach ustawy regulujących zasady stosowania małego ZUS plus.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 112a",
+          "quote": "Artykuł 112a zawiera przepisy przejściowe dotyczące ubezpieczonych, którzy w 2023 r. stosowali zasady z art. 18c"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia_emerytalne_rentowe",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "112a"
+      ],
+      "_generated_from": [
+        "Czy będąc na dużym ZUS na zasadach ogólnych od lutego 2026, mogę skorzystać z małego ZUS plus w roku 2027 od stycznia?"
+      ],
+      "_source_subbatch_key": "112a|18aa::subbatch::1"
+    },
+    {
+      "id": "law-19-roczna-podstawa-limit",
+      "question_intent": "Jaka jest maksymalna roczna podstawa wymiaru składek na ubezpieczenia emerytalne i rentowe?",
+      "question_patterns": [
+        "Jaka jest najwyższa podstawa do jakiej można podwyższyć składki?",
+        "Czy istnieje limit rocznej podstawy wymiaru składek?",
+        "Do jakiej kwoty mogę deklarować podstawę wymiaru składek?"
+      ],
+      "answer": "Roczna podstawa wymiaru składek na ubezpieczenia emerytalne i rentowe nie może przekroczyć kwoty odpowiadającej trzydziestokrotności prognozowanego przeciętnego wynagrodzenia miesięcznego w gospodarce narodowej na dany rok kalendarzowy, określonego w ustawie budżetowej. Dokładną kwotę limitu na dany rok ogłasza Minister właściwy do spraw zabezpieczenia społecznego do końca roku poprzedniego w Dzienniku Urzędowym.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 19 ust. 1",
+          "quote": "Roczna podstawa wymiaru składek na ubezpieczenia emerytalne i rentowe osób, o których mowa w art. 6 i 7, w danym roku kalendarzowym nie może być wyższa od kwoty odpowiadającej trzydziestokrotności prognozowanego przeciętnego wynagrodzenia miesięcznego w gospodarce narodowej"
+        }
+      ],
+      "conditions": [
+        "Dotyczy osób wymienionych w art. 6 i 7",
+        "Limit obowiązuje w danym roku kalendarzowym",
+        "Kwota zależy od prognozowanego przeciętnego wynagrodzenia określonego w ustawie budżetowej"
+      ],
+      "exceptions": [
+        "art. 19 ust. 2 - może być stosowana inna metoda w razie braku podstaw do określenia wynagrodzenia"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "podstawa_wymiaru_skladek_limit",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "18",
+        "19"
+      ],
+      "_generated_from": [
+        "Czy biorę dochód osobno z każdego miesiąca?",
+        "a dochód za grudzień będzie w rozliczeniu rocznym?",
+        "Ewentualnie jaka jest najwyższa podstawa do jakiej można podwyższyć składki?"
+      ],
+      "_source_subbatch_key": "18|19::subbatch::1"
+    },
+    {
+      "id": "law-19-miesieczne-rozliczenie",
+      "question_intent": "Jak rozliczane są składki - miesięcznie czy rocznie? Czy w grudniu składki są rozliczane inaczej?",
+      "question_patterns": [
+        "Czy biorę dochód osobno z każdego miesiąca?",
+        "a dochód za grudzień będzie w rozliczeniu rocznym?",
+        "Czy grudzień ma inny sposób rozliczenia?"
+      ],
+      "answer": "Artykuł 19 ustawy reguluje roczny limit podstawy wymiaru składek, ale nie precyzuje sposobu jej rozliczania w podziale na miesiące. Składki obliczane są od miesięcznej podstawy wymiaru ustalonej zgodnie z art. 18, jednak do osiągnięcia rocznego limitu. Gdy ubezpieczony przekroczy roczny limit, płatnik składek zobowiązany jest zaprzestać obliczania i przekazywania składek.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 19 ust. 3 i 5",
+          "quote": "Do osiągnięcia kwoty, o której mowa w ust. 1, składki na ubezpieczenia emerytalne i rentowe oblicza się i przekazuje do Zakładu od podstawy wymiaru. Płatnik składek jest zobowiązany zaprzestać obliczać i przekazywać składki po przekroczeniu rocznej podstawy wymiaru składek"
+        }
+      ],
+      "conditions": [
+        "Składki rozliczane są od bieżącej miesięcznej podstawy wymiaru",
+        "Obowiązek zaprzestania obliczeń trzeba spełnić od momentu przekroczenia limitu rocznego"
+      ],
+      "exceptions": [
+        "art. 19 ust. 6 - gdy więcej niż jeden płatnik - ubezpieczony musi zawiadomić wszystkich płatników"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "rozliczenie_skladek_miesieczne_roczne",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18",
+        "19"
+      ],
+      "_generated_from": [
+        "Czy biorę dochód osobno z każdego miesiąca?",
+        "a dochód za grudzień będzie w rozliczeniu rocznym?",
+        "Ewentualnie jaka jest najwyższa podstawa do jakiej można podwyższyć składki?"
+      ],
+      "_source_subbatch_key": "18|19::subbatch::1"
+    },
+    {
+      "id": "law-17a-zwolnienie-zus-jdg",
+      "question_intent": "Czy przedsiębiorca prowadzący JDG na ryczałcie może uzyskać zwolnienie ze składek ZUS",
+      "question_patterns": [
+        "Jakie ulgi na ZUS dla nowej JDG na ryczałcie",
+        "Czy mogę być zwolniony ze składek ZUS jako nowy przedsiębiorca",
+        "Jakie zwolnienia ZUS dla początkującego przedsiębiorcy",
+        "Czy przysługują mi ulgi na ubezpieczenia społeczne"
+      ],
+      "answer": "Tak, możesz uzyskać zwolnienie ze składek na ubezpieczenia emerytalne, rentowe i wypadkowe za jeden miesiąc w danym roku kalendarzowym, jeśli spełnisz wszystkie warunki z art. 17a. Kluczowe to: nie więcej niż 10 ubezpieczonych, przychód nie przekraczający równowartości 2 mln euro w ostatnich 2 latach, brak działalności u byłego pracodawcy oraz obowiązkowe podleganie ubezpieczeniom w miesiącu poprzedzającym złożenie wniosku. Zwolnienie stanowi pomoc de minimis i przysługuje wyłącznie za jeden miesiąc w roku.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 17a ust. 1",
+          "quote": "Na wniosek płatnika składek prowadzącego działalność, o której mowa w art. 8 ust. 6 pkt 1, zwalnia się go z opłacenia należnych składek z tego tytułu na jego własne obowiązkowe ubezpieczenia emerytalne, rentowe i wypadkowe, za wskazany we wniosku miesiąc kalendarzowy, jeżeli..."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 17b ust. 1",
+          "quote": "Zwolnienie z opłacenia składek, o których mowa w art. 17a, przysługuje wyłącznie za jeden miesiąc kalendarzowy w danym roku kalendarzowym."
+        }
+      ],
+      "conditions": [
+        "Prowadzenie działalności regulowanej w art. 8 ust. 6 pkt 1",
+        "Maksymalnie 10 ubezpieczonych w miesiącu poprzedzającym złożenie wniosku",
+        "Przychód z pozarolniczej działalności gospodarczej nieprzekraczający równowartości 2 mln euro (w co najmniej jednym z ostatnich 2 lat lub jego brak w obydwu latach)",
+        "Brak działalności u byłego pracodawcy",
+        "Obowiązkowe podleganie ubezpieczeniom emerytalnemu, rentowym i wypadkowemu w miesiącu poprzedzającym złożenie wniosku",
+        "Dysponowanie limitem pomocy de minimis"
+      ],
+      "exceptions": [
+        "Zwolnienie przysługuje tylko za jeden miesiąc w roku kalendarzowym",
+        "Nie dotyczy JDG, jeśli wcześniej były tam pracownicy w liczbie przekraczającej 10"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "ryczalt"
+      ],
+      "topic": "zwolnienia_i_ulgi_zus",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "note": "Wymaga weryfikacji, czy ryczałt mieszczący się w limicie 2 mln euro spełnia warunki art. 8 ust. 6 pkt 1 - tekst nie definiuje tego bezpośrednio",
+      "_source_articles": [
+        "17a",
+        "17b",
+        "18aa"
+      ],
+      "_generated_from": [
+        "Chce założyć nową JDG na ryczałcie - czy przysługują mi jakieś ulgi na ZUS?"
+      ],
+      "_source_subbatch_key": "17a|17b|18aa::subbatch::1"
+    },
+    {
+      "id": "law-6-prokurenta-skladka",
+      "question_intent": "Czy prokurent działający na podstawie powołania podlega obowiązkowym ubezpieczeniom społecznym i składce zdrowotnej",
+      "question_patterns": [
+        "Czy prokurent podlega ubezpieczeniu społecznemu",
+        "Czy za prokurenta naliczamy składkę zdrowotną",
+        "Czy prokurent to pracownik w rozumieniu ubezpieczeń społecznych"
+      ],
+      "answer": "Prokurent działający na podstawie powołania NIE podlega obowiązkowemu ubezpieczeniu emerytalnym, rentowym ani chorobowemu. Ustawa wyłącza prokuratorów z grona pracowników podlegających ubezpieczeniom społecznym. Nie naliczasz i nie odprowadzasz dla niego składki zdrowotnej na podstawie stosunku pracy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6 ust. 1 pkt 1",
+          "quote": "Pracownikami, z wyłączeniem prokuratorów"
+        }
+      ],
+      "conditions": [
+        "Dotyczy osób zatrudnionych na stanowisku prokurenta",
+        "Wyłączenie dotyczy prokuratorów bez względu na formę zatrudnienia"
+      ],
+      "exceptions": [
+        "Prokurent może dobrowolnie ubezpieczyć się na ubezpieczenia emerytalne i rentowe",
+        "Prokurent może podlegać ubezpieczeniu społecznemu, jeśli pełni inną funkcję podlegającą ubezpieczeniu (np. pracownik)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ubezpieczenia_społeczne_pracownicy",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "6",
+        "11"
+      ],
+      "_generated_from": [
+        "Diet) prokurenta działającego na podstawie powołania naliczacie i odprowadzacie składkę zdrowotną?"
+      ],
+      "_source_subbatch_key": "11|6::subbatch::1"
+    },
+    {
+      "id": "law-83g-potwierdzenie-zero",
+      "question_intent": "Czy można prosić o potwierdzenie gdy podczas pobierania wyświetla się zero",
+      "question_patterns": [
+        "Doczytałam zero podczas pobierania - czy mogę prosić o potwierdzenie?",
+        "Co zrobić gdy wyświetla się zero przy pobieraniu dokumentu?",
+        "Czy zero podczas pobierania oznacza problem z dokumentem?"
+      ],
+      "answer": "Pytanie dotyczy problemu technicznego przy pobieraniu dokumentu, a nie zasad ustawy o ubezpieczeniach społecznych. Zaświadczenia i pisma są udostępniane przez ZUS na profilu informacyjnym w postaci elektronicznej (art. 83g ust. 1), a ZUS powiadamia o ich umieszczeniu drogą elektroniczną (art. 83g ust. 3). W przypadku problemów technicznych przy pobieraniu należy zgłosić się do obsługi ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 83g ust. 1, 3",
+          "quote": "Zaświadczenia, decyzje oraz inne pisma Zakład sporządza i doręcza wnioskodawcy w postaci elektronicznej na profilu informacyjnym"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "dokumenty_elektroniczne_zus",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "83g"
+      ],
+      "_generated_from": [
+        "Doczytałam zero jest podczas pobierania - czy moge prosić o potwierdzenie?"
+      ],
+      "_source_subbatch_key": "83g::subbatch::1"
+    },
+    {
+      "id": "law-48d-termin-zlozenia-deklaracji",
+      "question_intent": "Czy przesłanie deklaracji rozliczeniowej (ZUA 0510) po terminie będzie miało konsekwencje?",
+      "question_patterns": [
+        "Będą konsekwencje jak wyśle ZUA 0510 dzisiaj?",
+        "Co się stanie jeśli wyślę deklarację rozliczeniową po terminie?",
+        "Czy mogę złożyć deklarację rozliczeniową po 5 latach?",
+        "Jakie są konsekwencje złożenia deklaracji po terminie?",
+        "Czy ZUS przyjmie deklarację złożoną po upływie 5 lat?"
+      ],
+      "answer": "Nie możesz złożyć deklaracji rozliczeniowej (ZUA 0510) po upływie 5 lat od dnia, w którym upłynął termin opłacenia składek rozliczonych w tej deklaracji. ZUS nie przyjmie deklaracji złożonej po tym terminie. Po upływie 5 lat ZUS ewidencjonuje dane wyłącznie na kontach ubezpieczonych w trybie szczególnym, ale tylko na podstawie prawomocnego orzeczenia sądu lub decyzji (chyba że zdeklarowałeś wcześniej kwotę).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 48d ust. 1",
+          "quote": "Deklaracji rozliczeniowej i imiennego raportu miesięcznego płatnik składek nie może złożyć po upływie 5 lat od dnia, w którym upłynął termin opłacenia składek rozliczonych w tej deklaracji i w tym raporcie."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 48d ust. 7",
+          "quote": "Zakład nie przyjmuje deklaracji rozliczeniowej i imiennego raportu miesięcznego złożonych po terminie określonym w ust. 1."
+        }
+      ],
+      "conditions": [
+        "Upłynęło 5 lat od dnia, w którym upłynął termin opłacenia składek rozliczonych w deklaracji",
+        "Deklaracja została złożona po terminie określonym w art. 48d ust. 1"
+      ],
+      "exceptions": [
+        "Jeśli podstawę wymiaru składek stanowi zadeklarowana wcześniej kwota, można ewidencjonować dane na kontach ubezpieczonych bez orzeczenia sądu"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "terminy_skladania_dokumentow_ubezpieczeniowych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "48d",
+        "49"
+      ],
+      "_generated_from": [
+        "Będą konsekwencje jak wyśle ZUA 0510 dzisiaj?"
+      ],
+      "_source_subbatch_key": "48d|49::subbatch::1"
+    },
+    {
+      "id": "law-47-rsa-rca-wymogi",
+      "question_intent": "Czy mały płatnik składek ma obowiązek wykazywania danych na RCA (Raporcie Corocznym Amortyzacyjnym) z zerowymi kwotami i kodem 0110, czy tylko na RSA (Rozliczeniu Składek Analitycznym)?",
+      "question_patterns": [
+        "Czy wykazuję dane tylko na RSA czy też na RCA z zerowymi kwotami?",
+        "Mały płatnik RCA zerowe kwoty kod 0110",
+        "Obowiązek wykazywania RCA dla małych płatników"
+      ],
+      "answer": "Artykuł 47 ustawy nie zawiera szczegółowych regulacji dotyczących struktury raportów RSA i RCA ani wymogów dotyczących wykazywania zer na RCA. Ustawa wymaga przesłania deklaracji rozliczeniowej i imiennych raportów miesięcznych, ale nie precyzuje, które dokumenty lub pola muszą być wypełniane dla małych płatników. Aby uzyskać jednoznaczną odpowiedź, należy zapoznać się z obowiązującymi wzorami formularzy i wytycznymi ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1 pkt 4",
+          "quote": "do 20 dnia następnego miesiąca – dla pozostałych płatników składek"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 46 ust. 4",
+          "quote": "deklaracja rozliczeniowa zawiera dane określone przez ministra właściwego do spraw zabezpieczenia społecznego"
+        }
+      ],
+      "conditions": [
+        "Dotyczy pozostałych płatników składek (nie jednostek budżetowych ani podmiotów z osobowością prawną)",
+        "Wymogi dotyczą przesłania deklaracji rozliczeniowej i imiennych raportów miesięcznych"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "ryczalt"
+      ],
+      "topic": "Raportowanie do ZUS - deklaracje i raporty",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "47",
+        "41"
+      ],
+      "_generated_from": [
+        "Czy w rozliczeniu ZUS ja jako mały płatnik wykazuję ją tylko na RSA, czy powinnam też na RCA z zerowymi kwotami i kodem 0110?",
+        "Dotyczącą rozliczenia składek ZUS spółki cywilnej?"
+      ],
+      "_source_subbatch_key": "41|47::subbatch::1"
+    },
+    {
+      "id": "law-47-spółka-cywilna-rozliczenie",
+      "question_intent": "Jak rozlicza się składki ZUS dla spółki cywilnej? Jakie są terminy i wymogi sprawozdawcze?",
+      "question_patterns": [
+        "Rozliczenie składek ZUS spółka cywilna",
+        "Spółka cywilna deklaracja rozliczeniowa termin",
+        "Jak spółka cywilna rozlicza się z ZUS?"
+      ],
+      "answer": "Spółka cywilna jako płatnik składek musi przesłać deklarację rozliczeniową i imienne raporty miesięczne do 20 dnia następnego miesiąca (jeżeli nie posiada osobowości prawnej) lub do 15 dnia (jeżeli ma osobowość prawną). Przepisy art. 47 nie zawierają specjalnych regulacji dla spółek cywilnych, dlatego obowiązują je ogólne zasady dotyczące pozostałych płatników składek.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1 pkt 3",
+          "quote": "do 15 dnia następnego miesiąca – dla płatników składek posiadających osobowość prawną"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1 pkt 4",
+          "quote": "do 20 dnia następnego miesiąca – dla pozostałych płatników składek"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 41 ust. 1",
+          "quote": "Płatnik składek przekazuje do Zakładu imienne raporty miesięczne, po upływie każdego miesiąca kalendarzowego, w terminie ustalonym dla rozliczania składek"
+        }
+      ],
+      "conditions": [
+        "Termin zależy od tego, czy spółka cywilna posiada osobowość prawną",
+        "Wymaga przesłania zarówno deklaracji rozliczeniowej jak i imiennych raportów miesięcznych"
+      ],
+      "exceptions": [
+        "Jeżeli obowiązek ubezpieczeń społecznych wygasł w ciągu miesiąca, raport przesyła się za okres ubezpieczenia w danym miesiącu"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna"
+      ],
+      "topic": "Raportowanie do ZUS - deklaracje i raporty",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "47",
+        "41"
+      ],
+      "_generated_from": [
+        "Czy w rozliczeniu ZUS ja jako mały płatnik wykazuję ją tylko na RSA, czy powinnam też na RCA z zerowymi kwotami i kodem 0110?",
+        "Dotyczącą rozliczenia składek ZUS spółki cywilnej?"
+      ],
+      "_source_subbatch_key": "41|47::subbatch::1"
+    },
+    {
+      "id": "law-83d-interpretacja-indywidualna",
+      "question_intent": "Czy mogę uzyskać od ZUS pisemną opinię (interpretację) dotyczącą mojego obowiązku ubezpieczenia lub wysokości składek?",
+      "question_patterns": [
+        "Czy ZUS wydaje interpretacje indywidualne?",
+        "Czy mogę poprosić ZUS o pisemną interpretację dotyczącą składek?",
+        "Czy bezpieczniej będzie napisać do ZUS żeby mieć podkładkę?",
+        "Jakie zagadnienia mogą być przedmiotem interpretacji indywidualnej ZUS?"
+      ],
+      "answer": "Tak, ZUS wydaje interpretacje indywidualne dotyczące obowiązku podlegania ubezpieczeniom społecznym, zasad obliczania składek i podstawy ich wymiaru. Interpretacja taka będzie dla Ciebie dokumentem, który możesz wykorzystać jako «podkładkę» do swoich decyzji biznesowych. Jednak ZUS nie wyda interpretacji, jeśli sprawa jest już przedmiotem kontroli lub postępowania wyjaśniającego u Ciebie, lub jeśli ZUS już ją rozstrzygnął.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 83d ust. 1",
+          "quote": "Zakład wydaje interpretacje indywidualne w zakresie obowiązku podlegania ubezpieczeniom społecznym, zasad obliczania składek na ubezpieczenia społeczne i podstawy wymiaru tych składek."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 83d ust. 2",
+          "quote": "Nie wydaje się interpretacji indywidualnych w zakresie tych elementów stanu faktycznego, które są przedmiotem toczącego się postępowania wyjaśniającego lub kontroli albo gdy w tym zakresie sprawa została rozstrzygnięta co do jej istoty w decyzji Zakładu."
+        }
+      ],
+      "conditions": [
+        "Wniosek musi dotyczyć obowiązku podlegania ubezpieczeniom społecznym, zasad obliczania składek lub podstawy wymiaru składek",
+        "Sprawa nie może być przedmiotem prowadzonej kontroli lub postępowania wyjaśniającego w dniu złożenia wniosku",
+        "ZUS nie może mieć już wydanej decyzji rozstrzygającej tę sprawę co do jej istoty"
+      ],
+      "exceptions": [
+        "Nie wydaje się interpretacji, jeśli element stanu faktycznego jest przedmiotem toczącego się postępowania wyjaśniającego lub kontroli",
+        "Nie wydaje się interpretacji, jeśli sprawa została już rozstrzygnięta w decyzji ZUS"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny",
+        "vat_zwolniony"
+      ],
+      "topic": "interpretacja_indywidualna_zus",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "83d"
+      ],
+      "_generated_from": [
+        "Ewnetualnie czy bezpieczniej będzie napisać do ZUS żeby mieć podkładkę?"
+      ],
+      "_source_subbatch_key": "83d::subbatch::1"
+    },
+    {
+      "id": "law-32-fp-fgsp-odliczenie",
+      "question_intent": "Czy składki na Fundusz Pracy i Fundusz Gwarantowanych Świadczeń Pracowniczych można odliczać/uwzględniać",
+      "question_patterns": [
+        "Czy FP i FGŚP mogę odliczyć?",
+        "Czy składki na Fundusz Pracy i FGŚP to koszty uzyskania przychodu?",
+        "Czy FP i Fundusz Gwarantowanych Świadczeń Pracowniczych można uwzględnić?"
+      ],
+      "answer": "Art. 32 ust. 1 Ustawy o systemie ubezpieczeń społecznych stanowi, że do składek na Fundusz Pracy i Fundusz Gwarantowanych Świadczeń Pracowniczych stosuje się odpowiednio przepisy dotyczące składek na ubezpieczenia społeczne. Oznacza to, że składki te podlegają tym samym zasadom poboru, egzekucji i rozliczenia co składki na ubezpieczenia społeczne. Jednak tekst artykułu 32 nie zawiera wprost regulacji dotyczącej możliwości odliczenia tych składek — dla pełnej odpowiedzi wymagana jest analiza przepisów o składkach na ubezpieczenia społeczne, do których się odsyła.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 32 ust. 1",
+          "quote": "Do składek na Fundusz Pracy, Fundusz Gwarantowanych Świadczeń Pracowniczych stosuje się odpowiednio przepisy dotyczące składek na ubezpieczenia społeczne"
+        }
+      ],
+      "conditions": [
+        "Przepisy dotyczące FP i FGŚP odpowiadają régułom dla składek na ubezpieczenia społeczne"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "składki_na_fundusze",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "32"
+      ],
+      "_generated_from": [
+        "Czy FP i FGŚP także mogę uwzględnić i odjąć?"
+      ],
+      "_source_subbatch_key": "32::subbatch::1"
+    },
+    {
+      "id": "law-18-skladki-kpir-strata",
+      "question_intent": "Czy składki ZUS można zaliczać do KPiR jako koszt, aby pogłębiać stratę firmy?",
+      "question_patterns": [
+        "Czy składki ZUS to koszt w KPiR?",
+        "Jak składki ZUS wpływają na wynik finansowy w KPiR?",
+        "Czy składki ZUS zmniejszają przychód lub zwiększają stratę w KPiR?"
+      ],
+      "answer": "Artykuł 18 Ustawy o systemie ubezpieczeń społecznych reguluje PODSTAWĘ WYMIARU składek, czyli jaki przychód jest brany do ich wyliczenia. Nie zawiera przepisów dotyczących księgowania składek ZUS w KPiR (Krajowej Ewidencji Przychodów i Wydatków). Sposób ujmowania składek w KPiR podlega Ustawie o podatku dochodowym od osób fizycznych i przepisom rachunkowym - leży to poza zakresem art. 18.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18 ust. 1",
+          "quote": "Podstawę wymiaru składek na ubezpieczenia emerytalne i rentowe stanowi przychód, o którym mowa w art. 4 pkt 9 i 10"
+        }
+      ],
+      "conditions": [
+        "Pytanie dotyczy księgowania w KPiR, a nie podstawy wymiaru składek",
+        "Art. 18 odnosi się wyłącznie do ustalania wysokości składek"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "ryczalt"
+      ],
+      "topic": "podstawa wymiaru składek",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18"
+      ],
+      "_generated_from": [
+        "Jeśli mam firmę, która jest na skali i będzie miała stratę przez pierwszą część roku, to składki ZUS lepiej jest zaliczyć do KPiR, ponieważ będzie to pogłębiać \"stratę\" czyli wynik na minus?"
+      ],
+      "_source_subbatch_key": "18::subbatch::1"
+    },
+    {
+      "id": "law-83e-a1-wiele-kontrahentow",
+      "question_intent": "Czy formularz A1 wydawany przez ZUS pozwala osobie na działalności gospodarczej pracować dla wielu zagranicznych kontrahentów jednocześnie bez przypisania do konkretnej firmy",
+      "question_patterns": [
+        "Czy jeden A1 pozwala na pracę dla wielu zagranicznych pracodawców",
+        "Czy A1 jest uniwersalnym dokumentem dla wszystkich zagranicznych pracodawców",
+        "Czy mogę używać jeden A1 dla różnych zagranicznych kontrahentów"
+      ],
+      "answer": "Tekst artykułu 83e nie zawiera informacji dotyczących zakresu ważności formularza A1, warunków jego wydania ani zasad jego wykorzystania wobec wielu pracodawców. Artykuł 83e reguluje wyłącznie procedurę wydawania dokumentu poświadczającego (formularza A1), a nie jego możliwości zastosowania.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 83e",
+          "quote": "Wniosek o dokument poświadczający jest zgłaszany do Zakładu w formie dokumentu elektronicznego opatrzonego kwalifikowanym podpisem elektronicznym"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "Ubezpieczenia społeczne - dokumenty koordynacyjne",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "83e",
+        "83g"
+      ],
+      "_generated_from": [
+        "Czy jako osoba na działalności mogę uzyskać jeden formularz A1, który pozwala mi legalnie pracować dla wielu kontrahentów zagranicznych (bez przypisywania A1 do jednej konkretnej firmy)?"
+      ],
+      "_source_subbatch_key": "83e|83g::subbatch::1"
+    },
+    {
+      "id": "law-43a-urzad-skarbowy-przekazanie",
+      "question_intent": "Czy można przekazać dokumenty ubezpieczeniowe (US2/A1) przez urząd skarbowy zamiast bezpośrednio do ZUS?",
+      "question_patterns": [
+        "Mogę wysłać US2 za klienta przez urząd skarbowy?",
+        "Czy można przekazać dokumenty do ZUS przez urząd skarbowy?",
+        "Czy A1 można złożyć w urzędzie skarbowym zamiast w ZUS?"
+      ],
+      "answer": "Tak, możesz przekazać dokumenty (w tym deklaracje rozliczeniowe i imienne raporty) bezpośrednio do urzędu skarbowego, w którym prowadzone jest centrum obsługi. Urząd skarbowy musi przekazać je do ZUS najpóźniej następnego dnia roboczego. Za datę złożenia w ZUS uważa się datę przekazania dokumentów do urzędu skarbowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43a ust. 1",
+          "quote": "płatnik składek może w terminie określonym dla złożenia tych dokumentów przekazać bezpośrednio do Zakładu lub urzędu skarbowego, w którym jest prowadzone centrum obsługi"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43a ust. 2",
+          "quote": "za datę złożenia dokumentów do Zakładu uważa się dzień złożenia tych dokumentów do urzędu skarbowego"
+        }
+      ],
+      "conditions": [
+        "Urząd skarbowy musi mieć prowadzone centrum obsługi",
+        "Dokumenty muszą być złożone w terminie określonym dla danego typu płatnika",
+        "Urząd skarbowy obowiązkowo przekazuje dokumenty do ZUS następnego dnia roboczego"
+      ],
+      "exceptions": [
+        "Zastrzeżenie art. 43 ust. 5a i 5c mogą dotyczyć niektórych rodzajów dokumentów"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "procedury_skladania_dokumen",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "43a",
+        "47"
+      ],
+      "_generated_from": [
+        "Mogę wysłać US2 (A1) za klienta na podstawie danych przez niego podanych?"
+      ],
+      "_source_subbatch_key": "43a|47::subbatch::1"
+    },
+    {
+      "id": "law-43a-forma-dokumentu",
+      "question_intent": "W jakiej formie można przesłać dokumenty ubezpieczeniowe przez urząd skarbowy?",
+      "question_patterns": [
+        "Jakie formy dokumentów akceptuje urząd skarbowy?",
+        "Czy mogę przesłać dokument elektroniczny czy tylko papierowy?"
+      ],
+      "answer": "Dokumenty przesyłane przez urząd skarbowy muszą być w formie pisemnej (dokument papierowy według ustalonego wzoru) lub jako wydruk z oprogramowania zatwierdzanego przez ZUS. Forma i warunki składania określone są w art. 47a ust. 2 i 3.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43a ust. 3",
+          "quote": "Dokumenty są składane zgodnie z art. 47a ust. 2 i 3 w formie dokumentu pisemnego według ustalonego wzoru albo w formie wydruku z oprogramowania"
+        }
+      ],
+      "conditions": [
+        "Dokument musi być w formie pisemnej lub wydruku z zatwierdzanego oprogramowania",
+        "Musi być złożony w urzędzie skarbowym, gdzie prowadzone jest centrum obsługi"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "forma_dokumen",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "43a",
+        "47"
+      ],
+      "_generated_from": [
+        "Mogę wysłać US2 (A1) za klienta na podstawie danych przez niego podanych?"
+      ],
+      "_source_subbatch_key": "43a|47::subbatch::1"
+    },
+    {
+      "id": "law-47-terminy-skladania",
+      "question_intent": "Jakie są terminy przesłania dokumentów ubezpieczeniowych w zależności od typu płatnika?",
+      "question_patterns": [
+        "Do kiedy muszę przesłać US2?",
+        "Jaki jest termin na złożenie deklaracji rozliczeniowej?",
+        "Kiedy przesyłać dokumenty w zależności od rodzaju podmiotu?"
+      ],
+      "answer": "Termin przesłania deklaracji, raportów i opłacenia składek zależy od typu płatnika: dla jednostek budżetowych do 5 dnia następnego miesiąca, dla płatników z osobowością prawną do 15 dnia, dla pozostałych do 20 dnia następnego miesiąca.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1",
+          "quote": "Płatnik składek przesyła deklarację rozliczeniową, imienne raporty miesięczne oraz opłaca składki za dany miesiąc niepóźniej niż do 5 dnia następnego miesiąca – dla jednostek budżetowych i samorządowych zakładów budżetowych; do 15 dnia następnego miesiąca – dla płatników składek posiadających osobowość prawną; do 20 dnia następnego miesiąca – dla pozostałych płatników składek"
+        }
+      ],
+      "conditions": [
+        "Termin dotyczy przesłania deklaracji rozliczeniowej, imiennych raportów miesięcznych i opłacenia składek",
+        "Termin liczy się od następnego miesiąca po miesiącu, za który przesyła się dokumenty"
+      ],
+      "exceptions": [
+        "Twórcy i artyści mają specjalny termin - przesyłają dokumenty w terminie opłacania składek za miesiąc otrzymania decyzji (art. 47 ust. 1a)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "terminy_skladania",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "43a",
+        "47"
+      ],
+      "_generated_from": [
+        "Mogę wysłać US2 (A1) za klienta na podstawie danych przez niego podanych?"
+      ],
+      "_source_subbatch_key": "43a|47::subbatch::1"
+    },
+    {
+      "id": "law-112a-grudzien-2023",
+      "question_intent": "Czy grudzień 2023 r. jest uwzględniany w dodatkowych 12 miesiącach календарowych przysługujących ubezpieczonemu?",
+      "question_patterns": [
+        "Czy grudzień 2023 jest wliczany?",
+        "A grudzień 2023 jest wprowadzony?",
+        "Czy grudzień 2023 wchodzi w skład 12 miesięcy?"
+      ],
+      "answer": "Tekst artykułu 112a nie określa wyraźnie, czy grudzień 2023 r. jest wliczany w okres 12 miesięcy kalendarzowych przysługujących ubezpieczonemu. Artykuł stanowi o prawie do ustalania podstawy wymiaru składek przez 12 miesięcy, ale nie definiuje dokładnie, kiedy ten okres się rozpoczyna ani czy obejmuje pełny rok kalendarzowy. Konieczna jest weryfikacja rozporządzenia wykonawczego lub stanowiska ZUS-u.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 112a ust. 1",
+          "quote": "zachowuje prawo do ustalania podstawy wymiaru składek na dotychczasowych zasadach przez okres dodatkowych 12 miesięcy kalendarzowych"
+        }
+      ],
+      "conditions": [
+        "Ubezpieczony ustalał podstawę wymiaru składek w 2023 r. na zasadach art. 18c",
+        "Period wynosi 12 miesięcy kalendarzowych"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "okresy przejściowe ubezpieczeń emerytalnych",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "112a"
+      ],
+      "_generated_from": [
+        "A grudzień 2023 jest wprowadzony?"
+      ],
+      "_source_subbatch_key": "112a::subbatch::1"
+    },
+    {
+      "id": "law-41-informacje-roczne",
+      "question_intent": "Czy płatnik składek korzysta wyłącznie z informacji rocznej do księgowania czy musi przekazywać raporty miesięczne?",
+      "question_patterns": [
+        "Czy tylko z informacji rocznej księgujesz?",
+        "Czy wystarczy raport roczny do księgowania składek?",
+        "Czy mogę nie składać raportów miesięcznych i robić tylko roczne rozliczenie?",
+        "Czy obowiązkowe są raporty miesięczne czy mogę składać roczne?"
+      ],
+      "answer": "Nie, nie możesz księgować wyłącznie z informacji rocznej. Płatnik składek jest zobowiązany przekazywać do ZUS imienne raporty miesięczne po upływie każdego miesiąca kalendarzowego, w terminie ustalonym dla rozliczania składek (art. 41 ust. 1). Raporty miesięczne są dokumentami obowiązkowymi, a nie opcjonalne – stanowią podstawę rozliczenia składek na ubezpieczenia społeczne i zdrowotne.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 41 ust. 1",
+          "quote": "Płatnik składek przekazuje do Zakładu imienne raporty miesięczne, po upływie każdego miesiąca kalendarzowego, w terminie ustalonym dla rozliczania składek"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 47 ust. 1",
+          "quote": "Płatnik składek przesyła w tym samym terminie deklarację rozliczeniową, imienne raporty miesięczne oraz opłaca składki za dany miesiąc"
+        }
+      ],
+      "conditions": [
+        "Raport musi być przekazany po upływie każdego miesiąca kalendarzowego",
+        "Termin przekazania zależy od kategorii płatnika składek (do 5, 15 lub 20 dnia następnego miesiąca)"
+      ],
+      "exceptions": [
+        "Pewne kategorie płatników mogą być zwolnione z obowiązku składania raportów w kolejnym miesiącu, jeśli warunki się nie zmieniły (art. 47 ust. 2c-2fb)",
+        "Płatnik opłacający składki wyłącznie za siebie przesyła jedynie deklarację rozliczeniową (art. 47 ust. 2)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "rozliczanie_skladek",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "41",
+        "47",
+        "48"
+      ],
+      "_generated_from": [
+        "Tylko z informacji rocznej ksiegujesz?"
+      ],
+      "_source_subbatch_key": "41|47|48::subbatch::1"
+    },
+    {
+      "id": "law-18-zmiana-formy-opodatkowania",
+      "question_intent": "Jaka podstawa do składki zdrowotnej przy zmianie formy opodatkowania z zasad ogólnych na liniowy",
+      "question_patterns": [
+        "Jaka podstawę do składki zdrowotnej wpisujecie w przypadku zmiany formy opodatkowania z zasad ogólnych na liniowy?",
+        "Która podstawa wymiaru składki zdrowotnej obowiązuje przy przejściu na podatek liniowy?",
+        "Jak zmienia się podstawa składki zdrowotnej przy zmianie podatku dochodowego?"
+      ],
+      "answer": "Przepisy art. 18 ustawy o systemie ubezpieczeń społecznych nie zawierają szczegółowych wytycznych dotyczących zmiany podstawy wymiaru składek przy przejściu z zasad ogólnych opodatkowania na podatek liniowy. Podstawa wymiaru składek na ubezpieczenia emerytalne i rentowe stanowi przychód (art. 18 ust. 1), ale brak jest bezpośredniej regulacji dotyczącej wpływu zmiany formy opodatkowania na tę podstawę.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18 ust. 1",
+          "quote": "Podstawę wymiaru składek na ubezpieczenia emerytalne i rentowe ubezpieczonych wymienionych w art. 6 ust. 1 pkt 1–3 stanowi przychód"
+        }
+      ],
+      "conditions": [
+        "Zmiana formy opodatkowania",
+        "Przejście z zasad ogólnych na podatek liniowy"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "podstawa_wymiaru_skladek_zmiany_formy_opodatkowania",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18",
+        "18a",
+        "18aa",
+        "20"
+      ],
+      "_generated_from": [
+        "Jaka podstawę do składki zdrowotnej wpisujecie w przypadku zmiany formy opodatkowania z zasad ogólnych na liniowy?"
+      ],
+      "_source_subbatch_key": "18|18a|18aa|20::subbatch::1"
+    },
+    {
+      "id": "law-22-fundusz-pracy-zus",
+      "question_intent": "Czy na kod mały ZUS plus 0570 płacimy fundusz pracy?",
+      "question_patterns": [
+        "Czy na mały ZUS plus 0570 płacimy fundusz pracy?",
+        "Fundusz pracy na mały ZUS plus 0570",
+        "Czy fundusz pracy należy do małego ZUS plus 0570?",
+        "Mały ZUS plus 0570 - fundusz pracy"
+      ],
+      "answer": "Ustawa o systemie ubezpieczeń społecznych nie zawiera informacji o funduszu pracy ani o kodzie 0570. Artykuł 22 ustawy określa wyłącznie stopy składek na ubezpieczenie emerytalne, rentowe, chorobowe i wypadkowe. Aby udzielić odpowiedzi na pytanie dotyczące funduszu pracy i kodu 0570, wymagana jest weryfikacja w odrębnych przepisach dotyczących funduszu pracy i klasyfikacji kodów ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 22 ust. 1",
+          "quote": "Stopy procentowe składek wynoszą: 19,52% na ubezpieczenie emerytalne, 8,00% na ubezpieczenia rentowe, 2,45% na ubezpieczenie chorobowe, od 0,40% do 8,12% na ubezpieczenie wypadkowe."
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "składki_ubezpieczeniowe",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "15",
+        "22"
+      ],
+      "_generated_from": [
+        "Czy na kod mały ZUS plus 0570 płacimy fundusz pracy?"
+      ],
+      "_source_subbatch_key": "15|22::subbatch::1"
+    },
+    {
+      "id": "law-43a-wyrejestrowanie-kod",
+      "question_intent": "Jaki kod lub formularz użyć przy wyrejestrowaniu płatnika składek",
+      "question_patterns": [
+        "Jaki kod użyć przy wyrejestrowaniu?",
+        "Jaki druk do wyrejestrowania płatnika?",
+        "Jak wyrejestrować płatnika składek - jaki formularz?",
+        "Wyrejestrowanie płatnika - jaki dokument?"
+      ],
+      "answer": "Ustawa nie określa konkretnego kodu lub nazwy formularza do wyrejestrowania płatnika składek. Art. 43a ust. 1 wymienia 'zgłoszenie wyrejestrowania płatnika składek' jako jeden z dokumentów, który płatnik może przekazać do Zakładu lub urzędu skarbowego, ale szczegóły dotyczące wzoru tego dokumentu znajdują się w oddzielnych przepisach regulacyjnych wydawanych przez ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43a ust. 1",
+          "quote": "zgłoszenie wyrejestrowania płatnika składek, zgłoszenie ubezpieczonego do ubezpieczeń społecznych, wyrejestrowanie ubezpieczonego z ubezpieczeń społecznych, deklaracje rozliczeniowe, raporty informacyjne oraz imienne raporty miesięczne, z zastrzeżeniem art. 43 ust. 5a i 5c, płatnik składek może w terminie określonym dla złożenia tych dokumentów przekazać bezpośrednio do Zakładu lub urzędu skarbowego"
+        }
+      ],
+      "conditions": [
+        "Dokument powinien być złożony w terminie określonym dla wyrejestrowania",
+        "Można go przekazać bezpośrednio do ZUS lub urzędu skarbowego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "rejestracja_i_wyrejestrowanie",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "43",
+        "43a",
+        "44"
+      ],
+      "_generated_from": [
+        "Jaki kod użyć przy wyrejestrowaniu go?"
+      ],
+      "_source_subbatch_key": "43|43a|44::subbatch::1"
+    },
+    {
+      "id": "law-36a-wznowienie-ubezpieczenia",
+      "question_intent": "Jaki kod ubezpieczenia obowiązuje po wznowieniu działalności - czy automatycznie przechodzi na kod dla osób prowadzących działalność bez zmian?",
+      "question_patterns": [
+        "Jaki kod ubezpieczenia po wznowieniu działalności gospodarczej?",
+        "Czy wznowienie wymaga zmiany kodu ubezpieczenia z 0570 na 0590?",
+        "Czy po zawieszeniu i wznowieniu działalności kod ubezpieczenia zmienia się automatycznie?"
+      ],
+      "answer": "Ustawa nie reguluje zmian kodów ubezpieczenia (0570xx, 0510xx, 0590xx) przy zawieszeniu i wznowieniu działalności. Stanowi jedynie, że wznowienie działalności nie wymaga ponownego zgłoszenia do obowiązkowych ubezpieczeń emerytalnego, rentowych i wypadkowego. Kwestia konkretnych kodów ubezpieczenia wykracza poza zakres tego artykułu i wymaga weryfikacji w przepisach ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 36a ust. 4",
+          "quote": "Wznowienie wykonywania działalności gospodarczej nie wymaga ponownego zgłoszenia do obowiązkowych ubezpieczeń emerytalnego, rentowych i wypadkowego"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 36a ust. 2",
+          "quote": "Zawieszenie wykonywania działalności gospodarczej powoduje ustanie obowiązku ubezpieczeń społecznych od dnia, w którym rozpoczyna się zawieszenie"
+        }
+      ],
+      "conditions": [
+        "Działalność była zawieszona zgodnie z art. 23 ust. 1-3 Prawa przedsiębiorców",
+        "Przedsiębiorca prowadzi pozarolniczą działalność gospodarczą"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zawieszenie_i_wznowienie_ubezpieczenia",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "36a",
+        "44"
+      ],
+      "_generated_from": [
+        "Jeżeli to nie jest zmiana kodu z 0570xx po odwieszeniu działalności to od 01.01 do 29.01 miałby być wg Ciebie na 0510xx a po odwieszeniu na 0590xx?"
+      ],
+      "_source_subbatch_key": "36a|44::subbatch::1"
+    },
+    {
+      "id": "law-44-kod-057-zmiana",
+      "question_intent": "Czy płatnik składek musi zgłosić zmianę danych jeśli był na kodzie 057 do końca grudnia?",
+      "question_patterns": [
+        "Byłem na kodzie 057 do grudnia, co muszę zrobić?",
+        "Kod 057 do końca grudnia - czy zgłosić zmianę?",
+        "Jeśli pracownik był na kodzie 057 przez grudzień, czy muszę to zgłosić?"
+      ],
+      "answer": "Tekst artykułu 44 nie zawiera informacji dotyczących kodów (w tym kodu 057) ani zasad ich zgłaszania w kontekście zmian danych. Aby odpowiedzieć na Twoje pytanie, potrzebna jest weryfikacja innych artykułów ustawy lub regulacji wewnętrznych ZUS dotyczących kodów stawek i terminów ich zgłaszania.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 1",
+          "quote": "O zmianach danych wykazanych w zgłoszeniu płatnik składek zawiadamia w terminie 7 dni od zaistnienia zmian"
+        }
+      ],
+      "conditions": [
+        "Zmiana danych musi być zgłoszona w ciągu 7 dni od zaistnienia zmian",
+        "Zgłoszenie musi być dokonane do wskazanej przez ZUS jednostki"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt"
+      ],
+      "topic": "Zgłoszenia zmian danych do ZUS",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "44"
+      ],
+      "_generated_from": [
+        "A jesli byl na kodzoe 057 do końca grudnia?"
+      ],
+      "_source_subbatch_key": "44::subbatch::1"
+    },
+    {
+      "id": "law-18aa-dla-kogo-maly-zus",
+      "question_intent": "Dla kogo dostępny jest mały ZUS plus (ulga dla małych przedsiębiorców)",
+      "question_patterns": [
+        "Dla kogo mały ZUS plus?",
+        "Kto może skorzystać z małego ZUS plus?",
+        "Jakie są warunki do małego ZUS plus?"
+      ],
+      "answer": "Mały ZUS plus jest dostępny dla przedsiębiorców będących osobami fizycznymi, którzy mogą zrezygnować z uprawnienia do zwolnienia z ubezpieczenia społecznego. Aby z niego skorzystać, musisz być osobą fizyczną prowadzącą działalność gospodarczą i złożyć odpowiednie zgłoszenie do ubezpieczeń społecznych. Dokładne warunki dotyczące wysokości dochodów znajdują się w ustawie z 6 marca 2018 r. - Prawo przedsiębiorców (art. 18 ust. 1).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18aa ust. 1",
+          "quote": "Przedsiębiorca będący osobą fizyczną może zrezygnować z uprawnienia, o którym mowa w art. 18 ust. 1 ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców"
+        }
+      ],
+      "conditions": [
+        "musi być osobą fizyczną",
+        "musi być przedsiębiorcą",
+        "musi złożyć zgłoszenie do ubezpieczeń społecznych na zasadach art. 18a ust. 1 i art. 36"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "małe ZUS plus, zwolnienia i ulgi",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa"
+      ],
+      "_generated_from": [
+        "Dla kogo mały ZUS plus?",
+        "Czy musiałabym podlegać zasadom ogólnym cały rok, żeby przejść na mały ZUS plus?",
+        "I jak to co wyjdzie z obliczeń nieprzekracza 56 tyś to moge zastosować ulgę?",
+        "Natomiast odliczając od dochodu, a mając stratę, to odliczenie tak jakby przepada, bo nie ma dochodu?"
+      ],
+      "_source_subbatch_key": "18aa::subbatch::1"
+    },
+    {
+      "id": "law-18aa-okres-24-miesiace",
+      "question_intent": "Czy trzeba podlegać zasadom ogólnym cały rok, aby przejść na mały ZUS plus",
+      "question_patterns": [
+        "Czy musiałabym podlegać zasadom ogólnym cały rok, żeby przejść na mały ZUS plus?",
+        "Jaki okres musi upłynąć zanim mogę przejść na mały ZUS plus?",
+        "Od kiedy liczy się okres 24 miesięcy dla małego ZUS plus?"
+      ],
+      "answer": "Okres 24 miesięcy kalendarzowych, wymagany dla przejścia na mały ZUS plus, liczy się od dnia objęcia ubezpieczeniami, a nie od początku roku. Ubezpieczenia obejmują cię od dnia wskazanego we wniosku, jednak nie wcześniej niż od dnia jego złożenia. Oznacza to, że okresu nie trzeba liczyć od 1 stycznia - liczy się od faktycznego dnia rozpoczęcia ubezpieczeń.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18aa ust. 1 i 2",
+          "quote": "okres 24 miesięcy kalendarzowych liczy się od dnia objęcia ubezpieczeniami... objęcie ubezpieczeniami następuje od dnia wskazanego we wniosku, niewcześniej jednak niż od dnia, w którym wniosek został zgłoszony"
+        }
+      ],
+      "conditions": [
+        "okres 24 miesięcy liczy się od dnia objęcia ubezpieczeniami",
+        "ubezpieczenia obejmują od dnia wskazanego we wniosku",
+        "nie wcześniej niż od dnia zgłoszenia wniosku"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "małe ZUS plus, okres kwalifikujący",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "18aa"
+      ],
+      "_generated_from": [
+        "Dla kogo mały ZUS plus?",
+        "Czy musiałabym podlegać zasadom ogólnym cały rok, żeby przejść na mały ZUS plus?",
+        "I jak to co wyjdzie z obliczeń nieprzekracza 56 tyś to moge zastosować ulgę?",
+        "Natomiast odliczając od dochodu, a mając stratę, to odliczenie tak jakby przepada, bo nie ma dochodu?"
+      ],
+      "_source_subbatch_key": "18aa::subbatch::1"
+    },
+    {
+      "id": "law-18aa-przychod-nie-przekracza-56tys",
+      "question_intent": "Czy można zastosować ulgę małego ZUS plus, gdy przychód nie przekracza 56 tysięcy",
+      "question_patterns": [
+        "Jeśli przychód nie przekracza 56 tys, mogę zastosować ulgę?",
+        "Co jeśli wyjdzie z obliczeń nieprzekracza 56 tys?",
+        "Czy limit 56 tysięcy to warunek dla małego ZUS plus?"
+      ],
+      "answer": "Artykuł 18aa ustawy o systemie ubezpieczeń społecznych nie zawiera informacji o limicie 56 tysięcy złotych. Szczegółowe warunki przyznania małego ZUS plus, w tym progi dochodowe, znajdują się w ustawie z 6 marca 2018 r. - Prawo przedsiębiorców (art. 18 ust. 1), na którą odsyła artykuł 18aa.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18aa ust. 1",
+          "quote": "Przedsiębiorca będący osobą fizyczną może zrezygnować z uprawnienia, o którym mowa w art. 18 ust. 1 ustawy z dnia 6 marca 2018 r."
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "małe ZUS plus, warunki i limity",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa"
+      ],
+      "_generated_from": [
+        "Dla kogo mały ZUS plus?",
+        "Czy musiałabym podlegać zasadom ogólnym cały rok, żeby przejść na mały ZUS plus?",
+        "I jak to co wyjdzie z obliczeń nieprzekracza 56 tyś to moge zastosować ulgę?",
+        "Natomiast odliczając od dochodu, a mając stratę, to odliczenie tak jakby przepada, bo nie ma dochodu?"
+      ],
+      "_source_subbatch_key": "18aa::subbatch::1"
+    },
+    {
+      "id": "law-18aa-strata-podatkowa-odliczenie",
+      "question_intent": "Czy przy stracie podatkowej można odliczyć składki w małym ZUS plus",
+      "question_patterns": [
+        "Mając stratę, odliczenie jakby przepada bo nie ma dochodu?",
+        "Czy mogę odliczyć składki gdy mam stratę podatkową?",
+        "Co z odliczeniami gdy nie mam dochodu, tylko stratę?"
+      ],
+      "answer": "Artykuł 18aa nie reguluje kwestii odliczeń składek w przypadku straty podatkowej. Przepisy dotyczące sposobu opodatkowania i wysokości składek w ramach małego ZUS plus znajdują się w ustawie z 6 marca 2018 r. - Prawo przedsiębiorców. Dla odpowiedzi na pytanie o odliczenia przy stracie potrzebna jest analiza tamtych przepisów.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18aa",
+          "quote": "Artykuł 18aa reguluje procedurę rezygnacji ze zwolnienia i objęcia ubezpieczeniami, nie zawiera postanowień o odliczeniach"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "małe ZUS plus, straty podatkowe",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa"
+      ],
+      "_generated_from": [
+        "Dla kogo mały ZUS plus?",
+        "Czy musiałabym podlegać zasadom ogólnym cały rok, żeby przejść na mały ZUS plus?",
+        "I jak to co wyjdzie z obliczeń nieprzekracza 56 tyś to moge zastosować ulgę?",
+        "Natomiast odliczając od dochodu, a mając stratę, to odliczenie tak jakby przepada, bo nie ma dochodu?"
+      ],
+      "_source_subbatch_key": "18aa::subbatch::1"
+    },
+    {
+      "id": "law-41e-korekta-lata-poprzednie",
+      "question_intent": "Czy obowiązek złożenia raportu korygującego dotyczy również raportów z lat poprzednich",
+      "question_patterns": [
+        "Czy musze zrobić korektę do lat poprzednich?",
+        "Czy obowiązek korekty raportu dotyczy raportów historycznych?",
+        "Czy muszę korygować raporty sprzed kilku lat?",
+        "Na jakie okresy rozciąga się obowiązek składania raportów korygujących?"
+      ],
+      "answer": "Ustawa nie precyzuje, czy obowiązek korekty dotyczy tylko bieżącego roku czy także lat poprzednich. Art. 41e zobowiązuje Cię do złożenia raportu korygującego w przypadku stwierdzenia nieprawidłowości, ale tekst nie wskazuje jasno na czasowy zakres tego obowiązku. Rekomendujemy sprawdzenie wytycznych ZUS lub konsultację z doradcą podatkowym.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 41e ust. 1",
+          "quote": "W przypadku stwierdzenia przez płatnika składek lub ubezpieczonego nieprawidłowości w raporcie informacyjnym płatnik składek jest obowiązany złożyć raport informacyjny korygujący"
+        }
+      ],
+      "conditions": [
+        "Stwierdzenie nieprawidłowości w raporcie informacyjnym przez płatnika lub ubezpieczonego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "raporty informacyjne - korekty",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "41a",
+        "41e"
+      ],
+      "_generated_from": [
+        "Czy musze zrobić korektę do lat poprzednich?"
+      ],
+      "_source_subbatch_key": "41a|41e::subbatch::1"
+    },
+    {
+      "id": "law-43-rejestracja-platnika",
+      "question_intent": "Kto jest zobowiązany do zgłoszenia się jako płatnik składek do ZUS?",
+      "question_patterns": [
+        "Kto musi się zarejestrować jako płatnik składek?",
+        "Czy muszę zgłosić się do ZUS jako płatnik?",
+        "Kiedy powstaje obowiązek zgłoszenia płatnika składek?",
+        "Kto jest zobowiązany do złożenia druku zgłoszenia płatnika składek?"
+      ],
+      "answer": "Płatnikiem składek jest osoba zatrudniająca pracownika lub prowadząca pozarolniczą działalność gospodarczą. Obowiązek zgłoszenia powstaje w terminie 7 dni od zatrudnienia pierwszego pracownika lub od daty powstania obowiązku ubezpieczeń emerytalnych i rentowych. Zgłoszenie dotyczy zarówno biur, firm jak i samych przedsiębiorców opłacających składki na własne ubezpieczenia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43 ust. 1",
+          "quote": "Płatnicy składek są zobowiązani do złożenia druku – zgłoszenie płatnika składek w Zakładzie w terminie 7 dni od daty zatrudnienia pierwszego pracownika lub powstania stosunku prawnego uzasadniającego objęcie ubezpieczeniami emerytalnym i rentowymi pierwszej osoby"
+        }
+      ],
+      "conditions": [
+        "zatrudnienie pierwszego pracownika",
+        "powstanie stosunku prawnego uzasadniającego obowiązek ubezpieczeń emerytalnych i rentowych",
+        "7 dni od zdarzenia powodującego powstanie obowiązku"
+      ],
+      "exceptions": [
+        "przedsiębiorcy zgłaszający się na podstawie odrębnych przepisów (art. 43 ust. 5a)",
+        "osoby wpisane do Krajowego Rejestru Sądowego (zgłaszają dane uzupełniające do naczelnika urzędu skarbowego)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "obowiązki rejestracyjne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "43",
+        "46"
+      ],
+      "_generated_from": [
+        "Księgowa, biuro czy sam przedsiębiorca?"
+      ],
+      "_source_subbatch_key": "43|46::subbatch::1"
+    },
+    {
+      "id": "law-43-Co-zawiera-zgloszczenie",
+      "question_intent": "Jakie dane muszą zawierać zgłoszenie płatnika składek?",
+      "question_patterns": [
+        "Co trzeba wpisać w zgłoszeniu płatnika?",
+        "Jakie informacje zawiera druk zgłoszenia?",
+        "Czego wymaga formularz zgłoszenia płatnika składek?",
+        "Jakimi danymi muszę uzupełnić zgłoszenie?"
+      ],
+      "answer": "Zgłoszenie osoby fizycznej musi zawierać co najmniej: numery NIP i REGON (lub PESEL/dowód), nazwisko, imię, datę i miejsce urodzenia, nazwę skróconą firmy, datę powstania obowiązku składkowego, wykaz rachunków bankowych, adresy siedziby, zamieszkania i korespondencji. Dla osób prawnych wymagane są: NIP, REGON, nazwa, dane rejestracyjne, data powstania obowiązku i dane kontaktowe.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43 ust. 4 i ust. 5",
+          "quote": "Zgłoszenie płatnika składek zawiera w szczególności następujące dane: numery NIP i REGON, nazwisko, imię, datę i miejsce urodzenia, nazwę skróconą firmy, datę powstania obowiązku opłacania składek, wykaz rachunków bankowych, adresy"
+        }
+      ],
+      "conditions": [
+        "dane muszą być aktualne i zgodne ze stanem faktycznym",
+        "dla osób fizycznych: dane osobowe (PESEL lub dowód osobisty)",
+        "dla osób prawnych: dane rejestracyjne i informacja o wpisie do rejestru"
+      ],
+      "exceptions": [
+        "przedsiębiorcy zgłaszają się na zasadach odrębnych (art. 43 ust. 5a)",
+        "podmioty wpisane do KRS przekazują dane uzupełniające do naczelnika urzędu skarbowego"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "obowiązki rejestracyjne",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "43",
+        "46"
+      ],
+      "_generated_from": [
+        "Księgowa, biuro czy sam przedsiębiorca?"
+      ],
+      "_source_subbatch_key": "43|46::subbatch::1"
+    },
+    {
+      "id": "law-46-obowiazek-rozliczenia",
+      "question_intent": "Co musi zrobić płatnik składek każdego miesiąca?",
+      "question_patterns": [
+        "Jakie są miesięczne obowiązki płatnika składek?",
+        "Jak rozliczyć składki za miesiąc?",
+        "Co trzeba złożyć w ZUS każdego miesiąca?",
+        "Jak obliczać i opłacać składki?"
+      ],
+      "answer": "Płatnik składek musi co miesiąc: obliczyć należne składki na każdy rodzaj ubezpieczenia, potrącić je z wynagrodzeń ubezpieczonych i rozliczyć w deklaracji rozliczeniowej, którą przekazuje do ZUS. Deklaracja powinna zawierać dane identyfikacyjne, liczbę ubezpieczonych, zestawienie składek i kwoty wypłaconych zasiłków.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 46 ust. 1 i ust. 2",
+          "quote": "Płatnik składek jest obowiązany obliczać, potrącać z dochodów ubezpieczonych, rozliczać oraz opłacać należne składki za każdy miesiąc kalendarzowy. Rozliczenie składek następuje w deklaracji rozliczeniowej"
+        }
+      ],
+      "conditions": [
+        "każdy miesiąc kalendarzowy",
+        "zgodnie z zasadami wynikającymi z przepisów ustawy",
+        "deklaracja rozliczeniowa przekazywana do wskazanej przez ZUS jednostki"
+      ],
+      "exceptions": [
+        "zasiłki wypłacone bezpodstawnie nie podlegają rozliczeniu w deklaracji"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "obowiązki rozliczeniowe",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "43",
+        "46"
+      ],
+      "_generated_from": [
+        "Księgowa, biuro czy sam przedsiębiorca?"
+      ],
+      "_source_subbatch_key": "43|46::subbatch::1"
+    },
+    {
+      "id": "law-46-zawartosc-deklaracji",
+      "question_intent": "Co dokładnie trzeba zawrzeć w deklaracji rozliczeniowej?",
+      "question_patterns": [
+        "Jakie dane musi zawierać deklaracja rozliczeniowa?",
+        "Co wykazać w druku rozliczeniowym?",
+        "Czego wymaga formula deklaracji?",
+        "Jakie informacje muszą być w deklaracji?"
+      ],
+      "answer": "Deklaracja rozliczeniowa powinna zawierać: dane identyfikacyjne płatnika (NIP, nazwę, nazwę skróconą), liczbę ubezpieczonych, zestawienie składek na poszczególne rodzaje ubezpieczeń (emerytu, rentowe, zdrowotne), kwoty wypłaconych zasiłków, przychody/dochody, informacje o formach opodatkowania oraz oświadczenie o zgodności danych z rzeczywistością potwierdzone podpisem.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 46 ust. 4",
+          "quote": "Deklaracja rozliczeniowa zawiera: dane identyfikacyjne płatnika, informacje o liczbie ubezpieczonych, zestawienie należnych składek, informacje o przychodach lub dochodach, kwoty wypłaconych zasiłków, oświadczenie płatnika potwierdzające zgodność danych ze stanem faktycznym"
+        }
+      ],
+      "conditions": [
+        "według ustalonego wzoru",
+        "dane muszą być kompletne i dokładne",
+        "potwierdzone oświadczeniem i podpisem"
+      ],
+      "exceptions": [
+        "zasiłki wypłacone bezpodstawnie nie uwzględniać w rozliczeniu"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "obowiązki rozliczeniowe",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "43",
+        "46"
+      ],
+      "_generated_from": [
+        "Księgowa, biuro czy sam przedsiębiorca?"
+      ],
+      "_source_subbatch_key": "43|46::subbatch::1"
+    },
+    {
+      "id": "law-16-17-skladki-koszty-uop-uz",
+      "question_intent": "Jak księgować składki ZUS w koszty dla pracowników i zleceniobiorców",
+      "question_patterns": [
+        "Jak księgujecie składki ZUS w koszty od u.o.p i u.z?",
+        "Czy składki ZUS na pracowników to koszt dla pracodawcy?",
+        "Czy składki ZUS za zleceniobiorców są kosztem?",
+        "Jaka część składek ZUS obciąża pracodawcę?"
+      ],
+      "answer": "Dla pracowników (u.o.p): pracodawca opłaca całość składek emerytalnych, rentowych, wypadkowych i chorobowych, które stanowią jego koszt operacyjny. Dla zleceniobiorców (u.z): pracodawca/płatnik opłaca składki emerytalne i rentowe w wysokości równej udziałowi ubezpieczonego, a także całość składki wypadkowej – wszystko to koszty pracodawcy. Składki chorobowe na pracowników finansuje w całości sam pracownik (potrącane z wynagrodzenia), więc nie stanowią kosztu pracodawcy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 1 pkt 1",
+          "quote": "Składki na ubezpieczenia emerytalne pracowników finansują z własnych środków, w równych częściach, ubezpieczeni i płatnicy składek"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 1 pkt 4",
+          "quote": "Składki na ubezpieczenia emerytalne zleceniobiorców finansują z własnych środków, w równych częściach, ubezpieczeni i płatnicy składek"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 2",
+          "quote": "Składki na ubezpieczenie chorobowe osób wymienionych w ust. 1 pkt 1–4 finansują w całości, z własnych środków, sami ubezpieczeni"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 16 ust. 3",
+          "quote": "Składki na ubezpieczenie wypadkowe osób wymienionych w ust. 1 pkt 1 i 3–10 finansują w całości, z własnych środków, płatnicy składek"
+        }
+      ],
+      "conditions": [
+        "Dotyczy pracowników ujętych w art. 16 ust. 1 pkt 1",
+        "Dotyczy zleceniobiorców ujętych w art. 16 ust. 1 pkt 4",
+        "Składki muszą być obliczane i przekazane przez płatnika składek co miesiąc"
+      ],
+      "exceptions": [
+        "Składki chorobowe pracowników nie są kosztem pracodawcy – finansuje je pracownik",
+        "W przypadku nielegalnego zatrudnienia lub zaniżenia podstawy wymiaru – całość składek (w tym część pracownika) opłaca pracodawca (art. 16 ust. 1e)"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "finansowanie_skladek_pracownicy_zleceniobiorcy",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "16",
+        "17"
+      ],
+      "_generated_from": [
+        "Jak księgujecie skladki ZUS w koszty od u.o.p i u.z?"
+      ],
+      "_source_subbatch_key": "16|17::subbatch::1"
+    },
+    {
+      "id": "law-28-umorzenie-skladek",
+      "question_intent": "Czy Zakład może jeszcze odzyskać należności ze składek, które zostały umorzone?",
+      "question_patterns": [
+        "Czy może tę kwotę jakoś jeszcze odzyskać?",
+        "Czy po umorzeniu składek Zakład może wznowić egzekucję?",
+        "Czy umorzenie składek jest ostateczne?"
+      ],
+      "answer": "Umorzenie należności ze składek przez Zakład jest ostateczne — tekst ustawy nie przewiduje możliwości wznowienia egzekucji po wydaniu decyzji umarza­jącej. Umorzenie składek powoduje także automatyczne umorzenie odsetek za zwłokę, kosztów upomnienia i dodatkowej opłaty, co oznacza całkowite wygaśnięcie roszczenia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 28 ust. 1, 4",
+          "quote": "Należności z tytułu składek mogą być umarzane w całości lub w części przez Zakład. Umorzenie składek powoduje także umorzenie odsetek za zwłokę, kosztów upomnienia i dodatkowej opłaty."
+        }
+      ],
+      "conditions": [
+        "Umorzenie następuje w ramach przesłanek określonych w art. 28 ust. 2-3",
+        "Decyzja o umorzeniu wydana przez Zakład"
+      ],
+      "exceptions": [
+        "Umorzenie cząstkowe w art. 28 ust. 3a dotyczy tylko ubezpieczonych będących równocześnie płatnikami"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "umorzenie_skladek",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "28",
+        "77a"
+      ],
+      "_generated_from": [
+        "Czy może tę kwotę jakoś jeszcze odzyskać?"
+      ],
+      "_source_subbatch_key": "28|77a::subbatch::1"
+    },
+    {
+      "id": "law-77a-umorzenie-cywilne",
+      "question_intent": "Czy Zakład może odzyskać należności cywilnoprawne po ich umorzeniu?",
+      "question_patterns": [
+        "Czy mogę jeszcze odzyskać umorzaną należność cywilnoprawną?",
+        "Czy umorzenie należności cywilnoprawnej jest nieodwołalne?"
+      ],
+      "answer": "Umorzenie należności cywilnoprawnej przez Zakład jest ostateczne i nieodwołalne — ustawa nie przewiduje wznowienia egzekucji po umorzeniu. Dotyczy to zarówno umorzenia z urzędu (art. 77a ust. 2) jak i na wniosek dłużnika (art. 77a ust. 4).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 77a ust. 1, 5",
+          "quote": "Zakład może umarzać w całości albo w części należności pieniężne mające charakter cywilnoprawny. Umorzenie następuje w formie pisemnej, na podstawie przepisów prawa cywilnego."
+        }
+      ],
+      "conditions": [
+        "Umorzenie wydane w formie pisemnej"
+      ],
+      "exceptions": [
+        "Przepisy art. 77a nie stosują się do należności, w przypadku których odrębne przepisy regulują umarzanie (art. 77a ust. 8)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "umorzenie_naleznosci_cywilnoprawnych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "28",
+        "77a"
+      ],
+      "_generated_from": [
+        "Czy może tę kwotę jakoś jeszcze odzyskać?"
+      ],
+      "_source_subbatch_key": "28|77a::subbatch::1"
+    },
+    {
+      "id": "law-19-przekroczenie-rocznej-podstawy",
+      "question_intent": "Czy składki na ubezpieczenia emerytalne i rentowe są pobierane tylko za miesiące, w których przychód przekroczy określony próg?",
+      "question_patterns": [
+        "Za miesiące w których przychód przekroczy połowę minimalnej emerytury i tylko za te miesiące?",
+        "Czy składki liczy się od każdego miesiąca osobno czy od całorocznego przychodu?",
+        "Czy mogę płacić składki tylko za wybrane miesiące?"
+      ],
+      "answer": "Składki na ubezpieczenia emerytalne i rentowe obliczane są od rocznej podstawy wymiaru, nie od poszczególnych miesięcy. Płatnik składek zobowiązany jest zaprzestać obliczanie i przekazywanie składek po przekroczeniu przez ubezpieczonego całorocznej kwoty rocznej podstawy wymiaru (art. 19 ust. 5). Rozliczenie odbywa się w skali roku kalendarzowego, a nie месячnej.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 19 ust. 1",
+          "quote": "Roczna podstawa wymiaru składek na ubezpieczenia emerytalne i rentowe w danym roku kalendarzowym nie może być wyższa od kwoty odpowiadającej trzydziestokrotności prognozowanego przeciętnego wynagrodzenia"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 19 ust. 5",
+          "quote": "Płatnik składek jest zobowiązany zaprzestać obliczać i przekazywać składki na ubezpieczenia emerytalne i rentowe po przekroczeniu przez ubezpieczonego kwoty rocznej podstawy wymiaru"
+        }
+      ],
+      "conditions": [
+        "Rozliczenie odbywa się w skali roku kalendarzowego",
+        "Limit dotyczy całorocznego przychodu, nie poszczególnych miesięcy",
+        "Obowiązek zaprzestania płacenia składek powstaje po przekroczeniu rocznego limitu"
+      ],
+      "exceptions": [
+        "Jeśli więcej niż jeden płatnik składek (art. 19 ust. 6)",
+        "Przy złożeniu korygującego imiennego raportu miesięcznego (art. 19 ust. 6a)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "Limit roczny składek emerytalnych i rentowych",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "19"
+      ],
+      "_generated_from": [
+        "Za miesiące w których przychód przekroczy połowę minimalnej emerytury i tylko za te miesiące?",
+        "Czy odejmuje dochód z miesiąca wcześniejszego z obecnym?"
+      ],
+      "_source_subbatch_key": "18aa|19::subbatch::1"
+    },
+    {
+      "id": "law-19-rozliczenie-miedzymiesiaczne",
+      "question_intent": "Czy dochód z miesiąca poprzedniego jest odejmowany od dochodu miesiąca bieżącego przy liczeniu składek?",
+      "question_patterns": [
+        "Czy odejmuje dochód z miesiąca wcześniejszego z obecnym?",
+        "Czy dokonuję rozliczenia międzymiesiącznego dochodów?",
+        "Czy mogę odliczyć straty z poprzedniego miesiąca?"
+      ],
+      "answer": "Tekst ustawy nie reguluje rozliczenia międzymiesiącznego dochodów ani odliczania zarobków z miesiąca wcześniejszego z bieżącym. Artykuł 19 dotyczy wyłącznie rocznej podstawy wymiaru składek i przekroczenia rocznego limitu w skali roku kalendarzowego. Szczegóły dotyczące metody liczenia podstawy wymiaru zawarte są w art. 18.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 19 ust. 1",
+          "quote": "Roczna podstawa wymiaru składek na ubezpieczenia emerytalne i rentowe w danym roku kalendarzowym"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 19 ust. 3",
+          "quote": "Do osiągnięcia kwoty, o której mowa w ust. 1, składki oblicza się od podstawy wymiaru ustalonej zgodnie z art. 18"
+        }
+      ],
+      "conditions": [
+        "Rozliczenie odbywa się w skali roku kalendarzowego",
+        "Podstawa wymiaru ustalana jest zgodnie z art. 18"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "Rozliczenie podstawy wymiaru składek",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "19"
+      ],
+      "_generated_from": [
+        "Za miesiące w których przychód przekroczy połowę minimalnej emerytury i tylko za te miesiące?",
+        "Czy odejmuje dochód z miesiąca wcześniejszego z obecnym?"
+      ],
+      "_source_subbatch_key": "18aa|19::subbatch::1"
+    },
+    {
+      "id": "law-36a-kod-ewidencji",
+      "question_intent": "Jaki kod ewidencji działalności (0590 czy 0510) stosować przy wznowieniu działalności po zawieszeniu",
+      "question_patterns": [
+        "Czy przy wznowieniu działalności będzie mogła korzystać z kodu 0590 czy automatem 0510?",
+        "Jaki kod ewidencji wybrać przy wznowieniu po zawieszeniu",
+        "Czy kod 0590 zmienia się na 0510 podczas wznowienia działalności"
+      ],
+      "answer": "Artykuł 36a nie określa przepisów dotyczących kodów ewidencji działalności (0510 czy 0590). Przepisy te znajdują się w innym akcie prawnym (Prawo przedsiębiorców z 2018 r.). Do udzielenia prawidłowej odpowiedzi wymagana jest weryfikacja kodów w obowiązujących przepisach o ewidencji działalności.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 36a",
+          "quote": "Wznowienie wykonywania działalności gospodarczej nie wymaga ponownego zgłoszenia do obowiązkowych ubezpieczeń emerytalnego, rentowych i wypadkowego"
+        }
+      ],
+      "conditions": [
+        "Artykuł reguluje wyłącznie kwestie ubezpieczeń społecznych",
+        "Wznowienie działalności nie wymaga ponownego zgłoszenia do ubezpieczeń"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zawieszenie_i_wznowienie_działalności",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "36a"
+      ],
+      "_generated_from": [
+        "Czy w momencie odwieszenia będzie mogła korzystać z kodu 0590 czy automatem 0510?"
+      ],
+      "_source_subbatch_key": "36a::subbatch::1"
+    },
+    {
+      "id": "law-18aa-rezygnacja-ubezpieczenia",
+      "question_intent": "Czy przedsiębiorca spełniający warunki przychodu musi być wyrejestrowany z jednego kodu ubezpieczenia i zarejestrowany z innego do określonego terminu",
+      "question_patterns": [
+        "Jeśli przedsiębiorca spełnia warunki przychodu za 2025 to do 31.01.2026 muszę go wyrejestrować z 0510 i zarejestrować z 0590",
+        "Czy przedsiębiorca z kodami 0510 musi przejść na 0590 po spełnieniu warunku przychodu",
+        "Jaki jest termin na zmianę rejestracji ubezpieczenia dla przedsiębiorcy spełniającego warunki przychodu"
+      ],
+      "answer": "Artykuł 18aa reguluje rezygnację z ulgi dla młodych przedsiębiorców (art. 18 Prawa przedsiębiorców), ale nie zawiera informacji o terminie 31.01.2026 ani o kodach ubezpieczenia 0510/0590. Aby udzielić prawidłowej odpowiedzi na temat obowiązku zmiany rejestracji w określonym terminie, konieczne jest sprawdzenie przepisów Prawa przedsiębiorców i wytycznych ZUS dotyczących warunków przychodu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18aa ust. 1",
+          "quote": "Przedsiębiorca będący osobą fizyczną może zrezygnować z uprawnienia, o którym mowa w art. 18 ust. 1 ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców, przez zgłoszenie do ubezpieczeń społecznych"
+        }
+      ],
+      "conditions": [
+        "Przedsiębiorca jest osobą fizyczną",
+        "Złożył zgłoszenie do ubezpieczeń społecznych na zasadach określonych w art. 18a i art. 36",
+        "Okres 24 miesięcy liczy się od dnia objęcia ubezpieczeniami"
+      ],
+      "exceptions": [
+        "Rezygnacja musi być zgłoszona na zasadach określonych w art. 18a i art. 36"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia społeczne przedsiębiorcy",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "43",
+        "44"
+      ],
+      "_generated_from": [
+        "#MZ+ jeśli przedsiębiorca spełnia warunki przychodu za 2025 to do 31.01.2026 muszę go wyrejestrować z 0510 i zarejestrować z 0590?"
+      ],
+      "_source_subbatch_key": "18aa|43|44::subbatch::1"
+    },
+    {
+      "id": "law-18aa-rejestracja-kod-0590",
+      "question_intent": "Kiedy należy przerejestrować na kod 0590 (mały ZUS plus)?",
+      "question_patterns": [
+        "Kiedy zgłosić zmianę na kod 0590?",
+        "Od kiedy obowiązuje przerejestrowanie na mały ZUS plus?",
+        "Jaki termin na przerejestrowanie 0590?"
+      ],
+      "answer": "Przerejestrowanie na kod 0590 (mały ZUS plus) należy zgłosić w terminie 7 dni od dnia zaistnienia zmiany warunków uprawniających do tego ubezpieczenia. Jednak dokładny moment, od którego należy się przerejestrować, zależy od konkretnych okoliczności faktycznych danego przedsiębiorcy i nie wynika wprost z przytoczonych artykułów ustawy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 1",
+          "quote": "O zmianach danych płatnik składek zawiadamia Zakład w terminie 7 dni od zaistnienia zmian"
+        }
+      ],
+      "conditions": [
+        "zmiana danych musi wynikać z faktycznie zaistniałych okoliczności",
+        "zawiadomienie musi być dokonane w formie dokumentu pisemnego według ustalonego wzoru lub wydruku z oprogramowania"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia_społeczne_przedsiębiorcy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "44"
+      ],
+      "_generated_from": [
+        "Kiedy należy przerejestrować na kod 0590 (mały ZUS plus)?",
+        "Czy mogę bez obaw dziś (2.02.2026) wysłać przerejestrowanie na kod 0590?",
+        "Co jeśli okazuje się dopiero dziś z uwagi na przyniesione dokumenty klienta, że mały ZUS plus się już nie należy (był do 11.2025) czy zgłoszenie 0510 od 01.01.2026 będzie już po terminie?"
+      ],
+      "_source_subbatch_key": "18aa|44::subbatch::1"
+    },
+    {
+      "id": "law-44-termin-zmiana-dane",
+      "question_intent": "Czy mogę bez obaw dziś (2.02.2026) wysłać przerejestrowanie na kod 0590?",
+      "question_patterns": [
+        "Czy mogę wysłać zgłoszenie zmiany dzisiaj?",
+        "Czy termin 7 dni jeszcze trwa?",
+        "Czy jestem w terminie do przerejestrowania?"
+      ],
+      "answer": "Możliwość wysłania przerejestrowania zależy od daty, w której zaistniała zmiana uprawniająca do kodu 0590. Jeśli do dnia 2.02.2026 upłynęło mniej niż 7 dni od zaistnienia tej zmiany, jesteś w terminie. Termin liczony jest od dnia zaistnienia zmian, nie od dnia jej odkrycia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 1",
+          "quote": "Płatnik składek zawiadamia Zakład w terminie 7 dni od zaistnienia zmian"
+        }
+      ],
+      "conditions": [
+        "termin liczy się od dnia faktycznego zaistnienia zmiany",
+        "nie od dnia jej odkrycia lub otrzymania dokumentów"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "terminy_zgłoszeń",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "44"
+      ],
+      "_generated_from": [
+        "Kiedy należy przerejestrować na kod 0590 (mały ZUS plus)?",
+        "Czy mogę bez obaw dziś (2.02.2026) wysłać przerejestrowanie na kod 0590?",
+        "Co jeśli okazuje się dopiero dziś z uwagi na przyniesione dokumenty klienta, że mały ZUS plus się już nie należy (był do 11.2025) czy zgłoszenie 0510 od 01.01.2026 będzie już po terminie?"
+      ],
+      "_source_subbatch_key": "18aa|44::subbatch::1"
+    },
+    {
+      "id": "law-44-zmiana-retroaktywna-terminy",
+      "question_intent": "Co jeśli okazuje się dopiero dziś (2.02.2026), że mały ZUS plus się już nie należy (był do 11.2025) - czy zgłoszenie 0510 od 01.01.2026 będzie już po terminie?",
+      "question_patterns": [
+        "Czy przeterminowałem zgłoszenie zmiany, którą odkryłem dopiero teraz?",
+        "Czy zmiana wsteczna ze względu na unieważnienie kodu 0590 jest już po terminie?",
+        "Jaki termin na zgłoszenie zmiany z powodu utraty uprawnień do 0590?"
+      ],
+      "answer": "Termin 7 dni liczony jest od dnia faktycznego zaistnienia zmiany (czyli od 01.01.2026, gdy utraciłeś uprawnienia do 0590), nie od dnia jej odkrycia (2.02.2026). Ponieważ od 01.01.2026 do 2.02.2026 upłynęło znacznie więcej niż 7 dni, zgłoszenie byłoby przeterminowane. Musisz zgłosić to bez zbędnej zwłoki, ale już po terminie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 44 ust. 1",
+          "quote": "Płatnik składek zawiadamia Zakład w terminie 7 dni od zaistnienia zmian"
+        }
+      ],
+      "conditions": [
+        "termin 7 dni liczy się od dnia zaistnienia zmiany (01.01.2026)",
+        "nie od dnia odkrycia lub otrzymania dokumentów (2.02.2026)"
+      ],
+      "exceptions": [
+        "zawiadomienie o stwierdzeniu nieprawidłowości we własnym zakresie powinno być dokonane bez zbędnej zwłoki"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "terminy_zgłoszeń_zmian",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "44"
+      ],
+      "_generated_from": [
+        "Kiedy należy przerejestrować na kod 0590 (mały ZUS plus)?",
+        "Czy mogę bez obaw dziś (2.02.2026) wysłać przerejestrowanie na kod 0590?",
+        "Co jeśli okazuje się dopiero dziś z uwagi na przyniesione dokumenty klienta, że mały ZUS plus się już nie należy (był do 11.2025) czy zgłoszenie 0510 od 01.01.2026 będzie już po terminie?"
+      ],
+      "_source_subbatch_key": "18aa|44::subbatch::1"
+    },
+    {
+      "id": "law-20-skladki-odliczenie",
+      "question_intent": "Czy można odliczyć składkę społeczną i część składki zdrowotnej",
+      "question_patterns": [
+        "Czy mogę odliczyć składkę społeczną i 50% składki zdrowotnej?",
+        "Jakie składki mogę odliczyć od przychodu?",
+        "Czy składka chorobowa i zdrowotna podlegają odliczeniu?"
+      ],
+      "answer": "Artykuł 20 Ustawy o systemie ubezpieczeń społecznych reguluje jedynie podstawę wymiaru składek, a nie zasady ich odliczania. Aby udzielić odpowiedzi na temat możliwości odliczenia składek społecznych i zdrowotnych, wymagana jest analiza innych przepisów ustawy (szczególnie dotyczących kosztów uzyskania przychodu) oraz przepisów ustawy o podatku dochodowym.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 20",
+          "quote": "Podstawę wymiaru składek na ubezpieczenie chorobowe oraz ubezpieczenie wypadkowe stanowi podstawa wymiaru składek na ubezpieczenie emerytalne i ubezpieczenia rentowe"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "podstawa wymiaru składek",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "20"
+      ],
+      "_generated_from": [
+        "Czy mogę odliczyć składkę społeczna i 50% składki zdrowotnej?"
+      ],
+      "_source_subbatch_key": "20::subbatch::1"
+    },
+    {
+      "id": "law-6-dorobka-bez-rejestracji",
+      "question_intent": "Czy osoba po zamknięciu działalności 3 lata temu może pracować bez rejestracji nowej firmy i czy ma obowiązek opłacania składek ZUS?",
+      "question_patterns": [
+        "Czy mogę pracować bez rejestracji firmy jeśli zamknąłem ją 3 lata temu?",
+        "Jakie są konsekwencje braku rejestracji działalności dla składek ZUS?",
+        "Czy muszę płacić składki ZUS jeśli pracuję bez zarejestrowanej działalności?"
+      ],
+      "answer": "Jeśli prowadzisz pracę zarobkową, w tym dorobek, na terenie Polski, jesteś obowiązkowo ubezpieczony z tytułu prowadzenia pozarolniczej działalności (art. 6 ust. 1 pkt 5). Brak rejestracji działalności nie zwalnia Cię z tego obowiązku – składki ZUS są należne niezależnie od stanu rejestracji w CEIDG. To, że zamknąłeś firmę 3 lata temu, nie wpływa na obowiązek ubezpieczenia się z nowej działalności.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6 ust. 1 pkt 5",
+          "quote": "osobami prowadzącymi pozarolniczą działalność oraz osobami z nimi współpracującymi"
+        }
+      ],
+      "conditions": [
+        "Świadczysz pracę zarobkową na terenie Polski",
+        "Działalność jest pozarolniczna",
+        "Wykonujesz ją osobiście"
+      ],
+      "exceptions": [
+        "Art. 8 i 9 mogą zawierać wyjątki dla specjalnych grup"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia_emerytalne_rentowe_obowiazek",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "6",
+        "6a",
+        "6b"
+      ],
+      "_generated_from": [
+        "Odnośnie składek ZUS. Chciałbym sobie dorobić, nie mogę mieć nierejestrowanej dzialnosci,bo od zamknięcia mojej firmy minęło 3 lata?"
+      ],
+      "_source_subbatch_key": "6|6a|6b::subbatch::1"
+    },
+    {
+      "id": "law-6a-skladki-po-zakonczeniu-dzialalnosci",
+      "question_intent": "Czy osoba, która zaprzestała prowadzić działalność, może się ubezpieczyć jeśli teraz opiekuje się dzieckiem?",
+      "question_patterns": [
+        "Czy mogę się ubezpieczyć po zamknięciu firmy jeśli będę opiekować się dzieckiem?",
+        "Jaki jest warunek czasowy aby ubezpieczyć się z tytułu opieki nad dzieckiem po działalności?"
+      ],
+      "answer": "Jeśli prowadziłeś pozarolniczą działalność przez co najmniej 6 miesięcy i ją zaprzestałeś, możesz podlegać obowiązkowym ubezpieczeniom emerytalnym i rentowym z tytułu sprawowania osobistej opieki nad dzieckiem (art. 6a ust. 1 pkt 1). Warunek 6-miesięcznego okresu uważa się za spełniony, jeśli w tym czasie nieprzerwanie opłacałeś składki (art. 6a ust. 2). To znaczy, że możesz się ubezpieczyć, ale z innego tytułu – opieki nad dzieckiem, nie działalności.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 1 pkt 1",
+          "quote": "osobami, które prowadziły pozarolniczą działalność gospodarczą przez okres co najmniej 6 miesięcy i zaprzestały jej prowadzenia"
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 6a ust. 2",
+          "quote": "podlegały z tych tytułów nieprzerwanie ubezpieczeniom emerytalnemu i rentowym bezpośrednio przed dniem rozpoczęcia sprawowania osobistej opieki nad dzieckiem i opłacały składki"
+        }
+      ],
+      "conditions": [
+        "Prowadziłeś pozarolniczą działalność przez co najmniej 6 miesięcy",
+        "Zaprzestałeś jej prowadzenia",
+        "Podlegałeś neprzerwanie ubezpieczeniom emerytalnym i rentowym w tym okresie",
+        "Opłacałeś składki w tym okresie",
+        "Teraz sprawujesz osobistą opiekę nad dzieckiem"
+      ],
+      "exceptions": [
+        "Jeśli drugi rodzic już jest objęty ubezpieczeniami z tego tytułu (art. 6a ust. 3)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ubezpieczenia_opieka_nad_dzieckiem",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "6",
+        "6a",
+        "6b"
+      ],
+      "_generated_from": [
+        "Odnośnie składek ZUS. Chciałbym sobie dorobić, nie mogę mieć nierejestrowanej dzialnosci,bo od zamknięcia mojej firmy minęło 3 lata?"
+      ],
+      "_source_subbatch_key": "6|6a|6b::subbatch::1"
+    },
+    {
+      "id": "law-43-kod-zawodu",
+      "question_intent": "Czy przy zgłoszeniu płatnika składek trzeba podawać kod zawodu?",
+      "question_patterns": [
+        "Czy trzeba podać kod zawodu przy zgłoszeniu płatnika?",
+        "Jaki kod zawodu podać w zgłoszeniu płatnika składek?",
+        "Czy kod zawodu jest wymagany w zgłoszeniu?",
+        "Czy też przy zgłoszeniu macie problem z kodem zawodu?"
+      ],
+      "answer": "Ustawa o systemie ubezpieczeń społecznych w art. 43 nie wymienia kodu zawodu jako obowiązkową daną w zgłoszeniu płatnika składek. Wymieniane są: NIP, REGON, PESEL, dane osobowe, adresy, numer uprawnień do prowadzenia działalności oraz rachunki bankowe. Kod zawodu nie figuruje w katalogu danych wymaganych przez prawo ubezpieczeń społecznych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 43 ust. 4-5",
+          "quote": "Zgłoszenie zawiera w szczególności następujące dane: numery NIP i REGON, nazwisko, imię, datę i miejsce urodzenia, rodzaj i numer uprawnienia, na podstawie którego prowadzona jest pozarolnicza działalność"
+        }
+      ],
+      "conditions": [
+        "Katalog danych w art. 43 ust. 4 dotyczy osób fizycznych",
+        "Katalog danych w art. 43 ust. 5 dotyczy osób prawnych i jednostek nieposiadających osobowości prawnej",
+        "Art. 43 ust. 5b-5c określają odrębne zasady dla płatników wpisanych do KRS"
+      ],
+      "exceptions": [
+        "Przepisy mogą być uzupełnione w odrębnych rozporządzeniach wykonawczych (nie wynika z przytoczonego tekstu)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "zgłoszenie_płatnika_składek",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "43"
+      ],
+      "_generated_from": [
+        "Czy też przy zgłoszeniu macie problem z kodem zawodu?"
+      ],
+      "_source_subbatch_key": "43::subbatch::1"
+    },
+    {
+      "id": "law-18aa-wakacje-skladkowe-rejestracja",
+      "question_intent": "Czy zmiana statusu ubezpieczenia (przerejestrowanie się na ZUS Plus) po przyznaniu wakacji składkowych wpływa na ważność tych wakacji?",
+      "question_patterns": [
+        "Przerejestrowanie na ZUS Plus po przyznaniu wakacji składkowych",
+        "Zmiana statusu ubezpieczenia a ważność już przyznanych wakacji",
+        "Czy wakacje składkowe tracą ważność po zmianie rejestru?",
+        "Co się dzieje z decyzją o wakacjach gdy zmieniam rejestr ubezpieczenia?"
+      ],
+      "answer": "Ustawa o systemie ubezpieczeń społecznych nie zawiera przepisów, które bezpośrednio regulują sytuację, gdy płatnik ma już przyznane wakacje składkowe, a następnie zmienia status ubezpieczenia poprzez przerejestrowanie się na inny system. Problem dotyka kwestii interakcji pomiędzy decyzją administracyjną o wakacjach a zmianą rejestru ubezpieczenia, co wymaga interpretacji organów ZUS.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 18aa ust. 1-3",
+          "quote": "Przedsiębiorca będący osobą fizyczną może zrezygnować z uprawnienia, przez zgłoszenie do ubezpieczeń społecznych; objęcie ubezpieczeniami następuje od dnia wskazanego we wniosku"
+        }
+      ],
+      "conditions": [
+        "Wniosek o wakacje składkowe został złożony i przyznany",
+        "Decyzja administracyjna w sprawie wakacji została wydana",
+        "Płatnik dokonał zmian w rejestracji ubezpieczenia (przerejestrowanie na ZUS Plus)"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "rejestracja_ubezpieczenia_zmiany_danych",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "18aa",
+        "44",
+        "47a"
+      ],
+      "_generated_from": [
+        "Co w sytuacji jak był złożony wniosek o wakacje składkowe za 01/26 i zostały przyznane ,a płatnik przerejestrował się dzięki zmianą na ZUS plus po wydanej decyzji?"
+      ],
+      "_source_subbatch_key": "18aa|44|47a::subbatch::1"
+    },
+    {
+      "id": "law-40d-kto-wylicza-emeryture",
+      "question_intent": "Która instytucja dokonuje waloryzacji składek i wyliczania emerytury — ZUS czy inna?",
+      "question_patterns": [
+        "Czy ZUS wylicza emeryturę?",
+        "Kto dokonuje waloryzacji składek przy ustalaniu emerytury?",
+        "Która instytucja odpowiada za wyliczenie emerytury?",
+        "Czy to ZUS czy inna instytucja wylicza emeryturę?"
+      ],
+      "answer": "Zgodnie z art. 40d, waloryzacja składek i ich podział przy ustalaniu emerytury dokonywane są przez Zakład (ZUS). Artykuł mówi o waloryzacji kwartalnej przeprowadzanej przy ustalaniu wysokości emerytury, ale nie określa wprost, która instytucja decyduje o ostatecznym wyliczeniu wysokości emerytury — wymaga to weryfikacji w pozostałych przepisach o emeryturach.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 40d ust. 1",
+          "quote": "Przy ustalaniu wysokości emerytury kwota składek, środków, odsetek za zwłokę i opłaty prolongacyjnej, zewidencjonowanych na subkoncie po dniu 31 stycznia roku, za który przeprowadzono ostatnią roczną waloryzację składek i środków, jest waloryzowana kwartalnie."
+        },
+        {
+          "law": "Ustawa o systemie ubezpieczeń społecznych",
+          "article": "art. 40d ust. 4",
+          "quote": "Waloryzacja kwartalna polega na pomnożeniu kwoty składek, środków, odsetek za zwłokę i opłaty prolongacyjnej zewidencjonowanych na subkoncie przez wskaźnik kwartalnej waloryzacji."
+        }
+      ],
+      "conditions": [
+        "Waloryzacja kwartalna dokonywana jest przy ustalaniu wysokości emerytury",
+        "Kwota na subkoncie musi być zewidencjonowana po 31 stycznia roku, za który przeprowadzono ostatnią roczną waloryzację",
+        "Wskaźnik kwartalnej waloryzacji ogłaszany jest przez Prezesa Zakładu w Dzienniku Urzędowym"
+      ],
+      "exceptions": [
+        "Waloryzacja kwartalna przeprowadzona przy ustalaniu okresowej emerytury kapitałowej nie jest uwzględniana przy kolejnych waloryzacjach rocznych (art. 40d ust. 8)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "emerytury i renty",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "40d",
+        "40e"
+      ],
+      "_generated_from": [
+        "Czy ZUS w momencie wyliczania emerytury dojdzie do tego albo inna instytucja?"
+      ],
+      "_source_subbatch_key": "40d|40e::subbatch::1"
+    }
+  ],
+  "errors": []
+}
