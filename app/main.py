@@ -303,6 +303,7 @@ def render_chat_page() -> None:
         chunk_ids=[f"{chunk.law_name} {chunk.article_number}" for chunk in result.chunks],
         answer_length=len(result.answer),
         grounded=bool(result.audit.get("grounded", False)),
+        no_match_reason=result.no_match_reason,
     )
 
     st.session_state.chat_history.extend(

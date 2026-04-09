@@ -66,6 +66,7 @@ class LawChunk:
     category: str
     verified_date: str
     question_intent: str = ""
+    score: float = 0.0
 
 
 _CACHE_LOCK = Lock()
@@ -283,7 +284,20 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> l
         boosted_score = float(score)
         if _category_matches(query_category, chunk):
             boosted_score *= 1.5
-        scored.append((boosted_score, chunk))
+        scored.append(
+            (
+                boosted_score,
+                LawChunk(
+                    content=chunk.content,
+                    law_name=chunk.law_name,
+                    article_number=chunk.article_number,
+                    category=chunk.category,
+                    verified_date=chunk.verified_date,
+                    question_intent=chunk.question_intent,
+                    score=boosted_score,
+                ),
+            )
+        )
 
     scored.sort(
         key=lambda item: (

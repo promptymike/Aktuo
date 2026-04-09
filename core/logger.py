@@ -41,6 +41,7 @@ def log_query(
     chunk_ids: list[str],
     answer_length: int,
     grounded: bool,
+    no_match_reason: str | None = None,
 ) -> None:
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -54,6 +55,8 @@ def log_query(
         "answer_length": answer_length,
         "grounded": grounded,
     }
+    if no_match_reason:
+        entry["no_match_reason"] = no_match_reason
     Thread(target=_write_log_entry, args=(entry,), daemon=True).start()
 
 

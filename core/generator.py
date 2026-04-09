@@ -4,15 +4,25 @@ import json
 from collections.abc import Sequence
 from urllib import error, request
 
+from config.settings import BM25_MIN_SCORE
 from core.retriever import LawChunk
 
 ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_API_VERSION = "2023-06-01"
 ANTHROPIC_MODEL = "claude-sonnet-4-6"
+LOW_CONFIDENCE_FALLBACK = (
+    "Nie znalazłem odpowiedzi w dostępnej bazie przepisów. "
+    "Aktuo obejmuje: VAT, PIT, Ordynację podatkową, rachunkowość, KSeF i JPK. "
+    "Jeśli Twoje pytanie dotyczy innego obszaru, pracujemy nad rozszerzeniem bazy."
+)
 
 
 class AnthropicAPIError(RuntimeError):
     pass
+
+
+def is_low_confidence_retrieval(chunks: Sequence[LawChunk]) -> bool:
+    return bool(chunks) and all(chunk.score < BM25_MIN_SCORE for chunk in chunks)
 
 
 def _build_user_prompt(query: str, chunks: Sequence[LawChunk]) -> str:
@@ -58,6 +68,8 @@ def generate_answer(
 ) -> str:
     if not chunks:
         return "insufficient data"
+    if is_low_confidence_retrieval(chunks):
+        return LOW_CONFIDENCE_FALLBACK
     if not api_key:
         raise AnthropicAPIError("Missing ANTHROPIC_API_KEY.")
 

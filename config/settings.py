@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(PROJECT_ROOT / ".env", override=False, encoding="utf-8")
 DEFAULT_SYSTEM_PROMPT_PATH = PROJECT_ROOT / "data" / "prompts" / "system_prompt_pl.txt"
+BM25_MIN_SCORE = 2.0
 
 PLACEHOLDER_VALUES = {
     "",
