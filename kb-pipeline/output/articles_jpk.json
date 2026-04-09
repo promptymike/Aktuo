@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "law_name": "Rozporządzenie Ministra Finansów w sprawie szczegółowego zakresu danych zawartych w deklaracjach podatkowych i w ewidencji w zakresie podatku od towarów i usług",
+    "short_name": "Rozporządzenie JPK_V7",
+    "date": "2019-10-15",
+    "isap_id": "Dz.U. 2019 poz. 1988"
+  },
+  "stats": {
+    "total_articles": 6,
+    "active_articles": 6,
+    "repealed_articles": 0
+  },
+  "articles": [
+    {
+      "article_number": "2",
+      "full_id": "§ 2",
+      "division": "Przepisy ogólne",
+      "chapter": "",
+      "raw_text": "§ 2. Rozporządzenie określa szczegółowy zakres danych zawartych w deklaracjach podatkowych oraz w ewidencji, o której mowa w art. 109 ust. 3 ustawy o VAT. Dane te służą prawidłowemu rozliczeniu podatku oraz sporządzeniu pliku JPK_V7. JPK_V7 obejmuje część deklaracyjną i część ewidencyjną. Struktura dotyczy podatników rozliczających VAT i prowadzących ewidencję dla potrzeb tego podatku.",
+      "paragraphs": [
+        {"paragraph_number": "1", "text": "Rozporządzenie określa szczegółowy zakres danych zawartych w deklaracjach podatkowych oraz w ewidencji VAT."},
+        {"paragraph_number": "2", "text": "Dane te służą prawidłowemu rozliczeniu podatku oraz sporządzeniu pliku JPK_V7."},
+        {"paragraph_number": "3", "text": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną."},
+        {"paragraph_number": "4", "text": "Struktura dotyczy podatników rozliczających VAT i prowadzących ewidencję dla potrzeb tego podatku."}
+      ],
+      "is_repealed": false,
+      "char_count": 437
+    },
+    {
+      "article_number": "4",
+      "full_id": "§ 4",
+      "division": "Część deklaracyjna",
+      "chapter": "",
+      "raw_text": "§ 4. Część deklaracyjna JPK_V7 zawiera dane odpowiadające rozliczeniu podatku należnego i naliczonego za dany okres. Obejmuje w szczególności podstawy opodatkowania, wysokość podatku, korekty oraz dane pozwalające ustalić wysokość zobowiązania podatkowego albo zwrotu podatku. W strukturze rozróżnia się rozliczenie miesięczne oraz kwartalne.",
+      "paragraphs": [
+        {"paragraph_number": "1", "text": "Część deklaracyjna JPK_V7 zawiera dane odpowiadające rozliczeniu podatku należnego i naliczonego za dany okres."},
+        {"paragraph_number": "2", "text": "Obejmuje podstawy opodatkowania, wysokość podatku, korekty oraz dane potrzebne do ustalenia zobowiązania lub zwrotu."},
+        {"paragraph_number": "3", "text": "W strukturze rozróżnia się rozliczenie miesięczne oraz kwartalne."}
+      ],
+      "is_repealed": false,
+      "char_count": 381
+    },
+    {
+      "article_number": "5",
+      "full_id": "§ 5",
+      "division": "Część deklaracyjna",
+      "chapter": "",
+      "raw_text": "§ 5. Część deklaracyjna zawiera także oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia za okres miesięczny albo kwartalny. Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK_V7M albo JPK_V7K. Korekty części deklaracyjnej składa się za okres, którego dotyczą korygowane dane.",
+      "paragraphs": [
+        {"paragraph_number": "1", "text": "Część deklaracyjna zawiera również oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia."},
+        {"paragraph_number": "2", "text": "Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK_V7M albo JPK_V7K."},
+        {"paragraph_number": "3", "text": "Korekty części deklaracyjnej składa się za okres, którego dotyczą korygowane dane."}
+      ],
+      "is_repealed": false,
+      "char_count": 327
+    },
+    {
+      "article_number": "10",
+      "full_id": "§ 10",
+      "division": "Ewidencja sprzedaży",
+      "chapter": "",
+      "raw_text": "§ 10. Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia grup towarów i usług (GTU) oraz oznaczenia procedur i typów dokumentów. Do oznaczeń procedur należą między innymi TP, SW, EE, MPP oraz inne wskazane w strukturze logicznej. Oznaczenia GTU stosuje się tylko do towarów i usług objętych odpowiednimi grupami. Oznaczenia procedur i GTU stosuje się po stronie sprzedaży zgodnie z charakterem transakcji. Raporty okresowe z kas rejestrujących, faktury do paragonów i inne dokumenty ujmuje się według zasad przewidzianych w ewidencji sprzedaży.",
+      "paragraphs": [
+        {"paragraph_number": "1", "text": "Ewidencja sprzedaży w JPK_V7 zawiera dane identyfikujące dokumenty sprzedaży, kontrahenta, podstawę opodatkowania i podatek należny."},
+        {"paragraph_number": "2", "text": "W ewidencji stosuje się oznaczenia grup towarów i usług GTU oraz oznaczenia procedur i typów dokumentów."},
+        {"paragraph_number": "3", "text": "Do oznaczeń procedur należą między innymi TP, SW, EE, MPP oraz inne wskazane w strukturze logicznej."},
+        {"paragraph_number": "4", "text": "Oznaczenia GTU stosuje się tylko do towarów i usług objętych odpowiednimi grupami."},
+        {"paragraph_number": "5", "text": "Oznaczenia procedur i GTU stosuje się po stronie sprzedaży zgodnie z charakterem transakcji."},
+        {"paragraph_number": "6", "text": "Raporty okresowe z kas rejestrujących, faktury do paragonów i inne dokumenty ujmuje się według zasad przewidzianych w ewidencji sprzedaży."}
+      ],
+      "is_repealed": false,
+      "char_count": 989
+    },
+    {
+      "article_number": "11",
+      "full_id": "§ 11",
+      "division": "Ewidencja zakupu",
+      "chapter": "",
+      "raw_text": "§ 11. Ewidencja zakupu w JPK_V7 zawiera dane pozwalające ustalić wysokość podatku naliczonego podlegającego odliczeniu oraz dane identyfikujące dokument zakupu i kontrahenta. W części zakupowej wykazuje się informacje potrzebne do rozliczenia podatku naliczonego za dany okres. Jeżeli korekta wpływa na podatek naliczony, powinna zostać wykazana w ewidencji zakupu za właściwy okres. Struktura obejmuje dane wymagane dla identyfikacji dokumentu, kontrahenta i kwot podatku.",
+      "paragraphs": [
+        {"paragraph_number": "1", "text": "Ewidencja zakupu w JPK_V7 zawiera dane potrzebne do ustalenia podatku naliczonego podlegającego odliczeniu."},
+        {"paragraph_number": "2", "text": "W części zakupowej wykazuje się dane identyfikujące dokument zakupu i kontrahenta."},
+        {"paragraph_number": "3", "text": "Korekty wpływające na podatek naliczony wykazuje się w ewidencji zakupu za właściwy okres."},
+        {"paragraph_number": "4", "text": "Struktura obejmuje dane identyfikujące dokument, kontrahenta i kwoty podatku."}
+      ],
+      "is_repealed": false,
+      "char_count": 613
+    },
+    {
+      "article_number": "12",
+      "full_id": "§ 12",
+      "division": "Korekty i wymogi techniczne",
+      "chapter": "",
+      "raw_text": "§ 12. Korekty pliku JPK_V7 składa się za okres, którego dotyczą korygowane dane. Plik powinien być zgodny ze strukturą logiczną opublikowaną przez Ministerstwo Finansów. Błędy formalne lub techniczne mogą skutkować odrzuceniem pliku. Korekta powinna obejmować dane prawidłowe dla całego okresu objętego korektą.",
+      "paragraphs": [
+        {"paragraph_number": "1", "text": "Korekty pliku JPK_V7 składa się za okres, którego dotyczą korygowane dane."},
+        {"paragraph_number": "2", "text": "Plik powinien być zgodny ze strukturą logiczną opublikowaną przez Ministerstwo Finansów."},
+        {"paragraph_number": "3", "text": "Błędy formalne lub techniczne mogą skutkować odrzuceniem pliku."},
+        {"paragraph_number": "4", "text": "Korekta powinna obejmować dane prawidłowe dla całego okresu objętego korektą."}
+      ],
+      "is_repealed": false,
+      "char_count": 328
+    }
+  ]
+}

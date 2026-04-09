@@ -1,0 +1,530 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 09:07:31",
+    "total_questions": 30,
+    "completed_batches_count": 2,
+    "total_batches": 2,
+    "completed_batches": [
+      0,
+      1
+    ],
+    "matched": 25,
+    "unmatched": 5,
+    "total_cost_usd": 0.0042
+  },
+  "batch_results": {
+    "0": [
+      {
+        "question": "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Rozporządzenie określa zakres danych w deklaracji, ale brak szczegółów o wariantach M i K w podanym indeksie",
+        "uncertain": true
+      },
+      {
+        "question": "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie dotyczy obowiązków podmiotowych, ale szczegóły wariantów nie są dostępne w indeksie",
+        "uncertain": true
+      },
+      {
+        "question": "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Przepisy ogólne określają zakres, ale szczegółowe wyjątki dotyczące zwolnienia nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Do kiedy trzeba wysłać plik JPK_V7 za dany miesiąc?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Terminy składania nie są zawarte w podanym indeksie artykułów"
+      },
+      {
+        "question": "Czy JPK_V7K wysyła się co miesiąc czy co kwartał?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Informacja o okresach składania wariantu K nie jest dostępna w indeksie"
+      },
+      {
+        "question": "Jakie dane zawiera część deklaracyjna JPK_V7?",
+        "matched_articles": [
+          "§ 4",
+          "§ 5"
+        ],
+        "primary_article": "§ 4",
+        "reasoning": "§ 4 określa dane w części deklaracyjnej odpowiadające rozliczeniu, § 5 dodaje wymagania techniczne"
+      },
+      {
+        "question": "Jakie dane zawiera część ewidencyjna JPK_V7?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 opisuje ewidencję sprzedaży, § 11 ewidencję zakupu jako części ewidencyjne"
+      },
+      {
+        "question": "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera dane do identyfikacji, w tym oznaczenia GTU",
+        "uncertain": true
+      },
+      {
+        "question": "Jakie towary obejmuje GTU_01?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Szczegółowy opis poszczególnych kodów GTU nie jest dostępny w indeksie"
+      },
+      {
+        "question": "Kiedy stosuje się GTU_06?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Szczegółowy opis kodów GTU nie jest dostępny w indeksie"
+      },
+      {
+        "question": "Czy usługi niematerialne trzeba oznaczać GTU_12?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Szczegółowy opis kodów GTU i warunków ich stosowania nie jest dostępny w indeksie"
+      },
+      {
+        "question": "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera wymogi oznaczania, ale szczegółowe warunki nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera oznaczenia transakcji, ale szczegóły TP nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale szczegóły symbolu SW nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale definicja EE nie jest dostępna",
+        "uncertain": true
+      },
+      {
+        "question": "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale szczegóły MPP nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale szczegóły IMP nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży dotyczy identyfikacji danych, ale szczegóły paragonu nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera dane identyfikacyjne, ale szczegółowe reguły nie są dostępne",
+        "uncertain": true
+      },
+      {
+        "question": "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera dane, ale szczegóły ujmowania raportów fiskalnych nie są dostępne",
+        "uncertain": true
+      }
+    ],
+    "1": [
+      {
+        "question": "Jak wykazać korektę sprzedaży w JPK_V7?",
+        "matched_articles": [
+          "§ 12",
+          "§ 10"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 określa zasady korekt w JPK_V7, § 10 dotyczy ewidencji sprzedaży która podlega korekcie"
+      },
+      {
+        "question": "Jak wykazać korektę zakupu w JPK_V7?",
+        "matched_articles": [
+          "§ 12",
+          "§ 11"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 określa zasady korekt w JPK_V7, § 11 dotyczy ewidencji zakupu która podlega korekcie"
+      },
+      {
+        "question": "Czy korekta JPK_V7 wymaga uzasadnienia?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 określa wymogi techniczne dla korekt JPK_V7"
+      },
+      {
+        "question": "Czy przy błędzie w JPK_V7 trzeba składać czynny żal?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 reguluje procedurę korekt JPK_V7, która zastępuje czynny żal",
+        "uncertain": true
+      },
+      {
+        "question": "Jakie są najczęstsze błędy odrzucające plik JPK_V7?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne wymagane w JPK_V7",
+        "uncertain": true
+      },
+      {
+        "question": "Czy brak oznaczenia GTU powoduje konieczność korekty JPK_V7?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa wymagane pola techniczne, § 10 reguluje ewidencję sprzedaży",
+        "uncertain": true
+      },
+      {
+        "question": "Czy można wysłać JPK_V7 po terminie?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "§ 2 określa przepisy ogólne dotyczące zakresu i charakteru JPK_V7",
+        "uncertain": true
+      },
+      {
+        "question": "Jakie oznaczenia transakcji stosuje się przy sprzedaży wysyłkowej?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 reguluje ewidencję sprzedaży zawierającą dane dotyczące transakcji sprzedaży"
+      },
+      {
+        "question": "Czy zakup objęty MPP oznacza się także po stronie zakupowej?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "§ 11 określa ewidencję zakupu i dane wymagane w tym zakresie"
+      },
+      {
+        "question": "Jakie dane kontrahenta trzeba wykazać w ewidencji JPK_V7?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 i § 11 określają dane ewidencji sprzedaży i zakupu zawierające informacje o kontrahentach"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "question": "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Rozporządzenie określa zakres danych w deklaracji, ale brak szczegółów o wariantach M i K w podanym indeksie",
+      "uncertain": true
+    },
+    {
+      "question": "Kto składa JPK_V7M, a kto JPK_V7K?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie dotyczy obowiązków podmiotowych, ale szczegóły wariantów nie są dostępne w indeksie",
+      "uncertain": true
+    },
+    {
+      "question": "Czy podatnik zwolniony z VAT składa JPK_V7?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Przepisy ogólne określają zakres, ale szczegółowe wyjątki dotyczące zwolnienia nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Do kiedy trzeba wysłać plik JPK_V7 za dany miesiąc?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Terminy składania nie są zawarte w podanym indeksie artykułów"
+    },
+    {
+      "question": "Czy JPK_V7K wysyła się co miesiąc czy co kwartał?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Informacja o okresach składania wariantu K nie jest dostępna w indeksie"
+    },
+    {
+      "question": "Jakie dane zawiera część deklaracyjna JPK_V7?",
+      "matched_articles": [
+        "§ 4",
+        "§ 5"
+      ],
+      "primary_article": "§ 4",
+      "reasoning": "§ 4 określa dane w części deklaracyjnej odpowiadające rozliczeniu, § 5 dodaje wymagania techniczne"
+    },
+    {
+      "question": "Jakie dane zawiera część ewidencyjna JPK_V7?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 opisuje ewidencję sprzedaży, § 11 ewidencję zakupu jako części ewidencyjne"
+    },
+    {
+      "question": "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera dane do identyfikacji, w tym oznaczenia GTU",
+      "uncertain": true
+    },
+    {
+      "question": "Jakie towary obejmuje GTU_01?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Szczegółowy opis poszczególnych kodów GTU nie jest dostępny w indeksie"
+    },
+    {
+      "question": "Kiedy stosuje się GTU_06?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Szczegółowy opis kodów GTU nie jest dostępny w indeksie"
+    },
+    {
+      "question": "Czy usługi niematerialne trzeba oznaczać GTU_12?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Szczegółowy opis kodów GTU i warunków ich stosowania nie jest dostępny w indeksie"
+    },
+    {
+      "question": "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera wymogi oznaczania, ale szczegółowe warunki nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera oznaczenia transakcji, ale szczegóły TP nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale szczegóły symbolu SW nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale definicja EE nie jest dostępna",
+      "uncertain": true
+    },
+    {
+      "question": "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale szczegóły MPP nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera oznaczenia, ale szczegóły IMP nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży dotyczy identyfikacji danych, ale szczegóły paragonu nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Jak wykazać fakturę do paragonu w JPK_V7?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera dane identyfikacyjne, ale szczegółowe reguły nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera dane, ale szczegóły ujmowania raportów fiskalnych nie są dostępne",
+      "uncertain": true
+    },
+    {
+      "question": "Jak wykazać korektę sprzedaży w JPK_V7?",
+      "matched_articles": [
+        "§ 12",
+        "§ 10"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 określa zasady korekt w JPK_V7, § 10 dotyczy ewidencji sprzedaży która podlega korekcie"
+    },
+    {
+      "question": "Jak wykazać korektę zakupu w JPK_V7?",
+      "matched_articles": [
+        "§ 12",
+        "§ 11"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 określa zasady korekt w JPK_V7, § 11 dotyczy ewidencji zakupu która podlega korekcie"
+    },
+    {
+      "question": "Czy korekta JPK_V7 wymaga uzasadnienia?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 określa wymogi techniczne dla korekt JPK_V7"
+    },
+    {
+      "question": "Czy przy błędzie w JPK_V7 trzeba składać czynny żal?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 reguluje procedurę korekt JPK_V7, która zastępuje czynny żal",
+      "uncertain": true
+    },
+    {
+      "question": "Jakie są najczęstsze błędy odrzucające plik JPK_V7?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne wymagane w JPK_V7",
+      "uncertain": true
+    },
+    {
+      "question": "Czy brak oznaczenia GTU powoduje konieczność korekty JPK_V7?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa wymagane pola techniczne, § 10 reguluje ewidencję sprzedaży",
+      "uncertain": true
+    },
+    {
+      "question": "Czy można wysłać JPK_V7 po terminie?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "§ 2 określa przepisy ogólne dotyczące zakresu i charakteru JPK_V7",
+      "uncertain": true
+    },
+    {
+      "question": "Jakie oznaczenia transakcji stosuje się przy sprzedaży wysyłkowej?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 reguluje ewidencję sprzedaży zawierającą dane dotyczące transakcji sprzedaży"
+    },
+    {
+      "question": "Czy zakup objęty MPP oznacza się także po stronie zakupowej?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "§ 11 określa ewidencję zakupu i dane wymagane w tym zakresie"
+    },
+    {
+      "question": "Jakie dane kontrahenta trzeba wykazać w ewidencji JPK_V7?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 i § 11 określają dane ewidencji sprzedaży i zakupu zawierające informacje o kontrahentach"
+    }
+  ]
+}

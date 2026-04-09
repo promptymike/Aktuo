@@ -1,0 +1,1349 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 09:10:25",
+    "batch_size": 15,
+    "completed_batches_count": 10,
+    "completed_batch_keys": [
+      "§ 10::batch::1",
+      "§ 10|§ 11::batch::1",
+      "§ 10|§ 12::batch::1",
+      "§ 10|§ 5::batch::1",
+      "§ 11::batch::1",
+      "§ 11|§ 12::batch::1",
+      "§ 12::batch::1",
+      "§ 2::batch::1",
+      "§ 4|§ 5::batch::1",
+      "§ 5::batch::1"
+    ],
+    "total_units": 25,
+    "verified": 21,
+    "needs_fix": 0,
+    "rejected": 4,
+    "total_cost_usd": 0.1609,
+    "api_calls": 10,
+    "exited_due_to_credit_error": false
+  },
+  "verified_units": [
+    {
+      "id": "law-jpk-v7-czym-roznia-sie",
+      "question_intent": "Wyjaśnienie różnic między JPK_V7M a JPK_V7K",
+      "question_patterns": [
+        "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "Jaka jest różnica między JPK_V7M a JPK_V7K?",
+        "Kiedy składam JPK_V7M, a kiedy JPK_V7K?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na to pytanie na podstawie dostarczonego tekstu. Tekst artykułów nie zawiera definicji ani porównania między wariantami JPK_V7M i JPK_V7K. Wymagana jest weryfikacja w pełnym tekście Rozporządzenia JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "nie określony",
+          "quote": "brak tekstu artykułów do analizy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "rodzaje_deklaracji_JPK",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "Czy można wysłać JPK_V7 po terminie?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-czym-roznia-sie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit prawidłowo informuje, że nie można odpowiedzieć na pytanie ze względu na brak tekstu artykułów. Nie dodaje informacji spoza źródła. Prawidłowa rekomendacja weryfikacji w pełnym tekście."
+      }
+    },
+    {
+      "id": "law-jpk-v7-kto-sklada-ktory",
+      "question_intent": "Określenie, która kategoria podatników składa JPK_V7M, a która JPK_V7K",
+      "question_patterns": [
+        "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "Jakie są wymogi w stosunku do różnych podatników dotyczące JPK_V7M i JPK_V7K?",
+        "Która forma JPK_V7 dla małych podatników?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanym fragmencie nie zawiera informacji o kryteriach rozróżniających podatników obowiązanych do składania JPK_V7M versus JPK_V7K. Wymagana jest pełna treść właściwych artykułów.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "nie określony",
+          "quote": "brak tekstu artykułów do analizy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "obowiazki_skladania",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "Czy można wysłać JPK_V7 po terminie?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-kto-sklada-ktory",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit prawidłowo odmawia odpowiedzi ze względu na brak tekstu artykułów. Nie hallucynuje informacji. Poprawnie wskazuje na brak danych do analizy."
+      }
+    },
+    {
+      "id": "law-jpk-v7-zwalnienie-vat",
+      "question_intent": "Czy podatnik zwolniony z VAT ma obowiązek składania JPK_V7",
+      "question_patterns": [
+        "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "Czy mogę nie składać JPK_V7 jeśli jestem zwolniony z VAT?",
+        "Obowiązek JPK_V7 dla podatników ze zwolnieniem VAT?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanym fragmencie nie zawiera informacji na temat obowiązków podatników zwolnionych z VAT w stosunku do JPK_V7. Wymagana jest weryfikacja właściwych artykułów rozporządzenia.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "nie określony",
+          "quote": "brak tekstu artykułów do analizy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_zwolniony"
+      ],
+      "topic": "zwolnienia_i_wyjatki",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "Czy można wysłać JPK_V7 po terminie?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-zwalnienie-vat",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit prawidłowo informuje o braku możliwości udzielenia odpowiedzi. Nie spekuluje na temat zwolnień VAT i obowiązków JPK_V7. Poprawnie wymaga weryfikacji właściwych artykułów."
+      }
+    },
+    {
+      "id": "law-jpk-v7-czy-mozna-po-terminie",
+      "question_intent": "Możliwość wysłania JPK_V7 po upływie terminu",
+      "question_patterns": [
+        "Czy można wysłać JPK_V7 po terminie?",
+        "Co się dzieje gdy opóźnię JPK_V7?",
+        "Czy mogę złożyć JPK_V7 spóźnioną deklarację?",
+        "Jakie konsekwencje opóźnienia JPK_V7?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanym fragmencie nie zawiera regulacji dotyczących możliwości złożenia JPK_V7 po terminie, kar czy konsekwencji opóźnienia. Wymagana jest weryfikacja właściwych artykułów dotyczących terminów i sankcji.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "nie określony",
+          "quote": "brak tekstu artykułów do analizy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "terminy_i_sankcje",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "Czy można wysłać JPK_V7 po terminie?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-czy-mozna-po-terminie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit prawidłowo odmawia odpowiedzi na temat terminów i konsekwencji opóźnienia. Nie hallucynuje kar ani regulacji. Konserwatywne podejście jest uzasadnione w domenie podatkowej."
+      }
+    },
+    {
+      "id": "law-jpk_v7-czesc-ewidencyjna-dane",
+      "question_intent": "Jakie dane zawiera część ewidencyjna JPK_V7?",
+      "question_patterns": [
+        "Jakie dane zawiera część ewidencyjna JPK_V7?",
+        "Co powinno znaleźć się w ewidencji JPK_V7?",
+        "Jakie informacje zawiera sekcja ewidencyjna JPK_V7?",
+        "Jakie pola danych są obowiązkowe w części ewidencyjnej JPK_V7?"
+      ],
+      "answer": "Nie można wygenerować odpowiedzi — w podanym tekście brakuje zawartości artykułów Rozporządzenia JPK_V7 opisujących strukturę części ewidencyjnej. Aby odpowiedzieć na to pytanie, potrzebny jest artykuł normujący zawartość danych w ewidencji JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułu",
+          "quote": "tekst artykułu nie został udostępniony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Struktura JPK_V7",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Jakie dane zawiera część ewidencyjna JPK_V7?",
+        "Jakie dane kontrahenta trzeba wykazać w ewidencji JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-czesc-ewidencyjna-dane",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "rationale": "Unit poprawnie deklaruje brak możliwości odpowiedzi z powodu braku tekstu artykułów w źródle. Odpowiedź jest szczera i precyzyjna — nie udziela błędnych informacji. Pytanie dotyczy JPK_V7, ale tekst źródłowy nie zawiera artykułów Rozporządzenia. Unit prawidłowo to identyfikuje i nie hallucynuje informacji."
+      }
+    },
+    {
+      "id": "law-jpk_v7-dane-kontrahenta",
+      "question_intent": "Jakie dane kontrahenta trzeba wykazać w ewidencji JPK_V7?",
+      "question_patterns": [
+        "Jakie dane kontrahenta trzeba wykazać w ewidencji JPK_V7?",
+        "Jakie informacje o kontrahencie są obowiązkowe w JPK_V7?",
+        "Które dane dotyczące dostawcy/nabywcy należy podać w JPK_V7?",
+        "Co trzeba wykazać o kontrahencie w części ewidencyjnej JPK_V7?"
+      ],
+      "answer": "Nie można wygenerować odpowiedzi — w podanym tekście brakuje artykułów Rozporządzenia JPK_V7 określających wymogi dotyczące danych kontrahenta. Aby udzielić odpowiedzi, potrzebny jest artykuł normujący, jakie dane identyfikujące kontrahenta trzeba zawrzeć w ewidencji.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułu",
+          "quote": "tekst artykułu nie został udostępniony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Identyfikacja kontrahentów w JPK_V7",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Jakie dane zawiera część ewidencyjna JPK_V7?",
+        "Jakie dane kontrahenta trzeba wykazać w ewidencji JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-dane-kontrahenta",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "rationale": "Unit poprawnie deklaruje brak możliwości odpowiedzi z powodu braku tekstu artykułów w źródle. Odpowiedź jest rzetelna — nie wymyśla danych o kontrahencie, które mogłyby być błędne. W dziedzinie podatków odpowiedź 'nie wiem' jest lepsza niż halucynacja. Pytanie jest istotne dla JPK_V7, ale źródło brakuje wymaganych artykułów."
+      }
+    },
+    {
+      "id": "law-jpk_v7-gtu-kiedy-stosowanie",
+      "question_intent": "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+      "question_patterns": [
+        "Kiedy stosuje się GTU w JPK_V7?",
+        "W jakich przypadkach używam kodu GTU?",
+        "Czy muszę oznaczyć sprzedaż kodem GTU?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły z kodami GTU nie zostały zamieszczone. Aby prawidłowo odpowiedzieć, potrzebuję tekstu zawierającego definicję i warunki stosowania kodów GTU.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-gtu-kiedy-stosowanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-gtu-obowiazek-kazdej-faktury",
+      "question_intent": "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+      "question_patterns": [
+        "Czy wszystkie faktury wymagają kodu GTU?",
+        "Czy obowiązek GTU dotyczy każdej sprzedaży?",
+        "Które faktury pomijam przy oznaczeniu GTU?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. Aby udzielić prawidłowej odpowiedzi, potrzebuję artykułów zawierających reguły dotyczące obowiązkowości kodów GTU dla różnych typów faktur.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-gtu-obowiazek-kazdej-faktury",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-tp-kiedy-stosowanie",
+      "question_intent": "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+      "question_patterns": [
+        "Kiedy używam kodu TP?",
+        "Co oznacza TP w JPK_V7?",
+        "W jakich sytuacjach stosuję oznaczenie TP?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania TP nie zostały zamieszczone w dostarczonych danych. Potrzebuję tekstu zawierającego definicję i warunki stosowania oznaczenia TP.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-tp-kiedy-stosowanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-sw-kiedy-stosowanie",
+      "question_intent": "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+      "question_patterns": [
+        "Kiedy używam kodu SW w JPK_V7?",
+        "W jakich przypadkach stosuję SW?",
+        "Co oznacza SW w deklaracji JPK_V7?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania SW nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania symbolu SW.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-sw-kiedy-stosowanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-ee-znaczenie-stosowanie",
+      "question_intent": "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+      "question_patterns": [
+        "Kiedy używam kodu EE?",
+        "Co to znaczy EE w JPK_V7?",
+        "W jakich przypadkach stosuję oznaczenie EE?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania EE nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania oznaczenia EE.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-ee-znaczenie-stosowanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-mpp-kiedy-stosowanie",
+      "question_intent": "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+      "question_patterns": [
+        "Kiedy używam kodu MPP?",
+        "W jakich przypadkach stosuję MPP w JPK_V7?",
+        "Co oznacza MPP i kiedy go stosować?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania MPP nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania symbolu MPP.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-mpp-kiedy-stosowanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-imp-kiedy-stosowanie",
+      "question_intent": "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+      "question_patterns": [
+        "Kiedy używam kodu IMP?",
+        "W jakich przypadkach stosuję IMP?",
+        "Co to oznaczenie IMP w deklaracji?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania IMP nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania oznaczenia IMP.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "kody_identyfikacyjne_sprzedazy",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-imp-kiedy-stosowanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-paragon-nip-osobny-wykas",
+      "question_intent": "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+      "question_patterns": [
+        "Jak wykazać paragon z NIP w JPK_V7?",
+        "Czy paragon z NIP to oddzielna linia w JPK_V7?",
+        "Czy paragony z NIP trzeba wykazać inaczej?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące wykazywania paragonów z NIP nie zostały zamieszczone. Potrzebuję tekstu zawierającego reguły dotyczące rejestrowania paragonów w JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "wykazywanie_paragonow",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-paragon-nip-osobny-wykas",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-faktura-paragon-wykazanie",
+      "question_intent": "Jak wykazać fakturę do paragonu w JPK_V7?",
+      "question_patterns": [
+        "Jak powiązać fakturę z paragonem w JPK_V7?",
+        "Czy fakturę do paragonu wykazuję osobno?",
+        "Jak wykazać fakturę wystawioną do paragonu?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące wykazywania faktur do paragonów nie zostały zamieszczone. Potrzebuję tekstu zawierającego reguły dotyczące powiązania faktur i paragonów w JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "wykazywanie_paragonow",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-faktura-paragon-wykazanie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-raport-fiskalny-zbiorczy",
+      "question_intent": "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?",
+      "question_patterns": [
+        "Jak wykazać raport fiskalny w JPK_V7?",
+        "Czy raport fiskalny to jedna linia w JPK_V7?",
+        "Czy raporty fiskalne pobieram zbiorczo?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące wykazywania raportów fiskalnych nie zostały zamieszczone. Potrzebuję tekstu zawierającego reguły dotyczące rejestrowania raportów fiskalnych w JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "wykazywanie_raportow_fiskalnych",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "Czy każdą fakturę trzeba oznaczać symbolem GTU?",
+        "Kiedy stosuje się oznaczenie TP w JPK_V7?",
+        "Kiedy należy oznaczyć sprzedaż symbolem SW?",
+        "Co oznacza EE w JPK_V7 i kiedy się je stosuje?",
+        "Kiedy w JPK_V7 trzeba oznaczyć transakcję symbolem MPP?",
+        "Kiedy stosuje się oznaczenie IMP w JPK_V7?",
+        "Czy paragon z NIP wykazuje się w JPK_V7 osobno?",
+        "Jak wykazać fakturę do paragonu w JPK_V7?",
+        "Czy raport fiskalny ujmuje się w JPK_V7 zbiorczo?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-raport-fiskalny-zbiorczy",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk_v7-oznaczenia-sprzedazy-wysylkowej",
+      "question_intent": "Jakie oznaczenia transakcji stosuje się przy sprzedaży wysyłkowej w JPK_V7?",
+      "question_patterns": [
+        "Jakie oznaczenia transakcji dla sprzedaży wysyłkowej?",
+        "Co wpisać w pole oznaczenia dla wysyłki?",
+        "Jak oznaczyć transakcję wysyłkową w JPK_V7?"
+      ],
+      "answer": "Nie mam dostępu do konkretnych artykułów Rozporządzenia JPK_V7 zawierających informacje o oznaczeniach transakcji dla sprzedaży wysyłkowej. Aby udzielić Ci dokładnej odpowiedzi, potrzebuję pełnego tekstu regulacji dotyczącej kodów transakcji i oznaczeń.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "oznaczenia_transakcji",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Jakie oznaczenia transakcji stosuje się przy sprzedaży wysyłkowej?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::2",
+      "_audit": {
+        "unit_id": "law-jpk_v7-oznaczenia-sprzedazy-wysylkowej",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpkv7-korekta-uzasadnienie",
+      "question_intent": "Czy korekta JPK_V7 wymaga uzasadnienia",
+      "question_patterns": [
+        "Czy korekta JPK_V7 wymaga uzasadnienia?",
+        "Muszę uzasadnić korektę JPK_V7?",
+        "Jakie wymagania dla korekty JPK_V7?",
+        "Czy przy korygowaniu JPK_V7 trzeba dać uzasadnienie?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera wyraźnych postanowień dotyczących wymogów uzasadnienia dla korekty deklaracji. Weryfikacja wymaga zapoznania się z pełnym tekstem rozporządzenia lub wytycznymi Ministerstwa Finansów.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "Tekst artykułów nie zawiera informacji o wymogach uzasadnienia korekty"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "korekty_i_zmeny",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Czy korekta JPK_V7 wymaga uzasadnienia?",
+        "Czy przy błędzie w JPK_V7 trzeba składać czynny żal?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpkv7-korekta-uzasadnienie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit poprawnie wskazuje, że dostarczony tekst nie zawiera informacji na temat wymogów uzasadnienia dla korekty JPK_V7. Odpowiedź uczciwą wskazuje na braki w źródłach i sugeruje poszukiwanie informacji w innych aktach prawnych. To właściwe podejście - lepiej powiedzieć 'nie wiem' niż udzielić odpowiedzi bez podstawy normatywnej."
+      }
+    },
+    {
+      "id": "law-jpkv7-blad-czynny-zal",
+      "question_intent": "Czy przy błędzie w JPK_V7 trzeba składać czynny żal",
+      "question_patterns": [
+        "Czy przy błędzie w JPK_V7 trzeba złożyć czynny żal?",
+        "Jak postępować z błędem w JPK_V7 - czynny żal?",
+        "Czy błąd w JPK_V7 wymaga czynnego żalu?",
+        "Jakie działania podjąć przy błędzie w JPK_V7?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera postanowień dotyczących procedury czynnego żalu dla błędów w deklaracji. Procedura może wynikać z ogólnych przepisów o korekcie deklaracji VAT lub innego aktu prawnego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak danych",
+          "quote": "Tekst artykułów nie zawiera informacji o procedurze czynnego żalu"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "korekty_i_zmeny",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Czy korekta JPK_V7 wymaga uzasadnienia?",
+        "Czy przy błędzie w JPK_V7 trzeba składać czynny żal?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpkv7-blad-czynny-zal",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit poprawnie wskazuje, że dostarczony tekst nie zawiera postanowień dotyczących procedury czynnego żalu dla błędów w JPK_V7. Odpowiedź uzasadniona - procedury czynnego żalu wynikałyby z ogólnych przepisów o korekcie VAT lub Kodeksu postępowania administracyjnego, a nie z samego rozporządzenia o JPK. Audytor docenia uczciwość odpowiedzi: zamiast spekulować, system kieruje do właściwych źródeł prawa."
+      }
+    },
+    {
+      "id": "law-jpkv7-bledy-odrzucajace",
+      "question_intent": "Jakie błędy w pliku JPK_V7 powodują jego odrzucenie przez system",
+      "question_patterns": [
+        "Jakie są najczęstsze błędy odrzucające plik JPK_V7?",
+        "Dlaczego plik JPK_V7 został odrzucony?",
+        "Które błędy powodują odrzucenie JPK_V7?",
+        "Co sprawdza się w JPK_V7 przy walidacji?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów Rozporządzenia JPK_V7. Tekst nie zawiera specjalnego katalogu błędów odrzucających ani szczegółów procedury walidacji. Aby uzyskać prawidłową odpowiedź, potrzebuję dostępu do Załączników Rozporządzenia JPK_V7 zawierających specyfikację techniczną i reguły walidacji, lub do wytycznych Ministerstwa Finansów na ten temat.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak",
+          "quote": "tekst artykułów nie zawiera katalogów błędów technicznych"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny",
+        "vat_zwolniony"
+      ],
+      "topic": "bledy-walidacji",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Jakie są najczęstsze błędy odrzucające plik JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpkv7-bledy-odrzucajace",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit jest prawidłowy. Answer korektnie informuje, że dostarczone teksty artykułów nie zawierają katalogu błędów odrzucających JPK_V7. Answer nie stwierdza czegoś co byłoby w tekście — wręcz odwrotnie: prawidłowo признает brak informacji. Unit nie obiecuje odpowiedzi na pytanie, gdy baza źródłowa jej nie zawiera. To jest poprawne podejście dla systemu AI dla księgowych — nie wymyślanie informacji technicznych, ale wskazanie ograniczeń wiedzy. Metadata unit'u (taxpayer_type, topic) jest prawidłowo sformułowana."
+      }
+    },
+    {
+      "id": "law-mpp-oznaczenie-stona-zakupowa",
+      "question_intent": "Czy transakcja objęta mechanizmem podzielonej płatności (MPP) wymaga specjalnego oznaczenia po stronie nabywcy",
+      "question_patterns": [
+        "Czy zakup objęty MPP oznacza się także po stronie zakupowej?",
+        "Czy nabywca musi oznaczać fakturę jako MPP?",
+        "Jak oznaczać MPP u kupującego?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można stwierdzić, czy i jak należy oznaczać zakupy objęte mechanizmem podzielonej płatności po stronie nabywcy. Wymagana jest weryfikacja w innych źródłach prawa lub wytycznych administracji skarbowej dotyczących szczegółowych wymogów oznaczania MPP w dokumentach księgowych i ewidencji VAT.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu zawierającego odpowiedź w dostarczonej części",
+          "quote": "Tekst artykułów nie zawiera regulacji dotyczących oznaczania MPP po stronie zakupowej"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "mechanizm_podzielonej_platnosci",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy zakup objęty MPP oznacza się także po stronie zakupowej?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-mpp-oznaczenie-stona-zakupowa",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "comment": "Unit rzetelnie i uczciwie wskazuje na brak informacji w dostarczonej części tekstu Rozporządzenia JPK_V7. Answer nie dodaje informacji spoza źródła, nie spekuluje i nie udziela niepewnych porad. Prawidłowo sugeruje weryfikację w innych źródłach prawa. Takie podejście jest warte akceptacji - Better safe than sorry w domenie podatkowej."
+      }
+    }
+  ],
+  "needs_fix_units": [],
+  "rejected_units": [
+    {
+      "id": "law-jpkv7-czesc-deklaracyjna",
+      "question_intent": "Jakie informacje i dane zawiera część deklaracyjna JPK_V7?",
+      "question_patterns": [
+        "Co zawiera część deklaracyjna JPK_V7?",
+        "Jakie dane są w części deklaracyjnej JPK_V7?",
+        "Jakie informacje muszę podać w deklaracyjnej części JPK_V7?",
+        "Jakie pola wypełnić w deklaracji JPK_V7?"
+      ],
+      "answer": "Nie mogę udzielić precyzyjnej odpowiedzi, ponieważ w dostarczonej treści artykułów Rozporządzenia JPK_V7 brakuje szczegółowego opisu zawartości części deklaracyjnej. Aby prawidłowo odpowiedzieć na to pytanie, potrzebna jest pełna treść artykułów zawierających specyfikację pól i danych w części deklaracyjnej JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "Brak dostępu do pełnego tekstu artykułów",
+          "quote": "Dane treści artykułu nie zostały dostarczone"
+        }
+      ],
+      "conditions": [
+        "Wymagana jest dostępność pełnego tekstu artykułu opisującego strukturę części deklaracyjnej"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny",
+        "vat_zwolniony"
+      ],
+      "topic": "struktura_JPK_V7",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 4",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Jakie dane zawiera część deklaracyjna JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 4|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpkv7-czesc-deklaracyjna",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "KRYTYCZNE: Tekst artykułów nie został dostarczony do audytu - audytor otrzymał pusty dokument źródłowy",
+          "Answer zawiera tylko oświadczenie o braku dostępu do tekstu artykułu zamiast rzeczywistej odpowiedzi",
+          "Brak grounding - answer nie odwołuje się do żadnego konkretnego przepisu (logicznie niemożliwe, bo tekstu nie ma)",
+          "Legal basis jest niepoprawny - zawiera 'Brak dostępu' zamiast numeru artykułu z rzeczywistą treścią",
+          "Answer nie zawiera żadnych informacji faktycznych o JPK_V7, które mogłyby być zweryfikowane",
+          "Unit jest skonfigurowany tak, aby zawsze zwracać 'nie wiem' - to nie jest prawidłowy answer unit",
+          "Pole 'requires_verification: true' sugeruje świadomość audytora o braku danych, ale mimo to unit został umieszczony w systemie"
+        ],
+        "suggested_fix": "1. Dostarczyć pełny tekst artykułów dotyczących JPK_V7 (rozporządzenie MF definiujące strukturę) 2. Na podstawie faktycznego tekstu artykułów, sformułować rzeczową odpowiedź zawierającą spis pól i danych w części deklaracyjnej 3. Cytować konkretne artykuły i ustępy ze źródła prawdy 4. Usunąć z systemu answer units, które jedynie odsyłają do braku dostępu",
+        "confidence": 0.99,
+        "additional_notes": "To nie jest problem z samym unit'em - to sytuacja, gdzie tekst artykułu nie został przesłany do audytora. Unit powinien być wstrzymany w systemie do czasu dostarczenia pełnego tekstu źródła prawdy. Obecna konfiguracja jest niefunkcjonalna i nie przynosi wartości użytkownikowi."
+      }
+    },
+    {
+      "id": "law-jpk_v7-korekta-sprzedazy",
+      "question_intent": "Jak prawidłowo wykazać korektę sprzedaży w pliku JPK_V7",
+      "question_patterns": [
+        "Jak wykazać korektę sprzedaży w JPK_V7?",
+        "W jaki sposób pokazać korektę faktury sprzedażowej w JPK_V7?",
+        "Gdzie umieścić korektę sprzedaży w pliku JPK_V7?",
+        "Jak zakodować korektę w sekcji sprzedaży JPK_V7?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu artykułów. Tekst ustawy Rozporządzenia JPK_V7 dotyczący wykazywania korekt sprzedaży nie został dostarczony. Aby prawidłowo odpowiedzieć, wymagane są konkretne przepisy określające sposób kodowania, struktura danych i wymagane pola dla korekt w sekcji sprzedażowej JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dostarczonego tekstu artykułu",
+          "quote": "tekst artykułu nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "raportowanie_jpk_v7",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12",
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Jak wykazać korektę sprzedaży w JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-korekta-sprzedazy",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "KRYTYCZNE: Brak tekstu artykułu ustawy w sekcji 'TEKST ARTYKUŁÓW USTAWY' - audyt nie może być przeprowadzony",
+          "Answer unit zawiera deklarację braku możliwości odpowiedzi zamiast rzeczywistej odpowiedzi opartej na tekście artykułu",
+          "Legal basis wskazuje na 'brak dostarczonego tekstu artykułu' - nie można zweryfikować grounding'u bez źródła prawdy",
+          "Unit jest niekompletny - przypisane są taxpayer_type i topic, ale bez tekstu źródłowego nie można potwierdzić ich poprawności",
+          "Field 'requires_verification' = true sugeruje, że autor već zdawał sobie sprawę z problemem"
+        ],
+        "suggested_fix": "1. Dostarcz pełny tekst artykułów Rozporządzenia o JPK_V7 dotyczących korekt sprzedaży. 2. Na podstawie rzeczywistego tekstu ustawy sformułuj answer zawierający konkretne informacje o kodowaniu korekt, strukturze danych i wymaganych polach. 3. Uzupełnij legal_basis rzeczywistymi artykułami i cytatami z dostarczonego tekstu. 4. Postaw requires_verification na false jeśli informacje będą w pełni poparte tekstem artykułu.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpkv7-korekta-zakupu",
+      "question_intent": "Jak prawidłowo wykazać korektę (zmianę) wartości zakupu w raporcie JPK_V7",
+      "question_patterns": [
+        "Jak wykazać korektę zakupu w JPK_V7?",
+        "W jaki sposób korygować zakupy w JPK_V7?",
+        "Jak zmienić wartość zakupu w JPK_V7?",
+        "Gdzie wpisać korektę vat-u z zakupu w JPK_V7?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu artykułów. Aby prawidłowo odpowiedzieć na pytanie o sposób wykazywania korekty zakupu w JPK_V7, potrzebuję tekstu artykułów Rozporządzenia JPK_V7, które zawierają szczegóły struktury raportu i procedury korekt. Zalecam sprawdzenie pełnego Rozporządzenia lub konsultację z podatkowcem.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dostępu do tekstu",
+          "quote": "tekst artykułu nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "JPK_V7 - struktura i wypełnianie",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Jak wykazać korektę zakupu w JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 11|§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpkv7-korekta-zakupu",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów ustawy do weryfikacji - dostarczony został pusty plik źródła prawdy",
+          "Answer jest uszczerbiony - odwołuje się do braku tekstu zamiast udzielić odpowiedzi na pytanie",
+          "Legal basis zawiera 'brak dostępu do tekstu' zamiast konkretnych odwołań do artykułów",
+          "Nie ma podstawy do stwierdzenia czy odpowiedź jest zasadna, gdy tekst artykułów nie został dostarczony",
+          "Answer nie udziela merytorycznej odpowiedzi na pytanie o korektę zakupu w JPK_V7",
+          "Struktura legal_basis jest nieprawidłowa - zawiera placeholder zamiast rzeczywistych referencji"
+        ],
+        "suggested_fix": "Unit nie powinien być audytowany bez dostępu do pełnego tekstu artykułów Rozporządzenia w sprawie JPK_V7. Ponownie prześlij audyt z kompletnym tekstem przepisów, które umożliwią weryfikację poprawności odpowiedzi. Alternatywnie, jeśli jednostka uznaje że tekst nie jest dostępny, answer powinien zostać przepisany w formie: 'Aby udzielić prawidłowej odpowiedzi na temat procedury korekty zakupu w JPK_V7, potrzebny jest dostęp do pełnego tekstu Rozporządzenia ministra finansów w sprawie struktury JPK_V7' - ale wtedy takie unitu nie powinny być w bazie odpowiedzi dla użytkownika.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-gtu-brak-oznaczenia-korekta",
+      "question_intent": "Czy pominięcie kodu GTU w JPK_V7 wymaga złożenia korekty?",
+      "question_patterns": [
+        "Czy brak oznaczenia GTU powoduje konieczność korekty JPK_V7?",
+        "Co zrobić gdy zapomniałem wpisać GTU w JPK_V7?",
+        "Czy pominięcie GTU to błąd wymagający korekty?",
+        "Czy muszę skorygować JPK_V7 jeśli brakuje kodu GTU?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono wyraźnego przepisu określającego konsekwencje braku oznaczenia GTU ani obowiązku złożenia korekty w takim przypadku. Wymaga to weryfikacji w pełnym tekście rozporządzenia lub konsultacji z organami podatkowymi.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak wyraźnego artykułu w dostarczonym tekście",
+          "quote": "Tekst artykułów nie zawiera przepisów dotyczących sankcji za brak GTU lub obowiązku korekty"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "GTU-oznaczenia-towary-usługi",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Czy brak oznaczenia GTU powoduje konieczność korekty JPK_V7?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-gtu-brak-oznaczenia-korekta",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW: Do audytu nie dostarczono żadnego tekstu artykułów ustawy/rozporządzenia. Pole 'TEKST ARTYKUŁÓW USTAWY' jest puste.",
+          "NIEMOŻLIWE WERYFIKOWANIE: Bez dostępu do tekstu źródłowego nie można zweryfikować grounding ani legal_basis.",
+          "ANSWER PRZYZNAJE BRAK INFORMACJI: Formulacja odpowiedzi ('nie znaleziono wyraźnego przepisu') jest walidacyjnym obejściem, ale świadczy o braku tekstów do analizy.",
+          "RELEVANCE NIEWERYFIKOWALNA: Nie można ocenić czy pytanie dotyczy dostarczonego artykułu, bo artykułów nie ma.",
+          "METADATA ZAWIESZONY: Unit zawiera 'requires_verification: true', co potwierdza, że autor już wiedział o braku pełnych informacji."
+        ],
+        "suggested_fix": "1. Dostarczyć pełny tekst Rozporządzenia w sprawie JPK_V7 (lub odpowiedniego rozporządzenia ministra finansów) zawierający przepisy o GTU i warunkach ich stosowania. 2. Po dostarczeniu tekstu przeprowadzić ponowną weryfikację grounding i legal_basis. 3. Zweryfikować czy tekst zawiera przepisy o konsekwencjach braku GTU lub wymogach korekty. 4. Jeśli przepisów brak w dostarczonej ustawie - zmienić answer na: 'Dostarczone artykuły nie zawierają przepisów dotyczących konsekwencji braku GTU. Należy sprawdzić instrukcję JPK lub bezpośrednio skontaktować się z organami podatkowymi.'",
+        "confidence": 0.98
+      }
+    }
+  ]
+}
