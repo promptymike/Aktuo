@@ -1,0 +1,1268 @@
+[
+  {
+    "id": "law-48-informacja-dodatkowa-zawartosc",
+    "question_intent": "Jakie elementy musi zawierać informacja dodatkowa do sprawozdania finansowego?",
+    "question_patterns": [
+      "Co powinna zawierać informacja dodatkowa do sprawozdania finansowego?",
+      "Jakie dane musi zawierać informacja dodatkowa?",
+      "Jakie objaśnienia powinny być w informacji dodatkowej?",
+      "Ile elementów powinno być w informacji dodatkowej?",
+      "Co obligatoryjnie umieszczamy w informacji dodatkowej?"
+    ],
+    "answer": "Informacja dodatkowa powinna zawierać: (1) wprowadzenie opisujące przyjęte zasady rachunkowości, metody wyceny i sporządzenia sprawozdania, oraz przyczyny ich zmian; (2) dodatkowe informacje i objaśnienia do pozycji bilansu, rachunku zysków i strat oraz innych sprawozdań; (3) proponowany podział zysku lub pokrycie straty; (4) informacje dotyczące pracowników i organów jednostki; (5) inne istotne informacje do zrozumienia sprawozdania. Dokładny zakres zależy od rodzaju i wielkości jednostki.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 48 ust. 1",
+        "quote": "Informacja dodatkowa powinna zawierać istotne dane i objaśnienia niezbędne do tego, aby sprawozdanie finansowe odpowiadało warunkom określonym w art. 4 ust. 1"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 48 ust. 1 pkt 1",
+        "quote": "wprowadzenie do sprawozdania finansowego, zawierające opis przyjętych zasad (polityki) rachunkowości"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 48 ust. 1 pkt 2",
+        "quote": "dodatkowe informacje i objaśnienia do pozycji bilansu, rachunku zysków i strat, oraz proponowany podział zysku lub pokrycia straty"
+      }
+    ],
+    "conditions": [
+      "Dane muszą być istotne i niezbędne do zrozumienia sprawozdania finansowego",
+      "Zakres informacji zależy od rodzaju jednostki (mikro, mała, duża, banki, ubezpieczalnie, organizacje pożytku publicznego)"
+    ],
+    "exceptions": [
+      "Jednostka mikro może nie sporządzać informacji dodatkowej, jeśli przedstawi informacje uzupełniające do bilansu z załącznika nr 4",
+      "Jednostka mała może sporządzać uproszczoną informację dodatkową zgodnie z załącznikiem nr 5"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "sprawozdanie_finansowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-53-termin-zatwierdzenia",
+    "question_intent": "Jaki jest termin na zatwierdzenie rocznego sprawozdania finansowego?",
+    "question_patterns": [
+      "Do kiedy trzeba zatwierdzić roczne sprawozdanie finansowe?",
+      "Jaki jest termin zatwierdzenia RSF?",
+      "Na ile czasu mam na zatwierdzenie sprawozdania?",
+      "Ile czasu od bilansu na zatwierdzenie?",
+      "Kiedy najpóźniej musi być zatwierdzone sprawozdanie finansowe?"
+    ],
+    "answer": "Roczne sprawozdanie finansowe musi być zatwierdzone przez organ zatwierdzający nie później niż 6 miesięcy od dnia bilansowego. Termin ten nie dotyczy: jednostek upadłych lub w postępowaniu restrukturyzacyjnym (chyba że udzielono zezwolenia), jednostek działających jako przedsiębiorstwo w spadzie, oraz oddziałów zagranicznych (dla nich zatwierdzenie sprawozdania zagranicznego wystarcza).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 53 ust. 1",
+        "quote": "Roczne sprawozdanie finansowe jednostki, z zastrzeżeniem ust. 2b, podlega zatwierdzeniu przez organ zatwierdzający, nie później niż 6 miesięcy od dnia bilansowego."
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 53 ust. 2a",
+        "quote": "Przepisy ust. 1 i 1a nie dotyczą jednostek, w stosunku do których ogłoszona została upadłość lub otwarto postępowanie restrukturyzacyjne"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 53 ust. 2b",
+        "quote": "Roczne sprawozdanie finansowe oddziału przedsiębiorcy zagranicznego uważa się za zatwierdzone, jeżeli zostało zatwierdzone sprawozdanie finansowe przedsiębiorcy zagranicznego"
+      }
+    ],
+    "conditions": [
+      "Termin liczony jest od dnia bilansowego (ostatniego dnia roku obrachunkowego)",
+      "Zatwierdzenie dokonywane przez organ zatwierdzający jednostki",
+      "Termin 6 miesięcy obowiązuje dla jednostek normalnie prowadzących działalność"
+    ],
+    "exceptions": [
+      "Jednostki w upadłości lub postępowaniu restrukturyzacyjnym (chyba że udzielono zezwolenia)",
+      "Jednostki działające jako przedsiębiorstwo w spadzie",
+      "Oddziały przedsiębiorców zagranicznych (zatwierdzenie sprawozdania całej jednostki zagranicznej)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg",
+      "spółka"
+    ],
+    "topic": "sprawozdawczość_finansowa",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-69-termin-zlozenia-sprawozdania",
+    "question_intent": "Jaki jest termin na złożenie rocznego sprawozdania finansowego do rejestru sądowego?",
+    "question_patterns": [
+      "Do kiedy trzeba złożyć sprawozdanie finansowe do KRS?",
+      "Jaki jest termin złożenia sprawozdania w rejestrze sądowym?",
+      "Ile dni mam na złożenie sprawozdania finansowego?"
+    ],
+    "answer": "Sprawozdanie finansowe należy złożyć do właściwego rejestru sądowego w terminie 15 dni od dnia zatwierdzenia rocznego sprawozdania finansowego (art. 69 ust. 1). Jeśli sprawozdanie nie zostało zatwierdzone w ustawowym terminie, należy je złożyć w ciągu 15 dni po tym terminie, a także 15 dni po jego zatwierdzeniu (art. 69 ust. 2).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 69 ust. 1",
+        "quote": "Kierownik jednostki składa we właściwym rejestrze sądowym roczne sprawozdanie finansowe w terminie 15 dni od dnia zatwierdzenia rocznego sprawozdania finansowego."
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 69 ust. 2",
+        "quote": "Jeżeli sprawozdanie finansowe nie zostało zatwierdzone w terminie określonym w art. 53 ust. 1, to należy je złożyć w rejestrze sądowym w ciągu 15 dni po tym terminie, a także 15 dni po jego zatwierdzeniu."
+      }
+    ],
+    "conditions": [
+      "termin liczony jest od dnia zatwierdzenia sprawozdania",
+      "dotyczy rocznego sprawozdania finansowego",
+      "składane do właściwego rejestru sądowego"
+    ],
+    "exceptions": [
+      "jeśli sprawozdanie nie zostało zatwierdzone w ustawowym terminie, termin liczy się od momentu jego zatwierdzenia"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "sprawozdawczość finansowa",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-69-podpisanie-esprawozdania",
+    "question_intent": "Jakie są terminy na podpisanie elektronicznego sprawozdania finansowego?",
+    "question_patterns": [
+      "Jakie są terminy na podpisanie e-sprawozdania finansowego?",
+      "Do kiedy muszę podpisać e-sprawozdanie?",
+      "Jaki jest termin na cyfrowe podpisanie sprawozdania?"
+    ],
+    "answer": "Ustawa o rachunkowości w art. 69 nie zawiera przepisów regulujących terminy na podpisanie e-sprawozdania finansowego. Informacja ta wymagałaby weryfikacji w przepisach dotyczących procedury podpisywania dokumentów elektronicznych lub w odrębnych regulacjach KRS.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 69",
+        "quote": "Przepisy art. 69 regulują terminy złożenia sprawozdania w rejestrze sądowym, a nie terminy podpisania dokumentów."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "sprawozdawczość finansowa",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-70-kas-sprawozdanie",
+    "question_intent": "Kiedy jednostka ma obowiązek przekazać sprawozdanie finansowe do szefa KAS?",
+    "question_patterns": [
+      "Czy trzeba przesyłać sprawozdanie finansowe do KAS?",
+      "Kiedy złożyć sprawozdanie finansowe szefowi KAS?",
+      "Jaki jest termin przekazania sprawozdania do KAS?"
+    ],
+    "answer": "Ustawa o rachunkowości (art. 70) nie przewiduje obowiązku przekazania sprawozdania finansowego do szefa KAS. Obowiązek dotyczy wyłącznie ogłoszenia sprawozdania w Monitorze Sądowym i Gospodarczym w ciągu 15 dni od zatwierdzenia. Aby udzielić pełnej odpowiedzi, wymagane jest sprawdzenie przepisów Ordynacji podatkowej lub ustawy o podatku dochodowym, które mogą wprowadzać odrębne obowiązki wobec organów podatkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 70 ust. 1-2",
+        "quote": "Kierownik jednostki jest obowiązany złożyć sprawozdanie finansowe do ogłoszenia w ciągu 15 dni od dnia ich zatwierdzenia. Ogłoszenie następuje w Monitorze Sądowym i Gospodarczym."
+      }
+    ],
+    "conditions": [
+      "Dotyczy jednostek wskazanych w art. 64 Ustawy o rachunkowości",
+      "Do których nie ma zastosowania art. 69"
+    ],
+    "exceptions": [
+      "Ustawa o rachunkowości nie wprowadza obowiązku wobec KAS - wymagane sprawdzenie przepisów podatkowych"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "obowiązki sprawozdawcze",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-dowod-skladniki",
+    "question_intent": "Jakie informacje muszą być zawarte w dowodzie księgowym?",
+    "question_patterns": [
+      "Co musi zawierać dowód księgowy?",
+      "Jakie dane powinny być na dowodzie księgowym?",
+      "Jakie elementy musi zawierać dowód księgowy?"
+    ],
+    "answer": "Dowód księgowy musi zawierać co najmniej: rodzaj i numer dowodu, nazwy i adresy stron operacji, opis operacji i jej wartość, datę operacji (i datę sporządzenia, jeśli różna), podpisy wystawcy i odbiorcy, oraz stwierdzenie sprawdzenia przez wskazanie miesiąca, sposobu ujęcia w księgach i podpis osoby odpowiedzialnej za dekretację. Część tych danych można pominąć, jeśli wyniknie to z odrębnych przepisów lub techniki dokumentowania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 21 ust. 1 pkt 1-6",
+        "quote": "Dowód księgowy powinien zawierać co najmniej: określenie rodzaju dowodu i jego numeru identyfikacyjnego; określenie stron dokonujących operacji gospodarczej; opis operacji oraz jej wartość; datę dokonania operacji; podpis wystawcy i osoby, której wydano lub od której przyjęto składniki aktywów; stwierdzenie sprawdzenia i zakwalifikowania dowodu przez wskazanie miesiąca i sposobu ujęcia w księgach"
+      }
+    ],
+    "conditions": [
+      "Wartość może być pominięta, jeśli dane wyrażone w jednostkach naturalnych są następnie wyceniane i potwierdzone wydrukiem",
+      "Dowód w walucie obcej musi zawierać przeliczenie na złote polskie wg kursu dnia operacji, chyba że system zapewnia automatyczne przeliczenie"
+    ],
+    "exceptions": [
+      "Można zaniechać danych pkt 1-3 i 5, jeśli wynika to z odrębnych przepisów",
+      "Można zaniechać danych pkt 6, jeśli wynika to z techniki dokumentowania"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "dokumentowanie-operacji-dowody-ksiegowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-dowody-zastepcze",
+    "question_intent": "Kiedy można stosować dowody zastępcze zamiast standardowych?",
+    "question_patterns": [
+      "Kiedy można stosować dowody zastępcze?",
+      "Na czym polegają dowody zastępcze?",
+      "Jakie są reguły dla dowodów zastępczych?"
+    ],
+    "answer": "Ustawa o rachunkowości nie definiuje warunków stosowania dowodów zastępczych w art. 21. Tekst artykułu jedynie wspomina o 'dowodzie zastępczym' w kontekście zwolnienia z wymogu podpisów osób (gdy dowód 'nie jest dowodem zastępczym'), ale nie precyzuje, kiedy dokładnie można go zastosować lub jakie muszą być jego cechy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 21 ust. 4",
+        "quote": "Jeżeli dowód nie dokumentuje przekazania lub przejęcia składnika aktywów, przeniesienia prawa własności lub użytkowania wieczystego gruntu albo nie jest dowodem zastępczym, podpisy osób mogą być zastąpione znakami zapewniającymi ustalenie tych osób"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [
+      "Podpisy mogą być zastąpione znakami, gdy dowód nie dokumentuje przekazania/przejęcia aktywów lub nie jest dowodem zastępczym"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "dokumentowanie-operacji-dowody-ksiegowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-podpis-wystawcy",
+    "question_intent": "Czy dowód księgowy musi zawierać podpis wystawcy",
+    "question_patterns": [
+      "Czy dowód księgowy musi mieć podpis wystawcy?",
+      "Czy podpis wystawcy jest obowiązkowy na dowodzie?",
+      "Jakie są wymagania dotyczące podpisu na dowodzie księgowym?"
+    ],
+    "answer": "Tak, dowód księgowy powinien zawierać podpis wystawcy dowodu oraz podpis osoby, której wydano lub od której przyjęto składniki aktywów. Jednak podpisy można pominąć, jeśli wynika to z odrębnych przepisów lub jeśli dowód nie dokumentuje przekazania/przejęcia aktywów – wtedy mogą być zastąpione znakami zapewniającymi ustalenie tych osób.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 21 ust. 1 pkt 5",
+        "quote": "podpis wystawcy dowodu oraz osoby, której wydano lub od której przyjęto składniki aktywów"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 21 ust. 1a pkt 1",
+        "quote": "Można zaniechać zamieszczania na dowodzie danych, o których mowa w ust. 1 pkt 1–3 i 5, jeżeli wynika to z odrębnych przepisów"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 21 ust. 4",
+        "quote": "podpisy osób mogą być zastąpione znakami zapewniającymi ustalenie tych osób"
+      }
+    ],
+    "conditions": [
+      "dowód dokumentuje przekazanie lub przejęcie składnika aktywów",
+      "dowód przenosi prawo własności lub użytkowania wieczystego gruntu",
+      "dowód jest dowodem zastępczym"
+    ],
+    "exceptions": [
+      "jeśli wynika to z odrębnych przepisów",
+      "jeśli dowód nie dokumentuje przekazania lub przejęcia składnika aktywów – podpisy mogą być zastąpione znakami",
+      "na dokumentach ubezpieczenia i emitowanych papierach wartościowych podpisy mogą być odtworzone mechanicznie"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "spółka",
+      "jednostka_budżetowa"
+    ],
+    "topic": "elementy_dowodu_ksiegowego",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-25-korekcja-bledow",
+    "question_intent": "Jak poprawiać błędy w dowodzie księgowym?",
+    "question_patterns": [
+      "Jak poprawiać błędy w dowodzie księgowym?",
+      "W jaki sposób dokonać korekty błędnego zapisu w księdze?",
+      "Jakie są metody poprawiania błędów księgowych?",
+      "Czy mogę skreślić błędny zapis?",
+      "Jak skorygować błędy po zamknięciu miesiąca?"
+    ],
+    "answer": "Błędy poprawiasz na dwa sposoby: (1) skreślając dotychczasową treść i wpisując nową, zachowując czytelność błędnego zapisu, podpisując poprawkę i wpisując datę — ale tylko przed zamknięciem miesiąca, lub (2) wprowadzając do ksiąg dowód zawierający korekty błędnych zapisów tylko zapisami dodatnimi albo tylko ujemnymi — ta metoda jest dozwolona zawsze, również po zamknięciu miesiąca. Po zamknięciu miesiąca lub przy prowadzeniu ksiąg na komputerze możesz używać wyłącznie drugiej metody (dowód korygujący).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 25 ust. 1 pkt 1",
+        "quote": "przez skreślenie dotychczasowej treści i wpisanie nowej, z zachowaniem czytelności błędnego zapisu, oraz podpisanie poprawki i umieszczenie daty"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 25 ust. 1 pkt 2",
+        "quote": "przez wprowadzenie do ksiąg rachunkowych dowodu zawierającego korekty błędnych zapisów, dokonywane tylko zapisami dodatnimi albo tylko ujemnymi"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 25 ust. 2",
+        "quote": "W razie ujawnienia błędów po zamknięciu miesiąca lub prowadzenia ksiąg rachunkowych przy użyciu komputera, dozwolone są tylko korekty dokonane w sposób określony w ust. 1 pkt 2"
+      }
+    ],
+    "conditions": [
+      "Poprawka poprzez skreślenie można dokonać tylko przed zamknięciem miesiąca",
+      "Poprawka poprzez skreślenie musi być dokonana jednocześnie we wszystkich księgach rachunkowych",
+      "Korekcja poprzez dowód korygujący wymaga tylko zapisów dodatnich LUB tylko ujemnych, nie mieszanych",
+      "Po zamknięciu miesiąca dostępna jest wyłącznie metoda drugą (dowód korygujący)"
+    ],
+    "exceptions": [
+      "Po zamknięciu miesiąca nie można używać metody skreślenia",
+      "W przypadku prowadzenia ksiąg na komputerze nie można używać metody skreślenia"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "jednostka_budzetowa",
+      "wszystkie_podmioty"
+    ],
+    "topic": "korekta błędów księgowych",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-14-zasady-dziennika",
+    "question_intent": "Jakie są zasady prowadzenia dziennika ksiąg rachunkowych?",
+    "question_patterns": [
+      "Jakie są zasady prowadzenia dziennika?",
+      "Jak prowadzić dziennik ksiąg rachunkowych?",
+      "Jakie wymogi dotyczą dziennika rachunkowego?",
+      "Co musi zawierać dziennik rachunkowy?"
+    ],
+    "answer": "Dziennik musi zawierać chronologiczne ujęcie zdarzeń z danego okresu i umożliwiać uzgodnienie jego obrotów z obrotami księgi głównej. Zapisy muszą być kolejno numerowane, sumy liczone w sposób ciągły, a każdy zapis musi być jednoznacznie powiązany ze spraw dzonymi dowodami księgowymi. Jeśli prowadzi się dzienniki częściowe, trzeba sporządzić zestawienie ich obrotów. W przypadku komputerowego prowadzenia ksiąg każdy zapis musi mieć automatycznie nadany numer pozycji i dane identyfikujące osobę odpowiedzialną za treść wpisu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 14 ust. 1",
+        "quote": "Dziennik zawiera chronologiczne ujęcie zdarzeń, jakie nastąpiły w danym okresie sprawozdawczym. Bez względu na technikę prowadzenia ksiąg rachunkowych dziennik powinien umożliwiać uzgodnienie jego obrotów z obrotami zestawienia obrotów i sald kont księgi głównej."
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 14 ust. 2",
+        "quote": "Zapisy w dzienniku muszą być kolejno numerowane, a sumy zapisów (obroty) liczone w sposób ciągły. Sposób dokonywania zapisów w dzienniku powinien umożliwiać ich jednoznaczne powiązanie ze sprawdzonymi i zatwierdzonymi dowodami księgowymi."
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 14 ust. 3",
+        "quote": "Jeżeli stosuje się dzienniki częściowe, grupujące zdarzenia według ich rodzajów, to należy sporządzić zestawienie obrotów tych dzienników za dany okres sprawozdawczy."
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 14 ust. 4",
+        "quote": "Przy prowadzeniu ksiąg rachunkowych przy użyciu komputera zapis księgowy powinien posiadać automatycznie nadany numer pozycji, pod którą został wprowadzony do dziennika, a także dane pozwalające na ustalenie osoby odpowiedzialnej za treść zapisu."
+      }
+    ],
+    "conditions": [
+      "Zapisy muszą być kolejno numerowane",
+      "Sumy zapisów muszą być liczone w sposób ciągły",
+      "Każdy zapis musi być jednoznacznie powiązany ze sprawdzonymi i zatwierdzonymi dowodami księgowymi",
+      "Dziennik musi umożliwiać uzgodnienie obrotów z księgą główną",
+      "Jeśli używa się dzienników częściowych - musi być sporządzone zestawienie ich obrotów",
+      "Przy prowadzeniu na komputerze - zapis musi mieć automatycznie nadany numer i dane identyfikujące autora"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "prowadzenie ksiąg rachunkowych",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-10-polityka-rachunkowosci-zawartosc",
+    "question_intent": "Co powinna zawierać dokumentacja polityki rachunkowości jednostki?",
+    "question_patterns": [
+      "Co powinna zawierać polityka rachunkowości?",
+      "Jakie elementy musi zawierać dokumentacja zasad rachunkowości?",
+      "Jaki jest obowiązkowy zakres polityki rachunkowości jednostki?",
+      "Co musi być opisane w polityce rachunkowości?"
+    ],
+    "answer": "Polityka rachunkowości powinna zawierać dokumentację opisującą: określenie roku obrotowego i okresów sprawozdawczych, metody wyceny aktywów i pasywów, plan kont z zasadami klasyfikacji zdarzeń, wykaz ksiąg rachunkowych, opis systemu przetwarzania danych oraz system ochrony danych i dowodów księgowych. Dokumentacja musi być sporządzona w języku polskim i ustalona przez kierownika w formie pisemnej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 10 ust. 1",
+        "quote": "Jednostka powinna posiadać dokumentację opisującą w języku polskim przyjęte przez nią zasady (politykę) rachunkowości"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 10 ust. 1 pkt 1-4",
+        "quote": "dokumentacja dotycząca określenia roku obrotowego, metod wyceny, sposobu prowadzenia ksiąg oraz systemu ochrony danych"
+      }
+    ],
+    "conditions": [
+      "dokumentacja musi być opisana w języku polskim",
+      "musi być ustalona przez kierownika jednostki w formie pisemnej",
+      "kierownik ma obowiązek jej aktualizacji"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "polityka_rachunkowosci",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-5-zasada-ciaglosci",
+    "question_intent": "Na czym polega zasada ciągłości w rachunkowości?",
+    "question_patterns": [
+      "Co to jest zasada ciągłości rachunkowości?",
+      "Czym jest ciągłość w rachunkowości?",
+      "Jakie są wymogi zasady ciągłości?"
+    ],
+    "answer": "Zasada ciągłości polega na stosowaniu w sposób ciągły przyjętych zasad rachunkowości, dokonując w kolejnych latach obrotowych jednakowego grupowania operacji gospodarczych, wyceny aktywów i pasywów, odpisów amortyzacyjnych i ustalania wyniku finansowego. Celem jest zapewnienie porównywalności informacji z sprawozdań finansowych z roku na rok.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 5 ust. 1",
+        "quote": "Przyjęte zasady (politykę) rachunkowości należy stosować w sposób ciągły, dokonując w kolejnych latach obrotowych jednakowego grupowania operacji gospodarczych, wyceny aktywów i pasywów"
+      }
+    ],
+    "conditions": [
+      "Jednakowe grupowanie operacji gospodarczych w kolejnych latach",
+      "Jednakowa wycena aktywów i pasywów",
+      "Jednakowe dokonywanie odpisów amortyzacyjnych",
+      "Porównywalność informacji z sprawozdań finansowych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasady_rachunkowości",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-26-inwentaryzacja-roczna-termin",
+    "question_intent": "Kiedy przeprowadza się obligatoryjną inwentaryzację roczną?",
+    "question_patterns": [
+      "Kiedy trzeba przeprowadzić inwentaryzację roczną?",
+      "W jakim terminie musi być inwentaryzacja?",
+      "Jaki jest termin na przeprowadzenie inwentaryzacji?"
+    ],
+    "answer": "Inwentaryzacja musi być przeprowadzona na ostatni dzień każdego roku obrotowego. W wyjątkowych przypadkach, gdy spis z natury lub uzgodnienie nie było możliwe, można użyć metody porównania danych ksiąg z dokumentami. Termin inwentaryzacji uważa się za dotrzymany, jeśli spis rozpoczęto nie wcześniej niż 3 miesiące przed końcem roku obrotowego, a zakończono do 15 dnia następnego roku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 26 ust. 1",
+        "quote": "Jednostki przeprowadzają na ostatni dzień każdego roku obrotowego inwentaryzację"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 26 ust. 3 pkt 1",
+        "quote": "inwentaryzację składników aktywów rozpoczęto nie wcześniej niż 3 miesiące przed końcem roku obrotowego, a zakończono do 15 dnia następnego roku"
+      }
+    ],
+    "conditions": [
+      "Inwentaryzacja dotyczy ostatniego dnia roku obrotowego",
+      "Spis z natury można rozpocząć maksymalnie 3 miesiące przed końcem roku",
+      "Spis z natury trzeba zakończyć do 15 dnia następnego roku",
+      "Różne metody inwentaryzacji dla różnych typów aktywów"
+    ],
+    "exceptions": [
+      "Można odstąpić od inwentaryzacji przy połączeniu lub podziale jednostek (poza spółkami kapitałowymi) za zgodą stron",
+      "Można odstąpić przy zawieszeniu działalności, jeśli jednostka nie zamyka ksiąg rachunkowych"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "inwentaryzacja",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-inwentaryzacja-spis-z-natury",
+    "question_intent": "Jakie składniki majątku inwentaryzuje się spisem z natury?",
+    "question_patterns": [
+      "Jakie składniki majątku inwentaryzuje się spisem z natury?",
+      "Które aktywa podlegają inwentaryzacji poprzez spis z natury?",
+      "Na co przeprowadza się spis z natury?"
+    ],
+    "answer": "Artykuł 27 nie zawiera wykazu składników majątku, które inwentaryzuje się spisem z natury. Przepis wymaga jedynie dokumentacji inwentaryzacji i powiązania wyników z zapisami w księgach rachunkowych, ale nie wskazuje konkretnie, które aktywa podlegają tej metodzie.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 27 ust. 1",
+        "quote": "Przeprowadzenie i wyniki inwentaryzacji należy odpowiednio udokumentować i powiązać z zapisami ksiąg rachunkowych."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt"
+    ],
+    "topic": "inwentaryzacja",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-inwentaryzacja-potwierdzenie-sald",
+    "question_intent": "Kiedy stosuje się potwierdzenie sald przy inwentaryzacji?",
+    "question_patterns": [
+      "Kiedy stosuje się potwierdzenie sald?",
+      "Jakie są zasady potwierdzenia sald w inwentaryzacji?",
+      "Kiedy można potwierdzić saldo zamiast spisu z natury?"
+    ],
+    "answer": "Artykuł 27 nie reguluje zasad stosowania potwierdzenia sald przy inwentaryzacji. Przepis koncentruje się na obowiązku dokumentacji inwentaryzacji, ujawniania różnic między stanem rzeczywistym a księgach oraz ich rozliczeniu, ale nie określa warunków użycia potwierdzenia sald.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 27",
+        "quote": "Przeprowadzenie i wyniki inwentaryzacji należy odpowiednio udokumentować i powiązać z zapisami ksiąg rachunkowych."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt"
+    ],
+    "topic": "inwentaryzacja",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-inwentaryzacja-weryfikacja",
+    "question_intent": "Kiedy można przeprowadzić inwentaryzację drogą weryfikacji?",
+    "question_patterns": [
+      "Kiedy można przeprowadzić inwentaryzację drogą weryfikacji?",
+      "Jakie są warunki stosowania weryfikacji w inwentaryzacji?",
+      "Czy można stosować weryfikację zamiast spisu z natury?"
+    ],
+    "answer": "Artykuł 27 nie zawiera regulacji dotyczących przeprowadzenia inwentaryzacji drogą weryfikacji ani warunków jej stosowania. Przepis mówi wyłącznie o obowiązku dokumentacji inwentaryzacji i rozliczeniu różnic w księgach rachunkowych, ale nie wyszczególnia metod inwentaryzacji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 27 ust. 2",
+        "quote": "Ujawnione w toku inwentaryzacji różnice między stanem rzeczywistym a stanem wykazanym w księgach rachunkowych należy wyjaśnić i rozliczyć w księgach rachunkowych tego roku obrotowego."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt"
+    ],
+    "topic": "inwentaryzacja",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-rozliczenie-roznic-inwentaryzacyjnych",
+    "question_intent": "Jak rozliczyć różnice między stanem rzeczywistym a stanem w księgach rachunkowych w wyniku inwentaryzacji?",
+    "question_patterns": [
+      "Jak rozliczyć różnice inwentaryzacyjne?",
+      "W jaki sposób rozliczyć niedobory i nadwyżki ze spisu z natury?",
+      "Kiedy i w jakich księgach rozliczam różnice z inwentaryzacji?",
+      "Czy mogę rozliczyć różnice inwentaryzacyjne w następnym roku obrachunkowym?"
+    ],
+    "answer": "Różnice ujawnione w toku inwentaryzacji między stanem rzeczywistym a stanem w księgach rachunkowych muszą być wyjaśnione i rozliczone w księgach rachunkowych w tym samym roku obrotowym, na który przypadał termin inwentaryzacji. Oznacza to, że jeśli inwentaryzacja odbyła się na koniec roku, rozliczenie różnic musi nastąpić również w tym roku, nie można przesunąć go na kolejny rok obrachunkowy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 27 ust. 2",
+        "quote": "Ujawnione w toku inwentaryzacji różnice między stanem rzeczywistym a stanem wykazanym w księgach rachunkowych należy wyjaśnić i rozliczyć w księgach rachunkowych tego roku obrotowego, na który przypadał termin inwentaryzacji."
+      }
+    ],
+    "conditions": [
+      "Różnice muszą być poprzedzone wyjaśnieniem przyczyn",
+      "Rozliczenie musi nastąpić w roku obrotowym, w którym przeprowadzono inwentaryzację",
+      "Wymóg dotyczy wszystkich ujawnionych różnic"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "jednostka_sektora_finansow_publicznych"
+    ],
+    "topic": "inwentaryzacja_i_rozliczenie",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-31-cena-nabycia",
+    "question_intent": "Czym jest cena nabycia środka trwałego?",
+    "question_patterns": [
+      "Co to jest cena nabycia w ustawie o rachunkowości?",
+      "Jak definiuje się cenę nabycia środka trwałego?",
+      "Jaka jest definicja ceny nabycia?"
+    ],
+    "answer": "Cena nabycia to wartość początkowa środka trwałego, którą stanowi kwota wydana na jego zakupienie. Zgodnie z ustawą, wartość tę mogą powiększać koszty ulepszenia (przebudowy, rozbudowy, modernizacji lub rekonstrukcji), jeśli powodują wzrost wartości użytkowej środka przewyższający wartość posiadaną przy przyjęciu do używania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 31 ust. 1",
+        "quote": "Wartość początkową stanowiącą cenę nabycia lub koszt wytworzenia środka trwałego powiększają koszty jego ulepszenia"
+      }
+    ],
+    "conditions": [
+      "Ulepszeń polegające na przebudowie, rozbudowie, modernizacji lub rekonstrukcji",
+      "Muszą powodować wzrost wartości użytkowej",
+      "Wartość użytkowa po ulepszeniu musi przewyższać posiadaną przy przyjęciu do używania"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "Wycena środków trwałych",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-28-srodki-trwale-wycena",
+    "question_intent": "Jak wycenia się środki trwałe na dzień bilansowy?",
+    "question_patterns": [
+      "Jakiej metody wyceny użyć dla środków trwałych?",
+      "W jaki sposób wyceniać środki trwałe w bilansie?",
+      "Jaka jest zasada wyceny środków trwałych na dzień bilansowy?",
+      "Jakie wartości przyjmuje się przy wycenie środków trwałych?"
+    ],
+    "answer": "Środki trwałe wycenia się według cen nabycia lub kosztów wytworzenia, ewentualnie wartości przeszacowanej, pomniejszonych o odpisy amortyzacyjne i odpisy z tytułu trwałej utraty wartości. Wycenę przeprowadza się nie rzadziej niż na dzień bilansowy. Jeśli zmienią się warunki (np. zmiana technologii), należy dokonać odpisów aktualizujących wartość środka trwałego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 28 ust. 1 pkt 1",
+        "quote": "środki trwałe oraz wartości niematerialne i prawne – według cen nabycia lub kosztów wytworzenia, lub wartości przeszacowanej (po aktualizacji wyceny środków trwałych), pomniejszonych o odpisy amortyzacyjne lub umorzeniowe, a także o odpisy z tytułu trwałej utraty wartości"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 28 ust. 1",
+        "quote": "Aktywa i pasywa wycenia się nie rzadziej niż na dzień bilansowy"
+      }
+    ],
+    "conditions": [
+      "Wycena przeprowadzana nie rzadziej niż na dzień bilansowy",
+      "Należy uwzględnić odpisy amortyzacyjne",
+      "Należy uwzględnić odpisy z tytułu trwałej utraty wartości",
+      "Można stosować cenę nabycia, koszt wytworzenia lub wartość przeszacowaną"
+    ],
+    "exceptions": [
+      "Jednostki mikro i małe mogą dokonywać odpisów amortyzacyjnych według zasad podatkowych (art. 32 ust. 7)",
+      "Wyjątkami z art. 32 ust. 8 są: jednostki sektora finansów publicznych, spółki kapitałowe, spółki komandytowo-akcyjne oraz spółki jawne/komandytowe ze wspólnikami będącymi spółkami kapitałowymi"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wycena_aktywów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-28-zobowiazania-wycena",
+    "question_intent": "Jak wycenia się zobowiązania na dzień bilansowy?",
+    "question_patterns": [
+      "Jak wycenić zobowiązania?",
+      "Jaka jest metoda wyceny zobowiązań?",
+      "W jakiej kwocie wykazać zobowiązania w bilansie?",
+      "Zasady wyceny zobowiązań finansowych"
+    ],
+    "answer": "Zobowiązania wycenia się w kwocie wymagającej zapłaty, z zastrzeżeniem dodatkowych zasad dla zobowiązań finansowych. Zobowiązania finansowe mogą być wyceniane według skorygowanej ceny nabycia, a jeśli jednostka przeznacza je do sprzedaży w okresie do 3 miesięcy — wówczas po wartości rynkowej lub wartości godziwej określonej w inny sposób.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 28 ust. 1 pkt 8",
+        "quote": "zobowiązania – w kwocie wymagającej zapłaty, z zastrzeżeniem pkt 8a"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 28 ust. 1 pkt 8a",
+        "quote": "zobowiązania finansowe mogą być wyceniane według skorygowanej ceny nabycia, a jeżeli jednostka przeznacza je do sprzedaży w okresie do 3 miesięcy, to według wartości rynkowej lub inaczej określonej wartości godziwej"
+      }
+    ],
+    "conditions": [
+      "Zobowiązania finansowe mogą być wyceniane alternatywnie",
+      "Jeśli przeznaczone do sprzedaży w ciągu 3 miesięcy — stosuje się wartość rynkową lub wartość godziwą"
+    ],
+    "exceptions": [
+      "Zobowiązania finansowe stanowią wyjątek od zasady wyceny w kwocie wymagającej zapłaty"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wycena-pasywów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-35b-odpis-aktywow-kiedy",
+    "question_intent": "Kiedy księgowy powinien utworzyć odpis aktualizujący wartość aktywów (należności)?",
+    "question_patterns": [
+      "Kiedy tworzy się odpis aktualizujący wartość aktywów?",
+      "W jakich sytuacjach dokonuje się odpisu aktualizującego należności?",
+      "Jakie są przesłanki do utworzenia odpisu aktualizującego?",
+      "Kiedy należy aktualizować wartość należności?"
+    ],
+    "answer": "Odpisy aktualizujące wartość należności tworzy się gdy zmniejsza się stopień prawdopodobieństwa ich zapłaty. Konkretnie: dla należności od dłużników w upadłości, likwidacji lub postępowaniu restrukturyzacyjnym; gdy wniosek o ogłoszenie upadłości zostaje oddalony a majątek dłużnika nie wystarcza; gdy należności są kwestionowane i spłata nie jest prawdopodobna; gdy należności są przeterminowane lub wykazują znaczny stopień prawdopodobieństwa nieściągalności. Wysokość odpisu uzależniona jest od konkretnej sytuacji i rodzaju zabezpieczenia należności.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 35b ust. 1",
+        "quote": "Wartość należności aktualizuje się uwzględniając stopień prawdopodobieństwa ich zapłaty poprzez dokonanie odpisu aktualizującego"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 35b ust. 1 pkt 1-5",
+        "quote": "w odniesieniu do: należności od dłużników w upadłości, likwidacji, postępowaniu restrukturyzacyjnym; należności w przypadku oddalenia wniosku o ogłoszenie upadłości; należności kwestionowanych; należności stanowiących równowartość kwot podwyższających; należności przeterminowanych lub nieprzeterminowanych o znacznym stopniu nieściągalności"
+      }
+    ],
+    "conditions": [
+      "Zmniejszenie stopnia prawdopodobieństwa zapłaty należności",
+      "Zaistnienie jednej z pięciu przesłanek określonych w art. 35b ust. 1 pkt 1-5",
+      "Dla należności od dłużników w upadłości - do wysokości nieobjętej gwarancją",
+      "Dla należności kwestionowanych - oszacowanie sytuacji majątkowej dłużnika"
+    ],
+    "exceptions": [
+      "Należności objęte gwarancją lub innym zabezpieczeniem mogą być objęte tylko częściowym odpisem",
+      "Dla należności stanowiących równowartość wcześniejszych odpisów - odpis tylko do czasu otrzymania lub odpisania"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "odpisy_aktualizujace_naleznosci",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-35d-kiedy-tworzy-sie-rezerwy",
+    "question_intent": "Na jakie zobowiązania tworzy się rezerwy i jakie są warunki ich utworzenia?",
+    "question_patterns": [
+      "Kiedy tworzy się rezerwy na zobowiązania?",
+      "Na jakie zobowiązania można tworzyć rezerwy?",
+      "Jakie warunki muszą być spełnione aby utworzyć rezerwę?",
+      "Kiedy jednostka powinna utworzyć rezerwę?"
+    ],
+    "answer": "Rezerwy tworzy się na dwa rodzaje zobowiązań: (1) pewne lub bardzo prawdopodobne przyszłe zobowiązania, które można wiarygodnie oszacować — w szczególności straty z transakcji w toku, gwarancji, poręczeń, operacji kredytowych czy procesów sądowych; (2) przyszłe zobowiązania spowodowane restrukturyzacją, jeśli jednostka jest do niej zobowiązana na podstawie odrębnych przepisów lub zawarła wiążące umowy, a plany restrukturyzacji pozwalają wiarygodnie oszacować ich wartość.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 35d ust. 1 pkt 1",
+        "quote": "pewne lub o dużym stopniu prawdopodobieństwa przyszłe zobowiązania, których kwotę można w sposób wiarygodny oszacować"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 35d ust. 1 pkt 2",
+        "quote": "przyszłe zobowiązania spowodowane restrukturyzacją, jeżeli na podstawie odrębnych przepisów jednostka jest zobowiązana do jej przeprowadzenia lub zawarto wiążące umowy"
+      }
+    ],
+    "conditions": [
+      "przyszłe zobowiązanie musi być pewne lub o dużym stopniu prawdopodobieństwa",
+      "kwotę zobowiązania można oszacować w sposób wiarygodny",
+      "dla restrukturyzacji: jednostka musi być zobowiązana na podstawie odrębnych przepisów lub zawrzeć wiążące umowy",
+      "dla restrukturyzacji: plany muszą pozwalać wiarygodnie oszacować wartość przyszłych zobowiązań"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "rezerwy_zobowiazania",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-39-rozliczenia-miedzyokresowe",
+    "question_intent": "Wyjaśnienie pojęcia rozliczeń międzyokresowych kosztów i ich rodzajów",
+    "question_patterns": [
+      "Na czym polegają rozliczenia międzyokresowe kosztów?",
+      "Czym są rozliczenia międzyokresowe?",
+      "Jakie są rodzaje rozliczeń międzyokresowych kosztów?",
+      "Do czego służą rozliczenia międzyokresowe?"
+    ],
+    "answer": "Rozliczenia międzyokresowe kosztów to czynności polegające na przyporządkowaniu kosztów do odpowiednich okresów sprawozdawczych. Istnieją dwa rodzaje: czynne rozliczenia międzyokresowe (dotyczą kosztów przyszłych okresów) oraz bierne rozliczenia międzyokresowe (dotyczą zobowiązań przypadających na bieżący okres, których kwotę można oszacować w sposób wiarygodny). Odpisy tego rozliczenia następują w miarę upływu czasu lub wielkości świadczeń, z zachowaniem zasady ostrożności.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 39 ust. 1",
+        "quote": "Jednostki dokonują czynnych rozliczeń międzyokresowych kosztów, jeżeli dotyczą one przyszłych okresów sprawozdawczych"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 39 ust. 2",
+        "quote": "Jednostki dokonują biernych rozliczeń międzyokresowych kosztów w wysokości prawdopodobnych zobowiązań przypadających na bieżący okres sprawozdawczy"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 39 ust. 3",
+        "quote": "Odpisy czynnych i biernych rozliczeń międzyokresowych kosztów mogą następować stosownie do upływu czasu lub wielkości świadczeń"
+      }
+    ],
+    "conditions": [
+      "Czynne rozliczenia muszą dotyczić przyszłych okresów sprawozdawczych",
+      "Bierne rozliczenia dotyczą zobowiązań przypadających na bieżący okres",
+      "Kwotę zobowiązania można oszacować w sposób wiarygodny",
+      "Odpisy powinny być uzasadnione charakterem rozliczanych kosztów"
+    ],
+    "exceptions": [
+      "Jednostki mikro i małe mogą nie tworzyć biernych rozliczeń na przyszłe świadczenia pracowników, z wyjątkiem sektora finansów publicznych i określonych typów spółek"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg",
+      "jednostka_sektora_publicznego"
+    ],
+    "topic": "rozliczenia_międzyokresowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-32-amortyzacja-bilansowa-podatkowa",
+    "question_intent": "Czy amortyzacja bilansowa musi być taka sama jak amortyzacja podatkowa?",
+    "question_patterns": [
+      "Czy amortyzacja bilansowa musi być taka sama jak podatkowa?",
+      "Czy mogę stosować różne stawki amortyzacji w rachunkowości i w podatku?",
+      "Jaka jest różnica między amortyzacją bilansową a podatkową?",
+      "Czy stawka amortyzacji w sprawozdaniu finansowym musi być równa stawce podatkowej?"
+    ],
+    "answer": "Nie, amortyzacja bilansowa nie musi być taka sama jak podatkowa. Jednostka ustala okres amortyzacji na podstawie ekonomicznej użyteczności środka trwałego, biorąc pod uwagę warunki jego faktycznego użytkowania. Wyjątek: jednostki mikro i małe mogą dobrowolnie stosować zasady amortyzacji określone w przepisach podatkowych, ale nie muszą — ten uproszczony sposób nie dotyczy spółek kapitałowych ani jednostek sektora finansów publicznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 32 ust. 2, 3, 7",
+        "quote": "Przy ustalaniu okresu amortyzacji i rocznej stawki amortyzacyjnej uwzględnia się okres ekonomicznej użyteczności środka trwałego. Jednostka mikro i jednostka mała mogą dokonywać odpisów amortyzacyjnych według zasad określonych w przepisach podatkowych."
+      }
+    ],
+    "conditions": [
+      "Amortyzacja bilansowa powinna być ustalona na dzień przyjęcia środka trwałego do używania",
+      "Musi być oparta na okresie ekonomicznej użyteczności, a nie celach podatkowych",
+      "Poprawność stosowanych stawek powinna być okresowo weryfikowana"
+    ],
+    "exceptions": [
+      "Jednostki mikro i małe mogą dobrowolnie stosować zasady podatkowe (art. 32 ust. 7)",
+      "Wyjątek nie dotyczy: jednostek sektora finansów publicznych, spółek kapitałowych, spółek komandytowo-akcyjnych, spółek jawnych i komandytowych ze wspólnikami będącymi spółkami kapitałowymi"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "jednostka_mala",
+      "jednostka_mikro"
+    ],
+    "topic": "amortyzacja_i_umorzenie",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-28a-jednostka-mikro-uproszczenia",
+    "question_intent": "Kto może sporządzać uproszczone sprawozdanie finansowe jako jednostka mikro?",
+    "question_patterns": [
+      "Która jednostka mikro może stosować uproszczenia w sprawozdaniu finansowym?",
+      "Jakie jednostki mikro mogą korzystać z uproszczeń sprawozdawczych?",
+      "Na czym polega uproszczone sprawozdanie dla jednostki mikro?"
+    ],
+    "answer": "Jednostka mikro może sporządzać uproszczone sprawozdanie finansowe, jeśli korzysta ze zwolnienia określonego w art. 46 ust. 5 pkt 4, art. 47 ust. 4 pkt 4 lub art. 48 ust. 3, albo ze zwolnienia ze sporządzenia sprawozdania z działalności zgodnie z art. 49 ust. 4. W takim przypadku jednostka ta nie wycenia aktywów i pasywów według wartości godziwej i skorygowanej ceny nabycia, a także nie stosuje przepisów wydanych na podstawie art. 81 ust. 2 pkt 4.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 28a",
+        "quote": "Jednostka mikro sporządzająca sprawozdanie finansowe z zastosowaniem uproszczeń, o których mowa w art. 46 ust. 5 pkt 4, art. 47 ust. 4 pkt 4 lub art. 48 ust. 3, lub korzystająca ze zwolnienia ze sporządzenia sprawozdania z działalności zgodnie z art. 49 ust. 4, nie wycenia aktywów i pasywów według wartości godziwej i skorygowanej ceny nabycia."
+      }
+    ],
+    "conditions": [
+      "Jednostka musi spełniać definicję jednostki mikro",
+      "Musi być objęta zwolnieniami określonymi w art. 46 ust. 5 pkt 4, art. 47 ust. 4 pkt 4 lub art. 48 ust. 3",
+      "Lub musi korzystać ze zwolnienia ze sporządzenia sprawozdania z działalności (art. 49 ust. 4)"
+    ],
+    "exceptions": [
+      "Jednostka mikro spełniająca kryteria z art. 28a - nie stosuje przepisów wydanych na podstawie art. 81 ust. 2 pkt 4",
+      "Jednostka mikro nie określona w art. 28a oraz jednostka mała mogą dobrowolnie nie stosować tych przepisów (art. 28b)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "sprawozdawczość_finansowa",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-2-limit-przychodow",
+    "question_intent": "Jaki limit przychodów powoduje obowiązek prowadzenia ksiąg rachunkowych?",
+    "question_patterns": [
+      "Ile przychodów to obowiązek ksiąg?",
+      "Próg przychodu dla ksiąg rachunkowych?",
+      "Kiedy osoby fizyczne muszą prowadzić księgi?"
+    ],
+    "answer": "Limit wynosi 2 500 000 euro przychodu netto ze sprzedaży towarów i produktów za rok obrotowy. Jeśli przychody osiągną lub przekroczą tę kwotę, podatnik musi prowadzić pełne księgi rachunkowe od następnego roku obrotowego (art. 2 ust. 1 pkt 2 oraz ust. 2). Limit ten dotyczy osób fizycznych, spółek cywilnych i spółek handlowych osób fizycznych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 2 ust. 1 pkt 2",
+        "quote": "przychody netto ze sprzedaży towarów i produktów za poprzedni rok obrotowy wyniosły co najmniej równowartość w walucie polskiej 2 500 000 euro"
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 2 ust. 2",
+        "quote": "przychody netto ze sprzedaży towarów i produktów za poprzedni rok obrotowy są niższe niż równowartość w walucie polskiej 2 500 000 euro"
+      }
+    ],
+    "conditions": [
+      "Przychody to przychody netto ze sprzedaży towarów i produktów",
+      "Limit wyliczany za rok obrotowy poprzedzający"
+    ],
+    "exceptions": [
+      "Jednostki sektora finansowego mają obowiązek księgi niezależnie od wysokości przychodów (art. 2 ust. 1 pkt 3)"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "spółka_cywilna"
+    ],
+    "topic": "limit_przychodów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-otwarcie-ksiag-limit",
+    "question_intent": "Od kiedy otworzyć księgi rachunkowe po przekroczeniu limitu przychodów",
+    "question_patterns": [
+      "Od kiedy trzeba otworzyć księgi rachunkowe po przekroczeniu limitu?",
+      "Kiedy otworzyć księgi po przekroczeniu progu przychodu?",
+      "Jaki termin na otwarcie ksiąg po przekroczeniu limitu?"
+    ],
+    "answer": "Artykuł 12 Ustawy o rachunkowości nie reguluje otwarcia ksiąg w związku z przekroczeniem limitu przychodów. Księgi rachunkowe otwiera się na dzień rozpoczęcia działalności, na początek każdego roku obrotowego, przy zmianie formy prawnej, połączeniu/podziale jednostki lub likwidacji — zawsze w ciągu 15 dni od zdarzenia. Obowiązek prowadzenia ksiąg w wyniku przekroczenia limitu wynika z innych przepisów (np. o VAT czy CIT), które nie są zawarte w tym artykule.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 12 ust. 1",
+        "quote": "Księgi rachunkowe otwiera się na dzień rozpoczęcia działalności, na początek każdego następnego roku obrotowego, na dzień zmiany formy prawnej, na dzień wpisu do rejestru połączenia lub podziału, albo na dzień rozpoczęcia likwidacji — w ciągu 15 dni od zaistnienia tych zdarzeń"
+      }
+    ],
+    "conditions": [
+      "Otwarcie ksiąg następuje w jednym z 5 enumerowanych w art. 12 ust. 1 przypadków",
+      "Termin otwarcia wynosi 15 dni od zdarzenia"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny"
+    ],
+    "topic": "otwarcie_ksiag_rachunkowych",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-4a-odpowiedzialność-kierownika",
+    "question_intent": "Czy kierownik jednostki odpowiada za rachunkowość mimo powierzenia ksiąg biuru rachunkowemu?",
+    "question_patterns": [
+      "Czy kierownik odpowiada za sprawozdania mimo powierzenia ksiąg?",
+      "Jaka odpowiedzialność kierownika za sprawozdania finansowe?",
+      "Czy powierzenie ksiąg zwalnia kierownika z odpowiedzialności?"
+    ],
+    "answer": "Tak, kierownik jednostki odpowiada za sprawozdania finansowe niezależnie od powierzenia ksiąg. Kierownik musi zapewnić, aby sprawozdania spełniały wymagania ustawy. Kierownik odpowiada solidarnie z członkami rady nadzorczej za szkodę wyrządzoną naruszeniem tych obowiązków.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 4a ust. 1 i 2",
+        "quote": "Kierownik jednostki jest zobowiązany do zapewnienia, aby sprawozdanie finansowe spełniało wymagania przewidziane w ustawie. Kierownik odpowiada solidarnie za szkodę wyrządzoną naruszeniem obowiązku."
+      }
+    ],
+    "conditions": [
+      "Obowiązek dotyczy sprawozdań finansowych, skonsolidowanych sprawozdań finansowych i sprawozdań z działalności",
+      "Odpowiedzialność solidarna z członkami rady nadzorczej"
+    ],
+    "exceptions": [
+      "Brak zwolnienia z odpowiedzialności na podstawie powierzenia ksiąg"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "odpowiedzialność kierownika jednostki",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-77-sankcje-nierzetelne-ksiegi",
+    "question_intent": "Jakie sankcje grożą za nierzetelne prowadzenie ksiąg rachunkowych?",
+    "question_patterns": [
+      "Jakie kary za nierzetelne księgi rachunkowe?",
+      "Co grozi za prowadzenie ksiąg wbrew przepisom?",
+      "Sankcje za podawanie nierzetelnych danych w księgach",
+      "Czy grozi kara za źle prowadzone księgi rachunkowe?"
+    ],
+    "answer": "Za prowadzenie ksiąg rachunkowych wbrew przepisom ustawy lub podawanie w nich nierzetelnych danych grozi grzywna albo kara pozbawienia wolności do 2 lat, albo obie kary łącznie. Sankcja dotyczy również zupełnego nieprowadzenia ksiąg rachunkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 77 pkt 1",
+        "quote": "Kto wbrew przepisom ustawy dopuszcza do nieprowadzenia ksiąg rachunkowych, prowadzenia ich wbrew przepisom ustawy lub podawania w tych księgach nierzetelnych danych – podlega grzywnie albo karze pozbawienia wolności do lat 2, albo obu tym karom łącznie."
+      }
+    ],
+    "conditions": [
+      "działanie wbrew przepisom ustawy",
+      "nieprowadzenie ksiąg lub prowadzenie ich niezgodnie z przepisami",
+      "podanie nierzetelnych danych w księgach"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "sankcje_karne_księgi_rachunkowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-76a-prowadzenie-ksiag-uprawnieni",
+    "question_intent": "Kto może usługowo prowadzić księgi rachunkowe?",
+    "question_patterns": [
+      "Kto może usługowo prowadzić księgi rachunkowe?",
+      "Jakie warunki musi spełniać osoba prowadząca usługowe prowadzenie ksiąg?",
+      "Czy każdy przedsiębiorca może prowadzić księgi dla innych?"
+    ],
+    "answer": "Usługowo prowadzić księgi rachunkowe mogą przedsiębiorcy, ale warunkiem jest, że czynności będą wykonywane przez osoby mające pełną zdolność do czynności prawnych i niezasądzone prawomocnym wyrokiem za przestępstwa przeciwko wiarygodności dokumentów, mieniu, obrocie gospodarczym, pieniędzmi, papierami wartościowymi, przestępstwa skarbowe i przestępstwa określone w rozdziale 9 kodeksu karnego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 76a ust. 1 i ust. 3",
+        "quote": "Usługowe prowadzenie ksiąg rachunkowych jest działalnością gospodarczą, mogą ją wykonywać przedsiębiorcy, pod warunkiem, że czynności będą wykonywane przez osoby które mają pełną zdolność do czynności prawnych i nie były skazane za wymienione przestępstwa"
+      }
+    ],
+    "conditions": [
+      "Osoba wykonująca czynności musi mieć pełną zdolność do czynności prawnych",
+      "Osoba nie może być skazana prawomocnym wyrokiem za przestępstwo przeciwko wiarygodności dokumentów",
+      "Osoba nie może być skazana za przestępstwo przeciwko mieniu, obrotowi gospodarczemu, obrocie pieniędzmi i papierami wartościowymi",
+      "Osoba nie może być skazana za przestępstwo skarbowe",
+      "Osoba nie może być skazana za przestępstwa określone w rozdziale 9"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "usługowe_prowadzenie_ksiag",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-76a-ubezpieczenie-oc",
+    "question_intent": "Czy biuro rachunkowe musi mieć ubezpieczenie OC?",
+    "question_patterns": [
+      "Czy biuro rachunkowe musi mieć ubezpieczenie OC?",
+      "Jakie ubezpieczenia są obowiązkowe dla biura rachunkowego?",
+      "Czy prowadzący usługowe księgi musi mieć ubezpieczenie odpowiedzialności cywilnej?"
+    ],
+    "answer": "Art. 76a Ustawy o rachunkowości nie reguluje kwestii obowiązkowego ubezpieczenia OC dla biur rachunkowych. Odpowiedź wymaga weryfikacji w innych przepisach, takich jak przepisy o działalności gospodarczej, kodeks cywilny lub przepisy sektorowe.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 76a",
+        "quote": "Art. 76a zawiera warunki dla podmiotów prowadzących usługowe prowadzenie ksiąg, ale nie zawiera postanowień dotyczących ubezpieczenia"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "usługowe_prowadzenie_ksiag",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-52-podpisanie-e-sprawozdania",
+    "question_intent": "Kto jest uprawniony i zobowiązany do podpisania elektronicznego sprawozdania finansowego?",
+    "question_patterns": [
+      "Kto podpisuje e-sprawozdanie finansowe?",
+      "Kto może podpisać elektroniczne sprawozdanie finansowe?",
+      "Kto musi podpisać sprawozdanie finansowe w formie elektronicznej?"
+    ],
+    "answer": "Sprawozdanie finansowe podpisują: osoba, której powierzono prowadzenie ksiąg rachunkowych i kierownik jednostki. Jeśli jednostką kieruje organ wieloosobowy (np. zarząd), sprawozdanie może podpisać co najmniej jedna osoba z tego organu, pod warunkiem że pozostałe osoby złożą oświadczenia lub odmowy złożenia oświadczeń potwierdzające spełnienie wymagań ustawy. Podpisy muszą być kwalifikowanymi podpisami elektronicznymi, podpisami zaufanymi lub podpisami osobistymi.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 52 ust. 2",
+        "quote": "Sprawozdanie finansowe podpisują – podając zarazem datę podpisu – osoba, której powierzono prowadzenie ksiąg rachunkowych, i kierownik jednostki, a jeżeli jednostką kieruje organ wieloosobowy – wszyscy członkowie tego organu albo co najmniej jedna osoba wchodząca w skład tego organu w sposób, o którym mowa w ust. 2b."
+      },
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 52 ust. 2d",
+        "quote": "Odmowę podpisu, o której mowa w ust. 2, oświadczenie lub odmowę złożenia oświadczenia, o których mowa w ust. 2b, sporządza się w postaci elektronicznej oraz opatruje kwalifikowanym podpisem elektronicznym, podpisem zaufanym albo podpisem osobistym."
+      }
+    ],
+    "conditions": [
+      "Osoba prowadząca księgi rachunkowe musi podpisać",
+      "Kierownik jednostki musi podpisać",
+      "W przypadku organu wieloosobowego - co najmniej jedna osoba z organu",
+      "Pozostałe osoby z organu wieloosobowego muszą złożyć oświadczenia lub odmowy"
+    ],
+    "exceptions": [
+      "Jeśli jednostką kieruje organ wieloosobowy, może podpisać tylko co najmniej jedna osoba z warunkiem oświadczeń od pozostałych"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "podpisywanie sprawozdań finansowych",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-69-format-e-sprawozdanie",
+    "question_intent": "W jakim formacie składa się e-sprawozdanie finansowe?",
+    "question_patterns": [
+      "W jakim formacie składa się e-sprawozdanie finansowe?",
+      "Jaki format e-sprawozdania finansowego?",
+      "W jakim formacie przesyła się e-sprawozdanie?"
+    ],
+    "answer": "Artykuły 69 i 70 Ustawy o rachunkowości nie zawierają informacji dotyczących formatu technicznego e-sprawozdania finansowego. Przepisy wskazują jedynie na obowiązek złożenia sprawozdania we właściwym rejestrze sądowym, ale szczegóły techniczne formatu wymagają weryfikacji w aktach wykonawczych lub wytycznych KRS.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 69 ust. 1",
+        "quote": "Kierownik jednostki składa we właściwym rejestrze sądowym roczne sprawozdanie finansowe"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "składanie_sprawozdań",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-70-ogloszenie-sprawozdanie",
+    "question_intent": "Kiedy trzeba ogłosić roczne sprawozdanie finansowe?",
+    "question_patterns": [
+      "Kiedy trzeba ogłosić roczne sprawozdanie finansowe?",
+      "Termin ogłoszenia sprawozdania finansowego",
+      "Gdzie ogłasza się sprawozdanie finansowe?",
+      "Obowiązek publikacji sprawozdania"
+    ],
+    "answer": "Jednostki podlegające art. 70 (takie jak niektóre jednostki sektora finansów publicznych) muszą ogłosić określone elementy sprawozdania finansowego w ciągu 15 dni od dnia zatwierdzenia w \"Monitorze Sądowym i Gospodarczym\". Dla pozostałych jednostek sprawozdanie składa się w rejestrze sądowym w terminie art. 69 ust. 1 (15 dni od zatwierdzenia).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o rachunkowości",
+        "article": "art. 70 ust. 1 i 2",
+        "quote": "Kierownik jednostki jest obowiązany złożyć wprowadzenie do sprawozdania finansowego, bilans, rachunek zysków i strat, zestawienie zmian w kapitale oraz rachunek przepływów pieniężnych do ogłoszenia w ciągu 15 dni od dnia ich zatwierdzenia. Ogłoszenie następuje w \"Monitorze Sądowym i Gospodarczym\""
+      }
+    ],
+    "conditions": [
+      "dotyczy jednostek wymienionych w art. 64 do których nie ma zastosowania art. 69",
+      "termin: 15 dni od zatwierdzenia",
+      "ogłoszenie w \"Monitorze Sądowym i Gospodarczym\""
+    ],
+    "exceptions": [
+      "przepis art. 70 nie ma zastosowania do jednostek objętych art. 69"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "publikacja_sprawozdań",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  }
+]

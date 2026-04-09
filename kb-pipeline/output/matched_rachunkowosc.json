@@ -1,0 +1,1053 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 08:50:52",
+    "total_questions": 60,
+    "completed_batches_count": 3,
+    "total_batches": 3,
+    "completed_batches": [
+      0,
+      1,
+      2
+    ],
+    "matched": 60,
+    "unmatched": 0,
+    "total_cost_usd": 0.0147
+  },
+  "batch_results": {
+    "0": [
+      {
+        "question": "Kiedy jednostka musi sporządzić bilans?",
+        "matched_articles": [
+          "45",
+          "46"
+        ],
+        "primary_article": "46",
+        "reasoning": "Art. 46 określa zasady sporządzania bilansu na dzień zamknięcia ksiąg rachunkowych, art. 45 definiuje ogólne zasady sprawozdania finansowego."
+      },
+      {
+        "question": "Kiedy trzeba sporządzić rachunek zysków i strat?",
+        "matched_articles": [
+          "45",
+          "47"
+        ],
+        "primary_article": "47",
+        "reasoning": "Art. 47 definiuje zawartość rachunku zysków i strat, art. 45 określa ogólne zasady sporządzania sprawozdania finansowego."
+      },
+      {
+        "question": "Które jednostki sporządzają zestawienie zmian w kapitale własnym?",
+        "matched_articles": [
+          "48a",
+          "49"
+        ],
+        "primary_article": "48a",
+        "reasoning": "Art. 48a określa wymogi dotyczące zestawienia zmian w kapitale (funduszu) własnym, art. 49 wskazuje jednostki podlegające tym wymogom."
+      },
+      {
+        "question": "Kiedy trzeba sporządzić rachunek przepływów pieniężnych?",
+        "matched_articles": [
+          "48b",
+          "49"
+        ],
+        "primary_article": "48b",
+        "reasoning": "Art. 48b definiuje rachunek przepływów pieniężnych metodą bezpośrednią, art. 49 wskazuje jednostki obowiązane do jego sporządzenia."
+      },
+      {
+        "question": "Co powinna zawierać informacja dodatkowa do sprawozdania finansowego?",
+        "matched_articles": [
+          "48"
+        ],
+        "primary_article": "48",
+        "reasoning": "Art. 48 określa wymogi co do zawartości informacji dodatkowej jako części sprawozdania finansowego."
+      },
+      {
+        "question": "Do kiedy trzeba zatwierdzić roczne sprawozdanie finansowe?",
+        "matched_articles": [
+          "53"
+        ],
+        "primary_article": "53",
+        "reasoning": "Art. 53 określa terminy zatwierdzenia rocznego sprawozdania finansowego przez właściwe organy jednostki."
+      },
+      {
+        "question": "Do kiedy trzeba złożyć sprawozdanie finansowe do KRS?",
+        "matched_articles": [
+          "69"
+        ],
+        "primary_article": "69",
+        "reasoning": "Art. 69 określa obowiązek składania sprawozdania finansowego we właściwym rejestrze sądowym (KRS)."
+      },
+      {
+        "question": "Kiedy jednostka ma obowiązek przekazać sprawozdanie finansowe do szefa KAS?",
+        "matched_articles": [
+          "70"
+        ],
+        "primary_article": "70",
+        "reasoning": "Art. 70 określa obowiązek przekazania sprawozdania finansowego organom podatkowym."
+      },
+      {
+        "question": "Kiedy sprawozdanie finansowe podlega badaniu przez biegłego rewidenta?",
+        "matched_articles": [
+          "64",
+          "68"
+        ],
+        "primary_article": "64",
+        "reasoning": "Art. 64 określa wymóg badania sprawozdań finansowych, art. 68 wskazuje konkretne kategorie jednostek obowiązane do badania."
+      },
+      {
+        "question": "Jakie są terminy na podpisanie e-sprawozdania finansowego?",
+        "matched_articles": [
+          "69"
+        ],
+        "primary_article": "69",
+        "reasoning": "Art. 69 określa procedury składania sprawozdań finansowych, w tym wymogi dotyczące podpisania, choć szczegóły dotyczą ogólnie sprawozdań."
+      },
+      {
+        "question": "Co musi zawierać dowód księgowy zgodnie z ustawą o rachunkowości?",
+        "matched_articles": [
+          "21"
+        ],
+        "primary_article": "21",
+        "reasoning": "Art. 21 wymienia wszystkie elementy, które powinien zawierać dowód księgowy."
+      },
+      {
+        "question": "Czy dowód księgowy musi mieć podpis wystawcy?",
+        "matched_articles": [
+          "21",
+          "22"
+        ],
+        "primary_article": "21",
+        "reasoning": "Art. 21 wymienia podpis wystawcy jako element dowodu księgowego, art. 22 określa wymóg rzetelności dowodów."
+      },
+      {
+        "question": "Jak poprawiać błędy w dowodzie księgowym?",
+        "matched_articles": [
+          "25"
+        ],
+        "primary_article": "25",
+        "reasoning": "Art. 25 określa procedury poprawiania błędów w zapisach księgowych, w tym dotyczące dowodów księgowych."
+      },
+      {
+        "question": "Czy można księgować na podstawie skanu dokumentu?",
+        "matched_articles": [
+          "21",
+          "22",
+          "23"
+        ],
+        "primary_article": "22",
+        "reasoning": "Art. 22 określa wymóg rzetelności dowodów księgowych, art. 23 wymaga trwałej formy zapisów, art. 21 definiuje zawartość dowodu."
+      },
+      {
+        "question": "Kiedy można stosować dowody zastępcze?",
+        "matched_articles": [
+          "21"
+        ],
+        "primary_article": "21",
+        "reasoning": "Art. 21 określa wymogi dla dowodów księgowych, których zastosowanie wymaga spełnienia określonych warunków.",
+        "uncertain": true
+      },
+      {
+        "question": "Jakie są zasady prowadzenia dziennika ksiąg rachunkowych?",
+        "matched_articles": [
+          "14"
+        ],
+        "primary_article": "14",
+        "reasoning": "Art. 14 określa zasady prowadzenia dziennika zawierającego chronologiczne ujęcie zdarzeń gospodarczych."
+      },
+      {
+        "question": "Co powinna zawierać polityka rachunkowości jednostki?",
+        "matched_articles": [
+          "4",
+          "10"
+        ],
+        "primary_article": "4",
+        "reasoning": "Art. 4 określa wymóg stosowania przyjętych zasad (polityki) rachunkowości, art. 10 wymaga dokumentacji opisującej zasady."
+      },
+      {
+        "question": "Kiedy trzeba aktualizować politykę rachunkowości?",
+        "matched_articles": [
+          "5"
+        ],
+        "primary_article": "5",
+        "reasoning": "Art. 5 określa zasady stosowania i zmian w przyjętych zasadach (polityce) rachunkowości."
+      },
+      {
+        "question": "Na czym polega zasada ciągłości w rachunkowości?",
+        "matched_articles": [
+          "5"
+        ],
+        "primary_article": "5",
+        "reasoning": "Art. 5 określa obowiązek ciągłego stosowania przyjętych zasad rachunkowości z roku na rok."
+      },
+      {
+        "question": "Na czym polega zasada ostrożności w rachunkowości?",
+        "matched_articles": [
+          "8"
+        ],
+        "primary_article": "8",
+        "reasoning": "Art. 8 określa wymóg zapewnienia ostrożności przy sporządzaniu sprawozdań finansowych."
+      }
+    ],
+    "1": [
+      {
+        "question": "Kiedy trzeba przeprowadzić inwentaryzację roczną?",
+        "matched_articles": [
+          "26"
+        ],
+        "primary_article": "26",
+        "reasoning": "Art. 26 ust. 1 stanowi, że jednostki przeprowadzają inwentaryzację na ostatni dzień każdego roku obrachunkowego"
+      },
+      {
+        "question": "Jakie składniki majątku inwentaryzuje się spisem z natury?",
+        "matched_articles": [
+          "27"
+        ],
+        "primary_article": "27",
+        "reasoning": "Art. 27 reguluje przeprowadzenie i wyniki inwentaryzacji, w tym metody inwentaryzacji takie jak spis z natury"
+      },
+      {
+        "question": "Kiedy stosuje się potwierdzenie sald przy inwentaryzacji?",
+        "matched_articles": [
+          "27"
+        ],
+        "primary_article": "27",
+        "reasoning": "Art. 27 określa metody inwentaryzacji, w tym potwierdzenie sald jako jedną z możliwych metod"
+      },
+      {
+        "question": "Kiedy można przeprowadzić inwentaryzację drogą weryfikacji?",
+        "matched_articles": [
+          "27"
+        ],
+        "primary_article": "27",
+        "reasoning": "Art. 27 zawiera przepisy dotyczące sposobów przeprowadzenia inwentaryzacji, w tym weryfikacji dokumentów"
+      },
+      {
+        "question": "W jakich terminach można rozpocząć i zakończyć spis z natury?",
+        "matched_articles": [
+          "26"
+        ],
+        "primary_article": "26",
+        "reasoning": "Art. 26 ust. 1 reguluje terminy przeprowadzenia inwentaryzacji rocznej na ostatni dzień roku obrachunkowego"
+      },
+      {
+        "question": "Jak rozliczyć różnice inwentaryzacyjne?",
+        "matched_articles": [
+          "26",
+          "27"
+        ],
+        "primary_article": "26",
+        "reasoning": "Art. 26 i 27 regulują inwentaryzację oraz sposób jej przeprowadzenia, art. 20 określa zasady wprowadzania różnic do ksiąg"
+      },
+      {
+        "question": "Co to jest cena nabycia w ustawie o rachunkowości?",
+        "matched_articles": [
+          "31"
+        ],
+        "primary_article": "31",
+        "reasoning": "Art. 31 ust. 1 definiuje wartość początkową stanowiącą cenę nabycia jako koszty uzyskania danego składnika aktywów"
+      },
+      {
+        "question": "Co to jest koszt wytworzenia według ustawy o rachunkowości?",
+        "matched_articles": [
+          "31"
+        ],
+        "primary_article": "31",
+        "reasoning": "Art. 31 ust. 1 definiuje wartość początkową stanowiącą koszt wytworzenia jako koszty bezpośrednio związane z wytworzeniem"
+      },
+      {
+        "question": "Kiedy stosuje się wartość godziwą w rachunkowości?",
+        "matched_articles": [
+          "7",
+          "28"
+        ],
+        "primary_article": "28",
+        "reasoning": "Art. 28 zawiera przepisy dotyczące wyceny aktywów i pasywów, art. 7 reguluje metody wyceny na dzień bilansowy"
+      },
+      {
+        "question": "Jak wycenia się środki trwałe na dzień bilansowy?",
+        "matched_articles": [
+          "28",
+          "32"
+        ],
+        "primary_article": "32",
+        "reasoning": "Art. 32 reguluje odpisów amortyzacyjne od środków trwałych, art. 28 określa zasady wyceny na dzień bilansowy"
+      },
+      {
+        "question": "Jak wycenia się należności na dzień bilansowy?",
+        "matched_articles": [
+          "35b"
+        ],
+        "primary_article": "35b",
+        "reasoning": "Art. 35b ust. 1 stanowi, że wartość należności aktualizuje się uwzględniając stopień wiarygodności ich spłaty"
+      },
+      {
+        "question": "Jak wycenia się zobowiązania na dzień bilansowy?",
+        "matched_articles": [
+          "28"
+        ],
+        "primary_article": "28",
+        "reasoning": "Art. 28 ust. 1 stanowi, że aktywa i pasywa wycenia się nie rzadziej niż na dzień bilansowy w zgodzie z zasadami ustawy"
+      },
+      {
+        "question": "Kiedy tworzy się odpis aktualizujący wartość aktywów?",
+        "matched_articles": [
+          "35b",
+          "35c"
+        ],
+        "primary_article": "35b",
+        "reasoning": "Art. 35b reguluje aktualizację wartości należności, art. 35c określa ustanie przyczyny dokonania odpisu"
+      },
+      {
+        "question": "Kiedy tworzy się rezerwy na zobowiązania?",
+        "matched_articles": [
+          "35d"
+        ],
+        "primary_article": "35d",
+        "reasoning": "Art. 35d ust. 1 stanowi, że rezerwy tworzy się na pewne lub o dużym stopniu prawdopodobieństwa zobowiązania"
+      },
+      {
+        "question": "Na czym polegają rozliczenia międzyokresowe kosztów?",
+        "matched_articles": [
+          "39"
+        ],
+        "primary_article": "39",
+        "reasoning": "Art. 39 ust. 1 reguluje czynne rozliczenia międzyokresowe kosztów ponoszonych w danym lub poprzednim okresie"
+      },
+      {
+        "question": "Jakie metody amortyzacji bilansowej dopuszcza ustawa o rachunkowości?",
+        "matched_articles": [
+          "32"
+        ],
+        "primary_article": "32",
+        "reasoning": "Art. 32 ust. 1 stanowi, że odpisy amortyzacyjne można obliczać metodą liniową, degresywną lub inną metodą"
+      },
+      {
+        "question": "Czy amortyzacja bilansowa musi być taka sama jak podatkowa?",
+        "matched_articles": [
+          "4",
+          "32"
+        ],
+        "primary_article": "4",
+        "reasoning": "Art. 4 ust. 1 stanowi, że jednostki stosują przyjęte zasady rachunkowości niezależnie od przepisów podatkowych"
+      },
+      {
+        "question": "Kiedy można zmienić stawkę amortyzacji bilansowej?",
+        "matched_articles": [
+          "5"
+        ],
+        "primary_article": "5",
+        "reasoning": "Art. 5 ust. 1 stanowi, że przyjęte zasady rachunkowości należy stosować konsekwentnie w kolejnych latach obrachunkowych"
+      },
+      {
+        "question": "Od kiedy rozpoczyna się amortyzację bilansową środka trwałego?",
+        "matched_articles": [
+          "32"
+        ],
+        "primary_article": "32",
+        "reasoning": "Art. 32 reguluje zasady stosowania odpisów amortyzacyjnych od momentu, gdy środek trwały jest gotów do użytku"
+      },
+      {
+        "question": "Jak ustalić okres ekonomicznej użyteczności środka trwałego?",
+        "matched_articles": [
+          "32"
+        ],
+        "primary_article": "32",
+        "reasoning": "Art. 32 stanowi, że okres użyteczności określa się na podstawie przewidywanego okresu, w którym środek trwały będzie użytkowany"
+      }
+    ],
+    "2": [
+      {
+        "question": "Kto może stosować uproszczenia dla jednostek małych?",
+        "matched_articles": [
+          "28b",
+          "49a"
+        ],
+        "primary_article": "28b",
+        "reasoning": "Art. 28b określa jednostki małe i średnie uprawnione do stosowania uproszczeń, art. 49a definiuje sprawozdanie finansowe sporządzone z zastosowaniem uproszczeń"
+      },
+      {
+        "question": "Jakie uproszczenia w sprawozdaniu finansowym przysługują jednostce małej?",
+        "matched_articles": [
+          "28b",
+          "50"
+        ],
+        "primary_article": "28b",
+        "reasoning": "Art. 28b zawiera szczegółowe uproszczenia dla jednostek małych i średnich, art. 50 mówi o możliwości wykazania informacji w innej formie"
+      },
+      {
+        "question": "Kto może sporządzać uproszczone sprawozdanie finansowe jako jednostka mikro?",
+        "matched_articles": [
+          "28a",
+          "28b"
+        ],
+        "primary_article": "28a",
+        "reasoning": "Art. 28a określa jednostkę mikro i jej uprawnienia do uproszczeń w sprawozdaniu finansowym"
+      },
+      {
+        "question": "Czy jednostka mała może nie sporządzać rachunku przepływów pieniężnych?",
+        "matched_articles": [
+          "28b",
+          "48b"
+        ],
+        "primary_article": "28b",
+        "reasoning": "Art. 28b zwalnia jednostki małe z obowiązku sporządzania rachunku przepływów pieniężnych, art. 48b definiuje raport przepływów pieniężnych"
+      },
+      {
+        "question": "Kiedy podatnik musi przejść z KPiR na pełne księgi rachunkowe?",
+        "matched_articles": [
+          "2"
+        ],
+        "primary_article": "2",
+        "reasoning": "Art. 2 określa krąg podmiotów objętych ustawą o rachunkowości, ale ustawą nie reguluje przejścia z KPiR - to materia ustawy o podatku dochodowym",
+        "uncertain": true
+      },
+      {
+        "question": "Jaki limit przychodów powoduje obowiązek prowadzenia ksiąg rachunkowych?",
+        "matched_articles": [
+          "2"
+        ],
+        "primary_article": "2",
+        "reasoning": "Art. 2 definiuje podmioty obowiązane do prowadzenia ksiąg rachunkowych, ale limity przychodów określa ustawa o podatku dochodowym",
+        "uncertain": true
+      },
+      {
+        "question": "Od kiedy trzeba otworzyć księgi rachunkowe po przekroczeniu limitu?",
+        "matched_articles": [
+          "12"
+        ],
+        "primary_article": "12",
+        "reasoning": "Art. 12 określa moment otwarcia ksiąg rachunkowych, ale szczegółowe warunki przekroczenia limitu reguluje ustawa o podatku dochodowym",
+        "uncertain": true
+      },
+      {
+        "question": "Jakie jednostki mają obowiązek prowadzić księgi rachunkowe niezależnie od limitu?",
+        "matched_articles": [
+          "2"
+        ],
+        "primary_article": "2",
+        "reasoning": "Art. 2 określa podmioty objęte obowiązkiem prowadzenia ksiąg rachunkowych, w tym spółki kapitałowe i inne jednostki wymienione w ustawie"
+      },
+      {
+        "question": "Kto odpowiada za prowadzenie ksiąg rachunkowych w jednostce?",
+        "matched_articles": [
+          "11",
+          "4a"
+        ],
+        "primary_article": "11",
+        "reasoning": "Art. 11 określa, że księgi rachunkowe prowadzi jednostka, art. 4a wskazuje odpowiedzialność kierownika i rady nadzorczej"
+      },
+      {
+        "question": "Czy kierownik jednostki odpowiada za rachunkowość mimo powierzenia ksiąg biuru rachunkowemu?",
+        "matched_articles": [
+          "11",
+          "4a"
+        ],
+        "primary_article": "4a",
+        "reasoning": "Art. 4a wyraźnie stanowi o odpowiedzialności kierownika jednostki niezależnie od organizacji pracy, art. 11 wskazuje na możliwość powierzenia prowadzenia ksiąg innej jednostce"
+      },
+      {
+        "question": "Za co odpowiada główny księgowy według ustawy o rachunkowości?",
+        "matched_articles": [
+          "24"
+        ],
+        "primary_article": "24",
+        "reasoning": "Art. 24 określa wymogi rzetelności i bezbłędności prowadzenia ksiąg, ale ustawa nie definiuje konkretnej roli głównego księgowego",
+        "uncertain": true
+      },
+      {
+        "question": "Jakie sankcje grożą za nierzetelne prowadzenie ksiąg rachunkowych?",
+        "matched_articles": [
+          "77",
+          "78",
+          "79"
+        ],
+        "primary_article": "77",
+        "reasoning": "Art. 77 penalizuje nieprowadzenie ksiąg, art. 78 odpowiedzialność biegłego rewidenta, art. 79 odpowiedzialność za brak badania - to przepisy odpowiedzialności karnej"
+      },
+      {
+        "question": "Kto może usługowo prowadzić księgi rachunkowe?",
+        "matched_articles": [
+          "76a"
+        ],
+        "primary_article": "76a",
+        "reasoning": "Art. 76a określa warunki usługowego prowadzenia ksiąg rachunkowych i wymagane kwalifikacje przedsiębiorcy"
+      },
+      {
+        "question": "Jakie warunki trzeba spełnić, aby usługowo prowadzić księgi rachunkowe?",
+        "matched_articles": [
+          "76a",
+          "76h"
+        ],
+        "primary_article": "76a",
+        "reasoning": "Art. 76a definiuje warunki świadczenia usługi, art. 76h określa obowiązki przedsiębiorców prowadzących usługowe prowadzenie ksiąg"
+      },
+      {
+        "question": "Czy biuro rachunkowe musi mieć ubezpieczenie OC?",
+        "matched_articles": [
+          "76a"
+        ],
+        "primary_article": "76a",
+        "reasoning": "Art. 76a zawiera wymogi dla przedsiębiorców prowadzących usługowe prowadzenie ksiąg rachunkowych, w tym wymóg ubezpieczenia OC"
+      },
+      {
+        "question": "W jakim formacie składa się e-sprawozdanie finansowe?",
+        "matched_articles": [
+          "69",
+          "70"
+        ],
+        "primary_article": "69",
+        "reasoning": "Art. 69 określa obowiązek złożenia sprawozdania finansowego do rejestru sądowego, art. 70 precyzuje zasady składania - format reguluje rozporządzenie"
+      },
+      {
+        "question": "Kto podpisuje e-sprawozdanie finansowe?",
+        "matched_articles": [
+          "52",
+          "69"
+        ],
+        "primary_article": "52",
+        "reasoning": "Art. 52 określa, że kierownik zapewnia sporządzenie sprawozdania finansowego, art. 69 wskazuje na wymóg podpisu"
+      },
+      {
+        "question": "Czy wszyscy członkowie zarządu muszą podpisać sprawozdanie finansowe?",
+        "matched_articles": [
+          "52",
+          "69"
+        ],
+        "primary_article": "52",
+        "reasoning": "Art. 52 mówi o kierowniku, ale szczegółowe wymogi dotyczące podpisów reguluje ustawa o spółkach kapitałowych"
+      },
+      {
+        "question": "Jak złożyć e-sprawozdanie finansowe do KRS?",
+        "matched_articles": [
+          "69",
+          "70"
+        ],
+        "primary_article": "69",
+        "reasoning": "Art. 69 określa obowiązek złożenia sprawozdania do rejestru sądowego, art. 70 dodatkowe wymogi - procedurę wskazują rozporządzenia"
+      },
+      {
+        "question": "Kiedy trzeba ogłosić roczne sprawozdanie finansowe?",
+        "matched_articles": [
+          "69",
+          "70"
+        ],
+        "primary_article": "69",
+        "reasoning": "Art. 69 określa obowiązek złożenia sprawozdania we właściwym rejestrze sądowym w terminie 3 miesięcy od dnia zatwierdzenia, art. 70 wskazuje dodatkowe wymogi ogłoszenia"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "question": "Kiedy jednostka musi sporządzić bilans?",
+      "matched_articles": [
+        "45",
+        "46"
+      ],
+      "primary_article": "46",
+      "reasoning": "Art. 46 określa zasady sporządzania bilansu na dzień zamknięcia ksiąg rachunkowych, art. 45 definiuje ogólne zasady sprawozdania finansowego."
+    },
+    {
+      "question": "Kiedy trzeba sporządzić rachunek zysków i strat?",
+      "matched_articles": [
+        "45",
+        "47"
+      ],
+      "primary_article": "47",
+      "reasoning": "Art. 47 definiuje zawartość rachunku zysków i strat, art. 45 określa ogólne zasady sporządzania sprawozdania finansowego."
+    },
+    {
+      "question": "Które jednostki sporządzają zestawienie zmian w kapitale własnym?",
+      "matched_articles": [
+        "48a",
+        "49"
+      ],
+      "primary_article": "48a",
+      "reasoning": "Art. 48a określa wymogi dotyczące zestawienia zmian w kapitale (funduszu) własnym, art. 49 wskazuje jednostki podlegające tym wymogom."
+    },
+    {
+      "question": "Kiedy trzeba sporządzić rachunek przepływów pieniężnych?",
+      "matched_articles": [
+        "48b",
+        "49"
+      ],
+      "primary_article": "48b",
+      "reasoning": "Art. 48b definiuje rachunek przepływów pieniężnych metodą bezpośrednią, art. 49 wskazuje jednostki obowiązane do jego sporządzenia."
+    },
+    {
+      "question": "Co powinna zawierać informacja dodatkowa do sprawozdania finansowego?",
+      "matched_articles": [
+        "48"
+      ],
+      "primary_article": "48",
+      "reasoning": "Art. 48 określa wymogi co do zawartości informacji dodatkowej jako części sprawozdania finansowego."
+    },
+    {
+      "question": "Do kiedy trzeba zatwierdzić roczne sprawozdanie finansowe?",
+      "matched_articles": [
+        "53"
+      ],
+      "primary_article": "53",
+      "reasoning": "Art. 53 określa terminy zatwierdzenia rocznego sprawozdania finansowego przez właściwe organy jednostki."
+    },
+    {
+      "question": "Do kiedy trzeba złożyć sprawozdanie finansowe do KRS?",
+      "matched_articles": [
+        "69"
+      ],
+      "primary_article": "69",
+      "reasoning": "Art. 69 określa obowiązek składania sprawozdania finansowego we właściwym rejestrze sądowym (KRS)."
+    },
+    {
+      "question": "Kiedy jednostka ma obowiązek przekazać sprawozdanie finansowe do szefa KAS?",
+      "matched_articles": [
+        "70"
+      ],
+      "primary_article": "70",
+      "reasoning": "Art. 70 określa obowiązek przekazania sprawozdania finansowego organom podatkowym."
+    },
+    {
+      "question": "Kiedy sprawozdanie finansowe podlega badaniu przez biegłego rewidenta?",
+      "matched_articles": [
+        "64",
+        "68"
+      ],
+      "primary_article": "64",
+      "reasoning": "Art. 64 określa wymóg badania sprawozdań finansowych, art. 68 wskazuje konkretne kategorie jednostek obowiązane do badania."
+    },
+    {
+      "question": "Jakie są terminy na podpisanie e-sprawozdania finansowego?",
+      "matched_articles": [
+        "69"
+      ],
+      "primary_article": "69",
+      "reasoning": "Art. 69 określa procedury składania sprawozdań finansowych, w tym wymogi dotyczące podpisania, choć szczegóły dotyczą ogólnie sprawozdań."
+    },
+    {
+      "question": "Co musi zawierać dowód księgowy zgodnie z ustawą o rachunkowości?",
+      "matched_articles": [
+        "21"
+      ],
+      "primary_article": "21",
+      "reasoning": "Art. 21 wymienia wszystkie elementy, które powinien zawierać dowód księgowy."
+    },
+    {
+      "question": "Czy dowód księgowy musi mieć podpis wystawcy?",
+      "matched_articles": [
+        "21",
+        "22"
+      ],
+      "primary_article": "21",
+      "reasoning": "Art. 21 wymienia podpis wystawcy jako element dowodu księgowego, art. 22 określa wymóg rzetelności dowodów."
+    },
+    {
+      "question": "Jak poprawiać błędy w dowodzie księgowym?",
+      "matched_articles": [
+        "25"
+      ],
+      "primary_article": "25",
+      "reasoning": "Art. 25 określa procedury poprawiania błędów w zapisach księgowych, w tym dotyczące dowodów księgowych."
+    },
+    {
+      "question": "Czy można księgować na podstawie skanu dokumentu?",
+      "matched_articles": [
+        "21",
+        "22",
+        "23"
+      ],
+      "primary_article": "22",
+      "reasoning": "Art. 22 określa wymóg rzetelności dowodów księgowych, art. 23 wymaga trwałej formy zapisów, art. 21 definiuje zawartość dowodu."
+    },
+    {
+      "question": "Kiedy można stosować dowody zastępcze?",
+      "matched_articles": [
+        "21"
+      ],
+      "primary_article": "21",
+      "reasoning": "Art. 21 określa wymogi dla dowodów księgowych, których zastosowanie wymaga spełnienia określonych warunków.",
+      "uncertain": true
+    },
+    {
+      "question": "Jakie są zasady prowadzenia dziennika ksiąg rachunkowych?",
+      "matched_articles": [
+        "14"
+      ],
+      "primary_article": "14",
+      "reasoning": "Art. 14 określa zasady prowadzenia dziennika zawierającego chronologiczne ujęcie zdarzeń gospodarczych."
+    },
+    {
+      "question": "Co powinna zawierać polityka rachunkowości jednostki?",
+      "matched_articles": [
+        "4",
+        "10"
+      ],
+      "primary_article": "4",
+      "reasoning": "Art. 4 określa wymóg stosowania przyjętych zasad (polityki) rachunkowości, art. 10 wymaga dokumentacji opisującej zasady."
+    },
+    {
+      "question": "Kiedy trzeba aktualizować politykę rachunkowości?",
+      "matched_articles": [
+        "5"
+      ],
+      "primary_article": "5",
+      "reasoning": "Art. 5 określa zasady stosowania i zmian w przyjętych zasadach (polityce) rachunkowości."
+    },
+    {
+      "question": "Na czym polega zasada ciągłości w rachunkowości?",
+      "matched_articles": [
+        "5"
+      ],
+      "primary_article": "5",
+      "reasoning": "Art. 5 określa obowiązek ciągłego stosowania przyjętych zasad rachunkowości z roku na rok."
+    },
+    {
+      "question": "Na czym polega zasada ostrożności w rachunkowości?",
+      "matched_articles": [
+        "8"
+      ],
+      "primary_article": "8",
+      "reasoning": "Art. 8 określa wymóg zapewnienia ostrożności przy sporządzaniu sprawozdań finansowych."
+    },
+    {
+      "question": "Kiedy trzeba przeprowadzić inwentaryzację roczną?",
+      "matched_articles": [
+        "26"
+      ],
+      "primary_article": "26",
+      "reasoning": "Art. 26 ust. 1 stanowi, że jednostki przeprowadzają inwentaryzację na ostatni dzień każdego roku obrachunkowego"
+    },
+    {
+      "question": "Jakie składniki majątku inwentaryzuje się spisem z natury?",
+      "matched_articles": [
+        "27"
+      ],
+      "primary_article": "27",
+      "reasoning": "Art. 27 reguluje przeprowadzenie i wyniki inwentaryzacji, w tym metody inwentaryzacji takie jak spis z natury"
+    },
+    {
+      "question": "Kiedy stosuje się potwierdzenie sald przy inwentaryzacji?",
+      "matched_articles": [
+        "27"
+      ],
+      "primary_article": "27",
+      "reasoning": "Art. 27 określa metody inwentaryzacji, w tym potwierdzenie sald jako jedną z możliwych metod"
+    },
+    {
+      "question": "Kiedy można przeprowadzić inwentaryzację drogą weryfikacji?",
+      "matched_articles": [
+        "27"
+      ],
+      "primary_article": "27",
+      "reasoning": "Art. 27 zawiera przepisy dotyczące sposobów przeprowadzenia inwentaryzacji, w tym weryfikacji dokumentów"
+    },
+    {
+      "question": "W jakich terminach można rozpocząć i zakończyć spis z natury?",
+      "matched_articles": [
+        "26"
+      ],
+      "primary_article": "26",
+      "reasoning": "Art. 26 ust. 1 reguluje terminy przeprowadzenia inwentaryzacji rocznej na ostatni dzień roku obrachunkowego"
+    },
+    {
+      "question": "Jak rozliczyć różnice inwentaryzacyjne?",
+      "matched_articles": [
+        "26",
+        "27"
+      ],
+      "primary_article": "26",
+      "reasoning": "Art. 26 i 27 regulują inwentaryzację oraz sposób jej przeprowadzenia, art. 20 określa zasady wprowadzania różnic do ksiąg"
+    },
+    {
+      "question": "Co to jest cena nabycia w ustawie o rachunkowości?",
+      "matched_articles": [
+        "31"
+      ],
+      "primary_article": "31",
+      "reasoning": "Art. 31 ust. 1 definiuje wartość początkową stanowiącą cenę nabycia jako koszty uzyskania danego składnika aktywów"
+    },
+    {
+      "question": "Co to jest koszt wytworzenia według ustawy o rachunkowości?",
+      "matched_articles": [
+        "31"
+      ],
+      "primary_article": "31",
+      "reasoning": "Art. 31 ust. 1 definiuje wartość początkową stanowiącą koszt wytworzenia jako koszty bezpośrednio związane z wytworzeniem"
+    },
+    {
+      "question": "Kiedy stosuje się wartość godziwą w rachunkowości?",
+      "matched_articles": [
+        "7",
+        "28"
+      ],
+      "primary_article": "28",
+      "reasoning": "Art. 28 zawiera przepisy dotyczące wyceny aktywów i pasywów, art. 7 reguluje metody wyceny na dzień bilansowy"
+    },
+    {
+      "question": "Jak wycenia się środki trwałe na dzień bilansowy?",
+      "matched_articles": [
+        "28",
+        "32"
+      ],
+      "primary_article": "32",
+      "reasoning": "Art. 32 reguluje odpisów amortyzacyjne od środków trwałych, art. 28 określa zasady wyceny na dzień bilansowy"
+    },
+    {
+      "question": "Jak wycenia się należności na dzień bilansowy?",
+      "matched_articles": [
+        "35b"
+      ],
+      "primary_article": "35b",
+      "reasoning": "Art. 35b ust. 1 stanowi, że wartość należności aktualizuje się uwzględniając stopień wiarygodności ich spłaty"
+    },
+    {
+      "question": "Jak wycenia się zobowiązania na dzień bilansowy?",
+      "matched_articles": [
+        "28"
+      ],
+      "primary_article": "28",
+      "reasoning": "Art. 28 ust. 1 stanowi, że aktywa i pasywa wycenia się nie rzadziej niż na dzień bilansowy w zgodzie z zasadami ustawy"
+    },
+    {
+      "question": "Kiedy tworzy się odpis aktualizujący wartość aktywów?",
+      "matched_articles": [
+        "35b",
+        "35c"
+      ],
+      "primary_article": "35b",
+      "reasoning": "Art. 35b reguluje aktualizację wartości należności, art. 35c określa ustanie przyczyny dokonania odpisu"
+    },
+    {
+      "question": "Kiedy tworzy się rezerwy na zobowiązania?",
+      "matched_articles": [
+        "35d"
+      ],
+      "primary_article": "35d",
+      "reasoning": "Art. 35d ust. 1 stanowi, że rezerwy tworzy się na pewne lub o dużym stopniu prawdopodobieństwa zobowiązania"
+    },
+    {
+      "question": "Na czym polegają rozliczenia międzyokresowe kosztów?",
+      "matched_articles": [
+        "39"
+      ],
+      "primary_article": "39",
+      "reasoning": "Art. 39 ust. 1 reguluje czynne rozliczenia międzyokresowe kosztów ponoszonych w danym lub poprzednim okresie"
+    },
+    {
+      "question": "Jakie metody amortyzacji bilansowej dopuszcza ustawa o rachunkowości?",
+      "matched_articles": [
+        "32"
+      ],
+      "primary_article": "32",
+      "reasoning": "Art. 32 ust. 1 stanowi, że odpisy amortyzacyjne można obliczać metodą liniową, degresywną lub inną metodą"
+    },
+    {
+      "question": "Czy amortyzacja bilansowa musi być taka sama jak podatkowa?",
+      "matched_articles": [
+        "4",
+        "32"
+      ],
+      "primary_article": "4",
+      "reasoning": "Art. 4 ust. 1 stanowi, że jednostki stosują przyjęte zasady rachunkowości niezależnie od przepisów podatkowych"
+    },
+    {
+      "question": "Kiedy można zmienić stawkę amortyzacji bilansowej?",
+      "matched_articles": [
+        "5"
+      ],
+      "primary_article": "5",
+      "reasoning": "Art. 5 ust. 1 stanowi, że przyjęte zasady rachunkowości należy stosować konsekwentnie w kolejnych latach obrachunkowych"
+    },
+    {
+      "question": "Od kiedy rozpoczyna się amortyzację bilansową środka trwałego?",
+      "matched_articles": [
+        "32"
+      ],
+      "primary_article": "32",
+      "reasoning": "Art. 32 reguluje zasady stosowania odpisów amortyzacyjnych od momentu, gdy środek trwały jest gotów do użytku"
+    },
+    {
+      "question": "Jak ustalić okres ekonomicznej użyteczności środka trwałego?",
+      "matched_articles": [
+        "32"
+      ],
+      "primary_article": "32",
+      "reasoning": "Art. 32 stanowi, że okres użyteczności określa się na podstawie przewidywanego okresu, w którym środek trwały będzie użytkowany"
+    },
+    {
+      "question": "Kto może stosować uproszczenia dla jednostek małych?",
+      "matched_articles": [
+        "28b",
+        "49a"
+      ],
+      "primary_article": "28b",
+      "reasoning": "Art. 28b określa jednostki małe i średnie uprawnione do stosowania uproszczeń, art. 49a definiuje sprawozdanie finansowe sporządzone z zastosowaniem uproszczeń"
+    },
+    {
+      "question": "Jakie uproszczenia w sprawozdaniu finansowym przysługują jednostce małej?",
+      "matched_articles": [
+        "28b",
+        "50"
+      ],
+      "primary_article": "28b",
+      "reasoning": "Art. 28b zawiera szczegółowe uproszczenia dla jednostek małych i średnich, art. 50 mówi o możliwości wykazania informacji w innej formie"
+    },
+    {
+      "question": "Kto może sporządzać uproszczone sprawozdanie finansowe jako jednostka mikro?",
+      "matched_articles": [
+        "28a",
+        "28b"
+      ],
+      "primary_article": "28a",
+      "reasoning": "Art. 28a określa jednostkę mikro i jej uprawnienia do uproszczeń w sprawozdaniu finansowym"
+    },
+    {
+      "question": "Czy jednostka mała może nie sporządzać rachunku przepływów pieniężnych?",
+      "matched_articles": [
+        "28b",
+        "48b"
+      ],
+      "primary_article": "28b",
+      "reasoning": "Art. 28b zwalnia jednostki małe z obowiązku sporządzania rachunku przepływów pieniężnych, art. 48b definiuje raport przepływów pieniężnych"
+    },
+    {
+      "question": "Kiedy podatnik musi przejść z KPiR na pełne księgi rachunkowe?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Art. 2 określa krąg podmiotów objętych ustawą o rachunkowości, ale ustawą nie reguluje przejścia z KPiR - to materia ustawy o podatku dochodowym",
+      "uncertain": true
+    },
+    {
+      "question": "Jaki limit przychodów powoduje obowiązek prowadzenia ksiąg rachunkowych?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Art. 2 definiuje podmioty obowiązane do prowadzenia ksiąg rachunkowych, ale limity przychodów określa ustawa o podatku dochodowym",
+      "uncertain": true
+    },
+    {
+      "question": "Od kiedy trzeba otworzyć księgi rachunkowe po przekroczeniu limitu?",
+      "matched_articles": [
+        "12"
+      ],
+      "primary_article": "12",
+      "reasoning": "Art. 12 określa moment otwarcia ksiąg rachunkowych, ale szczegółowe warunki przekroczenia limitu reguluje ustawa o podatku dochodowym",
+      "uncertain": true
+    },
+    {
+      "question": "Jakie jednostki mają obowiązek prowadzić księgi rachunkowe niezależnie od limitu?",
+      "matched_articles": [
+        "2"
+      ],
+      "primary_article": "2",
+      "reasoning": "Art. 2 określa podmioty objęte obowiązkiem prowadzenia ksiąg rachunkowych, w tym spółki kapitałowe i inne jednostki wymienione w ustawie"
+    },
+    {
+      "question": "Kto odpowiada za prowadzenie ksiąg rachunkowych w jednostce?",
+      "matched_articles": [
+        "11",
+        "4a"
+      ],
+      "primary_article": "11",
+      "reasoning": "Art. 11 określa, że księgi rachunkowe prowadzi jednostka, art. 4a wskazuje odpowiedzialność kierownika i rady nadzorczej"
+    },
+    {
+      "question": "Czy kierownik jednostki odpowiada za rachunkowość mimo powierzenia ksiąg biuru rachunkowemu?",
+      "matched_articles": [
+        "11",
+        "4a"
+      ],
+      "primary_article": "4a",
+      "reasoning": "Art. 4a wyraźnie stanowi o odpowiedzialności kierownika jednostki niezależnie od organizacji pracy, art. 11 wskazuje na możliwość powierzenia prowadzenia ksiąg innej jednostce"
+    },
+    {
+      "question": "Za co odpowiada główny księgowy według ustawy o rachunkowości?",
+      "matched_articles": [
+        "24"
+      ],
+      "primary_article": "24",
+      "reasoning": "Art. 24 określa wymogi rzetelności i bezbłędności prowadzenia ksiąg, ale ustawa nie definiuje konkretnej roli głównego księgowego",
+      "uncertain": true
+    },
+    {
+      "question": "Jakie sankcje grożą za nierzetelne prowadzenie ksiąg rachunkowych?",
+      "matched_articles": [
+        "77",
+        "78",
+        "79"
+      ],
+      "primary_article": "77",
+      "reasoning": "Art. 77 penalizuje nieprowadzenie ksiąg, art. 78 odpowiedzialność biegłego rewidenta, art. 79 odpowiedzialność za brak badania - to przepisy odpowiedzialności karnej"
+    },
+    {
+      "question": "Kto może usługowo prowadzić księgi rachunkowe?",
+      "matched_articles": [
+        "76a"
+      ],
+      "primary_article": "76a",
+      "reasoning": "Art. 76a określa warunki usługowego prowadzenia ksiąg rachunkowych i wymagane kwalifikacje przedsiębiorcy"
+    },
+    {
+      "question": "Jakie warunki trzeba spełnić, aby usługowo prowadzić księgi rachunkowe?",
+      "matched_articles": [
+        "76a",
+        "76h"
+      ],
+      "primary_article": "76a",
+      "reasoning": "Art. 76a definiuje warunki świadczenia usługi, art. 76h określa obowiązki przedsiębiorców prowadzących usługowe prowadzenie ksiąg"
+    },
+    {
+      "question": "Czy biuro rachunkowe musi mieć ubezpieczenie OC?",
+      "matched_articles": [
+        "76a"
+      ],
+      "primary_article": "76a",
+      "reasoning": "Art. 76a zawiera wymogi dla przedsiębiorców prowadzących usługowe prowadzenie ksiąg rachunkowych, w tym wymóg ubezpieczenia OC"
+    },
+    {
+      "question": "W jakim formacie składa się e-sprawozdanie finansowe?",
+      "matched_articles": [
+        "69",
+        "70"
+      ],
+      "primary_article": "69",
+      "reasoning": "Art. 69 określa obowiązek złożenia sprawozdania finansowego do rejestru sądowego, art. 70 precyzuje zasady składania - format reguluje rozporządzenie"
+    },
+    {
+      "question": "Kto podpisuje e-sprawozdanie finansowe?",
+      "matched_articles": [
+        "52",
+        "69"
+      ],
+      "primary_article": "52",
+      "reasoning": "Art. 52 określa, że kierownik zapewnia sporządzenie sprawozdania finansowego, art. 69 wskazuje na wymóg podpisu"
+    },
+    {
+      "question": "Czy wszyscy członkowie zarządu muszą podpisać sprawozdanie finansowe?",
+      "matched_articles": [
+        "52",
+        "69"
+      ],
+      "primary_article": "52",
+      "reasoning": "Art. 52 mówi o kierowniku, ale szczegółowe wymogi dotyczące podpisów reguluje ustawa o spółkach kapitałowych"
+    },
+    {
+      "question": "Jak złożyć e-sprawozdanie finansowe do KRS?",
+      "matched_articles": [
+        "69",
+        "70"
+      ],
+      "primary_article": "69",
+      "reasoning": "Art. 69 określa obowiązek złożenia sprawozdania do rejestru sądowego, art. 70 dodatkowe wymogi - procedurę wskazują rozporządzenia"
+    },
+    {
+      "question": "Kiedy trzeba ogłosić roczne sprawozdanie finansowe?",
+      "matched_articles": [
+        "69",
+        "70"
+      ],
+      "primary_article": "69",
+      "reasoning": "Art. 69 określa obowiązek złożenia sprawozdania we właściwym rejestrze sądowym w terminie 3 miesięcy od dnia zatwierdzenia, art. 70 wskazuje dodatkowe wymogi ogłoszenia"
+    }
+  ]
+}
