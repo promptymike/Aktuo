@@ -235,8 +235,7 @@ def render_login_gate() -> None:
         st.rerun()
 
 
-def main() -> None:
-    st.set_page_config(page_title="Aktuo", layout="wide")
+def render_chat_page() -> None:
     render_styles()
 
     try:
@@ -310,6 +309,18 @@ def main() -> None:
     )
     render_footer()
     st.rerun()
+
+
+def main() -> None:
+    st.set_page_config(page_title="Aktuo", layout="wide")
+    chat_page = st.Page(render_chat_page, title="Aktuo", url_path="", default=True)
+    analytics_page = st.Page(
+        Path(__file__).with_name("analytics.py"),
+        title="Analytics",
+        url_path="analytics",
+    )
+    navigation = st.navigation([chat_page, analytics_page], position="hidden")
+    navigation.run()
 
 
 if __name__ == "__main__":
