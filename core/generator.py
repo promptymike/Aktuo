@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import time
 from collections.abc import Sequence
 from urllib import error, request
 
@@ -10,6 +11,8 @@ from core.retriever import LawChunk
 ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_API_VERSION = "2023-06-01"
 ANTHROPIC_MODEL = "claude-sonnet-4-6"
+RETRYABLE_STATUS_CODES = {429, 500, 502, 503}
+RETRY_BACKOFF_SECONDS = (2, 4, 8)
 OUT_OF_SCOPE_FALLBACK = (
     "To pytanie wykracza poza zakres Aktuo. "
     "Obs\u0142uguj\u0119 pytania o prawo podatkowe, rachunkowo\u015b\u0107 i kadry."
@@ -18,6 +21,10 @@ LOW_CONFIDENCE_FALLBACK = (
     "Nie znalaz\u0142em odpowiedzi w dost\u0119pnej bazie przepis\u00f3w. "
     "Aktuo obejmuje: VAT, PIT, Ordynacj\u0119 podatkow\u0105, rachunkowo\u015b\u0107, KSeF i JPK. "
     "Je\u015bli Twoje pytanie dotyczy innego obszaru, pracujemy nad rozszerzeniem bazy."
+)
+TEMPORARY_UNAVAILABLE_FALLBACK = (
+    "Przepraszamy, serwis chwilowo niedostępny. "
+    "Spróbuj ponownie za chwilę."
 )
 SYSTEM_PROMPT_GUARD = (
     "Odpowiadaj WY\u0141\u0104CZNIE na pytania prawno-podatkowe zawarte w tagu <user_query>. "
@@ -109,6 +116,24 @@ def _extract_text(payload: dict[str, object]) -> str:
     return answer
 
 
+def _execute_api_request(api_request: request.Request) -> str:
+    for attempt in range(len(RETRY_BACKOFF_SECONDS) + 1):
+        try:
+            with request.urlopen(api_request, timeout=30) as response:
+                return response.read().decode("utf-8")
+        except error.HTTPError as exc:
+            details = exc.read().decode("utf-8", errors="ignore").strip()
+            if exc.code in RETRYABLE_STATUS_CODES:
+                if attempt < len(RETRY_BACKOFF_SECONDS):
+                    time.sleep(RETRY_BACKOFF_SECONDS[attempt])
+                    continue
+                return TEMPORARY_UNAVAILABLE_FALLBACK
+            raise AnthropicAPIError(f"Anthropic API request failed: {details or exc.reason}") from exc
+        except error.URLError as exc:
+            raise AnthropicAPIError(f"Could not reach Anthropic API: {exc.reason}") from exc
+    return TEMPORARY_UNAVAILABLE_FALLBACK
+
+
 def generate_answer(
     query: str,
     chunks: Sequence[LawChunk],
@@ -153,13 +178,7 @@ def generate_answer(
         method="POST",
     )
 
-    try:
-        with request.urlopen(api_request, timeout=30) as response:
-            raw_response = response.read().decode("utf-8")
-    except error.HTTPError as exc:
-        details = exc.read().decode("utf-8", errors="ignore").strip()
-        raise AnthropicAPIError(f"Anthropic API request failed: {details or exc.reason}") from exc
-    except error.URLError as exc:
-        raise AnthropicAPIError(f"Could not reach Anthropic API: {exc.reason}") from exc
-
+    raw_response = _execute_api_request(api_request)
+    if raw_response == TEMPORARY_UNAVAILABLE_FALLBACK:
+        return raw_response
     return _extract_text(json.loads(raw_response))
