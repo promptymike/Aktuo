@@ -1,0 +1,1591 @@
+[
+  {
+    "id": "law-27-liczba-deklaracji",
+    "question_intent": "Czy trzeba złożyć jedną deklarację czy więcej",
+    "question_patterns": [
+      "Czy jedna deklaracja ma być złożona",
+      "Ile deklaracji trzeba złożyć",
+      "Czy jedna czy wiele deklaracji"
+    ],
+    "answer": "Zasadniczo podatnicy składają jedno zeznanie za rok podatkowy (art. 27 ust. 1). Wyjątek stanowią podatnicy osiągający dochody z zagranicznej jednostki kontrolowanej - muszą składać odrębne zeznanie za każdą taką jednostkę (art. 27 ust. 2a). Podatnicy osiągający dochody z transgranicznego łączenia lub podziału składają zeznanie w terminie trzech miesięcy po uzyskaniu dochodów (art. 27 ust. 2aa).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1, 2a, 2aa",
+        "quote": "są obowiązani składać urzędom skarbowym zeznanie; Jeżeli podatnik osiąga dochody z więcej niż jednej zagranicznej jednostki kontrolowanej, składa odrębne zeznanie o dochodach z każdej z tych jednostek"
+      }
+    ],
+    "conditions": [
+      "Jedno zeznanie za rok podatkowy w standardowym przypadku",
+      "Odrębne zeznania dla każdej zagranicznej jednostki kontrolowanej",
+      "Zeznanie w terminie trzech miesięcy po uzyskaniu dochodów z transgranicznego łączenia/podziału"
+    ],
+    "exceptions": [
+      "Podatnicy z zagranicznymi jednostkami kontrolowanymi - art. 27 ust. 2a",
+      "Podatnicy z transgranicznym łączeniem/podziałem - art. 27 ust. 2aa"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "liczba i rodzaj zeznań podatkowych",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-sprawozdanie-finansowe",
+    "question_intent": "Czy trzeba składać zeznanie CIT i sprawozdanie finansowe za okres na spółkę",
+    "question_patterns": [
+      "Czy muszę składać CIT i sprawozdanie za okres na sp",
+      "Czy trzeba sprawozdanie finansowe i zeznanie CIT",
+      "Czy obydwa dokumenty CIT i sprawozdanie"
+    ],
+    "answer": "Zeznanie podatkowe (art. 27 ust. 1) muszą złożyć wszyscy podatnicy (z pewnymi wyjątkami) do końca trzeciego miesiąca roku następnego. Sprawozdanie finansowe (art. 27 ust. 2) jest obowiązkowe dla podatników obowiązanych do jego sporządzenia, które muszą je przekazać Szefowi KAS w ciągu 15 dni od zatwierdzenia. Oba dokumenty są niezależnymi obowiązkami - podatnik spółki musi złożyć zarówno zeznanie, jak i sprawozdanie, jeśli jest do tego obowiązany.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1, 2",
+        "quote": "są obowiązani składać urzędom skarbowym zeznanie do końca trzeciego miesiąca roku następnego; Podatnicy obowiązani do sporządzenia sprawozdania finansowego przekazują Szefowi KAS sprawozdanie w terminie 15 dni od zatwierdzenia"
+      }
+    ],
+    "conditions": [
+      "Zeznanie: do 31 marca roku następnego",
+      "Sprawozdanie finansowe: w ciągu 15 dni od zatwierdzenia rocznego sprawozdania",
+      "Sprawozdanie dotyczy podatników obowiązanych do jego sporządzenia (zgodnie z ustawą o rachunkowości)"
+    ],
+    "exceptions": [
+      "Sprawozdanie nie dotyczy podmiotów zwolnionych podmiotowo z podatku",
+      "Sprawozdanie nie dotyczy podmiotów przekazujących sprawozdania do Krajowego Rejestru Sądowego"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "obowiązki sprawozdawcze - CIT i sprawozdanie finansowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-wynajem-auto-zagranica-wht",
+    "question_intent": "Czy przy wynajmie samochodu zagranicą należy pobrać podatek u źródła (WHT)?",
+    "question_patterns": [
+      "Czy wynajem pojazdu zagranicą podlega opodatkowaniu u źródła?",
+      "Czy na wynajem auta za granicą nakładany jest podatek WHT?",
+      "Wynajem samochodów zagranicą - czy są zwolnienia podatkowe?",
+      "Czy wynajem pojazdu przez zagraniczną osobę podlega WHT?"
+    ],
+    "answer": "Wynajem samochodu zagranicą nie jest wymieniony w art. 21 ust. 1 jako przychód podlegający obowiązkowi pobrania podatku u źródła. Art. 21 zawiera katalog przychodów polegających podatek u źródła (odsetki, prawa autorskie, usługi rozrywkowe, niektóre usługi biznesowe), ale wynajem pojazdu do tej listy nie należy. Podatek od dochodów zagranicznego wynajmującego byłby opodatkowany na zasadach ogólnych, jeśli miałby siedzibę w Polsce, lub na zasadach umów o unikaniu podwójnego opodatkowania.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 21 ust. 1",
+        "quote": "Podatek dochodowy z tytułu uzyskanych na terytorium Rzeczypospolitej Polskiej przez podatników uzyskanych przez podatników zawiera katalog przychodów podlegających opodatkowaniu u źródła"
+      }
+    ],
+    "conditions": [
+      "Przychód musi być uzyskany na terytorium Polski",
+      "Przychód musi należeć do katalogu zawartego w art. 21 ust. 1 pkt 1-4"
+    ],
+    "exceptions": [
+      "Wynajem pojazdu nie jest wymieniony w katalogu przychodów podlegających opodatkowaniu u źródła",
+      "Przepisy art. 21 stosuje się z uwzględnieniem umów o unikaniu podwójnego opodatkowania"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "podatek_u_zrodla_dochody_zagraniczne",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-16-reprezentacja-koszty",
+    "question_intent": "Czy koszty posiłków dla pracowników (obiad, kolacja) są kosztem uzyskania przychodów, czy wydatkami reprezentacyjnymi",
+    "question_patterns": [
+      "Czy zakupiony obiad dla pracowników to koszt uzyskania przychodów?",
+      "Kolacja służbowa – czy to koszt do odliczenia?",
+      "Koszty posiłków pracowników – czy się zaliczają do kosztów?",
+      "Wydatki na żywienie pracowników – czy to koszty operacyjne?"
+    ],
+    "answer": "Koszty posiłków pracowników nie stanowią kosztów uzyskania przychodów, ponieważ art. 16 ust. 1 pkt 28 ustawy zawiera katalog wydatków na usługi gastronomiczne i zakup żywności określonych jako koszty reprezentacji, które są wykluczone z kosztów. Wyjątek dotyczy świadczeń wypłaconych pracownikowi z zakładowego funduszu świadczeń socjalnych, ale jedynie jeśli obowiązek tworzenia funduszu wynika z odrębnych ustaw.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 16 ust. 1 pkt 28",
+        "quote": "kosztów reprezentacji, w szczególności poniesionych na usługi gastronomiczne, zakup żywności oraz napojów, w tym alkoholowych"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 16 ust. 1 pkt 45",
+        "quote": "wydatków pracodawcy na działalność socjalną, o której mowa w przepisach o zakładowym funduszu świadczeń socjalnych"
+      }
+    ],
+    "conditions": [
+      "Wydatki na usługi gastronomiczne i żywność pracowników należą do wydatków reprezentacyjnych",
+      "Mogą być zaliczone do kosztów jedynie w wyjątkowych przypadkach – gdy finansowane ze środków zakładowego funduszu świadczeń socjalnych"
+    ],
+    "exceptions": [
+      "Świadczenia urlopowe wypłacone pracownikowi z funduszu świadczeń socjalnych (art. 16 ust. 1 pkt 45)",
+      "Koszty dofinansowania żłobków, klubów dziecięcych lub przedszkolek pracowników (art. 15 ust. 1za)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "koszty uzyskania przychodów - wydatki wykluczone",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-19-cit-estonski",
+    "question_intent": "Czy przychody/dochody podlegają opodatkowaniu w systemie CIT estońskim?",
+    "question_patterns": [
+      "Czy na CIT estońskim to będzie opodatkowane?",
+      "Czy ten dochód podlega CIT estonskiemu?",
+      "Opodatkowanie w systemie CIT estońskim"
+    ],
+    "answer": "Dostarczone teksty artykułów (art. 19, art. 28d, art. 28o) nie zawierają żadnych informacji dotyczących CIT estońskiego ani jego zasad opodatkowania. Aby udzielić prawidłowej odpowiedzi, konieczne jest zapoznanie się z przepisami dotyczącymi CIT estońskiego w polskiej ustawie o podatku dochodowym od osób prawnych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 19, art. 28d, art. 28o",
+        "quote": "Artykuły zawierają regulacje standardowego CIT i ryczałtu, ale nie zawierają przepisów dotyczących CIT estońskiego"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "CIT-estonski",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-9-ewidencja-rachunkowa",
+    "question_intent": "Jakie obowiązki w zakresie prowadzenia ewidencji rachunkowej wynika z ustawy o CIT?",
+    "question_patterns": [
+      "Jak prowadzić ewidencję rachunkową dla CIT",
+      "Jakie są obowiązki ewidencyjne dla podatnika CIT",
+      "Co należy wyodrębnić w ewidencji rachunkowej"
+    ],
+    "answer": "Podatnicy muszą prowadzić ewidencję rachunkową, która umożliwia określenie wysokości dochodu (straty), podstawy opodatkowania i należnego podatku za rok podatkowy. W ewidencji należy uwzględnić informacje niezbędne do obliczenia odpisów amortyzacyjnych zgodnie z przepisami o środkach trwałych. W przypadku prowadzenia kilku rodzajów działalności opodatkowanej różnymi formami podatku, przychody i koszty muszą być wyodrębnione na poszczególne rodzaje działalności.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 9 ust. 1",
+        "quote": "Podatnicy są obowiązani do prowadzenia ewidencji rachunkowej, zgodnie z odrębnymi przepisami, w sposób zapewniający określenie wysokości dochodu (straty), podstawy opodatkowania i wysokości należnego podatku za rok podatkowy"
+      }
+    ],
+    "conditions": [
+      "Ewidencja musi być prowadzona zgodnie z odrębnymi przepisami (Ustawa o rachunkowości)",
+      "Musi zawierać informacje niezbędne do obliczenia odpisów amortyzacyjnych",
+      "W przypadku kilku rodzajów działalności - przychody i koszty wyodrębnione na każdy rodzaj"
+    ],
+    "exceptions": [
+      "Podatnicy prowadzący uproszczoną ewidencję przychodów i kosztów - mają inne wymogi"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Obowiązki ewidencyjne",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15-koszty-przychody",
+    "question_intent": "Jakie wydatki stanowią koszty uzyskania przychodów i na jakich zasadach się je ujmuje?",
+    "question_patterns": [
+      "Co stanowi koszt uzyskania przychodów",
+      "Jakie wydatki można zaliczyć do kosztów",
+      "Kiedy ujmuje się koszt w księgach"
+    ],
+    "answer": "Kosztami uzyskania przychodów są wydatki poniesione w celu osiągnięcia przychodów lub zachowania źródła przychodów, z pewnymi wyjątkami. Koszty bezpośrednio związane z przychodami są potrącalne w roku, w którym osiągnięte zostały odpowiadające im przychody. Koszty poniesione po zakończeniu roku ale przed upływem terminu złożenia zeznania mogą być potrącalne w roku, którego dotyczą. Za dzień poniesienia kosztu uważa się dzień ujęcia w księgach na podstawie faktury lub innego dowodu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 1",
+        "quote": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów, z wyjątkiem kosztów wymienionych w art. 16 ust. 1"
+      }
+    ],
+    "conditions": [
+      "Koszt musi być związany z uzyskaniem przychodów podlegających opodatkowaniu",
+      "Koszt musi być poniesiony w celu osiągnięcia lub zachowania źródła przychodów",
+      "Koszty w walutach obcych przelicza się wg kursu NBP z ostatniego dnia roboczego przed poniesieni em kosztu"
+    ],
+    "exceptions": [
+      "Koszty wymienione w art. 16 ust. 1 nie stanowią kosztów uzyskania przychodów",
+      "Koszty związane z przychodami zwolnionymi z podatku"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Koszty uzyskania przychodów",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15-ujmowanie-kosztow",
+    "question_intent": "W jakim roku podatkowym ujmuje się koszty uzyskania przychodów w rachunkowości?",
+    "question_patterns": [
+      "Kiedy ujmuje się koszt",
+      "Dzień poniesienia kosztu",
+      "Koszty poniesione po zamknięciu roku"
+    ],
+    "answer": "Za dzień poniesienia kosztu uważa się dzień, na który ujęto koszt w księgach rachunkowych (zaksięgowano) na podstawie otrzymanej faktury, albo dzień ujęcia na podstawie innego dowodu jeśli brak faktury. Koszty bezpośrednio związane z przychodami poniesione po zamknięciu roku ale przed upływem terminu złożenia zeznania mogą być potrącalne w roku, którego dotyczą. Koszty poniesione po tym terminie są potrącalne w roku następnym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 4e",
+        "quote": "Za dzień poniesienia kosztu uzyskania przychodów uważa się dzień, na który ujęto koszt w księgach rachunkowych (zaksięgowano) na podstawie otrzymanej faktury (rachunku), albo dzień, na który ujęto koszt na podstawie innego dowodu"
+      }
+    ],
+    "conditions": [
+      "Koszt musi być ujęty w księgach na podstawie faktury lub innego dowodu",
+      "Dotyczy kosztów bezpośrednio związanych z przychodami",
+      "Do upływu terminu złożenia zeznania (art. 27 ust. 1)"
+    ],
+    "exceptions": [
+      "Nie stosuje się do rezerw i biernych rozliczeń międzyokresowych kosztów",
+      "Koszty zaniechanych inwestycji - potrącalne w dacie zbycia lub likwidacji"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Ujmowanie kosztów",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-8-sprawozdanie-finansowe-od-otwarcia",
+    "question_intent": "Czy sporządzać sprawozdanie finansowe od dnia otwarcia ksiąg rachunkowych",
+    "question_patterns": [
+      "Czy robię SF za okres od otwarcia ksiąg",
+      "SF od dnia otwarcia ksiąg rachunkowych",
+      "Czy teraz robię SF za okres od otwar"
+    ],
+    "answer": "Zgodnie z art. 8 ust. 6, jeśli z odrębnych przepisów wynika obowiązek zamknięcia ksiąg przed upływem roku podatkowego, następny rok podatkowy biegnie od dnia otwarcia ksiąg rachunkowych do końca przyjętego roku podatkowego. Sprawozdanie finansowe należy sporządzić za ten okres.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 8 ust. 6",
+        "quote": "W tym przypadku za następny rok podatkowy uważa się okres od dnia otwarcia ksiąg rachunkowych do końca przyjętego przez podatnika roku podatkowego"
+      }
+    ],
+    "conditions": [
+      "Istnieje obowiązek zamknięcia ksiąg rachunkowych przed upływem przyjętego roku podatkowego (wynika z odrębnych przepisów)"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "rok_podatkowy",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-7aa-ukryte-zyski-oc-ac",
+    "question_intent": "Czy od połowy OC i AC trzeba zapłacić podatek od ukrytych zysków przy przejściu na ryczałt?",
+    "question_patterns": [
+      "Czy od połowy OC i AC trzeba zapłacić podatek od ukrytych zysków?",
+      "Podatek od ukrytych zysków OC AC ryczałt",
+      "Czy muszę zapłacić podatek od różnicy wartości majątku przy wyborze ryczałtu?"
+    ],
+    "answer": "Art. 7aa dotyczy tzw. dochodu z przekształcenia przy przejściu na ryczałt. Jeśli spółka przechodzi z normalnego opodatkowania na ryczałt, musi wykazać dochód z przekształcenia będący różnicą między wartością księgową (finansową) składników majątku a ich wartością podatkową. Od tego dochodu trzeba zapłacić podatek wg normalnej stawki 19% albo rozłożyć go na 2 lata. Pytanie o 'połowę OC i AC' wymaga precyzacji — czy chodzi o wycenę kapitału własnego?",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 7aa ust. 2 pkt 3",
+        "quote": "dochód z przekształcenia w kwocie odpowiadającej sumie nadwyżek wartości poszczególnych składników majątku, ustalonych dla wyniku finansowego netto zgodnie z przepisami o rachunkowości, ponad ich wartość podatkową"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 7aa ust. 5 pkt 2",
+        "quote": "podatnik dokonuje zapłaty podatku w całości albo w częściach w okresie nie dłuższym niż 2 lata"
+      }
+    ],
+    "conditions": [
+      "Podatnik wybiera ryczałt od dochodów spółek po dotychczasowym opodatkowaniu normalnym",
+      "Dochód z przekształcenia oblicza się na dzień przejścia na ryczałt",
+      "Dotyczy spółek lub przedsiębiorców przekształconych w spółkę"
+    ],
+    "exceptions": [
+      "Brak podatku, jeśli spółka stosowała ryczałt nieprzerwanie przez co najmniej 4 lata — wtedy zobowiązanie wygasa (art. 7aa ust. 5 pkt 1)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "ryczalt"
+    ],
+    "topic": "ryczałt od dochodów spółek, dochód z przekształcenia",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-7aa-brak-specjalisty-estonski",
+    "question_intent": "Czy w artykule 7aa jest informacja o specjaliście od City estońskiego i ukrytych zysków?",
+    "question_patterns": [
+      "Jest tu jakiś specjalista od City estońskiego i ukrytych zysków?",
+      "Gdzie znaleźć eksperta od podatku estońskiego?",
+      "Informacja o specjaliście od City estońskiego"
+    ],
+    "answer": "Art. 7aa dotyczy wyłącznie polskiego ryczałtu od dochodów spółek — nie zawiera żadnych informacji o City estońskim ani o specjalistach. Ustawa o podatku dochodowym od osób prawnych nie reguluje podatku estońskiego — to system obowiązujący w Estonii i podlegający estońskim przepisom podatkowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 7aa (brak odniesienia do City estońskiego)",
+        "quote": "Artykuł reguluje wyłącznie ryczałt od dochodów spółek w Polsce"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zakres zastosowania ustawy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-7aa-brak-checklisty-estonski",
+    "question_intent": "Czy dostępna jest checklista dotycząca dochodów do opodatkowania na estońskim ryczałcie?",
+    "question_patterns": [
+      "Czy macie checklistę co do dochodów do opodatkowania na estońskim?",
+      "Checklista dochody do opodatkowania ryczałt estoński",
+      "Lista kontrolna dla City estońskiego"
+    ],
+    "answer": "Art. 7aa dotyczy polski ryczałtu od dochodów spółek i nie zawiera informacji na temat City estońskiego. Polska ustawa podatkowa (CIT) nie reguluje podatku estońskiego — to osobny system podatkowy obowiązujący w Estonii. Dla spółek w Polsce przychodzą do gry regulacje art. 7aa dotyczące przejścia na ryczałt.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 7aa (dotyczy wyłącznie polskiego ryczałtu)",
+        "quote": "Przepisy art. 7aa stosują się do podatnika wybranego opodatkowanie ryczałtem od dochodów spółek w Polsce"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zakres zastosowania ustawy polskiej CIT",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-cit8-likwidacja",
+    "question_intent": "Czy spółka z o.o. w likwidacji musi złożyć zeznanie CIT-8 i sprawozdanie finansowe?",
+    "question_patterns": [
+      "Czy muszę złożyć CIT-8 podczas likwidacji spółki z o.o.",
+      "Jakie obowiązki sprawozdawcze ma spółka w trakcie likwidacji",
+      "Jaki termin do złożenia zeznania CIT-8 i SF przy likwidacji"
+    ],
+    "answer": "Podany tekst artykułu 27 nie zawiera szczegółowych regulacji dotyczących obowiązków sprawozdawczych spółek w likwidacji. Artykuł 27 ust. 1 nakłada na podatników (z wyjątkami) obowiązek złożenia zeznania do końca trzeciego miesiąca roku następnego, jednak nie określa, czy i jak przepisy zmienią się w przypadku likwidacji spółki. Konieczna jest weryfikacja przepisów zawartych w pozostałych artykułach ustawy lub aktach wykonawczych dotyczących likwidacji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1",
+        "quote": "Podatnicy, z wyjątkiem zwolnionych od podatku na podstawie art. 6 ust. 1, są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o wysokości dochodu osiągniętego (straty poniesionej) w roku podatkowym – do końca trzeciego miesiąca roku następnego"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 2",
+        "quote": "Podatnicy obowiązani do sporządzenia sprawozdania finansowego przekazują, za pomocą środków komunikacji elektronicznej, Szefowi Krajowej Administracji Skarbowej sprawozdanie finansowe w terminie 15 dni od dnia zatwierdzenia rocznego sprawozdania finansowego"
+      }
+    ],
+    "conditions": [
+      "Spółka nie jest zwolniona od podatku na podstawie art. 6 ust. 1",
+      "Spółka osiągnęła dochód lub poniosła stratę w roku podatkowym"
+    ],
+    "exceptions": [
+      "Podmioty zwolnione podmiotowo z podatku",
+      "Podmioty obowiązane do przekazywania sprawozdań finansowych do Krajowego Rejestru Sądowego"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "obowiązki_sprawozdawcze",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-18-dokumentacja-darowizn",
+    "question_intent": "Jakie dokumenty są wymagane do odliczenia darowizny w podatku?",
+    "question_patterns": [
+      "Jak muszę udokumentować darowiznę?",
+      "Jakie dowody potrzebuję do odliczenia darowizny?",
+      "Co musi zawierać dokumentacja darowizny?"
+    ],
+    "answer": "Darowizna musi być udokumentowana dowodem wpłaty na rachunek płatniczy obdarowanego albo, w przypadku darowizny niepieniężnej, dokumentem zawierającym jej wartość oraz oświadczeniem obdarowanego o przyjęciu. Do zeznania należy wykazać kwotę darowizny, kwotę dokonanego odliczenia oraz dane obdarowanego (nazwa, adres, NIP/numer identyfikacji podatkowej).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 18 ust. 1c",
+        "quote": "Odliczenie darowizn stosuje się, jeżeli wysokość darowizny jest udokumentowana dowodem wpłaty na rachunek płatniczy obdarowanego lub dokumentem, z którego wynika wartość darowizny, oraz oświadczeniem obdarowanego o jej przyjęciu"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 18 ust. 1g",
+        "quote": "Podatnicy korzystający z odliczenia darowizn są obowiązani wykazać w zeznaniu kwotę przekazanej darowizny, kwotę dokonanego odliczenia oraz dane pozwalające na identyfikację obdarowanego"
+      }
+    ],
+    "conditions": [
+      "Dla darowizny pieniężnej: dowód wpłaty na rachunek płatniczy obdarowanego",
+      "Dla darowizny niepieniężnej: dokument zawierający wartość i oświadczenie obdarowanego o przyjęciu",
+      "Wykazanie w zeznaniu podatku: kwota darowizny, kwota odliczenia, dane obdarowanego"
+    ],
+    "exceptions": [
+      "Darowiznę materiałów dydaktycznych można odliczyć tylko jeśli są kompletne, zdatne do użytku i nie starsze niż 12 lat"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "dokumentacja_darowizn",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-kapital-zapasowy-podatek",
+    "question_intent": "Czy spółka musi zapłacić podatek dochodowy od kapitału zapasowego?",
+    "question_patterns": [
+      "Czy kapitał zapasowy podlega opodatkowaniu?",
+      "Czy zwiększenie kapitału zapasowego to przychód podatkowy?",
+      "Czy dopłaty na kapitał zapasowy to przychód?"
+    ],
+    "answer": "Nie. Zgodnie z art. 12 ust. 4 pkt 11 USTAWY, dopłaty wniesione do spółki oraz kwoty i wartości stanowiące nadwyżkę ponad wartość nominalną udziałów (akcji) przekazane na kapitał zapasowy NIE zaliczają się do przychodów. Kapitał zapasowy nie podlega zatem opodatkowaniu podatkiem dochodowym.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 4 pkt 11",
+        "quote": "dopłat wnoszonych do spółki, jeżeli ich wniesienie następuje w trybie i na zasadach określonych w odrębnych przepisach, kwot i wartości stanowiących nadwyżkę ponad wartość nominalną udziałów (akcji), otrzymanych przy ich wydaniu i przekazanych na kapitał zapasowy"
+      }
+    ],
+    "conditions": [
+      "Dopłata musi być wniesiona w trybie i na zasadach określonych w odrębnych przepisach",
+      "Kwota musi być przekazana na kapitał zapasowy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "przychody_wykluczone",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22-zwolnienie-wykazanie",
+    "question_intent": "Gdzie wykazać spełnienie warunków zwolnienia z podatku od dywidend według art. 22 ust. 4 CIT?",
+    "question_patterns": [
+      "Gdzie wykazać warunki art. 22 ust. 4 CIT?",
+      "Jak dokumentować zwolnienie z podatku od dywidend?",
+      "Gdzie udowodnić spełnienie warunków zwolnienia dywidend?",
+      "Dokumentacja warunków art. 22 ust. 4"
+    ],
+    "answer": "Tekst art. 22 ust. 4 CIT nie wskazuje konkretnego miejsca lub formularza do wykazania spełnienia warunków zwolnienia. Artykuł definiuje warunki materialne zwolnienia (siedziба spółki, opodatkowanie, posiadanie 10% udziałów, brak zwolnienia od podatku), ale nie precyzuje procedury dokumentowania. Wymaga to weryfikacji w przepisach wykonawczych lub wytycznych organów podatkowych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 22 ust. 4",
+        "quote": "Zwalnia się od podatku dochodowego przychody z tytułu udziału w zyskach osób prawnych, jeżeli spełnione są łącznie następujące warunki..."
+      }
+    ],
+    "conditions": [
+      "spółka wypłacająca dywidendę ma siedzibę lub zarząd w Polsce",
+      "spółka uzyskująca dywidendę jest opodatkowana podatkiem dochodowym od całości dochodów",
+      "spółka uzyskująca posiada bezpośrednio minimum 10% udziałów w spółce wypłacającej",
+      "spółka uzyskująca nie korzysta ze zwolnienia z opodatkowania"
+    ],
+    "exceptions": [
+      "Zwolnienie nie dotyczy komplementariuszy z art. 22 ust. 4 (zrobienie rozróżnienia)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zwolnienia_dywidendy",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-certyfikat-rezydencji",
+    "question_intent": "Czy certyfikat rezydencji jest wymagany do wysłania deklaracji podatkowej do urzędu skarbowego i zagranicznych organów?",
+    "question_patterns": [
+      "Czy muszę dołączyć certyfikat rezydencji do deklaracji?",
+      "Jaki dokument potwierdzający rezydencję podatkową wysłać do urzędu?",
+      "Certyfikat rezydencji a deklaracja podatkowa"
+    ],
+    "answer": "Ustawa o podatku dochodowym od osób prawnych nie zawiera przepisów dotyczących certyfikatu rezydencji ani wymaganych do wysłania dokumentów potwierdzających rezydencję podatkową. Regulacje w tej materii mogą wynikać z odrębnych przepisów procedury podatkowej lub umów między Polską a Irlandią o unikaniu podwójnego opodatkowania, które nie są zawarte w przeanalizowanym tekście ustawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 3",
+        "quote": "Przepisy art. 3 regulują zasady rozliczania podatku dla podatników mających siedzibę lub zarząd na terytorium RP"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "procedura podatkowa i dokumentacja",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15-zaliczenie-platnosci-koszty",
+    "question_intent": "Jak zaliczyć płatność do kosztów uzyskania przychodów?",
+    "question_patterns": [
+      "W jaki sposób mogę zaliczyć płatność w koszty?",
+      "Jak zaliczyć wydatek do kosztów uzyskania przychodów?",
+      "Jakimi zasadami kierować się przy zaliczaniu wydatków do kosztów?"
+    ],
+    "answer": "Aby zaliczyć płatność do kosztów uzyskania przychodów, musi być ona poniesiona w celu osiągnięcia przychodów ze źródła przychodów lub zachowania/zabezpieczenia tego źródła. Koszty bezpośrednio związane z przychodami zalicza się w roku, w którym osiągnięte zostały odpowiadające im przychody. Koszty inne niż bezpośrednio związane są potrącalne w dacie ich poniesienia. Należy każdorazowo sprawdzić, czy wydatek nie jest wymieniony w art. 16 (koszty nie podlegające odliczeniu).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 1",
+        "quote": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 4",
+        "quote": "Koszty uzyskania przychodów bezpośrednio związane z przychodami, poniesione w latach poprzedzających rok podatkowy oraz w roku podatkowym, są potrącalne w tym roku podatkowym, w którym osiągnięte zostały odpowiadające im przychody"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 4d",
+        "quote": "Koszty uzyskania przychodów, inne niż koszty bezpośrednio związane z przychodami, są potrącalne w dacie ich poniesienia"
+      }
+    ],
+    "conditions": [
+      "Wydatek musi być powiązany z osiągnięciem przychodu lub zachowaniem źródła przychodu",
+      "Wydatek nie może być wymieniony w art. 16 ust. 1 jako koszt niepodlegający odliczeniu",
+      "Dla kosztów bezpośrednio związanych - muszą być poniesione do upływu terminu składania zeznania lub sprawozdania finansowego",
+      "Dla kosztów bezpośrednio związanych - stanowią koszt roku, w którym osiągnięto przychód"
+    ],
+    "exceptions": [
+      "Koszty wymienione w art. 16 ust. 1 nie podlegają odliczeniu",
+      "Koszty poniesione po terminie określonym w art. 15 ust. 4b podlegają odliczeniu w roku następnym"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zasady zaliczania wydatków do kosztów",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-swiadeenia-reklamowe",
+    "question_intent": "Czy przychody z usług reklamowych od zagranicznych dostawców (Meta Irlandia, Google) podlegają opodatkowaniu i jaką stawkę podatku zastosować?",
+    "question_patterns": [
+      "Jaka stawka podatku dochodowego od usług reklamowych z zagranicy?",
+      "Czy przychody z reklam od Google i Meta podlegają polskiemu podatkowaniu?",
+      "Jak opodatkować przychody z usług reklamowych zagranicznych dostawców?",
+      "Jaką stawkę wpisać w IFT-2R dla przychodów z usług reklamowych?"
+    ],
+    "answer": "Przychody z usług reklamowych udzielanych przez zagraniczne osoby prawne podlegają opodatkowaniu podatkiem dochodowym w Polsce stawką 20% (art. 21 ust. 1 pkt 2a). Stawka ta stosuje się do wszystkich świadczeń reklamowych niezależnie od dostawcy. Informacje o wysokości podatku należnego zawarte będą w faktach/dokumentach wysyłanych przez zagraniczne podmioty lub powinny wynikać z umowy o świadczenie usług.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 21 ust. 1 pkt 2a",
+        "quote": "z tytułu świadczeń: doradczych, księgowych, badania rynku, usług prawnych, usług reklamowych, zarządzania i kontroli, przetwarzania danych, usług rekrutacji pracowników i pozyskiwania personelu, gwarancji i poręczeń oraz świadczeń o podobnym charakterze – ustala się w wysokości 20% przychodów"
+      }
+    ],
+    "conditions": [
+      "Świadczeniodawcą musi być osoba prawna mająca siedzibę za granicą",
+      "Przychody muszą być uzyskane na terytorium RP",
+      "Świadczenia muszą być udzielone przez zagraniczne podmioty"
+    ],
+    "exceptions": [
+      "Umowy międzynarodowe o unikaniu podwójnego opodatkowania mogą zmienić stawkę (art. 21 ust. 2)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "podatek_od_przychodów_zagranica_usługi",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-deklaracja-ift2r",
+    "question_intent": "Czy przychody z zagranicznych usług reklamowych wymuszają złożenie deklaracji IFT-2R i w której części je wykazać?",
+    "question_patterns": [
+      "Jaka deklaracja dla przychodów z Meta i Google?",
+      "Gdzie wpisać przychody z usług reklamowych z zagranicy w IFT-2R?",
+      "Czy muszę składać IFT-2R dla przychodów z reklam zagranicznego dostawcy?",
+      "W której części IFT-2R wykazać usługi reklamowe z zagranicy?"
+    ],
+    "answer": "Tekst artykułu 21 ustawy o podatku dochodowym od osób prawnych definiuje opodatkowanie przychodów z usług reklamowych na poziomie 20%, jednak nie zawiera szczegółowych wskazówek dotyczących formularza IFT-2R ani konkretnej części do wypełnienia. Informacje o wypełnianiu deklaracji znajdują się w instrukcjach do formularza wydawanych przez organy podatkowe.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 21 ust. 1 pkt 2a",
+        "quote": "z tytułu świadczeń [...] usług reklamowych [...] – ustala się w wysokości 20% przychodów"
+      }
+    ],
+    "conditions": [
+      "Przychody muszą pochodzić z usług reklamowych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "deklaracje_i_formularze",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-16h-rozpoczecie-amortyzacji",
+    "question_intent": "Od kiedy zaczyna się amortyzacja budynku wprowadzonego do ewidencji?",
+    "question_patterns": [
+      "Od kiedy amortyzuję budynek przyjęty do używania?",
+      "Kiedy rozpoczyna się amortyzacja środka trwałego?",
+      "Od którego miesiąca liczyć amortyzację nieruchomości?"
+    ],
+    "answer": "Amortyzacja budynku zaczyna się od pierwszego miesiąca następującego po miesiącu, w którym budynek wprowadzono do ewidencji środków trwałych (art. 16h ust. 1 pkt 1). Na przykład: jeśli budynek wprowadzono do ewidencji w marcu, amortyzacja zaczyna się od kwietnia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 16h ust. 1 pkt 1",
+        "quote": "Odpisów amortyzacyjnych dokonuje się od wartości początkowej środków trwałych, począwszy od pierwszego miesiąca następującego po miesiącu, w którym ten środek wprowadzono do ewidencji"
+      }
+    ],
+    "conditions": [
+      "Budynek musi być kompletny i zdatny do użytku",
+      "Budynek musi być wprowadzony do ewidencji środków trwałych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "amortyzacja_srodkow_trwalych",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15-koszty-oprogramowanie-licencje",
+    "question_intent": "Czy zakupiona licencja lub subskrypcja oprogramowania (np. Canva) stanowi koszt uzyskania przychodów?",
+    "question_patterns": [
+      "Czy licencja oprogramowania to koszt uzyskania przychodów?",
+      "Czy subskrypcja do narzędzia online stanowi koszt?",
+      "Czy zakupienie dostępu do platformy można zaliczyć do kosztów?"
+    ],
+    "answer": "Tak, zakupiona licencja lub subskrypcja oprogramowania/usługi online stanowi koszt uzyskania przychodów, jeśli została poniesiona w celu osiągnięcia przychodów ze źródła przychodów lub zachowania źródła przychodów. Jeśli narzędzie (jak Canva) używasz wyłącznie do celów biznesowych firmy, całość wydatku zaliczasz do kosztów. Koszty poniesione w roku podatkowym są potrącalne w dacie ich poniesienia (wystawienia faktury).",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 1",
+        "quote": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 4d",
+        "quote": "Koszty uzyskania przychodów, inne niż koszty bezpośrednio związane z przychodami, są potrącalne w dacie ich poniesienia"
+      }
+    ],
+    "conditions": [
+      "Wydatek musi być poniesiony w celu osiągnięcia lub zachowania przychodów",
+      "Faktura/rachunek musi być wystawiona na firmę",
+      "Wydatek nie może być zaliczony do kosztów wymienionych w art. 16 ust. 1 (wydatki niedochodowe)"
+    ],
+    "exceptions": [
+      "Jeśli oprogramowanie służy celom prywatnym wspólnika/akcjonariusza - koszt nie jest potrącalny",
+      "Jeśli oprogramowanie stanowi środek trwały (licencja na kilka lat) - może podlegać amortyzacji"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "koszty_operacyjne_usługi",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-certyfikat-rezydencji-pojecie",
+    "question_intent": "Czy certyfikat rezydencji podatkowej jest wymagany do zastosowania zwolnienia z podatku od odsetek i należności licencyjnych?",
+    "question_patterns": [
+      "Co to jest certyfikat rezydencji podatkowej?",
+      "Czy certyfikat rezydencji jest wymogiem do zwolnienia?",
+      "Jaką rolę pełni certyfikat rezydencji w art. 21?"
+    ],
+    "answer": "Ustawa o podatku dochodowym od osób prawnych nie zawiera terminu 'certyfikat rezydencji podatkowej'. Zwolnienie od podatku od odsetek, praw autorskich i należności licencyjnych (art. 21 ust. 3) wymaga spełnienia warunków dotyczących statusu podatnika i struktury kapitałowej, ale nie wymaga odrębnie wystawianego certyfikatu rezydencji. Warunkiem jest, aby podmiot uzyskujący przychody był spółką podlegającą opodatkowaniu dochodowym od całości dochodów w państwie UE lub EOG.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 21 ust. 3 pkt 2",
+        "quote": "uzyskującym przychody, o których mowa w ust. 1 pkt 1, jest spółka podlegająca w innym niż Rzeczpospolita Polska państwie członkowskim Unii Europejskiej lub w innym państwie należącym do Europejskiego Obszaru Gospodarczego opodatkowaniu podatkiem dochodowym od całości swoich dochodów bez względu na miejsce ich osiągania"
+      }
+    ],
+    "conditions": [
+      "Przychody pochodzą z odsetek, praw autorskich, praw pokrewnych lub należności licencyjnych",
+      "Podmiot uzyskujący przychody jest spółką w UE/EOG opodatkowaną od całości dochodów",
+      "Spełnione są wszystkie pozostałe warunki z art. 21 ust. 3"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zwolnienia_podatkowe_należności_licencyjne",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-kolumna-dochodu-zwolnionego",
+    "question_intent": "Gdzie wykazać przychody zwolnione z podatku od należności licencyjnych - w kolumnie dochodu zwolnionego czy opodatkowanego?",
+    "question_patterns": [
+      "Gdzie wykazywać zwolnione przychody licencyjne w zeznaniu?",
+      "Czy przychody zwolnione wykazuję jako dochód zwolniony czy opodatkowany 0%?",
+      "Jak wykazać zwolnienie z art. 21 ust. 3 w dokumencie obrachunkowym?"
+    ],
+    "answer": "Ustawa o podatku dochodowym od osób prawnych nie określa sposobu wykazywania przychodów zwolnionych w dokumentach rozliczeniowych lub formularzach zeznania podatkowego. Przychody zwolnione na podstawie art. 21 ust. 3 powinny być wykazane w przychodach zwolnionych z podatku, nie jako przychody opodatkowane stawką 0%. Dokładne kolumny i sposób wykazania określane są w wytycznych do formularzy PIT-8/NIP lub informacjach Ministerstwa Finansów, które są poza zakresem analizowanej ustawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 21 ust. 3",
+        "quote": "Zwalnia się od podatku dochodowego przychody, o których mowa w ust. 1 pkt 1, jeżeli spełnione są łącznie następujące warunki"
+      }
+    ],
+    "conditions": [
+      "Spełnione są wszystkie warunki art. 21 ust. 3",
+      "Przychody pochodzą z odsetek, praw autorskich lub należności licencyjnych"
+    ],
+    "exceptions": [
+      "Zwolnienie nie ma zastosowania w przypadkach wymienionych w art. 21 ust. 6 (przychody z podziału zysków, wierzytelności dające prawo do udziału w zyskach, wierzytelności o terminie spłaty powyżej 50 lat)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zwolnienia_podatkowe_należności_licencyjne",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15-dotacja-arimr-koszty",
+    "question_intent": "Czy koszty poniesione w związku z dotacją z ARiMR (przychód zwolniony) mogą być odliczone, jeśli nie wykazuję straty, a tylko zerową podstawę opodatkowania?",
+    "question_patterns": [
+      "dotacja ARiMR koszty opodatkowanie",
+      "przychód zwolniony koszty do odliczenia",
+      "dotacja zwolniona z podatku koszty",
+      "ARiMR 8000 zł koszty 9500 zł",
+      "czy mogę odliczyć koszty do dotacji zwolnionej"
+    ],
+    "answer": "Nie możesz odliczyć kosztów związanych z przychodami zwolnionymi z podatku. Zgodnie z art. 15 ust. 2, gdy ponoszysz koszty w celu osiągnięcia zarówno przychodów opodatkowanych, jak i przychodów zwolnionych (takich jak dotacja), koszty trzeba podzielić w stosunku do wysokości przychodów z każdego źródła. W Twoim przypadku, jeśli dotacja (przychód zwolniony) wyniosła 8000 zł, a całkowite przychody to 8000 zł, wszystkie koszty (9500 zł) przypadają na przychód zwolniony i nie mogą być odliczone. Podstawa opodatkowania wyniesie zatem 0 zł, a strata się nie pojawia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 2",
+        "quote": "Jeżeli podatnik ponosi koszty uzyskania przychodów ze źródeł, z których dochody podlegają opodatkowaniu podatkiem dochodowym, oraz koszty związane z przychodami ze źródeł, z których dochody nie podlegają opodatkowaniu podatkiem dochodowego lub są zwolnione z podatku dochodowego, koszty te ustala się w takim stosunku, w jakim pozostają osiągnięte w roku podatkowym przychody z tych źródeł w ogólnej kwocie przychodów."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 1",
+        "quote": "Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów."
+      }
+    ],
+    "conditions": [
+      "Dotacja z ARiMR jest przychodem zwolnionym z podatku dochodowego",
+      "Koszty poniesiono w celu uzyskania przychodu zwolnionego",
+      "Nie ma możliwości przypisania kosztów do źródła przychodu opodatkowanego"
+    ],
+    "exceptions": [
+      "Jeśli miałbyś jednocześnie przychody opodatkowane z innego źródła, koszty dzieliłbyś proporcjonalnie między przychody opodatkowane i zwolnione (art. 15 ust. 2)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "koszty uzyskania przychodów - przychody zwolnione",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-25-wykazanie-zaliczek-rozliczenie",
+    "question_intent": "Czy zaliczki wpłacone w roku bieżącym automatycznie zmniejszają podatek do zapłaty w zeznaniu rocznym?",
+    "question_patterns": [
+      "Czy zaliczki zmniejszają podatek do zapłaty?",
+      "Jak zaliczki wpływają na podatek wykazany w CIT-8?",
+      "Czy suma zaliczek to odliczenie?",
+      "Zaliczki to przedpłata podatku?"
+    ],
+    "answer": "Tak, zaliczki wpłacone w ciągu roku stanowią zaliczenie na podatek dochodowy. W zeznaniu rocznym (art. 27) podatnik wykazuje całkowity podatek należny, a zaliczki wpłacone w roku zmniejszają ostatecznie należny podatek. Jeśli suma zaliczek przekroczy należny podatek, podatnik uzyska nadpłatę podlegającą zwrotowi lub zaliczeniu na podatki przyszłych okresów.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 25 ust. 1",
+        "quote": "Podatnicy są obowiązani wpłacać zaliczki w wysokości różnicy pomiędzy podatkiem należnym od dochodu osiągniętego od początku roku podatkowego a sumą zaliczek należnych za poprzednie okresy."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1",
+        "quote": "Podatnicy rozliczają się z podatku dochodowego przez złożenie zeznania rocznego."
+      }
+    ],
+    "conditions": [
+      "Zaliczki muszą być wpłacone w terminach wymaganych przez ustawę",
+      "Zaliczki stanowią zaliczenie na podatek roku podatkowego"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Rozliczenie zaliczek na podatek CIT",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-25-zaliczki-mniejsze-niz-podatek-roczny",
+    "question_intent": "Czy zaliczki miesięczne mogą być mniejsze niż roczny podatek należny",
+    "question_patterns": [
+      "Czy może być sytuacja w CIT-8 że należne zaliczki miesięczne są mniejsze od rocznej kwoty podatku",
+      "Czy suma zaliczek miesięcznych może być mniejsza niż całoroczny podatek",
+      "Czy zaliczki w ciągu roku mogą być niższe niż podatek za cały rok"
+    ],
+    "answer": "Tak, jest to normalna sytuacja. Zaliczki miesięczne oblicza się jako różnicę między podatkiem należnym od dochodu osiągniętego od początku roku a sumą już wpłaconych zaliczek (art. 25 ust. 1). Dlatego w poszczególnych miesiącach można wpłacać zaliczki znacznie niższe niż całoroczny podatek. Ostateczne wyrównanie następuje przy rozliczeniu rocznym w CIT-8 (art. 27 ust. 1), gdzie podatnik wpłaca brakującą różnicę lub otrzymuje zwrot.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 25 ust. 1",
+        "quote": "podatnicy są obowiązani wpłacać na rachunek urzędu skarbowego zaliczki miesięczne w wysokości różnicy pomiędzy podatkiem należnym od dochodu osiągniętego od początku roku podatkowego a sumą zaliczek należnych za poprzednie miesiące"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1",
+        "quote": "podatnicy są obowiązani do dokonania rozliczenia podatku za rok podatkowy"
+      }
+    ],
+    "conditions": [
+      "Zaliczka liczona jest za każdy miesiąc osobno",
+      "Zasada odliczenia zaliczek z poprzednich miesięcy powoduje malejące kwoty zaliczek w kolejnych miesiącach"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zaliczki miesięczne",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-18ea-18eb-zle-dlugii",
+    "question_intent": "Gdzie w ustawie o CIT (artykuły 18ea i 18eb) znajduje się ulga na złe długi?",
+    "question_patterns": [
+      "Gdzie w CIT-8 wykazuje ulgę na złe długi?",
+      "Jaki artykuł CIT dotyczy złych długów?",
+      "Gdzie znaleźć regulację o złych długach w ustawie o podatku dochodowym od osób prawnych?",
+      "Ulga na złe długi w ustawie o CIT"
+    ],
+    "answer": "Podane artykuły 18ea i 18eb nie zawierają regulacji dotyczącej ulgę na złe długi. Artykuł 18ea reguluje odliczenie kosztów produkcji próbnej i wprowadzenia nowego produktu na rynek, a artykuł 18eb dotyczy odliczenia kosztów zwiększenia przychodów ze sprzedaży produktów. Aby znaleźć przepisy o złych długach, należy sprawdzić inne artykuły ustawy o podatku dochodowym od osób prawnych.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 18ea i art. 18eb",
+        "quote": "Podane artykuły nie zawierają regulacji dotyczącej złych długów"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "złe długi, ulgi podatkowe",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-cit-zeznanie-wielolokacyjne",
+    "question_intent": "Czy przy 2 miastach muszę złożyć 2 zeznania CIT?",
+    "question_patterns": [
+      "2 miasta - ile zeznań CIT?",
+      "Czy músze złożyć 2 zeznania podatkowe przy dwóch siedzibach?",
+      "Wielolokacyjna działalność - ile CIT-ów?",
+      "2 oddziały - jedno czy dwa zeznania?"
+    ],
+    "answer": "Składasz JEDNO zeznanie CIT za całą działalność spółki w danym roku podatkowym, niezależnie od liczby miast czy lokalizacji. Zeznanie obejmuje całość dochodów i strat ze wszystkich źródeł działalności. W ustawie nie ma wymogu złożenia osobnego zeznania dla każdej lokalizacji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1",
+        "quote": "Podatnicy, z wyjątkiem zwolnionych od podatku, są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o wysokości dochodu osiągniętego (straty poniesionej) w roku podatkowym – do końca trzeciego miesiąca roku następnego"
+      }
+    ],
+    "conditions": [
+      "Podatnik jest obowiązany do złożenia zeznania za rok podatkowy",
+      "Zeznanie zawiera całość dochodów ze wszystkich źródeł"
+    ],
+    "exceptions": [
+      "Podatnicy zwolnieni od podatku na podstawie art. 6 ust. 1",
+      "Podatnicy, o których mowa w art. 27a"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zeznanie_podatkowe_obowiazek",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-28b-zwrot-podatku-termin",
+    "question_intent": "Jaki jest termin zwrotu podatku przez urząd skarbowy?",
+    "question_patterns": [
+      "Ile czasu ma US na zwrot nadpłaty?",
+      "W jakim terminie urząd skarbowy zwraca podatek?",
+      "Kiedy otrzymam zwrot podatku po złożeniu wniosku?",
+      "Jaki jest maksymalny termin zwrotu podatku przez organ podatkowy?"
+    ],
+    "answer": "Organ podatkowy zwraca podatek bez zbędnej zwłoki, nie później jednak niż w terminie 6 miesięcy od dnia wpływu wniosku o zwrot podatku. Termin ten biegnie na nowo od dnia wpływu zmienionego wniosku. W przypadku bezwątpliwości wniosku zwrot następuje niezwłocznie bez wydania decyzji.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 28b ust. 6",
+        "quote": "Zwrot podatku, z zastrzeżeniem ust. 7, następuje bez zbędnej zwłoki, nie później jednak niż w terminie 6 miesięcy od dnia wpływu wniosku o zwrot podatku."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 28b ust. 10",
+        "quote": "Jeżeli wniosek o zwrot podatku nie budzi wątpliwości, organ podatkowy niezwłocznie dokonuje zwrotu kwoty wskazanej we wniosku bez wydania decyzji."
+      }
+    ],
+    "conditions": [
+      "Właściwie złożony wniosek o zwrot podatku",
+      "Spełnienie warunków do zwrotu wynikających z przepisów szczególnych lub umów o unikaniu podwójnego opodatkowania"
+    ],
+    "exceptions": [
+      "Organ podatkowy może przedłużyć termin do czasu zakończenia weryfikacji, jeśli informacje wskazują na wysokie prawdopodobieństwo niezasadności zwrotu i weryfikacja nie jest możliwa w standardowym terminie (art. 28b ust. 7)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "zwrot podatku, terminy proceduralne",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "note": "Artykuł nie rozstrzyga czy zwroty w praktyce pojawiają się wcześniej – to wymaga weryfikacji danych empirycznych spoza ustawy.",
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-11c-ceny-transferowe-warunki",
+    "question_intent": "Od czego zależą ceny transferowe między podmiotami powiązanymi?",
+    "question_patterns": [
+      "Od czego zależne ceny transferowe?",
+      "Jakie warunki decydują o cenach transferowych?",
+      "Co wpływa na ustalenie ceny transferowej?",
+      "Na jakich warunkach ustalane są ceny transferowe?"
+    ],
+    "answer": "Ceny transferowe między podmiotami powiązanymi muszą być ustalane na warunkach, które ustaliłyby między sobą podmioty niepowiązane (cena rynkowa). Jeśli organ podatkowy stwierdzi, że warunki są inne niż rynkowe i podatnik wykazuje niższy dochód, organ może przeanalizować faktyczny przebieg transakcji i jej okoliczności, aby określić prawidłową cenę.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 11c ust. 1",
+        "quote": "Podmioty powiązane są obowiązane ustalać ceny transferowe na warunkach, które ustaliłyby między sobą podmioty niepowiązane."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 11c ust. 3",
+        "quote": "Określając wysokość dochodu (straty) podatnika, organ podatkowy bierze pod uwagę faktyczny przebieg i okoliczności zawarcia i realizacji transakcji kontrolowanej oraz zachowanie stron tej transakcji."
+      }
+    ],
+    "conditions": [
+      "Transakcja musi zachodzić między podmiotami powiązanymi",
+      "Cena musi być ustalona na warunkach rynkowych (arm's length principle)",
+      "Organ podatkowy może weryfikować cenę na podstawie faktycznego przebiegu transakcji"
+    ],
+    "exceptions": [
+      "Jeżeli podatnik ma zawarte uprzednie porozumienie cenowe, porozumienie inwestycyjne lub porozumienie podatkowe – organ podatkowy nie określa zobowiązania w zakresie zgodnym z tym porozumieniem (art. 11c ust. 6)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "ceny_transferowe",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-11d-metody-weryfikacji-cen",
+    "question_intent": "Jakimi metodami weryfikuje się ceny transferowe?",
+    "question_patterns": [
+      "Jakie metody weryfikacji cen transferowych?",
+      "Jak organ podatkowy weryfikuje ceny transferowe?",
+      "Jakie są metody ustalania cen transferowych?",
+      "Od czego zależy wybór metody weryfikacji ceny?"
+    ],
+    "answer": "Ceny transferowe weryfikuje się pięcioma metodami: porównywalnej ceny niekontrolowanej, ceny odprzedaży, koszt plus, marży transakcyjnej netto oraz podziału zysku. Wybór metody zależy od warunków transakcji, dostępności informacji i specyfiki sprawy – organ zwykle stosuje metodę przyjętą przez podatnika, chyba że inna metoda byłaby bardziej odpowiednia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 11d ust. 1",
+        "quote": "Ceny transferowe weryfikuje się, stosując metodę najbardziej odpowiednią w danych okolicznościach, wybraną spośród następujących metod: porównywalnej ceny niekontrolowanej; ceny odprzedaży; koszt plus; marży transakcyjnej netto; podziału zysku."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 11d ust. 3",
+        "quote": "Przy wyborze metody najbardziej odpowiedniej w danych okolicznościach uwzględnia się warunki ustalone między podmiotami powiązanymi, dostępność informacji oraz specyficzne kryteria jej zastosowania."
+      }
+    ],
+    "conditions": [
+      "Metoda musi być najbardziej odpowiednia w danych okolicznościach",
+      "Uwzględnianie warunków transakcji, dostępności danych i specyfiki sprawy",
+      "Możliwość stosowania innej metody niż przyjęta przez podatnika, jeśli jest bardziej odpowiednia"
+    ],
+    "exceptions": [
+      "Jeśli nie można zastosować pięciu standardowych metod – stosuje się inną metodę, w tym techniki wyceny (art. 11d ust. 2)",
+      "Jeśli organ pomiął transakcję kontrolowaną – nie stosuje się metodę; jeśli zastąpił ją transakcją właściwą – stosuje metodę dla nowej transakcji (art. 11d ust. 5)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "ceny_transferowe_metody",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15a-kurs-podatkowo-rachunkowy",
+    "question_intent": "Którą datę i kurs (średni NBP vs. faktyczny) stosować do rozliczenia podatkowości i wyceny księgowej różnic kursowych",
+    "question_patterns": [
+      "Data wystawienia vs data usługi - jaki kurs do CIT",
+      "Jaki kurs do rozrachunku a jaki do podatku przy różnych datach",
+      "Czy kurs od daty wystawienia czy od daty usługi do podatku dochodowego"
+    ],
+    "answer": "Do podatku CIT stosuje się kurs średni NBP z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu lub poniesienia kosztu (art. 15a ust. 6). W Twojej sytuacji: koszt poniesiony to dzień faktury (04.02), więc do CIT stosuje się kurs z ostatniego dnia roboczego przed 04.02. Do rozrachunku księgowego może zastosować się natomiast faktycznie użyty kurs, ale tylko jeśli ten kurs jest dokumentowany (art. 15a ust. 4). Data wystawienia (10.02) nie jest datą relewantną dla CIT - relevantna jest data faktury/poniesienia kosztu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15a ust. 6",
+        "quote": "Przez średni kurs ogłaszany przez Narodowy Bank Polski, o którym mowa w ust. 2 i 3, rozumie się kurs z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu lub poniesienia kosztu"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15a ust. 4",
+        "quote": "Przy obliczaniu różnic kursowych uwzględnia się kursy faktycznie zastosowane w przypadku sprzedaży lub kupna walut obcych oraz otrzymania należności lub zapłaty zobowiązań"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15a ust. 7",
+        "quote": "Za koszt poniesiony uważa się koszt wynikający z otrzymanej faktury (rachunku)"
+      }
+    ],
+    "conditions": [
+      "Data relewantna to dzień poniesienia kosztu (dzień faktury), nie dzień wystawienia",
+      "Do CIT zawsze stosuje się kurs średni NBP z ostatniego dnia roboczego poprzedzającego dzień poniesienia kosztu",
+      "Faktycznie zastosowany kurs można uwzględnić tylko jeśli jest dokumentowany i rzeczywiście zastosowany"
+    ],
+    "exceptions": [
+      "Wyjątek: jeśli podatnik wybrał metodę z art. 9b ust. 1 pkt 2 (metoda księgowa), wówczas zasady wyceny mogą być inne - patrz art. 9b"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "różnice kursowe, daty relewantne",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-27-zeznanie-cit-termin",
+    "question_intent": "Jaki jest termin składania zeznania CIT i kiedy należy wpłacić podatek?",
+    "question_patterns": [
+      "Kiedy złożyć zeznanie CIT za 2025?",
+      "Co teraz z deklaracją CIT za 2025?",
+      "Termin składania zeznania CIT",
+      "Deadline na CIT za rok 2025"
+    ],
+    "answer": "Zeznanie CIT za rok 2025 należy złożyć do końca trzeciego miesiąca roku następnego, czyli do 31 marca 2026 roku. W tym samym terminie należy wpłacić podatek należny albo różnicę między podatkiem należnym a sumą zapłaconych zaliczek za cały rok. Zeznanie składa się za pomocą środków komunikacji elektronicznej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1",
+        "quote": "są obowiązani, z zastrzeżeniem ust. 2a, składać urzędom skarbowym zeznanie, według ustalonego wzoru, o wysokości dochodu osiągniętego (straty poniesionej) w roku podatkowym – do końca trzeciego miesiąca roku następnego"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 27 ust. 1c",
+        "quote": "Zeznanie, o którym mowa w ust. 1, składa się za pomocą środków komunikacji elektronicznej"
+      }
+    ],
+    "conditions": [
+      "Podatnik nie jest zwolniony od podatku na podstawie art. 6 ust. 1",
+      "Rok podatkowy to zwykle rok kalendarzowy (2025)",
+      "Obowiązek dotyczy wszystkich podatników CIT z zastrzeżeniami ustawowymi"
+    ],
+    "exceptions": [
+      "Podatnicy zwolnieni od podatku na podstawie art. 6 ust. 1",
+      "Fundacje rodzinne w zakresie objętym zwolnieniem (art. 6 ust. 1 pkt 25)",
+      "Podatnicy osiągający dochody z zagranicznej jednostki kontrolowanej (inny termin – do końca 9 miesiąca)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "procedura-podatkowa",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-zagranica-siedziaba-zarzad",
+    "question_intent": "Czy spółka prowadząca działalność za granicą (budowanie stoisk targowych) podlega opodatkowaniu w Polsce?",
+    "question_patterns": [
+      "Spółka zoo buduje stoiska targowe za granicą - czy płaci podatek w Polsce?",
+      "Czy działalność zagraniczna spółki podlega opodatkowaniu CIT?",
+      "Jaki jest obowiązek podatkowy spółki z siedzibą w Polsce pracującej za granicą?",
+      "Spółka ma siedzibę w Polsce ale pracuje za granicą - jakie są zasady opodatkowania?"
+    ],
+    "answer": "Spółka zoo z siedzibą lub zarządem w Polsce podlega obowiązkowi podatkowemu od całości swoich dochodów, niezależnie od miejsca ich osiągania. Oznacza to, że przychody ze sprzedaży stoisk targowych za granicą również podlegają opodatkowaniu CIT w Polsce. Nie ma tu wyjątku ani zwolnienia - polska spółka rozlicza się w Polsce od całości dochodów, w tym tych pochodzących z działalności zagranicznej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 3 ust. 1",
+        "quote": "Podatnicy, jeżeli mają siedzibę lub zarząd na terytorium Rzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów, bez względu na miejsce ich osiągania."
+      }
+    ],
+    "conditions": [
+      "Spółka ma siedzibę lub zarząd na terytorium Polski",
+      "Obowiązek dotyczy całości dochodów niezależnie od miejsca ich źródła"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Zakres obowiązku podatkowego - działalność zagraniczna",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-przychod-swiadczenia-zagranica",
+    "question_intent": "Jak rozliczyć przychody ze sprzedaży stoików targowych za granicą - czy są to usługi czy dostawy?",
+    "question_patterns": [
+      "Czy sprzedaż i montaż stoiska targowego za granicą to przychód z usług czy towarów?",
+      "Jak ujawnić w zeznaniu CIT dochody ze stoików budowanych za granicą?",
+      "Kiedy powstaje przychód ze sprzedaży stoiska targowego budowanego za granicą?"
+    ],
+    "answer": "Przychód ze sprzedaży stoiska targowego za granicą (czy zawiera dostawę, montaż czy usługę) podlega zasadom art. 12. Przychód powstaje w dniu wydania rzeczy/wykonania usługi, nie później niż dzień wystawienia faktury lub uregulowania należności. Spółka powinna wystawiać faktury za swoje świadczenia zgodnie z miejscem realizacji usługi/dostawy.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 3 i 3a",
+        "quote": "Za przychody związane z działalnością gospodarczą uważa się także należne przychody, choćby nie zostały jeszcze faktycznie otrzymane. Za datę powstania przychodu uznaje się dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, nie później niż dzień wystawienia faktury albo uregulowania należności."
+      }
+    ],
+    "conditions": [
+      "Przychód musi być należny, nawet jeśli nie został jeszcze faktycznie otrzymany",
+      "Datę powstania określa się na dzień wykonania usługi/wydania towaru lub wystawienia faktury (co wcześniej)"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Data i wysokość przychodu - usługi zagraniczne",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-21-podatek-zagranica-usluga",
+    "question_intent": "Czy przychody spółki z usług świadczonych za granicą podlegają szczególnemu opodatkowaniu lub zwolnieniu?",
+    "question_patterns": [
+      "Czy usługi świadczone za granicą mogą być zwolnione z podatku?",
+      "Czy polska spółka budująca stoiska za granicą ma ulgi podatkowe?",
+      "Czy przychody ze stoików budowanych za granicą mogą być opodatkowane inaczej niż usługi krajowe?"
+    ],
+    "answer": "Art. 21 dotyczy podatku od PRZYCHODÓW zagranicznych podatników otrzymywanych W POLSCE, nie dotyczy przychodów polskich spółek ze sprzedaży usług za granicą. Polska spółka zoo rozliczająca się od przychodów zagranicznych nie ma żadnych zwolnień czy ulg podatkowych - opodatkowana jest na ogólnych zasadach CIT od pełnego dochodu.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 21 ust. 1",
+        "quote": "Podatek dochodowy z tytułu uzyskanych na terytorium Rzeczypospolitej Polskiej przez podatników, o których mowa w art. 3 ust. 2, przychodów..."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 3 ust. 2",
+        "quote": "Podatnicy, jeżeli nie mają na terytorium Rzeczypospolitej Polskiej siedziby lub zarządu, podlegają obowiązkowi podatkowemu tylko od dochodów, które osiągają na terytorium Rzeczypospolitej Polskiej."
+      }
+    ],
+    "conditions": [
+      "Art. 21 stosuje się tylko do podatników zagranicznych osiągających dochody w Polsce (art. 3 ust. 2)",
+      "Spółka zoo ma siedzibę w Polsce, więc rozlicza się na zasadach art. 3 ust. 1"
+    ],
+    "exceptions": [
+      "Brak zwolnień dla przychodów polskich spółek ze sprzedaży usług za granicą"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Opodatkowanie przychodów zagranicznych - błędy interpretacyjne",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-waluta-obca-przychod",
+    "question_intent": "Jak przeliczać przychody ze sprzedaży stoików targowych za granicą (w walucie obcej)?",
+    "question_patterns": [
+      "W jakiej walucie ujawnić przychody ze stoików budowanych za granicą?",
+      "Jak przeliczać EUR na PLN dla celów CIT?",
+      "Jaki kurs wymiany zastosować do przychodów zagranicznych?",
+      "Czy stosować kurs NBP do przychodów w obcej walucie?"
+    ],
+    "answer": "Przychody w walutach obcych ze sprzedaży stoików za granicą należy przeliczyć na złote według kursu średniego ogłaszanego przez Narodowy Bank Polski z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu. Przeliczenie musi być dokonane na moment powstania przychodu, a nie na moment płatności.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 2",
+        "quote": "Przychody w walutach obcych przelicza się na złote według kursu średniego ogłaszanego przez Narodowy Bank Polski z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu."
+      }
+    ],
+    "conditions": [
+      "Przeliczenie dokonuje się na dzień UZYSKANIA przychodu (nie dnia zapłaty)",
+      "Używa się kursu NBP z ostatniego dnia roboczego PRZED dniem uzyskania przychodu"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Przychody w walutach obcych",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-zagraniczny-zaklad-przychod",
+    "question_intent": "Czy spółka zoo mogąca prowadzić działalność za granicą poprzez zagraniczny zakład powinna tak się zorganizować?",
+    "question_patterns": [
+      "Czy spółka zoo powinna zarejestrować zagraniczny zakład?",
+      "Czy prowadzenie działalności za granicą bez zagranicznego zakładu jest inne podatkowo niż ze zakładem?",
+      "Co to jest zagraniczny zakład dla celów CIT?",
+      "Czy zagraniczny zakład zmienia obowiązek podatkowy spółki?"
+    ],
+    "answer": "Spółka zoo z siedzibą w Polsce podlega opodatkowaniu od całości dochodów niezależnie od tego, czy prowadzi działalność za granicą poprzez zagraniczny zakład, czy bezpośrednio. Utworzenie zagranicznego zakładu nie zmienia zakresu opodatkowania w Polsce - spółka rozlicza się od wszystkich dochodów. Zagraniczny zakład jest pojęciem ważnym dla celów limitowania odliczań podatku zagranicznego, ale nie wpływa na obowiązek wpisania przychodów zagranicznych do polskiego CIT.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 3 ust. 1",
+        "quote": "Podatnicy, jeżeli mają siedzibę lub zarząd na terytorium Rzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów, bez względu na miejsce ich osiągania."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 3 ust. 3 pkt 1",
+        "quote": "za dochody (przychody) osiągane na terytorium Rzeczypospolitej Polskiej przez podatników uważa się w szczególności dochody (przychody) z wszelkiego rodzaju działalności prowadzonej na terytorium Rzeczypospolitej Polskiej, w tym poprzez położony na terytorium Rzeczypospolitej Polskiej zagraniczny zakład"
+      }
+    ],
+    "conditions": [
+      "Spółka ma siedzibę w Polsce",
+      "Przychody ze wszystkich źródeł (w tym zagranicznych) podlegają opodatkowaniu w Polsce"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Zagraniczny zakład i obowiązek podatkowy",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-koszty-przychod-netto",
+    "question_intent": "Czy przy rozliczaniu przychodów ze stoików za granicą może ujawniać koszty budowy/materiałów?",
+    "question_patterns": [
+      "Czy przychody ze sprzedaży stoików to przychód netto czy brutto?",
+      "Czy może odliczyć koszty materiałów i pracy przy stoikach budowanych za granicą?",
+      "Jak ujawnić w zeznaniu CIT - jako przychód z usług czy przychód pomniejszony o koszty?",
+      "Czy przychody to cena faktury czy cena minus koszty?"
+    ],
+    "answer": "Przychodem jest pełna wartość należności z tytułu sprzedaży/usługi (cena faktury), niezależnie od poniesionych kosztów materiałów i robocizny. Koszty ujawnia się ODDZIELNIE jako koszty uzyskania przychodów w rejestrze VAT/rachunkowości. Przychód wykazuje się brutto, a następnie odejmuje koszty przy ustalaniu dochodu podatkowego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 1 pkt 1",
+        "quote": "Przychodami są otrzymane pieniądze, wartości pieniężne, w tym również różnice kursowe"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 3",
+        "quote": "Za przychody związane z działalnością gospodarczą uważa się także należne przychody, choćby nie zostały jeszcze faktycznie otrzymane, po wyłączeniu wartości zwróconych towarów, udzielonych bonifikat i skont."
+      }
+    ],
+    "conditions": [
+      "Przychód to należna kwota, nie kwota netto",
+      "Koszty ujawnia się jako koszty uzyskania przychodów oddzielnie"
+    ],
+    "exceptions": [
+      "Wyłączenie: wartości zwróconych towarów, bonifikat i skontów"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "Definicja i ustalanie przychodów",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-28j-zatrudnienie-zlecenia",
+    "question_intent": "Czy spółka zatrudniająca osoby na zleceniach (bez umowy o pracę) może stosować opodatkowanie ryczałtem od dochodów spółek?",
+    "question_patterns": [
+      "Czy zlecenia liczą się do warunku zatrudnienia przy ryczałcie?",
+      "Osoby na zleceniach - czy spełniają warunek zatrudnienia do estońskiego?",
+      "Czy mogę mieć pracowników na umowy zlecenia zamiast umów o pracę przy ryczałcie?"
+    ],
+    "answer": "Nie, zlecenia nie spełniają warunku zatrudnienia do opodatkowania ryczałtem. Ustawa wymaga zatrudnienia na podstawie umowy o pracę (minimum 3 osoby przez 300 dni) lub wydatków na wynagrodzenia dla osób na umowach innych niż umowa o pracę w kwocie co najmniej trzykrotności przeciętnego wynagrodzenia miesięcznego. Sama umowa zlecenia nie jest wystarczająca do spełnienia tego obowiązkowego warunku.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 28j ust. 1 pkt 3 lit. a",
+        "quote": "zatrudnia na podstawie umowy o pracę co najmniej 3 osoby w przeliczeniu na pełne etaty, niebędące udziałowcami, akcjonariuszami ani wspólnikami tego podatnika, przez okres co najmniej 300 dni w roku podatkowym"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 28j ust. 1 pkt 3 lit. b",
+        "quote": "ponosi miesięcznie wydatki w kwocie stanowiącej co najmniej trzykrotność przeciętnego miesięcznego wynagrodzenia w sektorze przedsiębiorstw z tytułu wypłaty wynagrodzeń na rzecz zatrudnionych na podstawie umowy innej niż umowa o pracę"
+      }
+    ],
+    "conditions": [
+      "Warunek zatrudnienia jest obligatoryjny do stosowania ryczałtu",
+      "Muszą być spełnione warunki co do liczby osób i okresu zatrudnienia",
+      "Zlecenia nie są uznawane za spełniające warunek zatrudnienia"
+    ],
+    "exceptions": [
+      "W roku rozpoczęcia działalności warunek zatrudnienia nie dotyczy pierwszego roku i 2 lat bezpośrednio po nim (art. 28j ust. 2 pkt 2)",
+      "Dla małych podatników w pierwszym roku wystarczy 1 osoba zatrudniona (art. 28j ust. 3)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "ryczalt_od_dochodow_spółek_warunki_zatrudnienia",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-7aa-ryczalt-przygotowanie",
+    "question_intent": "Jakie kroki muszę podjąć przygotowując się do opodatkowania ryczałtem od dochodów spółek?",
+    "question_patterns": [
+      "Co mam zrobić zanim przejdę na ryczałt od dochodów spółek?",
+      "Jakie obowiązki przed wybraniem ryczałtu?",
+      "Jak się przygotować do ryczałtu CIT?",
+      "CIT estoński co mam zrobić?"
+    ],
+    "answer": "Na ostatni dzień roku podatkowego poprzedzającego pierwszy rok opodatkowania ryczałtem musisz: (1) sporządzić informację o przychodach, kosztach, dochodzie z przekształcenia oraz podatku należnym, (2) wyodrębnić w kapitale własnym zyski niepodzielone, zyski podzielone oraz niepokryte straty z lat poprzedzających. W zeznaniu za rok poprzedzający opodatkowanie ryczałtem musisz wykazać przychody, koszty i podatek należny według stawki CIT, a także podatek od dochodu z przekształcenia.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 7aa ust. 1",
+        "quote": "Podatnik, który wybrał opodatkowanie ryczałtem od dochodów spółek, jest obowiązany na ostatni dzień roku podatkowego poprzedzającego pierwszy rok opodatkowania tym ryczałtem sporządzić informację oraz wyodrębnić w kapitale własnym spółki."
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 7aa ust. 4",
+        "quote": "W zeznaniu podatnik wykazuje przychody oraz koszty i ustala podatek należny od dochodu oraz dochód z przekształcenia."
+      }
+    ],
+    "conditions": [
+      "Obowiązki dotyczą ostatniego dnia roku podatkowego poprzedzającego pierwszy rok ryczałtu",
+      "Wyodrębnienie zysków i strat musi być wykazane w sprawozdaniu finansowym",
+      "Informacja musi zawierać przychody, koszty i podatek należny"
+    ],
+    "exceptions": [
+      "Przepisów nie stosuje się do przychodów z art. 12 ust. 4 oraz kosztów niestanowiących kosztów uzyskania przychodów",
+      "Z wyjątkiem przychodów i kosztów podlegających rozliczeniu w innych terminach zgodnie z przepisami o rachunkowości"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "ryczałt od dochodów spółek - przygotowanie",
+    "difficulty": "hard",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-28e-rok-podatkowy-ryczalt",
+    "question_intent": "Jaki rok podatkowy obowiązuje podatnika na ryczałcie od dochodów spółek?",
+    "question_patterns": [
+      "Jaki jest rok podatkowy w ryczałcie?",
+      "Kiedy się kończy rok podatkowy na ryczałcie?",
+      "Jak określić rok podatkowy przy przejściu na ryczałt?"
+    ],
+    "answer": "Rokiem podatkowym podatnika opodatkowanego ryczałtem jest rok obrotowy w rozumieniu przepisów o rachunkowości. Jeśli wybrałeś ryczałt przed końcem roku podatkowego, pierwszy rok opodatkowania ryczałtem liczy się od pierwszego dnia miesiąca następującego po zakończeniu poprzedniego roku podatkowego do końca twojego przyjętego roku obrotowego.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 28e ust. 1 i 2",
+        "quote": "Rokiem podatkowym podatnika opodatkowanego ryczałtem jest rok obrotowy. Jeżeli podatnik dokonał wyboru przed upływem roku podatkowego, za pierwszy rok uważa się okres od pierwszego dnia miesiąca następującego po zakończeniu poprzedniego roku podatkowego."
+      }
+    ],
+    "conditions": [
+      "Rok obrotowy definiowany zgodnie z przepisami o rachunkowości",
+      "Dotyczy wyboru ryczałtu dokonanego w trakcie roku podatkowego"
+    ],
+    "exceptions": [
+      "Przepis art. 28e ust. 2 zastosuj tylko, jeśli wybór ryczałtu dokonano przed upływem przyjętego roku podatkowego"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "ryczałt od dochodów spółek - rok podatkowy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-12-faktura-przychod-data",
+    "question_intent": "Kiedy powstaje przychód z fakturą na plus (avansem) - czy na bieżąco czy później?",
+    "question_patterns": [
+      "Fakturę na plus księgujemy na bieżąco?",
+      "Kiedy ujmujemy przychód z faktury na plus (zaliczki)?",
+      "Czy przychód z przedpłaty wykazujemy natychmiast?",
+      "Data powstania przychodu z faktury na plus",
+      "Obrachowanie faktury na plus w księgach"
+    ],
+    "answer": "Nie. Przychód z faktury na plus (zaliczki na dostawy w następnych okresach) nie powstaje natychmiast. Zgodnie z art. 12 ust. 4 pkt 1, zaliczki pobrane na poczet przyszłych dostaw nie zaliczają się do przychodów. Przychód powstaje dopiero wtedy, gdy następuje wydanie rzeczy lub wykonanie usługi, zgodnie z art. 12 ust. 3a.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 4 pkt 1",
+        "quote": "Do przychodów nie zalicza się pobranych wpłat lub zarachowanych należności na poczet dostaw towarów i usług, które zostaną wykonane w następnych okresach sprawozdawczych"
+      },
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 12 ust. 3a",
+        "quote": "Za datę powstania przychodu uznaje się dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykonania usługi"
+      }
+    ],
+    "conditions": [
+      "Wpłata pobrana na poczet dostaw lub usług, które zostaną wykonane w następnych okresach",
+      "Brak faktyki dostarczenia towaru lub wykonania usługi w okresie pobrania wpłaty"
+    ],
+    "exceptions": [
+      "Skapitalizowane odsetki od pożyczek (kredytów) zaliczają się do przychodów na bieżąco"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "przychody_i_koszty",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-15-koszty-przedluzajace-okres",
+    "question_intent": "Czy koszty związane z usługami ciągłymi (np. prąd) należy dzielić proporcjonalnie między okresy rozliczeniowe na przełomie roku?",
+    "question_patterns": [
+      "Czy faktury za prąd dzielimy proporcjonalnie na przełomie roku?",
+      "Jak rozliczyć faktury za opłaty mediów na koniec roku podatkowego?",
+      "Czy koszty za usługi obejmujące wiele miesięcy należy proporcjonować między lata?"
+    ],
+    "answer": "Tak. Koszty uzyskania przychodów dotyczące okresu przekraczającego rok podatkowy, gdy nie można określić jaka ich część dotyczy danego roku, stanowią koszty proporcjonalnie do długości okresu, którego dotyczą. Faktura za prąd pokrywająca np. listopad i grudzień powinna być podzielona między dwa okresy rozliczeniowe - za rok, w którym usługa została dostarczona.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 15 ust. 4d",
+        "quote": "Koszty uzyskania przychodów, inne niż koszty bezpośrednio związane z przychodami, są potrącalne w dacie ich poniesienia. Jeżeli koszty te dotyczą okresu przekraczającego rok podatkowy, a nie jest możliwe określenie, jaka ich część dotyczy danego roku podatkowego, w takim przypadku stanowią koszty uzyskania przychodów proporcjonalnie do długości okresu, którego dotyczą."
+      }
+    ],
+    "conditions": [
+      "Koszt musi dotyczyć okresu przekraczającego rok podatkowy",
+      "Nie jest możliwe określenie, jaka część kosztu dotyczy danego roku",
+      "Koszt nie jest bezpośrednio związany z przychodami"
+    ],
+    "exceptions": [
+      "Koszty bezpośrednio związane z przychodami rozliczane są na podstawie art. 15 ust. 4-4c (inne zasady)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "koszty uzyskania przychodów - rozliczenie międzyokresowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-no-match-facebook-google",
+    "question_intent": "Pytanie dotyczące adresów do IFT-2R dla Facebooka i Google",
+    "question_patterns": [
+      "Jakie adresy wykazujecie do ift-2r w kwestii Facebooka oraz Google?",
+      "Adresy Facebook Google IFT-2R",
+      "Gdzie wykazać adresy platform cyfrowych"
+    ],
+    "answer": "Pytanie dotyczy procedur sprawozdawczych (IFT-2R), które nie są regulowane w Ustawie o podatku dochodowym od osób prawnych. Artykuły 3 i 4 tej ustawy dotyczą jedynie zasad określenia obowiązku podatkowego i zakresu terytorialnego. Odpowiedź na to pytanie wymaga konsultacji z odrębnymi przepisami o obowiązkach informacyjnych wobec Krajowej Administracji Skarbowej.",
+    "legal_basis": [
+      {
+        "law": "Ustawa o podatku dochodowym od osób prawnych",
+        "article": "art. 3, art. 4",
+        "quote": "Przepisy dotyczą obowiązku podatkowego i zakresu terytorialnego, nie procedur sprawozdawczych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "procedury_sprawozdawcze_poza_zakresem",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  }
+]
