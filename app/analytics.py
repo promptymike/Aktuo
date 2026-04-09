@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections import Counter
 from datetime import datetime, timedelta
@@ -13,7 +14,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-ANALYTICS_PASSWORD = "AKTUO_ADMIN_2026"
 LOG_PATH = PROJECT_ROOT / "data" / "logs" / "queries.jsonl"
 LOCAL_TZ = ZoneInfo("Europe/Warsaw")
 
@@ -45,6 +45,13 @@ def _parse_timestamp(value: object) -> datetime | None:
 
 
 def _render_password_gate() -> bool:
+    analytics_password = os.environ.get("AKTUO_ADMIN_PASSWORD", "")
+    if not analytics_password:
+        st.title("Analytics")
+        st.caption("Panel administracyjny Aktuo")
+        st.info("Analytics disabled. Set AKTUO_ADMIN_PASSWORD to enable.")
+        return False
+
     if st.session_state.get("analytics_authenticated"):
         return True
 
@@ -55,7 +62,7 @@ def _render_password_gate() -> bool:
         submitted = st.form_submit_button("Otwórz dashboard", use_container_width=True)
 
     if submitted:
-        if password == ANALYTICS_PASSWORD:
+        if password == analytics_password:
             st.session_state.analytics_authenticated = True
             st.rerun()
         st.error("Nieprawidłowe hasło.")
@@ -82,9 +89,17 @@ def main() -> None:
         with_timestamps.append(row)
 
     total_queries = len(with_timestamps)
-    today_queries = sum(1 for entry in with_timestamps if entry["_parsed_timestamp"] and entry["_parsed_timestamp"] >= start_today)
+    today_queries = sum(
+        1 for entry in with_timestamps if entry["_parsed_timestamp"] and entry["_parsed_timestamp"] >= start_today
+    )
     week_queries = sum(1 for entry in with_timestamps if entry["_parsed_timestamp"] and entry["_parsed_timestamp"] >= week_ago)
-    unique_users = len({str(entry.get("user_email", "")).strip().lower() for entry in with_timestamps if str(entry.get("user_email", "")).strip()})
+    unique_users = len(
+        {
+            str(entry.get("user_email", "")).strip().lower()
+            for entry in with_timestamps
+            if str(entry.get("user_email", "")).strip()
+        }
+    )
     grounded_false = sum(1 for entry in with_timestamps if entry.get("grounded") is False)
     grounded_false_pct = (grounded_false / total_queries * 100) if total_queries else 0.0
 
@@ -113,10 +128,7 @@ def main() -> None:
         st.info("Brak danych pytań w logach.")
 
     st.subheader("Rozkład kategorii")
-    category_counts = Counter(
-        str(entry.get("category", "brak")).strip() or "brak"
-        for entry in with_timestamps
-    )
+    category_counts = Counter(str(entry.get("category", "brak")).strip() or "brak" for entry in with_timestamps)
     if category_counts:
         chart_rows = [{"kategoria": category, "liczba": count} for category, count in category_counts.most_common()]
         st.bar_chart(chart_rows, x="kategoria", y="liczba", horizontal=True)

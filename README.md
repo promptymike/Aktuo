@@ -30,6 +30,16 @@ py -3.11 -m pip install -r requirements.txt
 py -3.11 -m streamlit run app/main.py
 ```
 
+## Streamlit Cloud secrets
+
+On Streamlit Cloud, do not keep admin secrets in `.env`.
+Set them in `.streamlit/secrets.toml` or in the Secrets panel, for example:
+
+```toml
+AKTUO_ADMIN_PASSWORD = "strong-admin-password"
+ANTHROPIC_API_KEY = "your_anthropic_api_key"
+```
+
 Run tests:
 
 ```powershell
