@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 
 import core.logger as logger
@@ -22,8 +23,8 @@ def test_log_query_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
     logger.log_query(
         session_id="session-123",
         user_email="beta@aktuo.pl",
-        question="Od kiedy KSeF jest obowiązkowy?",
-        redacted_query="Od kiedy KSeF jest obowiązkowy?",
+        question="Jan Kowalski pyta: Od kiedy KSeF jest obowiązkowy?",
+        redacted_query="Jan Kowalski pyta: Od kiedy KSeF jest obowiązkowy?",
         category="ksef",
         chunks_returned=2,
         chunk_ids=["Ustawa o VAT art. 106ga", "Ustawa o VAT art. 145l"],
@@ -36,10 +37,14 @@ def test_log_query_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
 
     entry = json.loads(lines[0])
     assert entry["session_id"] == "session-123"
-    assert entry["user_email"] == "beta@aktuo.pl"
+    assert entry["user_email"] == hashlib.sha256(b"beta@aktuo.pl").hexdigest()[:8]
     assert entry["category"] == "ksef"
     assert entry["chunks_returned"] == 2
     assert entry["grounded"] is True
+    assert entry["question"] == "[PERSON] pyta: Od kiedy KSeF jest obowiązkowy?"
+    assert entry["redacted_query"] == "[PERSON] pyta: Od kiedy KSeF jest obowiązkowy?"
+    assert "beta@aktuo.pl" not in lines[0]
+    assert "Jan Kowalski" not in lines[0]
 
 
 def test_log_query_includes_optional_no_match_reason(tmp_path, monkeypatch) -> None:
@@ -72,9 +77,9 @@ def test_log_feedback_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
     logger.log_feedback(
         session_id="session-123",
         user_email="beta@aktuo.pl",
-        query="Czy mogę skorygować JPK_V7?",
+        query="Jan Kowalski może skorygować JPK_V7?",
         rating="down",
-        comment="Za mało konkretów o korekcie.",
+        comment="Jan Kowalski dostał za mało konkretów o korekcie.",
     )
 
     lines = feedback_path.read_text(encoding="utf-8").splitlines()
@@ -82,7 +87,9 @@ def test_log_feedback_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
 
     entry = json.loads(lines[0])
     assert entry["session_id"] == "session-123"
-    assert entry["user_email"] == "beta@aktuo.pl"
-    assert entry["query"] == "Czy mogę skorygować JPK_V7?"
+    assert entry["user_email"] == hashlib.sha256(b"beta@aktuo.pl").hexdigest()[:8]
+    assert entry["query"] == "[PERSON] może skorygować JPK_V7?"
     assert entry["rating"] == "down"
-    assert entry["comment"] == "Za mało konkretów o korekcie."
+    assert entry["comment"] == "[PERSON] dostał za mało konkretów o korekcie."
+    assert "beta@aktuo.pl" not in lines[0]
+    assert "Jan Kowalski" not in lines[0]

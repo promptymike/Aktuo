@@ -1,15 +1,30 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 from threading import Thread
 from typing import Any
 
+from core.anonymizer import anonymize_text
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 LOG_PATH = PROJECT_ROOT / "data" / "logs" / "queries.jsonl"
 FEEDBACK_PATH = PROJECT_ROOT / "data" / "logs" / "feedback.jsonl"
+
+
+def _hash_email(value: str) -> str:
+    normalized = value.strip().lower()
+    if not normalized:
+        return ""
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:8]
+
+
+def _sanitize_text(value: str) -> str:
+    if not value:
+        return ""
+    return anonymize_text(value)
 
 
 def _write_log_entry(entry: dict[str, Any]) -> None:
@@ -46,9 +61,9 @@ def log_query(
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "session_id": session_id,
-        "user_email": user_email,
-        "question": question,
-        "redacted_query": redacted_query,
+        "user_email": _hash_email(user_email),
+        "question": _sanitize_text(question),
+        "redacted_query": _sanitize_text(redacted_query),
         "category": category,
         "chunks_returned": chunks_returned,
         "chunk_ids": chunk_ids,
@@ -71,9 +86,9 @@ def log_feedback(
     entry = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "session_id": session_id,
-        "user_email": user_email,
-        "query": query,
+        "user_email": _hash_email(user_email),
+        "query": _sanitize_text(query),
         "rating": rating,
-        "comment": comment,
+        "comment": _sanitize_text(comment),
     }
     Thread(target=_write_feedback_entry, args=(entry,), daemon=True).start()
