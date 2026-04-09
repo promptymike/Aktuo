@@ -1,0 +1,3916 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 20:39:22",
+    "batch_size": 15,
+    "completed_batches_count": 15,
+    "completed_batch_keys": [
+      "§ 10::batch::1",
+      "§ 10|§ 11::batch::1",
+      "§ 10|§ 11|§ 2::batch::1",
+      "§ 10|§ 11|§ 2|§ 4::batch::1",
+      "§ 10|§ 11|§ 5::batch::1",
+      "§ 10|§ 4::batch::1",
+      "§ 10|§ 5::batch::1",
+      "§ 11::batch::1",
+      "§ 11|§ 12::batch::1",
+      "§ 11|§ 5::batch::1",
+      "§ 12::batch::1",
+      "§ 12|§ 5::batch::1",
+      "§ 2::batch::1",
+      "§ 2|§ 4::batch::1",
+      "§ 5::batch::1"
+    ],
+    "total_units": 68,
+    "verified": 21,
+    "needs_fix": 0,
+    "rejected": 47,
+    "total_cost_usd": 0.4358,
+    "api_calls": 15,
+    "exited_due_to_credit_error": false
+  },
+  "verified_units": [
+    {
+      "id": "law-jpk-v7-nip-przedrostek-pl",
+      "question_intent": "Czy przy wysyłaniu JPK_V7 za styczeń należy umieszczać przedrostek PL przed numerem NIP kontrahentów krajowych",
+      "question_patterns": [
+        "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?",
+        "Czy NIP kontrahentów krajowych w JPK_V7 powinien zawierać przedrostek PL?",
+        "Jaki format NIP krajowych w JPK_V7 - z PL czy bez?",
+        "Czy do JPK_V7 wpisujemy NIP z przedrostkiem PL dla kontrahentów z Polski?"
+      ],
+      "answer": "Brak możliwości udzielenia odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. Aby odpowiedzieć na pytanie o format numeru NIP (z przedrostkiem PL czy bez), niezbędny jest tekst artykułu regulujący strukturę i format pól w JPK_V7, szczególnie dotyczący sposobu wpisywania numerów identyfikacyjnych kontrahentów krajowych.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "nie udostępniono",
+          "quote": "tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "formato-nip-jak-v7",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?"
+      ],
+      "_source_subbatch_key": "§ 11|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-nip-przedrostek-pl",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 1.0,
+        "explanation": "Unit prawidłowo deklaruje brak możliwości udzielenia odpowiedzi na podstawie niedostarczonego tekstu artykułu. Answer jest uczciwą i uzasadnioną odpowiedzią - jednostka nie udzielę odpowiedzi bez źródła prawdy, co jest właściwym podejściem w domenie prawa podatkowego. Legal basis prawidłowo wskazuje, że tekst artykułów nie został dostarczony. Unit zawiera flag 'requires_verification: true' co jest uzasadnione brakiem dostępu do źródła."
+      }
+    },
+    {
+      "id": "law-jpk-v7-oznaczenie-faktury",
+      "question_intent": "Czy faktury mają być oznaczane w JPK_V7 i jakie oznaczenie stosować?",
+      "question_patterns": [
+        "Z jakim oznaczeniem wykazać faktury w JPK?",
+        "Czy należy nadać oznaczenie fakturom w JPK_V7?",
+        "Jakie oznaczenie dla faktur w deklaracji JPK?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu, ponieważ nie zawiera on artykułów dotyczących oznaczenia faktur w JPK_V7. Aby dokładnie odpowiedzieć na Twoje pytanie, wymagana jest pełna treść rozporządzenia zawierająca przepisy dotyczące oznaczania dokumentów handlowych w deklaracji.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "brak tekstu do cytowania"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "oznaczenie_faktury_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5",
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Z jakim oznaczeniem należy wykazać te faktury w JPK i czy w ogóle należy nadać im jakieś oznaczenie?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-oznaczenie-faktury",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "rationale": "Unit prawidłowo stwierdza brak materiału źródłowego do udzielenia odpowiedzi. Nie dodaje żadnych informacji spoza dostarczonego tekstu. Odpowiedź jest uczciwą deklaracją braku możliwości odpowiedzi, co jest właściwe zachowanie w systemie AI dla księgowych. Unit nie podejmuje się udzielania odpowiedzi bez gruntownego oparcia, co jest najbezpieczniejszą praktyką w domenie podatkowej."
+      }
+    },
+    {
+      "id": "law-jpk_v7-najem-prywatny-zakup",
+      "question_intent": "Czy rachunki za najem prywatny należy wykazać w JPK_V7?",
+      "question_patterns": [
+        "Czy wykazujemy w JPK rachunki za najem prywatny?",
+        "Rachunki za najem prywatny do JPK czy nie?",
+        "Czy dostarczane rachunki za najem prywatny trafiają do JPK?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. W podanym tekście nie ma artykułów regulujących zasady ewidencjonowania najmu prywatnego. Musisz zweryfikować to w kompletnym tekście rozporządzenia lub u doradcy podatkowego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonym tekście",
+          "quote": "tekst nie zawiera regulacji dotyczącej najmu prywatnego"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "ewidencja_zakupow_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-najem-prywatny-zakup",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Unit prawidłowo informuje, że brak tekstu artykułów do sprawdzenia. Odpowiedź jest transparentna i bezpieczna - nie udziela niepewnej informacji."
+      }
+    },
+    {
+      "id": "law-jpk_v7-najem-formalnos-vat-zw",
+      "question_intent": "Czy niewykazanie w JPK najmu prywatnego to błąd, jeśli VAT jest zwolniony?",
+      "question_patterns": [
+        "Czy brak księżowania najmu prywatnego w JPK to błąd, skoro VAT zwolniony?",
+        "Najem prywatny VAT zwolniony - czy musi być w JPK?",
+        "Czy to formalność jeśli VAT zwolniony przy najemie prywatnym?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu rozporządzenia. Dostarczone artykuły nie zawierają regulacji na temat zwolnień VAT ani zasad ewidencjonowania umów bez VAT w JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "tekst nie zawiera wskazanych regulacji"
+        }
+      ],
+      "conditions": [
+        "VAT zwolniony"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_zwolniony"
+      ],
+      "topic": "zwolnienia_vat",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-najem-formalnos-vat-zw",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Unit prawidłowo odmawia odpowiedzi. Nie ma tekstu rozporządzenia do analizy, więc odpowiedź jest bezpieczna i transparentna."
+      }
+    },
+    {
+      "id": "law-jpk_v7-odliczenie-zawieszenie",
+      "question_intent": "Czy można odliczyć VAT w lutym w JPK mimo zawieszenia deklaracji?",
+      "question_patterns": [
+        "Czy mogę odliczyć VAT w JPK w lutym jeśli jest zawieszenie?",
+        "Zawieszenie - czy mogę wykazać odliczenie w JPK?",
+        "Czy odliczenie VAT jest możliwe w JPK mimo zawieszenia deklaracji?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera w dostarczonej wersji regulacji dotyczących zawieszenia deklaracji VAT ani wpływu zawieszenia na możliwość wykazania odliczeń w JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak regulacji na temat zawieszenia i odliczeń"
+        }
+      ],
+      "conditions": [
+        "zawieszenie deklaracji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "odliczenia_vat",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-odliczenie-zawieszenie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa odpowiedzi. Zagadnienie zawieszenia deklaracji VAT nie jest regulowane w JPK_V7, tylko w Kodeksie VAT. Unit bezpiecznie komunikuje brak podstawy."
+      }
+    },
+    {
+      "id": "law-jpk_v7-opisy-faktury-cit",
+      "question_intent": "Jak powinna wyglądać dokumentacja i opisy na fakturach zakupowych w kontekście JPK i CIT?",
+      "question_patterns": [
+        "Jak opisać fakturę zakupową dla JPK i CIT?",
+        "Jakie wymagania do opisów faktur w JPK_V7?",
+        "Opisy na fakturach - wymogi JPK i CIT?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera szczegółowych regulacji na temat standardów opisów faktur zakupowych ani wymogów wobec treści faktur.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "tekst nie zawiera regulacji na temat opisów faktur"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "faktury_dokumentacja",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-opisy-faktury-cit",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Pytanie dotyczy zarówno JPK_V7 jak i CIT - wymogi opisów faktur znajdują się w Kodeksie VAT (art. 106e), nie w JPK_V7. Unit słusznie nie udzielił odpowiedzi bez tekstu."
+      }
+    },
+    {
+      "id": "law-jpk_v7-dowod-wewnetrzny-bilans",
+      "question_intent": "Czy można wystawić dowód wewnętrzny na podstawie raportu klienta od kwoty z bilansu?",
+      "question_patterns": [
+        "Czy mogę wystawić dowód wewnętrzny od kwoty bilansowej?",
+        "Dowód wewnętrzny na podstawie raportu klienta - czy można?",
+        "Czy butelki z SK to wyjątek dla dowodu wewnętrznego?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły Rozporządzenia JPK_V7 nie zawierają regulacji dotyczącej dowodów wewnętrznych, raportów z bilansów czy wyłączeń dla butelek.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak regulacji na temat dowodów wewnętrznych"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [
+        "butelki z SK"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna"
+      ],
+      "topic": "dokumentacja_gospodarcza",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-dowod-wewnetrzny-bilans",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Dowody wewnętrzne są regulowane w ustawie o rachunkowości, nie w JPK_V7. Unit poprawnie stwierdza brak podstawy do odpowiedzi."
+      }
+    },
+    {
+      "id": "law-jpk_v7-zwrot-vat-samochod",
+      "question_intent": "W której pozycji JPK wykazać zwrot VAT od zakupu samochodu?",
+      "question_patterns": [
+        "Gdzie w JPK wpisać zwrot VAT od samochodu?",
+        "Zwrot VAT samochód - która pozycja w JPK?",
+        "P_44 czy inna pozycja dla zwrotu VAT od auta?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera informacji o kodach pozycji (np. p_44) ani nie reguluje zwrotów VAT od sprzedaży samochodów.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak kodów pozycji i regulacji zwrotów VAT"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "vat_sprzedaz",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-zwrot-vat-samochod",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Pytanie dotyczy konkretnych kodów pozycji w JPK_V7 (p_44) oraz zwrotów VAT - zagadnienia regulowane w samym rozporządzeniu. Unit słusznie nie spekuluje bez tekstu."
+      }
+    },
+    {
+      "id": "law-jpk_v7-samochod-vat-2026",
+      "question_intent": "Gdzie wykazać w JPK VAT od samochodu kupiętego w 2025, jeśli klient od 2026 nie będzie VATowcem?",
+      "question_patterns": [
+        "Samochód kupiony 2025, klient od 2026 nie VATowiec - gdzie w JPK?",
+        "P_44 minus dla samochodu jeśli rezygnacja z VAT?",
+        "Jak wykazać VAT od auta środka trwałego w JPK gdy zmiana statusu?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Brakuje artykułów regulujących obsługę zmiany statusu VATowego podatnika oraz zasady wykazywania odliczeń VAT w sytuacji utraty statusu podatnika VAT czynnego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak regulacji na temat zmiany statusu VATowego"
+        }
+      ],
+      "conditions": [
+        "zmiana statusu z VATowca na non-VAT",
+        "samochód jako środek trwały"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "odliczenia_vat_samochod",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-samochod-vat-2026",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Zagadnienie stanów przejściowych (zmiana statusu VATowego) wymaga analizy zarówno JPK_V7 jak i Kodeksu VAT. Unit bezpiecznie nie udziela odpowiedzi."
+      }
+    },
+    {
+      "id": "law-jpk_v7-faktura-chin-import",
+      "question_intent": "Jak wykazać w JPK fakturę zakupową z Chin na wzory/próbki warte 5 USD?",
+      "question_patterns": [
+        "Jak wykazać w JPK fakturę z Chin 5 USD?",
+        "Ewidencja zakupów - import z Chin, jak to zrobić?",
+        "Faktura z Chin na próbki w JPK - gdzie wpisać?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły JPK_V7 nie zawierają regulacji dotyczącej importu, transakcji zagranicznych czy przeliczania walut obcych na potrzeby ewidencji JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak regulacji na temat importu i walut obcych"
+        }
+      ],
+      "conditions": [
+        "import z Chin",
+        "wartość w USD"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "import_transakcje_zagranicze",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-faktura-chin-import",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Transakcje zagraniczne i przeliczanie walut obcych nie są szczegółowo uregulowane w JPK_V7. Wymaga odwołania do Kodeksu VAT i ustawy o rachunkowości."
+      }
+    },
+    {
+      "id": "law-jpk_v7-rozbieznosc-faktura-przyjecie",
+      "question_intent": "Jak wykazać w JPK zakup z rozbieżnością między fakturą a faktycznym przyjęciem towaru?",
+      "question_patterns": [
+        "Rozbieżność faktury i przyjęcia - jak to wykazać w JPK?",
+        "Faktura 10 tys kg, przyjęto 7 tys - gdzie to wpisać?",
+        "Jak opisać w JPK towar z niedostawieniem?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera regulacji dotyczącej rozbieżności między dokumentami a stanem faktycznym przyjęcia towarów.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak regulacji na temat rozbieżności dokumentów"
+        }
+      ],
+      "conditions": [
+        "rozbieżność faktura-przyjęcie"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "ewidencja_zakupow_towary",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-rozbieznosc-faktura-przyjecie",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Rozbieżności między dokumentami a rzeczywistością są zagadnieniem regulowanym w ustawie o rachunkowości i Kodeksie VAT, nie w JPK_V7."
+      }
+    },
+    {
+      "id": "law-jpk_v7-zakupy-temu-prywatne",
+      "question_intent": "Czy zakupy z TEMU na osobę prywatną można wykazać w ewidencji towarów dowodem wewnętrznym?",
+      "question_patterns": [
+        "Zakupy TEMU osoba prywatna - czy do ewidencji?",
+        "Czy mogę wciągnąć TEMU dowodem wewnętrznym?",
+        "Zakupy prywatne z TEMU - ewidencja towarów JPK?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły JPK_V7 nie zawierają regulacji dotyczącej osobistych zakupów podatnika czy możliwości evidencjonowania zakupów prywatnych dowodami wewnętrznymi.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej wersji",
+          "quote": "brak regulacji na temat zakupów osobistych"
+        }
+      ],
+      "conditions": [
+        "zakup prywatny",
+        "TEMU"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencja_towarow_dowody",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?"
+      ],
+      "_source_subbatch_key": "§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-zakupy-temu-prywatne",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "note": "Prawidłowa odmowa. Kwestia osobistych zakupów podatnika i ich ewidencji jest zagadnieniem regulowanym w ustawie o rachunkowości (art. 19 ust. 1), nie w JPK_V7. Unit prawidłowo odmawia odpowiedzi."
+      }
+    },
+    {
+      "id": "law-jpk_v7-solidarna-odpowiedzialność",
+      "question_intent": "Czy brak przesyłania sprawozdań wiąże się z odpowiedzialnością solidarną w kontekście JPK i podatków?",
+      "question_patterns": [
+        "Czy brak sprawozdań to odpowiedzialność solidarna?",
+        "Jakie zagrożenia wynikają z braku przesyłania JPK?",
+        "Kto odpowiada za niezłożenie JPK i podatków?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie Rozporządzenia JPK_V7, ponieważ dokument ten zawiera wyłącznie szczegółowe przepisy techniczne dotyczące struktury i formatu raportów JPK. Przepisy o odpowiedzialności solidarnej, sankcjach za brak przesyłania JPK i zagrożeniach wynikających z nieprzesyłania sprawozdań znajdują się w ustawie o podatku od towarów i usług oraz w kodeksie karnym skarbowym, a nie w tym rozporządzeniu.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak przepisów",
+          "quote": "Rozporządzenie JPK_V7 nie zawiera przepisów dotyczących odpowiedzialności solidarnej ani sankcji"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "odpowiedzialność_i_sankcje",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2",
+        "§ 4"
+      ],
+      "_generated_from": [
+        "Skoro nie przesyłali sprawozdań, to nie wiem jak u nich w zakresie składania JPK i zapłaty podatku. Czy widzicie tu jakieś zagrożenia? Jakaś odpowiedzialność solidarna?"
+      ],
+      "_source_subbatch_key": "§ 2|§ 4::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-solidarna-odpowiedzialność",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "explanation": "Unit zawiera prawidłową ocenę zakresu regulacji. Brak tekstu artykułów ustawy do porównania uniemożliwia pełną weryfikację, ale logika unitu jest słuszna: Rozporządzenie JPK_V7 jest dokumentem technicznym regulującym format i strukturę raportów, a nie sankcje czy odpowiedzialność. Answer prawidłowo kieruje użytkownika do właściwych źródeł prawa (ustawa o VAT, Kodeks karny skarbowy). Deklaracja 'brak przepisów' w legal_basis jest metodologicznie poprawna i transparentna."
+      }
+    },
+    {
+      "id": "law-jpk_v7-biuro-ksiegowe-obowiazki",
+      "question_intent": "Czy biuro rachunkowe lub samodzielna księgowa podlegają regulacjom JPK_V7",
+      "question_patterns": [
+        "Czy biuro rachunkowe musi stosować JPK_V7",
+        "Czy samodzielna księgowa podlega JPK_V7",
+        "Czy o wewnątrz firmy mowa w regulacjach"
+      ],
+      "answer": "Nie można odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów JPK_V7. Regulacja dotyczy podatników i podatek VAT, ale brakuje informacji o obowiązkach biur rachunkowych lub księgowych prowadzących usługi dla innych podmiotów. Wymagana weryfikacja przepisów ogólnych JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułów",
+          "quote": "Tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "obowiazki-podatnika",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "Jak podchodzicie do JPK-KH i PD?",
+        "Co mam teraz zrobić?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-biuro-ksiegowe-obowiazki",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-wejscie-od-kwietnia",
+      "question_intent": "Jaki jest termin obowiązkowego wejścia do KSEF od 1 kwietnia",
+      "question_patterns": [
+        "Jeśli firma wchodzi dopiero do KSEF od 1 kwietnia",
+        "Od kiedy obowiązek wysyłania w KSEF",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia"
+      ],
+      "answer": "Nie można odpowiedzieć na to pytanie, gdyż dostarczone informacje nie zawierają tekstu artykułów regulujących terminy wejścia w system KSEF. Brakuje konkretnych przepisów dotyczących dat obowiązkowego przejścia.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułów",
+          "quote": "Tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "termin-obowiazku",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "Jak podchodzicie do JPK-KH i PD?",
+        "Co mam teraz zrobić?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-wejscie-od-kwietnia",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-ewidencja-samochodow",
+      "question_intent": "Czy samochód wprowadzony do ewidencji wymaga wysłania danych tylko za rok lub natychmiast",
+      "question_patterns": [
+        "Czy jak mam tylko 1 samochód to dopiero za rok wysłę ewidencję",
+        "Kiedy wysyłać ewidencję środków trwałych",
+        "Czy muszę coś w tym roku nanosić do ewidencji śr.trwałych"
+      ],
+      "answer": "Nie można odpowiedzieć na to pytanie na podstawie dostarczonego tekstu. Regulacja JPK_V7 nie zawiera przepisów w dostarczonej części dotyczących ewidencji środków trwałych ani harmonogramu przesyłania danych o samochodach.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułów",
+          "quote": "Tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "srodki-trwale",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "Jak podchodzicie do JPK-KH i PD?",
+        "Co mam teraz zrobić?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-ewidencja-samochodow",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-vat-czynny-wysylka",
+      "question_intent": "Czy podatnik VAT czynny wysyła dane JPK_V7 tylko za rok czy na bieżąco",
+      "question_patterns": [
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok",
+        "Kiedy wysyłać JPK_V7 gdy jestem czynnym VAT",
+        "Czy wysyłka danych VAT tylko raz w roku"
+      ],
+      "answer": "Nie można odpowiedzieć na to pytanie, ponieważ dostarczone materiały nie zawierają tekstu artykułów określających harmonogram wysyłania JPK_V7 dla podatników VAT czynnych.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułów",
+          "quote": "Tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "harmonogram-wysylki",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "Jak podchodzicie do JPK-KH i PD?",
+        "Co mam teraz zrobić?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-vat-czynny-wysylka",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-jpk-kh-pd",
+      "question_intent": "Jak podchodzić do JPK-KH i JPK-PD w kontekście JPK_V7",
+      "question_patterns": [
+        "Jak podchodzicie do JPK-KH i PD",
+        "Jaki jest związek między JPK_V7 a JPK-KH",
+        "Czy JPK-KH i PD są częścią JPK_V7"
+      ],
+      "answer": "Nie można odpowiedzieć na to pytanie. Dostarczone materiały nie zawierają informacji o relacji między JPK_V7 a JPK-KH lub JPK-PD, ani nie wyjaśniają powiązań między tymi systemami.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułów",
+          "quote": "Tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "integracja-systemow",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "Jak podchodzicie do JPK-KH i PD?",
+        "Co mam teraz zrobić?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-jpk-kh-pd",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-co-zrobic-teraz",
+      "question_intent": "Jakie działania powinien podjąć podatnik w związku z JPK_V7",
+      "question_patterns": [
+        "Co mam teraz zrobić",
+        "Jakie są kolejne kroki",
+        "Co powinienem zrobić teraz z JPK_V7"
+      ],
+      "answer": "Nie można udzielić konkretnych wskazówek bez tekstu artykułów. Należy zapoznać się z pełnym tekstem Rozporządzenia JPK_V7, aby zrozumieć obowiązki danego podatnika, terminy przesyłania danych i wymagane dokumenty.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak tekstu artykułów",
+          "quote": "Tekst artykułów nie został dostarczony"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "plan-dzialania",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2"
+      ],
+      "_generated_from": [
+        "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "Jak podchodzicie do JPK-KH i PD?",
+        "Co mam teraz zrobić?"
+      ],
+      "_source_subbatch_key": "§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-co-zrobic-teraz",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-podglad-pliku",
+      "question_intent": "Czy istnieje możliwość podglądu pliku JPK_VAT przed wysłaniem?",
+      "question_patterns": [
+        "Jak podejrzeć plik JPK_VAT?",
+        "Czy mogę zobaczyć zawartość pliku JPK_VAT?",
+        "Gdzie mogę znaleźć podgląd JPK_VAT?",
+        "Co zawiera plik JPK_VAT?"
+      ],
+      "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ nie zawiera on informacji dotyczących procedury podglądu pliku JPK_VAT. Funkcjonalność podglądu powinna być opisana w instrukcji systemu teleinformatycznego lub dokumentacji technicznej JPK_VAT, nie w samym rozporządzeniu.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak informacji w tekście",
+          "quote": "tekst artykułów nie dotyczy procedury podglądu pliku"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny",
+        "vat_zwolniony"
+      ],
+      "topic": "procedury-technicznego-jpk",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2",
+        "§ 4",
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "A zajrzałaś/eś kiedykolwiek na podgląd pliku JPK_VAT?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11|§ 2|§ 4::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-podglad-pliku",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "reasoning": "Unit poprawnie uzasadnia, że odpowiedź nie może być udzielona z powodu braku informacji w dostarczonym tekście artykułów ustawy. Answer jest rzetelny i uczciwze przyznaje ograniczenie źródła. Nie dodaje spekulacyjnych informacji o procedurach technicznych. Prawidłowo wskazuje, że takie informacje powinny być w dokumentacji technicznej, nie w samym rozporządzeniu. Pytania użytkownika są rzeczywiście związane z JPK_VAT, co potwierdza relevance. Brak tekstu artykułów to problem z danymi wejściowymi, a nie z unit'em."
+      }
+    },
+    {
+      "id": "law-jkp-v7-zle-dlougi-korekta",
+      "question_intent": "Czy gdy kontrahent skorzystał z ulgi na złe długi, należy skorygować faktury w JPK i zwrócić VAT z odsetkami?",
+      "question_patterns": [
+        "Ulga na złe długi - czy muszę skorygować VAT w JPK?",
+        "Kontrahent wziął ulgę na nieściągalne długi - co robić z VAT-em?",
+        "Jak raportować w JPK gdy jest ulga na złe długi?",
+        "Czy trzeba oddać VAT z odsetkami jeśli kontrahent ma ulgę na długi?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfikacji w pełnym tekście ustawy o podatku od towarów i usług (VAT) oraz wytycznych skarbowych.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak bezpośredniego odniesienia",
+          "quote": "Dostarczone fragmenty artykułów nie zawierają regulacji dotyczących ulgi na złe długi"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekcja_VAT_utrata_kontroli",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Jeśli kontrahent wykorzystał ulgę na złe długi to musi Pani skorygować fry kosztowe w JPK z terminem płatności faktur i oddać VAT z odsetkami?"
+      ],
+      "_source_subbatch_key": "§ 11|§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jkp-v7-zle-dlougi-korekta",
+        "verdict": "VERIFIED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "PASS",
+        "issues": [],
+        "suggested_fix": null,
+        "confidence": 0.98,
+        "reasoning": "Answer jednostka prawidłowo stwierdziwszy brak materiału źródłowego (nie dostarczono tekstu artykułów ustawy do weryfikacji). Unit udziela uczciwej odpowiedzi poprzez wyjaśnienie, że nie może odpowiedzieć na pytanie bez odpowiedniego źródła prawnego. Jest to właściwe postępowanie dla systemu AI - lepiej wskazać brak grounding niż wymyślać informacje. Unit prawidłowo sugeruje sprawdzenie pełnego tekstu ustawy o VAT. Oznaczenie 'requires_verification: true' jest adekwatne."
+      }
+    }
+  ],
+  "needs_fix_units": [],
+  "rejected_units": [
+    {
+      "id": "law-jpk-v7-faktury-stycznia-w-lutym",
+      "question_intent": "Czy faktury wystawione w styczniu muszą mieć znaczniki BFK lub DI w JPK za luty?",
+      "question_patterns": [
+        "Czy faktury z poprzedniego miesiąca wykazuję w JPK z znacznikami?",
+        "Kiedy faktura z stycznia pojawia się w JPK - z jakim znacznikiem?",
+        "Znaczniki BFK i DI - czy dotyczą daty wystawienia czy wykazania w JPK?"
+      ],
+      "answer": "Brak wystarczających informacji w dostarczonej treści artykułów. W JPK_V7 faktury wykazuje się okresowo (miesięcznie), ale dokładne zasady przypisania znaczników BFK/DI do faktur wystawionych w innym miesiącu niż raportowany wymagają weryfikacji pełnego tekstu rozporządzenia.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "tekst artykułów nie zawiera explicite informacji o dacie wystawienia vs. dacie wykazania w JPK"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "znaczniki_dokumentów_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-faktury-stycznia-w-lutym",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do weryfikacji - dostarczony zostal pusty blok TEKST ARTYKUŁÓW USTAWY",
+          "Unit zawiera odpowiedź 'Brak wystarczających informacji' zamiast faktycznej weryfikacji",
+          "Nie można zweryfikować legal_basis gdy artykuł jest pusty",
+          "Unit sam w sobie jest niedokończony - zawiera tylko stwierdzenie braku informacji"
+        ],
+        "suggested_fix": "Dostarczyć pełny tekst artykułów Rozporządzenia w sprawie JPK_V7 do weryfikacji oraz odpowiedź która zawiera konkretne twierdzenia faktyczne do sprawdzenia",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-v7-paragon-gtu-znacznik",
+      "question_intent": "Jakie znaczniki przypisać w JPK_VAT do faktury wystawionej do paragonu fiskalnego z kodem GTU?",
+      "question_patterns": [
+        "Faktura do paragonu z GTU - jaki znacznik w JPK?",
+        "Paragon fiskalny z kodem GTU - oznaczenie w JPK VAT",
+        "Gdy wystawiam fakturę do paragonu z GTU - czy FP, BFK czy GTU?"
+      ],
+      "answer": "Brak wystarczających informacji w dostarczonej treści artykułów dotyczącej szczegółowych reguł przypisywania znaczników BFK, GTU czy FP do dokumentów powiązanych z paragonami fiskalnymi i kodami GTU.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "tekst artykułów nie zawiera informacji o kodach GTU i powiązanych znacznikach"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "znaczniki_dokumentów_jpk",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-paragon-gtu-znacznik",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do weryfikacji - dostarczony został pusty blok TEKST ARTYKUŁÓW USTAWY",
+          "Unit zawiera deklarację braku informacji zamiast konkretnej odpowiedzi",
+          "Nie można weryfikować legal_basis bez dostępu do tekstu źródłowego",
+          "Unit jest niefunkcjonalny jako content do audytu"
+        ],
+        "suggested_fix": "Dostarczyć pełny tekst artykułów Rozporządzenia JPK_V7 oraz sformułować konkretną odpowiedź z cytatami, którą można zweryfikować",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-v7-sprzedaz-internetowa-paragony-bez-oznaczenia",
+      "question_intent": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo bez oznaczenia RO?",
+      "question_patterns": [
+        "Paragony bez fiskalizacji - czy mogę je zbiorować w JPK?",
+        "Sprzedaż internetowa na paragony - oznaczenie RO obowiązkowe?",
+        "Dokumenty zbiorcze sprzedaży - czy każdy wymaga oznaczenia?"
+      ],
+      "answer": "Brak wystarczających informacji w dostarczonej treści artykułów. Rozporządzenie JPK_V7 nie zawiera explicite zasad dotyczących zbiorczych raportów sprzedaży bez fiskalizacji i wymaganych w tym przypadku znaczników lub oznaczenia RO.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "tekst artykułów nie definiuje zasad dla dokumentów zbiorczych bez fiskalizacji"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "dokumenty_zbiorcze_jpk",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-sprzedaz-internetowa-paragony-bez-oznaczenia",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do weryfikacji - dostarczony został pusty blok",
+          "Odpowiedź nie zawiera żadnych stwierdzeń faktycznych do sprawdzenia",
+          "Struktura unitu zawiera tylko deklarację braku informacji",
+          "Audyt niemożliwy bez tekstu źródłowego"
+        ],
+        "suggested_fix": "Dostarczyć tekst artykułów Rozporządzenia oraz sformułować konkretną odpowiedź z powołaniami na zasady zbiorczych raportów sprzedaży",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-v7-najem-prywatny-bez-faktury",
+      "question_intent": "Czy najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury powinien mieć oznaczenia DI i WEW?",
+      "question_patterns": [
+        "Najem prywatny bez faktury - jakie oznaczenia w JPK?",
+        "Wydatki na najem - DI, WEW czy coś innego?",
+        "Dokument bez faktury - czy mogę wykazać w JPK i z jakimi oznaczeniami?"
+      ],
+      "answer": "Brak wystarczających informacji w dostarczonej treści artykułów. Rozporządzenie nie zawiera szczegółowych wytycznych dotyczących wykazywania wydatków na najem prywatny bez faktury i przypisania im oznaczników DI lub WEW w JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "tekst artykułów nie definiuje obchodzenia wydatków bez faktury"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "wydatki_bez_faktury",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-najem-prywatny-bez-faktury",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do weryfikacji - pusty blok TEKST ARTYKUŁÓW USTAWY",
+          "Unit zawiera tylko stwierdzenie braku danych zamiast odpowiedzi do audytu",
+          "Nie można zweryfikować żadnych twierdzeń bez tekstu źródłowego",
+          "Struktura unitu nie nadaje się do audytu"
+        ],
+        "suggested_fix": "Dostarczyć pełny tekst Rozporządzenia JPK_V7 oraz sformułować konkretną odpowiedź na temat wydatków bez faktury",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-v7-faktury-imienne-osoby-fizyczne-bfk",
+      "question_intent": "Czy faktury imienne na osoby fizyczne (do paragonów) wymagają znacznika BFK w JPK?",
+      "question_patterns": [
+        "Faktura imienne na osobę fizyczną - znacznik BFK obowiązkowy?",
+        "Do paragonu wystawiam fakturę imienna - czy BFK?",
+        "Gdy faktura trafia do paragonów - czy zawsze BFK?"
+      ],
+      "answer": "Brak wystarczających informacji w dostarczonej treści artykułów. Rozporządzenie JPK_V7 nie zawiera wystarczających szczegółów o obowiązkowości znacznika BFK (Bezpłatna Kopia Faktury) dla faktur imiennych wystawianych do paragonów.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "tekst artykułów nie definiuje reguł stosowania BFK dla faktur imiennych do osób fizycznych"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "znaczniki_dokumentów_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-faktury-imienne-osoby-fizyczne-bfk",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do weryfikacji - dostarczony został pusty blok",
+          "Odpowiedź zawiera tylko deklarację braku informacji",
+          "Audyt niemożliwy - brak tekstu źródłowego i konkretnych twierdzeń do sprawdzenia",
+          "Unit nie spełnia standardu contentowego"
+        ],
+        "suggested_fix": "Dostarczyć tekst artykułów Rozporządzenia JPK_V7 oraz konkretną odpowiedź zawierającą twierdzenia o znaczniku BFK",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-v7-paragon-autostrada-di-luty",
+      "question_intent": "Jakie oznaczenie w JPK od lutego dla paragonu fiskalnego za autostradę - czy DI?",
+      "question_patterns": [
+        "Paragon za autostradę - od lutego jaki znacznik DI?",
+        "Opłaty autostradowe na paragonie - oznaczenie w JPK",
+        "Paragon fiskalny opłata drogowa - DI czy inny znacznik?"
+      ],
+      "answer": "Brak wystarczających informacji w dostarczonej treści artykułów. Rozporządzenie JPK_V7 nie zawiera explicite wytycznych dotyczących oznaczników dla paragonów fiskalnych za opłaty autostradowe i ich zmian od lutego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej treści",
+          "quote": "tekst artykułów nie zawiera informacji o opłatach autostradowych i znaczniku DI"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "znaczniki_dokumentów_jpk",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-paragon-autostrada-di-luty",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do weryfikacji - pusty blok TEKST ARTYKUŁÓW USTAWY",
+          "Unit zawiera tylko stwierdzenie 'brak informacji' zamiast rzeczywistej odpowiedzi",
+          "Audyt niemożliwy do przeprowadzenia bez tekstu źródłowego",
+          "Struktura unitu niefunkcjonalna"
+        ],
+        "suggested_fix": "Dostarczyć pełny tekst Rozporządzenia JPK_V7 oraz sformułować konkretną odpowiedź na temat oznaczników dla paragonów autostradowych",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-jdg-pelne-ksiegi",
+      "question_intent": "Czy znaczniki JPK są obowiązkowe dla jednoosobowych działalności gospodarczych na pełnych księgach?",
+      "question_patterns": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Czy JDG na pełnej księgowości musi stosować znaczniki JPK?",
+        "Czy dla JDG prowadzącej pełną księgowość znaczniki JPK są obligatoryjne?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu artykułów Rozporządzenia JPK_V7 nie można jednoznacznie określić, czy znaczniki są obowiązkowe dla JDG na pełnych księgach. Dokument nie zawiera wystarczających informacji o różnicowaniu obowiązków ze względu na formę prowadzenia ksiąg. Konieczna jest weryfikacja pełnego tekstu rozporządzenia lub konsultacja z organami podatkowymi.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie został dostarczona do analizy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "obowiązki_jpk_znaczniki",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-jdg-pelne-ksiegi",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów do analizy - nie można zweryfikować grounding",
+          "Unit przyznaje, że 'dokument nie zawiera wystarczających informacji' - to jest potwierdzenie, że unit NIE POWINIEN BYĆ W BAZIE",
+          "Relevance FAIL: pytanie dotyczy konkretnego rozporządzenia, ale nie dostarczone były artykuły - unit nie może być oceniany bez źródła"
+        ],
+        "suggested_fix": "Unit powinien być usunięty z bazy aż do momentu dostarczenia pełnego tekstu Rozporządzenia JPK_V7. Jeśli tekst nie będzie dostępny, nie powinno być unitów odnoszących się do tego rozporządzenia.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-di-nieznane",
+      "question_intent": "Wyjaśnienie pojęcia 'DI' w kontekście JPK",
+      "question_patterns": [
+        "Jakie znowu DI?",
+        "Co to są DI w JPK?",
+        "Jakie znaczenie mają DI w Rozporządzeniu JPK?"
+      ],
+      "answer": "Pytanie dotyczy pojęcia 'DI', które nie jest wyjaśnione w dostarczonego tekście artykułów Rozporządzenia JPK_V7. Nie można udzielić odpowiedzi na podstawie dostępnych materiałów. Zalecana jest konsultacja z właściwym urzędem skarbowym lub publikacjami MF wyjaśniającymi terminologię JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie zawiera wyjaśnienia pojęcia DI"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "terminologia_jpk",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-di-nieznane",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów - niemożliwe zweryfikowanie grounding",
+          "Unit przyznaje explicite: 'nie jest wyjaśnione w dostarczonego tekście' - to oznacza, że unit nie powinien istnieć bez dostępu do źródła",
+          "Pytanie dotyczy terminologii z nieistniejącego dla audytora źródła"
+        ],
+        "suggested_fix": "Usuń unit. Nie można tworzyć unitów wyjaśniających pojęcia z artykułów, których tekst nie jest dostępny audytorowi.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-kod-pais-karta-kontrahenta",
+      "question_intent": "Czy w karcie kontrahenta przy pełnej księgowości trzeba wpisywać kod kraju PL w JPK_VAT7?",
+      "question_patterns": [
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy kod kraju PL jest obowiązkowy w karcie kontrahenta JPK_VAT7?",
+        "Czy dla kontrahentów polskich trzeba wpisywać PL w kodzie kraju?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można określić wymagań dotyczących kodu kraju w karcie kontrahenta lub formatu kodowania dla krajów w JPK_VAT7. Dokument nie zawiera wystarczających informacji o strukturze karty kontrahenta. Konieczna jest weryfikacja pełnego tekstu rozporządzenia.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie został dostarczona do analizy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "struktura_jpk_kontrahenci",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-kod-pais-karta-kontrahenta",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia JPK_V7",
+          "Answer przyznaje: 'nie można określić wymagań' i 'dokument nie zawiera wystarczających informacji'",
+          "Unit powinien być usunięty zamiast dodany do bazy"
+        ],
+        "suggested_fix": "Usuń unit z bazy. Bez tekstu Rozporządzenia niemożliwe jest zweryfikowanie odpowiedzi.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-przedrostek-pl-luty-2026",
+      "question_intent": "Czy od lutego 2026 każdy polski kontrahent w JPK musi mieć przedrostek PL?",
+      "question_patterns": [
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL?",
+        "Czy to prawda, że od lutego 2026 wszystkie polskie kontrahenty muszą mieć PL?",
+        "Jaka jest reguła dotycząca przedrostka PL dla kontrahentów od 2026 roku?"
+      ],
+      "answer": "Dostarczone teksty artykułów Rozporządzenia JPK_V7 nie zawierają informacji o obowiązkach dotyczących przedrostka PL dla kontrahentów polskich ani o zmianach mających wejść w życie od lutego 2026 roku. Nie można potwierdzić ani obalić tej informacji. Należy zweryfikować źródło tej informacji u MF lub swojego doradcy podatkowego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie zawiera regulacji dotyczącej przedrostka PL"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "identyfikacja_kontrahentów",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-przedrostek-pl-luty-2026",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "Answer stwierdzą: 'nie zawierają informacji' - to potwierdza, że unit nie powinien być w bazie",
+          "Konkretne pytanie o datę (luty 2026) nie może być odpowiedziane bez dostępu do tekstu"
+        ],
+        "suggested_fix": "Usuń unit. Nie można oceniać odpowiedzi na pytania o konkretne przepisy bez dostępu do tekstu źródłowego.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-struktura-kontrahenci",
+      "question_intent": "Jakie są prawidłowe zasady ujęcia kontrahentów w nowej strukturze JPK księgi handlowe?",
+      "question_patterns": [
+        "Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Jakie są zasady ujęcia kontrahentów w JPK księgi handlowe?",
+        "Jak prawidłowo wpisywać kontrahentów w nowej strukturze JPK?"
+      ],
+      "answer": "Pytanie dotyczy ogólnych zasad ujęcia kontrahentów w strukturze JPK księgi handlowe. Dostarczone teksty artykułów Rozporządzenia JPK_V7 nie zawierają wystarczających informacji o konkretnych regułach kodowania, identyfikacji i strukturze danych dla kontrahentów. Wymagana jest analiza pełnego tekstu rozporządzenia oraz wytycznych MF.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie zawiera szczegółowych reguł dla kontrahentów"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "struktura_jpk_kontrahenci",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-struktura-kontrahenci",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "Answer sam przyznaje: 'nie zawierają wystarczających informacji'",
+          "Pytanie ogólne o 'prawidłowe zasady' wymaga dostępu do tekstu"
+        ],
+        "suggested_fix": "Usuń z bazy. Unit nie powinien istnieć bez dostępu do Rozporządzenia JPK_V7.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-szkolenia-znaczniki",
+      "question_intent": "Gdzie znaleźć szkolenia na temat znaczników kont, JPK CIT i JPK ŚT?",
+      "question_patterns": [
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Gdzie są szkolenia dotyczące znaczników JPK?",
+        "Jakie szkolenia są dostępne na temat JPK CIT i JPK ŚT?"
+      ],
+      "answer": "Pytanie dotyczy oferty szkoleń, a nie treści Rozporządzenia JPK_V7. Ministerstwo Finansów, izby handlowo-przemysłowe oraz prywatne firmy edukacyjne oferują szkolenia z zakresu JPK. Rekomendowana jest weryfikacja oferty na stronach MF oraz stowarzyszeń księgowych.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak powiązania",
+          "quote": "Pytanie wykracza poza zakres zawartości artykułów"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "edukacja_szkolenia",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-szkolenia-znaczniki",
+        "verdict": "REJECTED",
+        "grounding": "PASS",
+        "legal_basis_check": "PASS",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "RELEVANCE FAIL - pytanie dotyczy szkolenia (edukacji), a nie zawartości Rozporządzenia JPK_V7",
+          "Unit sam przyznaje: 'Pytanie dotyczy oferty szkoleń, a nie treści Rozporządzenia'",
+          "Unit nie powinien być w bazie podatkowo-prawnej - to pytanie dla HR/szkoleniec"
+        ],
+        "suggested_fix": "Usuń unit. Pytania o szkolenia nie należą do systemu AI dla księgowych weryfikującego przepisy podatkowe.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-dwa-znaczniki-konto",
+      "question_intent": "Czy można dodać dwa znaczniki na jednym koncie?",
+      "question_patterns": [
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy jedno konto może mieć dwa znaczniki?",
+        "Czy można przypisać wiele znaczników do jednego konta?"
+      ],
+      "answer": "Dostarczone teksty artykułów Rozporządzenia JPK_V7 nie zawierają informacji o możliwości przypisania wielu znaczników do jednego konta lub ograniczeniach w tym zakresie. Konieczna jest weryfikacja pełnego tekstu rozporządzenia oraz instrukcji obsługi systemu JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie zawiera regulacji dotyczącej liczby znaczników na koncie"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "znaczniki_kont",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-dwa-znaczniki-konto",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "Answer przyznaje: 'nie zawierają informacji'",
+          "Pytanie dotyczy konkretnej funkcjonalności JPK, którą trzeba weryfikować w tekście rozporządzenia"
+        ],
+        "suggested_fix": "Usuń unit do czasu uzyskania dostępu do pełnego tekstu Rozporządzenia JPK_V7.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-vat-luty-znaczniki",
+      "question_intent": "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione, aby JPK nie został odrzucony?",
+      "question_patterns": [
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "Czy brak znaczników w fakturach powoduje odrzucenie JPK_VAT?",
+        "Jakie konsekwencje ma brak znaczników w fakturach przy wysyłce JPK_VAT?"
+      ],
+      "answer": "Dostarczone teksty artykułów Rozporządzenia JPK_V7 nie zawierają informacji o warunkach akceptacji JPK_VAT przez urząd skarbowy ani o wymaganiach dotyczących znaczników faktur. Konieczna jest weryfikacja instrukcji obsługi JPK_VAT7 oraz wytycznych MF dotyczących walidacji pliku.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie zawiera informacji o warunkach akceptacji"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "vat_czynny"
+      ],
+      "topic": "obowiązki_jpk_vat",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-vat-luty-znaczniki",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "Answer przyznaje: 'nie zawierają informacji o warunkach akceptacji'",
+          "Pytanie o konsekwencje techniczne (odrzucenie pliku) wymaga dostępu do dokumentacji",
+          "W domenie podatkowej nie odpowiadanie na pytanie jest lepsze niż podanie błędnej informacji"
+        ],
+        "suggested_fix": "Usuń unit. Bez tekstu Rozporządzenia nie można weryfikować odpowiedzi.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-zrodlo-wiedzy-znaczniki",
+      "question_intent": "Jakie jest źródło informacji dotyczące sposobu dodawania znaczników w JPK?",
+      "question_patterns": [
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Gdzie są instrukcje dotyczące znaczników JPK?",
+        "Jakie są wytyczne dla znaczników w JPK?"
+      ],
+      "answer": "Instrukcje dotyczące znaczników JPK pochodzą z Rozporządzenia JPK_V7, wytycznych Ministerstwa Finansów oraz instrukcji obsługi systemu udostępnianych przez MF. Wszystkie zasady powinny być dostępne na portalu podatkowca i w dokumentach oficjalnych MF.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak konkretnego artykułu",
+          "quote": "Źródłem jest całość rozporządzenia i instrukcje MF"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "źródła_informacji",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-zrodlo-wiedzy-znaczniki",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "RELEVANCE FAIL - pytanie 'A skąd wiecie jak te znaczniki i jakie dodawać?' to pytanie retoryczne/socjologiczne, a nie pytanie o przepisy",
+          "Answer odwołuje się do 'wytycznych MF' i 'instrukcji obsługi systemu' - to nie jest treść artykułów Rozporządzenia",
+          "Unit wprowadza źródła, których nie ma w dostarczonej zawartości artykułów",
+          "Grounding FAIL - answer podaje informacje spoza tekstu artykułów"
+        ],
+        "suggested_fix": "Usuń unit. Pytanie nie dotyczy konkretnego artykułu, a odpowiedź odwołuje się do źródeł poza Rozporządzeniem.",
+        "confidence": 0.97
+      }
+    },
+    {
+      "id": "law-jpk-ksiegowania-znaczniki",
+      "question_intent": "Jakie są prawidłowe zasady księgowania i wyboru znaczników kont w JPK?",
+      "question_patterns": [
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?",
+        "Jakie są zasady przypisywania znaczników do kont?",
+        "Jak prawidłowo księgować ze znacznikami JPK?"
+      ],
+      "answer": "Dostarczone teksty artykułów Rozporządzenia JPK_V7 nie zawierają wystarczających informacji o szczegółowych zasadach księgowania i wyborze znaczników dla poszczególnych typów operacji. Rekomendowana jest konsultacja pełnego tekstu rozporządzenia, instrukcji MF oraz doradcy podatkowego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak pełnego tekstu artykułu",
+          "quote": "Tekst artykułów nie zawiera szczegółowych zasad księgowania"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "księgowanie_znaczniki",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "Jakie znowu DI?",
+        "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "Jak prawidłowo robicie księgowania i jakie znaczniki kont?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-ksiegowania-znaczniki",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "Answer przyznaje: 'nie zawierają wystarczających informacji'",
+          "Pytanie dotyczy praktycznych zasad księgowania, które wymagają dostępu do tekstu"
+        ],
+        "suggested_fix": "Usuń unit z bazy aż do dostarczenia pełnego tekstu Rozporządzenia JPK_V7.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk_v7-potwierdzenie-problem",
+      "question_intent": "Czy mogą wystąpić problemy z potwierdzeniem JPK_V7?",
+      "question_patterns": [
+        "Czy ktoś też ma problemy z potwierdzeniem?",
+        "Jakie problemy mogą być z potwierdzeniem JPK_V7?",
+        "Co zrobić gdy nie mogę potwierdzić JPK_V7?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów Rozporządzenia JPK_V7. Pytanie wymaga weryfikacji dokumentacji technicznej lub procedur potwierdzenia pliku JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej zawartości",
+          "quote": "tekst artykułu nie zawiera regulacji dotyczącej procesów potwierdzenia"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny",
+        "vat_zwolniony"
+      ],
+      "topic": "procedury_techniczne",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy ktoś też ma problemy z potwierdzeniem?",
+        "Czy zaznaczać kod JPK FP?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::2",
+      "_audit": {
+        "unit_id": "law-jpk_v7-potwierdzenie-problem",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "RELEVANCE FAIL - pytanie 'Czy ktoś też ma problemy z potwierdzeniem?' to pytanie społeczności/forum, a nie pytanie o przepisy",
+          "Answer sam przyznaje: 'nie mogę odpowiedzieć'",
+          "Unit nie powinien być w bazie - to pytanie do supportu technicznego, nie do systemu AI weryfikującego przepisy"
+        ],
+        "suggested_fix": "Usuń unit. To pytanie o problemy techniczne, nie o treść Rozporządzenia.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk_v7-kod-fpk",
+      "question_intent": "Czy należy zaznaczać kod JPK FP w JPK_V7?",
+      "question_patterns": [
+        "Czy zaznaczać kod JPK FP?",
+        "Czy muszę oznaczać JPK FP w pliku?",
+        "Jaki kod JPK zaznaczić dla faktur?"
+      ],
+      "answer": "Nie mogę odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów Rozporządzenia JPK_V7. Pytanie wymaga weryfikacji konkretnych regulacji dotyczących kodów i oznaczeń w strukturze pliku JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak artykułu w dostarczonej zawartości",
+          "quote": "tekst artykułu nie zawiera regulacji dotyczącej kodów JPK FP"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "struktura_pliku_jpk",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Czy ktoś też ma problemy z potwierdzeniem?",
+        "Czy zaznaczać kod JPK FP?"
+      ],
+      "_source_subbatch_key": "§ 5::subbatch::2",
+      "_audit": {
+        "unit_id": "law-jpk_v7-kod-fpk",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułów Rozporządzenia",
+          "Answer przyznaje: 'nie mogę odpowiedzieć na podstawie dostarczonego tekstu'",
+          "Unit powinien być usunięty zamiast dodany do bazy"
+        ],
+        "suggested_fix": "Usuń unit z bazy. Bez tekstu Rozporządzenia niemożliwe jest odpowiadanie na pytania o konkretne kody.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-zaliczka-mpp-konsekwencje",
+      "question_intent": "Jakie są konsekwencje wystawienia faktury zaliczkowej z adnotacją MPP, gdy opłata wpłynęła zwykłym przelewem?",
+      "question_patterns": [
+        "Faktura zaliczkowa z MPP opłacona przelewem - konsekwencje?",
+        "Czy jest problem jeśli wystawiłem fv zaliczkową z adnotacją MPP, a zapłata przyszła normalnie?",
+        "Opłacono przelewem, fv ma adnotację MPP - co się stanie?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można znaleźć szczegółowych przepisów dotyczących konsekwencji wystawienia faktury zaliczkowej z adnotacją MPP w sytuacji zwykłej wpłaty. Rekomendujemy weryfikację w Instrukcji Deklaranta JPK_V7 lub kontakt z organami podatkowymi, ponieważ kwestia ta może wymagać analizy ustawy o VAT.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak bezpośredniego artykułu w dostarczonym tekście",
+          "quote": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych regulacji dotyczących adnotacji MPP na fakturach zaliczkowych"
+        }
+      ],
+      "conditions": [
+        "Faktura zaliczkowa wystawiona z adnotacją MPP",
+        "Opłata wpłynęła zwykłym przelewem"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "faktury zaliczkowe, MPP, ewidencja VAT",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "_generated_from": [
+        "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
+        "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "Czy JPK należy wysłać tylko za Grudzień z częścią ewidencyjna i deklaracyjna?",
+        "Jeśli VAT należny to jak wykazać w JPK, czy trzeba wskazać jak?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 4::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-zaliczka-mpp-konsekwencje",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW - nie dostarczonów żaden tekst rozporządzenia JPK_V7 do weryfikacji",
+          "Unit jest opracowany dla tekstu, który nie został dostarczony do audytu",
+          "Nie można weryfikować grounding bez tekstu źródłowego",
+          "Unit zawiera tylko potwierdzenie braku informacji, a nie faktyczną odpowiedź"
+        ],
+        "suggested_fix": "Dostarczyć tekst Rozporządzenia JPK_V7 lub usunąć unit z procesu audytu do czasu dostarczenia materiału źródłowego",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk-v7-data-fv-zaliczka-czynny-zal",
+      "question_intent": "Z jaką datą wystawić fakturę po zmianie sytuacji zaliczki i jak to wpłynie na JPK oraz możliwość złożenia czynnego żalu?",
+      "question_patterns": [
+        "Data wystawienia faktury po zaliczce - jak to działa w JPK?",
+        "Czy mogę wystawić fv z inną datą jeśli zmieni się okoliczności zaliczki?",
+        "Czynny żal i JPK - jak korygować?",
+        "Jaka data na fakturze gdy zmieniam sytuację zaliczki?"
+      ],
+      "answer": "Dostarczone fragmenty Rozporządzenia JPK_V7 nie zawierają szczegółowych przepisów dotyczących datowania faktur w sytuacji zmian okoliczności zaliczek ani procedury czynnego żalu w JPK. Kwestia ta wymaga analizy ustawy o VAT oraz warunków składania korekt w JPK, które są regulowane poza dostarczonym tekstem.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak bezpośredniego artykułu w dostarczonym tekście",
+          "quote": "Tekst nie zawiera regulacji dotyczących datowania faktur i procedur czynnego żalu"
+        }
+      ],
+      "conditions": [
+        "Zmiana okoliczności związanych z zaliczką",
+        "Konieczność złożenia JPK"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "faktury zaliczkowe, korekty w JPK, czynny żal",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "_generated_from": [
+        "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
+        "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "Czy JPK należy wysłać tylko za Grudzień z częścią ewidencyjna i deklaracyjna?",
+        "Jeśli VAT należny to jak wykazać w JPK, czy trzeba wskazać jak?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 4::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-data-fv-zaliczka-czynny-zal",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW - nie dostarczonów żaden tekst rozporządzenia JPK_V7 do weryfikacji",
+          "Unit odnosi się do tekstu, który nie został dostarczony",
+          "Niemożliwe jest potwierdzenie, czy answer jednostronnie rezygnuje z udzielenia odpowiedzi czy faktycznie jej brak w tekście",
+          "Unit stanowi dezercję od udzielenia konkretnej odpowiedzi użytkownikowi"
+        ],
+        "suggested_fix": "Dostarczyć pełny tekst rozporządzenia lub zastąpić unit konkretną, ugruntowaną odpowiedzią",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk-v7-grudzien-czesc-ewidencyjna-deklaracyjna",
+      "question_intent": "Czy JPK za Grudzień należy wysłać z obiema częściami: ewidencyjną i deklaracyjną?",
+      "question_patterns": [
+        "JPK za Grudzień - cześć ewidencyjna i deklaracyjna?",
+        "Czy wysyłać JPK w Grudniu razem z obydwiema częściami?",
+        "Grudzień JPK - co muszę wysłać razem?"
+      ],
+      "answer": "Dostarczone fragmenty Rozporządzenia JPK_V7 nie zawierają jawnych przepisów dotyczących obowiązku wysłania obu części JPK w miesiącu Grudzień. Wymaga to weryfikacji w pełnym tekście rozporządzenia oraz instrukcji dotyczącej harmonogramu deklaracji VAT za poszczególne okresy.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak bezpośredniego artykułu w dostarczonym tekście",
+          "quote": "Tekst nie zawiera szczegółowych regulacji dotyczących wysyłania JPK w Grudniu"
+        }
+      ],
+      "conditions": [
+        "Okres rozliczeniowy: Grudzień",
+        "Obowiązek wysłania JPK"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "JPK_V7, harmonogram, części ewidencyjna i deklaracyjna",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "_generated_from": [
+        "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
+        "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "Czy JPK należy wysłać tylko za Grudzień z częścią ewidencyjna i deklaracyjna?",
+        "Jeśli VAT należny to jak wykazać w JPK, czy trzeba wskazać jak?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 4::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-grudzien-czesc-ewidencyjna-deklaracyjna",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW - nie dostarczonów żaden tekst rozporządzenia JPK_V7 do weryfikacji",
+          "Pytanie dotyczy konkretnego warunku (Grudzień) - wymaga bezpośredniej odpowiedzi z tekstu prawa",
+          "Unit zamiast odpowiadać, odsyła do innych źródeł",
+          "W domenie prawa podatkowego takie 'nie wiem' odpowiedzi mogą dezorientować podatnika"
+        ],
+        "suggested_fix": "Dostarczyć tekst regulacji lub opracować konkretną odpowiedź na podstawie aktualnych przepisów o harmonogramach JPK",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk-v7-vat-nalezny-ewidencja",
+      "question_intent": "Jak wykazać VAT należny w JPK i czy trzeba go specjalnie wskazywać?",
+      "question_patterns": [
+        "VAT należny w JPK - jak to ewidencjonować?",
+        "Czy trzeba specjalnie zaznaczać VAT należny w JPK?",
+        "Jak wpisać VAT należny w części ewidencyjnej JPK?",
+        "Gdzie w JPK pokazuję VAT należny?"
+      ],
+      "answer": "Dostarczone fragmenty Rozporządzenia JPK_V7 nie zawierają szczegółowych instrukcji dotyczących sposobu ewidencjonowania VAT należnego w poszczególnych polach JPK. Rekomendujemy zapoznanie się z Instrukcją Deklaranta JPK_V7, która zawiera mapowanie pól i wskazówki dotyczące wpisywania wartości VAT należnego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak bezpośredniego artykułu w dostarczonym tekście",
+          "quote": "Tekst nie zawiera szczegółów dotyczących ewidencjonowania VAT należnego w JPK"
+        }
+      ],
+      "conditions": [
+        "Podatnik czynny VAT",
+        "Konieczność wykazania VAT należnego w JPK"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "JPK_V7, VAT należny, ewidencja, część ewidencyjna",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "_generated_from": [
+        "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
+        "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "Czy JPK należy wysłać tylko za Grudzień z częścią ewidencyjna i deklaracyjna?",
+        "Jeśli VAT należny to jak wykazać w JPK, czy trzeba wskazać jak?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 4::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-vat-nalezny-ewidencja",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "PASS",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW - nie dostarczonów żaden tekst rozporządzenia JPK_V7 do weryfikacji",
+          "Pytanie dotyczy praktycznej ewidencji VAT w konkretnym dokumencie (JPK)",
+          "Unit nie udziela żadnej merytorycznej odpowiedzi",
+          "Zamiast grounding w tekście artykułu, unit odsyła do innego dokumentu (Instrukcji Deklaranta)",
+          "Dla podatnika czynnego to jest kluczowe pytanie - wymaga konkretnej, ugruntowanej odpowiedzi"
+        ],
+        "suggested_fix": "Dostarczyć tekst Rozporządzenia JPK_V7 lub Instrukcji Deklaranta i opracować konkretną odpowiedź",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk-v7-kody-kraju-korekta",
+      "question_intent": "Czy trzeba korygować JPK_V7 za poprzednie miesiące, jeśli dopiero od lutego zaczyna się stosować kody kraju przed NIP",
+      "question_patterns": [
+        "Czy należy korygować JPK za styczeń, jeśli kody kraju wprowadzam od lutego?",
+        "Czy zmiana formatu NIP na kod kraju + NIP wymaga korekty za poprzednie okresy?",
+        "Kiedy mogę zacząć używać kodów kraju w JPK_V7?",
+        "Jak postąpić z JPK ze stycznia, jeśli od lutego zmieniam format NIP?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można jednoznacznie stwierdzić, czy korekta za poprzednie okresy jest wymagana w przypadku wprowadzenia kodów kraju przed NIP. Wymagana jest weryfikacja pełnego tekstu rozporządzenia, szczególnie przepisów przejściowych dotyczących formatów identyfikatorów podatników.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak konkretnego artykułu w dostarczonej treści",
+          "quote": "Tekst rozporządzenia dotyczący kodów kraju i wymagań korektowych nie został dostarczony"
+        }
+      ],
+      "conditions": [
+        "zmiana dotyczy formatu identyfikatora podatnika (kod kraju + NIP)",
+        "zmiana wprowadzana od lutego (poprzednie okresy w starym formacie)"
+      ],
+      "exceptions": [
+        "możliwe wyjątki dla podmiotów stosujących specjalne procedury przejściowe"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Formaty identyfikatorów w JPK_V7",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12",
+        "§ 5"
+      ],
+      "_generated_from": [
+        "Dopiero od lutego wprowadzam kody kraju przed NIP, korygowalibyście JPK za styczeń w tym przypadku?"
+      ],
+      "_source_subbatch_key": "§ 12|§ 5::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-kody-kraju-korekta",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁU - Do audytu nie dostarczono ŻADNEGO tekstu artykułu ustawy/rozporządzenia. Sekcja 'TEKST ARTYKUŁÓW USTAWY (ŹRÓDŁO PRAWDY)' jest pusta.",
+          "NIEMOŻLIWY AUDIT - Bez tekstu źródła prawdy nie można weryfikować grounding, legal_basis ani accuracy.",
+          "ANSWER JEST WYCOFANIEM SIĘ - Answer jednostki faktycznie mówi 'nie można stwierdzić' - to jest non-answer. Unit powinien zawierać jasną odpowiedź opartą na tekście artykułu.",
+          "BRAK CYTATU - legal_basis zawiera tylko notatki o braku tekstu, zamiast faktycznych cytatów z artykułu.",
+          "QUESTION WYMAGA ODPOWIEDZI - Pytania są konkretne (czy trzeba korygować, kiedy zacząć, jak postąpić), ale answer je omija.",
+          "REQUIRES_VERIFICATION = TRUE - Unit sam sobie zaznacza, że wymaga weryfikacji, co oznacza, że nie powinien być w systemie produkcyjnym."
+        ],
+        "suggested_fix": "1) Dostarczyć pełny tekst Rozporządzenia w sprawie JPK_V7 dotyczący kodów kraju i wymagań formatowych. 2) Opracować answer oparty na konkretnych artykułach zawierający jasną odpowiedź (np. 'TAK, wymagana jest korekta' lub 'NIE, korekta nie jest wymagana' z uzasadnieniem). 3) Jeśli odpowiedź rzeczywiście nie wynika z dostarczonych przepisów, to unit nie powinien być w bazie - należy zgromadzić odpowiednią dokumentację prawną.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-v7-numer-faktury-w-opisie",
+      "question_intent": "Czy w opisie operacji i pozycjach dekretu w JPK można umieszczać numer faktury?",
+      "question_patterns": [
+        "Czy do JPK księgi rachunkowe w opisie operacji mogą zawierać numer faktury?",
+        "Czy mogę wpisać numer faktury w pozycjach dekretu?",
+        "Czy pozycje z faktury mogą być opisane w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych wytycznych dotyczących formatu opisu operacji i pozycji w dekrecie ani wymogów umieszczania numerów faktur w tych polach. Wymaga to weryfikacji z wytycznymi MF dotyczącymi struktury pliku JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "struktura JPK",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-numer-faktury-w-opisie",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji - nie podano żadnych przepisów Rozporządzenia JPK_V7",
+          "Answer przyznaje brak grounding i wymaga weryfikacji, co oznacza, że unit nie powinien być w systemie",
+          "Pytanie dotyczy szczegółów technicznych struktury JPK, które mogą być poza zakresem artykułów ustawy",
+          "Unit zawiera 'requires_verification': true, co oznacza, że nie jest gotowy do użytku"
+        ],
+        "suggested_fix": "Odrzucić unit. Jeśli ma być utrzymany, dostarczyć faktyczne przepisy zawierające wytyczne dotyczące formatu pól w JPK lub jasno stwierdzić, że takie wytyczne znajdują się wyłącznie w schematach technicznych MF poza ustawą.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-dokument-kontrahenta",
+      "question_intent": "Czy dokument powinien być osobnym wpisem na kontrahenta w JPK?",
+      "question_patterns": [
+        "Czy jeden dokument to osobny wiersz na kontrahenta?",
+        "Czy każdy dokument to osobny zapis w JPK na danego dostawcę?",
+        "Jak grupować dokumenty kontrahentów w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera konkretnych wytycznych dotyczących zasad grupowania lub dzielenia wpisów w JPK na podstawie dokumentów i kontrahentów. Wymaga to weryfikacji z aktualnym schematem pliku JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "struktura JPK",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-dokument-kontrahenta",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji - nie podano żadnych przepisów",
+          "Answer przyznaje brak konkretnych wytycznych w tekście i wymaga weryfikacji",
+          "Unit zawiera 'requires_verification': true, świadczący o braku gotowości",
+          "Pytanie dotyczy reguł technicznych struktury bazy danych, które mogą nie być zawarte w artykułach ustawy"
+        ],
+        "suggested_fix": "Odrzucić unit jako niegotowy. Wymaga rzeczywistych przepisów lub schematów technicznych do grounding.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-faktury-poza-zestawieniem",
+      "question_intent": "Jeśli faktury nie są ujęte w zestawieniu, czy księgujemy je osobno w JPK bez faktury proforma?",
+      "question_patterns": [
+        "Faktury niezaewidencjonowane w zestawieniu - jak je księgować?",
+        "Czy faktury poza zestawieniem się księguje bez FP?",
+        "Jak postępować z fakturami niujętymi w zestawieniu?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie precyzuje zasad ewidencjonowania faktur, które nie zostały ujęte w zestawieniu sprzedaży ani nie wyjaśnia roli faktury proforma w tym kontekście. Wymaga to weryfikacji z wytycznymi MF oraz kodeksem rachunkowości.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencjonowanie faktur",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-faktury-poza-zestawieniem",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak precyzji w przepisach dotyczących faktur spoza zestawienia",
+          "Pytanie dotyczy procedur księgowych, które mogą wymagać kodeksu rachunkowości, a nie artykułów rozporządzenia JPK",
+          "Wzmianka o 'fakturze proforma' wymaga grounding, którego nie ma"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga właściwych przepisów z kodeksu rachunkowości lub wytycznych MF, a nie z artykułów ustawy o JPK.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-kaucje",
+      "question_intent": "Jak ewidencjonować kaucje w JPK?",
+      "question_patterns": [
+        "Kaucje w JPK - jak je wykazać?",
+        "Czy kaucje podlegają ewidencji w JPK?",
+        "Jak księgować kaucje w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych wytycznych dotyczących ewidencjonowania kaucji w plikach JPK. Wymaga to weryfikacji z wytycznymi MF oraz regulacjami dotyczącymi ujęcia kaucji w ewidencji finansowo-księgowej.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "operacje specjalne",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-kaucje",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak wytycznych w Rozporządzeniu JPK_V7",
+          "Pytanie dotyczy ewidencji kaucji, które mogą być poza zakresem JPK",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić. Jeśli kaucje powinny być w JPK, dostarczyć przepisy. Jeśli nie - zmienić pytanie na 'czy kaucje powinny być w JPK' z jasną odpowiedzią.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-podstawa-dokumentu",
+      "question_intent": "Czy do JPK można księgować na podstawie dokumentu innego niż rachunek/faktura?",
+      "question_patterns": [
+        "Czy księgujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Jakie dokumenty mogą być podstawą do JPK?",
+        "Czy można użyć dokumentu innego niż faktura w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera listy zaakceptowanych typów dokumentów jako podstawy do księgowania w JPK. Wymaga to weryfikacji z wytycznymi MF dotyczącymi dokumentacji akceptowalnej dla JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "dokumentacja",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-podstawa-dokumentu",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak listy akceptowanych typów dokumentów",
+          "Pytanie dotyczy wymogów dokumentacji, które mogą być poza artykułami ustawy",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić. Dostarczyć właściwe przepisy z ustawy o podatku VAT lub kodeksu rachunkowości dotyczące akceptowalnych dokumentów.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-analityka-rozrachunki",
+      "question_intent": "Czy analityka rozrachunków (PZU, Inspektorat Sanitarny, Urząd Miasta) powinna być ewidencjonowana w JPK?",
+      "question_patterns": [
+        "Czy rozrachunki z kontrahentem instytucjonalnym wykazuje się w JPK?",
+        "Czy analityka rozrachunków z urzędem powinna być w JPK?",
+        "Czy rozliczenia z PZU, urzędami należą do JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych wytycznych dotyczących ewidencjonowania analityki rozrachunków z poszczególnymi kontrahentami instytucjonalnymi w strukturze pliku JPK. Wymaga to weryfikacji z wytycznymi MF oraz schematem pliku.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "rozrachunki",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-analityka-rozrachunki",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak wytycznych dotyczących analityki rozrachunków",
+          "Pytanie dotyczy szczegółów struktury pliku, które mogą być poza artykułami",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga schematu pliku JPK lub konkretnych przepisów dotyczących wymaganych analityk.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-wykazanie-w-jpk",
+      "question_intent": "Czy operacje powinny się wykazywać w JPK?",
+      "question_patterns": [
+        "Czy to powinno pokazywać się w JPK?",
+        "Czy dana operacja jest wymagana w JPK?",
+        "Czy to wykazywać w JPK?"
+      ],
+      "answer": "Bez konkretnego opisania operacji lub typu dokumentu nie można udzielić odpowiedzi. Tekst Rozporządzenia JPK_V7 nie został w pełni podany. Wymagana jest weryfikacja z wytycznymi MF dla konkretnego typu operacji.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "zakres JPK",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-wykazanie-w-jpk",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Pytanie jest zbyt ogólne i nieskonkretyzowane - nie można odpowiedzieć na 'czy to powinno być w JPK' bez konkretnej operacji",
+          "Answer przyznaje, że bez opisu operacji nie można udzielić odpowiedzi - unit jest bezużyteczny",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić całkowicie. Unit nie definiuje konkretnego scenariusza i jest nieprzydatny dla użytkownika.",
+        "confidence": 1.0
+      }
+    },
+    {
+      "id": "law-jpk-v7-faktury-kwota-brutto-vat",
+      "question_intent": "Czy faktury niezatwierdzone powinny być wykazane w JPK z naliczonym VAT od kwoty brutto?",
+      "question_patterns": [
+        "Czy wykazywać faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "Jak wykazać fakturę i VAT w JPK?",
+        "Czy VAT liczyć od brutto przy wykazaniu w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych wytycznych dotyczących zasad naliczania VAT i wykazywania faktur w plikach JPK. Wymaga to weryfikacji z wytycznymi MF dotyczącymi ujęcia VAT w JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "VAT w JPK",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-faktury-kwota-brutto-vat",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak szczegółowych wytycznych dotyczących naliczania VAT",
+          "Pytanie dotyczy kluczowej kwestii podatku VAT, ale nie ma żadnych przepisów do grounding",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga przepisów z ustawy o VAT dotyczących ewidencji i naliczania podatku.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-faktura-włoska-vat-ue",
+      "question_intent": "Czy faktura włoska podpisana przez kontrahenta jest wystarczającą dokumentacją dla USL wewnątrzwspólnotowej w JPK?",
+      "question_patterns": [
+        "Czy włoska faktura z podpisem jest wystarczająca dla USL w JPK?",
+        "Czy FS1/02/2026 podpisana przez włoskiego kontrahenta wystarczy?",
+        "Jak dokumentować USL z Włoch w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych wytycznych dotyczących wymogów dokumentacji dla usług wewnątrzwspólnotowych ani nie precyzuje, czy zagraniczna faktura jest wystarczającą podstawą. Wymaga to weryfikacji z wytycznymi MF dotyczącymi USL.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "VAT - usługi wewnątrzwspólnotowe",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-faktura-włoska-vat-ue",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak wytycznych dotyczących USL i dokumentacji zagranicznej",
+          "Pytanie dotyczy usług wewnątrzwspólnotowych (VAT EU), co może być poza zakresem Rozporządzenia JPK",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga przepisów z ustawy o VAT dotyczących USL i wymogów dokumentacji dla transakcji wewnątrzwspólnotowych.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-v7-sprzedawca-jako-kontrahent",
+      "question_intent": "Czy w JPK V7 można stosować sprzedawcę jako kontrahenta (zamiast faktycznego dostawcy)?",
+      "question_patterns": [
+        "Czy sprzedawcę stosować jako kontrahenta w JPK?",
+        "Jak wyglądać powinno wpisanie sprzedawcy jako kontrahenta?",
+        "Czy stosować sprzedawcę zamiast dostawcy w JPK?"
+      ],
+      "answer": "Tekst Rozporządzenia JPK_V7 nie zawiera szczegółowych wytycznych dotyczących stosowania sprzedawcy jako kontrahenta w plikach JPK ani nie wyjaśnia różnic w ujęciu tego rozwiązania. Wymaga to weryfikacji z wytycznymi MF dla JPK V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak dedykowanego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został podany"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "struktura JPK",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "Czy jako osobny dokument na kontrahenta?",
+        "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "Kaucje w JPK?????",
+        "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "Czy powinna pokazywać się w JPK?",
+        "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-v7-sprzedawca-jako-kontrahent",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak wytycznych dotyczących stosowania sprzedawcy jako kontrahenta",
+          "Pytanie dotyczy techniki ewidencji, której mogą nie regulować artykuły ustawy",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga jasnych przepisów lub stwierdzenia, że zasada 'faktycznego dostawcy' wynika z kodeksu rachunkowości, a nie z artykułów JPK.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-korekta-biezaca",
+      "question_intent": "Czy mogę korygować dane na bieżąco bez składania korekty deklaracji?",
+      "question_patterns": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji jeśli poprawię dane na bieżąco?",
+        "Czy bieżąca korekta wymaga złożenia korekty deklaracji?"
+      ],
+      "answer": "Nie mogę Ci udzielić odpowiedzi na podstawie dostarczonego tekstu art. 86a Rozporządzenia JPK_V7, ponieważ przepisy nie określają, czy korekty dokonane na bieżąco (przed upłynięciem terminu) wymagają złożenia korekty deklaracji. Kwestia ta wymaga weryfikacji w pełnym tekście rozporządzenia lub konsultacji z organami podatkowymi.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Rozporządzenie JPK_V7 określa wymogi dotyczące ewidencji, ale dostarczone fragmenty nie zawierają przepisów o procedurze korekt bieżących"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekty_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-korekta-biezaca",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Odpowiedź jest bazowana na braku tekstu, a nie na tekście artykułu",
+          "Unit powinien być oparty na faktycznym tekście Rozporządzenia JPK_V7, a nie stwierdzeniu 'nie ma tekstu'",
+          "Niemożliwe jest zweryfikowanie poprawności odpowiedzi bez tekstu źródłowego"
+        ],
+        "suggested_fix": "Nie można naprawić bez dostarczenia tekstu artykułu. Unit powinien zawierać grounded odpowiedź opartą na konkretnym tekście przepisów.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-obowiazek-korekty",
+      "question_intent": "Czy zawsze muszę dokonywać korekty deklaracji i JPK?",
+      "question_patterns": [
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy obowiązkowa jest korekta JPK i korekta deklaracji?",
+        "Kiedy muszę robić korektę?"
+      ],
+      "answer": "Tekst dostarczonego fragmentu Rozporządzenia JPK_V7 nie zawiera wystarczających informacji do określenia, czy korekta deklaracji i JPK jest zawsze obowiązkowa. Odpowiedź zależy od konkretnych warunków, które wymagają weryfikacji w pełnym tekście rozporządzenia.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Brak wystarczającego tekstu do odpowiedzi"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekty_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-obowiazek-korekty",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Odpowiedź przyznaje brak wystarczających informacji zamiast udzielić odpowiedzi opartej na tekście",
+          "Unit rezygnuje z udzielenia odpowiedzi zamiast na niej pracować",
+          "Podany legal_basis jest pusty - 'Brak wystarczającego tekstu'"
+        ],
+        "suggested_fix": "Nie można naprawić. Unit wymaga pełnego tekstu źródłowego do opracowania odpowiedzi. Takie unity powinny być odrzucone na etapie tworzenia.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-korekta-grudzen",
+      "question_intent": "Czy trzeba robić korektę JPK za grudzień?",
+      "question_patterns": [
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę dokonywać korekty JPK za grudzień?",
+        "Czy trzeba robić korektę JPK za ostatni miesiąc roku?"
+      ],
+      "answer": "Dostarczone fragmenty Rozporządzenia JPK_V7 nie zawierają informacji, czy korekta JPK za konkretny miesiąc (w tym grudzień) jest obowiązkowa. Wymaga to weryfikacji w pełnych przepisach dotyczących procedury korekt i terminów złożenia JPK.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Brak informacji o wymogach korekt za poszczególne okresy"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekty_jpk",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-korekta-grudzen",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Nie można zweryfikować odpowiedzi bez dostępu do tekstu Rozporządzenia",
+          "Unit przyznaje brak informacji zamiast podać odpowiedź opartą na tekście",
+          "Quote w legal_basis jest niekonkretny: 'Brak informacji o wymogach korekt za poszczególne okresy'"
+        ],
+        "suggested_fix": "Odrzucić unit. Nie można go naprawić bez tekstu źródłowego artykułu.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-zaleglosci",
+      "question_intent": "Czy muszę złożyć zaległe JPK ewidencyjne za poprzednie miesiące?",
+      "question_patterns": [
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy obowiązkowe są zaległe JPK za poprzednie okresy?",
+        "Czy trzeba wysyłać JPK za miesiące, w których go nie wysłałem?"
+      ],
+      "answer": "Tekst dostarczonego fragmentu Rozporządzenia JPK_V7 nie zawiera informacji o obowiązkach dotyczących złożenia zaległych JPK za poprzednie okresy rozliczeniowe. Należy to weryfikować w pełnym tekście rozporządzenia lub z organami podatkowymi.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Brak przepisów o zaległościach w JPK"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekty_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-zaleglosci",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Odpowiedź opiera się na braku tekstu, a nie na jego analizie",
+          "Niemożliwe jest udzielenie grounded odpowiedzi bez dostępu do przepisów",
+          "Legal basis zawiera tylko stwierdzenie 'Brak przepisów o zaległościach w JPK' bez cytatu"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga tekstu źródłowego do opracowania.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-odblokowywanie",
+      "question_intent": "Co zrobić, jeśli przypadkowo odblokowałem wysłany plik JPK?",
+      "question_patterns": [
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad",
+        "Jak odblokować plik JPK, który został wysłany?",
+        "Co to znaczy że plik JPK jest zablokowany?"
+      ],
+      "answer": "Dostarczone fragmenty Rozporządzenia JPK_V7 nie zawierają informacji na temat funkcji blokowania/odblokowywania plików JPK ani procedury postępowania w takiej sytuacji. Należy skonsultować się z dostawcą oprogramowania (np. Optima) lub organami podatkowymi.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Brak informacji o funkcjach technicznych plików"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "aspekty_techniczne_jpk",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-odblokowywanie",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Pytanie dotyczy aspektów technicznych oprogramowania (Optima), nie przepisów prawa podatkowego",
+          "Rozporządzenie JPK_V7 typowo nie zawiera instrukcji obsługi oprogramowania",
+          "Unit powinien być sformułowany jako pytanie spoza zakresu artykułu, a nie jako brak tekstu"
+        ],
+        "suggested_fix": "Odrzucić unit. Pytanie jest poza zakresem przepisów prawa podatkowego i dotyczy aspektów technicznych oprogramowania.",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "law-jpk-korekta-od-kontrahenta",
+      "question_intent": "Jak wykazać w JPK korektę wystawioną przez kontrahenta?",
+      "question_patterns": [
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak wykazać korektę otrzymaną od dostawcy w JPK?",
+        "Czy korekta od sprzedawcy musi być wykazana w JPK?"
+      ],
+      "answer": "Dostarczone fragmenty Rozporządzenia JPK_V7 nie zawierają wystarczających informacji o tym, jak wykazywać w JPK korekty otrzymane od kontrahentów (dostawców). Wymaga to weryfikacji w pełnym tekście rozporządzenia lub przepisach VAT dotyczących odliczenia korekt.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Brak procedury wykazywania korekt otrzymanych"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekty_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-korekta-od-kontrahenta",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Odpowiedź przyznaje brak wystarczających informacji zamiast pracować na tekście",
+          "Quote w legal_basis jest niekonkretny: 'Brak procedury wykazywania korekt otrzymanych'",
+          "Niemożliwe zweryfikowanie odpowiedzi bez tekstu przepisów"
+        ],
+        "suggested_fix": "Odrzucić. Unit wymaga tekstu źródłowego.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-korekta-kontrahent",
+      "question_intent": "Jak skorygować w JPK błędne dane kontrahenta (nabywcy)?",
+      "question_patterns": [
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Kontrahent poprosił zmianę danych nabywcy na fakturze sprzedaży, jak to wykazać w JPK?",
+        "Jak zmienić dane odbiorcy w JPK?"
+      ],
+      "answer": "Tekst dostarczonego fragmentu Rozporządzenia JPK_V7 nie zawiera szczegółowych procedur korygowania danych kontrahenta w JPK. Takie korekty zazwyczaj wymagają złożenia korekty całego dokumentu sprzedaży lub procedury określonej w pełnym tekście rozporządzenia, którą należy weryfikować.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "art. 86a",
+          "quote": "Brak szczegółów procedury korekt danych kontrahenta"
+        }
+      ],
+      "conditions": [
+        "zmiana danych nabywcy na fakturze sprzedaży"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "korekty_jpk",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 12"
+      ],
+      "_generated_from": [
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "Czy trzeba robić korektę?",
+        "Czy robię korektę JPK za grudzień?",
+        "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "Czy premie macie brak korekt?",
+        "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?"
+      ],
+      "_source_subbatch_key": "§ 12::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-korekta-kontrahent",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ŹRÓDŁOWEGO - Nie dostarczono żadnego tekstu artykułu ustawy do weryfikacji",
+          "Odpowiedź bazuje na braku tekstu, a nie na jego analizie",
+          "Quote zawiera tylko 'Brak szczegółów procedury korekt danych kontrahenta' - to nie jest cytat",
+          "Unit zawiera warunek 'zmiana danych nabywcy na fakturze sprzedaży', ale nie ma tekstu do weryfikacji"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga tekstu źródłowego artykułu do opracowania odpowiedzi.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk_v7-test-wysylka-faktury",
+      "question_intent": "Jak wykazać fakturę z testowej wysyłki w JPK_VAT",
+      "question_patterns": [
+        "Jak wykazać fakturę testową w JPK",
+        "Gdzie w JPK umieścić fakturę z testowania wysyłki",
+        "Faktura testowa - wykazanie w JPK_VAT"
+      ],
+      "answer": "Przepisy JPK_V7 nie zawierają odrębnych zasad dla faktur testowych. Faktura wystawiona w celach testowych powinna być wykazana w JPK_VAT según ogólnym zasadom - w zależności od jej charakteru (sprzedaż, usługa, itp.) w odpowiedniej pozycji. Należy sprawdzić, czy dokument ma charakter faktury handlowej, czy jest to wyłącznie dokument testowy bez rzeczywistej transakcji gospodarczej.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "zasady ogólne",
+          "quote": "JPK_VAT zawiera informacje o transakcjach sprzedaży i zakupu objętych obowiązkiem podatku VAT"
+        }
+      ],
+      "conditions": [
+        "Dokument musi mieć charakter faktury handlowej",
+        "Musi reprezentować rzeczywistą transakcję gospodarczą"
+      ],
+      "exceptions": [
+        "Dokumenty czysto testowe bez transakcji gospodarczej mogą nie wymagać wykazania"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "wykazanie_sprzedazy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?",
+        "Czy w przypadku sprzedaży węgla kiedy na fakturze musi być numer pesel oraz numer i seria dowodu osoby fizycznej, żeby było zwolnienie z akcyzy to czy w JPK trzeba wpisywać ten numer pesel osoby fizycznej?",
+        "Prośba o pomoc-my wyświadczyliśmy usługę dla kontrahenta UE - w której pozycji JPK powinno się to znaleźć?",
+        "Czy zaliczkę otrzymaną na poczet świadczenia usług budowlanych na rzeczy kontrahenta z Niemiec (budynek położony w Niemczech), wykazujemy w JPK w dacie otrzymania zaliczki?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-test-wysylka-faktury",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "FAIL",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW W ŹRÓDLE - nie można zweryfikować grounding",
+          "Cytowany 'Rozporządzenie JPK_V7' i 'zasady ogólne' to nie jest prawidłowy format odniesienia do konkretnego artykułu ustawy",
+          "Quote o 'transakcjach sprzedaży i zakupu' jest zbyt ogólny i nie może być zweryfikowany",
+          "Answer zawiera opinie o 'czysto testowych dokumentach' bez wsparcia w tekście artykułu",
+          "Brak konkretnego artykułu i ustępu w legal_basis - tylko opisowe odniesienia",
+          "Pytanie dotyczy interpretacji procedury, ale brak aktualnego tekstu ustawy do weryfikacji"
+        ],
+        "suggested_fix": "Nie można naprawić bez dostępu do pełnego tekstu artykułów ustawy o JPK. Należy: 1) Dodać konkretne artykuły i ustępy rozporządzenia, 2) Usunąć opinie o dokumentach 'czysto testowych' jeśli nie wynikają z tekstu, 3) Weryfikować ponownie gdy będzie dostępny pełny tekst źródła",
+        "confidence": 0.85
+      }
+    },
+    {
+      "id": "law-jpk_v7-pesel-wegiel-akcyza",
+      "question_intent": "Czy wpisywać PESEL kupującego węgla w JPK_VAT przy zwolnieniu z akcyzy",
+      "question_patterns": [
+        "PESEL w JPK przy sprzedaży węgla ze zwolnieniem z akcyzy",
+        "Gdzie wpisać PESEL w JPK_VAT dla węgla",
+        "Dane osoby fizycznej w JPK przy węglu i akcyzie"
+      ],
+      "answer": "Przepisy JPK_V7 nie regulują obowiązku wpisywania numeru PESEL w ewidencji JPK. Wymóg podania PESEL i danych dowodu osoby fizycznej na fakturze wynika z przepisów akcyzowych (dla zwolnienia z akcyzy), ale to nie oznacza, że dane te muszą być wpisane w strukturze JPK_VAT. W JPK należy wykazać transakcję sprzedaży węgla zgodnie ze standardowymi zasadami.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "zasady ogólne struktury JPK",
+          "quote": "JPK zawiera dane dotyczące transakcji VAT, identyfikowane przez NIP lub inne identyfikatory standardowe"
+        }
+      ],
+      "conditions": [
+        "Sprzedaż węgla osobie fizycznej",
+        "Wymóg PESEL wynika z przepisów akcyzowych, nie z JPK"
+      ],
+      "exceptions": [
+        "JPK_VAT nie zawiera dedykowanego pola dla PESEL konsumenta"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "dane_nabywcy",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?",
+        "Czy w przypadku sprzedaży węgla kiedy na fakturze musi być numer pesel oraz numer i seria dowodu osoby fizycznej, żeby było zwolnienie z akcyzy to czy w JPK trzeba wpisywać ten numer pesel osoby fizycznej?",
+        "Prośba o pomoc-my wyświadczyliśmy usługę dla kontrahenta UE - w której pozycji JPK powinno się to znaleźć?",
+        "Czy zaliczkę otrzymaną na poczet świadczenia usług budowlanych na rzeczy kontrahenta z Niemiec (budynek położony w Niemczech), wykazujemy w JPK w dacie otrzymania zaliczki?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-pesel-wegiel-akcyza",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "FAIL",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW W ŹRÓDLE - niemożliwa weryfikacja",
+          "Przywołane 'zasady ogólne struktury JPK' to nie jest prawidłowy cytat z artykułu",
+          "Answer mieszająca przepisy JPK_VAT z przepisami akcyzowymi bez jasnego rozgraniczenia",
+          "Stwierdzenie 'JPK_VAT nie zawiera dedykowanego pola dla PESEL' - gdzie to wynika z tekstu?",
+          "Brak konkretnych artykułów rozporządzenia o JPK",
+          "Odpowiedź zawiera interpretację procedury bez wsparcia w tekście ustawy"
+        ],
+        "suggested_fix": "Odrzucić do czasu dostępności pełnego tekstu artykułów. Unit wymaga: 1) Konkretnych artykułów rozporządzenia JPK_V7, 2) Oddzielenia przepisów JPK od przepisów akcyzowych, 3) Cytowania rzeczywistych polskich ustaw lub rozporządzeń",
+        "confidence": 0.9
+      }
+    },
+    {
+      "id": "law-jpk_v7-usluga-ue-pozycja",
+      "question_intent": "W której pozycji JPK wykazać usługę świadczoną dla kontrahenta z UE",
+      "question_patterns": [
+        "Eksport usług do UE - gdzie w JPK",
+        "Usługa dla kontrahenta z UE - pozycja w JPK_VAT",
+        "Sprzedaż usług wewnątrz UE w JPK",
+        "Gdzie wykazać usługę B2B do UE"
+      ],
+      "answer": "Usługi świadczone dla podmiotu z UE powinny być wykazane w JPK_VAT w pozycji dotyczącej sprzedaży. Jeśli spełniają warunki zwolnienia z VAT (nabywca jest podatnikiem VAT zarejestrowanym w innym kraju UE, świadczenie dotyczy usług telekomunikacyjnych, nadawczych lub elektronicznych), wykazuje się je jako sprzedaż zwolniona z VAT. W przeciwnym razie — jako sprzedaż z VAT lub sprzedaż poza terytorium.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "zasady wykazywania sprzedaży",
+          "quote": "JPK_VAT zawiera informacje o sprzedaży podlegającej VAT oraz sprzedaży zwolnionej z VAT"
+        }
+      ],
+      "conditions": [
+        "Kontrahent muszący być podatnikiem VAT z UE (jeśli ma być zwolnienie)",
+        "Usługa musi być zdefiniowana jako usługa telekomunikacyjna, nadawcza lub elektroniczna (dla zwolnień)"
+      ],
+      "exceptions": [
+        "Jeśli nabywca jest osobą fizyczną - mogą obowiązywać inne zasady"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "sprzedaz_uslug_ue",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?",
+        "Czy w przypadku sprzedaży węgla kiedy na fakturze musi być numer pesel oraz numer i seria dowodu osoby fizycznej, żeby było zwolnienie z akcyzy to czy w JPK trzeba wpisywać ten numer pesel osoby fizycznej?",
+        "Prośba o pomoc-my wyświadczyliśmy usługę dla kontrahenta UE - w której pozycji JPK powinno się to znaleźć?",
+        "Czy zaliczkę otrzymaną na poczet świadczenia usług budowlanych na rzeczy kontrahenta z Niemiec (budynek położony w Niemczech), wykazujemy w JPK w dacie otrzymania zaliczki?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-usluga-ue-pozycja",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "FAIL",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW W ŹRÓDLE - niemożliwa weryfikacja",
+          "Quote: 'JPK_VAT zawiera informacje o sprzedaży podlegającej VAT oraz sprzedaży zwolnionej z VAT' - nie zweryfikowany wobec tekstu ustawy",
+          "Wymienienie 'usług telekomunikacyjnych, nadawczych lub elektronicznych' jako warunku zwolnienia - bez odniesienia do konkretnego artykułu dyrektywy VAT",
+          "Answer zawiera interpretację zasad VAT dla UE, ale artykuł źródłowy powinien być o JPK",
+          "Brak artykułów rozporządzenia o JPK_V7",
+          "Warunki i wyjątki nie są poparte tekstem artykułu"
+        ],
+        "suggested_fix": "Odrzucić - brak możliwości weryfikacji. Należy dostarczyć: 1) Pełny tekst rozporządzenia o JPK_V7, 2) Konkretne artykuły dotyczące wykazywania usług, 3) Rozgraniczenie reguł JPK od reguł VAT",
+        "confidence": 0.92
+      }
+    },
+    {
+      "id": "law-jpk_v7-zaliczka-usluga-budowlana-niemcy",
+      "question_intent": "Kiedy wykazać zaliczkę na usługę budowlaną dla kontrahenta z Niemiec w JPK",
+      "question_patterns": [
+        "Zaliczka na usługę budowlaną zagranica - termin wykazania w JPK",
+        "Kiedy wykazać zaliczkę na usługę z Niemiec w JPK_VAT",
+        "Zaliczka dla zagranicznego kontrahenta - data w JPK",
+        "Usługa budowlana poza UE - zaliczka w JPK"
+      ],
+      "answer": "Zaliczkę należy wykazać w JPK_VAT w dacie jej otrzymania (wpłynięcia na konto), a nie w dacie świadczenia usługi. Usługa budowlana świadczona w Niemczech (terytorialnie) jest związana z nieruchomością położoną tam, co wpływa na zasady VAT (może podlegać VAT w kraju świadczenia), ale termin wykazania zaliczki w JPK określa datę faktycznego otrzymania funduszy.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "zasady wykazywania przychodów",
+          "quote": "Przychody i zaliczki wykazuje się w JPK w dacie ich uzyskania/otrzymania"
+        }
+      ],
+      "conditions": [
+        "Zaliczka musi być rzeczywiście otrzymana (wpłynięcie na konto)",
+        "Usługa budowlana świadczona poza terytorium Polski"
+      ],
+      "exceptions": [
+        "Może obowiązywać VAT w kraju świadczenia (Niemcy), a podatnik może być zwolniony z VAT w Polsce"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "zaliczki_przychody_zagranica",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10"
+      ],
+      "_generated_from": [
+        "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?",
+        "Czy w przypadku sprzedaży węgla kiedy na fakturze musi być numer pesel oraz numer i seria dowodu osoby fizycznej, żeby było zwolnienie z akcyzy to czy w JPK trzeba wpisywać ten numer pesel osoby fizycznej?",
+        "Prośba o pomoc-my wyświadczyliśmy usługę dla kontrahenta UE - w której pozycji JPK powinno się to znaleźć?",
+        "Czy zaliczkę otrzymaną na poczet świadczenia usług budowlanych na rzeczy kontrahenta z Niemiec (budynek położony w Niemczech), wykazujemy w JPK w dacie otrzymania zaliczki?"
+      ],
+      "_source_subbatch_key": "§ 10::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk_v7-zaliczka-usluga-budowlana-niemcy",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "FAIL",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "BRAK TEKSTU ARTYKUŁÓW W ŹRÓDLE - całkowicie niemożliwa weryfikacja",
+          "Quote: 'Przychody i zaliczki wykazuje się w JPK w dacie ich uzyskania/otrzymania' - nie ma źródła do weryfikacji",
+          "Answer zawiera dwie różne datowanie: 'data otrzymania' (zaliczki) vs. data świadczenia - wymaga konkretnego artykułu",
+          "Stwierdzenie o VAT w kraju Niemiec - to dotyczy dyrektywy VAT, nie JPK",
+          "Brak artykułów rozporządzenia o JPK_V7",
+          "Exception o możliwości zwolnienia z VAT nie ma wsparcia w przywołanym artykule o JPK",
+          "Pytanie dotyczy transakcji zagranicznej - wymaga bardzo precyzyjnego wsparcia tekstem"
+        ],
+        "suggested_fix": "Całkowicie odrzucić. Nie ma możliwości audytu. Wymagane: 1) Pełny tekst rozporządzenia o JPK_V7 ze szczególnie artykułami o datach wykazania, 2) Oddzielenie reguł JPK od reguł VAT, 3) Konkretne przepisy dotyczące zaliczek i transakcji zagranicznych",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "law-jpk-opis-w-ksiegach",
+      "question_intent": "Czy JPK_V7 zawiera wymogi dotyczące opisów zapisów w księgach rachunkowych",
+      "question_patterns": [
+        "Jaki opis powinien być w księgach w JPK?",
+        "Czy JPK_V7 określa jak opisywać zapisy w księgach?",
+        "Jakie informacje opisowe są wymagane w JPK dla zapisów księgowych?"
+      ],
+      "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można zidentyfikować konkretnych wymogów dotyczących opisu zapisów w księgach rachunkowych. Tekst artykułów nie zawiera wystarczających informacji aby odpowiedzieć na to pytanie kompletnie.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "tekst artykułów nie dostarcza",
+          "quote": "brak danych"
+        }
+      ],
+      "conditions": [],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_czynny"
+      ],
+      "topic": "JPK_V7 - wymogi opisowe",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 2",
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Chodzi o opis w księgach w JPK?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11|§ 2::subbatch::1",
+      "_audit": {
+        "unit_id": "law-jpk-opis-w-ksiegach",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "PASS",
+        "relevance": "FAIL",
+        "issues": [
+          "KRYTYCZNE: Brak tekstu artykułów ustawy do weryfikacji - pole 'TEKST ARTYKUŁÓW USTAWY' jest puste",
+          "Unit nie może być zweryfikowany bez źródła prawdy - audyt jest niemożliwy",
+          "Answer jednostki jest ostrożny (nie twierdzi nic definitywnie), ale to nie rekompensuje braku materiału źródłowego",
+          "legal_basis wskazuje 'tekst artykułów nie dostarcza' - to oznacza że unit został przygotowany bez dostępu do tekstu ustawy",
+          "Nie można zweryfikować czy twierdzenia w answer rzeczywiście wynikają z tekstu, skoro tekst nie został dostarczony"
+        ],
+        "suggested_fix": "Jednostka wymaga pełnego tekstu Rozporządzenia JPK_V7 (odpowiednia część art.) aby móc być zaudytowana. W obecnej formie - bez tekstu źródłowego - nie może być zaakceptowana w systemie. Jeśli tekst artykułu istnieje ale nie zawiera wymogów opisowych - answer powinien to wprost stwierdzić z powołaniem się na konkretny artykuł/ustęp.",
+        "confidence": 0.98
+      }
+    },
+    {
+      "id": "law-jpk-prowizja-ubezpieczenia-zagranica",
+      "question_intent": "Czy prowizja za sprzedaż ubezpieczeń od kontrahenta zagranicznego powinna być wykazana w JPK_V7 i czy wlicza się do proporcji VAT",
+      "question_patterns": [
+        "Prowizja od ubezpieczeń z zagranicy w JPK",
+        "Czy wykazywać prowizję zagraniczną w deklaracji VAT",
+        "Ubezpieczenia z Francji a JPK_V7",
+        "Proporcja VAT a prowizja zagraniczna"
+      ],
+      "answer": "Nie mogę udzielić pewnej odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ brakuje w nim szczegółowych regulacji dotyczących klasyfikacji prowizji za ubezpieczenia ze źródeł zagranicznych oraz ich włączenia do proporcji. Wymagane jest weryfikacja przepisów VAT oraz zasad wykazywania usług zagranicznych w JPK_V7.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak konkretnego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został dostarczony do analizy"
+        }
+      ],
+      "conditions": [
+        "Prowizja pochodzi od kontrahenta zagranicznego (Francja)",
+        "Dotyczy usług ubezpieczeniowych"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "usługi_zagraniczne_vat",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Dostaje raport związany z prowizją za sprzedaż ubezpieczeń od kontrahenta z Francji. Czy powinno się to pojawić w JPK? Czy wlicza się do proporcji?",
+        "Mam dalej wątpliwości czy przed krajowym Nip kontrahenta należy wpisywać PL?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::2",
+      "_audit": {
+        "unit_id": "law-jpk-prowizja-ubezpieczenia-zagranica",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji - nie podano przepisów Rozporządzenia JPK_V7",
+          "Answer przyznaje brak szczegółowych regulacji w dostarczonej części tekstu",
+          "Pytanie dotyczy klasyfikacji VAT dla usług ubezpieczeniowych i proporcji, co jest materią ustawy o VAT, a nie artykułów o JPK",
+          "Unit zawiera 'requires_verification': true"
+        ],
+        "suggested_fix": "Odrzucić i przenieść do kategorii przepisów o VAT, nie JPK. Wymaga artykułów z ustawy o podatku VAT dotyczących usług ubezpieczeniowych i proporcji VAT.",
+        "confidence": 0.99
+      }
+    },
+    {
+      "id": "law-jpk-nip-przedrostek-pl",
+      "question_intent": "Czy przed krajowym numerem NIP kontrahenta należy wpisywać przedrostek PL w JPK_V7",
+      "question_patterns": [
+        "NIP krajowy z PL czy bez",
+        "Czy dodawać PL do polskiego NIP-u",
+        "Format NIP Polski w JPK",
+        "Przedrostek PL dla identyfikatora VAT krajowego"
+      ],
+      "answer": "Nie mogę udzielić pewnej odpowiedzi na podstawie dostarczonego tekstu, ponieważ brakuje w nim regulacji dotyczących formatu wpisywania numerów NIP (identyfikatorów VAT) kontrahentów krajowych w JPK_V7. Wymagana jest weryfikacja szczegółowych wytycznych dotyczących struktury pola dla numeru VAT.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak konkretnego artykułu w podanym tekście",
+          "quote": "Tekst artykułów nie został dostarczony do analizy"
+        }
+      ],
+      "conditions": [
+        "Dotyczy polskiego numeru NIP",
+        "Umieszczenie w JPK_V7"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "struktura_jpk_identyfikatory",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "_generated_from": [
+        "Dostaje raport związany z prowizją za sprzedaż ubezpieczeń od kontrahenta z Francji. Czy powinno się to pojawić w JPK? Czy wlicza się do proporcji?",
+        "Mam dalej wątpliwości czy przed krajowym Nip kontrahenta należy wpisywać PL?"
+      ],
+      "_source_subbatch_key": "§ 10|§ 11::subbatch::2",
+      "_audit": {
+        "unit_id": "law-jpk-nip-przedrostek-pl",
+        "verdict": "REJECTED",
+        "grounding": "FAIL",
+        "legal_basis_check": "FAIL",
+        "completeness": "NEEDS_FIX",
+        "accuracy": "FAIL",
+        "relevance": "FAIL",
+        "issues": [
+          "Brak tekstu artykułu do weryfikacji",
+          "Answer przyznaje brak regulacji dotyczących formatu NIP",
+          "Pytanie dotyczy technicznego formatu pola w schemacie pliku, które mogą być poza artykułami ustawy",
+          "Unit zawiera 'requires_verification': true",
+          "Format numerów identyfikatorów VAT jest regulowany na poziomie dyrektyw EU, a nie artykułów krajowych"
+        ],
+        "suggested_fix": "Odrzucić. Wymaga schematów technicznych pliku JPK z MF lub konkretnych przepisów dotyczących formatu identyfikatorów VAT.",
+        "confidence": 0.99
+      }
+    }
+  ]
+}

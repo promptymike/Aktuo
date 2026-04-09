@@ -1,0 +1,614 @@
+[
+  {
+    "id": "law-jpk-v7-nip-przedrostek-pl",
+    "question_intent": "Czy przy wysyłaniu JPK_V7 za styczeń należy umieszczać przedrostek PL przed numerem NIP kontrahentów krajowych",
+    "question_patterns": [
+      "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?",
+      "Czy NIP kontrahentów krajowych w JPK_V7 powinien zawierać przedrostek PL?",
+      "Jaki format NIP krajowych w JPK_V7 - z PL czy bez?",
+      "Czy do JPK_V7 wpisujemy NIP z przedrostkiem PL dla kontrahentów z Polski?"
+    ],
+    "answer": "Brak możliwości udzielenia odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. Aby odpowiedzieć na pytanie o format numeru NIP (z przedrostkiem PL czy bez), niezbędny jest tekst artykułu regulujący strukturę i format pól w JPK_V7, szczególnie dotyczący sposobu wpisywania numerów identyfikacyjnych kontrahentów krajowych.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "nie udostępniono",
+        "quote": "tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "formato-nip-jak-v7",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk-v7-oznaczenie-faktury",
+    "question_intent": "Czy faktury mają być oznaczane w JPK_V7 i jakie oznaczenie stosować?",
+    "question_patterns": [
+      "Z jakim oznaczeniem wykazać faktury w JPK?",
+      "Czy należy nadać oznaczenie fakturom w JPK_V7?",
+      "Jakie oznaczenie dla faktur w deklaracji JPK?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu, ponieważ nie zawiera on artykułów dotyczących oznaczenia faktur w JPK_V7. Aby dokładnie odpowiedzieć na Twoje pytanie, wymagana jest pełna treść rozporządzenia zawierająca przepisy dotyczące oznaczania dokumentów handlowych w deklaracji.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej treści",
+        "quote": "brak tekstu do cytowania"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny"
+    ],
+    "topic": "oznaczenie_faktury_jpk",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-najem-prywatny-zakup",
+    "question_intent": "Czy rachunki za najem prywatny należy wykazać w JPK_V7?",
+    "question_patterns": [
+      "Czy wykazujemy w JPK rachunki za najem prywatny?",
+      "Rachunki za najem prywatny do JPK czy nie?",
+      "Czy dostarczane rachunki za najem prywatny trafiają do JPK?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. W podanym tekście nie ma artykułów regulujących zasady ewidencjonowania najmu prywatnego. Musisz zweryfikować to w kompletnym tekście rozporządzenia lub u doradcy podatkowego.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonym tekście",
+        "quote": "tekst nie zawiera regulacji dotyczącej najmu prywatnego"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "ewidencja_zakupow_jpk",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-najem-formalnos-vat-zw",
+    "question_intent": "Czy niewykazanie w JPK najmu prywatnego to błąd, jeśli VAT jest zwolniony?",
+    "question_patterns": [
+      "Czy brak księżowania najmu prywatnego w JPK to błąd, skoro VAT zwolniony?",
+      "Najem prywatny VAT zwolniony - czy musi być w JPK?",
+      "Czy to formalność jeśli VAT zwolniony przy najemie prywatnym?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu rozporządzenia. Dostarczone artykuły nie zawierają regulacji na temat zwolnień VAT ani zasad ewidencjonowania umów bez VAT w JPK_V7.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "tekst nie zawiera wskazanych regulacji"
+      }
+    ],
+    "conditions": [
+      "VAT zwolniony"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_zwolniony"
+    ],
+    "topic": "zwolnienia_vat",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-odliczenie-zawieszenie",
+    "question_intent": "Czy można odliczyć VAT w lutym w JPK mimo zawieszenia deklaracji?",
+    "question_patterns": [
+      "Czy mogę odliczyć VAT w JPK w lutym jeśli jest zawieszenie?",
+      "Zawieszenie - czy mogę wykazać odliczenie w JPK?",
+      "Czy odliczenie VAT jest możliwe w JPK mimo zawieszenia deklaracji?"
+    ],
+    "answer": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera w dostarczonej wersji regulacji dotyczących zawieszenia deklaracji VAT ani wpływu zawieszenia na możliwość wykazania odliczeń w JPK.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak regulacji na temat zawieszenia i odliczeń"
+      }
+    ],
+    "conditions": [
+      "zawieszenie deklaracji"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-opisy-faktury-cit",
+    "question_intent": "Jak powinna wyglądać dokumentacja i opisy na fakturach zakupowych w kontekście JPK i CIT?",
+    "question_patterns": [
+      "Jak opisać fakturę zakupową dla JPK i CIT?",
+      "Jakie wymagania do opisów faktur w JPK_V7?",
+      "Opisy na fakturach - wymogi JPK i CIT?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera szczegółowych regulacji na temat standardów opisów faktur zakupowych ani wymogów wobec treści faktur.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "tekst nie zawiera regulacji na temat opisów faktur"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "faktury_dokumentacja",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-dowod-wewnetrzny-bilans",
+    "question_intent": "Czy można wystawić dowód wewnętrzny na podstawie raportu klienta od kwoty z bilansu?",
+    "question_patterns": [
+      "Czy mogę wystawić dowód wewnętrzny od kwoty bilansowej?",
+      "Dowód wewnętrzny na podstawie raportu klienta - czy można?",
+      "Czy butelki z SK to wyjątek dla dowodu wewnętrznego?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły Rozporządzenia JPK_V7 nie zawierają regulacji dotyczącej dowodów wewnętrznych, raportów z bilansów czy wyłączeń dla butelek.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak regulacji na temat dowodów wewnętrznych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [
+      "butelki z SK"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "dokumentacja_gospodarcza",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-zwrot-vat-samochod",
+    "question_intent": "W której pozycji JPK wykazać zwrot VAT od zakupu samochodu?",
+    "question_patterns": [
+      "Gdzie w JPK wpisać zwrot VAT od samochodu?",
+      "Zwrot VAT samochód - która pozycja w JPK?",
+      "P_44 czy inna pozycja dla zwrotu VAT od auta?"
+    ],
+    "answer": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera informacji o kodach pozycji (np. p_44) ani nie reguluje zwrotów VAT od sprzedaży samochodów.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak kodów pozycji i regulacji zwrotów VAT"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "vat_sprzedaz",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-samochod-vat-2026",
+    "question_intent": "Gdzie wykazać w JPK VAT od samochodu kupiętego w 2025, jeśli klient od 2026 nie będzie VATowcem?",
+    "question_patterns": [
+      "Samochód kupiony 2025, klient od 2026 nie VATowiec - gdzie w JPK?",
+      "P_44 minus dla samochodu jeśli rezygnacja z VAT?",
+      "Jak wykazać VAT od auta środka trwałego w JPK gdy zmiana statusu?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Brakuje artykułów regulujących obsługę zmiany statusu VATowego podatnika oraz zasady wykazywania odliczeń VAT w sytuacji utraty statusu podatnika VAT czynnego.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak regulacji na temat zmiany statusu VATowego"
+      }
+    ],
+    "conditions": [
+      "zmiana statusu z VATowca na non-VAT",
+      "samochód jako środek trwały"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "odliczenia_vat_samochod",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-faktura-chin-import",
+    "question_intent": "Jak wykazać w JPK fakturę zakupową z Chin na wzory/próbki warte 5 USD?",
+    "question_patterns": [
+      "Jak wykazać w JPK fakturę z Chin 5 USD?",
+      "Ewidencja zakupów - import z Chin, jak to zrobić?",
+      "Faktura z Chin na próbki w JPK - gdzie wpisać?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły JPK_V7 nie zawierają regulacji dotyczącej importu, transakcji zagranicznych czy przeliczania walut obcych na potrzeby ewidencji JPK.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak regulacji na temat importu i walut obcych"
+      }
+    ],
+    "conditions": [
+      "import z Chin",
+      "wartość w USD"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "import_transakcje_zagranicze",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-rozbieznosc-faktura-przyjecie",
+    "question_intent": "Jak wykazać w JPK zakup z rozbieżnością między fakturą a faktycznym przyjęciem towaru?",
+    "question_patterns": [
+      "Rozbieżność faktury i przyjęcia - jak to wykazać w JPK?",
+      "Faktura 10 tys kg, przyjęto 7 tys - gdzie to wpisać?",
+      "Jak opisać w JPK towar z niedostawieniem?"
+    ],
+    "answer": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera regulacji dotyczącej rozbieżności między dokumentami a stanem faktycznym przyjęcia towarów.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak regulacji na temat rozbieżności dokumentów"
+      }
+    ],
+    "conditions": [
+      "rozbieżność faktura-przyjęcie"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "ewidencja_zakupow_towary",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-zakupy-temu-prywatne",
+    "question_intent": "Czy zakupy z TEMU na osobę prywatną można wykazać w ewidencji towarów dowodem wewnętrznym?",
+    "question_patterns": [
+      "Zakupy TEMU osoba prywatna - czy do ewidencji?",
+      "Czy mogę wciągnąć TEMU dowodem wewnętrznym?",
+      "Zakupy prywatne z TEMU - ewidencja towarów JPK?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły JPK_V7 nie zawierają regulacji dotyczącej osobistych zakupów podatnika czy możliwości evidencjonowania zakupów prywatnych dowodami wewnętrznymi.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak artykułu w dostarczonej wersji",
+        "quote": "brak regulacji na temat zakupów osobistych"
+      }
+    ],
+    "conditions": [
+      "zakup prywatny",
+      "TEMU"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "ewidencja_towarow_dowody",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-solidarna-odpowiedzialność",
+    "question_intent": "Czy brak przesyłania sprawozdań wiąże się z odpowiedzialnością solidarną w kontekście JPK i podatków?",
+    "question_patterns": [
+      "Czy brak sprawozdań to odpowiedzialność solidarna?",
+      "Jakie zagrożenia wynikają z braku przesyłania JPK?",
+      "Kto odpowiada za niezłożenie JPK i podatków?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie Rozporządzenia JPK_V7, ponieważ dokument ten zawiera wyłącznie szczegółowe przepisy techniczne dotyczące struktury i formatu raportów JPK. Przepisy o odpowiedzialności solidarnej, sankcjach za brak przesyłania JPK i zagrożeniach wynikających z nieprzesyłania sprawozdań znajdują się w ustawie o podatku od towarów i usług oraz w kodeksie karnym skarbowym, a nie w tym rozporządzeniu.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak przepisów",
+        "quote": "Rozporządzenie JPK_V7 nie zawiera przepisów dotyczących odpowiedzialności solidarnej ani sankcji"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "odpowiedzialność_i_sankcje",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-biuro-ksiegowe-obowiazki",
+    "question_intent": "Czy biuro rachunkowe lub samodzielna księgowa podlegają regulacjom JPK_V7",
+    "question_patterns": [
+      "Czy biuro rachunkowe musi stosować JPK_V7",
+      "Czy samodzielna księgowa podlega JPK_V7",
+      "Czy o wewnątrz firmy mowa w regulacjach"
+    ],
+    "answer": "Nie można odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów JPK_V7. Regulacja dotyczy podatników i podatek VAT, ale brakuje informacji o obowiązkach biur rachunkowych lub księgowych prowadzących usługi dla innych podmiotów. Wymagana weryfikacja przepisów ogólnych JPK_V7.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak tekstu artykułów",
+        "quote": "Tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "obowiazki-podatnika",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-wejscie-od-kwietnia",
+    "question_intent": "Jaki jest termin obowiązkowego wejścia do KSEF od 1 kwietnia",
+    "question_patterns": [
+      "Jeśli firma wchodzi dopiero do KSEF od 1 kwietnia",
+      "Od kiedy obowiązek wysyłania w KSEF",
+      "Czy trzeba wcześniej czy dopiero od 1 kwietnia"
+    ],
+    "answer": "Nie można odpowiedzieć na to pytanie, gdyż dostarczone informacje nie zawierają tekstu artykułów regulujących terminy wejścia w system KSEF. Brakuje konkretnych przepisów dotyczących dat obowiązkowego przejścia.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak tekstu artykułów",
+        "quote": "Tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "termin-obowiazku",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-ewidencja-samochodow",
+    "question_intent": "Czy samochód wprowadzony do ewidencji wymaga wysłania danych tylko za rok lub natychmiast",
+    "question_patterns": [
+      "Czy jak mam tylko 1 samochód to dopiero za rok wysłę ewidencję",
+      "Kiedy wysyłać ewidencję środków trwałych",
+      "Czy muszę coś w tym roku nanosić do ewidencji śr.trwałych"
+    ],
+    "answer": "Nie można odpowiedzieć na to pytanie na podstawie dostarczonego tekstu. Regulacja JPK_V7 nie zawiera przepisów w dostarczonej części dotyczących ewidencji środków trwałych ani harmonogramu przesyłania danych o samochodach.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak tekstu artykułów",
+        "quote": "Tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "srodki-trwale",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-vat-czynny-wysylka",
+    "question_intent": "Czy podatnik VAT czynny wysyła dane JPK_V7 tylko za rok czy na bieżąco",
+    "question_patterns": [
+      "Jeśli jesteś czynnym to tak dopiero wysyłka za rok",
+      "Kiedy wysyłać JPK_V7 gdy jestem czynnym VAT",
+      "Czy wysyłka danych VAT tylko raz w roku"
+    ],
+    "answer": "Nie można odpowiedzieć na to pytanie, ponieważ dostarczone materiały nie zawierają tekstu artykułów określających harmonogram wysyłania JPK_V7 dla podatników VAT czynnych.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak tekstu artykułów",
+        "quote": "Tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "vat_czynny"
+    ],
+    "topic": "harmonogram-wysylki",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-jpk-kh-pd",
+    "question_intent": "Jak podchodzić do JPK-KH i JPK-PD w kontekście JPK_V7",
+    "question_patterns": [
+      "Jak podchodzicie do JPK-KH i PD",
+      "Jaki jest związek między JPK_V7 a JPK-KH",
+      "Czy JPK-KH i PD są częścią JPK_V7"
+    ],
+    "answer": "Nie można odpowiedzieć na to pytanie. Dostarczone materiały nie zawierają informacji o relacji między JPK_V7 a JPK-KH lub JPK-PD, ani nie wyjaśniają powiązań między tymi systemami.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak tekstu artykułów",
+        "quote": "Tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "integracja-systemow",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-co-zrobic-teraz",
+    "question_intent": "Jakie działania powinien podjąć podatnik w związku z JPK_V7",
+    "question_patterns": [
+      "Co mam teraz zrobić",
+      "Jakie są kolejne kroki",
+      "Co powinienem zrobić teraz z JPK_V7"
+    ],
+    "answer": "Nie można udzielić konkretnych wskazówek bez tekstu artykułów. Należy zapoznać się z pełnym tekstem Rozporządzenia JPK_V7, aby zrozumieć obowiązki danego podatnika, terminy przesyłania danych i wymagane dokumenty.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak tekstu artykułów",
+        "quote": "Tekst artykułów nie został dostarczony"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg",
+      "ryczalt",
+      "vat_czynny"
+    ],
+    "topic": "plan-dzialania",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jpk_v7-podglad-pliku",
+    "question_intent": "Czy istnieje możliwość podglądu pliku JPK_VAT przed wysłaniem?",
+    "question_patterns": [
+      "Jak podejrzeć plik JPK_VAT?",
+      "Czy mogę zobaczyć zawartość pliku JPK_VAT?",
+      "Gdzie mogę znaleźć podgląd JPK_VAT?",
+      "Co zawiera plik JPK_VAT?"
+    ],
+    "answer": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ nie zawiera on informacji dotyczących procedury podglądu pliku JPK_VAT. Funkcjonalność podglądu powinna być opisana w instrukcji systemu teleinformatycznego lub dokumentacji technicznej JPK_VAT, nie w samym rozporządzeniu.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak informacji w tekście",
+        "quote": "tekst artykułów nie dotyczy procedury podglądu pliku"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "ryczalt",
+      "vat_czynny",
+      "vat_zwolniony"
+    ],
+    "topic": "procedury-technicznego-jpk",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-jkp-v7-zle-dlougi-korekta",
+    "question_intent": "Czy gdy kontrahent skorzystał z ulgi na złe długi, należy skorygować faktury w JPK i zwrócić VAT z odsetkami?",
+    "question_patterns": [
+      "Ulga na złe długi - czy muszę skorygować VAT w JPK?",
+      "Kontrahent wziął ulgę na nieściągalne długi - co robić z VAT-em?",
+      "Jak raportować w JPK gdy jest ulga na złe długi?",
+      "Czy trzeba oddać VAT z odsetkami jeśli kontrahent ma ulgę na długi?"
+    ],
+    "answer": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfikacji w pełnym tekście ustawy o podatku od towarów i usług (VAT) oraz wytycznych skarbowych.",
+    "legal_basis": [
+      {
+        "law": "Rozporządzenie JPK_V7",
+        "article": "brak bezpośredniego odniesienia",
+        "quote": "Dostarczone fragmenty artykułów nie zawierają regulacji dotyczących ulgi na złe długi"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna",
+      "vat_czynny"
+    ],
+    "topic": "korekcja_VAT_utrata_kontroli",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  }
+]

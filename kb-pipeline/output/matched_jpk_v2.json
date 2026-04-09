@@ -1,0 +1,1635 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 20:32:26",
+    "total_questions": 100,
+    "completed_batches_count": 5,
+    "total_batches": 5,
+    "completed_batches": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "matched": 74,
+    "unmatched": 26,
+    "total_cost_usd": 0.0166
+  },
+  "batch_results": {
+    "0": [
+      {
+        "question": "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+        "matched_articles": [
+          "§ 10",
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 dotyczy oznaczeń i pól technicznych w części deklaracyjnej, § 10 określa ewidencję sprzedaży z danymi identyfikacyjnymi faktur"
+      },
+      {
+        "question": "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne wymagane w JPK, § 10 dotyczy ewidencji sprzedaży"
+      },
+      {
+        "question": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "matched_articles": [
+          "§ 10",
+          "§ 5"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 określa ewidencję sprzedaży i dane identyfikacyjne dokumentów, § 5 dotyczy oznaczeń technicznych"
+      },
+      {
+        "question": "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne, § 10 dotyczy ewidencji sprzedaży"
+      },
+      {
+        "question": "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń w JPK_V7"
+      },
+      {
+        "question": "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
+        "matched_articles": [
+          "§ 10",
+          "§ 4"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 dotyczy ewidencji sprzedaży z danymi faktury, § 4 określa część deklaracyjną"
+      },
+      {
+        "question": "Dopiero od lutego wprowadzam kody kraju przed NIP, korygowalibyście JPK za styczeń w tym przypadku?",
+        "matched_articles": [
+          "§ 12",
+          "§ 5"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 dotyczy korekt pliku JPK_V7, § 5 określa pola techniczne w tym kody krajów"
+      },
+      {
+        "question": "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?",
+        "matched_articles": [
+          "§ 5",
+          "§ 11"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne w tym kody krajów, § 11 dotyczy ewidencji zakupu"
+      },
+      {
+        "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "matched_articles": [
+          "§ 10",
+          "§ 4"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 określa dane ewidencji sprzedaży w tym daty, § 4 dotyczy części deklaracyjnej"
+      },
+      {
+        "question": "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 określa dane ewidencji sprzedaży, § 11 określa dane ewidencji zakupu"
+      },
+      {
+        "question": "Jakie znowu DI?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne w JPK_V7 w tym oznaczenie DI"
+      },
+      {
+        "question": "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia techniczne w tym znacznik BFK, § 10 dotyczy ewidencji sprzedaży"
+      },
+      {
+        "question": "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne w tym kody krajów dla kontrahentów"
+      },
+      {
+        "question": "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń krajów w kodach NIP"
+      },
+      {
+        "question": "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa pola techniczne wymagane w strukturze JPK"
+      },
+      {
+        "question": "Czy jako osobny dokument na kontrahenta?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 określa ewidencję sprzedaży, § 11 określa ewidencję zakupu z danymi kontrahentów"
+      },
+      {
+        "question": "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa oznaczenia i pola techniczne w JPK_V7",
+        "uncertain": true
+      },
+      {
+        "question": "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 określa zasady korekt pliku JPK_V7 za okres, którego dotyczą korekty"
+      },
+      {
+        "question": "Deklaracje itp do nich?",
+        "matched_articles": [
+          "§ 4",
+          "§ 5"
+        ],
+        "primary_article": "§ 4",
+        "reasoning": "§ 4 określa część deklaracyjną JPK_V7 zawierającą dane do rozliczenia"
+      },
+      {
+        "question": "Czy muszę dokonywać korekty deklaracji i JPK?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 określa zasady korekt pliku JPK_V7 i wymogi techniczne dotyczące korekt"
+      }
+    ],
+    "1": [
+      {
+        "question": "Czy na dokumencie wewnetrznym firmy mozna wpisywac zbiorczo dochod z całego dnia, żeby jednym wpisem umieścić w kpir?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy KPIR (księgi przychodów i rozchodów), a nie JPK_V7. Indeks nie zawiera artykułów regulujących zasady ewidencji w KPIR."
+      },
+      {
+        "question": "To są faktury typu opłaty drogowe albo parking?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy klasyfikacji faktur, ale indeks nie zawiera artykułów opisujących typy faktur lub kategorie opłat."
+      },
+      {
+        "question": "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy ewidencji sprzedaży i zakupu w JPK_V7 - artykuły opisują dane zawarte w ewidencji sprzedaży i zakupu."
+      },
+      {
+        "question": "Z jakim oznaczeniem należy wykazać te faktury w JPK i czy w ogóle należy nadać im jakieś oznaczenie?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie dotyczy oznaczeń i pól technicznych w JPK_V7, które są szczegółowo regulowane w § 5."
+      },
+      {
+        "question": "Kaucje w JPK?????",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy sposobu wykazania kaucji w ewidencji sprzedaży i zakupu JPK_V7.",
+        "uncertain": true
+      },
+      {
+        "question": "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Pytanie dotyczy ewidencji zakupu (rachunków od dostawców) w JPK_V7."
+      },
+      {
+        "question": "Czy trzeba robić korektę?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Pytanie bezpośrednio dotyczy korekt w JPK_V7, które są regulowane w § 12."
+      },
+      {
+        "question": "Czy robię korektę JPK za grudzień?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Pytanie dotyczy procedury korekty pliku JPK_V7 za określony okres - § 12 reguluje zasady korekt."
+      },
+      {
+        "question": "Korzystaliscie z nowego wzoru JPK V7M wersja 3 czy dalej starego wersja 2?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy wersji wzoru JPK_V7, ale indeks nie zawiera artykułów opisujących różne wersje lub numery wersji dokumentu."
+      },
+      {
+        "question": "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Pytanie dotyczy ewidencji zakupu (najmu) w JPK_V7, który powinien zawierać dane pozwalające ustalić wysokość VAT do odliczenia."
+      },
+      {
+        "question": "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy dokumentów źródłowych ewidencji sprzedaży i zakupu w JPK_V7."
+      },
+      {
+        "question": "Możecie zerknąć czy dobrze robię?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie jest pytaniem ogólnym bez konkretnego zakresu regulacyjnego - nie można wskazać pasujących artykułów."
+      },
+      {
+        "question": "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie dotyczy pól technicznych i oznaczeń w JPK_V7, które są regulowane w § 5.",
+        "uncertain": true
+      },
+      {
+        "question": "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy struktury danych w ewidencji sprzedaży i zakupu w JPK_V7, umożliwiającej identyfikację kontrahentów.",
+        "uncertain": true
+      },
+      {
+        "question": "Czy JPK należy wysłać tylko za Grudzień z częścią ewidencyjna i deklaracyjna?",
+        "matched_articles": [
+          "§ 4",
+          "§ 10"
+        ],
+        "primary_article": "§ 4",
+        "reasoning": "Pytanie dotyczy zawartości i okresu rozliczeniowego część deklaracyjnej i ewidencyjnej JPK_V7."
+      },
+      {
+        "question": "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Pytanie dotyczy ewidencji zakupu i okresu wykazania VAT do odliczenia w JPK_V7.",
+        "uncertain": true
+      },
+      {
+        "question": "Czy US może odmówić zwrotu?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy procedury zwrotu VAT przez urząd skarbowy, a nie struktury JPK_V7. Indeks nie zawiera artykułów o procedurach zwrotu VAT."
+      },
+      {
+        "question": "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy ewidencji sprzedaży (faktur) w JPK_V7."
+      },
+      {
+        "question": "Chodzi o opis w księgach w JPK?",
+        "matched_articles": [
+          "§ 2",
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy danych ewidencji sprzedaży i zakupu w JPK_V7, zawierających opisy transakcji.",
+        "uncertain": true
+      },
+      {
+        "question": "Czy w przypadku sprzedaży węgla kiedy na fakturze musi być numer pesel oraz numer i seria dowodu osoby fizycznej, żeby było zwolnienie z akcyzy to czy w JPK trzeba wpisywać ten numer pesel osoby fizycznej?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy danych osobowych kupującego w ewidencji sprzedaży JPK_V7."
+      }
+    ],
+    "2": [
+      {
+        "question": "Skoro nie przesyłali sprawozdań, to nie wiem jak u nich w zakresie składania JPK i zapłaty podatku. Czy widzicie tu jakieś zagrożenia? Jakaś odpowiedzialność solidarna?",
+        "matched_articles": [
+          "§ 2",
+          "§ 4"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie dotyczy ogólnych wymogów składania JPK i zakresu danych - odpowiada na definicję i cel rozporządzenia",
+        "uncertain": true
+      },
+      {
+        "question": "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie o oznaczenia i znaczniki w JPK dotyczy części technicznej - § 5 opisuje oznaczenia i pola techniczne",
+        "uncertain": true
+      },
+      {
+        "question": "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie o znaczniki i wymogi techniczne przy wysyłce - bezpośrednio dotyczy § 5 zawierającego oznaczenia i pola techniczne"
+      },
+      {
+        "question": "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie ogólne o zasadzie stosowania rozporządzenia - § 2 definiuje przepisy ogólne",
+        "uncertain": true
+      },
+      {
+        "question": "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie o zasadzie stosowania wymogów - § 2 zawiera przepisy ogólne rozporządzenia",
+        "uncertain": true
+      },
+      {
+        "question": "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie o terminie wdrożenia - § 2 definiuje przepisy ogólne dotyczące zakresu stosowania",
+        "uncertain": true
+      },
+      {
+        "question": "A skąd wiecie jak te znaczniki i jakie dodawać?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie o znacznikach w JPK - § 5 opisuje oznaczenia i pola techniczne wymagane w deklaracji"
+      },
+      {
+        "question": "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie o zasadzie okresowej składania ewidencji - § 2 zawiera przepisy ogólne rozporządzenia",
+        "uncertain": true
+      },
+      {
+        "question": "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie o terminie wysyłki - § 2 definiuje przepisy ogólne stosowania rozporządzenia",
+        "uncertain": true
+      },
+      {
+        "question": "Jak prawidłowo robicie księgowania i jakie znaczniki kont?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie o znacznikach w JPK - § 5 opisuje oznaczenia i pola techniczne"
+      },
+      {
+        "question": "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Pytanie o korektach i zaległych plikach JPK - § 12 opisuje korekty pliku JPK_V7 za okresy minionego"
+      },
+      {
+        "question": "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Pytanie o ewidencji zakupu - § 11 zawiera dane pozwalające ustalić wysoki VAT od zakupów"
+      },
+      {
+        "question": "Jak podchodzicie do JPK-KH i PD?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie o innych typach JPK - § 2 definiuje przepisy ogólne rozporządzenia",
+        "uncertain": true
+      },
+      {
+        "question": "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Pytanie o dokumentowaniu i ewidencji zakupów - § 11 zawiera wymogi ewidencji zakupu"
+      },
+      {
+        "question": "Czy powinna pokazywać się w JPK?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie o wykazaniu danych w JPK - § 10 i § 11 definiują dane w ewidencji sprzedaży i zakupu",
+        "uncertain": true
+      },
+      {
+        "question": "Co mam teraz zrobić?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie ogólne bez konkretnego zakresu - § 2 zawiera przepisy ogólne",
+        "uncertain": true
+      },
+      {
+        "question": "Czy premie macie brak korekt?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Pytanie o korektach pliku JPK - § 12 opisuje korekty i wymogi techniczne"
+      },
+      {
+        "question": "Czy ktoś też ma problem z wysyłką JPK w rewizor nexo?",
+        "matched_articles": [
+          "§ 4",
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie o problemy techniczne wysyłki - § 5 opisuje wymogi techniczne JPK_V7",
+        "uncertain": true
+      },
+      {
+        "question": "Czy ktoś też ma problemy z potwierdzeniem?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Pytanie o potwierdzeniu technicznym - § 5 zawiera pola techniczne wymagane w deklaracji",
+        "uncertain": true
+      },
+      {
+        "question": "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Pytanie o wysłanym pliku i możliwości korekty - § 12 opisuje korekty pliku JPK_V7"
+      }
+    ],
+    "3": [
+      {
+        "question": "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Ewidencja zakupu w JPK_V7 zawiera dane pozwalające ustalić wysokość VAT podlegającego odliczeniu, w tym zwroty VAT od zakupów"
+      },
+      {
+        "question": "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Ewidencja zakupu zawiera dane dotyczące VAT z zakupów, w tym środków trwałych i korekt odliczeń"
+      },
+      {
+        "question": "Jakie szkolenia online polecanie z zakresu JPK CIT?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy szkoleń, które nie są przedmiotem Rozporządzenia JPK_V7"
+      },
+      {
+        "question": "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Zarówno ewidencja sprzedaży jak i zakupu zawierają dane o fakturach i VAT wymagane do wykazania w JPK_V7"
+      },
+      {
+        "question": "Jeśli VAT należny to jak wykazać w JPK, czy trzeba wskazać jak?",
+        "matched_articles": [
+          "§ 10",
+          "§ 4"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera dane pozwalające ustalić wysokość VAT należnego, część deklaracyjna zawiera jego podsumowanie"
+      },
+      {
+        "question": "Może warto rozważyć w tej sytuacji zaliczki płacone w sposób uproszczony?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy strategii podatkowej, a nie zakresu danych w JPK_V7"
+      },
+      {
+        "question": "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Ewidencja zakupu w JPK_V7 zawiera dane pozwalające ustalić wysokość VAT z zakupów międzynarodowych"
+      },
+      {
+        "question": "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Ewidencja zakupu zawiera dane dotyczące zakupów; rozbieżności powinny być wykazane zgodnie z dokumentacją faktury"
+      },
+      {
+        "question": "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Korekty pliku JPK_V7 składa się za okres, którego dotyczą korygowan. Sekcja ta bezpośrednio dotyczy wykazywania korekt"
+      },
+      {
+        "question": "Od kiedy wysyłka JPK CIT?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_CIT, a nie JPK_V7. Rozporządzenie dotyczy JPK_V7 (VAT)"
+      },
+      {
+        "question": "A zajrzałaś/eś kiedykolwiek na podgląd pliku JPK_VAT?",
+        "matched_articles": [
+          "§ 2",
+          "§ 4",
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie ogólne o strukturę JPK_V7; § 2 określa szczegółowy zakres danych w deklaracji"
+      },
+      {
+        "question": "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?",
+        "matched_articles": [
+          "§ 11"
+        ],
+        "primary_article": "§ 11",
+        "reasoning": "Ewidencja zakupu zawiera dane o zakupach; kwestia czy mogą być to zakupy osoby prywatnej wykracza poza zakres rozporządzenia"
+      },
+      {
+        "question": "Czy zaznaczać kod JPK FP?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "Część deklaracyjna zawiera oznaczenia i pola techniczne wymagane do wykazania, w tym kody"
+      },
+      {
+        "question": "Jak skorygować JPK, wprowadzony zły kontrahent?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Korekty pliku JPK_V7 dotyczą zmian danych, w tym danych dotyczących kontrahentów"
+      },
+      {
+        "question": "Czy ktoś już testował w środowisku testowym JPK KR Pd i mógłby się wypowiedzieć jak to zrobić?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_KR, a nie JPK_V7; poza zakresem Rozporządzenia JPK_V7"
+      },
+      {
+        "question": "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży i zakupu zawierają dane o transakcjach międzynarodowych; pytanie dotyczy wykazania usług wewnątrzwspólnotowych"
+      },
+      {
+        "question": "Raport fiskalny - jaki powinien być kontrahent?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy raportu fiskalnego, które wykracza poza zakres JPK_V7"
+      },
+      {
+        "question": "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży i zakupu zawierają dane dotyczące identyfikacji kontrahentów"
+      },
+      {
+        "question": "Dostaje raport związany z prowizją za sprzedaż ubezpieczeń od kontrahenta z Francji. Czy powinno się to pojawić w JPK? Czy wlicza się do proporcji?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Ewidencja sprzedaży zawiera dane o przychodach ze sprzedaży usług, w tym prowizji; kwestia proporcji VAT wykracza poza zakres rozporządzenia"
+      },
+      {
+        "question": "JPK CIT-Obowiązek utworzenia kont analitycznych dla rozrachunków z kontrahentami. Co to znaczy? Teraz takich jednorazowych kontrahentów wprowadzam na konto ktore jest tak skonstruowane żeby nie zapisywać na stałe? Czy tak nie może być???",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_CIT i struktury kont księgowych, nie JPK_V7"
+      }
+    ],
+    "4": [
+      {
+        "question": "Możecie napisać jak planujecie księgować delegacje żeby MF było zadowolone z JPK_KR_PD?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_KR_PD i księgowania delegacji - artykuły w indeksie dotyczą tylko JPK_V7 (ewidencja sprzedaży, zakupu, części deklaracyjnej). JPK_KR nie jest opisany w dostarczonrm indeksie."
+      },
+      {
+        "question": "Prośba o pomoc-my wyświadczyliśmy usługę dla kontrahenta UE - w której pozycji JPK powinno się to znaleźć?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Usługa dla kontrahenta UE to transakcja sprzedaży podlegająca ewidencji w JPK_V7 - § 10 opisuje ewidencję sprzedaży zawierającą dane pozwalające na identyfikację transakcji."
+      },
+      {
+        "question": "Mam dalej wątpliwości czy przed krajowym Nip kontrahenta należy wpisywać PL?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Pytanie dotyczy formatu danych kontrahenta w ewidencji sprzedaży i zakupu - § 10 i § 11 zawierają dane identyfikacyjne kontrahentów w JPK_V7."
+      },
+      {
+        "question": "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?",
+        "matched_articles": [
+          "§ 12"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Zmiana danych na wystawionej fakturze wymaga korekty - § 12 opisuje korekty pliku JPK_V7 i procedury ich składania."
+      },
+      {
+        "question": "Przy likwidacji działalności (VAT-Z) i remanencie likwidacyjnym VAT: czy spis z natury trzeba gdzieś składać do US?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy VAT-Z i procedur likwidacyjnych - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+      },
+      {
+        "question": "JPK_KR jak podmioty powiązane wykazujecie powiązania kapitałowe i osobowe?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_KR i powiązań między podmiotami - artykuły w indeksie dotyczą tylko JPK_V7 i nie zawierają informacji o wykazywaniu powiązań."
+      },
+      {
+        "question": "Czy ma ktoś może rozpiskę znaczników kont do planu kont które trzeba przypisać prawidłowo?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy znaczników kont i planu kont - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+      },
+      {
+        "question": "Czy w nowym roku dla raportowania nowego JPK Kr Pd można księgować?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_KR_PD i przepisów przejściowych - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_KR_PD."
+      },
+      {
+        "question": "Czy na potrzeby nowego JPK kr pd trzeba utworzyć analitykę do konta rozrachunki z pracownikami z tytułu wynagrodzeń?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_KR_PD i struktury kont - artykuły w indeksie dotyczą JPK_V7 i ewidencji VAT, nie analityki kont."
+      },
+      {
+        "question": "Czy analityka konta 201/202-akronim musi być IDENTYCZNA jak Kod kontrahenta?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy analityki kont i kodów kontrahentów - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+      },
+      {
+        "question": "Interesuje mnie osoba z praktycznym doświadczeniem w zakresie CIT, JPK_KR oraz modeli współpracy z kierowcami / podwykonawcami?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy poszukiwania eksperta - nie jest pytaniem o przepisy Rozporządzenia JPK_V7."
+      },
+      {
+        "question": "Czy muszą być rozdzieleni osobno dostawcy i odbiorcy na dwa różne konta?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy struktury planu kont i segregacji kontrahentów - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+      },
+      {
+        "question": "Czy od stycznia na pełnych księgach używać będziecie jednego konta np 247 - pozostałe rozrachunki z instytucjami?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy struktury kont w planie kont - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+      },
+      {
+        "question": "Dot JPK-CIT Czy od stycznia na pełnych księgach używać będziecie jednego konta np 247 - pozostałe rozrachunki z instytucjami?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_CIT i struktury kont - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_CIT."
+      },
+      {
+        "question": "Na jakich kontach ksiegujecie?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie jest zbyt ogólne i dotyczy praktyki księgowania - nie jest zawarte w artykułach Rozporządzenia JPK_V7."
+      },
+      {
+        "question": "Czy zaliczkę otrzymaną na poczet świadczenia usług budowlanych na rzeczy kontrahenta z Niemiec (budynek położony w Niemczech), wykazujemy w JPK w dacie otrzymania zaliczki?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "Zaliczka z zagranicą to transakcja sprzedaży podlegająca ewidencji - § 10 opisuje ewidencję sprzedaży zawierającą dane identyfikujące transakcje."
+      },
+      {
+        "question": "JPK Cit Konta 201, 202 bez analityki z podzialem na kontrahenta To samo z kontem 230 z podzialem na pracowników Da rade czy trzeba zmieniac?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_CIT i struktury kont - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_CIT ani analityce kont."
+      },
+      {
+        "question": "Chciałam zapytać czy firmie, która prowadzi już kilka lat działalność mogę zmienić plan kont w związku z wejściem jpk_kr w nowym okresie obrachunkowym?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy zmian w planie kont i JPK_KR - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_KR ani zmianach w planie kont."
+      },
+      {
+        "question": "JPK-CIT W związku z koniecznością raportowania i nadawania znaczników co robicie z kontem rozrachunkowym zbiorczym, gdzie wpływają pieniądze np z PayU?",
+        "matched_articles": [],
+        "primary_article": null,
+        "reasoning": "Pytanie dotyczy JPK_CIT, znaczników kont i kont zbiorczych - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_CIT."
+      },
+      {
+        "question": "Jeśli kontrahent wykorzystał ulgę na złe długi to musi Pani skorygować fry kosztowe w JPK z terminem płatności faktur i oddać VAT z odsetkami?",
+        "matched_articles": [
+          "§ 12",
+          "§ 11"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "Korekta dotycząca złych długów wymaga korekty w JPK_V7 - § 12 opisuje korekty pliku, § 11 opisuje ewidencję zakupu zawierającą dane o zakupach wymagające korekty."
+      }
+    ]
+  },
+  "matches": [
+    {
+      "question": "Czy w JPK za luty faktury wystawione w stycznia też muszą mieć znaczniki BFK lub DI?",
+      "matched_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 dotyczy oznaczeń i pól technicznych w części deklaracyjnej, § 10 określa ewidencję sprzedaży z danymi identyfikacyjnymi faktur"
+    },
+    {
+      "question": "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne wymagane w JPK, § 10 dotyczy ewidencji sprzedaży"
+    },
+    {
+      "question": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+      "matched_articles": [
+        "§ 10",
+        "§ 5"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 określa ewidencję sprzedaży i dane identyfikacyjne dokumentów, § 5 dotyczy oznaczeń technicznych"
+    },
+    {
+      "question": "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne, § 10 dotyczy ewidencji sprzedaży"
+    },
+    {
+      "question": "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń w JPK_V7"
+    },
+    {
+      "question": "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
+      "matched_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 dotyczy ewidencji sprzedaży z danymi faktury, § 4 określa część deklaracyjną"
+    },
+    {
+      "question": "Dopiero od lutego wprowadzam kody kraju przed NIP, korygowalibyście JPK za styczeń w tym przypadku?",
+      "matched_articles": [
+        "§ 12",
+        "§ 5"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 dotyczy korekt pliku JPK_V7, § 5 określa pola techniczne w tym kody krajów"
+    },
+    {
+      "question": "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?",
+      "matched_articles": [
+        "§ 5",
+        "§ 11"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne w tym kody krajów, § 11 dotyczy ewidencji zakupu"
+    },
+    {
+      "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+      "matched_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 określa dane ewidencji sprzedaży w tym daty, § 4 dotyczy części deklaracyjnej"
+    },
+    {
+      "question": "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 określa dane ewidencji sprzedaży, § 11 określa dane ewidencji zakupu"
+    },
+    {
+      "question": "Jakie znowu DI?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne w JPK_V7 w tym oznaczenie DI"
+    },
+    {
+      "question": "Podpowiedzcie mi proszę czy jak są wystawione imienne faktury na osoby fizyczne (do paragonów) to do JPK muszę wstawiać ten znacznik BFK?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia techniczne w tym znacznik BFK, § 10 dotyczy ewidencji sprzedaży"
+    },
+    {
+      "question": "Czy przy pełnej księgowości Księga Handlowa w JPK_VAT7 trzeba wpisywać PL w kodzie kraju w karcie kontrahenta?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne w tym kody krajów dla kontrahentów"
+    },
+    {
+      "question": "Czy od lutego 2026 r. każdy kontrahent polski w JPK ma mieć przedrostek PL? Czy to jakieś nieprawdziwe info?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń krajów w kodach NIP"
+    },
+    {
+      "question": "Wszystkim. Czy ktoś może już się zastanawiał nad prawidłowym ujęciem kontrahentów w nowej strukturze JPK księgi handlowe?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa pola techniczne wymagane w strukturze JPK"
+    },
+    {
+      "question": "Czy jako osobny dokument na kontrahenta?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 określa ewidencję sprzedaży, § 11 określa ewidencję zakupu z danymi kontrahentów"
+    },
+    {
+      "question": "Poszukuję szkolenia odnośnie znaczników kont, JPK CIT oraz JPK ŚT. Macie coś do polecenia?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa oznaczenia i pola techniczne w JPK_V7",
+      "uncertain": true
+    },
+    {
+      "question": "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 określa zasady korekt pliku JPK_V7 za okres, którego dotyczą korekty"
+    },
+    {
+      "question": "Deklaracje itp do nich?",
+      "matched_articles": [
+        "§ 4",
+        "§ 5"
+      ],
+      "primary_article": "§ 4",
+      "reasoning": "§ 4 określa część deklaracyjną JPK_V7 zawierającą dane do rozliczenia"
+    },
+    {
+      "question": "Czy muszę dokonywać korekty deklaracji i JPK?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 określa zasady korekt pliku JPK_V7 i wymogi techniczne dotyczące korekt"
+    },
+    {
+      "question": "Czy na dokumencie wewnetrznym firmy mozna wpisywac zbiorczo dochod z całego dnia, żeby jednym wpisem umieścić w kpir?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy KPIR (księgi przychodów i rozchodów), a nie JPK_V7. Indeks nie zawiera artykułów regulujących zasady ewidencji w KPIR."
+    },
+    {
+      "question": "To są faktury typu opłaty drogowe albo parking?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy klasyfikacji faktur, ale indeks nie zawiera artykułów opisujących typy faktur lub kategorie opłat."
+    },
+    {
+      "question": "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy ewidencji sprzedaży i zakupu w JPK_V7 - artykuły opisują dane zawarte w ewidencji sprzedaży i zakupu."
+    },
+    {
+      "question": "Z jakim oznaczeniem należy wykazać te faktury w JPK i czy w ogóle należy nadać im jakieś oznaczenie?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie dotyczy oznaczeń i pól technicznych w JPK_V7, które są szczegółowo regulowane w § 5."
+    },
+    {
+      "question": "Kaucje w JPK?????",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy sposobu wykazania kaucji w ewidencji sprzedaży i zakupu JPK_V7.",
+      "uncertain": true
+    },
+    {
+      "question": "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Pytanie dotyczy ewidencji zakupu (rachunków od dostawców) w JPK_V7."
+    },
+    {
+      "question": "Czy trzeba robić korektę?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Pytanie bezpośrednio dotyczy korekt w JPK_V7, które są regulowane w § 12."
+    },
+    {
+      "question": "Czy robię korektę JPK za grudzień?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Pytanie dotyczy procedury korekty pliku JPK_V7 za określony okres - § 12 reguluje zasady korekt."
+    },
+    {
+      "question": "Korzystaliscie z nowego wzoru JPK V7M wersja 3 czy dalej starego wersja 2?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy wersji wzoru JPK_V7, ale indeks nie zawiera artykułów opisujących różne wersje lub numery wersji dokumentu."
+    },
+    {
+      "question": "Czy nie księgowanie do JPK najmu prywatnego to duży błąd, jeśli to i jest tylko formalnosc, bo VAT jest na zw?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Pytanie dotyczy ewidencji zakupu (najmu) w JPK_V7, który powinien zawierać dane pozwalające ustalić wysokość VAT do odliczenia."
+    },
+    {
+      "question": "Czy ksiegujecie do JPK na podstawie innego dokumentu niż rachunek?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy dokumentów źródłowych ewidencji sprzedaży i zakupu w JPK_V7."
+    },
+    {
+      "question": "Możecie zerknąć czy dobrze robię?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie jest pytaniem ogólnym bez konkretnego zakresu regulacyjnego - nie można wskazać pasujących artykułów."
+    },
+    {
+      "question": "Jest możliwość dodania dwóch znaczników na jednym koncie?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie dotyczy pól technicznych i oznaczeń w JPK_V7, które są regulowane w § 5.",
+      "uncertain": true
+    },
+    {
+      "question": "Czy jednak należy zrobić analitykę , np rozrachunki z PZU , rozrachunki z Inspektoratem Sanitarnym, Rozrachunki z Urzędem Miasta itp?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy struktury danych w ewidencji sprzedaży i zakupu w JPK_V7, umożliwiającej identyfikację kontrahentów.",
+      "uncertain": true
+    },
+    {
+      "question": "Czy JPK należy wysłać tylko za Grudzień z częścią ewidencyjna i deklaracyjna?",
+      "matched_articles": [
+        "§ 4",
+        "§ 10"
+      ],
+      "primary_article": "§ 4",
+      "reasoning": "Pytanie dotyczy zawartości i okresu rozliczeniowego część deklaracyjnej i ewidencyjnej JPK_V7."
+    },
+    {
+      "question": "Czy można to odliczyć w lutym składając JPK mimo zawieszenia?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Pytanie dotyczy ewidencji zakupu i okresu wykazania VAT do odliczenia w JPK_V7.",
+      "uncertain": true
+    },
+    {
+      "question": "Czy US może odmówić zwrotu?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy procedury zwrotu VAT przez urząd skarbowy, a nie struktury JPK_V7. Indeks nie zawiera artykułów o procedurach zwrotu VAT."
+    },
+    {
+      "question": "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy ewidencji sprzedaży (faktur) w JPK_V7."
+    },
+    {
+      "question": "Chodzi o opis w księgach w JPK?",
+      "matched_articles": [
+        "§ 2",
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy danych ewidencji sprzedaży i zakupu w JPK_V7, zawierających opisy transakcji.",
+      "uncertain": true
+    },
+    {
+      "question": "Czy w przypadku sprzedaży węgla kiedy na fakturze musi być numer pesel oraz numer i seria dowodu osoby fizycznej, żeby było zwolnienie z akcyzy to czy w JPK trzeba wpisywać ten numer pesel osoby fizycznej?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy danych osobowych kupującego w ewidencji sprzedaży JPK_V7."
+    },
+    {
+      "question": "Skoro nie przesyłali sprawozdań, to nie wiem jak u nich w zakresie składania JPK i zapłaty podatku. Czy widzicie tu jakieś zagrożenia? Jakaś odpowiedzialność solidarna?",
+      "matched_articles": [
+        "§ 2",
+        "§ 4"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie dotyczy ogólnych wymogów składania JPK i zakresu danych - odpowiada na definicję i cel rozporządzenia",
+      "uncertain": true
+    },
+    {
+      "question": "Paragon fiskalny za autostradę jakie oznaczenie w JPK od lutego DI?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie o oznaczenia i znaczniki w JPK dotyczy części technicznej - § 5 opisuje oznaczenia i pola techniczne",
+      "uncertain": true
+    },
+    {
+      "question": "Czy wysyłając VAT za luty muszę mieć wszystkie znaczniki faktur uzupełnione zgodnie z wytycznymi bo inaczej odrzuci mi JPK VAT przy wysyłce do US?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie o znaczniki i wymogi techniczne przy wysyłce - bezpośrednio dotyczy § 5 zawierającego oznaczenia i pola techniczne"
+    },
+    {
+      "question": "Jako biuro lub samodzielna ksiegowa Czy o wewnątrz firmy mowa?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie ogólne o zasadzie stosowania rozporządzenia - § 2 definiuje przepisy ogólne",
+      "uncertain": true
+    },
+    {
+      "question": "Jeśli firma wchodzi dopiero do ksefu od 1 kwietnia?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie o zasadzie stosowania wymogów - § 2 zawiera przepisy ogólne rozporządzenia",
+      "uncertain": true
+    },
+    {
+      "question": "Czy trzeba wcześniej czy dopiero od 1 kwietnia?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie o terminie wdrożenia - § 2 definiuje przepisy ogólne dotyczące zakresu stosowania",
+      "uncertain": true
+    },
+    {
+      "question": "A skąd wiecie jak te znaczniki i jakie dodawać?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie o znacznikach w JPK - § 5 opisuje oznaczenia i pola techniczne wymagane w deklaracji"
+    },
+    {
+      "question": "Czy jak mam tylko 1 samochód i jest dobrze wprowadzona to dopiero za rok mam wysłać ewidencję czy muszę coś w tym roku nanosić do ewidencji śr.trwałych?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie o zasadzie okresowej składania ewidencji - § 2 zawiera przepisy ogólne rozporządzenia",
+      "uncertain": true
+    },
+    {
+      "question": "Jeśli jesteś czynnym to tak dopiero wysyłka za rok?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie o terminie wysyłki - § 2 definiuje przepisy ogólne stosowania rozporządzenia",
+      "uncertain": true
+    },
+    {
+      "question": "Jak prawidłowo robicie księgowania i jakie znaczniki kont?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie o znacznikach w JPK - § 5 opisuje oznaczenia i pola techniczne"
+    },
+    {
+      "question": "Czy muszę również złożyć zaległe JPK ewidencyjne za październik i listopad?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Pytanie o korektach i zaległych plikach JPK - § 12 opisuje korekty pliku JPK_V7 za okresy minionego"
+    },
+    {
+      "question": "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Pytanie o ewidencji zakupu - § 11 zawiera dane pozwalające ustalić wysoki VAT od zakupów"
+    },
+    {
+      "question": "Jak podchodzicie do JPK-KH i PD?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie o innych typach JPK - § 2 definiuje przepisy ogólne rozporządzenia",
+      "uncertain": true
+    },
+    {
+      "question": "Czy na podstawie przeslanego od klienta roportu wystawiam dowod wewnetrzny od kwoty bilanu z wyjątkiem butelek z SK?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Pytanie o dokumentowaniu i ewidencji zakupów - § 11 zawiera wymogi ewidencji zakupu"
+    },
+    {
+      "question": "Czy powinna pokazywać się w JPK?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie o wykazaniu danych w JPK - § 10 i § 11 definiują dane w ewidencji sprzedaży i zakupu",
+      "uncertain": true
+    },
+    {
+      "question": "Co mam teraz zrobić?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie ogólne bez konkretnego zakresu - § 2 zawiera przepisy ogólne",
+      "uncertain": true
+    },
+    {
+      "question": "Czy premie macie brak korekt?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Pytanie o korektach pliku JPK - § 12 opisuje korekty i wymogi techniczne"
+    },
+    {
+      "question": "Czy ktoś też ma problem z wysyłką JPK w rewizor nexo?",
+      "matched_articles": [
+        "§ 4",
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie o problemy techniczne wysyłki - § 5 opisuje wymogi techniczne JPK_V7",
+      "uncertain": true
+    },
+    {
+      "question": "Czy ktoś też ma problemy z potwierdzeniem?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Pytanie o potwierdzeniu technicznym - § 5 zawiera pola techniczne wymagane w deklaracji",
+      "uncertain": true
+    },
+    {
+      "question": "Przez przypadek w Optimie odblokowałem wysłany plik JPK za listopad?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Pytanie o wysłanym pliku i możliwości korekty - § 12 opisuje korekty pliku JPK_V7"
+    },
+    {
+      "question": "W której pozycji z JPK wykazać zwrot VATu od zakupu samochodu?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Ewidencja zakupu w JPK_V7 zawiera dane pozwalające ustalić wysokość VAT podlegającego odliczeniu, w tym zwroty VAT od zakupów"
+    },
+    {
+      "question": "Był to środek trwały ale klient od 2026 nie będzie VATowcem a odliczył VAT od zakupu samochodu w 2025 i nie wiem w któej pozycji w JPK to wykazać, czy p_44 na - kwota?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Ewidencja zakupu zawiera dane dotyczące VAT z zakupów, w tym środków trwałych i korekt odliczeń"
+    },
+    {
+      "question": "Jakie szkolenia online polecanie z zakresu JPK CIT?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy szkoleń, które nie są przedmiotem Rozporządzenia JPK_V7"
+    },
+    {
+      "question": "Czy w takim razie powinnam wykazywać te faktury w JPK i naliczyć VAT od kwoty brutto?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Zarówno ewidencja sprzedaży jak i zakupu zawierają dane o fakturach i VAT wymagane do wykazania w JPK_V7"
+    },
+    {
+      "question": "Jeśli VAT należny to jak wykazać w JPK, czy trzeba wskazać jak?",
+      "matched_articles": [
+        "§ 10",
+        "§ 4"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera dane pozwalające ustalić wysokość VAT należnego, część deklaracyjna zawiera jego podsumowanie"
+    },
+    {
+      "question": "Może warto rozważyć w tej sytuacji zaliczki płacone w sposób uproszczony?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy strategii podatkowej, a nie zakresu danych w JPK_V7"
+    },
+    {
+      "question": "Jak wykazać w ewidencji zakupów/ JPK vatFakturę zakupowaną z Chin ( zakup wzorów próbek) wartość 5 $?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Ewidencja zakupu w JPK_V7 zawiera dane pozwalające ustalić wysokość VAT z zakupów międzynarodowych"
+    },
+    {
+      "question": "Jak mam wykazać ten zakup w JPK, no bo przecież mam rozbieżność faktury z przyjęciem i dysponuję jak właściciel tylko 7tys kg?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Ewidencja zakupu zawiera dane dotyczące zakupów; rozbieżności powinny być wykazane zgodnie z dokumentacją faktury"
+    },
+    {
+      "question": "Jeśli ktoś mi wystawi taką korektę to ją się jakoś wykazuje w JPK VAT?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Korekty pliku JPK_V7 składa się za okres, którego dotyczą korygowan. Sekcja ta bezpośrednio dotyczy wykazywania korekt"
+    },
+    {
+      "question": "Od kiedy wysyłka JPK CIT?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_CIT, a nie JPK_V7. Rozporządzenie dotyczy JPK_V7 (VAT)"
+    },
+    {
+      "question": "A zajrzałaś/eś kiedykolwiek na podgląd pliku JPK_VAT?",
+      "matched_articles": [
+        "§ 2",
+        "§ 4",
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie ogólne o strukturę JPK_V7; § 2 określa szczegółowy zakres danych w deklaracji"
+    },
+    {
+      "question": "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?",
+      "matched_articles": [
+        "§ 11"
+      ],
+      "primary_article": "§ 11",
+      "reasoning": "Ewidencja zakupu zawiera dane o zakupach; kwestia czy mogą być to zakupy osoby prywatnej wykracza poza zakres rozporządzenia"
+    },
+    {
+      "question": "Czy zaznaczać kod JPK FP?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "Część deklaracyjna zawiera oznaczenia i pola techniczne wymagane do wykazania, w tym kody"
+    },
+    {
+      "question": "Jak skorygować JPK, wprowadzony zły kontrahent?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Korekty pliku JPK_V7 dotyczą zmian danych, w tym danych dotyczących kontrahentów"
+    },
+    {
+      "question": "Czy ktoś już testował w środowisku testowym JPK KR Pd i mógłby się wypowiedzieć jak to zrobić?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_KR, a nie JPK_V7; poza zakresem Rozporządzenia JPK_V7"
+    },
+    {
+      "question": "FS1/02/2026 r., podpisane przez włoskiego kontrahenta, jest wystarczające? Opisując wewnątrzwspólnotową usługę dziergania szalików z przędzy powierzanej przez kontrahenta?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży i zakupu zawierają dane o transakcjach międzynarodowych; pytanie dotyczy wykazania usług wewnątrzwspólnotowych"
+    },
+    {
+      "question": "Raport fiskalny - jaki powinien być kontrahent?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy raportu fiskalnego, które wykracza poza zakres JPK_V7"
+    },
+    {
+      "question": "Czytam, ze niektórzy stosują jako kontrahenta sprzedawcę. Jak to powinno wyglądać w świetle JPK V3?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży i zakupu zawierają dane dotyczące identyfikacji kontrahentów"
+    },
+    {
+      "question": "Dostaje raport związany z prowizją za sprzedaż ubezpieczeń od kontrahenta z Francji. Czy powinno się to pojawić w JPK? Czy wlicza się do proporcji?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Ewidencja sprzedaży zawiera dane o przychodach ze sprzedaży usług, w tym prowizji; kwestia proporcji VAT wykracza poza zakres rozporządzenia"
+    },
+    {
+      "question": "JPK CIT-Obowiązek utworzenia kont analitycznych dla rozrachunków z kontrahentami. Co to znaczy? Teraz takich jednorazowych kontrahentów wprowadzam na konto ktore jest tak skonstruowane żeby nie zapisywać na stałe? Czy tak nie może być???",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_CIT i struktury kont księgowych, nie JPK_V7"
+    },
+    {
+      "question": "Możecie napisać jak planujecie księgować delegacje żeby MF było zadowolone z JPK_KR_PD?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_KR_PD i księgowania delegacji - artykuły w indeksie dotyczą tylko JPK_V7 (ewidencja sprzedaży, zakupu, części deklaracyjnej). JPK_KR nie jest opisany w dostarczonrm indeksie."
+    },
+    {
+      "question": "Prośba o pomoc-my wyświadczyliśmy usługę dla kontrahenta UE - w której pozycji JPK powinno się to znaleźć?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Usługa dla kontrahenta UE to transakcja sprzedaży podlegająca ewidencji w JPK_V7 - § 10 opisuje ewidencję sprzedaży zawierającą dane pozwalające na identyfikację transakcji."
+    },
+    {
+      "question": "Mam dalej wątpliwości czy przed krajowym Nip kontrahenta należy wpisywać PL?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Pytanie dotyczy formatu danych kontrahenta w ewidencji sprzedaży i zakupu - § 10 i § 11 zawierają dane identyfikacyjne kontrahentów w JPK_V7."
+    },
+    {
+      "question": "Bardziej doświadczonych, kontrahent (nabywca) poprosił, aby zmienić dane nabywcy na fakturze sprzedaży wystawionej w grudniu?",
+      "matched_articles": [
+        "§ 12"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Zmiana danych na wystawionej fakturze wymaga korekty - § 12 opisuje korekty pliku JPK_V7 i procedury ich składania."
+    },
+    {
+      "question": "Przy likwidacji działalności (VAT-Z) i remanencie likwidacyjnym VAT: czy spis z natury trzeba gdzieś składać do US?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy VAT-Z i procedur likwidacyjnych - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+    },
+    {
+      "question": "JPK_KR jak podmioty powiązane wykazujecie powiązania kapitałowe i osobowe?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_KR i powiązań między podmiotami - artykuły w indeksie dotyczą tylko JPK_V7 i nie zawierają informacji o wykazywaniu powiązań."
+    },
+    {
+      "question": "Czy ma ktoś może rozpiskę znaczników kont do planu kont które trzeba przypisać prawidłowo?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy znaczników kont i planu kont - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+    },
+    {
+      "question": "Czy w nowym roku dla raportowania nowego JPK Kr Pd można księgować?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_KR_PD i przepisów przejściowych - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_KR_PD."
+    },
+    {
+      "question": "Czy na potrzeby nowego JPK kr pd trzeba utworzyć analitykę do konta rozrachunki z pracownikami z tytułu wynagrodzeń?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_KR_PD i struktury kont - artykuły w indeksie dotyczą JPK_V7 i ewidencji VAT, nie analityki kont."
+    },
+    {
+      "question": "Czy analityka konta 201/202-akronim musi być IDENTYCZNA jak Kod kontrahenta?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy analityki kont i kodów kontrahentów - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+    },
+    {
+      "question": "Interesuje mnie osoba z praktycznym doświadczeniem w zakresie CIT, JPK_KR oraz modeli współpracy z kierowcami / podwykonawcami?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy poszukiwania eksperta - nie jest pytaniem o przepisy Rozporządzenia JPK_V7."
+    },
+    {
+      "question": "Czy muszą być rozdzieleni osobno dostawcy i odbiorcy na dwa różne konta?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy struktury planu kont i segregacji kontrahentów - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+    },
+    {
+      "question": "Czy od stycznia na pełnych księgach używać będziecie jednego konta np 247 - pozostałe rozrachunki z instytucjami?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy struktury kont w planie kont - nie jest zawarte w artykułach Rozporządzenia JPK_V7 dostępnych w indeksie."
+    },
+    {
+      "question": "Dot JPK-CIT Czy od stycznia na pełnych księgach używać będziecie jednego konta np 247 - pozostałe rozrachunki z instytucjami?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_CIT i struktury kont - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_CIT."
+    },
+    {
+      "question": "Na jakich kontach ksiegujecie?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie jest zbyt ogólne i dotyczy praktyki księgowania - nie jest zawarte w artykułach Rozporządzenia JPK_V7."
+    },
+    {
+      "question": "Czy zaliczkę otrzymaną na poczet świadczenia usług budowlanych na rzeczy kontrahenta z Niemiec (budynek położony w Niemczech), wykazujemy w JPK w dacie otrzymania zaliczki?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "Zaliczka z zagranicą to transakcja sprzedaży podlegająca ewidencji - § 10 opisuje ewidencję sprzedaży zawierającą dane identyfikujące transakcje."
+    },
+    {
+      "question": "JPK Cit Konta 201, 202 bez analityki z podzialem na kontrahenta To samo z kontem 230 z podzialem na pracowników Da rade czy trzeba zmieniac?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_CIT i struktury kont - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_CIT ani analityce kont."
+    },
+    {
+      "question": "Chciałam zapytać czy firmie, która prowadzi już kilka lat działalność mogę zmienić plan kont w związku z wejściem jpk_kr w nowym okresie obrachunkowym?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy zmian w planie kont i JPK_KR - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_KR ani zmianach w planie kont."
+    },
+    {
+      "question": "JPK-CIT W związku z koniecznością raportowania i nadawania znaczników co robicie z kontem rozrachunkowym zbiorczym, gdzie wpływają pieniądze np z PayU?",
+      "matched_articles": [],
+      "primary_article": null,
+      "reasoning": "Pytanie dotyczy JPK_CIT, znaczników kont i kont zbiorczych - artykuły w indeksie dotyczą JPK_V7 i nie zawierają informacji o JPK_CIT."
+    },
+    {
+      "question": "Jeśli kontrahent wykorzystał ulgę na złe długi to musi Pani skorygować fry kosztowe w JPK z terminem płatności faktur i oddać VAT z odsetkami?",
+      "matched_articles": [
+        "§ 12",
+        "§ 11"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "Korekta dotycząca złych długów wymaga korekty w JPK_V7 - § 12 opisuje korekty pliku, § 11 opisuje ewidencję zakupu zawierającą dane o zakupach wymagające korekty."
+    }
+  ]
+}
