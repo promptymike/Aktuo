@@ -58,6 +58,10 @@ POLISH_STOP_WORDS = {
     "jej",
 }
 
+CATEGORY_BOOST = 3.0
+CATEGORY_MIN_RESULTS = 3
+CATEGORY_CANDIDATE_POOL = 20
+
 
 @dataclass(slots=True)
 class LawChunk:
@@ -75,7 +79,20 @@ _KNOWLEDGE_CACHE: dict[str, tuple[int, tuple[LawChunk, ...], BM25Okapi, tuple[tu
 
 
 def _normalize(text: str) -> str:
-    normalized = unicodedata.normalize("NFKD", text.lower())
+    translation = str.maketrans(
+        {
+            "ą": "a",
+            "ć": "c",
+            "ę": "e",
+            "ł": "l",
+            "ń": "n",
+            "ó": "o",
+            "ś": "s",
+            "ż": "z",
+            "ź": "z",
+        }
+    )
+    normalized = unicodedata.normalize("NFKD", text.lower().translate(translation))
     return "".join(character for character in normalized if not unicodedata.combining(character))
 
 
@@ -89,15 +106,46 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
     if chunk.category == query_category:
         return True
 
-    haystack = _normalize(" ".join([chunk.category, chunk.law_name, chunk.content, chunk.question_intent]))
+    law_name = _normalize(chunk.law_name)
+    category_name = _normalize(chunk.category)
 
-    category_aliases = {
+    broad_law_aliases = {
         "ksef": (
-            "ksef",
             "krajowy system e-faktur",
-            "e-faktura",
-            "ustrukturyz",
+            "rozporzadzenie ksef",
+            "ustawa o vat - ksef",
         ),
+        "vat": (
+            "ustawa o vat",
+            "podatek od towarow i uslug",
+        ),
+        "pit": (
+            "ustawa o podatku dochodowym od osob fizycznych",
+        ),
+        "cit": (
+            "ustawa o podatku dochodowym od osob prawnych",
+        ),
+        "zus": (
+            "ustawa o systemie ubezpieczen spolecznych",
+        ),
+        "kadry": (
+            "kodeks pracy",
+        ),
+        "ordynacja": (
+            "ordynacja podatkowa",
+        ),
+        "jpk": (
+            "rozporzadzenie jpk_v7",
+        ),
+        "rachunkowosc": (
+            "ustawa o rachunkowosci",
+        ),
+    }
+
+    if query_category in broad_law_aliases:
+        return any(alias in law_name for alias in broad_law_aliases[query_category])
+
+    subcategory_aliases = {
         "fakturowanie": (
             "fakturowanie",
             "faktura",
@@ -134,104 +182,10 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
             "obowiazek_podatkowy",
             "nalezny",
         ),
-        "vat": (
-            "vat",
-            "zwrot_vat",
-            "zwolnienie_z_vat",
-            "rejestracja_vat",
-        ),
-        "pit": (
-            "pit",
-            "podatek dochodowy",
-            "pit-36",
-            "pit-37",
-            "pit-11",
-            "kwota wolna",
-            "skala podatkowa",
-            "podatek liniowy",
-        ),
-        "cit": (
-            "cit",
-            "podatek dochodowy od osob prawnych",
-            "estonski cit",
-            "ryczalt od dochodow spolek",
-            "wht",
-            "podatek u zrodla",
-            "ceny transferowe",
-            "tpr",
-            "cit-8",
-            "maly podatnik cit",
-            "ift-2r",
-        ),
-        "zus": (
-            "zus",
-            "skladka",
-            "skladki",
-            "skladka zdrowotna",
-            "skladka spoleczna",
-            "maly zus",
-            "preferencyjny zus",
-            "ulga na start",
-            "dra",
-            "rca",
-            "zasilek",
-            "chorobowe",
-            "macierzynski",
-            "zbieg tytulow",
-            "podstawa wymiaru",
-        ),
-        "kadry": (
-            "kodeks pracy",
-            "umowa o prace",
-            "urlop",
-            "wynagrodzenie minimalne",
-            "nadgodziny",
-            "wypowiedzenie",
-            "swiadectwo pracy",
-            "l4",
-            "zasilek chorobowy",
-            "czas pracy",
-            "okres probny",
-            "praca zdalna",
-            "bhp",
-            "badania lekarskie",
-            "macierzynski",
-            "rodzicielski",
-            "ekwiwalent",
-        ),
-        "ordynacja": (
-            "ordynacja podatkowa",
-            "przedawnienie",
-            "kontrola podatkowa",
-            "interpretacja indywidualna",
-            "nadplata",
-            "zaleglosc podatkowa",
-            "odsetki za zwloke",
-            "pelnomocnictwo",
-        ),
-        "jpk": (
-            "jpk",
-            "jpk_v7",
-            "jpk_vat",
-            "gtu",
-            "oznaczenia jpk",
-        ),
-        "rachunkowosc": (
-            "bilans",
-            "rachunek zyskow i strat",
-            "sprawozdanie finansowe",
-            "ksiegi rachunkowe",
-            "kpir",
-            "srodki trwale",
-            "amortyzacja",
-            "inwentaryzacja",
-            "rezerwa",
-            "rmk",
-            "odpis aktualizujacy",
-        ),
     }
 
-    return any(alias in haystack for alias in category_aliases.get(query_category, ()))
+    haystack = " ".join([category_name, law_name])
+    return any(alias in haystack for alias in subcategory_aliases.get(query_category, ()))
 
 
 def load_chunks(knowledge_path: str | Path) -> list[LawChunk]:
@@ -286,6 +240,32 @@ def _load_bm25_cache(knowledge_path: str | Path) -> tuple[list[LawChunk], BM25Ok
         return list(cached[1]), cached[2], list(cached[3])
 
 
+def _select_category_aware_results(
+    scored: list[tuple[float, LawChunk]], query_category: str, limit: int
+) -> list[LawChunk]:
+    top_candidates = scored[: max(limit, CATEGORY_CANDIDATE_POOL)]
+
+    if query_category == "ogólne":
+        return [chunk for _, chunk in top_candidates[:limit]]
+
+    matching_category = [
+        chunk for _, chunk in top_candidates if _category_matches(query_category, chunk)
+    ]
+    if not matching_category:
+        return [chunk for _, chunk in top_candidates[:limit]]
+
+    others = [chunk for _, chunk in top_candidates if not _category_matches(query_category, chunk)]
+
+    guaranteed = matching_category[: min(CATEGORY_MIN_RESULTS, len(matching_category))]
+    remaining_slots = max(limit - len(guaranteed), 0)
+    selected = guaranteed + others[:remaining_slots]
+
+    if len(selected) < limit:
+        selected.extend(matching_category[len(guaranteed) : len(guaranteed) + (limit - len(selected))])
+
+    return selected[:limit]
+
+
 def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> list[LawChunk]:
     chunks, bm25, _ = _load_bm25_cache(knowledge_path)
     query_tokens = _tokenize(query)
@@ -299,7 +279,7 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> l
     for score, chunk in zip(scores, chunks, strict=False):
         boosted_score = float(score)
         if _category_matches(query_category, chunk):
-            boosted_score *= 1.5
+            boosted_score *= CATEGORY_BOOST
         scored.append(
             (
                 boosted_score,
@@ -324,4 +304,4 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> l
         ),
         reverse=True,
     )
-    return [chunk for _, chunk in scored[:limit]]
+    return _select_category_aware_results(scored, query_category, limit)
