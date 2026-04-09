@@ -22,7 +22,7 @@ class RagResult:
 def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api_key: str) -> RagResult:
     redacted_query = anonymize_text(query)
     category = categorize_query(redacted_query)
-    chunks = retrieve_chunks(query=redacted_query, knowledge_path=knowledge_path, limit=3)
+    chunks = retrieve_chunks(query=redacted_query, knowledge_path=knowledge_path, limit=5)
     answer = generate_answer(query=redacted_query, chunks=chunks, system_prompt=system_prompt, api_key=api_key)
     audit = audit_answer(answer=answer, chunks=chunks)
     return RagResult(

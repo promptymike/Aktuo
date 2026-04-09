@@ -15,6 +15,7 @@ def test_load_chunks_uses_cache_and_invalidates_on_file_change(tmp_path, monkeyp
                     "article_number": "art. 106e",
                     "category": "fakturowanie",
                     "verified_date": "",
+                    "question_intent": "Co powinna zawierać faktura?",
                     "content": "Faktura zawiera dane podstawowe.",
                 }
             ]
@@ -23,13 +24,13 @@ def test_load_chunks_uses_cache_and_invalidates_on_file_change(tmp_path, monkeyp
     )
 
     call_count = {"count": 0}
-    original_ingest = retriever.ingest_seed_chunks
+    original_load_seed_laws = retriever.load_seed_laws
 
-    def counting_ingest(path):
+    def counting_load_seed_laws(path):
         call_count["count"] += 1
-        return original_ingest(path)
+        return original_load_seed_laws(path)
 
-    monkeypatch.setattr(retriever, "ingest_seed_chunks", counting_ingest)
+    monkeypatch.setattr(retriever, "load_seed_laws", counting_load_seed_laws)
 
     retriever.load_chunks(seed_file)
     retriever.load_chunks(seed_file)
@@ -43,6 +44,7 @@ def test_load_chunks_uses_cache_and_invalidates_on_file_change(tmp_path, monkeyp
                     "article_number": "art. 106j",
                     "category": "faktury_korygujące",
                     "verified_date": "",
+                    "question_intent": "Kiedy wystawia się fakturę korygującą?",
                     "content": "Faktura korygująca poprawia błąd.",
                 }
             ]
