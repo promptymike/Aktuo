@@ -1,0 +1,1931 @@
+[
+  {
+    "id": "law-261-praca-dodatkowa",
+    "question_intent": "Czy pracodawca może mi zakazać pracy u innego pracodawcy równocześnie?",
+    "question_patterns": [
+      "Czy mogę pracować dla dwóch pracodawców jednocześnie?",
+      "Czy pracodawca może zakazać mi pracy na drugim etacie?",
+      "Czy mam prawo do pracy dodatkowo u innego pracodawcy?",
+      "Czy mogę łączyć pracę u dwóch pracodawców?"
+    ],
+    "answer": "Pracodawca nie może Ci zakazać pracy u innego pracodawcy równocześnie. Prawo do jednoczesnego pozostawania w stosunku pracy z innym pracodawcą jest chronione przepisami kodeksu pracy. Wyjątkami są wyłącznie przypadki określone w art. 1011 § 1 kodeksu pracy lub gdy odrębne przepisy stanowią inaczej.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 261 § 1",
+        "quote": "Pracodawca nie może zakazać pracownikowi jednoczesnego pozostawania w stosunku pracy z innym pracodawcą"
+      }
+    ],
+    "conditions": [
+      "Praca musi być jednoczesna (równocześnie u obu pracodawców)",
+      "Dotyczy stosunku pracy lub innego stosunku prawnego będącego podstawą świadczenia pracy"
+    ],
+    "exceptions": [
+      "Przypadek określony w art. 1011 § 1 kodeksu pracy",
+      "Inne przepisy stanowiące inaczej"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna"
+    ],
+    "topic": "prawo_pracy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-94-szkolenie-bhp",
+    "question_intent": "Czy pracodawca (szpital psychiatryczny) ma obowiązek szkolenia pracowników pomocy społecznej z zakresu bezpieczeństwa i higieny pracy?",
+    "question_patterns": [
+      "Czy szpital psychiatryczny musi szkolić pracowników pomocy społecznej z BHP?",
+      "Jaki jest obowiązek pracodawcy dotyczący szkolenia z bezpieczeństwa pracy?",
+      "Czy pracodawca organizujący szkolenie musi je prowadzić dla pracowników?"
+    ],
+    "answer": "Tak, pracodawca (w tym szpital psychiatryczny jako organizator) jest obowiązany prowadzić systematyczne szkolenie pracowników w zakresie bezpieczeństwa i higieny pracy. Obowiązek ten wynika wprost z art. 94 pkt 4 Kodeksu pracy i dotyczy zapewnienia pracownikom bezpiecznych i higienicznych warunków pracy oraz systematycznego szkolenia w tym zakresie.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 94 pkt 4",
+        "quote": "zapewniać bezpieczne i higieniczne warunki pracy oraz prowadzić systematyczne szkolenie pracowników w zakresie bezpieczeństwa i higieny pracy"
+      }
+    ],
+    "conditions": [
+      "Szkolenie musi być systematyczne (powtarzalne, zaplanowane)",
+      "Szkolenie musi obejmować bezpieczeństwo i higienę pracy",
+      "Obowiązek dotyczy pracowników podejmujących pracę u danego pracodawcy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "obowiazki_pracodawcy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-94-szkolenie-kwalifikacyjne",
+    "question_intent": "Czy pracodawca ma obowiązek ułatwiać pracownikom podnoszenie kwalifikacji zawodowych?",
+    "question_patterns": [
+      "Czy pracodawca powinien wspierać szkolenia pracowników?",
+      "Jaki jest obowiązek pracodawcy wobec podnoszenia kwalifikacji?",
+      "Czy szpital ma obowiązek wspierać doskonalenie zawodowe pracowników?"
+    ],
+    "answer": "Tak, pracodawca ma obowiązek ułatwiać pracownikom podnoszenie kwalifikacji zawodowych. Obowiązek ten wynika zarówno z art. 17 jak i z art. 94 pkt 6 Kodeksu pracy. Oznacza to, że pracodawca powinien wspierać i umożliwiać pracownikom uczestnictwo w szkoleniach oraz doskonaleniu zawodowym.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 17",
+        "quote": "Pracodawca jest obowiązany ułatwiać pracownikom podnoszenie kwalifikacji zawodowych"
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 94 pkt 6",
+        "quote": "ułatwiać pracownikom podnoszenie kwalifikacji zawodowych"
+      }
+    ],
+    "conditions": [
+      "Obowiązek dotyczy wszystkich pracowników",
+      "Ułatwianie powinno być rzeczywiste, a nie tylko teoretyczne"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "obowiazki_pracodawcy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-94-informacja-warunki-zatrudnienia",
+    "question_intent": "Czy pracodawca musi informować pracowników o warunkach zatrudnienia?",
+    "question_patterns": [
+      "Jakie informacje pracodawca musi przekazać pracownikom?",
+      "Czy pracodawca powinien zaznajomić pracowników z zakresem obowiązków?",
+      "Jakie są obowiązki pracodawcy przy podejmowaniu pracy przez pracownika?"
+    ],
+    "answer": "Tak, pracodawca ma obowiązek zaznajomić pracowników podejmujących pracę z zakresem ich obowiązków, sposobem wykonywania pracy na danym stanowisku oraz podstawowymi uprawnieniami (art. 94 pkt 1). Ponadto musi informować pracowników o warunkach zatrudnienia wskazanych w ustawie (art. 94 pkt 1a).",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 94 pkt 1",
+        "quote": "zaznajamiać pracowników podejmujących pracę z zakresem ich obowiązków, sposobem wykonywania pracy na wyznaczonych stanowiskach oraz ich podstawowymi uprawnieniami"
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 94 pkt 1a",
+        "quote": "informować pracowników o warunkach ich zatrudnienia"
+      }
+    ],
+    "conditions": [
+      "Obowiązek dotyczy pracowników podejmujących pracę",
+      "Zaznajomienie musi być przeprowadzone przed faktycznym wykonywaniem pracy lub na jej początku"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna"
+    ],
+    "topic": "obowiazki_pracodawcy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-2-definicja-pracownika",
+    "question_intent": "Kto jest pracownikiem w rozumieniu Kodeksu pracy",
+    "question_patterns": [
+      "Kto to jest pracownik?",
+      "Jak zdefiniowana jest osoba pracownika w Kodeksie pracy?",
+      "Jaka osoba jest uważana za pracownika?",
+      "Co to pracownik, osoba na zleceniu, osoba postronna?",
+      "Czy osoba na umowie zlecenia to pracownik?"
+    ],
+    "answer": "Pracownikiem jest osoba zatrudniona na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę (art. 2 Kodeksu pracy). Osoba na zleceniu lub osoba postronna nie są pracownikami, ponieważ nie spełniają tego warunku zatrudnienia.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 2",
+        "quote": "Pracownikiem jest osoba zatrudniona na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę."
+      }
+    ],
+    "conditions": [
+      "Zatrudnienie na podstawie umowy o pracę",
+      "Zatrudnienie na podstawie powołania",
+      "Zatrudnienie na podstawie wyboru",
+      "Zatrudnienie na podstawie mianowania",
+      "Zatrudnienie na podstawie spółdzielczej umowy o pracę"
+    ],
+    "exceptions": [
+      "Osoba pracująca na podstawie umowy zlecenia nie jest pracownikiem",
+      "Osoba pracująca na podstawie umowy o dzieło nie jest pracownikiem",
+      "Osoba postronna niebędąca stroną żadnej umowy lub aktu nie jest pracownikiem"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "prawo_pracy_podstawy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-29-umowa-pracownika",
+    "question_intent": "Jakie dokumenty i informacje pracodawca musi przekazać pracownikowi do podpisu lub potwierdzenia?",
+    "question_patterns": [
+      "Co dostaje pracownik do podpisu?",
+      "Jakie dokumenty musi podpisać pracownik?",
+      "Co pracodawca musi przekazać pracownikowi na piśmie?",
+      "Jakie informacje pracownik otrzymuje od pracodawcy?"
+    ],
+    "answer": "Pracownik otrzymuje umowę o pracę zawartą na piśmie, która określa strony umowy, rodzaj umowy, datę zawarcia oraz warunki pracy i płacy (rodzaj pracy, miejsce wykonywania, wynagrodzenie, wymiar czasu pracy, dzień rozpoczęcia). Jeśli umowa nie została zawarta pisemnie, pracodawca musi potwierdzić na piśmie wszystkie ustalenia przed dopuszczeniem pracownika do pracy. Dodatkowo, pracodawca musi informować pracownika na piśmie o warunkach zatrudnienia (normy czasu pracy, przerwy, odpoczynek, urlop, zasady rozwiązania stosunku pracy itp.) - najpóźniej w ciągu 7 dni od dopuszczenia do pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 29 § 2",
+        "quote": "Umowę o pracę zawiera się na piśmie. Jeżeli umowa o pracę nie została zawarta z zachowaniem formy pisemnej, pracodawca przed dopuszczeniem pracownika do pracy potwierdza pracownikowi na piśmie ustalenia co do stron umowy, rodzaju umowy oraz jej warunków."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 29 § 1",
+        "quote": "Umowa o pracę określa strony umowy, adres siedziby pracodawcy, a także rodzaj umowy, datę jej zawarcia oraz warunki pracy i płacy, w szczególności rodzaj pracy, miejsce lub miejsca wykonywania pracy, wynagrodzenie, wymiar czasu pracy, dzień rozpoczęcia pracy."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 29 § 3",
+        "quote": "Pracodawca informuje pracownika w postaci papierowej lub elektronicznej nie później niż w terminie 7 dni od dnia dopuszczenia pracownika do pracy, co najmniej o obowiązujących normach i wymiarze czasu pracy, przerwach, odpoczynku, wynagrodzeniu, urlopie i warunkach rozwiązania stosunku pracy."
+      }
+    ],
+    "conditions": [
+      "Umowa musi być zawarta na piśmie",
+      "Jeśli brak formy pisemnej - potwierdzenie ustalań przed dopuszczeniem do pracy",
+      "Informacje o warunkach zatrudnienia przekazuje się nie później niż w ciągu 7 dni od dopuszczenia do pracy",
+      "Informacje można przekazać w formie papierowej lub elektronicznej"
+    ],
+    "exceptions": [
+      "Poinformowanie o warunkach zatrudnienia może nastąpić przez wskazanie odpowiednich przepisów prawa pracy (art. 29 § 31)"
+    ],
+    "taxpayer_type": [
+      "pracownik",
+      "pracownik_sezonowy"
+    ],
+    "topic": "warunki-zatrudnienia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-kodeks-pracy-brak-regulacji",
+    "question_intent": "Pytanie o średnią krajową dla pracowników oddelegowanych za granicę",
+    "question_patterns": [
+      "jaka jest średnia krajowa dla pracowników oddelegowanych za granicę",
+      "ile wynosi średnia krajowa pracownika delegowanego",
+      "średnia krajowa pracowników zagranicznych"
+    ],
+    "answer": "Pytanie dotyka spraw pracowników oddelegowanych za granicę, jednak przepisy zawarte w dostępnym fragmencie Kodeksu pracy (art. 13 oraz preambuła) nie regulują kwestii średniej krajowej dla tego typu zatrudnienia. Artykuł 13 gwarantuje jedynie prawo pracownika do godziwego wynagrodzenia za pracę oraz odsyła do przepisów prawa pracy i polityki płacowej państwa. Aby uzyskać informacje o średniej krajowej dla pracowników oddelegowanych, należy zwrócić się do aktualnych danych Głównego Urzędu Statystycznego (GUS) lub Ministerstwa Rodziny, Pracy i Polityki Społecznej.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 13",
+        "quote": "Pracownik ma prawo do godziwego wynagrodzenia za pracę. Warunki realizacji tego prawa określają przepisy prawa pracy oraz polityka państwa w dziedzinie płac, w szczególności poprzez ustalanie minimalnego wynagrodzenia za pracę."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wynagrodzenie",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-149-ewidencja-czasu-pracy",
+    "question_intent": "Czy pracodawca musi prowadzić ewidencję czasu pracy dla wszystkich pracowników?",
+    "question_patterns": [
+      "Czy ewidencja czasu pracy jest obowiązkowa dla wszystkich pracowników?",
+      "Dla kogo pracodawca nie musi prowadzić ewidencji godzin pracy?",
+      "Kiedy pracodawca jest zwolniony z obowiązku ewidencjonowania czasu pracy?",
+      "Jacy pracownicy są wyłączeni z ewidencji czasu pracy?"
+    ],
+    "answer": "Pracodawca prowadzi ewidencję czasu pracy pracownika do celów ustalenia wynagrodzenia i świadczeń, jednak nie dotyczy to pracowników objętych systemem zadaniowego czasu pracy, kierowników zakładu pracy ani pracowników otrzymujących ryczałt za godziny nadliczbowe lub pracę w porze nocnej. Dla tych kategorii pracowników ewidencja godzin pracy nie jest wymagana.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 149 § 1 i § 2",
+        "quote": "Pracodawca prowadzi ewidencję czasu pracy pracownika do celów prawidłowego ustalenia jego wynagrodzenia i innych świadczeń związanych z pracą. W stosunku do pracowników objętych systemem zadaniowego czasu pracy, pracowników zarządzających w imieniu pracodawcy zakładem pracy oraz pracowników otrzymujących ryczałt za godziny nadliczbowe lub za pracę w porze nocnej nie ewidencjonuje się godzin pracy."
+      }
+    ],
+    "conditions": [
+      "Ewidencja prowadzana jest do celów prawidłowego ustalenia wynagrodzenia i świadczeń związanych z pracą",
+      "Pracownik ma prawo żądać udostępnienia ewidencji"
+    ],
+    "exceptions": [
+      "Pracownicy w systemie zadaniowego czasu pracy",
+      "Pracownicy zarządzający w imieniu pracodawcy zakładem pracy",
+      "Pracownicy otrzymujący ryczałt za godziny nadliczbowe",
+      "Pracownicy otrzymujący ryczałt za pracę w porze nocnej"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "ewidencja czasu pracy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-2-definicja-pracownika-2",
+    "question_intent": "Kto jest pracownikiem according to Polish Labour Code?",
+    "question_patterns": [
+      "Kto jest uważany za pracownika?",
+      "Jaka jest definicja pracownika w Kodeksie pracy?",
+      "Na jakiej podstawie ktoś jest pracownikiem?",
+      "Czy partner do współpracy to pracownik?"
+    ],
+    "answer": "Pracownikiem jest osoba zatrudniona na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę. Partner do współpracy, jeśli nie jest zatrudniony na jednej z wymienionych podstaw, nie jest pracownikiem w rozumieniu Kodeksu pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 2",
+        "quote": "Pracownikiem jest osoba zatrudniona na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę."
+      }
+    ],
+    "conditions": [
+      "Zatrudnienie na podstawie umowy o pracę",
+      "Zatrudnienie na podstawie powołania",
+      "Zatrudnienie na podstawie wyboru",
+      "Zatrudnienie na podstawie mianowania",
+      "Zatrudnienie na podstawie spółdzielczej umowy o pracę"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "pracownik_definicja",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-93-wieniec-pogrzeb",
+    "question_intent": "Czy koszty wieńca na pogrzeb pracownika można ujać w kosztach firmy?",
+    "question_patterns": [
+      "Ująć zakup wieńca na pogrzeb pracownika?",
+      "Czy wieniec na pogrzeb pracownika to koszt firmy?",
+      "Jaki jest status kosztów wieńca na pogrzeb"
+    ],
+    "answer": "Kodeks pracy reguluje odprawę pośmiertną przysługującą rodzinie pracownika (art. 93), ale nie zawiera przepisów dotyczących kosztów wieńca na pogrzeb. Zakup wieńca nie jest świadczeniem przewidzianym w ustawie kodeks pracy. Czy jest to koszt pracownika czy pracodawcy zależy od postanowień wewnętrznych oraz przepisów prawa podatkowego i rachunkowego, które wykraczają poza kodeks pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 93",
+        "quote": "W razie śmierci pracownika rodzinie przysługuje od pracodawcy odprawa pośmiertna"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "świadczenia_pracownicze",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-kodeks-pracy-pracownik-umowa-b2b",
+    "question_intent": "Czy osoba zatrudniona na podstawie umowy o pracę traci status pracownika jeśli jednocześnie prowadzi JDG i ma umowę B2B z inną firmą?",
+    "question_patterns": [
+      "Czy zawarcie umowy B2B wpływa na status pracownika?",
+      "Czy prowadzenie JDG i umowa B2B powoduje utratę statusu pracownika?",
+      "Czy można być pracownikiem i mieć umowę zlecenia równocześnie?"
+    ],
+    "answer": "Kodeks pracy definiuje pracownika jako osobę zatrudnioną na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę. Prowadzenie JDG i posiadanie umowy B2B to działalność poza ramami stosunku pracy, zatem nie wpływa na status pracownika osób zatrudnionych umową o pracę. Kwestia utraty uprawnień do ulgi na start wymaga weryfikacji w odrębnej ustawie podatkowej, a nie w Kodeksie pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 2",
+        "quote": "Pracownikiem jest osoba zatrudniona na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę."
+      }
+    ],
+    "conditions": [
+      "Umowa o pracę musi być zawarta zgodnie z art. 2 Kodeksu pracy",
+      "Status pracownika wynika z formy umowy, a nie z równoczesnych aktywności zawodowych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "definicja_pracownika",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-kodeks-pracy-umowa-pracę-ulga-start",
+    "question_intent": "Czy posiadanie umowy o pracę stanowi warunek pozytywny czy negatywny do skorzystania z ulgi na start?",
+    "question_patterns": [
+      "Czy umowa o pracę jest warunkiem do ulgi na start?",
+      "Czy brak umowy o pracę jest wymagany dla ulgi na start?",
+      "Jakie warunki dotyczą umowy o pracę w kontekście ulgi na start?"
+    ],
+    "answer": "Kodeks pracy nie zawiera przepisów dotyczących warunków do uzyskania ulgi na start. Pytanie dotyczy warunków określonych w ustawie podatkowej (Ordynacja podatkowa lub ustawa o podatku dochodowym), która znajduje się poza zakresem Kodeksu pracy. Weryfikacja warunku związanego z umową o pracę wymaga zapoznania się z właściwą ustawą podatkową.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "Brak przepisów",
+        "quote": "Kodeks pracy nie reguluje uprawnień do ulg podatkowych"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ulgi_podatkowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-22-stosunek-pracy-definicja",
+    "question_intent": "Jakie są warunki nawiązania stosunku pracy i co charakteryzuje pracownika?",
+    "question_patterns": [
+      "Jakie warunki muszą być spełnione aby nawiązać stosunek pracy?",
+      "Kto może być zatrudniony jako pracownik?",
+      "Co definiuje stosunek pracy w kodeksie pracy?",
+      "Jakie są wymogi dla pracownika w umowie o pracę?"
+    ],
+    "answer": "Stosunek pracy nawiąże się, gdy pracownik zobowiązuje się do wykonywania pracy określonego rodzaju na rzecz pracodawcy i pod jego kierownictwem, w miejscu i czasie wyznaczonym przez pracodawcę, a pracodawca zobowiązuje się do zatrudniania pracownika za wynagrodzeniem. Pracownikiem może być osoba, która ukończyła 18 lat, z wyjątkami dla osób młodych określonymi w dziale dziewiątym kodeksu. Zatrudnienie w tych warunkach jest zatrudnieniem na podstawie stosunku pracy, niezależnie od nazwy zawartej umowy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 22 § 1",
+        "quote": "Przez nawiązanie stosunku pracy pracownik zobowiązuje się do wykonywania pracy określonego rodzaju na rzecz pracodawcy i pod jego kierownictwem oraz w miejscu i czasie wyznaczonym przez pracodawcę, a pracodawca – do zatrudniania pracownika za wynagrodzeniem."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 22 § 2",
+        "quote": "Pracownikiem może być osoba, która ukończyła 18 lat."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 22 § 11",
+        "quote": "Zatrudnienie w warunkach określonych w § 1 jest zatrudnieniem na podstawie stosunku pracy, bez względu na nazwę zawartej przez strony umowy."
+      }
+    ],
+    "conditions": [
+      "Pracownik musi wykonywać pracę określonego rodzaju",
+      "Praca wykonywana jest na rzecz pracodawcy",
+      "Praca wykonywana jest pod kierownictwem pracodawcy",
+      "Miejsce i czas pracy wyznacza pracodawca",
+      "Pracodawca zobowiązuje się do zapłaty wynagrodzenia"
+    ],
+    "exceptions": [
+      "Osoby, które nie ukończyły 18 lat mogą być zatrudnione na warunkach określonych w dziale dziewiątym kodeksu"
+    ],
+    "taxpayer_type": [
+      "pracodawca_osoba_fizyczna",
+      "pracodawca_osoba_prawna"
+    ],
+    "topic": "nawiązanie stosunku pracy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-29-forma-umowy-pracę",
+    "question_intent": "W jakiej formie powinna być zawarta umowa o pracę?",
+    "question_patterns": [
+      "Czy umowa o pracę musi być na piśmie?",
+      "Jaka forma umowy o pracę jest wymagana?",
+      "Czy mogę zawrzeć umowę o pracę ustnie?"
+    ],
+    "answer": "Umowa o pracę musi być zawarta na piśmie. Jeśli pracodawca nie zastosuje formy pisemnej, jest zobowiązany potwierdzić na piśmie pracownikowi wszystkie ustalenia dotyczące stron umowy, rodzaju umowy i jej warunków przed dopuszczeniem pracownika do pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 29 § 2",
+        "quote": "Umowę o pracę zawiera się na piśmie. Jeżeli umowa o pracę nie została zawarta z zachowaniem formy pisemnej, pracodawca przed dopuszczeniem pracownika do pracy potwierdza pracownikowi na piśmie ustalenia"
+      }
+    ],
+    "conditions": [
+      "Forma pisemna jest obowiązkowa",
+      "Potwierdzenie musi nastąpić przed dopuszczeniem pracownika do pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "umowa_o_pracę",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-1551-ekwiwalent-urlop-przekazanie",
+    "question_intent": "Czy pracownikowi przysługuje ekwiwalent pieniężny za niewykorzystane dni urlopu przy przejściu do innego pracodawcy?",
+    "question_patterns": [
+      "Ekwiwalent za urlop przy zmianie pracodawcy",
+      "Czy dostaję pieniądze za niewykorzystane dni urlopu?",
+      "Jak rozliczać urlop przy przejściu do nowego pracodawcy",
+      "Ekwiwalent należy się za 6 dni urlop"
+    ],
+    "answer": "Kodeks pracy nie reguluje ekwiwalentu pieniężnego za urlop w artykułach 1551–1552. Przepisy tych artykułów dotyczą wymiaru urlopu przysługującego pracownikowi przy zmianie pracodawcy lub przerwie w zatrudnieniu – urlop liczbowy, nie finansowy. Kwestię ekwiwalentu za niewykorzystane dni urlopu regulują inne przepisy kodeksu, które nie zostały dostarczone w niniejszym tekście.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 1551, art. 1552",
+        "quote": "Przepisy dotyczą wymiaru urlopu przysługującego przy zmianie pracodawcy w roku kalendarzowym"
+      }
+    ],
+    "conditions": [
+      "Pracownik zmienia pracodawcę w tym samym roku kalendarzowym",
+      "Wymiar urlopu obliczany jest proporcjonalnie do okresu przepracowanego"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [],
+    "topic": "urlop_pracowniczy",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-152-urlop-prawo-podstawowe",
+    "question_intent": "Czy pracownik ma prawo do urlopu i na jakich warunkach",
+    "question_patterns": [
+      "Czy mam prawo do urlopu wypoczynkowego",
+      "Jakie są moje prawa urlopowe",
+      "Czy pracodawca musi mi dać urlop"
+    ],
+    "answer": "Tak, każdemu pracownikowi przysługuje prawo do corocznego, nieprzerwanego, płatnego urlopu wypoczynkowego. To prawo jest niezbywalne – pracownik nie może się go zrzec, a pracodawca jest obowiązany udzielić urlopu w roku kalendarzowym, w którym pracownik uzyskał do niego prawo.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 152 § 1 i § 2",
+        "quote": "Pracownikowi przysługuje prawo do corocznego, nieprzerwanego, płatnego urlopu wypoczynkowego. Pracownik nie może zrzec się prawa do urlopu."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 161",
+        "quote": "Pracodawca jest obowiązany udzielić pracownikowi urlopu w tym roku kalendarzowym, w którym pracownik uzyskał do niego prawo."
+      }
+    ],
+    "conditions": [
+      "Urlop musi być coroczny",
+      "Urlop musi być nieprzerwany",
+      "Urlop musi być płatny",
+      "Urlop musi być udzielony w roku kalendarzowym, w którym pracownik uzyskał do niego prawo"
+    ],
+    "exceptions": [
+      "Pracownik nie może zrzec się prawa do urlopu – to prawo jest niezbywalne"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_zatrudniona"
+    ],
+    "topic": "urlop_pracowniczy",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-152-161-zastepstwo-podczas-urlopu",
+    "question_intent": "Kto zastępuje pracownika podczas urlopu lub choroby",
+    "question_patterns": [
+      "Kto mnie zastępi podczas urlopu",
+      "Kto pracuje kiedy jestem na urlopie",
+      "Kto mnie będzie zastępował podczas nieobecności",
+      "Co się dzieje z moją pracą gdy jestem na urlopie"
+    ],
+    "answer": "Przepisy Kodeksu pracy (art. 152 i 161) regulują prawo pracownika do urlopu, ale nie określają wprost, kto go zastępuje podczas urlopu lub choroby. Kwestię zastępstwa i organizacji pracy podczas urlopu pracownika powinien uregulować pracodawca w ramach swoich kompetencji kierowniczych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 152 § 1",
+        "quote": "Pracownikowi przysługuje prawo do corocznego, nieprzerwanego, płatnego urlopu wypoczynkowego"
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 161",
+        "quote": "Pracodawca jest obowiązany udzielić pracownikowi urlopu w tym roku kalendarzowym, w którym pracownik uzyskał do niego prawo."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_zatrudniona"
+    ],
+    "topic": "urlop_pracowniczy",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-172-wynagrodzenie-urlopowe-skladniki-zmienne",
+    "question_intent": "Jak prawidłowo wpisać wynagrodzenie urlopowe ze składników zmiennych w zaświadczeniu Z-3",
+    "question_patterns": [
+      "Jak wpisać w Z-3 wynagrodzenie urlopowe ze składników zmiennych",
+      "Jakiej metody użyć do obliczenia wynagrodzenia urlopowego ze zmiennych składników",
+      "Czy mogę obliczyć wynagrodzenie urlopowe na podstawie średniej ze zmiennych składników"
+    ],
+    "answer": "Wynagrodzenie urlopowe ze składników zmiennych należy obliczyć na podstawie przeciętnego wynagrodzenia z okresu 3 miesięcy poprzedzających miesiąc rozpoczęcia urlopu. W przypadku znacznego wahania wysokości wynagrodzenia okres ten można przedłużyć do 12 miesięcy. W zaświadczeniu Z-3 należy wpisać ostateczną kwotę wynagrodzenia urlopowego obliczoną tą metodą.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 172",
+        "quote": "Zmienne składniki wynagrodzenia mogą być obliczane na podstawie przeciętnego wynagrodzenia z okresu 3 miesięcy poprzedzających miesiąc rozpoczęcia urlopu; w przypadkach znacznego wahania wysokości wynagrodzenia okres ten może być przedłużony do 12 miesięcy."
+      }
+    ],
+    "conditions": [
+      "Wynagrodzenie urlopowe dotyczy czasu urlopu",
+      "Stosuje się do zmiennych składników wynagrodzenia",
+      "Podstawą obliczenia jest przeciętne wynagrodzenie z 3 miesięcy (lub 12 miesięcy przy znacznym wahaniu)"
+    ],
+    "exceptions": [
+      "Okres obliczania można przedłużyć do 12 miesięcy w przypadkach znacznego wahania wysokości wynagrodzenia"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "wynagrodzenie_urlopowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-85-wymplata-listopad",
+    "question_intent": "Czy zmiana warunków umowy od 1 listopada wpływa na termin wypłaty wynagrodzenia za cały miesiąc listopad?",
+    "question_patterns": [
+      "Jeśli przedsiębiorca zmienił pracownikowi warunki umowy od 1 listopada, do kiedy wypłaca wynagrodzenie za listopad?",
+      "Zmiana warunków od 1 listopada - czy wpływ na termin wypłaty wynagrodzenia za listopad?",
+      "Wymiana umowy od 1 listopada - kiedy wypłacić wynagrodzenie za listopad?"
+    ],
+    "answer": "Niezależnie od zmiany warunków umowy, wynagrodzenie za listopad (jako pełny miesiąc pracy) musi być wypłacone z dołu nie później niż w ciągu pierwszych 10 dni grudnia. Zmiana warunków umowy nie wpływa na termin wypłaty wynagrodzenia za miesiąc, w którym zmiana nastąpiła.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 ust. 2",
+        "quote": "Wynagrodzenie za pracę płatne raz w miesiącu wypłaca się z dołu, niezwłocznie po ustaleniu jego pełnej wysokości, nie później jednak niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego."
+      }
+    ],
+    "conditions": [
+      "Wynagrodzenie płacone raz w miesiącu",
+      "Wypłata następuje z dołu (po zakończeniu okresu)",
+      "Termin: nie później niż 10 dni następnego miesiąca"
+    ],
+    "exceptions": [
+      "art. 85 ust. 3 - jeśli 10. dzień wypada w dniu wolnym od pracy, wynagrodzenie wypłaca się dzień wcześniej"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "Wymogi dotyczące wypłaty wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-78-wynagrodzenie-ustalenie",
+    "question_intent": "Jak pracodawca powinien ustalać wynagrodzenie dla pracowników?",
+    "question_patterns": [
+      "Na jakiej podstawie ustalić wynagrodzenie pracownika?",
+      "Jakie kryteria muszę uwzględnić przy ustalaniu pensji?",
+      "Co wpływa na wysokość wynagrodzenia w kodeksie pracy?"
+    ],
+    "answer": "Wynagrodzenie za pracę musi odpowiadać rodzajowi wykonywanej pracy i wymaganym kwalifikacjom, a także uwzględniać ilość i jakość świadczonej pracy. Pracodawca ustala wysokość oraz zasady przyznawania stawek wynagrodzeń w procedurze określonej w Kodeksie pracy, biorąc pod uwagę dodatkowe składniki wynagrodzenia przewidziane dla danego rodzaju pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 78 § 1",
+        "quote": "Wynagrodzenie za pracę powinno być tak ustalone, aby odpowiadało w szczególności rodzajowi wykonywanej pracy i kwalifikacjom wymaganym przy jej wykonywaniu"
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 78 § 2",
+        "quote": "W celu określenia wynagrodzenia za pracę ustala się wysokość oraz zasady przyznawania pracownikom stawek wynagrodzenia"
+      }
+    ],
+    "conditions": [
+      "Wynagrodzenie musi być dostosowane do rodzaju pracy",
+      "Konieczne uwzględnienie posiadanych przez pracownika kwalifikacji",
+      "Branie pod uwagę ilości i jakości świadczonej pracy",
+      "Procedura określona w art. 771-773 Kodeksu pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wynagrodzenia_pracowników",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-78-brak-regulacji-procentowa",
+    "question_intent": "Czy kod pracy określa procentową podwyżkę wynagrodzeń?",
+    "question_patterns": [
+      "Ile procent podwyżki wynagrodzenia nakłada kodeks pracy?",
+      "Czy kodeks pracy wskazuje konkretny procent wzrostu wynagrodzeń?",
+      "Jakie są procentowe wymogi wobec podwyżek?"
+    ],
+    "answer": "Dostarczone artykuły Kodeksu pracy (art. 78) nie zawierają regulacji dotyczących konkretnych procentowych podwyżek wynagrodzeń. Kodeks określa jedynie kryteria ustalania wynagrodzenia (rodzaj pracy, kwalifikacje, ilość i jakość pracy), ale nie narzuca minimalnego procentu podwyżki.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 78",
+        "quote": "Wynagrodzenie za pracę powinno być tak ustalone, aby odpowiadało w szczególności rodzajowi wykonywanej pracy i kwalifikacjom"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wynagrodzenia_pracowników",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-78-rozliczenia-pracownicze",
+    "question_intent": "Czy kodeks pracy zawiera regulacje dotyczące rozliczeń pracowników z przychodu?",
+    "question_patterns": [
+      "Czy pracownicy mogą być rozliczani procentowo z przychodu?",
+      "Jak rozliczyć pracownika w procentach z przychodu firmy?",
+      "Jakie zasady obowiązują przy rozliczeniach prowizyjnych?"
+    ],
+    "answer": "Dostarczone artykuły Kodeksu pracy (art. 78) nie zawierają informacji na temat rozliczeń pracowników w procentach z przychodu ani zasad prowizji. Artykuł 78 definiuje tylko ogólne kryteria ustalania wynagrodzenia (rodzaj pracy, kwalifikacje, ilość i jakość pracy).",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 78",
+        "quote": "Wynagrodzenie za pracę powinno być tak ustalone, aby odpowiadało w szczególności rodzajowi wykonywanej pracy"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "wynagrodzenia_pracowników",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-93-odprawa-emerytalna-warunki",
+    "question_intent": "Czy pracownikowi przysługuje odprawa emerytalna lub rentowa przy przejściu na emeryturę?",
+    "question_patterns": [
+      "Czy pracownica idąca na emeryturę dostaje odprawę?",
+      "Pracownik przechodzi na emeryturę - czy mu się należy odprawa?",
+      "Jakie świadczenie przysługuje pracownikowi przechodzącemu na emeryturę?",
+      "Czy przy przejściu na emeryturę pracownik dostaje jednomiesięczne wynagrodzenie?"
+    ],
+    "answer": "Na podstawie art. 93 Kodeksu pracy, odprawa pośmiertna przysługuje rodzinie pracownika w razie jego śmierci. Niniejszy artykuł nie reguluje wypłaty odprawy emerytalnej przy przejściu pracownika na emeryturę - dotyczy tylko sytuacji śmierci pracownika. Aby poznać warunki nabycia odprawy emerytalnej, konieczne jest zapoznanie się z innymi przepisami Kodeksu pracy regulującymi zakończenie stosunku pracy z przyczyn emerytalnych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 93 § 1",
+        "quote": "W razie śmierci pracownika w czasie trwania stosunku pracy lub w czasie pobierania po jego rozwiązaniu zasiłku z tytułu niezdolności do pracy wskutek choroby, rodzinie przysługuje od pracodawcy odprawa pośmiertna."
+      }
+    ],
+    "conditions": [
+      "Odprawa przysługuje wyłącznie w przypadku śmierci pracownika",
+      "Śmierć musi nastąpić w czasie trwania stosunku pracy lub podczas pobierania zasiłku z tytułu niezdolności do pracy"
+    ],
+    "exceptions": [
+      "Art. 93 § 7: odprawa nie przysługuje, jeśli pracodawca ubezpieczył pracownika na życie i otrzymane odszkodowanie jest nie niższe niż odprawa pośmiertna"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik",
+      "osoba_prawna_pracodawca"
+    ],
+    "topic": "odprawy-pracownicze",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-176-ciaza-prace-uciazliwe",
+    "question_intent": "Jakie prace są zakazane dla kobiet w ciąży i na jaką podstawie prawnej?",
+    "question_patterns": [
+      "Kiedy kobieta w ciąży musi przejść na L4?",
+      "Które prace są zakazane dla kobiet w ciąży?",
+      "Co mówi prawo o pracach dla kobiet w ciąży?",
+      "Jakie prace mogą zaszkodzić ciąży?"
+    ],
+    "answer": "Kobiety w ciąży nie mogą wykonywać prac uciążliwych, niebezpiecznych lub szkodliwych dla zdrowia, mogących niekorzystnie wpłynąć na zdrowie, przebieg ciąży lub karmienie dziecka piersią. Konkretny wykaz takich prac określa Rada Ministrów w rozporządzeniu, uwzględniając nadmierny wysiłek fizyczny (w tym transport ciężarów) oraz czynniki środowiska pracy. Przejście na L4 nie wynika bezpośrednio z ustawy - decyzję o zwolnieniu lekarskim podejmuje lekarz lub pracownica na podstawie swojego stanu zdrowia.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 176 § 1",
+        "quote": "Kobiety w ciąży i kobiety karmiące dziecko piersią nie mogą wykonywać prac uciążliwych, niebezpiecznych lub szkodliwych dla zdrowia"
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 176 § 2",
+        "quote": "Rada Ministrów określi, w drodze rozporządzenia, wykaz prac, o których mowa w § 1"
+      }
+    ],
+    "conditions": [
+      "Kobieta musi być w ciąży",
+      "Praca musi być uciążliwa, niebezpieczna lub szkodliwa dla zdrowia",
+      "Praca może mieć niekorzystny wpływ na zdrowie, przebieg ciąży lub karmienie dziecka"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ochrona pracownic w ciąży",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-snizenie-podstawy-skladek",
+    "question_intent": "Czy za okres niezdolności do pracy (L4) mogę obniżyć podstawę składek ZUS, jeśli trwa tylko kilka dni w miesiącu?",
+    "question_patterns": [
+      "Czy mogę obniżyć podstawę składek ZUS za dni L4?",
+      "L4 a podstawa wymiaru zasiłku chorobowego",
+      "Czy L4 wpływa na podstawę składek?"
+    ],
+    "answer": "Zgodnie z art. 92 § 2 Kodeksu pracy, wynagrodzenie za czas niezdolności do pracy oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego. Pytanie dotyczące obniżenia podstawy składek ZUS wymaga weryfikacji w oddzielnych przepisach ustawy o systemie ubezpieczeń społecznych, które nie są zawarte w przytoczonym tekście Kodeksu pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 2",
+        "quote": "Wynagrodzenie, o którym mowa w § 1, oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego i wypłaca za każdy dzień niezdolności do pracy, nie wyłączając dni wolnych od pracy."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-caly-miesiac-l4-podstawa-zero",
+    "question_intent": "Jeśli pracownik jest cały miesiąc na L4, czy podstawa składek wynosi 0 zł?",
+    "question_patterns": [
+      "Czy podstawa składek wynosi 0 zł gdy cały miesiąc L4?",
+      "Cały miesiąc zwolnienie lekarskie podstawa wymiaru",
+      "L4 przez cały miesiąc a składki ZUS"
+    ],
+    "answer": "Kodeks pracy nie reguluje bezpośrednio wysokości podstawy składek ZUS. Art. 92 § 2 stanowi, że wynagrodzenie za czas niezdolności do pracy oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego. Rozstrzygnięcie, czy podstawa wynosi 0 zł, wymaga weryfikacji w przepisach ustawy o systemie ubezpieczeń społecznych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 2",
+        "quote": "Wynagrodzenie, o którym mowa w § 1, oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego i wypłaca za każdy dzień niezdolności do pracy."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-l4-okres-nalezenia-z-12-miesiecy",
+    "question_intent": "Czy okres niezdolności do pracy (L4) i rehabilitacyjne bierze się z poprzednich 12 miesięcy?",
+    "question_patterns": [
+      "Czy L4 nalicza się z ostatnich 12 miesięcy?",
+      "Okres liczenia L4 i rehabilitacyjne",
+      "Zasiłek chorobowy z poprzednich 12 miesięcy"
+    ],
+    "answer": "Art. 92 § 1 Kodeksu pracy przewiduje, że zasiłek chorobowy przysługuje za niezdolność do pracy trwającą do 33 dni w ciągu roku kalendarzowego (lub 14 dni dla pracownika po 50. roku życia). Tekst nie zawiera szczegółów dotyczących okresu liczenia dochodu do podstawy zasiłku. Szczegółowe zasady znajdują się w ustawie o systemie ubezpieczeń społecznych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 1 pkt 1",
+        "quote": "Za czas niezdolności pracownika do pracy wskutek choroby lub odosobnienia w związku z chorobą zakaźną – trwającej łącznie do 33 dni w ciągu roku kalendarzowego – pracownik zachowuje prawo do 80 % wynagrodzenia."
+      }
+    ],
+    "conditions": [
+      "Rok kalendarzowy",
+      "Pracownik do 50. roku życia: do 33 dni",
+      "Pracownik po 50. roku życia: do 14 dni"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-zwolnienie-przedsiebiorcy-kod-313",
+    "question_intent": "Czy zwolnienie lekarskie przedsiębiorcy wykazuje się w płatniku z kodem 313?",
+    "question_patterns": [
+      "Zwolnienie lekarskie przedsiębiorcy kod 313",
+      "Jak wykazać L4 przedsiębiorcy w podatku?",
+      "L4 przedsiębiorcy kod sprawozdawczy"
+    ],
+    "answer": "Kodeks pracy nie zawiera informacji dotyczących kodów sprawozdawczych ani zasad wykazywania zwolnień lekarskich w dokumentach podatkowych. Pytanie wymaga weryfikacji w przepisach ustawy o podatku dochodowym od osób fizycznych i regulaminie sprawozdawczości.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92",
+        "quote": "Art. 92 reguluje wynagrodzenie za czas niezdolności do pracy, ale nie zawiera przepisów o kodach sprawozdawczych."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-warunki-zasilek-chorobowy",
+    "question_intent": "Czy pracownik musi spełniać określone warunki (rejestracja do chorobowego), aby mieć prawo do zasiłku chorobowego?",
+    "question_patterns": [
+      "Czy muszę być zarejestrowany do chorobowego?",
+      "Warunki do zasiłku chorobowego",
+      "Czy każdy pracownik ma prawo do zasiłku?"
+    ],
+    "answer": "Art. 92 § 3 pkt 2 Kodeksu pracy stanowi, że wynagrodzenie za czas niezdolności do pracy nie przysługuje w przypadkach, w których pracownik nie ma prawa do zasiłku chorobowego. Kodeks pracy nie szczegółowo definiuje warunki uprawnień do zasiłku. Szczegółowe warunki (np. rejestracja ubezpieczeniowa) określone są w ustawie o systemie ubezpieczeń społecznych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 3 pkt 2",
+        "quote": "Wynagrodzenie nie przysługuje w przypadkach, w których pracownik nie ma prawa do zasiłku chorobowego."
+      }
+    ],
+    "conditions": [
+      "Pracownik ma prawo do zasiłku chorobowego (wymaga weryfikacji w ustawie o systemie ubezpieczeń)"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-rzycalt-zasilek-przedsiebiorcy",
+    "question_intent": "Będąc na ryczałcie i płacąc ZUS miesięcznie określoną kwotę, jaką kwotę dziennie dostanę za L4?",
+    "question_patterns": [
+      "Zasiłek chorobowy dla przedsiębiorcy na ryczałcie",
+      "L4 a ryczałt przedsiębiorcy",
+      "Ile dostanę za L4 będąc na ryczałcie?"
+    ],
+    "answer": "Kodeks pracy nie zawiera szczegółowych zasad dotyczących zasiłku chorobowego dla przedsiębiorców na ryczałcie. Art. 92 § 2 stanowi, że wynagrodzenie za czas niezdolności do pracy oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego. Wysokość zasiłku dla przedsiębiorców określona jest w ustawie o systemie ubezpieczeń społecznych, nie w Kodeksie pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 2",
+        "quote": "Wynagrodzenie, o którym mowa w § 1, oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "ryczalt"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-l4-i-decyzja-renta",
+    "question_intent": "Pracownik jest do końca miesiąca na L4 i czeka na decyzję w sprawie renty chorobowej. Jakie są jego prawa?",
+    "question_patterns": [
+      "Pracownik na L4 w trakcie oczekiwania na decyzję o rentę",
+      "Co przysluguje gdy czekam na rentę chorobową?",
+      "L4 a decyzja o renty chorobowej"
+    ],
+    "answer": "Art. 92 § 1 Kodeksu pracy przewiduje, że za czas niezdolności do pracy pracownik zachowuje prawo do 80% wynagrodzenia (lub 100% w określonych przypadkach) przez pierwsze 33 dni w roku kalendarzowym. Art. 92 § 4 stanowi, że za okres dłuższy niż 33 dni pracownikowi przysługuje zasiłek chorobowy na zasadach odrębnych. W czasie oczekiwania na decyzję ZUS o rentę pracownik pozostaje na zwolnieniu lekarskim.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 1 i § 4",
+        "quote": "Za czas niezdolności do pracy trwającej do 33 dni pracownik zachowuje prawo do 80% wynagrodzenia. Za okres dłuższy pracownikowi przysługuje zasiłek chorobowy na zasadach określonych w odrębnych przepisach."
+      }
+    ],
+    "conditions": [
+      "Pracownik pozostaje w niezdolności do pracy",
+      "Pierwsze 33 dni: 80% wynagrodzenia",
+      "Okres dłuższy: zasiłek chorobowy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-przedsiebiorca-kasa-fiskalna-l4",
+    "question_intent": "Czy przedsiębiorca może dokonywać sprzedaży na kasie fiskalnej będąc na zwolnieniu lekarskim?",
+    "question_patterns": [
+      "Czy mogę pracować będąc na L4?",
+      "Przedsiębiorca na L4 a kasa fiskalna",
+      "L4 a wykonywanie działalności zawodowej"
+    ],
+    "answer": "Kodeks pracy art. 92 definiuje prawo pracownika do wynagrodzenia za czas niezdolności do pracy, ale nie zawiera przepisów dotyczących zakazów lub ograniczeń działalności zawodowej przedsiębiorcy będącego na zwolnieniu lekarskim. Kwestia ta regulowana jest w przepisach ordynacji podatkowej i przepisach o systemie ubezpieczeń społecznych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92",
+        "quote": "Art. 92 dotyczy wynagrodzenia za czas niezdolności do pracy, nie reguluje działalności zawodowej przedsiębiorcy."
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-wysokosc-wynagrodzenia-l4",
+    "question_intent": "Jaka jest wysokość wynagrodzenia za czas niezdolności do pracy (L4) w zależności od przyczyny?",
+    "question_patterns": [
+      "Ile procent wynagrodzenia za L4?",
+      "80% czy 100% za zwolnienie lekarskie?",
+      "Wysokość zasiłku chorobowego w Kodeksie pracy"
+    ],
+    "answer": "Zgodnie z art. 92 § 1 Kodeksu pracy, pracownik za niezdolność do pracy wskutek choroby do 33 dni rocznie (lub 14 dni dla osób po 50. roku życia) zachowuje prawo do 80% wynagrodzenia. Za wypadek w drodze do/z pracy lub chorobę w czasie ciąży przysługuje 100% wynagrodzenia. Za okresy dłuższe niż 33 dni przysługuje zasiłek chorobowy na zasadach odrębnych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 1 pkt 1, 2",
+        "quote": "Za chorobę – pracownik zachowuje prawo do 80% wynagrodzenia. Za wypadek w drodze do pracy lub chorobę w czasie ciąży – 100% wynagrodzenia."
+      }
+    ],
+    "conditions": [
+      "Choroby lub odosobnienie w związku z chorobą zakaźną",
+      "Do 33 dni w roku kalendarzowym (pracownik do 50 lat) lub 14 dni (pracownik po 50. roku)",
+      "Wypadek w drodze do/z pracy",
+      "Choroba w czasie ciąży"
+    ],
+    "exceptions": [
+      "Pracodawca może przewidywać wyższe wynagrodzenie",
+      "Brak wynagrodzenia jeśli pracownik nie ma prawa do zasiłku chorobowego"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-wiek-50-lat-limit-dni",
+    "question_intent": "Czy pracownik po 50. roku życia ma krótszy limit dni zasiłku chorobowego?",
+    "question_patterns": [
+      "Pracownik po 50 lat ile dni L4?",
+      "Czy po 50 latach jest mniej dni zwolnienia?",
+      "Limit dni zasiłku dla pracownika starszego"
+    ],
+    "answer": "Tak, art. 92 § 1 pkt 1 Kodeksu pracy stanowi, że pracownik, który ukończył 50. rok życia, ma prawo do wynagrodzenia za niezdolność do pracy wskutek choroby trwającą do 14 dni w ciągu roku kalendarzowego (zamiast 33 dni dla pracowników poniżej 50 lat). Dotyczy to niezdolności przypadającej po roku kalendarzowym, w którym pracownik ukończył 50 lat.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 1 pkt 1, § 5",
+        "quote": "Pracownik, który ukończył 50 rok życia, ma prawo do 80% wynagrodzenia za niezdolność do pracy trwającą do 14 dni w ciągu roku kalendarzowego."
+      }
+    ],
+    "conditions": [
+      "Pracownik musi ukończyć 50. rok życia",
+      "Limit 14 dni dotyczy niezdolności przypadającej po roku, w którym pracownik ukończył 50 lat"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "zasiłki_chorobowe",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-zakupy-na-l4",
+    "question_intent": "Czy właściciel firmy będący na zwolnieniu lekarskim (L4) przez cały miesiąc może dokonywać zakupów dla działalności gospodarczej",
+    "question_patterns": [
+      "Czy mogę robić zakupy firmowe będąc na L4?",
+      "Czy właściciel na zwolnieniu lekarskim może dokonywać czynności gospodarczych?",
+      "Czy na L4 mogę kupować materiały do mojej firmy budowlanej?"
+    ],
+    "answer": "Kodeks pracy reguluje prawo pracownika do wynagrodzenia podczas niezdolności do pracy, ale nie zawiera przepisów zakazujących właścicielowi firmy dokonywania zakupów gospodarczych podczas L4. Pytanie Twoje wykracza poza zakres Kodeksu pracy i dotyczy raczej zdolności do czynności prawnych oraz przepisów podatkowych i celnych. Rekomendujemy konsultację z doradcą podatkowym lub inspektorem ZUS w kontekście dokumentowania faktycznej niezdolności do pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 1",
+        "quote": "Za czas niezdolności pracownika do pracy wskutek choroby lub odosobnienia w związku z chorobą zakaźną pracownik zachowuje prawo do 80% wynagrodzenia"
+      }
+    ],
+    "conditions": [
+      "Przepisy Kodeksu pracy dotyczą pracownika, nie właściciela firmy",
+      "Artykuł 92 reguluje prawo do wynagrodzenia podczas L4, nie czynności prawne"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "urlopy-i-zwolnienia",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-92-l4-weekend",
+    "question_intent": "Czy pracownik otrzymuje wynagrodzenie za dni wolne od pracy (weekend) podczas zwolnienia lekarskiego?",
+    "question_patterns": [
+      "Czy L4 obejmuje weekend?",
+      "Czy za weekend przysługuje wynagrodzenie na L4?",
+      "Czy opłaca się brać L4 na weekend?",
+      "Czy dni wolne są płatne na zwolnieniu lekarskim?"
+    ],
+    "answer": "Wynagrodzenie za zwolnienie lekarskie przysługuje za KAŻDY dzień niezdolności do pracy, nie wyłączając dni wolnych od pracy (weekendu). Oznacza to, że czwartek, piątek, sobota i niedziela będą bezpośrednio opłacone z funduszu wynagrodzenia chorobowego. Zakres: 80% wynagrodzenia za chorobę (poza wyjątkami), obliczony według zasad zasiłku chorobowego.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 2",
+        "quote": "wynagrodzenie oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego i wypłaca za każdy dzień niezdolności do pracy, nie wyłączając dni wolnych od pracy"
+      }
+    ],
+    "conditions": [
+      "Niezdolność do pracy musi trwać łącznie do 33 dni w ciągu roku (pracownik poniżej 50 lat) lub do 14 dni (pracownik powyżej 50 lat)",
+      "Pracownik musi mieć prawo do zasiłku chorobowego",
+      "Wynagrodzenie wynosi 80% dla zwykłej choroby"
+    ],
+    "exceptions": [
+      "100% wynagrodzenia przysługuje w przypadku wypadku w drodze do/z pracy lub choroby w ciąży",
+      "Brak wynagrodzenia, gdy pracownik nie ma prawa do zasiłku chorobowego"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "zasilek-chorobowy-l4",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-261-pracownik-dwaj-pracodawcy",
+    "question_intent": "Czy pracownik może pracować u dwóch pracodawców jednocześnie i kiedy wchodzą w życie zmiany dotyczące tego prawa?",
+    "question_patterns": [
+      "Czy pracownik może mieć umowę u dwóch pracodawców naraz?",
+      "Kiedy wchodzą zmiany w regulacji pracy u kilku pracodawców?",
+      "Zmiany w l4 dotyczące choroby u jednego pracodawcy a pracy u drugiego wchodzą od 2027?"
+    ],
+    "answer": "Kodeks pracy nie zawiera informacji o dacie wejścia w życie żadnych zmian ani nie reguluje kwestii zasiłku chorobowego przy pracy u dwóch pracodawców jednocześnie. Art. 261 stanowi jedynie, że pracodawca nie może zakazać pracownikowi pracy u innego pracodawcy, ale przepisy dotyczące wynagrodzenia chorobowego (art. 92) nie zawierają regulacji dla sytuacji pracy u wielu pracodawców. Aby udzielić pełnej odpowiedzi na pytanie o daty zmian, konieczna jest weryfikacja poza Kodeksem pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 261 § 1",
+        "quote": "Pracodawca nie może zakazać pracownikowi jednoczesnego pozostawania w stosunku pracy z innym pracodawcą"
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 92 § 1 pkt 1",
+        "quote": "Za czas niezdolności pracownika do pracy wskutek choroby - pracownik zachowuje prawo do 80% wynagrodzenia"
+      }
+    ],
+    "conditions": [
+      "Pracownik może pracować u wielu pracodawców jednocześnie (art. 261 § 1)",
+      "Art. 261 § 2 zawiera wyjątki określone w art. 1011 § 1 i przepisach odrębnych"
+    ],
+    "exceptions": [
+      "Przepisy art. 261 § 1 nie stosuje się w przypadku określonym w art. 1011 § 1",
+      "Przepisy art. 261 § 1 nie stosuje się, jeżeli odrębne przepisy stanowią inaczej"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "prawo_pracy_umowy",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-87-skladki-odprowadzane",
+    "question_intent": "Jakie składki powinny być odprowadzane za pracownika?",
+    "question_patterns": [
+      "Jakie składki trzeba odprowadzać za pracownika?",
+      "Od czego odprowadza się składki na ubezpieczenia społeczne?",
+      "Które składki są odliczane z wynagrodzenia pracownika?",
+      "Jakie są obowiązkowe składki pracodawcy za pracownika?"
+    ],
+    "answer": "Kodeks pracy reguluje procedurę potrącania składek z wynagrodzenia pracownika, ale nie określa wysokości ani rodzaju składek, które powinny być odprowadzane. Składki na ubezpieczenia społeczne oraz zaliczka na podatek dochodowy od osób fizycznych są wymieniane jako przedmiot odliczenia sprzed potrąceń, zgodnie z art. 87 § 1. Szczegółowe informacje dotyczące wysokości i rodzaju składek znajdują się w odrębnych ustawach o ubezpieczeniach społecznych i podatku dochodowym.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 87 § 1",
+        "quote": "Z wynagrodzenia za pracę – po odliczeniu składek na ubezpieczenia społeczne, zaliczki na podatek dochodowy od osób fizycznych oraz wpłat dokonywanych do pracowniczego planu kapitałowego"
+      }
+    ],
+    "conditions": [
+      "Składki odliczane są przed potrąceniami z wynagrodzenia",
+      "Dotyczy składek na ubezpieczenia społeczne",
+      "Dotyczy zaliczki na podatek dochodowy od osób fizycznych"
+    ],
+    "exceptions": [
+      "Potrącenia mają miejsce dopiero po odliczeniu składek",
+      "Jeśli pracownik zrezygnował z wpłat do pracowniczego planu kapitałowego, wpłaty nie są odliczane"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik",
+      "pracodawca"
+    ],
+    "topic": "wynagrodzenie i potrącenia",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-29-adres-doreczen",
+    "question_intent": "Czy w umowie o pracę lub przy komunikacji z pracownikiem należy wpisać adres zamieszkania pracownika jako adres do doręczeń?",
+    "question_patterns": [
+      "W adresie do doręczeń wpisujecie adres zamieszkania pracownika?",
+      "Jaki adres pracownika powinien być w umowie o pracę?",
+      "Czy umowa o pracę musi zawierać adres zamieszkania pracownika?",
+      "Jakie dane adresowe pracownika są wymagane w umowie?"
+    ],
+    "answer": "Umowa o pracę musi zawierać adres siedziby pracodawcy. Dla pracodawcy będącego osobą fizyczną bez siedziby – wpisuje się adres jego zamieszkania. Natomiast przepisy art. 29 Kodeksu pracy nie narzucają umieszczania adresu zamieszkania pracownika w umowie o pracę. Pracodawca informuje pracownika o warunkach zatrudnienia w formie papierowej lub elektronicznej, ale to dotyczy treści informacji, nie wymagania adresu pracownika w umowie.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 29 § 1",
+        "quote": "Umowa o pracę określa strony umowy, adres siedziby pracodawcy, a w przypadku pracodawcy będącego osobą fizyczną nieposiadającego siedziby – adres zamieszkania"
+      }
+    ],
+    "conditions": [
+      "Umowa musi zawierać adres siedziby pracodawcy",
+      "Dla osoby fizycznej bez siedziby – wpisuje się adres zamieszkania pracodawcy, a nie pracownika"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "umowa_o_prace",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-3-pracodawca-bez-pracownikow",
+    "question_intent": "Czy osoba prowadząca jednoosobowe biuro bez pracowników jest pracodawcą?",
+    "question_patterns": [
+      "Czy jednoosobowe biuro bez pracowników to pracodawca?",
+      "Czy właściciel biura bez zatrudnionych pracowników jest pracodawcą?",
+      "Kto jest pracodawcą w kodeksie pracy?"
+    ],
+    "answer": "Pracodawcą jest osoba fizyczna lub jednostka organizacyjna, która zatrudnia pracowników. Właściciel jednoosobowego biura bez pracowników nie spełnia definicji pracodawcy, ponieważ nie zatrudnia nikogo. Kodeks pracy stosuje się wyłącznie do relacji między pracodawcą a zatrudnionymi pracownikami.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 3",
+        "quote": "Pracodawcą jest jednostka organizacyjna, choćby nie posiadała osobowości prawnej, a także osoba fizyczna, jeżeli zatrudniają one pracowników."
+      }
+    ],
+    "conditions": [
+      "Pracodawca musi zatrudniać pracowników",
+      "Pracownik to osoba zatrudniona na podstawie umowy o pracę, powołania, wyboru, mianowania lub spółdzielczej umowy o pracę"
+    ],
+    "exceptions": [
+      "Brak zastosowania kodeksu pracy do osób bez zatrudnionych pracowników"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "definicje_podmioty",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-30-rozwiazanie-porozumienie-stron",
+    "question_intent": "Czy umowa o pracę na czas nieokreślony może być rozwiązana na mocy porozumienia stron?",
+    "question_patterns": [
+      "Czy umowa na czas nieokreślony może być rozwiązana na mocy porozumienia stron?",
+      "Czy moze z pracownikiem rozwiązać umowę za porozumieniem stron?",
+      "Czy strony mogą wspólnie rozwiązać umowę o pracę na czas nieokreślony?",
+      "Jaki jest sposób rozwiązania umowy poprzez porozumienie stron?"
+    ],
+    "answer": "Tak, umowa o pracę na czas nieokreślony może być rozwiązana na mocy porozumienia stron. Jest to jeden ze sposobów rozwiązania umowy o pracę przewidzianych w ustawie. Rozwiązanie poprzez porozumienie stron nie wymaga zachowania okresu wypowiedzenia ani podania przyczyny.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 30 § 1 pkt 1",
+        "quote": "Umowa o pracę rozwiązuje się: 1) na mocy porozumienia stron"
+      }
+    ],
+    "conditions": [
+      "Oświadczenie obydwu stron musi nastąpić na piśmie (art. 30 § 3)"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "pracodawca"
+    ],
+    "topic": "rozwiązanie umowy o pracę",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-251-przedluzenie-umowy-czas-okreslony",
+    "question_intent": "Czy pracodawca może przedłużyć umowę na czas określony poza pierwotnie ustalony termin?",
+    "question_patterns": [
+      "Czy można przedłużyć umowę na czas określony do innej daty?",
+      "Umowa na czas określony do 31.07.2026 - czy mogę ją przedłużyć do 31.12.2026?",
+      "Jakie są limity przedłużania umów na czas określony?",
+      "Czy przedłużenie umowy na czas określony jest możliwe prawnie?"
+    ],
+    "answer": "Umowa na czas określony może być przedłużona, jednak łączny okres zatrudnienia na podstawie umów na czas określony zawartych między tymi samymi stronami nie może przekraczać 33 miesięcy, a łączna liczba takich umów nie może być większa niż trzy. Uzgodnienie dłuższego okresu w trakcie trwania umowy uważa się za zawarcie nowej umowy na czas określony. Jeśli przedłużenie przekroczy limit 33 miesięcy lub będzie czwartą umową, pracownik automatycznie przechodzi na umowę na czas nieokreślony.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 251 § 1",
+        "quote": "Okres zatrudnienia na podstawie umowy o pracę na czas określony, a także łączny okres zatrudnienia na podstawie umów o pracę na czas określony zawieranych między tymi samymi stronami stosunku pracy, nie może przekraczać 33 miesięcy, a łączna liczba tych umów nie może przekraczać trzech."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 251 § 2",
+        "quote": "Uzgodnienie między stronami w trakcie trwania umowy o pracę na czas określony dłuższego okresu wykonywania pracy na podstawie tej umowy uważa się za zawarcie, od dnia następującego po dniu, w którym miało nastąpić jej rozwiązanie, nowej umowy o pracę na czas określony."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 251 § 3",
+        "quote": "Jeżeli okres zatrudnienia na podstawie umowy o pracę na czas określony jest dłuższy niż okres, o którym mowa w § 1, lub jeżeli liczba zawartych umów jest większa niż liczba umów określona w tym przepisie, uważa się, że pracownik, odpowiednio od dnia następującego po upływie okresu, o którym mowa w § 1, lub od dnia zawarcia czwartej umowy o pracę na czas określony, jest zatrudniony na podstawie umowy o pracę na czas nieokreślony."
+      }
+    ],
+    "conditions": [
+      "Łączny okres zatrudnienia na podstawie wszystkich umów na czas określony między tymi samymi stronami nie może przekraczać 33 miesięcy",
+      "Łączna liczba umów na czas określony nie może być większa niż trzy",
+      "Uzgodnienie dłuższego okresu w trakcie trwania umowy traktuje się jako zawarcie nowej umowy"
+    ],
+    "exceptions": [
+      "Umowy zastępujące pracownika w czasie usprawiedliwionej nieobecności (art. 251 § 4 pkt 1)",
+      "Umowy na pracę dorywczą lub sezonową (art. 251 § 4 pkt 2)",
+      "Umowy na czas kadencji (art. 251 § 4 pkt 3)",
+      "Umowy zawarte ze względu na obiektywne przyczyny pracodawcy spełniające wymogi (art. 251 § 4 pkt 4)",
+      "Przedłużenie umowy do dnia porodu (art. 251 § 4 ust. 1)"
+    ],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "umowy-na-czas-okreslony",
+    "difficulty": "medium",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-129-rozliczenie-3m",
+    "question_intent": "Czy można stosować 3-miesięczny okres rozliczeniowy czasu pracy (równoważny wymiar)?",
+    "question_patterns": [
+      "Czy dobrze myślę, równoważny czas pracy, 3 miesięczne rozliczenie?",
+      "Czy równoważny wymiar czasu pracy to 3 miesiące?",
+      "Jaki okres rozliczeniowy dla równoważnego wymiaru pracy?",
+      "Czy mogę stosować 3-miesięczne rozliczenie równoważnego czasu pracy?"
+    ],
+    "answer": "Niestety podany fragment ustawy (art. 128 i 150) nie zawiera szczegółowych informacji o równoważnym wymiarze czasu pracy ani o konkretnych okresach rozliczeniowych. Art. 150 § 2 wskazuje na art. 135 § 2 i 3, a § 3 odsyła do art. 129 § 2 - te artykuły nie zostały udostępnione w analizowanym tekście. Aby udzielić prawidłowej odpowiedzi na temat 3-miesięcznego rozliczenia równoważnego czasu pracy, konieczna jest pełna treść wskazanych artykułów.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 150 § 2",
+        "quote": "Pracodawca może stosować okres rozliczeniowy czasu pracy, o którym mowa w art. 135 § 2 i 3 – po uprzednim zawiadomieniu właściwego okręgowego inspektora pracy."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 150 § 3",
+        "quote": "Przedłużenie okresu rozliczeniowego czasu pracy zgodnie z art. 129 § 2 oraz rozkłady czasu pracy ustala się w układzie zbiorowym pracy lub w porozumieniu z organizacjami związkowymi."
+      }
+    ],
+    "conditions": [
+      "Wymaga się zawiadomienia okręgowego inspektora pracy",
+      "Konieczne jest ustalenie w układzie zbiorowym lub regulaminie pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "pracodawca",
+      "pracownik"
+    ],
+    "topic": "czas pracy - okres rozliczeniowy",
+    "difficulty": "hard",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-85-czestotliwosc-wyplaty",
+    "question_intent": "Jak często pracodawca musi wypłacać wynagrodzenie pracownikowi?",
+    "question_patterns": [
+      "Jak często wypłaca się wynagrodzenie?",
+      "Jaką częstotliwość wypłaty wynagrodzenia określa kodeks pracy?",
+      "Ile razy w miesiącu pracownik powinien otrzymać wynagrodzenie?",
+      "Minimalna częstotliwość wypłaty wynagrodzenia"
+    ],
+    "answer": "Pracodawca musi wypłacać wynagrodzenie co najmniej raz w miesiącu, w stałym i ustalonym z góry terminie. Wynagrodzenie miesięczne wypłaca się z dołu, niezwłocznie po ustaleniu jego pełnej wysokości, ale nie później niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 1 i § 2",
+        "quote": "Wypłaty wynagrodzenia za pracę dokonuje się co najmniej raz w miesiącu, w stałym i ustalonym z góry terminie. Wynagrodzenie za pracę płatne raz w miesiącu wypłaca się z dołu, niezwłocznie po ustaleniu jego pełnej wysokości, nie później jednak niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego."
+      }
+    ],
+    "conditions": [
+      "Termin wypłaty musi być stały i ustalony z góry",
+      "Wynagrodzenie wypłacane raz w miesiącu wypłaca się z dołu",
+      "Wypłata następuje niezwłocznie po ustaleniu pełnej wysokości",
+      "Najpóźniej w ciągu pierwszych 10 dni następnego miesiąca"
+    ],
+    "exceptions": [
+      "Jeżeli ustalony dzień wypłaty wynagrodzenia jest dniem wolnym od pracy, wynagrodzenie wypłaca się w dniu poprzedzającym"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "wypłata wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-86-forma-wyplaty",
+    "question_intent": "W jakiej formie pracodawca musi wypłacać wynagrodzenie?",
+    "question_patterns": [
+      "W jakiej formie wypłaca się wynagrodzenie?",
+      "Czy wynagrodzenie można wypłacić w formie niepieniężnej?",
+      "Jakie formy wypłaty wynagrodzenia są dozwolone?",
+      "Czy możliwa jest wypłata wynagrodzenia na rachunek bankowy?"
+    ],
+    "answer": "Wynagrodzenie wypłaca się głównie w formie pieniężnej. Częściowe spełnienie wynagrodzenia w innej formie niż pieniężna jest dozwolone tylko wtedy, gdy przewidują to ustawowe przepisy prawa pracy lub układ zbiorowy pracy. Pracodawca wypłaca wynagrodzenie na wskazany przez pracownika rachunek bankowy, chyba że pracownik złożył wniosek o wypłatę do rąk własnych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 86 § 2 i § 3",
+        "quote": "Wypłaty wynagrodzenia dokonuje się w formie pieniężnej; częściowe spełnienie wynagrodzenia w innej formie niż pieniężna jest dopuszczalne tylko wówczas, gdy przewidują to ustawowe przepisy prawa pracy lub układ zbiorowy pracy. Wypłata wynagrodzenia jest dokonywana na wskazany przez pracownika rachunek płatniczy, chyba że pracownik złożył wniosek o wypłatę wynagrodzenia do rąk własnych."
+      }
+    ],
+    "conditions": [
+      "Forma podstawowa: pieniężna",
+      "Pracownik wskazuje rachunek do wypłaty",
+      "Pracownik może żądać wypłaty do rąk własnych na podstawie złożonego wniosku"
+    ],
+    "exceptions": [
+      "Częściowe spełnienie w innej formie niż pieniężna jest dopuszczalne, jeśli przewidują to ustawowe przepisy prawa pracy lub układ zbiorowy pracy"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "forma i sposób wypłaty wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-85-dzien-wolny",
+    "question_intent": "Co się dzieje z wypłatą wynagrodzenia, gdy ustalony dzień wypłaty przypadnie na dzień wolny od pracy?",
+    "question_patterns": [
+      "Kiedy wypłacić wynagrodzenie jeśli ustalony dzień wypłaty to dzień wolny?",
+      "Czy wynagrodzenie wypłaca się w weekend lub święto?",
+      "W jaki dzień wypłacić wynagrodzenie gdy przypadnie na dzień wolny?"
+    ],
+    "answer": "Jeśli ustalony dzień wypłaty wynagrodzenia przypadnie na dzień wolny od pracy, pracodawca wypłaca wynagrodzenie w dniu poprzedzającym (ostatnim dniu roboczym przed dniem wolnym).",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 3",
+        "quote": "Jeżeli ustalony dzień wypłaty wynagrodzenia za pracę jest dniem wolnym od pracy, wynagrodzenie wypłaca się w dniu poprzedzającym."
+      }
+    ],
+    "conditions": [
+      "Ustalony dzień wypłaty musi być dniem wolnym od pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "termin wypłaty wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-85-dokumenty",
+    "question_intent": "Czy pracownik ma prawo wglądu do dokumentów obliczenia wynagrodzenia?",
+    "question_patterns": [
+      "Czy mogę zobaczyć dokumenty dotyczące obliczenia mojego wynagrodzenia?",
+      "Jakie ma pracownik prawa dostępu do informacji o obliczeniu wynagrodzenia?",
+      "Czy pracodawca musi pokazać mi rozliczenie wynagrodzenia?"
+    ],
+    "answer": "Tak, pracodawca jest obowiązany na żądanie pracownika udostępnić do wglądu dokumenty, na których podstawie zostało obliczone jego wynagrodzenie. To prawo nie wymaga szczególnych przesłanek – pracownik może żądać wglądu dowolnie.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 5",
+        "quote": "Pracodawca, na żądanie pracownika, jest obowiązany udostępnić do wglądu dokumenty, na których podstawie zostało obliczone jego wynagrodzenie."
+      }
+    ],
+    "conditions": [
+      "Pracownik musi złożyć żądanie do pracodawcy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "prawa pracownika dotyczące wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-80-wynagrodzenie-za-prace",
+    "question_intent": "Czy wynagrodzenie za pracę niewykonaną (np. trzynastka) musi być wypłacone pracownikowi?",
+    "question_patterns": [
+      "Czy pracownik ma prawo do wynagrodzenia za czas, w którym nie pracuje?",
+      "Kiedy pracownik zachowuje prawo do wynagrodzenia mimo niewykonywania pracy?",
+      "Czy trzynastka to obowiązkowe wynagrodzenie?"
+    ],
+    "answer": "Pracownik zachowuje prawo do wynagrodzenia za czas niewykonywania pracy TYLKO wtedy, gdy przepisy prawa pracy to expressis verbis stanowią. Sam fakt niewykonywania pracy nie uprawnia automatycznie do wynagrodzenia. Trzeba zatem sprawdzić, czy przepisy prawa pracy (np. regulacje o trzynastce) stanowią o takim prawie.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 80",
+        "quote": "Za czas niewykonywania pracy pracownik zachowuje prawo do wynagrodzenia tylko wówczas, gdy przepisy prawa pracy tak stanowią."
+      }
+    ],
+    "conditions": [
+      "przepisy prawa pracy muszą wyraźnie stanowić o prawie do wynagrodzenia za czas niewykonywania pracy"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "wynagrodzenie_pracownika",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-111-godnosc-pracownika",
+    "question_intent": "Czy świadczenia takie jak karty multisport muszą respektować godność pracownika?",
+    "question_patterns": [
+      "Czy pracodawca musi szanować godność pracownika przy finansowaniu świadczeń?",
+      "Czy godność pracownika jest ważna przy wyborze świadczeń socjalnych?",
+      "Jakie są obowiązki pracodawcy wobec godności pracownika?"
+    ],
+    "answer": "Tak, pracodawca ma obowiązek szanować godność i inne dobra osobiste pracownika (art. 111). Oznacza to, że każde świadczenie socjalne, w tym karty multisport, musi być realizowane w sposób poszanowujący godność pracownika. Niedyskryminacyjny dostęp do takich świadczeń i respektowanie wyboru pracownika są elementami tego obowiązku.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 111",
+        "quote": "Pracodawca jest obowiązany szanować godność i inne dobra osobiste pracownika."
+      }
+    ],
+    "conditions": [
+      "obowiązek ten dotyczy wszystkich pracowników",
+      "praktykuje się przy każdej formie świadczeń socjalnych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "prawa_pracownika_godnosc",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-preamble-brak-informacji-cena-obslugi",
+    "question_intent": "Pytanie o cenę lub koszt obsługi kadrowej pracownika",
+    "question_patterns": [
+      "Jaka cena obsługi kadrowej jednego pracownika?",
+      "Ile kosztuje obsługa kadry pracowników?",
+      "Jakie są stawki za obsługę personalną?"
+    ],
+    "answer": "Kodeks pracy nie zawiera informacji o cenach, stawkach ani kosztach obsługi kadrowej pracowników. Kodeks określa jedynie prawa i obowiązki pracowników i pracodawców. Pytanie dotyczy kwestii spoza zakresu Kodeksu pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 1",
+        "quote": "Kodeks pracy określa prawa i obowiązki pracowników i pracodawców"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "Zakres regulacji Kodeksu pracy",
+    "difficulty": "easy",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-16-benefity-zfss",
+    "question_intent": "Czy pracodawca może finansować benefity pracownicze (np. multisport) z Zakładowego Funduszu Świadczeń Socjalnych (ZFŚS) ze wsparciem pracownika?",
+    "question_patterns": [
+      "Czy benefity z ZFŚS mogą być współfinansowane przez pracownika?",
+      "Multisport i ZFŚS - jak to działa?",
+      "Czy pracownik może dofinansować benefit z ZFŚS?",
+      "Co pracodawca może finansować z Funduszu Świadczeń Socjalnych?"
+    ],
+    "answer": "Kodeks pracy art. 16 obliguje pracodawcę do zaspokajania bytowych, socjalnych i kulturalnych potrzeb pracowników, ale tekst artykułu nie zawiera szczegółowych regulacji dotyczących współfinansowania świadczeń przez pracowników czy zasad finansowania benefitów z ZFŚS. Określenie, czy konkretny benefit (jak multisport) może być współfinansowany ze ZFŚS, wymaga przeanalizowania oddzielnych przepisów o ZFŚS i wewnętrznych regulaminów.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 16",
+        "quote": "Pracodawca, stosownie do możliwości i warunków, zaspokaja bytowe, socjalne i kulturalne potrzeby pracowników."
+      }
+    ],
+    "conditions": [
+      "Pracodawca działający stosownie do swoich możliwości i warunków",
+      "Świadczenia muszą dotyczyć potrzeb bytowych, socjalnych lub kulturalnych"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "świadczenia_socjalne_pracownicze",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-292-monterzy-pracownicy-mobilni",
+    "question_intent": "Czy monterów należy traktować jako pracowników mobilnych i czy można nie rozliczać im delegacji?",
+    "question_patterns": [
+      "Czy monterzy to pracownicy mobilni?",
+      "Czy monterów zwolnia się z rozliczenia delegacji?",
+      "Jak klasyfikować monterów - jako mobilnych czy stacjonarnych?"
+    ],
+    "answer": "Podany tekst artykułu 292 Kodeksu pracy nie zawiera żadnych przepisów dotyczących pracowników mobilnych, klasyfikacji monterów ani zasad rozliczania delegacji. Artykuł 292 reguluje wyłącznie równość warunków pracy i wynagrodzeń między pracownikami w pełnym i niepełnym wymiarze czasu pracy. Odpowiedź na to pytanie wymaga przeanalizowania innych artykułów kodeksu lub aktów wykonawczych.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 292 § 1",
+        "quote": "Zawarcie z pracownikiem umowy o pracę przewidującej zatrudnienie w niepełnym wymiarze czasu pracy nie może powodować ustalenia jego warunków pracy i płacy w sposób mniej korzystny"
+      }
+    ],
+    "conditions": [],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_dg",
+      "osoba_prawna"
+    ],
+    "topic": "prawo_pracy",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-87-skladka-zdrowotna-niepelny-etat",
+    "question_intent": "Czy pracownik na niepełny etat ma obowiązek płacenia składki zdrowotnej, czy może to być ograniczone do wysokości podatku dochodowego?",
+    "question_patterns": [
+      "Pracownik na niepełny etat - składka zdrowotna ograniczona do wysokości podatku - obowiązek czy przywilej?",
+      "Czy składka zdrowotna dla pracownika na część etatu jest obowiązkowa?",
+      "Czy na niepełnym etacie można ograniczyć składkę zdrowotną do podatku dochodowego?",
+      "Jaki jest status składki zdrowotnej dla pracownika zatrudnionego na niepełny wymiar czasu pracy?"
+    ],
+    "answer": "Artykuł 87 Kodeksu pracy nie zawiera żadnych przepisów dotyczących zmiany obowiązu płacenia składki zdrowotnej dla pracowników na niepełny etat ani jej ograniczenia do wysokości podatku dochodowego. Wymiar zatrudnienia (pełny lub niepełny etat) nie zmienia obowiązku ubezpieczenia zdrowotnego pracownika. Kwestia ta regulowana jest przez przepisy o ubezpieczeniu zdrowotnym, a nie przez art. 87 KP.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 87 ust. 1",
+        "quote": "Z wynagrodzenia za pracę – po odliczeniu składek na ubezpieczenia społeczne, zaliczki na podatek dochodowy od osób fizycznych oraz wpłat dokonywanych do pracowniczego planu kapitałowego..."
+      }
+    ],
+    "conditions": [
+      "Artykuł 87 mówi tylko o kolejności potrąceń składek na ubezpieczenia społeczne",
+      "Nie zawiera żadnych wyjątków dla pracowników na część etatu",
+      "Nie reguluje wysokości ani warunków płacenia składek zdrowotnych"
+    ],
+    "exceptions": [
+      "Brak wyjątków w tekście artykułu 87 dotyczących zmniejszenia lub ograniczenia składek dla pracowników na niepełny wymiar"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "wynagrodzenia_i_potraczenia",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-111-godnosc-pracownika-2",
+    "question_intent": "Czy pracodawca może rozpowszechniać negatywne opinie o pracowniku na wyższych szczeblach zarządzania",
+    "question_patterns": [
+      "Czy obgadywanie pracownika dociera do wyższego szczebla?",
+      "Czy pracodawca może ujawniać negatywne opinie o pracowniku przełożonym?",
+      "Czy rozpowszechnianie opinii o pracowniku wpływa na jego pozycję?"
+    ],
+    "answer": "Pracodawca ma obowiązek szanować godność i inne dobra osobiste pracownika zgodnie z art. 111 Kodeksu pracy. Rozpowszechnianie negatywnych opinii o pracowniku bez faktycznych podstaw, zwłaszcza na wyższych szczeblach zarządzania, może naruszać ten obowiązek. Jednak tekst artykułu nie zawiera konkretnych regulacji dotyczących procedury rozpatrywania takich naruszeń ani sankcji za złamanie tego obowiązku.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 111",
+        "quote": "Pracodawca jest obowiązany szanować godność i inne dobra osobiste pracownika."
+      }
+    ],
+    "conditions": [
+      "Pracodawca ma obowiązek szanować godność pracownika",
+      "Obowiązek obejmuje również inne dobra osobiste pracownika"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_prawna",
+      "osoba_fizyczna_dg"
+    ],
+    "topic": "ochrona praw pracownika",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-85-wyplata-wynagrodzenia",
+    "question_intent": "W jaki sposób pracownik powinien otrzymać wypłatę wynagrodzenia za grudzień i styczeń?",
+    "question_patterns": [
+      "Jak otrzymać wypłatę za grudzień i styczeń?",
+      "Kiedy pracodawca musi wypłacić wynagrodzenie za miesiąc?",
+      "W jakim terminie przysługuje wypłata wynagrodzenia?"
+    ],
+    "answer": "Pracodawca jest obowiązany wypłacić wynagrodzenie za pracę wykonaną w danym miesiącu co najmniej raz w miesiącu, w stałym i ustalonym z góry terminie. Wynagrodzenie płatne raz w miesiącu musi być wypłacone z dołu (po przepracowaniu miesiąca), niezwłocznie po ustaleniu jego pełnej wysokości, jednak nie później niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego. Jeśli ustalony dzień wypłaty przypadł na dzień wolny od pracy, wynagrodzenie należy wypłacić w dniu poprzedzającym.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 1",
+        "quote": "Wypłaty wynagrodzenia za pracę dokonuje się co najmniej raz w miesiącu, w stałym i ustalonym z góry terminie."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 2",
+        "quote": "Wynagrodzenie za pracę płatne raz w miesiącu wypłaca się z dołu, niezwłocznie po ustaleniu jego pełnej wysokości, nie później jednak niż w ciągu pierwszych 10 dni następnego miesiąca kalendarzowego."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 3",
+        "quote": "Jeżeli ustalony dzień wypłaty wynagrodzenia za pracę jest dniem wolnym od pracy, wynagrodzenie wypłaca się w dniu poprzedzającym."
+      }
+    ],
+    "conditions": [
+      "Wynagrodzenie musi być ustalone w pełnej wysokości",
+      "Wypłata dokonywana w formie pieniężnej na rachunek płatniczy lub do rąk własnych",
+      "Termin nie może być później niż w ciągu pierwszych 10 dni następnego miesiąca"
+    ],
+    "exceptions": [
+      "Jeśli dzień wypłaty przypadł na dzień wolny - wypłata w dniu poprzedzającym"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "wyplata-wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-86-forma-wyplaty-2",
+    "question_intent": "W jakiej formie pracodawca powinien wypłacić wynagrodzenie pracownikowi?",
+    "question_patterns": [
+      "Jak pracownik może żądać wypłaty wynagrodzenia?",
+      "Czy pracodawca może wypłacić wynagrodzenie w innej formie niż pieniądz?",
+      "Na jaki rachunek powinno być wypłacone wynagrodzenie?"
+    ],
+    "answer": "Wynagrodzenie musi być wypłacane w formie pieniężnej. Pracownik wskazuje rachunek płatniczy, na który ma być dokonana wypłata, chyba że złożył wniosek (w postaci papierowej lub elektronicznej) o wypłatę wynagrodzenia do rąk własnych. Częściowe spełnienie wynagrodzenia w innej formie niż pieniężna jest dopuszczalne tylko wówczas, gdy przewidują to ustawowe przepisy prawa pracy lub układ zbiorowy pracy.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 86 § 2",
+        "quote": "Wypłaty wynagrodzenia dokonuje się w formie pieniężnej; częściowe spełnienie wynagrodzenia w innej formie niż pieniężna jest dopuszczalne tylko wówczas, gdy przewidują to ustawowe przepisy prawa pracy lub układ zbiorowy pracy."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 86 § 3",
+        "quote": "Wypłata wynagrodzenia jest dokonywana na wskazany przez pracownika rachunek płatniczy, chyba że pracownik złożył w postaci papierowej lub elektronicznej wniosek o wypłatę wynagrodzenia do rąk własnych."
+      }
+    ],
+    "conditions": [
+      "Forma główna - pieniądz",
+      "Pracownik wskazuje rachunek płatniczy lub składa wniosek o wypłatę do rąk własnych"
+    ],
+    "exceptions": [
+      "Możliwe częściowe spełnienie w innej formie, jeśli przewidują to przepisy ustawy lub układ zbiorowy"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "forma-wyplaty-wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-85-dokumentacja",
+    "question_intent": "Co powinien zrobić pracownik, aby sprawdzić, jak obliczono jego wynagrodzenie?",
+    "question_patterns": [
+      "Czy mogę żądać dokumentów do obliczenia wynagrodzenia?",
+      "Jakie dokumenty mam prawo otrzymać od pracodawcy?"
+    ],
+    "answer": "Pracownik ma prawo żądać od pracodawcy udostępnienia do wglądu dokumentów, na których podstawie zostało obliczone jego wynagrodzenie. Pracodawca jest obowiązany spełnić to żądanie. Możesz skorzystać z tego prawa, aby sprawdzić poprawność obliczenia wynagrodzeń za grudzień i styczeń.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 85 § 5",
+        "quote": "Pracodawca, na żądanie pracownika, jest obowiązany udostępnić do wglądu dokumenty, na których podstawie zostało obliczone jego wynagrodzenie."
+      }
+    ],
+    "conditions": [
+      "Żądanie pracownika powinno być wyraźnie sformułowane",
+      "Pracodawca musi udostępnić dokumenty do wglądu"
+    ],
+    "exceptions": [],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "dokumentacja-wynagrodzenia",
+    "difficulty": "easy",
+    "requires_verification": false,
+    "verified": true,
+    "verified_date": ""
+  },
+  {
+    "id": "law-55-rozwiazanie-bez-wypowiedzenia",
+    "question_intent": "Jakie prawo ma pracownik do rozwiązania umowy bez wypowiedzenia ze względu na naruszenia pracodawcy?",
+    "question_patterns": [
+      "Czy mogę rozwiązać umowę bez wypowiedzenia, jeśli pracodawca nie płaci wynagrodzenia?",
+      "Co to jest ciężkie naruszenie obowiązków pracodawcy?",
+      "Jakie uprawnienia mam, gdy pracodawca narusza moje prawa?"
+    ],
+    "answer": "Pracownik może rozwiązać umowę o pracę bez wypowiedzenia, gdy pracodawca dopuścił się ciężkiego naruszenia podstawowych obowiązków wobec pracownika - do czego zalicza się brak wypłaty wynagrodzeń. W takim przypadku pracownikowi przysługuje odszkodowanie w wysokości wynagrodzenia za okres wypowiedzenia. Rozwiązanie musi nastąpić na piśmie z podaniem przyczyny. Takie rozwiązanie ma te same skutki, jakie przepisy wiążą z rozwiązaniem umowy przez pracodawcę za wypowiedzeniem.",
+    "legal_basis": [
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 55 § 11",
+        "quote": "Pracownik może rozwiązać umowę o pracę w trybie określonym w § 1 także wtedy, gdy pracodawca dopuścił się ciężkiego naruszenia podstawowych obowiązków wobec pracownika; w takim przypadku pracownikowi przysługuje odszkodowanie w wysokości wynagrodzenia za okres wypowiedzenia."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 55 § 2",
+        "quote": "Oświadczenie pracownika o rozwiązaniu umowy o pracę bez wypowiedzenia powinno nastąpić na piśmie, z podaniem przyczyny uzasadniającej rozwiązanie umowy."
+      },
+      {
+        "law": "Kodeks pracy",
+        "article": "art. 55 § 3",
+        "quote": "Rozwiązanie umowy o pracę z przyczyn określonych w § 1 i 11 pociąga za sobą skutki, jakie przepisy prawa wiążą z rozwiązaniem umowy przez pracodawcę za wypowiedzeniem."
+      }
+    ],
+    "conditions": [
+      "Pracodawca musi dopuścić się ciężkiego naruszenia podstawowych obowiązków",
+      "Brak wypłaty wynagrodzeń stanowi takie naruszenie",
+      "Oświadczenie musi być na piśmie z podaniem przyczyny",
+      "Pracownikowi przysługuje odszkodowanie w wysokości wynagrodzenia za okres wypowiedzenia"
+    ],
+    "exceptions": [
+      "Dla umowy na czas określony - odszkodowanie do wysokości wynagrodzenia za czas, do którego umowa miała trwać, nie więcej jednak niż za okres wypowiedzenia"
+    ],
+    "taxpayer_type": [
+      "osoba_fizyczna_pracownik"
+    ],
+    "topic": "rozwiazanie-umowy-bez-wypowiedzenia",
+    "difficulty": "medium",
+    "requires_verification": true,
+    "verified": true,
+    "verified_date": ""
+  }
+]
