@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 from threading import Lock
@@ -74,20 +75,8 @@ _KNOWLEDGE_CACHE: dict[str, tuple[int, tuple[LawChunk, ...], BM25Okapi, tuple[tu
 
 
 def _normalize(text: str) -> str:
-    translation = str.maketrans(
-        {
-            "ą": "a",
-            "ć": "c",
-            "ę": "e",
-            "ł": "l",
-            "ń": "n",
-            "ó": "o",
-            "ś": "s",
-            "ż": "z",
-            "ź": "z",
-        }
-    )
-    return text.lower().translate(translation)
+    normalized = unicodedata.normalize("NFKD", text.lower())
+    return "".join(character for character in normalized if not unicodedata.combining(character))
 
 
 def _tokenize(text: str) -> list[str]:
@@ -121,6 +110,7 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
             "korekta_faktury",
             "faktura korygujaca",
             "koryguj",
+            "nip",
         ),
         "korekty": (
             "korekta",
@@ -165,15 +155,30 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
             "podatek dochodowy od osob prawnych",
             "estonski cit",
             "ryczalt od dochodow spolek",
+            "wht",
+            "podatek u zrodla",
+            "ceny transferowe",
+            "tpr",
+            "cit-8",
+            "maly podatnik cit",
+            "ift-2r",
         ),
         "zus": (
             "zus",
+            "skladka",
             "skladki",
             "skladka zdrowotna",
             "skladka spoleczna",
             "maly zus",
+            "preferencyjny zus",
+            "ulga na start",
             "dra",
             "rca",
+            "zasilek",
+            "chorobowe",
+            "macierzynski",
+            "zbieg tytulow",
+            "podstawa wymiaru",
         ),
         "kadry": (
             "kodeks pracy",
@@ -185,6 +190,14 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
             "swiadectwo pracy",
             "l4",
             "zasilek chorobowy",
+            "czas pracy",
+            "okres probny",
+            "praca zdalna",
+            "bhp",
+            "badania lekarskie",
+            "macierzynski",
+            "rodzicielski",
+            "ekwiwalent",
         ),
         "ordynacja": (
             "ordynacja podatkowa",
@@ -212,6 +225,9 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
             "srodki trwale",
             "amortyzacja",
             "inwentaryzacja",
+            "rezerwa",
+            "rmk",
+            "odpis aktualizujacy",
         ),
     }
 
