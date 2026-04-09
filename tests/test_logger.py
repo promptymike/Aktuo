@@ -40,3 +40,27 @@ def test_log_query_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
     assert entry["category"] == "ksef"
     assert entry["chunks_returned"] == 2
     assert entry["grounded"] is True
+
+
+def test_log_feedback_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
+    feedback_path = tmp_path / "feedback.jsonl"
+    monkeypatch.setattr(logger, "FEEDBACK_PATH", feedback_path)
+    monkeypatch.setattr(logger, "Thread", ImmediateThread)
+
+    logger.log_feedback(
+        session_id="session-123",
+        user_email="beta@aktuo.pl",
+        query="Czy mogę skorygować JPK_V7?",
+        rating="down",
+        comment="Za mało konkretów o korekcie.",
+    )
+
+    lines = feedback_path.read_text(encoding="utf-8").splitlines()
+    assert len(lines) == 1
+
+    entry = json.loads(lines[0])
+    assert entry["session_id"] == "session-123"
+    assert entry["user_email"] == "beta@aktuo.pl"
+    assert entry["query"] == "Czy mogę skorygować JPK_V7?"
+    assert entry["rating"] == "down"
+    assert entry["comment"] == "Za mało konkretów o korekcie."

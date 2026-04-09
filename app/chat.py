@@ -4,6 +4,7 @@ from collections.abc import Sequence
 
 import streamlit as st
 
+from core.logger import log_feedback
 from core.rag import RagResult
 
 
@@ -13,10 +14,18 @@ def render_user_message(question: str) -> None:
         st.write(question)
 
 
-def render_assistant_message(result: RagResult) -> None:
+def render_assistant_message(
+    result: RagResult,
+    *,
+    message_index: int,
+    session_id: str,
+    user_email: str,
+    query: str,
+) -> None:
     with st.chat_message("assistant"):
         st.markdown("**Aktuo**")
         st.write(result.answer)
+
         if result.chunks:
             with st.expander("Pokaż źródła prawne", expanded=False):
                 for chunk in result.chunks:
@@ -27,13 +36,60 @@ def render_assistant_message(result: RagResult) -> None:
                         f"_Kategoria: {chunk.category}{verified}_"
                     )
 
+        feedback_status_key = f"feedback_status_{message_index}"
+        feedback_down_key = f"feedback_down_open_{message_index}"
+        feedback_comment_key = f"feedback_comment_{message_index}"
 
-def render_chat_history(history: Sequence[dict[str, object]]) -> None:
-    for message in history:
+        if st.session_state.get(feedback_status_key):
+            st.success("Dziękujemy za feedback!")
+            return
+
+        col_up, col_down = st.columns(2)
+        if col_up.button("👍", key=f"feedback_up_{message_index}", use_container_width=True):
+            log_feedback(
+                session_id=session_id,
+                user_email=user_email,
+                query=query,
+                rating="up",
+            )
+            st.session_state[feedback_status_key] = "up"
+            st.rerun()
+
+        if col_down.button("👎", key=f"feedback_down_{message_index}", use_container_width=True):
+            st.session_state[feedback_down_key] = True
+
+        if st.session_state.get(feedback_down_key):
+            st.text_input("Co było nie tak? (opcjonalne)", key=feedback_comment_key)
+            if st.button("Wyślij feedback", key=f"feedback_submit_{message_index}", use_container_width=True):
+                log_feedback(
+                    session_id=session_id,
+                    user_email=user_email,
+                    query=query,
+                    rating="down",
+                    comment=str(st.session_state.get(feedback_comment_key, "")).strip(),
+                )
+                st.session_state[feedback_status_key] = "down"
+                st.session_state.pop(feedback_down_key, None)
+                st.rerun()
+
+
+def render_chat_history(
+    history: Sequence[dict[str, object]],
+    *,
+    session_id: str,
+    user_email: str,
+) -> None:
+    for index, message in enumerate(history):
         role = message.get("role")
         if role == "user":
             render_user_message(str(message.get("content", "")))
         elif role == "assistant":
             result = message.get("result")
             if isinstance(result, RagResult):
-                render_assistant_message(result)
+                render_assistant_message(
+                    result,
+                    message_index=index,
+                    session_id=session_id,
+                    user_email=user_email,
+                    query=str(message.get("query", "")),
+                )

@@ -264,7 +264,11 @@ def render_chat_page() -> None:
         render_footer()
         return
 
-    render_chat_history(st.session_state.chat_history)
+    render_chat_history(
+        st.session_state.chat_history,
+        session_id=st.session_state.session_id,
+        user_email=user_email,
+    )
 
     question = st.chat_input("Zadaj pytanie o prawo podatkowe...")
     if not question:
@@ -304,7 +308,7 @@ def render_chat_page() -> None:
     st.session_state.chat_history.extend(
         [
             {"role": "user", "content": question},
-            {"role": "assistant", "result": result},
+            {"role": "assistant", "result": result, "query": question},
         ]
     )
     render_footer()
