@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import sys
 import uuid
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import streamlit as st
 
@@ -17,9 +19,15 @@ from core.generator import AnthropicAPIError
 from core.logger import log_query
 from core.rag import answer_query
 
+LOCAL_TZ = ZoneInfo("Europe/Warsaw")
+
 
 def normalize_email(value: str) -> str:
     return value.strip().lower()
+
+
+def current_timestamp() -> str:
+    return datetime.now(LOCAL_TZ).isoformat()
 
 
 def render_styles() -> None:
@@ -246,8 +254,11 @@ def render_chat_page() -> None:
         st.info(f"Szczegóły: {exc}")
         st.stop()
 
-    if "chat_history" not in st.session_state:
-        st.session_state.chat_history = []
+    if "messages" not in st.session_state:
+        if "chat_history" in st.session_state:
+            st.session_state.messages = list(st.session_state.chat_history)
+        else:
+            st.session_state.messages = []
     if "session_id" not in st.session_state:
         st.session_state.session_id = str(uuid.uuid4())
     user_email = st.session_state.get("user_email")
@@ -265,14 +276,14 @@ def render_chat_page() -> None:
         return
 
     render_chat_history(
-        st.session_state.chat_history,
+        st.session_state.messages,
         session_id=st.session_state.session_id,
         user_email=user_email,
     )
 
     question = st.chat_input("Zadaj pytanie o prawo podatkowe...")
     if not question:
-        if not st.session_state.chat_history:
+        if not st.session_state.messages:
             st.write("Na przykład: Od kiedy KSeF będzie obowiązkowy dla mojej firmy?")
         render_footer()
         return
@@ -306,10 +317,16 @@ def render_chat_page() -> None:
         no_match_reason=result.no_match_reason,
     )
 
-    st.session_state.chat_history.extend(
+    message_timestamp = current_timestamp()
+    st.session_state.messages.extend(
         [
-            {"role": "user", "content": question},
-            {"role": "assistant", "result": result, "query": question},
+            {"role": "user", "content": question, "timestamp": message_timestamp},
+            {
+                "role": "assistant",
+                "result": result,
+                "query": question,
+                "timestamp": message_timestamp,
+            },
         ]
     )
     render_footer()

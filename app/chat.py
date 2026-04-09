@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
+from datetime import datetime
 
 import streamlit as st
 
@@ -8,9 +9,28 @@ from core.logger import log_feedback
 from core.rag import RagResult
 
 
-def render_user_message(question: str) -> None:
+def _format_timestamp(value: str | None) -> str:
+    if not value:
+        return ""
+    try:
+        return datetime.fromisoformat(value).strftime("%Y-%m-%d %H:%M")
+    except ValueError:
+        return value
+
+
+def _render_timestamp(timestamp: str | None) -> None:
+    label = _format_timestamp(timestamp)
+    if label:
+        st.markdown(
+            f"<div style='color:#7b8798;font-size:0.78rem;margin-bottom:0.35rem;'>{label}</div>",
+            unsafe_allow_html=True,
+        )
+
+
+def render_user_message(question: str, *, timestamp: str | None = None) -> None:
     with st.chat_message("user"):
         st.markdown("**Ty**")
+        _render_timestamp(timestamp)
         st.write(question)
 
 
@@ -21,9 +41,11 @@ def render_assistant_message(
     session_id: str,
     user_email: str,
     query: str,
+    timestamp: str | None = None,
 ) -> None:
     with st.chat_message("assistant"):
         st.markdown("**Aktuo**")
+        _render_timestamp(timestamp)
         st.write(result.answer)
 
         if result.chunks:
@@ -82,7 +104,10 @@ def render_chat_history(
     for index, message in enumerate(history):
         role = message.get("role")
         if role == "user":
-            render_user_message(str(message.get("content", "")))
+            render_user_message(
+                str(message.get("content", "")),
+                timestamp=str(message.get("timestamp", "")),
+            )
         elif role == "assistant":
             result = message.get("result")
             if isinstance(result, RagResult):
@@ -92,4 +117,5 @@ def render_chat_history(
                     session_id=session_id,
                     user_email=user_email,
                     query=str(message.get("query", "")),
+                    timestamp=str(message.get("timestamp", "")),
                 )
