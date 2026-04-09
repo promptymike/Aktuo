@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import sys
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
+from math import ceil
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -14,7 +15,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from app.chat import render_chat_history, render_user_message
 from app.sidebar import render_sidebar
-from config.settings import MissingEnvironmentError, get_settings
+from config.settings import MissingEnvironmentError, RATE_LIMIT_PER_HOUR, get_settings
 from core.generator import AnthropicAPIError
 from core.logger import log_query
 from core.rag import answer_query
@@ -28,6 +29,30 @@ def normalize_email(value: str) -> str:
 
 def current_timestamp() -> str:
     return datetime.now(LOCAL_TZ).isoformat()
+
+
+def load_recent_query_timestamps(now: datetime) -> list[datetime]:
+    window_start = now - timedelta(hours=1)
+    recent: list[datetime] = []
+    for raw_value in st.session_state.get("query_timestamps", []):
+        try:
+            parsed = datetime.fromisoformat(raw_value)
+        except (TypeError, ValueError):
+            continue
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=LOCAL_TZ)
+        if parsed >= window_start:
+            recent.append(parsed)
+    st.session_state.query_timestamps = [value.isoformat() for value in recent]
+    return recent
+
+
+def minutes_until_rate_limit_reset(recent: list[datetime], now: datetime) -> int:
+    if not recent:
+        return 0
+    reset_at = min(recent) + timedelta(hours=1)
+    remaining_seconds = max(0, (reset_at - now).total_seconds())
+    return max(1, ceil(remaining_seconds / 60))
 
 
 def render_styles() -> None:
@@ -261,6 +286,8 @@ def render_chat_page() -> None:
             st.session_state.messages = []
     if "session_id" not in st.session_state:
         st.session_state.session_id = str(uuid.uuid4())
+    if "query_timestamps" not in st.session_state:
+        st.session_state.query_timestamps = []
     user_email = st.session_state.get("user_email")
 
     logout_requested = render_sidebar(settings, user_email)
@@ -287,6 +314,15 @@ def render_chat_page() -> None:
             st.write("Na przykład: Od kiedy KSeF będzie obowiązkowy dla mojej firmy?")
         render_footer()
         return
+
+    now = datetime.now(LOCAL_TZ)
+    recent_queries = load_recent_query_timestamps(now)
+    if len(recent_queries) >= RATE_LIMIT_PER_HOUR:
+        minutes_left = minutes_until_rate_limit_reset(recent_queries, now)
+        st.error(f"Przekroczono limit pytań. Spróbuj ponownie za {minutes_left} minut.")
+        render_footer()
+        return
+    st.session_state.query_timestamps.append(now.isoformat())
 
     try:
         result = answer_query(
