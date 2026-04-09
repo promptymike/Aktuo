@@ -1,21 +1,15 @@
 from __future__ import annotations
 
+import re
+import unicodedata
+
 
 def _normalize(text: str) -> str:
-    translation = str.maketrans(
-        {
-            "ą": "a",
-            "ć": "c",
-            "ę": "e",
-            "ł": "l",
-            "ń": "n",
-            "ó": "o",
-            "ś": "s",
-            "ż": "z",
-            "ź": "z",
-        }
+    normalized = unicodedata.normalize("NFKD", text.lower())
+    without_accents = "".join(
+        character for character in normalized if not unicodedata.combining(character)
     )
-    return text.lower().translate(translation)
+    return re.sub(r"\s+", " ", without_accents).strip()
 
 
 def categorize_query(query: str) -> str:
@@ -48,6 +42,7 @@ def categorize_query(query: str) -> str:
                 "kpir",
                 "pelne ksiegi",
                 "e-sprawozdanie",
+                "e sprawozdanie",
                 "krs",
                 "ustawa o rachunkowosci",
                 "wycena aktywow",
@@ -80,6 +75,15 @@ def categorize_query(query: str) -> str:
                 "stawka cit",
                 "estonski cit",
                 "ryczalt od dochodow spolek",
+                "wht",
+                "podatek u zrodla",
+                "ceny transferowe",
+                "tp",
+                "tpr",
+                "cit-8",
+                "ryczalt od dochodow",
+                "maly podatnik cit",
+                "ift-2r",
             ),
         ),
         (
@@ -102,13 +106,22 @@ def categorize_query(query: str) -> str:
             "zus",
             (
                 "zus",
+                "skladka",
                 "skladki",
-                "skladka zdrowotna",
-                "skladka spoleczna",
-                "maly zus",
-                "preferencyjne skladki",
+                "ubezpieczenie spoleczne",
+                "ubezpieczenie zdrowotne",
+                "fp",
+                "fgsp",
                 "dra",
                 "rca",
+                "zasilek",
+                "chorobowe",
+                "macierzynski",
+                "preferencyjny zus",
+                "maly zus",
+                "ulga na start",
+                "zbieg tytulow",
+                "podstawa wymiaru",
             ),
         ),
         (
@@ -116,13 +129,21 @@ def categorize_query(query: str) -> str:
             (
                 "kodeks pracy",
                 "umowa o prace",
-                "urlop",
-                "wynagrodzenie minimalne",
-                "nadgodziny",
                 "wypowiedzenie",
+                "urlop",
+                "nadgodziny",
+                "czas pracy",
                 "swiadectwo pracy",
-                "l4",
+                "okres probny",
+                "praca zdalna",
+                "bhp",
+                "badania lekarskie",
+                "macierzynski",
+                "rodzicielski",
+                "ekwiwalent",
+                "wynagrodzenie minimalne",
                 "zasilek chorobowy",
+                "l4",
             ),
         ),
         (
@@ -139,16 +160,19 @@ def categorize_query(query: str) -> str:
             ),
         ),
         (
-            "faktury_korygujące",
+            "faktury_koryguj\u0105ce",
             (
                 "faktura korygujaca",
                 "faktury korygujace",
                 "korekta faktury",
+                "korekta",
+                "korekty",
                 "korygujacej",
                 "korygujaca",
                 "nota korygujaca",
                 "blad na fakturze",
                 "bledny nip",
+                "nip",
             ),
         ),
         (
@@ -187,7 +211,7 @@ def categorize_query(query: str) -> str:
             ),
         ),
         (
-            "podatek_należny",
+            "podatek_nale\u017cny",
             (
                 "podatek nalezny",
                 "vat nalezny",
@@ -228,4 +252,4 @@ def categorize_query(query: str) -> str:
     for category, keywords in keyword_map:
         if any(keyword in lowered for keyword in keywords):
             return category
-    return "ogólne"
+    return "og\u00f3lne"
