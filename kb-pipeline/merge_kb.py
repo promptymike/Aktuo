@@ -34,6 +34,11 @@ def iter_kb_files() -> list[Path]:
 
 
 def normalize_record(record: dict) -> dict[str, str] | None:
+    if "verdict" in record and str(record.get("verdict", "")).strip().upper() != "VERIFIED":
+        return None
+    if "verified" in record and bool(record.get("verified")) is False:
+        return None
+
     if {"law_name", "article_number", "category", "verified_date", "content"} <= record.keys():
         normalized = {
             "law_name": str(record["law_name"]).strip(),
