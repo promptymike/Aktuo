@@ -126,7 +126,7 @@ def rejoin_broken_lines(text: str) -> str:
             and not line.endswith((".", ";", ":", ")", "–", "—"))
             and lines[i + 1].strip()
             and not re.match(
-                r"^\s*(Art\.|DZIAŁ|Rozdział|\d+[a-z]?\)|\d+[a-z]?\.\s|[a-z]\))",
+                r"^\s*(Art\.|§\s*\d|DZIAŁ|Rozdział|Rozdzial|\d+[a-z]?\)|\d+[a-z]?\.\s|[a-z]\))",
                 lines[i + 1].strip(),
             )
             and (
@@ -155,6 +155,7 @@ def extract_metadata(text: str) -> dict:
 
     def clean_title(value: str) -> str:
         cleaned = normalize_whitespace(re.sub(r"\d+\)\s*$", "", value))
+        cleaned = re.sub(r"\s*Opracowano na podstawie:.*?(?:poz\.\s*\d+\.?)\s*", " ", cleaned).strip()
         if cleaned.lower().startswith("ustawa "):
             return cleaned
         if cleaned.lower().startswith(("ordynacja", "prawo", "kodeks")):
@@ -177,7 +178,7 @@ def extract_metadata(text: str) -> dict:
     }
 
     header_match = re.search(
-        r"U\s*S\s*T\s*A\s*W\s*A\s*\n\s*z dnia\s+([^\n]+)\n(.+?)(?:\nDZIAŁ|\nRozdział|\nArt\.)",
+        r"U\s*S\s*T\s*A\s*W\s*A\s+z dnia\s+([^\n]+)\n(.+?)(?:\nDZIAŁ|\nRozdzial|\nRozdział|\nArt\.)",
         text,
         re.IGNORECASE | re.DOTALL,
     )
@@ -206,6 +207,26 @@ def extract_metadata(text: str) -> dict:
     m2 = re.search(r"t\.j\.\s*\n?\s*Dz\.\s*U\.\s*z\s*(\d{4})\s*r\.\s*\n?\s*poz\.\s*([\d,\s]+)", text[:500])
     if m2:
         meta["consolidated_id"] = f"Dz.U.{m2.group(1)}.{m2.group(2).split(',')[0].strip()}"
+
+    if not meta["law_name"]:
+        rozp_match = re.search(
+            r"ROZPORZ[ĄA]?D\s*Z\s*E\s*N\s*I\s*E.*?\n\s*z dnia\s+([^\n]+)\n(.+?)(?:\nRozdzial|\nRozdział|\n§)",
+            text,
+            re.IGNORECASE | re.DOTALL,
+        )
+        if rozp_match:
+            date_text = normalize_whitespace(rozp_match.group(1))
+            title_text = normalize_whitespace(rozp_match.group(2))
+            title_text = re.sub(r"\d+\)\s*$", "", title_text).strip()
+            title_text = re.split(r"\s*Na podstawie\s", title_text, maxsplit=1)[0].strip()
+            meta["law_name"] = f"Rozporządzenie {title_text}" if not title_text.lower().startswith("rozporz") else title_text
+            meta["short_name"] = meta["law_name"]
+            parsed_date = re.match(r"(\d{1,2})\s+([a-ząćęłńóśźż]+)\s+(\d{4})\s*r\.", date_text, re.IGNORECASE)
+            if parsed_date:
+                day, month_name, year = parsed_date.groups()
+                month = month_map.get(month_name.lower())
+                if month:
+                    meta["date"] = f"{year}-{month}-{int(day):02d}"
 
     if not meta["law_name"]:
         meta["law_name"] = "Ustawa"
@@ -265,6 +286,64 @@ def find_context(text: str, position: int) -> dict:
     return context
 
 
+def parse_sections(text: str) -> list[dict]:
+    """Rozbija tekst rozporządzenia na paragrafy (§)."""
+    section_pattern = re.compile(r"^(§\s*(\d+[a-z]*)\.)\s+(.*)", re.MULTILINE)
+    matches = list(section_pattern.finditer(text))
+
+    if not matches:
+        raise ValueError("Nie znaleziono paragrafów (§) w tekście")
+
+    sections: list[dict] = []
+    for i, match in enumerate(matches):
+        sec_num = match.group(2)
+        start = match.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+
+        raw_text = text[start:end].strip()
+
+        # Cut off załączniki that might follow last §
+        attach_cut = re.search(r"\nZa[lł][aą]cznik", raw_text, re.IGNORECASE)
+        if not attach_cut:
+            attach_cut = re.search(r"\nZalcznik", raw_text)
+        if attach_cut:
+            raw_text = raw_text[: attach_cut.start()].strip()
+
+        context = find_context(text, start)
+
+        section = {
+            "article_number": sec_num,
+            "full_id": f"§ {sec_num}",
+            "division": context.get("division", ""),
+            "chapter": context.get("chapter", ""),
+            "raw_text": raw_text,
+            "paragraphs": [],
+            "is_repealed": "(uchylony)" in raw_text and len(raw_text) < 100,
+            "char_count": len(raw_text),
+        }
+        sections.append(section)
+
+    # Parse załączniki as a single pseudo-section
+    last_section_end = matches[-1].start()
+    remaining = text[last_section_end:]
+    attach_match = re.search(r"(Za[lł][aą]cznik|Zalcznik)", remaining, re.IGNORECASE)
+    if attach_match:
+        attach_text = remaining[attach_match.start():].strip()
+        if len(attach_text) > 50:
+            sections.append({
+                "article_number": "załączniki",
+                "full_id": "załączniki",
+                "division": "",
+                "chapter": "",
+                "raw_text": attach_text,
+                "paragraphs": [],
+                "is_repealed": False,
+                "char_count": len(attach_text),
+            })
+
+    return sections
+
+
 def parse_paragraphs(article_text: str, art_num: str) -> list[dict]:
     """Parsuje ustępy w artykule."""
     paragraphs = []
@@ -321,7 +400,18 @@ def main() -> None:
 
     print("[4/4] Parsowanie artykułów...")
     metadata = extract_metadata(raw)
-    articles = parse_articles(rejoined)
+
+    has_articles = bool(re.search(r"^Art\.\s*\d+[a-z]*\.", rejoined, re.MULTILINE))
+    has_sections = bool(re.search(r"^§\s*\d+[a-z]*\.", rejoined, re.MULTILINE))
+
+    if has_articles:
+        articles = parse_articles(rejoined)
+        label = "artykułów"
+    elif has_sections:
+        articles = parse_sections(rejoined)
+        label = "paragrafów"
+    else:
+        raise ValueError("Nie znaleziono artykułów (Art.) ani paragrafów (§) w tekście")
 
     total = len(articles)
     repealed = sum(1 for a in articles if a["is_repealed"])
@@ -339,7 +429,7 @@ def main() -> None:
 
     Path(output_path).write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"\nGotowe! {active} aktywnych artykułów (+ {repealed} uchylonych)")
+    print(f"\nGotowe! {active} aktywnych {label} (+ {repealed} uchylonych)")
     print(f"Zapisano: {output_path}")
 
 
