@@ -1,0 +1,994 @@
+{
+  "meta": {
+    "sample_size": 50,
+    "seed": 20260410,
+    "summary": {
+      "ACCURATE": 40,
+      "UNVERIFIABLE": 2,
+      "INACCURATE": 8
+    },
+    "summary_pct": {
+      "ACCURATE": 80.0,
+      "UNVERIFIABLE": 4.0,
+      "INACCURATE": 16.0
+    }
+  },
+  "inaccurate": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 4",
+      "category": "ksef-obowiazki",
+      "verdict": "INACCURATE",
+      "detail": "Niski overlap tre?ci z artyku?em ?r?d?owym (0.03).",
+      "overlap_ratio": 0.0323,
+      "unsupported_numbers": [],
+      "content_preview": "Jeśli miejscem świadczenia jest terytorium innego państwa członkowskiego lub trzeciego, albo nabywca nie ma siedziby działalności gospodarczej w Polsce, faktura ustrukturyzowana nie jest przesyłana do KSeF w standardowy ",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 106g",
+        "art. 4"
+      ],
+      "source_preview": "Art. 106g. (uchylony)\nArt. 4. Ulgi i zwolnienia podatkowe udzielone na podstawie odrębnych ustaw nie mają zastosowania do podatku od towarów i usług.\nDZIAŁ II\nZakres opodatkowania\nRozdział 1\nPrzepisy ogólne"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 6 ust. 2",
+      "category": "opodatkowanie łączne małżonków",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 36.",
+      "overlap_ratio": 0.6897,
+      "unsupported_numbers": [
+        "36"
+      ],
+      "content_preview": "Tak, małżonkowie mogą wybrać wspólne opodatkowanie swoich dochodów z działalności gospodarczej. Warunkiem jest złożenie wspólnego wniosku w zeznaniu podatkowym (PIT-36) o łącznym opodatkowaniu. Podatek będzie wtedy wylic",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 6",
+        "art. 2"
+      ],
+      "source_preview": "Art. 6. 1. Małżonkowie podlegają odrębnemu opodatkowaniu od osiąganych przez nich dochodów.\n2. Małżonkowie podlegający obowiązkowi podatkowemu, o  którym mowa w art. 3 ust. 1, pozostający w związku małżeńskim i we wspóln"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 26ha ust. 1",
+      "category": "ulgi_i_odliczenia",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 50.",
+      "overlap_ratio": 0.2083,
+      "unsupported_numbers": [
+        "50"
+      ],
+      "content_preview": "Art. 26ha nie reguluje ulgi termoizolacyjnej. Artykuł ten dotyczy wyłącznie odliczenia 50% kosztów uzyskania przychodów poniesionych na działalność sportową, kulturalną lub wspierającą szkolnictwo wyższe i naukę. Ulga te",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 26h",
+        "art. 1"
+      ],
+      "source_preview": "Art. 26h. 1. Podatnik będący właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego ma prawo odliczyć od podstawy obliczenia podatku, ustalonej zgodnie z  art. 26 ust.  1 lub art.  30c ust.  2, wydatki p"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 13b",
+      "category": "procedury_elektroniczne",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 100.",
+      "overlap_ratio": 0.3478,
+      "unsupported_numbers": [
+        "100"
+      ],
+      "content_preview": "Ustawa o VAT nie zawiera przepisów dotyczących znaczników VAT lub rejestrów, w których byłyby one wybierane. Przepisy ustawy regulują wyłącznie obowiązek składania deklaracji i informacji podsumowujących (art. 99-100). S",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 99",
+        "art. 13b"
+      ],
+      "source_preview": "Art. 99. 1. Podatnicy, o  których mowa w  art. 15, są obowiązani składać w urzędzie skarbowym deklaracje podatkowe za okresy miesięczne w  terminie do\n25. dnia miesiąca następującego po każdym kolejnym miesiącu, z  zastr"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "§ 14",
+      "category": "wymagania_techniczne_kseff",
+      "verdict": "INACCURATE",
+      "detail": "Niski overlap tre?ci z artyku?em ?r?d?owym (0.06).",
+      "overlap_ratio": 0.0625,
+      "unsupported_numbers": [],
+      "content_preview": "Artykuł nie zawiera informacji o sposobach technicznych połączenia z KSeF (API, portal WWW). Przepisy § 10 i § 14 powołują się na specyfikację oprogramowania interfejsowego, która zawiera szczegóły techniczne dostępu do ",
+      "source_hit_count": 1,
+      "source_articles": [
+        "art. 14"
+      ],
+      "source_preview": "Art. 14. 1. Opodatkowaniu podatkiem podlegają towary własnej produkcji i towary, które po nabyciu nie były przedmiotem dostawy towarów, w przypadku:\n1) rozwiązania spółki cywilnej lub handlowej niemającej osobowości praw"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 6",
+      "category": "Faktury dla osób fizycznych w KSeF",
+      "verdict": "INACCURATE",
+      "detail": "Niski overlap tre?ci z artyku?em ?r?d?owym (0.00).",
+      "overlap_ratio": 0.0,
+      "unsupported_numbers": [],
+      "content_preview": "Artykuł 106gb ust. 6 wymaga, aby podatnik zapewnił dostęp do faktury ustrukturyzowanej osobie niebędącej podatnikiem VAT czynnym (co obejmuje osoby fizyczne nieprowadzące działalności), chyba że osoba ta zwolni podatnika",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 106g",
+        "art. 6"
+      ],
+      "source_preview": "Art. 106g. (uchylony)\nArt. 6. Przepisów ustawy nie stosuje się do:\n1) transakcji zbycia przedsiębiorstwa lub zorganizowanej części przedsiębiorstwa;\n2) czynności, które nie mogą być przedmiotem prawnie skutecznej umowy.\n"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 30e ust. 4",
+      "category": "rozliczenie sprzedaży dziedziczonej nieruchomości",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 39.",
+      "overlap_ratio": 0.2857,
+      "unsupported_numbers": [
+        "39"
+      ],
+      "content_preview": "Podatnik jest obowiązany wykazać dochód ze sprzedaży w zeznaniu podatkowym rocznym (art. 30e ust. 4). Tekst ustawy nie zawiera informacji, czy konkretnie PIT-39 jest wymagany, czy też inne formularze mogą zastąpić to obo",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 30e",
+        "art. 4"
+      ],
+      "source_preview": "Art. 30e. 1. Od dochodu z odpłatnego zbycia nieruchomości i praw określonych w art. 10 ust. 1 pkt 8 lit. a–c podatek dochodowy wynosi 19  % podstawy obliczenia podatku.\n2. Podstawą obliczenia podatku, o której mowa w ust"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 96 ust. 1",
+      "category": "Rejestracja w VAT — termin zgłoszenia",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 2026.",
+      "overlap_ratio": 0.5862,
+      "unsupported_numbers": [
+        "2026"
+      ],
+      "content_preview": "Termin rejestracji VAT wynika z art. 96 ust. 1: zgłoszenie rejestracyjne musisz złożyć PRZED dniem wykonania pierwszej czynności (sprzedaży, usługi itp. określonej w art. 5). Nie dotyczy to konkretnego miesiąca, ale mome",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 96",
+        "art. 1"
+      ],
+      "source_preview": "Art. 96. 1. Podmioty, o  których mowa w  art. 15 i art. 15a, są obowiązane przed dniem wykonania pierwszej czynności okreś lonej w  art. 5 złożyć naczelnikowi urzędu skarbowego zgłoszenie rejestracyjne, z zastrzeżeniem u"
+    }
+  ],
+  "unverifiable": [
+    {
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 22",
+      "category": "składki_ubezpieczeniowe",
+      "verdict": "UNVERIFIABLE",
+      "detail": "Brak mapowania ustawy albo brak artyku?u ?r?d?owego po article_number.",
+      "overlap_ratio": 0.0,
+      "unsupported_numbers": [],
+      "content_preview": "Nie można określić wysokości składki zdrowotnej na podstawie dostarczonych artykułów ustawy o systemie ubezpieczeń społecznych. Artykuł 22 reguluje jedynie stopy procentowe składek na ubezpieczenia emerytalne, rentowe, c",
+      "source_hit_count": 0,
+      "source_articles": [],
+      "source_preview": ""
+    },
+    {
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 47 ust. 2",
+      "category": "terminy_i_procedury_skladania",
+      "verdict": "UNVERIFIABLE",
+      "detail": "Brak mapowania ustawy albo brak artyku?u ?r?d?owego po article_number.",
+      "overlap_ratio": 0.0,
+      "unsupported_numbers": [],
+      "content_preview": "Jeśli opłacasz składki wyłącznie za siebie, składasz tylko deklarację rozliczeniową (bez imiennych raportów miesięcznych). Deklarację tę przesyłasz w tym samym terminie, w którym opłacasz składki za dany miesiąc — czyli ",
+      "source_hit_count": 0,
+      "source_articles": [],
+      "source_preview": ""
+    }
+  ],
+  "results": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 111 ust. 1",
+      "category": "ewidencja_sprzedaży_kasy_fiskalne",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.625,
+      "unsupported_numbers": [],
+      "content_preview": "Ustawa o VAT nie reguluje w art. 111 sposobu ewidencjonowania kaucji na kasie fiskalnej. Przepisy określają jedynie, że podatnicy ewidencjonują sprzedaż przy zastosowaniu kas rejestrujących oraz wystawiają paragony fiska",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 111",
+        "art. 1"
+      ],
+      "source_preview": "Art. 111. 1. Podatnicy dokonujący sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych są obowiązani prowadzić ewidencję sprzedaży przy zastosowaniu kas rejestrujących.\n"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 88 ust. 1 pkt 4",
+      "category": "wyłączenia-z-odliczenia",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.4,
+      "unsupported_numbers": [],
+      "content_preview": "Nie możesz odliczyć VAT od nabytych usług gastronomicznych, w tym posiłków dla pracowników, niezależnie od tego, czy są to posiłki pofilokatyczne. Przepis art. 88 ust. 1 pkt 4 wyraźnie zabrania odliczania VAT z usług noc",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 88",
+        "art. 1",
+        "art. 4"
+      ],
+      "source_preview": "Art. 88. 1. Obniżenia kwoty lub zwrotu różnicy podatku należnego nie stosuje się do nabywanych przez podatnika:\n1) (uchylony)\n2) (uchylony)\n3) (uchylony)\n4) usług noclegowych i gastronomicznych, z wyjątkiem:\na) (uchylona"
+    },
+    {
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 22",
+      "category": "składki_ubezpieczeniowe",
+      "verdict": "UNVERIFIABLE",
+      "detail": "Brak mapowania ustawy albo brak artyku?u ?r?d?owego po article_number.",
+      "overlap_ratio": 0.0,
+      "unsupported_numbers": [],
+      "content_preview": "Nie można określić wysokości składki zdrowotnej na podstawie dostarczonych artykułów ustawy o systemie ubezpieczeń społecznych. Artykuł 22 reguluje jedynie stopy procentowe składek na ubezpieczenia emerytalne, rentowe, c",
+      "source_hit_count": 0,
+      "source_articles": [],
+      "source_preview": ""
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 19a ust. 8",
+      "category": "obowiązek podatkowy",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.8519,
+      "unsupported_numbers": [],
+      "content_preview": "Jeżeli przed dokonaniem dostawy towaru lub wykonaniem usługi otrzymasz całość lub część zapłaty (przedpłatę, zaliczkę, zadatek, ratę), obowiązek podatkowy VAT powstaje z chwilą jej otrzymania w odniesieniu do otrzymanej ",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 19a",
+        "art. 8"
+      ],
+      "source_preview": "Art. 19a. 1. Obowiązek podatkowy powstaje z  chwilą dokonania dostawy towarów lub wykonania usługi, z zastrzeżeniem ust. 1a, 1b, 5 i 7–11, art. 14 ust. 6, art. 20, art. 21 ust. 1 i art. 138f.\n1a. W przypadku, o którym mo"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 4",
+      "category": "ksef-obowiazki",
+      "verdict": "INACCURATE",
+      "detail": "Niski overlap tre?ci z artyku?em ?r?d?owym (0.03).",
+      "overlap_ratio": 0.0323,
+      "unsupported_numbers": [],
+      "content_preview": "Jeśli miejscem świadczenia jest terytorium innego państwa członkowskiego lub trzeciego, albo nabywca nie ma siedziby działalności gospodarczej w Polsce, faktura ustrukturyzowana nie jest przesyłana do KSeF w standardowy ",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 106g",
+        "art. 4"
+      ],
+      "source_preview": "Art. 106g. (uchylony)\nArt. 4. Ulgi i zwolnienia podatkowe udzielone na podstawie odrębnych ustaw nie mają zastosowania do podatku od towarów i usług.\nDZIAŁ II\nZakres opodatkowania\nRozdział 1\nPrzepisy ogólne"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 11",
+      "category": "terminy odliczenia VAT",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.6,
+      "unsupported_numbers": [],
+      "content_preview": "Jeśli nie odliczysz VAT w okresie otrzymania faktury, możesz to zrobić w deklaracji za jeden z trzech następnych okresów rozliczeniowych (czyli do końca trzeciego miesiąca następującego po miesiącu otrzymania). Jeśli prz",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 86",
+        "art. 11"
+      ],
+      "source_preview": "Art. 86. 1. W  zakresie, w  jakim towary i  usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o  kwotę podatku "
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90b ust. 2",
+      "category": "Korekta VAT pojazdy samochodowe",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.375,
+      "unsupported_numbers": [],
+      "content_preview": "Ustawa o VAT nie reguluje zagadnienia zaklasyfikowania korekty VAT jako przychodu podatkowego w podatku dochodowym. Klasyfikacja ta należy do przepisów o podatku dochodowym (PIT/CIT), a nie do ustawy o VAT. Wymaga to wer",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 90b",
+        "art. 2"
+      ],
+      "source_preview": "Art. 90b. 1. W  przypadku gdy w  ciągu 60  miesięcy, licząc od miesiąca, w którym odpowiednio nabyto, dokonano importu lub oddano do używania pojazd samochodowy:\n1) o którym mowa  w art. 86a ust.  3 pkt  1 lit.  a, nastą"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 3 pkt 1",
+      "category": "dokumentacja-faktura",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.7368,
+      "unsupported_numbers": [],
+      "content_preview": "Tak, na żądanie nabywcy jesteś obowiązany wystawić fakturę dokumentującą sprzedaż towarów lub usług. Obowiązek wystawienia faktury na żądanie wynika z art. 106b ust. 3, niezależnie od tego, czy jesteś zarejestrowany jako",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 106b",
+        "art. 3",
+        "art. 1"
+      ],
+      "source_preview": "Art. 106b. 1. Podatnik jest obowiązany wystawić fakturę dokumentującą:\n1) sprzedaż, a także dostawę towarów i  świadczenie usług, o  których mowa w art. 106a pkt  2, dokonywane przez niego na rzecz innego podatnika podat"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 130c ust. 5a",
+      "category": "procedury_szczególne_oss",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.76,
+      "unsupported_numbers": [],
+      "content_preview": "Błędy w deklaracji VAT koryguje się poprzez złożenie korekty w deklaracji VAT za bieżący okres rozliczeniowy, jednak nie później niż w ciągu 3 lat od upływu terminu do złożenia oryginalnej deklaracji zawierającej błąd. W",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 130c",
+        "art. 5a"
+      ],
+      "source_preview": "Art. 130c. 1. Podatnicy zidentyfikowani na potrzeby procedury unijnej są obowiązani składać za pomocą środków komunikacji elektronicznej deklaracje na potrzeby rozliczenia VAT, zwane dalej „deklaracjami VAT”, do właściwe"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 3 ust. 1a",
+      "category": "Rezydencja podatkowa",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.4,
+      "unsupported_numbers": [],
+      "content_preview": "Rezydencję podatkową ustala się na podstawie miejsca zamieszkania, a nie miejsca wykonywania pracy. Osobę traktuje się jako rezydenta Polski, jeśli ma na terytorium Polski centrum interesów osobistych lub gospodarczych, ",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 3",
+        "art. 1a"
+      ],
+      "source_preview": "Art. 3. 1. Osoby fizyczne, jeżeli mają miejsce zamieszkania na terytorium\nRzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów (przychodów) bez względu na miejsce położenia źródeł przyc"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 103 ust. 1",
+      "category": "platnosci_podatku",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5714,
+      "unsupported_numbers": [],
+      "content_preview": "Podatek VAT musisz wpłacić do 25. dnia miesiąca następującego po miesiącu, w którym powstał obowiązek podatkowy. Wpłata powinna być dokonana na rachunek urzędu skarbowego. Jeśli podatek z okresu powinien być sfinansowany",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 103",
+        "art. 1"
+      ],
+      "source_preview": "Art. 103. 1. Podatnicy oraz podmioty wymienione w  art. 108 są obowiązani, bez wezwania naczelnika urzędu skarbowego, do obliczania i  wpłacania podatku za okresy miesięczne w terminie do 25. dnia miesiąca następującego "
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 26ha ust. 1",
+      "category": "ulgi_i_odliczenia",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.2174,
+      "unsupported_numbers": [],
+      "content_preview": "Art. 26ha nie reguluje ulgi prorodzinnej. Przepis ten dotyczy wyłącznie odliczenia kosztów uzyskania przychodów poniesionych na działalność sportową, kulturalną lub wspierającą szkolnictwo wyższe i naukę. Ulga prorodzinn",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 26h",
+        "art. 1"
+      ],
+      "source_preview": "Art. 26h. 1. Podatnik będący właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego ma prawo odliczyć od podstawy obliczenia podatku, ustalonej zgodnie z  art. 26 ust.  1 lub art.  30c ust.  2, wydatki p"
+    },
+    {
+      "law_name": "Rozporządzenie JPK_V7",
+      "article_number": "Â§ 12",
+      "category": "jpk",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.6667,
+      "unsupported_numbers": [],
+      "content_preview": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygowany okres, bo błędy formalne lub techniczn",
+      "source_hit_count": 1,
+      "source_articles": [
+        "§ 12"
+      ],
+      "source_preview": "§ 12. Korekty pliku JPK_V7 składa się za okres, którego dotyczą korygowane dane. Plik powinien być zgodny ze strukturą logiczną opublikowaną przez Ministerstwo Finansów. Błędy formalne lub techniczne mogą skutkować odrzu"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 145f ust. 1",
+      "category": "odwrotne_obciazenie_vat",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.2692,
+      "unsupported_numbers": [],
+      "content_preview": "Na podstawie art. 145f ust. 1, dostawca lub usługodawca przy odwrotnym obciążeniu (dostawie gazu, energii lub usług przenoszenia uprawnień do emisji) nie rozlicza podatku należnego. Oznacza to, że VAT nie jest wykazywany",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 145f",
+        "art. 1"
+      ],
+      "source_preview": "Art. 145f. 1. W przypadku czynności, o których mowa w art. 145e ust. 1, dostawca lub usługodawca nie rozlicza podatku należnego.\n2. W przypadku czynności, o których mowa w art. 145e ust. 1, kwotę podatku naliczonego, o k"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 87 ust. 6c",
+      "category": "Sankcje w zwrocie VAT",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.6471,
+      "unsupported_numbers": [],
+      "content_preview": "Tak, jeśli stwierdzono, że naruszałeś obowiązek zapewniania możliwości płatności instrumentami płatniczymi w każdym miejscu wykonywania działalności (lokal, poza lokalem, pojazd), nie przysługuje ci zwrot w terminie 25 d",
+      "source_hit_count": 1,
+      "source_articles": [
+        "art. 87"
+      ],
+      "source_preview": "Art. 87. 1. W  przypadku gdy kwota podatku naliczonego, o  której mowa w art. 86 ust.  2, jest w  okresie rozliczeniowym wyższa od kwoty podatku należnego, podatnik ma prawo do obniżenia o tę różnicę kwoty podatku należn"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 1",
+      "category": "terminy_deklaracji_ewidencja",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.4762,
+      "unsupported_numbers": [],
+      "content_preview": "Deklaracja podatkowa za grudzień musi być złożona do 25. dnia miesiąca następującego po grudniu, czyli do 25. stycznia następnego roku. Ewidencja za grudzień powinna być przesłana razem z deklaracją do 25. stycznia. To d",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 99",
+        "art. 1"
+      ],
+      "source_preview": "Art. 99. 1. Podatnicy, o  których mowa w  art. 15, są obowiązani składać w urzędzie skarbowym deklaracje podatkowe za okresy miesięczne w  terminie do\n25. dnia miesiąca następującego po każdym kolejnym miesiącu, z  zastr"
+    },
+    {
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 47 ust. 2",
+      "category": "terminy_i_procedury_skladania",
+      "verdict": "UNVERIFIABLE",
+      "detail": "Brak mapowania ustawy albo brak artyku?u ?r?d?owego po article_number.",
+      "overlap_ratio": 0.0,
+      "unsupported_numbers": [],
+      "content_preview": "Jeśli opłacasz składki wyłącznie za siebie, składasz tylko deklarację rozliczeniową (bez imiennych raportów miesięcznych). Deklarację tę przesyłasz w tym samym terminie, w którym opłacasz składki za dany miesiąc — czyli ",
+      "source_hit_count": 0,
+      "source_articles": [],
+      "source_preview": ""
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 22b ust. 2 pkt 2",
+      "category": "amortyzacja_prace_rozwojowe",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.9459,
+      "unsupported_numbers": [],
+      "content_preview": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określone, (2) techniczna przydatność został przez",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 22b",
+        "art. 2"
+      ],
+      "source_preview": "Art. 22b. 1. Amortyzacji podlegają, z  zastrzeżeniem art. 22c, nabyte od innego podmiotu, nadające się do gospodarczego wykorzystania w  dniu przyjęcia do używania:\n1) (uchylony)\n2) spółdzielcze prawo do lokalu użytkoweg"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 146 ust. 1 pkt 1-3",
+      "category": "przepisy_przejsciowe",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5161,
+      "unsupported_numbers": [],
+      "content_preview": "W okresie przejściowym obowiązywały specjalne stawki VAT. Stawka 3% dotyczyła towarów i usług z załącznika nr 6 (do 30 kwietnia 2008 r.), stawka 7% obowiązywała dla robót budowlanych mieszkaniowych, remontów, usług gastr",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 146",
+        "art. 1",
+        "art. 3"
+      ],
+      "source_preview": "Art. 146. 1. W  okresie od dnia przystąpienia Rzeczypospolitej Polskiej do\nUnii Europejskiej do:\n1) dnia 30 kwietnia 2008 r. stosuje się stawkę w  wysokości 3 % w odniesieniu do czynności, o  których mowa w  art. 5, któr"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 14 ust. 1h",
+      "category": "przychody z działalności gospodarczej - energia elektryczna i gaz",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.7,
+      "unsupported_numbers": [],
+      "content_preview": "Dla energii elektrycznej stosuje się przepisy analogiczne jak dla usług rozliczanych w okresach rozliczeniowych. Jeśli na fakturze określony jest okres rozliczeniowy (np. styczeń 2025), datę powstania przychodu ustala si",
+      "source_hit_count": 1,
+      "source_articles": [
+        "art. 14"
+      ],
+      "source_preview": "Art. 14. 1. Za przychód z  działalności, o  której mowa w  art. 10 ust.  1 pkt  3, uważa się kwoty należne, choćby nie zostały faktycznie otrzymane, po wyłączeniu\n\n\nwartości zwróconych towarów, udzielonych bonifikat i  s"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 6 ust. 2",
+      "category": "opodatkowanie łączne małżonków",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 36.",
+      "overlap_ratio": 0.6897,
+      "unsupported_numbers": [
+        "36"
+      ],
+      "content_preview": "Tak, małżonkowie mogą wybrać wspólne opodatkowanie swoich dochodów z działalności gospodarczej. Warunkiem jest złożenie wspólnego wniosku w zeznaniu podatkowym (PIT-36) o łącznym opodatkowaniu. Podatek będzie wtedy wylic",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 6",
+        "art. 2"
+      ],
+      "source_preview": "Art. 6. 1. Małżonkowie podlegają odrębnemu opodatkowaniu od osiąganych przez nich dochodów.\n2. Małżonkowie podlegający obowiązkowi podatkowemu, o  którym mowa w art. 3 ust. 1, pozostający w związku małżeńskim i we wspóln"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 3",
+      "category": "ewidencja_sprzedazy",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.875,
+      "unsupported_numbers": [],
+      "content_preview": "Podatnicy, z wyjątkiem podatników ze sprzedażą zwolnioną i wykonujących wyłącznie czynności zwolnione, są obowiązani prowadzić ewidencję zawierającą dane pozwalające na prawidłowe rozliczenie podatku, w szczególności: ro",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 109",
+        "art. 3"
+      ],
+      "source_preview": "Art. 109. 1. Podatnicy, u których sprzedaż jest zwolniona od podatku na podstawie art. 113 ust. 1 i 9 albo art. 113a ust. 1, są obowiązani prowadzić ewidencję sprzedaży za dany dzień, nie później jednak niż przed dokonan"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 1 pkt 5",
+      "category": "faktury_korygujace",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5333,
+      "unsupported_numbers": [],
+      "content_preview": "Faktura korygująca służy do korekty podstawy opodatkowania, kwoty podatku, zwrotu towarów, zwrotu zapłaty lub stwierdzenia pomyłki w jakiejkolwiek pozycji faktury (art. 106j ust. 1 pkt 5). Pomyłka w dacie faktury jest po",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 106j",
+        "art. 1",
+        "art. 5"
+      ],
+      "source_preview": "Art. 106j. 1. W przypadku gdy po wystawieniu faktury:\n1) podstawa opodatkowania lub kwota podatku wskazana w fakturze uległa zmianie,\n2) (uchylony)\n\n3) dokonano zwrotu podatnikowi towarów i opakowań,\n4) dokonano zwrotu n"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+      "article_number": "art. 21 ust. 3 pkt 2",
+      "category": "zwolnienia_podatkowe_należności_licencyjne",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5833,
+      "unsupported_numbers": [],
+      "content_preview": "Ustawa o podatku dochodowym od osób prawnych nie zawiera terminu 'certyfikat rezydencji podatkowej'. Zwolnienie od podatku od odsetek, praw autorskich i należności licencyjnych (art. 21 ust. 3) wymaga spełnienia warunków",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 21",
+        "art. 3",
+        "art. 2"
+      ],
+      "source_preview": "Art. 21. 1. Podatek dochodowy z  tytułu uzyskanych na terytorium\nRzeczypospolitej Polskiej przez podatników, o  których mowa w  art. 3 ust.  2, przychodów:\n1) z odsetek, z  praw autorskich lub praw pokrewnych, z  praw do"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 97 ust. 3 pkt 1",
+      "category": "rejestracja VAT UE",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.3077,
+      "unsupported_numbers": [],
+      "content_preview": "Tak, podatnik zwolniony z VAT musi się zarejestrować jako podatnik VAT-UE jeśli nabywał będzie usługi objęte art. 28b (import usług). Zgodnie z art. 97 ust. 3 pkt 1, obowiązek zawiadomienia dotyczy podatników nabywającyc",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 97",
+        "art. 3",
+        "art. 1"
+      ],
+      "source_preview": "Art. 97. 1. Podatnicy, o  których mowa w  art. 15 i art. 15a, podlegający obowiązkowi zarejestrowania jako podatnicy VAT czynni, są obowiązani przed dniem dokonania pierwszej wewnątrzwspólnotowej dostawy lub pierwszego w"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+      "article_number": "art. 7aa ust. 1",
+      "category": "ryczałt od dochodów spółek - przygotowanie",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.2632,
+      "unsupported_numbers": [],
+      "content_preview": "Na ostatni dzień roku podatkowego poprzedzającego pierwszy rok opodatkowania ryczałtem musisz: (1) sporządzić informację o przychodach, kosztach, dochodzie z przekształcenia oraz podatku należnym, (2) wyodrębnić w kapita",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 7a",
+        "art. 1"
+      ],
+      "source_preview": "Art. 7a. 1. W podatkowych grupach kapitałowych dochodem ze źródła przychodów jest nadwyżka sumy dochodów wszystkich spółek tworzących grupę uzyskanych z danego źródła przychodów nad sumą ich strat poniesionych z tego źró"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 6",
+      "category": "faktury_wyt",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.3846,
+      "unsupported_numbers": [],
+      "content_preview": "Przepisy art. 106e nie definiują oznaczeń BFK ani DI dla faktur wewnętrznych. Artykuł zawiera wymóg, by faktura zawierała datę dokonania lub zakończenia dostawy (pkt 6), ale nie wskazuje konkretnego kodu lub oznaczenia d",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 106e",
+        "art. 1",
+        "art. 6"
+      ],
+      "source_preview": "Art. 106e. 1. Faktura powinna zawierać:\n1) datę wystawienia;\n2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę;\n3) imiona i nazwiska lub nazwy podatnika i nabywc"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 3a",
+      "category": "dokumentacja i ewidencja sprzedaży",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.9,
+      "unsupported_numbers": [],
+      "content_preview": "Podatnicy świadczący usługi, których miejscem świadczenia nie jest terytorium kraju, muszą w ewidencji podać nazwę usługi, wartość usługi bez VAT, oraz uwzględnić moment powstania obowiązku podatkowego określony dla tego",
+      "source_hit_count": 1,
+      "source_articles": [
+        "art. 109"
+      ],
+      "source_preview": "Art. 109. 1. Podatnicy, u których sprzedaż jest zwolniona od podatku na podstawie art. 113 ust. 1 i 9 albo art. 113a ust. 1, są obowiązani prowadzić ewidencję sprzedaży za dany dzień, nie później jednak niż przed dokonan"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 26e",
+      "category": "ulgi_rodzinne",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.3043,
+      "unsupported_numbers": [],
+      "content_preview": "Artykuł 26e dotyczy wyłącznie kosztów kwalifikowanych działalności badawczo-rozwojowej i nie reguluje zasad ulg rodzinnych ani limitów dochodów dla osób z dziećmi. Pytanie wymaga zapoznania się z przepisami dotyczącymi u",
+      "source_hit_count": 1,
+      "source_articles": [
+        "art. 26e"
+      ],
+      "source_preview": "Art. 26e. 1. Podatnik uzyskujący przychody ze źródła określonego w  art. 10 ust. 1 pkt 3 odlicza od podstawy obliczenia podatku, ustalonej zgodnie z art. 26 ust. 1 lub art. 30c ust. 2, koszty uzyskania przychodów poniesi"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 26ha ust. 1",
+      "category": "ulgi_i_odliczenia",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 50.",
+      "overlap_ratio": 0.2083,
+      "unsupported_numbers": [
+        "50"
+      ],
+      "content_preview": "Art. 26ha nie reguluje ulgi termoizolacyjnej. Artykuł ten dotyczy wyłącznie odliczenia 50% kosztów uzyskania przychodów poniesionych na działalność sportową, kulturalną lub wspierającą szkolnictwo wyższe i naukę. Ulga te",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 26h",
+        "art. 1"
+      ],
+      "source_preview": "Art. 26h. 1. Podatnik będący właścicielem lub współwłaścicielem budynku mieszkalnego jednorodzinnego ma prawo odliczyć od podstawy obliczenia podatku, ustalonej zgodnie z  art. 26 ust.  1 lub art.  30c ust.  2, wydatki p"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 13b",
+      "category": "procedury_elektroniczne",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 100.",
+      "overlap_ratio": 0.3478,
+      "unsupported_numbers": [
+        "100"
+      ],
+      "content_preview": "Ustawa o VAT nie zawiera przepisów dotyczących znaczników VAT lub rejestrów, w których byłyby one wybierane. Przepisy ustawy regulują wyłącznie obowiązek składania deklaracji i informacji podsumowujących (art. 99-100). S",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 99",
+        "art. 13b"
+      ],
+      "source_preview": "Art. 99. 1. Podatnicy, o  których mowa w  art. 15, są obowiązani składać w urzędzie skarbowym deklaracje podatkowe za okresy miesięczne w  terminie do\n25. dnia miesiąca następującego po każdym kolejnym miesiącu, z  zastr"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89a ust. 2 pkt 5",
+      "category": "korekta_wierzytelnosci_nieSciaglnych",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5833,
+      "unsupported_numbers": [],
+      "content_preview": "Okres na dokonanie korekty VAT z tytułu nieściągalności wierzytelności wynosi 3 lata od końca roku, w którym została wystawiona faktura. Korekta roczna dotyczy okresu rozliczeniowego, w którym nieściągalność uznawana jes",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 89a",
+        "art. 2",
+        "art. 5"
+      ],
+      "source_preview": "Art. 89a. 1. Podatnik może skorygować podstawę opodatkowania oraz podatek należny z  tytułu dostawy towarów lub świadczenia usług na terytorium kraju w  przypadku wierzytelności, których nieściągalność została uprawdopod"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 15 ust. 1",
+      "category": "definicja_podatnika",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.4138,
+      "unsupported_numbers": [],
+      "content_preview": "Podatnikami VAT są osoby fizyczne, które wykonują samodzielnie działalność gospodarczą. Osoba fizyczna nieprowadząca działalności gospodarczej nie jest podatnikiem VAT i nie powinna wystawiać faktur z VAT. Jeśli osoba ta",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 15",
+        "art. 1"
+      ],
+      "source_preview": "Art. 15. 1. Podatnikami są osoby prawne, jednostki organizacyjne niemające osobowości prawnej oraz osoby fizyczne, wykonujące samodzielnie działalność gospodarczą, o  której mowa w  ust. 2, bez względu na cel lub rezulta"
+    },
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 35b ust. 1",
+      "category": "aktualizacja_wartości_należności",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.2059,
+      "unsupported_numbers": [],
+      "content_preview": "Ustawa o rachunkowości nie reguluje bezpośrednio naliczania odsetek od niezapłaconych należności na koniec roku. Przepisy art. 35b dotyczą wyłącznie aktualizacji wartości samych należności poprzez odpisy aktualizujące, w",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 35b",
+        "art. 1"
+      ],
+      "source_preview": "Art. 35b. 1. Wartość należności aktualizuje się uwzględniając stopień prawdopodobieństwa ich zapłaty poprzez doko nanie odpisu aktualizującego, w odniesieniu do:\n1) należności od dłużników postawionych w  stan likwidacji"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "§ 14",
+      "category": "wymagania_techniczne_kseff",
+      "verdict": "INACCURATE",
+      "detail": "Niski overlap tre?ci z artyku?em ?r?d?owym (0.06).",
+      "overlap_ratio": 0.0625,
+      "unsupported_numbers": [],
+      "content_preview": "Artykuł nie zawiera informacji o sposobach technicznych połączenia z KSeF (API, portal WWW). Przepisy § 10 i § 14 powołują się na specyfikację oprogramowania interfejsowego, która zawiera szczegóły techniczne dostępu do ",
+      "source_hit_count": 1,
+      "source_articles": [
+        "art. 14"
+      ],
+      "source_preview": "Art. 14. 1. Opodatkowaniu podatkiem podlegają towary własnej produkcji i towary, które po nabyciu nie były przedmiotem dostawy towarów, w przypadku:\n1) rozwiązania spółki cywilnej lub handlowej niemającej osobowości praw"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 3 ust. 1",
+      "category": "obowiazek_podatkowy",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.4839,
+      "unsupported_numbers": [],
+      "content_preview": "Jeśli masz miejsce zamieszkania w Polsce (posiada się tam centrum interesów życiowych lub przebywasz tam ponad 183 dni w roku), podlegasz nieograniczonemu obowiązkowi podatkowemu — musisz rozliczyć się ze WSZYSTKICH swoi",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 3",
+        "art. 1"
+      ],
+      "source_preview": "Art. 3. 1. Osoby fizyczne, jeżeli mają miejsce zamieszkania na terytorium\nRzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów (przychodów) bez względu na miejsce położenia źródeł przyc"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 7 ust. 1",
+      "category": "dochody_rodzinne",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.44,
+      "unsupported_numbers": [],
+      "content_preview": "Art. 7 ustawy przewiduje dolicrzanie dochodów małoletniego dziecka do dochodów rodziców, ale zawiera katalog wyłączeń. Nie podlegają dolicrzeniu dochody z pracy dziecka, rent, stypendiów oraz dochodów z przedmiotów oddan",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 7",
+        "art. 1"
+      ],
+      "source_preview": "Art. 7. 1. Dochody małoletnich dzieci własnych i  przysposobionych, z wyjątkiem dochodów z  ich pracy, rent, stypendiów oraz dochodów z  przedmiotów oddanych im do swobodnego użytku, podlegające opodatkowaniu na terytori"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 30b ust. 1a",
+      "category": "opodatkowanie_kryptowalut",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.7778,
+      "unsupported_numbers": [],
+      "content_preview": "Dochody z odpłatnego zbycia walut wirtualnych opodatkowane są stawką 19% na zasadach ogólnych. Dochodem jest różnica między sumą przychodów uzyskanych ze sprzedaży kryptowalut a kosztami uzyskania przychodów, osiągnięta ",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 30b",
+        "art. 1a"
+      ],
+      "source_preview": "Art. 30b. 1. Od dochodów uzyskanych:\n1) z odpłatnego zbycia papierów wartościowych lub pochodnych instrumentów finansowych oraz z realizacji praw z nich wynikających,\n2) z odpłatnego zbycia udziałów (akcji),\n3) z odpłatn"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 26 ust. 1 pkt 6",
+      "category": "odliczenia od dochodu - wydatki rehabilitacyjne",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.7742,
+      "unsupported_numbers": [],
+      "content_preview": "Wydatki na cele rehabilitacyjne oraz wydatki związane z ułatwieniem wykonywania czynności życiowych mogą być odliczone od dochodu, jeśli są poniesione przez podatnika będącego osobą niepełnosprawną lub podatnika mającego",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 26",
+        "art. 1",
+        "art. 6"
+      ],
+      "source_preview": "Art. 26. 1. Podstawę obliczenia podatku, z  zastrzeżeniem art.  29–30cb, art. 30da–30dh, art. 30e–30g i art. 30j–30p, stanowi dochód ustalony zgodnie z art. 9, art. 23o, art.  23u, art.  24 ust.  1, 2, 3b –3e, 4 –4e, 6 i"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 10b pkt 1",
+      "category": "termin_odliczenia_vat",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5862,
+      "unsupported_numbers": [],
+      "content_preview": "Prawo do obniżenia kwoty podatku należnego o VAT naliczony z dokumentu celnego lub faktury powstaje w rozliczeniu za okres, w którym otrzymałeś ten dokument (art. 86 ust. 10b pkt 1). Jeśli otrzymałeś dokument w marcu, mo",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 86",
+        "art. 1"
+      ],
+      "source_preview": "Art. 86. 1. W  zakresie, w  jakim towary i  usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o  kwotę podatku "
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 5 pkt 3",
+      "category": "uproszczona_faktura",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.875,
+      "unsupported_numbers": [],
+      "content_preview": "Tak. Dla faktury poniżej 450 zł (lub 100 EUR) można pominąć: imiona/nazwiska i adresy nabywcy oraz miarę, ilość, cenę jednostkową netto i wartość netto - pod warunkiem że faktura zawiera dane pozwalające określić kwotę V",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 106e",
+        "art. 5",
+        "art. 3"
+      ],
+      "source_preview": "Art. 106e. 1. Faktura powinna zawierać:\n1) datę wystawienia;\n2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę;\n3) imiona i nazwiska lub nazwy podatnika i nabywc"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 111 ust. 1",
+      "category": "obowiązek_kas_fiskalnych",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.8214,
+      "unsupported_numbers": [],
+      "content_preview": "Podatnicy dokonujący sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych są obowiązani prowadzić ewidencję sprzedaży przy zastosowaniu kas rejestrujących. Oznacza to, ż",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 111",
+        "art. 1"
+      ],
+      "source_preview": "Art. 111. 1. Podatnicy dokonujący sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych są obowiązani prowadzić ewidencję sprzedaży przy zastosowaniu kas rejestrujących.\n"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 6",
+      "category": "Faktury dla osób fizycznych w KSeF",
+      "verdict": "INACCURATE",
+      "detail": "Niski overlap tre?ci z artyku?em ?r?d?owym (0.00).",
+      "overlap_ratio": 0.0,
+      "unsupported_numbers": [],
+      "content_preview": "Artykuł 106gb ust. 6 wymaga, aby podatnik zapewnił dostęp do faktury ustrukturyzowanej osobie niebędącej podatnikiem VAT czynnym (co obejmuje osoby fizyczne nieprowadzące działalności), chyba że osoba ta zwolni podatnika",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 106g",
+        "art. 6"
+      ],
+      "source_preview": "Art. 106g. (uchylony)\nArt. 6. Przepisów ustawy nie stosuje się do:\n1) transakcji zbycia przedsiębiorstwa lub zorganizowanej części przedsiębiorstwa;\n2) czynności, które nie mogą być przedmiotem prawnie skutecznej umowy.\n"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 10b pkt 1",
+      "category": "terminy_odliczenie_vat",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.7037,
+      "unsupported_numbers": [],
+      "content_preview": "Prawo do odliczenia VAT powstaje w rozliczeniu za okres, w którym podatnik otrzymał fakturę lub dokument celny. Podatnik powinien uwzględnić to odliczenie w deklaracji VAT za ten okres. Jeśli tego nie zrobił, może odlicz",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 86",
+        "art. 1"
+      ],
+      "source_preview": "Art. 86. 1. W  zakresie, w  jakim towary i  usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o  kwotę podatku "
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+      "article_number": "art. 30e ust. 4",
+      "category": "rozliczenie sprzedaży dziedziczonej nieruchomości",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 39.",
+      "overlap_ratio": 0.2857,
+      "unsupported_numbers": [
+        "39"
+      ],
+      "content_preview": "Podatnik jest obowiązany wykazać dochód ze sprzedaży w zeznaniu podatkowym rocznym (art. 30e ust. 4). Tekst ustawy nie zawiera informacji, czy konkretnie PIT-39 jest wymagany, czy też inne formularze mogą zastąpić to obo",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 30e",
+        "art. 4"
+      ],
+      "source_preview": "Art. 30e. 1. Od dochodu z odpłatnego zbycia nieruchomości i praw określonych w art. 10 ust. 1 pkt 8 lit. a–c podatek dochodowy wynosi 19  % podstawy obliczenia podatku.\n2. Podstawą obliczenia podatku, o której mowa w ust"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90b ust. 4",
+      "category": "korekta-vat-pojazdy-zmiana-przeznaczenia",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.6087,
+      "unsupported_numbers": [],
+      "content_preview": "Korektę dokonujesz w miesiącu, w którym nastąpiła zmiana przeznaczenia pojazdu, nie w miesiącu jego nabycia. Korektę wpisujesz w deklaracji za okres rozliczeniowy, w którym zmiana nastąpiła. Kwota korekty powinna być pro",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 90b",
+        "art. 4"
+      ],
+      "source_preview": "Art. 90b. 1. W  przypadku gdy w  ciągu 60  miesięcy, licząc od miesiąca, w którym odpowiednio nabyto, dokonano importu lub oddano do używania pojazd samochodowy:\n1) o którym mowa  w art. 86a ust.  3 pkt  1 lit.  a, nastą"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 96 ust. 1",
+      "category": "Rejestracja w VAT — termin zgłoszenia",
+      "verdict": "INACCURATE",
+      "detail": "W unicie s? liczby niewyst?puj?ce w ?r?dle: 2026.",
+      "overlap_ratio": 0.5862,
+      "unsupported_numbers": [
+        "2026"
+      ],
+      "content_preview": "Termin rejestracji VAT wynika z art. 96 ust. 1: zgłoszenie rejestracyjne musisz złożyć PRZED dniem wykonania pierwszej czynności (sprzedaży, usługi itp. określonej w art. 5). Nie dotyczy to konkretnego miesiąca, ale mome",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 96",
+        "art. 1"
+      ],
+      "source_preview": "Art. 96. 1. Podmioty, o  których mowa w  art. 15 i art. 15a, są obowiązane przed dniem wykonania pierwszej czynności okreś lonej w  art. 5 złożyć naczelnikowi urzędu skarbowego zgłoszenie rejestracyjne, z zastrzeżeniem u"
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 92 § 2",
+      "category": "zasiłki_chorobowe",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.5185,
+      "unsupported_numbers": [],
+      "content_preview": "Zgodnie z art. 92 § 2 Kodeksu pracy, wynagrodzenie za czas niezdolności do pracy oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego. Pytanie dotyczące obniżenia podstawy składek Z",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 92",
+        "art. 2"
+      ],
+      "source_preview": "Art. 92. § 1. Za czas niezdolności pracownika do pracy wskutek:\n1) choroby lub odosobnienia w  związku z chorobą zakaźną – trwającej łącznie do 33  dni w  ciągu roku kalendarzowego, a w przypadku pracownika, który ukończ"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 21 ust. 1",
+      "category": "rozliczenie_vat",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.7714,
+      "unsupported_numbers": [],
+      "content_preview": "Jako mały podatnik możesz wybrać metodę kasową, które powoduje że obowiązek podatkowy powstaje z dniem otrzymania zapłaty (nie wcześniej niż 180 dni od wydania towaru/wykonania usługi), ale musisz zawiadomić pisemnie nac",
+      "source_hit_count": 2,
+      "source_articles": [
+        "art. 21",
+        "art. 1"
+      ],
+      "source_preview": "Art. 21. 1. Mały podatnik może wybrać metodę rozliczeń polegającą na tym, że obowiązek podatkowy w odniesieniu do dokonywanych przez niego dostaw towarów i świadczenia usług powstaje:\n1) z dniem otrzymania całości lub cz"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 100 ust. 1 pkt 4",
+      "category": "wewnątrzwspólnotowe transakcje",
+      "verdict": "ACCURATE",
+      "detail": "S?ownictwo i fakty z unitu maj? wystarczaj?ce pokrycie w tre?ci ?r?d?owego artyku?u.",
+      "overlap_ratio": 0.4706,
+      "unsupported_numbers": [],
+      "content_preview": "Obowiązek raportowania dotyczy usług, do których stosuje się art. 28b, świadczonych na terytorium innego państwa członkowskiego UE, dla których zobowiązanym do zapłaty VAT jest usługobiorca (art. 100 ust. 1 pkt 4). Konkr",
+      "source_hit_count": 3,
+      "source_articles": [
+        "art. 100",
+        "art. 1",
+        "art. 4"
+      ],
+      "source_preview": "Art. 100. 1. Podatnicy, o  których mowa w  art. 15, zarejestrowani jako podatnicy VAT UE, są obowiązani składać w  urzędzie skarbowym zbiorcze informacje o dokonanych:\n1) wewnątrzwspólnotowych dostawach towarów w rozumie"
+    }
+  ]
+}
