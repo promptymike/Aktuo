@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-10 09:36:42",
+    "total_audited": 50,
+    "sample_size": 50,
+    "seed": 2026,
+    "total_fb_questions_available": 500,
+    "total_time_seconds": 1.2
+  },
+  "summary": {
+    "good": 44,
+    "weak": 6,
+    "miss": 0,
+    "good_pct": 88.0,
+    "weak_pct": 12.0,
+    "miss_pct": 0.0,
+    "category_mismatches": 6
+  },
+  "per_category": {
+    "CIT": {
+      "total": 7,
+      "good": 7,
+      "weak": 0,
+      "miss": 0
+    },
+    "JPK": {
+      "total": 10,
+      "good": 8,
+      "weak": 2,
+      "miss": 0
+    },
+    "KADRY": {
+      "total": 10,
+      "good": 8,
+      "weak": 2,
+      "miss": 0
+    },
+    "RACHUNKOWO??": {
+      "total": 12,
+      "good": 10,
+      "weak": 2,
+      "miss": 0
+    },
+    "ZUS": {
+      "total": 11,
+      "good": 11,
+      "weak": 0,
+      "miss": 0
+    }
+  },
+  "misses": [],
+  "weaks": [
+    {
+      "question": "Teraz jest księgowane: faktury sprzedaży i zakupu po kursie z dnia poprzedzającego dzień sprzedaży, a zapłata po kursie z dnia poprzedzającego zapłatę?",
+      "source_category": "RACHUNKOWO??",
+      "detected_category": "fakturowanie",
+      "topic": "faktura sprzedaz zakupu",
+      "source_freq": 3,
+      "top_score": 67.059,
+      "issues": [
+        "category mismatch: RACHUNKOWO??→fakturowanie"
+      ]
+    },
+    {
+      "question": "Pracuje od pon do piątku, jestem w szpitalu od czwartku do niedzieli, bardziej sie opłaca brać l4 na czwartek i piątek czy razem z weekendem?",
+      "source_category": "KADRY",
+      "detected_category": "pit",
+      "topic": "L4 i chorobowe",
+      "source_freq": 1,
+      "top_score": 20.068,
+      "issues": [
+        "category mismatch: KADRY→pit"
+      ]
+    },
+    {
+      "question": "Czy kwota netto będzie wpływała na krótkoterminowe rozliczenia miedzyokresowe kosztów?",
+      "source_category": "RACHUNKOWO??",
+      "detected_category": "terminy",
+      "topic": "RMK i memoriał",
+      "source_freq": 1,
+      "top_score": 13.392,
+      "issues": [
+        "category mismatch: RACHUNKOWO??→terminy"
+      ]
+    },
+    {
+      "question": "Za październik nie została wpłacona zaliczka od umowy zlecenie jednego z pracowników, została ona zapłacona w styczniu razem z zaliczkami za grudzień, w której pozycji PIT 4 R ująć faktycznie zapłacone zaliczki?",
+      "source_category": "KADRY",
+      "detected_category": "pit",
+      "topic": "umowa zlecenie",
+      "source_freq": 2,
+      "top_score": 52.748,
+      "issues": [
+        "category mismatch: KADRY→pit"
+      ]
+    },
+    {
+      "question": "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+      "source_category": "JPK",
+      "detected_category": "zus",
+      "topic": "faktura ujete zestawieniu",
+      "source_freq": 2,
+      "top_score": 12.293,
+      "issues": [
+        "category mismatch: JPK→zus"
+      ]
+    },
+    {
+      "question": "Mam dalej wątpliwości czy przed krajowym Nip kontrahenta należy wpisywać PL?",
+      "source_category": "JPK",
+      "detected_category": "cit",
+      "topic": "JPK_KR i znaczniki kont",
+      "source_freq": 1,
+      "top_score": 22.954,
+      "issues": [
+        "category mismatch: JPK→cit"
+      ]
+    }
+  ],
+  "category_mismatches": {
+    "KADRY→pit": 2,
+    "RACHUNKOWO??→fakturowanie": 1,
+    "RACHUNKOWO??→terminy": 1,
+    "JPK→zus": 1,
+    "JPK→cit": 1
+  }
+}

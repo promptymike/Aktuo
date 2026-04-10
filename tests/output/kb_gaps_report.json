@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-10 09:35:24",
+    "total_questions": 989,
+    "total_time_seconds": 22.0,
+    "covered_threshold": 2.0,
+    "weak_threshold": 0.5
+  },
+  "summary": {
+    "covered": 981,
+    "weak": 1,
+    "gap": 7,
+    "covered_pct": 99.2,
+    "weak_pct": 0.1,
+    "gap_pct": 0.7
+  },
+  "per_category": {
+    "CIT": {
+      "total": 100,
+      "covered": 98,
+      "weak": 0,
+      "gap": 2,
+      "covered_pct": 98.0
+    },
+    "JPK": {
+      "total": 130,
+      "covered": 129,
+      "weak": 0,
+      "gap": 1,
+      "covered_pct": 99.2
+    },
+    "KADRY": {
+      "total": 100,
+      "covered": 99,
+      "weak": 0,
+      "gap": 1,
+      "covered_pct": 99.0
+    },
+    "KSeF": {
+      "total": 50,
+      "covered": 50,
+      "weak": 0,
+      "gap": 0,
+      "covered_pct": 100.0
+    },
+    "Ordynacja podatkowa": {
+      "total": 50,
+      "covered": 50,
+      "weak": 0,
+      "gap": 0,
+      "covered_pct": 100.0
+    },
+    "PIT": {
+      "total": 100,
+      "covered": 100,
+      "weak": 0,
+      "gap": 0,
+      "covered_pct": 100.0
+    },
+    "RACHUNKOWO??": {
+      "total": 100,
+      "covered": 100,
+      "weak": 0,
+      "gap": 0,
+      "covered_pct": 100.0
+    },
+    "RACHUNKOWOŚĆ": {
+      "total": 60,
+      "covered": 60,
+      "weak": 0,
+      "gap": 0,
+      "covered_pct": 100.0
+    },
+    "VAT": {
+      "total": 199,
+      "covered": 196,
+      "weak": 1,
+      "gap": 2,
+      "covered_pct": 98.5
+    },
+    "ZUS": {
+      "total": 100,
+      "covered": 99,
+      "weak": 0,
+      "gap": 1,
+      "covered_pct": 99.0
+    }
+  },
+  "top_100_gaps": [
+    {
+      "question": "Co potrzeba?",
+      "source_category": "CIT",
+      "topic": "potrzeba",
+      "source_freq": 2,
+      "detected_category": "ogólne",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 4 pkt 2 ustawy zasiłkowej",
+        "category": "zasiłki_chorobowe",
+        "score": 0.0,
+        "content_preview": "Zasiłek chorobowy dla osoby prowadzącej JDG wynosi 80% podstawy wymiaru zasiłku (100% w przypadku choroby w ciąży lub wypadku przy pracy). Podstawą wy"
+      }
+    },
+    {
+      "question": "Co ze znacznikami?",
+      "source_category": "CIT",
+      "topic": "znacznikami",
+      "source_freq": 2,
+      "detected_category": "jpk",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Rozporządzenie JPK_V7",
+        "article_number": "§ 10 ust. 4 pkt 3 rozporządzenia",
+        "category": "oznaczenia_transakcji_jpk",
+        "score": 0.0,
+        "content_preview": "Oznaczenie TP w JPK_V7 stosuje się do transakcji między podmiotami powiązanymi w rozumieniu art. 32 ust. 2 pkt 1 ustawy o VAT. Dotyczy to m.in.: trans"
+      }
+    },
+    {
+      "question": "Czy na urlopie macierzyńskim mogę pracować na B2B?",
+      "source_category": "KADRY",
+      "topic": "urlop i ekwiwalent",
+      "source_freq": 2,
+      "detected_category": "zus",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 4 pkt 2 ustawy zasiłkowej",
+        "category": "zasiłki_chorobowe",
+        "score": 0.0,
+        "content_preview": "Zasiłek chorobowy dla osoby prowadzącej JDG wynosi 80% podstawy wymiaru zasiłku (100% w przypadku choroby w ciąży lub wypadku przy pracy). Podstawą wy"
+      }
+    },
+    {
+      "question": "Co byście zrobili?",
+      "source_category": "ZUS",
+      "topic": "byscie zrobili",
+      "source_freq": 2,
+      "detected_category": "ogólne",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 4 pkt 2 ustawy zasiłkowej",
+        "category": "zasiłki_chorobowe",
+        "score": 0.0,
+        "content_preview": "Zasiłek chorobowy dla osoby prowadzącej JDG wynosi 80% podstawy wymiaru zasiłku (100% w przypadku choroby w ciąży lub wypadku przy pracy). Podstawą wy"
+      }
+    },
+    {
+      "question": "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+      "source_category": "JPK",
+      "topic": "struktura",
+      "source_freq": 0,
+      "detected_category": "jpk",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Rozporządzenie JPK_V7",
+        "article_number": "§ 10 ust. 4 pkt 3 rozporządzenia",
+        "category": "oznaczenia_transakcji_jpk",
+        "score": 0.0,
+        "content_preview": "Oznaczenie TP w JPK_V7 stosuje się do transakcji między podmiotami powiązanymi w rozumieniu art. 32 ust. 2 pkt 1 ustawy o VAT. Dotyczy to m.in.: trans"
+      }
+    },
+    {
+      "question": "Jak wypełnić JPK_V7M?",
+      "source_category": "VAT",
+      "topic": "JPK",
+      "source_freq": 0,
+      "detected_category": "jpk",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Rozporządzenie JPK_V7",
+        "article_number": "§ 10 ust. 4 pkt 3 rozporządzenia",
+        "category": "oznaczenia_transakcji_jpk",
+        "score": 0.0,
+        "content_preview": "Oznaczenie TP w JPK_V7 stosuje się do transakcji między podmiotami powiązanymi w rozumieniu art. 32 ust. 2 pkt 1 ustawy o VAT. Dotyczy to m.in.: trans"
+      }
+    },
+    {
+      "question": "Czym się różni JPK_V7M od JPK_V7K?",
+      "source_category": "VAT",
+      "topic": "JPK",
+      "source_freq": 0,
+      "detected_category": "jpk",
+      "top_score": 0.0,
+      "top_chunk": {
+        "law_name": "Rozporządzenie JPK_V7",
+        "article_number": "§ 10 ust. 4 pkt 3 rozporządzenia",
+        "category": "oznaczenia_transakcji_jpk",
+        "score": 0.0,
+        "content_preview": "Oznaczenie TP w JPK_V7 stosuje się do transakcji między podmiotami powiązanymi w rozumieniu art. 32 ust. 2 pkt 1 ustawy o VAT. Dotyczy to m.in.: trans"
+      }
+    }
+  ],
+  "top_20_weak": [
+    {
+      "question": "Co to jest prewspółczynnik VAT?",
+      "source_category": "VAT",
+      "topic": "odliczenia VAT",
+      "source_freq": 0,
+      "detected_category": "vat",
+      "top_score": 1.552,
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "Zasady naliczania i odliczania VAT",
+        "score": 1.552,
+        "content_preview": "VAT naliczony (z faktur od dostawców) odliczasz z VAT należnego (z własnych sprzedaży). W rozliczeniu VAT wykazujesz zarówno VAT należny, jak i VAT na"
+      }
+    }
+  ],
+  "gap_topic_clusters": [
+    {
+      "topic": "JPK",
+      "count": 2
+    },
+    {
+      "topic": "potrzeba",
+      "count": 1
+    },
+    {
+      "topic": "znacznikami",
+      "count": 1
+    },
+    {
+      "topic": "urlop i ekwiwalent",
+      "count": 1
+    },
+    {
+      "topic": "byscie zrobili",
+      "count": 1
+    },
+    {
+      "topic": "struktura",
+      "count": 1
+    }
+  ]
+}
