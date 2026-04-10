@@ -1,0 +1,1254 @@
+{
+  "summary": {
+    "PARTIAL": 7,
+    "FAIL": 23
+  },
+  "questions": [
+    {
+      "query": "W trakcie użytkowania odliczałam 50% VAT (paliwa, koszty eksploatacji). Czy ta darowizna powinna być opodatkowana VAT?",
+      "freq": 26,
+      "source_cat": "vat",
+      "aktuo_category": "vat",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 1",
+          "score": 50.5079,
+          "content_excerpt": "Od wydatków związanych z samochodami odliczasz 50% VAT (art. 86a ust. 1). To dotyczy nabycia, importu, paliwa, napraw, ubezpieczenia i wszystkich kosztów eksploatacji samochodu. Wyjątek: jeśli samochód jest wykorzystywan",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 2 pkt 3",
+          "score": 37.4218,
+          "content_excerpt": "VAT od paliwa do samochodu firmowego odliczasz według tych samych zasad co od samochodu. Jeśli pojazd nie jest wykorzystywany wyłącznie do działalności gospodarczej - odliczasz 50% VAT. Jeśli jest używany wyłącznie bizne",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 113 ust. 5",
+          "score": 34.5055,
+          "content_excerpt": "Zwolnienie traci moc od czynności, którą przekraczasz próg 240 000 zł. Oznacza to, że już ta transakcja powinna być opodatkowana VAT, a następnie wszystkie kolejne transakcje w roku. Od tego momentu musisz wystawiać fakt",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "113",
+              "source_excerpt": "Art. 113. 1. Zwalnia się od podatku sprzedaż dokonywaną przez podatnika posiadającego siedzibę działalności gospodarczej na terytorium kraju, u  którego wartość sprzedaży, z  wyłączeniem podatku, nie przekroczyła w  poprzednim ani bieżącym "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Czy mogę odliczyć VAT w styczniu (faktura wystawiona w grudniu), ale tylko odliczę VAT w styczniu a nie będę ujmować kosztu w kpir?",
+      "freq": 16,
+      "source_cat": "vat",
+      "aktuo_category": "rachunkowosc",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 6 ust. 1",
+          "score": 22.6571,
+          "content_excerpt": "Zgodnie z ustawą o rachunkowości, wszystkie przychody i koszty należy ujmować w księgach w danym roku obrotowym, niezależnie od terminu ich zapłaty (zasada memoriału). Ustawa nie wspomina o magazynie walut jako zasadzie ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 39 ust. 2 pkt 1",
+          "score": 15.5161,
+          "content_excerpt": "Tak, powinna być ujęta w bilansie grudnia poprzez bierne rozliczenia międzyokresowe kosztów. Zgodnie z art. 39 ust. 2, tworzy się bierne rozliczenia dla kosztów przyszłych okresów, które przypadają na bieżący okres spraw",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 39 ust. 1 i 3",
+          "score": 13.6764,
+          "content_excerpt": "Ustawa o rachunkowości nie precyzuje, czy RMK ma być wyliczany od kwoty netto czy brutto. Art. 39 mówi jedynie, że RMK odpisuje się w koszty stosownie do upływu czasu lub wielkości świadczeń, z zachowaniem zasady ostrożn",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy w takiej sytuacji przysługuje mu pełne odliczenie VAT czy np jak to jest z samochodami w leasingu w mieszanym użytkowaniu 50%?",
+      "freq": 13,
+      "source_cat": "vat",
+      "aktuo_category": "podatek_naliczony",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86 ust. 1",
+          "score": 44.8851,
+          "content_excerpt": "Prawo do odliczenia VAT przysługuje w zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych. Oznacza to, że jeśli zakup dotyczy częściowo działalności podlegającej opodatkowaniu VAT,",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86",
+              "source_excerpt": "Art. 86. 1. W  zakresie, w  jakim towary i  usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o  kwotę podatku naliczonego, z  zast"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86 ust. 1",
+          "score": 29.2246,
+          "content_excerpt": "Tak, prawo do odliczenia VAT z faktury za zwykły koszt (np. materiały, usługi) przysługuje w rozliczeniu za okres, w którym podatnik otrzymał fakturę (art. 86 ust. 10b pkt 1), jeśli towar lub usługa są wykorzystywane do ",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86",
+              "source_excerpt": "Art. 86. 1. W  zakresie, w  jakim towary i  usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o  kwotę podatku naliczonego, z  zast"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 1",
+          "score": 17.8849,
+          "content_excerpt": "Od wydatków związanych z pojazdami samochodowymi możesz odliczyć tylko 50% podatku naliczonego (art. 86a ust. 1). Dotyczy to VAT wynikającego z faktury, podatku należnego z tytułu świadczenia usług czy dostawy towarów. P",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Czy od samochodu Opel combo van, który ma wpisane w dowodzie rejestracyjnym samochód ciężarowy do 3,5 t, można odliczać 100% VAT?",
+      "freq": 12,
+      "source_cat": "vat",
+      "aktuo_category": "vat",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+          "score": 91.7061,
+          "content_excerpt": "Tak, jeśli Opel Combo Van spełnia warunki określone w art. 86a ust. 9 (pojazd z jednym rzędem siedzeń oddzielonym ścianą od części ładunkowej), może kwalifikować do 100% odliczenia VAT zamiast standardowych 50%. Warunkie",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 9 pkt 1",
+          "score": 83.006,
+          "content_excerpt": "Samochód z kratką (przegrodą) daje pełne odliczenie VAT gdy ma jeden rząd siedzeń oddzielony od części ładunkowej ścianą lub trwałą przegrodą, jest klasyfikowany jako wielozadaniowy/van lub ma otwartą część ładunkową. Wy",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+          "score": 54.2799,
+          "content_excerpt": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków przegrodą jest uznawany za pojazd wykorzystyw",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Samochód osobowy z leasingiem operacyjnymWartość powyżej 100 tys bruttoZgłoszony do VAT-26Czy leasing odliczam proporcje?",
+      "freq": 12,
+      "source_cat": "vat",
+      "aktuo_category": "vat",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+          "score": 49.7987,
+          "content_excerpt": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków przegrodą jest uznawany za pojazd wykorzystyw",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "86a",
+              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) należnego z tytułu: a"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 113 ust. 1",
+          "score": 37.5863,
+          "content_excerpt": "Nie, jeśli obrót rolnika w roku poprzednim wyniósł 250 tys. zł netto (powyżej limitu 240 tys. zł), to nie może on skorzystać ze zwolnienia do 240 tys. zł w bieżącym roku. Warunek zwolnienia wymaga, aby wartość sprzedaży ",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "113",
+              "source_excerpt": "Art. 113. 1. Zwalnia się od podatku sprzedaż dokonywaną przez podatnika posiadającego siedzibę działalności gospodarczej na terytorium kraju, u  którego wartość sprzedaży, z  wyłączeniem podatku, nie przekroczyła w  poprzednim ani bieżącym "
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 90 ust. 1",
+          "score": 29.308,
+          "content_excerpt": "Przy działalności mieszanej podatnik musi odrębnie określić kwoty VAT naliczonego związane z czynnościami opodatkowanymi. Jeśli nie można wyodrębnić tych kwot, stosuje się proporcję - można odliczyć taką część VAT nalicz",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "90",
+              "source_excerpt": "Art. 90. 1. W stosunku do towarów i  usług, które są wykorzystywane przez podatnika do wykonywania czynności, w związku z którymi przysługuje prawo do obniżenia kwoty podatku należnego, jak i  czynności, w  związku z którymi takie prawo nie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": ".Jaka stawka VAT na usługi gastronomiczne z owocami morza, a jaka na usługi gastronomiczne tylko z rybami?",
+      "freq": 11,
+      "source_cat": "vat",
+      "aktuo_category": "podatek_należny",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 119 ust. 3a i 6",
+          "score": 19.8979,
+          "content_excerpt": "Podatnik musi prowadzić ewidencję (art. 109 ust. 3) z wyszczególnieniem wydatków na towary i usługi nabyte dla turysty oraz posiadać dokumenty potwierdzające te kwoty. Odrębnie ewidencjonuje usługi własne i odrębnie usłu",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "119",
+              "source_excerpt": "Art. 119. 1. Podstawą opodatkowania przy wykonywaniu usług turystyki jest kwota marży pomniejszona o kwotę należnego podatku, z zastrzeżeniem ust. 5. 2. Przez marżę, o  której mowa w  ust. 1, rozumie się różnicę między kwotą, którą ma zapła"
+            },
+            {
+              "article": "6",
+              "source_excerpt": "Art. 6. Przepisów ustawy nie stosuje się do: 1) transakcji zbycia przedsiębiorstwa lub zorganizowanej części przedsiębiorstwa; 2) czynności, które nie mogą być przedmiotem prawnie skutecznej umowy. 3) (uchylony) Rozdział 2 Dostawa towarów i"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 16 ust. 1 pkt 28",
+          "score": 17.0293,
+          "content_excerpt": "Koszty posiłków pracowników nie stanowią kosztów uzyskania przychodów, ponieważ art. 16 ust. 1 pkt 28 ustawy zawiera katalog wydatków na usługi gastronomiczne i zakup żywności określonych jako koszty reprezentacji, które",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 28c ust. 1",
+          "score": 14.2494,
+          "content_excerpt": "Przepisy art. 28c określają miejsce świadczenia usług, ale nie zawierają informacji o mechanizmie odwrotnego obciążenia (reverse charge) ani stawkach VAT. Aby stwierdzić, czy usługa podlega odwróceniu obowiązku zapłaty V",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "28c",
+              "source_excerpt": "Art. 28c. 1. Miejscem świadczenia usług na rzecz podmiotów niebędących podatnikami jest miejsce, w  którym usługodawca posiada siedzibę działalności gospodarczej, z zastrzeżeniem ust. 2 i 3 oraz art. 28d, art. 28e, art. 28f ust. 1, 2 i 3, a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?",
+      "freq": 11,
+      "source_cat": "vat",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 23b ust. 1",
+          "score": 27.3608,
+          "content_excerpt": "Przepisy art. 23b nie określają wymaganego formatu harmonogramu spłat leasingu ani nie nakładają obowiązku podziału opłat na kapitał i odsetki. Ustawa odnosi się jedynie do całości opłat ustalonych w umowie leasingu w po",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 3 ust. 2a",
+          "score": 23.3279,
+          "content_excerpt": "Osoba fizyczna z rezydencją podatkową w Niemczech NIE podlega obowiązkowi podatkowemu w Polsce. W Polsce ma zastosowanie ograniczony obowiązek podatkowy - płaci podatek tylko od dochodów uzyskanych na terytorium Polski. ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 21 ust. 1 pkt 17",
+          "score": 21.0753,
+          "content_excerpt": "Diety i zwrot kosztów otrzymywane przez osoby pełniące funkcje obywatelskie (w tym sołtysów) są zwolnione od podatku dochodowego do wysokości nieprzekraczającej miesięcznie 3000 zł. Ponieważ Twoja dieta wynosi 2700 zł mi",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Korekta in minus kosztowa: wystawiona 20.02 dot usługi z 12.02. VAT i dochodowy księguję pod datą wystawienia 20.02?",
+      "freq": 9,
+      "source_cat": "vat",
+      "aktuo_category": "faktury_korygujące",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106j ust. 1 pkt 4",
+          "score": 76.8545,
+          "content_excerpt": "Faktura korygująca powinna być wystawiona w związku ze zmianą podstawy opodatkowania lub zwrotem zapłaty. Артykuł 106j nie określa terminu, w jakim korekta musi być wystawiona po zmianie okoliczności. Faktura korygująca ",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106j",
+              "source_excerpt": "Art. 106j. 1. W przypadku gdy po wystawieniu faktury: 1) podstawa opodatkowania lub kwota podatku wskazana w fakturze uległa zmianie, 2) (uchylony)  3) dokonano zwrotu podatnikowi towarów i opakowań, 4) dokonano zwrotu nabywcy całości lub c"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106j ust. 2 pkt 2",
+          "score": 50.4967,
+          "content_excerpt": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wystawiona, nie zaś data faktury pierwotnej czy",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106j",
+              "source_excerpt": "Art. 106j. 1. W przypadku gdy po wystawieniu faktury: 1) podstawa opodatkowania lub kwota podatku wskazana w fakturze uległa zmianie, 2) (uchylony)  3) dokonano zwrotu podatnikowi towarów i opakowań, 4) dokonano zwrotu nabywcy całości lub c"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106j ust. 1 pkt 1 i 5",
+          "score": 28.5784,
+          "content_excerpt": "Ustawa nie łączy prawa do odliczenia VAT naliczonego z powodem wystawienia faktury korygującej. Jeśli jednak faktura była wystawiona dla błędnego kontrahenta, VAT nie powinien był być odliczony wcześnie, bo zabrakłoby do",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106j",
+              "source_excerpt": "Art. 106j. 1. W przypadku gdy po wystawieniu faktury: 1) podstawa opodatkowania lub kwota podatku wskazana w fakturze uległa zmianie, 2) (uchylony)  3) dokonano zwrotu podatnikowi towarów i opakowań, 4) dokonano zwrotu nabywcy całości lub c"
+            },
+            {
+              "article": "5",
+              "source_excerpt": "Art. 5. 1. Opodatkowaniu podatkiem od towarów i  usług, zwanym dalej „podatkiem”, podlegają: 1) odpłatna dostawa towarów i odpłatne świadczenie usług na terytorium kraju; 2) eksport towarów; 3) import towarów na terytorium kraju; 4) wewnątr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Oznaczenia BFK DI Czy faktury sprzedażowe na kontrahenta zagranicznego oznaczamy BFK czy DI?",
+      "freq": 8,
+      "source_cat": "vat",
+      "aktuo_category": "fakturowanie",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106e ust. 1 pkt 6",
+          "score": 79.773,
+          "content_excerpt": "Przepisy art. 106e nie definiują oznaczeń BFK ani DI dla faktur wewnętrznych. Artykuł zawiera wymóg, by faktura zawierała datę dokonania lub zakończenia dostawy (pkt 6), ale nie wskazuje konkretnego kodu lub oznaczenia d",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106e",
+              "source_excerpt": "Art. 106e. 1. Faktura powinna zawierać: 1) datę wystawienia; 2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę; 3) imiona i nazwiska lub nazwy podatnika i nabywcy towarów lub usług "
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106e ust. 3",
+          "score": 55.4095,
+          "content_excerpt": "Tekst ustawy o VAT nie określa, jakie oznaczenia w księdze pamiętowej (KPL) stosować dla poszczególnych rodzajów faktur VAT, w tym dla faktury dotyczącej procedury marży. Przepisy dotyczą wyłącznie wymogów treści faktury",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106e",
+              "source_excerpt": "Art. 106e. 1. Faktura powinna zawierać: 1) datę wystawienia; 2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę; 3) imiona i nazwiska lub nazwy podatnika i nabywcy towarów lub usług "
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106e ust. 1",
+          "score": 50.4446,
+          "content_excerpt": "Ustawa o VAT nie definiuje skrótów takich jak 'BFK' ani nie reguluje systemu oznaczeń dla faktur zakupowych (kosztowych). Ustawowo faktury muszą zawierać elementy wymienione w art. 106e (np. datę, numer, dane stron, staw",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106e",
+              "source_excerpt": "Art. 106e. 1. Faktura powinna zawierać: 1) datę wystawienia; 2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę; 3) imiona i nazwiska lub nazwy podatnika i nabywcy towarów lub usług "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Czy taką sprzedaż należy wykazać ze stawką ZW (i liczyć do limitu zwolnienia z VAT)?",
+      "freq": 7,
+      "source_cat": "vat",
+      "aktuo_category": "podatek_należny",
+      "overall_status": "PARTIAL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 113 ust. 2 pkt 2",
+          "score": 19.534,
+          "content_excerpt": "Sprzedaż zwolniona od podatku na podstawie art. 43 ust. 1 nie wlicza się do limitu 240 000 zł z art. 113 ust. 1, z pewnymi wyjątkami. Nie liczy się także sprzedaż zwolniona na podstawie art. 82 ust. 3, za wyjątkiem trans",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "113",
+              "source_excerpt": "Art. 113. 1. Zwalnia się od podatku sprzedaż dokonywaną przez podatnika posiadającego siedzibę działalności gospodarczej na terytorium kraju, u  którego wartość sprzedaży, z  wyłączeniem podatku, nie przekroczyła w  poprzednim ani bieżącym "
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106ga ust. 2 pkt 6",
+          "score": 13.5345,
+          "content_excerpt": "Podatnicy korzystający ze zwolnienia z VAT (art. 113a ust. 1) są zwolnieni z obowiązku wystawiania faktur ustrukturyzowanych w Krajowym Systemie e-Faktur. W takim przypadku mogą wystawiać faktury elektroniczne lub papier",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "106g",
+              "source_excerpt": "Art. 106g. (uchylony)"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 113 ust. 12",
+          "score": 12.4778,
+          "content_excerpt": "Nie. Ustawa przewiduje mechanizm zabezpieczający przed omijaniem limitu poprzez art. 113 ust. 12 - jeśli między tobą a kontrahentem istnieje związek (np. powiązanie kapitałowe), który wpływa na zaniżenie wartości sprzeda",
+          "status": "PARTIAL",
+          "reason": "w?a?ciwa ustawa, ale chunk wymaga r?cznej oceny lub doprecyzowania wzgl?dem ?r?d?a",
+          "source_hits": [
+            {
+              "article": "113",
+              "source_excerpt": "Art. 113. 1. Zwalnia się od podatku sprzedaż dokonywaną przez podatnika posiadającego siedzibę działalności gospodarczej na terytorium kraju, u  którego wartość sprzedaży, z  wyłączeniem podatku, nie przekroczyła w  poprzednim ani bieżącym "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Jeśli mam kogoś na zleceniu, ale w 2025 nie przepracował ani 1h i nie zarobił ani 1zł to czy muszę wystawiać zerowy PIT4R?",
+      "freq": 10,
+      "source_cat": "pit",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 14c ust. 1 pkt 1",
+          "score": 23.5462,
+          "content_excerpt": "Przy wyborze metody kasowej od 2026 roku musisz sprawdzić przychody z roku bezpośrednio poprzedzającego - czyli z 2025 roku. Limit wynosi 1 000 000 zł i stosuje się niezależnie od formy opodatkowania, którą stosowałeś w ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 14 ust. 1e",
+          "score": 22.9759,
+          "content_excerpt": "Jeśli strony umowy ustalą, że usługa jest rozliczana w okresach rozliczeniowych, przychód powstaje w ostatnim dniu danego okresu rozliczeniowego określonego w umowie lub wystawionej fakturze (art. 14 ust. 1e). Przepis te",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 22 ust. 4",
+          "score": 21.2209,
+          "content_excerpt": "Koszty poniesione w 2025 roku są potrącalne w roku, w którym zostały poniesione, czyli 2025 roku. Przychód z odszkodowania otrzymany w 2026 roku będzie przychodem roku 2026. Jeśli są to koszty bezpośrednio związane z tym",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Bo sie zgubiłam. PIT-37 Ulga rehabilitacyjna na niepełnosprawnego syna i faktury za leki powyżej 100 zl?",
+      "freq": 6,
+      "source_cat": "pit",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 22 ust. 2 pkt 1",
+          "score": 36.5455,
+          "content_excerpt": "Przychód z pracy wykazujesz w wysokości kwot wykazanych przez pracodawcę na PIT-11 (brutto, przed potrąceniami). Na PIT-37 wykazujesz przychód z tytułu stosunku pracy, następnie odliczasz od niego koszty uzyskania przych",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 21 ust. 1 pkt 17",
+          "score": 34.8796,
+          "content_excerpt": "Diety i zwrot kosztów otrzymywane przez osoby pełniące funkcje obywatelskie (w tym sołtysów) są zwolnione od podatku dochodowego do wysokości nieprzekraczającej miesięcznie 3000 zł. Ponieważ Twoja dieta wynosi 2700 zł mi",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 27 ust. 1",
+          "score": 32.8465,
+          "content_excerpt": "Od dochodu do 120 000 zł podatek wynosi 12% minus kwota zmniejszająca podatek 3600 zł. Od dochodu powyżej 120 000 zł podatek wynosi 10 800 zł plus 32% nadwyżki ponad 120 000 zł. To skala progresywna z dwoma przedziałami.",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy pit11 można wysłać jeszcze 2 lutego z uwagi na weekend?",
+      "freq": 6,
+      "source_cat": "pit",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 21.8888,
+          "content_excerpt": "Zeznanie podatkowe trzeba złożyć w terminie od 15 lutego do 30 kwietnia roku następującego po roku podatkowym. Zeznania złożone przed 15 lutego uznaje się za złożone w dniu 15 lutego. To oznacza, że dla roku 2025 termin ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 21.0835,
+          "content_excerpt": "Zeznanie o wysokości osiągniętego dochodu (PIT-36) należy złożyć w terminie od 15 lutego do 30 kwietnia roku następującego po roku podatkowym. Zeznania złożone przed 15 lutego traktuje się jako złożone w dniu 15 lutego.",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 20.9358,
+          "content_excerpt": "Zeznanie roczne o dochodach należy złożyć w terminie od 15 lutego do 30 kwietnia roku następującego po roku podatkowym. Zeznania złożone przed 15 lutego uznaje się za złożone w dniu 15 lutego roku następującego po roku p",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Mam taki mix:Żona PIT36 (dg + UoP) + PIT/M (połowa nagrody)Mąż PIT36L (dg) oraz PIT36 (zerowy) + PIT/M (połowa nagrody)Czy w przypadku męża będzie właśnie tak?",
+      "freq": 6,
+      "source_cat": "pit",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 20 ust. 1",
+          "score": 59.7744,
+          "content_excerpt": "Nagrody stanowią przychody z innych źródeł (art. 20 ust. 1), nie z działalności gospodarczej. Rozliczane są w PIT-11 (zeznaniu rocznym) razem z dochodami z pozostałych źródeł, nie w ryczałcie PIT-28. Karta podarunkowa o ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 12 ust. 1",
+          "score": 52.1744,
+          "content_excerpt": "Tak, premie, nagrody i różnego rodzaju dodatki stanowią przychód ze stosunku pracy. Są one wymieniane w art. 12 ust. 1 jako część przychodów pracownika, niezależnie od tego, czy ich wysokość została z góry ustalona.",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 12 ust. 1",
+          "score": 39.3849,
+          "content_excerpt": "Przychodem ze stosunku pracy są wszelkiego rodzaju wypłaty pieniężne oraz wartość świadczeń w naturze bądź ich ekwiwalenty, niezależnie od źródła finansowania. Obejmuje to: wynagrodzenia zasadnicze, dodatki, nagrody, ekw",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Ulga na dziecko Córka ma 22 lata i studiuje w Danii. Czy w takim przypadku mogę zastosować ulgę na dziecko?",
+      "freq": 6,
+      "source_cat": "pit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 21 ust. 1 pkt 8",
+          "score": 20.1357,
+          "content_excerpt": "Renta rodzinna pobierana przez dziecko po zmarłym ojcu jest wolna od podatku dochodowego na podstawie art. 21 ust. 1 pkt 8, dlatego nie stanowi dochodu podlegającego opodatkowaniu. Ulga na dziecko przysługuje rodzicom ni",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 27f ust. 1",
+          "score": 19.2968,
+          "content_excerpt": "Matka samotnie wychowująca może skorzystać z ulgi na dziecko za każdy miesiąc, w którym dziecko pozostawało małoletnie i spełniały się warunki z art. 27f ust. 1. Jednak od lipca dziecko może być już pełnoletnie - jeśli t",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 27f ust. 2 pkt 1 lit. b",
+          "score": 17.3327,
+          "content_excerpt": "Tak, samotna matka może się rozliczać z ulgą na dziecko, jeśli spełnia warunki określone w art. 27f. Jeśli nie pozostaje w związku małżeńskim (w tym przez część roku), limit dochodów wynosi 56 000 zł rocznie. Jeśli samot",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy jeśli działalność w 2025 była na ryczałcie od 03-12.2025 to czy w 2026 można użyć jako podstawy - przychodu z roku poprzedniego do ustalenia podstawy zdrowotnej?",
+      "freq": 5,
+      "source_cat": "pit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 22 ust. 4",
+          "score": 27.1984,
+          "content_excerpt": "Koszty poniesione w 2025 roku są potrącalne w roku, w którym zostały poniesione, czyli 2025 roku. Przychód z odszkodowania otrzymany w 2026 roku będzie przychodem roku 2026. Jeśli są to koszty bezpośrednio związane z tym",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 14c ust. 1 pkt 1",
+          "score": 24.6839,
+          "content_excerpt": "Przy wyborze metody kasowej od 2026 roku musisz sprawdzić przychody z roku bezpośrednio poprzedzającego - czyli z 2025 roku. Limit wynosi 1 000 000 zł i stosuje się niezależnie od formy opodatkowania, którą stosowałeś w ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 22.7094,
+          "content_excerpt": "Dochody osiągnięte w roku podatkowym 2025 wykazuje się w zeznaniu PIT-36 (lub PIT-37) składanym w terminie od 15 lutego do 30 kwietnia 2026 roku (art. 45 ust. 1). Zeznanie za rok 2025 dotyczy dochodów uzyskanych w tym ro",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Pit-37 Zamotałam się osoba która otrzymuje PIT40A z KRUS i PIT11A otrzymuje z Zusu powinna taką osoba rozliczyć się PIT 37?",
+      "freq": 5,
+      "source_cat": "pit",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 26g",
+          "score": 61.7401,
+          "content_excerpt": "Przepisy ustawy o podatku dochodowym nie zawierają szczegółowych instrukcji dotyczących konkretnych pól w formularzu PIT-37. Odliczenie kosztów kwalifikowanych dokonujesz w zeznaniu za rok podatkowy, w którym je poniosłe",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 59.7203,
+          "content_excerpt": "Artykuł 45 nie zawiera konkretnych informacji o formularzu PIT-36. Przepis mówi ogólnie o zeznaniu rocznym, ale dokładną definicję i zastosowanie poszczególnych formularzy (PIT-36, PIT-36L, PIT-37) określają inne przepis",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 21 ust. 1 pkt 17",
+          "score": 55.2914,
+          "content_excerpt": "Diety i zwrot kosztów otrzymywane przez osoby pełniące funkcje obywatelskie (w tym sołtysów) są zwolnione od podatku dochodowego do wysokości nieprzekraczającej miesięcznie 3000 zł. Ponieważ Twoja dieta wynosi 2700 zł mi",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Chciałabym zapytać czy ktoś może miał taką sytuację, że od 2016 roku zawieszona jest działalność, a podatnik rozliczony na formularzu PIT 37 zamiast PIT 36.Teraz wydaje mi się, że trzeba złożyć korekty wstecz od 2020 roku?",
+      "freq": 4,
+      "source_cat": "pit",
+      "aktuo_category": "pit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 79.2684,
+          "content_excerpt": "Artykuł 45 nie zawiera konkretnych informacji o formularzu PIT-36. Przepis mówi ogólnie o zeznaniu rocznym, ale dokładną definicję i zastosowanie poszczególnych formularzy (PIT-36, PIT-36L, PIT-37) określają inne przepis",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 76.327,
+          "content_excerpt": "Dochody osiągnięte w roku podatkowym 2025 wykazuje się w zeznaniu PIT-36 (lub PIT-37) składanym w terminie od 15 lutego do 30 kwietnia 2026 roku (art. 45 ust. 1). Zeznanie za rok 2025 dotyczy dochodów uzyskanych w tym ro",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 26 ust. 1 pkt 9",
+          "score": 74.0325,
+          "content_excerpt": "Tak, darowizny odliczasz w zeznaniu podatkowym, którym dla niektórych podatników jest PIT-37 (zamiast PIT-36). W zeznaniu wykazujesz kwotę przekazanej darowizny, kwotę dokonanego odliczenia i dane obdarowanego. Odliczeni",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Mam tak w Volkswagen Leasing, samochód osobowy elektryczny, proporcja ustalona ale na fakturach i harmonogramie brak podziału. Co z tym zrobić?",
+      "freq": 4,
+      "source_cat": "pit",
+      "aktuo_category": "fakturowanie",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 145n ust. 1 pkt 1",
+          "score": 23.2149,
+          "content_excerpt": "Tak, w okresie od 1 lutego do 31 grudnia 2026 r. podatnicy obowiązani do wystawiania faktur ustrukturyzowanych mogą wystawiać faktury elektroniczne lub papierowe przy zastosowaniu kas rejestrujących. Wartość sprzedaży z ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "145n",
+              "source_excerpt": "Art. 145n. 1. W okresie od dnia 1  lutego 2026 r. do dnia 31  grudnia 2026 r. podatnicy obowiązani do wystawiania faktur ustrukturyzowanych mogą wystawiać: 1) faktury elektroniczne lub faktury w postaci papierowej przy zastosowaniu kas reje"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106gb",
+          "score": 20.5333,
+          "content_excerpt": "Artykuł 106gb nie zawiera żadnych informacji o fakturach zaliczkowych. Odpowiedź na to pytanie wymaga weryfikacji w innych przepisach ustawy o VAT.",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "106g",
+              "source_excerpt": "Art. 106g. (uchylony)"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106j ust. 1 pkt 5",
+          "score": 18.3967,
+          "content_excerpt": "Tak, jeśli stwierdzisz pomyłkę w dowolnej pozycji faktury (w tym w nazwie towaru), musisz wystawić fakturę korygującą (art. 106j ust. 1 pkt 5). Dotyczy to również literówek. W korrekcie powinna być wykazana prawidłowa tr",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "106j",
+              "source_excerpt": "Art. 106j. 1. W przypadku gdy po wystawieniu faktury: 1) podstawa opodatkowania lub kwota podatku wskazana w fakturze uległa zmianie, 2) (uchylony)  3) dokonano zwrotu podatnikowi towarów i opakowań, 4) dokonano zwrotu nabywcy całości lub c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "(do tej pory robiłem taką w druczkach a teraz podobno trzeba elektronicznie)?",
+      "freq": 3,
+      "source_cat": "pit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 96 ust. 1, 3",
+          "score": 12.9946,
+          "content_excerpt": "Zarówno rejestracja obowiązkowa jak i dobrowolna muszą być dokonane PRZED dniem wykonania pierwszej czynności opodatkowanej. Brak różnicy w terminach - w obu przypadkach zgłoszenie trzeba złożyć przed rozpoczęciem działa",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "96",
+              "source_excerpt": "Art. 96. 1. Podmioty, o  których mowa w  art. 15 i art. 15a, są obowiązane przed dniem wykonania pierwszej czynności okreś lonej w  art. 5 złożyć naczelnikowi urzędu skarbowego zgłoszenie rejestracyjne, z zastrzeżeniem ust. 3. 1a. Dostawca "
+            },
+            {
+              "article": "3",
+              "source_excerpt": "Art. 3. 1. (uchylony) 2. (uchylony) 3. W przypadku: 1) (uchylony)  2) podatników: a) nieposiadających siedziby działalności gospodarczej lub stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju, b) o których mowa w art."
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 4",
+          "score": 8.4129,
+          "content_excerpt": "Tak, podatek trzeba wpłacić przed upływem terminu do złożenia zeznania (do 30 kwietnia). Wpłacić trzeba: różnicę między podatkiem należnym z zeznania a sumą zapłaconych zaliczek, lub pełny podatek należny z zeznania o do",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106i ust. 2",
+          "score": 6.6242,
+          "content_excerpt": "Nie, taka faktura nie jest BFK. Według art. 106i ust. 2 Ustawy o VAT, jeśli otrzymasz całość lub część zapłaty PRZED dostawą, faktura powinna być wystawiona nie później niż 15. dnia miesiąca następującego po miesiącu, w ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "106",
+              "source_excerpt": "Art. 106. (uchylony)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Czy ktoś posiada certyfikat rezydencji podatkowej za 2025 od: *Weglot SAS *Stripe *Squarespace Ireland *Serif Europe LTD?",
+      "freq": 29,
+      "source_cat": "cit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 3 ust. 1a",
+          "score": 17.6308,
+          "content_excerpt": "Ustawa o PIT nie zawiera definicji ani regulacji dotyczącej certyfikatu rezydencji podatkowej. Przepisy art. 3 określają status rezydenta podatkowego w oparciu o miejsce zamieszkania (art. 3 ust. 1a) – czyli centrum inte",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 21 ust. 3 pkt 2",
+          "score": 16.0162,
+          "content_excerpt": "Ustawa o podatku dochodowym od osób prawnych nie zawiera terminu 'certyfikat rezydencji podatkowej'. Zwolnienie od podatku od odsetek, praw autorskich i należności licencyjnych (art. 21 ust. 3) wymaga spełnienia warunków",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 30j ust. 1 pkt 1",
+          "score": 11.5525,
+          "content_excerpt": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w którym się przeprowadziłeś, złożyć w urzędzie",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy nadal trzeba pisać pisma o stwierdzenie nadpłaty i zwrot jesli wynika z cit8? Czy sami zwrócą?",
+      "freq": 19,
+      "source_cat": "cit",
+      "aktuo_category": "cit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 28b ust. 6",
+          "score": 16.5808,
+          "content_excerpt": "Organ podatkowy zwraca podatek bez zbędnej zwłoki, nie później jednak niż w terminie 6 miesięcy od dnia wpływu wniosku o zwrot podatku. Termin ten biegnie na nowo od dnia wpływu zmienionego wniosku. W przypadku bezwątpli",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 8 ust. 6",
+          "score": 14.6401,
+          "content_excerpt": "Zgodnie z art. 8 ust. 6, jeśli z odrębnych przepisów wynika obowiązek zamknięcia ksiąg przed upływem roku podatkowego, następny rok podatkowy biegnie od dnia otwarcia ksiąg rachunkowych do końca przyjętego roku podatkowe",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 7aa ust. 2 pkt 3",
+          "score": 13.4071,
+          "content_excerpt": "Art. 7aa dotyczy tzw. dochodu z przekształcenia przy przejściu na ryczałt. Jeśli spółka przechodzi z normalnego opodatkowania na ryczałt, musi wykazać dochód z przekształcenia będący różnicą między wartością księgową (fi",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Ma może ktoś certyfikat rezydencji za rok 2025 od firmy Timocom Platz oraz Cookie Script?",
+      "freq": 10,
+      "source_cat": "cit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 3 ust. 1a",
+          "score": 14.3647,
+          "content_excerpt": "Ustawa o PIT nie zawiera definicji ani regulacji dotyczącej certyfikatu rezydencji podatkowej. Przepisy art. 3 określają status rezydenta podatkowego w oparciu o miejsce zamieszkania (art. 3 ust. 1a) – czyli centrum inte",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 13.6425,
+          "content_excerpt": "Artykuł 45 wymaga złożenia zeznania za dany rok podatkowy w terminie od 15 lutego do 30 kwietnia roku następującego. Przychody za 2024 rok powinny być wykazane w zeznaniu za 2024 (złożonym do 30 kwietnia 2025). Brak złoż",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 21 ust. 3 pkt 2",
+          "score": 13.0897,
+          "content_excerpt": "Ustawa o podatku dochodowym od osób prawnych nie zawiera terminu 'certyfikat rezydencji podatkowej'. Zwolnienie od podatku od odsetek, praw autorskich i należności licencyjnych (art. 21 ust. 3) wymaga spełnienia warunków",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Estoński CIT czy zakupiony obiad dla pracowników co jakiś czas to wydatek niezwiązany z działalnością gospodarczą czy kolacja służbowa?",
+      "freq": 7,
+      "source_cat": "cit",
+      "aktuo_category": "cit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+          "article_number": "art. 28j ust. 1",
+          "score": 46.2104,
+          "content_excerpt": "Estoński CIT może wybrać podatnik CIT mający siedzibę lub zarząd w Polsce, jeżeli spełnia warunki z art. 28j ust. 1, w szczególności dotyczące struktury przychodów, poziomu zatrudnienia lub ponoszenia określonych wydatkó",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+          "article_number": "art. 28j ust. 1 oraz art. 28k ust. 1",
+          "score": 39.0693,
+          "content_excerpt": "Estoński CIT, czyli ryczałt od dochodów spółek, może wybrać podatnik CIT mający siedzibę lub zarząd w Polsce, jeżeli spełnia warunki z art. 28j ust. 1, w tym dotyczące struktury przychodów, zatrudnienia, formy prowadzeni",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+          "article_number": "art. 28k ust. 1",
+          "score": 37.3666,
+          "content_excerpt": "Z estońskiego CIT wyłączeni są podatnicy wskazani w art. 28k ust. 1, w tym m.in. przedsiębiorstwa finansowe, instytucje pożyczkowe, podatnicy korzystający z niektórych zwolnień strefowych, podmioty w upadłości lub likwid",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Wynajem auta za granica. Czy w tej sytuacji należy pobrać podatek u źródła (WHT)?",
+      "freq": 7,
+      "source_cat": "cit",
+      "aktuo_category": "cit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 21 ust. 1",
+          "score": 68.4867,
+          "content_excerpt": "Wynajem samochodu zagranicą nie jest wymieniony w art. 21 ust. 1 jako przychód podlegający obowiązkowi pobrania podatku u źródła. Art. 21 zawiera katalog przychodów polegających podatek u źródła (odsetki, prawa autorskie",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 12 ust. 2",
+          "score": 24.7383,
+          "content_excerpt": "Przychody w walutach obcych ze sprzedaży stoików za granicą należy przeliczyć na złote według kursu średniego ogłaszanego przez Narodowy Bank Polski z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu. ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 15 ust. 1",
+          "score": 23.6869,
+          "content_excerpt": "Aby zaliczyć płatność do kosztów uzyskania przychodów, musi być ona poniesiona w celu osiągnięcia przychodów ze źródła przychodów lub zachowania/zabezpieczenia tego źródła. Koszty bezpośrednio związane z przychodami zali",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Doby wieczór!. Składacie państwo deklarację IFT2R? Czy składa się do miesięcznej subskrypcji (Google, Adobe itp)?",
+      "freq": 6,
+      "source_cat": "cit",
+      "aktuo_category": "cit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 27 ust. 1",
+          "score": 13.1485,
+          "content_excerpt": "Zeznanie CIT za rok 2025 należy złożyć do końca trzeciego miesiąca roku następnego, czyli do 31 marca 2026 roku. W tym samym terminie należy wpłacić podatek należny albo różnicę między podatkiem należnym a sumą zapłacony",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 26a ust. 1 i 2",
+          "score": 11.8991,
+          "content_excerpt": "Miejscem importu towarów z Chin jest terytorium Polski — to miejsce, gdzie towary znajdują się w momencie ich wprowadzenia na terytorium Unii Europejskiej. Jeśli towary podlegają procedurze celnej (uszlachetnianie, skład",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "26a",
+              "source_excerpt": "Art. 26a. 1. Miejscem importu towarów jest terytorium państwa członkowskiego, na którym towary znajdują się w momencie ich wprowadzenia na terytorium Unii Europejskiej.  2. W przypadku gdy towary zostaną objęte z momentem ich wprowadzenia n"
+            },
+            {
+              "article": "2",
+              "source_excerpt": "Art. 2. Ilekroć w dalszych przepisach jest mowa o: 1) terytorium kraju – rozumie się przez to terytorium Rzeczypospolitej Polskiej, z zastrzeżeniem art. 2a; 2) państwie członkowskim – rozumie się przez to państwo członkowskie Unii Europejsk"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 99 ust. 4",
+          "score": 11.7837,
+          "content_excerpt": "Aby przejść z rozliczeń kwartalnych na miesięczne, należy po upływie 4 kwartałów rozliczeń kwartalnych zawiadomić na piśmie naczelnika urzędu skarbowego. Zawiadomienie składa się w terminie do dnia złożenia pierwszej dek",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": [
+            {
+              "article": "99",
+              "source_excerpt": "Art. 99. 1. Podatnicy, o  których mowa w  art. 15, są obowiązani składać w urzędzie skarbowym deklaracje podatkowe za okresy miesięczne w  terminie do 25. dnia miesiąca następującego po każdym kolejnym miesiącu, z  zastrzeżeniem ust. 2–10, "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Czy ktoś z Państwa posiada certyfikat rezydencji podatkowej firmy Apple Distribution International Ltd. i mógłby się podzielić?",
+      "freq": 4,
+      "source_cat": "cit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 3 ust. 1a",
+          "score": 17.6308,
+          "content_excerpt": "Ustawa o PIT nie zawiera definicji ani regulacji dotyczącej certyfikatu rezydencji podatkowej. Przepisy art. 3 określają status rezydenta podatkowego w oparciu o miejsce zamieszkania (art. 3 ust. 1a) – czyli centrum inte",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 21 ust. 3 pkt 2",
+          "score": 16.0162,
+          "content_excerpt": "Ustawa o podatku dochodowym od osób prawnych nie zawiera terminu 'certyfikat rezydencji podatkowej'. Zwolnienie od podatku od odsetek, praw autorskich i należności licencyjnych (art. 21 ust. 3) wymaga spełnienia warunków",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 30j ust. 1 pkt 1",
+          "score": 11.5525,
+          "content_excerpt": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w którym się przeprowadziłeś, złożyć w urzędzie",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy ma ktoś certyfikaty rezydencji za rok 2025 dla: Canva, Klaviyo,BunnyWay,Manychat, Zoom??",
+      "freq": 3,
+      "source_cat": "cit",
+      "aktuo_category": "ogólne",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 13.6425,
+          "content_excerpt": "Artykuł 45 wymaga złożenia zeznania za dany rok podatkowy w terminie od 15 lutego do 30 kwietnia roku następującego. Przychody za 2024 rok powinny być wykazane w zeznaniu za 2024 (złożonym do 30 kwietnia 2025). Brak złoż",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 6 ust. 2 pkt 2",
+          "score": 10.0833,
+          "content_excerpt": "Tak, małżeństwo zawarte w lutym 2025 roku może się rozliczyć wspólnie za rok 2025. Prawo do wspólnego rozliczenia obejmuje także małżonków, którzy zawarli związek w trakcie roku podatkowego — wówczas rozliczenie dotyczy ",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 45 ust. 1",
+          "score": 10.0833,
+          "content_excerpt": "Dochody osiągnięte w roku podatkowym 2025 wykazuje się w zeznaniu PIT-36 (lub PIT-37) składanym w terminie od 15 lutego do 30 kwietnia 2026 roku (art. 45 ust. 1). Zeznanie za rok 2025 dotyczy dochodów uzyskanych w tym ro",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy powinnam złożyć wniosek do US już teraz czy po wysłaniu CIT-8?",
+      "freq": 3,
+      "source_cat": "cit",
+      "aktuo_category": "cit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 27 ust. 1",
+          "score": 22.5124,
+          "content_excerpt": "Zeznanie CIT za rok 2025 należy złożyć do końca trzeciego miesiąca roku następnego, czyli do 31 marca 2026 roku. W tym samym terminie należy wpłacić podatek należny albo różnicę między podatkiem należnym a sumą zapłacony",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+          "article_number": "art. 28j ust. 1",
+          "score": 21.4407,
+          "content_excerpt": "Estoński CIT może wybrać podatnik CIT mający siedzibę lub zarząd w Polsce, jeżeli spełnia warunki z art. 28j ust. 1, w szczególności dotyczące struktury przychodów, poziomu zatrudnienia lub ponoszenia określonych wydatkó",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+          "article_number": "art. 28k ust. 1",
+          "score": 19.8584,
+          "content_excerpt": "Z estońskiego CIT wyłączeni są podatnicy wskazani w art. 28k ust. 1, w tym m.in. przedsiębiorstwa finansowe, instytucje pożyczkowe, podatnicy korzystający z niektórych zwolnień strefowych, podmioty w upadłości lub likwid",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    },
+    {
+      "query": "Czy składacie IFT-2R za dostęp do dysku w chmurze i usługi reklamowe z APPLE?Czy składacie IFT-2R za dostęp do dysku w chmurze i usługi reklamowe z APPLE?",
+      "freq": 3,
+      "source_cat": "cit",
+      "aktuo_category": "cit",
+      "overall_status": "FAIL",
+      "top_3": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 21 ust. 1 pkt 2a",
+          "score": 81.1278,
+          "content_excerpt": "Tekst artykułu 21 ustawy o podatku dochodowym od osób prawnych definiuje opodatkowanie przychodów z usług reklamowych na poziomie 20%, jednak nie zawiera szczegółowych wskazówek dotyczących formularza IFT-2R ani konkretn",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 3, art. 4",
+          "score": 79.2225,
+          "content_excerpt": "Pytanie dotyczy procedur sprawozdawczych (IFT-2R), które nie są regulowane w Ustawie o podatku dochodowym od osób prawnych. Artykuły 3 i 4 tej ustawy dotyczą jedynie zasad określenia obowiązku podatkowego i zakresu teryt",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 12 ust. 3 i 3a",
+          "score": 17.3513,
+          "content_excerpt": "Przychód ze sprzedaży stoiska targowego za granicą (czy zawiera dostawę, montaż czy usługę) podlega zasadom art. 12. Przychód powstaje w dniu wydania rzeczy/wykonania usługi, nie później niż dzień wystawienia faktury lub",
+          "status": "FAIL",
+          "reason": "z?a ustawa albo brak wiarygodnego artyku?u ?r?d?owego",
+          "source_hits": []
+        }
+      ]
+    }
+  ]
+}
