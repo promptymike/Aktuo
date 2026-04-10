@@ -35,6 +35,18 @@ def test_categorize_query_returns_pit_category() -> None:
     assert categorize_query("Jak obliczyć zaliczkę na podatek i kiedy złożyć PIT-37?") == "pit"
 
 
+def test_categorize_query_recognizes_ulga_dla_seniora_as_pit() -> None:
+    assert categorize_query("Ulga dla seniora - czy przysługuje za cały rok?") == "pit"
+
+
+def test_categorize_query_recognizes_cash_register_as_vat() -> None:
+    assert categorize_query("Sprzedaż bezpośrednia rolnik - zwolnienie z kasy fiskalnej") == "vat"
+
+
+def test_categorize_query_mixed_pit_and_vat_falls_back_to_ogolne() -> None:
+    assert categorize_query("Obowiązek podatkowy PIT i VAT - data wykonania vs data faktury") == "ogólne"
+
+
 def test_categorize_query_returns_zus_category() -> None:
     assert categorize_query("Jaki jest zbieg tytułów ZUS przy zleceniu i działalności?") == "zus"
 

@@ -33,6 +33,17 @@ def _matches_keyword(query: str, query_tokens: set[str], keyword: str) -> bool:
 def categorize_query(query: str) -> str:
     lowered = _normalize(query)
     lowered_tokens = _tokenize(lowered)
+    if "pit" in lowered_tokens and "vat" in lowered_tokens:
+        return "ogólne"
+    cash_register_keywords = (
+        "kasa fiskalna",
+        "kasy fiskalne",
+        "kasa rejestrująca",
+        "kasy rejestrujące",
+        "zwolnienie z kasy",
+    )
+    if any(_matches_keyword(lowered, lowered_tokens, keyword) for keyword in cash_register_keywords):
+        return "vat"
     keyword_map = (
         (
             "ksef",
@@ -132,6 +143,12 @@ def categorize_query(query: str) -> str:
                 "pit-4r",
                 "pit4r",
                 "ulga na dzieci",
+                "ulga dla seniora",
+                "senior",
+                "wynagrodzenie w euro",
+                "waluta obca",
+                "kurs nbp",
+                "przeliczenie waluty",
                 "kwota wolna",
                 "skala podatkowa",
                 "podatek liniowy",
@@ -270,6 +287,11 @@ def categorize_query(query: str) -> str:
                 "rejestracja vat",
                 "vat ue",
                 "zwrot vat",
+                "kasa fiskalna",
+                "kasy fiskalne",
+                "kasa rejestrujaca",
+                "kasy rejestrujace",
+                "zwolnienie z kasy",
                 "podatek od towarow i uslug",
             ),
         ),
