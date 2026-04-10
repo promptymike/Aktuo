@@ -1,0 +1,487 @@
+{
+  "meta": {
+    "knowledge_path": "data\\seeds\\law_knowledge.json",
+    "total_kb_records": 3997
+  },
+  "kb_per_law": {
+    "Kodeks pracy": 431,
+    "Ordynacja podatkowa": 762,
+    "Rozporządzenie JPK_V7": 9,
+    "Ustawa o VAT": 1481,
+    "Ustawa o VAT - KSeF terminy wdrożenia": 1,
+    "Ustawa o VAT - KSeF uproszczenia 2026": 1,
+    "Ustawa o VAT - KSeF zwolnienia": 1,
+    "Ustawa o podatku dochodowym od osób fizycznych": 663,
+    "Ustawa o podatku dochodowym od osób prawnych": 227,
+    "Ustawa o rachunkowości": 196,
+    "Ustawa o systemie ubezpieczeń społecznych": 225
+  },
+  "article_coverage": {
+    "meta": {
+      "knowledge_path": "data\\seeds\\law_knowledge.json",
+      "source_files": {
+        "Ustawa o VAT": "kb-pipeline\\output\\articles.json",
+        "Ustawa o podatku dochodowym od osób fizycznych": "kb-pipeline\\output\\articles_pit.json",
+        "Ustawa o podatku dochodowym od osób prawnych": "kb-pipeline\\output\\articles_cit.json",
+        "Ordynacja podatkowa": "kb-pipeline\\output\\articles_ordynacja.json",
+        "Ustawa o rachunkowości": "kb-pipeline\\output\\articles_rachunkowosc.json",
+        "Kodeks pracy": "kb-pipeline\\output\\articles_kodeks_pracy.json",
+        "Ustawa o systemie ubezpieczeń społecznych": "kb-pipeline\\output\\articles_zus.json",
+        "Rozporządzenie KSeF": "kb-pipeline\\output\\articles_ksef.json",
+        "Rozporządzenie JPK_V7": "kb-pipeline\\output\\articles_jpk.json"
+      },
+      "kb_total_records": 3997
+    },
+    "laws": {
+      "Kodeks pracy": {
+        "kb_records": 431,
+        "kb_unique_article_roots": 404,
+        "source_file": "kb-pipeline\\output\\articles_kodeks_pracy.json",
+        "source_active_articles": 399,
+        "covered_article_roots": 399,
+        "missing_article_roots": 0,
+        "coverage_pct": 100.0,
+        "missing_sample": [],
+        "covered_sample": [
+          "art. 1",
+          "art. 10",
+          "art. 100",
+          "art. 1011",
+          "art. 1012",
+          "art. 1013",
+          "art. 1014",
+          "art. 102",
+          "art. 103",
+          "art. 1031",
+          "art. 1032",
+          "art. 1033",
+          "art. 1034",
+          "art. 1035",
+          "art. 1036",
+          "art. 104",
+          "art. 1041",
+          "art. 1042",
+          "art. 1043",
+          "art. 105"
+        ]
+      },
+      "Ordynacja podatkowa": {
+        "kb_records": 762,
+        "kb_unique_article_roots": 729,
+        "source_file": "kb-pipeline\\output\\articles_ordynacja.json",
+        "source_active_articles": 726,
+        "covered_article_roots": 726,
+        "missing_article_roots": 0,
+        "coverage_pct": 100.0,
+        "missing_sample": [],
+        "covered_sample": [
+          "art. 1",
+          "art. 10",
+          "art. 100",
+          "art. 101",
+          "art. 102",
+          "art. 103",
+          "art. 105",
+          "art. 106",
+          "art. 107",
+          "art. 108",
+          "art. 109",
+          "art. 11",
+          "art. 110",
+          "art. 111",
+          "art. 112",
+          "art. 112a",
+          "art. 112b",
+          "art. 112c",
+          "art. 113",
+          "art. 114"
+        ]
+      },
+      "Rozporządzenie JPK_V7": {
+        "kb_records": 9,
+        "kb_unique_article_roots": 9,
+        "source_file": "kb-pipeline\\output\\articles_jpk.json",
+        "source_active_articles": 6,
+        "covered_article_roots": 6,
+        "missing_article_roots": 0,
+        "coverage_pct": 100.0,
+        "missing_sample": [],
+        "covered_sample": [
+          "§ 10",
+          "§ 11",
+          "§ 12",
+          "§ 2",
+          "§ 4",
+          "§ 5"
+        ]
+      },
+      "Ustawa o VAT": {
+        "kb_records": 1481,
+        "kb_unique_article_roots": 346,
+        "source_file": "kb-pipeline\\output\\articles.json",
+        "source_active_articles": 341,
+        "covered_article_roots": 341,
+        "missing_article_roots": 0,
+        "coverage_pct": 100.0,
+        "missing_sample": [],
+        "covered_sample": [
+          "art. 1",
+          "art. 10",
+          "art. 100",
+          "art. 101",
+          "art. 102",
+          "art. 103",
+          "art. 103a",
+          "art. 103b",
+          "art. 104",
+          "art. 105a",
+          "art. 106a",
+          "art. 106b",
+          "art. 106ba",
+          "art. 106c",
+          "art. 106d",
+          "art. 106e",
+          "art. 106f",
+          "art. 106ga",
+          "art. 106gb",
+          "art. 106gba"
+        ]
+      },
+      "Ustawa o VAT - KSeF terminy wdrożenia": {
+        "kb_records": 1,
+        "kb_unique_article_roots": 1,
+        "source_file": null,
+        "source_active_articles": null,
+        "covered_article_roots": null,
+        "missing_article_roots": null,
+        "coverage_pct": null,
+        "missing_sample": [],
+        "covered_sample": [],
+        "note": "No parsed article source mapped for this law."
+      },
+      "Ustawa o VAT - KSeF uproszczenia 2026": {
+        "kb_records": 1,
+        "kb_unique_article_roots": 1,
+        "source_file": null,
+        "source_active_articles": null,
+        "covered_article_roots": null,
+        "missing_article_roots": null,
+        "coverage_pct": null,
+        "missing_sample": [],
+        "covered_sample": [],
+        "note": "No parsed article source mapped for this law."
+      },
+      "Ustawa o VAT - KSeF zwolnienia": {
+        "kb_records": 1,
+        "kb_unique_article_roots": 1,
+        "source_file": null,
+        "source_active_articles": null,
+        "covered_article_roots": null,
+        "missing_article_roots": null,
+        "coverage_pct": null,
+        "missing_sample": [],
+        "covered_sample": [],
+        "note": "No parsed article source mapped for this law."
+      },
+      "Ustawa o podatku dochodowym od osób fizycznych": {
+        "kb_records": 663,
+        "kb_unique_article_roots": 225,
+        "source_file": "kb-pipeline\\output\\articles_pit.json",
+        "source_active_articles": 227,
+        "covered_article_roots": 225,
+        "missing_article_roots": 2,
+        "coverage_pct": 99.12,
+        "missing_sample": [
+          "art. 26d",
+          "art. 56"
+        ],
+        "covered_sample": [
+          "art. 1",
+          "art. 10",
+          "art. 11",
+          "art. 11a",
+          "art. 12",
+          "art. 13",
+          "art. 14",
+          "art. 14b",
+          "art. 14c",
+          "art. 15",
+          "art. 17",
+          "art. 18",
+          "art. 19",
+          "art. 1a",
+          "art. 2",
+          "art. 20",
+          "art. 21",
+          "art. 22",
+          "art. 22a",
+          "art. 22b"
+        ]
+      },
+      "Ustawa o podatku dochodowym od osób prawnych": {
+        "kb_records": 227,
+        "kb_unique_article_roots": 193,
+        "source_file": "kb-pipeline\\output\\articles_cit.json",
+        "source_active_articles": 195,
+        "covered_article_roots": 193,
+        "missing_article_roots": 2,
+        "coverage_pct": 98.97,
+        "missing_sample": [
+          "art. 37",
+          "art. 41"
+        ],
+        "covered_sample": [
+          "art. 1",
+          "art. 11a",
+          "art. 11b",
+          "art. 11c",
+          "art. 11d",
+          "art. 11e",
+          "art. 11f",
+          "art. 11g",
+          "art. 11i",
+          "art. 11j",
+          "art. 11k",
+          "art. 11l",
+          "art. 11n",
+          "art. 11o",
+          "art. 11p",
+          "art. 11q",
+          "art. 11r",
+          "art. 11s",
+          "art. 11t",
+          "art. 12"
+        ]
+      },
+      "Ustawa o rachunkowości": {
+        "kb_records": 196,
+        "kb_unique_article_roots": 138,
+        "source_file": "kb-pipeline\\output\\articles_rachunkowosc.json",
+        "source_active_articles": 139,
+        "covered_article_roots": 138,
+        "missing_article_roots": 1,
+        "coverage_pct": 99.28,
+        "missing_sample": [
+          "art. 84"
+        ],
+        "covered_sample": [
+          "art. 1",
+          "art. 10",
+          "art. 11",
+          "art. 11a",
+          "art. 12",
+          "art. 13",
+          "art. 14",
+          "art. 15",
+          "art. 16",
+          "art. 17",
+          "art. 18",
+          "art. 19",
+          "art. 2",
+          "art. 20",
+          "art. 21",
+          "art. 22",
+          "art. 23",
+          "art. 24",
+          "art. 25",
+          "art. 26"
+        ]
+      },
+      "Ustawa o systemie ubezpieczeń społecznych": {
+        "kb_records": 225,
+        "kb_unique_article_roots": 204,
+        "source_file": "kb-pipeline\\output\\articles_zus.json",
+        "source_active_articles": 204,
+        "covered_article_roots": 204,
+        "missing_article_roots": 0,
+        "coverage_pct": 100.0,
+        "missing_sample": [],
+        "covered_sample": [
+          "art. 1",
+          "art. 10",
+          "art. 107",
+          "art. 108",
+          "art. 109",
+          "art. 11",
+          "art. 110",
+          "art. 111",
+          "art. 112",
+          "art. 112a",
+          "art. 112b",
+          "art. 113",
+          "art. 113a",
+          "art. 113b",
+          "art. 113c",
+          "art. 114",
+          "art. 115",
+          "art. 116",
+          "art. 117",
+          "art. 12"
+        ]
+      }
+    },
+    "priority_article_checks": {
+      "Ustawa o podatku dochodowym od osób fizycznych": [
+        {
+          "article": "art. 11a",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 14",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 19",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 21",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 22",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 26",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 27",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 30c",
+          "has_kb_unit": true
+        }
+      ],
+      "Ustawa o VAT": [
+        {
+          "article": "art. 19a",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 29a",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 106b",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 106c",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 106d",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 106e",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 106f",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 111",
+          "has_kb_unit": true
+        },
+        {
+          "article": "art. 113",
+          "has_kb_unit": true
+        }
+      ]
+    },
+    "kb_only_laws_without_parsed_source": [
+      "Ustawa o VAT - KSeF terminy wdrożenia",
+      "Ustawa o VAT - KSeF uproszczenia 2026",
+      "Ustawa o VAT - KSeF zwolnienia"
+    ]
+  },
+  "top100_coverage": {
+    "summary": {
+      "COVERED": 41,
+      "WEAK": 31,
+      "GAP": 28
+    },
+    "summary_pct": {
+      "COVERED": 41.0,
+      "WEAK": 31.0,
+      "GAP": 28.0
+    },
+    "per_category": {
+      "ceidg": {
+        "covered": 0,
+        "weak": 1,
+        "gap": 0
+      },
+      "cit": {
+        "covered": 0,
+        "weak": 0,
+        "gap": 6
+      },
+      "erp": {
+        "covered": 0,
+        "weak": 2,
+        "gap": 0
+      },
+      "inne": {
+        "covered": 0,
+        "weak": 1,
+        "gap": 0
+      },
+      "jpk": {
+        "covered": 8,
+        "weak": 0,
+        "gap": 0
+      },
+      "kadry": {
+        "covered": 0,
+        "weak": 1,
+        "gap": 2
+      },
+      "ksef": {
+        "covered": 10,
+        "weak": 0,
+        "gap": 0
+      },
+      "ordynacja": {
+        "covered": 0,
+        "weak": 0,
+        "gap": 1
+      },
+      "pit": {
+        "covered": 0,
+        "weak": 0,
+        "gap": 7
+      },
+      "praktyka": {
+        "covered": 0,
+        "weak": 17,
+        "gap": 0
+      },
+      "rachunkowosc": {
+        "covered": 3,
+        "weak": 3,
+        "gap": 10
+      },
+      "spolki": {
+        "covered": 0,
+        "weak": 1,
+        "gap": 0
+      },
+      "vat": {
+        "covered": 17,
+        "weak": 5,
+        "gap": 2
+      },
+      "zus": {
+        "covered": 3,
+        "weak": 0,
+        "gap": 0
+      }
+    }
+  }
+}

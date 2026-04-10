@@ -5,7 +5,6 @@
 | Kodeks pracy | 399 | 399 | 0 | 100.0% |
 | Ordynacja podatkowa | 726 | 726 | 0 | 100.0% |
 | Rozporządzenie JPK_V7 | 6 | 6 | 0 | 100.0% |
-| Rozporządzenie KSeF | 27 | 4 | 23 | 14.81% |
 | Ustawa o VAT | 341 | 341 | 0 | 100.0% |
 | Ustawa o VAT - KSeF terminy wdrożenia | n/a | n/a | n/a | n/a |
 | Ustawa o VAT - KSeF uproszczenia 2026 | n/a | n/a | n/a | n/a |
@@ -48,7 +47,6 @@
 
 ## Największe luki
 
-- Rozporządzenie KSeF: brakuje 23 z 27 aktywnych artykułów.
 - Ustawa o podatku dochodowym od osób fizycznych: brakuje 2 z 227 aktywnych artykułów.
 - Ustawa o podatku dochodowym od osób prawnych: brakuje 2 z 195 aktywnych artykułów.
 - Ustawa o rachunkowości: brakuje 1 z 139 aktywnych artykułów.

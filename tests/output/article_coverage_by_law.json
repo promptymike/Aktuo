@@ -12,7 +12,7 @@
       "Rozporządzenie KSeF": "kb-pipeline\\output\\articles_ksef.json",
       "Rozporządzenie JPK_V7": "kb-pipeline\\output\\articles_jpk.json"
     },
-    "kb_total_records": 4021
+    "kb_total_records": 3997
   },
   "laws": {
     "Kodeks pracy": {
@@ -97,48 +97,8 @@
         "§ 5"
       ]
     },
-    "Rozporządzenie KSeF": {
-      "kb_records": 28,
-      "kb_unique_article_roots": 6,
-      "source_file": "kb-pipeline\\output\\articles_ksef.json",
-      "source_active_articles": 27,
-      "covered_article_roots": 4,
-      "missing_article_roots": 23,
-      "coverage_pct": 14.81,
-      "missing_sample": [
-        "§ 1",
-        "§ 11",
-        "§ 12",
-        "§ 13",
-        "§ 16",
-        "§ 18",
-        "§ 19",
-        "§ 20",
-        "§ 21",
-        "§ 22",
-        "§ 24",
-        "§ 26",
-        "§ 28",
-        "§ 3",
-        "§ 30",
-        "§ 32",
-        "§ 34",
-        "§ 36",
-        "§ 5",
-        "§ 6",
-        "§ 7",
-        "§ 8",
-        "§ 9"
-      ],
-      "covered_sample": [
-        "§ 10",
-        "§ 14",
-        "§ 2",
-        "§ 4"
-      ]
-    },
     "Ustawa o VAT": {
-      "kb_records": 1478,
+      "kb_records": 1481,
       "kb_unique_article_roots": 346,
       "source_file": "kb-pipeline\\output\\articles.json",
       "source_active_articles": 341,
@@ -206,8 +166,8 @@
       "note": "No parsed article source mapped for this law."
     },
     "Ustawa o podatku dochodowym od osób fizycznych": {
-      "kb_records": 662,
-      "kb_unique_article_roots": 226,
+      "kb_records": 663,
+      "kb_unique_article_roots": 225,
       "source_file": "kb-pipeline\\output\\articles_pit.json",
       "source_active_articles": 227,
       "covered_article_roots": 225,
