@@ -1,0 +1,289 @@
+{
+  "meta": {
+    "knowledge_path": "data\\seeds\\law_knowledge.json",
+    "added_total": 1940,
+    "new_total_records": 4021
+  },
+  "per_law": {
+    "Ustawa o VAT": 228,
+    "Ustawa o podatku dochodowym od osób fizycznych": 145,
+    "Ustawa o podatku dochodowym od osób prawnych": 168,
+    "Ordynacja podatkowa": 723,
+    "Ustawa o rachunkowości": 103,
+    "Kodeks pracy": 388,
+    "Ustawa o systemie ubezpieczeń społecznych": 182,
+    "Rozporządzenie JPK_V7": 3
+  },
+  "sample_records": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 103a",
+      "category": "terminy",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 103a | Rozdział 4 – Zapłata podatku | W przypadku gdy podatek jest pobierany przez płatnika, o którym mowa w art. 17a, wpłacanie kwot podatku przez podatnika,",
+      "content": "W przypadku gdy podatek jest pobierany przez płatnika, o którym mowa w art. 17a, wpłacanie kwot podatku przez podatnika, o którym mowa w art. 103 ust. 5a, może być dokonywane na rachunek VAT płatnika przy użyciu komunikatu przelewu, o którym mowa w art. 10 8a ust. 3, w którym podatnik wskazuje w miejsce informacji, o których mowa w art. 108a ust. 3: 1) pkt 1 i 2 – kwotę podatku, o której mowa w art. 103 ust. 5a, która ma zostać zapłacona w mechanizmie podzielonej płatności; 2) pkt 3 – numer dokumentu związanego z płatnością wystawionego przez płatnika, o którym mowa w art. 17a;",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 103b",
+      "category": "terminy",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 103b | Rozdział 4 – Zapłata podatku | 1. W przypadku gdy na podstawie art. 5c rozporządzenia 282/2011 podatnik ułatwiający dostawy towarów, o których mowa w a",
+      "content": "1. W przypadku gdy na podstawie art. 5c rozporządzenia 282/2011 podatnik ułatwiający dostawy towarów, o których mowa w art. 7a ust. 1 i 2, nie jest obowiązany do zapłaty podatku w kwocie przekraczającej kwotę tego podatku, którą zadeklarował i zapłacił, naczelnik urzędu skarbowego lub naczelnik urzędu celno-skarbowego określa podmiotowi dokonującemu dostawy towarów na rzecz tego podatnika kwotę podatku do zapłaty. 2. Kwotę podatku do zapłaty, o której mowa w ust. 1, stanowi kwota, do zapłaty której, na podstawie art.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 104",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 104 | Rozdział 4 – Zapłata podatku | 1. Przepisy art. 21 i art. 86 ust. 10e stosuje się również do podatnika rozpoczynającego w trakcie roku podatkowego wyko",
+      "content": "1. Przepisy art. 21 i art. 86 ust. 10e stosuje się również do podatnika rozpoczynającego w trakcie roku podatkowego wykonywanie czynności określonych w art. 5, jeżeli przewidywana przez podatnika wartość sprzedaży nie przekroczy, w proporcji do okresu pro wadzonej działalności gospodarczej, kwot określonych w art. 2 pkt 25. 2. W przypadku przekroczenia kwot określonych zgodnie z ust. 1 podatnik traci prawo do rozliczania się metodą kasową począwszy od okresu rozliczeniowego następującego po kwartale, w którym nastąpiło to przekroczenie, oraz w następnym roku podatkowym",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 105a",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 105a | Rozdział 4 – Zapłata podatku | 1. Podatnik, o którym mowa w art. 15, na rzecz którego dokonano dostawy towarów, o których mowa w załączniku nr 15 do us",
+      "content": "1. Podatnik, o którym mowa w art. 15, na rzecz którego dokonano dostawy towarów, o których mowa w załączniku nr 15 do ustawy, odpowiada solidarnie wraz z podmiotem dokonującym tej dostawy za jego zaległości podatkowe, w części podatku proporcjonalnie przypadającej na dostawę dokonaną na jego rzecz, jeżeli w momencie dokonania tej dostawy podatnik wiedział lub miał uzasadnione podstawy do tego, aby przypuszczać, że cała kwota podatku przypadająca na dokonaną na jego rzecz dostawę lub jej część nie zostanie wpłacona na rachunek urzędu skarbowego. 2.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106a",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106a | Rozdział 1 – Faktury | Przepisy niniejszego rozdziału stosuje się do: 1) sprzedaży, z wyjątkiem: a) przypadków, o których mowa w art. 17 ust. 1",
+      "content": "Przepisy niniejszego rozdziału stosuje się do: 1) sprzedaży, z wyjątkiem: a) przypadków, o których mowa w art. 17 ust. 1 pkt 4 i 5 oraz ust. 1a, w których usługodawca lub dokonujący dostawy towarów nie rozlicza podatku należnego i faktura dokumentująca te transakcje nie jest wystawiana przez usługobiorcę lub nabywcę towarów w imieniu i na rzecz usługodawcy lub dokonującego dostawy towarów, b) czynności rozliczanych w procedurach szczególnych, o których mowa w dziale XII w rozdziałach 6a, 7 i 9, dla których państwem członkowskim identyfikacji w rozumieniu przepisów tych rozdziałów jest...",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ba",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106ba | Rozdział 1 – Faktury | W przypadku gdy faktura jest wystawiana na rzecz podatnika albo osoby prawnej niebędącej podatnikiem, podmioty te są obo",
+      "content": "W przypadku gdy faktura jest wystawiana na rzecz podatnika albo osoby prawnej niebędącej podatnikiem, podmioty te są obowiązane do podania numeru, o którym mowa odpowiednio w art. 106e ust. 1 pkt 5, pkt 24 lit. b, pkt 26 albo 27, jeżeli posługują się tym numerem na potrzeby danej czynności",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106c",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106c | Rozdział 1 – Faktury | Faktury dokumentujące dostawę towarów, o której mowa w art. 18, z tytułu której na dłużniku ciąży obo wiązek podatkowy, ",
+      "content": "Faktury dokumentujące dostawę towarów, o której mowa w art. 18, z tytułu której na dłużniku ciąży obo wiązek podatkowy, wystawiają w imieniu i na rzecz dłużnika: 1) organy egzekucyjne określone w ustawie z dnia 17 czerwca 1966 r. o postępowaniu egzekucyjnym w administracji; 2) komornicy sądowi wykonujący czynności egzekucyjne w rozumieniu przepisów Kodeksu postępowania cywilnego",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106d",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106d | Rozdział 1 – Faktury | 1. Podmiot, o którym mowa w art. 106b ust. 1 pkt 1, nabywający towary lub usługi od podatnika może wystawiać w imieniu i",
+      "content": "1. Podmiot, o którym mowa w art. 106b ust. 1 pkt 1, nabywający towary lub usługi od podatnika może wystawiać w imieniu i na rzecz tego podatnika faktury: 1) dokumentujące dokonanie przez podatnika sprzedaży na rzecz tego podmiotu, 2) o których mowa w art. 106b ust. 1 pkt 4, 3) dokumentujące dostawę towarów lub świadczenie usług, o których mowa w art. 106a pkt 2 lit.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gba",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106gba | Rozdział 1 – Faktury | 1. W przypadku gdy faktury ustrukturyzowane lub faktury, o których mowa w art. 106nda ust. 1, art. 106nf ust. 1 i art. 1",
+      "content": "1. W przypadku gdy faktury ustrukturyzowane lub faktury, o których mowa w art. 106nda ust. 1, art. 106nf ust. 1 i art. 106nh ust. 1, dotyczą czynności o złożonej liczbie danych w zakresie jednostek miary i ilości (liczby) dostarczanych towarów lub wykonywa nych usług lub cen jednostkowych netto, podatnik może wystawiać i przesyłać do Krajowego Systemu e -Faktur faktury ustrukturyzowane lub faktury, o których mowa w art. 106nda ust. 1, art. 106nf ust. 1 i art. 106nh ust. 1, z załącznikiem będącym integralną częścią faktury, zawierającym wyłącznie dane, o których mowa w art. 106e ust.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106l",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106l | Rozdział 1 – Faktury | 1. W przypadku gdy udostępniona nabywcy, o którym mowa w art. 106gb ust. 4, w sposób inny niż przy użyciu Krajowego Syst",
+      "content": "1. W przypadku gdy udostępniona nabywcy, o którym mowa w art. 106gb ust. 4, w sposób inny niż przy użyciu Krajowego Systemu e -Faktur, faktura ustrukturyzowana lub faktura, o której mowa w art. 106nda ust. 1, art. 106nf ust. 1 i art. 106nh ust. 1, po przesłaniu jej do Krajowego Systemu e-Faktur, ulegnie zniszczeniu albo zaginie, podatnik na wniosek nabywcy udostępnia ponownie tę fakturę, oznaczając ją kodem, o którym mowa w art. 106gb ust. 5. 2.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106na",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106na | Rozdział 1 – Faktury | 1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) ",
+      "content": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy użyciu Krajowego Systemu e-Faktur w dniu przydzielenia w tym systemie numeru identyfikującego tę fakturę. 4. W przypadku udostępnienia faktury ustrukturyzowanej nabywcy, o którym mowa w art. 106gb ust. 4, w sposób inny niż przy użyciu Krajowego Systemu e-Faktur, za datę otrzymania tej faktury uznaje się datę jej faktycznego otrzymania przez tego nabywcę",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106nd",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106nd | Rozdział 1 – Faktury | 1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych.",
+      "content": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycznym służącym do: 1) nadawania, zmiany lub odbierania uprawnień do korzystania z Krajowego Systemu e-Faktur; 2) powiadamiania podmiotów, o których mowa w art. 106nb, o nadanych uprawnieniach do korzystania z Krajowego Systemu e -Faktur lub ich odebraniu; 3) uwierzytelnienia oraz weryfikacji uprawnień do korzystania z Krajowego Systemu e -Faktur, posiadanych przez podmioty, o których mowa w art. 106nb;",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106nda",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106nda | Rozdział 1 – Faktury | 1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie",
+      "content": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. 2. W przypadku gdy podatnik wystawi fakturę w sposób określony w ust. 1, jest obowiązany niezwłocznie, nie później niż w następnym dniu roboczym po dniu jej wystawienia, przesłać tę fakturę do Krajowego Systemu e -Faktur w celu przydzielenia numeru identyfikującego tę fakturę w Krajowym Systemie e-Faktur. 3. Faktura, o której mowa w ust. 1, jest otrzymywana przez nabywcę przy użyciu Krajowego Systemu e-Faktur. 4.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ne",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106ne | Rozdział 1 – Faktury | 1. Minister właściwy do spraw finansów publicznych zamieszcza w Biuletynie Informacji Publicznej na stronie podmiotowej ",
+      "content": "1. Minister właściwy do spraw finansów publicznych zamieszcza w Biuletynie Informacji Publicznej na stronie podmiotowej urzędu obsługującego tego ministra komunikaty o wystąpieniu i zakończeniu awarii Krajowego Systemu e-Faktur, które wyznaczają okres trwa nia tej awarii. Komunikaty te są zamieszczane również za pośrednictwem oprogramowania interfejsowego. 2. Oprogramowanie interfejsowe, o którym mowa w ust. 1, jest dostępne na stronie, której adres jest podany w Biuletynie Informacji Publicznej na stronie podmiotowej urzędu obsługującego ministra właściwego do spraw finansów publicznych. 3.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ng",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106ng | Rozdział 1 – Faktury | W przypadku, o którym mowa w art. 106ne ust. 3, podatnik w okresie trwania awarii wystawia faktury w postaci papierowej ",
+      "content": "W przypadku, o którym mowa w art. 106ne ust. 3, podatnik w okresie trwania awarii wystawia faktury w postaci papierowej lub faktury elektroniczne",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106nha",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106nha | Rozdział 1 – Faktury | W przypadku gdy po wystawieniu faktury, o której mowa w art. 106nda ust. 1, a przed jej przesłaniem do Krajowego Systemu",
+      "content": "W przypadku gdy po wystawieniu faktury, o której mowa w art. 106nda ust. 1, a przed jej przesłaniem do Krajowego Systemu e -Faktur, został zamieszczony komunikat o wystąpieniu awarii Krajowego Systemu e-Faktur, o którym mowa w: 1) art. 106ne ust. 1 – przepisy art. 106nf ust. 4, 5, 7 –11 i 13 stosuje się odpowiednio; 2) art. 106ne ust. 3 – podatnik nie przesyła tej faktury do Krajowego Systemu e-Faktur",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106p",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106p | Rozdział 1 – Faktury | Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, w odniesieniu do niektórych rodz",
+      "content": "Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, w odniesieniu do niektórych rodzajów towarów lub usług, inny niż określony w art. 31a ust. 1 sposób przeliczania wykazywanych na fakturach kwot w walutach obcych, stos owanych do określenia podstawy opodatkowania, z uwzględnieniem specyfiki rozliczania należności z tytułu dostaw tych towarów lub świadczenia tych usług",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106q",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106q | Rozdział 1 – Faktury | Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, późniejsze niż określone w art. ",
+      "content": "Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, późniejsze niż określone w art. 106i terminy wystawiania faktur, uwzględniając specyfikę niektórych rodzajów działalności związaną z liczbą lub rodzajem wykonywanych czynności",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106r",
+      "category": "ksef",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106r | Rozdział 1 – Faktury | Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia: 1) rodzaje uprawnień do korzystania z ",
+      "content": "Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia: 1) rodzaje uprawnień do korzystania z Krajowego Systemu e-Faktur, 2) sposoby nadawania oraz odbierania uprawnień do korzystania z Krajowego Systemu e-Faktur oraz wzór zawiadomienia o nadaniu oraz odebraniu tych uprawnień, 3) sposoby uwierzytelniania podmiotów korzystających z Krajowego Systemu e-Faktur, w tym sposób potwierdzenia tożsamości wystawcy faktury przy użyciu certyfikatu, o którym mowa w art. 106nda ust.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106s",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 106s | Rozdział 1 – Faktury | Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, przypadki odpowiednio udokumento",
+      "content": "Minister właściwy do spraw finansów publicznych może określić, w drodze rozporządzenia, przypadki odpowiednio udokumentowanych dostaw towarów lub świadczenia usług, w których nie ma obowiązku wystawiania faktur ustrukturyzowanych, oraz przypadki, w których mimo braku obowiązku można wystawiać faktury ustrukturyzowane, uwzględniając: 1) specyfikę niektórych rodzajów działalności związaną z liczbą i rodzajem czynności wymagających udokumentowania; 2) konieczność zapewnienia szczególnych sposobów dokumentowania czynności;",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 108b",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 108b | Rozdział 1a – Mechanizm podzielonej płatności | 1. Na wniosek podatnika naczelnik urzędu skarbowego wydaje, w drodze postanowienia, zgodę na przekazanie środków zgromad",
+      "content": "1. Na wniosek podatnika naczelnik urzędu skarbowego wydaje, w drodze postanowienia, zgodę na przekazanie środków zgromadzonych na wskazanym przez podatnika rachunku VAT na wskazany przez niego rachunek bankowy albo rachunek w spółdzielczej kasie oszczędnoś ciowo-kredytowej, dla których jest prowadzony ten rachunek VAT. 1a. Na postanowienie, o którym mowa w ust. 1, służy zażalenie. 2. Podatnik we wniosku określa wysokość środków zgromadzonych na rachunku VAT, jaka ma zostać przekazana. 3. Naczelnik urzędu skarbowego wydaje postanowienie w terminie 60 dni od dnia otrzymania wniosku.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 108c",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 108c | Rozdział 1a – Mechanizm podzielonej płatności | 1. Do wysokości kwoty odpowiadającej kwocie podatku wynikającej z otrzymanej faktury, zapłaconej z zastosowaniem mechani",
+      "content": "1. Do wysokości kwoty odpowiadającej kwocie podatku wynikającej z otrzymanej faktury, zapłaconej z zastosowaniem mechanizmu podzielonej płatności, w tym również w przypadku gdy kwota ta została zapłacona z zastosowaniem mechanizmu podzielonej płatności prz ez podatnika innego niż wskazany na fakturze, przepisów art. 112b ust. 1 pkt 1, ust. 2 pkt 1 i ust. 2a oraz art. 112c nie stosuje się. 2.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 108d",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 108d | Rozdział 1a – Mechanizm podzielonej płatności | 1. Jeżeli zapłata zobowiązania podatkowego z tytułu podatku następuje w całości z rachunku VAT w terminie wcześniejszym ",
+      "content": "1. Jeżeli zapłata zobowiązania podatkowego z tytułu podatku następuje w całości z rachunku VAT w terminie wcześniejszym niż termin zapłaty podatku, kwotę zobowiązania podatkowego z tytułu podatku można obniżyć o kwotę wyliczoną według wzoru: S = Z × r × n 360 w którym poszczególne symbole oznaczają: S – kwotę, o którą obniża się kwotę zobowiązania podatkowego z tytułu podatku, Z – kwotę zobowiązania podatkowego z tytułu podatku wynikającą z deklaracji podatkowej przed obniżeniem tego zobowiązania, r – stopę referencyjną Narodowego Banku Polskiego obowiązującą na dwa dni robocze przed dniem...",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 108e",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 108e | Rozdział 1a – Mechanizm podzielonej płatności | Podatnicy, którzy dokonują dostawy towarów lub świadczą usługi, o których mowa w załączniku nr 15 do ustawy, oraz podatn",
+      "content": "Podatnicy, którzy dokonują dostawy towarów lub świadczą usługi, o których mowa w załączniku nr 15 do ustawy, oraz podatnicy nabywający te towary lub usługi są obowiązani posiadać rachunek rozliczeniowy, o którym mowa w art. 49 ust. 1 pkt 1 ustawy z dnia 2 9 sierpnia 1997 r. – Prawo bankowe, lub imienny rachunek w spółdzielczej kasie oszczęd nościowo-kredytowej otwarty w związku z prowadzoną działalnością gospodarczą, prowadzone w walucie polskiej",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 108f",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 108f | Rozdział 1a – Mechanizm podzielonej płatności | 1. Na wniosek podatnika nieposiadającego siedziby działalności gospodarczej lub stałego miejsca prowadzenia działalności",
+      "content": "1. Na wniosek podatnika nieposiadającego siedziby działalności gospodarczej lub stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju naczelnik drugiego urzędu skarbowego dokonuje zwrotu poniesionych przez podatnika kosztów obsługi rachunków, o których mowa w art. 108e, oraz rachunków VAT prowadzonych dla tych rachunków. 2. Zwrot kosztów, o których mowa w ust. 1, przysługuje do wysokości kosztów wynikających z wykorzystywania rachunków, o których mowa w art.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109a",
+      "category": "fakturowanie",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 109a | Rozdział 2 – Ewidencje | W przypadku ujęcia w ewidencji przez podatnika, o którym mowa w art. 109 ust. 3, wystawionej dla niego faktury dotyczące",
+      "content": "W przypadku ujęcia w ewidencji przez podatnika, o którym mowa w art. 109 ust. 3, wystawionej dla niego faktury dotyczącej sprzedaży potwierdzonej paragonem, który nie zawiera numeru, za pomocą którego jest on zidentyfikowany na potrzeby podatku, organ pod atkowy ustala temu podatnikowi dodatkowe zobowiązanie podatkowe w wysokości odpowiadającej 100 % kwoty podatku wykazanego na tej fakturze. W stosunku do osób fizycznych, które za ten sam czyn ponoszą odpowiedzialność za wykroczenie skarbowe albo za przestępstwo skarbowe, dodatkowego zobowiązania podatkowego nie ustala się",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109b",
+      "category": "terminy",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 109b | Rozdział 2 – Ewidencje | 1. Podatnik ułatwiający poprzez użycie interfejsu elektronicznego dokonanie na terytorium Unii Europejskiej: 1) sprzedaż",
+      "content": "1. Podatnik ułatwiający poprzez użycie interfejsu elektronicznego dokonanie na terytorium Unii Europejskiej: 1) sprzedaży na odległość towarów importowanych innej niż dostawa towarów, o której mowa w art. 7a ust. 1, lub 2) wewnątrzwspólnotowej sprzedaży towarów na odległość lub dostawy towarów na rzecz podmiotu niebędącego podatnikiem innych niż dostawy towarów, o których mowa w art. 7a ust.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 110",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 110 | Rozdział 2 – Ewidencje | W przypadku gdy osoby prawne, jednostki organizacyjne niemające osobowości prawnej oraz osoby fizyczne nie są obowiązane",
+      "content": "W przypadku gdy osoby prawne, jednostki organizacyjne niemające osobowości prawnej oraz osoby fizyczne nie są obowiązane do prowadzenia ewidencji określonej w art. 109 ust. 3 w związku z dokonywaniem sprzedaży zwolnionej od podatku na podstawie art. 43 i art. 82 ust. 3, dokonają sprzedaży opodatkowanej i nie zapłacą podatku należnego, a na podstawie dokumentacji nie jest możliwe ustalenie wartości tej sprzedaży, organ podatkowy określi, w drodze oszacowania, wartość sprzedaży opodatkowanej i ustali od niej kwotę podatku należnego.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 110a",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 110a | Rozdział 2a – Ogólne obowiązki dostawców usług płatniczych | Ilekroć w niniejszym rozdziale jest mowa o: 1) akceptancie – rozumie się przez to akceptanta, o którym mowa w art. 2 pkt",
+      "content": "Ilekroć w niniejszym rozdziale jest mowa o: 1) akceptancie – rozumie się przez to akceptanta, o którym mowa w art. 2 pkt 1b ustawy z dnia 19 sierpnia 2011 r. o usługach płatniczych; 2) BIC – rozumie się przez to BIC, o którym mowa w art. 2 pkt 16 rozporządzenia Parlamentu Europejskiego i Rady (UE) nr 260/2012 z dnia 14 marca 2012 r. ustanawiającego wymogi techniczne i handlowe w odniesieniu do poleceń przelewu i poleceń zapłaty w euro oraz zmieniającego rozporządzenie (WE) nr 924/2009 ( 3) dostawcy usług płatniczych – rozumie się przez to dostawcę, o którym mowa w art. 4 ust.",
+      "source": "parsed_article_gap_patch"
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 110c",
+      "category": "vat",
+      "verified_date": "",
+      "question_intent": "Ustawa o VAT | art. 110c | Rozdział 2a – Ogólne obowiązki dostawców usług płatniczych | Ewidencja, o której mowa w art. 110b ust. 1, zawiera: 1) BIC lub inny kod identyfikacyjny, który jednoznacznie identyfik",
+      "content": "Ewidencja, o której mowa w art. 110b ust. 1, zawiera: 1) BIC lub inny kod identyfikacyjny, który jednoznacznie identyfikuje dostawcę usług płatniczych; 2) imię i nazwisko lub nazwę odbiorcy płatności zgodnie z danymi posiadanymi przez dostawcę usług płatniczych; 3) numer, za pomocą którego odbiorca płatności jest zidentyfikowany na potrzeby podatku lub podatku od wartości dodanej lub inny numer, za pomocą którego odbiorca płatności jest zidentyfikowany dla celów podatkowych, jeżeli jest dostępny;",
+      "source": "parsed_article_gap_patch"
+    }
+  ]
+}
