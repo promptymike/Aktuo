@@ -77,17 +77,17 @@ def render_styles() -> None:
             @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
             :root {
-                --aktuo-purple: #6C3FB5;
-                --aktuo-purple-dark: #4F2E87;
-                --aktuo-purple-deep: #2D1B69;
-                --aktuo-purple-mid: #4A2D8A;
-                --aktuo-sidebar: #F3F0FA;
-                --aktuo-surface: #F8F6FC;
-                --aktuo-surface-soft: #F0ECFA;
+                --aktuo-primary: #1a2744;
+                --aktuo-primary-hover: #2a3d5c;
+                --aktuo-primary-deep: #1a2744;
+                --aktuo-primary-mid: #2a3d5c;
+                --aktuo-sidebar: #f0f2f5;
+                --aktuo-surface: #f0f2f5;
+                --aktuo-surface-soft: #e8ecf1;
                 --aktuo-text: #1A1A2E;
                 --aktuo-muted: #666666;
-                --aktuo-border: rgba(108, 63, 181, 0.22);
-                --aktuo-border-strong: rgba(108, 63, 181, 0.38);
+                --aktuo-border: rgba(26, 39, 68, 0.22);
+                --aktuo-border-strong: rgba(26, 39, 68, 0.38);
             }
 
             html, body, [class*="css"] {
@@ -105,7 +105,7 @@ def render_styles() -> None:
 
             [data-testid="stSidebar"] {
                 background: var(--aktuo-sidebar);
-                border-right: 1px solid rgba(108, 63, 181, 0.08);
+                border-right: 1px solid rgba(26, 39, 68, 0.08);
             }
 
             [data-testid="stSidebar"] .stMarkdown,
@@ -131,8 +131,8 @@ def render_styles() -> None:
                 height: 3.45rem;
                 padding: 0.18rem;
                 border-radius: 999px;
-                background: linear-gradient(135deg, var(--aktuo-purple-deep), var(--aktuo-purple-mid));
-                box-shadow: 0 14px 34px rgba(45, 27, 105, 0.18);
+                background: linear-gradient(135deg, var(--aktuo-primary-deep), var(--aktuo-primary-mid));
+                box-shadow: 0 14px 34px rgba(26, 39, 68, 0.18);
                 flex-shrink: 0;
             }
 
@@ -143,7 +143,7 @@ def render_styles() -> None:
                 width: 100%;
                 height: 100%;
                 border-radius: 999px;
-                background: var(--aktuo-purple);
+                background: var(--aktuo-primary);
                 color: #FFFFFF;
                 font-size: 1.3rem;
                 font-weight: 700;
@@ -179,12 +179,12 @@ def render_styles() -> None:
                 border: 1px solid var(--aktuo-border);
                 border-radius: 18px;
                 background: #FFFFFF;
-                box-shadow: 0 16px 36px rgba(76, 54, 132, 0.08);
+                box-shadow: 0 16px 36px rgba(26, 39, 68, 0.08);
             }
 
             [data-testid="stForm"] [data-baseweb="input"] > div,
             .stTextInput [data-baseweb="input"] > div {
-                border: 1px solid rgba(108, 63, 181, 0.2);
+                border: 1px solid rgba(26, 39, 68, 0.2);
                 border-radius: 12px;
                 background: #FFFFFF;
             }
@@ -193,15 +193,15 @@ def render_styles() -> None:
             .stTextInput [data-baseweb="input"] > div:focus-within,
             div[data-testid="stChatInput"] textarea:focus,
             textarea:focus {
-                border-color: var(--aktuo-purple);
-                box-shadow: 0 0 0 3px rgba(108, 63, 181, 0.12);
+                border-color: var(--aktuo-primary);
+                box-shadow: 0 0 0 3px rgba(26, 39, 68, 0.12);
             }
 
             .stButton > button,
             [data-testid="stFormSubmitButton"] > button {
-                background: var(--aktuo-purple);
+                background: var(--aktuo-primary);
                 color: #FFFFFF;
-                border: 1px solid var(--aktuo-purple);
+                border: 1px solid var(--aktuo-primary);
                 border-radius: 12px;
                 padding: 0.62rem 1rem;
                 font-weight: 600;
@@ -210,15 +210,15 @@ def render_styles() -> None:
 
             .stButton > button:hover,
             [data-testid="stFormSubmitButton"] > button:hover {
-                background: var(--aktuo-purple-dark);
-                border-color: var(--aktuo-purple-dark);
-                box-shadow: 0 14px 28px rgba(108, 63, 181, 0.18);
+                background: var(--aktuo-primary-hover);
+                border-color: var(--aktuo-primary-hover);
+                box-shadow: 0 14px 28px rgba(26, 39, 68, 0.18);
                 transform: translateY(-1px);
             }
 
             .stButton > button:focus,
             [data-testid="stFormSubmitButton"] > button:focus {
-                box-shadow: 0 0 0 3px rgba(108, 63, 181, 0.15);
+                box-shadow: 0 0 0 3px rgba(26, 39, 68, 0.15);
             }
 
             .aktuo-quick-label {
@@ -231,7 +231,8 @@ def render_styles() -> None:
             .stChatMessage {
                 border-radius: 18px;
                 border: 1px solid var(--aktuo-border);
-                box-shadow: 0 12px 28px rgba(74, 45, 138, 0.05);
+                box-shadow: 0 12px 28px rgba(26, 39, 68, 0.05);
+                color: var(--aktuo-text);
             }
 
             div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) {
@@ -241,7 +242,7 @@ def render_styles() -> None:
 
             div[data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarAssistant"]) {
                 background: var(--aktuo-surface-soft);
-                border-color: rgba(108, 63, 181, 0.16);
+                border-color: rgba(26, 39, 68, 0.16);
             }
 
             div[data-testid="stChatMessageContent"] {
@@ -249,7 +250,7 @@ def render_styles() -> None:
             }
 
             .aktuo-message-label {
-                color: var(--aktuo-purple-dark);
+                color: var(--aktuo-primary-hover);
                 font-size: 0.78rem;
                 font-weight: 700;
                 letter-spacing: 0.02em;
@@ -263,7 +264,7 @@ def render_styles() -> None:
                 z-index: 30;
                 padding: 0.85rem 0 calc(0.8rem + env(safe-area-inset-bottom));
                 background: rgba(255, 255, 255, 0.96);
-                border-top: 1px solid rgba(108, 63, 181, 0.12);
+                border-top: 1px solid rgba(26, 39, 68, 0.12);
                 backdrop-filter: blur(14px);
             }
 
@@ -273,13 +274,13 @@ def render_styles() -> None:
             }
 
             div[data-testid="stChatInput"] textarea {
-                border: 1px solid rgba(108, 63, 181, 0.18) !important;
+                border: 1px solid rgba(26, 39, 68, 0.18) !important;
                 border-radius: 14px !important;
                 min-height: 54px;
             }
 
             .stExpander {
-                border: 1px solid rgba(108, 63, 181, 0.14);
+                border: 1px solid rgba(26, 39, 68, 0.14);
                 border-radius: 16px;
                 background: rgba(255, 255, 255, 0.65);
             }
@@ -318,6 +319,14 @@ def render_styles() -> None:
 
                 .aktuo-subtitle {
                     font-size: 0.92rem;
+                }
+
+                .stChatMessage,
+                .stChatMessage p,
+                .stChatMessage li,
+                div[data-testid="stChatMessageContent"],
+                div[data-testid="stChatMessageContent"] p {
+                    color: #1A1A2E !important;
                 }
 
                 .stChatMessage {
