@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 20:11:17",
+    "total_questions": 10,
+    "completed_batches_count": 1,
+    "total_batches": 1,
+    "completed_batches": [
+      0
+    ],
+    "matched": 10,
+    "unmatched": 0,
+    "total_cost_usd": 0.0018
+  },
+  "batch_results": {
+    "0": [
+      {
+        "question": "Czy w JPK za luty faktury wystawione w styczniu też muszą mieć znaczniki BFK lub DI?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń i znaczników, § 10 odnosi się do ewidencji sprzedaży i okresu sprawozdawczego"
+      },
+      {
+        "question": "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 zawiera wymogi dotyczące oznaczeń i pól technicznych, § 10 opisuje ewidencję sprzedaży z kodami GTU"
+      },
+      {
+        "question": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 określa wymogi ewidencji sprzedaży i znaczniki dokumentów, § 5 zawiera przepisy techniczne dotyczące oznaczeń"
+      },
+      {
+        "question": "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 zawiera wymogi dotyczące oznaczeń i znaczników (Di, WEW), § 10 opisuje ewidencję sprzedaży"
+      },
+      {
+        "question": "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń obowiązkowych w JPK_V7"
+      },
+      {
+        "question": "Opłacono zwykłym przelewem, wystawili fv zaliczkową z adnotacją MPP, czy są jakieś konsekwencje?",
+        "matched_articles": [
+          "§ 5",
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 opisuje ewidencję sprzedaży i rodzaje faktur, § 5 zawiera wymogi dotyczące oznaczeń technicznych"
+      },
+      {
+        "question": "Dopiero od lutego wprowadzam kody kraju przed NIP, korygowalibyście JPK za styczeń w tym przypadku?",
+        "matched_articles": [
+          "§ 12",
+          "§ 5"
+        ],
+        "primary_article": "§ 12",
+        "reasoning": "§ 12 dotyczy korekt pliku JPK_V7 za poprzednie okresy, § 5 zawiera wymogi techniczne dotyczące danych identyfikacyjnych"
+      },
+      {
+        "question": "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?",
+        "matched_articles": [
+          "§ 5"
+        ],
+        "primary_article": "§ 5",
+        "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń i pól technicznych, w tym formatu numeru NIP"
+      },
+      {
+        "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 zawiera wymogi dotyczące ewidencji sprzedaży i daty wystawienia dokumentów"
+      },
+      {
+        "question": "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+        "matched_articles": [
+          "§ 2",
+          "§ 10"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "§ 2 określa szczegółowy zakres danych w deklaracji, § 10 dotyczy ewidencji sprzedaży i sposobu ewidencjonowania dokumentów"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "question": "Czy w JPK za luty faktury wystawione w styczniu też muszą mieć znaczniki BFK lub DI?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń i znaczników, § 10 odnosi się do ewidencji sprzedaży i okresu sprawozdawczego"
+    },
+    {
+      "question": "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 zawiera wymogi dotyczące oznaczeń i pól technicznych, § 10 opisuje ewidencję sprzedaży z kodami GTU"
+    },
+    {
+      "question": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 określa wymogi ewidencji sprzedaży i znaczniki dokumentów, § 5 zawiera przepisy techniczne dotyczące oznaczeń"
+    },
+    {
+      "question": "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 zawiera wymogi dotyczące oznaczeń i znaczników (Di, WEW), § 10 opisuje ewidencję sprzedaży"
+    },
+    {
+      "question": "Czy teraz te znaczniki JPK są obowiązkowe również dla jdg na pełnych księgach?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń obowiązkowych w JPK_V7"
+    },
+    {
+      "question": "Opłacono zwykłym przelewem, wystawili fv zaliczkową z adnotacją MPP, czy są jakieś konsekwencje?",
+      "matched_articles": [
+        "§ 5",
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 opisuje ewidencję sprzedaży i rodzaje faktur, § 5 zawiera wymogi dotyczące oznaczeń technicznych"
+    },
+    {
+      "question": "Dopiero od lutego wprowadzam kody kraju przed NIP, korygowalibyście JPK za styczeń w tym przypadku?",
+      "matched_articles": [
+        "§ 12",
+        "§ 5"
+      ],
+      "primary_article": "§ 12",
+      "reasoning": "§ 12 dotyczy korekt pliku JPK_V7 za poprzednie okresy, § 5 zawiera wymogi techniczne dotyczące danych identyfikacyjnych"
+    },
+    {
+      "question": "Czy wysyłacie JPK za styczeń bez przedrostka PL przy numerze NIP kontrahentów krajowych?",
+      "matched_articles": [
+        "§ 5"
+      ],
+      "primary_article": "§ 5",
+      "reasoning": "§ 5 określa wymogi techniczne dotyczące oznaczeń i pól technicznych, w tym formatu numeru NIP"
+    },
+    {
+      "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 zawiera wymogi dotyczące ewidencji sprzedaży i daty wystawienia dokumentów"
+    },
+    {
+      "question": "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+      "matched_articles": [
+        "§ 2",
+        "§ 10"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "§ 2 określa szczegółowy zakres danych w deklaracji, § 10 dotyczy ewidencji sprzedaży i sposobu ewidencjonowania dokumentów"
+    }
+  ]
+}

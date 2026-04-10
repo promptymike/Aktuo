@@ -1,0 +1,2476 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "q": "Czy zakupy z TEMU na osobe prywatna mogę wciągnąć do ewidencji towarów dowodem wewnętrznym?",
+      "cat": "inne",
+      "sub": "zakupy temu osobe",
+      "post_ids": [
+        10401
+      ]
+    },
+    {
+      "id": 2,
+      "q": "Czy jakieś cło też ogarniać?",
+      "cat": "inne",
+      "sub": "jakieś cło też",
+      "post_ids": [
+        10401
+      ]
+    },
+    {
+      "id": 3,
+      "q": "Czy zmieniacie u swoich klientów VAT miesięczny na VAT kwartalny?",
+      "cat": "jpk",
+      "sub": "zmieniacie u swoich",
+      "post_ids": [
+        10402
+      ]
+    },
+    {
+      "id": 4,
+      "q": "Jak to tłumaczycie klientom?",
+      "cat": "jpk",
+      "sub": "tłumaczycie klientom zmieniacie",
+      "post_ids": [
+        10402
+      ]
+    },
+    {
+      "id": 5,
+      "q": "Macie jakieś argumenty?",
+      "cat": "jpk",
+      "sub": "macie jakieś argumenty",
+      "post_ids": [
+        10402
+      ]
+    },
+    {
+      "id": 6,
+      "q": "Moim zdaniem to nieprofesjonalne - czego jako biuro rachunkowe się boimy?",
+      "cat": "jpk",
+      "sub": "moim zdaniem nieprofesjonalne",
+      "post_ids": [
+        10402
+      ]
+    },
+    {
+      "id": 7,
+      "q": "Nie a niby czego mam się bać?",
+      "cat": "jpk",
+      "sub": "a niby czego",
+      "post_ids": [
+        10402
+      ]
+    },
+    {
+      "id": 8,
+      "q": "Czy wystawiacie na koniec roku na 31 grudnia faktury do przekształcenia, które jest nie zpłacone czy zostawiacie bez fakturowania?",
+      "cat": "inne",
+      "sub": "wystawiacie koniec roku",
+      "post_ids": [
+        10403
+      ]
+    },
+    {
+      "id": 9,
+      "q": "Czy fakturę wystawioną w wersji Demo KSeF muszę usunąć, zrobić korektę?",
+      "cat": "ksef",
+      "sub": "fakturę wystawioną wersji",
+      "post_ids": [
+        10404
+      ]
+    },
+    {
+      "id": 10,
+      "q": "Czy nawet jak nabywca jya pobierze to będzie wiedział, że to demo i nigdzie jej nie ma księgowość?",
+      "cat": "ksef",
+      "sub": "nawet nabywca jya",
+      "post_ids": [
+        10404
+      ]
+    },
+    {
+      "id": 11,
+      "q": "! Faktury kosztowe – duplikaty a VAT odliczonyHej, mam zagwozdkę i już mi się oczy kręcą od przepisów Na szkoleniu o VAT odliczonym usłyszałam, że duplikat faktury, aby móc odliczyć z niego VAT, nie może być wystawiony później niż 4 okresy po wystawieniu faktury pierwotnej.P?",
+      "cat": "vat",
+      "sub": "faktury kosztowe duplikaty",
+      "post_ids": [
+        10405
+      ]
+    },
+    {
+      "id": 12,
+      "q": "Faktury kosztowe – duplikaty a VAT odliczonyHej, mam zagwozdkę i już mi się oczy kręcą od przepisów Na szkoleniu o VAT odliczonym usłyszałam, że duplikat faktury, aby móc odliczyć z niego VAT, nie może być wystawiony później niż 4 okresy po wystawieniu faktury pierwotnej.P?",
+      "cat": "vat",
+      "sub": "faktury kosztowe duplikaty",
+      "post_ids": [
+        10405
+      ]
+    },
+    {
+      "id": 13,
+      "q": "Jeśli nie otrzymałeś/aś faktury to nie masz prawa odliczenia podatku VAT, więc analogicznie jak otrzymasz duplikat to przysługuje Ci prawo odliczenia VAT'u w tej dacie plus dodatkowe okresy jak przy standardowej fakturze?",
+      "cat": "vat",
+      "sub": "otrzymałeś aś faktury",
+      "post_ids": [
+        10405
+      ]
+    },
+    {
+      "id": 14,
+      "q": "Czy PCC dot. zakupu auta z grudnia, ale wypełnione i opłacone w styczniu jest kosztem grudnia czy stycznia?",
+      "cat": "inne",
+      "sub": "pcc dot. zakupu",
+      "post_ids": [
+        10406
+      ]
+    },
+    {
+      "id": 15,
+      "q": "Zakupu auta z grudnia, ale wypełnione i opłacone w styczniu jest kosztem grudnia czy stycznia?",
+      "cat": "inne",
+      "sub": "zakupu auta grudnia",
+      "post_ids": [
+        10406
+      ]
+    },
+    {
+      "id": 16,
+      "q": "Ale bilansowo czy podatkowo?",
+      "cat": "inne",
+      "sub": "ale bilansowo podatkowo",
+      "post_ids": [
+        10406
+      ]
+    },
+    {
+      "id": 17,
+      "q": "I czy śt przyjęty do używania przed opłaceniem czy nie?",
+      "cat": "inne",
+      "sub": "śt przyjęty używania",
+      "post_ids": [
+        10406
+      ]
+    },
+    {
+      "id": 18,
+      "q": "Czy w wersji Demo odbiorca zobaczy fakturę wysłaną do niego, jeśli też będzie testował w wersji Demo?",
+      "cat": "inne",
+      "sub": "wersji demo odbiorca",
+      "post_ids": [
+        10407
+      ]
+    },
+    {
+      "id": 19,
+      "q": "Czy jest tutaj osoba która ma magazyn walut w SYMFONIA FK?",
+      "cat": "erp",
+      "sub": "Symfonia",
+      "post_ids": [
+        10408
+      ]
+    },
+    {
+      "id": 20,
+      "q": "Czy sprzedając auta nowe (przebieg mniejszy niż 6000 i rejestracja krótsza niż 6 miesięcy) można stosować transakcje trójstronne uproszczone?",
+      "cat": "inne",
+      "sub": "sprzedając auta nowe",
+      "post_ids": [
+        10409
+      ]
+    },
+    {
+      "id": 21,
+      "q": "Klient kupuje w Niemczech i sprzedaje bezpośrednio do Danii?",
+      "cat": "inne",
+      "sub": "klient kupuje niemczech",
+      "post_ids": [
+        10409
+      ]
+    },
+    {
+      "id": 22,
+      "q": "Czy pracując jako samodzielna księgowa na etacie macie wykupione Oc dla siebie?",
+      "cat": "praktyka",
+      "sub": "pracując jako samodzielna",
+      "post_ids": [
+        10411
+      ]
+    },
+    {
+      "id": 23,
+      "q": "A po co, skoro na etacie odpowiedzialność jest ograniczona ustawowo?",
+      "cat": "praktyka",
+      "sub": "a skoro etacie",
+      "post_ids": [
+        10411
+      ]
+    },
+    {
+      "id": 24,
+      "q": "Powiedzcie mi, jak widzicie okres od lutego do kwietnia, kiedy oprócz pitów i bieżących rozliczeń dojdą telefony od klientów, którzy nie ogarnęli KSeFu?",
+      "cat": "ksef",
+      "sub": "offline24",
+      "post_ids": [
+        10412
+      ]
+    },
+    {
+      "id": 25,
+      "q": "Jak wspierają was w tym dostawcy waszych programów i narzędzi?",
+      "cat": "ksef",
+      "sub": "offline24",
+      "post_ids": [
+        10412
+      ]
+    },
+    {
+      "id": 26,
+      "q": "Jak sami się na to przygotowujecie?",
+      "cat": "ksef",
+      "sub": "offline24",
+      "post_ids": [
+        10412
+      ]
+    },
+    {
+      "id": 27,
+      "q": "Ja przejmując firmę - czy mogę wysłać DRA za pomocą swojego podpisu kwalifikowanego z Płatnika?",
+      "cat": "jpk",
+      "sub": "ja przejmując firmę",
+      "post_ids": [
+        10413
+      ]
+    },
+    {
+      "id": 28,
+      "q": "Czy konieczne będzie coś dodatkowego?",
+      "cat": "jpk",
+      "sub": "konieczne będzie coś",
+      "post_ids": [
+        10413
+      ]
+    },
+    {
+      "id": 29,
+      "q": "Import usług faktura z października korekta październik czy mogę ją ująć w grudniu żeby się nie cofać?",
+      "cat": "vat",
+      "sub": "import usług",
+      "post_ids": [
+        10414,
+        10419
+      ]
+    },
+    {
+      "id": 30,
+      "q": "Czy pomimo, że faktura nie posiada NIP US oraz Nipu odbiorcy powinnam rozpoznać to jako import usług?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10415
+      ]
+    },
+    {
+      "id": 31,
+      "q": "Jest na to jakieś rozwiązanie?",
+      "cat": "erp",
+      "sub": "Optima",
+      "post_ids": [
+        10416,
+        10421
+      ]
+    },
+    {
+      "id": 32,
+      "q": "Czy muszę księgować faktury sprzedaży wystawione na osoby prywatne, czy wystarczy, że są widoczne w zestawieniu?",
+      "cat": "jpk",
+      "sub": "muszę księgować faktury",
+      "post_ids": [
+        10417,
+        10422
+      ]
+    },
+    {
+      "id": 33,
+      "q": "Jak zaksięgować faktury na rzecz firm?",
+      "cat": "jpk",
+      "sub": "zaksięgować faktury rzecz",
+      "post_ids": [
+        10417,
+        10422
+      ]
+    },
+    {
+      "id": 34,
+      "q": "Czy zaznaczać kod JPK FP?",
+      "cat": "jpk",
+      "sub": "zaznaczać kod jpk",
+      "post_ids": [
+        10417,
+        10422
+      ]
+    },
+    {
+      "id": 35,
+      "q": "Jak zaksięgować faktury na rzecz firm? —?",
+      "cat": "jpk",
+      "sub": "zaksięgować faktury rzecz",
+      "post_ids": [
+        10417,
+        10422
+      ]
+    },
+    {
+      "id": 36,
+      "q": "Jeśli faktury nie są ujęte w zestawieniu, to księgujemy je osobno, bez FP?",
+      "cat": "jpk",
+      "sub": "faktury są ujęte",
+      "post_ids": [
+        10417,
+        10422
+      ]
+    },
+    {
+      "id": 37,
+      "q": "Podatnik zwolniony z VAT, czy dobrze myślę, iż wykazuje w VAT -9M w grudniu, pomimo, że płatności zostaną pobrane do 15.01?",
+      "cat": "vat",
+      "sub": "podatnik zwolniony vat",
+      "post_ids": [
+        10420
+      ]
+    },
+    {
+      "id": 38,
+      "q": "Czy trzeba składać VAT-9M, skoro jest naliczony VAT na fakturze?",
+      "cat": "vat",
+      "sub": "trzeba składać vat-9m",
+      "post_ids": [
+        10420
+      ]
+    },
+    {
+      "id": 39,
+      "q": "Jednocześnie na żądanie klienta wystawiana jest również faktura. — 2?",
+      "cat": "jpk",
+      "sub": "jednocześnie żądanie klienta",
+      "post_ids": [
+        10422
+      ]
+    },
+    {
+      "id": 40,
+      "q": "Szukam osoby która mogłoby mi pomóc przy zamknięciu roku w?",
+      "cat": "inne",
+      "sub": "szukam osoby która",
+      "post_ids": [
+        10423
+      ]
+    },
+    {
+      "id": 41,
+      "q": "Na jakim programie Pan/i pracuje?",
+      "cat": "inne",
+      "sub": "jakim programie pan",
+      "post_ids": [
+        10423
+      ]
+    },
+    {
+      "id": 42,
+      "q": "Czy jak mam zawieszoną działalność i nic się nie dzieje to muszę prowadzić zerową pkpir?",
+      "cat": "pit",
+      "sub": "zawieszoną działalność nic",
+      "post_ids": [
+        10424
+      ]
+    },
+    {
+      "id": 43,
+      "q": "(do tej pory robiłem taką w druczkach a teraz podobno trzeba elektronicznie)?",
+      "cat": "pit",
+      "sub": "pory robiłem taką",
+      "post_ids": [
+        10424
+      ]
+    },
+    {
+      "id": 44,
+      "q": "Pytanie bardziej kadrowe, ale może coś poradzicie, zadrudniliśmy kogoś, kto nie zrobił jeszcze badań, oficjalnie więc nie może zacząć pracy, czy jest jakiś sposób by ta osoba dostała wynagrodzenie za te dni przed zrobieniem badań wstępnych?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10425
+      ]
+    },
+    {
+      "id": 45,
+      "q": "Szukam jakichś interpretacji, ale niestety nie znalazłam niczego co by mówiło, że może wziąć urlop wypoczynkowy na zaś, rozumiecie, że zacznie pracę od urlopu?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10425
+      ]
+    },
+    {
+      "id": 46,
+      "q": "Jeśli umowa jest podpisana, zgłoszona do ZUS, a pracownik nie został dopuszczony do pracy ze względu na brak badań lekarskich z winy pracodawcy to legalnie w grę wchodzi tylko nieobecność usprawiedliwiona płatna?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10425
+      ]
+    },
+    {
+      "id": 47,
+      "q": "Jak u Was wygląda proces zamknięcia miesiąca w programie?",
+      "cat": "inne",
+      "sub": "u was wygląda",
+      "post_ids": [
+        10426
+      ]
+    },
+    {
+      "id": 48,
+      "q": "Księgujecie najpierw wstępnie w bufor, a potem ostatecznie do 20 następnego miesiąca, potem od razu zamknięcie wstępne okresu, czy może już ostateczne?",
+      "cat": "inne",
+      "sub": "księgujecie najpierw wstępnie",
+      "post_ids": [
+        10426
+      ]
+    },
+    {
+      "id": 49,
+      "q": "Są sytuacje, że cofacie się do jakiegoś okresu?",
+      "cat": "inne",
+      "sub": "są sytuacje cofacie",
+      "post_ids": [
+        10426
+      ]
+    },
+    {
+      "id": 50,
+      "q": "Czy wystawiacie faktury za swoich klientów?",
+      "cat": "ksef",
+      "sub": "wystawiacie faktury za",
+      "post_ids": [
+        10427
+      ]
+    },
+    {
+      "id": 51,
+      "q": "Jak wy do tego podchodzicie?",
+      "cat": "ksef",
+      "sub": "wy podchodzicie cześć...",
+      "post_ids": [
+        10427
+      ]
+    },
+    {
+      "id": 52,
+      "q": "Druga sprawa czy widujecie ceny dla klientów z racji wejścia w życie KSeF?",
+      "cat": "ksef",
+      "sub": "druga sprawa widujecie",
+      "post_ids": [
+        10427
+      ]
+    },
+    {
+      "id": 53,
+      "q": "Jak rozliczyć paliwo zakupione do tego auta oraz elementy eksploatacyjne?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10428
+      ]
+    },
+    {
+      "id": 54,
+      "q": "Koszt 75% i VAT 50% czy wszystko 100%?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10428
+      ]
+    },
+    {
+      "id": 55,
+      "q": "Jak powinnam poprawnie rozliczyć poniższą fakturę w KPiR?",
+      "cat": "vat",
+      "sub": "powinnam poprawnie rozliczyć",
+      "post_ids": [
+        10430,
+        10434
+      ]
+    },
+    {
+      "id": 56,
+      "q": "Powiedzcie proszę skąd można uzyskać Certyfikat rezydencji podatkowej dla Vercel USA?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10432
+      ]
+    },
+    {
+      "id": 57,
+      "q": "Kiedy należy rozliczyć VAT?",
+      "cat": "vat",
+      "sub": "należy rozliczyć vat",
+      "post_ids": [
+        10433
+      ]
+    },
+    {
+      "id": 58,
+      "q": "Jak księgujecie faktury z Envato, gdzie macie podanego autora?",
+      "cat": "vat",
+      "sub": "import usług",
+      "post_ids": [
+        10435
+      ]
+    },
+    {
+      "id": 59,
+      "q": "Import usług + podatek u źródła?",
+      "cat": "vat",
+      "sub": "import usług",
+      "post_ids": [
+        10435
+      ]
+    },
+    {
+      "id": 60,
+      "q": "Ja szukam osoby aby jej zlecieć pracę usługę?",
+      "cat": "rachunkowosc",
+      "sub": "rozrachunki",
+      "post_ids": [
+        10436,
+        10442
+      ]
+    },
+    {
+      "id": 61,
+      "q": "Państwu, mam pytanie odnośnie procedury importu DDP?",
+      "cat": "vat",
+      "sub": "WNT",
+      "post_ids": [
+        10438
+      ]
+    },
+    {
+      "id": 62,
+      "q": "Jeżeli odprawa odbywała się w Polsce to powinnam zaksięgować fakturę z Chin jako koszt bez wykazywania w VAT?",
+      "cat": "vat",
+      "sub": "WNT",
+      "post_ids": [
+        10438
+      ]
+    },
+    {
+      "id": 63,
+      "q": "Jeżeli odprawa odbywała się w innym kraju UE (przemieszczenie z tego kraju do Polski) to powinnam zaksięgować fakturę jako WNT?",
+      "cat": "vat",
+      "sub": "WNT",
+      "post_ids": [
+        10438
+      ]
+    },
+    {
+      "id": 64,
+      "q": "Czy współpracował ktos z Państwa z BR OtoTax i mógłby wyrazić opinię?",
+      "cat": "inne",
+      "sub": "współpracował ktos państwa",
+      "post_ids": [
+        10441,
+        10451
+      ]
+    },
+    {
+      "id": 65,
+      "q": "Czy paliwo w zbiorniku wpisujecie w remanent?",
+      "cat": "rachunkowosc",
+      "sub": "remanent",
+      "post_ids": [
+        10443
+      ]
+    },
+    {
+      "id": 66,
+      "q": "A paliwo to towar?",
+      "cat": "rachunkowosc",
+      "sub": "remanent",
+      "post_ids": [
+        10443
+      ]
+    },
+    {
+      "id": 67,
+      "q": "Czy daje je na konto wynagrodzenia niewypłacone i ZUS nie zapłacony?",
+      "cat": "kadry",
+      "sub": "wynagrodzenia",
+      "post_ids": [
+        10444
+      ]
+    },
+    {
+      "id": 68,
+      "q": "Czy zwyczajnie bo dotyczą grudnia?",
+      "cat": "kadry",
+      "sub": "wynagrodzenia",
+      "post_ids": [
+        10444
+      ]
+    },
+    {
+      "id": 69,
+      "q": "Czy mogę to zaksięgować w DP w Nkup?",
+      "cat": "kadry",
+      "sub": "mogę zaksięgować dp",
+      "post_ids": [
+        10445
+      ]
+    },
+    {
+      "id": 70,
+      "q": "Czy prawidłowe jest ujęcie całości wydatku jako NKUP (konta zespołu 7) po wcześniejszym ujęciu na rozrachunkach do wyjaśnienia?",
+      "cat": "vat",
+      "sub": "paragon",
+      "post_ids": [
+        10447
+      ]
+    },
+    {
+      "id": 71,
+      "q": "Czy nie istnieje jakakolwiek podstawa do zaliczenia tego wydatku do KUP (np?",
+      "cat": "vat",
+      "sub": "paragon",
+      "post_ids": [
+        10447,
+        10453
+      ]
+    },
+    {
+      "id": 72,
+      "q": "Na podstawie dowodu księgowego do przelewu)?",
+      "cat": "vat",
+      "sub": "paragon",
+      "post_ids": [
+        10447,
+        10453
+      ]
+    },
+    {
+      "id": 73,
+      "q": "Szukam biura księgowego Poznań Handel, fv VAT i unijne, paragony?",
+      "cat": "ksef",
+      "sub": "szukam biura księgowego",
+      "post_ids": [
+        10448
+      ]
+    },
+    {
+      "id": 74,
+      "q": "Szukam biura, które jak trzeba to skieruje na badania medycyny pracy, podpowie kontakt na szkolenie bhp, podpowie co zrobic by było dobrze/ lepiej (jest kreatywne.)?",
+      "cat": "ksef",
+      "sub": "szukam biura które",
+      "post_ids": [
+        10448
+      ]
+    },
+    {
+      "id": 75,
+      "q": "Jak ująć to w kpir i co z remanentem?",
+      "cat": "rachunkowosc",
+      "sub": "remanent",
+      "post_ids": [
+        10449
+      ]
+    },
+    {
+      "id": 76,
+      "q": "Czy macie problemy z tytułami operacji w homebanking InsertGT mbank korporacyjny?",
+      "cat": "inne",
+      "sub": "macie problemy tytułami",
+      "post_ids": [
+        10452,
+        10459
+      ]
+    },
+    {
+      "id": 77,
+      "q": "Nie, a jaki jest problem?",
+      "cat": "inne",
+      "sub": "a problem macie",
+      "post_ids": [
+        10452,
+        10459
+      ]
+    },
+    {
+      "id": 78,
+      "q": "Pełne księgizakup paliwa za granicą, płatność kartą firmową właściciela, brak paragonu i faktury, brak delegacji, auto używane 50/50, jedyny dokument – wyciąg bankowy z kwota do 450zł.Czy prawidłowe jest ujęcie całości wydatku jako NKUP (konta zespołu 7) po wcześniejszym ujęciu na rozrachunkach do wyjaśnienia?",
+      "cat": "vat",
+      "sub": "paragon",
+      "post_ids": [
+        10453
+      ]
+    },
+    {
+      "id": 79,
+      "q": "W adresie do doręczeń wpisujecie adres zamieszkania pracownika?",
+      "cat": "kadry",
+      "sub": "adresie doręczeń wpisujecie",
+      "post_ids": [
+        10454
+      ]
+    },
+    {
+      "id": 80,
+      "q": "Czy może w ogóle adres biura?",
+      "cat": "kadry",
+      "sub": "może ogóle adres",
+      "post_ids": [
+        10454,
+        10460
+      ]
+    },
+    {
+      "id": 81,
+      "q": "Czy ten kraj może być normalny?",
+      "cat": "ksef",
+      "sub": "kraj może być",
+      "post_ids": [
+        10455
+      ]
+    },
+    {
+      "id": 82,
+      "q": "Czy tylko ja mam tak dobry poniedziałek?",
+      "cat": "ksef",
+      "sub": "tylko ja tak",
+      "post_ids": [
+        10455
+      ]
+    },
+    {
+      "id": 83,
+      "q": "Szukam biura księgowego PoznańHandel, fv VAT i unijne, paragony?",
+      "cat": "ksef",
+      "sub": "szukam biura księgowego",
+      "post_ids": [
+        10456
+      ]
+    },
+    {
+      "id": 84,
+      "q": "Szukam biura, które jak trzeba to skieruje na badania medycyny pracy, podpowie kontakt na szkolenie bhp, podpowie co zrobic by było dobrze/ lepiej (jest kreatywne.)Nie oczekuję cudow i orkiestry ale współpracy i tłumaczenia po ludzku, a nie po ksiegowemu, bo księgowa zostać nie chcę?",
+      "cat": "ksef",
+      "sub": "szukam biura które",
+      "post_ids": [
+        10456
+      ]
+    },
+    {
+      "id": 85,
+      "q": "Która zrealizuje jedną budowę nieruchomości (przynajmniej na ten moment)?",
+      "cat": "spolki",
+      "sub": "spółka z o.o.",
+      "post_ids": [
+        10457
+      ]
+    },
+    {
+      "id": 86,
+      "q": "Za grudzień są faktury za paliwo,jak rozliczyć faktury grudniowe gdy dodatkowe badanie pozwalające odliczać 100% było przeprowadzone na początku stycznia?",
+      "cat": "kadry",
+      "sub": "za grudzień są",
+      "post_ids": [
+        10458
+      ]
+    },
+    {
+      "id": 87,
+      "q": "UPL dla pracownika biura.W adresie do doręczeń wpisujecie adres zamieszkania pracownika?",
+      "cat": "kadry",
+      "sub": "upl pracownika biura.w",
+      "post_ids": [
+        10460
+      ]
+    },
+    {
+      "id": 88,
+      "q": "Mogę wysłać US2 (A1) za klienta na podstawie danych przez niego podanych?",
+      "cat": "zus",
+      "sub": "mogę wysłać us2",
+      "post_ids": [
+        10462,
+        10469
+      ]
+    },
+    {
+      "id": 89,
+      "q": "Jeśli masz ZUS PEL to tak?",
+      "cat": "zus",
+      "sub": "masz zus pel",
+      "post_ids": [
+        10462,
+        10469
+      ]
+    },
+    {
+      "id": 90,
+      "q": "F-ra na dane firmy z Chin 170 $, oczywiście opłacona przelewem ,kurier przywiózł towar i żadnych dokumentów czy z racji niskiej kwoty nie ma potrzeby ocenia?",
+      "cat": "inne",
+      "sub": "f-ra dane firmy",
+      "post_ids": [
+        10463
+      ]
+    },
+    {
+      "id": 91,
+      "q": "Jakie z. Wyświetl więcej?",
+      "cat": "vat",
+      "sub": "z. wyświetl więcej",
+      "post_ids": [
+        10464,
+        10470
+      ]
+    },
+    {
+      "id": 92,
+      "q": "Czy ktoś mógłby mi pomóc jak zaksięgować coś takiego na KPIR?",
+      "cat": "rachunkowosc",
+      "sub": "księgowanie",
+      "post_ids": [
+        10465
+      ]
+    },
+    {
+      "id": 93,
+      "q": "Czy kwotę kaucji z faktury księguje w kolumnie 10 KPiR?",
+      "cat": "inne",
+      "sub": "kwotę kaucji faktury",
+      "post_ids": [
+        10466,
+        10474
+      ]
+    },
+    {
+      "id": 94,
+      "q": "Czy składając ZAW-fa dla spółki, jakoosoba uprawnioną w punkcie C wpisuje wspólnika, a w punkcie E reprezentantem może być ten sam wspólnik?",
+      "cat": "ksef",
+      "sub": "zaw-fa",
+      "post_ids": [
+        10467
+      ]
+    },
+    {
+      "id": 95,
+      "q": "Czyli sam sobie nada uprawnienia?",
+      "cat": "ksef",
+      "sub": "zaw-fa",
+      "post_ids": [
+        10467
+      ]
+    },
+    {
+      "id": 96,
+      "q": "Klient nie za bardzo potrafi?",
+      "cat": "zus",
+      "sub": "klient za bardzo",
+      "post_ids": [
+        10469
+      ]
+    },
+    {
+      "id": 97,
+      "q": "Dzien dobry, Mam pytanie dotyczące obowiązku zakładania JDG?",
+      "cat": "inne",
+      "sub": "dzien dobry dotyczące",
+      "post_ids": [
+        10471
+      ]
+    },
+    {
+      "id": 98,
+      "q": "Odnośnie kasy fiskalnej. Spolka prowadzi dzialanosc wykonczeniową i remontową?",
+      "cat": "rachunkowosc",
+      "sub": "plan kont",
+      "post_ids": [
+        10472,
+        10477
+      ]
+    },
+    {
+      "id": 99,
+      "q": "Czy jeśli dalej świadczy uslugi remotnowe i przyjmuje płatnosci przelewem to czy mając już kasę powinna ewidencjonować te wplaty tskże na kasie, czy może dalej poza kasą i wystawiać?",
+      "cat": "rachunkowosc",
+      "sub": "plan kont",
+      "post_ids": [
+        10472,
+        10477
+      ]
+    },
+    {
+      "id": 100,
+      "q": "A to nie przyszedł żaden tytuł egzekucyjny?",
+      "cat": "pit",
+      "sub": "ryczałt",
+      "post_ids": [
+        10473
+      ]
+    },
+    {
+      "id": 101,
+      "q": "To jdg czy spółka?",
+      "cat": "pit",
+      "sub": "ryczałt",
+      "post_ids": [
+        10473
+      ]
+    },
+    {
+      "id": 102,
+      "q": "Czy Księgowa może wytłumaczyć, na co komornik pobrał 60tys w 2025?",
+      "cat": "pit",
+      "sub": "ryczałt",
+      "post_ids": [
+        10473
+      ]
+    },
+    {
+      "id": 103,
+      "q": "Dzien dobry, Mam pytanie dotyczące obowiązku zakładania JDG.Jestem obywatelem Polski, ale na stałe mieszkam za granicą (poza UE).Przebywam poza Polską przez większość roku, w Polsce bywam sporadycznie?",
+      "cat": "inne",
+      "sub": "dzien dobry dotyczące",
+      "post_ids": [
+        10475
+      ]
+    },
+    {
+      "id": 104,
+      "q": "Osoba 0590 od 01.02.2020 do 01.02.2023 i od 01.02.2023 do 31.12.2025 kod 0510 (35mcy) czy teraz od 01.01.2026 wg starych zasad (nie tych, że każdy może od nowego roku od nowa) może podlegać 0590 czy musi podlegać 36mcy czyli dopiero od 01.2027 może mieć 0590?",
+      "cat": "zus",
+      "sub": "kod 0590",
+      "post_ids": [
+        10476
+      ]
+    },
+    {
+      "id": 105,
+      "q": ". W ciagu roku przejęłam klienta na kpir, a powinien w tym roku być na księgach?",
+      "cat": "vat",
+      "sub": ". ciagu roku",
+      "post_ids": [
+        10479
+      ]
+    },
+    {
+      "id": 106,
+      "q": "W ciagu roku przejęłam klienta na kpir, a powinien w tym roku być na księgach?",
+      "cat": "vat",
+      "sub": "ciagu roku przejęłam",
+      "post_ids": [
+        10479
+      ]
+    },
+    {
+      "id": 107,
+      "q": "Co robić i jakie konsekwencje?",
+      "cat": "vat",
+      "sub": "robić konsekwencje przecież",
+      "post_ids": [
+        10479
+      ]
+    },
+    {
+      "id": 108,
+      "q": "Czy macierzyńskie też mi wzrośnie?",
+      "cat": "zus",
+      "sub": "macierzyńskie też wzrośnie",
+      "post_ids": [
+        10480
+      ]
+    },
+    {
+      "id": 109,
+      "q": "Mam coś wysłać do ZUS-U?",
+      "cat": "zus",
+      "sub": "coś wysłać zus-u",
+      "post_ids": [
+        10480
+      ]
+    },
+    {
+      "id": 110,
+      "q": "Może ktoś miałby jakieś rady jak zacząć szukać takiej praktyki?",
+      "cat": "inne",
+      "sub": "może miałby jakieś",
+      "post_ids": [
+        10481
+      ]
+    },
+    {
+      "id": 111,
+      "q": "Lepiej jest wysyłać maile czy raczej osobiście przyjść do biura z CV?",
+      "cat": "inne",
+      "sub": "lepiej wysyłać maile",
+      "post_ids": [
+        10481
+      ]
+    },
+    {
+      "id": 112,
+      "q": "Jakie miasto?",
+      "cat": "inne",
+      "sub": "miasto dzień dobry",
+      "post_ids": [
+        10481
+      ]
+    },
+    {
+      "id": 113,
+      "q": "Czy generował ktoś z Was certyfikat typu 2?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10482
+      ]
+    },
+    {
+      "id": 114,
+      "q": "Czy to tak ma być a tylko opis własny ma świadczyć o tym do czego są przeznaczone certyfikaty?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10482
+      ]
+    },
+    {
+      "id": 115,
+      "q": "Jak skarbówka coś chce to tez klikam \" pobierz\" i już?",
+      "cat": "ksef",
+      "sub": "skarbówka coś chce",
+      "post_ids": [
+        10484
+      ]
+    },
+    {
+      "id": 116,
+      "q": "Co wy chcecie teraz wysyłać?",
+      "cat": "zus",
+      "sub": "DRA",
+      "post_ids": [
+        10485,
+        10490
+      ]
+    },
+    {
+      "id": 117,
+      "q": "Wystarczy zalogować się do e-us lub zadzwonić i zapytać, wplata do BGK wskazywała by na jakieś zobowiązanie bankowe, może gwarancję bankową?",
+      "cat": "inne",
+      "sub": "wystarczy zalogować e-us",
+      "post_ids": [
+        10486
+      ]
+    },
+    {
+      "id": 118,
+      "q": "To klient nie ma żadnych wezwań z US?",
+      "cat": "inne",
+      "sub": "klient żadnych wezwań",
+      "post_ids": [
+        10486
+      ]
+    },
+    {
+      "id": 119,
+      "q": "Skąd ty masz wiedzieć?",
+      "cat": "inne",
+      "sub": "skąd ty masz",
+      "post_ids": [
+        10486
+      ]
+    },
+    {
+      "id": 120,
+      "q": "Ma ktoś może wzór informacji dla kontrahentów o obowiązku odbierania faktur z KSeFod 1 kwietnia i może się nim podzielić?",
+      "cat": "inne",
+      "sub": "może wzór informacji",
+      "post_ids": [
+        10487
+      ]
+    },
+    {
+      "id": 121,
+      "q": "Z jaką datą należy wykazać przychód z odliczonego VAT: z datą wysłania JPK_V7 (robiłam tak dotychczas) czy w miesiącu, za który składany jest JPK_V7 (info ze szkoleń)?",
+      "cat": "jpk",
+      "sub": "datą należy wykazać",
+      "post_ids": [
+        10488
+      ]
+    },
+    {
+      "id": 122,
+      "q": "Co ma zrobić pracownik, aby otrzymać wypłatę za grudzień oraz styczeń i w jaki sposób rozwiązać umowę skoro jest brak kontaktu z szefem?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10489
+      ]
+    },
+    {
+      "id": 123,
+      "q": "Jest jakiś zarząd w tej spółce?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10489
+      ]
+    },
+    {
+      "id": 124,
+      "q": "Sekretariat?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10489
+      ]
+    },
+    {
+      "id": 125,
+      "q": "Czy zarząd właśnie poszedł do are?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10489
+      ]
+    },
+    {
+      "id": 126,
+      "q": "Czy polecają Państwo szkolenie z kpir ze stowarzyszenia księgowych?",
+      "cat": "rachunkowosc",
+      "sub": "polecają państwo szkolenie",
+      "post_ids": [
+        10492
+      ]
+    },
+    {
+      "id": 127,
+      "q": "Dobrowolna rejestracja do VAT, remanent do celów VAT, korekta VAT in plus.Z jaką datą należy wykazać przychód z odliczonego VAT: z datą wysłania JPK_V7 (robiłam tak dotychczas) czy w miesiącu, za który składany jest JPK_V7 (info ze szkoleń)?",
+      "cat": "jpk",
+      "sub": "dobrowolna rejestracja vat",
+      "post_ids": [
+        10494
+      ]
+    },
+    {
+      "id": 128,
+      "q": ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?",
+      "cat": "inne",
+      "sub": ". klient wystawił",
+      "post_ids": [
+        10496
+      ]
+    },
+    {
+      "id": 129,
+      "q": "Może ktoś ma jakiś pomysł jak z tego wyjść?",
+      "cat": "inne",
+      "sub": "może jakiś pomysł",
+      "post_ids": [
+        10496
+      ]
+    },
+    {
+      "id": 130,
+      "q": "Jakie widelki placowe?",
+      "cat": "erp",
+      "sub": "Comarch",
+      "post_ids": [
+        10497,
+        10503
+      ]
+    },
+    {
+      "id": 131,
+      "q": "Czy ktoś z Państwa próbował zgłosić do US zamiar wystawiania faktur z załącznikiem w KSeF?",
+      "cat": "ksef",
+      "sub": "państwa próbował zgłosić",
+      "post_ids": [
+        10498
+      ]
+    },
+    {
+      "id": 132,
+      "q": "W jaki sposób połączyć program z KSeF?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10499
+      ]
+    },
+    {
+      "id": 133,
+      "q": "Brać certyfikat od klienta i wrzucać go do programu czy wystarczy nadane uprawnienie z MCU?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10499
+      ]
+    },
+    {
+      "id": 134,
+      "q": "W jaki sposób połączyć program z KSeF? —?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10499
+      ]
+    },
+    {
+      "id": 135,
+      "q": "Czy faktycznie potrzebujesz uprawnień?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10499
+      ]
+    },
+    {
+      "id": 136,
+      "q": "DRA za 12.25 jak będzie zapłacone do 20.01.2026 będzie kosztem podatkowym w grudniu?",
+      "cat": "zus",
+      "sub": "DRA",
+      "post_ids": [
+        10500
+      ]
+    },
+    {
+      "id": 137,
+      "q": "Czy w zaliczce PIT za grudzień można uwzględnić remanent?",
+      "cat": "pit",
+      "sub": "remanent",
+      "post_ids": [
+        10502
+      ]
+    },
+    {
+      "id": 138,
+      "q": "Jak powinno się ją zaksięgować?",
+      "cat": "vat",
+      "sub": "powinno ją zaksięgować",
+      "post_ids": [
+        10504
+      ]
+    },
+    {
+      "id": 139,
+      "q": "VAT do stycznia 2026r a koszt lub towar można aktualnie rozliczyć do grudnia 2025?",
+      "cat": "vat",
+      "sub": "vat stycznia 2026r",
+      "post_ids": [
+        10504
+      ]
+    },
+    {
+      "id": 140,
+      "q": "Co zrobić teraz wprowadzić ja do stycznia czy skorygować inwentaryzację o wartości faktury?",
+      "cat": "inne",
+      "sub": "zrobić teraz wprowadzić",
+      "post_ids": [
+        10505
+      ]
+    },
+    {
+      "id": 141,
+      "q": "Jeśli stany zgodne to jak może brakować wprowadzenia tej fv?",
+      "cat": "inne",
+      "sub": "stany zgodne może",
+      "post_ids": [
+        10505
+      ]
+    },
+    {
+      "id": 142,
+      "q": "Jeśli stany są zgodne uwzgledniając ilości z fv to oczywiście roznice inwentaryzacyjne?",
+      "cat": "inne",
+      "sub": "stany są zgodne",
+      "post_ids": [
+        10505
+      ]
+    },
+    {
+      "id": 143,
+      "q": "Braki a nie nadwyżkę?",
+      "cat": "inne",
+      "sub": "braki a nadwyżkę",
+      "post_ids": [
+        10505
+      ]
+    },
+    {
+      "id": 144,
+      "q": ". Zatrudniam pracownika na umowę o pracę?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10507
+      ]
+    },
+    {
+      "id": 145,
+      "q": "Jak to wpisać w umowie o pracę?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10507,
+        10512
+      ]
+    },
+    {
+      "id": 146,
+      "q": "Jak zaksięgować noty które wystawiamy w styczniu a dotyczą grudnia?",
+      "cat": "rachunkowosc",
+      "sub": "księgowanie",
+      "post_ids": [
+        10508,
+        10513
+      ]
+    },
+    {
+      "id": 147,
+      "q": "Jak do grudnia to trzeba potwierdzenie sald należność do 15 stego a tu czasu mało?",
+      "cat": "rachunkowosc",
+      "sub": "księgowanie",
+      "post_ids": [
+        10508,
+        10513
+      ]
+    },
+    {
+      "id": 148,
+      "q": "Kiedy odliczyć VAT?",
+      "cat": "vat",
+      "sub": "odliczyć vat faktura",
+      "post_ids": [
+        10510
+      ]
+    },
+    {
+      "id": 149,
+      "q": "I w jakim miesiacu wprowadzić do KPIR grudzień czy styczeń?",
+      "cat": "vat",
+      "sub": "jakim miesiacu wprowadzić",
+      "post_ids": [
+        10510
+      ]
+    },
+    {
+      "id": 150,
+      "q": "Jak US to weryfikuje?",
+      "cat": "jpk",
+      "sub": "us weryfikuje jdg",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 151,
+      "q": "Czy US będzie kazał poprawiać księgowania w latach za które powinny być prowadzone pełne księgi?",
+      "cat": "jpk",
+      "sub": "us będzie kazał",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 152,
+      "q": "Czy ktoś spotkał się z taką kontrolą?",
+      "cat": "jpk",
+      "sub": "spotkał taką kontrolą",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 153,
+      "q": "Jakieś kary?",
+      "cat": "jpk",
+      "sub": "jakieś kary jdg",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 154,
+      "q": "A w PIT nie widać przychodów?",
+      "cat": "jpk",
+      "sub": "a pit widać",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 155,
+      "q": "O matko, serio?",
+      "cat": "jpk",
+      "sub": "matko serio jdg",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 156,
+      "q": "Myślisz, że w urzędzie debile siedzą?",
+      "cat": "jpk",
+      "sub": "myślisz urzędzie debile",
+      "post_ids": [
+        10511
+      ]
+    },
+    {
+      "id": 157,
+      "q": ".Zatrudniam pracownika na umowę o pracę?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10512
+      ]
+    },
+    {
+      "id": 158,
+      "q": "Zarówno na kpir jak i spółkach, czh ma ktoś może jakąś ściągę?",
+      "cat": "spolki",
+      "sub": "zarówno kpir spółkach",
+      "post_ids": [
+        10514
+      ]
+    },
+    {
+      "id": 159,
+      "q": "Na jakie konto to zaksięgować bank i?",
+      "cat": "rachunkowosc",
+      "sub": "księgowanie",
+      "post_ids": [
+        10515
+      ]
+    },
+    {
+      "id": 160,
+      "q": "Czy III stopnia w Stowarzyszeniu Księgowych w Polsce?",
+      "cat": "rachunkowosc",
+      "sub": "bilans",
+      "post_ids": [
+        10516,
+        10521
+      ]
+    },
+    {
+      "id": 161,
+      "q": "Czy na koniec roku trzeba naliczyć odsetki od niezapłaconych, przeterminiwanych należności odsetki na 31.12.2025(ująć bilansowo )?",
+      "cat": "ordynacja",
+      "sub": "odsetki",
+      "post_ids": [
+        10517,
+        10523
+      ]
+    },
+    {
+      "id": 162,
+      "q": "A poszly do kontrahenta wezwania do zaplaty/noty?",
+      "cat": "ordynacja",
+      "sub": "odsetki",
+      "post_ids": [
+        10517,
+        10523
+      ]
+    },
+    {
+      "id": 163,
+      "q": "Klient dostał zwrot opłaty skarbowej na konto kh.na jakie konto to zaksięgować bank i?",
+      "cat": "rachunkowosc",
+      "sub": "księgowanie",
+      "post_ids": [
+        10520
+      ]
+    },
+    {
+      "id": 164,
+      "q": "Kiedy mogę stosować ewidencję sprzedaży zamiast księgowania każdej faktury?",
+      "cat": "vat",
+      "sub": "mogę stosować ewidencję",
+      "post_ids": [
+        10522
+      ]
+    },
+    {
+      "id": 165,
+      "q": "Czy w sytuacji, gdy faktury są na rzecz osób prywatnych i firm taka ewidencja zostaje wykluczona?",
+      "cat": "vat",
+      "sub": "sytuacji gdy faktury",
+      "post_ids": [
+        10522
+      ]
+    },
+    {
+      "id": 166,
+      "q": "Czy ma na to wpływ to, czy jestem podatnikiem VAT czynnym?",
+      "cat": "vat",
+      "sub": "wpływ jestem podatnikiem",
+      "post_ids": [
+        10522
+      ]
+    },
+    {
+      "id": 167,
+      "q": "Faktury z monday.com - czy to import usług?",
+      "cat": "vat",
+      "sub": "import usług",
+      "post_ids": [
+        10524
+      ]
+    },
+    {
+      "id": 168,
+      "q": "Czy ich usluge traktowac jako zakup licencji?",
+      "cat": "vat",
+      "sub": "import usług",
+      "post_ids": [
+        10524
+      ]
+    },
+    {
+      "id": 169,
+      "q": "Roczny obrót to suma przychodów ze sprzedaży Netto (dla vatowca), na kpir nie ma bilansu, dostałeś uniwersalny wniosek do wypełnienia czy konkretnie dla JDG?",
+      "cat": "rachunkowosc",
+      "sub": "bilans",
+      "post_ids": [
+        10525
+      ]
+    },
+    {
+      "id": 170,
+      "q": "Jak wyliczyć roczny obrót i roczna sumę bilansowa?",
+      "cat": "rachunkowosc",
+      "sub": "bilans",
+      "post_ids": [
+        10525
+      ]
+    },
+    {
+      "id": 171,
+      "q": "Czy trzeba drukować DRA i inne dokumenty np?",
+      "cat": "zus",
+      "sub": "DRA",
+      "post_ids": [
+        10529
+      ]
+    },
+    {
+      "id": 172,
+      "q": "Z-3 czy wystarczy zachować pdf podpisany elektronicznie?",
+      "cat": "zus",
+      "sub": "DRA",
+      "post_ids": [
+        10529
+      ]
+    },
+    {
+      "id": 173,
+      "q": "Ale jak ktoś będzie w styczniu na miesięcznym, a później od lutego wróci na zwolnienie z VAT to będzie składał czy nie?",
+      "cat": "vat",
+      "sub": "ale będzie styczniu",
+      "post_ids": [
+        10530
+      ]
+    },
+    {
+      "id": 174,
+      "q": "Liczy się na 31.12.2026 czy jak?",
+      "cat": "vat",
+      "sub": "liczy 31.12.2026 jpk",
+      "post_ids": [
+        10530,
+        10536
+      ]
+    },
+    {
+      "id": 175,
+      "q": ". Przedsiębiorca chce wycofać samochód z środków trwałych, który wprowadził na postawie oświadczenia?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10532
+      ]
+    },
+    {
+      "id": 176,
+      "q": "Czy dobrze rozumiem, że nie muszę naliczać podatku VAT od wartości rynkowej pojazdu, ale muszę naliczyć od części składowych?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10532,
+        10539
+      ]
+    },
+    {
+      "id": 177,
+      "q": "Zależy jakie części składowe instalacja gazowa czy podstawie remonty?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10532,
+        10539
+      ]
+    },
+    {
+      "id": 178,
+      "q": "Czy macie do czynienia z fakturą za usługi internetu z firmy Starlink firma z Irlandii ale z polskim NIP?",
+      "cat": "vat",
+      "sub": "macie czynienia fakturą",
+      "post_ids": [
+        10533
+      ]
+    },
+    {
+      "id": 179,
+      "q": "Jak wykazać w ewidencji VAT?",
+      "cat": "vat",
+      "sub": "wykazać ewidencji vat",
+      "post_ids": [
+        10533
+      ]
+    },
+    {
+      "id": 180,
+      "q": "Czy u kosmetyczki kpir rękawiczki jednorazowe ksiegujecie w kol.10 czy 13?",
+      "cat": "inne",
+      "sub": "u kosmetyczki kpir",
+      "post_ids": [
+        10534
+      ]
+    },
+    {
+      "id": 181,
+      "q": "Środki do dezynfekcji powieszchni i nozyczki również księgujecie w dawnej kolumnie 10?",
+      "cat": "inne",
+      "sub": "środki dezynfekcji powieszchni",
+      "post_ids": [
+        10534
+      ]
+    },
+    {
+      "id": 182,
+      "q": "Może ktoś wie czemu nie widzę uprawnień nadanych przez firmę w KSeF?",
+      "cat": "ksef",
+      "sub": "uprawnienia",
+      "post_ids": [
+        10535
+      ]
+    },
+    {
+      "id": 183,
+      "q": "JPK_PKPIR składają w pierwszej kolejności podatnicy na VAT miesięcznym.Ale jak ktoś będzie w styczniu na miesięcznym, a później od lutego wróci na zwolnienie z VAT to będzie składał czy nie?",
+      "cat": "vat",
+      "sub": "jpk pkpir składają",
+      "post_ids": [
+        10536
+      ]
+    },
+    {
+      "id": 184,
+      "q": "Czy obecnie w Subiekcie dostępna jest już możliwość parowania z KSeF za pomocą certyfikatu, czy rekomendowanym (i jedynym) rozwiązaniem na ten moment jest uwierzytelnianie poprzez token KSeF?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10537
+      ]
+    },
+    {
+      "id": 185,
+      "q": "Jak to zrobic najlepiej?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10537
+      ]
+    },
+    {
+      "id": 186,
+      "q": "Czy od 01.02 na JDG muszę zarejestrować ją do składek społecznych i za luty naliczyć składki społeczne?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10538
+      ]
+    },
+    {
+      "id": 187,
+      "q": "A jaka stawka na umowie o pracę i wymiar etatu?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10538
+      ]
+    },
+    {
+      "id": 188,
+      "q": ".Przedsiębiorca chce wycofać samochód z środków trwałych, który wprowadził na postawie oświadczenia?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10539
+      ]
+    },
+    {
+      "id": 189,
+      "q": "Po centralizacji VAT w 2017 roku na fakturach mamy nip marszałka, teraz po wejściu KSeF będziemy korzystać ze swojego starego nip ( przynajmniej ja tak rozumiem) i pytanie czy robicie aneksy do umow z wykonawcami?",
+      "cat": "ksef",
+      "sub": "centralizacji vat 2017",
+      "post_ids": [
+        10540
+      ]
+    },
+    {
+      "id": 190,
+      "q": "Odnośnie neutralności podatkowej. Wiadome jest że w ogłoszeniach o pracę stosujemy nazwy stanowisk neutralnych podatkowo?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10541
+      ]
+    },
+    {
+      "id": 191,
+      "q": "Czy piszemy osoba zajmująca się obsługą klienta czy sprzedawca?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10541
+      ]
+    },
+    {
+      "id": 192,
+      "q": "Czy po nadaniu uprawnien w mcu bede mogła zalogowac sie dopiero do KSeF 2.0 prodykcyjngo czy do demu tez?",
+      "cat": "ksef",
+      "sub": "uprawnienia",
+      "post_ids": [
+        10542
+      ]
+    },
+    {
+      "id": 193,
+      "q": "Do którego roku księgujecie?",
+      "cat": "vat",
+      "sub": "którego roku księgujecie",
+      "post_ids": [
+        10543
+      ]
+    },
+    {
+      "id": 194,
+      "q": "Tak ochoczo wiele biur składa propozycje - ale czy jesteście doradcami podatkowymi?",
+      "cat": "pit",
+      "sub": "tak ochoczo wiele",
+      "post_ids": [
+        10544
+      ]
+    },
+    {
+      "id": 195,
+      "q": "Ale bedzie tez operatorem koparki i kierowca to jak to ująć na umowie o pracę?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10545
+      ]
+    },
+    {
+      "id": 196,
+      "q": "Czy w tej sytuacji jeżeli odprowadzę VAT w grudniu 2025 r coś się stanie?",
+      "cat": "vat",
+      "sub": "sytuacji jeżeli odprowadzę",
+      "post_ids": [
+        10546
+      ]
+    },
+    {
+      "id": 197,
+      "q": "Czy muszę w styczniu 2026?",
+      "cat": "vat",
+      "sub": "muszę styczniu 2026",
+      "post_ids": [
+        10546
+      ]
+    },
+    {
+      "id": 198,
+      "q": "Czy dobrze rozumiem?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10547
+      ]
+    },
+    {
+      "id": 199,
+      "q": "Ksiegowy generuje certyfikat do KSeF na swój NIP wgrywa go do swojego programu ksiegowego, klient nadaje uprawnienie księgowemu generuje swój certyfikat aby mógł korzystać we własnym programie, a ksiegowy gdy ma uprawnienie od klienta na swoim certyfikacie ściąga faktury z KSeF?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10547
+      ]
+    },
+    {
+      "id": 200,
+      "q": "Czy ktoś ma może dofinansowanie z nfośigw?",
+      "cat": "pit",
+      "sub": "ryczałt",
+      "post_ids": [
+        10548
+      ]
+    },
+    {
+      "id": 201,
+      "q": "Ile dokumentów?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10550,
+        10556
+      ]
+    },
+    {
+      "id": 202,
+      "q": "Pracownicy?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10550,
+        10556
+      ]
+    },
+    {
+      "id": 203,
+      "q": "Jeśli tylko podatki i mało dokumentów, to może i ok?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10550,
+        10556
+      ]
+    },
+    {
+      "id": 204,
+      "q": "Jak sądzicie, czy wynagrodzenie 7500 netto na umowę o pracę za ok 45 firm na KPIR ( różnych ale łatwych branż) jest adekwatne?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10550,
+        10556
+      ]
+    },
+    {
+      "id": 205,
+      "q": "W kwietniu 2025 roku wpłynęły nam pieniądze na konto jako zaliczka na wykonanie usługi (100 procent usługi) i w IV 2025 roku Wystawiliśmy fakturę zaliczkę?",
+      "cat": "vat",
+      "sub": "kwietniu 2025 roku",
+      "post_ids": [
+        10551
+      ]
+    },
+    {
+      "id": 206,
+      "q": "Kiedy powstaje przychod podatkowy?",
+      "cat": "vat",
+      "sub": "powstaje przychod podatkowy",
+      "post_ids": [
+        10551
+      ]
+    },
+    {
+      "id": 207,
+      "q": "Z chwilą zakończenia usługi i wystawienia faktury końcowej?",
+      "cat": "vat",
+      "sub": "chwilą zakończenia usługi",
+      "post_ids": [
+        10551
+      ]
+    },
+    {
+      "id": 208,
+      "q": "Czy zeby uzyskać Netto trzeba od tego odjąć tylko podatek?",
+      "cat": "inne",
+      "sub": "zeby uzyskać netto",
+      "post_ids": [
+        10552
+      ]
+    },
+    {
+      "id": 209,
+      "q": "Czy coś jeszcze?",
+      "cat": "inne",
+      "sub": "coś jeszcze zasiłek",
+      "post_ids": [
+        10552
+      ]
+    },
+    {
+      "id": 210,
+      "q": "Podatek 12%?",
+      "cat": "inne",
+      "sub": "podatek 12% zasiłek",
+      "post_ids": [
+        10552
+      ]
+    },
+    {
+      "id": 211,
+      "q": "Czy dobrze rozumiem:Ksiegowy generuje certyfikat do KSeF na swój NIP wgrywa go do swojego programu ksiegowego, klient nadaje uprawnienie księgowemu generuje swój certyfikat aby mógł korzystać we własnym programie, a ksiegowy gdy ma uprawnienie od klienta na swoim certyfikacie ściąga faktury z KSeF?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10553
+      ]
+    },
+    {
+      "id": 212,
+      "q": "Czy ma może ktoś certyfikat rezydencji za 2025 rok dla OPENAI LLC?",
+      "cat": "ksef",
+      "sub": "certyfikat",
+      "post_ids": [
+        10557
+      ]
+    },
+    {
+      "id": 213,
+      "q": "Jaka płaca?",
+      "cat": "inne",
+      "sub": "płaca studentka biura",
+      "post_ids": [
+        10559
+      ]
+    },
+    {
+      "id": 214,
+      "q": "Jak można sprawdzić czy ZUS odlicza ulgę podatkową?",
+      "cat": "zus",
+      "sub": "DRA",
+      "post_ids": [
+        10562,
+        10568
+      ]
+    },
+    {
+      "id": 215,
+      "q": "A nie może przez POG napisać?",
+      "cat": "zus",
+      "sub": "DRA",
+      "post_ids": [
+        10562,
+        10568
+      ]
+    },
+    {
+      "id": 216,
+      "q": "Czy orientuje się ktoś z jakiego okresu mozna pobrac transakcje epay z terminala platnczego paytel?",
+      "cat": "inne",
+      "sub": "orientuje jakiego okresu",
+      "post_ids": [
+        10564
+      ]
+    },
+    {
+      "id": 217,
+      "q": "Poszukać Tobie numeru do operatora?",
+      "cat": "inne",
+      "sub": "poszukać tobie numeru",
+      "post_ids": [
+        10564
+      ]
+    },
+    {
+      "id": 218,
+      "q": "Czy ktoś może potwierdzić czy dobrze myślę?",
+      "cat": "zus",
+      "sub": "mały ZUS plus",
+      "post_ids": [
+        10565,
+        10572
+      ]
+    },
+    {
+      "id": 219,
+      "q": "Czy w takim razie wystarczy jeśli w lutym, składając deklaracje za styczeń złoże DRA cz.II i wykaże tam nową podstawę do MZ+ czy muszę coś złożyć/wysłać do ZUS wcześniej żeby miec tę ulgę?",
+      "cat": "zus",
+      "sub": "mały ZUS plus",
+      "post_ids": [
+        10565,
+        10572
+      ]
+    },
+    {
+      "id": 220,
+      "q": "W jaki sposób rozliczacie wpływy z google ireland za reklamy na YouTube?",
+      "cat": "vat",
+      "sub": "VAT UE",
+      "post_ids": [
+        10566
+      ]
+    },
+    {
+      "id": 221,
+      "q": "Może ktoś podpowie?",
+      "cat": "vat",
+      "sub": "VAT UE",
+      "post_ids": [
+        10566
+      ]
+    },
+    {
+      "id": 222,
+      "q": "Jak ksiegujecie wyciągi z konta DKV?",
+      "cat": "rachunkowosc",
+      "sub": "ksiegujecie wyciągi konta",
+      "post_ids": [
+        10569,
+        10576
+      ]
+    },
+    {
+      "id": 223,
+      "q": "Czy trzeba podpinać potwierdzenie zapłaty?",
+      "cat": "rachunkowosc",
+      "sub": "trzeba podpinać potwierdzenie",
+      "post_ids": [
+        10569,
+        10576
+      ]
+    },
+    {
+      "id": 224,
+      "q": "Czy ktoś może wskazać, podesłać Linka do fajnego szkolenia odnośnie znaczników oraz zmian podatkowych w 2026r?",
+      "cat": "inne",
+      "sub": "może wskazać podesłać",
+      "post_ids": [
+        10571,
+        10581
+      ]
+    },
+    {
+      "id": 225,
+      "q": "Zglasza sie ja do urzedu?",
+      "cat": "inne",
+      "sub": "zglasza sie ja",
+      "post_ids": [
+        10575
+      ]
+    },
+    {
+      "id": 226,
+      "q": "Trzeba robic na niej raporty?",
+      "cat": "inne",
+      "sub": "trzeba robic niej",
+      "post_ids": [
+        10575,
+        10584
+      ]
+    },
+    {
+      "id": 227,
+      "q": "Ktos moze juz zglebil temat?",
+      "cat": "inne",
+      "sub": "ktos moze juz",
+      "post_ids": [
+        10575
+      ]
+    },
+    {
+      "id": 228,
+      "q": "Czy PKD 95.31.B naprawa blacharsko-lakiernicza oraz konserwacja pojazdów obliguje do posiadania kasy fiskalnej i rejestracji do VAT od pierwszej sprzedaży?",
+      "cat": "vat",
+      "sub": "pkd 95.31.b naprawa",
+      "post_ids": [
+        10578
+      ]
+    },
+    {
+      "id": 229,
+      "q": "Jak byście wycenili: KPIR, podatek liniowy, sprzedaż krajową + zerowa deklaracja VIU-DO - w przyszłości sprzedaż zagraniczna?",
+      "cat": "pit",
+      "sub": "byście wycenili kpir",
+      "post_ids": [
+        10579
+      ]
+    },
+    {
+      "id": 230,
+      "q": "Zezłomowałem naczepę i przyczepę - czy w JPK podaję kod GTU 5 dla tych transakcji?",
+      "cat": "jpk",
+      "sub": "zezłomowałem naczepę przyczepę",
+      "post_ids": [
+        10580
+      ]
+    },
+    {
+      "id": 231,
+      "q": "Działa wam infolinia ZUS?",
+      "cat": "zus",
+      "sub": "działa wam infolinia",
+      "post_ids": [
+        10583
+      ]
+    },
+    {
+      "id": 232,
+      "q": "Pytanie o Bolt i ekase.Zglasza sie ja do urzedu?",
+      "cat": "inne",
+      "sub": "bolt ekase.zglasza sie",
+      "post_ids": [
+        10584
+      ]
+    },
+    {
+      "id": 233,
+      "q": "Pytanie o Bolt i ekase.Zglasza sie ja do urzedu? — Ktos moze juz zglebil temat?",
+      "cat": "inne",
+      "sub": "bolt ekase.zglasza sie",
+      "post_ids": [
+        10584
+      ]
+    },
+    {
+      "id": 234,
+      "q": "W jaki sposób klienci nadają Wam uprawnienia?",
+      "cat": "ksef",
+      "sub": "uprawnienia",
+      "post_ids": [
+        10585
+      ]
+    },
+    {
+      "id": 235,
+      "q": "Która opcje należy zaznaczyć?",
+      "cat": "ksef",
+      "sub": "uprawnienia",
+      "post_ids": [
+        10585,
+        10594
+      ]
+    },
+    {
+      "id": 236,
+      "q": "Czyli do KPIR księgujemy fakturę grudniu, bo usługa wykonana w listopadzie 2025 a do VAT w styczniu 2026?",
+      "cat": "vat",
+      "sub": "czyli kpir księgujemy",
+      "post_ids": [
+        10586
+      ]
+    },
+    {
+      "id": 237,
+      "q": "Jak byście wycenili:KPIR, podatek liniowy, sprzedaż krajową + zerowa deklaracja VIU-DO - w przyszłości sprzedaż zagraniczna - 50 faktur zakupowych - 1000 faktur sprzedażowych importowanych?",
+      "cat": "pit",
+      "sub": "byście wycenili kpir",
+      "post_ids": [
+        10587
+      ]
+    },
+    {
+      "id": 238,
+      "q": "Jak to ująć w KUP?",
+      "cat": "rachunkowosc",
+      "sub": "KUP/NKUP",
+      "post_ids": [
+        10588
+      ]
+    },
+    {
+      "id": 239,
+      "q": "Zamiennych do auta wystawiona w styczniu 2026, ale dotyczy faktury z grudnia 2025 - VAT zmniejszam w styczniu 2026, a KPiR też styczeń?",
+      "cat": "vat",
+      "sub": "zamiennych auta wystawiona",
+      "post_ids": [
+        10589
+      ]
+    },
+    {
+      "id": 240,
+      "q": "Czy robiąc remanent do cen zakupu powinna doliczyć też opłaconą akcyzę za dany samochód i to wpisać jako cena samochodu na remanencie?",
+      "cat": "vat",
+      "sub": "akcyza",
+      "post_ids": [
+        10590
+      ]
+    },
+    {
+      "id": 241,
+      "q": "Czy macie w umowie z klientem zapisać, że ma pilnować limitu do VAT?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10591
+      ]
+    },
+    {
+      "id": 242,
+      "q": "Możecie podpowiedzieć, jak to ująć?",
+      "cat": "kadry",
+      "sub": "umowa",
+      "post_ids": [
+        10591
+      ]
+    },
+    {
+      "id": 243,
+      "q": "Czy ktoś z Państwa pracuje na Małej Księgowości Rzeczpospolita?",
+      "cat": "ksef",
+      "sub": "państwa pracuje małej",
+      "post_ids": [
+        10592
+      ]
+    },
+    {
+      "id": 244,
+      "q": "Czy ktoś z Was prowadzi kantor / wymianę walut i może podzielić się, jak technicznie ujmujecie takie operacje w księgowości?",
+      "cat": "vat",
+      "sub": "was prowadzi kantor",
+      "post_ids": [
+        10593,
+        10599
+      ]
+    },
+    {
+      "id": 245,
+      "q": "KsefW jaki sposób klienci nadają Wam uprawnienia?",
+      "cat": "ksef",
+      "sub": "uprawnienia",
+      "post_ids": [
+        10594
+      ]
+    },
+    {
+      "id": 246,
+      "q": "Czy jest możliwość nienaliczenia VAT przy darowiźnie samochodu, który był środkiem trwałym i przysługiwało prawo odliczenia VAT 50 procent?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10595
+      ]
+    },
+    {
+      "id": 247,
+      "q": "Samochód był czy nadal jest środkiem trwałym?",
+      "cat": "vat",
+      "sub": "samochód",
+      "post_ids": [
+        10595
+      ]
+    },
+    {
+      "id": 248,
+      "q": "Gdzie znajde UNIKALNE id SHA-256 w szafirze?",
+      "cat": "ksef",
+      "sub": "zaw-fa",
+      "post_ids": [
+        10596
+      ]
+    },
+    {
+      "id": 249,
+      "q": "A czemu chcesz to wpisać w ZAW-FA?",
+      "cat": "ksef",
+      "sub": "zaw-fa",
+      "post_ids": [
+        10596
+      ]
+    },
+    {
+      "id": 250,
+      "q": "Czy ktoś rozlicza sprzedaż na zasadzie fullfilmentu w oparciu o usługi świadczone przez stronę skladusa.pl?",
+      "cat": "inne",
+      "sub": "rozlicza sprzedaż zasadzie",
+      "post_ids": [
+        10597,
+        10603
+      ]
+    },
+    {
+      "id": 251,
+      "q": ".Czy ktoś z Państwa pracuje na Małej Księgowości Rzeczpospolita?",
+      "cat": "ksef",
+      "sub": ".czy państwa pracuje",
+      "post_ids": [
+        10598
+      ]
+    },
+    {
+      "id": 252,
+      "q": ".Mam pytania odnośnie KSeF?",
+      "cat": "ksef",
+      "sub": ".mam pytania odnośnie",
+      "post_ids": [
+        10598
+      ]
+    },
+    {
+      "id": 253,
+      "q": "Chodzi mi o praktykę: kasa/bank, magazyn walut, rozliczenie marży pod CIT oraz sprzedaż zwolniona z VAT?",
+      "cat": "vat",
+      "sub": "chodzi praktykę kasa",
+      "post_ids": [
+        10599
+      ]
+    },
+    {
+      "id": 254,
+      "q": "Czy mogę to zaksięgować w nkup?",
+      "cat": "kadry",
+      "sub": "mogę zaksięgować nkup",
+      "post_ids": [
+        10600
+      ]
+    },
+    {
+      "id": 255,
+      "q": "A jaki ma to związek z działalnością?",
+      "cat": "kadry",
+      "sub": "a związek działalnością",
+      "post_ids": [
+        10600
+      ]
+    },
+    {
+      "id": 256,
+      "q": "Wysyłając JPK KR będą dane tylko dotyczące 2026r?",
+      "cat": "jpk",
+      "sub": "wysyłając jpk kr",
+      "post_ids": [
+        10601,
+        10607
+      ]
+    },
+    {
+      "id": 257,
+      "q": "Czy znaczniki i ewentualne dopracowanie kont muszę wprowadzić jeszcze w 2025r czy dopiero w 2026r?",
+      "cat": "jpk",
+      "sub": "znaczniki ewentualne dopracowanie",
+      "post_ids": [
+        10601,
+        10607
+      ]
+    },
+    {
+      "id": 258,
+      "q": "Jeśli spółka VAT kwartalny lub bez VAT to temat dopiero w 2027 do ogarnięcia?",
+      "cat": "jpk",
+      "sub": "spółka vat kwartalny",
+      "post_ids": [
+        10601,
+        10607
+      ]
+    },
+    {
+      "id": 259,
+      "q": "Ktoś z trójmiasta to zaproszę na kawę, żeby porozmawiać?",
+      "cat": "vat",
+      "sub": "OSS",
+      "post_ids": [
+        10602,
+        10608
+      ]
+    },
+    {
+      "id": 260,
+      "q": "Czy rolnik czynny podatnik VAT, może korzystać ze zwolnienia z kasy fiskalnej z poz 47?",
+      "cat": "vat",
+      "sub": "rolnik czynny podatnik",
+      "post_ids": [
+        10604
+      ]
+    },
+    {
+      "id": 261,
+      "q": "A czemu nie?",
+      "cat": "vat",
+      "sub": "a czemu rolnik",
+      "post_ids": [
+        10604
+      ]
+    },
+    {
+      "id": 262,
+      "q": "Jeżeli kilka razy w roku zawieszam działalność i potem odwiedzam to limit do VAT licze proporcja czy mam limit 200.000 zł?",
+      "cat": "vat",
+      "sub": "jeżeli kilka razy",
+      "post_ids": [
+        10605
+      ]
+    },
+    {
+      "id": 263,
+      "q": "Jeśli paliwo jest częścią usługi naprawy, to traktujesz jak zwykły materiał?",
+      "cat": "vat",
+      "sub": "paliwo częścią usługi",
+      "post_ids": [
+        10606
+      ]
+    },
+    {
+      "id": 264,
+      "q": "Co z odliczeniem VAT/kup?",
+      "cat": "vat",
+      "sub": "odliczeniem vat kup",
+      "post_ids": [
+        10606
+      ]
+    },
+    {
+      "id": 265,
+      "q": "Czerwcu czy mogę dowodem wewnętrznym w grudniu na bieżąco po odnalezieniu błędnego wpisu to skorygować in minus kolumnami?",
+      "cat": "inne",
+      "sub": "czerwcu mogę dowodem",
+      "post_ids": [
+        10609
+      ]
+    },
+    {
+      "id": 266,
+      "q": "Czy jest w grupie ktoś kto rozlicza spedytorów pracujących na b2b?",
+      "cat": "vat",
+      "sub": "grupie rozlicza spedytorów",
+      "post_ids": [
+        10610
+      ]
+    },
+    {
+      "id": 267,
+      "q": "Jaka forma rozliczenia będzie dla mnie najlepsza?",
+      "cat": "vat",
+      "sub": "forma rozliczenia będzie",
+      "post_ids": [
+        10610
+      ]
+    },
+    {
+      "id": 268,
+      "q": "Czy jest coś bardziej korzystnego?",
+      "cat": "vat",
+      "sub": "coś bardziej korzystnego",
+      "post_ids": [
+        10610
+      ]
+    },
+    {
+      "id": 269,
+      "q": "Czy od razu najlepiej zarejestrować się jako vatowiec?",
+      "cat": "vat",
+      "sub": "razu najlepiej zarejestrować",
+      "post_ids": [
+        10610
+      ]
+    }
+  ]
+}

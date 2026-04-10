@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "checkpoint_version": 1,
+    "checkpoint_saved_at": "2026-04-09 09:06:42",
+    "total_questions": 10,
+    "completed_batches_count": 1,
+    "total_batches": 1,
+    "completed_batches": [
+      0
+    ],
+    "matched": 10,
+    "unmatched": 0,
+    "total_cost_usd": 0.0018
+  },
+  "batch_results": {
+    "0": [
+      {
+        "question": "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+        "matched_articles": [
+          "§ 2",
+          "§ 4",
+          "§ 5"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "§ 2 określa zakres danych w rozporządzeniu, § 4 i § 5 opisują część deklaracyjną; brakuje w indeksie bezpośredniego artykułu rozróżniającego wersje miesięczną od kwartalnej"
+      },
+      {
+        "question": "Kto składa JPK_V7M, a kto JPK_V7K?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "§ 2 zawiera przepisy ogólne, które powinny określać obligatorów, jednak indeks nie zawiera szczegółowych artykułów o obowiązkach podmiotowych dla JPK_V7M i JPK_V7K"
+      },
+      {
+        "question": "Czy podatnik zwolniony z VAT składa JPK_V7?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "§ 2 określa przepisy ogólne rozporządzenia, ale dostępny indeks nie zawiera bezpośredniego artykułu o zwolnieniach z obowiązku składania JPK_V7"
+      },
+      {
+        "question": "Do kiedy trzeba wysłać plik JPK_V7 za dany miesiąc?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie dotyczy terminów, które powinny być określone w przepisach ogólnych § 2, jednak dostępny indeks nie zawiera szczegółowego artykułu o terminach składania"
+      },
+      {
+        "question": "Czy JPK_V7K wysyła się co miesiąc czy co kwartał?",
+        "matched_articles": [
+          "§ 2"
+        ],
+        "primary_article": "§ 2",
+        "reasoning": "Pytanie dotyczy periodyczności składania, § 2 zawiera przepisy ogólne, ale indeks nie zawiera artykułu bezpośrednio o periodyczności JPK_V7K"
+      },
+      {
+        "question": "Jakie dane zawiera część deklaracyjna JPK_V7?",
+        "matched_articles": [
+          "§ 4",
+          "§ 5"
+        ],
+        "primary_article": "§ 4",
+        "reasoning": "§ 4 opisuje zawartość części deklaracyjnej odpowiadającej rozliczeniu VAT, § 5 uzupełnia o oznaczenia i pola techniczne"
+      },
+      {
+        "question": "Jakie dane zawiera część ewidencyjna JPK_V7?",
+        "matched_articles": [
+          "§ 10",
+          "§ 11"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 opisuje ewidencję sprzedaży, § 11 opisuje ewidencję zakupu - razem tworzą część ewidencyjną JPK_V7"
+      },
+      {
+        "question": "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 zawiera dane ewidencji sprzedaży, gdzie powinny być wymogi dotyczące kodów GTU, jednak dostępny indeks nie zawiera szczegółowego artykułu o warunkach stosowania GTU"
+      },
+      {
+        "question": "Jakie towary obejmuje GTU_01?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 opisuje ewidencję sprzedaży, gdzie klasyfikacja towarów powinna być określona, ale indeks nie zawiera artykułu o konkretnych definicjach kodów GTU"
+      },
+      {
+        "question": "Kiedy stosuje się GTU_06?",
+        "matched_articles": [
+          "§ 10"
+        ],
+        "primary_article": "§ 10",
+        "reasoning": "§ 10 opisuje ewidencję sprzedaży z kodami GTU, jednak dostępny indeks nie zawiera szczegółowego artykułu o warunkach stosowania konkretnego kodu GTU_06"
+      }
+    ]
+  },
+  "matches": [
+    {
+      "question": "Co to jest JPK_V7M i czym różni się od JPK_V7K?",
+      "matched_articles": [
+        "§ 2",
+        "§ 4",
+        "§ 5"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "§ 2 określa zakres danych w rozporządzeniu, § 4 i § 5 opisują część deklaracyjną; brakuje w indeksie bezpośredniego artykułu rozróżniającego wersje miesięczną od kwartalnej"
+    },
+    {
+      "question": "Kto składa JPK_V7M, a kto JPK_V7K?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "§ 2 zawiera przepisy ogólne, które powinny określać obligatorów, jednak indeks nie zawiera szczegółowych artykułów o obowiązkach podmiotowych dla JPK_V7M i JPK_V7K"
+    },
+    {
+      "question": "Czy podatnik zwolniony z VAT składa JPK_V7?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "§ 2 określa przepisy ogólne rozporządzenia, ale dostępny indeks nie zawiera bezpośredniego artykułu o zwolnieniach z obowiązku składania JPK_V7"
+    },
+    {
+      "question": "Do kiedy trzeba wysłać plik JPK_V7 za dany miesiąc?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie dotyczy terminów, które powinny być określone w przepisach ogólnych § 2, jednak dostępny indeks nie zawiera szczegółowego artykułu o terminach składania"
+    },
+    {
+      "question": "Czy JPK_V7K wysyła się co miesiąc czy co kwartał?",
+      "matched_articles": [
+        "§ 2"
+      ],
+      "primary_article": "§ 2",
+      "reasoning": "Pytanie dotyczy periodyczności składania, § 2 zawiera przepisy ogólne, ale indeks nie zawiera artykułu bezpośrednio o periodyczności JPK_V7K"
+    },
+    {
+      "question": "Jakie dane zawiera część deklaracyjna JPK_V7?",
+      "matched_articles": [
+        "§ 4",
+        "§ 5"
+      ],
+      "primary_article": "§ 4",
+      "reasoning": "§ 4 opisuje zawartość części deklaracyjnej odpowiadającej rozliczeniu VAT, § 5 uzupełnia o oznaczenia i pola techniczne"
+    },
+    {
+      "question": "Jakie dane zawiera część ewidencyjna JPK_V7?",
+      "matched_articles": [
+        "§ 10",
+        "§ 11"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 opisuje ewidencję sprzedaży, § 11 opisuje ewidencję zakupu - razem tworzą część ewidencyjną JPK_V7"
+    },
+    {
+      "question": "Kiedy trzeba oznaczać sprzedaż kodem GTU w JPK_V7?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 zawiera dane ewidencji sprzedaży, gdzie powinny być wymogi dotyczące kodów GTU, jednak dostępny indeks nie zawiera szczegółowego artykułu o warunkach stosowania GTU"
+    },
+    {
+      "question": "Jakie towary obejmuje GTU_01?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 opisuje ewidencję sprzedaży, gdzie klasyfikacja towarów powinna być określona, ale indeks nie zawiera artykułu o konkretnych definicjach kodów GTU"
+    },
+    {
+      "question": "Kiedy stosuje się GTU_06?",
+      "matched_articles": [
+        "§ 10"
+      ],
+      "primary_article": "§ 10",
+      "reasoning": "§ 10 opisuje ewidencję sprzedaży z kodami GTU, jednak dostępny indeks nie zawiera szczegółowego artykułu o warunkach stosowania konkretnego kodu GTU_06"
+    }
+  ]
+}
