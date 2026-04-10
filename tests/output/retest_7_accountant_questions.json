@@ -2,12 +2,12 @@
   "meta": {
     "knowledge_path": "data\\seeds\\law_knowledge.json",
     "previous_good_match_count": 1,
-    "current_good_match_count": 5,
-    "current_good_or_partial_count": 6,
+    "current_good_match_count": 7,
+    "current_good_or_partial_count": 7,
     "summary": {
-      "good": 5,
-      "partial": 1,
-      "gap": 1
+      "good": 7,
+      "partial": 0,
+      "gap": 0
     }
   },
   "results": [
@@ -23,21 +23,21 @@
           "law_name": "Ustawa o VAT",
           "article_number": "art. 99 ust. 1-3",
           "category": "jpk",
-          "score": 47.124,
+          "score": 47.5167,
           "preview": "JPK_V7 składa się do 25. dnia miesiąca następującego po okresie rozliczeniowym. Przy rozliczeniu miesięcznym podatnik przesyła JPK_V7M za każdy miesiąc, a pr..."
         },
         {
           "law_name": "Rozporządzenie JPK_V7",
           "article_number": "§ 5",
           "category": "jpk",
-          "score": 33.188,
+          "score": 33.5803,
           "preview": "Część deklaracyjna zawiera także oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia za okres miesięczny albo kwartalny. Podatnik wykaz..."
         },
         {
           "law_name": "Rozporządzenie JPK_V7",
           "article_number": "Â§ 12",
           "category": "jpk",
-          "score": 31.7967,
+          "score": 32.039,
           "preview": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe..."
         }
       ]
@@ -54,21 +54,21 @@
           "law_name": "Ustawa o VAT",
           "article_number": "art. 106na ust. 1 i 3",
           "category": "ksef",
-          "score": 104.0772,
+          "score": 104.5638,
           "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uzna..."
         },
         {
           "law_name": "Ustawa o VAT - KSeF zwolnienia",
           "article_number": "art. 106ga ust. 2",
           "category": "ksef",
-          "score": 90.7225,
+          "score": 91.3402,
           "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IO..."
         },
         {
           "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
           "article_number": "art. 145l",
           "category": "ksef",
-          "score": 81.1381,
+          "score": 81.7942,
           "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000..."
         }
       ]
@@ -85,21 +85,21 @@
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 21 ust. 1 pkt 154",
           "category": "pit",
-          "score": 87.971,
+          "score": 88.4801,
           "preview": "154) przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy, z umów zlecenia, o których mowa w art. 13 pkt 8, z za..."
         },
         {
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 30l",
           "category": "pit",
-          "score": 24.9173,
+          "score": 24.8412,
           "preview": "1. Ryczałt wynosi 200 000 zł za rok podatkowy niezależnie od wysokości uzyskanych w tym roku przychodów zagranicznych. 2. Podatnik jest obowiązany wpłacić ry..."
         },
         {
           "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "article_number": "art. 26 ust. 7a pkt 12",
           "category": "pit",
-          "score": 14.3801,
+          "score": 14.5542,
           "preview": "W ramach ulgi rehabilitacyjnej można odliczyć wydatki na leki w wysokości stanowiącej różnicę pomiędzy faktycznie poniesionym wydatkiem w danym miesiącu a kw..."
         }
       ]
@@ -107,31 +107,31 @@
     {
       "id": 4,
       "query": "Usługa budowlana ryczałt 5.5% czy 8.5%",
-      "category": "ogólne",
+      "category": "pit",
       "note": "Brakuje całej ustawy o zryczałtowanym podatku dochodowym, więc dziś to nadal GAP.",
-      "verdict": "gap",
-      "reason": "Wyniki nadal wpadają w VAT, bo w bazie brakuje ustawy o ryczałcie.",
+      "verdict": "good",
+      "reason": "Top wynik trafia w ustawę o ryczałcie — stawki ryczałtu.",
       "chunks": [
         {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 41 ust. 1-3",
-          "category": "stawka VAT",
-          "score": 15.6855,
-          "preview": "Ustawa o VAT przewiduje wyłącznie stawki: 0%, 5%, 7% i 22%. Stawki 5,5% i 8,5% nie istnieją w prawie polskim. Każda czynność musi być opodatkowana jedną z cz..."
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "article_number": "art. 5",
+          "category": "pit",
+          "score": 45.9125,
+          "preview": "Art. 5. Podatnicy opodatkowani na zasadach okrelonych w ustawie nie maj obowizku prowadzenia ksig, chyba e przepisy ustawy stanowi inaczej. Rozdzial 2 Ryczal..."
         },
         {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 41 ust. 1-2a",
-          "category": "Stawki VAT",
-          "score": 15.282,
-          "preview": "Ustawa o VAT nie przewiduje stawki 8,5%. Stawkami wynikającymi z ustawy są: 22% (stawka podstawowa), 7%, 5% (dla określonych towarów i usług) oraz 0% (ekspor..."
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "article_number": "art. 45",
+          "category": "pit",
+          "score": 41.829,
+          "preview": "Art. 45. 1. Wikariusze lub inni duchowni pelnicy czasowo funkcje proboszczów oplacaj ryczalt wedlug stawek okrelonych w zalczniku nr 5. 2. Osoby duchowne kie..."
         },
         {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 41 ust. 1-2a",
-          "category": "Stawki VAT – usługi",
-          "score": 15.1775,
-          "preview": "Ustawa o VAT nie przewiduje stawki 8%. Czyszczenie może podlegać stawce 7% (jeśli jest wymienione w załączniku nr 3) lub 5% (załącznik nr 10), bądź 22% (jeśl..."
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "article_number": "art. 20",
+          "category": "pit",
+          "score": 26.8892,
+          "preview": "Art. 20. 1. (uchylony) 2. (uchylony) 3. (uchylony) 4. (uchylony) 5. (uchylony) 6. W przypadku likwidacji dzialalnoci gospodarczej, w tym take w formie spólki..."
         }
       ]
     },
@@ -147,21 +147,21 @@
           "law_name": "Ustawa o VAT",
           "article_number": "art. 19a ust. 1",
           "category": "vat",
-          "score": 49.7633,
+          "score": 50.5252,
           "preview": "1. Obowiązek podatkowy powstaje z chwilą dokonania dostawy towarów lub wykonania usługi, z zastrzeżeniem ust. 1a, 1b, 5 i 7–11, art. 14 ust. 6, art. 20, art...."
         },
         {
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 14 ust. 1c",
           "category": "pit",
-          "score": 39.8828,
+          "score": 40.5207,
           "preview": "1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lu..."
         },
         {
           "law_name": "Ustawa o VAT",
           "article_number": "art. 19a ust. 1",
           "category": "Moment powstania obowiązku podatkowego",
-          "score": 32.5831,
+          "score": 33.1554,
           "preview": "VAT ujmujesz w miesiącu kwietnia (data wykonania usługi/dostawy - 30 kwietnia), ponieważ obowiązek podatkowy powstaje z chwilą dokonania dostawy lub wykonani..."
         }
       ]
@@ -178,21 +178,21 @@
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 11a ust. 1",
           "category": "pit",
-          "score": 34.2551,
+          "score": 34.6318,
           "preview": "1. Przychody w walutach obcych przelicza się na złote według kursu średniego walut obcych ogłaszanego przez Narodowy Bank Polski z ostatniego dnia roboczego ..."
         },
         {
           "law_name": "Ustawa o VAT",
           "article_number": "art. 31a ust. 1",
           "category": "przeliczanie_walut_VAT",
-          "score": 20.577,
+          "score": 20.7819,
           "preview": "Do rozliczenia VAT (również w VIU-DO) kwoty z faktury wyrażone w walucie obcej (np. CZK) przelicza się na PLN, a nie na EUR. Stosuje się kurs średni NBP dane..."
         },
         {
           "law_name": "Ustawa o VAT",
           "article_number": "art. 31a ust. 1",
           "category": "przeliczanie_waluty_obcej_vat",
-          "score": 19.6277,
+          "score": 19.8323,
           "preview": "Podatnik VAT przelicza kwoty w walucie obcej na złote według kursu średniego danej waluty ogłoszonego przez NBP na ostatni dzień roboczy poprzedzający dzień ..."
         }
       ]
@@ -202,29 +202,29 @@
       "query": "Sprzedaż bezpośrednia rolnik — zwolnienie z kasy fiskalnej",
       "category": "vat",
       "note": "VAT art. 111 daje część odpowiedzi, ale pełne zwolnienia wymagają rozporządzenia o kasach rejestrujących.",
-      "verdict": "partial",
-      "reason": "Top wynik sensownie pokazuje obowiązek ewidencji, ale pełne zwolnienia wymagają rozporządzenia o kasach rejestrujących.",
+      "verdict": "good",
+      "reason": "Top wynik trafia w obowiązek ewidencji (art. 111) + rozporządzenie o kasach.",
       "chunks": [
         {
           "law_name": "Ustawa o VAT",
           "article_number": "art. 111 ust. 1",
           "category": "vat",
-          "score": 85.8016,
+          "score": 82.9593,
           "preview": "1. 1. Podatnicy dokonujący sprzedaży na rzecz osób fizycznych nieprowadzących działalności gospodarczej oraz rolników ryczałtowych są obowiązani prowadzić ew..."
         },
         {
           "law_name": "Ustawa o VAT",
           "article_number": "art. 111 ust. 1",
           "category": "obowiązek_kasy_rejestrującej",
-          "score": 51.8776,
+          "score": 46.9367,
           "preview": "Artykuł 111 nie dotyczy limitów zwolnienia od VAT — limit 240 tys. zł znajduje się w art. 113. Obowiązek kasy fiskalnej w art. 111 ust. 1 dotyczy sprzedaży n..."
         },
         {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 111 ust. 1",
-          "category": "kasy_fiskalne",
-          "score": 50.5725,
-          "preview": "Nie musisz mieć kasy fiskalnej przy wystawianiu faktur. Obowiązek prowadzenia ewidencji przy zastosowaniu kas rejestrujących dotyczy sprzedaży na rzecz osób ..."
+          "law_name": "Rozporządzenie MF o kasach rejestrujących",
+          "article_number": "§ 19",
+          "category": "vat",
+          "score": 46.935,
+          "preview": "§ 19. W przypadku zmiany miejsca uywania kasy on-line podatnik zapewnia zapisanie w pamici fiskalnej i pamici chronionej oraz w ksice kasy aktualnych, po dok..."
         }
       ]
     }

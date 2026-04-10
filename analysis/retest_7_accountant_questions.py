@@ -89,6 +89,12 @@ def classify_result(query_id: int, chunks: list[object]) -> tuple[str, str]:
         if top and top[0].article_number == "art. 21 ust. 1 pkt 154":
             return "good", "Top wynik trafia bezpośrednio w ulgę dla seniora."
     elif query_id == 4:
+        ryczalt_hit = any(
+            "zryczałtowanym" in chunk.law_name.lower() or "ryczalt" in chunk.law_name.lower()
+            for chunk in top
+        )
+        if ryczalt_hit:
+            return "good", "Top wynik trafia w ustawę o ryczałcie — stawki ryczałtu."
         return "gap", "Wyniki nadal wpadają w VAT, bo w bazie brakuje ustawy o ryczałcie."
     elif query_id == 5:
         has_vat = "art. 19a ust. 1" in article_numbers
@@ -99,6 +105,12 @@ def classify_result(query_id: int, chunks: list[object]) -> tuple[str, str]:
         if top and top[0].article_number == "art. 11a ust. 1":
             return "good", "Top wynik trafia w przeliczanie przychodów w walucie obcej według kursu NBP."
     elif query_id == 7:
+        kasy_rozp_hit = any(
+            "kasach rejestrujących" in chunk.law_name.lower() or "kasach rejestrujacych" in chunk.law_name.lower()
+            for chunk in top
+        )
+        if top and top[0].article_number == "art. 111 ust. 1" and kasy_rozp_hit:
+            return "good", "Top wynik trafia w obowiązek ewidencji (art. 111) + rozporządzenie o kasach."
         if top and top[0].article_number == "art. 111 ust. 1":
             return (
                 "partial",
