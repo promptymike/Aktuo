@@ -4,8 +4,13 @@ import re
 import unicodedata
 
 
+_POLISH_TRANS = str.maketrans(
+    {"ą": "a", "ć": "c", "ę": "e", "ł": "l", "ń": "n", "ó": "o", "ś": "s", "ż": "z", "ź": "z"}
+)
+
+
 def _normalize(text: str) -> str:
-    normalized = unicodedata.normalize("NFKD", text.lower())
+    normalized = unicodedata.normalize("NFKD", text.lower().translate(_POLISH_TRANS))
     without_accents = "".join(
         character for character in normalized if not unicodedata.combining(character)
     )
@@ -152,6 +157,10 @@ def categorize_query(query: str) -> str:
                 "kwota wolna",
                 "skala podatkowa",
                 "podatek liniowy",
+                "ryczałt",
+                "ryczałt ewidencjonowany",
+                "najem prywatny",
+                "stawka ryczałtu",
             ),
         ),
         (
@@ -292,6 +301,7 @@ def categorize_query(query: str) -> str:
                 "kasa rejestrujaca",
                 "kasy rejestrujace",
                 "zwolnienie z kasy",
+                "paragon",
                 "podatek od towarow i uslug",
             ),
         ),

@@ -169,9 +169,11 @@ def _category_matches(query_category: str, chunk: LawChunk) -> bool:
         "vat": (
             "ustawa o vat",
             "podatek od towarow i uslug",
+            "rozporzadzenie mf o kasach rejestrujacych",
         ),
         "pit": (
             "ustawa o podatku dochodowym od osob fizycznych",
+            "ustawa o zryczaltowanym podatku dochodowym",
         ),
         "cit": (
             "ustawa o podatku dochodowym od osob prawnych",
