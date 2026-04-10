@@ -13,7 +13,7 @@ def _format_timestamp(value: str | None) -> str:
     if not value:
         return ""
     try:
-        return datetime.fromisoformat(value).strftime("%Y-%m-%d %H:%M")
+        return datetime.fromisoformat(value).strftime("%H:%M")
     except ValueError:
         return value
 
@@ -22,14 +22,14 @@ def _render_timestamp(timestamp: str | None) -> None:
     label = _format_timestamp(timestamp)
     if label:
         st.markdown(
-            f"<div style='color:#7b8798;font-size:0.78rem;margin-bottom:0.35rem;'>{label}</div>",
+            f"<div style='color:#999999;font-size:0.76rem;margin-bottom:0.35rem;'>{label}</div>",
             unsafe_allow_html=True,
         )
 
 
 def render_user_message(question: str, *, timestamp: str | None = None) -> None:
     with st.chat_message("user"):
-        st.markdown("**Ty**")
+        st.markdown("<div class='aktuo-message-label'>Ty</div>", unsafe_allow_html=True)
         _render_timestamp(timestamp)
         st.write(question)
 
@@ -44,7 +44,7 @@ def render_assistant_message(
     timestamp: str | None = None,
 ) -> None:
     with st.chat_message("assistant"):
-        st.markdown("**Aktuo**")
+        st.markdown("<div class='aktuo-message-label'>Aktuo</div>", unsafe_allow_html=True)
         _render_timestamp(timestamp)
         st.write(result.answer)
 
