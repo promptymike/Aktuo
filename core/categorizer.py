@@ -12,8 +12,27 @@ def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", without_accents).strip()
 
 
+def _tokenize(text: str) -> set[str]:
+    return set(re.findall(r"[a-z0-9_]+", text))
+
+
+def _matches_keyword(query: str, query_tokens: set[str], keyword: str) -> bool:
+    normalized_keyword = _normalize(keyword)
+    keyword_tokens = re.findall(r"[a-z0-9_]+", normalized_keyword)
+    if not keyword_tokens:
+        return False
+
+    if len(keyword_tokens) == 1:
+        return keyword_tokens[0] in query_tokens
+
+    padded_query = f" {query} "
+    padded_keyword = f" {' '.join(keyword_tokens)} "
+    return padded_keyword in padded_query
+
+
 def categorize_query(query: str) -> str:
     lowered = _normalize(query)
+    lowered_tokens = _tokenize(lowered)
     keyword_map = (
         (
             "ksef",
@@ -34,12 +53,14 @@ def categorize_query(query: str) -> str:
             (
                 "bilans",
                 "sprawozdanie",
+                "sf",
                 "rzis",
                 "rachunek zyskow",
                 "inwentaryzacja",
                 "amortyzacja bilansowa",
                 "dowod ksiegowy",
                 "kpir",
+                "ksiega przychodow i rozchodow",
                 "pelne ksiegi",
                 "e-sprawozdanie",
                 "e sprawozdanie",
@@ -59,6 +80,15 @@ def categorize_query(query: str) -> str:
                 "jpk_v7m",
                 "jpk_v7k",
                 "gtu",
+                "bfk",
+                "di",
+                "fp",
+                "wew",
+                "ro",
+                "mpp",
+                "tp",
+                "sw",
+                "ee",
                 "znacznik",
                 "plik kontrolny",
                 "ewidencja vat",
@@ -74,6 +104,7 @@ def categorize_query(query: str) -> str:
                 "spolka akcyjna",
                 "stawka cit",
                 "estonski cit",
+                "estonczyk",
                 "ryczalt od dochodow spolek",
                 "wht",
                 "podatek u zrodla",
@@ -81,6 +112,7 @@ def categorize_query(query: str) -> str:
                 "tp",
                 "tpr",
                 "cit-8",
+                "cit8",
                 "ryczalt od dochodow",
                 "maly podatnik cit",
                 "ift-2r",
@@ -96,6 +128,9 @@ def categorize_query(query: str) -> str:
                 "pit-36",
                 "pit-37",
                 "pit-11",
+                "pit11",
+                "pit-4r",
+                "pit4r",
                 "ulga na dzieci",
                 "kwota wolna",
                 "skala podatkowa",
@@ -114,6 +149,9 @@ def categorize_query(query: str) -> str:
                 "fgsp",
                 "dra",
                 "rca",
+                "rsa",
+                "pue",
+                "e platnik",
                 "zasilek",
                 "chorobowe",
                 "macierzynski",
@@ -252,6 +290,6 @@ def categorize_query(query: str) -> str:
         ),
     )
     for category, keywords in keyword_map:
-        if any(keyword in lowered for keyword in keywords):
+        if any(_matches_keyword(lowered, lowered_tokens, keyword) for keyword in keywords):
             return category
     return "og\u00f3lne"

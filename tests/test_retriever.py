@@ -275,3 +275,36 @@ def test_retrieve_chunks_hard_filters_for_kadry_category(tmp_path) -> None:
     chunks = retrieve_chunks("Jakie są okresy wypowiedzenia umowy o pracę?", seed_file)
 
     assert sum(1 for chunk in chunks if chunk.law_name == "Kodeks pracy") >= 2
+
+
+def test_retrieve_chunks_expands_accountant_shortcuts_with_synonyms(tmp_path) -> None:
+    seed_file = tmp_path / "law_knowledge.json"
+    seed_file.write_text(
+        json.dumps(
+            [
+                {
+                    "law_name": "Ustawa o rachunkowości",
+                    "article_number": "art. 69",
+                    "category": "rachunkowosc",
+                    "verified_date": "2026-04-01",
+                    "question_intent": "Kiedy składa się sprawozdanie finansowe do KRS?",
+                    "content": "Sprawozdanie finansowe składa się do KRS w ustawowym terminie.",
+                },
+                {
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 99",
+                    "category": "terminy",
+                    "verified_date": "2026-04-02",
+                    "question_intent": "Kiedy składa się JPK_V7?",
+                    "content": "JPK_V7 składa się do 25. dnia miesiąca.",
+                },
+            ],
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    chunks = retrieve_chunks("Kiedy złożyć SF do KRS?", seed_file, limit=1)
+
+    assert len(chunks) == 1
+    assert chunks[0].law_name == "Ustawa o rachunkowości"

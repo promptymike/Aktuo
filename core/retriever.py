@@ -58,6 +58,48 @@ POLISH_STOP_WORDS = {
     "jej",
 }
 
+CATEGORY_SYNONYM_MAP: dict[str, tuple[str, ...]] = {
+    "jpk": ("jednolity", "plik", "kontrolny"),
+    "ksef": ("krajowy", "system", "e", "faktur"),
+    "vat": ("podatek", "towarow", "uslug"),
+    "pit": ("podatek", "dochodowy", "osob", "fizycznych"),
+    "cit": ("podatek", "dochodowy", "osob", "prawnych"),
+    "zus": ("ubezpieczen", "spolecznych"),
+    "jdg": ("jednoosobowa", "dzialalnosc", "gospodarcza"),
+    "kpir": ("ksiega", "przychodow", "rozchodow"),
+    "sf": ("sprawozdanie", "finansowe"),
+    "gtu": ("oznaczenie", "gtu", "jpk"),
+    "wdt": ("wewnatrzwspolnotowa", "dostawa", "towarow"),
+    "wnt": ("wewnatrzwspolnotowe", "nabycie", "towarow"),
+    "wht": ("podatek", "zrodla"),
+    "dra": ("deklaracja", "zus", "dra"),
+    "rca": ("raport", "zus", "rca"),
+    "rsa": ("raport", "zus", "rsa"),
+    "pit11": ("pit", "11", "formularz"),
+    "pit4r": ("pit", "4r", "formularz"),
+    "cit8": ("cit", "8", "formularz"),
+    "krs": ("krajowy", "rejestr", "sadowy"),
+    "nip": ("numer", "identyfikacji", "podatkowej"),
+    "bhp": ("bezpieczenstwo", "higiena", "pracy"),
+    "pue": ("platforma", "uslug", "elektronicznych", "zus"),
+    "pfron": ("fundusz", "rehabilitacji", "niepelnosprawnych"),
+    "skwp": ("stowarzyszenie", "ksiegowych", "polsce"),
+    "kup": ("koszty", "uzyskania", "przychodu"),
+    "wew": ("dokument", "wewnetrzny", "jpk"),
+    "ro": ("oznaczenie", "ro", "jpk"),
+    "fp": ("oznaczenie", "fp", "jpk"),
+    "mpp": ("mechanizm", "podzielonej", "platnosci"),
+    "tp": ("transakcje", "powiazane", "ceny", "transferowe"),
+    "sw": ("sprzedaz", "wysylkowa"),
+    "ee": ("uslugi", "elektroniczne"),
+    "bfk": ("oznaczenie", "bfk", "jpk", "ksef"),
+    "di": ("oznaczenie", "di", "jpk", "ksef"),
+    "mr_t": ("marza", "turystyka"),
+    "mr_uz": ("marza", "towary", "uzywane"),
+    "estonczyk": ("estonski", "cit"),
+    "zusik": ("zus", "ubezpieczen", "spolecznych"),
+}
+
 CATEGORY_BOOST = 3.0
 CATEGORY_MIN_RESULTS = 3
 CATEGORY_CANDIDATE_POOL = 20
@@ -99,7 +141,16 @@ def _normalize(text: str) -> str:
 def _tokenize(text: str) -> list[str]:
     normalized = _normalize(text)
     tokens = re.findall(r"[a-z0-9_]+", normalized)
-    return [token for token in tokens if token not in POLISH_STOP_WORDS]
+    expanded_tokens: list[str] = []
+    for token in tokens:
+        if token not in POLISH_STOP_WORDS:
+            expanded_tokens.append(token)
+        expanded_tokens.extend(
+            synonym
+            for synonym in CATEGORY_SYNONYM_MAP.get(token, ())
+            if synonym not in POLISH_STOP_WORDS
+        )
+    return expanded_tokens
 
 
 def _category_matches(query_category: str, chunk: LawChunk) -> bool:

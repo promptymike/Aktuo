@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "fb_total_raw": 11601,
+    "fb_total_unique_by_normalized_question": 11509,
+    "used_from_fb_in_root_pipeline_banks": 500,
+    "never_used_from_fb": 11098,
+    "never_used_from_fb_freq_ge_3": 240,
+    "scope_note": "Counts are based on root-level kb-pipeline/questions_*.json, per user request. kb-pipeline/input/questions_*_fb.json are staging inputs and are not counted as used unless mirrored into root pipeline banks."
+  },
+  "root_question_files": [
+    {
+      "file": "questions_cit.json",
+      "total_questions": 100,
+      "matched_fb_questions": 100,
+      "matched_fb_categories": {
+        "cit": 100
+      }
+    },
+    {
+      "file": "questions_jpk.json",
+      "total_questions": 30,
+      "matched_fb_questions": 0,
+      "matched_fb_categories": {}
+    },
+    {
+      "file": "questions_jpk_v2.json",
+      "total_questions": 100,
+      "matched_fb_questions": 100,
+      "matched_fb_categories": {
+        "jpk": 100
+      }
+    },
+    {
+      "file": "questions_kadry.json",
+      "total_questions": 100,
+      "matched_fb_questions": 100,
+      "matched_fb_categories": {
+        "kadry": 100
+      }
+    },
+    {
+      "file": "questions_ksef.json",
+      "total_questions": 50,
+      "matched_fb_questions": 0,
+      "matched_fb_categories": {}
+    },
+    {
+      "file": "questions_ordynacja.json",
+      "total_questions": 50,
+      "matched_fb_questions": 0,
+      "matched_fb_categories": {}
+    },
+    {
+      "file": "questions_pit.json",
+      "total_questions": 100,
+      "matched_fb_questions": 0,
+      "matched_fb_categories": {}
+    },
+    {
+      "file": "questions_rachunkowosc.json",
+      "total_questions": 60,
+      "matched_fb_questions": 0,
+      "matched_fb_categories": {}
+    },
+    {
+      "file": "questions_rachunkowosc_v2.json",
+      "total_questions": 100,
+      "matched_fb_questions": 100,
+      "matched_fb_categories": {
+        "rachunkowosc": 100
+      }
+    },
+    {
+      "file": "questions_vat.json",
+      "total_questions": 199,
+      "matched_fb_questions": 0,
+      "matched_fb_categories": {}
+    },
+    {
+      "file": "questions_zus.json",
+      "total_questions": 100,
+      "matched_fb_questions": 100,
+      "matched_fb_categories": {
+        "kadry": 1,
+        "ksef": 1,
+        "zus": 98
+      }
+    }
+  ],
+  "per_category": {
+    "ceidg": {
+      "total_in_fb": 121,
+      "used_in_pipeline": 0,
+      "unused": 121,
+      "unused_freq_ge_3": 5
+    },
+    "cit": {
+      "total_in_fb": 259,
+      "used_in_pipeline": 100,
+      "unused": 159,
+      "unused_freq_ge_3": 0
+    },
+    "erp": {
+      "total_in_fb": 340,
+      "used_in_pipeline": 0,
+      "unused": 340,
+      "unused_freq_ge_3": 12
+    },
+    "inne": {
+      "total_in_fb": 566,
+      "used_in_pipeline": 0,
+      "unused": 566,
+      "unused_freq_ge_3": 7
+    },
+    "jpk": {
+      "total_in_fb": 520,
+      "used_in_pipeline": 100,
+      "unused": 420,
+      "unused_freq_ge_3": 4
+    },
+    "kadry": {
+      "total_in_fb": 1074,
+      "used_in_pipeline": 102,
+      "unused": 972,
+      "unused_freq_ge_3": 10
+    },
+    "ksef": {
+      "total_in_fb": 1566,
+      "used_in_pipeline": 1,
+      "unused": 1565,
+      "unused_freq_ge_3": 31
+    },
+    "ordynacja": {
+      "total_in_fb": 189,
+      "used_in_pipeline": 0,
+      "unused": 189,
+      "unused_freq_ge_3": 3
+    },
+    "pit": {
+      "total_in_fb": 894,
+      "used_in_pipeline": 0,
+      "unused": 894,
+      "unused_freq_ge_3": 17
+    },
+    "praktyka": {
+      "total_in_fb": 787,
+      "used_in_pipeline": 0,
+      "unused": 787,
+      "unused_freq_ge_3": 48
+    },
+    "rachunkowosc": {
+      "total_in_fb": 2177,
+      "used_in_pipeline": 100,
+      "unused": 2077,
+      "unused_freq_ge_3": 39
+    },
+    "spolki": {
+      "total_in_fb": 123,
+      "used_in_pipeline": 0,
+      "unused": 123,
+      "unused_freq_ge_3": 3
+    },
+    "vat": {
+      "total_in_fb": 2102,
+      "used_in_pipeline": 0,
+      "unused": 2102,
+      "unused_freq_ge_3": 61
+    },
+    "zus": {
+      "total_in_fb": 883,
+      "used_in_pipeline": 100,
+      "unused": 783,
+      "unused_freq_ge_3": 0
+    }
+  }
+}
