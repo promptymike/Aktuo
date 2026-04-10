@@ -365,6 +365,9 @@ def render_chat_page() -> None:
         chunk_ids=[f"{chunk.law_name} {chunk.article_number}" for chunk in result.chunks],
         answer_length=len(result.answer),
         grounded=bool(result.audit.get("grounded", False)),
+        input_tokens=result.input_tokens,
+        output_tokens=result.output_tokens,
+        estimated_cost_usd=result.estimated_cost_usd,
         no_match_reason=result.no_match_reason,
     )
 

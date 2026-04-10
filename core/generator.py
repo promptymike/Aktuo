@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 import time
 from collections.abc import Sequence
+from contextvars import ContextVar
+from dataclasses import dataclass
 from urllib import error, request
 
 from config.settings import BM25_MIN_SCORE
@@ -13,6 +15,8 @@ ANTHROPIC_API_VERSION = "2023-06-01"
 ANTHROPIC_MODEL = "claude-sonnet-4-6"
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503}
 RETRY_BACKOFF_SECONDS = (2, 4, 8)
+INPUT_COST_PER_MILLION_TOKENS_USD = 3.0
+OUTPUT_COST_PER_MILLION_TOKENS_USD = 15.0
 OUT_OF_SCOPE_FALLBACK = (
     "To pytanie wykracza poza zakres Aktuo. "
     "Obs\u0142uguj\u0119 pytania o prawo podatkowe, rachunkowo\u015b\u0107 i kadry."
@@ -38,6 +42,19 @@ SYSTEM_PROMPT_GUARD = (
 
 class AnthropicAPIError(RuntimeError):
     pass
+
+
+@dataclass(slots=True)
+class GenerationMetrics:
+    input_tokens: int = 0
+    output_tokens: int = 0
+    estimated_cost_usd: float = 0.0
+
+
+_LAST_GENERATION_METRICS: ContextVar[GenerationMetrics] = ContextVar(
+    "last_generation_metrics",
+    default=GenerationMetrics(),
+)
 
 
 def is_low_confidence_retrieval(chunks: Sequence[LawChunk]) -> bool:
@@ -116,6 +133,41 @@ def _extract_text(payload: dict[str, object]) -> str:
     return answer
 
 
+def _estimate_cost_usd(input_tokens: int, output_tokens: int) -> float:
+    input_cost = (input_tokens / 1_000_000) * INPUT_COST_PER_MILLION_TOKENS_USD
+    output_cost = (output_tokens / 1_000_000) * OUTPUT_COST_PER_MILLION_TOKENS_USD
+    return round(input_cost + output_cost, 6)
+
+
+def _extract_generation_metrics(payload: dict[str, object]) -> GenerationMetrics:
+    usage = payload.get("usage", {})
+    if not isinstance(usage, dict):
+        return GenerationMetrics()
+
+    input_tokens = usage.get("input_tokens", 0)
+    output_tokens = usage.get("output_tokens", 0)
+    if not isinstance(input_tokens, int) or not isinstance(output_tokens, int):
+        return GenerationMetrics()
+
+    return GenerationMetrics(
+        input_tokens=input_tokens,
+        output_tokens=output_tokens,
+        estimated_cost_usd=_estimate_cost_usd(input_tokens, output_tokens),
+    )
+
+
+def get_last_generation_metrics() -> GenerationMetrics:
+    return _LAST_GENERATION_METRICS.get()
+
+
+def _set_last_generation_metrics(metrics: GenerationMetrics) -> None:
+    _LAST_GENERATION_METRICS.set(metrics)
+
+
+def reset_last_generation_metrics() -> None:
+    _set_last_generation_metrics(GenerationMetrics())
+
+
 def _execute_api_request(api_request: request.Request) -> str:
     for attempt in range(len(RETRY_BACKOFF_SECONDS) + 1):
         try:
@@ -140,6 +192,7 @@ def generate_answer(
     system_prompt: str,
     api_key: str,
 ) -> str:
+    reset_last_generation_metrics()
     if is_out_of_scope_query(query):
         return OUT_OF_SCOPE_FALLBACK
     if not chunks:
@@ -181,4 +234,6 @@ def generate_answer(
     raw_response = _execute_api_request(api_request)
     if raw_response == TEMPORARY_UNAVAILABLE_FALLBACK:
         return raw_response
-    return _extract_text(json.loads(raw_response))
+    payload = json.loads(raw_response)
+    _set_last_generation_metrics(_extract_generation_metrics(payload))
+    return _extract_text(payload)

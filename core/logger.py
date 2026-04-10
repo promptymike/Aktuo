@@ -60,6 +60,9 @@ def log_query(
     chunk_ids: list[str],
     answer_length: int,
     grounded: bool,
+    input_tokens: int = 0,
+    output_tokens: int = 0,
+    estimated_cost_usd: float = 0.0,
     no_match_reason: str | None = None,
 ) -> None:
     entry = {
@@ -73,6 +76,9 @@ def log_query(
         "chunk_ids": chunk_ids,
         "answer_length": answer_length,
         "grounded": grounded,
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+        "estimated_cost_usd": estimated_cost_usd,
     }
     if no_match_reason:
         entry["no_match_reason"] = no_match_reason
