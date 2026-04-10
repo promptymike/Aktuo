@@ -21,6 +21,11 @@ class RagResult:
 
 
 def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api_key: str) -> RagResult:
+    if not isinstance(query, str):
+        raise ValueError("query must be a string")
+    if not query.strip():
+        raise ValueError("query must not be empty")
+
     redacted_query = anonymize_text(query)
     category = categorize_query(redacted_query)
     chunks = retrieve_chunks(query=redacted_query, knowledge_path=knowledge_path, limit=5)
