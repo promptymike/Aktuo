@@ -93,3 +93,37 @@ def test_log_feedback_appends_jsonl_entry(tmp_path, monkeypatch) -> None:
     assert entry["comment"] == "[PERSON] dostał za mało konkretów o korekcie."
     assert "beta@aktuo.pl" not in lines[0]
     assert "Jan Kowalski" not in lines[0]
+
+
+def test_log_query_warns_when_write_fails(monkeypatch) -> None:
+    warnings: list[str] = []
+
+    class FailingThread:
+        def __init__(self, *, target, args=(), daemon=None):
+            self._target = target
+            self._args = args
+
+        def start(self) -> None:
+            self._target(*self._args)
+
+    monkeypatch.setattr(logger, "Thread", FailingThread)
+    monkeypatch.setattr(
+        logger,
+        "LOG_PATH",
+        __import__("pathlib").Path("?:/invalid/path/queries.jsonl"),
+    )
+    monkeypatch.setattr(logger.LOGGER, "warning", lambda message, exc: warnings.append(str(message)))
+
+    logger.log_query(
+        session_id="session-125",
+        user_email="beta@aktuo.pl",
+        question="Czy NIP 123-456-32-18 trzeba korygowac?",
+        redacted_query="Czy NIP 123-456-32-18 trzeba korygowac?",
+        category="vat",
+        chunks_returned=1,
+        chunk_ids=["Ustawa o VAT art. 106j"],
+        answer_length=100,
+        grounded=True,
+    )
+
+    assert warnings

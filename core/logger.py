@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import logging
 from datetime import datetime, timezone
 from pathlib import Path
 from threading import Thread
@@ -12,6 +13,7 @@ from core.anonymizer import anonymize_text
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 LOG_PATH = PROJECT_ROOT / "data" / "logs" / "queries.jsonl"
 FEEDBACK_PATH = PROJECT_ROOT / "data" / "logs" / "feedback.jsonl"
+LOGGER = logging.getLogger(__name__)
 
 
 def _hash_email(value: str) -> str:
@@ -32,7 +34,8 @@ def _write_log_entry(entry: dict[str, Any]) -> None:
         LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
         with LOG_PATH.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    except OSError:
+    except OSError as exc:
+        LOGGER.warning("Failed to write query log: %s", exc)
         return
 
 
@@ -41,7 +44,8 @@ def _write_feedback_entry(entry: dict[str, Any]) -> None:
         FEEDBACK_PATH.parent.mkdir(parents=True, exist_ok=True)
         with FEEDBACK_PATH.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    except OSError:
+    except OSError as exc:
+        LOGGER.warning("Failed to write feedback log: %s", exc)
         return
 
 
