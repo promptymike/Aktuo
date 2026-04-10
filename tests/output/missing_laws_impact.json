@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "source_file": "fb_pipeline\\dedup_questions_output_v3.json",
+    "total_rows": 11601
+  },
+  "per_missing_law": {
+    "ustawa_o_ryczalcie": {
+      "label": "Ustawa o zryczałtowanym podatku dochodowym",
+      "unique_questions": 57,
+      "weighted_freq_sum": 85,
+      "top_source_categories": [
+        [
+          "pit",
+          22
+        ],
+        [
+          "vat",
+          12
+        ],
+        [
+          "ksef",
+          9
+        ],
+        [
+          "kadry",
+          5
+        ],
+        [
+          "jpk",
+          2
+        ],
+        [
+          "rachunkowosc",
+          2
+        ],
+        [
+          "zus",
+          2
+        ],
+        [
+          "praktyka",
+          1
+        ]
+      ],
+      "top_questions": [
+        {
+          "question": "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW??",
+          "freq": 13,
+          "cat": "jpk",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Czy klient ma obowiązek wystawić fakturę za najem prywatny?",
+          "freq": 4,
+          "cat": "praktyka",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Czy wasi klienci dostarczają wam rachunki za najem prywatny do JPK?",
+          "freq": 2,
+          "cat": "jpk",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Faktura za najem auta czy potrzebuje tutaj wartość znać?",
+          "freq": 2,
+          "cat": "kadry",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Czy wystawiając faktury- najem prywatny (faktury są na imię i nazwisko) ale posiadając jednocześnie firmę, będąc vatowcem, mam od 1.04 obowiązek wysyłania faktur do KSeF?",
+          "freq": 2,
+          "cat": "ksef",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Co z osobami, które prowadzą najem prywatny, ale nie mają działalności?",
+          "freq": 2,
+          "cat": "ksef",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Tylko leasing, najem, dzierżawa zostaje przeliczana wg limitu na 100 k jeżeli powyżej 50g/km a 150 k jeżeli poniżej 50g/km?",
+          "freq": 2,
+          "cat": "pit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "A najem prywatny wystawiony na firmę ale u podatnika zwolnionego z VAT?",
+          "freq": 2,
+          "cat": "pit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Pytanie brzmi: czy możemy rozliczyć działalność i najem prywatny rocznie na jednym PIT-28?",
+          "freq": 2,
+          "cat": "pit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Dodatkowo prowadzi najem na cele mieszkaniowe i rozlicza się na PIT28. Czy małżonkowie mogą rozliczyć się razem na PIT36?",
+          "freq": 2,
+          "cat": "pit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Czy posiadajac najem lokalu jako os prywatna (PIT28) moge z etatu rozliczyc sie z mezem na PIT 37?",
+          "freq": 2,
+          "cat": "pit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Podatnik ZW usługi dentystyczne na zasadach ogólnych do tego najem - rozumiem, że do limitu 240 tyś, a co z mediami - liczą się do limitu?",
+          "freq": 2,
+          "cat": "pit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Najem i działalność a VAT Jak radzicie sobie z klientami, którzy mają też najem prywatny? Czy u każdego rozliczacie VAT wg proporcji co najmniej od faktury za usługi księgowe? Jak to ominąć?",
+          "freq": 2,
+          "cat": "vat",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Mam na fakturze za najem samochodu pozycje : \" opłata za zarządzanie \" Czy ona też jest proporcją księgowana?",
+          "freq": 2,
+          "cat": "vat",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Faktury na osoby fizyczne za najem mieszkania na VAT \"zw\" z oznaczeniem BFK, a faktury dla tej firmy na 23% normalnie w KSeF?",
+          "freq": 2,
+          "cat": "vat",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Czy ma ktoś z najem prywatny osoby,która ma jdg?",
+          "freq": 1,
+          "cat": "ceidg",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Potem ta firma zostala zawieszona od 02.2021 i teraz wlaściciel chce ją odwiesic i zmienic na ryczalt. Zastanawiam sie czy po prostu nie zrobic OT z terazniejsza data?",
+          "freq": 1,
+          "cat": "cit",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Jak jest faktura za najem samochodu osobowego, z umowy najmu długoterminowego?",
+          "freq": 1,
+          "cat": "kadry",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Najem samochodu długoterminowy skąd wziąć wartość samochodu?",
+          "freq": 1,
+          "cat": "kadry",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        },
+        {
+          "question": "Jak jedna wspólniczka umowa najmu wynajmuje swój samochód spółce - oczywiście tylko ona z niego korzysta to czy ten najem jest w 100 % kosztem spółki?",
+          "freq": 1,
+          "cat": "kadry",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie"
+          ]
+        }
+      ]
+    },
+    "rozporzadzenie_o_kasach": {
+      "label": "Rozporządzenie MF o kasach rejestrujących",
+      "unique_questions": 14,
+      "weighted_freq_sum": 24,
+      "top_source_categories": [
+        [
+          "rachunkowosc",
+          5
+        ],
+        [
+          "vat",
+          2
+        ],
+        [
+          "ordynacja",
+          2
+        ],
+        [
+          "pit",
+          2
+        ],
+        [
+          "kadry",
+          1
+        ],
+        [
+          "ksef",
+          1
+        ],
+        [
+          "praktyka",
+          1
+        ]
+      ],
+      "top_questions": [
+        {
+          "question": "Kasa fiskalna a dzierżawa gruntów sprzedaż osoby fizyczne Dzień dobry, przedsiębiorstwo dzierżawi grunty pod garaże blaszane i lokale użytkowe czy wystawiając fakturę z forma płatności przelew przedsiębiorstwo nadal musi posiadać kasę fiskalną od 1.04?",
+          "freq": 7,
+          "cat": "vat",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Czy kasa fiskalna musi być cały czas podłączona i trzeba drukować paragony zerowe czy w takim np w domu weselnym tylko w trakcie gotowości do sprzedaży pomóżcie?",
+          "freq": 5,
+          "cat": "vat",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Co z kosztami typu lampa taxi, przegląd taxi, foteliki do przewozu dzieci, kasa fiskalna taxi , nr boczne, licencja taxi, badania okresowe?",
+          "freq": 1,
+          "cat": "kadry",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Kasa fiskalna wchodzi w limit?",
+          "freq": 1,
+          "cat": "ksef",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Parking samoobsługowy z automatem biletowym, płatny tylko karta lub blik, kasa fiskalna od 1 kwietnia 2027?",
+          "freq": 1,
+          "cat": "ordynacja",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Czy na działalności nierejestrowanej usługi mobilne head spa konieczna jest kasa fiskalna?",
+          "freq": 1,
+          "cat": "ordynacja",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Ryczałt a kasa fiskalna klient założył niedawno jdg, czy w ewidencji przychodów mogę ujmować raport fiskalny miesięczny czyli raz w miesiącu ująć przychód?",
+          "freq": 1,
+          "cat": "pit",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Czy sprzedaż energii cieplnej rzecz osób fizycznych nieprowadzących działalności gospodarczej i rolników ryczałtowych podlega pod zwolnienie z kasy fiskalnej , z załącznika nr 1 RMF z dnia 17 grudnia 2024?",
+          "freq": 1,
+          "cat": "pit",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Czy dobrze myślę, że do limitu do kasy fiskalnej sumujemu całość sprzedaży osobom fizycznym i gotówkową i bezgotówkową, a w przypadku sprzedaży tego typu towarów mogłoby być zwolnienie z kasy (po przekroczeniu 20.000,00 zł), gdyby sprzedaż była realizowana w systemie wysyłkowym i płatność byłaby przelewem?",
+          "freq": 1,
+          "cat": "praktyka",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Wpłaty miesięczne są w granicach nawet 10 000 zl. Czy od 01 kwietnia musi być kasa fiskalna?",
+          "freq": 1,
+          "cat": "rachunkowosc",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "W jaki sposób ewidencjonować w KPiR u podatnika zwolnionego z VAT wpływy za działalność usługową - zajęcia dla dzieci, za które wpłaty wpływają przelewem na konto ( zwolnienie z kasy fiskalnej) Płatności są na podstawie umów, nie ma faktur. Czy można robić miesięczny wpis do KPiR?",
+          "freq": 1,
+          "cat": "rachunkowosc",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Wynajem garażu od 01.04.2026 Osoba fizyczna wynajmuje prywatnie garaż innej osobie prywatnej (najem długoterminowy) wpływy na konto za ten wynajem. Jak to wygląda z kasą fiskalną od 1 kwietnia 2026?",
+          "freq": 1,
+          "cat": "rachunkowosc",
+          "matched_buckets": [
+            "ustawa_o_ryczalcie",
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Z tego co czytałam nadal dotyczy mnie zwolnienie z kasy do 20000 czyli płatności blik na konto firmowe powinny być ok. Pomożecie?",
+          "freq": 1,
+          "cat": "rachunkowosc",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        },
+        {
+          "question": "Powiedzcie mi, jaka u Was jest praktyka, wrzucacie komputery,laptopy, kasy fiskalne za 3000 do środków trwalych czy tylko w koszty?",
+          "freq": 1,
+          "cat": "rachunkowosc",
+          "matched_buckets": [
+            "rozporzadzenie_o_kasach"
+          ]
+        }
+      ]
+    },
+    "prawo_przedsiebiorcow": {
+      "label": "Prawo przedsiębiorców",
+      "unique_questions": 4,
+      "weighted_freq_sum": 6,
+      "top_source_categories": [
+        [
+          "zus",
+          2
+        ],
+        [
+          "kadry",
+          1
+        ],
+        [
+          "pit",
+          1
+        ]
+      ],
+      "top_questions": [
+        {
+          "question": "Czy robiąc deklarację ZUS DRA za styczeń 2026 (ulga na start) kwota składki zdrowotnej to jeszcze 314,96 zł czy 432,54 zł?",
+          "freq": 2,
+          "cat": "zus",
+          "matched_buckets": [
+            "prawo_przedsiebiorcow"
+          ]
+        },
+        {
+          "question": "Czy jest wybrana ulga na start, jaki system spłaty podatków jest wielu czynników którzy nie jest podany w ogłoszeniu. Tak co miesiąc do ZUS, i w razie czego podjedź do ZUSu i poproś o pomoc oni w razie czego nadają konsultacje.?",
+          "freq": 2,
+          "cat": "zus",
+          "matched_buckets": [
+            "prawo_przedsiebiorcow"
+          ]
+        },
+        {
+          "question": "Od marca założyłam dzialalność jednoosobowa z ulgą na start, mąż pracuje na umowie o pracy jego dochody ok10000brutto. Czy przy uldze na start należy się aktywnie w pracy?",
+          "freq": 1,
+          "cat": "kadry",
+          "matched_buckets": [
+            "prawo_przedsiebiorcow"
+          ]
+        },
+        {
+          "question": "Chce byc na ryczalcie i ulga na start. Ale czy moze wspolpracowac z zona faktury wystawiac?",
+          "freq": 1,
+          "cat": "pit",
+          "matched_buckets": [
+            "prawo_przedsiebiorcow"
+          ]
+        }
+      ]
+    }
+  },
+  "union_missing_whole_law": {
+    "unique_questions": 74,
+    "weighted_freq_sum": 114
+  },
+  "overlap_patterns": {
+    "ustawa_o_ryczalcie": 56,
+    "rozporzadzenie_o_kasach": 13,
+    "prawo_przedsiebiorcow": 4,
+    "rozporzadzenie_o_kasach + ustawa_o_ryczalcie": 1
+  }
+}
