@@ -1,0 +1,937 @@
+{
+  "meta": {
+    "sample_size": 50,
+    "seed": 20260410,
+    "category_match_rate_pct": 22.0,
+    "retrieval_sensible_rate_pct": 54.0
+  },
+  "summary": {
+    "category_hits": 11,
+    "category_misses": 39,
+    "retrieval_sensible": 27,
+    "retrieval_misses": 23
+  },
+  "top_slang_terms": [
+    {
+      "short": "wdt",
+      "full_phrase": "wewn?trzwsp?lnotowa dostawa towar?w",
+      "occurrences": 1,
+      "category_miss_count": 1,
+      "retrieval_miss_count": 0,
+      "examples": [
+        "Niektóre towary wysyłamy firmą spedycyjna do jego magazynu w Niemczech. Czy te dostawy do magazynu w Niemczech to WDT? Czy sprzedaż krajowa?"
+      ]
+    },
+    {
+      "short": "ksef",
+      "full_phrase": "Krajowy System e-Faktur",
+      "occurrences": 5,
+      "category_miss_count": 0,
+      "retrieval_miss_count": 0,
+      "examples": [
+        "Na pewno autor chciał udostępnić NIP w numerze KSeF?",
+        "Mamy spółki, które mają po kilka oddziałów i chcą, aby faktury wysyłać do KSeF z identyfikatorem dla danego oddziału, co umożliwi im właściwe rozdysponowanie faktur. Moze ktoś wie, gdzie to się ustawia?",
+        "Zdarzyło się komuś, że faktura wystawiona w KSeF z Castoramy nie jest widoczna u Was w programie?"
+      ]
+    },
+    {
+      "short": "jpk",
+      "full_phrase": "jednolity plik kontrolny",
+      "occurrences": 1,
+      "category_miss_count": 0,
+      "retrieval_miss_count": 0,
+      "examples": [
+        "Nie uważacie, że w momencie wprowadzenia KSeF oraz JPK_ST_KR czas pożegnać dualizm prawa bilansowego i podatkowego?"
+      ]
+    },
+    {
+      "short": "kup",
+      "full_phrase": "koszty uzyskania przychodu",
+      "occurrences": 1,
+      "category_miss_count": 0,
+      "retrieval_miss_count": 0,
+      "examples": [
+        "Podatnik VAT zwolniony , grudzień 2025 , leasing operacyjny auto - elektryk, wartość brutto z umowy 219 tys.Rozumiem, że z opłaty wstępnej ( faktura XII/25 ) brutto całość w KUP, i później z faktur za opłatę leasingową już w 2026 również brutto całość w KUP, ponieważ limit na \" elektryki \" się nie zmienił i wynosi nadal 225 tys.Czy dobrze myślę?"
+      ]
+    },
+    {
+      "short": "pit11",
+      "full_phrase": "formularz PIT-11",
+      "occurrences": 1,
+      "category_miss_count": 0,
+      "retrieval_miss_count": 0,
+      "examples": [
+        "Czy pit11 wysyłacie bez problemu?"
+      ]
+    }
+  ],
+  "sample_records": [
+    {
+      "id": 9109,
+      "freq": 1,
+      "source_cat": "spolki",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Czy mogę przez to narazić przedsiębiorcę na jakieś konsekwencje?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 45 ust. 6",
+        "score": 6.7323,
+        "category": "procedura_skladania_zeznań",
+        "content_preview": "Artykuł 45 definiuje obowiązek złożenia zeznania i wyjaśnia, że podatek wynikający z zeznania jest p"
+      }
+    },
+    {
+      "id": 2131,
+      "freq": 2,
+      "source_cat": "zus",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "!u mnie tabela się nie otwiera i nie wchodzą kody?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106b",
+        "score": 8.0743,
+        "category": "dokumentacja_i_kody_ksiegowe",
+        "content_preview": "Ustawa o VAT nie określa kodów księgowych do stosowania. Kody księgowe (takie jak BFK czy inne) są k"
+      }
+    },
+    {
+      "id": 4855,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "A masz umowę leasingu? Harmonogram spłaty? Wiesz jaka zastosować proporcje?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "score": 10.7729,
+        "category": "Odliczenie VAT - warunki i proporcja",
+        "content_preview": "Tak, możesz odliczyć VAT z oprogramowania (usługi), jeśli w całości jest wykorzystywane do wykonywan"
+      }
+    },
+    {
+      "id": 8326,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Jak przyszłam do pracy to były księgowanie w dacie przelewu i układane pod konkretnym wyciągiem bankowym na którym były ich opłaty. To prawidłowo? Jaka to metoda?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 24a ust. 5",
+        "score": 16.0702,
+        "category": "ewidencja i dokumentacja przychodów",
+        "content_preview": "Tak, osoba fizyczna z przychodami poniżej progu może dobrowolnie prowadzić księgi rachunkowe od pocz"
+      }
+    },
+    {
+      "id": 10722,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "vat",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Jak wykazać w deklaracji VAT?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 89a ust. 1a",
+        "score": 23.0704,
+        "category": "nieściągalne wierzytelności, 90 dni",
+        "content_preview": "90 dni liczy się od dnia upływu terminu płatności określonego w umowie lub na fakturze. Jeśli faktur"
+      }
+    },
+    {
+      "id": 3029,
+      "freq": 1,
+      "source_cat": "inne",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Ja przegapiłam metode uproszczona od dawna tak można?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 21 ust. 1",
+        "score": 10.7077,
+        "category": "metoda_kasowa",
+        "content_preview": "Aby stosować metodę kasową, musisz zawiadomić na piśmie naczelnika urzędu skarbowego w terminie do k"
+      }
+    },
+    {
+      "id": 9341,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy dobrze myślę. Mam dziś ciężki dzień?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Rozporządzenie JPK_V7",
+        "article_number": "brak danych",
+        "score": 7.0895,
+        "category": "oznaczenia_transakcji",
+        "content_preview": "Nie mam dostępu do konkretnych artykułów Rozporządzenia JPK_V7 zawierających informacje o oznaczenia"
+      }
+    },
+    {
+      "id": 1436,
+      "freq": 2,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "A czemu ma nie wejść do limitu?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 10 ust. 5",
+        "score": 9.4014,
+        "category": "wewnątrzwspólnotowe_nabycie",
+        "content_preview": "W przypadku przekroczenia limitu 50 000 zł, uważa się że wewnątrzwspólnotowe nabycie towarów ma miej"
+      }
+    },
+    {
+      "id": 4422,
+      "freq": 1,
+      "source_cat": "kadry",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Jakie macie doświadczenie z wynagrodzeniem w przypadku pracowników budowlanych/ brukarzy, kiedy warunki atmosferyczne uniemożliwiają wykonywanie pracy.Czy pracodawca ma obowiązek wypłacać postojowe?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Kodeks pracy",
+        "article_number": "art. 94 pkt 1",
+        "score": 18.795,
+        "category": "obowiazki_pracodawcy",
+        "content_preview": "Tak, pracodawca ma obowiązek zaznajomić pracowników podejmujących pracę z zakresem ich obowiązków, s"
+      }
+    },
+    {
+      "id": 11033,
+      "freq": 1,
+      "source_cat": "zus",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy dopiero za styczeń w lutym?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 19a ust. 1",
+        "score": 11.0945,
+        "category": "Obowiązek podatkowy dla usług rozliczanych okresowo",
+        "content_preview": "Obowiązek podatkowy VAT powstaje z chwilą dokonania dostawy lub wykonania usługi, czyli w naszym prz"
+      }
+    },
+    {
+      "id": 5082,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ksef",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Na pewno autor chciał udostępnić NIP w numerze KSeF?",
+      "found_slang": [
+        "ksef"
+      ],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+        "article_number": "art. 145l",
+        "score": 24.8494,
+        "category": "ksef",
+        "content_preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektronicz"
+      }
+    },
+    {
+      "id": 829,
+      "freq": 2,
+      "source_cat": "ksef",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Kiedy w końcu doczytacie, że dobrowolność dla mniejszych podmiotów do 01.04 dotyczy tylko WYSTAWIANIA faktur?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 3",
+        "score": 11.8772,
+        "category": "KSeF - rodzaje faktur",
+        "content_preview": "Artykuł 3 dotyczy wyłącznie uprawnień do wystawiania elektronicznych faktur ustrukturyzowanych, ale "
+      }
+    },
+    {
+      "id": 9737,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "fakturowanie",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Podatnik VAT zwolniony , grudzień 2025 , leasing operacyjny auto - elektryk, wartość brutto z umowy 219 tys.Rozumiem, że z opłaty wstępnej ( faktura XII/25 ) brutto całość w KUP, i później z faktur za opłatę leasingową już w 2026 również brutto całość w KUP, ponieważ limit na \" elektryki \" się nie zmienił i wynosi nadal 225 tys.Czy dobrze myślę?",
+      "found_slang": [
+        "kup"
+      ],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106e ust. 8",
+        "score": 89.194,
+        "category": "Faktury - wymagane dane i kwota VAT",
+        "content_preview": "Tak, podatnik może wykazywać na fakturze cenę jednostkową brutto zamiast netto, ale musi jednocześni"
+      }
+    },
+    {
+      "id": 2630,
+      "freq": 1,
+      "source_cat": "erp",
+      "predicted_cat": "fakturowanie",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Prawidłowo zaciąga wam faktury walutowe?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106gb",
+        "score": 8.5364,
+        "category": "e-faktury_KSeF",
+        "content_preview": "Przepis art. 106gb nie określa wymagań dotyczących numeru faktury w KSeF. Obowiązki dotyczą struktur"
+      }
+    },
+    {
+      "id": 6521,
+      "freq": 1,
+      "source_cat": "pit",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy muszę w takiej sytuacji korygować zeznanie podatkowe za 23?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106h ust. 1",
+        "score": 10.7495,
+        "category": "faktury",
+        "content_preview": "Fakturę można wystawić do sprzedaży zarejestrowanej na kasie fiskalnej. W takiej sytuacji trzeba zac"
+      }
+    },
+    {
+      "id": 9444,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "faktury_korygujące",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Czy błędną datę wystawienia faktury sprzedaży można poprawić notą korygującą?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 1 pkt 5",
+        "score": 56.5323,
+        "category": "faktury_korygujące",
+        "content_preview": "Tak, błędna data sprzedaży na fakturze stanowi pomyłkę w pozycji faktury i wymaga wystawienia faktur"
+      }
+    },
+    {
+      "id": 11157,
+      "freq": 1,
+      "source_cat": "zus",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy mógłby ktoś podesłać podobną?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+        "article_number": "art. 26 ust. 1",
+        "score": 10.9882,
+        "category": "cit",
+        "content_preview": "Dla zastosowania stawki traktatowej albo niepobrania WHT płatnik musi posiadać certyfikat rezydencji"
+      }
+    },
+    {
+      "id": 637,
+      "freq": 2,
+      "source_cat": "kadry",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Co najlepiej zrobić w tej sytuacji?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106h ust. 1",
+        "score": 6.0777,
+        "category": "faktury",
+        "content_preview": "Fakturę można wystawić do sprzedaży zarejestrowanej na kasie fiskalnej. W takiej sytuacji trzeba zac"
+      }
+    },
+    {
+      "id": 9243,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "podatek_należny",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Niektóre towary wysyłamy firmą spedycyjna do jego magazynu w Niemczech. Czy te dostawy do magazynu w Niemczech to WDT? Czy sprzedaż krajowa?",
+      "found_slang": [
+        "wdt"
+      ],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 19a ust. 1",
+        "score": 9.1637,
+        "category": "obowiazek_podatkowy",
+        "content_preview": "Obowiązek podatkowy w VAT powstaje z chwilą dokonania dostawy towarów. Dostawę towarów rozumie się j"
+      }
+    },
+    {
+      "id": 6362,
+      "freq": 1,
+      "source_cat": "pit",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Z powietrza?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 83e",
+        "score": 0.0,
+        "category": "Ubezpieczenia społeczne - dokumenty koordynacyjne",
+        "content_preview": "Tekst artykułu 83e nie zawiera informacji dotyczących zakresu ważności formularza A1, warunków jego "
+      }
+    },
+    {
+      "id": 413,
+      "freq": 2,
+      "source_cat": "inne",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Ile czeka się na przelew w sytuacji, gdy umiera właściciel danej firmy?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 19",
+        "score": 10.0697,
+        "category": "przeniesienie_vat",
+        "content_preview": "Jeśli w danym okresie rozliczeniowym nie wykonujesz żadnych czynności opodatkowanych na terytorium k"
+      }
+    },
+    {
+      "id": 10820,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy ktoś mi zaproponuje tutaj kwotę za takie usługi?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 45 ust. 1",
+        "score": 8.5018,
+        "category": "pit",
+        "content_preview": "Art. 45 ust. 1 stanowi, że podatnik składa zeznanie według ustalonego wzoru za dany rok podatkowy. J"
+      }
+    },
+    {
+      "id": 2689,
+      "freq": 1,
+      "source_cat": "erp",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Co wybrać przy pracy w optimie: OCR czy saldeo?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 32 ust. 1",
+        "score": 5.7012,
+        "category": "zaliczki_pit_pracodawca",
+        "content_preview": "Płatnikami zaliczek PIT są: zakłady pracy będące osobami fizycznymi, osobami prawnymi oraz jednostka"
+      }
+    },
+    {
+      "id": 4819,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Koszty stycznia czy lutego?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 36a ust. 2",
+        "score": 10.298,
+        "category": "zawieszenie_działalności_skladki",
+        "content_preview": "Obowiązek ubezpieczeń społecznych ustaje od dnia, w którym zawieszasz działalność. Jeśli zawiesisz d"
+      }
+    },
+    {
+      "id": 5367,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ksef",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Mamy spółki, które mają po kilka oddziałów i chcą, aby faktury wysyłać do KSeF z identyfikatorem dla danego oddziału, co umożliwi im właściwe rozdysponowanie faktur. Moze ktoś wie, gdzie to się ustawia?",
+      "found_slang": [
+        "ksef"
+      ],
+      "top_chunk": {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 2 ust. 2 pkt 3 lit. a",
+        "score": 44.6736,
+        "category": "uprawnienia_ksef",
+        "content_preview": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będz"
+      }
+    },
+    {
+      "id": 8416,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy dużo rzeczy w tych programach jest do skonfigurowania na początku księgowania?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 109 ust. 8a",
+        "score": 7.5032,
+        "category": "ewidencja_elektroniczna",
+        "content_preview": "Artykuł 109 ust. 8a nakazuje prowadzenie ewidencji w postaci elektronicznej przy użyciu programów ko"
+      }
+    },
+    {
+      "id": 9348,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "A do czego i jak bedzie uzytkowana?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 11 ust. 1",
+        "score": 8.6311,
+        "category": "Definicja przychodu",
+        "content_preview": "Przychodem jest pełna kwota otrzymana lub postawiona do dyspozycji, przed potrąceniami podatkowymi. "
+      }
+    },
+    {
+      "id": 5969,
+      "freq": 1,
+      "source_cat": "pit",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Bardzo proszę o pomoc: Podatnik rozliczający się na zasadach ogólnych z tytułu prowadzonej działalności gospodarczej chce rozliczyć się wspólnie z małżonkiem, ich łączne dochody po odliczeniu składek społecznych wynoszą: ok 131 500 PLN?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 6 ust. 2",
+        "score": 18.1162,
+        "category": "wspólne opodatkowanie małżonków, zawieszenie JDG",
+        "content_preview": "Tak, możesz rozliczyć się wspólnie z małżonkiem na PIT-36 z dochodów z etatu. Jeśli w 2025 roku JDG "
+      }
+    },
+    {
+      "id": 2765,
+      "freq": 1,
+      "source_cat": "inne",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Czy właściciela firmy też wliczamy do ubezpieczonych do IWY?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 46 ust. 1 i ust. 2",
+        "score": 9.6991,
+        "category": "obowiązki rozliczeniowe",
+        "content_preview": "Płatnik składek musi co miesiąc: obliczyć należne składki na każdy rodzaj ubezpieczenia, potrącić je"
+      }
+    },
+    {
+      "id": 5724,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ksef",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Zdarzyło się komuś, że faktura wystawiona w KSeF z Castoramy nie jest widoczna u Was w programie?",
+      "found_slang": [
+        "ksef"
+      ],
+      "top_chunk": {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "score": 27.0198,
+        "category": "procedury_ksef",
+        "content_preview": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o "
+      }
+    },
+    {
+      "id": 7489,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Dokument musi być podpisany elektrycznie. Czy była jakaś zmiana w prs?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Kodeks pracy",
+        "article_number": "art. 85 ust. 2",
+        "score": 10.337,
+        "category": "Wymogi dotyczące wypłaty wynagrodzenia",
+        "content_preview": "Niezależnie od zmiany warunków umowy, wynagrodzenie za listopad (jako pełny miesiąc pracy) musi być "
+      }
+    },
+    {
+      "id": 2029,
+      "freq": 2,
+      "source_cat": "zus",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Jeśli właściciel nie wliczony to wyjdzie IWA?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 7 ust. 1 i 2",
+        "score": 6.327,
+        "category": "definicja_dostawy",
+        "content_preview": "Dostawą towarów jest przeniesienie prawa do rozporządzania towarami jak właściciel. Obejmuje to m.in"
+      }
+    },
+    {
+      "id": 9766,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy mąż i żona (bez rozdzielności) mogą mieć obydwoje firmy o tym samym profilu na ryczałcie?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 6 ust. 2",
+        "score": 11.7439,
+        "category": "małżeńskie-opodatkowanie-warunki",
+        "content_preview": "Tak, wspólnota majątkowa małżonków jest warunkiem koniecznym dla wspólnego opodatkowania (art. 6 ust"
+      }
+    },
+    {
+      "id": 8491,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "fakturowanie",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Sprawozdania do dzisiaj, już praktycznie wysłane, ale właśnie znalazłyśmy, że nie mamy jednej faktury IMU z grudnia, co robić? Korektę VATu grudnia to na pewno a czy sprawozdania też poprawiać?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 145m ust. 1",
+        "score": 42.0176,
+        "category": "faktury_ustrukturyzowane",
+        "content_preview": "Przepisy przejściowe dotyczą okresu od 1 kwietnia 2026 r. do 31 grudnia 2026 r. (art. 145m) i od 1 l"
+      }
+    },
+    {
+      "id": 1820,
+      "freq": 2,
+      "source_cat": "vat",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Czy nauka języków obcych na odległość (przez zooma) osobom z EU podlega limitowi 42 tys?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 28k ust. 1",
+        "score": 21.9631,
+        "category": "miejsce świadczenia usług",
+        "content_preview": "Limit 42 tys. zł dotyczy usług telekomunikacyjnych, nadawczych i elektronicznych świadczonych na rze"
+      }
+    },
+    {
+      "id": 10520,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Czy świadomie w tej sytuacji mogłam zrezy?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106h ust. 1",
+        "score": 6.0777,
+        "category": "faktury",
+        "content_preview": "Fakturę można wystawić do sprzedaży zarejestrowanej na kasie fiskalnej. W takiej sytuacji trzeba zac"
+      }
+    },
+    {
+      "id": 7767,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Księgowanie kosztów to prawo, nie obowiązek, więc to od Pana/i zależy, czy Pan(i) z tego prawa skorzysta?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 145e-145f",
+        "score": 13.6021,
+        "category": "poza_zakresem_vat",
+        "content_preview": "Przepisy VAT (art. 145e-145f) nie regulują sposób księgowania energii w księgach rachunkowych — to m"
+      }
+    },
+    {
+      "id": 5303,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "A rozporządzenie nowe nie zwolniło z obowiązku numerowania?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 111 ust. 8",
+        "score": 10.054,
+        "category": "kas_rejestrujace",
+        "content_preview": "Ustawa pozwala ministrowi na wprowadzenie zwolnień z obowiązku prowadzenia kas rejestrujących dla wy"
+      }
+    },
+    {
+      "id": 7887,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Kwoty dotyczą 2023/2024 roku. Czekacie aż się przedawnią?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 40c ust. 1",
+        "score": 13.1569,
+        "category": "waloryzacja_subkonta",
+        "content_preview": "Tak, waloryzacja kwot na subkoncie przeprowadzana jest automatycznie corocznie od dnia 1 czerwca każ"
+      }
+    },
+    {
+      "id": 1072,
+      "freq": 2,
+      "source_cat": "pit",
+      "predicted_cat": "pit",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Czy pit11 wysyłacie bez problemu?",
+      "found_slang": [
+        "pit11"
+      ],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 39 ust. 1",
+        "score": 18.8928,
+        "category": "pit",
+        "content_preview": "Art. 39 ust. 1 nakłada na płatnika obowiązek przesłania podatnikowi i urzędowi skarbowemu imiennej i"
+      }
+    },
+    {
+      "id": 2066,
+      "freq": 2,
+      "source_cat": "zus",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Jeśli kontynuacja to tak jest?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 30c ust. 1",
+        "score": 7.0796,
+        "category": "warunki wyboru ryczałtu i przejęcie działalności",
+        "content_preview": "Tekst ustawy o podatku dochodowym od osób fizycznych nie reguluje bezpośrednio kwestii przejęcia dzi"
+      }
+    },
+    {
+      "id": 6221,
+      "freq": 1,
+      "source_cat": "pit",
+      "predicted_cat": "pit",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Czy możliwe jest odliczenie takich wydatków w Pit (tj.w ramach ulgi termomodernizacyjnej)?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 26 ust. 7a pkt 12",
+        "score": 31.684,
+        "category": "pit",
+        "content_preview": "W ramach ulgi rehabilitacyjnej można odliczyć wydatki na leki w wysokości stanowiącej różnicę pomięd"
+      }
+    },
+    {
+      "id": 9579,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "fakturowanie",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "A zwroty do paragonów?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106gb",
+        "score": 23.1419,
+        "category": "e-faktury_ksef",
+        "content_preview": "Artykuł 106gb nie reguluje statusu paragonów ani limitów wartościowych dokumentów w Krajowym Systemi"
+      }
+    },
+    {
+      "id": 6368,
+      "freq": 1,
+      "source_cat": "pit",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Dobrze myślę?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 83e",
+        "score": 0.0,
+        "category": "Ubezpieczenia społeczne - dokumenty koordynacyjne",
+        "content_preview": "Tekst artykułu 83e nie zawiera informacji dotyczących zakresu ważności formularza A1, warunków jego "
+      }
+    },
+    {
+      "id": 5411,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ksef",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Szukam osoby która pracuje w programie Buchalter celem konsultacji technicznej odnośnie KSeF?",
+      "found_slang": [
+        "ksef"
+      ],
+      "top_chunk": {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "§ 14",
+        "score": 47.9992,
+        "category": "wymagania_techniczne_kseff",
+        "content_preview": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odno"
+      }
+    },
+    {
+      "id": 4894,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Przecież na dwa monitory też nie idzie pracować, bo jak patrzysz na podgląd w e-dokumenty to nie możesz nic zrobić w dekrecie. Czy coś wiecie może czy Wapro będzie coś robić w tym temacie?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "article_number": "art. 26g",
+        "score": 18.8267,
+        "category": "ulgi_i_odliczenia",
+        "content_preview": "Tekst art. 26g nie opisuje sytuacji, w której ulga by nie przysługiwała lub nic nie zmieniała. Artyk"
+      }
+    },
+    {
+      "id": 2791,
+      "freq": 1,
+      "source_cat": "inne",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": true,
+      "question": "Czy w ciągu roku nie ma to znaczenia a znaczenie ma jedynie na przełomie roku?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "score": 20.1066,
+        "category": "odliczenie_vat_towary_materialy",
+        "content_preview": "Do celów VAT różnica między kosztem a towarem handlowym nie ma znaczenia — obydwa dają prawo do odli"
+      }
+    },
+    {
+      "id": 8070,
+      "freq": 1,
+      "source_cat": "rachunkowosc",
+      "predicted_cat": "ogólne",
+      "category_hit": false,
+      "retrieval_sensible": false,
+      "question": "Czy osoba która ma ubezpieczeniaCzęść faktur wystawia jako Agent a część jako osoba wykonująca czynności agencyjne, może być na stawce ryczałtu 15%?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "§ 2 ust. 2 pkt 3 lit. a",
+        "score": 17.6003,
+        "category": "uprawnienia_ksef",
+        "content_preview": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będz"
+      }
+    },
+    {
+      "id": 9560,
+      "freq": 1,
+      "source_cat": "vat",
+      "predicted_cat": "fakturowanie",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Jak pracujecie z klientem, który nadal przynosi papierowe dokumenty, które trzeba przygotować, zeskanować itd(np paragony z biedry)?",
+      "found_slang": [],
+      "top_chunk": {
+        "law_name": "Ustawa o VAT",
+        "article_number": "art. 106e ust. 1",
+        "score": 32.1516,
+        "category": "dokumentacja-faktury",
+        "content_preview": "Ustawa o VAT nie wymaga, aby faktura zawierała numer paragonu. Paragraf i faktura to odrębne dokumen"
+      }
+    },
+    {
+      "id": 5522,
+      "freq": 1,
+      "source_cat": "ksef",
+      "predicted_cat": "ksef",
+      "category_hit": true,
+      "retrieval_sensible": true,
+      "question": "Nie uważacie, że w momencie wprowadzenia KSeF oraz JPK_ST_KR czas pożegnać dualizm prawa bilansowego i podatkowego?",
+      "found_slang": [
+        "jpk",
+        "ksef"
+      ],
+      "top_chunk": {
+        "law_name": "Rozporządzenie KSeF",
+        "article_number": "art. 2",
+        "score": 26.948,
+        "category": "procedury_ksef",
+        "content_preview": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o "
+      }
+    }
+  ]
+}
