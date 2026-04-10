@@ -1,0 +1,425 @@
+{
+  "total": 100,
+  "summary": {
+    "WEAK": 20,
+    "COVERED": 61,
+    "GAP": 19
+  },
+  "per_category": {
+    "cit": {
+      "GAP": 4
+    },
+    "fakturowanie": {
+      "COVERED": 8
+    },
+    "faktury_korygujące": {
+      "COVERED": 2
+    },
+    "jpk": {
+      "WEAK": 9
+    },
+    "kadry": {
+      "COVERED": 1
+    },
+    "ksef": {
+      "WEAK": 11,
+      "COVERED": 1
+    },
+    "ogólne": {
+      "COVERED": 37
+    },
+    "pit": {
+      "GAP": 6
+    },
+    "podatek_należny": {
+      "COVERED": 6
+    },
+    "podatek_naliczony": {
+      "COVERED": 3
+    },
+    "rachunkowosc": {
+      "GAP": 6
+    },
+    "vat": {
+      "COVERED": 3
+    },
+    "zus": {
+      "GAP": 3
+    }
+  },
+  "gaps": [
+    {
+      "freq": 19,
+      "query": "Czy nadal trzeba pisać pisma o stwierdzenie nadpłaty i zwrot jesli wynika z cit8? Czy sami zwrócą?",
+      "source_cat": "cit",
+      "category": "cit",
+      "top_score": 16.5808,
+      "top_law": "Ustawa o podatku dochodowym od osób prawnych",
+      "top_article": "art. 28b ust. 6"
+    },
+    {
+      "freq": 16,
+      "query": "Czy mogę odliczyć VAT w styczniu (faktura wystawiona w grudniu), ale tylko odliczę VAT w styczniu a nie będę ujmować kosztu w kpir?",
+      "source_cat": "vat",
+      "category": "rachunkowosc",
+      "top_score": 22.6571,
+      "top_law": "Ustawa o rachunkowości",
+      "top_article": "art. 6 ust. 1"
+    },
+    {
+      "freq": 14,
+      "query": "DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+      "source_cat": "zus",
+      "category": "zus",
+      "top_score": 67.9482,
+      "top_law": "Ustawa o systemie ubezpieczeń społecznych",
+      "top_article": "art. 16 ust. 4"
+    },
+    {
+      "freq": 11,
+      "query": "Czy działa Wam „ e płatnik „ na pue ZUS?",
+      "source_cat": "zus",
+      "category": "zus",
+      "top_score": 41.2872,
+      "top_law": "Ustawa o systemie ubezpieczeń społecznych",
+      "top_article": "art. 45 ust. 1 pkt 2"
+    },
+    {
+      "freq": 11,
+      "query": "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?",
+      "source_cat": "vat",
+      "category": "pit",
+      "top_score": 27.3608,
+      "top_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "top_article": "art. 23b ust. 1"
+    },
+    {
+      "freq": 10,
+      "query": "Jeśli mam kogoś na zleceniu, ale w 2025 nie przepracował ani 1h i nie zarobił ani 1zł to czy muszę wystawiać zerowy PIT4R?",
+      "source_cat": "pit",
+      "category": "pit",
+      "top_score": 23.5462,
+      "top_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "top_article": "art. 14c ust. 1 pkt 1"
+    },
+    {
+      "freq": 9,
+      "query": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+      "source_cat": "rachunkowosc",
+      "category": "rachunkowosc",
+      "top_score": 20.899,
+      "top_law": "Ustawa o rachunkowości",
+      "top_article": "art. 39 ust. 2 pkt 1"
+    },
+    {
+      "freq": 8,
+      "query": "W pue wyskakują mi jakieś błędy,Podpowie dobra duszyczka ile wynoszą łącznie teraz składki na ZUS preferencyjny ryczałt 60k-300k?",
+      "source_cat": "zus",
+      "category": "zus",
+      "top_score": 58.2363,
+      "top_law": "Ustawa o systemie ubezpieczeń społecznych",
+      "top_article": "art. 22 ust. 1"
+    },
+    {
+      "freq": 7,
+      "query": "Estoński CIT czy zakupiony obiad dla pracowników co jakiś czas to wydatek niezwiązany z działalnością gospodarczą czy kolacja służbowa?",
+      "source_cat": "cit",
+      "category": "cit",
+      "top_score": 46.2104,
+      "top_law": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+      "top_article": "art. 28j ust. 1"
+    },
+    {
+      "freq": 7,
+      "query": "Wynajem auta za granica. Czy w tej sytuacji należy pobrać podatek u źródła (WHT)?",
+      "source_cat": "cit",
+      "category": "cit",
+      "top_score": 68.4867,
+      "top_law": "Ustawa o podatku dochodowym od osób prawnych",
+      "top_article": "art. 21 ust. 1"
+    },
+    {
+      "freq": 6,
+      "query": "Bo sie zgubiłam. PIT-37 Ulga rehabilitacyjna na niepełnosprawnego syna i faktury za leki powyżej 100 zl?",
+      "source_cat": "pit",
+      "category": "pit",
+      "top_score": 36.5455,
+      "top_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "top_article": "art. 22 ust. 2 pkt 1"
+    },
+    {
+      "freq": 6,
+      "query": "Czy pit11 można wysłać jeszcze 2 lutego z uwagi na weekend?",
+      "source_cat": "pit",
+      "category": "pit",
+      "top_score": 21.8888,
+      "top_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "top_article": "art. 45 ust. 1"
+    },
+    {
+      "freq": 6,
+      "query": "Dlaczego bilansowo do 10/25? Towar idzie na magazyn, to chcesz naginać rzeczywistość, że go nie było już w 2025?",
+      "source_cat": "rachunkowosc",
+      "category": "rachunkowosc",
+      "top_score": 16.2758,
+      "top_law": "Ustawa o rachunkowości",
+      "top_article": "art. 26 ust. 1"
+    },
+    {
+      "freq": 6,
+      "query": "Doby wieczór!. Składacie państwo deklarację IFT2R? Czy składa się do miesięcznej subskrypcji (Google, Adobe itp)?",
+      "source_cat": "cit",
+      "category": "cit",
+      "top_score": 13.1485,
+      "top_law": "Ustawa o podatku dochodowym od osób prawnych",
+      "top_article": "art. 27 ust. 1"
+    },
+    {
+      "freq": 6,
+      "query": "Mam taki mix:Żona PIT36 (dg + UoP) + PIT/M (połowa nagrody)Mąż PIT36L (dg) oraz PIT36 (zerowy) + PIT/M (połowa nagrody)Czy w przypadku męża będzie właśnie tak?",
+      "source_cat": "pit",
+      "category": "pit",
+      "top_score": 59.7744,
+      "top_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "top_article": "art. 20 ust. 1"
+    },
+    {
+      "freq": 5,
+      "query": "Czy jest to prawidłowe i faktura do VAT i kpir idzie w lutym czy trzeba ręcznie zmienić datę sprzedaży na 31.01?",
+      "source_cat": "vat",
+      "category": "rachunkowosc",
+      "top_score": 23.6088,
+      "top_law": "Ustawa o rachunkowości",
+      "top_article": "art. 21 ust. 1"
+    },
+    {
+      "freq": 5,
+      "query": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
+      "source_cat": "rachunkowosc",
+      "category": "rachunkowosc",
+      "top_score": 17.6296,
+      "top_law": "Ustawa o rachunkowości",
+      "top_article": "art. 39 ust. 3"
+    },
+    {
+      "freq": 5,
+      "query": "Pit-37 Zamotałam się osoba która otrzymuje PIT40A z KRUS i PIT11A otrzymuje z Zusu powinna taką osoba rozliczyć się PIT 37?",
+      "source_cat": "pit",
+      "category": "pit",
+      "top_score": 61.7401,
+      "top_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "top_article": "art. 26g"
+    },
+    {
+      "freq": 5,
+      "query": "Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza?",
+      "source_cat": "rachunkowosc",
+      "category": "rachunkowosc",
+      "top_score": 38.6841,
+      "top_law": "Ustawa o rachunkowości",
+      "top_article": "art. 45 ust. 1"
+    }
+  ],
+  "weaks": [
+    {
+      "freq": 44,
+      "query": "Czy w JPK za luty faktury wystawione w styczniu też muszą mieć znaczniki BFK lub DI?",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 17.5054,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 24,
+      "query": "Faktura wystawiona 1 kwietnia, czyli najpóźniej 2 kwietnia powinna być w KSeF przy założeniu trybu offline, ale nie dotarła?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 51.2911,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "art. 2",
+      "top_preview": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinn"
+    },
+    {
+      "freq": 21,
+      "query": "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 17.5054,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 20,
+      "query": "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
+      "source_cat": "rachunkowosc",
+      "category": "ksef",
+      "top_score": 39.2439,
+      "top_law": "Ustawa o VAT - KSeF terminy wdrożenia",
+      "top_article": "art. 106ga",
+      "top_preview": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, "
+    },
+    {
+      "freq": 17,
+      "query": "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 38.074,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 15,
+      "query": "A jako osoba fizyczna na jdg po zalogowaniu do KSeF muszę wygenerować certyfikat i token?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 39.3242,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "§ 2 ust. 2 pkt 3 lit. a",
+      "top_preview": "Tak, pełnomocnik może obsługiwać KSeF za podatnika. Podatnik może wskazać osobę fizyczną, która będzie miała uprawnienie do nadawania i odbierania uprawnień w K"
+    },
+    {
+      "freq": 15,
+      "query": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 17.5054,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 15,
+      "query": "Klient dał mi uprawnienia do przeglądania faktur i logowałam się na jego KSeF i widzę faktury ale na OPTIMIE mi ich nie pobiera, musi być token?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 49.829,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "art. 2",
+      "top_preview": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinn"
+    },
+    {
+      "freq": 13,
+      "query": "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW??",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 17.5054,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 12,
+      "query": "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 48.0384,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "§ 4 ust. 1",
+      "top_preview": "Dostarczone fragmenty ustawy o VAT nie zawierają informacji na temat terminów przesyłania faktur offline do Krajowego Systemu e-Faktur. Artykuły dotyczą uprawni"
+    },
+    {
+      "freq": 9,
+      "query": "Czy teraz te znaczniki JPK sa obowiązkowe również dla jdg na pełnych księgach?",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 17.5054,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 9,
+      "query": "Faktura z datą wystawienia i przesłania do KSeF 02.2026, data dostawy 03.2026 VAT do lutego, koszty marzec?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 54.4656,
+      "top_law": "Ustawa o VAT - KSeF terminy wdrożenia",
+      "top_article": "art. 106ga",
+      "top_preview": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, "
+    },
+    {
+      "freq": 7,
+      "query": "To zależy stawka np wykazuje się przy usługach hotelowych, gastronomicznych czy 50% nieodliczonego VAT za samochód i ta stawka nie wchodzi do JPK?",
+      "source_cat": "vat",
+      "category": "jpk",
+      "top_score": 19.037,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 6,
+      "query": "Dopiero od lutego wprowadzam kody kraju przed NIP, korygowalibyście JPK za styczeń w tym przypadku?",
+      "source_cat": "jpk",
+      "category": "jpk",
+      "top_score": 26.4925,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 6,
+      "query": "Faktura sprzedaży WDT wystawiona w lutym ale wysyłka towarów za granicę w marcu. Kiedy wykazujemy sprzedaż VAT-UE i JPK?",
+      "source_cat": "vat",
+      "category": "jpk",
+      "top_score": 25.8302,
+      "top_law": "Rozporządzenie JPK_V7",
+      "top_article": "brak bezpośredniego odniesienia",
+      "top_preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorz"
+    },
+    {
+      "freq": 6,
+      "query": "Ksef - korekta Czy da się wysłać do KSeF korektę korygująca tylko dane odbiorcy faktury? Do tej pory mieliśmy takie korekty zmieniające tylko dane odbiorcy a teraz w KSeF musimy zrobić korektę do 0 i nową fakturę?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 54.5715,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "§ 10 ust. 1 pkt 7b",
+      "top_preview": "Tekst artykułu nie zawiera informacji o formatach danych. Przepis § 10 reguluje wyłącznie proces zgłoszenia zamiaru wystawiania faktur z załącznikiem do KSeF, w"
+    },
+    {
+      "freq": 5,
+      "query": "Anonimowe wyszukiwanie faktury w KSeF Czy Anonimowe wyszukiwanie faktury KSeF u kogoś działa / działało w ciągu ostatnich kilku dni?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 38.1396,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "art. 2",
+      "top_preview": "Przepis artykułu 2 definiuje kto ma uprawnienia do korzystania z KSeF, ale nie zawiera informacji o momencie uznania faktury za wystawioną. Ta informacja powinn"
+    },
+    {
+      "freq": 5,
+      "query": "Czy ktoś miał problem z pobraniem faktur zaliczkowych i rozliczeniowych z KSEf do Symfonii handel?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 49.994,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "art. 3",
+      "top_preview": "Artykuł 3 dotyczy wyłącznie uprawnień do wystawiania elektronicznych faktur ustrukturyzowanych, ale nie zawiera przepisów dotyczących faktur zaliczkowych ani sp"
+    },
+    {
+      "freq": 5,
+      "query": "Obowiązek KSeF od 01.04.2026Moje pytanie czy mogę na ten moment wysłać na próbę sobie fv sprzedaży dla 1 klienta?",
+      "source_cat": "ksef",
+      "category": "ksef",
+      "top_score": 20.0583,
+      "top_law": "Ustawa o VAT - KSeF terminy wdrożenia",
+      "top_article": "art. 106ga",
+      "top_preview": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, "
+    },
+    {
+      "freq": 5,
+      "query": "Wszystkim. Faktura korygująca sprzedażowa do daty (KSeF) księgujecie tylko korektę? Jak?",
+      "source_cat": "rachunkowosc",
+      "category": "ksef",
+      "top_score": 15.5026,
+      "top_law": "Rozporządzenie KSeF",
+      "top_article": "§ 2 ust. 1, § 3",
+      "top_preview": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących"
+    }
+  ]
+}
