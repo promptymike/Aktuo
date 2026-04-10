@@ -130,6 +130,8 @@ def categorize_query(query: str) -> str:
                 "kodeks pracy",
                 "umowa o prace",
                 "wypowiedzenie",
+                "wypowiedzenia",
+                "okres wypowiedzenia",
                 "urlop",
                 "nadgodziny",
                 "czas pracy",

@@ -190,6 +190,22 @@
   },
   {
     "law_name": "Kodeks pracy",
+    "article_number": "art. 34",
+    "category": "kadry",
+    "verified_date": "",
+    "question_intent": "Okres wypowiedzenia umowy o pracę na okres próbny",
+    "content": "Okres wypowiedzenia umowy o pracę zawartej na okres próbny wynosi 3 dni robocze, gdy okres próbny nie przekracza 2 tygodni, 1 tydzień, gdy jest dłuższy niż 2 tygodnie, oraz 2 tygodnie, gdy wynosi 3 miesiące. Podstawa prawna: art. 34 Kodeksu pracy."
+  },
+  {
+    "law_name": "Kodeks pracy",
+    "article_number": "art. 36 Â§ 1",
+    "category": "kadry",
+    "verified_date": "",
+    "question_intent": "Okres wypowiedzenia umowy o pracę na czas określony lub nieokreślony",
+    "content": "Okres wypowiedzenia umowy o pracę na czas określony i na czas nieokreślony zależy od okresu zatrudnienia u danego pracodawcy i wynosi 2 tygodnie przy zatrudnieniu krótszym niż 6 miesięcy, 1 miesiąc po co najmniej 6 miesiącach oraz 3 miesiące po co najmniej 3 latach pracy. Podstawa prawna: art. 36 § 1 Kodeksu pracy."
+  },
+  {
+    "law_name": "Kodeks pracy",
     "article_number": "art. 55 § 11",
     "category": "rozwiazanie-umowy-bez-wypowiedzenia",
     "verified_date": "",
@@ -680,87 +696,27 @@
   },
   {
     "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak",
-    "category": "bledy-walidacji",
+    "article_number": "Â§ 12",
+    "category": "jpk",
     "verified_date": "",
-    "content": "Nie mogę odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów Rozporządzenia JPK_V7. Tekst nie zawiera specjalnego katalogu błędów odrzucających ani szczegółów procedury walidacji. Aby uzyskać prawidłową odpowiedź, potrzebuję dostępu do Załączników Rozporządzenia JPK_V7 zawierających specyfikację techniczną i reguły walidacji, lub do wytycznych Ministerstwa Finansów na ten temat."
+    "question_intent": "Korekta pliku JPK_V7",
+    "content": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygowany okres, bo błędy formalne lub techniczne mogą skutkować odrzuceniem pliku. Podstawa prawna: § 12 rozporządzenia JPK_V7."
   },
   {
     "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej treści",
-    "category": "oznaczenie_faktury_jpk",
+    "article_number": "Â§ 2",
+    "category": "jpk",
     "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu, ponieważ nie zawiera on artykułów dotyczących oznaczenia faktur w JPK_V7. Aby dokładnie odpowiedzieć na Twoje pytanie, wymagana jest pełna treść rozporządzenia zawierająca przepisy dotyczące oznaczania dokumentów handlowych w deklaracji."
+    "question_intent": "Czym jest JPK_V7 i kogo dotyczy",
+    "content": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowadzących ewidencję dla potrzeb tego podatku. Podstawa prawna: § 2 rozporządzenia w sprawie szczegółowego zakresu danych zawartych w deklaracjach podatkowych i ewidencji VAT."
   },
   {
     "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "odliczenia_vat",
+    "article_number": "Â§ 4-5",
+    "category": "jpk",
     "verified_date": "",
-    "content": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera w dostarczonej wersji regulacji dotyczących zawieszenia deklaracji VAT ani wpływu zawieszenia na możliwość wykazania odliczeń w JPK."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "vat_sprzedaz",
-    "verified_date": "",
-    "content": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera informacji o kodach pozycji (np. p_44) ani nie reguluje zwrotów VAT od sprzedaży samochodów."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "ewidencja_zakupow_towary",
-    "verified_date": "",
-    "content": "Nie mogę odpowiedzieć na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera regulacji dotyczącej rozbieżności między dokumentami a stanem faktycznym przyjęcia towarów."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "zwolnienia_vat",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu rozporządzenia. Dostarczone artykuły nie zawierają regulacji na temat zwolnień VAT ani zasad ewidencjonowania umów bez VAT w JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "odliczenia_vat_samochod",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Brakuje artykułów regulujących obsługę zmiany statusu VATowego podatnika oraz zasady wykazywania odliczeń VAT w sytuacji utraty statusu podatnika VAT czynnego."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "faktury_dokumentacja",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanej wersji nie zawiera szczegółowych regulacji na temat standardów opisów faktur zakupowych ani wymogów wobec treści faktur."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "import_transakcje_zagranicze",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły JPK_V7 nie zawierają regulacji dotyczącej importu, transakcji zagranicznych czy przeliczania walut obcych na potrzeby ewidencji JPK."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "ewidencja_towarow_dowody",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły JPK_V7 nie zawierają regulacji dotyczącej osobistych zakupów podatnika czy możliwości evidencjonowania zakupów prywatnych dowodami wewnętrznymi."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonej wersji",
-    "category": "dokumentacja_gospodarcza",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi. Dostarczone artykuły Rozporządzenia JPK_V7 nie zawierają regulacji dotyczącej dowodów wewnętrznych, raportów z bilansów czy wyłączeń dla butelek."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak artykułu w dostarczonym tekście",
-    "category": "ewidencja_zakupow_jpk",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. W podanym tekście nie ma artykułów regulujących zasady ewidencjonowania najmu prywatnego. Musisz zweryfikować to w kompletnym tekście rozporządzenia lub u doradcy podatkowego."
+    "question_intent": "JPK_V7M i JPK_V7K — część deklaracyjna i okres rozliczenia",
+    "content": "Część deklaracyjna JPK_V7 obejmuje dane potrzebne do rozliczenia podatku należnego i naliczonego za dany okres oraz rozróżnia rozliczenie miesięczne i kwartalne. Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK_V7M albo JPK_V7K, a korektę części deklaracyjnej składa za okres, którego dotyczą korygowane dane. Podstawa prawna: § 4 i § 5 rozporządzenia JPK_V7."
   },
   {
     "law_name": "Rozporządzenie JPK_V7",
@@ -785,192 +741,10 @@
   },
   {
     "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania EE nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania oznaczenia EE."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania IMP nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania oznaczenia IMP."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania MPP nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania symbolu MPP."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania SW nie zostały zamieszczone. Potrzebuję tekstu zawierającego definicję i warunki stosowania symbolu SW."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące kodowania TP nie zostały zamieszczone w dostarczonych danych. Potrzebuję tekstu zawierającego definicję i warunki stosowania oznaczenia TP."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "wykazywanie_paragonow",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące wykazywania faktur do paragonów nie zostały zamieszczone. Potrzebuję tekstu zawierającego reguły dotyczące powiązania faktur i paragonów w JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "wykazywanie_paragonow",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące wykazywania paragonów z NIP nie zostały zamieszczone. Potrzebuję tekstu zawierającego reguły dotyczące rejestrowania paragonów w JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "wykazywanie_raportow_fiskalnych",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły dotyczące wykazywania raportów fiskalnych nie zostały zamieszczone. Potrzebuję tekstu zawierającego reguły dotyczące rejestrowania raportów fiskalnych w JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ artykuły z kodami GTU nie zostały zamieszczone. Aby prawidłowo odpowiedzieć, potrzebuję tekstu zawierającego definicję i warunki stosowania kodów GTU."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "kody_identyfikacyjne_sprzedazy",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. Aby udzielić prawidłowej odpowiedzi, potrzebuję artykułów zawierających reguły dotyczące obowiązkowości kodów GTU dla różnych typów faktur."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "korekty_i_zmeny",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera postanowień dotyczących procedury czynnego żalu dla błędów w deklaracji. Procedura może wynikać z ogólnych przepisów o korekcie deklaracji VAT lub innego aktu prawnego."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak danych",
-    "category": "korekty_i_zmeny",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 nie zawiera wyraźnych postanowień dotyczących wymogów uzasadnienia dla korekty deklaracji. Weryfikacja wymaga zapoznania się z pełnym tekstem rozporządzenia lub wytycznymi Ministerstwa Finansów."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak informacji w tekście",
-    "category": "procedury-technicznego-jpk",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7, ponieważ nie zawiera on informacji dotyczących procedury podglądu pliku JPK_VAT. Funkcjonalność podglądu powinna być opisana w instrukcji systemu teleinformatycznego lub dokumentacji technicznej JPK_VAT, nie w samym rozporządzeniu."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak przepisów",
-    "category": "odpowiedzialność_i_sankcje",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie Rozporządzenia JPK_V7, ponieważ dokument ten zawiera wyłącznie szczegółowe przepisy techniczne dotyczące struktury i formatu raportów JPK. Przepisy o odpowiedzialności solidarnej, sankcjach za brak przesyłania JPK i zagrożeniach wynikających z nieprzesyłania sprawozdań znajdują się w ustawie o podatku od towarów i usług oraz w kodeksie karnym skarbowym, a nie w tym rozporządzeniu."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułu",
-    "category": "Identyfikacja kontrahentów w JPK_V7",
-    "verified_date": "",
-    "content": "Nie można wygenerować odpowiedzi — w podanym tekście brakuje artykułów Rozporządzenia JPK_V7 określających wymogi dotyczące danych kontrahenta. Aby udzielić odpowiedzi, potrzebny jest artykuł normujący, jakie dane identyfikujące kontrahenta trzeba zawrzeć w ewidencji."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułu",
-    "category": "Struktura JPK_V7",
-    "verified_date": "",
-    "content": "Nie można wygenerować odpowiedzi — w podanym tekście brakuje zawartości artykułów Rozporządzenia JPK_V7 opisujących strukturę części ewidencyjnej. Aby odpowiedzieć na to pytanie, potrzebny jest artykuł normujący zawartość danych w ewidencji JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułów",
-    "category": "obowiazki-podatnika",
-    "verified_date": "",
-    "content": "Nie można odpowiedzieć na to pytanie na podstawie dostarczonego tekstu artykułów JPK_V7. Regulacja dotyczy podatników i podatek VAT, ale brakuje informacji o obowiązkach biur rachunkowych lub księgowych prowadzących usługi dla innych podmiotów. Wymagana weryfikacja przepisów ogólnych JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułów",
-    "category": "srodki-trwale",
-    "verified_date": "",
-    "content": "Nie można odpowiedzieć na to pytanie na podstawie dostarczonego tekstu. Regulacja JPK_V7 nie zawiera przepisów w dostarczonej części dotyczących ewidencji środków trwałych ani harmonogramu przesyłania danych o samochodach."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułów",
-    "category": "termin-obowiazku",
-    "verified_date": "",
-    "content": "Nie można odpowiedzieć na to pytanie, gdyż dostarczone informacje nie zawierają tekstu artykułów regulujących terminy wejścia w system KSEF. Brakuje konkretnych przepisów dotyczących dat obowiązkowego przejścia."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułów",
-    "category": "harmonogram-wysylki",
-    "verified_date": "",
-    "content": "Nie można odpowiedzieć na to pytanie, ponieważ dostarczone materiały nie zawierają tekstu artykułów określających harmonogram wysyłania JPK_V7 dla podatników VAT czynnych."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "brak tekstu artykułów",
-    "category": "integracja-systemow",
-    "verified_date": "",
-    "content": "Nie można odpowiedzieć na to pytanie. Dostarczone materiały nie zawierają informacji o relacji między JPK_V7 a JPK-KH lub JPK-PD, ani nie wyjaśniają powiązań między tymi systemami."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
     "article_number": "brak tekstu artykułów",
     "category": "plan-dzialania",
     "verified_date": "",
     "content": "Nie można udzielić konkretnych wskazówek bez tekstu artykułów. Należy zapoznać się z pełnym tekstem Rozporządzenia JPK_V7, aby zrozumieć obowiązki danego podatnika, terminy przesyłania danych i wymagane dokumenty."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "nie określony",
-    "category": "rodzaje_deklaracji_JPK",
-    "verified_date": "",
-    "content": "Nie mogę odpowiedzieć na to pytanie na podstawie dostarczonego tekstu. Tekst artykułów nie zawiera definicji ani porównania między wariantami JPK_V7M i JPK_V7K. Wymagana jest weryfikacja w pełnym tekście Rozporządzenia JPK_V7."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "nie określony",
-    "category": "zwolnienia_i_wyjatki",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanym fragmencie nie zawiera informacji na temat obowiązków podatników zwolnionych z VAT w stosunku do JPK_V7. Wymagana jest weryfikacja właściwych artykułów rozporządzenia."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "nie określony",
-    "category": "obowiazki_skladania",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanym fragmencie nie zawiera informacji o kryteriach rozróżniających podatników obowiązanych do składania JPK_V7M versus JPK_V7K. Wymagana jest pełna treść właściwych artykułów."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "nie określony",
-    "category": "terminy_i_sankcje",
-    "verified_date": "",
-    "content": "Nie mogę udzielić odpowiedzi na podstawie dostarczonego tekstu. Rozporządzenie JPK_V7 w podanym fragmencie nie zawiera regulacji dotyczących możliwości złożenia JPK_V7 po terminie, kar czy konsekwencji opóźnienia. Wymagana jest weryfikacja właściwych artykułów dotyczących terminów i sankcji."
-  },
-  {
-    "law_name": "Rozporządzenie JPK_V7",
-    "article_number": "nie udostępniono",
-    "category": "formato-nip-jak-v7",
-    "verified_date": "",
-    "content": "Brak możliwości udzielenia odpowiedzi na podstawie dostarczonego tekstu Rozporządzenia JPK_V7. Aby odpowiedzieć na pytanie o format numeru NIP (z przedrostkiem PL czy bez), niezbędny jest tekst artykułu regulujący strukturę i format pól w JPK_V7, szczególnie dotyczący sposobu wpisywania numerów identyfikacyjnych kontrahentów krajowych."
   },
   {
     "law_name": "Rozporządzenie KSeF",
@@ -9628,6 +9402,14 @@
   {
     "law_name": "Ustawa o VAT",
     "article_number": "art. 99 ust. 1-3",
+    "category": "jpk",
+    "verified_date": "",
+    "question_intent": "Termin złożenia JPK_V7 za miesiąc lub kwartał",
+    "content": "JPK_V7 składa się do 25. dnia miesiąca następującego po okresie rozliczeniowym. Przy rozliczeniu miesięcznym podatnik przesyła JPK_V7M za każdy miesiąc, a przy rozliczeniu kwartalnym przesyła część ewidencyjną co miesiąc i rozliczenie JPK_V7K po zakończeniu kwartału, również do 25. dnia miesiąca następującego po danym okresie. Podstawa prawna: art. 99 ust. 1-3 ustawy o VAT."
+  },
+  {
+    "law_name": "Ustawa o VAT",
+    "article_number": "art. 99 ust. 1-3",
     "category": "Obowiązki sprawozdawcze",
     "verified_date": "",
     "content": "Nie, przejście na VAT kwartalny nie zwalnia z obowiązku złożenia PKPIR. PKPIR dotyczy podatku dochodowego, a VAT to odrębny podatek. Przepisy o VAT (art. 99) regulują jedynie częstotliwość składania deklaracji VAT (miesięcznie lub kwartalnie), ale nie zastępują obowiązków wynikających z podatku dochodowego."
@@ -9977,6 +9759,30 @@
     "verified_date": "",
     "content": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działalności (B2C). Faktury B2C mogą być wystawiane w KSeF dobrowolnie.",
     "source": "legacy"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+    "article_number": "art. 28j ust. 1",
+    "category": "cit",
+    "verified_date": "",
+    "question_intent": "Estoński CIT — warunki wejścia",
+    "content": "Estoński CIT może wybrać podatnik CIT mający siedzibę lub zarząd w Polsce, jeżeli spełnia warunki z art. 28j ust. 1, w szczególności dotyczące struktury przychodów, poziomu zatrudnienia lub ponoszenia określonych wydatków na wynagrodzenia, prowadzenia ksiąg rachunkowych oraz złożenia zawiadomienia o wyborze ryczałtu. Podstawa prawna: art. 28j ust. 1 ustawy o CIT."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+    "article_number": "art. 28j ust. 1 oraz art. 28k ust. 1",
+    "category": "cit",
+    "verified_date": "",
+    "question_intent": "Estoński CIT — kto może skorzystać i kto jest wyłączony",
+    "content": "Estoński CIT, czyli ryczałt od dochodów spółek, może wybrać podatnik CIT mający siedzibę lub zarząd w Polsce, jeżeli spełnia warunki z art. 28j ust. 1, w tym dotyczące struktury przychodów, zatrudnienia, formy prowadzenia ksiąg i złożenia zawiadomienia o wyborze ryczałtu. Z rozwiązania wyłączeni są m.in. podatnicy wskazani w art. 28k ust. 1, np. przedsiębiorstwa finansowe, podmioty w upadłości lub likwidacji oraz niektóre podmioty utworzone w drodze określonych reorganizacji. Podstawa prawna: art. 28j ust. 1 i art. 28k ust. 1 ustawy o CIT."
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osÃ³b prawnych",
+    "article_number": "art. 28k ust. 1",
+    "category": "cit",
+    "verified_date": "",
+    "question_intent": "Estoński CIT — kto jest wyłączony",
+    "content": "Z estońskiego CIT wyłączeni są podatnicy wskazani w art. 28k ust. 1, w tym m.in. przedsiębiorstwa finansowe, instytucje pożyczkowe, podatnicy korzystający z niektórych zwolnień strefowych, podmioty w upadłości lub likwidacji oraz część podmiotów powstałych w wyniku określonych reorganizacji lub aportów. Podstawa prawna: art. 28k ust. 1 ustawy o CIT."
   },
   {
     "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
