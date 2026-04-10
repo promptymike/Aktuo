@@ -49,6 +49,8 @@ def categorize_query(query: str) -> str:
     )
     if any(_matches_keyword(lowered, lowered_tokens, keyword) for keyword in cash_register_keywords):
         return "vat"
+    if "ulg" in lowered and ("senior" in lowered or "emeryt" in lowered):
+        return "pit"
     keyword_map = (
         (
             "ksef",
@@ -149,6 +151,10 @@ def categorize_query(query: str) -> str:
                 "pit4r",
                 "ulga na dzieci",
                 "ulga dla seniora",
+                "ulga seniora",
+                "ulga dla pracujacego seniora",
+                "art. 21 ust. 1 pkt 154",
+                "zwolnienie emeryt",
                 "senior",
                 "wynagrodzenie w euro",
                 "waluta obca",
