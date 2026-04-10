@@ -11,6 +11,7 @@ load_dotenv(PROJECT_ROOT / ".env", override=False, encoding="utf-8")
 DEFAULT_SYSTEM_PROMPT_PATH = PROJECT_ROOT / "data" / "prompts" / "system_prompt_pl.txt"
 BM25_MIN_SCORE = 2.0
 RATE_LIMIT_PER_HOUR = 30
+MAX_QUESTION_LENGTH = 5000
 
 PLACEHOLDER_VALUES = {
     "",

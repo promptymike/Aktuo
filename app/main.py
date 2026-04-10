@@ -16,7 +16,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from app.chat import render_chat_history, render_user_message
 from app.sidebar import render_sidebar
-from config.settings import MissingEnvironmentError, RATE_LIMIT_PER_HOUR, get_settings
+from config.settings import MAX_QUESTION_LENGTH, MissingEnvironmentError, RATE_LIMIT_PER_HOUR, get_settings
 from core.generator import AnthropicAPIError
 from core.logger import log_query
 from core.rag import answer_query
@@ -31,6 +31,10 @@ def normalize_email(value: str) -> str:
 
 def is_valid_email(value: str) -> bool:
     return bool(EMAIL_PATTERN.fullmatch(value))
+
+
+def is_question_too_long(value: str) -> bool:
+    return len(value) > MAX_QUESTION_LENGTH
 
 
 def current_timestamp() -> str:
@@ -318,6 +322,11 @@ def render_chat_page() -> None:
     if not question:
         if not st.session_state.messages:
             st.write("Na przykład: Od kiedy KSeF będzie obowiązkowy dla mojej firmy?")
+        render_footer()
+        return
+
+    if is_question_too_long(question):
+        st.error(f"Pytanie jest za długie. Maksymalna długość to {MAX_QUESTION_LENGTH} znaków.")
         render_footer()
         return
 
