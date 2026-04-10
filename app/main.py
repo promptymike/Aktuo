@@ -5,6 +5,7 @@ import uuid
 from datetime import datetime, timedelta
 from math import ceil
 from pathlib import Path
+import re
 from zoneinfo import ZoneInfo
 
 import streamlit as st
@@ -21,10 +22,15 @@ from core.logger import log_query
 from core.rag import answer_query
 
 LOCAL_TZ = ZoneInfo("Europe/Warsaw")
+EMAIL_PATTERN = re.compile(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
 
 
 def normalize_email(value: str) -> str:
     return value.strip().lower()
+
+
+def is_valid_email(value: str) -> bool:
+    return bool(EMAIL_PATTERN.fullmatch(value))
 
 
 def current_timestamp() -> str:
@@ -261,7 +267,7 @@ def render_login_gate() -> None:
         submitted = st.form_submit_button("Zaloguj", use_container_width=True)
     if submitted:
         normalized = normalize_email(email)
-        if not normalized or "@" not in normalized:
+        if not normalized or not is_valid_email(normalized):
             st.error("Podaj prawidłowy adres e-mail.")
             return
         st.session_state.user_email = normalized
