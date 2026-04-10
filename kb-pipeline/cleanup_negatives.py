@@ -18,6 +18,11 @@ KNOWLEDGE_PATH = PROJECT_ROOT / "data" / "seeds" / "law_knowledge.json"
 NEGATIVE_PHRASES = (
     "nie mogę odpowiedzieć",
     "nie moge odpowiedziec",
+    "nie mogę udzielić odpowiedzi",
+    "nie moge udzielic odpowiedzi",
+    "nie można odpowiedzieć",
+    "nie mozna odpowiedziec",
+    "nie można wygenerować odpowiedzi",
     "nie jestem w stanie",
     "poza zakresem",
     "brak danych",
@@ -29,6 +34,10 @@ NEGATIVE_PHRASES = (
     "brak informacji",
     "nie zawiera przepisów",
     "nie zawiera przepisow",
+    "nie zawiera informacji",
+    "nie zawiera regulacji",
+    "nie mam dostępu",
+    "nie mam dostepu",
 )
 
 
