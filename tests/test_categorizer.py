@@ -39,5 +39,33 @@ def test_categorize_query_returns_ordynacja_category_without_diacritics() -> Non
     assert categorize_query("Jakie sa odsetki za zwloke i kiedy jest przedawnienie?") == "ordynacja"
 
 
+def test_categorize_query_returns_kadry_for_wypowiedzenie() -> None:
+    assert categorize_query("Ile wynosi okres wypowiedzenia umowy o pracę po 5 latach?") == "kadry"
+
+
+def test_categorize_query_returns_kadry_for_umowa_na_czas() -> None:
+    assert categorize_query("Jakie są limity umów na czas określony?") == "kadry"
+
+
+def test_categorize_query_returns_zus_for_zasilek_chorobowy() -> None:
+    assert categorize_query("Ile wynosi zasiłek chorobowy dla JDG?") == "zus"
+
+
+def test_categorize_query_returns_zus_for_preferencyjny() -> None:
+    assert categorize_query("Ile wynosi preferencyjny ZUS?") == "zus"
+
+
+def test_categorize_query_returns_rachunkowosc_for_inwentaryzacja() -> None:
+    assert categorize_query("Kiedy trzeba robić inwentaryzację?") == "rachunkowosc"
+
+
+def test_categorize_query_returns_pit_for_formy_opodatkowania() -> None:
+    assert categorize_query("Jakie są formy opodatkowania JDG?") == "pit"
+
+
+def test_categorize_query_returns_cit_for_strata() -> None:
+    assert categorize_query("Jak rozliczyć stratę podatkową w CIT?") == "cit"
+
+
 def test_categorize_query_falls_back_to_ogolne() -> None:
     assert categorize_query("Potrzebuję ogólnej informacji podatkowej.") == "ogólne"
