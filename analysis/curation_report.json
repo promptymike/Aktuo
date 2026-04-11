@@ -1,0 +1,77 @@
+{
+  "proposed_kb_units_total": 88,
+  "proposed_kb_units_accepted": 78,
+  "proposed_kb_units_rejected": 10,
+  "proposed_synonyms_total": 20,
+  "proposed_synonyms_accepted": 10,
+  "proposed_synonyms_rejected": 10,
+  "top_accepted_laws_by_count": {
+    "Kodeks pracy": 22,
+    "Ustawa o VAT": 17,
+    "Ustawa o rachunkowości": 12,
+    "Ustawa o podatku dochodowym od osób fizycznych": 10,
+    "Ustawa o podatku dochodowym od osób prawnych": 8,
+    "Rozporządzenie MF o kasach rejestrujących": 6,
+    "Ustawa o zryczałtowanym podatku dochodowym": 2,
+    "Ustawa o systemie ubezpieczeń społecznych": 1
+  },
+  "top_accepted_synonyms_by_freq": [
+    {
+      "short": "IFT2R",
+      "full_phrase": "formularz IFT-2R",
+      "freq": 9
+    },
+    {
+      "short": "PIT-37",
+      "full_phrase": "formularz PIT-37",
+      "freq": 6
+    },
+    {
+      "short": "PIT36",
+      "full_phrase": "formularz PIT-36",
+      "freq": 6
+    },
+    {
+      "short": "PIT36L",
+      "full_phrase": "formularz PIT-36L",
+      "freq": 6
+    },
+    {
+      "short": "KRUS",
+      "full_phrase": "Kasa Rolniczego Ubezpieczenia Społecznego",
+      "freq": 5
+    },
+    {
+      "short": "PIT11A",
+      "full_phrase": "formularz PIT-11A",
+      "freq": 5
+    },
+    {
+      "short": "PIT40A",
+      "full_phrase": "formularz PIT-40A",
+      "freq": 5
+    },
+    {
+      "short": "SENT",
+      "full_phrase": "",
+      "freq": 4
+    },
+    {
+      "short": "DG-1",
+      "full_phrase": "",
+      "freq": 3
+    },
+    {
+      "short": "PKD",
+      "full_phrase": "Polska Klasyfikacja Działalności",
+      "freq": 3
+    }
+  ],
+  "rejection_reasons_histogram": {
+    "invalid article reference": 10,
+    "ambiguous short token": 5,
+    "not clearly domain-law relevant": 2,
+    "noise or brand synonym": 2,
+    "duplicate proposed synonym": 1
+  }
+}
