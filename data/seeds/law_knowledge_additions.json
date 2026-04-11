@@ -1,0 +1,116 @@
+[
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+    "article_number": "art. 26",
+    "category": "cit",
+    "verified_date": "",
+    "question_intent": "Czy certyfikat rezydencji podatkowej kontrahenta pozwala zastosować stawkę z umowy o unikaniu podwójnego opodatkowania albo nie pobierać WHT?",
+    "content": "Przy wypłatach objętych WHT płatnik co do zasady pobiera zryczałtowany podatek w dniu wypłaty. Zastosowanie stawki z umowy o unikaniu podwójnego opodatkowania albo niepobranie podatku jest możliwe dopiero po udokumentowaniu siedziby podatnika certyfikatem rezydencji. Art. 26 CIT nakłada też obowiązek dochowania należytej staranności przy weryfikacji warunków preferencji.",
+    "source": "gap_question_addition",
+    "gap_query": "Czy ktoś posiada certyfikat rezydencji podatkowej za 2025 od: *Weglot SAS *Stripe *Squarespace Ireland *Serif Europe LTD?",
+    "gap_freq": 29,
+    "gap_source_category": "cit",
+    "proposal_meta": {
+      "matched_law": "Ustawa o podatku dochodowym od osób prawnych",
+      "matched_source_file": "kb-pipeline\\output\\articles_cit.json",
+      "score": 9.0,
+      "overlap_hint": "certyfikat, rezydencji, WHT",
+      "curated_manually": true
+    }
+  },
+  {
+    "law_name": "Ordynacja podatkowa",
+    "article_number": "art. 79",
+    "category": "ordynacja",
+    "verified_date": "",
+    "question_intent": "Czy przy nadpłacie wynikającej z CIT-8 trzeba składać wniosek o stwierdzenie nadpłaty i zwrot?",
+    "content": "Art. 79 Ordynacji podatkowej reguluje wniosek o stwierdzenie nadpłaty i wniosek o jej zwrot. Co do zasady prawo do złożenia takiego wniosku wygasa z upływem terminu przedawnienia zobowiązania podatkowego, chyba że ustawy podatkowe przewidują inny tryb zwrotu podatku. Przepis wskazuje też, że żądanie z wniosku o stwierdzenie nadpłaty może zostać rozpatrzone w toczącym się postępowaniu podatkowym.",
+    "source": "gap_question_addition",
+    "gap_query": "Czy nadal trzeba pisać pisma o stwierdzenie nadpłaty i zwrot jesli wynika z cit8? Czy sami zwrócą?",
+    "gap_freq": 19,
+    "gap_source_category": "cit",
+    "proposal_meta": {
+      "matched_law": "Ordynacja podatkowa",
+      "matched_source_file": "kb-pipeline\\output\\articles_ordynacja.json",
+      "score": 8.0,
+      "overlap_hint": "nadpłata, zwrot, CIT-8",
+      "curated_manually": true
+    }
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+    "article_number": "art. 26",
+    "category": "cit",
+    "verified_date": "",
+    "question_intent": "Czy przy wynajmie auta za granicą trzeba pobrać podatek u źródła (WHT)?",
+    "content": "Art. 26 CIT wskazuje, że przy wypłatach należności z art. 21 ust. 1 i art. 22 ust. 1 płatnik pobiera zryczałtowany podatek dochodowy w dniu wypłaty. Możliwość zastosowania stawki z umowy o unikaniu podwójnego opodatkowania albo niepobrania WHT zależy od posiadania certyfikatu rezydencji i dochowania należytej staranności. Przy usługach zagranicznych najpierw trzeba więc ustalić, czy dana należność w ogóle wpada do katalogu WHT.",
+    "source": "gap_question_addition",
+    "gap_query": "Wynajem auta za granica. Czy w tej sytuacji należy pobrać podatek u źródła (WHT)?",
+    "gap_freq": 7,
+    "gap_source_category": "cit",
+    "proposal_meta": {
+      "matched_law": "Ustawa o podatku dochodowym od osób prawnych",
+      "matched_source_file": "kb-pipeline\\output\\articles_cit.json",
+      "score": 7.0,
+      "overlap_hint": "wynajem, WHT, podatek u źródła",
+      "curated_manually": true
+    }
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 26",
+    "category": "pit",
+    "verified_date": "",
+    "question_intent": "Jak działa ulga rehabilitacyjna na leki dla niepełnosprawnego dziecka?",
+    "content": "Art. 26 PIT przewiduje odliczenia od dochodu, w tym ulgę rehabilitacyjną na zasadach wskazanych w dalszych jednostkach redakcyjnych tego przepisu. W praktyce wydatki na leki można rozliczać tylko wtedy, gdy spełnione są warunki ustawowe oraz istnieją dokumenty potwierdzające poniesienie wydatku. Przy rozliczeniu leki i inne wydatki rehabilitacyjne trzeba więc oceniać bezpośrednio pod kątem art. 26 PIT.",
+    "source": "gap_question_addition",
+    "gap_query": "Bo sie zgubiłam. PIT-37 Ulga rehabilitacyjna na niepełnosprawnego syna i faktury za leki powyżej 100 zl?",
+    "gap_freq": 6,
+    "gap_source_category": "pit",
+    "proposal_meta": {
+      "matched_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "matched_source_file": "kb-pipeline\\output\\articles_pit.json",
+      "score": 7.0,
+      "overlap_hint": "ulga rehabilitacyjna, leki, niepełnosprawny",
+      "curated_manually": true
+    }
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 27f",
+    "category": "pit",
+    "verified_date": "",
+    "question_intent": "Czy ulga na dziecko przysługuje także na pełnoletnie dziecko studiujące za granicą?",
+    "content": "Art. 27f PIT reguluje ulgę na dziecko i odliczenie miesięczne od podatku. Przepis określa kwoty ulgi oraz limity dochodów przy jednym dziecku, a w dalszych jednostkach redakcyjnych odwołuje się do dzieci pełnoletnich uczących się, jeżeli spełnione są warunki ustawowe. Przy ocenie prawa do ulgi na studiujące dziecko za granicą trzeba więc weryfikować przesłanki z art. 27f, a nie sam fakt nauki poza Polską.",
+    "source": "gap_question_addition",
+    "gap_query": "Ulga na dziecko Córka ma 22 lata i studiuje w Danii. Czy w takim przypadku mogę zastosować ulgę na dziecko?",
+    "gap_freq": 6,
+    "gap_source_category": "pit",
+    "proposal_meta": {
+      "matched_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "matched_source_file": "kb-pipeline\\output\\articles_pit.json",
+      "score": 7.0,
+      "overlap_hint": "ulga, dziecko, studiuje",
+      "curated_manually": true
+    }
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+    "article_number": "art. 39",
+    "category": "pit",
+    "verified_date": "",
+    "question_intent": "Czy PIT-11 można wysłać 2 lutego, jeżeli ustawowy termin wypada w weekend?",
+    "content": "Art. 39 PIT nakłada na płatników obowiązek przesłania podatnikowi i urzędowi skarbowemu imiennej informacji sporządzonej według ustalonego wzoru, czyli m.in. PIT-11. Sam przepis określa obowiązek i tryb przekazania informacji, a zasady przesuwania terminu, gdy ostatni dzień wypada w sobotę lub dzień wolny, wynikają z Ordynacji podatkowej. W praktyce termin PIT-11 ocenia się więc łącznie przez art. 39 PIT i reguły terminowe Ordynacji.",
+    "source": "gap_question_addition",
+    "gap_query": "Czy pit11 można wysłać jeszcze 2 lutego z uwagi na weekend?",
+    "gap_freq": 6,
+    "gap_source_category": "pit",
+    "proposal_meta": {
+      "matched_law": "Ustawa o podatku dochodowym od osób fizycznych",
+      "matched_source_file": "kb-pipeline\\output\\articles_pit.json",
+      "score": 7.0,
+      "overlap_hint": "pit11, termin, weekend",
+      "curated_manually": true
+    }
+  }
+]
