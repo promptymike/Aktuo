@@ -1,154 +1,310 @@
-"""Prepare raw KB units for reprocessing through generate_units.py pipeline.
+"""Prepare raw KB units for reprocessing through generate_units.py.
 
-Creates per-law articles.json and matched.json inputs from raw units,
-using full article text from parsed articles files where available.
+The raw-unit detector saves records straight from law_knowledge.json. This script:
+1. Groups them by canonical law, not by raw law_name string, so mojibake variants
+   like "os?b" and "osób" do not split PIT/CIT into separate partial runs.
+2. Preserves distinct VAT/KSeF supplement entries as separate reprocess inputs.
+3. Reuses full parsed article text from articles_*.json when available.
 """
 
 from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from collections import defaultdict
+from dataclasses import dataclass
 from pathlib import Path
+
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "output"
 RAW_UNITS_PATH = ROOT / "raw_units_to_process.json"
-
-# Map law_name patterns → articles file and canonical law name
-LAW_FILE_MAP = {
-    "Ustawa o VAT": ("articles_vat.json", "Ustawa o VAT"),
-    "Ordynacja podatkowa": ("articles_ordynacja.json", "Ordynacja podatkowa"),
-    "podatku dochodowym od osób fizycznych": ("articles_pit.json", "Ustawa o PIT"),
-    "podatku dochodowym od os?b fizycznych": ("articles_pit.json", "Ustawa o PIT"),
-    "podatku dochodowym od osób prawnych": ("articles_cit.json", "Ustawa o CIT"),
-    "podatku dochodowym od os?b prawnych": ("articles_cit.json", "Ustawa o CIT"),
-    "Kodeks pracy": ("articles_kodeks_pracy.json", "Kodeks pracy"),
-    "ubezpiecze": ("articles_zus.json", "Ustawa o ZUS"),
-    "rachunkowo": ("articles_rachunkowosc.json", "Ustawa o rachunkowości"),
-    "zryczałtowanym": ("articles_ryczalt.json", "Ustawa o ryczałcie"),
-    "zrycza": ("articles_ryczalt.json", "Ustawa o ryczałcie"),
-    "kasach rejestruj": ("articles_kasy.json", "Rozporządzenie o kasach"),
-    "JPK_V7": ("articles_jpk.json", "Rozporządzenie JPK_V7"),
-    "KSeF": ("articles_ksef.json", "Ustawa o KSeF"),
-}
+REPROCESS_DIR = OUTPUT / "reprocess"
 
 
-def find_articles_file(law_name: str) -> tuple[Path | None, str]:
-    for pattern, (filename, short) in LAW_FILE_MAP.items():
-        if pattern.lower() in law_name.lower():
-            path = OUTPUT / filename
-            if path.exists():
-                return path, short
-    return None, law_name
+@dataclass(frozen=True)
+class LawConfig:
+    canonical_law_name: str
+    short_name: str
+    source_filename: str
+
+
+LAW_CONFIGS = (
+    (
+        "ustawa o vat - ksef terminy wdrozenia",
+        LawConfig(
+            canonical_law_name="Ustawa o VAT - KSeF terminy wdrożenia",
+            short_name="Ustawa o VAT KSeF terminy",
+            source_filename="articles_vat.json",
+        ),
+    ),
+    (
+        "ustawa o vat - ksef uproszczenia 2026",
+        LawConfig(
+            canonical_law_name="Ustawa o VAT - KSeF uproszczenia 2026",
+            short_name="Ustawa o VAT KSeF uproszczenia",
+            source_filename="articles_vat.json",
+        ),
+    ),
+    (
+        "ustawa o vat - ksef zwolnienia",
+        LawConfig(
+            canonical_law_name="Ustawa o VAT - KSeF zwolnienia",
+            short_name="Ustawa o VAT KSeF zwolnienia",
+            source_filename="articles_vat.json",
+        ),
+    ),
+    (
+        "ustawa o vat",
+        LawConfig(
+            canonical_law_name="Ustawa o VAT",
+            short_name="Ustawa o VAT",
+            source_filename="articles_vat.json",
+        ),
+    ),
+    (
+        "podatku dochodowym od osob fizycznych",
+        LawConfig(
+            canonical_law_name="Ustawa o podatku dochodowym od osób fizycznych",
+            short_name="Ustawa o PIT",
+            source_filename="articles_pit.json",
+        ),
+    ),
+    (
+        "podatku dochodowym od osob prawnych",
+        LawConfig(
+            canonical_law_name="Ustawa o podatku dochodowym od osób prawnych",
+            short_name="Ustawa o CIT",
+            source_filename="articles_cit.json",
+        ),
+    ),
+    (
+        "ordynacja podatkowa",
+        LawConfig(
+            canonical_law_name="Ordynacja podatkowa",
+            short_name="Ordynacja podatkowa",
+            source_filename="articles_ordynacja.json",
+        ),
+    ),
+    (
+        "kodeks pracy",
+        LawConfig(
+            canonical_law_name="Kodeks pracy",
+            short_name="Kodeks pracy",
+            source_filename="articles_kodeks_pracy.json",
+        ),
+    ),
+    (
+        "ubezpieczen spolecznych",
+        LawConfig(
+            canonical_law_name="Ustawa o systemie ubezpieczeń społecznych",
+            short_name="Ustawa o ZUS",
+            source_filename="articles_zus.json",
+        ),
+    ),
+    (
+        "rachunkowosci",
+        LawConfig(
+            canonical_law_name="Ustawa o rachunkowości",
+            short_name="Ustawa o rachunkowości",
+            source_filename="articles_rachunkowosc.json",
+        ),
+    ),
+    (
+        "zryczaltowanym podatku dochodowym",
+        LawConfig(
+            canonical_law_name="Ustawa o zryczałtowanym podatku dochodowym",
+            short_name="Ustawa o ryczałcie",
+            source_filename="articles_ryczalt.json",
+        ),
+    ),
+    (
+        "kasach rejestrujacych",
+        LawConfig(
+            canonical_law_name="Rozporządzenie MF o kasach rejestrujących",
+            short_name="Rozporządzenie o kasach",
+            source_filename="articles_kasy.json",
+        ),
+    ),
+    (
+        "jpk_v7",
+        LawConfig(
+            canonical_law_name="Rozporządzenie JPK_V7",
+            short_name="Rozporządzenie JPK_V7",
+            source_filename="articles_jpk.json",
+        ),
+    ),
+    (
+        "ksef",
+        LawConfig(
+            canonical_law_name="Rozporządzenie KSeF",
+            short_name="Rozporządzenie KSeF",
+            source_filename="articles_ksef.json",
+        ),
+    ),
+)
+
+
+def normalize(text: str) -> str:
+    translation = str.maketrans(
+        {
+            "ą": "a",
+            "ć": "c",
+            "ę": "e",
+            "ł": "l",
+            "ń": "n",
+            "ó": "o",
+            "ś": "s",
+            "ż": "z",
+            "ź": "z",
+        }
+    )
+    normalized = unicodedata.normalize("NFKD", text.lower().translate(translation))
+    without_accents = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    without_mojibake_markers = without_accents.replace("?", " ").replace("Â", " ").replace("Ă", " ")
+    collapsed = re.sub(r"\s+", " ", without_mojibake_markers).strip()
+    return collapsed.replace("os b", "osob").replace("rozporz dzenie", "rozporzadzenie")
+
+
+def classify_law(law_name: str) -> LawConfig:
+    normalized = normalize(law_name)
+    for pattern, config in LAW_CONFIGS:
+        if pattern in normalized:
+            return config
+    return LawConfig(
+        canonical_law_name=law_name,
+        short_name=law_name,
+        source_filename="",
+    )
+
+
+def slugify(text: str) -> str:
+    normalized = normalize(text)
+    slug = re.sub(r"[^a-z0-9]+", "_", normalized).strip("_")
+    return slug or "unknown"
 
 
 def load_articles_index(articles_path: Path) -> dict[str, dict]:
     data = json.loads(articles_path.read_text(encoding="utf-8"))
     index: dict[str, dict] = {}
-    for art in data.get("articles", []):
-        index[art["article_number"]] = art
+    for article in data.get("articles", []):
+        index[str(article["article_number"])] = article
     return index
 
 
 def extract_article_num(article_number: str) -> str:
-    """Extract bare article number: 'art. 11a ust. 1' → '11a'."""
-    m = re.match(r"(?:art\.\s*|§\s*)(\d+[a-z]*)", article_number, re.IGNORECASE)
-    return m.group(1) if m else article_number
+    """Extract bare article or section number: 'art. 11a ust. 1' -> '11a'."""
+    match = re.match(r"(?:art\.\s*|[§Â§]\s*)(\d+[a-z]*)", article_number, re.IGNORECASE)
+    return match.group(1) if match else article_number
 
 
 def generate_question(law_name: str, article_number: str, content: str) -> str:
-    """Generate a synthetic question from raw unit metadata."""
-    preview = " ".join(content.split())[:200]
-    return f"Co reguluje {article_number} {law_name}? Kontekst: {preview}"
+    preview = " ".join(content.split())[:220]
+    return f"Co reguluje {article_number} w akcie {law_name}? Kontekst przepisu: {preview}"
 
 
 def main() -> None:
     raw_units = json.loads(RAW_UNITS_PATH.read_text(encoding="utf-8"))
     print(f"Loaded {len(raw_units)} raw units")
 
-    # Group by law
-    by_law: dict[str, list[dict]] = defaultdict(list)
+    grouped_units: dict[str, dict] = defaultdict(lambda: {"config": None, "units": [], "source_law_names": set()})
     for unit in raw_units:
-        by_law[unit["law_name"]].append(unit)
+        config = classify_law(str(unit["law_name"]))
+        group_key = slugify(config.short_name)
+        grouped_units[group_key]["config"] = config
+        grouped_units[group_key]["units"].append(unit)
+        grouped_units[group_key]["source_law_names"].add(str(unit["law_name"]))
 
-    output_dir = OUTPUT / "reprocess"
-    output_dir.mkdir(exist_ok=True)
-
+    REPROCESS_DIR.mkdir(exist_ok=True)
     total_articles = 0
     total_questions = 0
 
-    for law_name, units in sorted(by_law.items(), key=lambda x: -len(x[1])):
-        articles_path, short_name = find_articles_file(law_name)
+    for group_key, payload in sorted(grouped_units.items(), key=lambda item: (-len(item[1]["units"]), item[0])):
+        config: LawConfig = payload["config"]
+        units: list[dict] = payload["units"]
+        source_law_names = sorted(payload["source_law_names"])
 
-        # Load full article texts if available
+        articles_path = OUTPUT / config.source_filename if config.source_filename else None
         full_articles: dict[str, dict] = {}
-        if articles_path:
+        if articles_path and articles_path.exists():
             full_articles = load_articles_index(articles_path)
 
-        # Build articles list and matches
         articles_out: list[dict] = []
         matches_out: list[dict] = []
         seen_art_nums: set[str] = set()
 
         for unit in units:
-            art_num = extract_article_num(unit["article_number"])
-
-            # Try to find full article text
+            art_num = extract_article_num(str(unit["article_number"]))
             full_art = full_articles.get(art_num)
+
             if full_art and art_num not in seen_art_nums:
                 articles_out.append(full_art)
                 seen_art_nums.add(art_num)
             elif art_num not in seen_art_nums:
-                # Fallback: create synthetic article from unit content
-                articles_out.append({
+                synthetic_source = {
                     "article_number": art_num,
-                    "full_id": unit["article_number"],
+                    "full_id": str(unit["article_number"]),
                     "division": "",
                     "chapter": "",
-                    "raw_text": unit["content"],
+                    "raw_text": str(unit["content"]),
                     "paragraphs": [],
                     "is_repealed": False,
-                    "char_count": len(unit["content"]),
-                })
+                    "char_count": len(str(unit["content"])),
+                }
+                articles_out.append(synthetic_source)
                 seen_art_nums.add(art_num)
 
-            question = generate_question(law_name, unit["article_number"], unit["content"])
-            matches_out.append({
-                "question": question,
-                "matched_articles": [art_num],
-                "topic": unit.get("category", ""),
-                "primary_article": art_num,
-            })
+            matches_out.append(
+                {
+                    "question": generate_question(config.canonical_law_name, str(unit["article_number"]), str(unit["content"])),
+                    "matched_articles": [art_num],
+                    "topic": unit.get("category", ""),
+                    "primary_article": art_num,
+                    "source_law_name": unit["law_name"],
+                    "source_article_number": unit["article_number"],
+                }
+            )
 
-        # Save per-law files
-        slug = re.sub(r"[^a-z0-9]+", "_", short_name.lower()).strip("_")
+        articles_file = REPROCESS_DIR / f"articles_{group_key}.json"
+        matched_file = REPROCESS_DIR / f"matched_{group_key}.json"
 
-        articles_file = output_dir / f"articles_{slug}.json"
         articles_data = {
             "metadata": {
-                "law_name": law_name,
-                "short_name": short_name,
+                "law_name": config.canonical_law_name,
+                "short_name": config.short_name,
+                "source_law_names": source_law_names,
+                "raw_unit_count": len(units),
+                "group_key": group_key,
             },
             "articles": articles_out,
         }
-        articles_file.write_text(json.dumps(articles_data, ensure_ascii=False, indent=2), encoding="utf-8")
+        matched_data = {
+            "metadata": {
+                "law_name": config.canonical_law_name,
+                "short_name": config.short_name,
+                "source_law_names": source_law_names,
+                "raw_unit_count": len(units),
+                "group_key": group_key,
+            },
+            "matches": matches_out,
+        }
 
-        matched_file = output_dir / f"matched_{slug}.json"
-        matched_data = {"matches": matches_out}
+        articles_file.write_text(json.dumps(articles_data, ensure_ascii=False, indent=2), encoding="utf-8")
         matched_file.write_text(json.dumps(matched_data, ensure_ascii=False, indent=2), encoding="utf-8")
 
         total_articles += len(articles_out)
         total_questions += len(matches_out)
-        full_pct = sum(1 for a in articles_out if a.get("char_count", 0) > 600) / max(len(articles_out), 1) * 100
+        full_text_count = sum(1 for article in articles_out if int(article.get("char_count", 0) or 0) > 600)
+        full_pct = (full_text_count / max(len(articles_out), 1)) * 100
         print(
-            f"  {short_name:<30} {len(units):>4} units -> "
+            f"  {config.short_name:<34} {len(units):>4} units -> "
             f"{len(articles_out):>4} articles, {len(matches_out):>4} questions "
             f"(full text: {full_pct:.0f}%)"
         )
 
     print(f"\nTotal: {total_articles} articles, {total_questions} questions")
-    print(f"Output: {output_dir}")
+    print(f"Output: {REPROCESS_DIR}")
 
 
 if __name__ == "__main__":
