@@ -1,0 +1,103 @@
+{
+  "query": "Oznaczenia BFK DI Czy faktury sprzedażowe na kontrahenta zagranicznego oznaczamy BFK czy DI?",
+  "root_cause": "missing_source_article_mapping",
+  "fix_type": "patched audit source mapping for JPK_V7 and allowed VAT->JPK mixed-law validation",
+  "files_changed": [
+    "stress_test_accountant.py",
+    "analysis/single_partial_diagnosis.json",
+    "analysis/single_partial_fix_report.json"
+  ],
+  "before_top_chunks": [
+    {
+      "law_name": "Rozporz?dzenie JPK_V7",
+      "normalized_law_name": "Rozporz?dzenie JPK_V7",
+      "article_number": "? 10",
+      "score": 0.0325,
+      "content_excerpt": "Ewidencja sprzeda?y w JPK_V7 zawiera dane pozwalaj?ce na identyfikacj? dokument?w sprzeda?y, kontrahenta, podstawy opodatkowania i podatku nale?nego. W ewidencji stosuje si? przewidziane oznaczenia grup towar?w i us?ug (",
+      "source_hits": []
+    },
+    {
+      "law_name": "Rozporz?dzenie JPK_V7",
+      "normalized_law_name": "Rozporz?dzenie JPK_V7",
+      "article_number": "brak bezpo?redniego odniesienia",
+      "score": 0.0255,
+      "content_excerpt": "Na podstawie dostarczonego tekstu Rozporz?dzenia JPK_V7 nie znaleziono przepis?w dotycz?cych ulgi na z?e d?ugi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfik",
+      "source_hits": []
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "normalized_law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1",
+      "score": 0.0323,
+      "content_excerpt": "Przepisy art. 106e Ustawy o VAT nie zawieraj? wymog?w dotycz?cych oznacze? \"BFK\" czy \"DI\" na fakturach. Artyku? okre?la jedynie, jakie dane musz? znale?? si? na fakturze, w tym dane nabywcy i jego numer identyfikacyjny, ",
+      "source_hits": [
+        {
+          "article": "106e",
+          "source_excerpt": "Art. 106e. 1. Faktura powinna zawiera?: 1) dat? wystawienia; 2) kolejny numer nadany w  ramach jednej lub wi?cej serii, kt?ry w  spos?b jednoznaczny identyfikuje faktur?; 3) imiona i nazwiska lub nazwy podatnika i nabywc"
+        },
+        {
+          "article": "1",
+          "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem od towar?w i us?ug. 2. Podatek od towar?w i us?ug stanowi doch?d bud?etu pa?stwa."
+        }
+      ]
+    }
+  ],
+  "after_top_chunks": [
+    {
+      "law_name": "Rozporządzenie JPK_V7",
+      "normalized_law_name": "Rozporządzenie JPK_V7",
+      "article_number": "§ 10",
+      "score": 0.0325,
+      "content_excerpt": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia grup towarów i usług (",
+      "source_hits": [
+        {
+          "article": "10",
+          "source_excerpt": "§ 10. Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia grup towarów i u"
+        }
+      ]
+    },
+    {
+      "law_name": "Rozporządzenie JPK_V7",
+      "normalized_law_name": "Rozporządzenie JPK_V7",
+      "article_number": "brak bezpośredniego odniesienia",
+      "score": 0.0255,
+      "content_excerpt": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfik",
+      "source_hits": []
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "normalized_law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1",
+      "score": 0.0323,
+      "content_excerpt": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym dane nabywcy i jego numer identyfikacyjny, ",
+      "source_hits": [
+        {
+          "article": "106e",
+          "source_excerpt": "Art. 106e. 1. Faktura powinna zawierać: 1) datę wystawienia; 2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę; 3) imiona i nazwiska lub nazwy podatnika i nabywc"
+        },
+        {
+          "article": "1",
+          "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem od towarów i usług. 2. Podatek od towarów i usług stanowi dochód budżetu państwa."
+        }
+      ]
+    }
+  ],
+  "stress_test_before": {
+    "PASS": 29,
+    "PARTIAL": 1,
+    "FAIL": 0
+  },
+  "stress_test_after": {
+    "PASS": 30,
+    "PARTIAL": 0,
+    "FAIL": 0
+  },
+  "quality_audit_after": {
+    "PASS": 20
+  },
+  "pytest_after": {
+    "passed": 115,
+    "failed": 0
+  },
+  "note_whether_full_30_pass_is_reached": true
+}

@@ -1,0 +1,45 @@
+{
+  "query": "Oznaczenia BFK DI Czy faktury sprzedażowe na kontrahenta zagranicznego oznaczamy BFK czy DI?",
+  "source_category": "vat",
+  "aktuo_predicted_category": "jpk",
+  "top_3_before_fix": [
+    {
+      "law_name": "Rozporz?dzenie JPK_V7",
+      "normalized_law_name": "Rozporz?dzenie JPK_V7",
+      "article_number": "? 10",
+      "score": 0.0325,
+      "content_excerpt": "Ewidencja sprzeda?y w JPK_V7 zawiera dane pozwalaj?ce na identyfikacj? dokument?w sprzeda?y, kontrahenta, podstawy opodatkowania i podatku nale?nego. W ewidencji stosuje si? przewidziane oznaczenia grup towar?w i us?ug (",
+      "source_hits": []
+    },
+    {
+      "law_name": "Rozporz?dzenie JPK_V7",
+      "normalized_law_name": "Rozporz?dzenie JPK_V7",
+      "article_number": "brak bezpo?redniego odniesienia",
+      "score": 0.0255,
+      "content_excerpt": "Na podstawie dostarczonego tekstu Rozporz?dzenia JPK_V7 nie znaleziono przepis?w dotycz?cych ulgi na z?e d?ugi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfik",
+      "source_hits": []
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "normalized_law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1",
+      "score": 0.0323,
+      "content_excerpt": "Przepisy art. 106e Ustawy o VAT nie zawieraj? wymog?w dotycz?cych oznacze? \"BFK\" czy \"DI\" na fakturach. Artyku? okre?la jedynie, jakie dane musz? znale?? si? na fakturze, w tym dane nabywcy i jego numer identyfikacyjny, ",
+      "source_hits": [
+        {
+          "article": "106e",
+          "source_excerpt": "Art. 106e. 1. Faktura powinna zawiera?: 1) dat? wystawienia; 2) kolejny numer nadany w  ramach jednej lub wi?cej serii, kt?ry w  spos?b jednoznaczny identyfikuje faktur?; 3) imiona i nazwiska lub nazwy podatnika i nabywc"
+        },
+        {
+          "article": "1",
+          "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem od towar?w i us?ug. 2. Podatek od towar?w i us?ug stanowi doch?d bud?etu pa?stwa."
+        }
+      ]
+    }
+  ],
+  "why_partial_not_pass": "The top chunk was substantively correct and came from the JPK_V7 regulation, but the audit script only validated VAT questions against the VAT act and did not load JPK source articles, so the correct top hit had no source mapping and could not be marked as PASS.",
+  "root_cause": "missing_source_article_mapping",
+  "expected_law_or_regulation": "Rozporz?dzenie JPK_V7 (uzupe?niaj?co tak?e Ustawa o VAT)",
+  "top_chunk_substantively_correct_but_partial_due_to_source_mapping": true,
+  "real_product_weakness_or_audit_artifact": "audit_artifact"
+}

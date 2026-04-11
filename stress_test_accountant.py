@@ -17,12 +17,17 @@ ARTICLE_FILES = {
     "Ustawa o VAT": Path("kb-pipeline/output/articles.json"),
     "Ustawa o podatku dochodowym od osób fizycznych": Path("kb-pipeline/output/articles_pit.json"),
     "Ustawa o podatku dochodowym od osób prawnych": Path("kb-pipeline/output/articles_cit.json"),
+    "Rozporządzenie JPK_V7": Path("kb-pipeline/output/articles_jpk.json"),
 }
 
 EXPECTED_LAWS = {
     "vat": {"Ustawa o VAT"},
     "pit": {"Ustawa o podatku dochodowym od osób fizycznych"},
     "cit": {"Ustawa o podatku dochodowym od osób prawnych"},
+}
+
+MIXED_EXPECTED_LAWS = {
+    ("vat", "jpk"): {"Rozporządzenie JPK_V7"},
 }
 
 
@@ -33,7 +38,15 @@ def normalize_law_name(name: str) -> str:
         return "Ustawa o podatku dochodowym od osób prawnych"
     if "Ustawa o VAT" in name:
         return "Ustawa o VAT"
+    if "Rozporządzenie JPK_V7" in name:
+        return "Rozporządzenie JPK_V7"
     return name
+
+
+def expected_laws_for_case(source_cat: str, aktuo_category: str) -> set[str]:
+    expected = set(EXPECTED_LAWS[source_cat])
+    expected.update(MIXED_EXPECTED_LAWS.get((source_cat, aktuo_category), set()))
+    return expected
 
 
 def split_article_numbers(article_number: str) -> list[str]:
@@ -83,6 +96,8 @@ def main() -> None:
     for item in questions:
         query = str(item["q"])
         source_cat = str(item["cat"])
+        aktuo_category = categorize_query(query)
+        expected_laws = expected_laws_for_case(source_cat, aktuo_category)
         chunks = retrieve_chunks(query, knowledge_path=KB_PATH, limit=5)[:3]
         reviews = []
         for chunk in chunks:
@@ -108,9 +123,9 @@ def main() -> None:
                 }
             )
 
-        if reviews and reviews[0]["normalized_law_name"] in EXPECTED_LAWS[source_cat] and reviews[0]["source_hits"]:
+        if reviews and reviews[0]["normalized_law_name"] in expected_laws and reviews[0]["source_hits"]:
             status = "PASS"
-        elif any(review["normalized_law_name"] in EXPECTED_LAWS[source_cat] and review["source_hits"] for review in reviews):
+        elif any(review["normalized_law_name"] in expected_laws and review["source_hits"] for review in reviews):
             status = "PARTIAL"
         else:
             status = "FAIL"
@@ -121,7 +136,7 @@ def main() -> None:
                 "query": query,
                 "source_cat": source_cat,
                 "freq": int(item.get("freq", 0)),
-                "aktuo_category": categorize_query(query),
+                "aktuo_category": aktuo_category,
                 "status": status,
                 "top_3": reviews,
             }
