@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from core.retriever import retrieve_chunks
+from core.retriever import LawChunk, _fuse_rankings, retrieve_chunks
 
 
 def test_retrieve_chunks_prefers_matching_polish_category(tmp_path) -> None:

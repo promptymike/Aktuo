@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import math
 import logging
 import re
 import unicodedata
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from threading import Lock
@@ -10,7 +12,7 @@ from threading import Lock
 from rank_bm25 import BM25Okapi
 
 from aktuo.synonym_mapper import expand_query, load_synonym_map
-from config.settings import SLANG_FILE_PATH
+from config.settings import RRF_BM25_K, RRF_VECTOR_K, SLANG_FILE_PATH
 from core.categorizer import categorize_query
 from data.ingest import load_seed_laws
 
@@ -120,7 +122,17 @@ class LawChunk:
 
 
 _CACHE_LOCK = Lock()
-_KNOWLEDGE_CACHE: dict[str, tuple[int, tuple[LawChunk, ...], BM25Okapi, tuple[tuple[str, ...], ...]]] = {}
+_KNOWLEDGE_CACHE: dict[
+    str,
+    tuple[
+        int,
+        tuple[LawChunk, ...],
+        BM25Okapi,
+        tuple[tuple[str, ...], ...],
+        tuple[Counter[str], ...],
+        tuple[float, ...],
+    ],
+] = {}
 _SLANG_CACHE: tuple[str, dict[str, list[str]]] | None = None
 LOGGER = logging.getLogger(__name__)
 
@@ -315,15 +327,29 @@ def load_chunks(knowledge_path: str | Path) -> list[LawChunk]:
         tuple(_tokenize(" ".join(part for part in (chunk.question_intent, chunk.content) if part)))
         for chunk in chunks
     )
+    vector_corpus = tuple(Counter(tokens) for tokens in tokenized_corpus)
+    vector_norms = tuple(
+        math.sqrt(sum(float(value * value) for value in counts.values())) or 1.0
+        for counts in vector_corpus
+    )
     bm25 = BM25Okapi([list(tokens) if tokens else ["_empty_"] for tokens in tokenized_corpus])
 
     with _CACHE_LOCK:
-        _KNOWLEDGE_CACHE[cache_key] = (mtime_ns, chunks, bm25, tokenized_corpus)
+        _KNOWLEDGE_CACHE[cache_key] = (
+            mtime_ns,
+            chunks,
+            bm25,
+            tokenized_corpus,
+            vector_corpus,
+            vector_norms,
+        )
 
     return list(chunks)
 
 
-def _load_bm25_cache(knowledge_path: str | Path) -> tuple[list[LawChunk], BM25Okapi, list[tuple[str, ...]]]:
+def _load_bm25_cache(
+    knowledge_path: str | Path,
+) -> tuple[list[LawChunk], BM25Okapi, list[tuple[str, ...]], list[Counter[str]], list[float]]:
     path = Path(knowledge_path).resolve()
     mtime_ns = path.stat().st_mtime_ns
     cache_key = str(path)
@@ -331,12 +357,12 @@ def _load_bm25_cache(knowledge_path: str | Path) -> tuple[list[LawChunk], BM25Ok
     with _CACHE_LOCK:
         cached = _KNOWLEDGE_CACHE.get(cache_key)
         if cached and cached[0] == mtime_ns:
-            return list(cached[1]), cached[2], list(cached[3])
+            return list(cached[1]), cached[2], list(cached[3]), list(cached[4]), list(cached[5])
 
     load_chunks(path)
     with _CACHE_LOCK:
         cached = _KNOWLEDGE_CACHE[cache_key]
-        return list(cached[1]), cached[2], list(cached[3])
+        return list(cached[1]), cached[2], list(cached[3]), list(cached[4]), list(cached[5])
 
 
 def _build_query_variants(query: str, slang_map: dict[str, list[str]]) -> list[str]:
@@ -382,6 +408,136 @@ def _build_query_variants(query: str, slang_map: dict[str, list[str]]) -> list[s
     return variants
 
 
+def _chunk_key(chunk: LawChunk) -> tuple[str, str, str, str]:
+    """Return a stable identifier for de-duplicating chunk results."""
+
+    return (chunk.law_name, chunk.article_number, chunk.question_intent, chunk.content)
+
+
+def _copy_chunk_with_score(chunk: LawChunk, score: float) -> LawChunk:
+    """Create a scored copy of a cached chunk."""
+
+    return LawChunk(
+        content=chunk.content,
+        law_name=chunk.law_name,
+        article_number=chunk.article_number,
+        category=chunk.category,
+        verified_date=chunk.verified_date,
+        question_intent=chunk.question_intent,
+        score=score,
+    )
+
+
+def _score_vector_similarity(
+    query_tokens: list[str],
+    vector_corpus: list[Counter[str]],
+    vector_norms: list[float],
+) -> list[float]:
+    """Compute cosine similarity scores between a query and token-frequency vectors."""
+
+    if not query_tokens:
+        return [0.0 for _ in vector_corpus]
+
+    query_counts = Counter(query_tokens)
+    query_norm = math.sqrt(sum(float(value * value) for value in query_counts.values()))
+    if query_norm == 0.0:
+        return [0.0 for _ in vector_corpus]
+
+    scores: list[float] = []
+    for counts, norm in zip(vector_corpus, vector_norms, strict=False):
+        dot_product = sum(float(query_counts[token] * counts.get(token, 0)) for token in query_counts)
+        scores.append(dot_product / (query_norm * norm) if dot_product else 0.0)
+    return scores
+
+
+def _merge_best_scores(
+    scores: list[float],
+    chunks: list[LawChunk],
+    query_category: str,
+    existing: dict[tuple[str, str, str, str], LawChunk] | None = None,
+) -> dict[tuple[str, str, str, str], LawChunk]:
+    """Merge a scoring pass into a de-duplicated best-score mapping."""
+
+    best_scores = existing or {}
+    for score, chunk in zip(scores, chunks, strict=False):
+        boosted_score = float(score)
+        if _category_matches(query_category, chunk):
+            boosted_score *= CATEGORY_BOOST
+
+        scored_chunk = _copy_chunk_with_score(chunk, boosted_score)
+        key = _chunk_key(scored_chunk)
+        previous = best_scores.get(key)
+        if previous is None or boosted_score > previous.score:
+            best_scores[key] = scored_chunk
+    return best_scores
+
+
+def _sort_ranked_chunks(chunks: dict[tuple[str, str, str, str], LawChunk]) -> list[LawChunk]:
+    """Sort scored chunks from strongest to weakest."""
+
+    return sorted(
+        chunks.values(),
+        key=lambda chunk: (
+            chunk.score,
+            chunk.verified_date,
+            chunk.law_name,
+            chunk.article_number,
+        ),
+        reverse=True,
+    )
+
+
+def _fuse_rankings(
+    bm25_ranked: list[LawChunk],
+    vector_ranked: list[LawChunk],
+    bm25_k: int = RRF_BM25_K,
+    vector_k: int = RRF_VECTOR_K,
+) -> list[LawChunk]:
+    """Fuse BM25 and vector rankings using Reciprocal Rank Fusion.
+
+    Each chunk receives a fusion score based on its rank in each ranking:
+    ``1 / (bm25_k + rank_bm25) + 1 / (vector_k + rank_vector)``.
+
+    Args:
+        bm25_ranked: Chunks ranked by BM25 relevance.
+        vector_ranked: Chunks ranked by vector similarity.
+        bm25_k: RRF dampening constant for BM25 ranks.
+        vector_k: RRF dampening constant for vector ranks.
+
+    Returns:
+        A de-duplicated list of chunks sorted by fused RRF score.
+    """
+
+    fused: dict[tuple[str, str, str, str], tuple[float, LawChunk]] = {}
+
+    for rank, chunk in enumerate(bm25_ranked, start=1):
+        key = _chunk_key(chunk)
+        fused_score, representative = fused.get(key, (0.0, chunk))
+        fused[key] = (fused_score + (1.0 / (bm25_k + rank)), representative)
+
+    for rank, chunk in enumerate(vector_ranked, start=1):
+        key = _chunk_key(chunk)
+        fused_score, representative = fused.get(key, (0.0, chunk))
+        if chunk.score > representative.score:
+            representative = chunk
+        fused[key] = (fused_score + (1.0 / (vector_k + rank)), representative)
+
+    fused_chunks = [
+        _copy_chunk_with_score(chunk, fused_score)
+        for fused_score, chunk in fused.values()
+    ]
+    fused_chunks.sort(
+        key=lambda chunk: (
+            chunk.score,
+            chunk.verified_date,
+            chunk.law_name,
+            chunk.article_number,
+        ),
+        reverse=True,
+    )
+    return fused_chunks
+
+
 def _select_category_aware_results(
     scored: list[tuple[float, LawChunk]], query_category: str, limit: int
 ) -> list[LawChunk]:
@@ -411,9 +567,12 @@ def _select_category_aware_results(
 def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> list[LawChunk]:
     """Retrieve the most relevant legal chunks for a user query.
 
-    The retriever expands accountant slang and abbreviations before BM25
-    scoring. When expansion produces multiple useful query variants, scores are
-    merged by keeping the highest score per chunk and removing duplicates.
+    The retriever expands accountant slang and abbreviations before scoring.
+    It then ranks documents with both BM25 and lightweight vector similarity
+    (cosine similarity over token-frequency vectors) and fuses the two rankings
+    using Reciprocal Rank Fusion (RRF). When expansion produces multiple useful
+    query variants, each method keeps the best score per chunk across variants
+    before fusion.
 
     Args:
         query: User query in natural language.
@@ -424,7 +583,7 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> l
         A ranked list of matching knowledge chunks.
     """
 
-    chunks, bm25, _ = _load_bm25_cache(knowledge_path)
+    chunks, bm25, _, vector_corpus, vector_norms = _load_bm25_cache(knowledge_path)
     slang_map = load_slang_map()
     query_variants = _build_query_variants(query, slang_map)
     tokenized_variants = [tokens for variant in query_variants if (tokens := _tokenize(variant))]
@@ -432,47 +591,17 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> l
         return []
 
     query_category = categorize_query(query_variants[0])
-    best_by_chunk: dict[tuple[str, str, str, str], tuple[float, int, LawChunk]] = {}
-    encounter_index = 0
+    bm25_best: dict[tuple[str, str, str, str], LawChunk] = {}
+    vector_best: dict[tuple[str, str, str, str], LawChunk] = {}
 
     for query_tokens in tokenized_variants:
-        scores = bm25.get_scores(query_tokens)
-        for score, chunk in zip(scores, chunks, strict=False):
-            boosted_score = float(score)
-            if _category_matches(query_category, chunk):
-                boosted_score *= CATEGORY_BOOST
+        bm25_scores = [float(score) for score in bm25.get_scores(query_tokens)]
+        vector_scores = _score_vector_similarity(query_tokens, vector_corpus, vector_norms)
+        bm25_best = _merge_best_scores(bm25_scores, chunks, query_category, bm25_best)
+        vector_best = _merge_best_scores(vector_scores, chunks, query_category, vector_best)
 
-            scored_chunk = LawChunk(
-                content=chunk.content,
-                law_name=chunk.law_name,
-                article_number=chunk.article_number,
-                category=chunk.category,
-                verified_date=chunk.verified_date,
-                question_intent=chunk.question_intent,
-                score=boosted_score,
-            )
-            chunk_key = (
-                scored_chunk.law_name,
-                scored_chunk.article_number,
-                scored_chunk.question_intent,
-                scored_chunk.content,
-            )
-            previous = best_by_chunk.get(chunk_key)
-            if previous is None or boosted_score > previous[0]:
-                best_by_chunk[chunk_key] = (boosted_score, encounter_index, scored_chunk)
-            encounter_index += 1
-
-    scored: list[tuple[float, LawChunk]] = [
-        (score, chunk) for score, _, chunk in best_by_chunk.values()
-    ]
-
-    scored.sort(
-        key=lambda item: (
-            item[0],
-            item[1].verified_date,
-            item[1].law_name,
-            item[1].article_number,
-        ),
-        reverse=True,
-    )
+    bm25_ranked = _sort_ranked_chunks(bm25_best)
+    vector_ranked = _sort_ranked_chunks(vector_best)
+    fused_ranked = _fuse_rankings(bm25_ranked, vector_ranked)
+    scored = [(chunk.score, chunk) for chunk in fused_ranked]
     return _select_category_aware_results(scored, query_category, limit)

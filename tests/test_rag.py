@@ -3,7 +3,8 @@ from __future__ import annotations
 import json
 import pytest
 
-from core.rag import answer_query
+from core.generator import GenerationMetrics
+from core.rag import _count_context_tokens, answer_query
 
 
 def test_answer_query_returns_grounded_result_for_polish_question(tmp_path, monkeypatch) -> None:
@@ -153,3 +154,106 @@ def test_answer_query_handles_emoji_and_foreign_language_queries(query, tmp_path
     )
 
     assert result.answer == "Mocked answer"
+
+
+def test_answer_query_triggers_context_summarization_when_context_is_too_long(tmp_path, monkeypatch) -> None:
+    seed_file = tmp_path / "law_knowledge.json"
+    long_content = " ".join(["przepis"] * 120)
+    seed_file.write_text(
+        json.dumps(
+            [
+                {
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 86",
+                    "category": "vat",
+                    "verified_date": "2026-04-01",
+                    "content": long_content,
+                },
+                {
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 87",
+                    "category": "vat",
+                    "verified_date": "2026-04-01",
+                    "content": long_content,
+                },
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    summarize_calls: list[str] = []
+
+    monkeypatch.setattr("core.rag.MAX_CONTEXT_TOKENS", 40)
+    monkeypatch.setattr(
+        "core.rag.summarize_context",
+        lambda query, chunks, system_prompt, api_key, max_words=150: summarize_calls.append(chunks[0].article_number) or f"Krotkie streszczenie {chunks[0].article_number}",
+    )
+    monkeypatch.setattr("core.rag.get_last_generation_metrics", lambda: GenerationMetrics())
+    monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
+    monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
+
+    result = answer_query(
+        query="Jak rozliczyc VAT?",
+        knowledge_path=seed_file,
+        system_prompt="Jestes Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.answer == "Mocked answer"
+    assert set(summarize_calls) == {"art. 86", "art. 87"}
+    assert all(chunk.content.startswith("Krotkie streszczenie") for chunk in result.chunks)
+
+
+def test_answer_query_shortened_context_fits_under_limit(tmp_path, monkeypatch) -> None:
+    seed_file = tmp_path / "law_knowledge.json"
+    long_content = " ".join(["obowiazek"] * 100)
+    seed_file.write_text(
+        json.dumps(
+            [
+                {
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 19a",
+                    "category": "vat",
+                    "verified_date": "2026-04-01",
+                    "content": long_content,
+                },
+                {
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 29a",
+                    "category": "vat",
+                    "verified_date": "2026-04-01",
+                    "content": long_content,
+                },
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    captured_context_sizes: list[int] = []
+
+    monkeypatch.setattr("core.rag.MAX_CONTEXT_TOKENS", 30)
+    monkeypatch.setattr(
+        "core.rag.summarize_context",
+        lambda query, chunks, system_prompt, api_key, max_words=150: "zwięzłe streszczenie przepisu z artykułem",
+    )
+    monkeypatch.setattr("core.rag.get_last_generation_metrics", lambda: GenerationMetrics())
+
+    def fake_generate_answer(query, chunks, system_prompt, api_key):
+        captured_context_sizes.append(_count_context_tokens(chunks))
+        return "Mocked answer"
+
+    monkeypatch.setattr("core.rag.generate_answer", fake_generate_answer)
+    monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
+
+    result = answer_query(
+        query="Kiedy powstaje obowiazek podatkowy?",
+        knowledge_path=seed_file,
+        system_prompt="Jestes Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.answer == "Mocked answer"
+    assert captured_context_sizes
+    assert captured_context_sizes[0] <= 30

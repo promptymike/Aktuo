@@ -63,20 +63,36 @@ def law_matches(source_category: str, law_name: str) -> bool:
 
 
 def classify_top100_item(source_category: str, chunks: list[object]) -> tuple[str, str]:
+    """Classify a top-100 question as COVERED / WEAK / GAP.
+
+    Thresholds are calibrated for RRF (Reciprocal Rank Fusion) scores
+    which fall in a narrow range ~0.025-0.033.  With k=60:
+      - rank 1 in both rankings  -> ~0.0328
+      - rank 1 in one only       -> ~0.0164
+      - rank 10 in both          -> ~0.0286
+    """
     if not chunks:
         return "GAP", "Brak chunków."
 
     top_chunk = chunks[0]
     top_score = float(top_chunk.score)
 
+    # --- RRF-calibrated thresholds ---
+    # COVERED: top chunk from the correct law with a strong positional score
+    #          (rank ~1-5 in both rankings, score > 0.030)
+    # WEAK:    correct law appears in top 3, decent ranking (score >= 0.025)
+    # GAP:     no match in expected law or very low scores
+    COVERED_THRESHOLD = 0.030
+    WEAK_THRESHOLD = 0.025
+
     if source_category in EXPECTED_LAW_BY_FB_CATEGORY:
-        if top_score > 5.0 and law_matches(source_category, top_chunk.law_name):
+        if top_score > COVERED_THRESHOLD and law_matches(source_category, top_chunk.law_name):
             return "COVERED", "Top chunk jest z właściwej ustawy i ma mocny score."
-        if top_score >= 2.0 and any(law_matches(source_category, chunk.law_name) for chunk in chunks[:3]):
+        if top_score >= WEAK_THRESHOLD and any(law_matches(source_category, chunk.law_name) for chunk in chunks[:3]):
             return "WEAK", "W top 3 jest właściwa ustawa, ale match nie jest jeszcze dość mocny lub precyzyjny."
         return "GAP", "Brak mocnego trafienia we właściwą ustawę."
 
-    if top_score >= 5.0:
+    if top_score >= COVERED_THRESHOLD:
         return "WEAK", "Kategoria źródłowa nie mapuje się jednoznacznie do ustawy, ale retriever zwrócił sensowny wynik."
     return "GAP", "Kategoria źródłowa nie ma dziś jednoznacznej podstawy w obecnej bazie."
 

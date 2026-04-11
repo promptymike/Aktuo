@@ -115,6 +115,24 @@ def _build_user_prompt(query: str, chunks: Sequence[LawChunk]) -> str:
     )
 
 
+def _build_summary_prompt(query: str, chunks: Sequence[LawChunk], max_words: int) -> str:
+    context = "\n".join(
+        (
+            f"- Law: {chunk.law_name} | Article: {chunk.article_number} | "
+            f"Category: {chunk.category} | Verified: {chunk.verified_date} | "
+            f"Content: {chunk.content}"
+        )
+        for chunk in chunks
+    )
+    return (
+        "Streszczaj wyłącznie na podstawie podanego kontekstu prawnego. "
+        f"Streść następujące przepisy zachowując kluczowe fakty, liczby, terminy i artykuły. "
+        f"Maksymalnie {max_words} słów. Zachowaj zwięzłość i nie wymyślaj nowych informacji.\n\n"
+        f"<user_query>{query}</user_query>\n\n"
+        f"Legal context:\n{context}"
+    )
+
+
 def _extract_text(payload: dict[str, object]) -> str:
     content = payload.get("content", [])
     if not isinstance(content, list):
@@ -237,3 +255,66 @@ def generate_answer(
     payload = json.loads(raw_response)
     _set_last_generation_metrics(_extract_generation_metrics(payload))
     return _extract_text(payload)
+
+
+def summarize_context(
+    query: str,
+    chunks: Sequence[LawChunk],
+    system_prompt: str,
+    api_key: str,
+    max_words: int = 150,
+) -> str:
+    """Summarize legal context into a shorter, citation-friendly form.
+
+    Args:
+        query: Original user query used as summarization context.
+        chunks: Retrieved legal chunks to compress.
+        system_prompt: System prompt used for the model call.
+        api_key: Anthropic API key.
+        max_words: Desired upper bound for the summary length.
+
+    Returns:
+        A concise summary of the provided legal context.
+    """
+
+    reset_last_generation_metrics()
+    if not chunks:
+        return ""
+    if not api_key:
+        raise AnthropicAPIError("Missing ANTHROPIC_API_KEY.")
+
+    payload = {
+        "model": ANTHROPIC_MODEL,
+        "max_tokens": 512,
+        "system": [
+            {
+                "type": "text",
+                "text": f"{system_prompt}\n\n{SYSTEM_PROMPT_GUARD}",
+                "cache_control": {"type": "ephemeral"},
+            }
+        ],
+        "messages": [
+            {
+                "role": "user",
+                "content": [{"type": "text", "text": _build_summary_prompt(query=query, chunks=chunks, max_words=max_words)}],
+            }
+        ],
+    }
+    body = json.dumps(payload).encode("utf-8")
+    api_request = request.Request(
+        ANTHROPIC_API_URL,
+        data=body,
+        headers={
+            "content-type": "application/json",
+            "x-api-key": api_key,
+            "anthropic-version": ANTHROPIC_API_VERSION,
+        },
+        method="POST",
+    )
+
+    raw_response = _execute_api_request(api_request)
+    if raw_response == TEMPORARY_UNAVAILABLE_FALLBACK:
+        return raw_response
+    response_payload = json.loads(raw_response)
+    _set_last_generation_metrics(_extract_generation_metrics(response_payload))
+    return _extract_text(response_payload)

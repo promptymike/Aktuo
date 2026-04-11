@@ -1,20 +1,23 @@
 {
   "meta": {
     "knowledge_path": "data\\seeds\\law_knowledge.json",
-    "total_kb_records": 3997
+    "total_kb_records": 4362
   },
   "kb_per_law": {
     "Kodeks pracy": 431,
-    "Ordynacja podatkowa": 762,
+    "Ordynacja podatkowa": 763,
     "Rozporządzenie JPK_V7": 9,
-    "Ustawa o VAT": 1481,
+    "Rozporządzenie MF o kasach rejestrujących": 161,
+    "Ustawa o VAT": 1482,
     "Ustawa o VAT - KSeF terminy wdrożenia": 1,
     "Ustawa o VAT - KSeF uproszczenia 2026": 1,
     "Ustawa o VAT - KSeF zwolnienia": 1,
-    "Ustawa o podatku dochodowym od osób fizycznych": 663,
-    "Ustawa o podatku dochodowym od osób prawnych": 227,
+    "Ustawa o podatku dochodowym od osób fizycznych": 666,
+    "Ustawa o podatku dochodowym od osób prawnych": 229,
     "Ustawa o rachunkowości": 196,
-    "Ustawa o systemie ubezpieczeń społecznych": 225
+    "Ustawa o systemie ubezpieczeń społecznych": 225,
+    "Ustawa o zrycza?towanym podatku dochodowym": 1,
+    "Ustawa o zryczałtowanym podatku dochodowym": 196
   },
   "article_coverage": {
     "meta": {
@@ -30,7 +33,7 @@
         "Rozporządzenie KSeF": "kb-pipeline\\output\\articles_ksef.json",
         "Rozporządzenie JPK_V7": "kb-pipeline\\output\\articles_jpk.json"
       },
-      "kb_total_records": 3997
+      "kb_total_records": 4362
     },
     "laws": {
       "Kodeks pracy": {
@@ -66,7 +69,7 @@
         ]
       },
       "Ordynacja podatkowa": {
-        "kb_records": 762,
+        "kb_records": 763,
         "kb_unique_article_roots": 729,
         "source_file": "kb-pipeline\\output\\articles_ordynacja.json",
         "source_active_articles": 726,
@@ -115,8 +118,20 @@
           "§ 5"
         ]
       },
+      "Rozporządzenie MF o kasach rejestrujących": {
+        "kb_records": 161,
+        "kb_unique_article_roots": 70,
+        "source_file": null,
+        "source_active_articles": null,
+        "covered_article_roots": null,
+        "missing_article_roots": null,
+        "coverage_pct": null,
+        "missing_sample": [],
+        "covered_sample": [],
+        "note": "No parsed article source mapped for this law."
+      },
       "Ustawa o VAT": {
-        "kb_records": 1481,
+        "kb_records": 1482,
         "kb_unique_article_roots": 346,
         "source_file": "kb-pipeline\\output\\articles.json",
         "source_active_articles": 341,
@@ -184,7 +199,7 @@
         "note": "No parsed article source mapped for this law."
       },
       "Ustawa o podatku dochodowym od osób fizycznych": {
-        "kb_records": 663,
+        "kb_records": 666,
         "kb_unique_article_roots": 225,
         "source_file": "kb-pipeline\\output\\articles_pit.json",
         "source_active_articles": 227,
@@ -219,7 +234,7 @@
         ]
       },
       "Ustawa o podatku dochodowym od osób prawnych": {
-        "kb_records": 227,
+        "kb_records": 229,
         "kb_unique_article_roots": 193,
         "source_file": "kb-pipeline\\output\\articles_cit.json",
         "source_active_articles": 195,
@@ -318,6 +333,30 @@
           "art. 117",
           "art. 12"
         ]
+      },
+      "Ustawa o zrycza?towanym podatku dochodowym": {
+        "kb_records": 1,
+        "kb_unique_article_roots": 1,
+        "source_file": null,
+        "source_active_articles": null,
+        "covered_article_roots": null,
+        "missing_article_roots": null,
+        "coverage_pct": null,
+        "missing_sample": [],
+        "covered_sample": [],
+        "note": "No parsed article source mapped for this law."
+      },
+      "Ustawa o zryczałtowanym podatku dochodowym": {
+        "kb_records": 196,
+        "kb_unique_article_roots": 62,
+        "source_file": null,
+        "source_active_articles": null,
+        "covered_article_roots": null,
+        "missing_article_roots": null,
+        "coverage_pct": null,
+        "missing_sample": [],
+        "covered_sample": [],
+        "note": "No parsed article source mapped for this law."
       }
     },
     "priority_article_checks": {
@@ -395,21 +434,24 @@
       ]
     },
     "kb_only_laws_without_parsed_source": [
+      "Rozporządzenie MF o kasach rejestrujących",
       "Ustawa o VAT - KSeF terminy wdrożenia",
       "Ustawa o VAT - KSeF uproszczenia 2026",
-      "Ustawa o VAT - KSeF zwolnienia"
+      "Ustawa o VAT - KSeF zwolnienia",
+      "Ustawa o zrycza?towanym podatku dochodowym",
+      "Ustawa o zryczałtowanym podatku dochodowym"
     ]
   },
   "top100_coverage": {
     "summary": {
-      "COVERED": 41,
-      "WEAK": 31,
-      "GAP": 28
+      "COVERED": 37,
+      "WEAK": 36,
+      "GAP": 27
     },
     "summary_pct": {
-      "COVERED": 41.0,
-      "WEAK": 31.0,
-      "GAP": 28.0
+      "COVERED": 37.0,
+      "WEAK": 36.0,
+      "GAP": 27.0
     },
     "per_category": {
       "ceidg": {
@@ -418,9 +460,9 @@
         "gap": 0
       },
       "cit": {
-        "covered": 0,
+        "covered": 1,
         "weak": 0,
-        "gap": 6
+        "gap": 5
       },
       "erp": {
         "covered": 0,
@@ -454,8 +496,8 @@
       },
       "pit": {
         "covered": 0,
-        "weak": 0,
-        "gap": 7
+        "weak": 5,
+        "gap": 2
       },
       "praktyka": {
         "covered": 0,
@@ -464,8 +506,8 @@
       },
       "rachunkowosc": {
         "covered": 3,
-        "weak": 3,
-        "gap": 10
+        "weak": 1,
+        "gap": 12
       },
       "spolki": {
         "covered": 0,
@@ -473,14 +515,14 @@
         "gap": 0
       },
       "vat": {
-        "covered": 17,
-        "weak": 5,
-        "gap": 2
+        "covered": 13,
+        "weak": 7,
+        "gap": 4
       },
       "zus": {
-        "covered": 3,
+        "covered": 2,
         "weak": 0,
-        "gap": 0
+        "gap": 1
       }
     }
   }

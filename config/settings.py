@@ -9,10 +9,18 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(PROJECT_ROOT / ".env", override=False, encoding="utf-8")
 DEFAULT_SYSTEM_PROMPT_PATH = PROJECT_ROOT / "data" / "prompts" / "system_prompt_pl.txt"
-BM25_MIN_SCORE = 2.0
+# After switching to RRF (Reciprocal Rank Fusion), scores are rank-based
+# and fall in a narrow range (~0.025-0.033).  A top-1 result at rank 1
+# in both BM25 and vector rankings scores ~0.0328.  Setting the
+# low-confidence threshold to 0.020 means only results ranked very deep
+# (rank 50+ in both rankings) are flagged.
+BM25_MIN_SCORE = 0.020
 RATE_LIMIT_PER_HOUR = 30
 MAX_QUESTION_LENGTH = 5000
+MAX_CONTEXT_TOKENS = int(os.getenv("AKTUO_MAX_CONTEXT_TOKENS", "1200"))
 SLANG_FILE_PATH = os.getenv("AKTUO_SLANG_FILE_PATH", "").strip()
+RRF_BM25_K = int(os.getenv("AKTUO_RRF_BM25_K", "60"))
+RRF_VECTOR_K = int(os.getenv("AKTUO_RRF_VECTOR_K", "60"))
 
 PLACEHOLDER_VALUES = {
     "",
