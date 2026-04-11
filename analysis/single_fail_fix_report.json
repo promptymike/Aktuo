@@ -1,0 +1,88 @@
+{
+  "failing_question": "Doby wiecz?r!. Sk?adacie pa?stwo deklaracj? IFT2R? Czy sk?ada si? do miesi?cznej subskrypcji (Google, Adobe itp)?",
+  "root_cause": "wrong_category_match",
+  "fix_type": "minimal categorizer keyword patch",
+  "files_changed": [
+    "core/categorizer.py",
+    "tests/test_categorizer.py",
+    "analysis/single_fail_diagnosis.json",
+    "analysis/single_fail_fix_report.json"
+  ],
+  "before_top_chunks": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 3021",
+      "category": "kadry",
+      "score": 0.032002,
+      "content_excerpt": "Do okresu zatrudnienia wlicza si? okresy prowadzenia przez osob? fizyczn? pozarolniczej dzia?alno?ci, o kt?rej mowa w art. 8 ust. 6 ustawy..."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+      "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+      "category": "cit",
+      "score": 0.030282,
+      "content_excerpt": "Art. 26a ust. 1 przewiduje roczne deklaracje sk?adane przez p?atnik?w po roku, w kt?rym powsta? obowi?zek zap?aty podatku, a art. 21 ust. 1 pkt 2a wskazuje m.in. us?ugi reklamowe..."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 3022",
+      "category": "kadry",
+      "score": 0.02886,
+      "content_excerpt": "Wniosek o wydanie za?wiadczenia przez Zak?ad Ubezpiecze? Spo?ecznych sk?ada osoba fizyczna, kt?rej okresy b?d? podlega?y wliczeniu do okresu zatrudnienia..."
+    }
+  ],
+  "after_top_chunks": [
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+      "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+      "category": "cit",
+      "score": 0.032018,
+      "content_excerpt": "Art. 26a ust. 1 przewiduje roczne deklaracje składane przez płatników po roku, w którym powstał obowiązek zapłaty podatku, a art. 21 ust. 1 pkt 2a wskazuje m.in. usługi reklamowe i przetwarzania danych jako należności mo"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 38ac",
+      "category": "cit",
+      "score": 0.031778,
+      "content_excerpt": "1. Stawka podatku, o której mowa w art. 19 ust. 1 pkt 5, wynosi: 1) 17 % w roku podatkowym rozpoczynającym się w: a) 2026 r., b) 2027 r. – w przypadku gdy rok podatkowy podatnika utworzonego przed dniem 1 stycznia 2026 r"
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 38ab",
+      "category": "cit",
+      "score": 0.031281,
+      "content_excerpt": "1. Stawka podatku, o której mowa w art. 19 ust. 1 pkt 4, wynosi: 1) 27 % w roku podatkowym rozpoczynającym się w: a) 2026 r., b) 2027 r. – w przypadku gdy rok podatkowy podatnika utworzonego przed dniem 1 stycznia 2026 r"
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 3021",
+      "category": "kadry",
+      "score": 0.027623,
+      "content_excerpt": "Do okresu zatrudnienia wlicza si ę okresy prowadzenia przez osobę fizyczną pozarolniczej dzia łalności, o której mowa w art. 8 ust. 6 ustawy 16) Zmiany tekstu jednolitego wymienionej ustawy zostały ogłoszone w 1089, 1222"
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 3022",
+      "category": "kadry",
+      "score": 0.025677,
+      "content_excerpt": "Wniosek o wydanie za świadczenia przez Zak ład Ubezpiecze ń Społecznych sk łada osoba fizyczna, której okresy będą podlegały wliczeniu do okresu zatrudnienia, w postaci elektronicznej za pomoc ą profilu informacyjnego ut"
+    }
+  ],
+  "stress_test_before": {
+    "PASS": 28,
+    "PARTIAL": 1,
+    "FAIL": 1
+  },
+  "stress_test_after": {
+    "PASS": 29,
+    "PARTIAL": 1,
+    "FAIL": 0
+  },
+  "quality_audit_after": {
+    "PASS": 20
+  },
+  "pytest_after": {
+    "passed": 115,
+    "failed": 0
+  }
+}

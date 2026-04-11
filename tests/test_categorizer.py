@@ -31,6 +31,15 @@ def test_categorize_query_recognizes_estonczyk_and_cit8() -> None:
     assert categorize_query("Czy estończyk i CIT8 są dla mojej spółki?") == "cit"
 
 
+def test_categorize_query_recognizes_ift2r_as_cit() -> None:
+    assert (
+        categorize_query(
+            "Dzień dobry, czy składacie deklarację IFT2R do miesięcznej subskrypcji Google?"
+        )
+        == "cit"
+    )
+
+
 def test_categorize_query_returns_pit_category() -> None:
     assert categorize_query("Jak obliczyć zaliczkę na podatek i kiedy złożyć PIT-37?") == "pit"
 

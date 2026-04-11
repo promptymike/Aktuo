@@ -1,0 +1,34 @@
+{
+  "failing_question": "Doby wiecz?r!. Sk?adacie pa?stwo deklaracj? IFT2R? Czy sk?ada si? do miesi?cznej subskrypcji (Google, Adobe itp)?",
+  "predicted_category_before_fix": "og?lne",
+  "before_top_chunks": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 3021",
+      "category": "kadry",
+      "score": 0.032002,
+      "content_excerpt": "Do okresu zatrudnienia wlicza si? okresy prowadzenia przez osob? fizyczn? pozarolniczej dzia?alno?ci, o kt?rej mowa w art. 8 ust. 6 ustawy..."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+      "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+      "category": "cit",
+      "score": 0.030282,
+      "content_excerpt": "Art. 26a ust. 1 przewiduje roczne deklaracje sk?adane przez p?atnik?w po roku, w kt?rym powsta? obowi?zek zap?aty podatku, a art. 21 ust. 1 pkt 2a wskazuje m.in. us?ugi reklamowe..."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 3022",
+      "category": "kadry",
+      "score": 0.02886,
+      "content_excerpt": "Wniosek o wydanie za?wiadczenia przez Zak?ad Ubezpiecze? Spo?ecznych sk?ada osoba fizyczna, kt?rej okresy b?d? podlega?y wliczeniu do okresu zatrudnienia..."
+    }
+  ],
+  "reason_for_fail": "Top-3 retrieval did not prioritize the expected CIT/WHT grounding. The only correct CIT chunk was ranked below an unrelated labor-law result, so the stress test classified the case as FAIL.",
+  "root_cause": "wrong_category_match",
+  "expected_law_or_act": "Ustawa o podatku dochodowym od os?b prawnych",
+  "expected_article_or_form": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a / formularz IFT-2R",
+  "issue_scope": "mixed problem",
+  "issue_kind": "retrieval problem",
+  "why_this_classification": "The KB already contained a correct CIT unit for this exact question, but categorize_query did not recognize IFT2R written without a hyphen, so category-aware retrieval did not enforce CIT priority."
+}

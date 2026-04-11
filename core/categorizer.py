@@ -131,9 +131,12 @@ def categorize_query(query: str) -> str:
                 "tpr",
                 "cit-8",
                 "cit8",
+                "ift2r",
                 "ryczalt od dochodow",
                 "maly podatnik cit",
                 "ift-2r",
+                "formularz ift-2r",
+                "formularz ift2r",
             ),
         ),
         (
