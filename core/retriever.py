@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import re
 import unicodedata
 from dataclasses import dataclass
@@ -8,6 +9,8 @@ from threading import Lock
 
 from rank_bm25 import BM25Okapi
 
+from aktuo.synonym_mapper import expand_query, load_synonym_map
+from config.settings import SLANG_FILE_PATH
 from core.categorizer import categorize_query
 from data.ingest import load_seed_laws
 
@@ -118,6 +121,8 @@ class LawChunk:
 
 _CACHE_LOCK = Lock()
 _KNOWLEDGE_CACHE: dict[str, tuple[int, tuple[LawChunk, ...], BM25Okapi, tuple[tuple[str, ...], ...]]] = {}
+_SLANG_CACHE: tuple[str, dict[str, list[str]]] | None = None
+LOGGER = logging.getLogger(__name__)
 
 
 def _normalize(text: str) -> str:
@@ -136,6 +141,47 @@ def _normalize(text: str) -> str:
     )
     normalized = unicodedata.normalize("NFKD", text.lower().translate(translation))
     return "".join(character for character in normalized if not unicodedata.combining(character))
+
+
+def load_slang_map() -> dict[str, list[str]]:
+    """Load and cache the slang expansion map used for query expansion.
+
+    The file path is read from :mod:`config.settings`. Missing files are treated
+    as an optional feature and result in an empty mapping. Malformed files are
+    logged as warnings and also fall back to an empty mapping.
+
+    Returns:
+        A dictionary mapping slang terms to their expanded forms.
+    """
+
+    global _SLANG_CACHE
+
+    slang_file = SLANG_FILE_PATH
+    with _CACHE_LOCK:
+        if _SLANG_CACHE and _SLANG_CACHE[0] == slang_file:
+            return dict(_SLANG_CACHE[1])
+
+    if not slang_file:
+        slang_map: dict[str, list[str]] = {}
+    else:
+        try:
+            slang_map = load_synonym_map(slang_file)
+        except ValueError as exc:
+            message = str(exc)
+            if "not found" in message.lower():
+                slang_map = {}
+            else:
+                LOGGER.warning(
+                    "Could not load slang map from %s. Query expansion disabled: %s",
+                    slang_file,
+                    exc,
+                )
+                slang_map = {}
+
+    with _CACHE_LOCK:
+        _SLANG_CACHE = (slang_file, dict(slang_map))
+
+    return dict(slang_map)
 
 
 def _tokenize(text: str) -> list[str]:
@@ -293,6 +339,49 @@ def _load_bm25_cache(knowledge_path: str | Path) -> tuple[list[LawChunk], BM25Ok
         return list(cached[1]), cached[2], list(cached[3])
 
 
+def _build_query_variants(query: str, slang_map: dict[str, list[str]]) -> list[str]:
+    """Create de-duplicated query variants using slang expansion.
+
+    The first variant is always the fully expanded query returned by
+    :func:`aktuo.synonym_mapper.expand_query` when any slang is found, followed
+    by the original query and then more targeted per-slang substitutions. This
+    keeps retrieval broad enough to benefit from expansion while preserving the
+    original phrasing as a fallback.
+
+    Args:
+        query: Raw user query.
+        slang_map: Mapping of slang terms to expanded forms.
+
+    Returns:
+        Ordered query variants with duplicates removed.
+    """
+
+    expanded_query = expand_query(query, slang_map)
+    variants: list[str] = []
+
+    def add_variant(value: str) -> None:
+        candidate = value.strip()
+        if candidate and candidate not in variants:
+            variants.append(candidate)
+
+    add_variant(expanded_query)
+    add_variant(query)
+
+    if expanded_query == query or not slang_map:
+        return variants
+
+    for slang, expansions in slang_map.items():
+        pattern = re.compile(rf"(?<!\w)({re.escape(slang)})(?!\w)", flags=re.IGNORECASE)
+        if not pattern.search(query):
+            continue
+
+        for expanded in expansions:
+            variant = pattern.sub(expanded, query)
+            add_variant(variant)
+
+    return variants
+
+
 def _select_category_aware_results(
     scored: list[tuple[float, LawChunk]], query_category: str, limit: int
 ) -> list[LawChunk]:
@@ -320,33 +409,62 @@ def _select_category_aware_results(
 
 
 def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> list[LawChunk]:
+    """Retrieve the most relevant legal chunks for a user query.
+
+    The retriever expands accountant slang and abbreviations before BM25
+    scoring. When expansion produces multiple useful query variants, scores are
+    merged by keeping the highest score per chunk and removing duplicates.
+
+    Args:
+        query: User query in natural language.
+        knowledge_path: Path to the JSON knowledge base file.
+        limit: Maximum number of chunks to return.
+
+    Returns:
+        A ranked list of matching knowledge chunks.
+    """
+
     chunks, bm25, _ = _load_bm25_cache(knowledge_path)
-    query_tokens = _tokenize(query)
-    if not query_tokens:
+    slang_map = load_slang_map()
+    query_variants = _build_query_variants(query, slang_map)
+    tokenized_variants = [tokens for variant in query_variants if (tokens := _tokenize(variant))]
+    if not tokenized_variants:
         return []
 
-    query_category = categorize_query(query)
-    scores = bm25.get_scores(query_tokens)
-    scored: list[tuple[float, LawChunk]] = []
+    query_category = categorize_query(query_variants[0])
+    best_by_chunk: dict[tuple[str, str, str, str], tuple[float, int, LawChunk]] = {}
+    encounter_index = 0
 
-    for score, chunk in zip(scores, chunks, strict=False):
-        boosted_score = float(score)
-        if _category_matches(query_category, chunk):
-            boosted_score *= CATEGORY_BOOST
-        scored.append(
-            (
-                boosted_score,
-                LawChunk(
-                    content=chunk.content,
-                    law_name=chunk.law_name,
-                    article_number=chunk.article_number,
-                    category=chunk.category,
-                    verified_date=chunk.verified_date,
-                    question_intent=chunk.question_intent,
-                    score=boosted_score,
-                ),
+    for query_tokens in tokenized_variants:
+        scores = bm25.get_scores(query_tokens)
+        for score, chunk in zip(scores, chunks, strict=False):
+            boosted_score = float(score)
+            if _category_matches(query_category, chunk):
+                boosted_score *= CATEGORY_BOOST
+
+            scored_chunk = LawChunk(
+                content=chunk.content,
+                law_name=chunk.law_name,
+                article_number=chunk.article_number,
+                category=chunk.category,
+                verified_date=chunk.verified_date,
+                question_intent=chunk.question_intent,
+                score=boosted_score,
             )
-        )
+            chunk_key = (
+                scored_chunk.law_name,
+                scored_chunk.article_number,
+                scored_chunk.question_intent,
+                scored_chunk.content,
+            )
+            previous = best_by_chunk.get(chunk_key)
+            if previous is None or boosted_score > previous[0]:
+                best_by_chunk[chunk_key] = (boosted_score, encounter_index, scored_chunk)
+            encounter_index += 1
+
+    scored: list[tuple[float, LawChunk]] = [
+        (score, chunk) for score, _, chunk in best_by_chunk.values()
+    ]
 
     scored.sort(
         key=lambda item: (
