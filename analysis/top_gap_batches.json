@@ -1,0 +1,813 @@
+{
+  "meta": {
+    "source_file": "fb_pipeline\\dedup_questions_output_v3.json",
+    "knowledge_file": "data\\seeds\\law_knowledge.json",
+    "based_on_unresolved_questions_from_top_200": 77
+  },
+  "batches": [
+    {
+      "batch_name": "KPiR / rachunkowość operacyjna",
+      "number_of_questions": 12,
+      "gap_count": 10,
+      "weak_count": 2,
+      "total_freq_impact": 89,
+      "questions_in_top100": 9,
+      "questions_in_top200": 12,
+      "total_freq_top100": 77,
+      "total_freq_top200": 89,
+      "likely_laws_or_regulations_needed": [
+        "Ustawa o podatku dochodowym od osób fizycznych",
+        "Ustawa o rachunkowości"
+      ],
+      "likely_synonym_additions_needed": [
+        "KPiR",
+        "SF"
+      ],
+      "root_causes": {
+        "cross_law_question": 10,
+        "missing_kb_unit": 2
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+          "freq": 22,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "fakturowanie",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
+          "freq": 10,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+          "freq": 9,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "rachunkowosc",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+          "freq": 8,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+          "freq": 8,
+          "dataset_category": "spolki",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
+          "freq": 5,
+          "dataset_category": "kadry",
+          "aktuo_category": "fakturowanie",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
+          "freq": 5,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "fakturowanie",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
+          "freq": 5,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+          "freq": 5,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "podatek_naliczony",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
+          "freq": 4,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "fakturowanie",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
+          "freq": 4,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "podatek_naliczony",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Szukam doświadczonego księgowego do spokojnego przeglądu i uporządkowania moich rozliczeń podatkowych za ostatnie 4 lata?",
+          "freq": 4,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        }
+      ],
+      "estimated_kb_units_needed": 8,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 89.0
+    },
+    {
+      "batch_name": "Pozostałe luki produktowe",
+      "number_of_questions": 27,
+      "gap_count": 24,
+      "weak_count": 3,
+      "total_freq_impact": 132,
+      "questions_in_top100": 6,
+      "questions_in_top200": 27,
+      "total_freq_top100": 55,
+      "total_freq_top200": 132,
+      "likely_laws_or_regulations_needed": [],
+      "likely_synonym_additions_needed": [],
+      "root_causes": {
+        "cross_law_question": 16,
+        "missing_kb_unit": 11
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "W trakcie użytkowania odliczałam 50% VAT (paliwa, koszty eksploatacji). Czy ta darowizna powinna być opodatkowana VAT?",
+          "freq": 26,
+          "dataset_category": "vat",
+          "aktuo_category": "vat",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy różnice kursowe z magazynu walut wrzucacie w przychody/koszty podatkowe?",
+          "freq": 7,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Stosunek powierzchni wydaje się rozsądny dla opłat typu czynsz, podatek od nieruchomości, ogrzewanie, ale czy zużycie energii?",
+          "freq": 6,
+          "dataset_category": "ordynacja",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Co robicie jeżeli klient jest na ryczalcie, ma kase fiskalną, a na kasie nabija towar/usługi z różną stawką podatku?",
+          "freq": 6,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Chciałam podpytać czy mają Państwo jakieś sprawdzone kursy, które by mi pomogły się do tego przygotować / rozwinąć?",
+          "freq": 5,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Potrzebuję pomocy z przeksztalconymi danymi za poprzedni rok obrotowy. Ktoś coś,?",
+          "freq": 5,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Osoba ma jdg, czy może otworzyć spółkę cywilną, gdzie udziałowcem będzie jdg Jan Kowalski i Jan Kowalski jako osoba fizyczna?",
+          "freq": 4,
+          "dataset_category": "ceidg",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy w symfoni da się usunąć fakturę korektę (sprzedaż)?",
+          "freq": 4,
+          "dataset_category": "erp",
+          "aktuo_category": "podatek_należny",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Ktoś pomoże?",
+          "freq": 4,
+          "dataset_category": "kadry",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Jak myślicie?",
+          "freq": 4,
+          "dataset_category": "ksef",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy urząd skarbowy tak samo pozbywa się jakoś dokumentów przesłanych przez podatnika po iluś tam latach, jak to jest ktoś może się orientuje?",
+          "freq": 4,
+          "dataset_category": "ordynacja",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy wie ktoś coś o systemie SENT? Jak to ma się do ubrań, jak klient wozi detaliczne ilośći ma robić wszystkie procedury?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy wystarczy jak Klient zbiera sobie te potwierdzenia na wypadek kontroli?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Jak rozliczacie klientów od faktur za każdą sztukę osobno czy pakiet co 10?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Rozlicza ktoś dodatki motywacyjne? Pomniejszacie za pierwszy dzień choroby czy dopiero po 30 dniach?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
+          "freq": 4,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "podatek_naliczony",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy rozlicza ktoś spółkę komandytowa?",
+          "freq": 4,
+          "dataset_category": "spolki",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy kto. Wyświetl więcej?",
+          "freq": 4,
+          "dataset_category": "vat",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy w takim wypadku będzie konieczne zebranie potwierdzeń wyciągów bankowych w razie kontroli?",
+          "freq": 4,
+          "dataset_category": "vat",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Jeśli sprzedaż będzie na rzecz osób fizycznych to kasa od początku?",
+          "freq": 4,
+          "dataset_category": "vat",
+          "aktuo_category": "podatek_należny",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Chciałabym się dowiedzieć od jakiej kwoty zaczynają się u was koszty prowadzenia jdg i spółki?",
+          "freq": 3,
+          "dataset_category": "ceidg",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Jakie PKD na prezenty z gotowych produktów typu lizaki, cukierki, batoniki, czekolada i tym podobne?",
+          "freq": 3,
+          "dataset_category": "ceidg",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Chciałabym zapytać czy robicie meldunek DG-1 do statystycznego?",
+          "freq": 3,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Co byście zrobili w takiej sytuacji?",
+          "freq": 3,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "W jaki sposób wysyłacie czynne żale?",
+          "freq": 3,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Też szukam?",
+          "freq": 3,
+          "dataset_category": "jpk",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "A certyfikaty zostały podpięte prawidłowo?",
+          "freq": 3,
+          "dataset_category": "ksef",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        }
+      ],
+      "estimated_kb_units_needed": 18,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 46.2
+    },
+    {
+      "batch_name": "KSeF uprawnienia i obieg faktur",
+      "number_of_questions": 4,
+      "gap_count": 2,
+      "weak_count": 2,
+      "total_freq_impact": 27,
+      "questions_in_top100": 1,
+      "questions_in_top200": 4,
+      "total_freq_top100": 16,
+      "total_freq_top200": 27,
+      "likely_laws_or_regulations_needed": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT"
+      ],
+      "likely_synonym_additions_needed": [
+        "KSeF"
+      ],
+      "root_causes": {
+        "cross_law_question": 2,
+        "missing_kb_unit": 2
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
+          "freq": 16,
+          "dataset_category": "praktyka",
+          "aktuo_category": "faktury_korygujące",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "A po co Ci uprawnienia?",
+          "freq": 4,
+          "dataset_category": "ksef",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Wiem, że w przypadku nadania uprawnień i pobrania takich faktur przez nas jest podgląd w PDF, a jak to będzie działać gdy klient je sam do nas wyśle?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy w Ksefie prowadząc jdg trzeba nadać uprawnienia administratora?",
+          "freq": 3,
+          "dataset_category": "ceidg",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        }
+      ],
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 27.0
+    },
+    {
+      "batch_name": "Leasing / samochody / amortyzacja",
+      "number_of_questions": 3,
+      "gap_count": 2,
+      "weak_count": 1,
+      "total_freq_impact": 14,
+      "questions_in_top100": 2,
+      "questions_in_top200": 3,
+      "total_freq_top100": 10,
+      "total_freq_top200": 14,
+      "likely_laws_or_regulations_needed": [
+        "Ustawa o VAT",
+        "Ustawa o podatku dochodowym od osób fizycznych",
+        "Ustawa o rachunkowości"
+      ],
+      "likely_synonym_additions_needed": [
+        "VAT26"
+      ],
+      "root_causes": {
+        "cross_law_question": 2,
+        "missing_kb_unit": 1
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
+          "freq": 5,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?",
+          "freq": 5,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
+          "freq": 4,
+          "dataset_category": "ksef",
+          "aktuo_category": "fakturowanie",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        }
+      ],
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 14.0
+    },
+    {
+      "batch_name": "Poza zakresem / community workflow",
+      "number_of_questions": 29,
+      "gap_count": 25,
+      "weak_count": 4,
+      "total_freq_impact": 190,
+      "questions_in_top100": 11,
+      "questions_in_top200": 29,
+      "total_freq_top100": 126,
+      "total_freq_top200": 190,
+      "likely_laws_or_regulations_needed": [],
+      "likely_synonym_additions_needed": [],
+      "root_causes": {
+        "cross_law_question": 14,
+        "missing_kb_unit": 13,
+        "weak_existing_chunk": 2
+      },
+      "recommended_fix_type": "categorizer",
+      "questions": [
+        {
+          "question": "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
+          "freq": 27,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Co polecacie jak zacząć pracę w takim miejscu, gdzie zdobywać wiedzę, jak tej pracy szukać?",
+          "freq": 22,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Jaki program do księgowania polecacie do rozliczania najpierw jednej firmy a w dalszej perspektywie może kolejnych?",
+          "freq": 16,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Szukam kogoś kto ukończył II stopień księgowości w SKWP Cześć, szukam kogoś kto ukończył II stopień księgowości w SKWP?",
+          "freq": 14,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Polecacie kurs online kadry i płace ze strony Mg-edu centrum szkoleń online lub niepubliczne centrum kształcenia ustawicznego?",
+          "freq": 11,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Jak masz kursy, to o jaki kurs pytasz?",
+          "freq": 9,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy są na grupie osoby prowadzące księgi rachunkowe wydawnictwa?",
+          "freq": 7,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Szukam osoby , która pracuje w programie symfonia e - biuro i jest w stanie odpłatnie wdrożyć w ten program?",
+          "freq": 5,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Szukam wdrożeniowca/programistę/informatyka dotyczy programu Subiekt , Poznań i okolice?",
+          "freq": 5,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Bardzo proszę o pomoc?",
+          "freq": 5,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy może ktoś polecić dobre szkolenie z branży e-commerce?",
+          "freq": 5,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy ktos z Państwa pracuje na programie ksiegowosc 360?Czy ktos z Państwa pracuje na programie ksiegowosc 360?",
+          "freq": 4,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Na jakim programie pracujecie i czy wymagacie (zakładam że tak, ale skoro brak info w ogłoszeniu to dopytam) jego znajomości?",
+          "freq": 4,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Co robię źle?",
+          "freq": 4,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Https://docs.google.com/forms/d/e/1FAIpQLSceIwmXCXJrGd0jYXamfEWBbHJM-XUtYRZXaIxlzi_jRXGbaQ/viewform?",
+          "freq": 4,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy jest ktoś na grupie kto rozlicza usługi kateringowe dokładnie dostawców/menadżerów w kuchni vikinga?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy ktoś może mi polecić jakąś stronę, video, cokolwiek z przykładami (jak w szkole), abym mogła zrozumieć ten proces?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy możecie polecić u kogo szukać dobrych i sprawdzonych szkoleń on-line dot?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Jakie szkolenia do codziennej aktualizacji i przyswajania wiedzy księgowej polecacie?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Szukam najbardziej zbliżonego programu desktopwego (lub w ostateczności online, ale tylko sprawdzonego i funkcjonalnego)?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Jaka cena za usługę?",
+          "freq": 4,
+          "dataset_category": "zus",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy macie jakieś pulPITy klienta, albo klienci wam wrzucają wszystko np. w saldeo lub podobny program?",
+          "freq": 3,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy możecie polecić program księgowy który ma dobrze rozwinięty moduł do faktur zaliczkowych oraz faktur końcowych?",
+          "freq": 3,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "weak_existing_chunk"
+        },
+        {
+          "question": "Czy program Rewizor jest kompatybilny z programem transportowym Marcos?",
+          "freq": 3,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Program księgowy dla Fundacji rodzinnej Co polecicie?",
+          "freq": 3,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "SYMFONIA Cześć Czy ktoś z Was posiada szablon faktury sprzedaży w języku angielskim i byłby chętny go udostępnić do Symfonia Handel?",
+          "freq": 3,
+          "dataset_category": "erp",
+          "aktuo_category": "fakturowanie",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Szukamy osoby, która pomoże nam \"rozładować\" nadchodzące miesiące (przynajmniej luty i marzec 2026)?",
+          "freq": 3,
+          "dataset_category": "erp",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "weak_existing_chunk"
+        },
+        {
+          "question": "Jak to ogarnąć?",
+          "freq": 3,
+          "dataset_category": "inne",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Szukam dodatkowej współpracy na umowę zlecenie z biurem rachunkowym lub firmą?",
+          "freq": 3,
+          "dataset_category": "kadry",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        }
+      ],
+      "estimated_kb_units_needed": 0,
+      "estimated_synonym_additions_needed": 3,
+      "priority_score": 9.5
+    },
+    {
+      "batch_name": "Procedury podatkowe / pisma / pełnomocnictwa",
+      "number_of_questions": 1,
+      "gap_count": 1,
+      "weak_count": 0,
+      "total_freq_impact": 5,
+      "questions_in_top100": 1,
+      "questions_in_top200": 1,
+      "total_freq_top100": 5,
+      "total_freq_top200": 5,
+      "likely_laws_or_regulations_needed": [
+        "Ordynacja podatkowa",
+        "Ustawa o VAT",
+        "Ustawa o podatku dochodowym od osób prawnych"
+      ],
+      "likely_synonym_additions_needed": [
+        "PPO-1",
+        "UPL-1"
+      ],
+      "root_causes": {
+        "missing_kb_unit": 1
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
+          "freq": 5,
+          "dataset_category": "ceidg",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "missing_kb_unit"
+        }
+      ],
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 5.0
+    },
+    {
+      "batch_name": "Ryczałt i stawki działalności",
+      "number_of_questions": 1,
+      "gap_count": 1,
+      "weak_count": 0,
+      "total_freq_impact": 4,
+      "questions_in_top100": 0,
+      "questions_in_top200": 1,
+      "total_freq_top100": 0,
+      "total_freq_top200": 4,
+      "likely_laws_or_regulations_needed": [
+        "Ustawa o zryczałtowanym podatku dochodowym"
+      ],
+      "likely_synonym_additions_needed": [
+        "ryczałt"
+      ],
+      "root_causes": {
+        "cross_law_question": 1
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "Czy klient ma obowiązek wystawić fakturę za najem prywatny?",
+          "freq": 4,
+          "dataset_category": "praktyka",
+          "aktuo_category": "fakturowanie",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        }
+      ],
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 4.0
+    }
+  ]
+}
