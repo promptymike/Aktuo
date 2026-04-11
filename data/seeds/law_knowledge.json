@@ -15252,6 +15252,15 @@
   },
   {
     "law_name": "Ustawa o VAT",
+    "article_number": "art. 111 ust. 1 i 8",
+    "category": "vat",
+    "verified_date": "2026-04-11",
+    "question_intent": "Sprzeda? bezpo?rednia rolnik ? czy przys?uguje zwolnienie z kasy fiskalnej?",
+    "content": "Sama ustawa o VAT nie daje automatycznego zwolnienia z kasy dla sprzeda?y bezpo?redniej rolnika. Art. 111 ust. 1 ustawy o VAT stanowi, ?e sprzeda? na rzecz os?b fizycznych nieprowadz?cych dzia?alno?ci i rolnik?w rycza?towych co do zasady podlega ewidencji na kasie rejestruj?cej. Dopiero art. 111 ust. 8 pozwala ministrowi finans?w wprowadzi? czasowe zwolnienia w odr?bnym rozporz?dzeniu, wi?c konkretn? mo?liwo?? zwolnienia trzeba ocenia? na podstawie rozporz?dzenia o zwolnieniach z obowi?zku ewidencji, a nie samego rozporz?dzenia o kasach. Podstawa prawna: art. 111 ust. 1 i 8 ustawy o VAT.",
+    "source": "accountant_retrieval_hotspot_patch"
+  },
+  {
+    "law_name": "Ustawa o VAT",
     "article_number": "art. 111 ust. 1b",
     "category": "kas_rejestrujace_ewidencja",
     "verified_date": "",
@@ -33356,6 +33365,15 @@
     "question_intent": "Ustawa o systemie ubezpieczeń społecznych | art. 98 | Rozdział 11 – Odpowiedzialność za wykroczenia przeciwko przepisom ustawy | 1. Kto, jako płatnik składek albo osoba obowiązana do działania w imieniu płatnika: 1) (utracił moc)8) 1a) nie ",
     "content": "1. Kto, jako płatnik składek albo osoba obowiązana do działania w imieniu płatnika: 1) (utracił moc)8) 1a) nie dopełnia obowiązku opłacania składek na ubezpieczenia społeczne w przewidzianym przepisami terminie, 2) nie zgłasza wymaganych ustawą danych lub zgłasza nieprawdziwe dane albo udziela w tych sprawach nieprawdziwych wyjaśnień lub odmawia ich udzielenia, 3) udaremnia lub utrudnia przeprowadzenie kontroli, 4) nie dopełnia obowiązku wypłacania świadczeń z ubezpieczeń społecznych i zasiłków finansowanych z budżetu państwa albo wypłaca je nienależnie, 5) nie prowadzi dokumentacji...",
     "source": "parsed_article_gap_patch"
+  },
+  {
+    "law_name": "Ustawa o zrycza?towanym podatku dochodowym",
+    "article_number": "art. 12 ust. 1 pkt 6 lit. a",
+    "category": "pit",
+    "verified_date": "2026-04-11",
+    "question_intent": "Us?uga budowlana ? jaka stawka rycza?tu: 5,5% czy 8,5%?",
+    "content": "Dla rob?t budowlanych w?a?ciwa jest stawka 5,5% rycza?tu, a nie 8,5%. Wynika to wprost z art. 12 ust. 1 pkt 6 lit. a ustawy o zrycza?towanym podatku dochodowym, kt?ry obejmuje dzia?alno?? wytw?rcz?, roboty budowlane oraz niekt?re przewozy ?adunk?w. Stawka 8,5% dotyczy innych kategorii przychod?w wskazanych w art. 12 ust. 1, wi?c kluczowe jest prawid?owe zakwalifikowanie us?ugi jako rob?t budowlanych. Podstawa prawna: art. 12 ust. 1 pkt 6 lit. a ustawy o zrycza?towanym podatku dochodowym.",
+    "source": "accountant_retrieval_hotspot_patch"
   },
   {
     "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
