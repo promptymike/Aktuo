@@ -40,6 +40,25 @@ def categorize_query(query: str) -> str:
     lowered_tokens = _tokenize(lowered)
     if "pit" in lowered_tokens and "vat" in lowered_tokens:
         return "ogólne"
+    operational_accounting_markers = (
+        "zaksieg",
+        "przeksieg",
+        "kpir",
+        "koszt posredni",
+        "koszty bilansowe",
+        "bilansowych i kup",
+        "zakup towarow",
+        "koszty uboczne zakupu",
+        "pozostale wydatki",
+    )
+    if any(marker in lowered for marker in operational_accounting_markers):
+        return "rachunkowosc"
+    if "pz" in lowered_tokens and ("faktura" in lowered_tokens or "ksiegowanie" in lowered):
+        return "rachunkowosc"
+    if "fv" in lowered_tokens and ("zakup" in lowered_tokens or "zaksi" in lowered):
+        return "rachunkowosc"
+    if "amortyz" in lowered and ("samoch" in lowered or "leasing" in lowered):
+        return "rachunkowosc"
     cash_register_keywords = (
         "kasa fiskalna",
         "kasy fiskalne",
@@ -88,6 +107,20 @@ def categorize_query(query: str) -> str:
                 "rezerwa",
                 "rmk",
                 "odpis aktualizujacy",
+                "zaksięgowac",
+                "ksiegowac",
+                "zaksięgowanie",
+                "ksiegowanie",
+                "przeksiegowac",
+                "przeksiegowane",
+                "koszt posredni",
+                "koszty bilansowe",
+                "bilansowych i kup",
+                "pz",
+                "fv",
+                "zakup towarow",
+                "koszty uboczne zakupu",
+                "pozostale wydatki",
             ),
         ),
         (

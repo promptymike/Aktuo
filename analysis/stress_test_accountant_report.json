@@ -1,8 +1,6 @@
 {
   "summary": {
-    "PASS": 28,
-    "PARTIAL": 1,
-    "FAIL": 1
+    "PASS": 30
   },
   "questions": [
     {
@@ -16,7 +14,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 86 ust. 1-2",
-          "score": 0.0296,
+          "score": 0.029,
           "content_excerpt": "VAT na fakturze nie stanowi kosztu uzyskania przychodu - to jest podatek naliczony, który może być odliczony od VAT należnego. VAT podlega odliczeniu (jeśli przysługuje prawo) w tej samej proporcji co koszt, czyli jeśli ",
           "source_hits": [
             {
@@ -37,7 +35,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 106b ust. 1 pkt 1",
-          "score": 0.0278,
+          "score": 0.0272,
           "content_excerpt": "Każda faktura wystawiona podatnika (sprzedaż) powinna być ujęta zarówno w przychodach (po cenie netto), jak i w VAT należnym. Art. 106b wymaga wystawienia faktury dla dostaw towarów i świadczenia usług na rzecz podatnika",
           "source_hits": [
             {
@@ -54,7 +52,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 90 ust. 1-3",
-          "score": 0.0264,
+          "score": 0.0258,
           "content_excerpt": "Ustawa o VAT reguluje jak OBLICZYĆ korektę VAT przy sprzedaży mieszanej (art. 90 i 90c), ale nie zawiera szczegółowych wytycznych dotyczących ujęcia księgowego w bilansie. Korekta powinna być ujęta w deklaracji VAT za da",
           "source_hits": [
             {
@@ -108,35 +106,18 @@
         {
           "law_name": "Ustawa o rachunkowości",
           "normalized_law_name": "Ustawa o rachunkowości",
-          "article_number": "art. 12 ust. 1",
-          "score": 0.03,
-          "content_excerpt": "Artykuł 12 Ustawy o rachunkowości nie reguluje otwarcia ksiąg w związku z przekroczeniem limitu przychodów. Księgi rachunkowe otwiera się na dzień rozpoczęcia działalności, na początek każdego roku obrotowego, przy zmian",
+          "article_number": "art. 2",
+          "score": 0.0313,
+          "content_excerpt": "Art. 2. 1. Przepisy ustawy o rachunkowości, zwanej dalej „ustawą”, stosuje się, z zastrzeżeniem ust.  3, do mających siedzibę lub miejsce sprawowania zarządu na terytorium Rzeczypospolitej Polskiej: 1) spółek handlowych ",
           "source_hits": []
         },
         {
-          "law_name": "Ustawa o VAT",
-          "normalized_law_name": "Ustawa o VAT",
-          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
-          "score": 0.0323,
-          "content_excerpt": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w którym po stronie sprzedawcy powstał obowiązek podatkowy, nie wcześniej jednak niż w okresie otrzymania faktury. Oznacza to, że odliczenie VAT może ",
-          "source_hits": [
-            {
-              "article": "86",
-              "source_excerpt": "Art. 86. 1. W  zakresie, w  jakim towary i  usługi są wykorzystywane do wykonywania czynności opodatkowanych, podatnikowi, o którym mowa w art. 15, przysługuje prawo do obniżenia kwoty podatku należnego o  kwotę podatku "
-            },
-            {
-              "article": "10",
-              "source_excerpt": "Art. 10. 1. Wewnątrzwspólnotowe nabycie towarów, o  którym mowa w art. 9, nie występuje w przypadku, gdy:  1) dotyczy towarów, do których miałyby odpowiednio zastosowanie przepisy art. 45 ust. 1 pkt 9, art. 80, art. 83 u"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem od towarów i usług. 2. Podatek od towarów i usług stanowi dochód budżetu państwa."
-            },
-            {
-              "article": "11",
-              "source_excerpt": "Art. 11. 1. Przez wewnątrzwspólnotowe nabycie towarów za wynagrodzeniem, o  którym mowa w  art. 5 ust.  1 pkt  4, rozumie się również przemieszczenie towarów przez podatnika podatku od wartości dodanej lub na jego rzecz,"
-            }
-          ]
+          "law_name": "Ustawa o rachunkowości",
+          "normalized_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 12 ust. 1",
+          "score": 0.0296,
+          "content_excerpt": "Artykuł 12 Ustawy o rachunkowości nie reguluje otwarcia ksiąg w związku z przekroczeniem limitu przychodów. Księgi rachunkowe otwiera się na dzień rozpoczęcia działalności, na początek każdego roku obrotowego, przy zmian",
+          "source_hits": []
         }
       ]
     },
@@ -210,8 +191,21 @@
         {
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
+          "article_number": "art. 2",
+          "score": 0.0318,
+          "content_excerpt": "Art. 2. Ilekro w dalszych przepisach jest mowa o: 1) terytorium kraju ­ rozumie si przez to terytorium Rzeczypospolitej Polskiej, z zastrzeeniem art. 2a; 2) pastwie czlonkowskim ­ rozumie si przez to pastwo czlonkowskie ",
+          "source_hits": [
+            {
+              "article": "2",
+              "source_excerpt": "Art. 2. Ilekroć w dalszych przepisach jest mowa o: 1) terytorium kraju – rozumie się przez to terytorium Rzeczypospolitej Polskiej, z zastrzeżeniem art. 2a; 2) państwie członkowskim – rozumie się przez to państwo członko"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 86a ust. 1-3 i 9",
-          "score": 0.0296,
+          "score": 0.0293,
           "content_excerpt": "W VAT zasadą dla wydatków związanych z pojazdami samochodowymi jest odliczenie 50%. Pełne 100% odliczenia przysługuje tylko wtedy, gdy pojazd jest wykorzystywany wyłącznie do działalności gospodarczej albo spełnia konstr",
           "source_hits": [
             {
@@ -236,7 +230,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 86a ust. 1",
-          "score": 0.0289,
+          "score": 0.0283,
           "content_excerpt": "Obowiązuje odliczenie VAT w wysokości 50% od wydatków związanych z pojazdem samochodowym, chyba że pojazd spełnia warunki art. 86a ust. 3 (wykorzystywany wyłącznie do działalności gospodarczej lub pojazd ciężarowy). W ta",
           "source_hits": [
             {
@@ -246,27 +240,6 @@
             {
               "article": "1",
               "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem od towarów i usług. 2. Podatek od towarów i usług stanowi dochód budżetu państwa."
-            }
-          ]
-        },
-        {
-          "law_name": "Ustawa o VAT",
-          "normalized_law_name": "Ustawa o VAT",
-          "article_number": "art. 86a ust. 2 pkt 3",
-          "score": 0.0279,
-          "content_excerpt": "VAT od paliwa do samochodu firmowego odliczasz według tych samych zasad co od samochodu. Jeśli pojazd nie jest wykorzystywany wyłącznie do działalności gospodarczej - odliczasz 50% VAT. Jeśli jest używany wyłącznie bizne",
-          "source_hits": [
-            {
-              "article": "86a",
-              "source_excerpt": "Art. 86a. 1. W  przypadku wydatków związanych z  pojazdami samochodowymi kwotę podatku naliczonego, o  której mowa w  art. 86 ust.  2, stanowi 50 % kwoty podatku: 1) wynikającej z faktury otrzymanej przez podatnika; 2) n"
-            },
-            {
-              "article": "2",
-              "source_excerpt": "Art. 2. Ilekroć w dalszych przepisach jest mowa o: 1) terytorium kraju – rozumie się przez to terytorium Rzeczypospolitej Polskiej, z zastrzeżeniem art. 2a; 2) państwie członkowskim – rozumie się przez to państwo członko"
-            },
-            {
-              "article": "3",
-              "source_excerpt": "Art. 3. 1. (uchylony) 2. (uchylony) 3. W przypadku: 1) (uchylony)  2) podatników: a) nieposiadających siedziby działalności gospodarczej lub stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju, b) o"
             }
           ]
         }
@@ -333,7 +306,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 86 ust. 1",
-          "score": 0.0254,
+          "score": 0.0259,
           "content_excerpt": "Prawo do odliczenia VAT zależy od zakresu wykorzystania towarów i usług. Możesz odliczyć 100% VAT tylko w zakresie, w jakim towary i usługi są wykorzystywane do czynności opodatkowanych (art. 86 ust. 1). Jeśli towary/usł",
           "source_hits": [
             {
@@ -545,7 +518,7 @@
       "source_cat": "vat",
       "freq": 8,
       "aktuo_category": "jpk",
-      "status": "PARTIAL",
+      "status": "PASS",
       "top_3": [
         {
           "law_name": "Rozporządzenie JPK_V7",
@@ -553,13 +526,18 @@
           "article_number": "§ 10",
           "score": 0.0325,
           "content_excerpt": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia grup towarów i usług (",
-          "source_hits": []
+          "source_hits": [
+            {
+              "article": "10",
+              "source_excerpt": "§ 10. Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia grup towarów i u"
+            }
+          ]
         },
         {
           "law_name": "Rozporządzenie JPK_V7",
           "normalized_law_name": "Rozporządzenie JPK_V7",
           "article_number": "brak bezpośredniego odniesienia",
-          "score": 0.0261,
+          "score": 0.0255,
           "content_excerpt": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfik",
           "source_hits": []
         },
@@ -567,7 +545,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 106e ust. 1",
-          "score": 0.0325,
+          "score": 0.0323,
           "content_excerpt": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym dane nabywcy i jego numer identyfikacyjny, ",
           "source_hits": [
             {
@@ -606,7 +584,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 99 ust. 7",
-          "score": 0.0298,
+          "score": 0.0302,
           "content_excerpt": "Podatnik zwolniony z VAT na podstawie art. 113 lub art. 113a nie ma obowiązku składać deklaracji podatkowych, chyba że przysługuje mu zwrot podatku naliczonego, jest obowiązany do korekty podatku lub spełnia inne warunki",
           "source_hits": [
             {
@@ -667,44 +645,28 @@
           ]
         },
         {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 26 ust. 1 pkt 2",
-          "score": 0.032,
-          "content_excerpt": "Ustawa o PIT w art. 26 reguluje odliczenia od dochodu, w tym określone składki, ale nie wyznacza zasad ustalania podstawy składki zdrowotnej dla ryczałtu. To oznacza, że pytanie o podstawę zdrowotną nie wynika wprost z p",
+          "article_number": "art. 20",
+          "score": 0.0323,
+          "content_excerpt": "Art. 20. 1. Za przychody z innych źródeł, o których mowa w art. 10 ust. 1 pkt 9, uważa się w szczególności: kwoty wypłacone po śmierci członka otwartego funduszu emerytalnego wskazanej przez niego osobie lub członkowi  j",
           "source_hits": [
             {
-              "article": "26",
-              "source_excerpt": "Art. 26. 1. Podstawę obliczenia podatku, z  zastrzeżeniem art.  29–30cb, art. 30da–30dh, art. 30e–30g i art. 30j–30p, stanowi dochód ustalony zgodnie z art. 9, art. 23o, art.  23u, art.  24 ust.  1, 2, 3b –3e, 4 –4e, 6 i"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób fizycznych oraz daninę solidarnościową."
-            },
-            {
-              "article": "2",
-              "source_excerpt": "Art. 2. 1. Przepisów ustawy nie stosuje się do: 1) przychodów z  działalności rolniczej, z  wyjątkiem przychodów z  działów specjalnych produkcji rolnej; 2) przychodów z gospodarki leśnej w rozumieniu ustawy o lasach; Op"
+              "article": "20",
+              "source_excerpt": "Art. 20. 1. Za przychody z innych źródeł, o których mowa w art. 10 ust. 1 pkt 9, uważa się w szczególności: kwoty wypłacone po śmierci członka otwartego funduszu emerytalnego wskazanej przez niego osobie lub członkowi  j"
             }
           ]
         },
         {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 45 ust. 1 i 1a",
-          "score": 0.0315,
-          "content_excerpt": "Art. 45 stanowi, że podatnicy składają zeznanie według ustalonego wzoru, a w terminie z art. 45 ust. 1a składają także odrębne zeznania dla wskazanych źródeł. Sama ustawa na poziomie tego przepisu nie rozpisuje gotowej k",
+          "article_number": "art. 14",
+          "score": 0.0317,
+          "content_excerpt": "Art. 14. 1. Za przychód z  działalności, o  której mowa w  art. 10 ust.  1 pkt  3, uważa się kwoty należne, choćby nie zostały faktycznie otrzymane, po wyłączeniu   wartości zwróconych towarów, udzielonych bonifikat i  s",
           "source_hits": [
             {
-              "article": "45",
-              "source_excerpt": "Art. 45. 1. Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o  wysokości osiągniętego dochodu (poniesionej straty) w roku podatkowym, w  terminie od dnia 15  lutego do dnia 30  kwietn"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób fizycznych oraz daninę solidarnościową."
-            },
-            {
-              "article": "1a",
-              "source_excerpt": "Art. 1a. 1. Ustawa reguluje również opodatkowanie podatkiem dochodowym dochodów przedsiębiorstwa w spadku. 2. Przedsiębiorstwo w  spadku, stanowiące jednostkę organizacyjną niemającą osobowości prawnej, jest podatnikiem "
+              "article": "14",
+              "source_excerpt": "Art. 14. 1. Za przychód z  działalności, o  której mowa w  art. 10 ust.  1 pkt  3, uważa się kwoty należne, choćby nie zostały faktycznie otrzymane, po wyłączeniu   wartości zwróconych towarów, udzielonych bonifikat i  s"
             }
           ]
         }
@@ -848,30 +810,26 @@
         {
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 12",
+          "score": 0.0323,
+          "content_excerpt": "Art. 12. 1. Za przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej oraz spółdzielczego stosunku pracy uważa się wszelkiego rodzaju wypłaty pieniężne oraz wartość pieniężną świadczeń w  naturze bądź ich ekw",
+          "source_hits": [
+            {
+              "article": "12",
+              "source_excerpt": "Art. 12. 1. Za przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej oraz spółdzielczego stosunku pracy uważa się wszelkiego rodzaju wypłaty pieniężne oraz wartość pieniężną świadczeń w  naturze bądź ich ekw"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 39",
-          "score": 0.032,
+          "score": 0.0315,
           "content_excerpt": "Art. 39 PIT nakłada na płatników obowiązek przesłania podatnikowi i urzędowi skarbowemu imiennej informacji sporządzonej według ustalonego wzoru, czyli m.in. PIT-11. Sam przepis określa obowiązek i tryb przekazania infor",
           "source_hits": [
             {
               "article": "39",
               "source_excerpt": "Art. 39. 1. Płatnicy, o  których mowa w  art. 32, art. 33 i art. 35, są obowiązani przesłać podatnikowi i urzędowi skarbowemu, przy pomocy którego naczelnik urzędu skarbowego właściwy według miejsca zamieszkania podatnik"
-            }
-          ]
-        },
-        {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 45 ust. 1",
-          "score": 0.032,
-          "content_excerpt": "Art. 45 ust. 1 potwierdza obowiązek złożenia rocznego zeznania według ustalonego wzoru. Sama ustawa o PIT na poziomie tego przepisu nie daje prostego katalogu kombinacji formularzy dla dokumentów PIT-40A, PIT-11A i PIT-3",
-          "source_hits": [
-            {
-              "article": "45",
-              "source_excerpt": "Art. 45. 1. Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o  wysokości osiągniętego dochodu (poniesionej straty) w roku podatkowym, w  terminie od dnia 15  lutego do dnia 30  kwietn"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób fizycznych oraz daninę solidarnościową."
             }
           ]
         }
@@ -966,10 +924,23 @@
           ]
         },
         {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 23",
+          "score": 0.0323,
+          "content_excerpt": "Art. 23. 1. Nie uważa się za koszty uzyskania przychodów: 1) wydatków na: a) nabycie gruntów lub prawa wieczystego użytkowania gruntów, z wyjątkiem opłat za wieczyste użytkowanie gruntów, b) nabycie lub wytworzenie we wł",
+          "source_hits": [
+            {
+              "article": "23",
+              "source_excerpt": "Art. 23. 1. Nie uważa się za koszty uzyskania przychodów: 1) wydatków na: a) nabycie gruntów lub prawa wieczystego użytkowania gruntów, z wyjątkiem opłat za wieczyste użytkowanie gruntów, b) nabycie lub wytworzenie we wł"
+            }
+          ]
+        },
+        {
           "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 22 ust. 4",
-          "score": 0.0323,
+          "score": 0.0317,
           "content_excerpt": "Koszty poniesione w 2025 roku są potrącalne w roku, w którym zostały poniesione, czyli 2025 roku. Przychód z odszkodowania otrzymany w 2026 roku będzie przychodem roku 2026. Jeśli są to koszty bezpośrednio związane z tym",
           "source_hits": [
             {
@@ -979,23 +950,6 @@
             {
               "article": "4",
               "source_excerpt": "Art. 4. (uchylony)"
-            }
-          ]
-        },
-        {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 14c ust. 1 pkt 1",
-          "score": 0.0317,
-          "content_excerpt": "Przy wyborze metody kasowej od 2026 roku musisz sprawdzić przychody z roku bezpośrednio poprzedzającego - czyli z 2025 roku. Limit wynosi 1 000 000 zł i stosuje się niezależnie od formy opodatkowania, którą stosowałeś w ",
-          "source_hits": [
-            {
-              "article": "14c",
-              "source_excerpt": "Art. 14c. 1. Podatnik, w tym podatnik rozpoczynający prowadzenie działalności gospodarczej, osiągający przychody z  działalności gospodarczej prowadzonej samodzielnie stosuje metodę kasową rozliczania przychodów, jeżeli "
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób fizycznych oraz daninę solidarnościową."
             }
           ]
         }
@@ -1026,19 +980,15 @@
           ]
         },
         {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 45 ust. 1",
-          "score": 0.032,
-          "content_excerpt": "Art. 45 ust. 1 stanowi, że podatnik składa zeznanie według ustalonego wzoru za dany rok podatkowy. Jeżeli wcześniej użyto niewłaściwego formularza, problem dotyczy korekty zeznania za konkretne lata, ale sama ustawa o PI",
+          "article_number": "art. 24a",
+          "score": 0.0323,
+          "content_excerpt": "Art. 24a. 1. Osoby fizyczne, przedsiębiorstwa w  spadku, spółki cywilne osób fizycznych, spółki cywilne osób fizycznych i przedsiębiorstwa w spadku, spółki jawne osób fizycznych oraz spółki partnerskie, wykonujące działa",
           "source_hits": [
             {
-              "article": "45",
-              "source_excerpt": "Art. 45. 1. Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o  wysokości osiągniętego dochodu (poniesionej straty) w roku podatkowym, w  terminie od dnia 15  lutego do dnia 30  kwietn"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób fizycznych oraz daninę solidarnościową."
+              "article": "24a",
+              "source_excerpt": "Art. 24a. 1. Osoby fizyczne, przedsiębiorstwa w  spadku, spółki cywilne osób fizycznych, spółki cywilne osób fizycznych i przedsiębiorstwa w spadku, spółki jawne osób fizycznych oraz spółki partnerskie, wykonujące działa"
             }
           ]
         },
@@ -1046,7 +996,7 @@
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 39",
-          "score": 0.0318,
+          "score": 0.0313,
           "content_excerpt": "Art. 39 PIT nakłada na płatników obowiązek przesłania podatnikowi i urzędowi skarbowemu imiennej informacji sporządzonej według ustalonego wzoru, czyli m.in. PIT-11. Sam przepis określa obowiązek i tryb przekazania infor",
           "source_hits": [
             {
@@ -1082,10 +1032,23 @@
           ]
         },
         {
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 44",
+          "score": 0.032,
+          "content_excerpt": "Art. 44. 1. Podatnicy osiągający dochody: 1) z działalności gospodarczej, o której mowa w art. 14, 2) (uchylony) – są obowiązani bez wezwania wpłacać w  ciągu roku podatkowego zaliczki na podatek dochodowy według zasad o",
+          "source_hits": [
+            {
+              "article": "44",
+              "source_excerpt": "Art. 44. 1. Podatnicy osiągający dochody: 1) z działalności gospodarczej, o której mowa w art. 14, 2) (uchylony) – są obowiązani bez wezwania wpłacać w  ciągu roku podatkowego zaliczki na podatek dochodowy według zasad o"
+            }
+          ]
+        },
+        {
           "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 45 ust. 1",
-          "score": 0.0323,
+          "score": 0.032,
           "content_excerpt": "Art. 45 ust. 1 potwierdza obowiązek złożenia rocznego zeznania według ustalonego wzoru. Sama ustawa o PIT na poziomie tego przepisu nie daje prostego katalogu kombinacji formularzy dla dokumentów PIT-40A, PIT-11A i PIT-3",
           "source_hits": [
             {
@@ -1095,19 +1058,6 @@
             {
               "article": "1",
               "source_excerpt": "Art. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób fizycznych oraz daninę solidarnościową."
-            }
-          ]
-        },
-        {
-          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 39",
-          "score": 0.0313,
-          "content_excerpt": "Art. 39 PIT nakłada na płatników obowiązek przesłania podatnikowi i urzędowi skarbowemu imiennej informacji sporządzonej według ustalonego wzoru, czyli m.in. PIT-11. Sam przepis określa obowiązek i tryb przekazania infor",
-          "source_hits": [
-            {
-              "article": "39",
-              "source_excerpt": "Art. 39. 1. Płatnicy, o  których mowa w  art. 32, art. 33 i art. 35, są obowiązani przesłać podatnikowi i urzędowi skarbowemu, przy pomocy którego naczelnik urzędu skarbowego właściwy według miejsca zamieszkania podatnik"
             }
           ]
         }
@@ -1234,7 +1184,7 @@
           "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "article_number": "art. 45 ust. 4",
-          "score": 0.0318,
+          "score": 0.0315,
           "content_excerpt": "Tak, podatek trzeba wpłacić przed upływem terminu do złożenia zeznania (do 30 kwietnia). Wpłacić trzeba: różnicę między podatkiem należnym z zeznania a sumą zapłaconych zaliczek, lub pełny podatek należny z zeznania o do",
           "source_hits": [
             {
@@ -1274,19 +1224,15 @@
           ]
         },
         {
-          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
-          "article_number": "art. 26 ust. 1",
+          "article_number": "art. 12",
           "score": 0.0323,
-          "content_excerpt": "Dla zastosowania stawki traktatowej albo niepobrania WHT płatnik musi posiadać certyfikat rezydencji podatnika i dochować należytej staranności. Sama praktyczna dostępność certyfikatu od kontrahenta nie wynika z ustawy, ",
+          "content_excerpt": "Art. 12. 1. Przychodami, z  zastrzeżeniem ust.  3 i  4 oraz art.  14, są w szczególności: 1) otrzymane pieniądze, wartości pieniężne, w tym również różnice kursowe; 2) wartość otrzymanych rzeczy lub praw, a  także wartoś",
           "source_hits": [
             {
-              "article": "26",
-              "source_excerpt": "Art. 26. 1. Osoby prawne, jednostki organizacyjne niemające osobowości prawnej oraz osoby fizyczne będące przedsiębiorcami, które dokonują wypłat należności z tytułów wymienionych w art. 21 ust. 1 oraz art. 22 ust. 1, są"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób prawnych i spółek kapitałowych w organizacji.  1) Niniejsza ustawa dokonuje w  zakresie swojej regulacji wdrożenia następujących dyrektyw Wspóln"
+              "article": "12",
+              "source_excerpt": "Art. 12. 1. Przychodami, z  zastrzeżeniem ust.  3 i  4 oraz art.  14, są w szczególności: 1) otrzymane pieniądze, wartości pieniężne, w tym również różnice kursowe; 2) wartość otrzymanych rzeczy lub praw, a  także wartoś"
             }
           ]
         },
@@ -1295,7 +1241,7 @@
           "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
           "article_number": "art. 26 ust. 1",
           "score": 0.0317,
-          "content_excerpt": "Dla zastosowania preferencji WHT płatnik musi mieć certyfikat rezydencji podatnika i dochować należytej staranności przy weryfikacji warunków. Bez certyfikatu rezydencji art. 26 ust. 1 nie pozwala bezpiecznie zastosować ",
+          "content_excerpt": "Dla zastosowania stawki traktatowej albo niepobrania WHT płatnik musi posiadać certyfikat rezydencji podatnika i dochować należytej staranności. Sama praktyczna dostępność certyfikatu od kontrahenta nie wynika z ustawy, ",
           "source_hits": [
             {
               "article": "26",
@@ -1334,10 +1280,23 @@
           ]
         },
         {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 16",
+          "score": 0.0323,
+          "content_excerpt": "Art. 16. 1. Nie uważa się za koszty uzyskania przychodów: 1) wydatków na: a) nabycie gruntów lub prawa wieczystego użytkowania gruntów, z wyjątkiem opłat za wieczyste użytkowanie gruntów, b) nabycie lub wytworzenie we wł",
+          "source_hits": [
+            {
+              "article": "16",
+              "source_excerpt": "Art. 16. 1. Nie uważa się za koszty uzyskania przychodów: 1) wydatków na: a) nabycie gruntów lub prawa wieczystego użytkowania gruntów, z wyjątkiem opłat za wieczyste użytkowanie gruntów, b) nabycie lub wytworzenie we wł"
+            }
+          ]
+        },
+        {
           "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
           "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
           "article_number": "art. 27 ust. 1 oraz art. 28b ust. 1",
-          "score": 0.0323,
+          "score": 0.0317,
           "content_excerpt": "Art. 27 ust. 1 reguluje termin złożenia CIT-8 i zapłaty podatku, natomiast art. 28b ust. 1 przewiduje zwrot podatku pobranego zgodnie z art. 26 ust. 2e na wniosek. To oznacza, że moment składania wniosku zależy od tego, ",
           "source_hits": [
             {
@@ -1351,31 +1310,6 @@
             {
               "article": "28b",
               "source_excerpt": "Art. 28b. 1. Organ podatkowy zwraca, na wniosek, podatek pobrany zgodnie z art. 26 ust. 2e. Wysokość podatku do zwrotu określa się na podstawie zwolnień lub stawek wynikających z  przepisów szczególnych lub umów o  unika"
-            }
-          ]
-        },
-        {
-          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
-          "article_number": "art. 28m ust. 1 pkt 2 i 3",
-          "score": 0.0312,
-          "content_excerpt": "W estońskim CIT opodatkowaniu podlegają m.in. ukryte zyski oraz wydatki niezwiązane z działalnością gospodarczą. Artykuł 28m ust. 1 nie tworzy automatycznej reguły, że każdy obiad dla pracowników jest albo zawsze kosztem",
-          "source_hits": [
-            {
-              "article": "28m",
-              "source_excerpt": "Art. 28m. 1. Opodatkowaniu ryczałtem podlega dochód odpowiadający: 1) wysokości zysku netto wypracowanego w  okresie opodatkowania ryczałtem w części, w  jakiej zysk ten został uchwałą o  podziale lub pokryciu wyniku fin"
-            },
-            {
-              "article": "1",
-              "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób prawnych i spółek kapitałowych w organizacji.  1) Niniejsza ustawa dokonuje w  zakresie swojej regulacji wdrożenia następujących dyrektyw Wspóln"
-            },
-            {
-              "article": "2",
-              "source_excerpt": "Art. 2. 1. Przepisów ustawy nie stosuje się do:  1) przychodów z  działalności rolniczej, z  wyjątkiem dochodów z  działów specjalnych produkcji rolnej oraz dochodów opodatkowanych  ryczałtem od dochodów spółek; 2) przyc"
-            },
-            {
-              "article": "3",
-              "source_excerpt": "Art. 3. 1. Podatnicy, jeżeli mają siedzibę lub zarząd na terytorium Rzeczypospolitej Polskiej, podlegają obowiązkowi podatkowemu od całości swoich dochodów, bez względu na miejsce ich osiągania. 1a. Podatnik ma zarząd na"
             }
           ]
         }
@@ -1569,40 +1503,61 @@
       "query": "Doby wieczór!. Składacie państwo deklarację IFT2R? Czy składa się do miesięcznej subskrypcji (Google, Adobe itp)?",
       "source_cat": "cit",
       "freq": 6,
-      "aktuo_category": "terminy",
-      "status": "FAIL",
+      "aktuo_category": "cit",
+      "status": "PASS",
       "top_3": [
         {
-          "law_name": "Ustawa o VAT",
-          "normalized_law_name": "Ustawa o VAT",
-          "article_number": "art. 99 ust. 11b",
-          "score": 0.0325,
-          "content_excerpt": "Nie. Artykuł 99 ust. 11b wyraźnie stanowi, że deklaracje podatkowe składa się wyłącznie za pomocą środków komunikacji elektronicznej. Przepisy ustawy nie zawierają zwolnienia z obowiązku złożenia deklaracji ze względu na",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+          "score": 0.0328,
+          "content_excerpt": "Art. 26a ust. 1 przewiduje roczne deklaracje składane przez płatników po roku, w którym powstał obowiązek zapłaty podatku, a art. 21 ust. 1 pkt 2a wskazuje m.in. usługi reklamowe i przetwarzania danych jako należności mo",
           "source_hits": [
             {
-              "article": "99",
-              "source_excerpt": "Art. 99. 1. Podatnicy, o  których mowa w  art. 15, są obowiązani składać w urzędzie skarbowym deklaracje podatkowe za okresy miesięczne w  terminie do 25. dnia miesiąca następującego po każdym kolejnym miesiącu, z  zastr"
+              "article": "26a",
+              "source_excerpt": "Art. 26a. 1. W terminie do końca pierwszego miesiąca roku następującego po roku podatkowym, w którym powstał obowiązek zapłaty podatku, płatnicy, o których mowa w art. 26, i podatnicy, o  których mowa w  art. 22 ust. 4b,"
+            },
+            {
+              "article": "1",
+              "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób prawnych i spółek kapitałowych w organizacji.  1) Niniejsza ustawa dokonuje w  zakresie swojej regulacji wdrożenia następujących dyrektyw Wspóln"
+            },
+            {
+              "article": "21",
+              "source_excerpt": "Art. 21. 1. Podatek dochodowy z  tytułu uzyskanych na terytorium Rzeczypospolitej Polskiej przez podatników, o  których mowa w  art. 3 ust.  2, przychodów: 1) z odsetek, z  praw autorskich lub praw pokrewnych, z  praw do"
             }
           ]
         },
         {
-          "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-          "normalized_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-          "article_number": "art. 47 ust. 2",
-          "score": 0.0313,
-          "content_excerpt": "Jeśli opłacasz składki wyłącznie za siebie, składasz tylko deklarację rozliczeniową (bez imiennych raportów miesięcznych). Deklarację tę przesyłasz w tym samym terminie, w którym opłacasz składki za dany miesiąc — czyli ",
-          "source_hits": []
-        },
-        {
-          "law_name": "Ustawa o VAT",
-          "normalized_law_name": "Ustawa o VAT",
-          "article_number": "art. 133",
-          "score": 0.0308,
-          "content_excerpt": "1. Podmioty zagraniczne zidentyfikowane na potrzeby procedury nieunijnej są obowiązane składać za pomocą środków komunikacji elektronicznej deklaracje VAT do właściwego urzędu skarbowego, niezależnie od tego, czy usługi ",
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 24s",
+          "score": 0.0318,
+          "content_excerpt": "1. Fundacja rodzinna jest obowiązana złożyć do urzędu skarbowego deklarację, według ustalonego wzoru, o wysokości dochodu (przychodu) osiągniętego w roku podatkowym ‒ w terminie do końca trzeciego miesiąca roku następneg",
           "source_hits": [
             {
-              "article": "133",
-              "source_excerpt": "Art. 133. 1. Podmioty zagraniczne zidentyfikowane na potrzeby procedury nieunijnej są obowiązane składać za pomocą środków komunikacji elektronicznej deklaracje VAT do właściwego urzędu skarbowego, niezależnie od tego, c"
+              "article": "24s",
+              "source_excerpt": "Art. 24s. 1. Fundacja rodzinna jest obowiązana złożyć do urzędu skarbowego deklarację, według ustalonego wzoru, o wysokości dochodu (przychodu) osiągniętego w roku podatkowym ‒ w terminie do końca trzeciego miesiąca roku"
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "normalized_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+          "score": 0.0318,
+          "content_excerpt": "Usługi reklamowe są wprost wymienione w art. 21 ust. 1 pkt 2a jako należności potencjalnie objęte WHT, a art. 26a ust. 1 reguluje roczne deklaracje składane po roku, w którym powstał obowiązek podatkowy. Dlatego przy pła",
+          "source_hits": [
+            {
+              "article": "26a",
+              "source_excerpt": "Art. 26a. 1. W terminie do końca pierwszego miesiąca roku następującego po roku podatkowym, w którym powstał obowiązek zapłaty podatku, płatnicy, o których mowa w art. 26, i podatnicy, o  których mowa w  art. 22 ust. 4b,"
+            },
+            {
+              "article": "1",
+              "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem dochodowym dochodów osób prawnych i spółek kapitałowych w organizacji.  1) Niniejsza ustawa dokonuje w  zakresie swojej regulacji wdrożenia następujących dyrektyw Wspóln"
+            },
+            {
+              "article": "21",
+              "source_excerpt": "Art. 21. 1. Podatek dochodowy z  tytułu uzyskanych na terytorium Rzeczypospolitej Polskiej przez podatników, o  których mowa w  art. 3 ust.  2, przychodów: 1) z odsetek, z  praw autorskich lub praw pokrewnych, z  praw do"
             }
           ]
         }

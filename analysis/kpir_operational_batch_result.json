@@ -1,0 +1,480 @@
+{
+  "questions_in_batch": 12,
+  "kb_units_added": 9,
+  "synonym_entries_added": 2,
+  "batch_coverage_before": {
+    "covered_count": 0,
+    "weak_count": 2,
+    "gap_count": 10
+  },
+  "batch_coverage_after": {
+    "covered_count": 6,
+    "weak_count": 4,
+    "gap_count": 2,
+    "questions_improved": 8
+  },
+  "top100_coverage_before": {
+    "covered_count": 70,
+    "weak_count": 6,
+    "gap_count": 24,
+    "coverage_percent": 70.0
+  },
+  "top100_coverage_after": {
+    "covered_count": 75,
+    "weak_count": 7,
+    "gap_count": 18,
+    "coverage_percent": 75.0
+  },
+  "top200_coverage_before": {
+    "covered_count": 123,
+    "weak_count": 12,
+    "gap_count": 65,
+    "coverage_percent": 61.5
+  },
+  "top200_coverage_after": {
+    "covered_count": 127,
+    "weak_count": 15,
+    "gap_count": 58,
+    "coverage_percent": 63.5
+  },
+  "files_changed": [
+    "analysis/kpir_operational_batch_input.json",
+    "analysis/kpir_operational_batch_diagnosis.json",
+    "analysis/kpir_operational_batch_result.json",
+    "analysis/top_coverage_impact_report.json",
+    "analysis/top_gap_batches.json",
+    "core/categorizer.py",
+    "data/seeds/law_knowledge.json",
+    "fb_pipeline/slang_analysis.json"
+  ],
+  "notes_on_questions_still_unresolved": [
+    {
+      "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+      "status": "WEAK",
+      "note": "Cz??ciowo nierozstrzygalne bez rozporz?dzenia o PKPiR albo nadal mieszane podatkowo-bilansowo."
+    },
+    {
+      "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+      "status": "WEAK",
+      "note": "Cz??ciowo nierozstrzygalne bez rozporz?dzenia o PKPiR albo nadal mieszane podatkowo-bilansowo."
+    },
+    {
+      "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
+      "status": "GAP",
+      "note": "Cz??ciowo nierozstrzygalne bez rozporz?dzenia o PKPiR albo nadal mieszane podatkowo-bilansowo."
+    },
+    {
+      "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+      "status": "WEAK",
+      "note": "Cz??ciowo nierozstrzygalne bez rozporz?dzenia o PKPiR albo nadal mieszane podatkowo-bilansowo."
+    },
+    {
+      "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
+      "status": "WEAK",
+      "note": "Cz??ciowo nierozstrzygalne bez rozporz?dzenia o PKPiR albo nadal mieszane podatkowo-bilansowo."
+    },
+    {
+      "question": "Szukam doświadczonego księgowego do spokojnego przeglądu i uporządkowania moich rozliczeń podatkowych za ostatnie 4 lata?",
+      "status": "GAP",
+      "note": "Cz??ciowo nierozstrzygalne bez rozporz?dzenia o PKPiR albo nadal mieszane podatkowo-bilansowo."
+    }
+  ],
+  "after_items": [
+    {
+      "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+      "before_verdict": "GAP",
+      "after_verdict": "COVERED",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 6",
+          "category": "rachunkowosc",
+          "score": 0.0328,
+          "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 28",
+          "category": "rachunkowosc",
+          "score": 0.0323,
+          "preview": "Art. 28. 1. Aktywa i pasywa wycenia się nie rzadziej niż na dzień bilansowy w sposób następujący: 1) środki trwałe oraz wartości niematerialne i prawne – według cen nabycia lub ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 39 ust. 2 pkt 1",
+          "category": "rozliczenia_międzyokresowe_kosztów",
+          "score": 0.0313,
+          "preview": "Narzuty płatnika są kosztem bilansowym okresu, w którym je faktycznie poniesiono (tj. kiedy świadczenie zostało wykonane), niezależnie od daty wystawienia faktury. Zgodnie z art..."
+        }
+      ]
+    },
+    {
+      "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
+      "before_verdict": "GAP",
+      "after_verdict": "COVERED",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 32 ust. 6",
+          "category": "amortyzacja_srodków_trwalych",
+          "score": 0.0323,
+          "preview": "Ustawa o rachunkowości zezwala na jednorazową amortyzację dla środków trwałych o niskiej jednostkowej wartości początkowej (art. 32 ust. 6). Jednak jednostki mikro i małe mogą a..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 32 ust. 3",
+          "category": "amortyzacja_aktualizacja",
+          "score": 0.032,
+          "preview": "Tak, gdy zmienią się warunki ekonomiczne wpływające na okres użyteczności środka trwałego, musisz dokonać korekty. Na dzień przyjęcia składnika do użytku ustalacie okres amortyz..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 35b ust. 2",
+          "category": "aktualizacja_wartości_należności",
+          "score": 0.0309,
+          "preview": "Odpisy aktualizujące wartość należności zaliczasz do pozostałych kosztów operacyjnych lub kosztów finansowych - zależy od rodzaju należności, której dotyczy odpis. Jeśli należno..."
+        }
+      ]
+    },
+    {
+      "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+      "before_verdict": "WEAK",
+      "after_verdict": "WEAK",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+          "category": "rachunkowosc",
+          "score": 0.0328,
+          "preview": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w kt?rym po stronie sprzedawcy powsta? obowi?zek podatkowy, nie wcze?niej jednak ni? w okresie otrzymania f..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 2",
+          "category": "rachunkowosc",
+          "score": 0.032,
+          "preview": "Art. 2. 1. Przepisy ustawy o rachunkowości, zwanej dalej „ustawą”, stosuje się, z zastrzeżeniem ust. 3, do mających siedzibę lub miejsce sprawowania zarządu na terytorium Rzeczy..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 12",
+          "category": "rachunkowosc",
+          "score": 0.0313,
+          "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+        }
+      ]
+    },
+    {
+      "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+      "before_verdict": "GAP",
+      "after_verdict": "COVERED",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 6",
+          "category": "rachunkowosc",
+          "score": 0.0325,
+          "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 34b",
+          "category": "rachunkowosc",
+          "score": 0.0325,
+          "preview": "1. Koszty wytworzenia, które można bezpośrednio przyporządkować przychodom osiągniętym przez jednostkę, wpływają na wynik finansowy jednostki za ten okres sprawozdawczy, w który..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 66",
+          "category": "rachunkowosc",
+          "score": 0.0296,
+          "preview": "1. (uchylony) 2. (uchylony) 3. (uchylony) 4. Wyboru firmy audytorskiej do przeprowadzenia badania sprawozdania finansowego oraz wyboru firmy audytorskiej do atestacji sprawozdaw..."
+        }
+      ]
+    },
+    {
+      "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+      "before_verdict": "WEAK",
+      "after_verdict": "WEAK",
+      "aktuo_category_after": "ogólne",
+      "reason_after": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 21",
+          "category": "spolki",
+          "score": 0.0328,
+          "preview": "Art. 21. 1. Podatek dochodowy z tytułu uzyskanych na terytorium Rzeczypospolitej Polskiej przez podatników, o których mowa w art. 3 ust. 2, przychodów: 1) z odsetek, z praw auto..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 63q",
+          "category": "rachunkowosc",
+          "score": 0.0315,
+          "preview": "1. Przepisy niniejszego rozdziału stosuje się do jednostek będących: 1) spółką kapitałową; 2) spółką komandytowo-akcyjną; 3) spółką jawną albo spółką komandytową, której wszystk..."
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 15 ust. 1",
+          "category": "koszty_operacyjne_usługi",
+          "score": 0.0315,
+          "preview": "Tak, zakupiona licencja lub subskrypcja oprogramowania/usługi online stanowi koszt uzyskania przychodów, jeśli została poniesiona w celu osiągnięcia przychodów ze źródła przycho..."
+        }
+      ]
+    },
+    {
+      "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
+      "before_verdict": "GAP",
+      "after_verdict": "GAP",
+      "aktuo_category_after": "fakturowanie",
+      "reason_after": "Brak mocnego trafienia w spodziewany akt prawny.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 106j ust. 2a",
+          "category": "faktury_korygujace",
+          "score": 0.0307,
+          "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 145n ust. 4",
+          "category": "ewidencja_faktury_2026",
+          "score": 0.0306,
+          "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 106j ust. 1 i 2",
+          "category": "faktury_korygujace",
+          "score": 0.0295,
+          "preview": "Tekst art. 106j nie określa, w jakim miesiącu rozliczać VAT z faktury korygującej. Ustawodawca reguluje w tym artykule wyłącznie wymogi formalne faktury korygującej (zawartość, ..."
+        }
+      ]
+    },
+    {
+      "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
+      "before_verdict": "GAP",
+      "after_verdict": "COVERED",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 12",
+          "category": "rachunkowosc",
+          "score": 0.0323,
+          "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowo?ci",
+          "canonical_law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 39 ust. 1-3",
+          "category": "rachunkowosc",
+          "score": 0.0318,
+          "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 32 ust. 1",
+          "category": "amortyzacja_srodki_trwale",
+          "score": 0.0313,
+          "preview": "Koszt zakupionego środka trwałego nie ujmuje się od razu jako koszt operacyjny. Wartość początkową (cenę nabycia) ujmuje się w aktywach (jako środek trwały), a koszt rozkłada si..."
+        }
+      ]
+    },
+    {
+      "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
+      "before_verdict": "GAP",
+      "after_verdict": "COVERED",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 39 ust. 3",
+          "category": "rozliczenia_miedzyokresowe_koszty",
+          "score": 0.0328,
+          "preview": "Ustawa o rachunkowości stanowi, że RMK odpisuje się stosownie do upływu czasu lub wielkości świadczeń, z zachowaniem zasady ostrożności. Rozłożenie opłaty na raty jest prawidłow..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 6",
+          "category": "rachunkowosc",
+          "score": 0.032,
+          "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 30",
+          "category": "rachunkowosc",
+          "score": 0.0313,
+          "preview": "Art. 30. 1. Nie rzadziej niż na dzień bilansowy wycenia się wyrażone w walutach obcych: 1) składniki aktywów (z wyłączeniem udziałów w jednostkach podporządkowanych wycenianych ..."
+        }
+      ]
+    },
+    {
+      "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+      "before_verdict": "GAP",
+      "after_verdict": "WEAK",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowo?ci",
+          "canonical_law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 28 ust. 2",
+          "category": "rachunkowosc",
+          "score": 0.0328,
+          "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 34c",
+          "category": "rachunkowosc",
+          "score": 0.0318,
+          "preview": "1. Koszty wytworzenia niezakończonej usługi, w tym budowlanej, obejmują koszty poniesione od dnia zawarcia odpowiedniej umowy do dnia bilansowego. Koszty poniesione przed zawarc..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 7",
+          "category": "rachunkowosc",
+          "score": 0.031,
+          "preview": "1. Poszczególne składniki aktywów i pasywów wycenia się stosując rzeczywiście poniesione na ich nabycie (wytworzenie) ceny (koszty), z zachowaniem zasady ostrożności. W szczegól..."
+        }
+      ]
+    },
+    {
+      "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
+      "before_verdict": "GAP",
+      "after_verdict": "WEAK",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowo?ci",
+          "canonical_law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 20 ust. 1-3 i art. 21 ust. 1 pkt 3-6",
+          "category": "rachunkowosc",
+          "score": 0.0328,
+          "preview": "Do ksi?g rachunkowych okresu sprawozdawczego wprowadza si? ka?de zdarzenie, kt?re nast?pi?o w tym okresie, na podstawie dowodu ksi?gowego. Dow?d powinien wskazywa? opis operacji..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 45 ust. 1",
+          "category": "sprawozdanie_finansowe_podstawy",
+          "score": 0.031,
+          "preview": "Sprawozdanie finansowe sporządza się na dzień zamknięcia ksiąg rachunkowych (art. 45 ust. 1), czyli zazwyczaj na koniec roku obrachunkowego (31 grudnia), lub na inny dzień bilan..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowo?ci",
+          "canonical_law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 39 ust. 1-3",
+          "category": "rachunkowosc",
+          "score": 0.0304,
+          "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+        }
+      ]
+    },
+    {
+      "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
+      "before_verdict": "GAP",
+      "after_verdict": "COVERED",
+      "aktuo_category_after": "rachunkowosc",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 30",
+          "category": "rachunkowosc",
+          "score": 0.0328,
+          "preview": "Art. 30. 1. Nie rzadziej niż na dzień bilansowy wycenia się wyrażone w walutach obcych: 1) składniki aktywów (z wyłączeniem udziałów w jednostkach podporządkowanych wycenianych ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 32 ust. 1",
+          "category": "amortyzacja_srodkow_trwalych",
+          "score": 0.032,
+          "preview": "Amortyzacja powinna być wykazana w kosztach operacyjnych bez ograniczenia do ceny sprzedaży. Art. 32 ust. 1 mówi jedynie, że podczas ustalania okresu amortyzacji należy uwzględn..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 21 ust. 1 pkt 5",
+          "category": "elementy_dowodu_ksiegowego",
+          "score": 0.0315,
+          "preview": "Tak, dowód księgowy powinien zawierać podpis wystawcy dowodu oraz podpis osoby, której wydano lub od której przyjęto składniki aktywów. Jednak podpisy można pominąć, jeśli wynik..."
+        }
+      ]
+    },
+    {
+      "question": "Szukam doświadczonego księgowego do spokojnego przeglądu i uporządkowania moich rozliczeń podatkowych za ostatnie 4 lata?",
+      "before_verdict": "GAP",
+      "after_verdict": "GAP",
+      "aktuo_category_after": "ogólne",
+      "reason_after": "Brak mocnego trafienia w spodziewany akt prawny.",
+      "top_3_after": [
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 99 ust. 4",
+          "category": "okresy_rozliczeniowe",
+          "score": 0.0328,
+          "preview": "Aby przejść z rozliczeń kwartalnych na miesięczne, należy po upływie 4 kwartałów rozliczeń kwartalnych zawiadomić na piśmie naczelnika urzędu skarbowego. Zawiadomienie składa si..."
+        },
+        {
+          "law_name": "Kodeks pracy",
+          "canonical_law_name": "Kodeks pracy",
+          "article_number": "art. 39",
+          "category": "kadry",
+          "score": 0.0318,
+          "preview": "Pracodawca nie może wypowiedzieć umowy o pracę pracownikowi, któremu brakuje nie więcej niż 4 lata do osiągnięcia wieku emerytalnego, jeżeli okres zatrudnienia umożliwia mu uzys..."
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 26 ust. 1 pkt 6a, ust. 6h",
+          "category": "odliczenia - wydatki na Internet",
+          "score": 0.0294,
+          "preview": "Podatnicy mogą odliczyć od dochodu wydatki na użytkowanie sieci Internet do wysokości 760 zł rocznie. Odliczenie przysługuje w kolejno po sobie następujących dwóch latach podatk..."
+        }
+      ]
+    }
+  ]
+}

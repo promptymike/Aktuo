@@ -2,134 +2,9 @@
   "meta": {
     "source_file": "fb_pipeline\\dedup_questions_output_v3.json",
     "knowledge_file": "data\\seeds\\law_knowledge.json",
-    "based_on_unresolved_questions_from_top_200": 77
+    "based_on_unresolved_questions_from_top_200": 73
   },
   "batches": [
-    {
-      "batch_name": "KPiR / rachunkowość operacyjna",
-      "number_of_questions": 12,
-      "gap_count": 10,
-      "weak_count": 2,
-      "total_freq_impact": 89,
-      "questions_in_top100": 9,
-      "questions_in_top200": 12,
-      "total_freq_top100": 77,
-      "total_freq_top200": 89,
-      "likely_laws_or_regulations_needed": [
-        "Ustawa o podatku dochodowym od osób fizycznych",
-        "Ustawa o rachunkowości"
-      ],
-      "likely_synonym_additions_needed": [
-        "KPiR",
-        "SF"
-      ],
-      "root_causes": {
-        "cross_law_question": 10,
-        "missing_kb_unit": 2
-      },
-      "recommended_fix_type": "kb_units",
-      "questions": [
-        {
-          "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
-          "freq": 22,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "fakturowanie",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
-          "freq": 10,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "missing_kb_unit"
-        },
-        {
-          "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
-          "freq": 9,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "rachunkowosc",
-          "verdict": "WEAK",
-          "root_cause_guess": "missing_kb_unit"
-        },
-        {
-          "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
-          "freq": 8,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
-          "freq": 8,
-          "dataset_category": "spolki",
-          "aktuo_category": "ogólne",
-          "verdict": "WEAK",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
-          "freq": 5,
-          "dataset_category": "kadry",
-          "aktuo_category": "fakturowanie",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
-          "freq": 5,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "fakturowanie",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
-          "freq": 5,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
-          "freq": 5,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "podatek_naliczony",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
-          "freq": 4,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "fakturowanie",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
-          "freq": 4,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "podatek_naliczony",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "Szukam doświadczonego księgowego do spokojnego przeglądu i uporządkowania moich rozliczeń podatkowych za ostatnie 4 lata?",
-          "freq": 4,
-          "dataset_category": "rachunkowosc",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        }
-      ],
-      "estimated_kb_units_needed": 8,
-      "estimated_synonym_additions_needed": 0,
-      "priority_score": 89.0
-    },
     {
       "batch_name": "Pozostałe luki produktowe",
       "number_of_questions": 27,
@@ -370,10 +245,95 @@
       "priority_score": 46.2
     },
     {
+      "batch_name": "KPiR / rachunkowość operacyjna",
+      "number_of_questions": 7,
+      "gap_count": 2,
+      "weak_count": 5,
+      "total_freq_impact": 39,
+      "questions_in_top100": 4,
+      "questions_in_top200": 7,
+      "total_freq_top100": 27,
+      "total_freq_top200": 39,
+      "likely_laws_or_regulations_needed": [
+        "Ustawa o podatku dochodowym od osób fizycznych",
+        "Ustawa o rachunkowości"
+      ],
+      "likely_synonym_additions_needed": [
+        "KPiR",
+        "SF"
+      ],
+      "root_causes": {
+        "cross_law_question": 6,
+        "missing_kb_unit": 1
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+          "freq": 9,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "rachunkowosc",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+          "freq": 8,
+          "dataset_category": "spolki",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
+          "freq": 5,
+          "dataset_category": "kadry",
+          "aktuo_category": "fakturowanie",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+          "freq": 5,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "rachunkowosc",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
+          "freq": 4,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "rachunkowosc",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Szukam doświadczonego księgowego do spokojnego przeglądu i uporządkowania moich rozliczeń podatkowych za ostatnie 4 lata?",
+          "freq": 4,
+          "dataset_category": "rachunkowosc",
+          "aktuo_category": "ogólne",
+          "verdict": "GAP",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+          "freq": 4,
+          "dataset_category": "vat",
+          "aktuo_category": "rachunkowosc",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        }
+      ],
+      "estimated_kb_units_needed": 3,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 39.0
+    },
+    {
       "batch_name": "KSeF uprawnienia i obieg faktur",
       "number_of_questions": 4,
-      "gap_count": 2,
-      "weak_count": 2,
+      "gap_count": 3,
+      "weak_count": 1,
       "total_freq_impact": 27,
       "questions_in_top100": 1,
       "questions_in_top200": 4,
@@ -405,7 +365,7 @@
           "freq": 4,
           "dataset_category": "ksef",
           "aktuo_category": "ogólne",
-          "verdict": "WEAK",
+          "verdict": "GAP",
           "root_cause_guess": "missing_kb_unit"
         },
         {
@@ -425,7 +385,7 @@
           "root_cause_guess": "cross_law_question"
         }
       ],
-      "estimated_kb_units_needed": 2,
+      "estimated_kb_units_needed": 3,
       "estimated_synonym_additions_needed": 0,
       "priority_score": 27.0
     },
@@ -495,9 +455,9 @@
       "likely_laws_or_regulations_needed": [],
       "likely_synonym_additions_needed": [],
       "root_causes": {
-        "cross_law_question": 14,
+        "cross_law_question": 13,
         "missing_kb_unit": 13,
-        "weak_existing_chunk": 2
+        "weak_existing_chunk": 3
       },
       "recommended_fix_type": "categorizer",
       "questions": [
@@ -627,7 +587,7 @@
           "dataset_category": "praktyka",
           "aktuo_category": "ogólne",
           "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
+          "root_cause_guess": "weak_existing_chunk"
         },
         {
           "question": "Czy ktoś może mi polecić jakąś stronę, video, cokolwiek z przykładami (jak w szkole), abym mogła zrozumieć ten proces?",
@@ -740,14 +700,14 @@
     },
     {
       "batch_name": "Procedury podatkowe / pisma / pełnomocnictwa",
-      "number_of_questions": 1,
+      "number_of_questions": 2,
       "gap_count": 1,
-      "weak_count": 0,
-      "total_freq_impact": 5,
+      "weak_count": 1,
+      "total_freq_impact": 8,
       "questions_in_top100": 1,
-      "questions_in_top200": 1,
+      "questions_in_top200": 2,
       "total_freq_top100": 5,
-      "total_freq_top200": 5,
+      "total_freq_top200": 8,
       "likely_laws_or_regulations_needed": [
         "Ordynacja podatkowa",
         "Ustawa o VAT",
@@ -758,6 +718,7 @@
         "UPL-1"
       ],
       "root_causes": {
+        "cross_law_question": 1,
         "missing_kb_unit": 1
       },
       "recommended_fix_type": "kb_units",
@@ -769,11 +730,19 @@
           "aktuo_category": "ogólne",
           "verdict": "GAP",
           "root_cause_guess": "missing_kb_unit"
+        },
+        {
+          "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+          "freq": 3,
+          "dataset_category": "jpk",
+          "aktuo_category": "rachunkowosc",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
         }
       ],
       "estimated_kb_units_needed": 2,
       "estimated_synonym_additions_needed": 0,
-      "priority_score": 5.0
+      "priority_score": 8.0
     },
     {
       "batch_name": "Ryczałt i stawki działalności",

@@ -1,0 +1,398 @@
+[
+  {
+    "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+    "freq": 22,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "fakturowanie",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106i ust. 2",
+        "category": "terminy wystawienia faktury",
+        "score": 0.032,
+        "preview": "Jeśli otrzymasz całość lub część zapłaty przed dokonaniem dostawy lub wykonaniem usługi, fakturę wystawisz nie później niż 15. dnia miesiąca następującego po miesiącu, w którym ..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106i ust. 1",
+        "category": "Fakturowanie przekształceń bez dostawy",
+        "score": 0.0313,
+        "preview": "Faktura powinna być wystawiona nie później niż 15. dnia miesiąca następującego po miesiącu dokonania dostawy (art. 106i ust. 1). Nie możesz wystawić faktury wcześniej niż 60 dni..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106i ust. 6 pkt 2",
+        "category": "terminy wystawienia faktury",
+        "score": 0.0313,
+        "preview": "Jeśli klient żąda faktury po upływie miesiąca, w którym dokonano dostawy, wystawisz ją nie później niż 15 dni od dnia zgłoszenia żądania. To inne reguły niż standardowe — żądani..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
+    "freq": 10,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 120 ust. 4",
+        "category": "procedura-marza-srodki-transportu",
+        "score": 0.0317,
+        "preview": "Procedura marża z art. 120 ust. 4 teoretycznie może dotyczyć samochodów jako 'towarów używanych' (ruchome dobra materialne nadające się do dalszego użytku), jeśli zostały nabyte..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 26ea ust. 1, ust. 2, ust. 4",
+        "category": "ulga_na_koszty_badawczo_rozwojowe",
+        "score": 0.0313,
+        "preview": "Ulga z art. 26ea przysługuje tylko w roku rozpoczęcia działalności gospodarczej lub roku bezpośrednio następującym (jeśli podatnik jest mikro/małym/średnim przedsiębiorcą). Po p..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+        "category": "odliczenie VAT pojazdy leasing",
+        "score": 0.0306,
+        "preview": "Jeśli samochód leasingowany spełnia warunki z art. 86a ust. 3 pkt 1 lit. a (wykorzystywany wyłącznie do działalności), nie obowiązuje ograniczenie 50% VAT i można odliczyć 100%...."
+      }
+    ],
+    "root_cause_guess": "missing_kb_unit"
+  },
+  {
+    "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+    "freq": 9,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "rachunkowosc",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+        "category": "rachunkowosc",
+        "score": 0.0328,
+        "preview": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w kt?rym po stronie sprzedawcy powsta? obowi?zek podatkowy, nie wcze?niej jednak ni? w okresie otrzymania f..."
+      },
+      {
+        "law_name": "Ustawa o rachunkowości",
+        "canonical_law_name": "Ustawa o rachunkowości",
+        "article_number": "art. 2",
+        "category": "rachunkowosc",
+        "score": 0.032,
+        "preview": "Art. 2. 1. Przepisy ustawy o rachunkowości, zwanej dalej „ustawą”, stosuje się, z zastrzeżeniem ust. 3, do mających siedzibę lub miejsce sprawowania zarządu na terytorium Rzeczy..."
+      },
+      {
+        "law_name": "Ustawa o rachunkowości",
+        "canonical_law_name": "Ustawa o rachunkowości",
+        "article_number": "art. 12",
+        "category": "rachunkowosc",
+        "score": 0.0315,
+        "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+      }
+    ],
+    "root_cause_guess": "missing_kb_unit"
+  },
+  {
+    "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+    "freq": 8,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 23a ust. 1",
+        "category": "definicje_leasing",
+        "score": 0.0325,
+        "preview": "Artykuł 23a nie zawiera żadnych regulacji dotyczących podnajmu przedmiotu leasingu. Zatem na podstawie samej definicji leasingu w ustawie nie można jednoznacznie stwierdzić, czy..."
+      },
+      {
+        "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
+        "article_number": "art. 41d",
+        "category": "zus",
+        "score": 0.032,
+        "preview": "1. Zakład informuje ubezpieczonego o przekazaniu przez płatnika składek raportu informacyjnego w informacji o stanie konta, o której mowa w art. 50 ust. 1, przesyłanej za rok, w..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 22b ust. 2 pkt 2",
+        "category": "amortyzacja_prace_rozwojowe",
+        "score": 0.0313,
+        "preview": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określo..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+    "freq": 8,
+    "dataset_category": "spolki",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+        "article_number": "art. 21",
+        "category": "spolki",
+        "score": 0.0328,
+        "preview": "Art. 21. 1. Podatek dochodowy z tytułu uzyskanych na terytorium Rzeczypospolitej Polskiej przez podatników, o których mowa w art. 3 ust. 2, przychodów: 1) z odsetek, z praw auto..."
+      },
+      {
+        "law_name": "Ustawa o rachunkowości",
+        "canonical_law_name": "Ustawa o rachunkowości",
+        "article_number": "art. 63q",
+        "category": "rachunkowosc",
+        "score": 0.0315,
+        "preview": "1. Przepisy niniejszego rozdziału stosuje się do jednostek będących: 1) spółką kapitałową; 2) spółką komandytowo-akcyjną; 3) spółką jawną albo spółką komandytową, której wszystk..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
+        "article_number": "art. 15 ust. 1",
+        "category": "koszty_operacyjne_usługi",
+        "score": 0.0315,
+        "preview": "Tak, zakupiona licencja lub subskrypcja oprogramowania/usługi online stanowi koszt uzyskania przychodów, jeśli została poniesiona w celu osiągnięcia przychodów ze źródła przycho..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
+    "freq": 5,
+    "dataset_category": "kadry",
+    "aktuo_category": "fakturowanie",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 2a",
+        "category": "faktury_korygujace",
+        "score": 0.0307,
+        "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 145n ust. 4",
+        "category": "ewidencja_faktury_2026",
+        "score": 0.0306,
+        "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 1 i 2",
+        "category": "faktury_korygujace",
+        "score": 0.0295,
+        "preview": "Tekst art. 106j nie określa, w jakim miesiącu rozliczać VAT z faktury korygującej. Ustawodawca reguluje w tym artykule wyłącznie wymogi formalne faktury korygującej (zawartość, ..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
+    "freq": 5,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "fakturowanie",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 2 pkt 2",
+        "category": "faktury_korygujace",
+        "score": 0.0328,
+        "preview": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wyst..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 116 ust. 2 pkt 4",
+        "category": "faktury_vat_rr",
+        "score": 0.0315,
+        "preview": "Faktura VAT RR powinna być wystawiona nie później niż 7 dni od dnia nabycia produktów rolnych (lub do 7 dnia następnego miesiąca przy dostawach ciągłych). Na fakturze wskazuje s..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 1 pkt 4",
+        "category": "dokumentacja_faktury_korygujace",
+        "score": 0.0313,
+        "preview": "Faktura korygująca powinna być wystawiona w związku ze zmianą podstawy opodatkowania lub zwrotem zapłaty. Артykuł 106j nie określa terminu, w jakim korekta musi być wystawiona p..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
+    "freq": 5,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 26e",
+        "category": "koszty-uzyskania-przychodow",
+        "score": 0.0323,
+        "preview": "Art. 26e nie reguluje kwestii kosztów uzyskania przychodów dla pracowników ani zmian stawek KUP w związku ze zmianą miejsca zamieszkania. Odpowiedź na Twoje pytanie wymaga anali..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+        "category": "pit",
+        "score": 0.0318,
+        "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychodów podlegają ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wyższy limit wartości. Opła..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 10b pkt 1",
+        "category": "odliczenie_vat_moment_powstania_prawa",
+        "score": 0.031,
+        "preview": "Prawo do odliczenia VAT powstaje w okresie, w którym faktycznie otrzymałaś fakturę, bez względu na datę wystawienia faktury lub datę wykonania usługi. Jeśli otrzymałaś fakturę z..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+    "freq": 5,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "podatek_naliczony",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "odliczenie_vat_towary_materialy",
+        "score": 0.0328,
+        "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "odliczenie_vat",
+        "score": 0.032,
+        "preview": "Prawo do odliczenia VAT zależy od użytkownia towaru lub usługi, a nie od relacji między VAT a kosztem. Jeśli towar/usługa jest wykorzystywany do czynności opodatkowanych, podatn..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "odliczenie_vat_podstawy",
+        "score": 0.0315,
+        "preview": "Ustawa o VAT nie reguluje wartości brutto czy netto w koszcie — to kwestia ksiąg rachunkowych, nie VAT. VAT odliczasz na podstawie faktury, niezależnie od tego, jak wykazujesz k..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
+    "freq": 4,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "fakturowanie",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106i ust. 1",
+        "category": "dokumentacja_VAT_termin_faktury",
+        "score": 0.0328,
+        "preview": "Fakturę wystawia się nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Data na fakturze musi odpowiadać rzeczywi..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106i ust. 1",
+        "category": "terminy wystawienia faktury",
+        "score": 0.0315,
+        "preview": "Fakturę do operacji z dnia 31.01.2026 można wystawić w dniu 2.02.2026. Zgodnie z art. 106i ust. 1, faktura wystawia się nie później niż 15. dnia miesiąca następującego po miesią..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106i ust. 1",
+        "category": "terminy wystawienia faktury",
+        "score": 0.0313,
+        "preview": "Podstawową regułą jest wystawienie faktury nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Przykład: sprzedaż ..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
+    "freq": 4,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "podatek_naliczony",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "odliczenie_vat_towary_materialy",
+        "score": 0.0328,
+        "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "odliczenie_vat_warunki_podstawowe",
+        "score": 0.032,
+        "preview": "Prawo do odliczenia VAT przysługuje w zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych. Oznacza to, że jeśli zakup dotyczy częściowo d..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86 ust. 1",
+        "category": "odliczenie_vat",
+        "score": 0.0313,
+        "preview": "Faktury za terminal bezgotówkowy można odliczyć VAT w standardowym trybie (art. 86 ust. 1, 10b) — jeśli terminal jest wykorzystywany do wykonywania czynności opodatkowanych, pod..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "Szukam doświadczonego księgowego do spokojnego przeglądu i uporządkowania moich rozliczeń podatkowych za ostatnie 4 lata?",
+    "freq": 4,
+    "dataset_category": "rachunkowosc",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 99 ust. 4",
+        "category": "okresy_rozliczeniowe",
+        "score": 0.0328,
+        "preview": "Aby przejść z rozliczeń kwartalnych na miesięczne, należy po upływie 4 kwartałów rozliczeń kwartalnych zawiadomić na piśmie naczelnika urzędu skarbowego. Zawiadomienie składa si..."
+      },
+      {
+        "law_name": "Kodeks pracy",
+        "canonical_law_name": "Kodeks pracy",
+        "article_number": "art. 39",
+        "category": "kadry",
+        "score": 0.0318,
+        "preview": "Pracodawca nie może wypowiedzieć umowy o pracę pracownikowi, któremu brakuje nie więcej niż 4 lata do osiągnięcia wieku emerytalnego, jeżeli okres zatrudnienia umożliwia mu uzys..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 26 ust. 1 pkt 6a, ust. 6h",
+        "category": "odliczenia - wydatki na Internet",
+        "score": 0.0294,
+        "preview": "Podatnicy mogą odliczyć od dochodu wydatki na użytkowanie sieci Internet do wysokości 760 zł rocznie. Odliczenie przysługuje w kolejno po sobie następujących dwóch latach podatk..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  }
+]

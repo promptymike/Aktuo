@@ -1,10 +1,10 @@
 {
   "top_100": {
     "summary": {
-      "covered_count": 70,
-      "weak_count": 6,
-      "gap_count": 24,
-      "coverage_percent": 70.0
+      "covered_count": 75,
+      "weak_count": 7,
+      "gap_count": 18,
+      "coverage_percent": 75.0
     },
     "per_category_breakdown": {
       "ceidg": {
@@ -58,9 +58,9 @@
         "gap_count": 12
       },
       "rachunkowosc": {
-        "covered_count": 9,
-        "weak_count": 1,
-        "gap_count": 6
+        "covered_count": 14,
+        "weak_count": 2,
+        "gap_count": 0
       },
       "spolki": {
         "covered_count": 0,
@@ -154,45 +154,6 @@
         ]
       },
       {
-        "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
-        "freq": 22,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 2",
-            "category": "terminy wystawienia faktury",
-            "score": 0.032,
-            "preview": "Jeśli otrzymasz całość lub część zapłaty przed dokonaniem dostawy lub wykonaniem usługi, fakturę wystawisz nie później niż 15. dnia miesiąca następującego po miesiącu, w którym ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "Fakturowanie przekształceń bez dostawy",
-            "score": 0.0313,
-            "preview": "Faktura powinna być wystawiona nie później niż 15. dnia miesiąca następującego po miesiącu dokonania dostawy (art. 106i ust. 1). Nie możesz wystawić faktury wcześniej niż 60 dni..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 6 pkt 2",
-            "category": "terminy wystawienia faktury",
-            "score": 0.0313,
-            "preview": "Jeśli klient żąda faktury po upływie miesiąca, w którym dokonano dostawy, wystawisz ją nie później niż 15 dni od dnia zgłoszenia żądania. To inne reguły niż standardowe — żądani..."
-          }
-        ]
-      },
-      {
         "question": "Jaki program do księgowania polecacie do rozliczania najpierw jednej firmy a w dalszej perspektywie może kolejnych?",
         "freq": 16,
         "dataset_category": "praktyka",
@@ -269,45 +230,6 @@
         ]
       },
       {
-        "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
-        "freq": 10,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 120 ust. 4",
-            "category": "procedura-marza-srodki-transportu",
-            "score": 0.0317,
-            "preview": "Procedura marża z art. 120 ust. 4 teoretycznie może dotyczyć samochodów jako 'towarów używanych' (ruchome dobra materialne nadające się do dalszego użytku), jeśli zostały nabyte..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26ea ust. 1, ust. 2, ust. 4",
-            "category": "ulga_na_koszty_badawczo_rozwojowe",
-            "score": 0.0313,
-            "preview": "Ulga z art. 26ea przysługuje tylko w roku rozpoczęcia działalności gospodarczej lub roku bezpośrednio następującym (jeśli podatnik jest mikro/małym/średnim przedsiębiorcą). Po p..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 3 pkt 1 lit. a",
-            "category": "odliczenie VAT pojazdy leasing",
-            "score": 0.0306,
-            "preview": "Jeśli samochód leasingowany spełnia warunki z art. 86a ust. 3 pkt 1 lit. a (wykorzystywany wyłącznie do działalności), nie obowiązuje ograniczenie 50% VAT i można odliczyć 100%...."
-          }
-        ]
-      },
-      {
         "question": "Jak masz kursy, to o jaki kurs pytasz?",
         "freq": 9,
         "dataset_category": "praktyka",
@@ -341,45 +263,6 @@
             "category": "wycena walut obcych",
             "score": 0.0318,
             "preview": "Przy kupnie lub sprzedaży walut obcych stosuj kurs faktycznie zastosowany w dniu operacji (art. 30 ust. 2 pkt 1). Jest to kurs, po którym faktycznie doszło do transakcji, nie śr..."
-          }
-        ]
-      },
-      {
-        "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
-        "freq": 8,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23a ust. 1",
-            "category": "definicje_leasing",
-            "score": 0.0325,
-            "preview": "Artykuł 23a nie zawiera żadnych regulacji dotyczących podnajmu przedmiotu leasingu. Zatem na podstawie samej definicji leasingu w ustawie nie można jednoznacznie stwierdzić, czy..."
-          },
-          {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 41d",
-            "category": "zus",
-            "score": 0.032,
-            "preview": "1. Zakład informuje ubezpieczonego o przekazaniu przez płatnika składek raportu informacyjnego w informacji o stanie konta, o której mowa w art. 50 ust. 1, przesyłanej za rok, w..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 22b ust. 2 pkt 2",
-            "category": "amortyzacja_prace_rozwojowe",
-            "score": 0.0313,
-            "preview": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określo..."
           }
         ]
       },
@@ -446,7 +329,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 43 ust. 1 pkt 36",
             "category": "zwolnienia_vat",
-            "score": 0.0304,
+            "score": 0.0302,
             "preview": "Zwolnienie z VAT dla wynajmu nieruchomości dotyczy wyłącznie nieruchomości o charakterze mieszkalnym na cele mieszkaniowe. Wynajem nieruchomości niemieszkaniowych (lokale biurow..."
           },
           {
@@ -557,7 +440,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "§ 14",
             "category": "wymagania_techniczne_kseff",
-            "score": 0.0303,
+            "score": 0.0301,
             "preview": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera..."
           },
           {
@@ -774,7 +657,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 177",
             "category": "ordynacja",
-            "score": 0.0325,
+            "score": 0.0323,
             "preview": "Czynności organu podatkowego, z których nie sporządza się protokółu, a które mają znaczenie dla sprawy lub toku postępowania, utrwala się w aktach w formie adnotacji podpisanej ..."
           },
           {
@@ -782,7 +665,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0318,
+            "score": 0.0315,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -790,7 +673,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 80b",
             "category": "pełnomocnictwo-i-reprezentacja",
-            "score": 0.0294,
+            "score": 0.0292,
             "preview": "Art. 80b reguluje wyłącznie podpisywanie deklaracji i zwalnia podatnika z obowiązku osobistego podpisu, ale nie określa uprawnień pełnomocnika w postępowaniu podatkowym. Do dzia..."
           }
         ]
@@ -817,18 +700,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.0291,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nda",
             "category": "ksef",
             "score": 0.029,
             "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd",
+            "category": "ksef",
+            "score": 0.0289,
+            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -866,123 +749,6 @@
             "category": "rachunkowosc",
             "score": 0.0313,
             "preview": "Art. 46. 1. W bilansie wykazuje się stany aktywów i pasywów na dzień kończący bieżący i poprzedni rok obrotowy. 1a. W przypadku sporządzania bilansu na inny dzień bilansowy niż ..."
-          }
-        ]
-      },
-      {
-        "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
-        "freq": 5,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2 pkt 2",
-            "category": "faktury_korygujace",
-            "score": 0.0328,
-            "preview": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wyst..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 116 ust. 2 pkt 4",
-            "category": "faktury_vat_rr",
-            "score": 0.0315,
-            "preview": "Faktura VAT RR powinna być wystawiona nie później niż 7 dni od dnia nabycia produktów rolnych (lub do 7 dnia następnego miesiąca przy dostawach ciągłych). Na fakturze wskazuje s..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 4",
-            "category": "dokumentacja_faktury_korygujace",
-            "score": 0.0313,
-            "preview": "Faktura korygująca powinna być wystawiona w związku ze zmianą podstawy opodatkowania lub zwrotem zapłaty. Артykuł 106j nie określa terminu, w jakim korekta musi być wystawiona p..."
-          }
-        ]
-      },
-      {
-        "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
-        "freq": 5,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26e",
-            "category": "koszty-uzyskania-przychodow",
-            "score": 0.0323,
-            "preview": "Art. 26e nie reguluje kwestii kosztów uzyskania przychodów dla pracowników ani zmian stawek KUP w związku ze zmianą miejsca zamieszkania. Odpowiedź na Twoje pytanie wymaga anali..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "pit",
-            "score": 0.0318,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychodów podlegają ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wyższy limit wartości. Opła..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 10b pkt 1",
-            "category": "odliczenie_vat_moment_powstania_prawa",
-            "score": 0.031,
-            "preview": "Prawo do odliczenia VAT powstaje w okresie, w którym faktycznie otrzymałaś fakturę, bez względu na datę wystawienia faktury lub datę wykonania usługi. Jeśli otrzymałaś fakturę z..."
-          }
-        ]
-      },
-      {
-        "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
-        "freq": 5,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "podatek_naliczony",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_towary_materialy",
-            "score": 0.0328,
-            "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat",
-            "score": 0.032,
-            "preview": "Prawo do odliczenia VAT zależy od użytkownia towaru lub usługi, a nie od relacji między VAT a kosztem. Jeśli towar/usługa jest wykorzystywany do czynności opodatkowanych, podatn..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_podstawy",
-            "score": 0.0315,
-            "preview": "Ustawa o VAT nie reguluje wartości brutto czy netto w koszcie — to kwestia ksiąg rachunkowych, nie VAT. VAT odliczasz na podstawie faktury, niezależnie od tego, jak wykazujesz k..."
           }
         ]
       }
@@ -1138,7 +904,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 12",
             "category": "rachunkowosc",
-            "score": 0.0315,
+            "score": 0.0313,
             "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           }
         ]
@@ -1218,6 +984,45 @@
             "category": "rachunkowosc",
             "score": 0.0315,
             "preview": "Księgi rachunkowe prowadzi się w języku polskim i w walucie polskiej"
+          }
+        ]
+      },
+      {
+        "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+        "freq": 5,
+        "dataset_category": "rachunkowosc",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Ustawa o rachunkowości"
+        ],
+        "assigned_batch": "KPiR / rachunkowość operacyjna",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 34c",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "1. Koszty wytworzenia niezakończonej usługi, w tym budowlanej, obejmują koszty poniesione od dnia zawarcia odpowiedniej umowy do dnia bilansowego. Koszty poniesione przed zawarc..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 7",
+            "category": "rachunkowosc",
+            "score": 0.031,
+            "preview": "1. Poszczególne składniki aktywów i pasywów wycenia się stosując rzeczywiście poniesione na ich nabycie (wytworzenie) ceny (koszty), z zachowaniem zasady ostrożności. W szczegól..."
           }
         ]
       }
@@ -1463,38 +1268,38 @@
         "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
         "freq": 22,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 2",
-            "category": "terminy wystawienia faktury",
-            "score": 0.032,
-            "preview": "Jeśli otrzymasz całość lub część zapłaty przed dokonaniem dostawy lub wykonaniem usługi, fakturę wystawisz nie później niż 15. dnia miesiąca następującego po miesiącu, w którym ..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "Fakturowanie przekształceń bez dostawy",
-            "score": 0.0313,
-            "preview": "Faktura powinna być wystawiona nie później niż 15. dnia miesiąca następującego po miesiącu dokonania dostawy (art. 106i ust. 1). Nie możesz wystawić faktury wcześniej niż 60 dni..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 28",
+            "category": "rachunkowosc",
+            "score": 0.0323,
+            "preview": "Art. 28. 1. Aktywa i pasywa wycenia się nie rzadziej niż na dzień bilansowy w sposób następujący: 1) środki trwałe oraz wartości niematerialne i prawne – według cen nabycia lub ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 6 pkt 2",
-            "category": "terminy wystawienia faktury",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 39 ust. 2 pkt 1",
+            "category": "rozliczenia_międzyokresowe_kosztów",
             "score": 0.0313,
-            "preview": "Jeśli klient żąda faktury po upływie miesiąca, w którym dokonano dostawy, wystawisz ją nie później niż 15 dni od dnia zgłoszenia żądania. To inne reguły niż standardowe — żądani..."
+            "preview": "Narzuty płatnika są kosztem bilansowym okresu, w którym je faktycznie poniesiono (tj. kiedy świadczenie zostało wykonane), niezależnie od daty wystawienia faktury. Zgodnie z art..."
           }
         ]
       },
@@ -1543,7 +1348,7 @@
         "question": "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
         "freq": 20,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ksef",
+        "aktuo_category": "rachunkowosc",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
@@ -1558,28 +1363,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+          },
+          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
-            "category": "ksef",
+            "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+            "category": "rachunkowosc",
             "score": 0.0323,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "preview": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w kt?rym po stronie sprzedawcy powsta? obowi?zek podatkowy, nie wcze?niej jednak ni? w okresie otrzymania f..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 35c",
+            "category": "aktualizacja_wartości_należności",
+            "score": 0.0296,
+            "preview": "Jeśli zanika przyczyna odpisu aktualizacyjnego (np. należność została spłacona), zmniejszasz dokonany wcześniej odpis. Równowartość cofniętego odpisu zwiększa wartość należności..."
           }
         ]
       },
@@ -2505,9 +2310,9 @@
         "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
         "freq": 10,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -2515,28 +2320,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 120 ust. 4",
-            "category": "procedura-marza-srodki-transportu",
-            "score": 0.0317,
-            "preview": "Procedura marża z art. 120 ust. 4 teoretycznie może dotyczyć samochodów jako 'towarów używanych' (ruchome dobra materialne nadające się do dalszego użytku), jeśli zostały nabyte..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 6",
+            "category": "amortyzacja_srodków_trwalych",
+            "score": 0.0323,
+            "preview": "Ustawa o rachunkowości zezwala na jednorazową amortyzację dla środków trwałych o niskiej jednostkowej wartości początkowej (art. 32 ust. 6). Jednak jednostki mikro i małe mogą a..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26ea ust. 1, ust. 2, ust. 4",
-            "category": "ulga_na_koszty_badawczo_rozwojowe",
-            "score": 0.0313,
-            "preview": "Ulga z art. 26ea przysługuje tylko w roku rozpoczęcia działalności gospodarczej lub roku bezpośrednio następującym (jeśli podatnik jest mikro/małym/średnim przedsiębiorcą). Po p..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 3",
+            "category": "amortyzacja_aktualizacja",
+            "score": 0.032,
+            "preview": "Tak, gdy zmienią się warunki ekonomiczne wpływające na okres użyteczności środka trwałego, musisz dokonać korekty. Na dzień przyjęcia składnika do użytku ustalacie okres amortyz..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 3 pkt 1 lit. a",
-            "category": "odliczenie VAT pojazdy leasing",
-            "score": 0.0306,
-            "preview": "Jeśli samochód leasingowany spełnia warunki z art. 86a ust. 3 pkt 1 lit. a (wykorzystywany wyłącznie do działalności), nie obowiązuje ograniczenie 50% VAT i można odliczyć 100%...."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 35b ust. 2",
+            "category": "aktualizacja_wartości_należności",
+            "score": 0.0309,
+            "preview": "Odpisy aktualizujące wartość należności zaliczasz do pozostałych kosztów operacyjnych lub kosztów finansowych - zależy od rodzaju należności, której dotyczy odpis. Jeśli należno..."
           }
         ]
       },
@@ -2695,7 +2500,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 12",
             "category": "rachunkowosc",
-            "score": 0.0315,
+            "score": 0.0313,
             "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           }
         ]
@@ -2745,38 +2550,38 @@
         "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
         "freq": 8,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23a ust. 1",
-            "category": "definicje_leasing",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
             "score": 0.0325,
-            "preview": "Artykuł 23a nie zawiera żadnych regulacji dotyczących podnajmu przedmiotu leasingu. Zatem na podstawie samej definicji leasingu w ustawie nie można jednoznacznie stwierdzić, czy..."
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 41d",
-            "category": "zus",
-            "score": 0.032,
-            "preview": "1. Zakład informuje ubezpieczonego o przekazaniu przez płatnika składek raportu informacyjnego w informacji o stanie konta, o której mowa w art. 50 ust. 1, przesyłanej za rok, w..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 34b",
+            "category": "rachunkowosc",
+            "score": 0.0325,
+            "preview": "1. Koszty wytworzenia, które można bezpośrednio przyporządkować przychodom osiągniętym przez jednostkę, wpływają na wynik finansowy jednostki za ten okres sprawozdawczy, w który..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 22b ust. 2 pkt 2",
-            "category": "amortyzacja_prace_rozwojowe",
-            "score": 0.0313,
-            "preview": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określo..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 66",
+            "category": "rachunkowosc",
+            "score": 0.0296,
+            "preview": "1. (uchylony) 2. (uchylony) 3. (uchylony) 4. Wyboru firmy audytorskiej do przeprowadzenia badania sprawozdania finansowego oraz wyboru firmy audytorskiej do atestacji sprawozdaw..."
           }
         ]
       },
@@ -3416,39 +3221,40 @@
         "question": "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
         "freq": 6,
         "dataset_category": "jpk",
-        "aktuo_category": "jpk",
+        "aktuo_category": "rachunkowosc",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
-          "Ustawa o VAT"
+          "Ustawa o VAT",
+          "Ustawa o rachunkowości"
         ],
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak artykułu zawierającego odpowiedź w dostarczonej części",
-            "category": "mechanizm_podzielonej_platnosci",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można stwierdzić, czy i jak należy oznaczać zakupy objęte mechanizmem podzielonej płatności po stronie nabywcy. Wymag..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 63h",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "1. Jednostka, o której mowa w art. 63f ust. 1, będąca jednostką zależną, może nie sporządzać sprawozdania z płatności, jeżeli jej jednostka dominująca mająca siedzibę lub miejsc..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "§ 10",
-            "category": "jpk",
-            "score": 0.032,
-            "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 63j",
+            "category": "rachunkowosc",
+            "score": 0.0315,
+            "preview": "Do sprawozdania z płatności i skonsolidowanego sprawozdania z płatności stosuje się odpowiednio przepisy art. 52 ust. 1–2e, z tym że nie podpisuje ich osoba, której powierzono p..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 108a ust. 1",
-            "category": "mechanizm_podzielonej_platnosci",
-            "score": 0.032,
-            "preview": "Mechanizm podzielonej płatności jest obligatoryjny tylko dla faktur za towary lub usługi z załącznika nr 15, gdy kwota należności przekracza 15 000 zł (art. 108a ust. 1a). W poz..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 63k",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Sprawozdanie z płatności i skonsolidowane sprawozdanie z płatności sporządza się w postaci elektronicznej oraz opatruje się kwalifikowanym podpisem elektronicznym, podpisem zauf..."
           }
         ]
       },
@@ -3521,7 +3327,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 43 ust. 1 pkt 36",
             "category": "zwolnienia_vat",
-            "score": 0.0304,
+            "score": 0.0302,
             "preview": "Zwolnienie z VAT dla wynajmu nieruchomości dotyczy wyłącznie nieruchomości o charakterze mieszkalnym na cele mieszkaniowe. Wynajem nieruchomości niemieszkaniowych (lokale biurow..."
           },
           {
@@ -4007,7 +3813,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 19a ust. 1",
             "category": "obowiazek_podatkowy",
-            "score": 0.0247,
+            "score": 0.0246,
             "preview": "Obowiązek podatkowy w VAT powstaje z chwilą dokonania dostawy towarów. Dostawę towarów rozumie się jako przeniesienie prawa do rozporządzania towarami jak właściciel. Oznacza to..."
           }
         ]
@@ -4073,7 +3879,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "§ 14",
             "category": "wymagania_techniczne_kseff",
-            "score": 0.0303,
+            "score": 0.0301,
             "preview": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera..."
           },
           {
@@ -4661,7 +4467,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 177",
             "category": "ordynacja",
-            "score": 0.0325,
+            "score": 0.0323,
             "preview": "Czynności organu podatkowego, z których nie sporządza się protokółu, a które mają znaczenie dla sprawy lub toku postępowania, utrwala się w aktach w formie adnotacji podpisanej ..."
           },
           {
@@ -4669,7 +4475,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0318,
+            "score": 0.0315,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -4677,7 +4483,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 80b",
             "category": "pełnomocnictwo-i-reprezentacja",
-            "score": 0.0294,
+            "score": 0.0292,
             "preview": "Art. 80b reguluje wyłącznie podpisywanie deklaracji i zwalnia podatnika z obowiązku osobistego podpisu, ale nie określa uprawnień pełnomocnika w postępowaniu podatkowym. Do dzia..."
           }
         ]
@@ -4704,18 +4510,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.0291,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nda",
             "category": "ksef",
             "score": 0.029,
             "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd",
+            "category": "ksef",
+            "score": 0.0289,
+            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -4760,9 +4566,9 @@
         "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
         "freq": 5,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -4770,28 +4576,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2 pkt 2",
-            "category": "faktury_korygujace",
-            "score": 0.0328,
-            "preview": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wyst..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0323,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 116 ust. 2 pkt 4",
-            "category": "faktury_vat_rr",
-            "score": 0.0315,
-            "preview": "Faktura VAT RR powinna być wystawiona nie później niż 7 dni od dnia nabycia produktów rolnych (lub do 7 dnia następnego miesiąca przy dostawach ciągłych). Na fakturze wskazuje s..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 4",
-            "category": "dokumentacja_faktury_korygujace",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 1",
+            "category": "amortyzacja_srodki_trwale",
             "score": 0.0313,
-            "preview": "Faktura korygująca powinna być wystawiona w związku ze zmianą podstawy opodatkowania lub zwrotem zapłaty. Артykuł 106j nie określa terminu, w jakim korekta musi być wystawiona p..."
+            "preview": "Koszt zakupionego środka trwałego nie ujmuje się od razu jako koszt operacyjny. Wartość początkową (cenę nabycia) ujmuje się w aktywach (jako środek trwały), a koszt rozkłada si..."
           }
         ]
       },
@@ -4799,38 +4605,38 @@
         "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
         "freq": 5,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26e",
-            "category": "koszty-uzyskania-przychodow",
-            "score": 0.0323,
-            "preview": "Art. 26e nie reguluje kwestii kosztów uzyskania przychodów dla pracowników ani zmian stawek KUP w związku ze zmianą miejsca zamieszkania. Odpowiedź na Twoje pytanie wymaga anali..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 39 ust. 3",
+            "category": "rozliczenia_miedzyokresowe_koszty",
+            "score": 0.0328,
+            "preview": "Ustawa o rachunkowości stanowi, że RMK odpisuje się stosownie do upływu czasu lub wielkości świadczeń, z zachowaniem zasady ostrożności. Rozłożenie opłaty na raty jest prawidłow..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "pit",
-            "score": 0.0318,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychodów podlegają ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wyższy limit wartości. Opła..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
+            "score": 0.032,
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 10b pkt 1",
-            "category": "odliczenie_vat_moment_powstania_prawa",
-            "score": 0.031,
-            "preview": "Prawo do odliczenia VAT powstaje w okresie, w którym faktycznie otrzymałaś fakturę, bez względu na datę wystawienia faktury lub datę wykonania usługi. Jeśli otrzymałaś fakturę z..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 30",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Art. 30. 1. Nie rzadziej niż na dzień bilansowy wycenia się wyrażone w walutach obcych: 1) składniki aktywów (z wyłączeniem udziałów w jednostkach podporządkowanych wycenianych ..."
           }
         ]
       },
@@ -4838,9 +4644,9 @@
         "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
         "freq": 5,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "podatek_naliczony",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -4848,28 +4654,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_towary_materialy",
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
             "score": 0.0328,
-            "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat",
-            "score": 0.032,
-            "preview": "Prawo do odliczenia VAT zależy od użytkownia towaru lub usługi, a nie od relacji między VAT a kosztem. Jeśli towar/usługa jest wykorzystywany do czynności opodatkowanych, podatn..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 34c",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "1. Koszty wytworzenia niezakończonej usługi, w tym budowlanej, obejmują koszty poniesione od dnia zawarcia odpowiedniej umowy do dnia bilansowego. Koszty poniesione przed zawarc..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_podstawy",
-            "score": 0.0315,
-            "preview": "Ustawa o VAT nie reguluje wartości brutto czy netto w koszcie — to kwestia ksiąg rachunkowych, nie VAT. VAT odliczasz na podstawie faktury, niezależnie od tego, jak wykazujesz k..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 7",
+            "category": "rachunkowosc",
+            "score": 0.031,
+            "preview": "1. Poszczególne składniki aktywów i pasywów wycenia się stosując rzeczywiście poniesione na ich nabycie (wytworzenie) ceny (koszty), z zachowaniem zasady ostrożności. W szczegól..."
           }
         ]
       },
@@ -5032,7 +4838,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 12 ust. 1",
             "category": "otwarcie_ksiag_rachunkowych",
-            "score": 0.0284,
+            "score": 0.0282,
             "preview": "Artykuł 12 Ustawy o rachunkowości nie reguluje otwarcia ksiąg w związku z przekroczeniem limitu przychodów. Księgi rachunkowe otwiera się na dzień rozpoczęcia działalności, na p..."
           }
         ]
@@ -5203,10 +5009,10 @@
   },
   "top_200": {
     "summary": {
-      "covered_count": 123,
-      "weak_count": 12,
-      "gap_count": 65,
-      "coverage_percent": 61.5
+      "covered_count": 127,
+      "weak_count": 15,
+      "gap_count": 58,
+      "coverage_percent": 63.5
     },
     "per_category_breakdown": {
       "ceidg": {
@@ -5230,8 +5036,8 @@
         "gap_count": 7
       },
       "jpk": {
-        "covered_count": 15,
-        "weak_count": 0,
+        "covered_count": 14,
+        "weak_count": 1,
         "gap_count": 1
       },
       "kadry": {
@@ -5241,8 +5047,8 @@
       },
       "ksef": {
         "covered_count": 25,
-        "weak_count": 3,
-        "gap_count": 1
+        "weak_count": 2,
+        "gap_count": 2
       },
       "ordynacja": {
         "covered_count": 0,
@@ -5260,9 +5066,9 @@
         "gap_count": 23
       },
       "rachunkowosc": {
-        "covered_count": 14,
-        "weak_count": 1,
-        "gap_count": 10
+        "covered_count": 20,
+        "weak_count": 3,
+        "gap_count": 2
       },
       "spolki": {
         "covered_count": 0,
@@ -5270,8 +5076,8 @@
         "gap_count": 1
       },
       "vat": {
-        "covered_count": 28,
-        "weak_count": 1,
+        "covered_count": 27,
+        "weak_count": 2,
         "gap_count": 3
       },
       "zus": {
@@ -5356,45 +5162,6 @@
         ]
       },
       {
-        "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
-        "freq": 22,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 2",
-            "category": "terminy wystawienia faktury",
-            "score": 0.032,
-            "preview": "Jeśli otrzymasz całość lub część zapłaty przed dokonaniem dostawy lub wykonaniem usługi, fakturę wystawisz nie później niż 15. dnia miesiąca następującego po miesiącu, w którym ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "Fakturowanie przekształceń bez dostawy",
-            "score": 0.0313,
-            "preview": "Faktura powinna być wystawiona nie później niż 15. dnia miesiąca następującego po miesiącu dokonania dostawy (art. 106i ust. 1). Nie możesz wystawić faktury wcześniej niż 60 dni..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 6 pkt 2",
-            "category": "terminy wystawienia faktury",
-            "score": 0.0313,
-            "preview": "Jeśli klient żąda faktury po upływie miesiąca, w którym dokonano dostawy, wystawisz ją nie później niż 15 dni od dnia zgłoszenia żądania. To inne reguły niż standardowe — żądani..."
-          }
-        ]
-      },
-      {
         "question": "Jaki program do księgowania polecacie do rozliczania najpierw jednej firmy a w dalszej perspektywie może kolejnych?",
         "freq": 16,
         "dataset_category": "praktyka",
@@ -5471,45 +5238,6 @@
         ]
       },
       {
-        "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
-        "freq": 10,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 120 ust. 4",
-            "category": "procedura-marza-srodki-transportu",
-            "score": 0.0317,
-            "preview": "Procedura marża z art. 120 ust. 4 teoretycznie może dotyczyć samochodów jako 'towarów używanych' (ruchome dobra materialne nadające się do dalszego użytku), jeśli zostały nabyte..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26ea ust. 1, ust. 2, ust. 4",
-            "category": "ulga_na_koszty_badawczo_rozwojowe",
-            "score": 0.0313,
-            "preview": "Ulga z art. 26ea przysługuje tylko w roku rozpoczęcia działalności gospodarczej lub roku bezpośrednio następującym (jeśli podatnik jest mikro/małym/średnim przedsiębiorcą). Po p..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 3 pkt 1 lit. a",
-            "category": "odliczenie VAT pojazdy leasing",
-            "score": 0.0306,
-            "preview": "Jeśli samochód leasingowany spełnia warunki z art. 86a ust. 3 pkt 1 lit. a (wykorzystywany wyłącznie do działalności), nie obowiązuje ograniczenie 50% VAT i można odliczyć 100%...."
-          }
-        ]
-      },
-      {
         "question": "Jak masz kursy, to o jaki kurs pytasz?",
         "freq": 9,
         "dataset_category": "praktyka",
@@ -5543,45 +5271,6 @@
             "category": "wycena walut obcych",
             "score": 0.0318,
             "preview": "Przy kupnie lub sprzedaży walut obcych stosuj kurs faktycznie zastosowany w dniu operacji (art. 30 ust. 2 pkt 1). Jest to kurs, po którym faktycznie doszło do transakcji, nie śr..."
-          }
-        ]
-      },
-      {
-        "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
-        "freq": 8,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23a ust. 1",
-            "category": "definicje_leasing",
-            "score": 0.0325,
-            "preview": "Artykuł 23a nie zawiera żadnych regulacji dotyczących podnajmu przedmiotu leasingu. Zatem na podstawie samej definicji leasingu w ustawie nie można jednoznacznie stwierdzić, czy..."
-          },
-          {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 41d",
-            "category": "zus",
-            "score": 0.032,
-            "preview": "1. Zakład informuje ubezpieczonego o przekazaniu przez płatnika składek raportu informacyjnego w informacji o stanie konta, o której mowa w art. 50 ust. 1, przesyłanej za rok, w..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 22b ust. 2 pkt 2",
-            "category": "amortyzacja_prace_rozwojowe",
-            "score": 0.0313,
-            "preview": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określo..."
           }
         ]
       },
@@ -5648,7 +5337,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 43 ust. 1 pkt 36",
             "category": "zwolnienia_vat",
-            "score": 0.0304,
+            "score": 0.0302,
             "preview": "Zwolnienie z VAT dla wynajmu nieruchomości dotyczy wyłącznie nieruchomości o charakterze mieszkalnym na cele mieszkaniowe. Wynajem nieruchomości niemieszkaniowych (lokale biurow..."
           },
           {
@@ -5759,7 +5448,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "§ 14",
             "category": "wymagania_techniczne_kseff",
-            "score": 0.0303,
+            "score": 0.0301,
             "preview": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera..."
           },
           {
@@ -5976,7 +5665,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 177",
             "category": "ordynacja",
-            "score": 0.0325,
+            "score": 0.0323,
             "preview": "Czynności organu podatkowego, z których nie sporządza się protokółu, a które mają znaczenie dla sprawy lub toku postępowania, utrwala się w aktach w formie adnotacji podpisanej ..."
           },
           {
@@ -5984,7 +5673,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0318,
+            "score": 0.0315,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -5992,7 +5681,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 80b",
             "category": "pełnomocnictwo-i-reprezentacja",
-            "score": 0.0294,
+            "score": 0.0292,
             "preview": "Art. 80b reguluje wyłącznie podpisywanie deklaracji i zwalnia podatnika z obowiązku osobistego podpisu, ale nie określa uprawnień pełnomocnika w postępowaniu podatkowym. Do dzia..."
           }
         ]
@@ -6019,18 +5708,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.0291,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nda",
             "category": "ksef",
             "score": 0.029,
             "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd",
+            "category": "ksef",
+            "score": 0.0289,
+            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -6068,123 +5757,6 @@
             "category": "rachunkowosc",
             "score": 0.0313,
             "preview": "Art. 46. 1. W bilansie wykazuje się stany aktywów i pasywów na dzień kończący bieżący i poprzedni rok obrotowy. 1a. W przypadku sporządzania bilansu na inny dzień bilansowy niż ..."
-          }
-        ]
-      },
-      {
-        "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
-        "freq": 5,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2 pkt 2",
-            "category": "faktury_korygujace",
-            "score": 0.0328,
-            "preview": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wyst..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 116 ust. 2 pkt 4",
-            "category": "faktury_vat_rr",
-            "score": 0.0315,
-            "preview": "Faktura VAT RR powinna być wystawiona nie później niż 7 dni od dnia nabycia produktów rolnych (lub do 7 dnia następnego miesiąca przy dostawach ciągłych). Na fakturze wskazuje s..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 4",
-            "category": "dokumentacja_faktury_korygujace",
-            "score": 0.0313,
-            "preview": "Faktura korygująca powinna być wystawiona w związku ze zmianą podstawy opodatkowania lub zwrotem zapłaty. Артykuł 106j nie określa terminu, w jakim korekta musi być wystawiona p..."
-          }
-        ]
-      },
-      {
-        "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
-        "freq": 5,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26e",
-            "category": "koszty-uzyskania-przychodow",
-            "score": 0.0323,
-            "preview": "Art. 26e nie reguluje kwestii kosztów uzyskania przychodów dla pracowników ani zmian stawek KUP w związku ze zmianą miejsca zamieszkania. Odpowiedź na Twoje pytanie wymaga anali..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "pit",
-            "score": 0.0318,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychodów podlegają ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wyższy limit wartości. Opła..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 10b pkt 1",
-            "category": "odliczenie_vat_moment_powstania_prawa",
-            "score": 0.031,
-            "preview": "Prawo do odliczenia VAT powstaje w okresie, w którym faktycznie otrzymałaś fakturę, bez względu na datę wystawienia faktury lub datę wykonania usługi. Jeśli otrzymałaś fakturę z..."
-          }
-        ]
-      },
-      {
-        "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
-        "freq": 5,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "podatek_naliczony",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_towary_materialy",
-            "score": 0.0328,
-            "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat",
-            "score": 0.032,
-            "preview": "Prawo do odliczenia VAT zależy od użytkownia towaru lub usługi, a nie od relacji między VAT a kosztem. Jeśli towar/usługa jest wykorzystywany do czynności opodatkowanych, podatn..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_podstawy",
-            "score": 0.0315,
-            "preview": "Ustawa o VAT nie reguluje wartości brutto czy netto w koszcie — to kwestia ksiąg rachunkowych, nie VAT. VAT odliczasz na podstawie faktury, niezależnie od tego, jak wykazujesz k..."
           }
         ]
       },
@@ -6350,11 +5922,19 @@
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46",
+            "category": "pit",
+            "score": 0.0325,
+            "preview": "Je?eli samoch?d osobowy stanowi w?asno?? podatnika prowadz?cego dzia?alno?? gospodarcz?, ale nie jest sk?adnikiem maj?tku firmowego, wydatki na jego u?ywanie oraz sk?adki na ube..."
+          },
+          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nd",
             "category": "ksef",
-            "score": 0.0311,
+            "score": 0.0305,
             "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           },
           {
@@ -6362,16 +5942,8 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "§ 2 ust. 1, § 3",
             "category": "terminy_ksef",
-            "score": 0.0306,
+            "score": 0.0298,
             "preview": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb",
-            "category": "krajowy_system_e-faktur",
-            "score": 0.0294,
-            "preview": "Artykuł 106gb nie reguluje procedury nadawania uprawnień biurom rachunkowym do KSeF. Przepis dotyczy jedynie sposobu wystawienia i otrzymania faktury ustrukturyzowanej oraz dost..."
           }
         ]
       },
@@ -6411,6 +5983,49 @@
             "category": "status_podatnika_vat",
             "score": 0.0318,
             "preview": "Podatnikami VAT są tylko osoby prowadzące samodzielnie działalność gospodarczą. Osoba, która nie prowadzi działalności gospodarczej (np. zatrudniona w jakimś podmiocie), nie moż..."
+          }
+        ]
+      },
+      {
+        "question": "A po co Ci uprawnienia?",
+        "freq": 4,
+        "dataset_category": "ksef",
+        "aktuo_category": "ogólne",
+        "verdict": "GAP",
+        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "root_cause_guess": "missing_kb_unit",
+        "expected_laws": [
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
+        "assigned_batch": "KSeF uprawnienia i obieg faktur",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+            "category": "fakturowanie",
+            "score": 0.032,
+            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+          },
+          {
+            "law_name": "Kodeks pracy",
+            "canonical_law_name": "Kodeks pracy",
+            "article_number": "art. 1732",
+            "category": "kadry",
+            "score": 0.0308,
+            "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
           }
         ]
       },
@@ -6503,7 +6118,7 @@
         "aktuo_category": "ogólne",
         "verdict": "GAP",
         "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
+        "root_cause_guess": "weak_existing_chunk",
         "expected_laws": [],
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
@@ -6524,12 +6139,12 @@
             "preview": "W przypadku dostaw gazu, energii elektrycznej i usług przenoszenia uprawnień do emisji (art. 145e ust. 1) obowiązuje mechanizm odwrotnego obciążenia. Dostawca lub usługodawca ni..."
           },
           {
-            "law_name": "Ordynacja podatkowa",
-            "canonical_law_name": "Ordynacja podatkowa",
-            "article_number": "art. 173",
-            "category": "ordynacja",
-            "score": 0.0278,
-            "preview": "Protokół sporządza się tak, aby z jego treści wynikało, kto, kiedy, gdzie i jakich czynności dokonał, kto i w jakim charakterze był przy nich obecny, co i w jaki sposób w wyniku..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 90 ust. 1-4",
+            "category": "proporcja-odliczenia",
+            "score": 0.0279,
+            "preview": "Jeżeli towary i usługi są wykorzystywane zarówno do czynności opodatkowanych, jak i zwolnionych od podatku, musisz oddzielić VAT związany z każdą kategorią. Jeśli nie możesz dok..."
           }
         ]
       },
@@ -6908,45 +6523,6 @@
         ]
       },
       {
-        "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
-        "freq": 4,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "dokumentacja_VAT_termin_faktury",
-            "score": 0.0328,
-            "preview": "Fakturę wystawia się nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Data na fakturze musi odpowiadać rzeczywi..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "terminy wystawienia faktury",
-            "score": 0.0315,
-            "preview": "Fakturę do operacji z dnia 31.01.2026 można wystawić w dniu 2.02.2026. Zgodnie z art. 106i ust. 1, faktura wystawia się nie później niż 15. dnia miesiąca następującego po miesią..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "terminy wystawienia faktury",
-            "score": 0.0313,
-            "preview": "Podstawową regułą jest wystawienie faktury nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Przykład: sprzedaż ..."
-          }
-        ]
-      },
-      {
         "question": "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
         "freq": 4,
         "dataset_category": "rachunkowosc",
@@ -6982,45 +6558,6 @@
             "category": "odliczenie_vat",
             "score": 0.031,
             "preview": "Tak, możesz odliczyć VAT z dokumentów związanych z zakupem (faktury lub dokumentu celnego), ale tylko jeśli: 1) jesteś czynnym podatnikiem VAT, 2) towary są wykorzystywane do wy..."
-          }
-        ]
-      },
-      {
-        "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
-        "freq": 4,
-        "dataset_category": "rachunkowosc",
-        "aktuo_category": "podatek_naliczony",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Ustawa o rachunkowości"
-        ],
-        "assigned_batch": "KPiR / rachunkowość operacyjna",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_towary_materialy",
-            "score": 0.0328,
-            "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_warunki_podstawowe",
-            "score": 0.032,
-            "preview": "Prawo do odliczenia VAT przysługuje w zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych. Oznacza to, że jeśli zakup dotyczy częściowo d..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat",
-            "score": 0.0313,
-            "preview": "Faktury za terminal bezgotówkowy można odliczyć VAT w standardowym trybie (art. 86 ust. 1, 10b) — jeśli terminal jest wykorzystywany do wykonywania czynności opodatkowanych, pod..."
           }
         ]
       },
@@ -7402,7 +6939,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 15 ust. 1",
             "category": "Podstawy opodatkowania VAT",
-            "score": 0.0269,
+            "score": 0.0268,
             "preview": "Zarówno osoby fizyczne, jak i osoby prawne (np. spółki) mogą być podatnikami VAT, jeśli wykonują samodzielnie działalność gospodarczą. Podatnikami są osoby prawne oraz osoby fiz..."
           }
         ]
@@ -7899,7 +7436,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 12",
             "category": "rachunkowosc",
-            "score": 0.0315,
+            "score": 0.0313,
             "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           }
         ]
@@ -7983,6 +7520,45 @@
         ]
       },
       {
+        "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+        "freq": 5,
+        "dataset_category": "rachunkowosc",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Ustawa o rachunkowości"
+        ],
+        "assigned_batch": "KPiR / rachunkowość operacyjna",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 34c",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "1. Koszty wytworzenia niezakończonej usługi, w tym budowlanej, obejmują koszty poniesione od dnia zawarcia odpowiedniej umowy do dnia bilansowego. Koszty poniesione przed zawarc..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 7",
+            "category": "rachunkowosc",
+            "score": 0.031,
+            "preview": "1. Poszczególne składniki aktywów i pasywów wycenia się stosując rzeczywiście poniesione na ich nabycie (wytworzenie) ceny (koszty), z zachowaniem zasady ostrożności. W szczegól..."
+          }
+        ]
+      },
+      {
         "question": "Czy w symfoni da się usunąć fakturę korektę (sprzedaż)?",
         "freq": 4,
         "dataset_category": "erp",
@@ -8016,49 +7592,6 @@
             "category": "obowiazek_faktury",
             "score": 0.0315,
             "preview": "Podatnik powinien wystawić fakturę za sprzedaż energii, jeśli sprzedaż dotyczy innego podatnika VAT lub osoby prawnej niebędącej podatnikiem (art. 106b ust. 1 pkt 1). Wyjątkiem ..."
-          }
-        ]
-      },
-      {
-        "question": "A po co Ci uprawnienia?",
-        "freq": 4,
-        "dataset_category": "ksef",
-        "aktuo_category": "ogólne",
-        "verdict": "WEAK",
-        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [
-          "Rozporządzenie KSeF",
-          "Ustawa o VAT",
-          "Ustawa o VAT - KSeF terminy wdrożenia",
-          "Ustawa o VAT - KSeF uproszczenia 2026",
-          "Ustawa o VAT - KSeF zwolnienia"
-        ],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "fakturowanie",
-            "score": 0.0323,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 119 ust. 1",
-            "category": "podstawa_opodatkowania_marża",
-            "score": 0.0311,
-            "preview": "Podstawą opodatkowania dla usług turystyki jest kwota marży pomniejszona o kwotę podatku, a nie cała zapłata od turysty. Marża to różnica między kwotą zapłaconą przez turystę a ..."
-          },
-          {
-            "law_name": "Kodeks pracy",
-            "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 1732",
-            "category": "kadry",
-            "score": 0.031,
-            "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
           }
         ]
       },
@@ -8100,8 +7633,88 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106j ust. 1",
             "category": "dokumentacja_faktury_korygujace",
-            "score": 0.0311,
+            "score": 0.0308,
             "preview": "Paragon fiskalny i faktura to odrębne dokumenty. Paragon potwierdza sprzedaż zaewidencjonowaną w kasie rejestrującej. Jeśli musisz skorygować wartość, wystawiasz fakturę koryguj..."
+          }
+        ]
+      },
+      {
+        "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
+        "freq": 4,
+        "dataset_category": "rachunkowosc",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Ustawa o rachunkowości"
+        ],
+        "assigned_batch": "KPiR / rachunkowość operacyjna",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 20 ust. 1-3 i art. 21 ust. 1 pkt 3-6",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Do ksi?g rachunkowych okresu sprawozdawczego wprowadza si? ka?de zdarzenie, kt?re nast?pi?o w tym okresie, na podstawie dowodu ksi?gowego. Dow?d powinien wskazywa? opis operacji..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 45 ust. 1",
+            "category": "sprawozdanie_finansowe_podstawy",
+            "score": 0.031,
+            "preview": "Sprawozdanie finansowe sporządza się na dzień zamknięcia ksiąg rachunkowych (art. 45 ust. 1), czyli zazwyczaj na koniec roku obrachunkowego (31 grudnia), lub na inny dzień bilan..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0304,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+          }
+        ]
+      },
+      {
+        "question": "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+        "freq": 4,
+        "dataset_category": "vat",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Rozporządzenie MF o kasach rejestrujących",
+          "Ustawa o VAT",
+          "Ustawa o rachunkowości"
+        ],
+        "assigned_batch": "KPiR / rachunkowość operacyjna",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+            "category": "rachunkowosc",
+            "score": 0.0291,
+            "preview": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w kt?rym po stronie sprzedawcy powsta? obowi?zek podatkowy, nie wcze?niej jednak ni? w okresie otrzymania f..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 21",
+            "category": "rachunkowosc",
+            "score": 0.0278,
+            "preview": "Art. 21. 1. Dowód księgowy powinien zawierać co najmniej: 1) określenie rodzaju dowodu i jego numeru identyfikacyjnego; 2) określenie stron (nazwy, adresy) dokonujących operacji..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
+            "score": 0.0263,
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
           }
         ]
       },
@@ -8139,6 +7752,47 @@
             "category": "faktury_korygujące",
             "score": 0.0303,
             "preview": "Tak, błędna data sprzedaży na fakturze stanowi pomyłkę w pozycji faktury i wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5. W takim przypadku faktura kor..."
+          }
+        ]
+      },
+      {
+        "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "freq": 3,
+        "dataset_category": "jpk",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Rozporządzenie JPK_V7",
+          "Ustawa o VAT",
+          "Ustawa o rachunkowości"
+        ],
+        "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0282,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+          },
+          {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 52 ust. 2",
+            "category": "podpisywanie_sprawozdania_finansowego",
+            "score": 0.0279,
+            "preview": "Tak, sprawozdanie finansowe MUSI być podpisane. Obowiązek ciąży na osobie, której powierzono prowadzenie ksiąg rachunkowych oraz na kierowniku jednostki. Podpis musi być opatrzo..."
           }
         ]
       },
@@ -8466,38 +8120,38 @@
         "question": "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
         "freq": 22,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 2",
-            "category": "terminy wystawienia faktury",
-            "score": 0.032,
-            "preview": "Jeśli otrzymasz całość lub część zapłaty przed dokonaniem dostawy lub wykonaniem usługi, fakturę wystawisz nie później niż 15. dnia miesiąca następującego po miesiącu, w którym ..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "Fakturowanie przekształceń bez dostawy",
-            "score": 0.0313,
-            "preview": "Faktura powinna być wystawiona nie później niż 15. dnia miesiąca następującego po miesiącu dokonania dostawy (art. 106i ust. 1). Nie możesz wystawić faktury wcześniej niż 60 dni..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 28",
+            "category": "rachunkowosc",
+            "score": 0.0323,
+            "preview": "Art. 28. 1. Aktywa i pasywa wycenia się nie rzadziej niż na dzień bilansowy w sposób następujący: 1) środki trwałe oraz wartości niematerialne i prawne – według cen nabycia lub ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 6 pkt 2",
-            "category": "terminy wystawienia faktury",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 39 ust. 2 pkt 1",
+            "category": "rozliczenia_międzyokresowe_kosztów",
             "score": 0.0313,
-            "preview": "Jeśli klient żąda faktury po upływie miesiąca, w którym dokonano dostawy, wystawisz ją nie później niż 15 dni od dnia zgłoszenia żądania. To inne reguły niż standardowe — żądani..."
+            "preview": "Narzuty płatnika są kosztem bilansowym okresu, w którym je faktycznie poniesiono (tj. kiedy świadczenie zostało wykonane), niezależnie od daty wystawienia faktury. Zgodnie z art..."
           }
         ]
       },
@@ -8546,7 +8200,7 @@
         "question": "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
         "freq": 20,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ksef",
+        "aktuo_category": "rachunkowosc",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
@@ -8561,28 +8215,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+          },
+          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
-            "category": "ksef",
+            "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+            "category": "rachunkowosc",
             "score": 0.0323,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "preview": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w kt?rym po stronie sprzedawcy powsta? obowi?zek podatkowy, nie wcze?niej jednak ni? w okresie otrzymania f..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 35c",
+            "category": "aktualizacja_wartości_należności",
+            "score": 0.0296,
+            "preview": "Jeśli zanika przyczyna odpisu aktualizacyjnego (np. należność została spłacona), zmniejszasz dokonany wcześniej odpis. Równowartość cofniętego odpisu zwiększa wartość należności..."
           }
         ]
       },
@@ -9508,9 +9162,9 @@
         "question": "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
         "freq": 10,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -9518,28 +9172,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 120 ust. 4",
-            "category": "procedura-marza-srodki-transportu",
-            "score": 0.0317,
-            "preview": "Procedura marża z art. 120 ust. 4 teoretycznie może dotyczyć samochodów jako 'towarów używanych' (ruchome dobra materialne nadające się do dalszego użytku), jeśli zostały nabyte..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 6",
+            "category": "amortyzacja_srodków_trwalych",
+            "score": 0.0323,
+            "preview": "Ustawa o rachunkowości zezwala na jednorazową amortyzację dla środków trwałych o niskiej jednostkowej wartości początkowej (art. 32 ust. 6). Jednak jednostki mikro i małe mogą a..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26ea ust. 1, ust. 2, ust. 4",
-            "category": "ulga_na_koszty_badawczo_rozwojowe",
-            "score": 0.0313,
-            "preview": "Ulga z art. 26ea przysługuje tylko w roku rozpoczęcia działalności gospodarczej lub roku bezpośrednio następującym (jeśli podatnik jest mikro/małym/średnim przedsiębiorcą). Po p..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 3",
+            "category": "amortyzacja_aktualizacja",
+            "score": 0.032,
+            "preview": "Tak, gdy zmienią się warunki ekonomiczne wpływające na okres użyteczności środka trwałego, musisz dokonać korekty. Na dzień przyjęcia składnika do użytku ustalacie okres amortyz..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 3 pkt 1 lit. a",
-            "category": "odliczenie VAT pojazdy leasing",
-            "score": 0.0306,
-            "preview": "Jeśli samochód leasingowany spełnia warunki z art. 86a ust. 3 pkt 1 lit. a (wykorzystywany wyłącznie do działalności), nie obowiązuje ograniczenie 50% VAT i można odliczyć 100%...."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 35b ust. 2",
+            "category": "aktualizacja_wartości_należności",
+            "score": 0.0309,
+            "preview": "Odpisy aktualizujące wartość należności zaliczasz do pozostałych kosztów operacyjnych lub kosztów finansowych - zależy od rodzaju należności, której dotyczy odpis. Jeśli należno..."
           }
         ]
       },
@@ -9698,7 +9352,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 12",
             "category": "rachunkowosc",
-            "score": 0.0315,
+            "score": 0.0313,
             "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           }
         ]
@@ -9748,38 +9402,38 @@
         "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
         "freq": 8,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23a ust. 1",
-            "category": "definicje_leasing",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
             "score": 0.0325,
-            "preview": "Artykuł 23a nie zawiera żadnych regulacji dotyczących podnajmu przedmiotu leasingu. Zatem na podstawie samej definicji leasingu w ustawie nie można jednoznacznie stwierdzić, czy..."
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 41d",
-            "category": "zus",
-            "score": 0.032,
-            "preview": "1. Zakład informuje ubezpieczonego o przekazaniu przez płatnika składek raportu informacyjnego w informacji o stanie konta, o której mowa w art. 50 ust. 1, przesyłanej za rok, w..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 34b",
+            "category": "rachunkowosc",
+            "score": 0.0325,
+            "preview": "1. Koszty wytworzenia, które można bezpośrednio przyporządkować przychodom osiągniętym przez jednostkę, wpływają na wynik finansowy jednostki za ten okres sprawozdawczy, w który..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 22b ust. 2 pkt 2",
-            "category": "amortyzacja_prace_rozwojowe",
-            "score": 0.0313,
-            "preview": "Koszty prac rozwojowych podlegają amortyzacji niezależnie od okresu używania, jeśli: (1) produkt lub technologia są ściśle ustalone i dotyczące ich koszty są wiarygodnie określo..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 66",
+            "category": "rachunkowosc",
+            "score": 0.0296,
+            "preview": "1. (uchylony) 2. (uchylony) 3. (uchylony) 4. Wyboru firmy audytorskiej do przeprowadzenia badania sprawozdania finansowego oraz wyboru firmy audytorskiej do atestacji sprawozdaw..."
           }
         ]
       },
@@ -10419,39 +10073,40 @@
         "question": "Opłacono zwykłym przelewem, wystawili fv zaliczkowa z adnotacja MPP, czy są jakieś konsekwencje?",
         "freq": 6,
         "dataset_category": "jpk",
-        "aktuo_category": "jpk",
+        "aktuo_category": "rachunkowosc",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
-          "Ustawa o VAT"
+          "Ustawa o VAT",
+          "Ustawa o rachunkowości"
         ],
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak artykułu zawierającego odpowiedź w dostarczonej części",
-            "category": "mechanizm_podzielonej_platnosci",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można stwierdzić, czy i jak należy oznaczać zakupy objęte mechanizmem podzielonej płatności po stronie nabywcy. Wymag..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 63h",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "1. Jednostka, o której mowa w art. 63f ust. 1, będąca jednostką zależną, może nie sporządzać sprawozdania z płatności, jeżeli jej jednostka dominująca mająca siedzibę lub miejsc..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "§ 10",
-            "category": "jpk",
-            "score": 0.032,
-            "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 63j",
+            "category": "rachunkowosc",
+            "score": 0.0315,
+            "preview": "Do sprawozdania z płatności i skonsolidowanego sprawozdania z płatności stosuje się odpowiednio przepisy art. 52 ust. 1–2e, z tym że nie podpisuje ich osoba, której powierzono p..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 108a ust. 1",
-            "category": "mechanizm_podzielonej_platnosci",
-            "score": 0.032,
-            "preview": "Mechanizm podzielonej płatności jest obligatoryjny tylko dla faktur za towary lub usługi z załącznika nr 15, gdy kwota należności przekracza 15 000 zł (art. 108a ust. 1a). W poz..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 63k",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Sprawozdanie z płatności i skonsolidowane sprawozdanie z płatności sporządza się w postaci elektronicznej oraz opatruje się kwalifikowanym podpisem elektronicznym, podpisem zauf..."
           }
         ]
       },
@@ -10524,7 +10179,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 43 ust. 1 pkt 36",
             "category": "zwolnienia_vat",
-            "score": 0.0304,
+            "score": 0.0302,
             "preview": "Zwolnienie z VAT dla wynajmu nieruchomości dotyczy wyłącznie nieruchomości o charakterze mieszkalnym na cele mieszkaniowe. Wynajem nieruchomości niemieszkaniowych (lokale biurow..."
           },
           {
@@ -11010,7 +10665,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 19a ust. 1",
             "category": "obowiazek_podatkowy",
-            "score": 0.0247,
+            "score": 0.0246,
             "preview": "Obowiązek podatkowy w VAT powstaje z chwilą dokonania dostawy towarów. Dostawę towarów rozumie się jako przeniesienie prawa do rozporządzania towarami jak właściciel. Oznacza to..."
           }
         ]
@@ -11076,7 +10731,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "§ 14",
             "category": "wymagania_techniczne_kseff",
-            "score": 0.0303,
+            "score": 0.0301,
             "preview": "Tekst artykułu nie zawiera informacji o formatach plików akceptowanych przez KSeF. Przepis § 14 odnosi się jedynie do specyfikacji technicznej kodu weryfikującego, którą zawiera..."
           },
           {
@@ -11664,7 +11319,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 177",
             "category": "ordynacja",
-            "score": 0.0325,
+            "score": 0.0323,
             "preview": "Czynności organu podatkowego, z których nie sporządza się protokółu, a które mają znaczenie dla sprawy lub toku postępowania, utrwala się w aktach w formie adnotacji podpisanej ..."
           },
           {
@@ -11672,7 +11327,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0318,
+            "score": 0.0315,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -11680,7 +11335,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 80b",
             "category": "pełnomocnictwo-i-reprezentacja",
-            "score": 0.0294,
+            "score": 0.0292,
             "preview": "Art. 80b reguluje wyłącznie podpisywanie deklaracji i zwalnia podatnika z obowiązku osobistego podpisu, ale nie określa uprawnień pełnomocnika w postępowaniu podatkowym. Do dzia..."
           }
         ]
@@ -11707,18 +11362,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.0291,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nda",
             "category": "ksef",
             "score": 0.029,
             "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd",
+            "category": "ksef",
+            "score": 0.0289,
+            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -11763,9 +11418,9 @@
         "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
         "freq": 5,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -11773,28 +11428,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2 pkt 2",
-            "category": "faktury_korygujace",
-            "score": 0.0328,
-            "preview": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wyst..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0323,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 116 ust. 2 pkt 4",
-            "category": "faktury_vat_rr",
-            "score": 0.0315,
-            "preview": "Faktura VAT RR powinna być wystawiona nie później niż 7 dni od dnia nabycia produktów rolnych (lub do 7 dnia następnego miesiąca przy dostawach ciągłych). Na fakturze wskazuje s..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 4",
-            "category": "dokumentacja_faktury_korygujace",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 1",
+            "category": "amortyzacja_srodki_trwale",
             "score": 0.0313,
-            "preview": "Faktura korygująca powinna być wystawiona w związku ze zmianą podstawy opodatkowania lub zwrotem zapłaty. Артykuł 106j nie określa terminu, w jakim korekta musi być wystawiona p..."
+            "preview": "Koszt zakupionego środka trwałego nie ujmuje się od razu jako koszt operacyjny. Wartość początkową (cenę nabycia) ujmuje się w aktywach (jako środek trwały), a koszt rozkłada si..."
           }
         ]
       },
@@ -11802,38 +11457,38 @@
         "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
         "freq": 5,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 26e",
-            "category": "koszty-uzyskania-przychodow",
-            "score": 0.0323,
-            "preview": "Art. 26e nie reguluje kwestii kosztów uzyskania przychodów dla pracowników ani zmian stawek KUP w związku ze zmianą miejsca zamieszkania. Odpowiedź na Twoje pytanie wymaga anali..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 39 ust. 3",
+            "category": "rozliczenia_miedzyokresowe_koszty",
+            "score": 0.0328,
+            "preview": "Ustawa o rachunkowości stanowi, że RMK odpisuje się stosownie do upływu czasu lub wielkości świadczeń, z zachowaniem zasady ostrożności. Rozłożenie opłaty na raty jest prawidłow..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "pit",
-            "score": 0.0318,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychodów podlegają ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wyższy limit wartości. Opła..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
+            "score": 0.032,
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 10b pkt 1",
-            "category": "odliczenie_vat_moment_powstania_prawa",
-            "score": 0.031,
-            "preview": "Prawo do odliczenia VAT powstaje w okresie, w którym faktycznie otrzymałaś fakturę, bez względu na datę wystawienia faktury lub datę wykonania usługi. Jeśli otrzymałaś fakturę z..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 30",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Art. 30. 1. Nie rzadziej niż na dzień bilansowy wycenia się wyrażone w walutach obcych: 1) składniki aktywów (z wyłączeniem udziałów w jednostkach podporządkowanych wycenianych ..."
           }
         ]
       },
@@ -11841,9 +11496,9 @@
         "question": "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
         "freq": 5,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "podatek_naliczony",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -11851,28 +11506,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_towary_materialy",
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
             "score": 0.0328,
-            "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat",
-            "score": 0.032,
-            "preview": "Prawo do odliczenia VAT zależy od użytkownia towaru lub usługi, a nie od relacji między VAT a kosztem. Jeśli towar/usługa jest wykorzystywany do czynności opodatkowanych, podatn..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 34c",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "1. Koszty wytworzenia niezakończonej usługi, w tym budowlanej, obejmują koszty poniesione od dnia zawarcia odpowiedniej umowy do dnia bilansowego. Koszty poniesione przed zawarc..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_podstawy",
-            "score": 0.0315,
-            "preview": "Ustawa o VAT nie reguluje wartości brutto czy netto w koszcie — to kwestia ksiąg rachunkowych, nie VAT. VAT odliczasz na podstawie faktury, niezależnie od tego, jak wykazujesz k..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 7",
+            "category": "rachunkowosc",
+            "score": 0.031,
+            "preview": "1. Poszczególne składniki aktywów i pasywów wycenia się stosując rzeczywiście poniesione na ich nabycie (wytworzenie) ceny (koszty), z zachowaniem zasady ostrożności. W szczegól..."
           }
         ]
       },
@@ -12035,7 +11690,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 12 ust. 1",
             "category": "otwarcie_ksiag_rachunkowych",
-            "score": 0.0284,
+            "score": 0.0282,
             "preview": "Artykuł 12 Ustawy o rachunkowości nie reguluje otwarcia ksiąg w związku z przekroczeniem limitu przychodów. Księgi rachunkowe otwiera się na dzień rozpoczęcia działalności, na p..."
           }
         ]
@@ -12440,11 +12095,19 @@
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46",
+            "category": "pit",
+            "score": 0.0325,
+            "preview": "Je?eli samoch?d osobowy stanowi w?asno?? podatnika prowadz?cego dzia?alno?? gospodarcz?, ale nie jest sk?adnikiem maj?tku firmowego, wydatki na jego u?ywanie oraz sk?adki na ube..."
+          },
+          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nd",
             "category": "ksef",
-            "score": 0.0311,
+            "score": 0.0305,
             "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           },
           {
@@ -12452,16 +12115,8 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "§ 2 ust. 1, § 3",
             "category": "terminy_ksef",
-            "score": 0.0306,
+            "score": 0.0298,
             "preview": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb",
-            "category": "krajowy_system_e-faktur",
-            "score": 0.0294,
-            "preview": "Artykuł 106gb nie reguluje procedury nadawania uprawnień biurom rachunkowym do KSeF. Przepis dotyczy jedynie sposobu wystawienia i otrzymania faktury ustrukturyzowanej oraz dost..."
           }
         ]
       },
@@ -12589,8 +12244,8 @@
         "freq": 4,
         "dataset_category": "ksef",
         "aktuo_category": "ogólne",
-        "verdict": "WEAK",
-        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "verdict": "GAP",
+        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
         "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Rozporządzenie KSeF",
@@ -12606,23 +12261,23 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
             "category": "fakturowanie",
-            "score": 0.0323,
+            "score": 0.032,
             "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 119 ust. 1",
-            "category": "podstawa_opodatkowania_marża",
-            "score": 0.0311,
-            "preview": "Podstawą opodatkowania dla usług turystyki jest kwota marży pomniejszona o kwotę podatku, a nie cała zapłata od turysty. Marża to różnica między kwotą zapłaconą przez turystę a ..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
           },
           {
             "law_name": "Kodeks pracy",
             "canonical_law_name": "Kodeks pracy",
             "article_number": "art. 1732",
             "category": "kadry",
-            "score": 0.031,
+            "score": 0.0308,
             "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
           }
         ]
@@ -12752,7 +12407,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106j ust. 1",
             "category": "dokumentacja_faktury_korygujace",
-            "score": 0.0311,
+            "score": 0.0308,
             "preview": "Paragon fiskalny i faktura to odrębne dokumenty. Paragon potwierdza sprzedaż zaewidencjonowaną w kasie rejestrującej. Jeśli musisz skorygować wartość, wystawiasz fakturę koryguj..."
           }
         ]
@@ -12831,7 +12486,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
             "article_number": "art. 26",
             "category": "cit",
-            "score": 0.0323,
+            "score": 0.032,
             "preview": "Art. 26 CIT wskazuje, że przy wypłatach należności z art. 21 ust. 1 i art. 22 ust. 1 płatnik pobiera zryczałtowany podatek dochodowy w dniu wypłaty. Możliwość zastosowania stawk..."
           },
           {
@@ -13143,7 +12798,7 @@
         "aktuo_category": "ogólne",
         "verdict": "GAP",
         "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
+        "root_cause_guess": "weak_existing_chunk",
         "expected_laws": [],
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
@@ -13164,12 +12819,12 @@
             "preview": "W przypadku dostaw gazu, energii elektrycznej i usług przenoszenia uprawnień do emisji (art. 145e ust. 1) obowiązuje mechanizm odwrotnego obciążenia. Dostawca lub usługodawca ni..."
           },
           {
-            "law_name": "Ordynacja podatkowa",
-            "canonical_law_name": "Ordynacja podatkowa",
-            "article_number": "art. 173",
-            "category": "ordynacja",
-            "score": 0.0278,
-            "preview": "Protokół sporządza się tak, aby z jego treści wynikało, kto, kiedy, gdzie i jakich czynności dokonał, kto i w jakim charakterze był przy nich obecny, co i w jaki sposób w wyniku..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 90 ust. 1-4",
+            "category": "proporcja-odliczenia",
+            "score": 0.0279,
+            "preview": "Jeżeli towary i usługi są wykorzystywane zarówno do czynności opodatkowanych, jak i zwolnionych od podatku, musisz oddzielić VAT związany z każdą kategorią. Jeśli nie możesz dok..."
           }
         ]
       },
@@ -13629,9 +13284,9 @@
         "question": "Faktura z 31.03, pz z 01.04. Bawicie się w księgowanie w różnych okresach czy dajecie wszystko do kwietnia?",
         "freq": 4,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "fakturowanie",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Ustawa o rachunkowości"
@@ -13639,28 +13294,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "dokumentacja_VAT_termin_faktury",
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 20 ust. 1-3 i art. 21 ust. 1 pkt 3-6",
+            "category": "rachunkowosc",
             "score": 0.0328,
-            "preview": "Fakturę wystawia się nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Data na fakturze musi odpowiadać rzeczywi..."
+            "preview": "Do ksi?g rachunkowych okresu sprawozdawczego wprowadza si? ka?de zdarzenie, kt?re nast?pi?o w tym okresie, na podstawie dowodu ksi?gowego. Dow?d powinien wskazywa? opis operacji..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "terminy wystawienia faktury",
-            "score": 0.0315,
-            "preview": "Fakturę do operacji z dnia 31.01.2026 można wystawić w dniu 2.02.2026. Zgodnie z art. 106i ust. 1, faktura wystawia się nie później niż 15. dnia miesiąca następującego po miesią..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 45 ust. 1",
+            "category": "sprawozdanie_finansowe_podstawy",
+            "score": 0.031,
+            "preview": "Sprawozdanie finansowe sporządza się na dzień zamknięcia ksiąg rachunkowych (art. 45 ust. 1), czyli zazwyczaj na koniec roku obrachunkowego (31 grudnia), lub na inny dzień bilan..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106i ust. 1",
-            "category": "terminy wystawienia faktury",
-            "score": 0.0313,
-            "preview": "Podstawową regułą jest wystawienie faktury nie później niż 15. dnia miesiąca następującego po miesiącu, w którym dokonano dostawy towaru lub wykonano usługę. Przykład: sprzedaż ..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0304,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
           }
         ]
       },
@@ -13746,38 +13401,38 @@
         "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
         "freq": 4,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "podatek_naliczony",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "cross_law_question",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Ustawa o rachunkowości"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_towary_materialy",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 30",
+            "category": "rachunkowosc",
             "score": 0.0328,
-            "preview": "Waciki bezpyłowe do stylizacji paznokci są utrzymanymi w запасе materiałami (kosztami) wykorzystywanymi do świadczenia usługi, a nie towarem handlowym. Prawo do odliczenia VAT z..."
+            "preview": "Art. 30. 1. Nie rzadziej niż na dzień bilansowy wycenia się wyrażone w walutach obcych: 1) składniki aktywów (z wyłączeniem udziałów w jednostkach podporządkowanych wycenianych ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat_warunki_podstawowe",
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 32 ust. 1",
+            "category": "amortyzacja_srodkow_trwalych",
             "score": 0.032,
-            "preview": "Prawo do odliczenia VAT przysługuje w zakresie, w jakim towary i usługi są wykorzystywane do wykonywania czynności opodatkowanych. Oznacza to, że jeśli zakup dotyczy częściowo d..."
+            "preview": "Amortyzacja powinna być wykazana w kosztach operacyjnych bez ograniczenia do ceny sprzedaży. Art. 32 ust. 1 mówi jedynie, że podczas ustalania okresu amortyzacji należy uwzględn..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86 ust. 1",
-            "category": "odliczenie_vat",
-            "score": 0.0313,
-            "preview": "Faktury za terminal bezgotówkowy można odliczyć VAT w standardowym trybie (art. 86 ust. 1, 10b) — jeśli terminal jest wykorzystywany do wykonywania czynności opodatkowanych, pod..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 21 ust. 1 pkt 5",
+            "category": "elementy_dowodu_ksiegowego",
+            "score": 0.0315,
+            "preview": "Tak, dowód księgowy powinien zawierać podpis wystawcy dowodu oraz podpis osoby, której wydano lub od której przyjęto składniki aktywów. Jednak podpisy można pominąć, jeśli wynik..."
           }
         ]
       },
@@ -14010,7 +13665,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106gb ust. 1",
             "category": "Moment wystawienia faktury w KSeF",
-            "score": 0.0313,
+            "score": 0.031,
             "preview": "Artykuł nie określa dokładnie momentu uznania faktury za wystawioną w KSeF — tekst mówi tylko o przesłaniu faktury do systemu. Pytanie wymaga weryfikacji względem pełnego tekstu..."
           }
         ]
@@ -14059,9 +13714,9 @@
         "question": "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
         "freq": 4,
         "dataset_category": "vat",
-        "aktuo_category": "fakturowanie",
-        "verdict": "COVERED",
-        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie MF o kasach rejestrujących",
@@ -14073,26 +13728,26 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2 pkt 2",
-            "category": "faktury_korygujace",
-            "score": 0.0325,
-            "preview": "Art. 106j ust. 2 pkt 2 wymaga, aby faktura korygująca zawierała numer kolejny oraz datę jej wystawienia. Data wystawienia faktury korygującej to data, kiedy faktycznie jest wyst..."
+            "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+            "category": "rachunkowosc",
+            "score": 0.0291,
+            "preview": "Prawo do odliczenia VAT powstaje co do zasady w rozliczeniu za okres, w kt?rym po stronie sprzedawcy powsta? obowi?zek podatkowy, nie wcze?niej jednak ni? w okresie otrzymania f..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106e ust. 1 pkt 1 i 6",
-            "category": "dokumentacja-faktury",
-            "score": 0.0313,
-            "preview": "Dla celów VAT decydująca jest data dokonania lub zakończenia dostawy towaru/usługi (data sprzedaży), nie data wystawienia faktury. Faktura powinna zawierać obie daty - datę wyst..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 21",
+            "category": "rachunkowosc",
+            "score": 0.0278,
+            "preview": "Art. 21. 1. Dowód księgowy powinien zawierać co najmniej: 1) określenie rodzaju dowodu i jego numeru identyfikacyjnego; 2) określenie stron (nazwy, adresy) dokonujących operacji..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106e ust. 1 pkt 7",
-            "category": "Dokumentacja VAT - Faktura",
-            "score": 0.0308,
-            "preview": "Na jednej fakturze możesz wystawić zarówno toner (towar) jak i usługę informatyczną. Faktura powinna zawierać nazwę (rodzaj) każdego towaru i usługi oddzielnie, ich miarę/ilość,..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
+            "score": 0.0263,
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
           }
         ]
       },
@@ -14711,7 +14366,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 15 ust. 1",
             "category": "Podstawy opodatkowania VAT",
-            "score": 0.0269,
+            "score": 0.0268,
             "preview": "Zarówno osoby fizyczne, jak i osoby prawne (np. spółki) mogą być podatnikami VAT, jeśli wykonują samodzielnie działalność gospodarczą. Podatnikami są osoby prawne oraz osoby fiz..."
           }
         ]
@@ -15337,39 +14992,40 @@
         "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
         "freq": 3,
         "dataset_category": "jpk",
-        "aktuo_category": "jpk",
-        "verdict": "COVERED",
-        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "missing_kb_unit",
+        "aktuo_category": "rachunkowosc",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
-          "Ustawa o VAT"
+          "Ustawa o VAT",
+          "Ustawa o rachunkowości"
         ],
         "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 28 ust. 2",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "§ 10",
-            "category": "jpk",
-            "score": 0.0299,
-            "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0282,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "Â§ 12",
-            "category": "jpk",
-            "score": 0.028,
-            "preview": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygo..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 52 ust. 2",
+            "category": "podpisywanie_sprawozdania_finansowego",
+            "score": 0.0279,
+            "preview": "Tak, sprawozdanie finansowe MUSI być podpisane. Obowiązek ciąży na osobie, której powierzono prowadzenie ksiąg rachunkowych oraz na kierowniku jednostki. Podpis musi być opatrzo..."
           }
         ]
       },
@@ -15405,10 +15061,10 @@
           {
             "law_name": "Kodeks pracy",
             "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 1862",
+            "article_number": "art. 32",
             "category": "kadry",
-            "score": 0.0289,
-            "preview": "W czasie urlopu wychowawczego pracownik ma prawo podjąć pracę zarobkową u dotychczasowego lub innego pracodawcy albo inną działalność, a także naukę lub szkolenie, jeżeli nie wy..."
+            "score": 0.029,
+            "preview": "Każda ze stron może rozwiązać umowę o pracę za wypowiedzeniem. § 2. Rozwiązanie umowy o pracę następuje z upływem okresu wypowiedzenia"
           }
         ]
       },
@@ -15479,7 +15135,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 45 ust. 1",
             "category": "pit",
-            "score": 0.0315,
+            "score": 0.0313,
             "preview": "Art. 45 ust. 1 potwierdza obowiązek złożenia rocznego zeznania według ustalonego wzoru. Sama ustawa o PIT na poziomie tego przepisu nie daje prostego katalogu kombinacji formula..."
           },
           {
@@ -16073,7 +15729,7 @@
         "question": "Dotyczy faktury pierwotnej wystawionej w lutym. W którym miesiącu ją zaksięgować? W miesiącu kiedy wpłynęła do KSeF czyli marzec czy jednak zaksięgować do lutego bo to korekta i deklaracja jeszcze nie sporządzona za luty?",
         "freq": 3,
         "dataset_category": "ksef",
-        "aktuo_category": "ksef",
+        "aktuo_category": "rachunkowosc",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
@@ -16088,28 +15744,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 12",
+            "category": "rachunkowosc",
+            "score": 0.0328,
+            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 6",
+            "category": "rachunkowosc",
+            "score": 0.0313,
+            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
-            "category": "ksef",
-            "score": 0.0317,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "law_name": "Ustawa o rachunkowości",
+            "canonical_law_name": "Ustawa o rachunkowości",
+            "article_number": "art. 45 ust. 1",
+            "category": "sprawozdanie_finansowe_podstawy",
+            "score": 0.0263,
+            "preview": "Sprawozdanie finansowe sporządza się na dzień zamknięcia ksiąg rachunkowych (art. 45 ust. 1), czyli zazwyczaj na koniec roku obrachunkowego (31 grudnia), lub na inny dzień bilan..."
           }
         ]
       },
@@ -16160,25 +15816,6 @@
   },
   "next_actions": [
     {
-      "batch_name": "KPiR / rachunkowość operacyjna",
-      "recommended_fix_type": "kb_units",
-      "estimated_kb_units_needed": 8,
-      "estimated_synonym_additions_needed": 0,
-      "expected_impact_on_top100_questions": 9,
-      "expected_impact_on_top100_pp": 9.0,
-      "expected_impact_on_top200_questions": 12,
-      "expected_impact_on_top200_pp": 6.0,
-      "likely_laws_or_regulations_needed": [
-        "Ustawa o podatku dochodowym od osób fizycznych",
-        "Ustawa o rachunkowości"
-      ],
-      "likely_synonym_additions_needed": [
-        "KPiR",
-        "SF"
-      ],
-      "priority_score": 89.0
-    },
-    {
       "batch_name": "Pozostałe luki produktowe",
       "recommended_fix_type": "kb_units",
       "estimated_kb_units_needed": 18,
@@ -16192,9 +15829,28 @@
       "priority_score": 46.2
     },
     {
+      "batch_name": "KPiR / rachunkowość operacyjna",
+      "recommended_fix_type": "kb_units",
+      "estimated_kb_units_needed": 3,
+      "estimated_synonym_additions_needed": 0,
+      "expected_impact_on_top100_questions": 4,
+      "expected_impact_on_top100_pp": 4.0,
+      "expected_impact_on_top200_questions": 7,
+      "expected_impact_on_top200_pp": 3.5,
+      "likely_laws_or_regulations_needed": [
+        "Ustawa o podatku dochodowym od osób fizycznych",
+        "Ustawa o rachunkowości"
+      ],
+      "likely_synonym_additions_needed": [
+        "KPiR",
+        "SF"
+      ],
+      "priority_score": 39.0
+    },
+    {
       "batch_name": "KSeF uprawnienia i obieg faktur",
       "recommended_fix_type": "kb_units",
-      "estimated_kb_units_needed": 2,
+      "estimated_kb_units_needed": 3,
       "estimated_synonym_additions_needed": 0,
       "expected_impact_on_top100_questions": 1,
       "expected_impact_on_top100_pp": 1.0,
@@ -16248,8 +15904,8 @@
       "estimated_synonym_additions_needed": 0,
       "expected_impact_on_top100_questions": 1,
       "expected_impact_on_top100_pp": 1.0,
-      "expected_impact_on_top200_questions": 1,
-      "expected_impact_on_top200_pp": 0.5,
+      "expected_impact_on_top200_questions": 2,
+      "expected_impact_on_top200_pp": 1.0,
       "likely_laws_or_regulations_needed": [
         "Ordynacja podatkowa",
         "Ustawa o VAT",
@@ -16259,7 +15915,7 @@
         "PPO-1",
         "UPL-1"
       ],
-      "priority_score": 5.0
+      "priority_score": 8.0
     },
     {
       "batch_name": "Ryczałt i stawki działalności",

@@ -35954,5 +35954,86 @@
     "question_intent": "Jak wygląda procedura złożenia oświadczenia dla wspólników spółki?",
     "content": "W przypadku prowadzenia działalności w formie spółki wszystkie wspólniki składają oświadczenie naczelnikom urzędów skarbowych właściwym według miejsca zamieszkania każdego ze wspólników. Wspólnicy spółki cywilnej osób fizycznych mogą złożyć oświadczenie o wyborze ryczałtu również na podstawie przepisów ustawy o CEIDG. Podstawa prawna: art. 9 ust. 2 Ustawa o ryczałcie.",
     "source": "raw_unit_reprocess_verified"
+  },
+  {
+    "law_name": "Ustawa o rachunkowo?ci",
+    "article_number": "art. 20 ust. 1-3 i art. 21 ust. 1 pkt 3-6",
+    "category": "rachunkowosc",
+    "verified_date": "2026-04-11",
+    "question_intent": "Faktura z 31.03 i PZ z 01.04 ? w kt?rym okresie ksi?gowa? zdarzenie oraz jak skorygowa? przeksi?gowanie po otrzymaniu faktury",
+    "content": "Do ksi?g rachunkowych okresu sprawozdawczego wprowadza si? ka?de zdarzenie, kt?re nast?pi?o w tym okresie, na podstawie dowodu ksi?gowego. Dow?d powinien wskazywa? opis operacji, dat? operacji oraz spos?b uj?cia w ksi?gach (dekretacj?). Je?eli faktura i dokument PZ maj? r??ne daty albo po otrzymaniu faktury okazuje si?, ?e wcze?niejsze przeksi?gowanie by?o w innej kwocie, zapis trzeba dostosowa? do tre?ci prawid?owego dowodu i w?a?ciwego okresu operacji. Podstawa prawna: art. 20 ust. 1-3 i art. 21 ust. 1 pkt 3-6 ustawy o rachunkowo?ci.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o rachunkowo?ci",
+    "article_number": "art. 6 ust. 1-2",
+    "category": "rachunkowosc",
+    "verified_date": "2026-04-11",
+    "question_intent": "Jak zaksi?gowa? zaliczk? lub koszt, gdy po dodaniu faktury kwota i okres uj?cia powinny si? zmieni?",
+    "content": "W ksi?gach rachunkowych trzeba uj?? wszystkie przychody i koszty dotycz?ce danego roku obrotowego niezale?nie od terminu zap?aty. Dla zachowania wsp??mierno?ci do w?a?ciwego okresu sprawozdawczego zalicza si? tak?e koszty i przychody dotycz?ce przysz?ych okres?w oraz koszty przypadaj?ce na bie??cy okres, nawet je?eli nie zosta?y jeszcze poniesione. To jest podstawa do poprawienia uj?cia kosztu lub zaliczki, je?eli po otrzymaniu faktury trzeba przypisa? wydatek do innego okresu ni? pierwotnie za?o?ono. Podstawa prawna: art. 6 ust. 1-2 ustawy o rachunkowo?ci.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o rachunkowo?ci",
+    "article_number": "art. 39 ust. 1-3",
+    "category": "rachunkowosc",
+    "verified_date": "2026-04-11",
+    "question_intent": "Faktura leasingowa albo us?uga obejmuj?ca prze?om miesi?cy ? rozliczenie koszt?w bilansowych mi?dzy okresami",
+    "content": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdopodobnych zobowi?za? przypadaj?cych na bie??cy okres, a odpis?w dokonuje si? stosownie do up?ywu czasu albo wielko?ci ?wiadcze?. Oznacza to, ?e faktura leasingowa albo inna us?uga obejmuj?ca prze?om miesi?cy nie powinna obci??a? jednorazowo niew?a?ciwego okresu bilansowego. Podstawa prawna: art. 39 ust. 1-3 ustawy o rachunkowo?ci.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o rachunkowo?ci",
+    "article_number": "art. 28 ust. 2",
+    "category": "rachunkowosc",
+    "verified_date": "2026-04-11",
+    "question_intent": "FV z zakupem towar?w do sprzeda?y i kosztami ubocznymi zakupu na jednej fakturze",
+    "content": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do u?ywania lub wprowadzenia do obrotu, w tym transport, za?adunek, wy?adunek i sk?adowanie. Je?eli na jednej FV masz zakup towar?w do sprzeda?y oraz koszty uboczne zakupu, to te koszty uboczne co do zasady zwi?kszaj? cen? nabycia towaru, a nie s? automatycznie odr?bnym kosztem og?lnym. Podstawa prawna: art. 28 ust. 2 ustawy o rachunkowo?ci.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 14 ust. 1c i 1e",
+    "category": "pit",
+    "verified_date": "2026-04-11",
+    "question_intent": "KPiR: przych?d za okres, kt?rego dotyczy us?uga, a nie tylko pod dat? wystawienia faktury",
+    "content": "W dzia?alno?ci gospodarczej przych?d powstaje co do zasady w dniu wydania rzeczy, wykonania us?ugi albo cz??ciowego wykonania us?ugi, nie p??niej ni? w dniu wystawienia faktury lub otrzymania zap?aty. Je?eli strony ustali?y rozliczanie us?ugi w okresach rozliczeniowych, za dat? powstania przychodu uznaje si? ostatni dzie? okresu rozliczeniowego wskazanego w umowie lub na fakturze. To w?a?nie ten przepis odpowiada na pytania typu: ?przych?d za okres, kt?rego dotyczy us?uga?. Podstawa prawna: art. 14 ust. 1c i 1e ustawy o PIT.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 22 ust. 5c, 5d i 6",
+    "category": "pit",
+    "verified_date": "2026-04-11",
+    "question_intent": "Faktura w marcu za wyw?z nieczysto?ci w lutym ? koszt po?redni w KPiR",
+    "content": "Koszty po?rednie s? potr?calne w dacie ich poniesienia. Je?eli dotycz? okresu przekraczaj?cego rok podatkowy i nie da si? ustali?, jaka cz??? dotyczy danego roku, rozlicza si? je proporcjonalnie do d?ugo?ci okresu, kt?rego dotycz?. Dla podatnik?w prowadz?cych ksi?gi rachunkowe dniem poniesienia kosztu jest dzie? uj?cia kosztu w ksi?gach na podstawie faktury lub innego dowodu, a art. 22 ust. 6 pozwala stosowa? zasady z ust. 5-5c odpowiednio tak?e do KPiR, je?eli ksi?ga pozwala wyodr?bni? koszty dotycz?ce tylko roku podatkowego. To odpowiada na pytania o faktur? wystawion? w marcu za us?ug? z lutego i o koszt po?redni. Podstawa prawna: art. 22 ust. 5c, 5d i 6 ustawy o PIT.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 22h ust. 1 pkt 1 i ust. 2 oraz art. 23 ust. 1 pkt 4",
+    "category": "pit",
+    "verified_date": "2026-04-11",
+    "question_intent": "Amortyzacja samochodu po zmianie limit?w ? czy trzeba przelicza? od nowa",
+    "content": "Odpis?w amortyzacyjnych dokonuje si? od miesi?ca nast?puj?cego po wprowadzeniu ?rodka trwa?ego do ewidencji, a wybran? metod? amortyzacji stosuje si? do pe?nego zamortyzowania danego ?rodka trwa?ego. Jednocze?nie odpisy od samochodu osobowego nie s? kosztem w tej cz??ci, kt?ra zosta?a ustalona od warto?ci samochodu przekraczaj?cej ustawowy limit z art. 23 ust. 1 pkt 4. To jest podstawa do oceny pyta?, czy po wej?ciu nowych limit?w amortyzacj? samochodu trzeba przelicza? na nowo. Podstawa prawna: art. 22h ust. 1 pkt 1 i ust. 2 oraz art. 23 ust. 1 pkt 4 ustawy o PIT.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 23 ust. 1 pkt 46",
+    "category": "pit",
+    "verified_date": "2026-04-11",
+    "question_intent": "Wykup z leasingu prywatnie i brak przekazania do firmy ? czy mo?na ksi?gowa? 20% koszt?w",
+    "content": "Je?eli samoch?d osobowy stanowi w?asno?? podatnika prowadz?cego dzia?alno?? gospodarcz?, ale nie jest sk?adnikiem maj?tku firmowego, wydatki na jego u?ywanie oraz sk?adki na ubezpieczenie nie s? co do zasady kosztem. Wyj?tek dotyczy 20% tych wydatk?w i sk?adek, pod warunkiem ?e samoch?d jest wykorzystywany r?wnie? do cel?w zwi?zanych z dzia?alno?ci? gospodarcz? podatnika. To jest przepis, kt?ry odpowiada na pytanie o samoch?d wykupiony z leasingu prywatnie i nieprzekazany do firmy. Podstawa prawna: art. 23 ust. 1 pkt 46 ustawy o PIT.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 23b ust. 1 oraz art. 23 ust. 1 pkt 47a",
+    "category": "pit",
+    "verified_date": "2026-04-11",
+    "question_intent": "Faktura leasingowa 23.02-09.03 ? KUP i limit warto?ci samochodu",
+    "content": "Op?aty ustalone w umowie leasingu stanowi? koszt uzyskania przychod?w korzystaj?cego w podstawowym okresie umowy, je?eli umowa spe?nia warunki ustawowe z art. 23b ust. 1. Przy samochodzie osobowym ograniczenie z art. 23 ust. 1 pkt 47a obejmuje cz??? op?at leasingowych przekraczaj?c? proporcj? wynikaj?c? z ustawowego limitu warto?ci samochodu. To jest podatkowa podstawa do analizy faktury leasingowej obejmuj?cej prze?om miesi?cy; bilansowe rozliczenie okresu wynika odr?bnie z ustawy o rachunkowo?ci. Podstawa prawna: art. 23b ust. 1 oraz art. 23 ust. 1 pkt 47a ustawy o PIT.",
+    "source": "manual_grounded_kpir_batch_2026_04_11"
   }
 ]
