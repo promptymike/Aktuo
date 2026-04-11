@@ -1,0 +1,134 @@
+[
+  {
+    "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
+    "freq": 16,
+    "dataset_category": "praktyka",
+    "aktuo_category": "faktury_korygujące",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 1 pkt 5",
+        "category": "faktury_korygujące",
+        "score": 0.0328,
+        "preview": "Pomyłka w NIP-ie na fakturze wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5, który obejmuje pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca ..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 2a",
+        "category": "faktury_korygujace",
+        "score": 0.031,
+        "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 10 ust. 1 pkt 8a",
+        "category": "obowiązek podatkowy, jednostki kontrolowane",
+        "score": 0.032,
+        "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": "A po co Ci uprawnienia?",
+    "freq": 4,
+    "dataset_category": "ksef",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+        "category": "fakturowanie",
+        "score": 0.032,
+        "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+      },
+      {
+        "law_name": "Ustawa o rachunkowo?ci",
+        "canonical_law_name": "Ustawa o rachunkowo?ci",
+        "article_number": "art. 39 ust. 1-3",
+        "category": "rachunkowosc",
+        "score": 0.0318,
+        "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+      },
+      {
+        "law_name": "Kodeks pracy",
+        "canonical_law_name": "Kodeks pracy",
+        "article_number": "art. 1732",
+        "category": "kadry",
+        "score": 0.0308,
+        "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
+      }
+    ],
+    "root_cause_guess": "missing_kb_unit"
+  },
+  {
+    "question": "Wiem, że w przypadku nadania uprawnień i pobrania takich faktur przez nas jest podgląd w PDF, a jak to będzie działać gdy klient je sam do nas wyśle?",
+    "freq": 4,
+    "dataset_category": "praktyka",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 30c ust. 1",
+        "category": "podstawa_opodatkowania",
+        "score": 0.0311,
+        "preview": "Nie zawsze. Podstawę opodatkowania z importu usług się nie ustala w przypadku, gdy wartość usługi została wliczona do podstawy opodatkowania wewnątrzwspólnotowego nabycia towaró..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "§ 4 ust. 1",
+        "category": "system_e-faktur_wymagania_techniczne",
+        "score": 0.03,
+        "preview": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą u..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "§ 4 ust. 1",
+        "category": "autentykacja_ksef",
+        "score": 0.0295,
+        "preview": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie upraw..."
+      }
+    ],
+    "root_cause_guess": "missing_kb_unit"
+  },
+  {
+    "question": "Czy w Ksefie prowadząc jdg trzeba nadać uprawnienia administratora?",
+    "freq": 3,
+    "dataset_category": "ceidg",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 10 ust. 1 pkt 8a",
+        "category": "obowiązek podatkowy, jednostki kontrolowane",
+        "score": 0.0328,
+        "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+      },
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 44 ust. 10",
+        "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
+        "score": 0.032,
+        "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 15 ust. 1",
+        "category": "status podatnika VAT",
+        "score": 0.0318,
+        "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  }
+]

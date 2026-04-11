@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "fb_pipeline\\dedup_questions_output_v3.json",
     "knowledge_file": "data\\seeds\\law_knowledge.json",
-    "based_on_unresolved_questions_from_top_200": 73
+    "based_on_unresolved_questions_from_top_200": 70
   },
   "batches": [
     {
@@ -328,66 +328,6 @@
       "estimated_kb_units_needed": 3,
       "estimated_synonym_additions_needed": 0,
       "priority_score": 39.0
-    },
-    {
-      "batch_name": "KSeF uprawnienia i obieg faktur",
-      "number_of_questions": 4,
-      "gap_count": 3,
-      "weak_count": 1,
-      "total_freq_impact": 27,
-      "questions_in_top100": 1,
-      "questions_in_top200": 4,
-      "total_freq_top100": 16,
-      "total_freq_top200": 27,
-      "likely_laws_or_regulations_needed": [
-        "Rozporządzenie KSeF",
-        "Ustawa o VAT"
-      ],
-      "likely_synonym_additions_needed": [
-        "KSeF"
-      ],
-      "root_causes": {
-        "cross_law_question": 2,
-        "missing_kb_unit": 2
-      },
-      "recommended_fix_type": "kb_units",
-      "questions": [
-        {
-          "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
-          "freq": 16,
-          "dataset_category": "praktyka",
-          "aktuo_category": "faktury_korygujące",
-          "verdict": "WEAK",
-          "root_cause_guess": "cross_law_question"
-        },
-        {
-          "question": "A po co Ci uprawnienia?",
-          "freq": 4,
-          "dataset_category": "ksef",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "missing_kb_unit"
-        },
-        {
-          "question": "Wiem, że w przypadku nadania uprawnień i pobrania takich faktur przez nas jest podgląd w PDF, a jak to będzie działać gdy klient je sam do nas wyśle?",
-          "freq": 4,
-          "dataset_category": "praktyka",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "missing_kb_unit"
-        },
-        {
-          "question": "Czy w Ksefie prowadząc jdg trzeba nadać uprawnienia administratora?",
-          "freq": 3,
-          "dataset_category": "ceidg",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        }
-      ],
-      "estimated_kb_units_needed": 3,
-      "estimated_synonym_additions_needed": 0,
-      "priority_score": 27.0
     },
     {
       "batch_name": "Leasing / samochody / amortyzacja",
@@ -743,6 +683,41 @@
       "estimated_kb_units_needed": 2,
       "estimated_synonym_additions_needed": 0,
       "priority_score": 8.0
+    },
+    {
+      "batch_name": "KSeF uprawnienia i obieg faktur",
+      "number_of_questions": 1,
+      "gap_count": 0,
+      "weak_count": 1,
+      "total_freq_impact": 4,
+      "questions_in_top100": 0,
+      "questions_in_top200": 1,
+      "total_freq_top100": 0,
+      "total_freq_top200": 4,
+      "likely_laws_or_regulations_needed": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT"
+      ],
+      "likely_synonym_additions_needed": [
+        "KSeF"
+      ],
+      "root_causes": {
+        "missing_kb_unit": 1
+      },
+      "recommended_fix_type": "kb_units",
+      "questions": [
+        {
+          "question": "A po co Ci uprawnienia?",
+          "freq": 4,
+          "dataset_category": "ksef",
+          "aktuo_category": "ogólne",
+          "verdict": "WEAK",
+          "root_cause_guess": "missing_kb_unit"
+        }
+      ],
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 4.0
     },
     {
       "batch_name": "Ryczałt i stawki działalności",

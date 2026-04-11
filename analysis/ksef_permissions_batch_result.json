@@ -1,0 +1,221 @@
+{
+  "questions_in_batch": 4,
+  "kb_units_added": 5,
+  "synonym_entries_added": 0,
+  "batch_coverage_before": {
+    "covered": 0,
+    "weak": 1,
+    "gap": 3
+  },
+  "batch_coverage_after": {
+    "covered": 3,
+    "weak": 1,
+    "gap": 0
+  },
+  "top100_coverage_before": {
+    "covered": 75,
+    "weak": 7,
+    "gap": 18,
+    "coverage_percent": 75.0
+  },
+  "top100_coverage_after": {
+    "covered_count": 76,
+    "weak_count": 6,
+    "gap_count": 18,
+    "coverage_percent": 76.0
+  },
+  "top200_coverage_before": {
+    "covered": 127,
+    "weak": 15,
+    "gap": 58,
+    "coverage_percent": 63.5
+  },
+  "top200_coverage_after": {
+    "covered_count": 130,
+    "weak_count": 15,
+    "gap_count": 55,
+    "coverage_percent": 65.0
+  },
+  "files_changed": [
+    "analysis/ksef_permissions_batch_input.json",
+    "analysis/ksef_permissions_batch_diagnosis.json",
+    "analysis/ksef_permissions_batch_result.json",
+    "analysis/top_coverage_impact_report.json",
+    "analysis/top_gap_batches.json",
+    "core/categorizer.py",
+    "data/seeds/law_knowledge.json"
+  ],
+  "notes_on_still_unresolved_questions": [
+    {
+      "question": "A po co Ci uprawnienia?",
+      "status": "WEAK",
+      "note": "Pytanie jest bardzo kontekstowe i bez słowa KSeF nadal konkuruje z innymi krótkimi zapytaniami. Po patchu ma już sensowny chunk KSeF w top 3, ale nie warto na siłę dodawać szerokiego heurystycznego haka tylko dla tak lakonicznego follow-upu."
+    }
+  ],
+  "after_batch_items": [
+    {
+      "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
+      "freq": 16,
+      "dataset_category": "praktyka",
+      "aktuo_category": "ksef",
+      "verdict": "COVERED",
+      "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT",
+        "Ustawa o VAT - KSeF terminy wdrożenia",
+        "Ustawa o VAT - KSeF uproszczenia 2026",
+        "Ustawa o VAT - KSeF zwolnienia"
+      ],
+      "top_3_chunks": [
+        {
+          "law_name": "Rozporządzenie KSeF",
+          "canonical_law_name": "Rozporządzenie KSeF",
+          "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+          "category": "ksef",
+          "score": 0.0325,
+          "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
+        },
+        {
+          "law_name": "Rozporządzenie KSeF",
+          "canonical_law_name": "Rozporządzenie KSeF",
+          "article_number": "§ 3 ust. 2 pkt 3-4 oraz ust. 3 pkt 1-2",
+          "category": "ksef",
+          "score": 0.0325,
+          "preview": "Rozporządzenie dopuszcza dalsze przekazywanie uprawnień w określonym łańcuchu. Uprawnienie z § 3 ust. 1 pkt 2 może mieć także podmiot wskazany przez podatnika oraz osoba fizyczn..."
+        },
+        {
+          "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+          "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+          "article_number": "art. 145l",
+          "category": "ksef",
+          "score": 0.0315,
+          "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+        }
+      ]
+    },
+    {
+      "question": "A po co Ci uprawnienia?",
+      "freq": 4,
+      "dataset_category": "ksef",
+      "aktuo_category": "ogólne",
+      "verdict": "WEAK",
+      "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+      "expected_laws": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT",
+        "Ustawa o VAT - KSeF terminy wdrożenia",
+        "Ustawa o VAT - KSeF uproszczenia 2026",
+        "Ustawa o VAT - KSeF zwolnienia"
+      ],
+      "top_3_chunks": [
+        {
+          "law_name": "Ustawa o rachunkowo?ci",
+          "canonical_law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 39 ust. 1-3",
+          "category": "rachunkowosc",
+          "score": 0.032,
+          "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+          "category": "fakturowanie",
+          "score": 0.032,
+          "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+        },
+        {
+          "law_name": "Rozporządzenie KSeF",
+          "canonical_law_name": "Rozporządzenie KSeF",
+          "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+          "category": "ksef",
+          "score": 0.0305,
+          "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
+        }
+      ]
+    },
+    {
+      "question": "Wiem, że w przypadku nadania uprawnień i pobrania takich faktur przez nas jest podgląd w PDF, a jak to będzie działać gdy klient je sam do nas wyśle?",
+      "freq": 4,
+      "dataset_category": "praktyka",
+      "aktuo_category": "ksef",
+      "verdict": "COVERED",
+      "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT",
+        "Ustawa o VAT - KSeF terminy wdrożenia",
+        "Ustawa o VAT - KSeF uproszczenia 2026",
+        "Ustawa o VAT - KSeF zwolnienia"
+      ],
+      "top_3_chunks": [
+        {
+          "law_name": "Rozporządzenie KSeF",
+          "canonical_law_name": "Rozporządzenie KSeF",
+          "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+          "category": "ksef",
+          "score": 0.0328,
+          "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+          "category": "ksef",
+          "score": 0.0323,
+          "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+          "category": "ksef",
+          "score": 0.0317,
+          "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+        }
+      ]
+    },
+    {
+      "question": "Czy w Ksefie prowadząc jdg trzeba nadać uprawnienia administratora?",
+      "freq": 3,
+      "dataset_category": "ceidg",
+      "aktuo_category": "ksef",
+      "verdict": "COVERED",
+      "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT",
+        "Ustawa o VAT - KSeF terminy wdrożenia",
+        "Ustawa o VAT - KSeF uproszczenia 2026",
+        "Ustawa o VAT - KSeF zwolnienia"
+      ],
+      "top_3_chunks": [
+        {
+          "law_name": "Rozporządzenie KSeF",
+          "canonical_law_name": "Rozporządzenie KSeF",
+          "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+          "category": "ksef",
+          "score": 0.0328,
+          "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
+        },
+        {
+          "law_name": "Rozporządzenie KSeF",
+          "canonical_law_name": "Rozporządzenie KSeF",
+          "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+          "category": "ksef",
+          "score": 0.0277,
+          "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+          "category": "ksef",
+          "score": 0.0269,
+          "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+        }
+      ]
+    }
+  ]
+}

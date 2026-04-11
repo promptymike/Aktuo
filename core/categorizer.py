@@ -40,6 +40,24 @@ def categorize_query(query: str) -> str:
     lowered_tokens = _tokenize(lowered)
     if "pit" in lowered_tokens and "vat" in lowered_tokens:
         return "ogólne"
+    ksef_permission_markers = (
+        "uprawn",
+        "administrator",
+        "token",
+        "podglad w pdf",
+        "dostep do faktur",
+        "pobrania takich faktur",
+        "dalszego ich przekazywania",
+        "nada mi uprawnienia",
+        "nadania uprawnien",
+    )
+    if ("ksef" in lowered or "ksefie" in lowered) and any(marker in lowered for marker in ksef_permission_markers):
+        return "ksef"
+    if "uprawn" in lowered and any(
+        marker in lowered
+        for marker in ("dalszego ich przekazywania", "pobrania takich faktur", "podglad w pdf", "administrator")
+    ):
+        return "ksef"
     operational_accounting_markers = (
         "zaksieg",
         "przeksieg",
@@ -75,6 +93,7 @@ def categorize_query(query: str) -> str:
             "ksef",
             (
                 "ksef",
+                "ksefie",
                 "krajowy system e-faktur",
                 "e-faktur",
                 "e-faktura",

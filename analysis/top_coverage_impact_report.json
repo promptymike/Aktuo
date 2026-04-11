@@ -1,10 +1,10 @@
 {
   "top_100": {
     "summary": {
-      "covered_count": 75,
-      "weak_count": 7,
+      "covered_count": 76,
+      "weak_count": 6,
       "gap_count": 18,
-      "coverage_percent": 75.0
+      "coverage_percent": 76.0
     },
     "per_category_breakdown": {
       "ceidg": {
@@ -53,8 +53,8 @@
         "gap_count": 0
       },
       "praktyka": {
-        "covered_count": 2,
-        "weak_count": 3,
+        "covered_count": 3,
+        "weak_count": 2,
         "gap_count": 12
       },
       "rachunkowosc": {
@@ -554,7 +554,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 145n ust. 4",
             "category": "ewidencja_faktury_2026",
-            "score": 0.0306,
+            "score": 0.0304,
             "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
           },
           {
@@ -700,18 +700,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nda",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.029,
-            "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+            "score": 0.0306,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0289,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0292,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -791,43 +791,6 @@
             "category": "korekta-vat-proporcja-sprzedaz-mieszana",
             "score": 0.0258,
             "preview": "Ustawa o VAT reguluje jak OBLICZYĆ korektę VAT przy sprzedaży mieszanej (art. 90 i 90c), ale nie zawiera szczegółowych wytycznych dotyczących ujęcia księgowego w bilansie. Korek..."
-          }
-        ]
-      },
-      {
-        "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
-        "freq": 16,
-        "dataset_category": "praktyka",
-        "aktuo_category": "faktury_korygujące",
-        "verdict": "WEAK",
-        "reason": "Retriever zwrócił sensowny wynik, ale pytanie nie mapuje się jednoznacznie do jednej ustawy.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 5",
-            "category": "faktury_korygujące",
-            "score": 0.0328,
-            "preview": "Pomyłka w NIP-ie na fakturze wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5, który obejmuje pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2a",
-            "category": "faktury_korygujace",
-            "score": 0.031,
-            "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.032,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
           }
         ]
       },
@@ -1202,28 +1165,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
             "score": 0.0323,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0315,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -1471,36 +1434,42 @@
         "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
         "freq": 16,
         "dataset_category": "praktyka",
-        "aktuo_category": "faktury_korygujące",
-        "verdict": "WEAK",
-        "reason": "Retriever zwrócił sensowny wynik, ale pytanie nie mapuje się jednoznacznie do jednej ustawy.",
+        "aktuo_category": "ksef",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 5",
-            "category": "faktury_korygujące",
-            "score": 0.0328,
-            "preview": "Pomyłka w NIP-ie na fakturze wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5, który obejmuje pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca ..."
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2a",
-            "category": "faktury_korygujace",
-            "score": 0.031,
-            "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 3 ust. 2 pkt 3-4 oraz ust. 3 pkt 1-2",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Rozporządzenie dopuszcza dalsze przekazywanie uprawnień w określonym łańcuchu. Uprawnienie z § 3 ust. 1 pkt 2 może mieć także podmiot wskazany przez podatnika oraz osoba fizyczn..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.032,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+            "article_number": "art. 145l",
+            "category": "ksef",
+            "score": 0.0315,
+            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
           }
         ]
       },
@@ -1642,28 +1611,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0315,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0315,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -1685,28 +1654,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -1888,28 +1857,28 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0323,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.0325,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0323,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       },
@@ -2373,7 +2342,7 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0265,
+            "score": 0.0261,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
@@ -2408,24 +2377,24 @@
             "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
             "article_number": "art. 145l",
             "category": "ksef",
-            "score": 0.0328,
+            "score": 0.0325,
             "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.032,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF terminy wdrożenia",
-            "canonical_law_name": "Ustawa o VAT - KSeF terminy wdrożenia",
-            "article_number": "art. 106ga",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 202..."
+            "score": 0.0315,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -3276,28 +3245,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.0325,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -3993,7 +3962,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 145n ust. 4",
             "category": "ewidencja_faktury_2026",
-            "score": 0.0306,
+            "score": 0.0304,
             "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
           },
           {
@@ -4102,28 +4071,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -4145,28 +4114,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
             "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.0318,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           }
         ]
       },
@@ -4189,11 +4158,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0325,
+            "score": 0.032,
             "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           },
           {
@@ -4201,16 +4178,8 @@
             "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
             "article_number": "art. 145l",
             "category": "ksef",
-            "score": 0.0325,
+            "score": 0.0318,
             "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
-            "category": "ksef",
-            "score": 0.0317,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
           }
         ]
       },
@@ -4232,28 +4201,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT - KSeF zwolnienia",
+            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
+            "article_number": "art. 106ga ust. 2",
+            "category": "ksef",
+            "score": 0.0317,
+            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           }
         ]
       },
@@ -4510,18 +4479,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nda",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.029,
-            "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+            "score": 0.0306,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0289,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0292,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -4737,28 +4706,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.0323,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       },
@@ -5009,16 +4978,16 @@
   },
   "top_200": {
     "summary": {
-      "covered_count": 127,
+      "covered_count": 130,
       "weak_count": 15,
-      "gap_count": 58,
-      "coverage_percent": 63.5
+      "gap_count": 55,
+      "coverage_percent": 65.0
     },
     "per_category_breakdown": {
       "ceidg": {
-        "covered_count": 0,
+        "covered_count": 1,
         "weak_count": 0,
-        "gap_count": 5
+        "gap_count": 4
       },
       "cit": {
         "covered_count": 11,
@@ -5047,8 +5016,8 @@
       },
       "ksef": {
         "covered_count": 25,
-        "weak_count": 2,
-        "gap_count": 2
+        "weak_count": 3,
+        "gap_count": 1
       },
       "ordynacja": {
         "covered_count": 0,
@@ -5061,9 +5030,9 @@
         "gap_count": 0
       },
       "praktyka": {
-        "covered_count": 2,
-        "weak_count": 3,
-        "gap_count": 23
+        "covered_count": 4,
+        "weak_count": 2,
+        "gap_count": 22
       },
       "rachunkowosc": {
         "covered_count": 20,
@@ -5562,7 +5531,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 145n ust. 4",
             "category": "ewidencja_faktury_2026",
-            "score": 0.0306,
+            "score": 0.0304,
             "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
           },
           {
@@ -5708,18 +5677,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nda",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.029,
-            "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+            "score": 0.0306,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0289,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0292,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -5983,49 +5952,6 @@
             "category": "status_podatnika_vat",
             "score": 0.0318,
             "preview": "Podatnikami VAT są tylko osoby prowadzące samodzielnie działalność gospodarczą. Osoba, która nie prowadzi działalności gospodarczej (np. zatrudniona w jakimś podmiocie), nie moż..."
-          }
-        ]
-      },
-      {
-        "question": "A po co Ci uprawnienia?",
-        "freq": 4,
-        "dataset_category": "ksef",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [
-          "Rozporządzenie KSeF",
-          "Ustawa o VAT",
-          "Ustawa o VAT - KSeF terminy wdrożenia",
-          "Ustawa o VAT - KSeF uproszczenia 2026",
-          "Ustawa o VAT - KSeF zwolnienia"
-        ],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "fakturowanie",
-            "score": 0.032,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
-          },
-          {
-            "law_name": "Ustawa o rachunkowo?ci",
-            "canonical_law_name": "Ustawa o rachunkowo?ci",
-            "article_number": "art. 39 ust. 1-3",
-            "category": "rachunkowosc",
-            "score": 0.0318,
-            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
-          },
-          {
-            "law_name": "Kodeks pracy",
-            "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 1732",
-            "category": "kadry",
-            "score": 0.0308,
-            "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
           }
         ]
       },
@@ -6486,43 +6412,6 @@
         ]
       },
       {
-        "question": "Wiem, że w przypadku nadania uprawnień i pobrania takich faktur przez nas jest podgląd w PDF, a jak to będzie działać gdy klient je sam do nas wyśle?",
-        "freq": 4,
-        "dataset_category": "praktyka",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 30c ust. 1",
-            "category": "podstawa_opodatkowania",
-            "score": 0.0311,
-            "preview": "Nie zawsze. Podstawę opodatkowania z importu usług się nie ustala w przypadku, gdy wartość usługi została wliczona do podstawy opodatkowania wewnątrzwspólnotowego nabycia towaró..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "§ 4 ust. 1",
-            "category": "system_e-faktur_wymagania_techniczne",
-            "score": 0.03,
-            "preview": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą u..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "§ 4 ust. 1",
-            "category": "autentykacja_ksef",
-            "score": 0.0295,
-            "preview": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie upraw..."
-          }
-        ]
-      },
-      {
         "question": "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
         "freq": 4,
         "dataset_category": "rachunkowosc",
@@ -6616,8 +6505,16 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
             "article_number": "art. 24m",
             "category": "cit",
-            "score": 0.0328,
+            "score": 0.0325,
             "preview": "1. Ilekroć w niniejszym rozdziale jest mowa o: 1) krajowej spółce zależnej – oznacza to spółkę zależną będącą spółką z ograniczoną odpowiedzialnością albo spółką akcyjną, będącą..."
+          },
+          {
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 284aa",
+            "category": "ordynacja",
+            "score": 0.0323,
+            "preview": "W przypadku gdy kontrolowana spółka cywilna, jawna, partnerska, komandytowa albo komandytowo -akcyjna została rozwiązana w trakcie kontroli podatkowej, kontrola podatkowa jest p..."
           },
           {
             "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
@@ -6626,14 +6523,6 @@
             "category": "pit",
             "score": 0.032,
             "preview": "Art. 20 ust. 8 Ustawy o ryczałcie stanowi, że w przypadku przekształcenia spółki w spółkę będącą podatnikiem podatku dochodowego albo przejęcia spółki przez spółkę będącą podatn..."
-          },
-          {
-            "law_name": "Ordynacja podatkowa",
-            "canonical_law_name": "Ordynacja podatkowa",
-            "article_number": "art. 284aa",
-            "category": "ordynacja",
-            "score": 0.032,
-            "preview": "W przypadku gdy kontrolowana spółka cywilna, jawna, partnerska, komandytowa albo komandytowo -akcyjna została rozwiązana w trakcie kontroli podatkowej, kontrola podatkowa jest p..."
           }
         ]
       },
@@ -6662,18 +6551,18 @@
           {
             "law_name": "Kodeks pracy",
             "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 283",
+            "article_number": "art. 1821c",
             "category": "kadry",
-            "score": 0.0317,
-            "preview": "Kto, będąc odpowiedzialnym za stan bezpieczeństwa i higieny pracy albo kierując pracownikami lub innymi osobami fizycznymi, nie przestrzega przepisów lub zasad bezpieczeństwa i ..."
+            "score": 0.0318,
+            "preview": "Urlop rodzicielski jest udzielany jednorazowo albo nie więcej niż w 5 częściach nie później niż do zakończenia roku kalendarzowego, w którym dziecko kończy 6 rok życia"
           },
           {
             "law_name": "Kodeks pracy",
             "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 1821c",
+            "article_number": "art. 283",
             "category": "kadry",
-            "score": 0.0315,
-            "preview": "Urlop rodzicielski jest udzielany jednorazowo albo nie więcej niż w 5 częściach nie później niż do zakończenia roku kalendarzowego, w którym dziecko kończy 6 rok życia"
+            "score": 0.0317,
+            "preview": "Kto, będąc odpowiedzialnym za stan bezpieczeństwa i higieny pracy albo kierując pracownikami lub innymi osobami fizycznymi, nie przestrzega przepisów lub zasad bezpieczeństwa i ..."
           }
         ]
       },
@@ -6834,43 +6723,6 @@
         ]
       },
       {
-        "question": "Czy w Ksefie prowadząc jdg trzeba nadać uprawnienia administratora?",
-        "freq": 3,
-        "dataset_category": "ceidg",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0328,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 44 ust. 10",
-            "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
-            "score": 0.032,
-            "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 15 ust. 1",
-            "category": "status podatnika VAT",
-            "score": 0.0318,
-            "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
-          }
-        ]
-      },
-      {
         "question": "Jakie PKD na prezenty z gotowych produktów typu lizaki, cukierki, batoniki, czekolada i tym podobne?",
         "freq": 3,
         "dataset_category": "ceidg",
@@ -6978,7 +6830,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106gb",
             "category": "e-faktury_ksef",
-            "score": 0.0305,
+            "score": 0.0303,
             "preview": "Przepisy art. 106gb dotyczą faktur ustrukturyzowanych wysyłanych przez KSeF, jednak tekst artykułu nie zawiera bezpośredniej informacji o możliwości wysyłania faktur korygującyc..."
           }
         ]
@@ -7327,43 +7179,6 @@
         ]
       },
       {
-        "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
-        "freq": 16,
-        "dataset_category": "praktyka",
-        "aktuo_category": "faktury_korygujące",
-        "verdict": "WEAK",
-        "reason": "Retriever zwrócił sensowny wynik, ale pytanie nie mapuje się jednoznacznie do jednej ustawy.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 5",
-            "category": "faktury_korygujące",
-            "score": 0.0328,
-            "preview": "Pomyłka w NIP-ie na fakturze wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5, który obejmuje pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2a",
-            "category": "faktury_korygujace",
-            "score": 0.031,
-            "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.032,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
-          }
-        ]
-      },
-      {
         "question": "Szukam kogoś kto ukończył II stopień księgowości w SKWP Cześć, szukam kogoś kto ukończył II stopień księgowości w SKWP?",
         "freq": 14,
         "dataset_category": "praktyka",
@@ -7592,6 +7407,49 @@
             "category": "obowiazek_faktury",
             "score": 0.0315,
             "preview": "Podatnik powinien wystawić fakturę za sprzedaż energii, jeśli sprzedaż dotyczy innego podatnika VAT lub osoby prawnej niebędącej podatnikiem (art. 106b ust. 1 pkt 1). Wyjątkiem ..."
+          }
+        ]
+      },
+      {
+        "question": "A po co Ci uprawnienia?",
+        "freq": 4,
+        "dataset_category": "ksef",
+        "aktuo_category": "ogólne",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "missing_kb_unit",
+        "expected_laws": [
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
+        "assigned_batch": "KSeF uprawnienia i obieg faktur",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.032,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+          },
+          {
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+            "category": "fakturowanie",
+            "score": 0.032,
+            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+            "category": "ksef",
+            "score": 0.0305,
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           }
         ]
       },
@@ -7871,10 +7729,10 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 30b ust. 4",
-            "category": "Podstawa opodatkowania przy imporcie",
-            "score": 0.029,
-            "preview": "Do podstawy opodatkowania importu wliczają się koszty dodatkowe takie jak prowizja, opakowanie, transport i ubezpieczenie — ale tylko jeśli nie zostały już uwzględnione w wartoś..."
+            "article_number": "art. 145n ust. 4",
+            "category": "ewidencja_faktury_2026",
+            "score": 0.0288,
+            "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
           }
         ]
       }
@@ -8054,28 +7912,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
             "score": 0.0323,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0315,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -8323,36 +8181,42 @@
         "question": "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
         "freq": 16,
         "dataset_category": "praktyka",
-        "aktuo_category": "faktury_korygujące",
-        "verdict": "WEAK",
-        "reason": "Retriever zwrócił sensowny wynik, ale pytanie nie mapuje się jednoznacznie do jednej ustawy.",
+        "aktuo_category": "ksef",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1 pkt 5",
-            "category": "faktury_korygujące",
-            "score": 0.0328,
-            "preview": "Pomyłka w NIP-ie na fakturze wymaga wystawienia faktury korygującej zgodnie z art. 106j ust. 1 pkt 5, który obejmuje pomyłki w jakiejkolwiek pozycji faktury. Faktura korygująca ..."
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 2a",
-            "category": "faktury_korygujace",
-            "score": 0.031,
-            "preview": "Nie – słowa \"FAKTURA KORYGUJĄCA\" lub \"KOREKTA\" są fakultatywne. Możesz je umieścić, ale nie są obowiązkowe. Obowiązkowe są natomiast dane faktury pierwotnej, numer korekty i kwo..."
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 3 ust. 2 pkt 3-4 oraz ust. 3 pkt 1-2",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Rozporządzenie dopuszcza dalsze przekazywanie uprawnień w określonym łańcuchu. Uprawnienie z § 3 ust. 1 pkt 2 może mieć także podmiot wskazany przez podatnika oraz osoba fizyczn..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.032,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
+            "article_number": "art. 145l",
+            "category": "ksef",
+            "score": 0.0315,
+            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
           }
         ]
       },
@@ -8494,28 +8358,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0315,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0315,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -8537,28 +8401,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -8740,28 +8604,28 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0323,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.0325,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0323,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       },
@@ -9225,7 +9089,7 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0265,
+            "score": 0.0261,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
@@ -9260,24 +9124,24 @@
             "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
             "article_number": "art. 145l",
             "category": "ksef",
-            "score": 0.0328,
+            "score": 0.0325,
             "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.032,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF terminy wdrożenia",
-            "canonical_law_name": "Ustawa o VAT - KSeF terminy wdrożenia",
-            "article_number": "art. 106ga",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 202..."
+            "score": 0.0315,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -10128,28 +9992,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.0325,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -10845,7 +10709,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 145n ust. 4",
             "category": "ewidencja_faktury_2026",
-            "score": 0.0306,
+            "score": 0.0304,
             "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
           },
           {
@@ -10954,28 +10818,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -10997,28 +10861,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
             "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.0318,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           }
         ]
       },
@@ -11041,11 +10905,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0325,
+            "score": 0.032,
             "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           },
           {
@@ -11053,16 +10925,8 @@
             "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
             "article_number": "art. 145l",
             "category": "ksef",
-            "score": 0.0325,
+            "score": 0.0318,
             "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
-            "category": "ksef",
-            "score": 0.0317,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
           }
         ]
       },
@@ -11084,28 +10948,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
             "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT - KSeF zwolnienia",
+            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
+            "article_number": "art. 106ga ust. 2",
+            "category": "ksef",
+            "score": 0.0317,
+            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           }
         ]
       },
@@ -11362,18 +11226,18 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nda",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.029,
-            "preview": "1. Podatnik obowiązany do wystawiania faktur ustrukturyzowanych może wystawiać faktury w postaci elektronicznej, zgodnie ze wzorem udostępnionym na podstawie art. 106gb ust. 8. ..."
+            "score": 0.0306,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0289,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0292,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -11589,28 +11453,28 @@
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.0323,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       },
@@ -12244,8 +12108,8 @@
         "freq": 4,
         "dataset_category": "ksef",
         "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Rozporządzenie KSeF",
@@ -12257,6 +12121,14 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.032,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+          },
+          {
             "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
@@ -12265,20 +12137,12 @@
             "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
           },
           {
-            "law_name": "Ustawa o rachunkowo?ci",
-            "canonical_law_name": "Ustawa o rachunkowo?ci",
-            "article_number": "art. 39 ust. 1-3",
-            "category": "rachunkowosc",
-            "score": 0.0318,
-            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
-          },
-          {
-            "law_name": "Kodeks pracy",
-            "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 1732",
-            "category": "kadry",
-            "score": 0.0308,
-            "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+            "category": "ksef",
+            "score": 0.0305,
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           }
         ]
       },
@@ -12301,28 +12165,28 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
+            "score": 0.032,
             "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -12344,28 +12208,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "score": 0.0323,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.0323,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
             "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -12561,28 +12425,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.0323,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
+            "score": 0.0317,
             "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -12665,10 +12529,10 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 3",
-            "category": "KSeF - wysyłanie faktur",
-            "score": 0.0292,
-            "preview": "Tekst artykułu wskazuje tylko podmioty uprawnione do wystawiania faktur w KSeF, ale nie zawiera instrukcji technicznych dotyczących wysyłania faktur z programów księgowych. Wyma..."
+            "article_number": "art. 106ga",
+            "category": "KSeF i dokumentacja VAT",
+            "score": 0.0291,
+            "preview": "Ustawa o VAT nie zawiera przepisów łączących obowiązek wysyłania faktur do KSeF z możliwością pobierania faktur zakupu z KSeF lub odliczania VAT. Art. 106ga dotyczy WYSYŁANIA fa..."
           }
         ]
       },
@@ -13169,36 +13033,42 @@
         "question": "Wiem, że w przypadku nadania uprawnień i pobrania takich faktur przez nas jest podgląd w PDF, a jak to będzie działać gdy klient je sam do nas wyśle?",
         "freq": 4,
         "dataset_category": "praktyka",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [],
+        "aktuo_category": "ksef",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 30c ust. 1",
-            "category": "podstawa_opodatkowania",
-            "score": 0.0311,
-            "preview": "Nie zawsze. Podstawę opodatkowania z importu usług się nie ustala w przypadku, gdy wartość usługi została wliczona do podstawy opodatkowania wewnątrzwspólnotowego nabycia towaró..."
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "§ 4 ust. 1",
-            "category": "system_e-faktur_wymagania_techniczne",
-            "score": 0.03,
-            "preview": "Na podstawie dostarczonego fragmentu ustawy o VAT nie ma informacji dotyczących rozwiązywania błędów API KSeF ani procedur technicznych obsługi takich błędów. Artykuły dotyczą u..."
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "§ 4 ust. 1",
-            "category": "autentykacja_ksef",
-            "score": 0.0295,
-            "preview": "Na podstawie dostarczonego tekstu artykułów nie można znaleźć informacji dotyczącej procedury uwierzytelniania się w KSeF podpisem kwalifikowanym. Artykuły dotyczą jedynie upraw..."
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0317,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -13569,8 +13439,16 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
             "article_number": "art. 24m",
             "category": "cit",
-            "score": 0.0328,
+            "score": 0.0325,
             "preview": "1. Ilekroć w niniejszym rozdziale jest mowa o: 1) krajowej spółce zależnej – oznacza to spółkę zależną będącą spółką z ograniczoną odpowiedzialnością albo spółką akcyjną, będącą..."
+          },
+          {
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 284aa",
+            "category": "ordynacja",
+            "score": 0.0323,
+            "preview": "W przypadku gdy kontrolowana spółka cywilna, jawna, partnerska, komandytowa albo komandytowo -akcyjna została rozwiązana w trakcie kontroli podatkowej, kontrola podatkowa jest p..."
           },
           {
             "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
@@ -13579,14 +13457,6 @@
             "category": "pit",
             "score": 0.032,
             "preview": "Art. 20 ust. 8 Ustawy o ryczałcie stanowi, że w przypadku przekształcenia spółki w spółkę będącą podatnikiem podatku dochodowego albo przejęcia spółki przez spółkę będącą podatn..."
-          },
-          {
-            "law_name": "Ordynacja podatkowa",
-            "canonical_law_name": "Ordynacja podatkowa",
-            "article_number": "art. 284aa",
-            "category": "ordynacja",
-            "score": 0.032,
-            "preview": "W przypadku gdy kontrolowana spółka cywilna, jawna, partnerska, komandytowa albo komandytowo -akcyjna została rozwiązana w trakcie kontroli podatkowej, kontrola podatkowa jest p..."
           }
         ]
       },
@@ -13615,18 +13485,18 @@
           {
             "law_name": "Kodeks pracy",
             "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 283",
+            "article_number": "art. 1821c",
             "category": "kadry",
-            "score": 0.0317,
-            "preview": "Kto, będąc odpowiedzialnym za stan bezpieczeństwa i higieny pracy albo kierując pracownikami lub innymi osobami fizycznymi, nie przestrzega przepisów lub zasad bezpieczeństwa i ..."
+            "score": 0.0318,
+            "preview": "Urlop rodzicielski jest udzielany jednorazowo albo nie więcej niż w 5 częściach nie później niż do zakończenia roku kalendarzowego, w którym dziecko kończy 6 rok życia"
           },
           {
             "law_name": "Kodeks pracy",
             "canonical_law_name": "Kodeks pracy",
-            "article_number": "art. 1821c",
+            "article_number": "art. 283",
             "category": "kadry",
-            "score": 0.0315,
-            "preview": "Urlop rodzicielski jest udzielany jednorazowo albo nie więcej niż w 5 częściach nie później niż do zakończenia roku kalendarzowego, w którym dziecko kończy 6 rok życia"
+            "score": 0.0317,
+            "preview": "Kto, będąc odpowiedzialnym za stan bezpieczeństwa i higieny pracy albo kierując pracownikami lub innymi osobami fizycznymi, nie przestrzega przepisów lub zasad bezpieczeństwa i ..."
           }
         ]
       },
@@ -14108,36 +13978,42 @@
         "question": "Czy w Ksefie prowadząc jdg trzeba nadać uprawnienia administratora?",
         "freq": 3,
         "dataset_category": "ceidg",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
+        "aktuo_category": "ksef",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+            "category": "ksef",
             "score": 0.0328,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 44 ust. 10",
-            "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
-            "score": 0.032,
-            "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.0277,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 15 ust. 1",
-            "category": "status podatnika VAT",
-            "score": 0.0318,
-            "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0269,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -14405,7 +14281,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106gb",
             "category": "e-faktury_ksef",
-            "score": 0.0305,
+            "score": 0.0303,
             "preview": "Przepisy art. 106gb dotyczą faktur ustrukturyzowanych wysyłanych przez KSeF, jednak tekst artykułu nie zawiera bezpośredniej informacji o możliwości wysyłania faktur korygującyc..."
           }
         ]
@@ -15459,10 +15335,10 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 30b ust. 4",
-            "category": "Podstawa opodatkowania przy imporcie",
-            "score": 0.029,
-            "preview": "Do podstawy opodatkowania importu wliczają się koszty dodatkowe takie jak prowizja, opakowanie, transport i ubezpieczenie — ale tylko jeśli nie zostały już uwzględnione w wartoś..."
+            "article_number": "art. 145n ust. 4",
+            "category": "ewidencja_faktury_2026",
+            "score": 0.0288,
+            "preview": "Faktury wystawione z kas rejestrujących, których wartość i podatek zostały ujęte w raporcie fiskalnym dobowym, ujmuje się w ewidencji w okresie rozliczeniowym, w którym faktury ..."
           }
         ]
       },
@@ -15484,28 +15360,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.0325,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
+            "score": 0.0317,
             "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           }
         ]
       },
@@ -15527,28 +15403,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
-            "category": "ksef",
             "score": 0.032,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.0318,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           }
         ]
       },
@@ -15570,28 +15446,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.0328,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+          },
+          {
             "law_name": "Ustawa o VAT - KSeF zwolnienia",
             "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
             "article_number": "art. 106ga ust. 2",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
             "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           }
         ]
       },
@@ -15613,28 +15489,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0328,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
-          },
-          {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.0325,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0318,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          },
+          {
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "category": "ksef",
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       },
@@ -15700,28 +15576,28 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
             "score": 0.0325,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.0325,
-            "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
+            "score": 0.0323,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.031,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       },
@@ -15756,7 +15632,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 6",
             "category": "rachunkowosc",
-            "score": 0.0313,
+            "score": 0.0306,
             "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
           },
           {
@@ -15764,7 +15640,7 @@
             "canonical_law_name": "Ustawa o rachunkowości",
             "article_number": "art. 45 ust. 1",
             "category": "sprawozdanie_finansowe_podstawy",
-            "score": 0.0263,
+            "score": 0.0259,
             "preview": "Sprawozdanie finansowe sporządza się na dzień zamknięcia ksiąg rachunkowych (art. 45 ust. 1), czyli zazwyczaj na koniec roku obrachunkowego (31 grudnia), lub na inny dzień bilan..."
           }
         ]
@@ -15787,28 +15663,28 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
             "score": 0.0325,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106na ust. 1 i 3",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0325,
-            "preview": "1. Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur. 2. (uchylony) 3. Faktura ustrukturyzowana jest uznana za otrzymaną przy..."
+            "score": 0.032,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "canonical_law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-            "article_number": "art. 145l",
+            "law_name": "Rozporządzenie KSeF",
+            "canonical_law_name": "Rozporządzenie KSeF",
+            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
             "category": "ksef",
-            "score": 0.0315,
-            "preview": "Do końca 2026 r. obowiązują uproszczenia: podatnicy mogą wystawiać faktury papierowe lub elektroniczne jeśli łączna sprzedaż w miesiącu nie przekracza 10 000 zł. Do końca 2026 r..."
+            "score": 0.032,
+            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
           }
         ]
       }
@@ -15846,24 +15722,6 @@
         "SF"
       ],
       "priority_score": 39.0
-    },
-    {
-      "batch_name": "KSeF uprawnienia i obieg faktur",
-      "recommended_fix_type": "kb_units",
-      "estimated_kb_units_needed": 3,
-      "estimated_synonym_additions_needed": 0,
-      "expected_impact_on_top100_questions": 1,
-      "expected_impact_on_top100_pp": 1.0,
-      "expected_impact_on_top200_questions": 4,
-      "expected_impact_on_top200_pp": 2.0,
-      "likely_laws_or_regulations_needed": [
-        "Rozporządzenie KSeF",
-        "Ustawa o VAT"
-      ],
-      "likely_synonym_additions_needed": [
-        "KSeF"
-      ],
-      "priority_score": 27.0
     },
     {
       "batch_name": "Leasing / samochody / amortyzacja",
@@ -15916,6 +15774,24 @@
         "UPL-1"
       ],
       "priority_score": 8.0
+    },
+    {
+      "batch_name": "KSeF uprawnienia i obieg faktur",
+      "recommended_fix_type": "kb_units",
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "expected_impact_on_top100_questions": 0,
+      "expected_impact_on_top100_pp": 0.0,
+      "expected_impact_on_top200_questions": 1,
+      "expected_impact_on_top200_pp": 0.5,
+      "likely_laws_or_regulations_needed": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT"
+      ],
+      "likely_synonym_additions_needed": [
+        "KSeF"
+      ],
+      "priority_score": 4.0
     },
     {
       "batch_name": "Ryczałt i stawki działalności",

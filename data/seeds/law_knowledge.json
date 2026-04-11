@@ -36035,5 +36035,50 @@
     "question_intent": "Faktura leasingowa 23.02-09.03 ? KUP i limit warto?ci samochodu",
     "content": "Op?aty ustalone w umowie leasingu stanowi? koszt uzyskania przychod?w korzystaj?cego w podstawowym okresie umowy, je?eli umowa spe?nia warunki ustawowe z art. 23b ust. 1. Przy samochodzie osobowym ograniczenie z art. 23 ust. 1 pkt 47a obejmuje cz??? op?at leasingowych przekraczaj?c? proporcj? wynikaj?c? z ustawowego limitu warto?ci samochodu. To jest podatkowa podstawa do analizy faktury leasingowej obejmuj?cej prze?om miesi?cy; bilansowe rozliczenie okresu wynika odr?bnie z ustawy o rachunkowo?ci. Podstawa prawna: art. 23b ust. 1 oraz art. 23 ust. 1 pkt 47a ustawy o PIT.",
     "source": "manual_grounded_kpir_batch_2026_04_11"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 3 ust. 2 pkt 3-4 oraz ust. 3 pkt 1-2",
+    "category": "ksef",
+    "verified_date": "2026-04-11",
+    "question_intent": "Czy osoba, która dostała w KSeF uprawnienia z prawem do dalszego nadawania, może przekazać je dalej na inny NIP albo na spółkę",
+    "content": "Rozporządzenie dopuszcza dalsze przekazywanie uprawnień w określonym łańcuchu. Uprawnienie z § 3 ust. 1 pkt 2 może mieć także podmiot wskazany przez podatnika oraz osoba fizyczna wskazana przez taki podmiot, a także osoba fizyczna wskazana przez osobę fizyczną mającą prawo nadawania i odbierania uprawnień (§ 3 ust. 2 pkt 4, ust. 3 pkt 1-2). Oznacza to, że dalsze przekazanie jest możliwe tylko w granicach wskazanego w rozporządzeniu modelu i po prawidłowym wskazaniu kolejnego podmiotu lub osoby w KSeF.",
+    "source": "manual_grounded_ksef_permissions_batch_2026_04_11"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
+    "category": "ksef",
+    "verified_date": "2026-04-11",
+    "question_intent": "Czy w JDG trzeba nadać administratora w KSeF i jak formalnie nadaje się lub odbiera uprawnienia",
+    "content": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m.in. NIP podatnika, dane osoby lub podmiotu, rodzaj uprawnienia oraz w razie potrzeby dane związane z podpisem lub pieczęcią (§ 4 ust. 2). Rozporządzenie nie wprowadza obowiązku wyznaczania odrębnego administratora dla każdej JDG; podatnik może działać sam albo wskazać osoby fizyczne lub podmioty zgodnie z § 3, a w trybie zawiadomienia z § 5 ust. 1-3 jednocześnie może być wskazana tylko jedna osoba fizyczna.",
+    "source": "manual_grounded_ksef_permissions_batch_2026_04_11"
+  },
+  {
+    "law_name": "Rozporządzenie KSeF",
+    "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+    "category": "ksef",
+    "verified_date": "2026-04-11",
+    "question_intent": "Do czego są uprawnienia w KSeF i jak uzyskuje się dostęp do faktury lub jej podglądu bez logowania",
+    "content": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifikowanego podpisu, kwalifikowanej pieczęci albo certyfikatu KSeF (§ 6 ust. 1). Niezależnie od tego rozporządzenie przewiduje dostęp do faktury bez uwierzytelnienia przez kod weryfikujący i dane identyfikujące fakturę (§ 7 ust. 1-2) albo przez numer identyfikujący w KSeF wraz z danymi faktury i nabywcy (§ 8).",
+    "source": "manual_grounded_ksef_permissions_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o VAT",
+    "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+    "category": "ksef",
+    "verified_date": "2026-04-11",
+    "question_intent": "Po co są uprawnienia w KSeF i jakie czynności w systemie obejmują",
+    "content": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych uprawnieniach, uwierzytelniania i weryfikacji prawa do korzystania z systemu oraz do dostępu do faktur ustrukturyzowanych (art. 106nd ust. 2 pkt 1-6 i 11 ustawy o VAT). W praktyce uprawnienia są potrzebne po to, aby system rozpoznał, kto może działać w imieniu podatnika i kto ma prawo zobaczyć albo obsłużyć fakturę w KSeF.",
+    "source": "manual_grounded_ksef_permissions_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o VAT",
+    "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+    "category": "ksef",
+    "verified_date": "2026-04-11",
+    "question_intent": "Jak działa obieg faktury w KSeF, gdy klient sam wysyła fakturę albo przekazuje ją poza systemem",
+    "content": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych w art. 106gb ust. 4 faktura może być udostępniona nabywcy w sposób z nim uzgodniony, a podatnik musi oznaczyć ją kodem umożliwiającym dostęp lub weryfikację danych (art. 106gb ust. 5-6). Dla celów prawnych faktura jest wystawiona w dniu przesłania do KSeF, otrzymana przy nadaniu numeru KSeF, a gdy udostępnia się ją poza KSeF odbiorcy z art. 106gb ust. 4 - za datę otrzymania przyjmuje się faktyczne otrzymanie przez nabywcę (art. 106na ust. 1, 3-4).",
+    "source": "manual_grounded_ksef_permissions_batch_2026_04_11"
   }
 ]
