@@ -1,16 +1,19 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from collections import Counter
 from pathlib import Path
 
+from analysis.run_eval import build_eval_report, write_eval_report
 from core.categorizer import categorize_query
 from core.retriever import retrieve_chunks
 
 
 KB_PATH = Path("data/seeds/law_knowledge.json")
 OUTPUT_PATH = Path("analysis/quality_audit_report.json")
+EVAL_MIN_ACCURACY = float(os.getenv("AKTUO_EVAL_MIN_ACCURACY", "0.80"))
 
 QUESTIONS = [
     {"query": "Termin złożenia JPK_V7?", "expected_laws": ["Ustawa o VAT", "Rozporządzenie JPK_V7"]},
@@ -147,6 +150,14 @@ def main() -> None:
     report = {"summary": dict(summary), "questions": results}
     OUTPUT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report["summary"], ensure_ascii=False))
+
+    eval_report = build_eval_report(knowledge_path=KB_PATH)
+    write_eval_report(eval_report)
+    behavior_accuracy = float(eval_report["overall"]["behavior_accuracy"])
+    if behavior_accuracy < EVAL_MIN_ACCURACY:
+        raise SystemExit(
+            f"Golden eval accuracy {behavior_accuracy:.2%} is below required threshold {EVAL_MIN_ACCURACY:.0%}."
+        )
 
 
 if __name__ == "__main__":
