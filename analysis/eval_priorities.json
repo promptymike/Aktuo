@@ -1,0 +1,532 @@
+{
+  "failed_records": 344,
+  "overall": {
+    "behavior_accuracy": 0.312,
+    "intent_accuracy": 0.504,
+    "macro_precision": 0.5187,
+    "macro_recall": 0.4667,
+    "total_records": 500
+  },
+  "root_cause_summary": [
+    {
+      "count": 132,
+      "example_questions": [
+        "Czy to jest poprawne?",
+        "Czy od samochodu Opel combo van, który ma wpisane w dowodzie rejestracyjnym samochód ciężarowy do 3,5 t, można odliczać 100% VAT?",
+        "Samochód osobowy z leasingiem operacyjnymWartość powyżej 100 tys bruttoZgłoszony do VAT-26Czy leasing odliczam proporcje?"
+      ],
+      "root_cause": "wrong_category_match",
+      "total_frequency": 435
+    },
+    {
+      "count": 2,
+      "example_questions": [
+        "Jeśli mam kogoś na zleceniu, ale w 2025 nie przepracował ani 1h i nie zarobił ani 1zł to czy muszę wystawiać zerowy PIT4R?",
+        ", jak oznaczyć import usług w programie comarvh optima jezeli dotyczy on tylko jednej poxycji na fakturze?"
+      ],
+      "root_cause": "wrong_law_priority",
+      "total_frequency": 12
+    },
+    {
+      "count": 51,
+      "example_questions": [
+        "Faktura wystawiona 1 kwietnia, czyli najpóźniej 2 kwietnia powinna być w KSeF przy założeniu trybu offline, ale nie dotarła?",
+        "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?"
+      ],
+      "root_cause": "needs_clarification_but_answered",
+      "total_frequency": 263
+    },
+    {
+      "count": 159,
+      "example_questions": [
+        "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
+        "W trakcie użytkowania odliczałam 50% VAT (paliwa, koszty eksploatacji). Czy ta darowizna powinna być opodatkowana VAT?",
+        "A czemu nie?"
+      ],
+      "root_cause": "unknown",
+      "total_frequency": 775
+    }
+  ],
+  "suggested_fixes": [
+    {
+      "count": 18,
+      "example_questions": [
+        "Faktura wystawiona 1 kwietnia, czyli najpóźniej 2 kwietnia powinna być w KSeF przy założeniu trybu offline, ale nie dotarła?",
+        "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?",
+        "Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?Faktura do paragonu z kodem GTU - znacznik w JPK VAT - FP, BFK, GTU_?"
+      ],
+      "expected_intent": "vat_jpk_ksef",
+      "expected_law_or_area": "VAT / JPK / KSeF",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified vat_jpk_ksef questions.",
+      "total_frequency": 171
+    },
+    {
+      "count": 10,
+      "example_questions": [
+        "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
+        "A czemu nie?",
+        "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?"
+      ],
+      "expected_intent": "legal_substantive",
+      "expected_law_or_area": "przepisy materialne",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed legal_substantive examples manually and refine the weakest layer first.",
+      "total_frequency": 117
+    },
+    {
+      "count": 21,
+      "example_questions": [
+        "Może ktoś podpowie?",
+        "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+        "Czy są na grupie osoby prowadzące księgi rachunkowe wydawnictwa?"
+      ],
+      "expected_intent": "legal_substantive",
+      "expected_law_or_area": "przepisy materialne",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so legal_substantive queries are not misclassified.",
+      "total_frequency": 104
+    },
+    {
+      "count": 9,
+      "example_questions": [
+        "W trakcie użytkowania odliczałam 50% VAT (paliwa, koszty eksploatacji). Czy ta darowizna powinna być opodatkowana VAT?",
+        "Czy to prawda?",
+        "Czy w takiej sytuacji przysługuje mu pełne odliczenie VAT czy np jak to jest z samochodami w leasingu w mieszanym użytkowaniu 50%?"
+      ],
+      "expected_intent": "vat_jpk_ksef",
+      "expected_law_or_area": "VAT / JPK / KSeF",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed vat_jpk_ksef examples manually and refine the weakest layer first.",
+      "total_frequency": 98
+    },
+    {
+      "count": 22,
+      "example_questions": [
+        "Jak to prawidłowo ująć koszty dotyczące tamtego roku, które dopiero teraz przyszły?",
+        "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+        "Szukam osoby do pracy w księgowości do biura rachunkowego w Rzeszowie, ze znajomością przepisów i Optimy?"
+      ],
+      "expected_intent": "accounting_operational",
+      "expected_law_or_area": "rachunkowość operacyjna",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed accounting_operational examples manually and refine the weakest layer first.",
+      "total_frequency": 95
+    },
+    {
+      "count": 19,
+      "example_questions": [
+        "Jaki program do księgowania polecacie do rozliczania najpierw jednej firmy a w dalszej perspektywie może kolejnych?",
+        "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+        "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?"
+      ],
+      "expected_intent": "software_tooling",
+      "expected_law_or_area": "oprogramowanie księgowe",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed software_tooling examples manually and refine the weakest layer first.",
+      "total_frequency": 95
+    },
+    {
+      "count": 21,
+      "example_questions": [
+        "Czy działa Wam „ e płatnik „ na pue ZUS?",
+        "W pue wyskakują mi jakieś błędy,Podpowie dobra duszyczka ile wynoszą łącznie teraz składki na ZUS preferencyjny ryczałt 60k-300k?",
+        "..Czy ktoś z Was miał podobną sytuację?"
+      ],
+      "expected_intent": "zus",
+      "expected_law_or_area": "ZUS",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed zus examples manually and refine the weakest layer first.",
+      "total_frequency": 76
+    },
+    {
+      "count": 19,
+      "example_questions": [
+        "Czy nadal trzeba pisać pisma o stwierdzenie nadpłaty i zwrot jesli wynika z cit8? Czy sami zwrócą?",
+        "Wynajem auta za granica. Czy w tej sytuacji należy pobrać podatek u źródła (WHT)?",
+        "Doby wieczór!. Składacie państwo deklarację IFT2R? Czy składa się do miesięcznej subskrypcji (Google, Adobe itp)?"
+      ],
+      "expected_intent": "cit_wht",
+      "expected_law_or_area": "CIT / WHT",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed cit_wht examples manually and refine the weakest layer first.",
+      "total_frequency": 69
+    },
+    {
+      "count": 12,
+      "example_questions": [
+        "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW??",
+        "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?",
+        "Bo sie zgubiłam. PIT-37 Ulga rehabilitacyjna na niepełnosprawnego syna i faktury za leki powyżej 100 zl?"
+      ],
+      "expected_intent": "pit_ryczalt",
+      "expected_law_or_area": "PIT / ryczałt",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed pit_ryczalt examples manually and refine the weakest layer first.",
+      "total_frequency": 66
+    },
+    {
+      "count": 14,
+      "example_questions": [
+        "Czy to jest poprawne?",
+        "Estoński CIT czy zakupiony obiad dla pracowników co jakiś czas to wydatek niezwiązany z działalnością gospodarczą czy kolacja służbowa?",
+        "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?"
+      ],
+      "expected_intent": "hr",
+      "expected_law_or_area": "Kodeks pracy",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so hr queries are not misclassified.",
+      "total_frequency": 56
+    },
+    {
+      "count": 5,
+      "example_questions": [
+        "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
+        "Czy mogę odliczyć VAT w styczniu (faktura wystawiona w grudniu), ale tylko odliczę VAT w styczniu a nie będę ujmować kosztu w kpir?",
+        "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?"
+      ],
+      "expected_intent": "pit_ryczalt",
+      "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed pit_ryczalt examples manually and refine the weakest layer first.",
+      "total_frequency": 52
+    },
+    {
+      "count": 6,
+      "example_questions": [
+        "Czy od samochodu Opel combo van, który ma wpisane w dowodzie rejestracyjnym samochód ciężarowy do 3,5 t, można odliczać 100% VAT?",
+        "Samochód osobowy z leasingiem operacyjnymWartość powyżej 100 tys bruttoZgłoszony do VAT-26Czy leasing odliczam proporcje?",
+        "OSS sprzedaż towaru dla klienta z Niemiec a klient chce żeby towar jechał na Węgry czy tak może być i jaka stawka VAT wtedy?"
+      ],
+      "expected_intent": "vat_jpk_ksef",
+      "expected_law_or_area": "VAT / JPK / KSeF",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so vat_jpk_ksef queries are not misclassified.",
+      "total_frequency": 47
+    },
+    {
+      "count": 13,
+      "example_questions": [
+        "Czy brać pod uwagę tylko SKWP czy może Fundację Rozwoju Rachunkowości czy Krajową Izbę Księgowych?",
+        "Czy ktoś się spotkał z taką sytuacją?",
+        "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?"
+      ],
+      "expected_intent": "accounting_operational",
+      "expected_law_or_area": "rachunkowość operacyjna",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so accounting_operational queries are not misclassified.",
+      "total_frequency": 39
+    },
+    {
+      "count": 9,
+      "example_questions": [
+        "DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+        "Do osób pracujących w BR Jak wygląda u Was kwestia nadgodzin? Czy macie je wypłacane, bądź odbieracie za nie czas wolny?",
+        "Co się zmieniło?"
+      ],
+      "expected_intent": "hr",
+      "expected_law_or_area": "Kodeks pracy",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed hr examples manually and refine the weakest layer first.",
+      "total_frequency": 39
+    },
+    {
+      "count": 10,
+      "example_questions": [
+        "Czy w Waszych biura h rachunkowych też tak jest, że potwierdzenia sald drukujecie i przychodzi je odebrać ktoś z firmy, sami podpisują i wysyłają?",
+        "Czy coś mnie ominęło?",
+        "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?"
+      ],
+      "expected_intent": "pit_ryczalt",
+      "expected_law_or_area": "PIT / ryczałt",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so pit_ryczalt queries are not misclassified.",
+      "total_frequency": 38
+    },
+    {
+      "count": 17,
+      "example_questions": [
+        "Czy pit11 można wysłać jeszcze 2 lutego z uwagi na weekend?",
+        "Pit-37 Zamotałam się osoba która otrzymuje PIT40A z KRUS i PIT11A otrzymuje z Zusu powinna taką osoba rozliczyć się PIT 37?",
+        "Dopiero się uczę jeśli emeryt dostał PIT 40a oraz PIT 11 emerytura zza granicy ulga rehabilitacyjna to składam PIT 36 plus PIT 0, czy coś jeszcze?"
+      ],
+      "expected_intent": "payroll",
+      "expected_law_or_area": "kadry i płace",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed payroll examples manually and refine the weakest layer first.",
+      "total_frequency": 36
+    },
+    {
+      "count": 10,
+      "example_questions": [
+        "Szukam biura, które jak trzeba to skieruje na badania medycyny pracy, podpowie kontakt na szkolenie bhp, podpowie co zrobic by było dobrze/ lepiej (jest kreatywne.)?",
+        "Czy jeśli jest certyfikat rezydencji z Canvy to trzeba wykazywać to w cit10z i pobierać podatek u źródła?",
+        "Czy usługa przeprowadzenia takiego szkolenia może być zwolniona z VAT?"
+      ],
+      "expected_intent": "education_community",
+      "expected_law_or_area": "edukacja i społeczność",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so education_community queries are not misclassified.",
+      "total_frequency": 33
+    },
+    {
+      "count": 12,
+      "example_questions": [
+        "Jaka cena za usługę?",
+        "Bo z jednej strony jest czynny VAT, wystawia faktury ze stawką 23% za wynajem nieruchomości- czy li ma obowiązek, a z drugiej strony nie jest przedsiębiorca, czyli nie ma obowiązku?",
+        "Czy jako biura rachunkowe, ksiegowosc macie ubezpieczenia na wypadek pomyłek?. —?"
+      ],
+      "expected_intent": "zus",
+      "expected_law_or_area": "ZUS",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so zus queries are not misclassified.",
+      "total_frequency": 32
+    },
+    {
+      "count": 15,
+      "example_questions": [
+        "Stosunek powierzchni wydaje się rozsądny dla opłat typu czynsz, podatek od nieruchomości, ogrzewanie, ale czy zużycie energii?",
+        "Czy urząd skarbowy tak samo pozbywa się jakoś dokumentów przesłanych przez podatnika po iluś tam latach, jak to jest ktoś może się orientuje?",
+        "A poszly do kontrahenta wezwania do zaplaty/noty?"
+      ],
+      "expected_intent": "legal_procedural",
+      "expected_law_or_area": "Ordynacja podatkowa / procedury",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed legal_procedural examples manually and refine the weakest layer first.",
+      "total_frequency": 30
+    },
+    {
+      "count": 9,
+      "example_questions": [
+        "Szukam osoby , która pracuje w programie symfonia e - biuro i jest w stanie odpłatnie wdrożyć w ten program?",
+        "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że faktury pobrane do rejestru to nie mam \"V\" czy ktoś też tak ma? Dlaczego tak się dzieje?",
+        "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?"
+      ],
+      "expected_intent": "software_tooling",
+      "expected_law_or_area": "oprogramowanie księgowe",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified software_tooling questions.",
+      "total_frequency": 30
+    },
+    {
+      "count": 13,
+      "example_questions": [
+        "2 Czy jeśli przeprowadziłam się do innego miasta, mogę wpisać nowy adres zamieszkania, a pozostawić \"stary\" urząd skarbowy?",
+        "Chciałabym zapytać jak sprzedaje firmą towar z montażem , to fv sprzedaży trzeba rozdzielić na towar i usługę , tak żeby wszystko zgadzało się w remanencie potem?",
+        "Czy macie dziś problem z dostaniem się na strony Urzędów skarbowych?"
+      ],
+      "expected_intent": "legal_procedural",
+      "expected_law_or_area": "Ordynacja podatkowa / procedury",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so legal_procedural queries are not misclassified.",
+      "total_frequency": 21
+    },
+    {
+      "count": 7,
+      "example_questions": [
+        "Chciałabym podjąć pracę na drugą część etatu by zdobyć większe doświadczenie i czegoś się nauczyć. — Dziękuję za komentarze?",
+        "Czy jeśli okres wypowiedzenia UoP to miesiąc to ZWUA składamy dopiero dzień po ustaniu okresu wypowiedzenia?",
+        "Czy przy wypłacie do 10 lutego za styczeń PIT-4 generowany jest za luty w miesiącu poniesienia kosztu czy powinien być za styczeń w miesiącu za które wynagrodzenie się należy?"
+      ],
+      "expected_intent": "hr",
+      "expected_law_or_area": "Kodeks pracy",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified hr questions.",
+      "total_frequency": 20
+    },
+    {
+      "count": 7,
+      "example_questions": [
+        "Czy w symfoni da się usunąć fakturę korektę (sprzedaż)?",
+        "Czy macie jakieś pulPITy klienta, albo klienci wam wrzucają wszystko np. w saldeo lub podobny program?",
+        "Czy prawidłowe jest księgowanie naliczonych ujemnych odsetek od akcji na dzień bilansowy zapisem 650Ma /np 1000 zł i Wn 750 1000zł.Jakim zapisem zrobić storno w roku następnym?"
+      ],
+      "expected_intent": "software_tooling",
+      "expected_law_or_area": "oprogramowanie księgowe",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so software_tooling queries are not misclassified.",
+      "total_frequency": 20
+    },
+    {
+      "count": 2,
+      "example_questions": [
+        "Korekta in minus kosztowa: wystawiona 20.02 dot usługi z 12.02. VAT i dochodowy księguję pod datą wystawienia 20.02?",
+        "Ksef - korekta Czy da się wysłać do KSeF korektę korygująca tylko dane odbiorcy faktury? Do tej pory mieliśmy takie korekty zmieniające tylko dane odbiorcy a teraz w KSeF musimy zrobić korektę do 0 i nową fakturę?"
+      ],
+      "expected_intent": "vat_jpk_ksef",
+      "expected_law_or_area": "VAT / JPK / KSeF + Ordynacja podatkowa / procedury",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified vat_jpk_ksef questions.",
+      "total_frequency": 15
+    },
+    {
+      "count": 7,
+      "example_questions": [
+        "Czy jedna deklaracja ma być złożona?",
+        "Czy należy ją dzielić na okresy również?",
+        "Czy teraz robię SF za okres od otwar?"
+      ],
+      "expected_intent": "cit_wht",
+      "expected_law_or_area": "CIT / WHT",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so cit_wht queries are not misclassified.",
+      "total_frequency": 14
+    },
+    {
+      "count": 9,
+      "example_questions": [
+        ". Umowa o dzieło z kosztami autorskimi gdzie ją ująć w PIT-11?",
+        "Czy w rozliczeniu rocznym PIT może ująć wszystkie koszty uzyskania przychodu z PIT-11(3600 zł) czy jedynie za styczeń 2025(300 zł)?",
+        "Etat - PIT-11 rozliczam się indywidulanie (PIT-37), weszłam w drugi próg podatkowy, w rocznym rozliczeniu wyszło, że muszę dopłacić niecałe 1000 zł rozumiem z czego wynika dopłata, ale ciekawi mnie jak to działa? Płacowa źle naliczyła?"
+      ],
+      "expected_intent": "payroll",
+      "expected_law_or_area": "kadry i płace",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified payroll questions.",
+      "total_frequency": 12
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        "Jeśli mam kogoś na zleceniu, ale w 2025 nie przepracował ani 1h i nie zarobił ani 1zł to czy muszę wystawiać zerowy PIT4R?"
+      ],
+      "expected_intent": "payroll",
+      "expected_law_or_area": "kadry i płace",
+      "root_cause": "wrong_law_priority",
+      "suggested_fix": "Improve retrieval ranking so kadry i płace wins over competing laws.",
+      "total_frequency": 10
+    },
+    {
+      "count": 8,
+      "example_questions": [
+        "Jak jest u Was technicznie z PIT 11?",
+        ". Dla JPK CIT jest obowiązek prowadzenia analityki wynagrodzeń pracowniczych?",
+        "176 KSH czy w PIT 11 uzwglednaicie KUP?"
+      ],
+      "expected_intent": "payroll",
+      "expected_law_or_area": "kadry i płace",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so payroll queries are not misclassified.",
+      "total_frequency": 9
+    },
+    {
+      "count": 3,
+      "example_questions": [
+        "Koszty w KPiR memoriałowo zaliczac do 2025 czy bieżąco styczeń 2026?",
+        "Mam przychód bilansowy z grudnia który będzie przychodem podatkowym w styczniu - czy tu mogę użyć konta pozabilansowego z odpowiednim znacznikiem?",
+        "W 2024 amortyzacja za część środków trwałych była naliczona ale nie została zaksięgowana. Czy mogę ująć ją w 2025 jako korekta lat ubiegłych?"
+      ],
+      "expected_intent": "pit_ryczalt",
+      "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so pit_ryczalt queries are not misclassified.",
+      "total_frequency": 9
+    },
+    {
+      "count": 3,
+      "example_questions": [
+        "Zastanawiam się nad faktura korekta sprzedaży na minus roboty budowlane ( bledna kwota) data wystawienia styczeń a dotyczyła faktury grudniowej, czy dobrze myślę CIT XII a VAT też styczeń?",
+        "Czy operujecie tylko czy wystawienia/sprzedazy.Jeśli data wpływu jest to 5.12 a wystawienia i sprzedaż 10.10 to jak ujmujecie w CIT i VAT?",
+        "Jeśli jest opcja testowania wysyłki to jak potem taką fv wykazać w JPK VAT?"
+      ],
+      "expected_intent": "cit_wht",
+      "expected_law_or_area": "CIT / WHT + przepisy materialne",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so cit_wht queries are not misclassified.",
+      "total_frequency": 7
+    },
+    {
+      "count": 3,
+      "example_questions": [
+        "Czy jest jakieś miejsce gdzie mogę zobaczyć listę uprawnień od wszystkich klientów jak np listę Upl w eurzedzie skarbowym?",
+        "Potrzebuję porady Czy ktoś miał podobną sytuację z pełnomocnictwem UPL w Urząd Skarbowy?",
+        "Składając ZAWFa do urzędu skarbowego aby nadać uprawnienia do spółki cywilnej dla siebie powinnam w danych osoby uprawnionej do korzystania poddać identyfikator NIP (swojej działalności) czy pesel?"
+      ],
+      "expected_intent": "legal_procedural",
+      "expected_law_or_area": "Ordynacja podatkowa / procedury",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified legal_procedural questions.",
+      "total_frequency": 6
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        "Czy jest to prawidłowe i faktura do VAT i kpir idzie w lutym czy trzeba ręcznie zmienić datę sprzedaży na 31.01?"
+      ],
+      "expected_intent": "pit_ryczalt",
+      "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified pit_ryczalt questions.",
+      "total_frequency": 5
+    },
+    {
+      "count": 4,
+      "example_questions": [
+        "Ile zarabiacie na rękę i ile pracujecie w zawodzie?",
+        "Ile zarabiacie w biurze rachunkowym księgując około 40 - 50 firm w miesiącu?",
+        "Jak wyceniacie klientów ze sprzedażą po VAT marża? Czy macie do takich transakcji osobną wycenę?"
+      ],
+      "expected_intent": "business_of_accounting_office",
+      "expected_law_or_area": "prowadzenie biura rachunkowego",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so business_of_accounting_office queries are not misclassified.",
+      "total_frequency": 4
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        "Meta i Google. Składać i pisać czynny żal? Ktoś złożył po terminie i były jakieś konsekwencje?"
+      ],
+      "expected_intent": "cit_wht",
+      "expected_law_or_area": "CIT / WHT",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified cit_wht questions.",
+      "total_frequency": 2
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        "#ryczałt kwartalnieMam mały problem, podatnik w roku 2025 był na opodatkowaniu liniowym płacił zaliczki kwartalnie od 2026 przeszedł na ryczałt i też by chciał kwartalnie, ale tutaj jest limit przychodów w którym trzeba się zmieścić, czy przy zmianie formy opodatkowania ten limit też mnie interesuje i patrze na przychód z 2025 gdzie był na liniowym?"
+      ],
+      "expected_intent": "pit_ryczalt",
+      "expected_law_or_area": "PIT / ryczałt",
+      "root_cause": "needs_clarification_but_answered",
+      "suggested_fix": "Tighten clarification rules for underspecified pit_ryczalt questions.",
+      "total_frequency": 2
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        "Chciałabym zapytać jak księgujecie fakturę za paliwo lub inny kosz związany z samochodem osobowym do UKRYTYCH ZYSKÓW na CIT Estońskim? Czy to jest 50%brutta?"
+      ],
+      "expected_intent": "cit_wht",
+      "expected_law_or_area": "CIT / WHT + przepisy materialne",
+      "root_cause": "unknown",
+      "suggested_fix": "Review failed cit_wht examples manually and refine the weakest layer first.",
+      "total_frequency": 2
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        "Kto poratuje?"
+      ],
+      "expected_intent": "out_of_scope",
+      "expected_law_or_area": "poza zakresem",
+      "root_cause": "wrong_category_match",
+      "suggested_fix": "Adjust intent routing so out_of_scope queries are not misclassified.",
+      "total_frequency": 2
+    },
+    {
+      "count": 1,
+      "example_questions": [
+        ", jak oznaczyć import usług w programie comarvh optima jezeli dotyczy on tylko jednej poxycji na fakturze?"
+      ],
+      "expected_intent": "software_tooling",
+      "expected_law_or_area": "oprogramowanie księgowe",
+      "root_cause": "wrong_law_priority",
+      "suggested_fix": "Improve retrieval ranking so oprogramowanie księgowe wins over competing laws.",
+      "total_frequency": 2
+    }
+  ]
+}

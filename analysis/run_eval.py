@@ -27,6 +27,7 @@ class EvalOutcome:
     """Structured result of evaluating one golden-set record."""
 
     question: str
+    source_frequency: int
     expected_intent: str
     predicted_intent: str
     expected_behavior: str
@@ -121,6 +122,7 @@ def evaluate_record(
     expected_behavior = str(record.get("expected_behavior", record.get("expected_behaviour", "answer_directly")))
     expected_law_or_area = str(record.get("expected_law_or_area", ""))
     expected_missing_slots = [str(slot) for slot in record.get("missing_clarification_fields", []) if isinstance(slot, str)]
+    source_frequency = int(record.get("source_frequency", 1) or 1)
 
     retrieval_result = retrieve(
         query=question,
@@ -154,6 +156,7 @@ def evaluate_record(
 
     return EvalOutcome(
         question=question,
+        source_frequency=source_frequency,
         expected_intent=expected_intent,
         predicted_intent=predicted_intent,
         expected_behavior=expected_behavior,
@@ -247,6 +250,7 @@ def build_eval_report(
         "records": [
             {
                 "question": outcome.question,
+                "source_frequency": outcome.source_frequency,
                 "expected_intent": outcome.expected_intent,
                 "predicted_intent": outcome.predicted_intent,
                 "expected_behavior": outcome.expected_behavior,

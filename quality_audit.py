@@ -14,6 +14,7 @@ from core.retriever import retrieve_chunks
 KB_PATH = Path("data/seeds/law_knowledge.json")
 OUTPUT_PATH = Path("analysis/quality_audit_report.json")
 EVAL_MIN_ACCURACY = float(os.getenv("AKTUO_EVAL_MIN_ACCURACY", "0.80"))
+EVAL_PRIORITY_THRESHOLD = float(os.getenv("AKTUO_EVAL_PRIORITY_THRESHOLD", "0.80"))
 
 QUESTIONS = [
     {"query": "Termin złożenia JPK_V7?", "expected_laws": ["Ustawa o VAT", "Rozporządzenie JPK_V7"]},
@@ -154,6 +155,15 @@ def main() -> None:
     eval_report = build_eval_report(knowledge_path=KB_PATH)
     write_eval_report(eval_report)
     behavior_accuracy = float(eval_report["overall"]["behavior_accuracy"])
+    if behavior_accuracy < EVAL_PRIORITY_THRESHOLD:
+        from analysis.prioritize_eval_failures import build_priority_report, write_priority_outputs
+
+        priorities = build_priority_report(eval_report)
+        _, markdown_path = write_priority_outputs(priorities)
+        print(
+            f"Warning: golden eval accuracy {behavior_accuracy:.2%} is below prioritization threshold "
+            f"{EVAL_PRIORITY_THRESHOLD:.0%}. See {markdown_path} for top failure groups."
+        )
     if behavior_accuracy < EVAL_MIN_ACCURACY:
         raise SystemExit(
             f"Golden eval accuracy {behavior_accuracy:.2%} is below required threshold {EVAL_MIN_ACCURACY:.0%}."
