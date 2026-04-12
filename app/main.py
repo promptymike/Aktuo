@@ -16,7 +16,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from app.chat import render_chat_history
+from app.chat import render_chat_history, resolve_clarification_followup_display
 from app.sidebar import render_sidebar
 from config.settings import (
     CLARIFICATION_CHIPS_ENABLED,
@@ -106,6 +106,33 @@ def load_clarification_chip_options(path: str) -> dict[str, list[str]]:
         str(slot_name): [str(option) for option in options if isinstance(option, str)]
         for slot_name, options in raw_chip_options.items()
         if isinstance(slot_name, str) and isinstance(options, list)
+    }
+
+
+@lru_cache(maxsize=4)
+def load_clarification_display_labels(path: str) -> dict[str, str]:
+    """Load optional display labels used for user-facing clarification follow-ups."""
+
+    file_path = Path(path)
+    if not file_path.exists():
+        raise ValueError(f"Nie znaleziono pliku promptów doprecyzowujących: {file_path}")
+
+    try:
+        payload = json.loads(file_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Plik promptów doprecyzowujących jest uszkodzony: {file_path}") from exc
+
+    if not isinstance(payload, dict):
+        raise ValueError(f"Plik promptów doprecyzowujących musi zawierać obiekt JSON: {file_path}")
+
+    raw_labels = payload.get("slot_display_labels", {})
+    if not isinstance(raw_labels, dict):
+        raise ValueError(f"Nieprawidłowy format etykiet doprecyzowujących w pliku: {file_path}")
+
+    return {
+        str(slot_name): str(label)
+        for slot_name, label in raw_labels.items()
+        if isinstance(slot_name, str) and isinstance(label, str)
     }
 
 
@@ -491,6 +518,10 @@ def render_chat_page() -> None:
         clarification_chip_options = load_clarification_chip_options(CLARIFICATION_PROMPTS_PATH)
     except ValueError:
         clarification_chip_options = {}
+    try:
+        clarification_display_labels = load_clarification_display_labels(CLARIFICATION_PROMPTS_PATH)
+    except ValueError:
+        clarification_display_labels = {}
 
     if "messages" not in st.session_state:
         if "chat_history" in st.session_state:
@@ -524,6 +555,7 @@ def render_chat_page() -> None:
         user_email=user_email,
         clarification_prompts=clarification_prompts,
         clarification_chip_options=clarification_chip_options,
+        clarification_display_labels=clarification_display_labels,
         clarification_chips_enabled=CLARIFICATION_CHIPS_ENABLED,
     )
 
@@ -537,8 +569,12 @@ def render_chat_page() -> None:
         display_question = str(question_payload.get("display_text", "")).strip()
         submitted_question = str(question_payload.get("submitted_text", display_question)).strip()
     else:
-        display_question = str(question_payload).strip()
-        submitted_question = display_question
+        submitted_question = str(question_payload).strip()
+        display_question = resolve_clarification_followup_display(
+            st.session_state.messages,
+            submitted_question,
+            clarification_display_labels=clarification_display_labels,
+        )
 
     if not submitted_question:
         render_footer()

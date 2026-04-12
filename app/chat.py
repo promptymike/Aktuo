@@ -50,24 +50,55 @@ def _visible_missing_slots(message_index: int, missing_slots: Sequence[str] | No
 def _queue_clarification_chip_followup(
     *,
     message_index: int,
-    original_query: str,
     slot_name: str,
     chip_value: str,
-    prompt_map: dict[str, str] | None,
+    display_label_map: dict[str, str] | None,
 ) -> None:
     """Queue a chip selection as the next follow-up user message and rerun."""
 
-    prompt = (prompt_map or {}).get(slot_name, GENERIC_CLARIFICATION_PROMPT)
     resolved_key = f"clarification_resolved_{message_index}"
     resolved_slots = list(st.session_state.get(resolved_key, []))
     if slot_name not in resolved_slots:
         resolved_slots.append(slot_name)
     st.session_state[resolved_key] = resolved_slots
+    display_label = (display_label_map or {}).get(slot_name, "").strip()
+    display_text = f"{display_label}: {chip_value}" if display_label else chip_value
     st.session_state["pending_clarification_followup"] = {
-        "display_text": chip_value,
-        "submitted_text": f"{original_query}\n{prompt} {chip_value}",
+        "display_text": display_text,
+        "submitted_text": chip_value,
     }
     st.rerun()
+
+
+def _active_clarification_slot(history: Sequence[dict[str, object]]) -> str | None:
+    """Return the single unresolved clarification slot for the latest clarification step."""
+
+    for message_index in range(len(history) - 1, -1, -1):
+        message = history[message_index]
+        result = message.get("result")
+        if not isinstance(result, RagResult) or not result.needs_clarification:
+            continue
+        visible_slots = _visible_missing_slots(message_index, result.missing_slots)
+        if len(visible_slots) == 1:
+            return visible_slots[0]
+        return None
+    return None
+
+
+def resolve_clarification_followup_display(
+    history: Sequence[dict[str, object]],
+    submitted_text: str,
+    *,
+    clarification_display_labels: dict[str, str] | None = None,
+) -> str:
+    """Return a user-facing clarification message with a slot label when the slot is unambiguous."""
+
+    slot_name = _active_clarification_slot(history)
+    if not slot_name:
+        return submitted_text
+
+    display_label = (clarification_display_labels or {}).get(slot_name, "").strip()
+    return f"{display_label}: {submitted_text}" if display_label else submitted_text
 
 
 def render_user_message(question: str, *, timestamp: str | None = None) -> None:
@@ -86,6 +117,7 @@ def render_assistant_message(
     query: str,
     clarification_prompts: dict[str, str] | None = None,
     clarification_chip_options: dict[str, list[str]] | None = None,
+    clarification_display_labels: dict[str, str] | None = None,
     clarification_chips_enabled: bool = True,
     timestamp: str | None = None,
 ) -> None:
@@ -113,10 +145,9 @@ def render_assistant_message(
                             ):
                                 _queue_clarification_chip_followup(
                                     message_index=message_index,
-                                    original_query=query,
                                     slot_name=slot_name,
                                     chip_value=chip_value,
-                                    prompt_map=clarification_prompts,
+                                    display_label_map=clarification_display_labels,
                                 )
             return
 
@@ -174,6 +205,7 @@ def render_chat_history(
     user_email: str,
     clarification_prompts: dict[str, str] | None = None,
     clarification_chip_options: dict[str, list[str]] | None = None,
+    clarification_display_labels: dict[str, str] | None = None,
     clarification_chips_enabled: bool = True,
 ) -> None:
     for index, message in enumerate(history):
@@ -194,6 +226,7 @@ def render_chat_history(
                     query=str(message.get("query", "")),
                     clarification_prompts=clarification_prompts,
                     clarification_chip_options=clarification_chip_options,
+                    clarification_display_labels=clarification_display_labels,
                     clarification_chips_enabled=clarification_chips_enabled,
                     timestamp=str(message.get("timestamp", "")),
                 )

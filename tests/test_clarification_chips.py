@@ -9,7 +9,7 @@ from core.rag import RagResult
 
 
 def test_clarification_chips_render_and_submit_followup(monkeypatch, tmp_path) -> None:
-    """Chip buttons should render from JSON and submit a contextual follow-up."""
+    """Chip buttons should render from JSON and submit only the selected slot value."""
 
     prompts_path = tmp_path / "clarification_slots.json"
     prompts_path.write_text(
@@ -21,6 +21,9 @@ def test_clarification_chips_render_and_submit_followup(monkeypatch, tmp_path) -
                 },
                 "slot_chip_options": {
                     "forma_opodatkowania": ["ryczałt", "liniowy", "zasady ogólne"]
+                },
+                "slot_display_labels": {
+                    "forma_opodatkowania": "Forma opodatkowania"
                 },
             },
             ensure_ascii=False,
@@ -59,6 +62,7 @@ def test_clarification_chips_render_and_submit_followup(monkeypatch, tmp_path) -
     monkeypatch.setattr(app_main, "CLARIFICATION_CHIPS_ENABLED", True)
     app_main.load_clarification_prompts.cache_clear()
     app_main.load_clarification_chip_options.cache_clear()
+    app_main.load_clarification_display_labels.cache_clear()
 
     at = AppTest.from_string(
         """
@@ -75,6 +79,7 @@ if "user_email" not in st.session_state:
 
 clarification_prompts = app_main.load_clarification_prompts(app_main.CLARIFICATION_PROMPTS_PATH)
 clarification_chip_options = app_main.load_clarification_chip_options(app_main.CLARIFICATION_PROMPTS_PATH)
+clarification_display_labels = app_main.load_clarification_display_labels(app_main.CLARIFICATION_PROMPTS_PATH)
 chip_followup = st.session_state.pop("pending_clarification_followup", None)
 
 render_chat_history(
@@ -83,6 +88,7 @@ render_chat_history(
     user_email=st.session_state.user_email,
     clarification_prompts=clarification_prompts,
     clarification_chip_options=clarification_chip_options,
+    clarification_display_labels=clarification_display_labels,
     clarification_chips_enabled=app_main.CLARIFICATION_CHIPS_ENABLED,
 )
 
@@ -132,8 +138,8 @@ if payload:
     markdown_values = [element.value for element in at.markdown]
 
     assert len(answer_calls) == 2
-    assert "ryczałt" in answer_calls[1]
-    assert "Jak rozliczyć PIT z najmu?" in answer_calls[1]
+    assert answer_calls[1] == "ryczałt"
+    assert any("Forma opodatkowania: ryczałt" == value for value in markdown_values)
     assert any("Podaj okres lub datę." in value for value in markdown_values)
     assert markdown_values[-1] == "1. Podaj okres lub datę."
     assert not any("Jaka jest forma opodatkowania?" in value for value in markdown_values[-6:])

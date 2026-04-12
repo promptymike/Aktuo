@@ -206,6 +206,20 @@ SLOT_CHIP_OPTIONS: dict[str, list[str]] = {
     "tytuł_ubezpieczenia": ["JDG", "etat", "zlecenie"],
 }
 
+SLOT_DISPLAY_LABELS: dict[str, str] = {
+    "okres_lub_data": "Okres lub data",
+    "forma_opodatkowania": "Forma opodatkowania",
+    "rola_lub_status_strony": "Rola strony",
+    "typ_podmiotu": "Typ podmiotu",
+    "typ_umowy": "Typ umowy",
+    "tytuł_ubezpieczenia": "Tytuł ubezpieczenia",
+    "rodzaj_dokumentu": "Rodzaj dokumentu",
+    "rodzaj_pisma_lub_wniosku": "Rodzaj pisma lub wniosku",
+    "etap_sprawy_lub_termin": "Etap sprawy lub termin",
+    "źródło_przychodu": "Źródło przychodu",
+    "status_osoby": "Status osoby",
+}
+
 
 INTENT_SOURCE_HINTS: dict[str, list[str]] = {
     "legal_substantive": ["legal_kb"],
@@ -673,6 +687,7 @@ def build_outputs() -> JSONDict:
     clarification_payload = dict(CLARIFICATION_SLOT_DEFINITIONS)
     clarification_payload["slot_prompts"] = SLOT_PROMPTS
     clarification_payload["slot_chip_options"] = SLOT_CHIP_OPTIONS
+    clarification_payload["slot_display_labels"] = SLOT_DISPLAY_LABELS
     write_json(CLARIFICATION_SLOTS_PATH, clarification_payload)
     write_jsonl(GOLDEN_EVAL_SET_PATH, golden_eval_records)
     write_jsonl(WORKFLOW_SPLIT_PATH, workflow_records)
