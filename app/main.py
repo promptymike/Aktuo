@@ -19,6 +19,7 @@ if str(PROJECT_ROOT) not in sys.path:
 from app.chat import render_chat_history
 from app.sidebar import render_sidebar
 from config.settings import (
+    CLARIFICATION_CHIPS_ENABLED,
     CLARIFICATION_PROMPTS_PATH,
     MAX_QUESTION_LENGTH,
     MissingEnvironmentError,
@@ -78,6 +79,33 @@ def load_clarification_prompts(path: str) -> dict[str, str]:
         str(slot_name): str(prompt)
         for slot_name, prompt in raw_prompts.items()
         if isinstance(slot_name, str) and isinstance(prompt, str)
+    }
+
+
+@lru_cache(maxsize=4)
+def load_clarification_chip_options(path: str) -> dict[str, list[str]]:
+    """Load optional chip suggestions for clarification slots from the curated JSON file."""
+
+    file_path = Path(path)
+    if not file_path.exists():
+        raise ValueError(f"Nie znaleziono pliku promptów doprecyzowujących: {file_path}")
+
+    try:
+        payload = json.loads(file_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Plik promptów doprecyzowujących jest uszkodzony: {file_path}") from exc
+
+    if not isinstance(payload, dict):
+        raise ValueError(f"Plik promptów doprecyzowujących musi zawierać obiekt JSON: {file_path}")
+
+    raw_chip_options = payload.get("slot_chip_options", {})
+    if not isinstance(raw_chip_options, dict):
+        raise ValueError(f"Nieprawidłowy format chipów doprecyzowujących w pliku: {file_path}")
+
+    return {
+        str(slot_name): [str(option) for option in options if isinstance(option, str)]
+        for slot_name, options in raw_chip_options.items()
+        if isinstance(slot_name, str) and isinstance(options, list)
     }
 
 
@@ -459,6 +487,10 @@ def render_chat_page() -> None:
         clarification_prompts = load_clarification_prompts(CLARIFICATION_PROMPTS_PATH)
     except ValueError:
         clarification_prompts = {}
+    try:
+        clarification_chip_options = load_clarification_chip_options(CLARIFICATION_PROMPTS_PATH)
+    except ValueError:
+        clarification_chip_options = {}
 
     if "messages" not in st.session_state:
         if "chat_history" in st.session_state:
@@ -484,21 +516,35 @@ def render_chat_page() -> None:
         return
 
     quick_question = render_quick_questions()
+    chip_followup = st.session_state.pop("pending_clarification_followup", None)
 
     render_chat_history(
         st.session_state.messages,
         session_id=st.session_state.session_id,
         user_email=user_email,
         clarification_prompts=clarification_prompts,
+        clarification_chip_options=clarification_chip_options,
+        clarification_chips_enabled=CLARIFICATION_CHIPS_ENABLED,
     )
 
     typed_question = st.chat_input("Zadaj pytanie o prawo podatkowe...")
-    question = quick_question or typed_question
-    if not question:
+    question_payload = chip_followup or quick_question or typed_question
+    if not question_payload:
         render_footer()
         return
 
-    if is_question_too_long(question):
+    if isinstance(question_payload, dict):
+        display_question = str(question_payload.get("display_text", "")).strip()
+        submitted_question = str(question_payload.get("submitted_text", display_question)).strip()
+    else:
+        display_question = str(question_payload).strip()
+        submitted_question = display_question
+
+    if not submitted_question:
+        render_footer()
+        return
+
+    if is_question_too_long(submitted_question):
         st.error(f"Pytanie jest za długie. Maksymalna długość to {MAX_QUESTION_LENGTH} znaków.")
         render_footer()
         return
@@ -514,7 +560,7 @@ def render_chat_page() -> None:
 
     try:
         result = answer_query(
-            query=question,
+            query=submitted_question,
             knowledge_path=settings.law_knowledge_path,
             system_prompt=settings.system_prompt,
             api_key=settings.anthropic_api_key,
@@ -529,7 +575,7 @@ def render_chat_page() -> None:
     log_query(
         session_id=st.session_state.session_id,
         user_email=user_email,
-        question=question,
+        question=submitted_question,
         redacted_query=result.redacted_query,
         category=result.category,
         chunks_returned=len(result.chunks),
@@ -545,11 +591,11 @@ def render_chat_page() -> None:
     message_timestamp = current_timestamp()
     st.session_state.messages.extend(
         [
-            {"role": "user", "content": question, "timestamp": message_timestamp},
+            {"role": "user", "content": display_question, "timestamp": message_timestamp},
             {
                 "role": "assistant",
                 "result": result,
-                "query": question,
+                "query": submitted_question,
                 "timestamp": message_timestamp,
             },
         ]

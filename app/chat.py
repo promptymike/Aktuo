@@ -40,6 +40,36 @@ def _resolve_clarification_prompts(
     return [(prompt_map or {}).get(slot_name, GENERIC_CLARIFICATION_PROMPT) for slot_name in missing_slots]
 
 
+def _visible_missing_slots(message_index: int, missing_slots: Sequence[str] | None) -> list[str]:
+    """Return only missing slots that have not already been resolved via chip click."""
+
+    resolved = set(st.session_state.get(f"clarification_resolved_{message_index}", []))
+    return [slot_name for slot_name in (missing_slots or []) if slot_name not in resolved]
+
+
+def _queue_clarification_chip_followup(
+    *,
+    message_index: int,
+    original_query: str,
+    slot_name: str,
+    chip_value: str,
+    prompt_map: dict[str, str] | None,
+) -> None:
+    """Queue a chip selection as the next follow-up user message and rerun."""
+
+    prompt = (prompt_map or {}).get(slot_name, GENERIC_CLARIFICATION_PROMPT)
+    resolved_key = f"clarification_resolved_{message_index}"
+    resolved_slots = list(st.session_state.get(resolved_key, []))
+    if slot_name not in resolved_slots:
+        resolved_slots.append(slot_name)
+    st.session_state[resolved_key] = resolved_slots
+    st.session_state["pending_clarification_followup"] = {
+        "display_text": chip_value,
+        "submitted_text": f"{original_query}\n{prompt} {chip_value}",
+    }
+    st.rerun()
+
+
 def render_user_message(question: str, *, timestamp: str | None = None) -> None:
     with st.chat_message("user"):
         st.markdown("<div class='aktuo-message-label'>Ty</div>", unsafe_allow_html=True)
@@ -55,6 +85,8 @@ def render_assistant_message(
     user_email: str,
     query: str,
     clarification_prompts: dict[str, str] | None = None,
+    clarification_chip_options: dict[str, list[str]] | None = None,
+    clarification_chips_enabled: bool = True,
     timestamp: str | None = None,
 ) -> None:
     with st.chat_message("assistant"):
@@ -63,11 +95,29 @@ def render_assistant_message(
         st.write(result.answer)
 
         if result.needs_clarification:
-            prompts = _resolve_clarification_prompts(result.missing_slots, clarification_prompts)
+            visible_slots = _visible_missing_slots(message_index, result.missing_slots)
+            prompts = _resolve_clarification_prompts(visible_slots, clarification_prompts)
             if prompts:
                 st.warning("Żeby odpowiedzieć precyzyjnie, potrzebuję jeszcze kilku informacji:")
-                for index, prompt in enumerate(prompts, start=1):
+                for index, slot_name in enumerate(visible_slots, start=1):
+                    prompt = (clarification_prompts or {}).get(slot_name, GENERIC_CLARIFICATION_PROMPT)
                     st.markdown(f"{index}. {prompt}")
+                    chip_options = (clarification_chip_options or {}).get(slot_name, [])
+                    if clarification_chips_enabled and chip_options:
+                        chip_columns = st.columns(len(chip_options))
+                        for column, chip_value in zip(chip_columns, chip_options, strict=False):
+                            if column.button(
+                                chip_value,
+                                key=f"clarification_chip_{message_index}_{slot_name}_{chip_value}",
+                                use_container_width=True,
+                            ):
+                                _queue_clarification_chip_followup(
+                                    message_index=message_index,
+                                    original_query=query,
+                                    slot_name=slot_name,
+                                    chip_value=chip_value,
+                                    prompt_map=clarification_prompts,
+                                )
             return
 
         if result.chunks:
@@ -123,6 +173,8 @@ def render_chat_history(
     session_id: str,
     user_email: str,
     clarification_prompts: dict[str, str] | None = None,
+    clarification_chip_options: dict[str, list[str]] | None = None,
+    clarification_chips_enabled: bool = True,
 ) -> None:
     for index, message in enumerate(history):
         role = message.get("role")
@@ -141,5 +193,7 @@ def render_chat_history(
                     user_email=user_email,
                     query=str(message.get("query", "")),
                     clarification_prompts=clarification_prompts,
+                    clarification_chip_options=clarification_chip_options,
+                    clarification_chips_enabled=clarification_chips_enabled,
                     timestamp=str(message.get("timestamp", "")),
                 )

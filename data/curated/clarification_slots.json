@@ -132,6 +132,41 @@
       "okres_lub_data"
     ]
   },
+  "slot_chip_options": {
+    "forma_opodatkowania": [
+      "rycza?t",
+      "liniowy",
+      "zasady og?lne"
+    ],
+    "okres_lub_data": [
+      "2026",
+      "2025",
+      "marzec 2026",
+      "kwiecie? 2026"
+    ],
+    "rola_lub_status_strony": [
+      "sprzedawca",
+      "nabywca",
+      "podatnik",
+      "pe?nomocnik"
+    ],
+    "typ_podmiotu": [
+      "JDG",
+      "sp??ka z o.o.",
+      "osoba fizyczna"
+    ],
+    "typ_umowy": [
+      "etat",
+      "zlecenie",
+      "dzie?o",
+      "B2B"
+    ],
+    "tytu?_ubezpieczenia": [
+      "JDG",
+      "etat",
+      "zlecenie"
+    ]
+  },
   "slot_prompts": {
     "czynność_operacyjna": "Jaką czynność chcesz wykonać w systemie lub procesie?",
     "etap_sprawy_lub_termin": "Na jakim etapie jest sprawa i jaki termin ma znaczenie?",

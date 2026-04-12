@@ -33,6 +33,12 @@ CLARIFICATION_PROMPTS_PATH = os.getenv(
     "AKTUO_CLARIFICATION_PROMPTS_PATH",
     CLARIFICATION_SLOTS_PATH,
 ).strip()
+CLARIFICATION_CHIPS_ENABLED = os.getenv("AKTUO_CLARIFICATION_CHIPS_ENABLED", "true").strip().lower() not in {
+    "0",
+    "false",
+    "no",
+    "off",
+}
 
 PLACEHOLDER_VALUES = {
     "",
