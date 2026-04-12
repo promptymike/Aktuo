@@ -36080,5 +36080,32 @@
     "question_intent": "Jak działa obieg faktury w KSeF, gdy klient sam wysyła fakturę albo przekazuje ją poza systemem",
     "content": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych w art. 106gb ust. 4 faktura może być udostępniona nabywcy w sposób z nim uzgodniony, a podatnik musi oznaczyć ją kodem umożliwiającym dostęp lub weryfikację danych (art. 106gb ust. 5-6). Dla celów prawnych faktura jest wystawiona w dniu przesłania do KSeF, otrzymana przy nadaniu numeru KSeF, a gdy udostępnia się ją poza KSeF odbiorcy z art. 106gb ust. 4 - za datę otrzymania przyjmuje się faktyczne otrzymanie przez nabywcę (art. 106na ust. 1, 3-4).",
     "source": "manual_grounded_ksef_permissions_batch_2026_04_11"
+  },
+  {
+    "law_name": "Ustawa o VAT",
+    "article_number": "art. 86a ust. 1-4 i 12-14",
+    "category": "vat",
+    "question_intent": "Czy przy leasingu samochodu osobowego op?aca si? zg?osi? auto wy??cznie do cel?w firmowych i kiedy mo?na odlicza? 100% VAT",
+    "content": "Przy wydatkach na samoch?d osobowy, tak?e u?ywany na podstawie leasingu, co do zasady odliczasz 50% VAT. Pe?ne 100% odliczenia przys?uguje tylko wtedy, gdy pojazd jest wykorzystywany wy??cznie do dzia?alno?ci gospodarczej, zasady u?ywania wykluczaj? u?ytek prywatny i prowadzona jest ewidencja przebiegu. Dodatkowo trzeba z?o?y? do urz?du skarbowego informacj? o poje?dzie do 25. dnia miesi?ca po miesi?cu poniesienia pierwszego wydatku; sp??nienie przesuwa pe?ne odliczenie dopiero od miesi?ca z?o?enia tej informacji. Podstawa prawna: art. 86a ust. 1-4 i 12-14 ustawy o VAT.",
+    "verified_date": "2026-04-12",
+    "source": "manual_grounded_leasing_batch_2026_04_12"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
+    "category": "pit",
+    "question_intent": "Jak rozlicza? w PIT koszty leasingu samochodu osobowego u?ywanego zar?wno firmowo, jak i prywatnie",
+    "content": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?ywania samochodu nie stanowi kosztu podatkowego. W praktyce przy u?ytku mieszanym do koszt?w trafia wi?c 75% takich wydatk?w. Dodatkowo cz??? raty leasingowej dotycz?ca sp?aty warto?ci samochodu podlega limitowi warto?ci auta z art. 23 ust. 1 pkt 47a. Podstawa prawna: art. 23 ust. 1 pkt 46a, art. 23 ust. 1 pkt 47a i art. 23b ust. 1 ustawy o PIT.",
+    "verified_date": "2026-04-12",
+    "source": "manual_grounded_leasing_batch_2026_04_12"
+  },
+  {
+    "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+    "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+    "category": "pit",
+    "question_intent": "Czy wykup samochodu z leasingu do firmy jest kosztem od razu i czy sprzeda? tego samochodu powoduje przych?d z dzia?alno?ci",
+    "content": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem trwa?ym podlegaj?cym amortyzacji, a wydatek na jego nabycie rozlicza si? przez odpisy amortyzacyjne. Je?eli potem sprzedajesz taki firmowy sk?adnik maj?tku, powstaje przych?d z dzia?alno?ci gospodarczej. Podstawa prawna: art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1 ustawy o PIT.",
+    "verified_date": "2026-04-12",
+    "source": "manual_grounded_leasing_batch_2026_04_12"
   }
 ]

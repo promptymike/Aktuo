@@ -86,6 +86,11 @@ def categorize_query(query: str) -> str:
     )
     if any(_matches_keyword(lowered, lowered_tokens, keyword) for keyword in cash_register_keywords):
         return "vat"
+    if "leasing" in lowered and any(marker in lowered for marker in ("samoch", "auto")):
+        if (("firmow" in lowered and "cel" in lowered) or "dzialaln" in lowered or any(marker in lowered for marker in ("vat26", "vat-26", "ewidencj"))):
+            return "vat"
+        if any(marker in lowered for marker in ("wykup", "koszt", "przychod", "srodek trwaly", "amortyz")):
+            return "pit"
     if "ulg" in lowered and ("senior" in lowered or "emeryt" in lowered):
         return "pit"
     keyword_map = (

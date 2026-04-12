@@ -1,0 +1,101 @@
+[
+  {
+    "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
+    "freq": 5,
+    "dataset_category": "inne",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 30j ust. 1 pkt 1",
+        "category": "ryczałt-od-przychodów-zagranicznych",
+        "score": 0.0305,
+        "preview": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w kt..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86a ust. 4 pkt 1",
+        "category": "odliczenie VAT pojazdy",
+        "score": 0.0293,
+        "preview": "Nie. Art. 86a ust. 4 pkt 1 wymaga, aby pojazd był wykorzystywany wyłącznie do działalności gospodarczej – sposób wykorzystywania musi wyłączać użycie do celów niezwiązanych z dz..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+        "category": "odliczanie_vat_pojazdy",
+        "score": 0.0288,
+        "preview": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków pr..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  },
+  {
+    "question": ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?",
+    "freq": 5,
+    "dataset_category": "praktyka",
+    "aktuo_category": "ogólne",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+        "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+        "article_number": "art. 12",
+        "category": "praktyka",
+        "score": 0.0328,
+        "preview": "Art. 12. 1. Ryczalt od przychodów ewidencjonowanych wynosi: 1) 17 % przychodów osiganych w zakresie wolnych zawodów; 2) 15 % przychodów ze wiadczenia uslug: a) reprodukcji kompu..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106b ust. 3 pkt 2",
+        "category": "Dokumentacja sprzedaży - faktury",
+        "score": 0.0323,
+        "preview": "Tak, jeśli klient o to poprosi, musisz wystawić fakturę. Przepis art. 106b ust. 3 pkt 2 jasno stanowi, że na żądanie nabywcy masz obowiązek wystawić fakturę dokumentującą sprzed..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 9 ust. 1",
+        "category": "wewnątrzwspólnotowe_nabycie",
+        "score": 0.0313,
+        "preview": "Wewnątrzwspólnotowe nabycie występuje, gdy towary są wysłane lub transportowane przez dokonującego dostawę, nabywcę lub na ich rzecz (art. 9 ust. 1). Jeśli klient sam odbiera to..."
+      }
+    ],
+    "root_cause_guess": "missing_kb_unit"
+  },
+  {
+    "question": "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
+    "freq": 4,
+    "dataset_category": "ksef",
+    "aktuo_category": "fakturowanie",
+    "current_top_3_chunks": [
+      {
+        "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+        "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+        "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+        "category": "fakturowanie",
+        "score": 0.0328,
+        "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106gb ust. 4 pkt 2",
+        "category": "e-faktury_ksef",
+        "score": 0.0315,
+        "preview": "Artykuł 106gb ust. 4 stanowi, że gdy nabywca jest podmiotem nieposiadającym siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności na terytorium kraju, ..."
+      },
+      {
+        "law_name": "Ustawa o VAT",
+        "canonical_law_name": "Ustawa o VAT",
+        "article_number": "art. 106j ust. 1",
+        "category": "dokumentacja_faktury_korygujace",
+        "score": 0.0308,
+        "preview": "Paragon fiskalny i faktura to odrębne dokumenty. Paragon potwierdza sprzedaż zaewidencjonowaną w kasie rejestrującej. Jeśli musisz skorygować wartość, wystawiasz fakturę koryguj..."
+      }
+    ],
+    "root_cause_guess": "cross_law_question"
+  }
+]

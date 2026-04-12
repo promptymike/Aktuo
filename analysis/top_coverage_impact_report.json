@@ -1,10 +1,10 @@
 {
   "top_100": {
     "summary": {
-      "covered_count": 76,
+      "covered_count": 77,
       "weak_count": 6,
-      "gap_count": 18,
-      "coverage_percent": 76.0
+      "gap_count": 17,
+      "coverage_percent": 77.0
     },
     "per_category_breakdown": {
       "ceidg": {
@@ -23,9 +23,9 @@
         "gap_count": 2
       },
       "inne": {
-        "covered_count": 0,
+        "covered_count": 1,
         "weak_count": 0,
-        "gap_count": 1
+        "gap_count": 0
       },
       "jpk": {
         "covered_count": 8,
@@ -491,43 +491,6 @@
         ]
       },
       {
-        "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
-        "freq": 5,
-        "dataset_category": "inne",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "Leasing / samochody / amortyzacja",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 30j ust. 1 pkt 1",
-            "category": "ryczałt-od-przychodów-zagranicznych",
-            "score": 0.0305,
-            "preview": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w kt..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 4 pkt 1",
-            "category": "odliczenie VAT pojazdy",
-            "score": 0.0293,
-            "preview": "Nie. Art. 86a ust. 4 pkt 1 wymaga, aby pojazd był wykorzystywany wyłącznie do działalności gospodarczej – sposób wykorzystywania musi wyłączać użycie do celów niezwiązanych z dz..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 3 pkt 1 lit. a",
-            "category": "odliczanie_vat_pojazdy",
-            "score": 0.0288,
-            "preview": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków pr..."
-          }
-        ]
-      },
-      {
         "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
         "freq": 5,
         "dataset_category": "kadry",
@@ -665,7 +628,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0315,
+            "score": 0.0318,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -2519,38 +2482,40 @@
         "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
         "freq": 8,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "rachunkowosc",
+        "aktuo_category": "pit",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "missing_kb_unit",
+        "root_cause_guess": "cross_law_question",
         "expected_laws": [
-          "Ustawa o rachunkowości"
+          "Ustawa o podatku dochodowym od osób fizycznych",
+          "Ustawa o rachunkowości",
+          "Ustawa o zryczałtowanym podatku dochodowym"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 6",
-            "category": "rachunkowosc",
-            "score": 0.0325,
-            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46",
+            "category": "pit",
+            "score": 0.0328,
+            "preview": "Je?eli samoch?d osobowy stanowi w?asno?? podatnika prowadz?cego dzia?alno?? gospodarcz?, ale nie jest sk?adnikiem maj?tku firmowego, wydatki na jego u?ywanie oraz sk?adki na ube..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 34b",
-            "category": "rachunkowosc",
-            "score": 0.0325,
-            "preview": "1. Koszty wytworzenia, które można bezpośrednio przyporządkować przychodom osiągniętym przez jednostkę, wpływają na wynik finansowy jednostki za ten okres sprawozdawczy, w który..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+            "category": "pit",
+            "score": 0.0313,
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 66",
-            "category": "rachunkowosc",
-            "score": 0.0296,
-            "preview": "1. (uchylony) 2. (uchylony) 3. (uchylony) 4. Wyboru firmy audytorskiej do przeprowadzenia badania sprawozdania finansowego oraz wyboru firmy audytorskiej do atestacji sprawozdaw..."
+            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+            "article_number": "art. 21 ust. 1, 1a",
+            "category": "pit",
+            "score": 0.0313,
+            "preview": "Podatnicy wpłacają ryczałt na rachunek urzędu skarbowego do 20. dnia następnego miesiąca za każdy miesiąc, a za grudzień do 20 stycznia następnego roku podatkowego (art. 21 ust...."
           }
         ]
       },
@@ -3902,27 +3867,22 @@
         "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
         "freq": 5,
         "dataset_category": "inne",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
+        "aktuo_category": "vat",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Rozporządzenie MF o kasach rejestrujących",
+          "Ustawa o VAT"
+        ],
         "assigned_batch": "Leasing / samochody / amortyzacja",
         "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 30j ust. 1 pkt 1",
-            "category": "ryczałt-od-przychodów-zagranicznych",
-            "score": 0.0305,
-            "preview": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w kt..."
-          },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 86a ust. 4 pkt 1",
             "category": "odliczenie VAT pojazdy",
-            "score": 0.0293,
+            "score": 0.0313,
             "preview": "Nie. Art. 86a ust. 4 pkt 1 wymaga, aby pojazd był wykorzystywany wyłącznie do działalności gospodarczej – sposób wykorzystywania musi wyłączać użycie do celów niezwiązanych z dz..."
           },
           {
@@ -3930,8 +3890,16 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 86a ust. 3 pkt 1 lit. a",
             "category": "odliczanie_vat_pojazdy",
-            "score": 0.0288,
+            "score": 0.0311,
             "preview": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków pr..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 113 ust. 1",
+            "category": "zwolnienie_vat_maly_podatnik",
+            "score": 0.0297,
+            "preview": "Nie, jeśli obrót rolnika w roku poprzednim wyniósł 250 tys. zł netto (powyżej limitu 240 tys. zł), to nie może on skorzystać ze zwolnienia do 240 tys. zł w bieżącym roku. Warune..."
           }
         ]
       },
@@ -4444,7 +4412,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0315,
+            "score": 0.0318,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -4978,10 +4946,10 @@
   },
   "top_200": {
     "summary": {
-      "covered_count": 130,
-      "weak_count": 15,
-      "gap_count": 55,
-      "coverage_percent": 65.0
+      "covered_count": 132,
+      "weak_count": 14,
+      "gap_count": 54,
+      "coverage_percent": 66.0
     },
     "per_category_breakdown": {
       "ceidg": {
@@ -5000,9 +4968,9 @@
         "gap_count": 9
       },
       "inne": {
-        "covered_count": 0,
+        "covered_count": 1,
         "weak_count": 0,
-        "gap_count": 7
+        "gap_count": 6
       },
       "jpk": {
         "covered_count": 14,
@@ -5015,8 +4983,8 @@
         "gap_count": 2
       },
       "ksef": {
-        "covered_count": 25,
-        "weak_count": 3,
+        "covered_count": 26,
+        "weak_count": 2,
         "gap_count": 1
       },
       "ordynacja": {
@@ -5468,43 +5436,6 @@
         ]
       },
       {
-        "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
-        "freq": 5,
-        "dataset_category": "inne",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "Leasing / samochody / amortyzacja",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 30j ust. 1 pkt 1",
-            "category": "ryczałt-od-przychodów-zagranicznych",
-            "score": 0.0305,
-            "preview": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w kt..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 4 pkt 1",
-            "category": "odliczenie VAT pojazdy",
-            "score": 0.0293,
-            "preview": "Nie. Art. 86a ust. 4 pkt 1 wymaga, aby pojazd był wykorzystywany wyłącznie do działalności gospodarczej – sposób wykorzystywania musi wyłączać użycie do celów niezwiązanych z dz..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 86a ust. 3 pkt 1 lit. a",
-            "category": "odliczanie_vat_pojazdy",
-            "score": 0.0288,
-            "preview": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków pr..."
-          }
-        ]
-      },
-      {
         "question": "Czy księgowy wie które faktury są rzeczywiście związane z prowadzaniem twojej firmy? Czy księgowy dostaje wynagrodzenie za bycie twoją asystentką?",
         "freq": 5,
         "dataset_category": "kadry",
@@ -5642,7 +5573,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0315,
+            "score": 0.0318,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -5907,12 +5838,12 @@
             "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "§ 2 ust. 1, § 3",
-            "category": "terminy_ksef",
-            "score": 0.0298,
-            "preview": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania ..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+            "category": "pit",
+            "score": 0.0296,
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           }
         ]
       },
@@ -5956,7 +5887,7 @@
         ]
       },
       {
-        "question": "Jak myślicie?",
+        "question": "A po co Ci uprawnienia?",
         "freq": 4,
         "dataset_category": "ksef",
         "aktuo_category": "ogólne",
@@ -5970,31 +5901,31 @@
           "Ustawa o VAT - KSeF uproszczenia 2026",
           "Ustawa o VAT - KSeF zwolnienia"
         ],
-        "assigned_batch": "Pozostałe luki produktowe",
+        "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 2",
-            "category": "pit",
-            "score": 0.0328,
-            "preview": "W przypadku prowadzenia działalności w formie spółki wszystkie wspólniki składają oświadczenie naczelnikom urzędów skarbowych właściwym według miejsca zamieszkania każdego ze ws..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+            "category": "fakturowanie",
+            "score": 0.032,
+            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
-            "category": "pit",
-            "score": 0.0323,
-            "preview": "Artykuł 9 reguluje procedurę złożenia oświadczenia o wyborze opodatkowania przychodów z pozarolniczej działalności gospodarczej w formie ryczałtu od przychodów ewidencjonowanych..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
-            "category": "pit",
-            "score": 0.0317,
-            "preview": "Oświadczenie o wyborze ryczałtu należy złożyć do 20. dnia miesiąca następującego po miesiącu, w którym osiągnięto pierwszy przychód z pozarolniczej działalności gospodarczej. Wy..."
+            "law_name": "Kodeks pracy",
+            "canonical_law_name": "Kodeks pracy",
+            "article_number": "art. 1732",
+            "category": "kadry",
+            "score": 0.0306,
+            "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
           }
         ]
       },
@@ -6353,7 +6284,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 14 ust. 1c",
             "category": "Data powstania przychodu",
-            "score": 0.0304,
+            "score": 0.0306,
             "preview": "Zaliczka otrzymana na poczet dostaw towarów i usług, które będą wykonane w przyszłości, nie jest przychódem - przepisuje się ją do przychodów dopiero w momencie wykonania usługi..."
           },
           {
@@ -6361,7 +6292,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 45 ust. 1",
             "category": "terminy_zeznania",
-            "score": 0.0295,
+            "score": 0.0297,
             "preview": "Termin do złożenia zeznania rocznego wynosi od 15 lutego do 30 kwietnia roku następującego po roku podatkowym, w którym osiągnięto przychód. Jeśli pierwszy przychód przypadł w s..."
           },
           {
@@ -7034,28 +6965,28 @@
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 2",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
             "category": "pit",
             "score": 0.0328,
-            "preview": "W przypadku prowadzenia działalności w formie spółki wszystkie wspólniki składają oświadczenie naczelnikom urzędów skarbowych właściwym według miejsca zamieszkania każdego ze ws..."
+            "preview": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
             "category": "pit",
             "score": 0.0323,
-            "preview": "Artykuł 9 reguluje procedurę złożenia oświadczenia o wyborze opodatkowania przychodów z pozarolniczej działalności gospodarczej w formie ryczałtu od przychodów ewidencjonowanych..."
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
-            "category": "pit",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 86a ust. 1-4 i 12-14",
+            "category": "vat",
             "score": 0.0317,
-            "preview": "Oświadczenie o wyborze ryczałtu należy złożyć do 20. dnia miesiąca następującego po miesiącu, w którym osiągnięto pierwszy przychód z pozarolniczej działalności gospodarczej. Wy..."
+            "preview": "Przy wydatkach na samoch?d osobowy, tak?e u?ywany na podstawie leasingu, co do zasady odliczasz 50% VAT. Pe?ne 100% odliczenia przys?uguje tylko wtedy, gdy pojazd jest wykorzyst..."
           }
         ]
       },
@@ -7411,7 +7342,7 @@
         ]
       },
       {
-        "question": "A po co Ci uprawnienia?",
+        "question": "Jak myślicie?",
         "freq": 4,
         "dataset_category": "ksef",
         "aktuo_category": "ogólne",
@@ -7425,74 +7356,31 @@
           "Ustawa o VAT - KSeF uproszczenia 2026",
           "Ustawa o VAT - KSeF zwolnienia"
         ],
-        "assigned_batch": "KSeF uprawnienia i obieg faktur",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o rachunkowo?ci",
-            "canonical_law_name": "Ustawa o rachunkowo?ci",
-            "article_number": "art. 39 ust. 1-3",
-            "category": "rachunkowosc",
-            "score": 0.032,
-            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "fakturowanie",
-            "score": 0.032,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
-          },
-          {
-            "law_name": "Rozporządzenie KSeF",
-            "canonical_law_name": "Rozporządzenie KSeF",
-            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
-            "category": "ksef",
-            "score": 0.0305,
-            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
-          }
-        ]
-      },
-      {
-        "question": "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
-        "freq": 4,
-        "dataset_category": "ksef",
-        "aktuo_category": "fakturowanie",
-        "verdict": "WEAK",
-        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [
-          "Rozporządzenie KSeF",
-          "Ustawa o VAT",
-          "Ustawa o VAT - KSeF terminy wdrożenia",
-          "Ustawa o VAT - KSeF uproszczenia 2026",
-          "Ustawa o VAT - KSeF zwolnienia"
-        ],
-        "assigned_batch": "Leasing / samochody / amortyzacja",
+        "assigned_batch": "Pozostałe luki produktowe",
         "top_3_chunks": [
           {
             "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "fakturowanie",
+            "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
+            "category": "pit",
             "score": 0.0328,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+            "preview": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?..."
+          },
+          {
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+            "category": "pit",
+            "score": 0.0323,
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb ust. 4 pkt 2",
-            "category": "e-faktury_ksef",
-            "score": 0.0315,
-            "preview": "Artykuł 106gb ust. 4 stanowi, że gdy nabywca jest podmiotem nieposiadającym siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności na terytorium kraju, ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1",
-            "category": "dokumentacja_faktury_korygujace",
-            "score": 0.0308,
-            "preview": "Paragon fiskalny i faktura to odrębne dokumenty. Paragon potwierdza sprzedaż zaewidencjonowaną w kasie rejestrującej. Jeśli musisz skorygować wartość, wystawiasz fakturę koryguj..."
+            "article_number": "art. 86a ust. 1-4 i 12-14",
+            "category": "vat",
+            "score": 0.0317,
+            "preview": "Przy wydatkach na samoch?d osobowy, tak?e u?ywany na podstawie leasingu, co do zasady odliczasz 50% VAT. Pe?ne 100% odliczenia przys?uguje tylko wtedy, gdy pojazd jest wykorzyst..."
           }
         ]
       },
@@ -9266,38 +9154,40 @@
         "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
         "freq": 8,
         "dataset_category": "rachunkowosc",
-        "aktuo_category": "rachunkowosc",
+        "aktuo_category": "pit",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "missing_kb_unit",
+        "root_cause_guess": "cross_law_question",
         "expected_laws": [
-          "Ustawa o rachunkowości"
+          "Ustawa o podatku dochodowym od osób fizycznych",
+          "Ustawa o rachunkowości",
+          "Ustawa o zryczałtowanym podatku dochodowym"
         ],
         "assigned_batch": "KPiR / rachunkowość operacyjna",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 6",
-            "category": "rachunkowosc",
-            "score": 0.0325,
-            "preview": "Art. 6. 1. W księgach rachunkowych jednostki należy ująć wszystkie osiągnięte, przypadające na jej rzecz przychody i obciążające ją koszty związane z tymi przychodami dotyczące ..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46",
+            "category": "pit",
+            "score": 0.0328,
+            "preview": "Je?eli samoch?d osobowy stanowi w?asno?? podatnika prowadz?cego dzia?alno?? gospodarcz?, ale nie jest sk?adnikiem maj?tku firmowego, wydatki na jego u?ywanie oraz sk?adki na ube..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 34b",
-            "category": "rachunkowosc",
-            "score": 0.0325,
-            "preview": "1. Koszty wytworzenia, które można bezpośrednio przyporządkować przychodom osiągniętym przez jednostkę, wpływają na wynik finansowy jednostki za ten okres sprawozdawczy, w który..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+            "category": "pit",
+            "score": 0.0313,
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 66",
-            "category": "rachunkowosc",
-            "score": 0.0296,
-            "preview": "1. (uchylony) 2. (uchylony) 3. (uchylony) 4. Wyboru firmy audytorskiej do przeprowadzenia badania sprawozdania finansowego oraz wyboru firmy audytorskiej do atestacji sprawozdaw..."
+            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+            "article_number": "art. 21 ust. 1, 1a",
+            "category": "pit",
+            "score": 0.0313,
+            "preview": "Podatnicy wpłacają ryczałt na rachunek urzędu skarbowego do 20. dnia następnego miesiąca za każdy miesiąc, a za grudzień do 20 stycznia następnego roku podatkowego (art. 21 ust...."
           }
         ]
       },
@@ -10649,27 +10539,22 @@
         "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
         "freq": 5,
         "dataset_category": "inne",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
+        "aktuo_category": "vat",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Rozporządzenie MF o kasach rejestrujących",
+          "Ustawa o VAT"
+        ],
         "assigned_batch": "Leasing / samochody / amortyzacja",
         "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 30j ust. 1 pkt 1",
-            "category": "ryczałt-od-przychodów-zagranicznych",
-            "score": 0.0305,
-            "preview": "Aby skorzystać z ryczałtu od przychodów zagranicznych dla osób przenoszących miejsce zamieszkania na terytorium Polski, musisz do końca stycznia roku następującego po roku, w kt..."
-          },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 86a ust. 4 pkt 1",
             "category": "odliczenie VAT pojazdy",
-            "score": 0.0293,
+            "score": 0.0313,
             "preview": "Nie. Art. 86a ust. 4 pkt 1 wymaga, aby pojazd był wykorzystywany wyłącznie do działalności gospodarczej – sposób wykorzystywania musi wyłączać użycie do celów niezwiązanych z dz..."
           },
           {
@@ -10677,8 +10562,16 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 86a ust. 3 pkt 1 lit. a",
             "category": "odliczanie_vat_pojazdy",
-            "score": 0.0288,
+            "score": 0.0311,
             "preview": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków pr..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 113 ust. 1",
+            "category": "zwolnienie_vat_maly_podatnik",
+            "score": 0.0297,
+            "preview": "Nie, jeśli obrót rolnika w roku poprzednim wyniósł 250 tys. zł netto (powyżej limitu 240 tys. zł), to nie może on skorzystać ze zwolnienia do 240 tys. zł w bieżącym roku. Warune..."
           }
         ]
       },
@@ -11191,7 +11084,7 @@
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 154",
             "category": "ordynacja",
-            "score": 0.0315,
+            "score": 0.0318,
             "preview": "Pisma skierowane do osób prawnych oraz jednostek organizacyjnych niemających osobowości prawnej, które nie mają organów, doręcza się kuratorowi wyznaczonemu przez sąd. § 2. (uch..."
           },
           {
@@ -11975,12 +11868,12 @@
             "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "§ 2 ust. 1, § 3",
-            "category": "terminy_ksef",
-            "score": 0.0298,
-            "preview": "Przepisy o uprawnieniach do KSeF (§ 2-3) nie regulują terminów podawania numeru KSeF ani jego powiązania z terminem płatności. Informacja o wymogach dotyczących terminu podania ..."
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+            "category": "pit",
+            "score": 0.0296,
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           }
         ]
       },
@@ -12108,8 +12001,8 @@
         "freq": 4,
         "dataset_category": "ksef",
         "aktuo_category": "ogólne",
-        "verdict": "WEAK",
-        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "verdict": "GAP",
+        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
         "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Rozporządzenie KSeF",
@@ -12121,14 +12014,6 @@
         "assigned_batch": "KSeF uprawnienia i obieg faktur",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o rachunkowo?ci",
-            "canonical_law_name": "Ustawa o rachunkowo?ci",
-            "article_number": "art. 39 ust. 1-3",
-            "category": "rachunkowosc",
-            "score": 0.032,
-            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
-          },
-          {
             "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
@@ -12137,12 +12022,20 @@
             "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
           },
           {
-            "law_name": "Rozporządzenie KSeF",
-            "canonical_law_name": "Rozporządzenie KSeF",
-            "article_number": "§ 4 ust. 1-2 oraz § 5 ust. 1-3",
-            "category": "ksef",
-            "score": 0.0305,
-            "preview": "Nadawanie i odbieranie uprawnień w KSeF odbywa się za pomocą oprogramowania interfejsowego po weryfikacji posiadanych uprawnień (§ 4 ust. 1). Do nadania uprawnienia podaje się m..."
+            "law_name": "Ustawa o rachunkowo?ci",
+            "canonical_law_name": "Ustawa o rachunkowo?ci",
+            "article_number": "art. 39 ust. 1-3",
+            "category": "rachunkowosc",
+            "score": 0.0318,
+            "preview": "Je?eli koszt dotyczy przysz?ych okres?w sprawozdawczych, jednostka dokonuje czynnych rozlicze? mi?dzyokresowych koszt?w. Bierne rozliczenia mi?dzyokresowe ujmuje si? dla prawdop..."
+          },
+          {
+            "law_name": "Kodeks pracy",
+            "canonical_law_name": "Kodeks pracy",
+            "article_number": "art. 1732",
+            "category": "kadry",
+            "score": 0.0306,
+            "preview": "Okres urlopu opiekuńczego wlicza się do okresu zatrudnienia, od którego zależą uprawnienia pracownicze"
           }
         ]
       },
@@ -12237,42 +12130,44 @@
         "question": "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
         "freq": 4,
         "dataset_category": "ksef",
-        "aktuo_category": "fakturowanie",
-        "verdict": "WEAK",
-        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "aktuo_category": "pit",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie KSeF",
           "Ustawa o VAT",
           "Ustawa o VAT - KSeF terminy wdrożenia",
           "Ustawa o VAT - KSeF uproszczenia 2026",
-          "Ustawa o VAT - KSeF zwolnienia"
+          "Ustawa o VAT - KSeF zwolnienia",
+          "Ustawa o podatku dochodowym od osób fizycznych",
+          "Ustawa o zryczałtowanym podatku dochodowym"
         ],
         "assigned_batch": "Leasing / samochody / amortyzacja",
         "top_3_chunks": [
           {
             "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
-            "category": "fakturowanie",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+            "category": "pit",
             "score": 0.0328,
-            "preview": "Przy leasingu samochodu osobowego koszty uzyskania przychod?w podlegaj? ustawowym ograniczeniom, a dla samochodu elektrycznego ustawodawca przewiduje wy?szy limit warto?ci. Op?a..."
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb ust. 4 pkt 2",
-            "category": "e-faktury_ksef",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
+            "category": "pit",
+            "score": 0.0318,
+            "preview": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?..."
+          },
+          {
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22h ust. 1 pkt 1 i ust. 2 oraz art. 23 ust. 1 pkt 4",
+            "category": "pit",
             "score": 0.0315,
-            "preview": "Artykuł 106gb ust. 4 stanowi, że gdy nabywca jest podmiotem nieposiadającym siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności na terytorium kraju, ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106j ust. 1",
-            "category": "dokumentacja_faktury_korygujace",
-            "score": 0.0308,
-            "preview": "Paragon fiskalny i faktura to odrębne dokumenty. Paragon potwierdza sprzedaż zaewidencjonowaną w kasie rejestrującej. Jeśli musisz skorygować wartość, wystawiasz fakturę koryguj..."
+            "preview": "Odpis?w amortyzacyjnych dokonuje si? od miesi?ca nast?puj?cego po wprowadzeniu ?rodka trwa?ego do ewidencji, a wybran? metod? amortyzacji stosuje si? do pe?nego zamortyzowania d..."
           }
         ]
       },
@@ -12455,8 +12350,8 @@
         "freq": 4,
         "dataset_category": "ksef",
         "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Brak mocnego trafienia w spodziewany akt prawny.",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "missing_kb_unit",
         "expected_laws": [
           "Rozporządzenie KSeF",
@@ -12468,28 +12363,28 @@
         "assigned_batch": "Pozostałe luki produktowe",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 2",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
             "category": "pit",
             "score": 0.0328,
-            "preview": "W przypadku prowadzenia działalności w formie spółki wszystkie wspólniki składają oświadczenie naczelnikom urzędów skarbowych właściwym według miejsca zamieszkania każdego ze ws..."
+            "preview": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
             "category": "pit",
             "score": 0.0323,
-            "preview": "Artykuł 9 reguluje procedurę złożenia oświadczenia o wyborze opodatkowania przychodów z pozarolniczej działalności gospodarczej w formie ryczałtu od przychodów ewidencjonowanych..."
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
-            "category": "pit",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 86a ust. 1-4 i 12-14",
+            "category": "vat",
             "score": 0.0317,
-            "preview": "Oświadczenie o wyborze ryczałtu należy złożyć do 20. dnia miesiąca następującego po miesiącu, w którym osiągnięto pierwszy przychód z pozarolniczej działalności gospodarczej. Wy..."
+            "preview": "Przy wydatkach na samoch?d osobowy, tak?e u?ywany na podstawie leasingu, co do zasady odliczasz 50% VAT. Pe?ne 100% odliczenia przys?uguje tylko wtedy, gdy pojazd jest wykorzyst..."
           }
         ]
       },
@@ -12971,7 +12866,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 14 ust. 1c",
             "category": "Data powstania przychodu",
-            "score": 0.0304,
+            "score": 0.0306,
             "preview": "Zaliczka otrzymana na poczet dostaw towarów i usług, które będą wykonane w przyszłości, nie jest przychódem - przepisuje się ją do przychodów dopiero w momencie wykonania usługi..."
           },
           {
@@ -12979,7 +12874,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 45 ust. 1",
             "category": "terminy_zeznania",
-            "score": 0.0295,
+            "score": 0.0297,
             "preview": "Termin do złożenia zeznania rocznego wynosi od 15 lutego do 30 kwietnia roku następującego po roku podatkowym, w którym osiągnięto przychód. Jeśli pierwszy przychód przypadł w s..."
           },
           {
@@ -14561,28 +14456,28 @@
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 2",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
             "category": "pit",
             "score": 0.0328,
-            "preview": "W przypadku prowadzenia działalności w formie spółki wszystkie wspólniki składają oświadczenie naczelnikom urzędów skarbowych właściwym według miejsca zamieszkania każdego ze ws..."
+            "preview": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
+            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+            "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
             "category": "pit",
             "score": 0.0323,
-            "preview": "Artykuł 9 reguluje procedurę złożenia oświadczenia o wyborze opodatkowania przychodów z pozarolniczej działalności gospodarczej w formie ryczałtu od przychodów ewidencjonowanych..."
+            "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           },
           {
-            "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "canonical_law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-            "article_number": "art. 9 ust. 1",
-            "category": "pit",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 86a ust. 1-4 i 12-14",
+            "category": "vat",
             "score": 0.0317,
-            "preview": "Oświadczenie o wyborze ryczałtu należy złożyć do 20. dnia miesiąca następującego po miesiącu, w którym osiągnięto pierwszy przychód z pozarolniczej działalności gospodarczej. Wy..."
+            "preview": "Przy wydatkach na samoch?d osobowy, tak?e u?ywany na podstawie leasingu, co do zasady odliczasz 50% VAT. Pe?ne 100% odliczenia przys?uguje tylko wtedy, gdy pojazd jest wykorzyst..."
           }
         ]
       },
@@ -14931,7 +14826,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 89a ust. 1",
             "category": "nieściągalne wierzytelności, korekta częściowa",
-            "score": 0.0315,
+            "score": 0.0318,
             "preview": "Tak, korekta dotyczy również podstawy opodatkowania i kwoty podatku przypadającej na część kwoty wierzytelności, której nieściągalność została uprawdopodobniona. Jeśli klient za..."
           },
           {
@@ -14939,7 +14834,7 @@
             "canonical_law_name": "Kodeks pracy",
             "article_number": "art. 32",
             "category": "kadry",
-            "score": 0.029,
+            "score": 0.0292,
             "preview": "Każda ze stron może rozwiązać umowę o pracę za wypowiedzeniem. § 2. Rozwiązanie umowy o pracę następuje z upływem okresu wypowiedzenia"
           }
         ]
@@ -15724,25 +15619,6 @@
       "priority_score": 39.0
     },
     {
-      "batch_name": "Leasing / samochody / amortyzacja",
-      "recommended_fix_type": "kb_units",
-      "estimated_kb_units_needed": 2,
-      "estimated_synonym_additions_needed": 0,
-      "expected_impact_on_top100_questions": 2,
-      "expected_impact_on_top100_pp": 2.0,
-      "expected_impact_on_top200_questions": 3,
-      "expected_impact_on_top200_pp": 1.5,
-      "likely_laws_or_regulations_needed": [
-        "Ustawa o VAT",
-        "Ustawa o podatku dochodowym od osób fizycznych",
-        "Ustawa o rachunkowości"
-      ],
-      "likely_synonym_additions_needed": [
-        "VAT26"
-      ],
-      "priority_score": 14.0
-    },
-    {
       "batch_name": "Poza zakresem / community workflow",
       "recommended_fix_type": "categorizer",
       "estimated_kb_units_needed": 0,
@@ -15774,6 +15650,25 @@
         "UPL-1"
       ],
       "priority_score": 8.0
+    },
+    {
+      "batch_name": "Leasing / samochody / amortyzacja",
+      "recommended_fix_type": "kb_units",
+      "estimated_kb_units_needed": 2,
+      "estimated_synonym_additions_needed": 0,
+      "expected_impact_on_top100_questions": 1,
+      "expected_impact_on_top100_pp": 1.0,
+      "expected_impact_on_top200_questions": 1,
+      "expected_impact_on_top200_pp": 0.5,
+      "likely_laws_or_regulations_needed": [
+        "Ustawa o VAT",
+        "Ustawa o podatku dochodowym od osób fizycznych",
+        "Ustawa o rachunkowości"
+      ],
+      "likely_synonym_additions_needed": [
+        "VAT26"
+      ],
+      "priority_score": 5.0
     },
     {
       "batch_name": "KSeF uprawnienia i obieg faktur",

@@ -1,0 +1,160 @@
+{
+  "batch_name": "Leasing / samochody / amortyzacja",
+  "generated_at": "2026-04-12",
+  "questions_in_batch": 3,
+  "kb_units_added": 3,
+  "synonym_entries_added": 0,
+  "batch_coverage_before": {
+    "covered_count": 0,
+    "weak_count": 1,
+    "gap_count": 2
+  },
+  "batch_coverage_after": {
+    "covered_count": 2,
+    "weak_count": 0,
+    "gap_count": 1
+  },
+  "questions_improved": 2,
+  "top100_coverage_before": {
+    "covered_count": 76,
+    "weak_count": 6,
+    "gap_count": 18,
+    "coverage_percent": 76.0
+  },
+  "top100_coverage_after": {
+    "covered_count": 77,
+    "weak_count": 6,
+    "gap_count": 17,
+    "coverage_percent": 77.0
+  },
+  "top200_coverage_before": {
+    "covered_count": 130,
+    "weak_count": 15,
+    "gap_count": 55,
+    "coverage_percent": 65.0
+  },
+  "top200_coverage_after": {
+    "covered_count": 132,
+    "weak_count": 14,
+    "gap_count": 54,
+    "coverage_percent": 66.0
+  },
+  "files_changed": [
+    "analysis/leasing_cars_batch_diagnosis.json",
+    "analysis/leasing_cars_batch_input.json",
+    "analysis/leasing_cars_batch_result.json",
+    "analysis/top_coverage_impact_report.json",
+    "analysis/top_gap_batches.json",
+    "core/categorizer.py",
+    "data/seeds/law_knowledge.json"
+  ],
+  "after_question_details": [
+    {
+      "question": "Czy to dobry pomysł aby na pierwsze pół roku samochód osobowy (leasing) wziąć tylko do celów firmowych?",
+      "dataset_category": "inne",
+      "aktuo_category_after": "vat",
+      "verdict_after": "COVERED",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Rozporządzenie MF o kasach rejestrujących",
+        "Ustawa o VAT"
+      ],
+      "top_3_chunks_after": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 4 pkt 1",
+          "category": "odliczenie VAT pojazdy",
+          "score": 0.0313,
+          "preview": "Nie. Art. 86a ust. 4 pkt 1 wymaga, aby pojazd był wykorzystywany wyłącznie do działalności gospodarczej – sposób wykorzystywania musi wyłączać użycie do celów niezwiązanych z działalnością (użytek prywatny). Jeśli samochód faktycznie jest u"
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+          "category": "odliczanie_vat_pojazdy",
+          "score": 0.0311,
+          "preview": "Tak, możesz odliczyć 100% VAT od tego pojazdu. Samochód ciężarowy (inny niż samochód osobowy) z jednym rzędem siedzeń oddzielonym od części przeznaczonej do przewozu ładunków przegrodą jest uznawany za pojazd wykorzystywany wyłącznie do dzi"
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 113 ust. 1",
+          "category": "zwolnienie_vat_maly_podatnik",
+          "score": 0.0297,
+          "preview": "Nie, jeśli obrót rolnika w roku poprzednim wyniósł 250 tys. zł netto (powyżej limitu 240 tys. zł), to nie może on skorzystać ze zwolnienia do 240 tys. zł w bieżącym roku. Warunek zwolnienia wymaga, aby wartość sprzedaży nie przekroczyła 240"
+        }
+      ]
+    },
+    {
+      "question": ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?",
+      "dataset_category": "praktyka",
+      "aktuo_category_after": "ogólne",
+      "verdict_after": "GAP",
+      "reason_after": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
+      "expected_laws": [],
+      "top_3_chunks_after": [
+        {
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "article_number": "art. 12",
+          "category": "praktyka",
+          "score": 0.0328,
+          "preview": "Art. 12. 1. Ryczalt od przychodów ewidencjonowanych wynosi: 1) 17 % przychodów osiganych w zakresie wolnych zawodów; 2) 15 % przychodów ze wiadczenia uslug:\na) reprodukcji komputerowych noników informacji (PKWiU 18.20.30.0), b) porednictwa "
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106b ust. 3 pkt 2",
+          "category": "Dokumentacja sprzedaży - faktury",
+          "score": 0.0323,
+          "preview": "Tak, jeśli klient o to poprosi, musisz wystawić fakturę. Przepis art. 106b ust. 3 pkt 2 jasno stanowi, że na żądanie nabywcy masz obowiązek wystawić fakturę dokumentującą sprzedaż zwolnioną od podatku na podstawie art. 113 (twój przypadek)."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 9 ust. 1",
+          "category": "wewnątrzwspólnotowe_nabycie",
+          "score": 0.0313,
+          "preview": "Wewnątrzwspólnotowe nabycie występuje, gdy towary są wysłane lub transportowane przez dokonującego dostawę, nabywcę lub na ich rzecz (art. 9 ust. 1). Jeśli klient sam odbiera towar ze Słowacji, nadal jest to wewnątrzwspólnotowe nabycie pod "
+        }
+      ]
+    },
+    {
+      "question": "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
+      "dataset_category": "ksef",
+      "aktuo_category_after": "pit",
+      "verdict_after": "COVERED",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Rozporządzenie KSeF",
+        "Ustawa o VAT",
+        "Ustawa o VAT - KSeF terminy wdrożenia",
+        "Ustawa o VAT - KSeF uproszczenia 2026",
+        "Ustawa o VAT - KSeF zwolnienia",
+        "Ustawa o podatku dochodowym od osób fizycznych",
+        "Ustawa o zryczałtowanym podatku dochodowym"
+      ],
+      "top_3_chunks_after": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+          "category": "pit",
+          "score": 0.0328,
+          "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem trwa?ym podlegaj?cym amortyzacji, a wydatek na jego nabycie roz"
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
+          "category": "pit",
+          "score": 0.0318,
+          "preview": "Op?aty leasingowe za samoch?d osobowy mog? by? kosztem uzyskania przychod?w na zasadach art. 23b ust. 1, ale przy aucie u?ywanym tak?e prywatnie 25% wydatk?w z tytu?u koszt?w u?ywania samochodu nie stanowi kosztu podatkowego. W praktyce prz"
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "article_number": "art. 22h ust. 1 pkt 1 i ust. 2 oraz art. 23 ust. 1 pkt 4",
+          "category": "pit",
+          "score": 0.0315,
+          "preview": "Odpis?w amortyzacyjnych dokonuje si? od miesi?ca nast?puj?cego po wprowadzeniu ?rodka trwa?ego do ewidencji, a wybran? metod? amortyzacji stosuje si? do pe?nego zamortyzowania danego ?rodka trwa?ego. Jednocze?nie odpisy od samochodu osobowe"
+        }
+      ]
+    }
+  ],
+  "notes_on_still_unresolved_questions": [
+    "Pytanie o faktur? ko?cem grudnia i brak twardego dowodu pozostaje GAP, bo opis stanu faktycznego jest urwany i nie wskazuje jednego konkretnego problemu prawnego do bezpiecznego ugruntowania w przepisie."
+  ]
+}
