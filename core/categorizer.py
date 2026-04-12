@@ -58,6 +58,10 @@ def categorize_query(query: str) -> str:
         for marker in ("dalszego ich przekazywania", "pobrania takich faktur", "podglad w pdf", "administrator")
     ):
         return "ksef"
+    if "jpk" in lowered and any(marker in lowered for marker in ("czynny", "zal", "?al", "korekt", "fv", "fakt")):
+        return "jpk"
+    if any(marker in lowered for marker in ("pe?nomoc", "pelnomoc", "profil zaufany", "podpis kwalifikowany", "zaw fa", "zaw-fa", "upl-1", "upl1", "pps-1", "pps1")):
+        return "ordynacja"
     operational_accounting_markers = (
         "zaksieg",
         "przeksieg",

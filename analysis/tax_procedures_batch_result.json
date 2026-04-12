@@ -1,0 +1,123 @@
+{
+  "batch_name": "Procedury podatkowe / pisma / pe?nomocnictwa",
+  "generated_at": "2026-04-12",
+  "questions_in_batch": 2,
+  "kb_units_added": 4,
+  "synonym_entries_added": 0,
+  "bad_existing_units_removed": 1,
+  "batch_coverage_before": {
+    "covered_count": 0,
+    "weak_count": 1,
+    "gap_count": 1
+  },
+  "batch_coverage_after": {
+    "covered_count": 2,
+    "weak_count": 0,
+    "gap_count": 0
+  },
+  "questions_improved": 2,
+  "top100_coverage_before": {
+    "covered_count": 77,
+    "weak_count": 6,
+    "gap_count": 17,
+    "coverage_percent": 77.0
+  },
+  "top100_coverage_after": {
+    "covered_count": 78,
+    "weak_count": 7,
+    "gap_count": 15,
+    "coverage_percent": 78.0
+  },
+  "top200_coverage_before": {
+    "covered_count": 132,
+    "weak_count": 14,
+    "gap_count": 54,
+    "coverage_percent": 66.0
+  },
+  "top200_coverage_after": {
+    "covered_count": 133,
+    "weak_count": 15,
+    "gap_count": 52,
+    "coverage_percent": 66.5
+  },
+  "files_changed": [
+    "analysis/tax_procedures_batch_input.json",
+    "analysis/tax_procedures_batch_diagnosis.json",
+    "analysis/tax_procedures_batch_result.json",
+    "analysis/top_coverage_impact_report.json",
+    "analysis/top_gap_batches.json",
+    "core/categorizer.py",
+    "data/seeds/law_knowledge.json"
+  ],
+  "after_question_details": [
+    {
+      "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
+      "dataset_category": "ceidg",
+      "aktuo_category_after": "ordynacja",
+      "verdict_after": "COVERED",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Ordynacja podatkowa"
+      ],
+      "top_3_chunks_after": [
+        {
+          "law_name": "Ordynacja podatkowa",
+          "article_number": "art. 3a, 3b i 168",
+          "category": "ordynacja",
+          "score": 0.0328,
+          "preview": "Ordynacja podatkowa pozwala sk?ada? deklaracje elektronicznie, a ich z?o?enie jest potwierdzane elektronicznie. Deklaracja elektroniczna powinna zawiera? dane we w?a?ciwym formacie oraz jeden podpis elektroniczny, a rodzaje podpisu dla posz"
+        },
+        {
+          "law_name": "Ordynacja podatkowa",
+          "article_number": "art. 293 § 3",
+          "category": "tajemnica skarbowa",
+          "score": 0.032,
+          "preview": "Organ podatkowy może ujawnić kontrahentowi podatnika informacje o niezłożeniu lub złożeniu deklaracji, o nieujęciu lub ujęciu zdarzeń w deklaracji oraz o zaleganiu lub niezaleganiu w podatkach. To wyjątki od tajemnicy skarbowej, ale dotyczą"
+        },
+        {
+          "law_name": "Ordynacja podatkowa",
+          "article_number": "art. 112b",
+          "category": "ordynacja",
+          "score": 0.032,
+          "preview": "Jednoosobowa spółka kapitałowa powstała w wyniku przekształcenia przedsiębiorcy będącego osobą fizyczną odpowiada całym swoim majątkiem solidarnie z tą osobą fizyczną za powstałe do dnia przekształcenia zaległości podatkowe przedsiębiorcy z"
+        }
+      ]
+    },
+    {
+      "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+      "dataset_category": "jpk",
+      "aktuo_category_after": "jpk",
+      "verdict_after": "COVERED",
+      "reason_after": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+      "expected_laws": [
+        "Rozporządzenie JPK_V7",
+        "Ustawa o VAT"
+      ],
+      "top_3_chunks_after": [
+        {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 109 ust. 3e-3g",
+          "category": "jpk",
+          "score": 0.0328,
+          "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy termin obowi?zuje po dor?czeniu wezwania naczelnika urz?du skarb"
+        },
+        {
+          "law_name": "Rozporządzenie JPK_V7",
+          "article_number": "§ 10",
+          "category": "jpk",
+          "score": 0.0299,
+          "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia grup towarów i usług (GTU) oraz oznaczenia"
+        },
+        {
+          "law_name": "Rozporządzenie JPK_V7",
+          "article_number": "Â§ 12",
+          "category": "jpk",
+          "score": 0.028,
+          "preview": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygowany okres, bo błędy formalne lub techniczne mogą skutkować odr"
+        }
+      ]
+    }
+  ],
+  "remaining_unresolved_batch_entry": null,
+  "notes_on_still_unresolved_questions": []
+}

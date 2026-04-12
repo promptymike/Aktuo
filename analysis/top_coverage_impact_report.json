@@ -1,16 +1,16 @@
 {
   "top_100": {
     "summary": {
-      "covered_count": 77,
-      "weak_count": 6,
-      "gap_count": 17,
-      "coverage_percent": 77.0
+      "covered_count": 78,
+      "weak_count": 7,
+      "gap_count": 15,
+      "coverage_percent": 78.0
     },
     "per_category_breakdown": {
       "ceidg": {
-        "covered_count": 0,
+        "covered_count": 1,
         "weak_count": 0,
-        "gap_count": 1
+        "gap_count": 0
       },
       "cit": {
         "covered_count": 6,
@@ -38,8 +38,8 @@
         "gap_count": 1
       },
       "ksef": {
-        "covered_count": 10,
-        "weak_count": 0,
+        "covered_count": 9,
+        "weak_count": 1,
         "gap_count": 0
       },
       "ordynacja": {
@@ -53,9 +53,9 @@
         "gap_count": 0
       },
       "praktyka": {
-        "covered_count": 3,
+        "covered_count": 4,
         "weak_count": 2,
-        "gap_count": 12
+        "gap_count": 11
       },
       "rachunkowosc": {
         "covered_count": 14,
@@ -79,43 +79,6 @@
       }
     },
     "gap_questions": [
-      {
-        "question": "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
-        "freq": 27,
-        "dataset_category": "praktyka",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "Poza zakresem / community workflow",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "article_number": "art. 15",
-            "category": "praktyka",
-            "score": 0.0328,
-            "preview": "Art. 15. 1. Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów, z ..."
-          },
-          {
-            "law_name": "Ordynacja podatkowa",
-            "canonical_law_name": "Ordynacja podatkowa",
-            "article_number": "art. 138j",
-            "category": "ordynacja",
-            "score": 0.0315,
-            "preview": "Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia: 1) wzór pełnomocnictwa ogólnego i wzór zawiadomienia o zmianie, odwołaniu lub wypowiedzeniu teg..."
-          },
-          {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 32",
-            "category": "zus",
-            "score": 0.0306,
-            "preview": "1. Do składek na Fundusz Pracy, Fundusz Solidarnościowy, Fundusz Gwarantowanych Świadczeń Pracowniczych i Fundusz Emerytur Pomostowych oraz na ubezpieczenie zdrowotne w zakresie..."
-          }
-        ]
-      },
       {
         "question": "Co polecacie jak zacząć pracę w takim miejscu, gdzie zdobywać wiedzę, jak tej pracy szukać?",
         "freq": 22,
@@ -374,45 +337,8 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 41 ust. 1, 2, 2a oraz art. 146ef ust. 1",
             "category": "vat",
-            "score": 0.0296,
+            "score": 0.0294,
             "preview": "Z samego tekstu ustawy nie wynika prosty podział stawek wyłącznie według tego, czy danie zawiera ryby czy owoce morza. Ustawa rozróżnia stawki dla towarów z załączników oraz wył..."
-          }
-        ]
-      },
-      {
-        "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
-        "freq": 5,
-        "dataset_category": "ceidg",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [],
-        "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0325,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 15 ust. 1",
-            "category": "status podatnika VAT",
-            "score": 0.0323,
-            "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 44 ust. 10",
-            "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
-            "score": 0.0315,
-            "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
           }
         ]
       },
@@ -797,6 +723,50 @@
         ]
       },
       {
+        "question": "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+        "freq": 12,
+        "dataset_category": "ksef",
+        "aktuo_category": "jpk",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Rozporządzenie JPK_V7",
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
+        "assigned_batch": "JPK oznaczenia i procedury",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0287,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          }
+        ]
+      },
+      {
         "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
         "freq": 9,
         "dataset_category": "rachunkowosc",
@@ -973,23 +943,23 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0307,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0269,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1",
             "category": "dokumentacja_vat",
-            "score": 0.0323,
+            "score": 0.0325,
             "preview": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym ..."
           }
         ]
@@ -1037,36 +1007,38 @@
         "question": "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
         "freq": 27,
         "dataset_category": "praktyka",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
+        "aktuo_category": "ordynacja",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Ordynacja podatkowa"
+        ],
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "article_number": "art. 15",
-            "category": "praktyka",
-            "score": 0.0328,
-            "preview": "Art. 15. 1. Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów, z ..."
-          },
           {
             "law_name": "Ordynacja podatkowa",
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 138j",
             "category": "ordynacja",
-            "score": 0.0315,
+            "score": 0.0323,
             "preview": "Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia: 1) wzór pełnomocnictwa ogólnego i wzór zawiadomienia o zmianie, odwołaniu lub wypowiedzeniu teg..."
           },
           {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 32",
-            "category": "zus",
-            "score": 0.0306,
-            "preview": "1. Do składek na Fundusz Pracy, Fundusz Solidarnościowy, Fundusz Gwarantowanych Świadczeń Pracowniczych i Fundusz Emerytur Pomostowych oraz na ubezpieczenie zdrowotne w zakresie..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 138i § 1",
+            "category": "pełnomocnictwo_w_sprawach_podatkowych",
+            "score": 0.031,
+            "preview": "Sposób odwołania pełnomocnictwa zależy od jego rodzaju. Dla pełnomocnictwa ogólnego — odwołanie wywiera skutek od dnia wpływu do Centralnego Rejestru. Dla pełnomocnictwa szczegó..."
+          },
+          {
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 306f",
+            "category": "ordynacja",
+            "score": 0.0296,
+            "preview": "Organ podatkowy na wniosek osoby, która uprawdopodobni, że może być spadkobiercą, wydaje zaświadczenie o wysokości znanych temu organowi zobowiązań spadkodawcy wymienionych w ar..."
           }
         ]
       },
@@ -1249,16 +1221,16 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0325,
+            "score": 0.0328,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0318,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0298,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
@@ -1376,19 +1348,19 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0323,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0301,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0247,
+            "score": 0.025,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           }
         ]
@@ -1539,19 +1511,19 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0323,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0315,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106b",
             "category": "faktury_i_dokumentacja",
-            "score": 0.0313,
+            "score": 0.0315,
             "preview": "Pytanie dotyczy procedur rozliczeniowych (FP - Fakt Papierze, RO - Raport Okresu), które nie są opisane w przytoczonych artykułach Ustawy o VAT. Przepisy art. 106b dotyczą obowi..."
           }
         ]
@@ -1740,23 +1712,23 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0325,
+            "score": 0.0328,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0323,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0298,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 109 ust. 14",
             "category": "Dokumentacja - Ewidencja sprzedaży i opakowań",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Przepisy art. 109 dotyczą ewidencji sprzedaży i dostaw, ale nie określają kodów oznaczenia faktur wewnętrznych (Wew/DI lub Wew/BFK). Ustawodawca powierza Ministrowi określenie s..."
           }
         ]
@@ -1805,9 +1777,9 @@
         "question": "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
         "freq": 12,
         "dataset_category": "ksef",
-        "aktuo_category": "ksef",
-        "verdict": "COVERED",
-        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "aktuo_category": "jpk",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
@@ -1822,26 +1794,26 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0287,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0323,
+            "score": 0.0318,
             "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Rozporządzenie KSeF",
-            "canonical_law_name": "Rozporządzenie KSeF",
-            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -2293,12 +2265,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.032,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -2313,7 +2285,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 10 ust. 1 pkt 8a",
             "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0323,
+            "score": 0.0325,
             "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
           }
         ]
@@ -2621,20 +2593,20 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0255,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
-          },
-          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1",
             "category": "dokumentacja_vat",
             "score": 0.0323,
             "preview": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106e",
+            "category": "vat",
+            "score": 0.032,
+            "preview": "Art. 106e. 1. Faktura powinna zawiera: 1) dat wystawienia; 2) kolejny numer nadany w ramach jednej lub wicej serii, który w sposób jednoznaczny identyfikuje faktur; 3) imiona i ..."
           }
         ]
       },
@@ -3047,19 +3019,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0323,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0275,
+            "score": 0.0278,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           },
           {
@@ -3067,7 +3039,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 42",
             "category": "vat",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Art. 42. 1. Wewntrzwspólnotowa dostawa towarów podlega opodatkowaniu wedlug stawki podatku 0 %, pod warunkiem e: 1) podatnik dokonal dostawy na rzecz nabywcy posiadajcego wlaciw..."
           }
         ]
@@ -3118,7 +3090,7 @@
         "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "missing_kb_unit",
+        "root_cause_guess": "weak_existing_chunk",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
           "Ustawa o VAT"
@@ -3126,19 +3098,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0309,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1 pkt 4",
             "category": "identyfikacja sprzedawcy na fakturze",
-            "score": 0.0313,
+            "score": 0.0315,
             "preview": "Tak, NIP sprzedawcy jest obowiązkowy. Art. 106e ust. 1 pkt 4 wymaga, aby faktura zawierała 'numer, za pomocą którego podatnik jest zidentyfikowany na potrzeby podatku' (czyli NI..."
           },
           {
@@ -3146,7 +3118,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 100 ust. 8",
             "category": "rejestracja_informacje_podsumowujace",
-            "score": 0.031,
+            "score": 0.0313,
             "preview": "Informacja podsumowująca musi zawierać: nazwę/imię i nazwisko podatnika z jego NIP, właściwy numer identyfikacyjny kontrahenta dla transakcji UE, właściwy numer identyfikacyjny ..."
           }
         ]
@@ -3466,7 +3438,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 41 ust. 1, 2, 2a oraz art. 146ef ust. 1",
             "category": "vat",
-            "score": 0.0296,
+            "score": 0.0294,
             "preview": "Z samego tekstu ustawy nie wynika prosty podział stawek wyłącznie według tego, czy danie zawiera ryby czy owoce morza. Ustawa rozróżnia stawki dla towarów z załączników oraz wył..."
           }
         ]
@@ -3565,12 +3537,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0325,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -3585,7 +3557,7 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.03,
+            "score": 0.0303,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           }
         ]
@@ -3610,24 +3582,24 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0323,
+            "score": 0.0325,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
-          },
-          {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0305,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0267,
+            "score": 0.0269,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0265,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           }
         ]
       },
@@ -3756,36 +3728,38 @@
         "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
         "freq": 5,
         "dataset_category": "ceidg",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [],
+        "aktuo_category": "ordynacja",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Ordynacja podatkowa"
+        ],
         "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0325,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 3a, 3b i 168",
+            "category": "ordynacja",
+            "score": 0.0328,
+            "preview": "Ordynacja podatkowa pozwala sk?ada? deklaracje elektronicznie, a ich z?o?enie jest potwierdzane elektronicznie. Deklaracja elektroniczna powinna zawiera? dane we w?a?ciwym forma..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 15 ust. 1",
-            "category": "status podatnika VAT",
-            "score": 0.0323,
-            "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 293 § 3",
+            "category": "tajemnica skarbowa",
+            "score": 0.032,
+            "preview": "Organ podatkowy może ujawnić kontrahentowi podatnika informacje o niezłożeniu lub złożeniu deklaracji, o nieujęciu lub ujęciu zdarzeń w deklaracji oraz o zaleganiu lub niezalega..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 44 ust. 10",
-            "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
-            "score": 0.0315,
-            "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 112b",
+            "category": "ordynacja",
+            "score": 0.032,
+            "preview": "Jednoosobowa spółka kapitałowa powstała w wyniku przekształcenia przedsiębiorcy będącego osobą fizyczną odpowiada całym swoim majątkiem solidarnie z tą osobą fizyczną za powstał..."
           }
         ]
       },
@@ -4946,16 +4920,16 @@
   },
   "top_200": {
     "summary": {
-      "covered_count": 132,
-      "weak_count": 14,
-      "gap_count": 54,
-      "coverage_percent": 66.0
+      "covered_count": 133,
+      "weak_count": 15,
+      "gap_count": 52,
+      "coverage_percent": 66.5
     },
     "per_category_breakdown": {
       "ceidg": {
-        "covered_count": 1,
+        "covered_count": 2,
         "weak_count": 0,
-        "gap_count": 4
+        "gap_count": 3
       },
       "cit": {
         "covered_count": 11,
@@ -4983,8 +4957,8 @@
         "gap_count": 2
       },
       "ksef": {
-        "covered_count": 26,
-        "weak_count": 2,
+        "covered_count": 25,
+        "weak_count": 3,
         "gap_count": 1
       },
       "ordynacja": {
@@ -4998,9 +4972,9 @@
         "gap_count": 0
       },
       "praktyka": {
-        "covered_count": 4,
+        "covered_count": 5,
         "weak_count": 2,
-        "gap_count": 22
+        "gap_count": 21
       },
       "rachunkowosc": {
         "covered_count": 20,
@@ -5024,43 +4998,6 @@
       }
     },
     "gap_questions": [
-      {
-        "question": "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
-        "freq": 27,
-        "dataset_category": "praktyka",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
-        "assigned_batch": "Poza zakresem / community workflow",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "article_number": "art. 15",
-            "category": "praktyka",
-            "score": 0.0328,
-            "preview": "Art. 15. 1. Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów, z ..."
-          },
-          {
-            "law_name": "Ordynacja podatkowa",
-            "canonical_law_name": "Ordynacja podatkowa",
-            "article_number": "art. 138j",
-            "category": "ordynacja",
-            "score": 0.0315,
-            "preview": "Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia: 1) wzór pełnomocnictwa ogólnego i wzór zawiadomienia o zmianie, odwołaniu lub wypowiedzeniu teg..."
-          },
-          {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 32",
-            "category": "zus",
-            "score": 0.0306,
-            "preview": "1. Do składek na Fundusz Pracy, Fundusz Solidarnościowy, Fundusz Gwarantowanych Świadczeń Pracowniczych i Fundusz Emerytur Pomostowych oraz na ubezpieczenie zdrowotne w zakresie..."
-          }
-        ]
-      },
       {
         "question": "Co polecacie jak zacząć pracę w takim miejscu, gdzie zdobywać wiedzę, jak tej pracy szukać?",
         "freq": 22,
@@ -5319,45 +5256,8 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 41 ust. 1, 2, 2a oraz art. 146ef ust. 1",
             "category": "vat",
-            "score": 0.0296,
+            "score": 0.0294,
             "preview": "Z samego tekstu ustawy nie wynika prosty podział stawek wyłącznie według tego, czy danie zawiera ryby czy owoce morza. Ustawa rozróżnia stawki dla towarów z załączników oraz wył..."
-          }
-        ]
-      },
-      {
-        "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
-        "freq": 5,
-        "dataset_category": "ceidg",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [],
-        "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
-        "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0325,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
-          },
-          {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 15 ust. 1",
-            "category": "status podatnika VAT",
-            "score": 0.0323,
-            "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
-          },
-          {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 44 ust. 10",
-            "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
-            "score": 0.0315,
-            "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
           }
         ]
       },
@@ -5805,7 +5705,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
             "article_number": "art. 18ea i art. 18eb",
             "category": "złe długi, ulgi podatkowe",
-            "score": 0.0315,
+            "score": 0.0317,
             "preview": "Podane artykuły 18ea i 18eb nie zawierają regulacji dotyczącej ulgę na złe długi. Artykuł 18ea reguluje odliczenie kosztów produkcji próbnej i wprowadzenia nowego produktu na ry..."
           }
         ]
@@ -5834,7 +5734,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nd",
             "category": "ksef",
-            "score": 0.0305,
+            "score": 0.0301,
             "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           },
           {
@@ -5842,7 +5742,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
             "category": "pit",
-            "score": 0.0296,
+            "score": 0.0293,
             "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           }
         ]
@@ -6179,7 +6079,7 @@
             "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
             "article_number": "art. 91",
             "category": "zus",
-            "score": 0.0305,
+            "score": 0.0303,
             "preview": "1. Ustalenia kontroli opisuje się w protokole kontroli, który powinien zawierać: 1) oznaczenie terytorialnej jednostki organizacyjnej Zakładu; 2) oznaczenie kontrolowanego płatn..."
           },
           {
@@ -6722,7 +6622,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 15 ust. 1",
             "category": "Podstawy opodatkowania VAT",
-            "score": 0.0268,
+            "score": 0.0267,
             "preview": "Zarówno osoby fizyczne, jak i osoby prawne (np. spółki) mogą być podatnikami VAT, jeśli wykonują samodzielnie działalność gospodarczą. Podatnikami są osoby prawne oraz osoby fiz..."
           }
         ]
@@ -7149,6 +7049,50 @@
         ]
       },
       {
+        "question": "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+        "freq": 12,
+        "dataset_category": "ksef",
+        "aktuo_category": "jpk",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Rozporządzenie JPK_V7",
+          "Rozporządzenie KSeF",
+          "Ustawa o VAT",
+          "Ustawa o VAT - KSeF terminy wdrożenia",
+          "Ustawa o VAT - KSeF uproszczenia 2026",
+          "Ustawa o VAT - KSeF zwolnienia"
+        ],
+        "assigned_batch": "JPK oznaczenia i procedury",
+        "top_3_chunks": [
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0287,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+            "category": "ksef",
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+          }
+        ]
+      },
+      {
         "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
         "freq": 9,
         "dataset_category": "rachunkowosc",
@@ -7502,10 +7446,10 @@
         ]
       },
       {
-        "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+        "question": "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
         "freq": 3,
         "dataset_category": "jpk",
-        "aktuo_category": "rachunkowosc",
+        "aktuo_category": "jpk",
         "verdict": "WEAK",
         "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
@@ -7514,31 +7458,31 @@
           "Ustawa o VAT",
           "Ustawa o rachunkowości"
         ],
-        "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
+        "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o rachunkowo?ci",
-            "canonical_law_name": "Ustawa o rachunkowo?ci",
-            "article_number": "art. 28 ust. 2",
-            "category": "rachunkowosc",
-            "score": 0.0313,
-            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0297,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 12",
-            "category": "rachunkowosc",
-            "score": 0.0282,
-            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+            "law_name": "Rozporządzenie JPK_V7",
+            "canonical_law_name": "Rozporządzenie JPK_V7",
+            "article_number": "Â§ 12",
+            "category": "jpk",
+            "score": 0.0278,
+            "preview": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygo..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 52 ust. 2",
-            "category": "podpisywanie_sprawozdania_finansowego",
-            "score": 0.0279,
-            "preview": "Tak, sprawozdanie finansowe MUSI być podpisane. Obowiązek ciąży na osobie, której powierzono prowadzenie ksiąg rachunkowych oraz na kierowniku jednostki. Podpis musi być opatrzo..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106e ust. 1",
+            "category": "Dokumentacja VAT - forma faktury",
+            "score": 0.0296,
+            "preview": "Mail od kontrahenta zagranicznego nie spełnia wymogów faktury wymaganej art. 106e, która musi zawierać konkretne elementy obowiązkowe (datę, numer, dane stron, opis towaru, cenę..."
           }
         ]
       },
@@ -7645,23 +7589,23 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0307,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0269,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1",
             "category": "dokumentacja_vat",
-            "score": 0.0323,
+            "score": 0.0325,
             "preview": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym ..."
           }
         ]
@@ -7709,36 +7653,38 @@
         "question": "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
         "freq": 27,
         "dataset_category": "praktyka",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
+        "aktuo_category": "ordynacja",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
-        "expected_laws": [],
+        "expected_laws": [
+          "Ordynacja podatkowa"
+        ],
         "assigned_batch": "Poza zakresem / community workflow",
         "top_3_chunks": [
-          {
-            "law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
-            "article_number": "art. 15",
-            "category": "praktyka",
-            "score": 0.0328,
-            "preview": "Art. 15. 1. Kosztami uzyskania przychodów są koszty poniesione w celu osiągnięcia przychodów ze źródła przychodów lub w celu zachowania albo zabezpieczenia źródła przychodów, z ..."
-          },
           {
             "law_name": "Ordynacja podatkowa",
             "canonical_law_name": "Ordynacja podatkowa",
             "article_number": "art. 138j",
             "category": "ordynacja",
-            "score": 0.0315,
+            "score": 0.0323,
             "preview": "Minister właściwy do spraw finansów publicznych określi, w drodze rozporządzenia: 1) wzór pełnomocnictwa ogólnego i wzór zawiadomienia o zmianie, odwołaniu lub wypowiedzeniu teg..."
           },
           {
-            "law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
-            "article_number": "art. 32",
-            "category": "zus",
-            "score": 0.0306,
-            "preview": "1. Do składek na Fundusz Pracy, Fundusz Solidarnościowy, Fundusz Gwarantowanych Świadczeń Pracowniczych i Fundusz Emerytur Pomostowych oraz na ubezpieczenie zdrowotne w zakresie..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 138i § 1",
+            "category": "pełnomocnictwo_w_sprawach_podatkowych",
+            "score": 0.031,
+            "preview": "Sposób odwołania pełnomocnictwa zależy od jego rodzaju. Dla pełnomocnictwa ogólnego — odwołanie wywiera skutek od dnia wpływu do Centralnego Rejestru. Dla pełnomocnictwa szczegó..."
+          },
+          {
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 306f",
+            "category": "ordynacja",
+            "score": 0.0296,
+            "preview": "Organ podatkowy na wniosek osoby, która uprawdopodobni, że może być spadkobiercą, wydaje zaświadczenie o wysokości znanych temu organowi zobowiązań spadkodawcy wymienionych w ar..."
           }
         ]
       },
@@ -7921,16 +7867,16 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0325,
+            "score": 0.0328,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0318,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0298,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
@@ -8048,19 +7994,19 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0323,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0301,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0247,
+            "score": 0.025,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           }
         ]
@@ -8211,19 +8157,19 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0323,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0315,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106b",
             "category": "faktury_i_dokumentacja",
-            "score": 0.0313,
+            "score": 0.0315,
             "preview": "Pytanie dotyczy procedur rozliczeniowych (FP - Fakt Papierze, RO - Raport Okresu), które nie są opisane w przytoczonych artykułach Ustawy o VAT. Przepisy art. 106b dotyczą obowi..."
           }
         ]
@@ -8412,23 +8358,23 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0325,
+            "score": 0.0328,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0323,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0298,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 109 ust. 14",
             "category": "Dokumentacja - Ewidencja sprzedaży i opakowań",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Przepisy art. 109 dotyczą ewidencji sprzedaży i dostaw, ale nie określają kodów oznaczenia faktur wewnętrznych (Wew/DI lub Wew/BFK). Ustawodawca powierza Ministrowi określenie s..."
           }
         ]
@@ -8477,9 +8423,9 @@
         "question": "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
         "freq": 12,
         "dataset_category": "ksef",
-        "aktuo_category": "ksef",
-        "verdict": "COVERED",
-        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "aktuo_category": "jpk",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
@@ -8494,26 +8440,26 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
-            "category": "ksef",
-            "score": 0.0325,
-            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0287,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
             "category": "ksef",
-            "score": 0.0323,
+            "score": 0.0318,
             "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
           },
           {
-            "law_name": "Rozporządzenie KSeF",
-            "canonical_law_name": "Rozporządzenie KSeF",
-            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
             "category": "ksef",
-            "score": 0.032,
-            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+            "score": 0.0318,
+            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
           }
         ]
       },
@@ -8965,12 +8911,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.032,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -8985,7 +8931,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 10 ust. 1 pkt 8a",
             "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0323,
+            "score": 0.0325,
             "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
           }
         ]
@@ -9293,20 +9239,20 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0255,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
-          },
-          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1",
             "category": "dokumentacja_vat",
             "score": 0.0323,
             "preview": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106e",
+            "category": "vat",
+            "score": 0.032,
+            "preview": "Art. 106e. 1. Faktura powinna zawiera: 1) dat wystawienia; 2) kolejny numer nadany w ramach jednej lub wicej serii, który w sposób jednoznaczny identyfikuje faktur; 3) imiona i ..."
           }
         ]
       },
@@ -9719,19 +9665,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0323,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0275,
+            "score": 0.0278,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           },
           {
@@ -9739,7 +9685,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 42",
             "category": "vat",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Art. 42. 1. Wewntrzwspólnotowa dostawa towarów podlega opodatkowaniu wedlug stawki podatku 0 %, pod warunkiem e: 1) podatnik dokonal dostawy na rzecz nabywcy posiadajcego wlaciw..."
           }
         ]
@@ -9790,7 +9736,7 @@
         "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "missing_kb_unit",
+        "root_cause_guess": "weak_existing_chunk",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
           "Ustawa o VAT"
@@ -9798,19 +9744,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0309,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1 pkt 4",
             "category": "identyfikacja sprzedawcy na fakturze",
-            "score": 0.0313,
+            "score": 0.0315,
             "preview": "Tak, NIP sprzedawcy jest obowiązkowy. Art. 106e ust. 1 pkt 4 wymaga, aby faktura zawierała 'numer, za pomocą którego podatnik jest zidentyfikowany na potrzeby podatku' (czyli NI..."
           },
           {
@@ -9818,7 +9764,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 100 ust. 8",
             "category": "rejestracja_informacje_podsumowujace",
-            "score": 0.031,
+            "score": 0.0313,
             "preview": "Informacja podsumowująca musi zawierać: nazwę/imię i nazwisko podatnika z jego NIP, właściwy numer identyfikacyjny kontrahenta dla transakcji UE, właściwy numer identyfikacyjny ..."
           }
         ]
@@ -10138,7 +10084,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 41 ust. 1, 2, 2a oraz art. 146ef ust. 1",
             "category": "vat",
-            "score": 0.0296,
+            "score": 0.0294,
             "preview": "Z samego tekstu ustawy nie wynika prosty podział stawek wyłącznie według tego, czy danie zawiera ryby czy owoce morza. Ustawa rozróżnia stawki dla towarów z załączników oraz wył..."
           }
         ]
@@ -10237,12 +10183,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0325,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -10257,7 +10203,7 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.03,
+            "score": 0.0303,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           }
         ]
@@ -10282,24 +10228,24 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0323,
+            "score": 0.0325,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
-          },
-          {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0305,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0267,
+            "score": 0.0269,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0265,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           }
         ]
       },
@@ -10428,36 +10374,38 @@
         "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
         "freq": 5,
         "dataset_category": "ceidg",
-        "aktuo_category": "ogólne",
-        "verdict": "GAP",
-        "reason": "Pytanie nie mapuje się dziś do jednoznacznego pokrycia w bazie.",
-        "root_cause_guess": "missing_kb_unit",
-        "expected_laws": [],
+        "aktuo_category": "ordynacja",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "root_cause_guess": "cross_law_question",
+        "expected_laws": [
+          "Ordynacja podatkowa"
+        ],
         "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 10 ust. 1 pkt 8a",
-            "category": "obowiązek podatkowy, jednostki kontrolowane",
-            "score": 0.0325,
-            "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 3a, 3b i 168",
+            "category": "ordynacja",
+            "score": 0.0328,
+            "preview": "Ordynacja podatkowa pozwala sk?ada? deklaracje elektronicznie, a ich z?o?enie jest potwierdzane elektronicznie. Deklaracja elektroniczna powinna zawiera? dane we w?a?ciwym forma..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 15 ust. 1",
-            "category": "status podatnika VAT",
-            "score": 0.0323,
-            "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 293 § 3",
+            "category": "tajemnica skarbowa",
+            "score": 0.032,
+            "preview": "Organ podatkowy może ujawnić kontrahentowi podatnika informacje o niezłożeniu lub złożeniu deklaracji, o nieujęciu lub ujęciu zdarzeń w deklaracji oraz o zaleganiu lub niezalega..."
           },
           {
-            "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-            "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-            "article_number": "art. 44 ust. 10",
-            "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
-            "score": 0.0315,
-            "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
+            "law_name": "Ordynacja podatkowa",
+            "canonical_law_name": "Ordynacja podatkowa",
+            "article_number": "art. 112b",
+            "category": "ordynacja",
+            "score": 0.032,
+            "preview": "Jednoosobowa spółka kapitałowa powstała w wyniku przekształcenia przedsiębiorcy będącego osobą fizyczną odpowiada całym swoim majątkiem solidarnie z tą osobą fizyczną za powstał..."
           }
         ]
       },
@@ -11835,7 +11783,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób prawnych",
             "article_number": "art. 18ea i art. 18eb",
             "category": "złe długi, ulgi podatkowe",
-            "score": 0.0315,
+            "score": 0.0317,
             "preview": "Podane artykuły 18ea i 18eb nie zawierają regulacji dotyczącej ulgę na złe długi. Artykuł 18ea reguluje odliczenie kosztów produkcji próbnej i wprowadzenia nowego produktu na ry..."
           }
         ]
@@ -11864,7 +11812,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106nd",
             "category": "ksef",
-            "score": 0.0305,
+            "score": 0.0301,
             "preview": "1. Szef Krajowej Administracji Skarbowej prowadzi Krajowy System e-Faktur i jest administratorem danych w nim zawartych. 2. Krajowy System e-Faktur jest systemem teleinformatycz..."
           },
           {
@@ -11872,7 +11820,7 @@
             "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
             "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
             "category": "pit",
-            "score": 0.0296,
+            "score": 0.0293,
             "preview": "Sam wykup samochodu z leasingu do firmy nie jest co do zasady jednorazowym kosztem, je?eli pojazd ma by? u?ywany w dzia?alno?ci d?u?ej ni? rok. Taki samoch?d staje si? ?rodkiem ..."
           }
         ]
@@ -11884,7 +11832,7 @@
         "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "missing_kb_unit",
+        "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
           "Ustawa o VAT",
@@ -11893,12 +11841,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
             "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -12043,10 +11991,10 @@
         "question": "BFK stosuje do swoich faktur sprzedażowych już w JPK VAT za miesiąc luty mimo, że obowiązek Ksef od 01.04?",
         "freq": 4,
         "dataset_category": "ksef",
-        "aktuo_category": "ksef",
+        "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "procedural_form_gap",
+        "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
           "Rozporządzenie KSeF",
@@ -12060,26 +12008,26 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
-            "category": "ksef",
-            "score": 0.0328,
-            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0325,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
-            "law_name": "Rozporządzenie KSeF",
-            "canonical_law_name": "Rozporządzenie KSeF",
-            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+            "law_name": "Rozporządzenie JPK_V7",
+            "canonical_law_name": "Rozporządzenie JPK_V7",
+            "article_number": "§ 10",
+            "category": "jpk",
+            "score": 0.0315,
+            "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "canonical_law_name": "Ustawa o VAT - KSeF zwolnienia",
-            "article_number": "art. 106ga ust. 2",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur ..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106gb ust. 4 pkt 1",
+            "category": "faktury ustrukturyzowane",
+            "score": 0.0315,
+            "preview": "Oznaczenie faktury kodem BFK jest obowiązkowe tylko w określonych sytuacjach. Zgodnie z art. 106gb ust. 5, kod ten wymagany jest gdy faktura ustrukturyzowana jest udostępniana n..."
           }
         ]
       },
@@ -12761,7 +12709,7 @@
             "canonical_law_name": "Ustawa o systemie ubezpieczeń społecznych",
             "article_number": "art. 91",
             "category": "zus",
-            "score": 0.0305,
+            "score": 0.0303,
             "preview": "1. Ustalenia kontroli opisuje się w protokole kontroli, który powinien zawierać: 1) oznaczenie terytorialnej jednostki organizacyjnej Zakładu; 2) oznaczenie kontrolowanego płatn..."
           },
           {
@@ -14137,7 +14085,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 15 ust. 1",
             "category": "Podstawy opodatkowania VAT",
-            "score": 0.0268,
+            "score": 0.0267,
             "preview": "Zarówno osoby fizyczne, jak i osoby prawne (np. spółki) mogą być podatnikami VAT, jeśli wykonują samodzielnie działalność gospodarczą. Podatnikami są osoby prawne oraz osoby fiz..."
           }
         ]
@@ -14525,7 +14473,7 @@
         "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "procedural_form_gap",
+        "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
           "Ustawa o VAT"
@@ -14533,12 +14481,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0325,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -14553,7 +14501,7 @@
             "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "Â§ 2",
             "category": "jpk",
-            "score": 0.0295,
+            "score": 0.0297,
             "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           }
         ]
@@ -14565,7 +14513,7 @@
         "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
-        "root_cause_guess": "cross_law_question",
+        "root_cause_guess": "weak_existing_chunk",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
           "Ustawa o VAT"
@@ -14573,19 +14521,19 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0307,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1 pkt 24 lit. a",
             "category": "identyfikacja podatnika na fakturze",
-            "score": 0.032,
+            "score": 0.0323,
             "preview": "Kod PL przed numerem NIP obowiązkowy jest tylko w określonych przypadkach. Zgodnie z art. 106e ust. 1 pkt 24 lit. a, numer podatnika poprzedzony kodem PL wymagany jest wyłącznie..."
           },
           {
@@ -14593,7 +14541,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1 pkt 4",
             "category": "identyfikacja sprzedawcy na fakturze",
-            "score": 0.0308,
+            "score": 0.0311,
             "preview": "Tak, NIP sprzedawcy jest obowiązkowy. Art. 106e ust. 1 pkt 4 wymaga, aby faktura zawierała 'numer, za pomocą którego podatnik jest zidentyfikowany na potrzeby podatku' (czyli NI..."
           }
         ]
@@ -14603,8 +14551,8 @@
         "freq": 3,
         "dataset_category": "jpk",
         "aktuo_category": "jpk",
-        "verdict": "COVERED",
-        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
+        "verdict": "WEAK",
+        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
@@ -14614,12 +14562,12 @@
         "assigned_batch": "JPK oznaczenia i procedury",
         "top_3_chunks": [
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0328,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0297,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Rozporządzenie JPK_V7",
@@ -14634,7 +14582,7 @@
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1",
             "category": "Dokumentacja VAT - forma faktury",
-            "score": 0.0293,
+            "score": 0.0296,
             "preview": "Mail od kontrahenta zagranicznego nie spełnia wymogów faktury wymaganej art. 106e, która musi zawierać konkretne elementy obowiązkowe (datę, numer, dane stron, opis towaru, cenę..."
           }
         ]
@@ -14662,20 +14610,20 @@
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.0263,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
-          },
-          {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
             "article_number": "art. 106e ust. 1",
             "category": "dokumentacja_vat",
             "score": 0.0328,
             "preview": "Przepisy art. 106e Ustawy o VAT nie zawierają wymogów dotyczących oznaczeń \"BFK\" czy \"DI\" na fakturach. Artykuł określa jedynie, jakie dane muszą znaleźć się na fakturze, w tym ..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 106e",
+            "category": "vat",
+            "score": 0.032,
+            "preview": "Art. 106e. 1. Faktura powinna zawiera: 1) dat wystawienia; 2) kolejny numer nadany w ramach jednej lub wicej serii, który w sposób jednoznaczny identyfikuje faktur; 3) imiona i ..."
           }
         ]
       },
@@ -14696,18 +14644,18 @@
           {
             "law_name": "Rozporządzenie JPK_V7",
             "canonical_law_name": "Rozporządzenie JPK_V7",
-            "article_number": "brak bezpośredniego odniesienia",
-            "category": "korekcja_VAT_utrata_kontroli",
-            "score": 0.032,
-            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kon..."
-          },
-          {
-            "law_name": "Rozporządzenie JPK_V7",
-            "canonical_law_name": "Rozporządzenie JPK_V7",
             "article_number": "§ 10",
             "category": "jpk",
-            "score": 0.0315,
+            "score": 0.032,
             "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
+          },
+          {
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0295,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
             "law_name": "Ustawa o VAT",
@@ -14763,40 +14711,39 @@
         "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
         "freq": 3,
         "dataset_category": "jpk",
-        "aktuo_category": "rachunkowosc",
-        "verdict": "WEAK",
-        "reason": "W top 3 jest sensowny akt prawny, ale trafienie nie jest jeszcze wystarczająco mocne.",
+        "aktuo_category": "jpk",
+        "verdict": "COVERED",
+        "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
         "expected_laws": [
           "Rozporządzenie JPK_V7",
-          "Ustawa o VAT",
-          "Ustawa o rachunkowości"
+          "Ustawa o VAT"
         ],
         "assigned_batch": "Procedury podatkowe / pisma / pełnomocnictwa",
         "top_3_chunks": [
           {
-            "law_name": "Ustawa o rachunkowo?ci",
-            "canonical_law_name": "Ustawa o rachunkowo?ci",
-            "article_number": "art. 28 ust. 2",
-            "category": "rachunkowosc",
-            "score": 0.0313,
-            "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+            "law_name": "Ustawa o VAT",
+            "canonical_law_name": "Ustawa o VAT",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
+            "score": 0.0328,
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 12",
-            "category": "rachunkowosc",
-            "score": 0.0282,
-            "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+            "law_name": "Rozporządzenie JPK_V7",
+            "canonical_law_name": "Rozporządzenie JPK_V7",
+            "article_number": "§ 10",
+            "category": "jpk",
+            "score": 0.0299,
+            "preview": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się prz..."
           },
           {
-            "law_name": "Ustawa o rachunkowości",
-            "canonical_law_name": "Ustawa o rachunkowości",
-            "article_number": "art. 52 ust. 2",
-            "category": "podpisywanie_sprawozdania_finansowego",
-            "score": 0.0279,
-            "preview": "Tak, sprawozdanie finansowe MUSI być podpisane. Obowiązek ciąży na osobie, której powierzono prowadzenie ksiąg rachunkowych oraz na kierowniku jednostki. Podpis musi być opatrzo..."
+            "law_name": "Rozporządzenie JPK_V7",
+            "canonical_law_name": "Rozporządzenie JPK_V7",
+            "article_number": "Â§ 12",
+            "category": "jpk",
+            "score": 0.028,
+            "preview": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygo..."
           }
         ]
       },
@@ -15456,7 +15403,7 @@
         "question": "Czy w JPK VAT 7 muszę wykazywać wszystkie faktury? Jeśli mam numery KSeF, a nie odliczam VATu to pomimo tego faktura musi znaleźć się w deklaracji VAT?",
         "freq": 3,
         "dataset_category": "ksef",
-        "aktuo_category": "ksef",
+        "aktuo_category": "jpk",
         "verdict": "COVERED",
         "reason": "Top chunk trafia w spodziewany akt prawny z mocnym score.",
         "root_cause_guess": "cross_law_question",
@@ -15473,26 +15420,26 @@
           {
             "law_name": "Ustawa o VAT",
             "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
-            "category": "ksef",
+            "article_number": "art. 109 ust. 3e-3g",
+            "category": "jpk",
             "score": 0.0325,
-            "preview": "Krajowy System e-Faktur służy nie tylko do wystawiania i odbierania faktur, ale także do nadawania, zmiany i odbierania uprawnień do korzystania z KSeF, powiadamiania o nadanych..."
+            "preview": "Je?eli podatnik sam stwierdzi, ?e przes?ana ewidencja VAT zawiera b??dy albo dane niezgodne ze stanem faktycznym, ma 14 dni na przes?anie korekty ewidencji. Taki sam 14-dniowy t..."
           },
           {
-            "law_name": "Ustawa o VAT",
-            "canonical_law_name": "Ustawa o VAT",
-            "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
-            "category": "ksef",
-            "score": 0.0323,
-            "preview": "Po przesłaniu faktury do KSeF dostęp do niej może być zapewniony także bez uwierzytelnienia przez kod i dane identyfikujące fakturę (art. 106gb ust. 3). W przypadkach wskazanych..."
+            "law_name": "Rozporządzenie JPK_V7",
+            "canonical_law_name": "Rozporządzenie JPK_V7",
+            "article_number": "Â§ 2",
+            "category": "jpk",
+            "score": 0.0311,
+            "preview": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowad..."
           },
           {
-            "law_name": "Rozporządzenie KSeF",
-            "canonical_law_name": "Rozporządzenie KSeF",
-            "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
-            "category": "ksef",
-            "score": 0.032,
-            "preview": "Uprawnienia w KSeF służą do uwierzytelnienia i weryfikacji prawa do korzystania z systemu. Uwierzytelnienie odbywa się przy użyciu środka identyfikacji elektronicznej, kwalifiko..."
+            "law_name": "Rozporządzenie JPK_V7",
+            "canonical_law_name": "Rozporządzenie JPK_V7",
+            "article_number": "brak artykułu zawierającego odpowiedź w dostarczonej części",
+            "category": "mechanizm_podzielonej_platnosci",
+            "score": 0.0219,
+            "preview": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie można stwierdzić, czy i jak należy oznaczać zakupy objęte mechanizmem podzielonej płatności po stronie nabywcy. Wymag..."
           }
         ]
       },
@@ -15623,33 +15570,13 @@
       "recommended_fix_type": "categorizer",
       "estimated_kb_units_needed": 0,
       "estimated_synonym_additions_needed": 3,
-      "expected_impact_on_top100_questions": 11,
-      "expected_impact_on_top100_pp": 11.0,
-      "expected_impact_on_top200_questions": 29,
-      "expected_impact_on_top200_pp": 14.5,
+      "expected_impact_on_top100_questions": 10,
+      "expected_impact_on_top100_pp": 10.0,
+      "expected_impact_on_top200_questions": 28,
+      "expected_impact_on_top200_pp": 14.0,
       "likely_laws_or_regulations_needed": [],
       "likely_synonym_additions_needed": [],
-      "priority_score": 9.5
-    },
-    {
-      "batch_name": "Procedury podatkowe / pisma / pełnomocnictwa",
-      "recommended_fix_type": "kb_units",
-      "estimated_kb_units_needed": 2,
-      "estimated_synonym_additions_needed": 0,
-      "expected_impact_on_top100_questions": 1,
-      "expected_impact_on_top100_pp": 1.0,
-      "expected_impact_on_top200_questions": 2,
-      "expected_impact_on_top200_pp": 1.0,
-      "likely_laws_or_regulations_needed": [
-        "Ordynacja podatkowa",
-        "Ustawa o VAT",
-        "Ustawa o podatku dochodowym od osób prawnych"
-      ],
-      "likely_synonym_additions_needed": [
-        "PPO-1",
-        "UPL-1"
-      ],
-      "priority_score": 8.0
+      "priority_score": 8.15
     },
     {
       "batch_name": "Leasing / samochody / amortyzacja",
@@ -15704,6 +15631,26 @@
         "ryczałt"
       ],
       "priority_score": 4.0
+    },
+    {
+      "batch_name": "JPK oznaczenia i procedury",
+      "recommended_fix_type": "audit_mapping",
+      "estimated_kb_units_needed": 0,
+      "estimated_synonym_additions_needed": 0,
+      "expected_impact_on_top100_questions": 1,
+      "expected_impact_on_top100_pp": 1.0,
+      "expected_impact_on_top200_questions": 2,
+      "expected_impact_on_top200_pp": 1.0,
+      "likely_laws_or_regulations_needed": [
+        "Rozporządzenie JPK_V7",
+        "Ustawa o VAT"
+      ],
+      "likely_synonym_additions_needed": [
+        "BFK",
+        "DI",
+        "GTU"
+      ],
+      "priority_score": 3.75
     }
   ]
 }

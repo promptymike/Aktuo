@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "fb_pipeline\\dedup_questions_output_v3.json",
     "knowledge_file": "data\\seeds\\law_knowledge.json",
-    "based_on_unresolved_questions_from_top_200": 68
+    "based_on_unresolved_questions_from_top_200": 67
   },
   "batches": [
     {
@@ -331,31 +331,23 @@
     },
     {
       "batch_name": "Poza zakresem / community workflow",
-      "number_of_questions": 29,
-      "gap_count": 25,
+      "number_of_questions": 28,
+      "gap_count": 24,
       "weak_count": 4,
-      "total_freq_impact": 190,
-      "questions_in_top100": 11,
-      "questions_in_top200": 29,
-      "total_freq_top100": 126,
-      "total_freq_top200": 190,
+      "total_freq_impact": 163,
+      "questions_in_top100": 10,
+      "questions_in_top200": 28,
+      "total_freq_top100": 99,
+      "total_freq_top200": 163,
       "likely_laws_or_regulations_needed": [],
       "likely_synonym_additions_needed": [],
       "root_causes": {
-        "cross_law_question": 13,
+        "cross_law_question": 12,
         "missing_kb_unit": 13,
         "weak_existing_chunk": 3
       },
       "recommended_fix_type": "categorizer",
       "questions": [
-        {
-          "question": "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
-          "freq": 27,
-          "dataset_category": "praktyka",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "cross_law_question"
-        },
         {
           "question": "Co polecacie jak zacząć pracę w takim miejscu, gdzie zdobywać wiedzę, jak tej pracy szukać?",
           "freq": 22,
@@ -583,53 +575,7 @@
       ],
       "estimated_kb_units_needed": 0,
       "estimated_synonym_additions_needed": 3,
-      "priority_score": 9.5
-    },
-    {
-      "batch_name": "Procedury podatkowe / pisma / pełnomocnictwa",
-      "number_of_questions": 2,
-      "gap_count": 1,
-      "weak_count": 1,
-      "total_freq_impact": 8,
-      "questions_in_top100": 1,
-      "questions_in_top200": 2,
-      "total_freq_top100": 5,
-      "total_freq_top200": 8,
-      "likely_laws_or_regulations_needed": [
-        "Ordynacja podatkowa",
-        "Ustawa o VAT",
-        "Ustawa o podatku dochodowym od osób prawnych"
-      ],
-      "likely_synonym_additions_needed": [
-        "PPO-1",
-        "UPL-1"
-      ],
-      "root_causes": {
-        "cross_law_question": 1,
-        "missing_kb_unit": 1
-      },
-      "recommended_fix_type": "kb_units",
-      "questions": [
-        {
-          "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
-          "freq": 5,
-          "dataset_category": "ceidg",
-          "aktuo_category": "ogólne",
-          "verdict": "GAP",
-          "root_cause_guess": "missing_kb_unit"
-        },
-        {
-          "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
-          "freq": 3,
-          "dataset_category": "jpk",
-          "aktuo_category": "rachunkowosc",
-          "verdict": "WEAK",
-          "root_cause_guess": "cross_law_question"
-        }
-      ],
-      "estimated_kb_units_needed": 2,
-      "estimated_synonym_additions_needed": 0,
-      "priority_score": 8.0
+      "priority_score": 8.15
     },
     {
       "batch_name": "Leasing / samochody / amortyzacja",
@@ -735,6 +681,51 @@
       "estimated_kb_units_needed": 2,
       "estimated_synonym_additions_needed": 0,
       "priority_score": 4.0
+    },
+    {
+      "batch_name": "JPK oznaczenia i procedury",
+      "number_of_questions": 2,
+      "gap_count": 0,
+      "weak_count": 2,
+      "total_freq_impact": 15,
+      "questions_in_top100": 1,
+      "questions_in_top200": 2,
+      "total_freq_top100": 12,
+      "total_freq_top200": 15,
+      "likely_laws_or_regulations_needed": [
+        "Rozporządzenie JPK_V7",
+        "Ustawa o VAT"
+      ],
+      "likely_synonym_additions_needed": [
+        "BFK",
+        "DI",
+        "GTU"
+      ],
+      "root_causes": {
+        "cross_law_question": 2
+      },
+      "recommended_fix_type": "audit_mapping",
+      "questions": [
+        {
+          "question": "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+          "freq": 12,
+          "dataset_category": "ksef",
+          "aktuo_category": "jpk",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        },
+        {
+          "question": "Do JPK księgi rachunkowe w opisie operacji i pozycjach dekretu może być numer faktury czy konkretne pozycje z faktury?",
+          "freq": 3,
+          "dataset_category": "jpk",
+          "aktuo_category": "jpk",
+          "verdict": "WEAK",
+          "root_cause_guess": "cross_law_question"
+        }
+      ],
+      "estimated_kb_units_needed": 0,
+      "estimated_synonym_additions_needed": 0,
+      "priority_score": 3.75
     }
   ]
 }

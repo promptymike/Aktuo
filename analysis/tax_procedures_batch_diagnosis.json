@@ -1,0 +1,118 @@
+{
+  "batch_name": "Procedury podatkowe / pisma / pe?nomocnictwa",
+  "generated_at": "2026-04-12",
+  "questions": [
+    {
+      "question": "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
+      "freq": 5,
+      "dataset_category": "ceidg",
+      "aktuo_category_before": "ogólne",
+      "current_top_3_chunks": [
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 10 ust. 1 pkt 8a",
+          "category": "obowiązek podatkowy, jednostki kontrolowane",
+          "score": 0.0325,
+          "preview": "Polska opodatkowuje dochodów z zagranicznych jednostek kontrolowanych (JDG) niezależnie od tego, czy są tam wypłacone. Podatnicy rozliczają je w odrębnym zeznaniu podatkowym za ..."
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "canonical_law_name": "Ustawa o VAT",
+          "article_number": "art. 15 ust. 1",
+          "category": "status podatnika VAT",
+          "score": 0.0323,
+          "preview": "Osoba fizyczna prowadząca JDG jest podatnikiem VAT (art. 15 ust. 1), jednak status 'podatnika VAT czynnego' uzyskuje się dopiero po złożeniu zgłoszenia rejestracyjnego do naczel..."
+        },
+        {
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "canonical_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 44 ust. 10",
+          "category": "zawieszenie działalności gospodarczej, zaliczki na podatek",
+          "score": 0.0315,
+          "preview": "Tak, podatnik ze zawieszoną JDG jest zwolniony ze wszystkich obowiązków wpłacania zaliczek (miesięcznych i kwartalnych) za okres zawieszenia. W zeznaniu za rok, w którym działal..."
+        }
+      ],
+      "primary_issue": "missing_kb_unit",
+      "secondary_issue": "form_specific_shorthand_not_present_in_sources",
+      "expected_laws": [
+        "Ordynacja podatkowa"
+      ],
+      "expected_articles": [
+        "art. 3a",
+        "art. 3b",
+        "art. 138d",
+        "art. 138e",
+        "art. 138j",
+        "art. 168 Ordynacji podatkowej"
+      ],
+      "diagnosis": "Pytanie u?ywa skr?tu formularza ZAW-FA i miesza w jednym zdaniu temat podpisu, formy z?o?enia oraz statusu JDG/sp??ki. W repo nie ma wprost ?r?d?a opisuj?cego sam formularz ZAW-FA, ale s? sparsowane przepisy Ordynacji o elektronicznym sk?adaniu deklaracji i poda? oraz o pe?nomocnictwach. Brakuje praktycznego unitu, kt?ry ??czy te przepisy w odpowied? o tym, ?e piecz?? nie zast?puje podpisu, e-deklaracja wymaga jednego podpisu elektronicznego, a forma i wz?r pe?nomocnictwa wynikaj? z Ordynacji i przepis?w wykonawczych.",
+      "recommended_fix": {
+        "type": "kb_units",
+        "actions": [
+          "doda? grounded unit o elektronicznym sk?adaniu deklaracji i podpisie elektronicznym z art. 3a i 3b oraz art. 168",
+          "doda? grounded unit o pe?nomocnictwie og?lnym i szczeg?lnym z art. 138d, 138e i 138j"
+        ]
+      },
+      "outside_scope_note": "Sam skr?t ZAW-FA nie wyst?puje w obecnych sparsowanych ?r?d?ach, wi?c odpowied? mo?e by? ugruntowana tylko na poziomie og?lnych zasad podpisu, poda? i pe?nomocnictw."
+    },
+    {
+      "question": "Z jaką datą wystawić teraz fv i co z JPK, czynny żal?",
+      "freq": 3,
+      "dataset_category": "jpk",
+      "aktuo_category_before": "rachunkowosc",
+      "current_top_3_chunks": [
+        {
+          "law_name": "Ustawa o rachunkowo?ci",
+          "canonical_law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 28 ust. 2",
+          "category": "rachunkowosc",
+          "score": 0.0313,
+          "preview": "Cena nabycia sk?adnika aktyw?w obejmuje nie tylko kwot? nale?n? sprzedaj?cemu, ale tak?e koszty bezpo?rednio zwi?zane z zakupem i przystosowaniem sk?adnika do stanu zdatnego do ..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 12",
+          "category": "rachunkowosc",
+          "score": 0.0282,
+          "preview": "Art. 12. 1. Księgi rachunkowe otwiera się, z zastrzeżeniem ust. 3: 1) na dzień rozpoczęcia działalności, którym jest dzień pierwszego zdarzenia wywołującego skutki o charakterze..."
+        },
+        {
+          "law_name": "Ustawa o rachunkowości",
+          "canonical_law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 52 ust. 2",
+          "category": "podpisywanie_sprawozdania_finansowego",
+          "score": 0.0279,
+          "preview": "Tak, sprawozdanie finansowe MUSI być podpisane. Obowiązek ciąży na osobie, której powierzono prowadzenie ksiąg rachunkowych oraz na kierowniku jednostki. Podpis musi być opatrzo..."
+        }
+      ],
+      "primary_issue": "cross_law_gap",
+      "expected_laws": [
+        "Ordynacja podatkowa",
+        "Ustawa o VAT"
+      ],
+      "expected_articles": [
+        "art. 81 i 81b Ordynacji podatkowej",
+        "art. 109 ust. 3e-3g ustawy o VAT"
+      ],
+      "diagnosis": "Pytanie ??czy kilka warstw proceduralnych: dat? wystawienia faktury, korekt? JPK i ewentualny czynny ?al. Obecny retriever wpada w rachunkowo?? przez skr?t FV, a brakuje praktycznego proceduralnego unitu, kt?ry zestawia korekt? deklaracji z Ordynacji z obowi?zkiem korekty ewidencji JPK z ustawy o VAT. W repo nie ma ?r?d?a karnoskarbowego o czynnym ?alu, wi?c t? cz??? mo?na jedynie oznaczy? jako wymagaj?c? odr?bnej analizy poza wskazanymi artyku?ami.",
+      "recommended_fix": {
+        "type": "kb_units",
+        "actions": [
+          "doda? grounded unit o korekcie deklaracji z art. 81 i 81b Ordynacji podatkowej",
+          "doda? grounded unit o korekcie ewidencji JPK z art. 109 ust. 3e-3g ustawy o VAT"
+        ]
+      },
+      "outside_scope_note": "Czynny ?al nie wynika z obecnie sparsowanych ?r?de? w repo, wi?c nie nale?y dopowiada? jego przes?anek bez ?r?d?a karnoskarbowego."
+    }
+  ],
+  "summary": {
+    "questions_total": 2,
+    "questions_fixable_with_minimal_patch": 2,
+    "synonym_support_needed": 0,
+    "minimal_patch_scope": [
+      "data/seeds/law_knowledge.json"
+    ]
+  }
+}
