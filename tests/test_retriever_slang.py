@@ -108,6 +108,14 @@ def test_query_expansion_with_slang(tmp_path, monkeypatch) -> None:
         "audit_answer",
         lambda answer, chunks: {"grounded": True, "context_count": len(chunks)},
     )
+    monkeypatch.setattr(
+        rag,
+        "retrieve",
+        lambda query, knowledge_path, limit=5: retriever.RetrievalResult(
+            chunks=retriever.retrieve_chunks(query, knowledge_path, limit),
+            intent="pit_ryczalt",
+        ),
+    )
 
     result = rag.answer_query(
         query="Estończyk i jdg w pit11",
@@ -178,6 +186,14 @@ def test_query_expansion_deduplication(tmp_path, monkeypatch) -> None:
         rag,
         "audit_answer",
         lambda answer, chunks: {"grounded": True, "context_count": len(chunks)},
+    )
+    monkeypatch.setattr(
+        rag,
+        "retrieve",
+        lambda query, knowledge_path, limit=5: retriever.RetrievalResult(
+            chunks=retriever.retrieve_chunks(query, knowledge_path, limit),
+            intent="cit_wht",
+        ),
     )
 
     result = rag.answer_query(

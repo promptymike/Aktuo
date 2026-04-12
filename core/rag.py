@@ -17,7 +17,7 @@ from core.generator import (
     reset_last_generation_metrics,
     summarize_context,
 )
-from core.retriever import LawChunk, retrieve_chunks
+from core.retriever import LawChunk, retrieve
 
 
 @dataclass(slots=True)
@@ -27,6 +27,8 @@ class RagResult:
     audit: dict[str, object]
     redacted_query: str
     category: str
+    needs_clarification: bool = False
+    missing_slots: list[str] | None = None
     input_tokens: int = 0
     output_tokens: int = 0
     estimated_cost_usd: float = 0.0
@@ -134,8 +136,33 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
         raise ValueError("query must not be empty")
 
     redacted_query = anonymize_text(query)
+    retrieval_result = retrieve(query=redacted_query, knowledge_path=knowledge_path, limit=5)
     category = categorize_query(redacted_query)
-    chunks = retrieve_chunks(query=redacted_query, knowledge_path=knowledge_path, limit=5)
+    if retrieval_result.needs_clarification:
+        missing_slots = retrieval_result.missing_slots or []
+        audit = {
+            "grounded": False,
+            "context_count": 0,
+            "sources": [],
+            "missing_slots": missing_slots,
+        }
+        missing_text = ", ".join(missing_slots)
+        answer = (
+            "Potrzebuję doprecyzowania, zanim odpowiem. "
+            f"Brakuje mi informacji: {missing_text}."
+        )
+        return RagResult(
+            answer=answer,
+            chunks=[],
+            audit=audit,
+            redacted_query=redacted_query,
+            category=category,
+            needs_clarification=True,
+            missing_slots=missing_slots,
+            no_match_reason="clarification_required",
+        )
+
+    chunks = retrieval_result.chunks
     low_confidence = is_low_confidence_retrieval(chunks)
     compression_metrics = GenerationMetrics()
     if not low_confidence:
@@ -164,6 +191,8 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
         audit=audit,
         redacted_query=redacted_query,
         category=category,
+        needs_clarification=False,
+        missing_slots=[],
         input_tokens=generation_metrics.input_tokens,
         output_tokens=generation_metrics.output_tokens,
         estimated_cost_usd=generation_metrics.estimated_cost_usd,

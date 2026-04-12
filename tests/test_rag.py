@@ -5,6 +5,7 @@ import pytest
 
 from core.generator import GenerationMetrics
 from core.rag import _count_context_tokens, answer_query
+from core.retriever import LawChunk, RetrievalResult
 
 
 def test_answer_query_returns_grounded_result_for_polish_question(tmp_path, monkeypatch) -> None:
@@ -107,6 +108,21 @@ def test_answer_query_handles_very_long_query(tmp_path, monkeypatch) -> None:
 
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    monkeypatch.setattr(
+        "core.rag.retrieve",
+        lambda query, knowledge_path, limit=5: RetrievalResult(
+            chunks=[
+                LawChunk(
+                    content="Podatnik ma prawo do odliczenia podatku naliczonego w zakresie wykorzystania do czynnosci opodatkowanych.",
+                    law_name="Ustawa o VAT",
+                    article_number="art. 86 ust. 1",
+                    category="vat",
+                    verified_date="2026-04-01",
+                )
+            ],
+            intent="vat_jpk_ksef",
+        ),
+    )
 
     result = answer_query(
         query=("Jak rozliczyc VAT? " * 700).strip(),
@@ -192,6 +208,28 @@ def test_answer_query_triggers_context_summarization_when_context_is_too_long(tm
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
     monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
+    monkeypatch.setattr(
+        "core.rag.retrieve",
+        lambda query, knowledge_path, limit=5: RetrievalResult(
+            chunks=[
+                LawChunk(
+                    content=long_content,
+                    law_name="Ustawa o VAT",
+                    article_number="art. 86",
+                    category="vat",
+                    verified_date="2026-04-01",
+                ),
+                LawChunk(
+                    content=long_content,
+                    law_name="Ustawa o VAT",
+                    article_number="art. 87",
+                    category="vat",
+                    verified_date="2026-04-01",
+                ),
+            ],
+            intent="vat_jpk_ksef",
+        ),
+    )
 
     result = answer_query(
         query="Jak rozliczyc VAT?",

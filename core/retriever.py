@@ -12,8 +12,15 @@ from threading import Lock
 from rank_bm25 import BM25Okapi
 
 from aktuo.synonym_mapper import expand_query, load_synonym_map
-from config.settings import RRF_BM25_K, RRF_VECTOR_K, SLANG_FILE_PATH
+from config.settings import (
+    CLARIFICATION_SLOTS_PATH,
+    INTENT_TAXONOMY_PATH,
+    RRF_BM25_K,
+    RRF_VECTOR_K,
+    SLANG_FILE_PATH,
+)
 from core.categorizer import categorize_query
+from core.intent_router import classify_intent, detect_clarification_slots
 from data.ingest import load_seed_laws
 
 
@@ -121,6 +128,16 @@ class LawChunk:
     score: float = 0.0
 
 
+@dataclass(slots=True)
+class RetrievalResult:
+    """Structured retrieval outcome used by the app-facing RAG layer."""
+
+    chunks: list[LawChunk]
+    intent: str
+    needs_clarification: bool = False
+    missing_slots: list[str] | None = None
+
+
 _CACHE_LOCK = Lock()
 _KNOWLEDGE_CACHE: dict[
     str,
@@ -194,6 +211,88 @@ def load_slang_map() -> dict[str, list[str]]:
         _SLANG_CACHE = (slang_file, dict(slang_map))
 
     return dict(slang_map)
+
+
+def _classify_intent_with_fallback(query: str, taxonomy_path: str = INTENT_TAXONOMY_PATH) -> str:
+    """Classify intent using the curated taxonomy with a safe warning fallback."""
+
+    try:
+        return classify_intent(query, taxonomy_path)
+    except ValueError as exc:
+        LOGGER.warning("Could not load curated taxonomy from %s: %s", taxonomy_path, exc)
+        return "unknown"
+
+
+def _detect_missing_slots(
+    query: str,
+    intent: str,
+    slots_path: str = CLARIFICATION_SLOTS_PATH,
+) -> list[str]:
+    """Return missing clarification slots for an intent, falling back safely on file errors."""
+
+    if intent == "unknown":
+        return []
+
+    try:
+        missing_map = detect_clarification_slots(query, slots_path, intent)
+    except ValueError as exc:
+        LOGGER.warning("Could not load clarification slots from %s: %s", slots_path, exc)
+        return []
+
+    return [slot_name for slot_name, is_missing in missing_map.items() if is_missing]
+
+
+def _should_require_clarification(query: str, missing_slots: list[str], intent: str) -> bool:
+    """Return True only for clearly underspecified queries.
+
+    This keeps the clarification gate useful for very short or generic queries
+    without blocking specific legal questions that can still benefit from
+    retrieval even if some contextual facts remain implicit.
+    """
+
+    if not missing_slots:
+        return False
+
+    normalized_query = _normalize(query)
+    query_tokens = re.findall(r"[a-z0-9_]+", normalized_query)
+    generic_prefixes = (
+        "jak rozliczyc",
+        "jak rozliczyć",
+        "co zrobic",
+        "co zrobić",
+        "jak ujac",
+        "jak ująć",
+        "jak zaksi",
+        "czy mozna",
+        "czy można",
+    )
+    specific_issue_tokens = {
+        "korekt",
+        "numer",
+        "odlicz",
+        "wymaga",
+        "obowiazek",
+        "obowiazek",
+        "termin",
+        "blad",
+        "bled",
+        "zwoln",
+        "stawk",
+        "import",
+        "clo",
+        "invoice",
+        "deduct",
+        "taxpayer",
+        "issue",
+    }
+
+    if intent == "legal_substantive":
+        return False
+
+    if any(token in normalized_query for token in specific_issue_tokens):
+        return False
+
+    return len(missing_slots) >= 2 and (len(query_tokens) <= 6 or normalized_query.startswith(generic_prefixes))
 
 
 def _tokenize(text: str) -> list[str]:
@@ -564,7 +663,7 @@ def _select_category_aware_results(
     return selected[:limit]
 
 
-def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> list[LawChunk]:
+def _retrieve_ranked_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> list[LawChunk]:
     """Retrieve the most relevant legal chunks for a user query.
 
     The retriever expands accountant slang and abbreviations before scoring.
@@ -605,3 +704,48 @@ def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> l
     fused_ranked = _fuse_rankings(bm25_ranked, vector_ranked)
     scored = [(chunk.score, chunk) for chunk in fused_ranked]
     return _select_category_aware_results(scored, query_category, limit)
+
+
+def retrieve(
+    query: str,
+    knowledge_path: str | Path,
+    limit: int = 5,
+    taxonomy_path: str = INTENT_TAXONOMY_PATH,
+    slots_path: str = CLARIFICATION_SLOTS_PATH,
+) -> RetrievalResult:
+    """Retrieve chunks with a lightweight intent and clarification pre-check.
+
+    Args:
+        query: Raw user query.
+        knowledge_path: Path to the JSON knowledge base file.
+        limit: Maximum number of chunks to return.
+        taxonomy_path: Path to the curated intent taxonomy file.
+        slots_path: Path to the curated clarification slots file.
+
+    Returns:
+        A structured retrieval result. When required clarification slots are
+        missing, retrieval is skipped and ``needs_clarification`` is set.
+    """
+
+    intent = _classify_intent_with_fallback(query, taxonomy_path)
+    missing_slots = _detect_missing_slots(query, intent, slots_path)
+    if _should_require_clarification(query, missing_slots, intent):
+        return RetrievalResult(
+            chunks=[],
+            intent=intent,
+            needs_clarification=True,
+            missing_slots=missing_slots,
+        )
+
+    return RetrievalResult(
+        chunks=_retrieve_ranked_chunks(query, knowledge_path, limit),
+        intent=intent,
+        needs_clarification=False,
+        missing_slots=[],
+    )
+
+
+def retrieve_chunks(query: str, knowledge_path: str | Path, limit: int = 5) -> list[LawChunk]:
+    """Backward-compatible raw retrieval helper without clarification gating."""
+
+    return _retrieve_ranked_chunks(query, knowledge_path, limit)

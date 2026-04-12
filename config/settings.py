@@ -21,6 +21,14 @@ MAX_CONTEXT_TOKENS = int(os.getenv("AKTUO_MAX_CONTEXT_TOKENS", "1200"))
 SLANG_FILE_PATH = os.getenv("AKTUO_SLANG_FILE_PATH", "").strip()
 RRF_BM25_K = int(os.getenv("AKTUO_RRF_BM25_K", "60"))
 RRF_VECTOR_K = int(os.getenv("AKTUO_RRF_VECTOR_K", "60"))
+INTENT_TAXONOMY_PATH = os.getenv(
+    "AKTUO_INTENT_TAXONOMY_PATH",
+    str(PROJECT_ROOT / "data" / "curated" / "intent_taxonomy.json"),
+).strip()
+CLARIFICATION_SLOTS_PATH = os.getenv(
+    "AKTUO_CLARIFICATION_SLOTS_PATH",
+    str(PROJECT_ROOT / "data" / "curated" / "clarification_slots.json"),
+).strip()
 
 PLACEHOLDER_VALUES = {
     "",
