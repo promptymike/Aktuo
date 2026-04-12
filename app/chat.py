@@ -8,6 +8,8 @@ import streamlit as st
 from core.logger import log_feedback
 from core.rag import RagResult
 
+GENERIC_CLARIFICATION_PROMPT = "Proszę doprecyzować brakujące informacje."
+
 
 def _format_timestamp(value: str | None) -> str:
     if not value:
@@ -27,6 +29,17 @@ def _render_timestamp(timestamp: str | None) -> None:
         )
 
 
+def _resolve_clarification_prompts(
+    missing_slots: Sequence[str] | None,
+    prompt_map: dict[str, str] | None,
+) -> list[str]:
+    """Map missing slot names to user-facing clarification prompts."""
+
+    if not missing_slots:
+        return []
+    return [(prompt_map or {}).get(slot_name, GENERIC_CLARIFICATION_PROMPT) for slot_name in missing_slots]
+
+
 def render_user_message(question: str, *, timestamp: str | None = None) -> None:
     with st.chat_message("user"):
         st.markdown("<div class='aktuo-message-label'>Ty</div>", unsafe_allow_html=True)
@@ -41,12 +54,21 @@ def render_assistant_message(
     session_id: str,
     user_email: str,
     query: str,
+    clarification_prompts: dict[str, str] | None = None,
     timestamp: str | None = None,
 ) -> None:
     with st.chat_message("assistant"):
         st.markdown("<div class='aktuo-message-label'>Aktuo</div>", unsafe_allow_html=True)
         _render_timestamp(timestamp)
         st.write(result.answer)
+
+        if result.needs_clarification:
+            prompts = _resolve_clarification_prompts(result.missing_slots, clarification_prompts)
+            if prompts:
+                st.warning("Żeby odpowiedzieć precyzyjnie, potrzebuję jeszcze kilku informacji:")
+                for index, prompt in enumerate(prompts, start=1):
+                    st.markdown(f"{index}. {prompt}")
+            return
 
         if result.chunks:
             with st.expander("Pokaż źródła prawne", expanded=False):
@@ -100,6 +122,7 @@ def render_chat_history(
     *,
     session_id: str,
     user_email: str,
+    clarification_prompts: dict[str, str] | None = None,
 ) -> None:
     for index, message in enumerate(history):
         role = message.get("role")
@@ -117,5 +140,6 @@ def render_chat_history(
                     session_id=session_id,
                     user_email=user_email,
                     query=str(message.get("query", "")),
+                    clarification_prompts=clarification_prompts,
                     timestamp=str(message.get("timestamp", "")),
                 )

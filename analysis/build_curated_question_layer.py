@@ -172,6 +172,32 @@ CLARIFICATION_SLOT_DEFINITIONS: dict[str, dict[str, list[str]]] = {
 }
 
 
+SLOT_PROMPTS: dict[str, str] = {
+    "obszar_prawa": "Jakiego obszaru dotyczy pytanie: VAT, PIT, CIT, ZUS, KSeF czy kadry?",
+    "stan_faktyczny": "Opisz krótko stan faktyczny: jaka czynność lub sytuacja wystąpiła?",
+    "okres_lub_data": "Podaj okres lub datę, której dotyczy pytanie.",
+    "rodzaj_pisma_lub_wniosku": "Jakie pismo, wniosek albo formularz chcesz złożyć lub skorygować?",
+    "organ_lub_kanał_złożenia": "Do jakiego organu lub przez jaki kanał ma trafić dokument?",
+    "etap_sprawy_lub_termin": "Na jakim etapie jest sprawa i jaki termin ma znaczenie?",
+    "rodzaj_ksiąg_lub_ewidencji": "Czy chodzi o KPiR, pełne księgi, ewidencję VAT czy inną ewidencję?",
+    "rodzaj_dokumentu": "Jakiego dokumentu dotyczy pytanie: faktury, korekty, umowy, JPK, deklaracji?",
+    "okres_księgowy": "Za jaki okres księgowy lub miesiąc chcesz to ująć?",
+    "typ_umowy": "Jaki jest typ umowy: etat, zlecenie, dzieło, B2B czy inna forma?",
+    "składnik_wynagrodzenia_lub_dokument": "Jakiego składnika wynagrodzenia lub dokumentu dotyczy pytanie?",
+    "tytuł_ubezpieczenia": "Jaki jest tytuł do ubezpieczenia: JDG, etat, zlecenie czy inny?",
+    "status_osoby": "Kogo dotyczy pytanie: pracownika, zleceniobiorcy, przedsiębiorcy, emeryta?",
+    "rodzaj_składki_lub_świadczenia": "O jaką składkę lub świadczenie chodzi: zdrowotną, społeczną, chorobowe, zasiłek?",
+    "forma_opodatkowania": "Jaka jest forma opodatkowania: skala, liniowy, ryczałt, estoński CIT?",
+    "źródło_przychodu": "Jakie jest źródło przychodu: działalność, najem, etat, zlecenie, dywidenda?",
+    "typ_podmiotu": "Jakiego podmiotu dotyczy pytanie: JDG, spółki, fundacji czy osoby fizycznej?",
+    "rodzaj_transakcji_lub_płatności": "Jakiej transakcji lub płatności dotyczy pytanie?",
+    "nazwa_systemu": "Jakiego programu lub systemu dotyczy problem?",
+    "czynność_operacyjna": "Jaką czynność chcesz wykonać w systemie lub procesie?",
+    "kontekst_błędu_lub_integracji": "Jaki błąd, komunikat albo problem z integracją się pojawia?",
+    "rola_lub_status_strony": "Kim jest strona w tej sytuacji: sprzedawcą, nabywcą, podatnikiem, pełnomocnikiem?",
+}
+
+
 INTENT_SOURCE_HINTS: dict[str, list[str]] = {
     "legal_substantive": ["legal_kb"],
     "legal_procedural": ["Ordynacja podatkowa", "legal_kb"],
@@ -635,7 +661,9 @@ def build_outputs() -> JSONDict:
     report = build_report(raw_questions, deduplicated_questions, workflow_records)
 
     write_json(INTENT_TAXONOMY_PATH, taxonomy)
-    write_json(CLARIFICATION_SLOTS_PATH, CLARIFICATION_SLOT_DEFINITIONS)
+    clarification_payload = dict(CLARIFICATION_SLOT_DEFINITIONS)
+    clarification_payload["slot_prompts"] = SLOT_PROMPTS
+    write_json(CLARIFICATION_SLOTS_PATH, clarification_payload)
     write_jsonl(GOLDEN_EVAL_SET_PATH, golden_eval_records)
     write_jsonl(WORKFLOW_SPLIT_PATH, workflow_records)
     write_json(REPORT_PATH, report)

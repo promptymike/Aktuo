@@ -29,6 +29,10 @@ CLARIFICATION_SLOTS_PATH = os.getenv(
     "AKTUO_CLARIFICATION_SLOTS_PATH",
     str(PROJECT_ROOT / "data" / "curated" / "clarification_slots.json"),
 ).strip()
+CLARIFICATION_PROMPTS_PATH = os.getenv(
+    "AKTUO_CLARIFICATION_PROMPTS_PATH",
+    CLARIFICATION_SLOTS_PATH,
+).strip()
 
 PLACEHOLDER_VALUES = {
     "",

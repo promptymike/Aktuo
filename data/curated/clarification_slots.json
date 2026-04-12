@@ -132,6 +132,30 @@
       "okres_lub_data"
     ]
   },
+  "slot_prompts": {
+    "czynność_operacyjna": "Jaką czynność chcesz wykonać w systemie lub procesie?",
+    "etap_sprawy_lub_termin": "Na jakim etapie jest sprawa i jaki termin ma znaczenie?",
+    "forma_opodatkowania": "Jaka jest forma opodatkowania: skala, liniowy, ryczałt, estoński CIT?",
+    "kontekst_błędu_lub_integracji": "Jaki błąd, komunikat albo problem z integracją się pojawia?",
+    "nazwa_systemu": "Jakiego programu lub systemu dotyczy problem?",
+    "obszar_prawa": "Jakiego obszaru dotyczy pytanie: VAT, PIT, CIT, ZUS, KSeF czy kadry?",
+    "okres_księgowy": "Za jaki okres księgowy lub miesiąc chcesz to ująć?",
+    "okres_lub_data": "Podaj okres lub datę, której dotyczy pytanie.",
+    "organ_lub_kanał_złożenia": "Do jakiego organu lub przez jaki kanał ma trafić dokument?",
+    "rodzaj_dokumentu": "Jakiego dokumentu dotyczy pytanie: faktury, korekty, umowy, JPK, deklaracji?",
+    "rodzaj_ksiąg_lub_ewidencji": "Czy chodzi o KPiR, pełne księgi, ewidencję VAT czy inną ewidencję?",
+    "rodzaj_pisma_lub_wniosku": "Jakie pismo, wniosek albo formularz chcesz złożyć lub skorygować?",
+    "rodzaj_składki_lub_świadczenia": "O jaką składkę lub świadczenie chodzi: zdrowotną, społeczną, chorobowe, zasiłek?",
+    "rodzaj_transakcji_lub_płatności": "Jakiej transakcji lub płatności dotyczy pytanie?",
+    "rola_lub_status_strony": "Kim jest strona w tej sytuacji: sprzedawcą, nabywcą, podatnikiem, pełnomocnikiem?",
+    "składnik_wynagrodzenia_lub_dokument": "Jakiego składnika wynagrodzenia lub dokumentu dotyczy pytanie?",
+    "stan_faktyczny": "Opisz krótko stan faktyczny: jaka czynność lub sytuacja wystąpiła?",
+    "status_osoby": "Kogo dotyczy pytanie: pracownika, zleceniobiorcy, przedsiębiorcy, emeryta?",
+    "typ_podmiotu": "Jakiego podmiotu dotyczy pytanie: JDG, spółki, fundacji czy osoby fizycznej?",
+    "typ_umowy": "Jaki jest typ umowy: etat, zlecenie, dzieło, B2B czy inna forma?",
+    "tytuł_ubezpieczenia": "Jaki jest tytuł do ubezpieczenia: JDG, etat, zlecenie czy inny?",
+    "źródło_przychodu": "Jakie jest źródło przychodu: działalność, najem, etat, zlecenie, dywidenda?"
+  },
   "software_tooling": {
     "insufficient_data_when": [
       "Pytanie ma wyłącznie formę rekomendacji narzędzia bez kryteriów."

@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import json
 import re
 import sys
 import uuid
 from datetime import datetime, timedelta
+from functools import lru_cache
 from math import ceil
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -16,7 +18,13 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from app.chat import render_chat_history
 from app.sidebar import render_sidebar
-from config.settings import MAX_QUESTION_LENGTH, MissingEnvironmentError, RATE_LIMIT_PER_HOUR, get_settings
+from config.settings import (
+    CLARIFICATION_PROMPTS_PATH,
+    MAX_QUESTION_LENGTH,
+    MissingEnvironmentError,
+    RATE_LIMIT_PER_HOUR,
+    get_settings,
+)
 from core.generator import AnthropicAPIError
 from core.logger import log_query
 from core.rag import answer_query
@@ -44,6 +52,33 @@ def is_question_too_long(value: str) -> bool:
 
 def current_timestamp() -> str:
     return datetime.now(LOCAL_TZ).isoformat()
+
+
+@lru_cache(maxsize=4)
+def load_clarification_prompts(path: str) -> dict[str, str]:
+    """Load user-facing clarification prompts from the curated JSON file."""
+
+    file_path = Path(path)
+    if not file_path.exists():
+        raise ValueError(f"Nie znaleziono pliku promptów doprecyzowujących: {file_path}")
+
+    try:
+        payload = json.loads(file_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Plik promptów doprecyzowujących jest uszkodzony: {file_path}") from exc
+
+    if not isinstance(payload, dict):
+        raise ValueError(f"Plik promptów doprecyzowujących musi zawierać obiekt JSON: {file_path}")
+
+    raw_prompts = payload.get("slot_prompts", payload)
+    if not isinstance(raw_prompts, dict):
+        raise ValueError(f"Nieprawidłowy format promptów doprecyzowujących w pliku: {file_path}")
+
+    return {
+        str(slot_name): str(prompt)
+        for slot_name, prompt in raw_prompts.items()
+        if isinstance(slot_name, str) and isinstance(prompt, str)
+    }
 
 
 def load_recent_query_timestamps(now: datetime) -> list[datetime]:
@@ -420,6 +455,11 @@ def render_chat_page() -> None:
         st.info(f"Szczegóły: {exc}")
         st.stop()
 
+    try:
+        clarification_prompts = load_clarification_prompts(CLARIFICATION_PROMPTS_PATH)
+    except ValueError:
+        clarification_prompts = {}
+
     if "messages" not in st.session_state:
         if "chat_history" in st.session_state:
             st.session_state.messages = list(st.session_state.chat_history)
@@ -449,6 +489,7 @@ def render_chat_page() -> None:
         st.session_state.messages,
         session_id=st.session_state.session_id,
         user_email=user_email,
+        clarification_prompts=clarification_prompts,
     )
 
     typed_question = st.chat_input("Zadaj pytanie o prawo podatkowe...")
