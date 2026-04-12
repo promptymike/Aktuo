@@ -40,6 +40,11 @@ def test_categorize_query_recognizes_ift2r_as_cit() -> None:
     )
 
 
+def test_categorize_query_recognizes_ift_2r_and_jpk_cit_as_cit() -> None:
+    assert categorize_query("Czy deklaracja IFT-2R może być podpisana przez jedną osobę?") == "cit"
+    assert categorize_query("Jak opisać faktury zakupowe w świetle JPK CIT?") == "cit"
+
+
 def test_categorize_query_returns_pit_category() -> None:
     assert categorize_query("Jak obliczyć zaliczkę na podatek i kiedy złożyć PIT-37?") == "pit"
 
@@ -48,8 +53,20 @@ def test_categorize_query_recognizes_ulga_dla_seniora_as_pit() -> None:
     assert categorize_query("Ulga dla seniora - czy przysługuje za cały rok?") == "pit"
 
 
+def test_categorize_query_recognizes_pit37_kup_and_tax_cost_phrases_as_pit() -> None:
+    assert categorize_query("Czy PIT 37 trzeba skorygować za 2025 rok?") == "pit"
+    assert categorize_query("Czy wartość netto i 50% VAT jest przychodem podatkowym?") == "pit"
+    assert categorize_query("Koszty w KPiR memoriałowo zaliczać do 2025 czy bieżąco styczeń 2026?") == "pit"
+
+
 def test_categorize_query_recognizes_cash_register_as_vat() -> None:
     assert categorize_query("Sprzedaż bezpośrednia rolnik - zwolnienie z kasy fiskalnej") == "vat"
+
+
+def test_categorize_query_recognizes_vat26_oss_and_vehicle_vat_questions_as_vat() -> None:
+    assert categorize_query("Samochód osobowy zgłoszony do VAT-26 - czy leasing odliczam proporcją?") == "vat"
+    assert categorize_query("Czy od samochodu ciężarowego do 3,5 t można odliczać 100% VAT?") == "vat"
+    assert categorize_query("OSS sprzedaż towaru do Niemiec - jaka stawka VAT?") == "vat"
 
 
 def test_categorize_query_mixed_pit_and_vat_falls_back_to_ogolne() -> None:

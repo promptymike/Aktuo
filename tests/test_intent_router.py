@@ -59,6 +59,27 @@ def test_classify_intent_matches_vat_zus_and_unknown(tmp_path) -> None:
     assert classify_intent("Polecacie dobrą kawę do biura?", str(taxonomy_path)) == "unknown"
 
 
+def test_classify_intent_prefers_vat_pit_and_cit_priority_markers(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    taxonomy = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+    taxonomy["pit_ryczalt"] = {
+        "description": "Pytania o PIT, ryczałt i formularze roczne.",
+        "examples": ["Czy PIT-37 trzeba skorygować?", "Koszty w KPiR memoriałowo czy bieżąco?"],
+        "routing_recommendation": "Kieruj do PIT.",
+    }
+    taxonomy["cit_wht"] = {
+        "description": "Pytania o CIT, WHT i formularz IFT-2R.",
+        "examples": ["Czy IFT-2R trzeba złożyć?", "Jak działa JPK CIT?"],
+        "routing_recommendation": "Kieruj do CIT/WHT.",
+    }
+    taxonomy_path.write_text(json.dumps(taxonomy, ensure_ascii=False), encoding="utf-8")
+
+    assert classify_intent("Samochód zgłoszony do VAT-26 - czy odliczam 100% VAT?", str(taxonomy_path)) == "vat_jpk_ksef"
+    assert classify_intent("Czy PIT 37 trzeba skorygować za 2025 rok?", str(taxonomy_path)) == "pit_ryczalt"
+    assert classify_intent("Czy deklaracja IFT-2R może być podpisana przez jedną osobę?", str(taxonomy_path)) == "cit_wht"
+
+
 def test_detect_clarification_slots_for_vat_and_pit(tmp_path) -> None:
     slots_path = tmp_path / "clarification_slots.json"
     _write_slots(slots_path)

@@ -1,17 +1,17 @@
 {
   "overall": {
-    "behavior_accuracy": 0.312,
-    "intent_accuracy": 0.504,
-    "macro_precision": 0.5187,
-    "macro_recall": 0.4667,
+    "behavior_accuracy": 0.314,
+    "intent_accuracy": 0.514,
+    "macro_precision": 0.5311,
+    "macro_recall": 0.4751,
     "total_records": 500
   },
   "per_intent": {
     "accounting_operational": {
       "accuracy": 0.0789,
       "behavior_correct": 3,
-      "precision": 0.3607,
-      "predicted": 61,
+      "precision": 0.3729,
+      "predicted": 59,
       "recall": 0.5789,
       "total": 38,
       "true_positive": 22
@@ -19,8 +19,8 @@
     "business_of_accounting_office": {
       "accuracy": 0.8947,
       "behavior_correct": 34,
-      "precision": 0.5,
-      "predicted": 66,
+      "precision": 0.5156,
+      "predicted": 64,
       "recall": 0.8684,
       "total": 38,
       "true_positive": 33
@@ -28,17 +28,17 @@
     "cit_wht": {
       "accuracy": 0.1842,
       "behavior_correct": 7,
-      "precision": 0.5405,
-      "predicted": 37,
-      "recall": 0.5263,
+      "precision": 0.5641,
+      "predicted": 39,
+      "recall": 0.5789,
       "total": 38,
-      "true_positive": 20
+      "true_positive": 22
     },
     "education_community": {
       "accuracy": 0.7368,
       "behavior_correct": 28,
-      "precision": 0.5532,
-      "predicted": 47,
+      "precision": 0.5652,
+      "predicted": 46,
       "recall": 0.6842,
       "total": 38,
       "true_positive": 26
@@ -46,8 +46,8 @@
     "hr": {
       "accuracy": 0.2105,
       "behavior_correct": 8,
-      "precision": 0.5294,
-      "predicted": 17,
+      "precision": 0.5625,
+      "predicted": 16,
       "recall": 0.2368,
       "total": 38,
       "true_positive": 9
@@ -55,8 +55,8 @@
     "legal_procedural": {
       "accuracy": 0.1842,
       "behavior_correct": 7,
-      "precision": 0.6364,
-      "predicted": 22,
+      "precision": 0.6667,
+      "predicted": 21,
       "recall": 0.3684,
       "total": 38,
       "true_positive": 14
@@ -82,26 +82,26 @@
     "payroll": {
       "accuracy": 0.0789,
       "behavior_correct": 3,
-      "precision": 0.7,
-      "predicted": 40,
-      "recall": 0.7368,
+      "precision": 0.6667,
+      "predicted": 36,
+      "recall": 0.6316,
       "total": 38,
-      "true_positive": 28
+      "true_positive": 24
     },
     "pit_ryczalt": {
-      "accuracy": 0.1579,
-      "behavior_correct": 6,
-      "precision": 0.425,
-      "predicted": 40,
-      "recall": 0.4474,
+      "accuracy": 0.1842,
+      "behavior_correct": 7,
+      "precision": 0.3922,
+      "predicted": 51,
+      "recall": 0.5263,
       "total": 38,
-      "true_positive": 17
+      "true_positive": 20
     },
     "software_tooling": {
       "accuracy": 0.0526,
       "behavior_correct": 2,
-      "precision": 0.7667,
-      "predicted": 30,
+      "precision": 0.8214,
+      "predicted": 28,
       "recall": 0.6053,
       "total": 38,
       "true_positive": 23
@@ -110,7 +110,7 @@
       "accuracy": 0.0,
       "behavior_correct": 0,
       "precision": 0.0,
-      "predicted": 38,
+      "predicted": 36,
       "recall": 0.0,
       "total": 0,
       "true_positive": 0
@@ -118,11 +118,11 @@
     "vat_jpk_ksef": {
       "accuracy": 0.2045,
       "behavior_correct": 9,
-      "precision": 0.5625,
-      "predicted": 48,
-      "recall": 0.6136,
+      "precision": 0.62,
+      "predicted": 50,
+      "recall": 0.7045,
       "total": 44,
-      "true_positive": 27
+      "true_positive": 31
     },
     "zus": {
       "accuracy": 0.1316,
@@ -1080,19 +1080,19 @@
           "article_number": "art. 86 ust. 1",
           "category": "odliczenie_vat_warunki_podstawowe",
           "law_name": "Ustawa o VAT",
-          "score": 0.032787
+          "score": 0.032522
         },
         {
-          "article_number": "art. 86 ust. 1",
-          "category": "odliczenie_vat",
+          "article_number": "art. 86a ust. 1-3 i 9",
+          "category": "vat",
           "law_name": "Ustawa o VAT",
-          "score": 0.031281
+          "score": 0.030777
         },
         {
           "article_number": "art. 86a ust. 1",
-          "category": "odliczenie_vat_pojazdy",
+          "category": "odliczenie VAT pojazdy KUP",
           "law_name": "Ustawa o VAT",
-          "score": 0.030536
+          "score": 0.026334
         }
       ]
     },
@@ -1143,12 +1143,12 @@
         "rodzaj_dokumentu",
         "okres_lub_data"
       ],
-      "intent_match": false,
+      "intent_match": true,
       "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "pit_ryczalt",
+      "predicted_intent": "vat_jpk_ksef",
       "question": "Czy od samochodu Opel combo van, który ma wpisane w dowodzie rejestracyjnym samochód ciężarowy do 3,5 t, można odliczać 100% VAT?",
       "source_frequency": 12,
       "top_chunks": [
@@ -1296,12 +1296,12 @@
         "rodzaj_dokumentu",
         "okres_lub_data"
       ],
-      "intent_match": false,
+      "intent_match": true,
       "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "software_tooling",
+      "predicted_intent": "vat_jpk_ksef",
       "question": "Samochód osobowy z leasingiem operacyjnymWartość powyżej 100 tys bruttoZgłoszony do VAT-26Czy leasing odliczam proporcje?",
       "source_frequency": 12,
       "top_chunks": [
@@ -1344,22 +1344,22 @@
       "source_frequency": 11,
       "top_chunks": [
         {
-          "article_number": "art. 99 ust. 7c",
-          "category": "deklaracje_VAT_podatek_nalezny_i_naliczony",
+          "article_number": "art. 41 ust. 1, 2, 2a oraz art. 146ef ust. 1",
+          "category": "vat",
           "law_name": "Ustawa o VAT",
-          "score": 0.032266
+          "score": 0.032787
         },
         {
-          "article_number": "art. 42h",
-          "category": "podatek_należny",
+          "article_number": "art. 43",
+          "category": "stawka_vat_usługi",
           "law_name": "Ustawa o VAT",
-          "score": 0.031054
+          "score": 0.031514
         },
         {
-          "article_number": "art. 19a ust. 1",
-          "category": "obowiazek_podatkowy",
+          "article_number": "art. 83 ust. 1 pkt 23",
+          "category": "Zwrot VAT - warunki ogólne",
           "law_name": "Ustawa o VAT",
-          "score": 0.031054
+          "score": 0.029958
         }
       ]
     },
@@ -1603,7 +1603,7 @@
           "article_number": "art. 26 ust. 1",
           "category": "cit",
           "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.031498
+          "score": 0.031746
         }
       ]
     },
@@ -2312,21 +2312,21 @@
       "source_frequency": 7,
       "top_chunks": [
         {
-          "article_number": "art. 24c ust. 1",
-          "category": "Różnice kursowe",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.032787
-        },
-        {
           "article_number": "art. 24c",
           "category": "praktyka",
           "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.032787
+        },
+        {
+          "article_number": "art. 6 ust. 1c",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
           "score": 0.032258
         },
         {
-          "article_number": "art. 15a",
-          "category": "praktyka",
-          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "article_number": "art. 14b",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "score": 0.031746
         }
       ]
@@ -2389,22 +2389,22 @@
       "source_frequency": 7,
       "top_chunks": [
         {
-          "article_number": "art. 99 ust. 7c",
-          "category": "deklaracje_VAT_podatek_nalezny_i_naliczony",
+          "article_number": "art. 43",
+          "category": "stawka_vat_usługi",
           "law_name": "Ustawa o VAT",
-          "score": 0.032522
+          "score": 0.031319
         },
         {
-          "article_number": "art. 99 ust. 7",
-          "category": "obowiązek_podatkowy_deklaracje",
+          "article_number": "art. 113 ust. 5",
+          "category": "zwolnienie_microbiznesu",
           "law_name": "Ustawa o VAT",
-          "score": 0.030159
+          "score": 0.031281
         },
         {
-          "article_number": "art. 19a ust. 1",
-          "category": "obowiazek_podatkowy",
+          "article_number": "art. 113 ust. 1",
+          "category": "zwolnienie_vat_maly_podatnik",
           "law_name": "Ustawa o VAT",
-          "score": 0.029643
+          "score": 0.027106
         }
       ]
     },
@@ -2504,22 +2504,22 @@
       "source_frequency": 7,
       "top_chunks": [
         {
-          "article_number": "art. 28m ust. 1 pkt 2 i 3",
-          "category": "cit",
-          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.032787
+          "article_number": "art. 45 ust. 1",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "score": 0.031319
         },
         {
-          "article_number": "art. 28j ust. 1",
-          "category": "cit",
-          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.032258
+          "article_number": "art. 39",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.030415
         },
         {
-          "article_number": "art. 28k ust. 1",
-          "category": "cit",
-          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.031498
+          "article_number": "art. 24a",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.030303
         }
       ]
     },
@@ -2569,32 +2569,32 @@
         "rodzaj_dokumentu",
         "okres_lub_data"
       ],
-      "intent_match": false,
+      "intent_match": true,
       "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "business_of_accounting_office",
+      "predicted_intent": "vat_jpk_ksef",
       "question": "OSS sprzedaż towaru dla klienta z Niemiec a klient chce żeby towar jechał na Węgry czy tak może być i jaka stawka VAT wtedy?",
       "source_frequency": 7,
       "top_chunks": [
         {
-          "article_number": "art. 19a ust. 1",
-          "category": "obowiazek_podatkowy",
+          "article_number": "art. 8b ust. 1",
+          "category": "Bony, kupony, rabaty, VAT",
           "law_name": "Ustawa o VAT",
-          "score": 0.032522
+          "score": 0.032018
         },
         {
-          "article_number": "art. 99 ust. 7c",
-          "category": "deklaracje_VAT_podatek_nalezny_i_naliczony",
+          "article_number": "art. 86 ust. 1",
+          "category": "odliczenie_vat",
           "law_name": "Ustawa o VAT",
-          "score": 0.032266
+          "score": 0.029418
         },
         {
-          "article_number": "art. 42h",
-          "category": "podatek_należny",
+          "article_number": "art. 86 ust. 1",
+          "category": "Odliczenie VAT - usługi",
           "law_name": "Ustawa o VAT",
-          "score": 0.029462
+          "score": 0.02879
         }
       ]
     },
@@ -3216,32 +3216,32 @@
         "rodzaj_dokumentu",
         "okres_lub_data"
       ],
-      "intent_match": false,
+      "intent_match": true,
       "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "business_of_accounting_office",
+      "predicted_intent": "vat_jpk_ksef",
       "question": "Klient nie zapłacił od tego zakupu ani naliczonego VAT ani cła?",
       "source_frequency": 6,
       "top_chunks": [
         {
-          "article_number": "art. 30b ust. 1",
-          "category": "import_towarow_podstawa_opodatkowania",
-          "law_name": "Ustawa o VAT",
+          "article_number": "art. 14",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
           "score": 0.032522
         },
         {
-          "article_number": "art. 106ga, art. 106gb",
-          "category": "Faktury ustrukturyzowane KSeF",
+          "article_number": "art. 86a ust. 1-3 i 9",
+          "category": "pit",
           "law_name": "Ustawa o VAT",
           "score": 0.031099
         },
         {
-          "article_number": "art. 86 ust. 10",
-          "category": "terminy_odliczenia_vat",
-          "law_name": "Ustawa o VAT",
-          "score": 0.029762
+          "article_number": "art. 42 ust. 1 i 1a",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "score": 0.021954
         }
       ]
     },
@@ -3493,22 +3493,22 @@
       "source_frequency": 6,
       "top_chunks": [
         {
-          "article_number": "art. 99 ust. 7c",
-          "category": "deklaracje_VAT_podatek_nalezny_i_naliczony",
+          "article_number": "art. 17 ust. 1 pkt 4",
+          "category": "mechanizm_odwroconego_obciazenia",
           "law_name": "Ustawa o VAT",
           "score": 0.032522
         },
         {
-          "article_number": "art. 99 ust. 7",
-          "category": "obowiązek_podatkowy_deklaracje",
+          "article_number": "art. 28c ust. 1",
+          "category": "miejsce_swiadczenia_uslug_stawka_vat",
           "law_name": "Ustawa o VAT",
-          "score": 0.025873
+          "score": 0.032266
         },
         {
-          "article_number": "art. 19a ust. 1",
-          "category": "obowiazek_podatkowy",
+          "article_number": "art. 43",
+          "category": "stawka_vat_usługi",
           "law_name": "Ustawa o VAT",
-          "score": 0.024604
+          "score": 0.028485
         }
       ]
     },
@@ -3968,7 +3968,7 @@
         "okres_księgowy"
       ],
       "intent_match": true,
-      "law_match": true,
+      "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -3977,22 +3977,22 @@
       "source_frequency": 5,
       "top_chunks": [
         {
-          "article_number": "art. 28 ust. 2",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowo?ci",
-          "score": 0.032787
+          "article_number": "art. 4 ust. 1 pkt 6",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.032522
         },
         {
-          "article_number": "art. 34c",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031754
+          "article_number": "art. 12 ust. 2",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.031778
         },
         {
-          "article_number": "art. 7",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031025
+          "article_number": "art. 23",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.03101
         }
       ]
     },
@@ -4119,12 +4119,12 @@
         "typ_umowy",
         "okres_lub_data"
       ],
-      "intent_match": true,
+      "intent_match": false,
       "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "payroll",
+      "predicted_intent": "pit_ryczalt",
       "question": "Pit-37 Zamotałam się osoba która otrzymuje PIT40A z KRUS i PIT11A otrzymuje z Zusu powinna taką osoba rozliczyć się PIT 37?",
       "source_frequency": 5,
       "top_chunks": [
@@ -4685,12 +4685,12 @@
         "forma_opodatkowania",
         "okres_lub_data"
       ],
-      "intent_match": false,
+      "intent_match": true,
       "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "vat_jpk_ksef",
+      "predicted_intent": "pit_ryczalt",
       "question": "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
       "source_frequency": 4,
       "top_chunks": [
@@ -5005,7 +5005,7 @@
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "education_community",
+      "predicted_intent": "vat_jpk_ksef",
       "question": "Czy ktoś korzysta z rewizor nexo pro i c?",
       "source_frequency": 4,
       "top_chunks": [
@@ -6253,27 +6253,27 @@
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "software_tooling",
+      "predicted_intent": "pit_ryczalt",
       "question": "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
       "source_frequency": 4,
       "top_chunks": [
         {
-          "article_number": "art. 86 ust. 1",
-          "category": "odliczenie_vat_towary_materialy",
-          "law_name": "Ustawa o VAT",
-          "score": 0.032258
+          "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "score": 0.031754
         },
         {
-          "article_number": "art. 86 ust. 1",
-          "category": "odliczenie_vat_warunki_podstawowe",
-          "law_name": "Ustawa o VAT",
-          "score": 0.031746
+          "article_number": "art. 55",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.031754
         },
         {
-          "article_number": "art. 86 ust. 1",
-          "category": "odliczenie_vat",
-          "law_name": "Ustawa o VAT",
-          "score": 0.03101
+          "article_number": "art. 31 ust. 2",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.030366
         }
       ]
     },
@@ -6288,7 +6288,7 @@
         "okres_księgowy"
       ],
       "intent_match": true,
-      "law_match": true,
+      "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -6297,22 +6297,22 @@
       "source_frequency": 4,
       "top_chunks": [
         {
-          "article_number": "art. 30",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.032787
-        },
-        {
-          "article_number": "art. 32 ust. 1",
-          "category": "amortyzacja_srodkow_trwalych",
-          "law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 4 ust. 1 pkt 6",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
           "score": 0.032002
         },
         {
-          "article_number": "art. 21 ust. 1 pkt 5",
-          "category": "elementy_dowodu_ksiegowego",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031498
+          "article_number": "art. 14",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.031099
+        },
+        {
+          "article_number": "art. 23c",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.029437
         }
       ]
     },
@@ -6681,7 +6681,7 @@
         "okres_księgowy"
       ],
       "intent_match": true,
-      "law_match": true,
+      "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -6690,22 +6690,22 @@
       "source_frequency": 3,
       "top_chunks": [
         {
-          "article_number": "art. 28 ust. 2",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowo?ci",
+          "article_number": "art. 4 ust. 1 pkt 6",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.032002
+        },
+        {
+          "article_number": "art. 12 ust. 1 pkt 6 lit. a",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.032002
+        },
+        {
+          "article_number": "art. 26 ust. 5",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
           "score": 0.031778
-        },
-        {
-          "article_number": "art. 27 ust. 2",
-          "category": "inwentaryzacja_i_rozliczenie",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031281
-        },
-        {
-          "article_number": "art. 21 ust. 1",
-          "category": "dowody_ksiegowe",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031281
         }
       ]
     },
@@ -7672,16 +7672,16 @@
           "score": 0.032787
         },
         {
-          "article_number": "art. 12 ust. 1 pkt 2",
-          "category": "pit",
-          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-          "score": 0.03101
+          "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.032258
         },
         {
-          "article_number": "art. 21 ust. 1 pkt 2a",
-          "category": "deklaracje_i_formularze",
-          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.029287
+          "article_number": "art. 11f",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "score": 0.029877
         }
       ]
     },
@@ -7808,7 +7808,7 @@
         "okres_lub_data"
       ],
       "intent_match": false,
-      "law_match": false,
+      "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -7817,22 +7817,22 @@
       "source_frequency": 3,
       "top_chunks": [
         {
+          "article_number": "art. 86a ust. 1-3 i 9",
+          "category": "pit",
+          "law_name": "Ustawa o VAT",
+          "score": 0.032787
+        },
+        {
+          "article_number": "art. 14",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.022708
+        },
+        {
           "article_number": "art. 5 ust. 1",
           "category": "przychod_vat_rozliczenie",
           "law_name": "Ustawa o VAT",
-          "score": 0.032018
-        },
-        {
-          "article_number": "art. 86 ust. 1",
-          "category": "Odliczenie VAT - zasady, Podstawa opodatkowania",
-          "law_name": "Ustawa o VAT",
-          "score": 0.030536
-        },
-        {
-          "article_number": "art. 86a ust. 1",
-          "category": "odliczenie_vat_pojazdy",
-          "law_name": "Ustawa o VAT",
-          "score": 0.030366
+          "score": 0.029762
         }
       ]
     },
@@ -8068,7 +8068,7 @@
         "rodzaj_dokumentu"
       ],
       "intent_match": true,
-      "law_match": true,
+      "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -8077,22 +8077,22 @@
       "source_frequency": 3,
       "top_chunks": [
         {
-          "article_number": "art. 56",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.032018
+          "article_number": "art. 52jb",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.032522
         },
         {
-          "article_number": "art. 45 ust. 1",
-          "category": "sprawozdanie_finansowe_podstawy",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031778
+          "article_number": "art. 6 ust. 4a i 6a",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.030622
         },
         {
-          "article_number": "art. 18",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031498
+          "article_number": "art. 57b ust. 4",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.029958
         }
       ]
     },
@@ -8688,7 +8688,7 @@
         "okres_księgowy"
       ],
       "intent_match": true,
-      "law_match": false,
+      "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -8697,22 +8697,22 @@
       "source_frequency": 3,
       "top_chunks": [
         {
-          "article_number": "Â§ 4-5",
-          "category": "jpk",
-          "law_name": "Rozporządzenie JPK_V7",
-          "score": 0.031514
+          "article_number": "art. 24",
+          "category": "praktyka",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.032002
         },
         {
-          "article_number": "Â§ 2",
-          "category": "jpk",
-          "law_name": "Rozporządzenie JPK_V7",
-          "score": 0.031025
+          "article_number": "art. 23f",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.032002
         },
         {
-          "article_number": "§ 5",
-          "category": "jpk",
-          "law_name": "Rozporządzenie JPK_V7",
-          "score": 0.030331
+          "article_number": "art. 22p",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.03125
         }
       ]
     },
@@ -8726,7 +8726,7 @@
         "źródło_przychodu"
       ],
       "intent_match": false,
-      "law_match": false,
+      "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
@@ -8735,22 +8735,22 @@
       "source_frequency": 3,
       "top_chunks": [
         {
-          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o VAT",
+          "article_number": "art. 22 ust. 5c, 5d i 6",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "score": 0.032787
         },
         {
-          "article_number": "art. 2",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031281
+          "article_number": "art. 23",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.030798
         },
         {
-          "article_number": "art. 84a",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.030331
+          "article_number": "art. 22",
+          "category": "praktyka",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.029287
         }
       ]
     },
@@ -8849,12 +8849,12 @@
         "źródło_przychodu",
         "okres_lub_data"
       ],
-      "intent_match": false,
+      "intent_match": true,
       "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "accounting_operational",
+      "predicted_intent": "pit_ryczalt",
       "question": "Mam przychód bilansowy z grudnia który będzie przychodem podatkowym w styczniu - czy tu mogę użyć konta pozabilansowego z odpowiednim znacznikiem?",
       "source_frequency": 3,
       "top_chunks": [
@@ -8936,22 +8936,22 @@
       "source_frequency": 3,
       "top_chunks": [
         {
-          "article_number": "art. 86a ust. 1",
-          "category": "odliczenie VAT pojazdy KUP",
+          "article_number": "art. 86a ust. 1-3 i 9",
+          "category": "pit",
           "law_name": "Ustawa o VAT",
-          "score": 0.031778
+          "score": 0.032787
         },
         {
-          "article_number": "art. 86 ust. 1-2",
-          "category": "odliczenie_podatku_naliczonego",
-          "law_name": "Ustawa o VAT",
-          "score": 0.031025
+          "article_number": "art. 12 ust. 2",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.032258
         },
         {
-          "article_number": "art. 5 ust. 1",
-          "category": "przychod_vat_rozliczenie",
-          "law_name": "Ustawa o VAT",
-          "score": 0.030679
+          "article_number": "art. 14",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.026862
         }
       ]
     },
@@ -9161,13 +9161,13 @@
       "intent_match": false,
       "law_match": false,
       "missing_slots": [
-        "typ_umowy",
-        "etap_zatrudnienia",
+        "forma_opodatkowania",
+        "źródło_przychodu",
         "okres_lub_data"
       ],
       "needs_clarification": true,
       "predicted_behavior": "ask_follow_up",
-      "predicted_intent": "hr",
+      "predicted_intent": "pit_ryczalt",
       "question": "Przychod - KUP - składki społeczne?",
       "source_frequency": 3,
       "top_chunks": []
@@ -9287,7 +9287,7 @@
       ]
     },
     {
-      "behavior_match": false,
+      "behavior_match": true,
       "expected_behavior": "insufficient_data",
       "expected_intent": "pit_ryczalt",
       "expected_law_or_area": "PIT / ryczałt",
@@ -9296,34 +9296,19 @@
         "źródło_przychodu",
         "okres_lub_data"
       ],
-      "intent_match": false,
-      "law_match": true,
-      "missing_slots": [],
-      "needs_clarification": false,
-      "predicted_behavior": "answer_directly",
-      "predicted_intent": "unknown",
+      "intent_match": true,
+      "law_match": false,
+      "missing_slots": [
+        "forma_opodatkowania",
+        "źródło_przychodu",
+        "okres_lub_data"
+      ],
+      "needs_clarification": true,
+      "predicted_behavior": "ask_follow_up",
+      "predicted_intent": "pit_ryczalt",
       "question": "Stanowi to przychód podatkowy?",
       "source_frequency": 3,
-      "top_chunks": [
-        {
-          "article_number": "art. 10 ust. 1 pkt 1",
-          "category": "źródła przychodów",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.032787
-        },
-        {
-          "article_number": "art. 10 ust. 1 pkt 2",
-          "category": "źródła przychodów",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.032258
-        },
-        {
-          "article_number": "art. 10 ust. 1 pkt 7",
-          "category": "źródła przychodów",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.031258
-        }
-      ]
+      "top_chunks": []
     },
     {
       "behavior_match": false,
@@ -9563,27 +9548,27 @@
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "vat_jpk_ksef",
+      "predicted_intent": "pit_ryczalt",
       "question": "Teraz jest księgowane: faktury sprzedaży i zakupu po kursie z dnia poprzedzającego dzień sprzedaży, a zapłata po kursie z dnia poprzedzającego zapłatę?",
       "source_frequency": 3,
       "top_chunks": [
         {
-          "article_number": "art. 31a ust. 1 i 2",
-          "category": "przeliczanie_walut_data_faktury",
-          "law_name": "Ustawa o VAT",
-          "score": 0.032787
+          "article_number": "art. 11a ust. 1",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.032522
         },
         {
-          "article_number": "art. 106i ust. 2",
-          "category": "terminy wystawienia faktury",
-          "law_name": "Ustawa o VAT",
-          "score": 0.031025
+          "article_number": "art. 43 ust. 3",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.030579
         },
         {
-          "article_number": "art. 106i ust. 3 pkt 1",
-          "category": "terminy wystawienia faktury",
-          "law_name": "Ustawa o VAT",
-          "score": 0.03101
+          "article_number": "art. 8 ust. 3",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.029437
         }
       ]
     },
@@ -9928,22 +9913,22 @@
       "source_frequency": 2,
       "top_chunks": [
         {
-          "article_number": "art. 109 ust. 3e-3g",
-          "category": "jpk",
-          "law_name": "Ustawa o VAT",
+          "article_number": "art. 28j ust. 1",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
           "score": 0.032787
         },
         {
-          "article_number": "§ 10",
-          "category": "jpk",
-          "law_name": "Rozporządzenie JPK_V7",
-          "score": 0.026481
+          "article_number": "art. 27 ust. 1",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.032258
         },
         {
-          "article_number": "art. 106i ust. 2",
-          "category": "faktury",
-          "law_name": "Ustawa o VAT",
-          "score": 0.030835
+          "article_number": "art. 28k ust. 1",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.031746
         }
       ]
     },
@@ -10231,22 +10216,22 @@
       "source_frequency": 2,
       "top_chunks": [
         {
-          "article_number": "art. 3 ust. 1",
-          "category": "obowiązek_podatkowy_zasadniczy",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.030798
-        },
-        {
-          "article_number": "art. 99 ust. 7c",
-          "category": "deklaracje_VAT_podatek_nalezny_i_naliczony",
-          "law_name": "Ustawa o VAT",
-          "score": 0.018911
-        },
-        {
           "article_number": "art. 26a ust. 1",
           "category": "miejsce_swiadczenia_import",
           "law_name": "Ustawa o VAT",
           "score": 0.031754
+        },
+        {
+          "article_number": "art. 28b ust. 1",
+          "category": "miejsce świadczenia usług",
+          "law_name": "Ustawa o VAT",
+          "score": 0.031545
+        },
+        {
+          "article_number": "art. 28c, art. 28d",
+          "category": "import_uslug",
+          "law_name": "Ustawa o VAT",
+          "score": 0.029462
         }
       ]
     },
@@ -13182,32 +13167,32 @@
         "rodzaj_transakcji_lub_płatności",
         "okres_lub_data"
       ],
-      "intent_match": false,
-      "law_match": false,
+      "intent_match": true,
+      "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "legal_procedural",
+      "predicted_intent": "cit_wht",
       "question": "Czy w przypadku łącznej reprezentacji w spółce deklaracja IFT-2R może być podpisana tylko przez jedną osobę -upoważnioną UPL-1?",
       "source_frequency": 2,
       "top_chunks": [
         {
-          "article_number": "art. 80a",
-          "category": "ordynacja",
-          "law_name": "Ordynacja podatkowa",
-          "score": 0.032787
+          "article_number": "art. 11l",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "score": 0.032018
         },
         {
-          "article_number": "art. 150",
-          "category": "ordynacja",
-          "law_name": "Ordynacja podatkowa",
-          "score": 0.032002
+          "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.031319
         },
         {
-          "article_number": "art. 284a",
-          "category": "ordynacja",
-          "law_name": "Ordynacja podatkowa",
-          "score": 0.031281
+          "article_number": "art. 24m",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+          "score": 0.030415
         }
       ]
     },
@@ -13357,12 +13342,12 @@
       "expected_missing_slots": [
         "okres_lub_data"
       ],
-      "intent_match": true,
+      "intent_match": false,
       "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "payroll",
+      "predicted_intent": "pit_ryczalt",
       "question": "Etat - PIT-11 rozliczam się indywidulanie (PIT-37), weszłam w drugi próg podatkowy, w rocznym rozliczeniu wyszło, że muszę dopłacić niecałe 1000 zł rozumiem z czego wynika dopłata, ale ciekawi mnie jak to działa? Płacowa źle naliczyła?",
       "source_frequency": 2,
       "top_chunks": [
@@ -13491,32 +13476,32 @@
         "rodzaj_transakcji_lub_płatności",
         "okres_lub_data"
       ],
-      "intent_match": false,
-      "law_match": false,
+      "intent_match": true,
+      "law_match": true,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "vat_jpk_ksef",
+      "predicted_intent": "cit_wht",
       "question": "Jak Państwo podchodzą do kwestii opisów na fakturach zakupowych w świetle JPK CIT?",
       "source_frequency": 2,
       "top_chunks": [
         {
-          "article_number": "art. 109 ust. 3e-3g",
-          "category": "jpk",
-          "law_name": "Ustawa o VAT",
-          "score": 0.029907
-        },
-        {
-          "article_number": "art. 1",
-          "category": "zakres regulacji ustawy",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.030478
-        },
-        {
           "article_number": "art. 28j ust. 1",
           "category": "cit",
           "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.030415
+          "score": 0.032787
+        },
+        {
+          "article_number": "art. 27 ust. 1",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.032258
+        },
+        {
+          "article_number": "art. 28k ust. 1",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.031746
         }
       ]
     },
@@ -14354,12 +14339,12 @@
         "typ_umowy",
         "okres_lub_data"
       ],
-      "intent_match": true,
+      "intent_match": false,
       "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "payroll",
+      "predicted_intent": "pit_ryczalt",
       "question": "Może ktoś z Państwa rozliczał kiedyś zwrot niezależnie pobranych świadczeń z ZUS i chciałby mi pomóc rozwikłać zagadkę jak ma się kwota zwrotu (potwierdzona zaświadczeniem z ZUSu) do kwoty w pozycji 51 w PIT-11a?",
       "source_frequency": 2,
       "top_chunks": [
@@ -14903,22 +14888,22 @@
       "source_frequency": 1,
       "top_chunks": [
         {
-          "article_number": "art. 109 ust. 3e-3g",
-          "category": "jpk",
-          "law_name": "Ustawa o VAT",
-          "score": 0.029727
-        },
-        {
           "article_number": "art. 28j ust. 1",
           "category": "cit",
           "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.030886
+          "score": 0.032787
         },
         {
           "article_number": "art. 27 ust. 1",
           "category": "cit",
           "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
-          "score": 0.029958
+          "score": 0.032258
+        },
+        {
+          "article_number": "art. 28k ust. 1",
+          "category": "cit",
+          "law_name": "Ustawa o podatku dochodowym od os?b prawnych",
+          "score": 0.031498
         }
       ]
     },
@@ -15300,22 +15285,22 @@
       "source_frequency": 1,
       "top_chunks": [
         {
-          "article_number": "art. 106e ust. 5 pkt 3",
-          "category": "uproszczona_faktura",
-          "law_name": "Ustawa o VAT",
-          "score": 0.032266
+          "article_number": "art. 12 ust. 1 pkt 4",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.032018
         },
         {
-          "article_number": "art. 106e ust. 5 pkt 3",
-          "category": "Wymagania faktury - uproszczenia",
-          "law_name": "Ustawa o VAT",
-          "score": 0.032002
-        },
-        {
-          "article_number": "art. 106j ust. 1 pkt 3",
-          "category": "faktury_korygujące",
-          "law_name": "Ustawa o VAT",
+          "article_number": "art. 26 ust. 7a pkt 12",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "score": 0.031514
+        },
+        {
+          "article_number": "art. 57aa ust. 6",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.031319
         }
       ]
     },
@@ -15886,12 +15871,12 @@
       "expected_missing_slots": [
         "typ_umowy"
       ],
-      "intent_match": true,
+      "intent_match": false,
       "law_match": false,
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "payroll",
+      "predicted_intent": "pit_ryczalt",
       "question": "Czy jako przedsiębiorca robiąc PIT 36 z działalności dodaje PIT-11 z tego roku przed rozpoczęciem jdg?",
       "source_frequency": 1,
       "top_chunks": [
@@ -16004,22 +15989,22 @@
       "source_frequency": 1,
       "top_chunks": [
         {
-          "article_number": "art. 106e ust. 1 pkt 2",
-          "category": "numer_faktury",
-          "law_name": "Ustawa o VAT",
+          "article_number": "art. 57c ust. 1",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
           "score": 0.032787
         },
         {
-          "article_number": "art. 106e ust. 1",
-          "category": "zawartość faktury",
-          "law_name": "Ustawa o VAT",
+          "article_number": "art. 57aa ust. 3, ust. 4",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
           "score": 0.032002
         },
         {
-          "article_number": "art. 106e ust. 1",
-          "category": "dokumentacja_faktury",
-          "law_name": "Ustawa o VAT",
-          "score": 0.031754
+          "article_number": "art. 55",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.032002
         }
       ]
     },
@@ -17388,32 +17373,17 @@
       "expected_missing_slots": [],
       "intent_match": false,
       "law_match": false,
-      "missing_slots": [],
-      "needs_clarification": false,
-      "predicted_behavior": "answer_directly",
-      "predicted_intent": "unknown",
+      "missing_slots": [
+        "forma_opodatkowania",
+        "źródło_przychodu",
+        "okres_lub_data"
+      ],
+      "needs_clarification": true,
+      "predicted_behavior": "ask_follow_up",
+      "predicted_intent": "pit_ryczalt",
       "question": "Kupna, negocjowanym?",
       "source_frequency": 1,
-      "top_chunks": [
-        {
-          "article_number": "art. 24e ust. 4",
-          "category": "koszty ubycia papierów wartościowych i wierzytelności",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.032787
-        },
-        {
-          "article_number": "art. 8 ust. 3",
-          "category": "pit",
-          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-          "score": 0.032258
-        },
-        {
-          "article_number": "art. 23 ust. 1 pkt 46a, 47a i art. 23b ust. 1",
-          "category": "pit",
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "score": 0.031746
-        }
-      ]
+      "top_chunks": []
     },
     {
       "behavior_match": true,
@@ -17780,27 +17750,27 @@
       "missing_slots": [],
       "needs_clarification": false,
       "predicted_behavior": "answer_directly",
-      "predicted_intent": "accounting_operational",
+      "predicted_intent": "pit_ryczalt",
       "question": "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w którym okresie zaksięgować?",
       "source_frequency": 5,
       "top_chunks": [
         {
-          "article_number": "art. 39 ust. 3",
-          "category": "rozliczenia_miedzyokresowe_koszty",
-          "law_name": "Ustawa o rachunkowości",
+          "article_number": "art. 23b ust. 1 oraz art. 23 ust. 1 pkt 47a",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
           "score": 0.032787
         },
         {
-          "article_number": "art. 6",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.032002
+          "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
+          "score": 0.032258
         },
         {
-          "article_number": "art. 30",
-          "category": "rachunkowosc",
-          "law_name": "Ustawa o rachunkowości",
-          "score": 0.031281
+          "article_number": "art. 23",
+          "category": "pit",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "score": 0.031746
         }
       ]
     },
@@ -17883,22 +17853,22 @@
       "source_frequency": 5,
       "top_chunks": [
         {
-          "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
-          "category": "ksef",
-          "law_name": "Rozporządzenie KSeF",
-          "score": 0.032522
+          "article_number": "art. 4 ust. 1 pkt 6",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.027027
         },
         {
-          "article_number": "art. 106ga ust. 2",
-          "category": "ksef",
-          "law_name": "Ustawa o VAT - KSeF zwolnienia",
-          "score": 0.032002
+          "article_number": "art. 4 ust. 1 pkt 2",
+          "category": "pit",
+          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+          "score": 0.025062
         },
         {
-          "article_number": "art. 145l",
-          "category": "ksef",
-          "law_name": "Ustawa o VAT - KSeF uproszczenia 2026",
-          "score": 0.031778
+          "article_number": "art. 106gb ust. 4 pkt 1",
+          "category": "faktury ustrukturyzowane",
+          "law_name": "Ustawa o VAT",
+          "score": 0.032266
         }
       ]
     }

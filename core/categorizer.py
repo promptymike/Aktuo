@@ -11,9 +11,7 @@ _POLISH_TRANS = str.maketrans(
 
 def _normalize(text: str) -> str:
     normalized = unicodedata.normalize("NFKD", text.lower().translate(_POLISH_TRANS))
-    without_accents = "".join(
-        character for character in normalized if not unicodedata.combining(character)
-    )
+    without_accents = "".join(character for character in normalized if not unicodedata.combining(character))
     return re.sub(r"\s+", " ", without_accents).strip()
 
 
@@ -36,10 +34,68 @@ def _matches_keyword(query: str, query_tokens: set[str], keyword: str) -> bool:
 
 
 def categorize_query(query: str) -> str:
+    """Categorize a user query into the legacy retriever category set."""
+
     lowered = _normalize(query)
     lowered_tokens = _tokenize(lowered)
+
+    cit_priority_markers = (
+        "ift-2r",
+        "ift2r",
+        "ift 2r",
+        "jpk cit",
+        "wht",
+        "certyfikat rezydencji",
+    )
+    vat_priority_markers = (
+        "vat-26",
+        "vat26",
+        "100% vat",
+        "100 vat",
+        "odliczenie vat",
+        "odliczac 100% vat",
+        "samochod ciezarowy",
+        "samochod osobowy",
+        "leasing samochodu",
+        "leasing auta",
+        "oss",
+        "clo",
+        "cło",
+    )
+    pit_priority_markers = (
+        "pit-37",
+        "pit 37",
+        "pit37",
+        "pit-36",
+        "pit 36",
+        "pit36",
+        "pit-11a",
+        "pit 11a",
+        "pit11a",
+        "pit-40a",
+        "pit 40a",
+        "pit40a",
+        "kup",
+        "koszt podatkowy",
+        "koszty podatkowe",
+        "przychod podatkowy",
+        "przychody podatkowe",
+        "wykup samochodu",
+        "wartosc netto",
+        "memorialowo",
+    )
+
     if "pit" in lowered_tokens and "vat" in lowered_tokens:
         return "ogólne"
+    if any(marker in lowered for marker in cit_priority_markers):
+        return "cit"
+    if "vat" in lowered and any(marker in lowered for marker in vat_priority_markers):
+        return "vat"
+    if any(marker in lowered for marker in ("oss", "vat-26", "vat26")):
+        return "vat"
+    if any(marker in lowered for marker in pit_priority_markers):
+        return "pit"
+
     ksef_permission_markers = (
         "uprawn",
         "administrator",
@@ -58,10 +114,26 @@ def categorize_query(query: str) -> str:
         for marker in ("dalszego ich przekazywania", "pobrania takich faktur", "podglad w pdf", "administrator")
     ):
         return "ksef"
-    if "jpk" in lowered and any(marker in lowered for marker in ("czynny", "zal", "?al", "korekt", "fv", "fakt")):
+    if "jpk" in lowered and any(marker in lowered for marker in ("czynny", "zal", "żal", "korekt", "fv", "fakt")):
         return "jpk"
-    if any(marker in lowered for marker in ("pe?nomoc", "pelnomoc", "profil zaufany", "podpis kwalifikowany", "zaw fa", "zaw-fa", "upl-1", "upl1", "pps-1", "pps1")):
+    if any(
+        marker in lowered
+        for marker in (
+            "pe?nomoc",
+            "pelnomoc",
+            "pełnomoc",
+            "profil zaufany",
+            "podpis kwalifikowany",
+            "zaw fa",
+            "zaw-fa",
+            "upl-1",
+            "upl1",
+            "pps-1",
+            "pps1",
+        )
+    ):
         return "ordynacja"
+
     operational_accounting_markers = (
         "zaksieg",
         "przeksieg",
@@ -81,22 +153,26 @@ def categorize_query(query: str) -> str:
         return "rachunkowosc"
     if "amortyz" in lowered and ("samoch" in lowered or "leasing" in lowered):
         return "rachunkowosc"
+
     cash_register_keywords = (
         "kasa fiskalna",
         "kasy fiskalne",
-        "kasa rejestrująca",
-        "kasy rejestrujące",
+        "kasa rejestrujaca",
+        "kasy rejestrujace",
         "zwolnienie z kasy",
     )
     if any(_matches_keyword(lowered, lowered_tokens, keyword) for keyword in cash_register_keywords):
         return "vat"
+
     if "leasing" in lowered and any(marker in lowered for marker in ("samoch", "auto")):
         if (("firmow" in lowered and "cel" in lowered) or "dzialaln" in lowered or any(marker in lowered for marker in ("vat26", "vat-26", "ewidencj"))):
             return "vat"
         if any(marker in lowered for marker in ("wykup", "koszt", "przychod", "srodek trwaly", "amortyz")):
             return "pit"
+
     if "ulg" in lowered and ("senior" in lowered or "emeryt" in lowered):
         return "pit"
+
     keyword_map = (
         (
             "ksef",
@@ -193,11 +269,13 @@ def categorize_query(query: str) -> str:
                 "cit-8",
                 "cit8",
                 "ift2r",
+                "ift 2r",
                 "ryczalt od dochodow",
                 "maly podatnik cit",
                 "ift-2r",
                 "formularz ift-2r",
                 "formularz ift2r",
+                "jpk cit",
             ),
         ),
         (
@@ -208,9 +286,19 @@ def categorize_query(query: str) -> str:
                 "zaliczka na podatek",
                 "zeznanie roczne",
                 "pit-36",
+                "pit 36",
+                "pit36",
                 "pit-37",
+                "pit 37",
+                "pit37",
                 "pit-11",
                 "pit11",
+                "pit-11a",
+                "pit 11a",
+                "pit11a",
+                "pit-40a",
+                "pit 40a",
+                "pit40a",
                 "pit-4r",
                 "pit4r",
                 "ulga na dzieci",
@@ -231,6 +319,14 @@ def categorize_query(query: str) -> str:
                 "ryczałt ewidencjonowany",
                 "najem prywatny",
                 "stawka ryczałtu",
+                "kup",
+                "koszt podatkowy",
+                "koszty podatkowe",
+                "przychod podatkowy",
+                "przychody podatkowe",
+                "wykup samochodu",
+                "wartosc netto",
+                "memorialowo",
             ),
         ),
         (
@@ -296,7 +392,7 @@ def categorize_query(query: str) -> str:
             ),
         ),
         (
-            "faktury_koryguj\u0105ce",
+            "faktury_korygujące",
             (
                 "faktura korygujaca",
                 "faktury korygujace",
@@ -347,7 +443,7 @@ def categorize_query(query: str) -> str:
             ),
         ),
         (
-            "podatek_nale\u017cny",
+            "podatek_nalezny",
             (
                 "podatek nalezny",
                 "vat nalezny",
@@ -366,12 +462,17 @@ def categorize_query(query: str) -> str:
                 "rejestracja vat",
                 "vat ue",
                 "zwrot vat",
+                "vat-26",
+                "vat26",
                 "kasa fiskalna",
                 "kasy fiskalne",
                 "kasa rejestrujaca",
                 "kasy rejestrujace",
                 "zwolnienie z kasy",
                 "paragon",
+                "oss",
+                "clo",
+                "cło",
                 "podatek od towarow i uslug",
             ),
         ),
@@ -394,4 +495,4 @@ def categorize_query(query: str) -> str:
     for category, keywords in keyword_map:
         if any(_matches_keyword(lowered, lowered_tokens, keyword) for keyword in keywords):
             return category
-    return "og\u00f3lne"
+    return "ogólne"
