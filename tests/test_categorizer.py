@@ -73,6 +73,24 @@ def test_categorize_query_mixed_pit_and_vat_falls_back_to_ogolne() -> None:
     assert categorize_query("Obowiązek podatkowy PIT i VAT - data wykonania vs data faktury") == "ogólne"
 
 
+def test_categorize_query_mixed_pit_vat_with_strong_vat_markers_returns_vat() -> None:
+    assert categorize_query(
+        "Leasing kapitał nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?"
+    ) == "vat"
+
+
+def test_categorize_query_leasing_operacyjny_vat26_returns_vat() -> None:
+    assert categorize_query(
+        "Samochód osobowy z leasingiem operacyjnym zgłoszony do VAT-26 - czy leasing odliczam proporcją?"
+    ) == "vat"
+
+
+def test_categorize_query_kasa_fiskalna_vat_returns_vat() -> None:
+    assert categorize_query(
+        "Czy kasa fiskalna musi być cały czas podłączona i trzeba drukować paragony zerowe?"
+    ) == "vat"
+
+
 def test_categorize_query_returns_zus_category() -> None:
     assert categorize_query("Jaki jest zbieg tytułów ZUS przy zleceniu i działalności?") == "zus"
 

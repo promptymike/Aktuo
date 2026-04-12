@@ -53,11 +53,16 @@ def categorize_query(query: str) -> str:
         "100% vat",
         "100 vat",
         "odliczenie vat",
+        "odliczac vat",
         "odliczac 100% vat",
         "samochod ciezarowy",
         "samochod osobowy",
         "leasing samochodu",
         "leasing auta",
+        "leasing operacyjny",
+        "proporcj",
+        "kasa fiskalna",
+        "kasy fiskalne",
         "oss",
         "clo",
         "cło",
@@ -86,6 +91,10 @@ def categorize_query(query: str) -> str:
     )
 
     if "pit" in lowered_tokens and "vat" in lowered_tokens:
+        # When strong VAT-specific markers are present, classify as vat
+        # even if PIT is also mentioned (e.g. "leasing samochodu VAT/PIT")
+        if any(marker in lowered for marker in vat_priority_markers):
+            return "vat"
         return "ogólne"
     if any(marker in lowered for marker in cit_priority_markers):
         return "cit"

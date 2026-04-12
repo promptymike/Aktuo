@@ -59,9 +59,8 @@ def test_classify_intent_matches_vat_zus_and_unknown(tmp_path) -> None:
     assert classify_intent("Polecacie dobrą kawę do biura?", str(taxonomy_path)) == "unknown"
 
 
-def test_classify_intent_prefers_vat_pit_and_cit_priority_markers(tmp_path) -> None:
-    taxonomy_path = tmp_path / "intent_taxonomy.json"
-    _write_taxonomy(taxonomy_path)
+def _extend_taxonomy_with_pit_cit(taxonomy_path) -> None:
+    """Add pit_ryczalt and cit_wht intents to the taxonomy fixture."""
     taxonomy = json.loads(taxonomy_path.read_text(encoding="utf-8"))
     taxonomy["pit_ryczalt"] = {
         "description": "Pytania o PIT, ryczałt i formularze roczne.",
@@ -75,9 +74,70 @@ def test_classify_intent_prefers_vat_pit_and_cit_priority_markers(tmp_path) -> N
     }
     taxonomy_path.write_text(json.dumps(taxonomy, ensure_ascii=False), encoding="utf-8")
 
+
+def test_classify_intent_prefers_vat_pit_and_cit_priority_markers(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
     assert classify_intent("Samochód zgłoszony do VAT-26 - czy odliczam 100% VAT?", str(taxonomy_path)) == "vat_jpk_ksef"
     assert classify_intent("Czy PIT 37 trzeba skorygować za 2025 rok?", str(taxonomy_path)) == "pit_ryczalt"
     assert classify_intent("Czy deklaracja IFT-2R może być podpisana przez jedną osobę?", str(taxonomy_path)) == "cit_wht"
+
+
+def test_classify_intent_pit40a_and_pit11a_route_to_payroll(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "Osoba która otrzymuje PIT40A z KRUS i PIT11A z ZUS - jak rozliczyć?",
+        str(taxonomy_path),
+    ) == "payroll"
+
+
+def test_classify_intent_pit_11_with_space_routes_to_payroll(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "Jak jest u Was technicznie z PIT 11?",
+        str(taxonomy_path),
+    ) == "payroll"
+
+
+def test_classify_intent_leasing_samochodu_vat_routes_to_vat(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "Mam fakturę za leasing samochodu - jak rozliczyć VAT?",
+        str(taxonomy_path),
+    ) == "vat_jpk_ksef"
+
+
+def test_classify_intent_kasa_fiskalna_routes_to_vat(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "Czy kasa fiskalna musi być cały czas podłączona?",
+        str(taxonomy_path),
+    ) == "vat_jpk_ksef"
+
+
+def test_classify_intent_estonczyk_routes_to_cit(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "Estoński CIT czy zakupiony obiad dla pracowników to ukryte zyski?",
+        str(taxonomy_path),
+    ) == "cit_wht"
 
 
 def test_detect_clarification_slots_for_vat_and_pit(tmp_path) -> None:
