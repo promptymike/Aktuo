@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "checkpoint_version": 3,
+    "checkpoint_saved_at": "2026-04-11 17:14:02",
+    "completed_groups": 1,
+    "total_groups": 1,
+    "completed_subbatches": 1,
+    "total_subbatches": 1,
+    "completed_subbatch_keys": [
+      "106ga::subbatch::1"
+    ],
+    "total_units": 6,
+    "errors": 0,
+    "invalid_units_rejected": 0,
+    "total_cost_usd": 0.0631,
+    "exited_due_to_credit_error": false,
+    "law": {
+      "law_name": "Ustawa o VAT - KSeF zwolnienia",
+      "short_name": "Ustawa o VAT KSeF zwolnienia",
+      "source_law_names": [
+        "Ustawa o VAT - KSeF zwolnienia"
+      ],
+      "raw_unit_count": 1,
+      "group_key": "ustawa_o_vat_ksef_zwolnienia"
+    }
+  },
+  "units": [
+    {
+      "id": "law-106ga-ust2-zwolnienia-ksf",
+      "question_intent": "Kto jest zwolniony z obowiązku wystawiania faktur ustrukturyzowanych w KSeF?",
+      "question_patterns": [
+        "Jakie podmioty nie muszą wystawiać faktur ustrukturyzowanych w KSeF?",
+        "Kto jest zwolniony z obowiązku KSeF?",
+        "Co reguluje art. 106ga ust. 2 w Ustawie o VAT KSeF zwolnienia?",
+        "Czy podatnik bez siedziby w Polsce musi wystawiać faktury w KSeF?"
+      ],
+      "answer": "Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby działalności gospodarczej w Polsce, podatnicy z jedynie stałym miejscem prowadzenia działalności niemajacym udziału w dostawach dokumentowanych na fakturze, podatnicy korzystający z procedur szczególnych (OSS/IOSS/procedury specjalne), podatnicy wystawiający faktury dla osób fizycznych nieprowadzących działalności oraz ci korzystający ze zwolnienia z VAT na podstawie art. 113a ust. 1. W przypadkach zwolnień mogą oni wystawiać faktury elektroniczne lub papierowe, a w niektórych sytuacjach mogą dobrowolnie wystawiać faktury ustrukturyzowane.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2",
+          "quote": "Obowiązek, o którym mowa w ust. 1, nie dotyczy wystawiania faktur: 1) przez podatnika nieposiadającego siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju"
+        },
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 3",
+          "quote": "przez podatnika korzystającego z procedur szczególnych, o których mowa w dziale XII w rozdziałach 7, 7a i 9"
+        },
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 4",
+          "quote": "na rzecz nabywcy towarów lub usług będącego osobą fizyczną nieprowadzącą działalności gospodarczej"
+        },
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 6",
+          "quote": "przez podatnika korzystającego ze zwolnienia, o którym mowa w art. 113a ust. 1"
+        }
+      ],
+      "conditions": [
+        "Podatnik nie posiada siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności w Polsce",
+        "Stałe miejsce prowadzenia działalności nie uczestniczy w dostawie towarów lub świadczeniu usług dokumentowanych fakturą",
+        "Podatnik korzysta z procedur szczególnych (OSS/IOSS) zgodnie z dział XII rozdziały 7, 7a, 9",
+        "Faktura wystawiana dla osoby fizycznej nieprowadzące działalności gospodarczej",
+        "Podatnik korzysta ze zwolnienia z VAT na podstawie art. 113a ust. 1"
+      ],
+      "exceptions": [
+        "Podatnik może dobrowolnie wystawiać faktury ustrukturyzowane w KSeF (art. 106ga ust. 4)",
+        "Zwolnieni podatnicy wystawiają faktury elektroniczne lub papierowe (art. 106ga ust. 3)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "podatnik_bez_siedziby_pl",
+        "oss_ioss",
+        "vat_zwolniony"
+      ],
+      "topic": "KSeF zwolnienia podatnicy",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga ust. 2 w akcie Ustawa o VAT - KSeF zwolnienia? Kontekst przepisu: Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działal"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-ust2pkt1-brak-siedziby",
+      "question_intent": "Czy podatnik bez siedziby w Polsce musi wystawiać faktury w KSeF?",
+      "question_patterns": [
+        "Podatnik bez siedziby w Polsce - KSeF obowiązek?",
+        "Zagraniczny podatnik VAT - czy wystawia faktury w KSeF?",
+        "Zwolnienie z KSeF dla podatnika bez siedziby działalności w Polsce"
+      ],
+      "answer": "Podatnik nieposiadający siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności na terytorium Polski jest zwolniony z obowiązku wystawiania faktur ustrukturyzowanych w KSeF. Taki podatnik może wystawiać faktury elektroniczne lub papierowe, bądź dobrowolnie wystawiać faktury ustrukturyzowane w systemie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 1",
+          "quote": "Obowiązek nie dotyczy wystawiania faktur przez podatnika nieposiadającego siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju"
+        },
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 3",
+          "quote": "W przypadku wystawia się faktury elektroniczne lub faktury w postaci papierowej"
+        }
+      ],
+      "conditions": [
+        "Podatnik nie posiada siedziby działalności gospodarczej w Polsce",
+        "Podatnik nie posiada stałego miejsca prowadzenia działalności w Polsce"
+      ],
+      "exceptions": [
+        "Podatnik może dobrowolnie wystawiać faktury ustrukturyzowane w KSeF (art. 106ga ust. 4)"
+      ],
+      "taxpayer_type": [
+        "podatnik_bez_siedziby_pl",
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "KSeF zwolnienia brak siedziby",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga ust. 2 w akcie Ustawa o VAT - KSeF zwolnienia? Kontekst przepisu: Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działal"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-ust2pkt3-procedury-szczegolne",
+      "question_intent": "Czy podatnik korzystający z procedur szczególnych OSS/IOSS musi wystawiać faktury w KSeF?",
+      "question_patterns": [
+        "Procedura OSS/IOSS - obowiązek KSeF",
+        "Podatnik korzystający z procedur szczególnych - faktury ustrukturyzowane",
+        "Zwolnienie z KSeF dla procedur OSS, IOSS"
+      ],
+      "answer": "Podatnik korzystający z procedur szczególnych (OSS, IOSS i inne procedury specjalne z działu XII rozdziałów 7, 7a i 9) jest zwolniony z obowiązku wystawiania faktur ustrukturyzowanych w KSeF dla czynności rozliczanych w tych procedurach. Może wystawiać faktury elektroniczne lub papierowe, albo dobrowolnie stosować faktury ustrukturyzowane.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 3",
+          "quote": "Obowiązek nie dotyczy wystawiania faktur przez podatnika korzystającego z procedur szczególnych, o których mowa w dziale XII w rozdziałach 7, 7a i 9, dokumentujących czynności rozliczane w tych procedurach"
+        }
+      ],
+      "conditions": [
+        "Podatnik korzysta z procedur szczególnych (OSS/IOSS) z działu XII rozdziały 7, 7a, 9",
+        "Zwolnienie dotyczy czynności rozliczanych w tych procedurach"
+      ],
+      "exceptions": [
+        "Podatnik może dobrowolnie wystawiać faktury ustrukturyzowane (art. 106ga ust. 4)"
+      ],
+      "taxpayer_type": [
+        "oss_ioss",
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "KSeF procedury szczególne OSS IOSS",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga ust. 2 w akcie Ustawa o VAT - KSeF zwolnienia? Kontekst przepisu: Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działal"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-ust2pkt4-osoby-fizyczne",
+      "question_intent": "Czy muszę wystawiać faktury w KSeF dla osób fizycznych nieprowadzących działalności?",
+      "question_patterns": [
+        "Faktura dla osoby fizycznej - KSeF obowiązek",
+        "Osoba fizyczna nieprowadząca działalności - faktury ustrukturyzowane",
+        "Zwolnienie z KSeF dla sprzedaży osobom fizycznym"
+      ],
+      "answer": "Podatnik wystawiający faktury na rzecz osób fizycznych nieprowadzących działalności gospodarczej jest zwolniony z obowiązku wystawiania faktur ustrukturyzowanych w KSeF. Takie faktury mogą być wystawiane w formie elektronicznej lub papierowej, lub dobrowolnie w systemie KSeF.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 4",
+          "quote": "Obowiązek nie dotyczy wystawiania faktur na rzecz nabywcy towarów lub usług będącego osobą fizyczną nieprowadzącą działalności gospodarczej"
+        }
+      ],
+      "conditions": [
+        "Faktura wystawiana dla osoby fizycznej",
+        "Osoba fizyczna nie prowadzi działalności gospodarczej"
+      ],
+      "exceptions": [
+        "Podatnik może dobrowolnie wystawiać faktury ustrukturyzowane w KSeF (art. 106ga ust. 4)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "KSeF zwolnienia osoby fizyczne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga ust. 2 w akcie Ustawa o VAT - KSeF zwolnienia? Kontekst przepisu: Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działal"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-ust2pkt6-zwolnienie-art113a",
+      "question_intent": "Czy podatnik zwolniony z VAT musi wystawiać faktury w KSeF?",
+      "question_patterns": [
+        "Zwolnienie z VAT - obowiązek KSeF",
+        "Art. 113a ust. 1 - faktury ustrukturyzowane",
+        "Podatnik zwolniony - faktury w systemie KSeF"
+      ],
+      "answer": "Podatnik korzystający ze zwolnienia z VAT na podstawie art. 113a ust. 1 jest zwolniony z obowiązku wystawiania faktur ustrukturyzowanych w KSeF. Taki podatnik wystawia faktury elektroniczne lub papierowe, może jednak dobrowolnie wystawiać faktury ustrukturyzowane w systemie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 2 pkt 6",
+          "quote": "Obowiązek nie dotyczy wystawiania faktur przez podatnika korzystającego ze zwolnienia, o którym mowa w art. 113a ust. 1"
+        }
+      ],
+      "conditions": [
+        "Podatnik korzysta ze zwolnienia z VAT na podstawie art. 113a ust. 1"
+      ],
+      "exceptions": [
+        "Podatnik może dobrowolnie wystawiać faktury ustrukturyzowane w KSeF (art. 106ga ust. 4)"
+      ],
+      "taxpayer_type": [
+        "vat_zwolniony"
+      ],
+      "topic": "KSeF zwolnienia VAT art. 113a",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga ust. 2 w akcie Ustawa o VAT - KSeF zwolnienia? Kontekst przepisu: Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działal"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-dobrowolnosc-ksf",
+      "question_intent": "Czy podatnik zwolniony z obowiązku KSeF może dobrowolnie wystawiać faktury ustrukturyzowane?",
+      "question_patterns": [
+        "Dobrowolne wystawianie faktur w KSeF",
+        "Fakultatywne faktury ustrukturyzowane dla zwolnionych podatników",
+        "Czy mogę wybrać KSeF mimo zwolnienia?"
+      ],
+      "answer": "Tak, podatnicy zwolnieni z obowiązku wystawiania faktur ustrukturyzowanych w KSeF mogą dobrowolnie wystawiać faktury ustrukturyzowane w systemie. Dotyczy to zwłaszcza podatników bez siedziby w Polsce, tych wystawiających faktury osobom fizycznym nieprowadzącym działalności oraz tych korzystających z procedur szczególnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF zwolnienia",
+          "article": "art. 106ga ust. 4",
+          "quote": "W przypadku, o którym mowa w ust. 2 pkt 1, 2 i 4, podatnicy mogą wystawiać faktury ustrukturyzowane"
+        }
+      ],
+      "conditions": [
+        "Podatnik jest zwolniony z obowiązkowego wystawiania faktur ustrukturyzowanych",
+        "Dotyczy zwolnień z art. 106ga ust. 2 pkt 1, 2 i 4 (oraz potencjalnie innych)"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "podatnik_bez_siedziby_pl",
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "KSeF dobrowolność stosowanie",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga ust. 2 w akcie Ustawa o VAT - KSeF zwolnienia? Kontekst przepisu: Z obowiązku wystawiania faktur ustrukturyzowanych w KSeF zwolnieni są: podatnicy bez siedziby w Polsce, podatnicy korzystający z procedur szczególnych OSS/IOSS, wystawcy faktur dla osób fizycznych nieprowadzących działal"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    }
+  ],
+  "errors": []
+}

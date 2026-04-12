@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "checkpoint_version": 3,
+    "checkpoint_saved_at": "2026-04-11 17:13:38",
+    "completed_groups": 1,
+    "total_groups": 1,
+    "completed_subbatches": 1,
+    "total_subbatches": 1,
+    "completed_subbatch_keys": [
+      "106ga::subbatch::1"
+    ],
+    "total_units": 8,
+    "errors": 0,
+    "invalid_units_rejected": 0,
+    "total_cost_usd": 0.0761,
+    "exited_due_to_credit_error": false,
+    "law": {
+      "law_name": "Ustawa o VAT - KSeF terminy wdrożenia",
+      "short_name": "Ustawa o VAT KSeF terminy",
+      "source_law_names": [
+        "Ustawa o VAT - KSeF terminy wdrożenia"
+      ],
+      "raw_unit_count": 1,
+      "group_key": "ustawa_o_vat_ksef_terminy"
+    }
+  },
+  "units": [
+    {
+      "id": "law-106ga-obowiazek-kssef",
+      "question_intent": "Co reguluje art. 106ga dotyczący obowiązku KSeF?",
+      "question_patterns": [
+        "Co reguluje art. 106ga ustawy o VAT?",
+        "Jaki jest obowiązek wynikający z art. 106ga?",
+        "Co muszę wiedzieć o KSeF według art. 106ga?",
+        "Kto ma obowiązek używać KSeF?"
+      ],
+      "answer": "Art. 106ga nakłada obowiązek na podatników wystawiania faktur ustrukturyzowanych przy użyciu Krajowego Systemu e-Faktur (KSeF). Obowiązek ten nie dotyczy podatników bez siedziby na terenie kraju, podatników korzystających z procedur szczególnych, wystawiania faktur konsumentom nieprowadzącym działalności, dostaw udokumentowanych zgodnie z przepisami wydanymi na podstawie art. 106s oraz podatników korzystających ze zwolnienia z art. 113a ust. 1.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 1",
+          "quote": "Podatnicy są obowiązani wystawiać faktury ustrukturyzowane przy użyciu Krajowego Systemu e-Faktur."
+        },
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2",
+          "quote": "Obowiązek, o którym mowa w ust. 1, nie dotyczy wystawiania faktur: 1) przez podatnika nieposiadającego siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju..."
+        }
+      ],
+      "conditions": [
+        "Podatnik musi mieć siedzibę działalności lub stałe miejsce prowadzenia działalności na terenie kraju",
+        "Podatnik nie korzysta z procedur szczególnych z działu XII rozdziały 7, 7a i 9",
+        "Faktura nie jest wystawiana konsumentowi (osobie fizycznej nieprowadzącej działalności)",
+        "Dostawa towarów/usług nie jest udokumentowana zgodnie z art. 106s"
+      ],
+      "exceptions": [
+        "Podatnik bez siedziby i stałego miejsca na terenie kraju (art. 106ga ust. 2 pkt 1)",
+        "Podatnik z stałym miejscem, które nie uczestniczy w dostawie/usłudze na fakturze (art. 106ga ust. 2 pkt 2)",
+        "Podatnik korzystający z procedur szczególnych (art. 106ga ust. 2 pkt 3)",
+        "Faktury na rzecz konsumentów (art. 106ga ust. 2 pkt 4)",
+        "Dostawa udokumentowana wg art. 106s (art. 106ga ust. 2 pkt 5)",
+        "Podatnik ze zwolnieniem z art. 113a ust. 1 (art. 106ga ust. 2 pkt 6)"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "obowiązek_kssef_fakultatywny_i_obligatoryjny",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-alternatywne-formy-faktur",
+      "question_intent": "W jakich formach mogę wystawiać faktury, jeśli nie mam obowiązku KSeF?",
+      "question_patterns": [
+        "Jakie formy faktur mogę używać zamiast KSeF?",
+        "Czy mogę wystawiać faktury papierowe lub elektroniczne, jeśli jestem zwolniony z KSeF?",
+        "Jakie alternatywy do KSeF mam jako podatnik?"
+      ],
+      "answer": "Jeśli nie masz obowiązku KSeF, możesz wystawiać faktury elektroniczne lub w postaci papierowej (art. 106ga ust. 3). Dodatkowo, w przypadkach wymienionych w art. 106ga ust. 2 pkt 1, 2 i 4, możesz fakultatywnie wystawiać faktury ustrukturyzowane przez KSeF, ale nie musisz (art. 106ga ust. 4).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 3",
+          "quote": "W przypadku, o którym mowa w ust. 2, wystawia się faktury elektroniczne lub faktury w postaci papierowej."
+        },
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 4",
+          "quote": "W przypadku, o którym mowa w ust. 2 pkt 1, 2 i 4, podatnicy mogą wystawiać faktury ustrukturyzowane."
+        }
+      ],
+      "conditions": [
+        "Należysz do grupy podatników zwolnionych z obowiązku KSeF (art. 106ga ust. 2)",
+        "Dla pkt 1, 2 i 4 - możliwość KSeF jest fakultatywna, nie obowiązkowa"
+      ],
+      "exceptions": [
+        "Podatnicy zwolnieni z obowiązku KSeF mogą alternatywnie wystawiać faktury papierowe lub elektroniczne"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_zwolniony"
+      ],
+      "topic": "formy_wystawiania_faktur",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-konsumenci",
+      "question_intent": "Czy mam obowiązek KSeF dla faktur wystawianych konsumentom?",
+      "question_patterns": [
+        "Czy faktury dla konsumentów muszą być w KSeF?",
+        "Czy osoba fizyczna nieprowadząca działalności wymaga KSeF?",
+        "Czy mogę wystawić fakturę papierową konsumentowi?"
+      ],
+      "answer": "Nie masz obowiązku wystawiania faktur w KSeF, gdy faktury wystawiasz na rzecz nabywcy będącego osobą fizyczną nieprowadzącą działalności gospodarczej (art. 106ga ust. 2 pkt 4). W takim przypadku możesz wystawiać faktury elektroniczne lub papierowe, lub fakultatywnie użyć KSeF.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2 pkt 4",
+          "quote": "na rzecz nabywcy towarów lub usług będącego osobą fizyczną nieprowadzącą działalności gospodarczej"
+        }
+      ],
+      "conditions": [
+        "Nabywca jest osobą fizyczną",
+        "Nabywca nie prowadzi działalności gospodarczej"
+      ],
+      "exceptions": [
+        "Faktury dla konsumentów są zwolnione z obowiązku KSeF"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "faktura_dla_konsumenta",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-procedury-szczegolne",
+      "question_intent": "Czy podatnik korzystający z procedur szczególnych ma obowiązek KSeF?",
+      "question_patterns": [
+        "Czy procedury szczególne z działu XII zwolniają z KSeF?",
+        "Czy mogę nie używać KSeF jeśli korzystam z procedur szczególnych?",
+        "Które procedury szczególne zwolniają z obowiązku KSeF?"
+      ],
+      "answer": "Podatnicy korzystający z procedur szczególnych opisanych w dziale XII rozdziałach 7, 7a i 9 ustawy, które dokumentują czynności rozliczane w tych procedurach, są zwolnieni z obowiązku KSeF (art. 106ga ust. 2 pkt 3). W przypadku takich procedur możesz wystawiać faktury elektroniczne lub papierowe.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2 pkt 3",
+          "quote": "przez podatnika korzystającego z procedur szczególnych, o których mowa w dziale XII w rozdziałach 7, 7a i 9, dokumentujących czynności rozliczane w tych procedurach"
+        }
+      ],
+      "conditions": [
+        "Podatnik korzysta z procedur szczególnych z działu XII rozdziały 7, 7a lub 9",
+        "Faktura dokumentuje czynności rozliczane w tych procedurach"
+      ],
+      "exceptions": [
+        "Procedury szczególne zwolniają z obowiązku KSeF"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "procedury_szczegolne_zwolnienie",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-zwolnienie-art113a",
+      "question_intent": "Czy podatnik ze zwolnieniem z art. 113a ust. 1 ma obowiązek KSeF?",
+      "question_patterns": [
+        "Czy mogę nie używać KSeF jeśli korzystam ze zwolnienia z art. 113a?",
+        "Czy zwolnienie z art. 113a zwalnia z KSeF?",
+        "Jakie zwolnienia zwalniają z obowiązku KSeF?"
+      ],
+      "answer": "Podatnik korzystający ze zwolnienia określonego w art. 113a ust. 1 jest zwolniony z obowiązku wystawiania faktur w KSeF (art. 106ga ust. 2 pkt 6). W takim przypadku możesz wystawiać faktury elektroniczne lub papierowe.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2 pkt 6",
+          "quote": "przez podatnika korzystającego ze zwolnienia, o którym mowa w art. 113a ust. 1"
+        }
+      ],
+      "conditions": [
+        "Podatnik korzysta ze zwolnienia z art. 113a ust. 1"
+      ],
+      "exceptions": [
+        "Zwolnienie z art. 113a ust. 1 zwolnia z obowiązku KSeF"
+      ],
+      "taxpayer_type": [
+        "vat_zwolniony"
+      ],
+      "topic": "zwolnienie_vat_i_kssef",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-podatnik-bez-siedziby",
+      "question_intent": "Czy podatnik bez siedziby na terenie kraju ma obowiązek KSeF?",
+      "question_patterns": [
+        "Czy muszę używać KSeF jeśli nie mam siedziby w Polsce?",
+        "Czy podatnik zagraiczny ma obowiązek KSeF?",
+        "Czy mogę wystawiać faktury papierowe jeśli nie mam siedziby na terenie kraju?"
+      ],
+      "answer": "Podatnik nieposiadający siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności na terenie kraju nie ma obowiązku wystawiania faktur w KSeF (art. 106ga ust. 2 pkt 1). Może on wystawiać faktury elektroniczne lub papierowe, lub fakultatywnie wystawiać faktury ustrukturyzowane.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2 pkt 1",
+          "quote": "przez podatnika nieposiadającego siedziby działalności gospodarczej ani stałego miejsca prowadzenia działalności gospodarczej na terytorium kraju"
+        }
+      ],
+      "conditions": [
+        "Podatnik nie posiada siedziby działalności na terenie kraju",
+        "Podatnik nie posiada stałego miejsca prowadzenia działalności na terenie kraju"
+      ],
+      "exceptions": [
+        "Podatnik bez siedziby na terenie kraju jest zwolniony z obowiązku KSeF"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "podatnik_zagraniczny_kssef",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-stale-miejsce-nie-uczestniczace",
+      "question_intent": "Czy mam obowiązek KSeF jeśli mam stałe miejsce, które nie uczestniczy w transakcji?",
+      "question_patterns": [
+        "Czy obowiązek KSeF dotyczy, gdy moje stałe miejsce nie bierze udziału w dostawie?",
+        "Czy stałe miejsce, które nie uczestniczy w dostawie, zwolnia z KSeF?"
+      ],
+      "answer": "Podatnik nieposiadający siedziby na terenie kraju, który ma stałe miejsce prowadzenia działalności na terenie kraju, jest zwolniony z obowiązku KSeF, jeśli to stałe miejsce nie uczestniczy w dostawie towarów lub świadczeniu usług, dla których wystawiono fakturę (art. 106ga ust. 2 pkt 2). W takim przypadku możesz wystawiać faktury elektroniczne, papierowe lub fakultatywnie KSeF.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2 pkt 2",
+          "quote": "przez podatnika nieposiadającego siedziby działalności gospodarczej na terytorium kraju, który posiada stale miejsce prowadzenia działalności gospodarczej na terytorium kraju, przy czym to stale miejsce prowadzenia działalności nie uczestniczy w dostawie towarów lub świadczeniu usług, dla których wystawiono fakturę"
+        }
+      ],
+      "conditions": [
+        "Podatnik nie ma siedziby na terenie kraju",
+        "Podatnik ma stałe miejsce na terenie kraju",
+        "Stałe miejsce nie uczestniczy w dostawie towarów lub świadczeniu usług na fakturze"
+      ],
+      "exceptions": [
+        "Jeśli stałe miejsce nie uczestniczy w transakcji, podatnik jest zwolniony z KSeF"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "stale_miejsce_kssef",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    },
+    {
+      "id": "law-106ga-dostawa-udokumentowana-106s",
+      "question_intent": "Czy faktura za dostawę udokumentowaną wg art. 106s wymaga KSeF?",
+      "question_patterns": [
+        "Czy dostawa udokumentowana zgodnie z art. 106s wymaga KSeF?",
+        "Czy mogę wystawiać fakturę papierową, jeśli dostawa jest udokumentowana wg art. 106s?",
+        "Jakie dostawy są zwolnione z obowiązku KSeF?"
+      ],
+      "answer": "Podatnik jest zwolniony z obowiązku KSeF w przypadku odpowiednio udokumentowanych dostaw towarów lub świadczenia usług, określonych w przepisach wydanych na podstawie art. 106s (art. 106ga ust. 2 pkt 5). Dla takich dostaw możesz wystawiać faktury elektroniczne lub papierowe.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o VAT KSeF terminy",
+          "article": "art. 106ga ust. 2 pkt 5",
+          "quote": "w przypadku odpowiednio udokumentowanych dostaw towarów lub świadczenia usług, określonych w przepisach wydanych na podstawie art. 106s"
+        }
+      ],
+      "conditions": [
+        "Dostawa towarów lub usług jest odpowiednio udokumentowana",
+        "Dokumentacja musi być zgodna z przepisami wydanymi na podstawie art. 106s"
+      ],
+      "exceptions": [
+        "Dostawy udokumentowane wg art. 106s są zwolnione z obowiązku KSeF"
+      ],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "dostawy_specjalne_106s",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "106ga"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 106ga w akcie Ustawa o VAT - KSeF terminy wdrożenia? Kontekst przepisu: Obowiązkowy KSeF wchodzi w życie etapowo: od 1 lutego 2026 r. dla przedsiębiorców których wartość sprzedaży wraz z podatkiem przekroczyła w 2024 r. 200 mln zł, od 1 kwietnia 2026 r. dla pozostałych przedsiębiorców. Podst"
+      ],
+      "_source_subbatch_key": "106ga::subbatch::1"
+    }
+  ],
+  "errors": []
+}

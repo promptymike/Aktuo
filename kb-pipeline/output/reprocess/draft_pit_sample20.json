@@ -1,0 +1,3337 @@
+{
+  "metadata": {
+    "checkpoint_version": 3,
+    "checkpoint_saved_at": "2026-04-11 00:16:59",
+    "completed_groups": 19,
+    "total_groups": 20,
+    "completed_subbatches": 19,
+    "total_subbatches": 20,
+    "completed_subbatch_keys": [
+      "11a::subbatch::1",
+      "13::subbatch::1",
+      "14::subbatch::1",
+      "14b::subbatch::1",
+      "15::subbatch::1",
+      "18::subbatch::1",
+      "1a::subbatch::1",
+      "21::subbatch::1",
+      "22d::subbatch::1",
+      "22e::subbatch::1",
+      "22f::subbatch::1",
+      "22i::subbatch::1",
+      "22j::subbatch::1",
+      "22l::subbatch::1",
+      "22m::subbatch::1",
+      "22n::subbatch::1",
+      "22o::subbatch::1",
+      "23c::subbatch::1",
+      "2::subbatch::1"
+    ],
+    "total_units": 84,
+    "errors": 1,
+    "invalid_units_rejected": 0,
+    "total_cost_usd": 0.99,
+    "exited_due_to_credit_error": false,
+    "law": {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "short_name": "Ustawa o PIT"
+    }
+  },
+  "units": [
+    {
+      "id": "law-11a-ust1-przychody-waluty-obce",
+      "question_intent": "Jak przeliczać przychody w walutach obcych na złote polskie",
+      "question_patterns": [
+        "Co reguluje art. 11a ust. 1 Ustawy o PIT",
+        "Jak przeliczać przychody w walutach obcych",
+        "Jaki kurs walutowy stosować do przychodów w walutach obcych",
+        "Kiedy przeliczać przychody denominowane w walutach obcych na PLN",
+        "Który kurs NBP do przychodów zagranicznych"
+      ],
+      "answer": "Przychody uzyskane w walutach obcych przelicza się na złote polskie przy użyciu kursu średniego walut obcych ogłaszanego przez Narodowy Bank Polski. Kurs stosuje się z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu. To oznacza, że zawsze bierzesz kurs z dnia roboczego bezpośrednio przed dniem otrzymania pieniędzy, nie kurs z dnia samego przychodu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 11a ust. 1",
+          "quote": "Przychody w walutach obcych przelicza się na złote według kursu średniego walut obcych ogłaszanego przez Narodowy Bank Polski z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu"
+        }
+      ],
+      "conditions": [
+        "Przychód uzyskany w walucie obcej",
+        "Konwersja na złote polskie",
+        "Kurs średni NBP z ostatniego dnia roboczego przed dniem przychodów"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przeliczenie walut obcych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "11a"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 11a ust. 1 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przychody w walutach obcych przelicza się na złote według kursu średniego walut obcych ogłaszanego przez Narodowy Bank Polski z ostatniego dnia roboczego poprzedzającego dzień uzyskania przychodu. "
+      ],
+      "_source_subbatch_key": "11a::subbatch::1"
+    },
+    {
+      "id": "law-13-przedmiot-regulacji",
+      "question_intent": "Co reguluje art. 13 ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest przedmiot art. 13 ustawy o PIT?",
+        "Co jest regulowane w art. 13?",
+        "Jakie przychody definiuje art. 13?",
+        "Co to są przychody z działalności wykonywanej osobiście?"
+      ],
+      "answer": "Art. 13 definiuje, jakie przychody zaliczane są do przychodów z działalności wykonywanej osobiście w rozumieniu art. 10 ust. 1 pkt 2. Obejmuje to m.in. przychody z działalności artystycznej, literackiej, naukowej, trenerskiej, przychody członków organów spółek, przychody z umów zlecenia i umów o dzieło oraz przychody z umów o zarządzanie przedsiębiorstwem. Przepis precyzuje definicję tego rodzaju przychodów dla potrzeb podatku dochodowego osób fizycznych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 13",
+          "quote": "Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się..."
+        }
+      ],
+      "conditions": [
+        "Przychody muszą wynikać z działalności wykonywanej osobiście",
+        "Działalność musi odpowiadać katalogowi wymienionemu w art. 13"
+      ],
+      "exceptions": [
+        "Punkt 1 artykułu został uchylony",
+        "Punkty 5 i 6 mają wyłączenia dla określonych przychodów (pkt 7 i 9)",
+        "Punkt 8 wyklucza przychody z umów zawieranych w ramach pozarolniczej działalności gospodarczej"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "definicja przychodów z działalności",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "13"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 13 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się: 1) (uchylony) 2) przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej,"
+      ],
+      "_source_subbatch_key": "13::subbatch::1"
+    },
+    {
+      "id": "law-13-przychody-artystyczne",
+      "question_intent": "Jakie przychody z działalności artystycznej, literackiej i naukowej zalicza się do przychodów z działalności wykonywanej osobiście?",
+      "question_patterns": [
+        "Czy przychody z działalności artystycznej to przychody z działalności osobiście?",
+        "Jakie przychody artysty są objęte art. 13 pkt 2?",
+        "Czy przychody naukowca wchodzą w zakres art. 13?",
+        "Czy stipendia sportowe to przychody z działalności osobiście?"
+      ],
+      "answer": "Zgodnie z art. 13 pkt 2, przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej, trenerskiej, oświatowej i publicystycznej zaliczane są do przychodów z działalności wykonywanej osobiście. Obejmuje to również przychody z udziału w konkursach (nauka, kultura, sztuka), udziału w badaniach uniwersyteckich, uprawiania sportu oraz wynagrodzenia sędziów sportowych. Stypendia sportowe przyznawane na podstawie odrębnych przepisów również wchodzą w ten katalog.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 13 pkt 2",
+          "quote": "przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej, trenerskiej, oświatowej i publicystycznej, w tym z tytułu udziału w konkursach z dziedziny nauki, kultury i sztuki oraz stypendia sportowe przyznawane na podstawie odrębnych przepisów"
+        }
+      ],
+      "conditions": [
+        "Działalność musi być wykonywana osobiście",
+        "Musi należeć do kategorii: artystyczna, literacka, naukowa, trenerska, oświatowa lub publicystyczna"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody artystyczne i naukowe",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "13"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 13 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się: 1) (uchylony) 2) przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej,"
+      ],
+      "_source_subbatch_key": "13::subbatch::1"
+    },
+    {
+      "id": "law-13-przychody-organow-spoldzielni",
+      "question_intent": "Czy przychody członka zarządu lub rady nadzorczej spółki to przychody z działalności osobiście?",
+      "question_patterns": [
+        "Czy wynagrodzenie za funkcję w zarządzie spółki to przychód z działalności osobiście?",
+        "Art. 13 pkt 7 - jakie to przychody?",
+        "Czy honorarium za radę nadzorczą wchodzi w art. 13?",
+        "Czy przychody z organów powołanych przez państwo to art. 13?"
+      ],
+      "answer": "Zgodnie z art. 13 pkt 7, przychody otrzymywane przez członków zarządów, rad nadzorczych, komisji lub innych organów stanowiących osób prawnych zaliczane są do przychodów z działalności wykonywanej osobiście. Przepis nie wymaga, by osoba byla powołana w określony sposób – obejmuje wszelkie wynagrodzenia za takie funkcje w organach spółek i fundacji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 13 pkt 7",
+          "quote": "przychody otrzymywane przez osoby, niezależnie od sposobu ich powoływania, należące do składu zarządów, rad nadzorczych, komisji lub innych organów stanowiących osób prawnych"
+        }
+      ],
+      "conditions": [
+        "Osoba musi być członkiem zarządu, rady nadzorczej, komisji lub innego organu",
+        "Organ musi stanowić osobę prawną"
+      ],
+      "exceptions": [
+        "Art. 13 pkt 9 wyłącza przychody z umów o zarządzanie przedsiębiorstwem z zakresu pkt 7"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody z organów spółek",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "13"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 13 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się: 1) (uchylony) 2) przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej,"
+      ],
+      "_source_subbatch_key": "13::subbatch::1"
+    },
+    {
+      "id": "law-13-przychody-umowa-zlecenia",
+      "question_intent": "Jakie przychody z umowy zlecenia i umowy o dzieło zaliczają się do art. 13?",
+      "question_patterns": [
+        "Czy wszystkie przychody z umowy zlecenia to art. 13?",
+        "Jakie ograniczenia mają przychody z umowy o dzieło w art. 13?",
+        "Art. 13 pkt 8 - od kogo mogę otrzymać przychód z umowy zlecenia?",
+        "Czy przychód z umowy zlecenia zawartej w ramach działalności gospodarczej to art. 13?"
+      ],
+      "answer": "Zgodnie z art. 13 pkt 8, przychody z umowy zlecenia lub umowy o dzieło zaliczają się do przychodów z działalności osobiście wyłącznie, gdy uzyskane są od: osoby fizycznej prowadzącej działalność, osoby prawnej, właściciela wynajmującego lokale lub zarządcy nieruchomości (gdy usługi dotyczą tej nieruchomości) lub przedsiębiorstwa w spadzie. Wykluczone są przychody z umów zawieranych w ramach prowadzonej przez podatnika pozarolniczej działalności gospodarczej.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 13 pkt 8",
+          "quote": "przychody z tytułu wykonywania usług, na podstawie umowy zlecenia lub umowy o dzieło, uzyskiwane wyłącznie od: a) osoby fizycznej prowadzącej działalność gospodarczą, osoby prawnej... z wyjątkiem przychodów uzyskanych na podstawie umów zawieranych w ramach prowadzonej przez podatnika pozarolniczej działalności gospodarczej"
+        }
+      ],
+      "conditions": [
+        "Umowa musi być umową zlecenia lub umową o dzieło",
+        "Kontrahent musi należeć do katalogu wskazanego w punkcie a, b lub c",
+        "Usługi dotyczące nieruchomości muszą być dla potrzeb związanych z tą nieruchomością"
+      ],
+      "exceptions": [
+        "Przychody z umów zawieranych w ramach prowadzonej przez podatnika pozarolniczej działalności gospodarczej nie wchodzą w zakres art. 13 pkt 8",
+        "Przychody o których mowa w pkt 9 są wykluczone"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody z umów zlecenia i dzieła",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "13"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 13 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się: 1) (uchylony) 2) przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej,"
+      ],
+      "_source_subbatch_key": "13::subbatch::1"
+    },
+    {
+      "id": "law-13-przychody-zarzadzanie-przedsiebiorstwem",
+      "question_intent": "Jakie przychody z umów o zarządzanie przedsiębiorstwem zaliczają się do art. 13?",
+      "question_patterns": [
+        "Czy przychód z umowy o zarządzanie przedsiębiorstwem to art. 13?",
+        "Art. 13 pkt 9 - jakie umowy obejmuje?",
+        "Czy kontrakty menedżerskie to art. 13?",
+        "Czy przychód menedżera z umowy o zarządzanie to przychód z działalności osobiście?"
+      ],
+      "answer": "Zgodnie z art. 13 pkt 9, przychody uzyskane na podstawie umów o zarządzanie przedsiębiorstwem, kontraktów menedżerskich lub umów o podobnym charakterze zaliczają się do przychodów z działalności osobiście. Obejmuje to również przychody z takich umów zawieranych w ramach prowadzonej przez podatnika pozarolniczej działalności gospodarczej. Wyjątek dotyczy przychodów wymienionych w pkt 7 (органы spółek).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 13 pkt 9",
+          "quote": "przychody uzyskane na podstawie umów o zarządzanie przedsiębiorstwem, kontraktów menedżerskich lub umów o podobnym charakterze, w tym przychody z tego rodzaju umów zawieranych w ramach prowadzonej przez podatnika pozarolniczej działalności gospodarczej"
+        }
+      ],
+      "conditions": [
+        "Umowa musi być umową o zarządzanie przedsiębiorstwem, kontraktem menedżerskim lub umową podobnego charakteru"
+      ],
+      "exceptions": [
+        "Przychody o których mowa w pkt 7 są wykluczone z zakresu pkt 9"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody z umów menedżerskich",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "13"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 13 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się: 1) (uchylony) 2) przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej,"
+      ],
+      "_source_subbatch_key": "13::subbatch::1"
+    },
+    {
+      "id": "law-13-przychody-duchownych",
+      "question_intent": "Czy przychody duchownych zaliczają się do przychodów z działalności osobiście?",
+      "question_patterns": [
+        "Art. 13 pkt 3 - jakie przychody duchownych?",
+        "Czy wszystkie przychody duchownego to art. 13?",
+        "Czy przychód duchownego z umowy o pracę to art. 13?",
+        "Jakie przychody duchownych wchodzą w zakres ustawy o PIT?"
+      ],
+      "answer": "Zgodnie z art. 13 pkt 3, przychody z działalności duchownych zaliczają się do przychodów z działalności osobiście wyłącznie w tym zakresie, w jakim uzyskiwane są z innego tytułu niż umowa o pracę. Przychody duchownego otrzymywane na podstawie umowy o pracę nie wchodzą w zakres tego przepisu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 13 pkt 3",
+          "quote": "przychody z działalności duchownych, osiągane z innego tytułu niż umowa o pracę"
+        }
+      ],
+      "conditions": [
+        "Przychody muszą pochodzić z działalności duchownego",
+        "Muszą być osiągane z innego tytułu niż umowa o pracę"
+      ],
+      "exceptions": [
+        "Przychody z umowy o pracę nie wchodzą w zakres art. 13 pkt 3"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody duchownych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "13"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 13 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychody z działalności wykonywanej osobiście, o której mowa w art. 10 ust. 1 pkt 2, uważa się: 1) (uchylony) 2) przychody z osobiście wykonywanej działalności artystycznej, literackiej, naukowej,"
+      ],
+      "_source_subbatch_key": "13::subbatch::1"
+    },
+    {
+      "id": "law-14-data-przychodu",
+      "question_intent": "Kiedy przychód powstaje dla podatkowca — jaka jest data powstania przychodu?",
+      "question_patterns": [
+        "Co reguluje art. 14 ust. 1c?",
+        "Kiedy przychód powstaje w PIT?",
+        "Jaka jest data powstania przychodu z działalności?",
+        "Kiedy dochodzi do powstania przychodu podatkowego?",
+        "Art. 14 ust. 1c — zasada ustalania daty przychodu"
+      ],
+      "answer": "Datą powstania przychodu jest dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi (albo częściowego wykonania), nie później niż dzień wystawienia faktury lub uregulowania należności. Przepis zawiera zastrzeżenia dotyczące usług rozliczanych w okresach rozliczeniowych, dostaw energii, oraz szczególnych przypadków opodatkowania, gdzie inne przepisy mogą zmienić tę zasadę.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1c",
+          "quote": "Za datę powstania przychodu uważa się dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykonania usługi, nie później niż dzień wystawienia faktury albo uregulowania należności."
+        }
+      ],
+      "conditions": [
+        "Datą powstania jest dzień wydania rzeczy ALBO zbycia prawa majątkowego ALBO wykonania usługi",
+        "Przychód powstaje nie później niż dzień wystawienia faktury",
+        "Przychód powstaje nie później niż dzień uregulowania należności",
+        "Przepis ma zastrzeżenia dla przypadków specjalnych (ust. 1e, 1h–1j, 1n–1p)"
+      ],
+      "exceptions": [
+        "Wyjątki dla usług rozliczanych w okresach rozliczeniowych (art. 14 ust. 1e)",
+        "Wyjątki dla dostaw energii elektrycznej, cieplnej i gazu (art. 14 ust. 1h)",
+        "Wyjątki dla przychodów bez zastosowania ust. 1c, 1e, 1h (art. 14 ust. 1i)",
+        "Wyjątki dla wpłat na poczet dostaw przyszłych (art. 14 ust. 1j)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "moment_powstania_przychodu",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-przychod-definicja",
+      "question_intent": "Czym uważa się przychód z działalności gospodarczej w ujęciu art. 14 ust. 1?",
+      "question_patterns": [
+        "Co to jest przychód z działalności wg art. 14 ust. 1?",
+        "Jak definiuje się przychód z działalności?",
+        "Jakie kwoty stanowią przychód z działalności?",
+        "Jak liczy się przychód — co się wyłącza z przychodów?"
+      ],
+      "answer": "Przychód z działalności to kwoty należne, nawet jeśli faktycznie nie otrzymane, pomniejszone o wartość zwróconych towarów, bonifikat i skont. Dla podatników dokonujących sprzedaży opodatkowanej VAT przychód pomniejsza się o należny podatek od towarów i usług.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1",
+          "quote": "Za przychód z działalności uważa się kwoty należne, choćby nie zostały faktycznie otrzymane, po wyłączeniu wartości zwróconych towarów, udzielonych bonifikat i skont."
+        }
+      ],
+      "conditions": [
+        "Przychód to kwoty NALEŻNE (nie otrzymane)",
+        "Przychód ulegnie zmniejszeniu o wartość zwróconych towarów",
+        "Przychód ulegnie zmniejszeniu o udzielone bonifikaty",
+        "Przychód ulegnie zmniejszeniu o udzielone skonta",
+        "Dla sprzedaży opodatkowanej VAT — przychód pomniejsza się o należny VAT"
+      ],
+      "exceptions": [
+        "Nie dotyczy przychodów zwolnionych z VAT",
+        "Specjalne zasady dla przychodów z VAT (art. 14 ust. 1)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "pojecie_przychodu",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-vat-pomniejszenie",
+      "question_intent": "O ile zmniejszam przychód, gdy sprzedaż podlega VAT?",
+      "question_patterns": [
+        "Czy przychód zmniejszam o VAT?",
+        "Jak uwzględniam VAT w przychodzie z działalności?",
+        "Czy przychód to należność brutto czy netto VAT?"
+      ],
+      "answer": "Przychód ze sprzedaży opodatkowanej VAT ustala się pomniejszony o należny podatek VAT. Przychód zostaje liczony netto VAT, czyli bez tego podatku.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1",
+          "quote": "U podatników dokonujących sprzedaży towarów i usług opodatkowanych podatkiem od towarów i usług za przychód z tej sprzedaży uważa się przychód pomniejszony o należny podatek od towarów i usług."
+        }
+      ],
+      "conditions": [
+        "Sprzedaż musi być opodatkowana podatkiem VAT",
+        "Przychód zmniejsza się o należny VAT",
+        "Dotyczy zarówno towarów jak i usług"
+      ],
+      "exceptions": [
+        "Nie dotyczy sprzedaży zwolnionej z VAT",
+        "Nie dotyczy sprzedaży poza podatkiem VAT"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "vat_w_przychodzie",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-uslugi-okresy-rozliczeniowe",
+      "question_intent": "Kiedy przychód powstaje dla usług rozliczanych w okresach rozliczeniowych (np. abonament)?",
+      "question_patterns": [
+        "Kiedy przychód powstaje dla usługi abonamentowej?",
+        "Jak ustalić datę przychodu dla usług w okresach rozliczeniowych?",
+        "Art. 14 ust. 1e — usługi rozliczane okresowo"
+      ],
+      "answer": "Dla usług rozliczanych w okresach rozliczeniowych datą powstania przychodu jest ostatni dzień okresu rozliczeniowego określonego w umowie lub na fakturze, nie rzadziej niż raz w roku. Ta zasada również stosuje się do dostaw energii elektrycznej, cieplnej i gazu przewodowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1e",
+          "quote": "Jeżeli strony ustalą, że usługa jest rozliczana w okresach rozliczeniowych, za datę powstania przychodu uznaje się ostatni dzień okresu rozliczeniowego określonego w umowie lub na wystawionej fakturze, nie rzadziej niż raz w roku."
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1h",
+          "quote": "Przepis ust. 1e stosuje się odpowiednio do dostawy energii elektrycznej i cieplnej oraz gazu przewodowego."
+        }
+      ],
+      "conditions": [
+        "Strony muszą ustalić rozliczenie w okresach rozliczeniowych",
+        "Okres rozliczeniowy określony w umowie lub na fakturze",
+        "Rozliczenie nie rzadziej niż raz w roku",
+        "Przychód powstaje ostatniego dnia okresu rozliczeniowego"
+      ],
+      "exceptions": [
+        "Nie dotyczy usług rozliczanych jednorazowo",
+        "Obowiązkowe zastosowanie co najmniej raz w roku"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "moment_powstania_przychodu",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-przychod-otrzymanie-zaplaty",
+      "question_intent": "Kiedy przychód powstaje dla przychodów niewymienionych w ust. 1c, 1e, 1h?",
+      "question_patterns": [
+        "Kiedy przychód powstaje jeśli nie mam faktury?",
+        "Jak ustalić datę przychodu dla przychodów bez faktury?",
+        "Art. 14 ust. 1i — przychód a otrzymanie zapłaty"
+      ],
+      "answer": "Dla przychodów, do których nie stosują się zasady z ust. 1c, 1e i 1h, datą powstania przychodu jest dzień otrzymania zapłaty. Ta zasada dotyczy przychodów, które nie mają faktury lub nie mogą być rozliczane w okresach.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1i",
+          "quote": "W przypadku otrzymania przychodu z działalności gospodarczej, do którego nie stosuje się ust. 1c, 1e i 1h, za datę powstania przychodu uznaje się dzień otrzymania zapłaty."
+        }
+      ],
+      "conditions": [
+        "Przychód nie podlega ust. 1c (brak faktury/umowy)",
+        "Przychód nie podlega ust. 1e (nie ma okresu rozliczeniowego)",
+        "Przychód nie podlega ust. 1h (nie dotyczy energii/gazu)",
+        "Datą przychodu jest dzień faktycznego otrzymania zapłaty"
+      ],
+      "exceptions": [
+        "Nie dotyczy przychodów z fakturą",
+        "Nie dotyczy usług w okresach rozliczeniowych",
+        "Nie dotyczy dostaw energii/gazu w okresach"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "moment_powstania_przychodu",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-wplaty-na-poczet",
+      "question_intent": "Czy wpłaty na poczet przyszłych dostaw stanowią przychód oraz kiedy?",
+      "question_patterns": [
+        "Kiedy przychód powstaje dla wpłat na poczet?",
+        "Czy zaliczki na przyszłe dostawy to przychód?",
+        "Art. 14 ust. 1j — wpłaty na poczet dostaw",
+        "Czy mogę opóźnić przychód poprzez przyjęcie zaliczki?"
+      ],
+      "answer": "Podatnik może uznać, że przychód powstaje w dniu pobrania wpłaty na poczet przyszłych dostaw (zarejestrowanych w kasie). Jednak jeśli podatnik wybierze taki sposób, musi go stosować przez cały rok podatkowy i poinformować o tym w zeznaniu podatkowym.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1j",
+          "quote": "W przypadku pobrania wpłat na poczet dostaw towarów i usług, które zostaną wykonane w następnych okresach sprawozdawczych, podlegających zarejestrowaniu przy zastosowaniu kasy rejestrującej, za datę powstania przychodu podatnik może uznać dzień pobrania wpłaty."
+        }
+      ],
+      "conditions": [
+        "Wpłaty muszą być na poczet dostaw przyszłych",
+        "Dostawy będą wykonane w następnych okresach",
+        "Wpłaty podlegają zarejestrowaniu w kasie rejestrującej",
+        "Podatnik musi konsekwentnie stosować ten sposób cały rok",
+        "Podatnik musi poinformować o wyborze w zeznaniu za rok",
+        "Informacja w zeznaniu art. 45 ust. 1 lub ust. 1a pkt 2"
+      ],
+      "exceptions": [
+        "Dotyczy tylko wpłat na poczet przyszłych dostaw",
+        "Dotyczy tylko sprzedaży rejestrowanej w kasie",
+        "Nie dotyczy zaliczek na inne cele"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt"
+      ],
+      "topic": "moment_powstania_przychodu",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-wpływy-zm-przedsiebiorcy",
+      "question_intent": "Co z wpłatami na poczet po śmierci przedsiębiorcy — jakie są zasady dla przedsiębiorstwa w spadku?",
+      "question_patterns": [
+        "Jak ustalić przychód po śmierci przedsiębiorcy?",
+        "Przedsiębiorstwo w spadku — czy muszę stosować sposób z ust. 1j?",
+        "Art. 14 ust. 1ja — wpłaty a śmierć przedsiębiorcy"
+      ],
+      "answer": "Jeśli zmarły przedsiębiorca w roku śmierci ustalał datę przychodu poprzez uznanie za przychód dnia pobrania wpłat na poczet dostaw, przedsiębiorstwo w spadku jest obowiązane stosować ten sposób do końca tego roku podatkowego. Następnie może zmienić metodę.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1ja",
+          "quote": "Jeżeli zmarły przedsiębiorca w roku podatkowym, w którym zmarł, ustalał datę powstania przychodu w sposób, o którym mowa w ust. 1j, przedsiębiorstwo w spadku jest obowiązane stosować ten sposób do końca tego roku podatkowego."
+        }
+      ],
+      "conditions": [
+        "Zmarły przedsiębiorca musiał stosować metodę z ust. 1j",
+        "Zmarł w roku podatkowym",
+        "Przedsiębiorstwo w spadku przejmuje tę metodę",
+        "Obowiązek stosowania do końca roku śmierci przedsiębiorcy"
+      ],
+      "exceptions": [
+        "Obowiązek stosowania metody dotyczy tylko roku śmierci",
+        "Od następnego roku metoda może być zmieniona"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "moment_powstania_przychodu",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14-wspolnicy-forma-niebedzaca-osoba-prawna",
+      "question_intent": "Czy wszyscy wspólnicy spółki cywilnej muszą wybrać ten sam sposób ustalania przychodu?",
+      "question_patterns": [
+        "Wspólnicy spółki cywilnej — jaki wybór metody?",
+        "Czy każdy wspólnik może wybrać inną metodę?",
+        "Art. 14 ust. 1l — wspólnicy spółki niebędącej osobą prawną",
+        "Jak informować o wyborze metody dla spółki cywilnej?"
+      ],
+      "answer": "Wszyscy wspólnicy spółki niebędącej osobą prawną muszą wspólnie wybrać i stosować ten sam sposób ustalania daty przychodu (art. 14 ust. 1j). Każdy wspólnik informuje o tym wyborze — nie mogą zdywersyfikować sposobów.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14 ust. 1l",
+          "quote": "W przypadku prowadzenia pozarolniczej działalności gospodarczej w formie spółki niebędącej osobą prawną wszyscy wspólnicy informują o wyborze sposobu ustalania daty powstania przychodu, o którym mowa w ust. 1j."
+        }
+      ],
+      "conditions": [
+        "Dotyczy spółki niebędącej osobą prawną (np. spółka cywilna, partnerska)",
+        "Wszyscy wspólnicy muszą wybrać JEDEN sposób",
+        "Sposób dotyczy art. 14 ust. 1j (wpłaty na poczet)",
+        "Każdy wspólnik informuje o wyborze w swoim zeznaniu"
+      ],
+      "exceptions": [
+        "Nie dotyczy spółek będących osobą prawną",
+        "Brak możliwości wybrania różnych metod przez wspólników"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "moment_powstania_przychodu",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "14"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14 ust. 1c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1c. Za datę powstania przychodu, o którym mowa w ust. 1, uważa się, z zastrzeżeniem ust. 1e, 1h–1j i 1n–1p, dzień wydania rzeczy, zbycia prawa majątkowego lub wykonania usługi, albo częściowego wykona"
+      ],
+      "_source_subbatch_key": "14::subbatch::1"
+    },
+    {
+      "id": "law-14b-regulacja-ogolna",
+      "question_intent": "Co reguluje art. 14b Ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest zakres art. 14b?",
+        "Co mówi art. 14b o różnicach kursowych?",
+        "Jakie zasady zawiera art. 14b?"
+      ],
+      "answer": "Art. 14b reguluje sposób ustalania różnic kursowych przez podatników. Podatnicy zazwyczaj ustalają je na podstawie art. 24c, ale mogą wybrać alternatywną metodę opartą na przepisach o rachunkowości, jeśli prowadzą księgi rachunkowe i spełniają warunki dotyczące badania sprawozdań finansowych. Przepis określa również zasady przejścia na tę metodę, jej stosowania i rezygnacji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 1-2",
+          "quote": "Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości."
+        }
+      ],
+      "conditions": [
+        "Podatnik prowadzi księgi rachunkowe",
+        "Wybiera metodę z ust. 2",
+        "Sprawozdania finansowe badane są przez firmy audytorskie w danym okresie"
+      ],
+      "exceptions": [
+        "Podatnik może pozostać przy metodzie z art. 24c"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-metoda-rachunkowa",
+      "question_intent": "Jakie warunki muszą spełnić podatnicy, aby stosować metodę z ust. 2 art. 14b?",
+      "question_patterns": [
+        "Kiedy mogę stosować metodę rachunkową dla różnic kursowych?",
+        "Co jest warunkiem wybrania metody z art. 14b ust. 2?",
+        "Czy mogę ustalać różnice kursowe na podstawie rachunkowości?"
+      ],
+      "answer": "Aby stosować metodę z ust. 2, podatnik musi prowadzić księgi rachunkowe oraz spełnić wymóg badania sprawozdań finansowych przez firmę audytorską w danym okresie. To kluczowy warunek pozwalający na stosowanie przepisów o rachunkowości zamiast standardowych zasad z art. 24c.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 2",
+          "quote": "Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod warunkiem że w okresie, o którym mowa w ust. 4, sporządzane przez podatników sprawozdania finansowe będą badane przez firmy audytorskie."
+        }
+      ],
+      "conditions": [
+        "Prowadzenie ksiąg rachunkowych",
+        "Badanie sprawozdań finansowych przez firmę audytorską"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - metoda rachunkowa",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-wycena-czestotliwosc",
+      "question_intent": "Jak często podatnik musi wyceniać różnice kursowe przy metodzie z ust. 2?",
+      "question_patterns": [
+        "Kiedy mam dokonywać wyceny różnic kursowych?",
+        "Jakie są terminy wyceny dla metody z art. 14b ust. 2?",
+        "Czy mogę wybrać częstotliwość wyceny?"
+      ],
+      "answer": "Podatnik może wybrać jeden z trzech wariantów: wycena na ostatni dzień każdego miesiąca i roku podatkowego, na ostatni dzień każdego kwartału i roku podatkowego, lub tylko na ostatni dzień roku podatkowego. Wybrany termin musi być stosowany przez pełny rok podatkowy i nie może być zmieniony w trakcie roku.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 3",
+          "quote": "Wycena ta dla celów podatkowych powinna być dokonywana na ostatni dzień każdego miesiąca i na ostatni dzień roku podatkowego lub na ostatni dzień kwartału i na ostatni dzień roku podatkowego albo tylko na ostatni dzień roku podatkowego, z tym że wybrany termin wyceny musi być stosowany przez pełny rok podatkowy i nie może być zmieniony."
+        }
+      ],
+      "conditions": [
+        "Wybrany termin musi być stosowany przez pełny rok podatkowy",
+        "Termin nie może być zmieniony w trakcie roku"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - wycena",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-okres-stosowania",
+      "question_intent": "Jak długo podatnik musi stosować metodę z art. 14b ust. 2?",
+      "question_patterns": [
+        "Na jak długo jestem zobowiązany do stosowania metody z art. 14b?",
+        "Kiedy mogę zrezygnować z metody rachunkowej?",
+        "Jaki jest minimalny okres stosowania metody z ust. 2?"
+      ],
+      "answer": "Podatnik, który wybrał metodę z ust. 2, musi ją stosować przez okres nie krótszy niż 3 lata podatkowe, licząc od początku roku podatkowego, w którym ją przyjął. Po upływie tego okresu może zrezygnować, informując o tym w zeznaniu rocznym.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 4",
+          "quote": "podatnicy mają obowiązek stosować tę metodę przez okres nie krótszy niż trzy lata podatkowe, licząc od początku roku podatkowego, w którym została przyjęta ta metoda."
+        }
+      ],
+      "conditions": [
+        "Okres licza się od początku roku podatkowego wyboru metody",
+        "Minimum 3 lata podatkowe"
+      ],
+      "exceptions": [
+        "Art. 14b ust. 4a - przedsiębiorstwo w spadku może zrezygnować na koniec roku śmierci przedsiębiorcy"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - okres stosowania",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-informacja-wyboru",
+      "question_intent": "W jaki sposób podatnik informuje o wyborze metody z art. 14b ust. 2?",
+      "question_patterns": [
+        "Jak zgłosić wybór metody z ust. 2?",
+        "Gdzie mam zaraportować wybór metody rachunkowej?",
+        "Jaką formę ma informacja o wyborze?"
+      ],
+      "answer": "Podatnik informuje o wyborze metody w zeznaniu rocznym (PIT) za rok podatkowy, w którym rozpoczął jej stosowanie. Informacja ta jest obowiązkową częścią zeznania i musi być zawarta w odpowiednim miejscu dokumentu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 4",
+          "quote": "Podatnicy informują o wyborze tej metody w zeznaniu, o którym mowa w art. 45 ust. 1 lub ust. 1a pkt 2, składanym za rok podatkowy, w którym rozpoczęli jej stosowanie."
+        }
+      ],
+      "conditions": [
+        "Informacja w zeznaniu rocznym (art. 45 ust. 1 lub ust. 1a pkt 2)",
+        "Za rok podatkowy rozpoczęcia stosowania metody"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - procedura",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-przejscie-na-metode",
+      "question_intent": "Co musi zrobić podatnik w roku przejścia na metodę z art. 14b ust. 2?",
+      "question_patterns": [
+        "Jak przejść na metodę rachunkową?",
+        "Co się dzieje w roku wyboru metody z ust. 2?",
+        "Jak potraktować różnice kursowe z poprzedniego roku?"
+      ],
+      "answer": "W pierwszym dniu roku wyboru metody podatnik zalicza do przychodów lub kosztów (zalicza odpowiednio) wszelkie naliczone różnice kursowe ustalone na podstawie przepisów o rachunkowości na ostatni dzień poprzedniego roku podatkowego. Od tego momentu stosuje zasady z ust. 3 dotyczące wyceny.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 6",
+          "quote": "podatnicy na pierwszy dzień roku podatkowego, w którym została wybrana ta metoda, zaliczają odpowiednio do przychodów lub kosztów uzyskania przychodów naliczone różnice kursowe ustalone na podstawie przepisów o rachunkowości na ostatni dzień poprzedniego roku podatkowego."
+        }
+      ],
+      "conditions": [
+        "Różnice z ostatniego dnia roku poprzedniego",
+        "Zaliczenie w pierwszym dniu roku wyboru metody"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - przejście na metodę",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-rezygnacja-procedura",
+      "question_intent": "Jak podatnik rezygnuje z metody z art. 14b ust. 2?",
+      "question_patterns": [
+        "Jak zrezygnować z metody rachunkowej?",
+        "Jakie są kroki rezygnacji z metody z ust. 2?",
+        "Co muszę zrobić, aby przejść na standardową metodę?"
+      ],
+      "answer": "Rezygnacja musi nastąpić w zeznaniu rocznym za ostatni rok stosowania metody, ale dopiero po upływie 3-letniego okresu obowiązkowego. W ostatnim dniu tego roku podatnik zalicza do przychodów lub kosztów wszystkie naliczone różnice kursowe ustalone na podstawie przepisów o rachunkowości.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 5 i 7",
+          "quote": "O rezygnacji podatnicy informują w zeznaniu za ostatni rok podatkowy, w którym stosowali tę metodę. Rezygnacja może nastąpić po upływie okresu, o którym mowa w ust. 4."
+        }
+      ],
+      "conditions": [
+        "Po upływie minimum 3 lat",
+        "Informacja w zeznaniu za ostatni rok stosowania",
+        "Zaliczenie różnic na ostatni dzień roku rezygnacji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - rezygnacja z metody",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-powrot-na-standardowa",
+      "question_intent": "Co się dzieje po rezygnacji z metody z art. 14b ust. 2?",
+      "question_patterns": [
+        "Jakie zasady obowiązują po rezygnacji z metody?",
+        "Jak ustalać różnice kursowe po rezygnacji?",
+        "Od kiedy stosować art. 24c po rezygnacji?"
+      ],
+      "answer": "Od pierwszego dnia roku podatkowego następującego po rezygnacji podatnik stosuje standardowe zasady z art. 24c, ustalając różnice kursowe od ostatniego dnia roku, w którym rezygnował (czyli uwzględniając zaliczone wówczas różnice kursowe).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 7 pkt 2",
+          "quote": "od pierwszego dnia roku podatkowego, następującego po roku, w którym stosowali tę metodę, stosują zasady, o których mowa w art. 24c, ustalając różnice kursowe od dnia, o którym mowa w pkt 1."
+        }
+      ],
+      "conditions": [
+        "Od pierwszego dnia następnego roku podatkowego",
+        "Stosowanie art. 24c od ostatniego dnia roku rezygnacji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - powrót na standardową metodę",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-14b-spadek-przedsiebiorcy",
+      "question_intent": "Jakie zasady dotyczą przedsiębiorstwa w spadku w kontekście art. 14b ust. 2?",
+      "question_patterns": [
+        "Co się dzieje z metodą z ust. 2 po śmierci przedsiębiorcy?",
+        "Czy przedsiębiorstwo w spadku musi stosować metodę rachunkową?",
+        "Jak długo przedsiębiorstwo w spadku stosuje metodę z ust. 2?"
+      ],
+      "answer": "Jeżeli zmarły przedsiębiorca w roku śmierci stosował metodę z ust. 2, przedsiębiorstwo w spadku jest obowiązane stosować tę metodę do końca tego roku podatkowego. Po końcu tego roku może stosować zasady standardowe lub kontynuować metodę rachunkową, jeśli spełnia wszystkie warunki.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 14b ust. 4a",
+          "quote": "Jeżeli zmarły przedsiębiorca w roku podatkowym, w którym zmarł, stosował metodę, o której mowa w ust. 2, przedsiębiorstwo w spadku jest obowiązane stosować tę metodę do końca tego roku podatkowego."
+        }
+      ],
+      "conditions": [
+        "Zmarły przedsiębiorca stosował metodę w roku śmierci",
+        "Obowiązek do końca roku śmierci"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "różnice kursowe - spadek",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "14b"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 14b Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy ustalają różnice kursowe na podstawie art. 24c, z zastrzeżeniem ust. 2. 2. Podatnicy prowadzący księgi rachunkowe mogą ustalać różnice kursowe na podstawie przepisów o rachunkowości, pod "
+      ],
+      "_source_subbatch_key": "14b::subbatch::1"
+    },
+    {
+      "id": "law-15-dzialy-specjalne-produkcji-rolnej",
+      "question_intent": "Jak ustala się przychód z działów specjalnych produkcji rolnej?",
+      "question_patterns": [
+        "Co reguluje art. 15 ustawy o PIT?",
+        "Jak obliczyć przychód z działów specjalnych produkcji rolnej?",
+        "Jakie zasady obowiązują przy ustalaniu przychodu z działów specjalnych produkcji rolnej?",
+        "Czy muszę prowadzić księgi dla działów specjalnych produkcji rolnej?"
+      ],
+      "answer": "Przychód z działów specjalnych produkcji rolnej ustala się według zasad z art. 14, jeżeli podatnik prowadzi księgi wykazujące te przychody. Podatnik musi zawiadomić naczelnika urzędu skarbowego o zamiarze założenia ksiąg przed rozpoczęciem roku podatkowego lub przed rozpoczęciem prowadzenia działów specjalnych w ciągu roku. Jeśli obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości, przychód ustala się na podstawie tych ksiąg, a powiadomienie naczelnika nie jest wymagane.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 15 ust. 1",
+          "quote": "Przychód z działów specjalnych produkcji rolnej ustala się według zasad określonych w art. 14, jeżeli podatnik prowadzi księgi wykazujące te przychody."
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 15 ust. 2",
+          "quote": "W przypadku gdy obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości, przychód z działów specjalnych produkcji rolnej ustala się na podstawie prowadzonych ksiąg rachunkowych."
+        }
+      ],
+      "conditions": [
+        "podatnik prowadzi księgi wykazujące przychody z działów specjalnych produkcji rolnej",
+        "zawiadomienie naczelnika urzędu skarbowego przed rozpoczęciem roku podatkowego lub przed rozpoczęciem prowadzenia działów",
+        "lub obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości"
+      ],
+      "exceptions": [
+        "brak obowiązku powiadomienia naczelnika jeśli obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody z działalności rolnej",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "15"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 15 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przychód z działów specjalnych produkcji rolnej ustala się według zasad określonych w art. 14, jeżeli podatnik prowadzi księgi wykazujące te przychody. O zamiarze założenia ksiąg podatnik jest obow"
+      ],
+      "_source_subbatch_key": "15::subbatch::1"
+    },
+    {
+      "id": "law-15-zawiadomienie-naczelnika",
+      "question_intent": "Kiedy i w jaki sposób powiadomić naczelnika urzędu skarbowego o założeniu ksiąg dla działów specjalnych?",
+      "question_patterns": [
+        "Kiedy muszę zawiadomić naczelnika o założeniu ksiąg?",
+        "Czy muszę powiadomić urząd skarbowy o założeniu ksiąg dla działów specjalnych produkcji rolnej?",
+        "Jakie są terminy zawiadomienia naczelnika o założeniu ksiąg?"
+      ],
+      "answer": "Podatnik musi zawiadomić właściwego naczelnika urzędu skarbowego o zamiarze założenia ksiąg przed rozpoczęciem roku podatkowego albo przed rozpoczęciem prowadzenia działów specjalnych produkcji rolnej, jeśli nastąpiło to w ciągu roku. Wyjątek stanowi sytuacja, gdy obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości — wtedy powiadomienie nie jest wymagane.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 15 ust. 1",
+          "quote": "O zamiarze założenia ksiąg podatnik jest obowiązany zawiadomić właściwego naczelnika urzędu skarbowego przed rozpoczęciem roku podatkowego albo przed rozpoczęciem prowadzenia działów specjalnych produkcji rolnej."
+        }
+      ],
+      "conditions": [
+        "podatnik prowadzi księgi wykazujące przychody",
+        "zawiadomienie przed rozpoczęciem roku podatkowego lub przed rozpoczęciem działów w ciągu roku"
+      ],
+      "exceptions": [
+        "brak obowiązku zawiadomienia gdy obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "obowiązki administracyjne podatnika",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "15"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 15 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przychód z działów specjalnych produkcji rolnej ustala się według zasad określonych w art. 14, jeżeli podatnik prowadzi księgi wykazujące te przychody. O zamiarze założenia ksiąg podatnik jest obow"
+      ],
+      "_source_subbatch_key": "15::subbatch::1"
+    },
+    {
+      "id": "law-15-ksiegi-rachunkowe-obowiazek",
+      "question_intent": "Czy jeśli muszę prowadzić księgi rachunkowe z przepisów o rachunkowości, czy zmienia to zasady ustalania przychodu?",
+      "question_patterns": [
+        "Jak ustala się przychód jeśli mam obowiązek prowadzenia ksiąg rachunkowych?",
+        "Czy przepisy o rachunkowości zmienia sposób ustalania przychodu z działów specjalnych?",
+        "Jakie są zasady gdy obowiązek ksiąg wynika z przepisów o rachunkowości?"
+      ],
+      "answer": "Jeśli obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości, przychód z działów specjalnych produkcji rolnej ustala się na podstawie prowadzonych ksiąg rachunkowych według zasad z art. 14. W tej sytuacji nie jest wymagane zawiadomienie naczelnika urzędu skarbowego o założeniu ksiąg.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 15 ust. 2",
+          "quote": "W przypadku gdy obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości, przychód z działów specjalnych produkcji rolnej ustala się na podstawie prowadzonych ksiąg rachunkowych według zasad określonych w art. 14. W takim przypadku nie ma obowiązku zawiadamiania właściwego naczelnika urzędu skarbowego."
+        }
+      ],
+      "conditions": [
+        "obowiązek prowadzenia ksiąg rachunkowych wynika z przepisów o rachunkowości",
+        "przychód ustala się według zasad art. 14"
+      ],
+      "exceptions": [
+        "brak obowiązku powiadomienia naczelnika"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody z działalności rolnej",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "15"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 15 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przychód z działów specjalnych produkcji rolnej ustala się według zasad określonych w art. 14, jeżeli podatnik prowadzi księgi wykazujące te przychody. O zamiarze założenia ksiąg podatnik jest obow"
+      ],
+      "_source_subbatch_key": "15::subbatch::1"
+    },
+    {
+      "id": "law-18-prychody-praw-majatkowych",
+      "question_intent": "Co reguluje artykuł 18 ustawy o PIT dotyczący przychodów z praw majątkowych?",
+      "question_patterns": [
+        "Co to są przychody z praw majątkowych?",
+        "Jakie przychody zalicza się do praw majątkowych?",
+        "Co Art. 18 ustawy o PIT reguluje dotyczące praw majątkowych?",
+        "Jakie prawa majątkowe generują przychód podatkowy?"
+      ],
+      "answer": "Artykuł 18 definiuje przychody z praw majątkowych, które obejmują w szczególności przychody z praw autorskich, praw pokrewnych, praw do projektów wynalazczych, praw do topografii układów scalonych, znaków towarowych i wzorów zdobniczych. Przychody z tych praw powstają zarówno z ich użytkowania, jak i z odpłatnego ich zbycia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 18",
+          "quote": "Za przychód z praw majątkowych uważa się w szczególności przychody z praw autorskich i praw pokrewnych w rozumieniu odrębnych przepisów, praw do projektów wynalazczych, praw do topografii układów scalonych, znaków towarowych i wzorów zdobniczych, w tym również z odpłatnego zbycia tych praw."
+        }
+      ],
+      "conditions": [
+        "Przychody pochodzą z praw autorskich i praw pokrewnych",
+        "Przychody pochodzą z praw do projektów wynalazczych",
+        "Przychody pochodzą z praw do topografii układów scalonych",
+        "Przychody pochodzą ze znaków towarowych i wzorów zdobniczych",
+        "Obejmuje również odpłatne zbycie tych praw"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody-prawa-majatkowe",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "18"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 18 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Za przychód z praw majątkowych uważa się w szczególności przychody z praw autorskich i praw pokrewnych w rozumieniu odrębnych przepisów, praw do projektów wynalazczych, praw do topografii układów scal"
+      ],
+      "_source_subbatch_key": "18::subbatch::1"
+    },
+    {
+      "id": "law-1a-regulacja-przedsiebiorstwa-spadku",
+      "question_intent": "Co reguluje art. 1a Ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest zakres art. 1a Ustawy o PIT?",
+        "Co obejmuje art. 1a dotyczący przedsiębiorstwa w spadku?",
+        "Jakie kwestie reguluje art. 1a Ustawy o podatku dochodowym?"
+      ],
+      "answer": "Art. 1a reguluje opodatkowanie podatkiem dochodowym dochodów przedsiębiorstwa w spadku. Przedsiębiorstwo w spadku jest podatnikiem z tytułu dochodów osiąganych od otwarcia spadku do wygaśnięcia zarządu sukcesyjnego lub uprawnienia do jego powołania. W przypadku śmierci wspólnika spółki cywilnej ze ustanowionym zarządem sukcesyjnym, przedsiębiorstwo w spadku traktowane jest jako wspólnik tej spółki.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 1a ust. 1",
+          "quote": "Ustawa reguluje również opodatkowanie podatkiem dochodowym dochodów przedsiębiorstwa w spadku."
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 1a ust. 2",
+          "quote": "Przedsiębiorstwo w spadku, stanowiące jednostkę organizacyjną niemającą osobowości prawnej, jest podatnikiem z tytułu dochodów osiąganych w okresie od otwarcia spadku do dnia wygaśnięcia zarządu sukcesyjnego albo uprawnienia do powołania zarządcy sukcesyjnego."
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 1a ust. 3",
+          "quote": "W przypadku śmierci osoby fizycznej będącej wspólnikiem spółki cywilnej, jeżeli ustanowiono zarząd sukcesyjny, podatnikiem z tytułu udziału w tej spółce jest przedsiębiorstwo w spadku, które traktowane jest jak wspólnik spółki cywilnej."
+        }
+      ],
+      "conditions": [
+        "Musi być otwarta spadowina",
+        "Musi istnieć zarząd sukcesyjny lub uprawnienie do jego powołania",
+        "Dla spółki cywilnej - musi być ustanowiony zarząd sukcesyjny"
+      ],
+      "exceptions": [
+        "Art. 1a nie stosuje się, jeśli zarząd sukcesyjny nie został ustanowiony i nie dokonano zgłoszenia wymaganego art. 12 ust. 1c ustawy o ewidencji podatników"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "opodatkowanie-spadku-przedsiebiorstwo-spadkowe",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "1a"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 1a Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Ustawa reguluje również opodatkowanie podatkiem dochodowym dochodów przedsiębiorstwa w spadku. 2. Przedsiębiorstwo w spadku, stanowiące jednostkę organizacyjną niemającą osobowości prawnej, jest po"
+      ],
+      "_source_subbatch_key": "1a::subbatch::1"
+    },
+    {
+      "id": "law-1a-podatnik-przedsiebiorstwo-spadku",
+      "question_intent": "Kto jest podatnikiem w rozumieniu art. 1a i kiedy taki status powstaje?",
+      "question_patterns": [
+        "Kiedy przedsiębiorstwo w spadku staje się podatnikiem?",
+        "Od kiedy do kiedy przedsiębiorstwo w spadku płaci podatek dochodowy?",
+        "Jaki jest okres opodatkowania przedsiębiorstwa w spadku?"
+      ],
+      "answer": "Przedsiębiorstwo w spadku jest podatnikiem z tytułu dochodów osiąganych od otwarcia spadku do wygaśnięcia zarządu sukcesyjnego. Jeśli zarząd nie został ustanowiony, status podatnika trwa do wygaśnięcia uprawnienia do powołania zarządcy sukcesyjnego (pod warunkiem dokonania wymaganego zgłoszenia do rejestru podatników).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 1a ust. 2",
+          "quote": "Przedsiębiorstwo w spadku jest podatnikiem z tytułu dochodów osiąganych w okresie od otwarcia spadku do dnia wygaśnięcia zarządu sukcesyjnego albo uprawnienia do powołania zarządcy sukcesyjnego."
+        }
+      ],
+      "conditions": [
+        "Przedsiębiorstwo w spadku musi być jednostką organizacyjną niemającą osobowości prawnej",
+        "Musi być dokonane zgłoszenie, o którym mowa w art. 12 ust. 1c ustawy o ewidencji podatników (gdy brak zarządu sukcesyjnego)"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "status-podatnika-przedsiebiorstwo-spadkowe",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "1a"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 1a Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Ustawa reguluje również opodatkowanie podatkiem dochodowym dochodów przedsiębiorstwa w spadku. 2. Przedsiębiorstwo w spadku, stanowiące jednostkę organizacyjną niemającą osobowości prawnej, jest po"
+      ],
+      "_source_subbatch_key": "1a::subbatch::1"
+    },
+    {
+      "id": "law-1a-spolka-cywilna-zmarl-wspólnik",
+      "question_intent": "Jak opodatkowany jest udział w spółce cywilnej po śmierci wspólnika ze zarządem sukcesyjnym?",
+      "question_patterns": [
+        "Kto płaci podatek z tytułu udziału w spółce cywilnej po śmierci wspólnika?",
+        "Czy przedsiębiorstwo w spadku może być wspólnikiem spółki cywilnej?",
+        "Jaki jest status przedsiębiorstwa w spadku w stosunku do spółki cywilnej?"
+      ],
+      "answer": "Gdy wspólnik spółki cywilnej umrze i zostanie ustanowiony zarząd sukcesyjny, podatnikiem z tytułu jego udziału w spółce jest przedsiębiorstwo w spadku. Przedsiębiorstwo to traktowane jest jak zwykły wspólnik spółki cywilnej na potrzeby opodatkowania, do wygaśnięcia zarządu sukcesyjnego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 1a ust. 3",
+          "quote": "W przypadku śmierci osoby fizycznej będącej wspólnikiem spółki cywilnej, jeżeli ustanowiono zarząd sukcesyjny, podatnikiem z tytułu udziału w tej spółce jest przedsiębiorstwo w spadku, które na potrzeby ustawy traktowane jest jak wspólnik spółki cywilnej."
+        }
+      ],
+      "conditions": [
+        "Zmarł wspólnik spółki cywilnej",
+        "Musi być ustanowiony zarząd sukcesyjny",
+        "Okres to od otwarcia spadku do wygaśnięcia zarządu sukcesyjnego"
+      ],
+      "exceptions": [
+        "Jeśli nie ustanowiono zarządu sukcesyjnego, przepis art. 1a ust. 3 nie stosuje się"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "opodatkowanie-spadku-spolka-cywilna",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "1a"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 1a Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Ustawa reguluje również opodatkowanie podatkiem dochodowym dochodów przedsiębiorstwa w spadku. 2. Przedsiębiorstwo w spadku, stanowiące jednostkę organizacyjną niemającą osobowości prawnej, jest po"
+      ],
+      "_source_subbatch_key": "1a::subbatch::1"
+    },
+    {
+      "id": "law-2-zakres-stosowania",
+      "question_intent": "Co reguluje art. 2 Ustawy o PIT i do jakich przychodów się nie stosuje?",
+      "question_patterns": [
+        "Jakie przychody są zwolnione z opodatkowania PIT?",
+        "Do jakich przychodów nie stosuje się Ustawa o PIT?",
+        "Co mówi art. 2 Ustawy o podatku dochodowym od osób fizycznych?",
+        "Które przychody nie podlegają PIT?"
+      ],
+      "answer": "Art. 2 określa przychody, do których przepisy Ustawy o PIT się nie stosują. Zalicza się do nich między innymi: przychody z działalności rolniczej (z wyjątkiem działów specjalnych), przychody z gospodarki leśnej, przychody podlegające podatkowi od spadków i darowizn, przychody ze spadków i darowizn, podziału majątku małżeńskiego, opodatkowane podatkiem tonażowym, a także świadczenia na zaspokojenie potrzeb rodziny objęte wspólnością majątkową małżonków.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 2 ust. 1",
+          "quote": "Przepisów ustawy nie stosuje się do: 1) przychodów z działalności rolniczej, z wyjątkiem przychodów z działów specjalnych produkcji rolnej; 2) przychodów z gospodarki leśnej w rozumieniu ustawy o lasach"
+        }
+      ],
+      "conditions": [
+        "Dotyczy przychody z działalności rolniczej, ale z wyjątkiem działów specjalnych produkcji rolnej",
+        "Dotyczy przychodów z gospodarki leśnej w rozumieniu ustawy o lasach",
+        "Dotyczy przychodów podlegających przepisom o podatku od spadków i darowizn",
+        "Dotyczy przychodów ze czynności, które nie mogą być przedmiotem prawnie skutecznej umowy"
+      ],
+      "exceptions": [
+        "Przychody z działów specjalnych produkcji rolnej – podlegają PIT",
+        "Przychody przedsiębiorcy żeglugowego opodatkowane podatkiem tonażowym – z zastrzeżeniem art. 24a ust. 1a"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zakres_stosowania_pit",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "2"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 2 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przepisów ustawy nie stosuje się do: 1) przychodów z działalności rolniczej, z wyjątkiem przychodów z działów specjalnych produkcji rolnej; 2) przychodów z gospodarki leśnej w rozumieniu ustawy o l"
+      ],
+      "_source_subbatch_key": "2::subbatch::1"
+    },
+    {
+      "id": "law-2-dzialalnosc-rolnicza-definicja",
+      "question_intent": "Jak ustawa definiuje działalność rolniczą?",
+      "question_patterns": [
+        "Co to jest działalność rolnicza w rozumieniu art. 2?",
+        "Jaka jest definicja działalności rolniczej w ustawie o PIT?",
+        "Jakie czynności zaliczają się do działalności rolniczej?"
+      ],
+      "answer": "Działalność rolnicza to wytwarzanie produktów roślinnych lub zwierzęcych w stanie nieprzetworzonym (naturalnym) z własnych upraw, hodowli lub chowu, w tym produkcja materiału siewnego, szkółkarskiego, sadownicza, hodowla zwierząt, ptactwa i hodowla ryb. Do działalności rolniczej zaliczą się też czynności, w których minimalne okresy przetrzymywania zwierząt wynoszą: miesiąc dla roślin, 16 dni dla specjalizowanego tuczu gęsi/kaczek, 6 tygodni dla pozostałego drobiu lub 2 miesiące dla pozostałych zwierząt.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 2 ust. 2",
+          "quote": "Działalnością rolniczą jest działalność polegająca na wytwarzaniu produktów roślinnych lub zwierzęcych w stanie nieprzetworzonym (naturalnym) z własnych upraw albo hodowli lub chowu"
+        }
+      ],
+      "conditions": [
+        "Produkty w stanie nieprzetworzonym (naturalnym)",
+        "Z własnych upraw albo hodowli lub chowu",
+        "Minimalne okresy przetrzymywania zwierząt – miesiąc dla roślin, 16 dni dla gęsi/kaczek, 6 tygodni dla drobiu, 2 miesiące dla innych zwierząt"
+      ],
+      "exceptions": [
+        "Działam specjalne produkcji rolnej – podlegają PIT"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "dzialalnosc_rolnicza",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "2"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 2 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przepisów ustawy nie stosuje się do: 1) przychodów z działalności rolniczej, z wyjątkiem przychodów z działów specjalnych produkcji rolnej; 2) przychodów z gospodarki leśnej w rozumieniu ustawy o l"
+      ],
+      "_source_subbatch_key": "2::subbatch::1"
+    },
+    {
+      "id": "law-2-dzialy-specjalne",
+      "question_intent": "Jakie są działy specjalne produkcji rolnej?",
+      "question_patterns": [
+        "Co zalicza się do działów specjalnych produkcji rolnej?",
+        "Jakie uprawy i hodowla to działy specjalne?",
+        "Kiedy przychody z działalności rolniczej podlegają PIT?"
+      ],
+      "answer": "Działami specjalnymi produkcji rolnej są: uprawy w szklarniach i ogrzewanych tunelach foliowych, uprawy grzybów, uprawy roślin in vitro, fermowa hodowla drobiu rzeźnego i nieśnego, wylęgarnie, hodowla zwierząt futerkowych i laboratoryjnych, hodowla dżdżownic, entomofagów, jedwabników, prowadzenie pasiek. Jednakże uprawy i hodowla zwierząt w rozmiarach nieprzekraczających wielkości określonych w załączniku nr 2 nie stanowią działów specjalnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 2 ust. 3",
+          "quote": "Działami specjalnymi produkcji rolnej są: uprawy w szklarniach i ogrzewanych tunelach foliowych, uprawy grzybów i ich grzybni, uprawy roślin in vitro, fermowa hodowla i chów drobiu rzeźnego i nieśnego"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 2 ust. 3a",
+          "quote": "Nie stanowią działów specjalnych produkcji rolnej uprawy, hodowla i chów zwierząt w rozmiarach nieprzekraczających wielkości określonych w załączniku nr 2"
+        }
+      ],
+      "conditions": [
+        "Wymienione w art. 2 ust. 3 rodzaje produkcji",
+        "Uprawy i hodowla w rozmiarach przekraczających wielkości z załącznika nr 2 stanowią działy specjalne"
+      ],
+      "exceptions": [
+        "Uprawy i hodowla w rozmiarach nieprzekraczających wielkości z załącznika nr 2 nie stanowią działów specjalnych"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "dzialalnosc_rolnicza",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "2"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 2 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przepisów ustawy nie stosuje się do: 1) przychodów z działalności rolniczej, z wyjątkiem przychodów z działów specjalnych produkcji rolnej; 2) przychodów z gospodarki leśnej w rozumieniu ustawy o l"
+      ],
+      "_source_subbatch_key": "2::subbatch::1"
+    },
+    {
+      "id": "law-2-przychody-wykluczone",
+      "question_intent": "Które przychody są wykluczone z opodatkowania PIT?",
+      "question_patterns": [
+        "Jakie przychody nie podlegają PIT?",
+        "Które przychody mają zwolnienie z podatku dochodowego?",
+        "Czy przychody ze spadków podlegają PIT?"
+      ],
+      "answer": "Z opodatkowania PIT wyłączone są między innymi: przychody podlegające podatkowi od spadków i darowizn, przychody wynikające z czynności prawnie nieskutecznych, przychody z podziału wspólnego majątku małżonków, przychody opodatkowane podatkiem tonażowym, świadczenia na zaspokojenie potrzeb rodziny objęte wspólnością majątkową małżonków, wypłaty związane z zarządem sukcesyjnym oraz przychody prosumentów energii odnawialnej z rozliczeń energii.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 2 ust. 1 pkt 3-9",
+          "quote": "Przepisów ustawy nie stosuje się do: przychodów podlegających przepisom o podatku od spadków i darowizn; przychodów wynikających z czynności, które nie mogą być przedmiotem prawnie skutecznej umowy"
+        }
+      ],
+      "conditions": [
+        "Przychody muszą spełniać definicję zawartą w art. 2 ust. 1"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "przychody_wykluczone",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "2"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 2 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Przepisów ustawy nie stosuje się do: 1) przychodów z działalności rolniczej, z wyjątkiem przychodów z działów specjalnych produkcji rolnej; 2) przychodów z gospodarki leśnej w rozumieniu ustawy o l"
+      ],
+      "_source_subbatch_key": "2::subbatch::1"
+    },
+    {
+      "id": "law-21-154-senior-exemption",
+      "question_intent": "Jakie przychody są zwolnione od podatku dla osób po 60/65 roku życia?",
+      "question_patterns": [
+        "Co reguluje art. 21 ust. 1 pkt 154 Ustawy o PIT?",
+        "Jakie przychody seniorów są zwolnione od podatku?",
+        "Czy przychód pracownika powyżej 60 lat kobiety (65 lat mężczyzny) jest zwolniony?",
+        "Limit zwolnienia dla seniorów w Polsce - jaka kwota?",
+        "Zwolnienie dla osób w wieku emerytalnym - przychody do jakiej wysokości?"
+      ],
+      "answer": "Art. 21 ust. 1 pkt 154 zwalnia przychody osób, które ukończyły 60 lat (kobiety) lub 65 lat (mężczyźni), uzyskane ze stosunku pracy, umów zlecenia, zasiłku macierzyńskiego i pozarolniczej działalności gospodarczej, do wysokości 85 528 zł rocznie. Warunkiem jest podleganie ubezpieczeniom społecznym z tytułu uzyskiwania tych przychodów oraz nieodbieranie emerytury, renty lub innych świadczeń wymienionych w przepisie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 21 ust. 1 pkt 154",
+          "quote": "przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy, z umów zlecenia, o których mowa w art. 13 pkt 8, z zasiłku macierzyńskiego, oraz z pozarolniczej działalności gospodarczej, do wysokości nieprzekraczającej w roku podatkowym kwoty 85 528 zł"
+        }
+      ],
+      "conditions": [
+        "Kobieta musi ukończyć 60. rok życia, mężczyzna 65. rok życia",
+        "Przychody muszą być ze stosunku pracy, umów zlecenia, zasiłku macierzyńskiego lub pozarolniczej działalności",
+        "Podatnik musi podlegać ubezpieczeniom społecznym z tytułu tych przychodów",
+        "Limit zwolnienia wynosi 85 528 zł rocznie",
+        "Podatnik nie może odbierać emerytury, renty lub świadczeń wymienionych w art. 21 ust. 1 pkt 154 lit. a-g"
+      ],
+      "exceptions": [
+        "Zwolnienie nie ma zastosowania, jeśli podatnik otrzymuje emeryturę z ZUS lub KRUS",
+        "Zwolnienie nie ma zastosowania, jeśli podatnik otrzymuje rentę rodzinną",
+        "Zwolnienie nie ma zastosowania, jeśli podatnik otrzymuje świadczenie przedemerytalne lub zasiłek przedemerytalny",
+        "Zwolnienie nie ma zastosowania, jeśli podatnik otrzymuje uposażenie w stanie spoczynku"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zwolnienia_dla_seniorow",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "21"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 21 ust. 1 pkt 154 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 154) przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy, z umów zlecenia, o których mowa w art. 13 pkt 8, z zasiłku macierzyńskiego, o którym mowa w usta"
+      ],
+      "_source_subbatch_key": "21::subbatch::1"
+    },
+    {
+      "id": "law-21-154-conditions-detail",
+      "question_intent": "Jakie warunki muszą być spełnione, aby senior mógł korzystać ze zwolnienia z art. 21 ust. 1 pkt 154?",
+      "question_patterns": [
+        "Kiedy senior może skorzystać ze zwolnienia podatku?",
+        "Czy możemy dostać zwolnienie jako senior pracujący?",
+        "Przychody seniora - kiedy zwolnione?",
+        "Czy emeryt pracując może mieć zwolnienie?"
+      ],
+      "answer": "Senior może korzystać ze zwolnienia pod trzema warunkami: (1) musi osiągnąć wiek 60 lat (kobieta) lub 65 lat (mężczyzna), (2) musi podlegać ubezpieczeniom społecznym z tytułu tych przychodów, (3) mimo osiągnięcia wieku emerytalnego nie może pobierać emerytury, renty, czy innych świadczeń emerytalnych wymienionych w art. 21 ust. 1 pkt 154 (dotyczy KRUS, ZUS, wojskowych, policji i innych).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 21 ust. 1 pkt 154",
+          "quote": "pod warunkiem, że podatnik podlega z tytułu uzyskania tych przychodów ubezpieczeniom społecznym i podatnik, mimo nabycia uprawnienia, nie otrzymuje: a) emerytury lub renty rodzinnej b) [oraz kolejne świadczenia c-g]"
+        }
+      ],
+      "conditions": [
+        "Wiek: kobieta 60+, mężczyzna 65+",
+        "Obowiązkowe ubezpieczenia społeczne z tytułu przychodów",
+        "Brak pobierania emerytury z ZUS",
+        "Brak pobierania renty rodzinnej z ZUS",
+        "Brak pobierania emerytury lub renty z KRUS",
+        "Brak emerytury z systemu żołnierzy zawodowych",
+        "Brak emerytury z systemu funkcjonariuszy",
+        "Brak renty z FUSS",
+        "Brak świadczenia przejściowego",
+        "Brak uposażenia w stanie spoczynku"
+      ],
+      "exceptions": [
+        "Jeśli senior pobiera jakiekolwiek świadczenie emerytalne - zwolnienie nie przysługuje",
+        "Jeśli senior nie podlega ubezpieczeniom społecznym - zwolnienie nie przysługuje"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zwolnienia_dla_seniorow",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "21"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 21 ust. 1 pkt 154 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 154) przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy, z umów zlecenia, o których mowa w art. 13 pkt 8, z zasiłku macierzyńskiego, o którym mowa w usta"
+      ],
+      "_source_subbatch_key": "21::subbatch::1"
+    },
+    {
+      "id": "law-21-154-limit",
+      "question_intent": "Jaki jest limit zwolnienia podatku dla seniora na podstawie art. 21 ust. 1 pkt 154?",
+      "question_patterns": [
+        "Do jakiej kwoty zwolniony przychód seniora?",
+        "Limit roczny dla zwolnienia seniora",
+        "Ile zarobi senior bez podatku?"
+      ],
+      "answer": "Limit zwolnienia dla seniora wynosi 85 528 zł rocznie. Przychody seniora powyżej tej kwoty podlegają normalnym zasadom opodatkowania podatkiem dochodowym. Limit dotyczy łącznie wszystkich przychodów z art. 21 ust. 1 pkt 154 osiągniętych w jednym roku podatkowym.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 21 ust. 1 pkt 154",
+          "quote": "do wysokości nieprzekraczającej w roku podatkowym kwoty 85 528 zł"
+        }
+      ],
+      "conditions": [
+        "Limit 85 528 zł obowiązuje dla każdego roku podatkowego",
+        "Limit dotyczy całości przychodów ze wszystkich źródeł wymienionych w pkt 154",
+        "Przychody powyżej limitu są opodatkowane normalnie"
+      ],
+      "exceptions": [
+        "Brak wyjątków od limitu"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "zwolnienia_dla_seniorow",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "21"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 21 ust. 1 pkt 154 Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 154) przychody ze stosunku służbowego, stosunku pracy, pracy nakładczej, spółdzielczego stosunku pracy, z umów zlecenia, o których mowa w art. 13 pkt 8, z zasiłku macierzyńskiego, o którym mowa w usta"
+      ],
+      "_source_subbatch_key": "21::subbatch::1"
+    },
+    {
+      "id": "law-22d-amortyzacja-limit",
+      "question_intent": "Czy mogę nie amortyzować składnika majątku i czy są na to warunki?",
+      "question_patterns": [
+        "Co reguluje art. 22d ustawy o PIT?",
+        "Kiedy mogę pominąć odpisy amortyzacyjne?",
+        "Jaki limit wartości pozwala na bezamortyzacyjne zaliczenie do kosztów?",
+        "Jak opodatkować zakup małego składnika majątku?"
+      ],
+      "answer": "Podatnicy mogą zrezygnować z odpisów amortyzacyjnych dla składników majątku z art. 22a i 22b, jeśli ich wartość początkowa nie przekracza 10 000 zł. W takim przypadku wydatki na nabycie tych składników traktuje się jako koszty uzyskania przychodów w miesiącu, w którym oddano je do używania, bez jakichkolwiek obliczeń amortyzacyjnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22d ust. 1",
+          "quote": "Podatnicy mogą nie dokonywać odpisów amortyzacyjnych od składników majątku, których wartość początkowa nie przekracza 10 000 zł; wydatki poniesione na ich nabycie stanowią wówczas koszty uzyskania przychodów w miesiącu oddania ich do używania."
+        }
+      ],
+      "conditions": [
+        "Składnik majątku musi być wymieniony w art. 22a lub 22b",
+        "Wartość początkowa określona zgodnie z art. 22g nie może przekraczać 10 000 zł",
+        "Wydatki mogą być zaliczone do kosztów dopiero w miesiącu oddania do używania"
+      ],
+      "exceptions": [
+        "Składniki wymieniające w ust. 1 nie są wprowadzane do ewidencji środków trwałych i wartości niematerialnych i prawnych"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_odpisy_srodki_trwale",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22d"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22d Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy mogą nie dokonywać odpisów amortyzacyjnych od składników majątku, o których mowa w art. 22a i 22b, których wartość początkowa, określona zgodnie z art. 22g, nie przekracza 10 000 zł; wyda"
+      ],
+      "_source_subbatch_key": "22d::subbatch::1"
+    },
+    {
+      "id": "law-22d-ewidencja-srodkow",
+      "question_intent": "Kiedy i jak wprowadzić składnik majątku do ewidencji środków trwałych?",
+      "question_patterns": [
+        "Kiedy muszę wpisać składnik majątku do ewidencji?",
+        "Jakie są terminy wprowadzenia do ewidencji środków trwałych?",
+        "Co się dzieje, jeśli wprowadzę składnik do ewidencji po terminie?",
+        "Czy mogę przesunąć wprowadzenie składnika do ewidencji?"
+      ],
+      "answer": "Składniki majątku z art. 22a–22c (poza tymi z ust. 1, czyli poniżej 10 000 zł) muszą być wprowadzone do ewidencji środków trwałych i wartości niematerialnych najpóźniej w miesiącu, w którym przekazano je do używania. Wprowadzenie do ewidencji po tym terminie jest traktowane jako ujawnienie środka trwałego lub wartości niematerialnej, co ma konsekwencje podatkowe określone w art. 22h ust. 1 pkt 4.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22d ust. 2",
+          "quote": "Składniki majątku z wyłączeniem składników wymienionych w ust. 1, wprowadza się do ewidencji środków trwałych oraz wartości niematerialnych i prawnych najpóźniej w miesiącu przekazania ich do używania. Późniejszy termin wprowadzenia uznaje się za ujawnienie środka trwałego."
+        }
+      ],
+      "conditions": [
+        "Dotyczy składników z art. 22a–22c, z wyłączeniem tych wartych poniżej 10 000 zł",
+        "Termin wprowadzenia to najpóźniej miesiąc przekazania do używania",
+        "Ewidencja musi być prowadzona zgodnie z art. 22n"
+      ],
+      "exceptions": [
+        "Składniki majątku z ust. 1 (do 10 000 zł) nie są wprowadzane do ewidencji środków trwałych"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencja_srodki_trwale_ujawnienie",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "22d"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22d Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy mogą nie dokonywać odpisów amortyzacyjnych od składników majątku, o których mowa w art. 22a i 22b, których wartość początkowa, określona zgodnie z art. 22g, nie przekracza 10 000 zł; wyda"
+      ],
+      "_source_subbatch_key": "22d::subbatch::1"
+    },
+    {
+      "id": "law-22e-zakres-regulacji",
+      "question_intent": "Co reguluje art. 22e ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest zakres art. 22e ustawy o PIT?",
+        "Co mówi art. 22e?",
+        "Czym zajmuje się art. 22e?"
+      ],
+      "answer": "Art. 22e reguluje sytuację, gdy podatnik nabył lub wytworzył majątek o wartości przekraczającej 10 000 zł i planował używać go maksymalnie rok, ale faktycznie używał go dłużej. Przepis określa obowiązki podatnika w zakresie zmiany klasyfikacji tego majątku ze składników wydatkowanych na środki trwałe lub wartości niematerialne, wraz z obliczeniem należnych odsetek za zwłokę.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22e ust. 1",
+          "quote": "Jeżeli podatnicy nabędą lub wytworzą we własnym zakresie składniki majątku wymienione w art. 22a ust. 1 i art. 22b ust. 1, o wartości początkowej przekraczającej 10 000 zł, i ze względu na przewidywany przez nich okres używania równy lub krótszy niż rok nie zaliczą ich do środków trwałych albo wartości niematerialnych i prawnych, a faktyczny okres ich używania przekroczy rok"
+        }
+      ],
+      "conditions": [
+        "Wartość początkowa majątku przekracza 10 000 zł",
+        "Majątek wymieniany w art. 22a ust. 1 i art. 22b ust. 1",
+        "Podatnik planował używać majątek na rok lub krócej",
+        "Faktyczny okres używania przekroczył rok"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "reklasyfikacja_majatku_art22e",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22e"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22e Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Jeżeli podatnicy nabędą lub wytworzą we własnym zakresie składniki majątku wymienione w art. 22a ust. 1 i art. 22b ust. 1, o wartości początkowej przekraczającej 10 000 zł, i ze względu na przewidy"
+      ],
+      "_source_subbatch_key": "22e::subbatch::1"
+    },
+    {
+      "id": "law-22e-obowiazki-podatnika",
+      "question_intent": "Jakie obowiązki ciążą na podatniku zgodnie z art. 22e?",
+      "question_patterns": [
+        "Co musi zrobić podatnik według art. 22e?",
+        "Jakie działania wymagane art. 22e?",
+        "Obowiązki z art. 22e"
+      ],
+      "answer": "Podatnik musi: (1) zaliczyć majątek do środków trwałych/wartości niematerialnych w cenie nabycia lub koszcie wytworzenia, (2) zmniejszyć koszty uzyskania przychodów o różnicę między ceną nabycia a odpisami amortyzacyjnymi, (3) stosować ustalone stawki amortyzacji przez cały okres amortyzacji, (4) wpłacić odsetki za zwłokę do urzędu skarbowego w terminie do 20. dnia miesiąca następującego po roku używania.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22e ust. 1 pkt 1-4",
+          "quote": "podatnicy są obowiązani, w pierwszym miesiącu następującym po miesiącu, w którym ten rok upłynął: 1) zaliczyć te składniki do środków trwałych... 2) zmniejszyć koszty... 3) stosować stawki amortyzacji... 4) wpłacić... kwotę odsetek"
+        }
+      ],
+      "conditions": [
+        "Spełnione warunki z art. 22e ust. 1 (przekroczenie roku używania)",
+        "Termin: pierwszy miesiąc po miesiącu upłynięcia roku"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "reklasyfikacja_majatku_art22e",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "22e"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22e Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Jeżeli podatnicy nabędą lub wytworzą we własnym zakresie składniki majątku wymienione w art. 22a ust. 1 i art. 22b ust. 1, o wartości początkowej przekraczającej 10 000 zł, i ze względu na przewidy"
+      ],
+      "_source_subbatch_key": "22e::subbatch::1"
+    },
+    {
+      "id": "law-22e-odsetki-naliczenie",
+      "question_intent": "Jak nalicza się odsetki za zwłokę w art. 22e?",
+      "question_patterns": [
+        "Od kiedy naliczane są odsetki w art. 22e?",
+        "Jaka stawka odsetek w art. 22e?",
+        "Od jakie okresu odsetki art. 22e?"
+      ],
+      "answer": "Odsetki naliczane są od dnia zaliczenia wydatków do kosztów uzyskania przychodów do dnia przekroczenia roku używania majątku. Stawka odsetek stanowi odsetki za zwłokę od zaległości podatkowych obowiązującą w dniu zaliczenia majątku do środków trwałych lub wartości niematerialnych. Podatnik wpłaca obliczoną kwotę odsetek do urzędu skarbowego w terminie do 20. dnia miesiąca następującego po roku.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22e ust. 1 pkt 4",
+          "quote": "odsetki od różnicy, o której mowa w pkt 2, są naliczane według stawki odsetek za zwłokę od zaległości podatkowych obowiązującej w dniu zaliczenia składnika majątku do środków trwałych lub wartości niematerialnych i prawnych"
+        }
+      ],
+      "conditions": [
+        "Okres naliczania: od dnia zaliczenia wydatku do dnia przekroczenia roku",
+        "Stawka: odsetki za zwłokę od zaległości podatkowych z dnia zaliczenia majątku"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "reklasyfikacja_majatku_art22e",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22e"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22e Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Jeżeli podatnicy nabędą lub wytworzą we własnym zakresie składniki majątku wymienione w art. 22a ust. 1 i art. 22b ust. 1, o wartości początkowej przekraczającej 10 000 zł, i ze względu na przewidy"
+      ],
+      "_source_subbatch_key": "22e::subbatch::1"
+    },
+    {
+      "id": "law-22e-zaliczenie-przed-rokiem",
+      "question_intent": "Jak zmienia się procedura art. 22e, gdy majątek zaliczony do ST/WNiP zostanie zaliczony przed rokiem?",
+      "question_patterns": [
+        "Art. 22e ust. 2 - reklasyfikacja przed rokiem",
+        "Co gdy reklasyfikuję majątek w ciągu roku?"
+      ],
+      "answer": "Jeżeli majątek zaliczony do kosztów w ciągu roku (przed upływem roku) będzie później zaliczony do środków trwałych lub wartości niematerialnych, stosuje się odpowiednio przepisy art. 22e ust. 1. Odsetki naliczane są od dnia zaliczenia do kosztów do dnia faktycznego zaliczenia do środków trwałych/wartości niematerialnych, a nie do upływu roku.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22e ust. 2",
+          "quote": "Przepisy ust. 1 stosuje się odpowiednio w przypadku zaliczenia wydatków na nabycie lub wytworzenie we własnym zakresie składników majątku o wartości początkowej przekraczającej 10 000 zł do kosztów uzyskania przychodów, a następnie zaliczenia tych składników do środków trwałych lub wartości niematerialnych i prawnych przed upływem roku; w tym przypadku odsetki nalicza się do dnia zaliczenia ich do środków trwałych lub wartości niematerialnych i prawnych"
+        }
+      ],
+      "conditions": [
+        "Majątek o wartości przekraczającej 10 000 zł został zaliczony do kosztów",
+        "Reklasyfikacja do ST/WNiP nastąpiła przed upływem roku od nabycia/wytworzenia"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "reklasyfikacja_majatku_art22e",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "22e"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22e Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Jeżeli podatnicy nabędą lub wytworzą we własnym zakresie składniki majątku wymienione w art. 22a ust. 1 i art. 22b ust. 1, o wartości początkowej przekraczającej 10 000 zł, i ze względu na przewidy"
+      ],
+      "_source_subbatch_key": "22e::subbatch::1"
+    },
+    {
+      "id": "law-22e-rozliczenie-nadwyzki",
+      "question_intent": "Jak rozliczyć nadwyżkę kosztów, jeśli różnica przewyższa koszty miesiąca?",
+      "question_patterns": [
+        "Nadwyżka kosztów art. 22e",
+        "Nierozliczona różnica art. 22e"
+      ],
+      "answer": "Jeśli różnica między ceną nabycia a amortyzacją jest wyższa od kosztów danego miesiąca, nierozliczona nadwyżka pomniejsza koszty w następnych miesiącach. Nadwyżka nie przepada, ale przenosi się na kolejne okresy rozliczeniowe.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22e ust. 3",
+          "quote": "Jeżeli różnica, o której mowa w ust. 1 pkt 2, jest wyższa od kosztów danego miesiąca, nierozliczona nadwyżka kosztów pomniejsza koszty w następnych miesiącach"
+        }
+      ],
+      "conditions": [
+        "Różnica z art. 22e ust. 1 pkt 2 wyższa od kosztów danego miesiąca"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "reklasyfikacja_majatku_art22e",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22e"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22e Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Jeżeli podatnicy nabędą lub wytworzą we własnym zakresie składniki majątku wymienione w art. 22a ust. 1 i art. 22b ust. 1, o wartości początkowej przekraczającej 10 000 zł, i ze względu na przewidy"
+      ],
+      "_source_subbatch_key": "22e::subbatch::1"
+    },
+    {
+      "id": "law-22f-regulacja-odpisy",
+      "question_intent": "Co reguluje artykuł 22f ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest zakres artykułu 22f?",
+        "Co podlega regulacji w art. 22f?",
+        "Jakie kwestie normuje art. 22f ustawy o podatku dochodowym?"
+      ],
+      "answer": "Artykuł 22f reguluje zasady dokonywania odpisów amortyzacyjnych przez podatników od środków trwałych oraz wartości niematerialnych i prawnych. Określa, kto jest zobowiązany lub uprawniony do ich dokonywania, jaki limit wartości activuje uproszczoną amortyzację jednorazową, jak liczyć odpisy od nieruchomości wykorzystywanej częściowo do działalności, oraz kto dokonuje odpisów od środków przewłaszczonych jako zabezpieczenie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22f ust. 1-5",
+          "quote": "Podatnicy dokonują odpisów amortyzacyjnych od wartości początkowej środków trwałych oraz wartości niematerialnych i prawnych"
+        }
+      ],
+      "conditions": [
+        "Artykuł dotyczy podatników prowadzących działalność gospodarczą",
+        "Wyjątek: podatnicy w upadłości ogłoszonej nie dokonują odpisów",
+        "Dla armatorów dodatkowa regulacja dotycząca taboru morskiego w budowie"
+      ],
+      "exceptions": [
+        "Podatnicy w upadłości ogłoszonej (art. 22f ust. 1 i 2)",
+        "Wartości poniżej 10 000 zł mogą być amortyzowane jednorazowo (art. 22f ust. 3)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "odpisy-amortyzacyjne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22f"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22f Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z wyjątkiem tych, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gos podarczej, dokonują odpisów amortyzacyjnych od wartości początkowej środków trwałych oraz wartości"
+      ],
+      "_source_subbatch_key": "22f::subbatch::1"
+    },
+    {
+      "id": "law-22f-obowiazek-odpisy",
+      "question_intent": "Kto musi dokonywać odpisów amortyzacyjnych podle art. 22f?",
+      "question_patterns": [
+        "Czy każdy podatnik jest zobowiązany do amortyzacji?",
+        "Kto dokonuje odpisów amortyzacyjnych?",
+        "Czy podatnik w upadłości dokonuje odpisów amortyzacyjnych?"
+      ],
+      "answer": "Podatnicy prowadzący działalność gospodarczą są zobowiązani dokonywać odpisów amortyzacyjnych od środków trwałych i wartości niematerialnych i prawnych. Wyjątek stanowią podatnicy, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gospodarczej – ci nie dokonują odpisów.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22f ust. 1",
+          "quote": "Podatnicy, z wyjątkiem tych, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gospodarczej, dokonują odpisów amortyzacyjnych"
+        }
+      ],
+      "conditions": [
+        "Podatnik musi prowadzić działalność gospodarczą",
+        "Dotyczy to środków trwałych i wartości niematerialnych i prawnych"
+      ],
+      "exceptions": [
+        "Podatnicy ogłoszeni w upadłości, którzy nie prowadzą działalności gospodarczej"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "odpisy-amortyzacyjne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22f"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22f Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z wyjątkiem tych, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gos podarczej, dokonują odpisów amortyzacyjnych od wartości początkowej środków trwałych oraz wartości"
+      ],
+      "_source_subbatch_key": "22f::subbatch::1"
+    },
+    {
+      "id": "law-22f-limit-jednorazowa",
+      "question_intent": "Jaki jest limit wartości dla jednorazowego odpisu amortyzacyjnego?",
+      "question_patterns": [
+        "Kiedy mogę dokonać jednorazowego odpisu amortyzacyjnego?",
+        "Jaka wartość środka trwałego uprawnia do amortyzacji jednorazowej?",
+        "Od kiedy stosuje się art. 22f ust. 3?"
+      ],
+      "answer": "Jeśli wartość początkowa środka trwałego lub wartości niematerialnej i prawnej wynosi równo lub poniżej 10 000 zł, podatnik może wybrać między amortyzacją standardową (art. 22h–22m) a jednorazowym odpisem w miesiącu oddania do używania lub w miesiącu następnym. Powyżej 10 000 zł amortyzacja przebiega zawsze standardowo.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22f ust. 3",
+          "quote": "W przypadku gdy wartość początkowa jest równa lub niższa niż 10 000 zł, podatnicy mogą dokonywać odpisów amortyzacyjnych zgodnie z art. 22h–22m albo jednorazowo"
+        }
+      ],
+      "conditions": [
+        "Wartość początkowa ≤ 10 000 zł",
+        "Jednorazowy odpis w miesiącu oddania do używania lub w miesiącu następnym",
+        "Zastrzeżenie art. 22d ust. 1"
+      ],
+      "exceptions": [
+        "Podatnicy mogą wybrać standardową amortyzację nawet poniżej 10 000 zł"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "odpisy-amortyzacyjne",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22f"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22f Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z wyjątkiem tych, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gos podarczej, dokonują odpisów amortyzacyjnych od wartości początkowej środków trwałych oraz wartości"
+      ],
+      "_source_subbatch_key": "22f::subbatch::1"
+    },
+    {
+      "id": "law-22f-nieruchomosc-czesc",
+      "question_intent": "Jak liczyć odpisy amortyzacyjne od nieruchomości wykorzystywanej tylko częściowo do działalności?",
+      "question_patterns": [
+        "Jak amortyzować nieruchomość wykorzystywaną częściowo do biznesu?",
+        "Czy mogę amortyzować całą nieruchomość jeśli część jest dla biznesu?",
+        "Jak obliczyć odpis od nieruchomości wynajmowanej i używanej do działalności?"
+      ],
+      "answer": "Odpisów amortyzacyjnych od nieruchomości lub lokalu wykorzystywanego tylko częściowo do działalności, wynajmu lub dzierżawy dokonuje się proporcjonalnie – w wysokości odpowiadającej stosunkowi powierzchni użytkowej przeznaczonej do biznesu do całkowitej powierzchni użytkowej nieruchomości.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22f ust. 4",
+          "quote": "odpisów amortyzacyjnych dokonuje się w wysokości ustalonej od wartości początkowej nieruchomości lub lokalu odpowiadającej stosunkowi powierzchni użytkowej wykorzystywanej do prowadzenia działalności gospodarczej, wynajmowanej lub wydzierżawianej, do ogólnej powierzchni użytkowej"
+        }
+      ],
+      "conditions": [
+        "Nieruchomość lub lokal wykorzystywany tylko częściowo do działalności, wynajmu lub dzierżawy",
+        "Obliczenia na bazie stosunku powierzchni użytkowych"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "odpisy-amortyzacyjne",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22f"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22f Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z wyjątkiem tych, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gos podarczej, dokonują odpisów amortyzacyjnych od wartości początkowej środków trwałych oraz wartości"
+      ],
+      "_source_subbatch_key": "22f::subbatch::1"
+    },
+    {
+      "id": "law-22f-przewlaszczone",
+      "question_intent": "Kto dokonuje odpisów amortyzacyjnych od środka trwałego przewłaszczonego jako zabezpieczenie?",
+      "question_patterns": [
+        "Jaki podatnik amortyzuje zastawiony środek trwały?",
+        "Czy mogę dokonać odpisu amortyzacyjnego od nieruchomości oddanej w zabezpieczenie kredytu?",
+        "Jak amortyzować przedmiot przewłaszczony na poczet pożyczki?"
+      ],
+      "answer": "Odpisy amortyzacyjne od środków trwałych lub wartości niematerialnych przewłaszczonych jako zabezpieczenie wierzytelności (pożyczki, kredytu) dokonuje dotychczasowy właściciel – czyli pożyczkobiorca lub kredytobiorca, a nie osoba, która otrzymała przedmiot jako zabezpieczenie.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22f ust. 5",
+          "quote": "Odpisów amortyzacyjnych od środków trwałych oraz wartości niematerialnych i prawnych, które zostały przewłaszczone w celu zabezpieczenia wierzytelności, w tym pożyczki lub kredytu, dokonuje dotychczasowy właściciel, w tym pożyczkobiorca lub kredytobiorca"
+        }
+      ],
+      "conditions": [
+        "Środek trwały lub wartość niematerialna przewłaszczone w zabezpieczenie",
+        "Dotyczy także pożyczek i kredytów"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "odpisy-amortyzacyjne",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22f"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22f Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z wyjątkiem tych, którzy ze względu na ogłoszoną upadłość nie prowadzą działalności gos podarczej, dokonują odpisów amortyzacyjnych od wartości początkowej środków trwałych oraz wartości"
+      ],
+      "_source_subbatch_key": "22f::subbatch::1"
+    },
+    {
+      "id": "law-22i-amortyzacja-srodkow-trwalych",
+      "question_intent": "Co reguluje art. 22i Ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest zakres regulacji art. 22i?",
+        "Co określa art. 22i Ustawy o podatku dochodowym?",
+        "Czym zajmuje się art. 22i?"
+      ],
+      "answer": "Art. 22i reguluje sposób ustalania odpisów amortyzacyjnych od środków trwałych. Podatnicy dokonują amortyzacji stosując stawki z Wykazu stawek amortyzacyjnych, ale mogą je podwyższać (za pomocą współczynników do 1,4 lub 2,0 w zależności od typu środka) lub obniżać dla poszczególnych aktywów. Przepisy określają warunki zmian stawek, terminy ich wprowadzenia oraz ograniczenia dla podatników korzystających ze zwolnień lub opodatkowania ryczałtowego.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 1",
+          "quote": "Odpisów amortyzacyjnych od środków trwałych dokonuje się przy zastosowaniu stawek amortyzacyjnych określonych w Wykazie stawek amortyzacyjnych"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 2",
+          "quote": "Podatnicy mogą podane w Wykazie stawek amortyzacyjnych stawki podwyższać"
+        }
+      ],
+      "conditions": [
+        "Zastosowanie stawek z Wykazu stawek amortyzacyjnych",
+        "Możliwość podwyższenia stawek poprzez współczynniki",
+        "Możliwość obniżenia stawek dla poszczególnych środków trwałych"
+      ],
+      "exceptions": [
+        "Przepisy ust. 4 i 5 nie stosują się do działalności zwolnionej z opodatkowania",
+        "Przepisy ust. 4 i 5 nie stosują się do opodatkowania ryczałtem lub podatkami zryczałtowanymi"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "amortyzacja środków trwałych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22i"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22i Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od środków trwałych, z zastrzeżeniem art. 22j–22ł, dokonuje się przy zastosowaniu stawek amortyzacyjnych określonych w Wykazie stawek amortyzacyjnych i zasad, o których mowa"
+      ],
+      "_source_subbatch_key": "22i::subbatch::1"
+    },
+    {
+      "id": "law-22i-podwyzszenie-stawek-wspolczynniki",
+      "question_intent": "Jakie współczynniki mogą być stosowane przy podwyższaniu stawek amortyzacyjnych?",
+      "question_patterns": [
+        "Ile wynoszą maksymalne współczynniki do podwyższania amortyzacji?",
+        "Jakie współczynniki mogę zastosować dla budynków, maszyn i urządzeń?",
+        "Jaki jest limit współczynnika podwyższającego stawkę amortyzacyjną?"
+      ],
+      "answer": "Współczynniki podwyższające stawki amortyzacyjne zależą od typu środka trwałego: dla budynków w warunkach pogorszonych – do 1,2, w warunkach złych – do 1,4; dla maszyn i urządzeń intensywnie używanych – do 1,4; dla maszyn grupy 4-6 i 8 poddanych szybkiemu postępowi technicznemu – do 2,0. Dla każdego środka trwałego należy wybrać jeden współczynnik, którym się mnoży stawkę z Wykazu.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 2",
+          "quote": "Podatnicy mogą podane w Wykazie stawek amortyzacyjnych stawki podwyższać przy zastosowaniu współczynników"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 6",
+          "quote": "należy dla poszczególnych środków trwałych stosować jeden wybrany współczynnik, przez który mnoży się stawkę amortyzacyjną"
+        }
+      ],
+      "conditions": [
+        "Budynki w warunkach pogorszonych – współczynnik max 1,2",
+        "Budynki w warunkach złych – współczynnik max 1,4",
+        "Maszyny, urządzenia i środki transportu intensywnie używane – współczynnik max 1,4",
+        "Maszyny grup 4-6 i 8 z szybkim postępem technicznym – współczynnik max 2,0",
+        "Jeden współczynnik na jeden środek trwały"
+      ],
+      "exceptions": [
+        "Morski tabor pływający wyłączony z możliwości podwyższenia stawek dla intensywnego użytkowania"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "współczynniki amortyzacji",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22i"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22i Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od środków trwałych, z zastrzeżeniem art. 22j–22ł, dokonuje się przy zastosowaniu stawek amortyzacyjnych określonych w Wykazie stawek amortyzacyjnych i zasad, o których mowa"
+      ],
+      "_source_subbatch_key": "22i::subbatch::1"
+    },
+    {
+      "id": "law-22i-zmiana-stawek-terminy",
+      "question_intent": "Od kiedy mogę zmienić stawki amortyzacyjne?",
+      "question_patterns": [
+        "Kiedy mogę podwyższyć lub obniżyć stawkę amortyzacji?",
+        "Od jakiego miesiąca wchodzą w życie zmiany stawek amortyzacyjnych?",
+        "Jaki termin obowiązuje przy zmianie stawek dla środków trwałych?"
+      ],
+      "answer": "Zmiany stawek amortyzacyjnych (podwyższenie lub obniżenie) wchodzą w życie od miesiąca następującego po miesiącu, w którym zaistniały okoliczności je uzasadniające, lub od pierwszego miesiąca każdego następnego roku podatkowego. Dla maszyn i urządzeń z szybkim postępem technicznym dodatkowo można decydować o aplikacji współczynnika już od miesiąca wprowadzenia do ewidencji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 3",
+          "quote": "stawki te ulegają podwyższeniu lub obniżeniu od miesiąca następującego po miesiącu, w którym zaistniały okoliczności"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 4",
+          "quote": "podatnicy mogą podwyższać stawki bądź rezygnować z ich stosowania począwszy od miesiąca następującego po miesiącu, w którym środki te zostały wprowadzone do ewidencji"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 5",
+          "quote": "Zmiany stawki dokonuje się począwszy od miesiąca, w którym środki te zostały wprowadzone do ewidencji, albo od pierwszego miesiąca każdego następnego roku podatkowego"
+        }
+      ],
+      "conditions": [
+        "Zmiana od miesiąca następującego po zaistnieniu okoliczności uzasadniających zmianę",
+        "Alternatywnie od pierwszego miesiąca każdego następnego roku podatkowego",
+        "Dla maszyn z szybkim postępem – również od miesiąca wprowadzenia do ewidencji"
+      ],
+      "exceptions": [
+        "Brak zmian dla aktywów używanych w działalności zwolnionej lub opodatkowanej ryczałtem"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "terminy zmian stawek amortyzacyjnych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22i"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22i Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od środków trwałych, z zastrzeżeniem art. 22j–22ł, dokonuje się przy zastosowaniu stawek amortyzacyjnych określonych w Wykazie stawek amortyzacyjnych i zasad, o których mowa"
+      ],
+      "_source_subbatch_key": "22i::subbatch::1"
+    },
+    {
+      "id": "law-22i-ograniczenia-dla-zwolnien",
+      "question_intent": "Czy mogę zmieniać stawki amortyzacyjne dla środków trwałych w działalności zwolnionej lub opodatkowanej ryczałtem?",
+      "question_patterns": [
+        "Jakie ograniczenia dotyczą zmiany stawek w działalności zwolnionej?",
+        "Czy mogę stosować podwyższone stawki amortyzacyjne w ryczałcie?",
+        "Czy przepisy o zmianach stawek stosują się do działalności zwolnionej z podatku?"
+      ],
+      "answer": "Nie – przepisy o zmianach stawek amortyzacyjnych (podwyższaniu i obniżaniu) nie stosują się do środków trwałych w działalności zwolnionej z opodatkowania lub opodatkowanej ryczałtem od przychodów ewidencjonowanych, podatkiem tonażowym lub zryczałtowanym podatkiem od wartości sprzedanej produkcji. Ograniczenie obowiązuje przez cały okres korzystania z takiego opodatkowania.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22i ust. 8",
+          "quote": "Przepisów ust. 4 i 5 nie stosuje się do środków trwałych wykorzystywanych przez podatników w działalności, z której przychody podlegają zwolnieniu z opodatkowania lub opodatkowaniu ryczałtem"
+        }
+      ],
+      "conditions": [
+        "Brak możliwości zmian stawek w działalności zwolnionej z opodatkowania",
+        "Brak możliwości zmian stawek w działalności opodatkowanej ryczałtem od przychodów ewidencjonowanych",
+        "Brak możliwości zmian stawek w działalności opodatkowanej podatkiem tonażowym lub zryczałtowanym podatkiem od wartości sprzedanej produkcji"
+      ],
+      "exceptions": [
+        "Ograniczenie dotyczy wyłącznie okresów korzystania z tych specjalnych opodatkowań"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "ryczalt",
+        "vat_zwolniony"
+      ],
+      "topic": "ograniczenia dla zwolnień i ryczałtu",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22i"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22i Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od środków trwałych, z zastrzeżeniem art. 22j–22ł, dokonuje się przy zastosowaniu stawek amortyzacyjnych określonych w Wykazie stawek amortyzacyjnych i zasad, o których mowa"
+      ],
+      "_source_subbatch_key": "22i::subbatch::1"
+    },
+    {
+      "id": "law-22j-regulacja-ogolna",
+      "question_intent": "Co reguluje art. 22j Ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest przedmiot regulacji art. 22j?",
+        "Co mówi art. 22j Ustawy o PIT?",
+        "Czym zajmuje się art. 22j?"
+      ],
+      "answer": "Art. 22j reguluje zasady indywidualnego ustalania stawek amortyzacyjnych przez podatników dla używanych lub ulepszonych środków trwałych, inwestycji w obcych środkach trwałych oraz środków trwałych wytworzonych we własnym zakresie. Przepis określa minimalne okresy amortyzacji dla poszczególnych kategorii środków trwałych (grupy Klasyfikacji, środki transportu, budynki, budowle) oraz warunki stosowania preferencyjnych okresów amortyzacji dla przedsiębiorców działających na obszarach słabiej rozwiniętych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 1",
+          "quote": "Podatnicy mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika"
+        }
+      ],
+      "conditions": [
+        "Zastrzeżenie art. 22l",
+        "Użytkowanie lub ulepszenie środka trwałego",
+        "Pierwsze wprowadzenie do ewidencji podatnika"
+      ],
+      "exceptions": [
+        "Przepisy ustawy z dnia 6 marca 2018 r. – Prawo przedsiębiorców dla mikroprzedsiębiorców, małych i średnich przedsiębiorców"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-minimalne-okresy-amortyzacji",
+      "question_intent": "Jakie są minimalne okresy amortyzacji dla poszczególnych kategorii środków trwałych?",
+      "question_patterns": [
+        "Ile miesięcy najkrócej mogę amortyzować środek trwały?",
+        "Jaki jest minimalny okres amortyzacji dla budynku?",
+        "Minimalna amortyzacja dla samochodu osobowego",
+        "Najmniejszy okres amortyzacji dla urządzeń"
+      ],
+      "answer": "Minimalne okresy amortyzacji zależą od kategorii środka trwałego. Dla środków grup 3–6 i 8 Klasyfikacji: 24–60 miesięcy w zależności od wartości (do 25 tys. zł – 24 mce, 25–50 tys. zł – 36 mce, powyżej 50 tys. zł – 60 mce). Dla środków transportu (samochody osobowe) – 30 miesięcy. Dla budynków i budowli – 10 lat, z pewnymi wyjątkami 3 lata (budynki handlowo-usługowe, kiosk, domki kempingowe). Dla inwestycji w obcych budynkach – 10 lat minimum.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 1 pkt 1, 2, 3, 4",
+          "quote": "okres amortyzacji nie może być krótszy niż: dla grup 3–6 i 8: 24, 36 lub 60 miesięcy; dla transportu: 30 miesięcy; dla budynków: 10 lat"
+        }
+      ],
+      "conditions": [
+        "Pierwsze wprowadzenie do ewidencji podatnika",
+        "Wartość początkowa środka trwałego",
+        "Klasyfikacja środka trwałego"
+      ],
+      "exceptions": [
+        "Budynki handlowo-usługowe, kioski, domki kempingowe – 3 lata minimum",
+        "Budynki niemieszkalne ze stawką 2,5% – 10–40 lat w zależności od okresu użytkowania"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-srodek-uzywany-definicja",
+      "question_intent": "Kiedy środek trwały uważa się za używany?",
+      "question_patterns": [
+        "Jakie warunki muszą być spełnione aby środek był uważany za używany?",
+        "Jak udowodnić że środek trwały jest używany?",
+        "Czy zakupiony na licytacji samochód to środek używany?"
+      ],
+      "answer": "Środek trwały (grupy 3–6, 8 lub transport) uważa się za używany, jeżeli podatnik udowodni, że przed nabyciem był wykorzystywany przez podmiot inny niż podatnik co najmniej przez 6 miesięcy. Dla budynków okres użytkowania przez poprzedniego użytkownika musi wynosić co najmniej 60 miesięcy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 2 pkt 1 i ust. 3 pkt 1",
+          "quote": "używane – jeżeli podatnik udowodni, że przed ich nabyciem były wykorzystywane przez podmiot inny niż podatnik co najmniej przez okres 6 miesięcy (dla środków) lub 60 miesięcy (dla budynków)"
+        }
+      ],
+      "conditions": [
+        "Użytkowanie przez podmiot inny niż podatnik",
+        "Dla środków: minimum 6 miesięcy użytkowania",
+        "Dla budynków: minimum 60 miesięcy użytkowania",
+        "Udowodnienie poprzedniego użytkowania"
+      ],
+      "exceptions": [
+        "Brak wyjątków – okresy są bezwzględne"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-srodek-uloszony-definicja",
+      "question_intent": "Kiedy środek trwały uważa się za ulepszony?",
+      "question_patterns": [
+        "Jaki procent wydatków na ulepszenie jest wymagany?",
+        "Czy wymiana dachu budynku to ulepszenie?",
+        "Kiedy mogę stosować preferencyjny okres amortyzacji na podstawie ulepszenia?"
+      ],
+      "answer": "Środek trwały uważa się za ulepszony, jeżeli wydatki poniesione przez podatnika na jego ulepszenie przed wprowadzeniem do ewidencji stanowiły co najmniej 20% wartości początkowej (dla środków grup 3–6, 8 oraz transportu) lub co najmniej 30% wartości początkowej (dla budynków, lokali i budowli).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 2 pkt 2 i ust. 3 pkt 2",
+          "quote": "ulepszone – jeżeli przed wprowadzeniem do ewidencji wydatki poniesione przez podatnika na ich ulepszenie stanowiły co najmniej 20% (środki) lub 30% (budynki) wartości początkowej"
+        }
+      ],
+      "conditions": [
+        "Wydatki na ulepszenie muszą być poniesione przez podatnika",
+        "Ulepszenie musi być dokonane przed wprowadzeniem do ewidencji",
+        "Dla środków: minimum 20% wartości początkowej",
+        "Dla budynków: minimum 30% wartości początkowej"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-inwestycje-w-obcych-srodkach",
+      "question_intent": "Jakie zasady amortyzacji dotyczą inwestycji w obcych środkach trwałych?",
+      "question_patterns": [
+        "Czy mogę amortyzować ulepszenia w wynajętym budynku?",
+        "Jaki okres amortyzacji dla inwestycji w obcym gruncie?",
+        "Jak amortyzować remonty w wynajętym lokalu?"
+      ],
+      "answer": "Podatnicy mogą indywidualnie ustalić stawki amortyzacyjne dla inwestycji w obcych środkach trwałych. Dla inwestycji w obcych budynkach lub budowlach minimalny okres amortyzacji wynosi 10 lat. Dla innych inwestycji w obcych środkach stosuje się zasady określone dla środków grup 3–6, 8 i transportu (24–60 miesięcy).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 4",
+          "quote": "Podatnicy mogą indywidualnie ustalić stawki amortyzacyjne dla przyjętych do używania inwestycji w obcych środkach trwałych"
+        }
+      ],
+      "conditions": [
+        "Inwestycja musi być przyjęta do używania",
+        "Zastosowanie zasad amortyzacji dla środka obcego"
+      ],
+      "exceptions": [
+        "Inwestycje w obcych budynkach – minimum 10 lat",
+        "Inne inwestycje – zasady standardowe"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-preferencyjne-okresy-msp",
+      "question_intent": "Jakie preferencyjne okresy amortyzacji mogą stosować mikroprzedsiębiorcy i MŚP?",
+      "question_patterns": [
+        "Czy mogę amortyzować budynek wybudowany we własnym zakresie szybciej?",
+        "Jaka amortyzacja dla budynku na słabo rozwiniętym terenie?",
+        "Jakimi preferencjami mogę skorzystać jako MŚP?"
+      ],
+      "answer": "Mikroprzedsiębiorcy, mali i średni przedsiębiorcy mogą indywidualnie ustalić stawki amortyzacyjne dla wytworzonych we własnym zakresie budynków niemieszkanych i budowli (grupy 1–2 Klasyfikacji), pod warunkiem lokalizacji w gminach ze wzniesioną stopą bezrobocia (minimum 120% średniej krajowej) i wskaźnikiem zamożności poniżej 100% średniej. Preferencyjne okresy: 5 lat (przy bezrobociu powyżej 170% średniej) lub 10 lat (przy bezrobociu 120–170% średniej).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 7, 8",
+          "quote": "Podatnicy będący mikroprzedsiębiorcami, małymi lub średnimi przedsiębiorcami mogą indywidualnie ustalić stawki amortyzacyjne dla wytworzonych we własnym zakresie środków trwałych będących budynkami niemieszkalnymi i budowlami"
+        }
+      ],
+      "conditions": [
+        "Status: mikroprzedsiębiorca, mały lub średni przedsiębiorca",
+        "Własna produkcja budynku/budowli",
+        "Budynki niemieszkalne lub budowle (grupy 1–2 Klasyfikacji)",
+        "Lokalizacja w gminie ze wskaźnikiem zamożności poniżej 100% średniej",
+        "Lokalizacja w powiecie ze stopą bezrobocia minimum 120% średniej krajowej"
+      ],
+      "exceptions": [
+        "Bezrobocie 120–170% – minimum 10 lat",
+        "Bezrobocie powyżej 170% – minimum 5 lat"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-momenty-spelnieniac-warunkow",
+      "question_intent": "Kiedy ustala się spełnianie warunków dla preferencyjnych okresów amortyzacji MSP?",
+      "question_patterns": [
+        "Od kiedy liczy się okres bezrobocia dla preferencji MŚP?",
+        "Jaki dokument potwierdzający preferencje amortyzacyjne?",
+        "Kiedy sprawdzam wskaźnik zamożności dla obniżonej amortyzacji?"
+      ],
+      "answer": "Warunki dla preferencyjnych okresów amortyzacji ustala się na miesiąc, w którym nastąpi: (1) uprawomocnienie się decyzji o pozwoleniu na budowę, (2) upłynięcie terminu na wniesienie sprzeciwu wobec zgłoszenia budowy lub wydanie zaświadczenia o braku podstaw do sprzeciwu, (3) pierwsze wprowadzenie do ewidencji – gdy budowa nie wymagała pozwolenia. Wskaźniki bezrobocia i zamożności sprawdzane są na rok bezpośrednio poprzedzający rok zdarzenia określającego spełnienie warunku.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 9, 10, 11",
+          "quote": "Spełnienie warunków ustala się na miesiąc, w którym wystąpiło jedno z następujących zdarzeń: uprawomocniła się decyzja o pozwoleniu na budowę, upłynął termin na wniesienie sprzeciwu albo wydano zaświadczenie, środek trwały został po raz pierwszy wprowadzony do ewidencji"
+        }
+      ],
+      "conditions": [
+        "Jedno z trzech zdarzeń musi zaistnieć",
+        "Wskaźniki sprawdzane na rok poprzedzający rok zdarzenia",
+        "Bezrobocie ogłoszone przez GUS",
+        "Wskaźnik zamożności ustalony przez ministra"
+      ],
+      "exceptions": [
+        "Brak pozwolenia ani zgłoszenia – moment pierwszego wprowadzenia do ewidencji"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-otwierty-wydrajace",
+      "question_intent": "Jakie zasady amortyzacji dotyczą otworów wiertniczych i platform wiertniczych?",
+      "question_patterns": [
+        "Jaka amortyzacja dla odwiertu wiertniczego?",
+        "Ile lat minimalnie amortyzować platformę wiertniczą?",
+        "Jak amortyzować inwestycje na platformach wiertniczych?"
+      ],
+      "answer": "Podatnicy mogą indywidualnie ustalić stawki amortyzacyjne dla otworów rozpoznawczych i wydobywczych oraz platform wiertniczych i produkcyjnych, wprowadzonych po raz pierwszy do ewidencji. Minimalny okres amortyzacji dla tych środków wynosi 60 miesięcy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 6",
+          "quote": "Podatnicy mogą indywidualnie ustalić stawki amortyzacyjne dla wprowadzonych po raz pierwszy do ewidencji otworów wiertniczych i platform wiertniczych, z tym że okres ich amortyzacji nie może być krótszy niż 60 miesięcy"
+        }
+      ],
+      "conditions": [
+        "Pierwsze wprowadzenie do ewidencji",
+        "Minimum 60 miesięcy amortyzacji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22j-pomoc-de-minimis",
+      "question_intent": "Czy preferencje amortyzacyjne dla MSP stanowią pomoc de minimis?",
+      "question_patterns": [
+        "Czy amortyzacja dla MŚP to pomoc publiczna?",
+        "Jak interpretować pomoc de minimis w kontekście preferencji amortyzacyjnych?",
+        "Jakie przepisy UE dotyczą preferencji amortyzacyjnych?"
+      ],
+      "answer": "Preferencje amortyzacyjne dla mikroprzedsiębiorców, małych i średnich przedsiębiorców stanowią pomoc de minimis udzielaną w zakresie i na zasadach określonych w bezpośrednio obowiązujących aktach prawa Unii Europejskiej dotyczących pomocy w ramach zasady de minimis.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22j ust. 13",
+          "quote": "Pomoc, o której mowa w ust. 7, stanowi pomoc de minimis udzielaną w zakresie i na zasadach określonych w bezpośrednio obowiązujących aktach prawa Unii Europejskiej dotyczących pomocy w ramach zasady de minimis"
+        }
+      ],
+      "conditions": [
+        "Dotyczy wyłącznie preferencji amortyzacyjnych dla MŚP",
+        "Wymaga spełnienia warunków prawa UE"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "Amortyzacja środków trwałych",
+      "difficulty": "hard",
+      "requires_verification": true,
+      "_source_articles": [
+        "22j"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22j Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy, z zastrzeżeniem art. 22l, mogą indywidualnie ustalić stawki amortyzacyjne dla używanych lub ulepszonych środków trwałych, po raz pierwszy wprowadzonych do ewidencji danego podatnika, z t"
+      ],
+      "_source_subbatch_key": "22j::subbatch::1"
+    },
+    {
+      "id": "law-22l-tabor-morski-amortyzacja",
+      "question_intent": "Co reguluje art. 22l Ustawy o PIT?",
+      "question_patterns": [
+        "Jak dokonuje się odpisów amortyzacyjnych od taboru transportu morskiego w budowie?",
+        "Jakie zasady obowiązują przy amortyzacji taboru morskiego w budowie?",
+        "Co mówi art. 22l o amortyzacji taboru transportu morskiego?"
+      ],
+      "answer": "Art. 22l reguluje zasady dokonywania odpisów amortyzacyjnych od taboru transportu morskiego w budowie. Odpisy dokonuje się co miesiąc, stosując stawki określone dla taboru pływającego. Podstawę amortyzacji stanowi część wartości kontraktowej powiększona o kolejne wydatki poniesione na budowę, które zwiększają podstawę odpisu w miesiącu następującym po ich poniesienia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22l ust. 1",
+          "quote": "Odpisów amortyzacyjnych od taboru transportu morskiego w budowie dokonuje się w ratach co miesiąc przy zastosowaniu stawek amortyzacyjnych określonych dla taboru pływającego"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22l ust. 2",
+          "quote": "Podstawę obliczenia odpisów amortyzacyjnych stanowi część wartości kontraktowej powiększona o kolejne wydatki poniesione na budowę danego obiektu"
+        }
+      ],
+      "conditions": [
+        "Tabor musi być wymieniony w art. 22a ust. 2 pkt 4",
+        "Odpisy dokonywane są co miesiąc",
+        "Stosuje się stawki dla taboru pływającego z Wykazu stawek amortyzacyjnych",
+        "Wydatki zwiększają sukcesywnie podstawę w miesiącu następującym po ich poniesienia"
+      ],
+      "exceptions": [
+        "Jeśli nie dojdzie do zawarcia umowy przenoszącej własność taboru na armatora, zmniejsza się koszty uzyskania przychodów o dokonane odpisy amortyzacyjne w miesiącu odstąpienia od umowy"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja-tabor-morski",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22l"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22l Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od taboru transportu morskiego w budowie, wymienionego w art. 22a ust. 2 pkt 4, dokonuje się w ratach co miesiąc przy zastosowaniu stawek amortyzacyjnych określonych dla tab"
+      ],
+      "_source_subbatch_key": "22l::subbatch::1"
+    },
+    {
+      "id": "law-22l-ust3-zakonczenie-amortyzacji",
+      "question_intent": "Do kiedy dokonuje się odpisów amortyzacyjnych od taboru w budowie?",
+      "question_patterns": [
+        "Kiedy kończy się okres dokonywania odpisów amortyzacyjnych od taboru morskiego w budowie?",
+        "Do jakiego momentu robi się odpisy amortyzacyjne od taboru w budowie?"
+      ],
+      "answer": "Odpisy amortyzacyjne od taboru w budowie dokonuje się do końca miesiąca, w którym dany obiekt został przyjęty do używania. Jeśli nie dojdzie do zawarcia umowy przenoszącej własność taboru na armatora, armator musi zmniejszyć koszty uzyskania przychodów o dokonane odpisy w miesiącu odstąpienia od umowy.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22l ust. 3",
+          "quote": "Odpisów amortyzacyjnych dokonuje się do końca miesiąca, w którym dany obiekt taboru został przyjęty do używania"
+        }
+      ],
+      "conditions": [
+        "Odpisy prowadzone są do końca miesiąca przyjęcia do używania",
+        "W przypadku niedojścia do zawarcia umowy sprzedaży - obligatoryjne przywrócenie odpisów"
+      ],
+      "exceptions": [
+        "Jeśli zawiąże się umowę sprzedaży taboru - normalny tryb amortyzacji zgodnie z art. 22i"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja-tabor-morski",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22l"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22l Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od taboru transportu morskiego w budowie, wymienionego w art. 22a ust. 2 pkt 4, dokonuje się w ratach co miesiąc przy zastosowaniu stawek amortyzacyjnych określonych dla tab"
+      ],
+      "_source_subbatch_key": "22l::subbatch::1"
+    },
+    {
+      "id": "law-22l-ust4-limit-amortyzacji",
+      "question_intent": "Czy suma odpisów amortyzacyjnych może przekroczyć wartość taboru?",
+      "question_patterns": [
+        "Jaki jest maksymalny limit odpisów amortyzacyjnych od taboru morskiego?",
+        "Czy suma odpisów z art. 22i i art. 22l może przekroczyć wartość początkową taboru?",
+        "Jaka jest górna granica amortyzacji taboru morskiego?"
+      ],
+      "answer": "Suma odpisów amortyzacyjnych dokonanych zgodnie z art. 22i (po przyjęciu do używania) i art. 22l ust. 2 (w trakcie budowy) nie może przekroczyć wartości początkowej danego obiektu taboru transportu morskiego. To gwarancja, że całkowita amortyzacja nie będzie większa niż wartość rzeczywista taboru.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22l ust. 4",
+          "quote": "Suma odpisów amortyzacyjnych dokonanych zgodnie z art. 22i i odpisów amortyzacyjnych, o których mowa w ust. 2, nie może przekroczyć wartości początkowej danego obiektu taboru"
+        }
+      ],
+      "conditions": [
+        "Limit dotyczy sumy odpisów z dwóch źródeł: budowy (art. 22l ust. 2) i użytkowania (art. 22i)"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja-tabor-morski",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22l"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22l Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od taboru transportu morskiego w budowie, wymienionego w art. 22a ust. 2 pkt 4, dokonuje się w ratach co miesiąc przy zastosowaniu stawek amortyzacyjnych określonych dla tab"
+      ],
+      "_source_subbatch_key": "22l::subbatch::1"
+    },
+    {
+      "id": "law-22l-ust2-podstawa-obliczenia",
+      "question_intent": "Co stanowi podstawę obliczenia odpisów amortyzacyjnych od taboru w budowie?",
+      "question_patterns": [
+        "Jak obliczyć podstawę amortyzacji taboru w budowie?",
+        "Jakie elementy wchodzą do podstawy odpisów amortyzacyjnych od taboru morskiego w budowie?"
+      ],
+      "answer": "Podstawę obliczenia odpisów stanowi część wartości kontraktowej (określona w art. 22h ust. 1 pkt 2) powiększona o kolejne wydatki (zaliczki) poniesione na budowę taboru. Te wydatki zwiększają sukcesywnie podstawę odpisu w miesiącu następującym po miesiącu ich poniesienia.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22l ust. 2",
+          "quote": "Podstawę obliczenia odpisów amortyzacyjnych stanowi część wartości kontraktowej powiększona o kolejne wydatki (zaliczki), poniesione na budowę danego obiektu"
+        }
+      ],
+      "conditions": [
+        "Wydatki wliczane są w miesiącu następującym po ich poniesienia",
+        "Podstawa systematycznie rośnie w miarę ponoszenia wydatków"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja-tabor-morski",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "22l"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22l Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Odpisów amortyzacyjnych od taboru transportu morskiego w budowie, wymienionego w art. 22a ust. 2 pkt 4, dokonuje się w ratach co miesiąc przy zastosowaniu stawek amortyzacyjnych określonych dla tab"
+      ],
+      "_source_subbatch_key": "22l::subbatch::1"
+    },
+    {
+      "id": "law-22m-amortyzacja-wartosci-niematerialnych",
+      "question_intent": "Co reguluje art. 22m ustawy o PIT?",
+      "question_patterns": [
+        "Co reguluje art. 22m Ustawy o PIT?",
+        "Jakie wartości niematerialne podlegają amortyzacji wg art. 22m?",
+        "Jaki jest minimalny okres amortyzacji wartości niematerialnych i prawnych?",
+        "Jak długo można amortyzować licencje i programy komputerowe?"
+      ],
+      "answer": "Art. 22m reguluje minimalne okresy dokonywania odpisów amortyzacyjnych od wartości niematerialnych i prawnych. Licencje na programy komputerowe i prawa autorskie amortyzuje się co najmniej przez 24 miesiące, licencje na filmy i emisje radiowe również 24 miesiące, koszty zakończonych prac rozwojowych 12 miesięcy, a pozostałe wartości niematerialne 60 miesięcy. Podatnicy ustalają stawki amortyzacyjne na cały okres amortyzacji przed jej rozpoczęciem.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 1",
+          "quote": "okres dokonywania odpisów amortyzacyjnych od wartości niematerialnych i prawnych nie może być krótszy niż"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 3",
+          "quote": "Podatnicy ustalają stawki amortyzacyjne dla poszczególnych wartości niematerialnych i prawnych na cały okres amortyzacji przed rozpoczęciem dokonywania odpisów amortyzacyjnych"
+        }
+      ],
+      "conditions": [
+        "Zastrzeżenie: art. 22m ust. 2 oraz art. 22ł ust. 1-3 zawierają wyjątki",
+        "Jeśli okres używania praw wynika z umowy i jest krótszy, można amortyzować w krótszym okresie (dotyczy licencji na filmy i emisje)",
+        "Stawki muszą być ustalone przed rozpoczęciem amortyzacji"
+      ],
+      "exceptions": [
+        "Dla licencji na wyświetlanie filmów i emisji radiowych - jeśli umowa przewiduje krótszy okres, można zastosować okres z umowy (art. 22m ust. 2)",
+        "Dla spółdzielczego prawa do lokalu - odrębne zasady ze stawką 2,5% lub 1,5% rocznie (art. 22m ust. 4)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_wartosci_niematerialnych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22m"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22m Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Z zastrzeżeniem ust. 2 i 3 oraz art. 22ł ust. 1–3, okres dokonywania odpisów amortyzacyjnych od wartoś ci niematerialnych i prawnych nie może być krótszy niż: 1) od licencji (sublicencji) na progra"
+      ],
+      "_source_subbatch_key": "22m::subbatch::1"
+    },
+    {
+      "id": "law-22m-minimalne-okresy-amortyzacji",
+      "question_intent": "Jakie są minimalne okresy amortyzacji dla licencji na programy komputerowe i praw autorskich?",
+      "question_patterns": [
+        "Ile czasu mogę amortyzować licencję na program komputerowy?",
+        "Jaki minimalny okres amortyzacji dla praw autorskich?",
+        "Minimalna amortyzacja programu komputerowego - ile miesięcy?",
+        "Sublicencja na program - ile miesięcy amortyzacji?"
+      ],
+      "answer": "Licencje i sublicencje na programy komputerowe oraz prawa autorskie podlegają amortyzacji przez okres nie krótszy niż 24 miesiące. Jest to minimalny okres, który podatnik musi uwzględnić w ustalonych dla tego celu stawkach amortyzacyjnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 1 pkt 1",
+          "quote": "od licencji (sublicencji) na programy komputerowe oraz od praw autorskich – 24 miesiące"
+        }
+      ],
+      "conditions": [
+        "Okres 24 miesięcy to MINIMALNY okres - podatnik może wybrać dłuższy",
+        "Stawka amortyzacyjna musi być ustalona na cały okres amortyzacji przed jej rozpoczęciem"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_wartosci_niematerialnych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22m"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22m Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Z zastrzeżeniem ust. 2 i 3 oraz art. 22ł ust. 1–3, okres dokonywania odpisów amortyzacyjnych od wartoś ci niematerialnych i prawnych nie może być krótszy niż: 1) od licencji (sublicencji) na progra"
+      ],
+      "_source_subbatch_key": "22m::subbatch::1"
+    },
+    {
+      "id": "law-22m-amortyzacja-prac-rozwojowych",
+      "question_intent": "Jaki okres amortyzacji obowiązuje dla kosztów zakończonych prac rozwojowych?",
+      "question_patterns": [
+        "Ile mogę amortyzować koszty prac rozwojowych?",
+        "Minimalny okres amortyzacji prac R&D?",
+        "Jak długo amortyzować zakończone prace rozwojowe?",
+        "Okres amortyzacji prac R&D - ile miesięcy?"
+      ],
+      "answer": "Koszty zakończonych prac rozwojowych amortyzuje się przez okres nie krótszy niż 12 miesięcy. Jest to najkrótszy minimalny okres spośród wartości niematerialnych wymienionych w art. 22m.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 1 pkt 3",
+          "quote": "od poniesionych kosztów zakończonych prac rozwojowych – 12 miesięcy"
+        }
+      ],
+      "conditions": [
+        "Dotyczy prac R&D, które zostały zakończone",
+        "12 miesięcy to minimalny okres - można wybrać dłuższy",
+        "Podatnik musi ustalić stawkę amortyzacyjną przed rozpoczęciem odpisów"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_wartosci_niematerialnych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22m"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22m Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Z zastrzeżeniem ust. 2 i 3 oraz art. 22ł ust. 1–3, okres dokonywania odpisów amortyzacyjnych od wartoś ci niematerialnych i prawnych nie może być krótszy niż: 1) od licencji (sublicencji) na progra"
+      ],
+      "_source_subbatch_key": "22m::subbatch::1"
+    },
+    {
+      "id": "law-22m-pozostale-wartosci-niematerialne",
+      "question_intent": "Ile trwa amortyzacja pozostałych wartości niematerialnych i prawnych?",
+      "question_patterns": [
+        "Jaki okres amortyzacji dla pozostałych wartości niematerialnych?",
+        "Jak długo amortyzować inne niż wymienione wartości niematerialne?",
+        "60 miesięcy amortyzacji - kiedy się stosuje?"
+      ],
+      "answer": "Pozostałe wartości niematerialne i prawne, które nie zostały wymienione w art. 22m ust. 1 pkt 1-3, amortyzuje się przez okres nie krótszy niż 60 miesięcy (5 lat). Obejmuje to np. znaki towarowe, patenty czy inne wartości niematerialne.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 1 pkt 4",
+          "quote": "od pozostałych wartości niematerialnych i prawnych – 60 miesięcy"
+        }
+      ],
+      "conditions": [
+        "Dotyczy wartości niematerialnych niepodanych w pkt 1-3",
+        "60 miesięcy to minimalny okres",
+        "Stawka musi być ustalona na cały okres przed rozpoczęciem amortyzacji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_wartosci_niematerialnych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22m"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22m Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Z zastrzeżeniem ust. 2 i 3 oraz art. 22ł ust. 1–3, okres dokonywania odpisów amortyzacyjnych od wartoś ci niematerialnych i prawnych nie może być krótszy niż: 1) od licencji (sublicencji) na progra"
+      ],
+      "_source_subbatch_key": "22m::subbatch::1"
+    },
+    {
+      "id": "law-22m-gdy-umowa-krotsza",
+      "question_intent": "Czy mogę amortyzować licencję na film w krótszym okresie, jeśli umowa to przewiduje?",
+      "question_patterns": [
+        "Umowa przewiduje krótszy okres - czy mogę amortyzować krócej?",
+        "Jeśli umowa na licencję filmową mówi o 12 miesiącach, mogę to zastosować?",
+        "Czy okres z umowy zastępuje minimalny okres amortyzacji?",
+        "Krótszy okres użytkowania w umowie - czy obowiązuje?"
+      ],
+      "answer": "Jeśli umowa na licencję do wyświetlania filmów lub emisji programów radiowych i telewizyjnych przewiduje okres używania krótszy niż 24 miesiące, podatnik może amortyzować w okresie wynikającym z umowy. Nie stosuje się wówczas minimalnego okresu 24 miesięcy z art. 22m ust. 1 pkt 2.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 2",
+          "quote": "Jeżeli wynikający z umowy okres używania praw majątkowych, o których mowa w ust. 1 pkt 2, jest krótszy od okresu ustalonego w tym przepisie, podatnicy mogą dokonywać odpisów amortyzacyjnych w okresie wynikającym z umowy"
+        }
+      ],
+      "conditions": [
+        "Dotyczy TYLKO licencji na wyświetlanie filmów oraz emisję programów radiowych i telewizyjnych",
+        "Okres musi wynikać z umowy",
+        "Okres z umowy musi być KRÓTSZY niż 24 miesiące"
+      ],
+      "exceptions": [
+        "Dla licencji na programy komputerowe i praw autorskich (pkt 1) - nie ma takiego wyjątku, minimalny okres to zawsze 24 miesiące"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_wartosci_niematerialnych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22m"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22m Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Z zastrzeżeniem ust. 2 i 3 oraz art. 22ł ust. 1–3, okres dokonywania odpisów amortyzacyjnych od wartoś ci niematerialnych i prawnych nie może być krótszy niż: 1) od licencji (sublicencji) na progra"
+      ],
+      "_source_subbatch_key": "22m::subbatch::1"
+    },
+    {
+      "id": "law-22m-kiedy-ustalac-stawki",
+      "question_intent": "Kiedy muszę ustalić stawkę amortyzacyjną dla wartości niematerialnych?",
+      "question_patterns": [
+        "Kiedy ustalić stawkę amortyzacyjną dla wartości niematerialnych?",
+        "Czy mogę zmienić stawkę amortyzacyjną w trakcie?",
+        "Na jak długo muszę ustalić stawkę amortyzacyjną?",
+        "Stawka amortyzacyjna - kiedy decyduję?"
+      ],
+      "answer": "Podatnik musi ustalić stawkę amortyzacyjną dla każdej wartości niematerialnej i prawnej NA CAŁY OKRES AMORTYZACJI przed rozpoczęciem dokonywania odpisów amortyzacyjnych. Oznacza to, że stawka powinna być określona z góry i utrzymana przez cały okres amortyzacji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22m ust. 3",
+          "quote": "Podatnicy ustalają stawki amortyzacyjne dla poszczególnych wartości niematerialnych i prawnych na cały okres amortyzacji przed rozpoczęciem dokonywania odpisów amortyzacyjnych"
+        }
+      ],
+      "conditions": [
+        "Stawka musi być ustalona PRZED rozpoczęciem odpisów",
+        "Obowiązuje na CAŁY okres amortyzacji",
+        "Dotyczy każdej wartości niematerialnej i prawnej osobno"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "amortyzacja_wartosci_niematerialnych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22m"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22m Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Z zastrzeżeniem ust. 2 i 3 oraz art. 22ł ust. 1–3, okres dokonywania odpisów amortyzacyjnych od wartoś ci niematerialnych i prawnych nie może być krótszy niż: 1) od licencji (sublicencji) na progra"
+      ],
+      "_source_subbatch_key": "22m::subbatch::1"
+    },
+    {
+      "id": "law-22n-regulacje-oglne",
+      "question_intent": "Co reguluje artykuł 22n Ustawy o PIT?",
+      "question_patterns": [
+        "Co reguluje art. 22n?",
+        "Jaki jest zakres artykułu 22n?",
+        "O czym mówi artykuł 22n Ustawy o PIT?",
+        "Jakie są główne zasady art. 22n?"
+      ],
+      "answer": "Artykuł 22n reguluje obowiązek prowadzenia ewidencji środków trwałych oraz wartości niematerialnych i prawnych. Podatnicy prowadzący księgi rachunkowe muszą zawierać w ewidencji informacje niezbędne do obliczenia odpisów amortyzacyjnych, a podatnicy na PPIR mają szczegółowe wymagania dotyczące zakresu danych ewidencyjnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22n ust. 1",
+          "quote": "Podatnicy prowadzący księgi rachunkowe są obowiązani do uwzględnienia w ewidencji środków trwałych oraz wartości niematerialnych i prawnych informacji niezbędnych do obliczenia wysokości odpisów amortyzacyjnych"
+        }
+      ],
+      "conditions": [
+        "Obowiązek dotyczy podatników prowadzących księgi rachunkowe lub podatkową księgę przychodów i rozchodów",
+        "Ewidencja musi zawierać dane umożliwiające obliczenie odpisów amortyzacyjnych"
+      ],
+      "exceptions": [
+        "Budynki mieszkalne, lokale mieszkalne i grunty się nie ewidencjonują",
+        "Spółdzielcze prawo do lokalu użytkowego zgodnie z art. 22g ust. 10 się nie ewidencjonuje"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencja środków trwałych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22n"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22n Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy prowadzący, zgodnie z przepisami o rachunkowości, księgi rachunkowe są obowiązani do uwzględnienia w ewidencji środków trwałych oraz wartości niematerialnych i prawnych informacji niezbęd"
+      ],
+      "_source_subbatch_key": "22n::subbatch::1"
+    },
+    {
+      "id": "law-22n-wymogi-ewidencji",
+      "question_intent": "Jakie informacje muszą być zawarte w ewidencji środków trwałych dla podatników na PPIR?",
+      "question_patterns": [
+        "Co musi zawierać ewidencja środków trwałych?",
+        "Jakie dane ewidencyjne dla PPIR?",
+        "Wymogi zawartości ewidencji art. 22n",
+        "Minimalne dane w ewidencji środków trwałych"
+      ],
+      "answer": "Ewidencja musi zawierać co najmniej: liczbę porządkową, datę nabycia i przyjęcia do używania, dokumenty, opis, symbol klasyfikacji, wartość początkową, stawkę amortyzacyjną, kwoty odpisów (roczne i narastające), wartość zaktualizowaną, wartość ulepszeń, datę likwidacji lub zbycia. Te dane pozwalają prawidłowo obliczać odpisy amortyzacyjne.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22n ust. 2 pkt 1-13",
+          "quote": "Podatnicy prowadzący podatkową księgę przychodów i rozchodów są obowiązani do prowadzenia ewidencji zawierającej co najmniej: liczbę porządkową, datę nabycia, datę przyjęcia do używania, określenie dokumentu stwierdzającego nabycie, określenie środka trwałego, symbol Klasyfikacji Środków Trwałych, wartość początkową, stawkę amortyzacyjną, kwotę odpisu amortyzacyjnego za rok podatkowy i narastająco, zaktualizowaną wartość początkową, zaktualizowaną kwotę odpisów amortyzacyjnych, wartość ulepszenia, datę likwidacji i jej przyczynę albo datę zbycia"
+        }
+      ],
+      "conditions": [
+        "Obowiązek dotyczy podatników prowadzących podatkową księgę przychodów i rozchodów",
+        "Wszystkie wymienione dane muszą być prowadzone w ewidencji"
+      ],
+      "exceptions": [
+        "Budynki mieszkalne, lokale mieszkalne, grunty i prawa użytkowania wieczystego związane z mieszkaniem się nie ewidencjonują",
+        "Spółdzielcze prawo do lokalu użytkowego wyceniane na zasadach art. 22g ust. 10 się nie ewidencjonuje"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "ewidencja środków trwałych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22n"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22n Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy prowadzący, zgodnie z przepisami o rachunkowości, księgi rachunkowe są obowiązani do uwzględnienia w ewidencji środków trwałych oraz wartości niematerialnych i prawnych informacji niezbęd"
+      ],
+      "_source_subbatch_key": "22n::subbatch::1"
+    },
+    {
+      "id": "law-22n-terminy-ewidencji",
+      "question_intent": "Do kiedy muszę wprowadzić środek trwały do ewidencji?",
+      "question_patterns": [
+        "Termin wprowadzenia do ewidencji?",
+        "Kiedy zapisać w ewidencji?",
+        "Najpóźniejszy termin ewidencji?",
+        "Kiedy się rozpoczyna ewidencjonowanie?"
+      ],
+      "answer": "Zapisy do ewidencji muszą być dokonane najpóźniej w miesiącu przekazania środka trwałego do używania. Wprowadzenie po tym terminie traktowane jest jako ujawnienie środka trwałego i podlega konsekwencjom z art. 22h ust. 1 pkt 4.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22n ust. 4",
+          "quote": "Zapisów dotyczących środków trwałych dokonuje się w ewidencji najpóźniej w miesiącu przekazania ich do używania. Późniejszy termin wprowadzenia uznaje się za ujawnienie środka trwałego"
+        }
+      ],
+      "conditions": [
+        "Termin wynosi maksymalnie do końca miesiąca przekazania do używania",
+        "Dotyczy wszystkich podatników prowadzących ewidencję"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencja środków trwałych",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "22n"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22n Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy prowadzący, zgodnie z przepisami o rachunkowości, księgi rachunkowe są obowiązani do uwzględnienia w ewidencji środków trwałych oraz wartości niematerialnych i prawnych informacji niezbęd"
+      ],
+      "_source_subbatch_key": "22n::subbatch::1"
+    },
+    {
+      "id": "law-22n-brak-ewidencji",
+      "question_intent": "Co się dzieje, gdy nie prowadzę ewidencji środków trwałych?",
+      "question_patterns": [
+        "Brak ewidencji skutki?",
+        "Odpisy bez ewidencji?",
+        "Czy mogę odliczyć odpisy bez ewidencji?",
+        "Konsekwencje braku ewidencji"
+      ],
+      "answer": "Jeśli nie prowadzisz ewidencji środków trwałych, dokonywane odpisy amortyzacyjne nie stanowią kosztów uzyskania przychodów i nie mogą być odliczone z podatku. Brak ewidencji uniemożliwia rozliczenie amortyzacji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22n ust. 6",
+          "quote": "W razie braku ewidencji środków trwałych oraz wartości niematerialnych i prawnych dokonywane odpisy amortyzacyjne nie stanowią kosztów uzyskania przychodów"
+        }
+      ],
+      "conditions": [
+        "Dotyczy podatników, którzy nie prowadzą ewidencji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencja środków trwałych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22n"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22n Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy prowadzący, zgodnie z przepisami o rachunkowości, księgi rachunkowe są obowiązani do uwzględnienia w ewidencji środków trwałych oraz wartości niematerialnych i prawnych informacji niezbęd"
+      ],
+      "_source_subbatch_key": "22n::subbatch::1"
+    },
+    {
+      "id": "law-22n-zmiana-formy-opodatkowania",
+      "question_intent": "Co z amortyzacją przy zmianie formy opodatkowania z ryczałtu na księgi?",
+      "question_patterns": [
+        "Zmiana formy opodatkowania amortyzacja?",
+        "Przejście z ryczałtu odpisy amortyzacyjne?",
+        "Odpisy za okres ryczałtu przy przejściu na PPIR",
+        "Jak ewidencjonować odpisy po zmianie formy?"
+      ],
+      "answer": "Przy zmianie formy opodatkowania (np. z ryczałtu na PPIR) musisz w nowej ewidencji uwzględnić odpisy amortyzacyjne za okresy, kiedy byłeś opodatkowany w formie ryczałtu dochodowego, podatku tonażowego lub ryczałtu od wartości sprzedanej produkcji.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22n ust. 5",
+          "quote": "W razie zmiany formy opodatkowania podatnicy, zakładając ewidencję, uwzględniają w niej odpisy amortyzacyjne przypadające za okres opodatkowania w formie zryczałtowanego podatku dochodowego"
+        }
+      ],
+      "conditions": [
+        "Zmiana formy opodatkowania z ryczałtu (dochodowego, tonażowego lub od wartości sprzedanej produkcji)",
+        "Utworzenie nowej ewidencji po zmianie formy"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "ewidencja środków trwałych",
+      "difficulty": "hard",
+      "requires_verification": false,
+      "_source_articles": [
+        "22n"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22n Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy prowadzący, zgodnie z przepisami o rachunkowości, księgi rachunkowe są obowiązani do uwzględnienia w ewidencji środków trwałych oraz wartości niematerialnych i prawnych informacji niezbęd"
+      ],
+      "_source_subbatch_key": "22n::subbatch::1"
+    },
+    {
+      "id": "law-22o-regulacja-aktualizacja-wyceny",
+      "question_intent": "Co reguluje art. 22o Ustawy o PIT?",
+      "question_patterns": [
+        "Jaki jest zakres regulacji art. 22o?",
+        "Co art. 22o określa w sprawie wyceny środków trwałych?",
+        "Jakie zasady aktualizacji wyceny określa art. 22o?"
+      ],
+      "answer": "Art. 22o reguluje tryb i terminy aktualizacji wyceny środków trwałych oraz wartości początkowej poszczególnych składników majątku. Minister właściwy do spraw finansów publicznych wydaje w drodze rozporządzenia szczegółowe zasady aktualizacji, jeśli wskaźnik wzrostu cen nakładów inwestycyjnych w okresie dwóch lub czterech kwartałów danego roku kalendarzowego przekroczy 10% w stosunku do roku ubiegłego. Wskaźniki wzrostu cen ogłasza Prezes Głównego Urzędu Statystycznego w odstępach kwartalnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22o ust. 1",
+          "quote": "Minister właściwy do spraw finansów publicznych określa, w drodze rozporządzenia, tryb i terminy aktualizacji wyceny środków trwałych"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22o ust. 2",
+          "quote": "Wskaźniki wzrostu cen nakładów inwestycyjnych ogłasza Prezes Głównego Urzędu Statystycznego w odstępach kwartalnych"
+        }
+      ],
+      "conditions": [
+        "wskaźnik wzrostu cen nakładów inwestycyjnych w okresie dwóch kwartałów przekroczy 10%",
+        "wskaźnik wzrostu cen nakładów inwestycyjnych w okresie czterech kwartałów przekroczy 10%",
+        "wzrost w stosunku do analogicznych okresów roku ubiegłego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "wycena-aktualizacja-srodkow-twalych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22o"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22o Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Minister właściwy do spraw finansów publicznych określa, w drodze rozporządzenia, tryb i terminy aktu alizacji wyceny środków trwałych, o których mowa w art. 22a, wartości początkowej składników ma"
+      ],
+      "_source_subbatch_key": "22o::subbatch::1"
+    },
+    {
+      "id": "law-22o-warunki-aktualizacji",
+      "question_intent": "W jakich warunkach dochodzi do aktualizacji wyceny środków trwałych?",
+      "question_patterns": [
+        "Kiedy minister wydaje rozporządzenie o aktualizacji wyceny?",
+        "Jaki wskaźnik wzrostu cen uzasadnia aktualizację?",
+        "Jakie są warunki do aktualizacji wartości początkowej?"
+      ],
+      "answer": "Aktualizacja wyceny środków trwałych i wartości początkowej składników majątku następuje, jeśli wskaźnik wzrostu cen nakładów inwestycyjnych w okresie dwóch kwartałów lub czterech kwartałów danego roku kalendarzowego przekroczy 10% w stosunku do analogicznych okresów roku ubiegłego. O przekroczeniu tego progu informuje Prezes Głównego Urzędu Statystycznego, ogłaszając wskaźniki wzrostu cen w odstępach kwartalnych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22o ust. 1",
+          "quote": "jeżeli wskaźnik wzrostu cen nakładów inwestycyjnych w okresie dwóch kwartałów oraz w okresie czterech kwartałów danego roku kalendarzowego w stosunku do analogicznych okresów roku ubiegłego przekroczy 10%"
+        }
+      ],
+      "conditions": [
+        "wzrost wskaźnika cen nakładów inwestycyjnych powyżej 10%",
+        "porównanie do analogicznych okresów roku poprzedniego"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "wycena-aktualizacja-srodkow-twalych",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "22o"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22o Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Minister właściwy do spraw finansów publicznych określa, w drodze rozporządzenia, tryb i terminy aktu alizacji wyceny środków trwałych, o których mowa w art. 22a, wartości początkowej składników ma"
+      ],
+      "_source_subbatch_key": "22o::subbatch::1"
+    },
+    {
+      "id": "law-22o-kto-oglasza-wskazniki",
+      "question_intent": "Kto ogłasza wskaźniki wzrostu cen nakładów inwestycyjnych?",
+      "question_patterns": [
+        "Jaka instytucja podaje wskaźniki wzrostu cen?",
+        "Jak często ogłaszane są wskaźniki cen?",
+        "Kto jest odpowiedzialny za publikację wskaźników?"
+      ],
+      "answer": "Prezes Głównego Urzędu Statystycznego ogłasza wskaźniki wzrostu cen nakładów inwestycyjnych w odstępach kwartalnych. Te dane są podstawą do podjęcia przez Ministra właściwego do spraw finansów publicznych decyzji o wydaniu rozporządzenia o aktualizacji wyceny.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 22o ust. 2",
+          "quote": "Wskaźniki wzrostu cen nakładów inwestycyjnych ogłasza Prezes Głównego Urzędu Statystycznego w odstępach kwartalnych"
+        }
+      ],
+      "conditions": [
+        "ogłaszanie w odstępach kwartalnych"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg"
+      ],
+      "topic": "wycena-aktualizacja-srodkow-twalych",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "22o"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 22o Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Minister właściwy do spraw finansów publicznych określa, w drodze rozporządzenia, tryb i terminy aktu alizacji wyceny środków trwałych, o których mowa w art. 22a, wartości początkowej składników ma"
+      ],
+      "_source_subbatch_key": "22o::subbatch::1"
+    },
+    {
+      "id": "law-23c-leasing-przychod",
+      "question_intent": "Co reguluje art. 23c ustawy o PIT? Jak ujmuje się przychód ze sprzedaży środków trwałych po umowie leasingu?",
+      "question_patterns": [
+        "Art. 23c PIT - przychód ze sprzedaży",
+        "Leasing - przychód z przeniesienia własności",
+        "Jak rozliczyć przychód przy umowie leasingu?",
+        "Wartość przychodu w leasingu finansowym"
+      ],
+      "answer": "Art. 23c reguluje sytuację, gdy finansujący przenosi własność środków trwałych lub wartości niematerialnych po umowie leasingu. Przychód ze sprzedaży przyjmuje się w wysokości ceny określonej w umowie. Wyjątek: jeśli cena jest niższa od hipotetycznej wartości netto, przychód określa się według wartości rynkowej (art. 19). Kosztem uzyskania przychodów jest rzeczywista wartość netto środków trwałych.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 23c ust. 1",
+          "quote": "Jeżeli po upływie podstawowego okresu umowy leasingu finansujący przenosi na korzystającego własność środków trwałych lub wartości niematerialnych i prawnych"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 23c ust. 1 pkt 1",
+          "quote": "przychodem ze sprzedaży środków trwałych lub wartości niematerialnych i prawnych jest ich wartość wyrażona w cenie określonej w umowie sprzedaży"
+        },
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 23c ust. 1 pkt 2",
+          "quote": "kosztem uzyskania przychodów przy ustalaniu dochodu ze sprzedaży jest rzeczywista wartość netto"
+        }
+      ],
+      "conditions": [
+        "Umowa leasingu finansowego objęta art. 23b ust. 1",
+        "Po upływie podstawowego okresu umowy",
+        "Finansujący przenosi własność na korzystającego"
+      ],
+      "exceptions": [
+        "Jeśli cena umowy jest niższa od hipotetycznej wartości netto - przychód określa się wg wartości rynkowej (art. 19)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "leasing_srodki_trwale_przychody",
+      "difficulty": "medium",
+      "requires_verification": true,
+      "_source_articles": [
+        "23c"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 23c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Jeżeli po upływie podstawowego okresu umowy leasingu, o której mowa w art. 23b ust. 1, finansujący przenosi na korzystającego własność środków trwałych lub wartości niematerialnych i prawnych, będącyc"
+      ],
+      "_source_subbatch_key": "23c::subbatch::1"
+    },
+    {
+      "id": "law-23c-wycena-przychod",
+      "question_intent": "Jaka jest zasada wyceny przychodu ze sprzedaży środków trwałych w umowie leasingu?",
+      "question_patterns": [
+        "Jak wycenić przychód w leasingu?",
+        "Wartość przychodu - cena umowy czy wartość rynkowa?",
+        "Leasing - przychód wg ceny czy wartości rynkowej?"
+      ],
+      "answer": "Standardowo przychód wycenia się w cenie określonej w umowie sprzedaży (art. 23c ust. 1 pkt 1). Jeśli jednak ta cena jest niższa od hipotetycznej wartości netto, przychód ustalasz w wysokości wartości rynkowej według zasad art. 19.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 23c ust. 1 pkt 1",
+          "quote": "przychodem ze sprzedaży środków trwałych lub wartości niematerialnych i prawnych jest ich wartość wyrażona w cenie określonej w umowie sprzedaży"
+        }
+      ],
+      "conditions": [
+        "Przeniesienie własności po umowie leasingu"
+      ],
+      "exceptions": [
+        "Cena umowy niższa od hipotetycznej wartości netto - stosuje się wartość rynkową (art. 19)"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "leasing_wycena_przychodu",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "23c"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 23c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Jeżeli po upływie podstawowego okresu umowy leasingu, o której mowa w art. 23b ust. 1, finansujący przenosi na korzystającego własność środków trwałych lub wartości niematerialnych i prawnych, będącyc"
+      ],
+      "_source_subbatch_key": "23c::subbatch::1"
+    },
+    {
+      "id": "law-23c-koszt-aquisition",
+      "question_intent": "Jaki jest koszt uzyskania przychodu przy sprzedaży środków trwałych w leasingu?",
+      "question_patterns": [
+        "Koszt uzyskania przychodu w leasingu",
+        "Jaki koszt odliczyć przy sprzedaży przedmiotu leasingu?",
+        "Wartość netto - jak uwzględnić w koszcie?"
+      ],
+      "answer": "Kosztem uzyskania przychodu przy ustalaniu dochodu ze sprzedaży jest rzeczywista wartość netto środków trwałych lub wartości niematerialnych i prawnych (art. 23c ust. 1 pkt 2).",
+      "legal_basis": [
+        {
+          "law": "Ustawa o PIT",
+          "article": "art. 23c ust. 1 pkt 2",
+          "quote": "kosztem uzyskania przychodów przy ustalaniu dochodu ze sprzedaży jest rzeczywista wartość netto"
+        }
+      ],
+      "conditions": [
+        "Sprzedaż środków trwałych/wartości niematerialnych po umowie leasingu"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna"
+      ],
+      "topic": "leasing_koszt_przychodu",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "23c"
+      ],
+      "_generated_from": [
+        "Co reguluje art. 23c Ustawa o podatku dochodowym od osób fizycznych? Kontekst: Jeżeli po upływie podstawowego okresu umowy leasingu, o której mowa w art. 23b ust. 1, finansujący przenosi na korzystającego własność środków trwałych lub wartości niematerialnych i prawnych, będącyc"
+      ],
+      "_source_subbatch_key": "23c::subbatch::1"
+    }
+  ],
+  "errors": [
+    {
+      "articles": [
+        "22p"
+      ],
+      "group_key": "22p",
+      "subbatch_key": "22p::subbatch::1",
+      "questions": [
+        "Co reguluje art. 22p Ustawa o podatku dochodowym od osób fizycznych? Kontekst: 1. Podatnicy prowadzący pozarolniczą działalność gospodarczą nie zaliczają do kosztów uzyskania przychodów kosztu w tej części, w jakiej płatność dotycząca transakcji określonej w art. 19 ustawy z dni"
+      ],
+      "error": "Expecting ',' delimiter: line 116 column 175 (char 6258)"
+    }
+  ]
+}

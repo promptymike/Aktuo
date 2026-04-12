@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "checkpoint_version": 3,
+    "checkpoint_saved_at": "2026-04-11 12:22:59",
+    "completed_groups": 6,
+    "total_groups": 6,
+    "completed_subbatches": 6,
+    "total_subbatches": 6,
+    "completed_subbatch_keys": [
+      "10::subbatch::1",
+      "5::subbatch::1",
+      "brak bezpośredniego odniesienia::subbatch::1",
+      "Â§ 12::subbatch::1",
+      "Â§ 2::subbatch::1",
+      "Â§ 4-5::subbatch::1"
+    ],
+    "total_units": 11,
+    "errors": 0,
+    "invalid_units_rejected": 0,
+    "total_cost_usd": 0.1014,
+    "exited_due_to_credit_error": false,
+    "law": {
+      "law_name": "Rozporządzenie JPK_V7",
+      "short_name": "Rozporządzenie JPK_V7",
+      "source_law_names": [
+        "Rozporządzenie JPK_V7"
+      ],
+      "raw_unit_count": 6,
+      "group_key": "rozporzadzenie_jpk_v7"
+    }
+  },
+  "units": [
+    {
+      "id": "law-jpk_v7-zakres-regulacji",
+      "question_intent": "Jaki jest zakres regulacji Rozporządzenia JPK_V7 — czy zawiera przepisy dotyczące ulgi na złe długi i korekty VAT?",
+      "question_patterns": [
+        "Co reguluje Rozporządzenie JPK_V7?",
+        "Czy JPK_V7 zawiera przepisy o złych długach?",
+        "Gdzie znaleźć regulacje dotyczące korekty VAT z tytułu złych długów?",
+        "Jaki zakres ma Rozporządzenie JPK_V7?"
+      ],
+      "answer": "Rozporządzenie JPK_V7 nie zawiera bezpośrednich przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Zagadnienia dotyczące złych długów regulowane są w ustawie o podatku od towarów i usług (VAT), a nie w rozporządzeniu o JPK. Wyjaśnienia proceduralne zawarte są w wytycznych skarbowych wydawanych przez Ministerstwo Finansów.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "brak bezpośredniego artykułu",
+          "quote": "Rozporządzenie dotyczy formularza JPK_V7, nie reguluje materialnych uprawnień podatkowych dotyczących złych długów"
+        }
+      ],
+      "conditions": [
+        "Pytanie dotyczy ulgi na złe długi",
+        "Poszukiwane są przepisy dotyczące korekty VAT w JPK"
+      ],
+      "exceptions": [
+        "JPK_V7 zawiera przepisy techniczne dotyczące raportowania VAT, ale nie substantywne przepisy o złych długach"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Zakres regulacji JPK_V7",
+      "difficulty": "easy",
+      "requires_verification": true,
+      "_source_articles": [
+        "brak bezpośredniego odniesienia"
+      ],
+      "_generated_from": [
+        "Co reguluje brak bezpośredniego odniesienia Rozporządzenie JPK_V7? Kontekst: Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Py"
+      ],
+      "_source_subbatch_key": "brak bezpośredniego odniesienia::subbatch::1"
+    },
+    {
+      "id": "law-10-ewidencja-sprzedazy",
+      "question_intent": "Co reguluje § 10 Rozporządzenia JPK_V7?",
+      "question_patterns": [
+        "Co reguluje § 10 JPK_V7?",
+        "Jakie są zasady ewidencji sprzedaży w JPK_V7?",
+        "Co zawiera ewidencja sprzedaży w JPK_V7?",
+        "Jakie dane musi zawierać ewidencja sprzedaży?"
+      ],
+      "answer": "§ 10 reguluje ewidencję sprzedaży w JPK_V7 i określa, że powinna ona zawierać dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji należy stosować przewidziane oznaczenia grup towarów i usług (GTU) oraz oznaczenia procedur i typów dokumentów (np. TP, SW, EE, MPP). Oznaczenia GTU stosuje się tylko do towarów i usług objętych odpowiednimi grupami, a zarówno procedury jak i GTU stosuje się po stronie sprzedaży zgodnie z charakterem transakcji.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 10",
+          "quote": "Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego"
+        }
+      ],
+      "conditions": [
+        "Oznaczenia GTU stosuje się tylko do towarów i usług objętych odpowiednimi grupami",
+        "Oznaczenia procedur i GTU stosuje się po stronie sprzedaży zgodnie z charakterem transakcji",
+        "Raporty okresowe z kas rejestrujących, faktury do paragonów i inne dokumenty ujmuje się według zasad przewidzianych w ewidencji sprzedaży"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "ewidencja_sprzedazy_jpk_v7",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "10"
+      ],
+      "_generated_from": [
+        "Co reguluje § 10 Rozporządzenie JPK_V7? Kontekst: Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia gr"
+      ],
+      "_source_subbatch_key": "10::subbatch::1"
+    },
+    {
+      "id": "law-10-gtu-procedury",
+      "question_intent": "Jakie oznaczenia procedur należy stosować w JPK_V7?",
+      "question_patterns": [
+        "Jakie są oznaczenia procedur w JPK_V7?",
+        "Czym są procedury TP, SW, EE, MPP?",
+        "Jakie procedury stosuje się w ewidencji sprzedaży?",
+        "Gdzie stosuje się oznaczenia procedur?"
+      ],
+      "answer": "Do oznaczeń procedur w JPK_V7 należą między innymi TP, SW, EE, MPP oraz inne wskazane w strukturze logicznej rozporządzenia. Oznaczenia te stosuje się po stronie sprzedaży zgodnie z charakterem transakcji. Procedury służą do prawidłowego sklasyfikowania i ujęcia dokumentów sprzedaży w ewidencji.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 10",
+          "quote": "Do oznaczeń procedur należą między innymi TP, SW, EE, MPP oraz inne wskazane w strukturze logicznej"
+        }
+      ],
+      "conditions": [
+        "Oznaczenia procedur stosuje się po stronie sprzedaży",
+        "Stosowanie zgodnie z charakterem transakcji"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "procedury_gtu_jpk_v7",
+      "difficulty": "medium",
+      "requires_verification": false,
+      "_source_articles": [
+        "10"
+      ],
+      "_generated_from": [
+        "Co reguluje § 10 Rozporządzenie JPK_V7? Kontekst: Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia gr"
+      ],
+      "_source_subbatch_key": "10::subbatch::1"
+    },
+    {
+      "id": "law-10-gtu-zasady",
+      "question_intent": "W jaki sposób stosuje się oznaczenia GTU w ewidencji sprzedaży?",
+      "question_patterns": [
+        "Kiedy stosuje się oznaczenia GTU?",
+        "Jakie są zasady stosowania GTU?",
+        "Do jakich towarów stosuje się GTU?",
+        "Czy zawsze należy stosować oznaczenia GTU?"
+      ],
+      "answer": "Oznaczenia grup towarów i usług (GTU) stosuje się tylko do towarów i usług objętych odpowiednimi grupami. Po stronie sprzedaży oznaczenia GTU należy stosować zgodnie z charakterem transakcji, na zasadach określonych w strukturze ewidencji sprzedaży.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 10",
+          "quote": "Oznaczenia GTU stosuje się tylko do towarów i usług objętych odpowiednimi grupami"
+        }
+      ],
+      "conditions": [
+        "Towar lub usługa musi być objęta odpowiednią grupą GTU",
+        "Stosowanie po stronie sprzedaży",
+        "Zgodnie z charakterem transakcji"
+      ],
+      "exceptions": [
+        "Oznaczenia GTU nie stosuje się do towarów i usług nieobjętych odpowiednimi grupami"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "gtu_grupy_towarowe",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "10"
+      ],
+      "_generated_from": [
+        "Co reguluje § 10 Rozporządzenie JPK_V7? Kontekst: Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia gr"
+      ],
+      "_source_subbatch_key": "10::subbatch::1"
+    },
+    {
+      "id": "law-10-dokumenty-kasy",
+      "question_intent": "Jak ujmuje się raporty z kas rejestrujących w JPK_V7?",
+      "question_patterns": [
+        "Jak ujmować raporty z kas rejestrujących?",
+        "Gdzie ujmować faktury do paragonów?",
+        "Jakie dokumenty ujmuje się w ewidencji sprzedaży?",
+        "Zasady ujmowania raportów kasowych"
+      ],
+      "answer": "Raporty okresowe z kas rejestrujących, faktury do paragonów i inne dokumenty ujmuje się w JPK_V7 według zasad przewidzianych w ewidencji sprzedaży, czyli zgodnie z wymogami dotyczącymi identyfikacji dokumentów, kontrahenta, podstawy opodatkowania i podatku należnego.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 10",
+          "quote": "Raporty okresowe z kas rejestrujących, faktury do paragonów i inne dokumenty ujmuje się według zasad przewidzianych w ewidencji sprzedaży"
+        }
+      ],
+      "conditions": [
+        "Dokument musi zawierać dane pozwalające na identyfikację",
+        "Musi być ujęty zgodnie z zasadami ewidencji sprzedaży",
+        "Ujęcie po stronie sprzedaży"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "dokumenty_kasy_rejestrujace",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "10"
+      ],
+      "_generated_from": [
+        "Co reguluje § 10 Rozporządzenie JPK_V7? Kontekst: Ewidencja sprzedaży w JPK_V7 zawiera dane pozwalające na identyfikację dokumentów sprzedaży, kontrahenta, podstawy opodatkowania i podatku należnego. W ewidencji stosuje się przewidziane oznaczenia gr"
+      ],
+      "_source_subbatch_key": "10::subbatch::1"
+    },
+    {
+      "id": "law-5-czesc-deklaracyjna",
+      "question_intent": "Co reguluje § 5 Rozporządzenia JPK_V7 dotyczące części deklaracyjnej?",
+      "question_patterns": [
+        "Co zawiera część deklaracyjna JPK_V7?",
+        "Jakie elementy musi zawierać część deklaracyjna?",
+        "Co reguluje § 5 JPK_V7?",
+        "Jakie oznaczenia i pola techniczne są wymagane w JPK_V7?"
+      ],
+      "answer": "Część deklaracyjna zawiera oznaczenia i pola techniczne niezbędne do prawidłowego złożenia rozliczenia za okres miesięczny (JPK_V7M) lub kwartalny (JPK_V7K). Podatnik musi wykazywać dane zgodnie z wybranym rodzajem rozliczenia. W przypadku korekt należy je składać za okres, którego dotyczą korygowane dane.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 5",
+          "quote": "Część deklaracyjna zawiera także oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia za okres miesięczny albo kwartalny"
+        }
+      ],
+      "conditions": [
+        "Dane muszą być wykazane zgodnie z rodzajem rozliczenia (JPK_V7M lub JPK_V7K)",
+        "Korekty składa się za okres, którego dotyczą korygowane dane"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Struktura JPK_V7",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "5"
+      ],
+      "_generated_from": [
+        "Co reguluje § 5 Rozporządzenie JPK_V7? Kontekst: Część deklaracyjna zawiera także oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia za okres miesięczny albo kwartalny. Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK"
+      ],
+      "_source_subbatch_key": "5::subbatch::1"
+    },
+    {
+      "id": "law-5-rodzaje-rozliczenia",
+      "question_intent": "Jakie rodzaje rozliczenia JPK_V7 reguluje § 5?",
+      "question_patterns": [
+        "Jakie rodzaje rozliczenia zawiera JPK_V7?",
+        "Co to JPK_V7M i JPK_V7K?",
+        "Czy mogę rozliczyć się miesięcznie czy kwartalnie w JPK_V7?"
+      ],
+      "answer": "Podatnik może wykazywać dane w dwóch rodzajach rozliczenia: JPK_V7M (rozliczenie miesięczne) lub JPK_V7K (rozliczenie kwartalne). Dane muszą być wykazane zgodnie z wybranym przez podatnika rodzajem rozliczenia.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 5",
+          "quote": "Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK_V7M albo JPK_V7K"
+        }
+      ],
+      "conditions": [
+        "Podatnik wskazuje konkretny rodzaj rozliczenia (miesięczne lub kwartalne)"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Rodzaje rozliczenia",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "5"
+      ],
+      "_generated_from": [
+        "Co reguluje § 5 Rozporządzenie JPK_V7? Kontekst: Część deklaracyjna zawiera także oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia za okres miesięczny albo kwartalny. Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK"
+      ],
+      "_source_subbatch_key": "5::subbatch::1"
+    },
+    {
+      "id": "law-5-korekty",
+      "question_intent": "Za jaki okres należy składać korekty części deklaracyjnej?",
+      "question_patterns": [
+        "Za jaki okres składam korekty w JPK_V7?",
+        "Kiedy mogę złożyć korektę części deklaracyjnej?",
+        "Jak postępować z korektami w JPK_V7?"
+      ],
+      "answer": "Korekty części deklaracyjnej składa się za okres, którego dotyczą korygowane dane. Oznacza to, że jeśli błąd dotyczy stycznia, korektę należy złożyć za styczeń, niezależnie od tego, w którym miesiącu błąd został odkryty.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 5",
+          "quote": "Korekty części deklaracyjnej składa się za okres, którego dotyczą korygowane dane"
+        }
+      ],
+      "conditions": [
+        "Korektę trzeba przypisać do okresu, którego dane są korygowane"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "Korekty rozliczeń",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "5"
+      ],
+      "_generated_from": [
+        "Co reguluje § 5 Rozporządzenie JPK_V7? Kontekst: Część deklaracyjna zawiera także oznaczenia i pola techniczne wymagane dla poprawnego złożenia rozliczenia za okres miesięczny albo kwartalny. Podatnik wykazuje dane zgodnie z rodzajem rozliczenia JPK"
+      ],
+      "_source_subbatch_key": "5::subbatch::1"
+    },
+    {
+      "id": "law-12-jpk-v7-korekta",
+      "question_intent": "Co reguluje § 12 Rozporządzenia JPK_V7?",
+      "question_patterns": [
+        "Jak poprawić JPK_V7?",
+        "Jakie zasady dotyczą korekty JPK_V7?",
+        "Jak złożyć korektę JPK_V7?",
+        "Jakie wymagania musi spełniać skorygowany plik JPK_V7?",
+        "Co trzeba zrobić, aby prawidłowo skorygować JPK_V7?"
+      ],
+      "answer": "§ 12 reguluje procedurę złożenia korekty JPK_V7. Korektę trzeba złożyć za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygowany okres — błędy formalne lub techniczne mogą skutkować odrzuceniem pliku.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 12",
+          "quote": "Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygowany okres"
+        }
+      ],
+      "conditions": [
+        "Korekta dotyczy okresu, którego dane są korygowane",
+        "Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną",
+        "Plik musi zawierać prawidłowe dane za cały korygowany okres"
+      ],
+      "exceptions": [
+        "Błędy formalne mogą skutkować odrzuceniem pliku",
+        "Błędy techniczne mogą skutkować odrzuceniem pliku"
+      ],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "procedury_administracyjne_jpk_v7",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "Â§ 12"
+      ],
+      "_generated_from": [
+        "Co reguluje Â§ 12 Rozporządzenie JPK_V7? Kontekst: Korektę JPK_V7 składa się za okres, którego dotyczą korygowane dane. Skorygowany plik musi być zgodny z opublikowaną strukturą logiczną i zawierać prawidłowe dane za cały korygowany okres, bo błędy fo"
+      ],
+      "_source_subbatch_key": "Â§ 12::subbatch::1"
+    },
+    {
+      "id": "law-2-jpk-v7-zakres",
+      "question_intent": "Jaki jest zakres i cel Rozporządzenia JPK_V7?",
+      "question_patterns": [
+        "Co reguluje § 2 Rozporządzenia JPK_V7?",
+        "Jaki jest zakres JPK_V7?",
+        "Do czego służy JPK_V7?",
+        "Jakie części zawiera JPK_V7?"
+      ],
+      "answer": "JPK_V7 zawiera część deklaracyjną i część ewidencyjną, służąc prawidłowemu rozliczeniu VAT. Rozporządzenie określa szczegółowy zakres danych zawartych w deklaracjach podatkowych i ewidencji VAT dla podatników rozliczających ten podatek.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 2",
+          "quote": "JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT"
+        }
+      ],
+      "conditions": [
+        "podatnik musi rozliczać VAT",
+        "podatnik musi prowadzić ewidencję dla potrzeb VAT"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_prawna",
+        "osoba_fizyczna_dg",
+        "vat_czynny"
+      ],
+      "topic": "struktura_jpk_v7",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "Â§ 2"
+      ],
+      "_generated_from": [
+        "Co reguluje Â§ 2 Rozporządzenie JPK_V7? Kontekst: JPK_V7 obejmuje część deklaracyjną i część ewidencyjną i służy prawidłowemu rozliczeniu VAT. Rozporządzenie wskazuje, że struktura dotyczy podatników rozliczających VAT i prowadzących ewidencję dla po"
+      ],
+      "_source_subbatch_key": "Â§ 2::subbatch::1"
+    },
+    {
+      "id": "law-4-5-czesc-deklaracyjna",
+      "question_intent": "Co reguluje § 4-5 Rozporządzenia JPK_V7?",
+      "question_patterns": [
+        "Jakie dane zawiera część deklaracyjna JPK_V7?",
+        "Co muszę wykazać w JPK_V7?",
+        "Jaka jest różnica między JPK_V7M a JPK_V7K?",
+        "Jak rozliczyć podatek w JPK_V7?"
+      ],
+      "answer": "Część deklaracyjna JPK_V7 zawiera dane potrzebne do rozliczenia podatku należnego i naliczonego za dany okres. Podatnik wykazuje dane w formie JPK_V7M (rozliczenie miesięczne) lub JPK_V7K (rozliczenie kwartalne), w zależności od wybranego sposobu rozliczenia. Korektę części deklaracyjnej składa się za okres, którego dotyczą korygowane dane.",
+      "legal_basis": [
+        {
+          "law": "Rozporządzenie JPK_V7",
+          "article": "§ 4-5",
+          "quote": "Część deklaracyjna JPK_V7 obejmuje dane potrzebne do rozliczenia podatku należnego i naliczonego za dany okres oraz rozróżnia rozliczenie miesięczne i kwartalne"
+        }
+      ],
+      "conditions": [
+        "Podatnik wykazuje dane zgodnie z rodzajem rozliczenia",
+        "Rozliczenie może być miesięczne (JPK_V7M) lub kwartalne (JPK_V7K)",
+        "Korekta składana jest za okres, którego dotyczą korygowane dane"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "osoba_fizyczna_dg",
+        "osoba_prawna",
+        "vat_czynny"
+      ],
+      "topic": "JPK_V7 - część deklaracyjna",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
+        "Â§ 4-5"
+      ],
+      "_generated_from": [
+        "Co reguluje Â§ 4-5 Rozporządzenie JPK_V7? Kontekst: Część deklaracyjna JPK_V7 obejmuje dane potrzebne do rozliczenia podatku należnego i naliczonego za dany okres oraz rozróżnia rozliczenie miesięczne i kwartalne. Podatnik wykazuje dane zgodnie z rodza"
+      ],
+      "_source_subbatch_key": "Â§ 4-5::subbatch::1"
+    }
+  ],
+  "errors": []
+}

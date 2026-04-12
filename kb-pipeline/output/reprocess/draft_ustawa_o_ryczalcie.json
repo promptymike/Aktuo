@@ -1,10 +1,10 @@
 {
   "metadata": {
     "checkpoint_version": 3,
-    "checkpoint_saved_at": "2026-04-11 12:44:06",
-    "completed_groups": 65,
+    "checkpoint_saved_at": "2026-04-11 15:13:30",
+    "completed_groups": 66,
     "total_groups": 66,
-    "completed_subbatches": 65,
+    "completed_subbatches": 66,
     "total_subbatches": 66,
     "completed_subbatch_keys": [
       "10::subbatch::1",
@@ -54,6 +54,7 @@
       "51::subbatch::1",
       "52::subbatch::1",
       "54::subbatch::1",
+      "55::subbatch::1",
       "56::subbatch::1",
       "57::subbatch::1",
       "57a::subbatch::1",
@@ -73,10 +74,10 @@
       "8::subbatch::1",
       "9::subbatch::1"
     ],
-    "total_units": 271,
-    "errors": 1,
+    "total_units": 272,
+    "errors": 0,
     "invalid_units_rejected": 0,
-    "total_cost_usd": 2.7036,
+    "total_cost_usd": 2.7149,
     "exited_due_to_credit_error": false,
     "law": {
       "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
@@ -10382,19 +10383,43 @@
         "Co reguluje art. 11 w akcie Ustawa o zryczałtowanym podatku dochodowym? Kontekst przepisu: Art. 11. 1. Podatnik uzyskujcy przychody wymienione w art. 6 ust. 1, 1a i 1d, oplacajcy ryczalt od przychodów ewidencjonowanych, moe odliczy od przychodów strat, o której mowa w art. 9 ust. 3­3b ustawy o podatku dochodow"
       ],
       "_source_subbatch_key": "11::subbatch::1"
-    }
-  ],
-  "errors": [
+    },
     {
-      "articles": [
+      "id": "law-55-ogloszenie-kwot-stawek",
+      "question_intent": "Co reguluje art. 55 w ustawie o ryczałcie?",
+      "question_patterns": [
+        "Co reguluje art. 55 ustawy o ryczałcie?",
+        "Jaki jest przedmiot art. 55?",
+        "Co minister finansów ogłasza na podstawie art. 55?"
+      ],
+      "answer": "Artykuł 55 reguluje obowiązek ministra właściwego do spraw finansów publicznych do ogłoszenia kwot i stawek ryczałtu w Dzienniku Urzędowym (Monitor Polski). Ogłoszenie musi nastąpić do 30 listopada roku poprzedzającego rok podatkowy, czyli przed rozpoczęciem roku, do którego stawki się stosują. Kwoty i stawki są obliczane na podstawie art. 54.",
+      "legal_basis": [
+        {
+          "law": "Ustawa o ryczałcie",
+          "article": "art. 55 ust. 1",
+          "quote": "Minister właściwy do spraw finansów publicznych w terminie do dnia 30 listopada roku poprzedzającego rok podatkowy ogłasza, w drodze obwieszczenia, w Dzienniku Urzędowym Rzeczypospolitej Polskiej \"Monitor Polski\" kwoty i stawki, obliczone zgodnie z art. 54"
+        }
+      ],
+      "conditions": [
+        "Ogłoszenie musi nastąpić do 30 listopada roku poprzedzającego rok podatkowy",
+        "Ogłoszenie publikowane jest w Dzienniku Urzędowym Rzeczypospolitej Polskiej \"Monitor Polski\"",
+        "Kwoty i stawki muszą być obliczone zgodnie z art. 54"
+      ],
+      "exceptions": [],
+      "taxpayer_type": [
+        "ryczalt"
+      ],
+      "topic": "procedura_ogłaszania_stawek",
+      "difficulty": "easy",
+      "requires_verification": false,
+      "_source_articles": [
         "55"
       ],
-      "group_key": "55",
-      "subbatch_key": "55::subbatch::1",
-      "questions": [
+      "_generated_from": [
         "Co reguluje art. 55 w akcie Ustawa o zryczałtowanym podatku dochodowym? Kontekst przepisu: Art. 55. 1. Minister wlaciwy do spraw finansów publicznych w terminie do dnia 30 listopada roku poprzedzajcego rok podatkowy oglasza, w drodze obwieszczenia, w Dzienniku Urzdowym Rzeczypospolitej Polskiej ,,Monitor Polsk"
       ],
-      "error": "Expecting ',' delimiter: line 12 column 259 (char 687)"
+      "_source_subbatch_key": "55::subbatch::1"
     }
-  ]
+  ],
+  "errors": []
 }

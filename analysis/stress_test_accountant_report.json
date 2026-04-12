@@ -534,14 +534,6 @@
           ]
         },
         {
-          "law_name": "Rozporządzenie JPK_V7",
-          "normalized_law_name": "Rozporządzenie JPK_V7",
-          "article_number": "brak bezpośredniego odniesienia",
-          "score": 0.0255,
-          "content_excerpt": "Na podstawie dostarczonego tekstu Rozporządzenia JPK_V7 nie znaleziono przepisów dotyczących ulgi na złe długi ani procedury korekty VAT w JPK w przypadku skorzystania przez kontrahenta z tej ulgi. Pytanie wymaga weryfik",
-          "source_hits": []
-        },
-        {
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 106e ust. 1",
@@ -555,6 +547,19 @@
             {
               "article": "1",
               "source_excerpt": "Art. 1. 1. Ustawa reguluje opodatkowanie podatkiem od towarów i usług. 2. Podatek od towarów i usług stanowi dochód budżetu państwa."
+            }
+          ]
+        },
+        {
+          "law_name": "Ustawa o VAT",
+          "normalized_law_name": "Ustawa o VAT",
+          "article_number": "art. 106e",
+          "score": 0.032,
+          "content_excerpt": "Art. 106e. 1. Faktura powinna zawiera: 1) dat wystawienia; 2) kolejny numer nadany w ramach jednej lub wicej serii, który w sposób jednoznaczny identyfikuje faktur; 3) imiona i nazwiska lub nazwy podatnika i nabywcy towa",
+          "source_hits": [
+            {
+              "article": "106e",
+              "source_excerpt": "Art. 106e. 1. Faktura powinna zawierać: 1) datę wystawienia; 2) kolejny numer nadany w  ramach jednej lub więcej serii, który w  sposób jednoznaczny identyfikuje fakturę; 3) imiona i nazwiska lub nazwy podatnika i nabywc"
             }
           ]
         }
@@ -1163,7 +1168,7 @@
           "law_name": "Ustawa o VAT",
           "normalized_law_name": "Ustawa o VAT",
           "article_number": "art. 96 ust. 1, 3",
-          "score": 0.032,
+          "score": 0.0318,
           "content_excerpt": "Zarówno rejestracja obowiązkowa jak i dobrowolna muszą być dokonane PRZED dniem wykonania pierwszej czynności opodatkowanej. Brak różnicy w terminach - w obu przypadkach zgłoszenie trzeba złożyć przed rozpoczęciem działa",
           "source_hits": [
             {
@@ -1181,21 +1186,12 @@
           ]
         },
         {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "normalized_law_name": "Ustawa o podatku dochodowym od osób fizycznych",
-          "article_number": "art. 45 ust. 4",
+          "law_name": "Ordynacja podatkowa",
+          "normalized_law_name": "Ordynacja podatkowa",
+          "article_number": "art. 3a, 3b i 168",
           "score": 0.0315,
-          "content_excerpt": "Tak, podatek trzeba wpłacić przed upływem terminu do złożenia zeznania (do 30 kwietnia). Wpłacić trzeba: różnicę między podatkiem należnym z zeznania a sumą zapłaconych zaliczek, lub pełny podatek należny z zeznania o do",
-          "source_hits": [
-            {
-              "article": "45",
-              "source_excerpt": "Art. 45. 1. Podatnicy są obowiązani składać urzędom skarbowym zeznanie, według ustalonego wzoru, o  wysokości osiągniętego dochodu (poniesionej straty) w roku podatkowym, w  terminie od dnia 15  lutego do dnia 30  kwietn"
-            },
-            {
-              "article": "4",
-              "source_excerpt": "Art. 4. (uchylony)"
-            }
-          ]
+          "content_excerpt": "Ordynacja podatkowa pozwala sk?ada? deklaracje elektronicznie, a ich z?o?enie jest potwierdzane elektronicznie. Deklaracja elektroniczna powinna zawiera? dane we w?a?ciwym formacie oraz jeden podpis elektroniczny, a rodz",
+          "source_hits": []
         }
       ]
     },
