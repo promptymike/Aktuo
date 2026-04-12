@@ -1,0 +1,145 @@
+{
+  "accounting_operational": {
+    "description": "Pytania o księgowanie, KPiR, dekretację, okresy i operacyjną pracę księgowego.",
+    "examples": [
+      "Jak to prawidłowo ująć koszty dotyczące tamtego roku, które dopiero teraz przyszły?",
+      "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+      "Szukam osoby do pracy w księgowości do biura rachunkowego w Rzeszowie, ze znajomością przepisów i Optimy?",
+      "Dlaczego bilansowo do 10/25? Towar idzie na magazyn, to chcesz naginać rzeczywistość, że go nie było już w 2025?",
+      "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?"
+    ],
+    "routing_recommendation": "Kieruj do workflow KB, a gdy trzeba, dołącz podstawę prawną."
+  },
+  "business_of_accounting_office": {
+    "description": "Pytania o prowadzenie biura rachunkowego: cenniki, klienci, rentowność i organizacja pracy.",
+    "examples": [
+      "Czy biuro rachunkowe musi mieć pieczęć, żeby pobierać dokumenty klienta z Ksef?",
+      "Czy wykryty błąd w okresach nie składkowych na świadectwie pracy przez biuro rachunkowe po kilku latach od wydania takiego świadectwa zgłaszać klientowi zeby wysłał poprawne świadectwo byłemu pracownikowi?",
+      "Czy prowadzi Pan/Pani własne biuro rachunkowe lub świadczy usługi księgowe dla jednoosobowych działalności gospodarczych oraz spółek z ograniczoną odpowiedzialnością w Polsce?",
+      "Chciałam zapytać czy robili Państwo jakiś oddzielny cennik za obsługę KSeF?",
+      "Czy biuro rachunkowe nadaje sobie uprawnienia w KSeF do prowadzenia własnej firmy?"
+    ],
+    "routing_recommendation": "Traktuj jako business/community support poza rdzeniem legal RAG."
+  },
+  "cit_wht": {
+    "description": "Pytania o CIT, WHT, CIT-8, rezydencję, IFT, TPR i opodatkowanie spółek.",
+    "examples": [
+      "Czy nadal trzeba pisać pisma o stwierdzenie nadpłaty i zwrot jesli wynika z cit8? Czy sami zwrócą?",
+      "Wynajem auta za granica. Czy w tej sytuacji należy pobrać podatek u źródła (WHT)?",
+      "Doby wieczór!. Składacie państwo deklarację IFT2R? Czy składa się do miesięcznej subskrypcji (Google, Adobe itp)?",
+      "Potrzebuje pomocy w jakiej pozycji deklaracji iftr2 wykazujecie faktury z Adobe, google,meta?",
+      "Czy dobrze rozumiem?"
+    ],
+    "routing_recommendation": "Kieruj do CIT/WHT i pytaj o typ podmiotu, płatność i kontekst międzynarodowy."
+  },
+  "education_community": {
+    "description": "Pytania o kursy, szkolenia, rozwój kariery i rekomendacje społeczności.",
+    "examples": [
+      "Czy ktoś posiada certyfikat rezydencji podatkowej za 2025 od: *Weglot SAS *Stripe *Squarespace Ireland *Serif Europe LTD?",
+      "Co polecacie jak zacząć pracę w takim miejscu, gdzie zdobywać wiedzę, jak tej pracy szukać?",
+      "A jako osoba fizyczna na jdg po zalogowaniu do KSeF muszę wygenerować certyfikat i token?",
+      "Polecacie kurs online kadry i płace ze strony Mg-edu centrum szkoleń online lub niepubliczne centrum kształcenia ustawicznego?",
+      "Ma może ktoś certyfikat rezydencji za rok 2025 od firmy Timocom Platz oraz Cookie Script?"
+    ],
+    "routing_recommendation": "Traktuj jako community-only i nie udawaj autorytatywnej porady."
+  },
+  "hr": {
+    "description": "Pytania o stosunek pracy, urlopy, wypowiedzenia i obowiązki pracodawcy.",
+    "examples": [
+      "Co zrobić?",
+      "Czy to jest poprawne?",
+      "Jak to u was wygląda?",
+      "DRA w jdg bez pracownikówSkładki społeczne wykazuje w miejscu finansowane przez ubezpieczonego czy płatnika składek?",
+      "Ktoś pomoże?"
+    ],
+    "routing_recommendation": "Kieruj do Kodeksu pracy, pytaj o typ umowy i daty."
+  },
+  "legal_procedural": {
+    "description": "Pytania o korekty, wnioski, pełnomocnictwa, terminy i tryb działania wobec organu.",
+    "examples": [
+      "Stosunek powierzchni wydaje się rozsądny dla opłat typu czynsz, podatek od nieruchomości, ogrzewanie, ale czy zużycie energii?",
+      "Czy urząd skarbowy tak samo pozbywa się jakoś dokumentów przesłanych przez podatnika po iluś tam latach, jak to jest ktoś może się orientuje?",
+      "Działa wam e-urząd skarbowy?",
+      "Czy wystawić korekta każdej fak. Zobacz więcej?",
+      "Jak rozliczyć taką korektę?"
+    ],
+    "routing_recommendation": "Kieruj do Ordynacji podatkowej i polityki dopytań o dokument, organ i etap sprawy."
+  },
+  "legal_substantive": {
+    "description": "Pytania o skutki materialnoprawne: obowiązki, stawki, limity i warunki zastosowania przepisu.",
+    "examples": [
+      "Szukam osoby, która wdroży mnie w pfron, tzn rejestracje pełnomocnictwa i składanie wniosków, oczywiście za opłatą?",
+      "A czemu nie?",
+      "Jak to zrobić?",
+      "Gdy klient nada mi uprawnienia z prawem do dalszego ich przekazywania na NIP jdg to będę mógł je przekazać dalej na spółkę?",
+      "Szukam kogoś kto ukończył II stopień księgowości w SKWP Cześć, szukam kogoś kto ukończył II stopień księgowości w SKWP?"
+    ],
+    "routing_recommendation": "Kieruj do legal KB i odpowiedzi opartej na konkretnym przepisie."
+  },
+  "out_of_scope": {
+    "description": "Pytania urwane, zbyt ogólne, towarzyskie albo niezwiązane z zakresem Aktuo.",
+    "examples": [
+      "Co myślicie?",
+      "Jak wrażenia?",
+      "Jakie miasto?",
+      "Czy warto?",
+      "Dobrze rozumiem?"
+    ],
+    "routing_recommendation": "Zwracaj out-of-scope albo prośbę o doprecyzowanie."
+  },
+  "payroll": {
+    "description": "Pytania o listę płac, zaliczki, PIT płatnika i składniki wynagrodzenia.",
+    "examples": [
+      "Jeśli mam kogoś na zleceniu, ale w 2025 nie przepracował ani 1h i nie zarobił ani 1zł to czy muszę wystawiać zerowy PIT4R?",
+      "Czy pit11 można wysłać jeszcze 2 lutego z uwagi na weekend?",
+      "Pit-37 Zamotałam się osoba która otrzymuje PIT40A z KRUS i PIT11A otrzymuje z Zusu powinna taką osoba rozliczyć się PIT 37?",
+      "Dopiero się uczę jeśli emeryt dostał PIT 40a oraz PIT 11 emerytura zza granicy ulga rehabilitacyjna to składam PIT 36 plus PIT 0, czy coś jeszcze?",
+      "Jak księgujecie wynagrodzenie z analityką czy bez?"
+    ],
+    "routing_recommendation": "Kieruj do warstwy kadrowo-płacowej z follow-upem o typ umowy i okres."
+  },
+  "pit_ryczalt": {
+    "description": "Pytania o PIT, ryczałt, formę opodatkowania, źródła przychodu i rozliczenia roczne.",
+    "examples": [
+      "Jak to rozliczyć?",
+      "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
+      "Czy mogę odliczyć VAT w styczniu (faktura wystawiona w grudniu), ale tylko odliczę VAT w styczniu a nie będę ujmować kosztu w kpir?",
+      "Najem prywatny wykazywany w JPK osoby prowadzącej działalność bez faktury, oznaczenia Di i WEW??",
+      "Jeśli odliczałam amortyzację za samochód, a teraz weszły nowe limity to amortyzację też przeliczam na nowo?"
+    ],
+    "routing_recommendation": "Kieruj do PIT/ryczałtu i pytaj o formę opodatkowania, źródło przychodu i rok."
+  },
+  "software_tooling": {
+    "description": "Pytania o programy księgowe, importy, integracje, błędy i konfiguracje narzędzi.",
+    "examples": [
+      "Jaki program do księgowania polecacie do rozliczania najpierw jednej firmy a w dalszej perspektywie może kolejnych?",
+      "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+      "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?",
+      "Szukam osoby , która pracuje w programie symfonia e - biuro i jest w stanie odpłatnie wdrożyć w ten program?",
+      "Szukam wdrożeniowca/programistę/informatyka dotyczy programu Subiekt , Poznań i okolice?"
+    ],
+    "routing_recommendation": "Traktuj jako workflow/product support, nie jako poradę prawną."
+  },
+  "vat_jpk_ksef": {
+    "description": "Pytania o VAT, JPK_V7, KSeF, faktury, korekty, oznaczenia i rozliczenia VAT.",
+    "examples": [
+      "Czy w JPK za luty faktury wystawione w styczniu też muszą mieć znaczniki BFK lub DI?",
+      "W trakcie użytkowania odliczałam 50% VAT (paliwa, koszty eksploatacji). Czy ta darowizna powinna być opodatkowana VAT?",
+      "Faktura wystawiona 1 kwietnia, czyli najpóźniej 2 kwietnia powinna być w KSeF przy założeniu trybu offline, ale nie dotarła?",
+      "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+      "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?"
+    ],
+    "routing_recommendation": "Kieruj do VAT/JPK/KSeF i pytaj o daty, dokument, rolę strony i kontekst transakcji."
+  },
+  "zus": {
+    "description": "Pytania o ZUS, składki, zbiegi tytułów, deklaracje i świadczenia.",
+    "examples": [
+      "Czy działa Wam „ e płatnik „ na pue ZUS?",
+      "W pue wyskakują mi jakieś błędy,Podpowie dobra duszyczka ile wynoszą łącznie teraz składki na ZUS preferencyjny ryczałt 60k-300k?",
+      "..Czy ktoś z Was miał podobną sytuację?",
+      "Co byście zrobili?",
+      "Czy ja dobrze myślę?"
+    ],
+    "routing_recommendation": "Kieruj do źródeł ZUS i dopytuj o tytuł ubezpieczenia oraz status osoby."
+  }
+}

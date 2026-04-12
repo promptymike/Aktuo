@@ -1,0 +1,191 @@
+{
+  "accounting_operational": {
+    "insufficient_data_when": [
+      "Pytanie nie zawiera operacyjnej decyzji do podjęcia."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, czy chodzi o KPiR, pełne księgi czy ewidencję VAT.",
+      "Brakuje dokumentu albo okresu, którego dotyczy zapis."
+    ],
+    "optional_helpful_facts": [
+      "forma_opodatkowania",
+      "status_vat",
+      "typ_podmiotu"
+    ],
+    "required_facts": [
+      "rodzaj_ksiąg_lub_ewidencji",
+      "rodzaj_dokumentu",
+      "okres_księgowy"
+    ]
+  },
+  "cit_wht": {
+    "insufficient_data_when": [
+      "Pytanie jest zbyt skrótowe, by ustalić obszar CIT/WHT."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, czy chodzi o klasyczny CIT, estoński CIT czy WHT.",
+      "Brakuje informacji o płatności, podmiocie albo kontekście międzynarodowym."
+    ],
+    "optional_helpful_facts": [
+      "kraj_kontrahenta",
+      "rezydencja_podatkowa",
+      "formularz_lub_obowiązek"
+    ],
+    "required_facts": [
+      "typ_podmiotu",
+      "rodzaj_transakcji_lub_płatności",
+      "okres_lub_data"
+    ]
+  },
+  "hr": {
+    "insufficient_data_when": [
+      "Pytanie jest wyłącznie opiniotwórcze albo społecznościowe."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, czy chodzi o nawiązanie, trwanie czy rozwiązanie stosunku pracy.",
+      "Brakuje typu umowy albo kluczowych dat."
+    ],
+    "optional_helpful_facts": [
+      "rodzaj_nieobecności",
+      "staż_pracy",
+      "status_szczególny_pracownika"
+    ],
+    "required_facts": [
+      "typ_umowy",
+      "etap_zatrudnienia",
+      "okres_lub_data"
+    ]
+  },
+  "legal_procedural": {
+    "insufficient_data_when": [
+      "Pytanie odwołuje się tylko do skrótu formularza bez opisu celu lub skutku."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, jaki dokument lub tryb proceduralny ma być zastosowany.",
+      "Pytanie dotyczy pisma, ale nie wiadomo do jakiego organu i na jakim etapie sprawy."
+    ],
+    "optional_helpful_facts": [
+      "czy_jest_pełnomocnik",
+      "czy_to_korekta",
+      "forma_elektroniczna_lub_papierowa"
+    ],
+    "required_facts": [
+      "rodzaj_pisma_lub_wniosku",
+      "organ_lub_kanał_złożenia",
+      "etap_sprawy_lub_termin"
+    ]
+  },
+  "legal_substantive": {
+    "insufficient_data_when": [
+      "Pytanie jest urwane i nie zawiera żadnego konkretu poza prośbą o pomoc."
+    ],
+    "must_ask_follow_up_when": [
+      "Brakuje kluczowego stanu faktycznego albo pytanie miesza kilka reżimów prawnych.",
+      "Nie da się ustalić, którego podatku lub strony dotyczy pytanie."
+    ],
+    "optional_helpful_facts": [
+      "status_podatnika",
+      "rodzaj_dokumentu",
+      "kontekst_krajowy_lub_zagraniczny"
+    ],
+    "required_facts": [
+      "obszar_prawa",
+      "stan_faktyczny",
+      "okres_lub_data"
+    ]
+  },
+  "payroll": {
+    "insufficient_data_when": [
+      "Pytanie nie wskazuje żadnej czynności płacowej ani dokumentu."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, czy chodzi o etat, zlecenie, dzieło albo kontrakt menedżerski.",
+      "Brakuje miesiąca rozliczenia albo rodzaju składnika płacowego."
+    ],
+    "optional_helpful_facts": [
+      "status_pracownika",
+      "wiek_lub_uprawnienie",
+      "nieobecność_lub_urlop"
+    ],
+    "required_facts": [
+      "typ_umowy",
+      "składnik_wynagrodzenia_lub_dokument",
+      "okres_lub_data"
+    ]
+  },
+  "pit_ryczalt": {
+    "insufficient_data_when": [
+      "Pytanie nie wskazuje źródła przychodu ani formy opodatkowania."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, czy chodzi o skalę, liniowy, ryczałt albo najem prywatny.",
+      "Brakuje źródła przychodu albo roku podatkowego."
+    ],
+    "optional_helpful_facts": [
+      "status_prywatny_lub_firmowy",
+      "rodzaj_majątku",
+      "czy_to_korekta"
+    ],
+    "required_facts": [
+      "forma_opodatkowania",
+      "źródło_przychodu",
+      "okres_lub_data"
+    ]
+  },
+  "software_tooling": {
+    "insufficient_data_when": [
+      "Pytanie ma wyłącznie formę rekomendacji narzędzia bez kryteriów."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, jakiego programu dotyczy pytanie albo jaka akcja się nie udaje."
+    ],
+    "optional_helpful_facts": [
+      "wersja_systemu",
+      "format_pliku",
+      "obszar_merytoryczny"
+    ],
+    "required_facts": [
+      "nazwa_systemu",
+      "czynność_operacyjna",
+      "kontekst_błędu_lub_integracji"
+    ]
+  },
+  "vat_jpk_ksef": {
+    "insufficient_data_when": [
+      "Pytanie jest tak skrótowe, że nie da się ustalić, czy chodzi o VAT, JPK czy KSeF."
+    ],
+    "must_ask_follow_up_when": [
+      "Brakuje daty/okresu albo typu dokumentu.",
+      "Nie wiadomo, czy pytanie dotyczy sprzedawcy, nabywcy, pełnomocnika albo uprawnień w KSeF."
+    ],
+    "optional_helpful_facts": [
+      "kontekst_krajowy_lub_zagraniczny",
+      "czy_to_korekta",
+      "kanał_ksef_lub_jpk"
+    ],
+    "required_facts": [
+      "rodzaj_dokumentu",
+      "okres_lub_data",
+      "rola_lub_status_strony"
+    ]
+  },
+  "zus": {
+    "insufficient_data_when": [
+      "Pytanie nie wskazuje żadnego tytułu do ubezpieczenia ani świadczenia."
+    ],
+    "must_ask_follow_up_when": [
+      "Nie wiadomo, czy chodzi o JDG, etat, zlecenie, zbieg tytułów albo osobę współpracującą.",
+      "Brakuje rodzaju świadczenia lub deklaracji ZUS."
+    ],
+    "optional_helpful_facts": [
+      "ciągłość_ubezpieczenia",
+      "okres_lub_data",
+      "rodzaj_dokumentu"
+    ],
+    "required_facts": [
+      "tytuł_ubezpieczenia",
+      "status_osoby",
+      "rodzaj_składki_lub_świadczenia"
+    ]
+  }
+}

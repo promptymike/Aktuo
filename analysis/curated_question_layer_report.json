@@ -1,0 +1,128 @@
+{
+  "deduplicated_questions": 11509,
+  "taxonomy_distribution": {
+    "accounting_operational": 1374,
+    "business_of_accounting_office": 50,
+    "cit_wht": 351,
+    "education_community": 371,
+    "hr": 1065,
+    "legal_procedural": 176,
+    "legal_substantive": 1342,
+    "out_of_scope": 41,
+    "payroll": 77,
+    "pit_ryczalt": 1304,
+    "software_tooling": 805,
+    "vat_jpk_ksef": 3554,
+    "zus": 999
+  },
+  "top_ambiguity_areas": [
+    {
+      "count": 4311,
+      "label": "vat_jpk_ksef"
+    },
+    {
+      "count": 1844,
+      "label": "legal_substantive"
+    },
+    {
+      "count": 1703,
+      "label": "accounting_operational"
+    },
+    {
+      "count": 1668,
+      "label": "pit_ryczalt"
+    },
+    {
+      "count": 1344,
+      "label": "hr"
+    },
+    {
+      "count": 1228,
+      "label": "zus"
+    },
+    {
+      "count": 1000,
+      "label": "software_tooling"
+    },
+    {
+      "count": 433,
+      "label": "cit_wht"
+    },
+    {
+      "count": 208,
+      "label": "legal_procedural"
+    },
+    {
+      "count": 99,
+      "label": "payroll"
+    }
+  ],
+  "top_missing_clarification_fields": [
+    {
+      "count": 8497,
+      "label": "okres_lub_data"
+    },
+    {
+      "count": 4384,
+      "label": "rodzaj_dokumentu"
+    },
+    {
+      "count": 1830,
+      "label": "obszar_prawa"
+    },
+    {
+      "count": 1695,
+      "label": "stan_faktyczny"
+    },
+    {
+      "count": 1640,
+      "label": "forma_opodatkowania"
+    },
+    {
+      "count": 1594,
+      "label": "rodzaj_ksiąg_lub_ewidencji"
+    },
+    {
+      "count": 1552,
+      "label": "okres_księgowy"
+    },
+    {
+      "count": 1456,
+      "label": "źródło_przychodu"
+    },
+    {
+      "count": 1326,
+      "label": "typ_umowy"
+    },
+    {
+      "count": 1182,
+      "label": "tytuł_ubezpieczenia"
+    }
+  ],
+  "top_roadmap_implications": [
+    {
+      "count": 11553,
+      "label": "legal_kb_depth"
+    },
+    {
+      "count": 2801,
+      "label": "workflow_kb"
+    },
+    {
+      "count": 643,
+      "label": "community_or_content"
+    },
+    {
+      "count": 77,
+      "label": "scope_filtering"
+    }
+  ],
+  "total_raw_questions": 13403,
+  "workflow_vs_legal_split": {
+    "community_only": 421,
+    "legal": 8821,
+    "mixed": 47,
+    "outside_scope": 41,
+    "workflow": 2179
+  }
+}
