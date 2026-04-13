@@ -140,6 +140,57 @@ def test_classify_intent_estonczyk_routes_to_cit(tmp_path) -> None:
     ) == "cit_wht"
 
 
+def _extend_taxonomy_with_hr_legal(taxonomy_path) -> None:
+    """Add hr, legal_substantive, cit_wht intents to the taxonomy fixture."""
+    taxonomy = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+    taxonomy["hr"] = {
+        "description": "Pytania o kadry, umowy o pracę, urlopy i stosunki pracy.",
+        "examples": ["Jakie są okresy wypowiedzenia?", "Co się zmieniło w Kodeksie pracy?"],
+        "routing_recommendation": "Kieruj do kadr.",
+    }
+    taxonomy["legal_substantive"] = {
+        "description": "Pytania o ogólne zagadnienia prawne i podatkowe.",
+        "examples": ["Jak to ogarnąć?", "Proszę o pomoc z podatkami."],
+        "routing_recommendation": "Kieruj do prawnika.",
+    }
+    taxonomy["cit_wht"] = {
+        "description": "Pytania o CIT, WHT i formularz IFT-2R.",
+        "examples": ["Czy IFT-2R trzeba złożyć?", "Jak działa JPK CIT?"],
+        "routing_recommendation": "Kieruj do CIT/WHT.",
+    }
+    taxonomy_path.write_text(json.dumps(taxonomy, ensure_ascii=False), encoding="utf-8")
+
+
+def test_classify_intent_generic_help_routes_to_legal_substantive(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_hr_legal(taxonomy_path)
+
+    assert classify_intent("Jak to ogarnąć?", str(taxonomy_path)) == "legal_substantive"
+    assert classify_intent("A w czym problem?", str(taxonomy_path)) == "legal_substantive"
+    assert classify_intent("Bardzo proszę o pomoc z tym tematem.", str(taxonomy_path)) == "legal_substantive"
+
+
+def test_classify_intent_zmienilo_and_dziecko_route_to_hr(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_hr_legal(taxonomy_path)
+
+    assert classify_intent("Co się zmieniło w Kodeksie pracy?", str(taxonomy_path)) == "hr"
+    assert classify_intent("Odnośnie ulgi na dziecko?", str(taxonomy_path)) == "hr"
+
+
+def test_classify_intent_dywidenda_routes_to_cit(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "Czy dywidendę zwolnioną z podatku w oparciu o art. 22 ustawy CIT?",
+        str(taxonomy_path),
+    ) == "cit_wht"
+
+
 def test_detect_clarification_slots_for_vat_and_pit(tmp_path) -> None:
     slots_path = tmp_path / "clarification_slots.json"
     _write_slots(slots_path)

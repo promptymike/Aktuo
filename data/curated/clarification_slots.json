@@ -133,6 +133,11 @@
     ]
   },
   "slot_chip_options": {
+    "etap_zatrudnienia": [
+      "nawiązanie",
+      "trwanie",
+      "rozwiązanie"
+    ],
     "forma_opodatkowania": [
       "rycza?t",
       "liniowy",
@@ -169,6 +174,7 @@
   },
   "slot_display_labels": {
     "etap_sprawy_lub_termin": "Etap sprawy lub termin",
+    "etap_zatrudnienia": "Etap zatrudnienia",
     "forma_opodatkowania": "Forma opodatkowania",
     "okres_lub_data": "Okres lub data",
     "rodzaj_dokumentu": "Rodzaj dokumentu",
@@ -183,6 +189,7 @@
   "slot_prompts": {
     "czynność_operacyjna": "Jaką czynność chcesz wykonać w systemie lub procesie?",
     "etap_sprawy_lub_termin": "Na jakim etapie jest sprawa i jaki termin ma znaczenie?",
+    "etap_zatrudnienia": "Jaki jest etap zatrudnienia: nawiązanie, trwanie czy rozwiązanie stosunku pracy?",
     "forma_opodatkowania": "Jaka jest forma opodatkowania: skala, liniowy, ryczałt, estoński CIT?",
     "kontekst_błędu_lub_integracji": "Jaki błąd, komunikat albo problem z integracją się pojawia?",
     "nazwa_systemu": "Jakiego programu lub systemu dotyczy problem?",

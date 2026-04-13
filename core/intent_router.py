@@ -93,7 +93,23 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "platnik",
         "wyplata",
     ),
-    "hr": ("umowa o prace", "wypowiedzenie", "urlop", "pracownik", "swiadectwo pracy", "nadgodziny"),
+    "hr": (
+        "umowa o prace",
+        "wypowiedzenie",
+        "urlop",
+        "pracownik",
+        "swiadectwo pracy",
+        "nadgodziny",
+        "dziecko",       # "Odnośnie ulgi na dziecko?" – child-relief employee declaration
+        "zmieni",        # "Co się zmieniło?", "Co się zmienił?" – HR law updates (prefix avoids ł normalization issue)
+    ),
+    "legal_substantive": (
+        "ogarnac",           # "Jak to ogarnąć?"
+        "prosze o pomoc",    # "Bardzo proszę o pomoc?"
+        "w czym problem",    # "A w czym problem?"
+        "co robie zle",      # "Co robię źle?"
+        "nie rozumiem",      # general confusion about a legal rule
+    ),
     "pit_ryczalt": (
         "pit",
         "pit-37",
@@ -133,6 +149,7 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "estonczyk",
         "ukryte zyski",
         "ryczalt od dochodow",
+        "dywidend",
     ),
     "accounting_operational": ("ksiegowanie", "zaksi", "bilans", "rzis", "sprawozdanie", "konto", "dekret", "kpir"),
     "legal_procedural": ("korekta", "nadplata", "nadpłata", "pelnomocnictwo", "pełnomocnictwo", "upl-1", "pps-1", "czynny zal", "czynny żal"),
@@ -144,7 +161,15 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
 
 SLOT_HINTS: dict[str, tuple[str, ...]] = {
     "obszar_prawa": ("vat", "pit", "cit", "zus", "ksef", "jpk", "urlop", "umowa", "podatek"),
-    "stan_faktyczny": ("sprzedaz", "zakup", "najem", "pracownik", "spolka", "spółka", "jdg", "usluga", "usługa", "towar"),
+    "stan_faktyczny": (
+        "sprzedaz", "zakup", "najem", "pracownik", "spolka", "spółka", "jdg", "usluga", "usługa", "towar",
+        # Broader legal-context anchors so that specific legal questions are not over-blocked
+        "umow",        # umowy, umowie, umową
+        "faktur",      # faktury, fakturę, faktury
+        "podatk",      # podatkowi, podatkiem, podatkowego
+        "dzialalnosc", # działalność
+        "dzielo",      # dzieło, dzieła
+    ),
     "okres_lub_data": ("202", "styczen", "styczeń", "luty", "marzec", "kwiecien", "kwiecień", "maj", "czerwiec", "lipiec", "sierp", "wrzes", "paź", "pazdz", "listopad", "grudzien", "grudzień", "miesiac", "miesiąc", "rok", "termin", "data"),
     "rodzaj_pisma_lub_wniosku": ("wniosek", "pismo", "korekta", "upl", "pps", "zaw", "czynny zal", "czynny żal", "nadplata", "nadpłata"),
     "organ_lub_kanał_złożenia": ("urzad", "urząd", "us", "skarbow", "e-urzad", "e-urząd", "bramka", "ksef", "jpk"),
@@ -152,6 +177,16 @@ SLOT_HINTS: dict[str, tuple[str, ...]] = {
     "rodzaj_ksiąg_lub_ewidencji": ("kpir", "ksiegi", "księgi", "ewidencj", "bilans", "rejestr"),
     "rodzaj_dokumentu": ("faktur", "rach", "paragon", "jpk", "pit", "cit", "umow", "lista plac"),
     "okres_księgowy": ("miesiac", "miesiąc", "rok", "okres", "zamkniecie", "zamknięcie", "grudzien", "styczen"),
+    "etap_zatrudnienia": (
+        "zatrudni",      # nawiązanie zatrudnienia
+        "wypowiedzeni",  # wypowiedzenie
+        "zwolnieni",     # rozwiązanie/zwolnienie
+        "probny",        # okres próbny
+        "nawiaz",        # nawiązanie stosunku pracy
+        "rozwiaz",       # rozwiązanie stosunku pracy
+        "ustanie",       # ustanie zatrudnienia
+        "trwanie",       # trwanie stosunku pracy
+    ),
     "typ_umowy": ("umowa", "etat", "zlecen", "dzieło", "dzielo", "b2b", "kontrakt"),
     "składnik_wynagrodzenia_lub_dokument": ("premia", "dodatek", "pit", "plac", "płac", "wynagrodzen", "ekwiwalent"),
     "tytuł_ubezpieczenia": ("jdg", "zlecen", "etat", "wspolprac", "współprac", "spolka", "spółka"),

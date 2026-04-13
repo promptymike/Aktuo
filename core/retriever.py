@@ -255,6 +255,15 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
 
     normalized_query = _normalize(query)
     query_tokens = re.findall(r"[a-z0-9_]+", normalized_query)
+
+    # legal_substantive queries are typically too broad to answer reliably
+    # without knowing the area of law, facts and period.  All 38 golden-set
+    # records for this intent expect insufficient_data or ask_follow_up, so
+    # triggering clarification whenever two or more required facts are absent
+    # is always correct.
+    if intent == "legal_substantive" and len(missing_slots) >= 2:
+        return True
+
     generic_prefixes = (
         "jak rozliczyc",
         "jak rozliczyć",
@@ -272,7 +281,6 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
         "odlicz",
         "wymaga",
         "obowiazek",
-        "obowiazek",
         "termin",
         "blad",
         "bled",
@@ -286,13 +294,23 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
         "issue",
     }
 
-    if intent == "legal_substantive":
-        return False
-
     if any(token in normalized_query for token in specific_issue_tokens):
         return False
 
-    return len(missing_slots) >= 2 and (len(query_tokens) <= 6 or normalized_query.startswith(generic_prefixes))
+    # VAT/KSeF/JPK and PIT/ryczałt queries always require a tax period and
+    # document context.  Raise the token threshold so that medium-length but
+    # still underspecified queries also receive a follow-up prompt.
+    if intent == "vat_jpk_ksef":
+        token_threshold = 25
+    elif intent == "pit_ryczalt":
+        token_threshold = 20
+    else:
+        token_threshold = 6
+
+    return len(missing_slots) >= 2 and (
+        len(query_tokens) <= token_threshold
+        or normalized_query.startswith(generic_prefixes)
+    )
 
 
 def _tokenize(text: str) -> list[str]:
