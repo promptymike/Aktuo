@@ -275,8 +275,11 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
         "czy mozna",
         "czy można",
     )
+    # Tokens that signal a specific, answerable question — skip clarification.
+    # NOTE: "korekt" was deliberately removed: it matched "korekta faktury" and
+    # "KSeF korekta" queries that still lack period/role context and should
+    # receive a follow-up prompt instead of a direct answer.
     specific_issue_tokens = {
-        "korekt",
         "numer",
         "odlicz",
         "wymaga",
@@ -297,13 +300,21 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
     if any(token in normalized_query for token in specific_issue_tokens):
         return False
 
-    # VAT/KSeF/JPK and PIT/ryczałt queries always require a tax period and
-    # document context.  Raise the token threshold so that medium-length but
+    # Per-intent token thresholds.  Higher values ensure that medium-length but
     # still underspecified queries also receive a follow-up prompt.
     if intent == "vat_jpk_ksef":
-        token_threshold = 25
-    elif intent == "pit_ryczalt":
+        # KSeF/JPK/VAT questions frequently embed dates or document types in
+        # passing; raise the bar so longer queries still require clarification
+        # when key context (period, role, document type) is absent.
+        token_threshold = 35
+    elif intent in {"software_tooling", "pit_ryczalt"}:
         token_threshold = 20
+    elif intent in {"hr", "payroll"}:
+        # HR and payroll queries are often phrased as general questions with
+        # implicit contract type or period — catch medium-length ones too.
+        token_threshold = 15
+    elif intent == "accounting_operational":
+        token_threshold = 12
     else:
         token_threshold = 6
 

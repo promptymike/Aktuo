@@ -71,8 +71,30 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "odliczenie vat",
         "odliczac vat",
         "100 vat",
+        "darowizna",         # donation subject to VAT
+        "stawka vat",        # VAT rate query
+        "proporcja vat",     # proportional VAT deduction
+        "odwrotne obciazenie",  # reverse charge
     ),
-    "zus": ("zus", "krus", "skladka", "skladki", "chorobowe", "macierzynski", "zasilek", "dra", "rca"),
+    "zus": (
+        "zus",
+        "krus",
+        "skladka",
+        "skladki",
+        "chorobowe",
+        "macierzynski",
+        "zasilek",
+        "dra",
+        "rca",
+        # Additional anchors for PUE/e-Płatnik and reduced-contribution queries (top unknown group)
+        "pue",               # Platforma Usług Elektronicznych ZUS
+        "e-platnik",         # electronic payer system
+        "e platnik",
+        "zwua",              # ZUS ZWUA deregistration report
+        "maly zus",          # "Mały ZUS Plus" reduced contributions
+        "preferencyjny",     # preferential/reduced ZUS rates
+        "pfron",             # PFRON disabled-persons fund levy
+    ),
     "payroll": (
         "lista plac",
         "wynagrodzenie",
@@ -151,7 +173,26 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "ryczalt od dochodow",
         "dywidend",
     ),
-    "accounting_operational": ("ksiegowanie", "zaksi", "bilans", "rzis", "sprawozdanie", "konto", "dekret", "kpir"),
+    "accounting_operational": (
+        "ksiegowanie",
+        "zaksi",
+        "bilans",
+        "rzis",
+        "sprawozdanie",
+        "konto",
+        "dekret",
+        "kpir",
+        # Additional anchors for cost-booking and asset queries (top unknown group)
+        "remanent",          # inventory count at year-end
+        "srodek trwaly",     # fixed asset
+        "wartosci niematerialne",  # intangible assets
+        "zamkniecie roku",   # year-end close
+        "bilans otwarcia",   # opening balance
+        "wynik finansowy",   # financial result
+        "nota ksiegowa",     # accounting note
+        "przeksiegowanie",   # reclassification entry
+        "ujac koszt",        # "jak ująć koszt" generic cost booking
+    ),
     "legal_procedural": ("korekta", "nadplata", "nadpłata", "pelnomocnictwo", "pełnomocnictwo", "upl-1", "pps-1", "czynny zal", "czynny żal"),
     "software_tooling": ("symfonia", "comarch", "insert", "enova", "optima", "subiekt", "program", "api", "integracja"),
     "business_of_accounting_office": ("biuro rachunkowe", "cennik", "klient", "rentownosc", "rentowność"),
@@ -170,7 +211,32 @@ SLOT_HINTS: dict[str, tuple[str, ...]] = {
         "dzialalnosc", # działalność
         "dzielo",      # dzieło, dzieła
     ),
-    "okres_lub_data": ("202", "styczen", "styczeń", "luty", "marzec", "kwiecien", "kwiecień", "maj", "czerwiec", "lipiec", "sierp", "wrzes", "paź", "pazdz", "listopad", "grudzien", "grudzień", "miesiac", "miesiąc", "rok", "termin", "data"),
+    "okres_lub_data": (
+        "202",                    # any year 2020-2029
+        # Month nominative forms (as typed) ↓
+        "styczen", "styczeń",     # January nom.
+        "luty",                   # February nom.
+        "marzec",                 # March nom.
+        "kwiecien", "kwiecień",   # April nom.
+        "maj",                    # May (same in gen.)
+        "czerwiec",               # June nom.
+        "lipiec",                 # July nom.
+        "sierp",                  # August prefix (sierpień / Sierpn-)
+        "wrzes",                  # September prefix (wrzesień / Wrzesn-)
+        "paz", "pazdz",           # October prefix (październik / Paźdz-)
+        "listopad",               # November nom.
+        "grudzien", "grudzień",   # December nom.
+        # Genitive/oblique prefixes for ordinal dates ("1 Stycznia", "3 Marca" etc.) ↓
+        "stycz",    # Stycz-nia  (January gen.)
+        "lut",      # Lut-ego / Lut-ym  (February obl.)
+        "marc",     # Marc-a / Marc-u  (March gen.)
+        "kwiet",    # Kwiet-nia  (April gen.)
+        "czerwc",   # Czerwc-a  (June gen.)
+        "lipc",     # Lipc-a  (July gen.)
+        "grudn",    # Grudn-ia  (December gen. — Grudnia)
+        # Generic date/time anchors ↓
+        "miesiac", "miesiąc", "rok", "termin", "data",
+    ),
     "rodzaj_pisma_lub_wniosku": ("wniosek", "pismo", "korekta", "upl", "pps", "zaw", "czynny zal", "czynny żal", "nadplata", "nadpłata"),
     "organ_lub_kanał_złożenia": ("urzad", "urząd", "us", "skarbow", "e-urzad", "e-urząd", "bramka", "ksef", "jpk"),
     "etap_sprawy_lub_termin": ("po terminie", "przed kontrola", "przed kontrolą", "w trakcie", "po wysylce", "po wysyłce", "termin", "ile czasu"),

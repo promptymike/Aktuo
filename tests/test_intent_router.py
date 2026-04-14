@@ -238,3 +238,119 @@ def test_retrieve_returns_clarification_without_running_ranking(tmp_path, monkey
     assert result.needs_clarification is True
     assert result.chunks == []
     assert set(result.missing_slots or []) == {"rodzaj_dokumentu", "okres_lub_data", "rola_lub_status_strony"}
+
+
+# ---------------------------------------------------------------------------
+# Tests for new routing hints added in feat: refine clarification and intent
+# ---------------------------------------------------------------------------
+
+def _extend_taxonomy_with_accounting_zus(taxonomy_path) -> None:
+    """Add accounting_operational and zus intents to the taxonomy fixture."""
+    taxonomy = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+    taxonomy["accounting_operational"] = {
+        "description": "Pytania o księgowanie, środki trwałe, remanent i ewidencje.",
+        "examples": ["Jak ująć koszt za poprzedni rok?", "Remanent na koniec roku."],
+        "routing_recommendation": "Kieruj do rachunkowości operacyjnej.",
+    }
+    taxonomy["zus"] = {
+        "description": "Pytania o ZUS, PUE, e-Płatnik i składki.",
+        "examples": ["Czy działa PUE ZUS?", "Mały ZUS Plus limity."],
+        "routing_recommendation": "Kieruj do ZUS.",
+    }
+    taxonomy_path.write_text(json.dumps(taxonomy, ensure_ascii=False), encoding="utf-8")
+
+
+def test_classify_intent_remanent_and_srodek_trwaly_route_to_accounting(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_accounting_zus(taxonomy_path)
+
+    assert classify_intent(
+        "Jak ująć koszt środka trwałego zakupionego w poprzednim roku?",
+        str(taxonomy_path),
+    ) == "accounting_operational"
+    assert classify_intent(
+        "Remanent na koniec roku — co wpisać do KPiR?",
+        str(taxonomy_path),
+    ) == "accounting_operational"
+    assert classify_intent(
+        "Wynik finansowy za 2025 — jak zamknąć rok?",
+        str(taxonomy_path),
+    ) == "accounting_operational"
+
+
+def test_classify_intent_pue_and_maly_zus_route_to_zus(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_accounting_zus(taxonomy_path)
+
+    assert classify_intent("Czy działa Wam PUE ZUS?", str(taxonomy_path)) == "zus"
+    assert classify_intent(
+        "Mały ZUS Plus — jaki jest limit przychodu?",
+        str(taxonomy_path),
+    ) == "zus"
+    assert classify_intent(
+        "Jak złożyć ZWUA przez e-Płatnik?",
+        str(taxonomy_path),
+    ) == "zus"
+
+
+def test_classify_intent_darowizna_routes_to_vat(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+
+    assert classify_intent(
+        "Czy darowizna samochodu powinna być opodatkowana VAT?",
+        str(taxonomy_path),
+    ) == "vat_jpk_ksef"
+
+
+def test_period_slot_detected_with_genitive_month_date(tmp_path) -> None:
+    """Genitive date forms like '1 Stycznia' must satisfy the okres_lub_data slot."""
+    slots_path = tmp_path / "clarification_slots.json"
+    _write_slots(slots_path)
+
+    # Nominative month — already tested; just re-confirm baseline
+    missing_nom = detect_clarification_slots(
+        "Czy sprzedawca ma wykazać fakturę za marzec 2026 w JPK?",
+        str(slots_path),
+        "vat_jpk_ksef",
+    )
+    assert missing_nom["okres_lub_data"] is False
+
+    # Genitive form: "1 stycznia" — should also be detected via "stycz" prefix
+    missing_gen = detect_clarification_slots(
+        "Czy fakturę wystawioną 1 stycznia 2026 trzeba ująć w JPK sprzedawcy?",
+        str(slots_path),
+        "vat_jpk_ksef",
+    )
+    assert missing_gen["okres_lub_data"] is False
+
+
+def test_vat_ksef_correction_query_still_requires_clarification(tmp_path, monkeypatch) -> None:
+    """KSeF correction queries must NOT bypass clarification via the old 'korekt' token."""
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    slots_path = tmp_path / "clarification_slots.json"
+    knowledge_path = tmp_path / "law_knowledge.json"
+    _write_taxonomy(taxonomy_path)
+    _write_slots(slots_path)
+    knowledge_path.write_text("[]", encoding="utf-8")
+
+    call_count = {"n": 0}
+
+    def count_calls(query, kp, limit=5):  # noqa: ARG001
+        call_count["n"] += 1
+        return []
+
+    monkeypatch.setattr("core.retriever._retrieve_ranked_chunks", count_calls)
+
+    result = retrieve(
+        query="KSeF — korekta: czy da się wysłać korektę zmieniającą tylko dane odbiorcy?",
+        knowledge_path=knowledge_path,
+        taxonomy_path=str(taxonomy_path),
+        slots_path=str(slots_path),
+    )
+
+    # Clarification must fire; ranking must NOT have been called
+    assert result.needs_clarification is True
+    assert call_count["n"] == 0
