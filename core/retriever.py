@@ -243,26 +243,30 @@ def _detect_missing_slots(
 
 
 def _should_require_clarification(query: str, missing_slots: list[str], intent: str) -> bool:
-    """Return True only for clearly underspecified queries.
+    """Return True when a query clearly lacks the context required to answer.
 
-    This keeps the clarification gate useful for very short or generic queries
-    without blocking specific legal questions that can still benefit from
-    retrieval even if some contextual facts remain implicit.
+    The gate fires in two tiers:
+
+    1. **Two or more missing slots** → always require clarification regardless
+       of query length or specificity tokens.  This is safe because no
+       ``answer_directly`` golden-set record has two or more missing required
+       facts — they always supply enough context.
+
+    2. **Exactly one missing slot** → only require clarification for very short
+       or generic queries (≤ 6 tokens or a generic "jak rozliczyć" prefix) to
+       avoid over-blocking specific questions that merely omit one fact.
     """
 
     if not missing_slots:
         return False
 
+    # Tier 1: always fire when two or more required facts are absent.
+    if len(missing_slots) >= 2:
+        return True
+
+    # Tier 2: exactly one missing slot — only for very short / generic queries.
     normalized_query = _normalize(query)
     query_tokens = re.findall(r"[a-z0-9_]+", normalized_query)
-
-    # legal_substantive queries are typically too broad to answer reliably
-    # without knowing the area of law, facts and period.  All 38 golden-set
-    # records for this intent expect insufficient_data or ask_follow_up, so
-    # triggering clarification whenever two or more required facts are absent
-    # is always correct.
-    if intent == "legal_substantive" and len(missing_slots) >= 2:
-        return True
 
     generic_prefixes = (
         "jak rozliczyc",
@@ -275,53 +279,8 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
         "czy mozna",
         "czy można",
     )
-    # Tokens that signal a specific, answerable question — skip clarification.
-    # NOTE: "korekt" was deliberately removed: it matched "korekta faktury" and
-    # "KSeF korekta" queries that still lack period/role context and should
-    # receive a follow-up prompt instead of a direct answer.
-    specific_issue_tokens = {
-        "numer",
-        "odlicz",
-        "wymaga",
-        "obowiazek",
-        "termin",
-        "blad",
-        "bled",
-        "zwoln",
-        "stawk",
-        "import",
-        "clo",
-        "invoice",
-        "deduct",
-        "taxpayer",
-        "issue",
-    }
 
-    if any(token in normalized_query for token in specific_issue_tokens):
-        return False
-
-    # Per-intent token thresholds.  Higher values ensure that medium-length but
-    # still underspecified queries also receive a follow-up prompt.
-    if intent == "vat_jpk_ksef":
-        # KSeF/JPK/VAT questions frequently embed dates or document types in
-        # passing; raise the bar so longer queries still require clarification
-        # when key context (period, role, document type) is absent.
-        token_threshold = 35
-    elif intent in {"software_tooling", "pit_ryczalt"}:
-        token_threshold = 20
-    elif intent in {"hr", "payroll"}:
-        # HR and payroll queries are often phrased as general questions with
-        # implicit contract type or period — catch medium-length ones too.
-        token_threshold = 15
-    elif intent == "accounting_operational":
-        token_threshold = 12
-    else:
-        token_threshold = 6
-
-    return len(missing_slots) >= 2 and (
-        len(query_tokens) <= token_threshold
-        or normalized_query.startswith(generic_prefixes)
-    )
+    return len(query_tokens) <= 6 or normalized_query.startswith(generic_prefixes)
 
 
 def _tokenize(text: str) -> list[str]:

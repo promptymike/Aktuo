@@ -29,7 +29,7 @@ def test_answer_query_returns_grounded_result_for_polish_question(tmp_path, monk
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
 
     result = answer_query(
-        query="Jan Kowalski pyta, czy błędny NIP na fakturze wymaga korekty.",
+        query="Jan Kowalski pyta, czy błędny NIP na fakturze sprzedawcy z marca 2026 wymaga korekty.",
         knowledge_path=seed_file,
         system_prompt="Jesteś Aktuo.",
         api_key="test-key",
@@ -65,7 +65,7 @@ def test_answer_query_marks_low_confidence_retrieval(tmp_path, monkeypatch) -> N
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: True)
 
     result = answer_query(
-        query="Jak rozliczyć cło importowe?",
+        query="Jak rozliczyć cło importowe na fakturze podatnika za marzec 2026?",
         knowledge_path=seed_file,
         system_prompt="Jesteś Aktuo.",
         api_key="test-key",
@@ -138,8 +138,8 @@ def test_answer_query_handles_very_long_query(tmp_path, monkeypatch) -> None:
 @pytest.mark.parametrize(
     "query",
     [
-        "😀 Czy faktura korygujaca wymaga nowego numeru?",
-        "Can a Polish taxpayer deduct VAT from an invoice?",
+        "😀 Czy faktura korygujaca sprzedawcy za marzec 2026 wymaga nowego numeru?",
+        "Can a Polish taxpayer deduct VAT from a March 2026 invoice?",
     ],
 )
 def test_answer_query_handles_emoji_and_foreign_language_queries(query, tmp_path, monkeypatch) -> None:
@@ -286,7 +286,7 @@ def test_answer_query_shortened_context_fits_under_limit(tmp_path, monkeypatch) 
     monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
 
     result = answer_query(
-        query="Kiedy powstaje obowiazek podatkowy?",
+        query="Kiedy powstaje obowiazek podatkowy VAT przy sprzedazy fakturami nabywcy za marzec 2026?",
         knowledge_path=seed_file,
         system_prompt="Jestes Aktuo.",
         api_key="test-key",

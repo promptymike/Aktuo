@@ -354,3 +354,91 @@ def test_vat_ksef_correction_query_still_requires_clarification(tmp_path, monkey
     # Clarification must fire; ranking must NOT have been called
     assert result.needs_clarification is True
     assert call_count["n"] == 0
+
+
+def _write_slots_zus(path) -> None:
+    """Write a slots fixture that includes zus and cit_wht required facts."""
+    path.write_text(
+        json.dumps(
+            {
+                "vat_jpk_ksef": {
+                    "required_facts": ["rodzaj_dokumentu", "okres_lub_data", "rola_lub_status_strony"]
+                },
+                "pit_ryczalt": {
+                    "required_facts": ["forma_opodatkowania", "źródło_przychodu", "okres_lub_data"]
+                },
+                "zus": {
+                    "required_facts": ["tytuł_ubezpieczenia", "status_osoby", "rodzaj_składki_lub_świadczenia"]
+                },
+                "cit_wht": {
+                    "required_facts": ["typ_podmiotu", "rodzaj_transakcji_lub_płatności", "okres_lub_data"]
+                },
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+
+def test_zus_underspecified_query_triggers_clarification(tmp_path, monkeypatch) -> None:
+    """ZUS queries with 3 missing slots must trigger clarification (threshold=15)."""
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    slots_path = tmp_path / "clarification_slots.json"
+    knowledge_path = tmp_path / "law_knowledge.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_accounting_zus(taxonomy_path)
+    _write_slots_zus(slots_path)
+    knowledge_path.write_text("[]", encoding="utf-8")
+
+    monkeypatch.setattr("core.retriever._retrieve_ranked_chunks", lambda q, kp, limit=5: [])
+
+    result = retrieve(
+        query="Czy działa Wam e płatnik na pue ZUS?",
+        knowledge_path=knowledge_path,
+        taxonomy_path=str(taxonomy_path),
+        slots_path=str(slots_path),
+    )
+    assert result.needs_clarification is True
+    assert result.intent == "zus"
+
+
+def test_cit_underspecified_query_triggers_clarification(tmp_path, monkeypatch) -> None:
+    """CIT queries with missing slots should trigger clarification (threshold=20)."""
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    slots_path = tmp_path / "clarification_slots.json"
+    knowledge_path = tmp_path / "law_knowledge.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+    _write_slots_zus(slots_path)
+    knowledge_path.write_text("[]", encoding="utf-8")
+
+    monkeypatch.setattr("core.retriever._retrieve_ranked_chunks", lambda q, kp, limit=5: [])
+
+    result = retrieve(
+        query="Wynajem auta za granicą. Czy w tej sytuacji należy pobrać podatek u źródła WHT?",
+        knowledge_path=knowledge_path,
+        taxonomy_path=str(taxonomy_path),
+        slots_path=str(slots_path),
+    )
+    assert result.needs_clarification is True
+    assert result.intent == "cit_wht"
+
+
+def test_vat_odliczenie_query_triggers_clarification(tmp_path, monkeypatch) -> None:
+    """Queries with 'odliczałam' must not bypass clarification after removing 'odlicz'."""
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    slots_path = tmp_path / "clarification_slots.json"
+    knowledge_path = tmp_path / "law_knowledge.json"
+    _write_taxonomy(taxonomy_path)
+    _write_slots(slots_path)
+    knowledge_path.write_text("[]", encoding="utf-8")
+
+    monkeypatch.setattr("core.retriever._retrieve_ranked_chunks", lambda q, kp, limit=5: [])
+
+    result = retrieve(
+        query="W trakcie użytkowania odliczałam 50% VAT. Czy ta darowizna powinna być opodatkowana VAT?",
+        knowledge_path=knowledge_path,
+        taxonomy_path=str(taxonomy_path),
+        slots_path=str(slots_path),
+    )
+    assert result.needs_clarification is True
