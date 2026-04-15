@@ -442,3 +442,317 @@ def test_vat_odliczenie_query_triggers_clarification(tmp_path, monkeypatch) -> N
         slots_path=str(slots_path),
     )
     assert result.needs_clarification is True
+
+
+# ---------------------------------------------------------------------------
+# Tests for intent confusion fixes (fix: reduce top intent confusion pairs)
+# ---------------------------------------------------------------------------
+
+def _extend_taxonomy_full(taxonomy_path) -> None:
+    """Add all intents needed for confusion-pair tests."""
+    taxonomy = json.loads(taxonomy_path.read_text(encoding="utf-8"))
+    taxonomy.setdefault("business_of_accounting_office", {
+        "description": "Pytania o prowadzenie biura rachunkowego: cenniki, klienci, rentowność.",
+        "examples": ["Ile bierzecie za obsługę klienta biura?", "Cennik za KSeF w biurze rachunkowym."],
+        "routing_recommendation": "Traktuj jako business/community.",
+    })
+    taxonomy.setdefault("legal_substantive", {
+        "description": "Pytania o skutki materialnoprawne: obowiązki, stawki, limity.",
+        "examples": ["Jak to ogarnąć?", "Proszę o pomoc z podatkami."],
+        "routing_recommendation": "Kieruj do prawnika.",
+    })
+    taxonomy.setdefault("legal_procedural", {
+        "description": "Pytania o korekty, wnioski, pełnomocnictwa i tryb postępowania.",
+        "examples": ["Jak rozliczyć korektę?", "Czy urząd skarbowy sam zwróci nadpłatę?"],
+        "routing_recommendation": "Kieruj do Ordynacji podatkowej.",
+    })
+    taxonomy.setdefault("education_community", {
+        "description": "Pytania o kursy, szkolenia, rozwój kariery i rekomendacje.",
+        "examples": ["Polecacie kurs online kadry i płace?", "Certyfikat księgowy — jak zdobyć?"],
+        "routing_recommendation": "Traktuj jako community-only.",
+    })
+    taxonomy.setdefault("software_tooling", {
+        "description": "Pytania o programy księgowe, importy, integracje i konfiguracje.",
+        "examples": ["Jaki program do księgowania polecacie?", "Jak zaimportować dane do Optimy?"],
+        "routing_recommendation": "Traktuj jako workflow/product support.",
+    })
+    taxonomy.setdefault("hr", {
+        "description": "Pytania o kadry, umowy o pracę, urlopy i stosunki pracy.",
+        "examples": ["Jakie są okresy wypowiedzenia?", "Ile dni urlopu przysługuje?"],
+        "routing_recommendation": "Kieruj do kadr.",
+    })
+    taxonomy.setdefault("pit_ryczalt", {
+        "description": "Pytania o PIT, ryczałt, formę opodatkowania i rozliczenia roczne.",
+        "examples": ["Czy PIT-37 trzeba skorygować?", "Koszty w KPiR memoriałowo czy bieżąco?"],
+        "routing_recommendation": "Kieruj do PIT.",
+    })
+    taxonomy.setdefault("accounting_operational", {
+        "description": "Pytania o księgowanie, środki trwałe, remanent i ewidencje.",
+        "examples": ["Jak ująć koszt za poprzedni rok?", "Remanent na koniec roku."],
+        "routing_recommendation": "Kieruj do rachunkowości operacyjnej.",
+    })
+    taxonomy.setdefault("out_of_scope", {
+        "description": "Pytania urwane, zbyt ogólne lub niezwiązane z Aktuo.",
+        "examples": ["Jakie miasto?"],
+        "routing_recommendation": "Zwracaj out-of-scope.",
+    })
+    taxonomy_path.write_text(json.dumps(taxonomy, ensure_ascii=False), encoding="utf-8")
+
+
+class TestConfusionFix1_BusinessOfAccountingOffice:
+    """Fix 1: bare 'klient' removed from business_of_accounting_office hints."""
+
+    def test_klient_query_not_pulled_to_biuro(self, tmp_path) -> None:
+        """Queries mentioning 'klient' in legal/tax context must NOT route to business_of_accounting_office."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # Legal-substantive query about a client's tax situation
+        result = classify_intent(
+            "Co robicie jeżeli klient jest na ryczalcie, ma kasę fiskalną?",
+            str(taxonomy_path),
+        )
+        assert result != "business_of_accounting_office"
+
+    def test_biuro_rachunkowe_still_routes_to_biuro(self, tmp_path) -> None:
+        """Queries about 'biuro rachunkowe' must still route correctly via rachunkow prefix."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Jak ustalić cennik w biurze rachunkowym za obsługę KSeF?",
+            str(taxonomy_path),
+        )
+        assert result == "business_of_accounting_office"
+
+    def test_vat_query_with_klient_not_pulled_to_biuro(self, tmp_path) -> None:
+        """VAT query mentioning 'klient' must not be captured by business_of_accounting_office."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Klient wystawił fakturę końcem grudnia — czy to idzie do JPK za grudzień?",
+            str(taxonomy_path),
+        )
+        assert result != "business_of_accounting_office"
+        assert result == "vat_jpk_ksef"
+
+
+class TestConfusionFix2_StopWordsKtosMoze:
+    """Fix 2: 'ktos', 'moze', 'kto' added to STOP_WORDS to reduce taxonomy noise."""
+
+    def test_ktos_podpowie_not_routed_to_education(self, tmp_path) -> None:
+        """Generic 'ktoś podpowie' queries must not route to education_community."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Czy ktoś rozlicza spółkę komandytową?",
+            str(taxonomy_path),
+        )
+        assert result != "education_community"
+
+    def test_moze_query_not_biased(self, tmp_path) -> None:
+        """'Może' as modal verb should not bias scoring."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # Should go to vat or legal, not education_community
+        result = classify_intent(
+            "Może ktoś podpowie jak wystawić fakturę korygującą?",
+            str(taxonomy_path),
+        )
+        assert result != "education_community"
+        # "faktura korygujaca" hint should pull this to vat
+        assert result == "vat_jpk_ksef"
+
+
+class TestConfusionFix3_SoftwareToolingAnchors:
+    """Fix 3: added software program names (streamsoft, saldeo, etc.) to software_tooling."""
+
+    def test_streamsoft_routes_to_software(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Czy ktoś używa programu Streamsoft PRO do importu danych?",
+            str(taxonomy_path),
+        )
+        assert result == "software_tooling"
+
+    def test_saldeo_routes_to_software(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Czy macie jakieś pulpity klienta, albo klienci wam wrzucają wszystko np. w saldeo?",
+            str(taxonomy_path),
+        )
+        assert result == "software_tooling"
+
+    def test_mala_ksiegowosc_routes_to_software(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # Genitive/locative form: "Małej Księgowości" matches inflected hint
+        result = classify_intent(
+            "Czy ktoś pracuje na Małej Księgowości Rzeczpospolita?",
+            str(taxonomy_path),
+        )
+        assert result == "software_tooling"
+
+
+class TestConfusionFix4_LegalProceduralAnchors:
+    """Fix 4: added 'wezwanie', 'konsekwencje', 'kara', 'sankcja' to legal_procedural."""
+
+    def test_wezwanie_routes_to_legal_procedural(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # "wezwania" matches "wezwani" prefix hint
+        result = classify_intent(
+            "Czy wysłaliście wezwania do zapłaty do kontrahenta?",
+            str(taxonomy_path),
+        )
+        assert result == "legal_procedural"
+
+    def test_konsekwencje_routes_to_legal_procedural(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Jakie są konsekwencje nieterminowego złożenia deklaracji?",
+            str(taxonomy_path),
+        )
+        assert result == "legal_procedural"
+
+    def test_kara_sankcja_routes_to_legal_procedural(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Jakie kary grożą za nieterminowe złożenie deklaracji?",
+            str(taxonomy_path),
+        )
+        assert result == "legal_procedural"
+
+    def test_sankcja_routes_to_legal_procedural(self, tmp_path) -> None:
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Czy grożą sankcje karnoskarbowe za niezłożenie korekty?",
+            str(taxonomy_path),
+        )
+        assert result == "legal_procedural"
+
+
+class TestConfusionFix5_PitRyczaltNarrowed:
+    """Fix 5: bare 'pit' removed from pit_ryczalt to avoid matching 'pulpity', 'kapitał'."""
+
+    def test_pulpity_not_routed_to_pit(self, tmp_path) -> None:
+        """'pulpity klienta' must not match bare 'pit' and route to pit_ryczalt."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Czy macie jakieś pulpity do zarządzania dokumentami w programie?",
+            str(taxonomy_path),
+        )
+        assert result != "pit_ryczalt"
+
+    def test_pit_37_still_routes_to_pit(self, tmp_path) -> None:
+        """Explicit PIT-37 reference must still route to pit_ryczalt."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        assert classify_intent(
+            "Czy PIT 37 trzeba skorygować za 2025 rok?",
+            str(taxonomy_path),
+        ) == "pit_ryczalt"
+
+    def test_rozliczenie_pit_routes_to_pit(self, tmp_path) -> None:
+        """Multi-word 'rozliczenie PIT' hint must route to pit_ryczalt."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        assert classify_intent(
+            "Jak wygląda rozliczenie PIT dla najmu prywatnego za 2025?",
+            str(taxonomy_path),
+        ) == "pit_ryczalt"
+
+    def test_kpir_koszt_routes_to_pit_not_vat(self, tmp_path) -> None:
+        """KPiR cost-booking queries should route to pit_ryczalt, not vat."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        result = classify_intent(
+            "Koszty w KPiR memoriałowo zaliczać do 2025 czy bieżąco styczeń 2026?",
+            str(taxonomy_path),
+        )
+        assert result == "pit_ryczalt"
+
+
+class TestConfusionFix6_SlotlessPenalty:
+    """Fix 6: slot-less intents (business, education, out_of_scope) receive a -1 scoring
+    penalty so that slotted intents with comparable keyword scores win instead of
+    acting as routing 'black holes' for ambiguous queries."""
+
+    def test_tie_broken_in_favour_of_slotted_intent(self, tmp_path) -> None:
+        """When a slotted and slot-less intent tie on keyword score, the slotted one wins."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # "formularz A1" gives ZUS +4 via hint, but the query also contains tokens
+        # matching business_of_accounting_office taxonomy. The penalty should
+        # ensure ZUS wins over business.
+        result = classify_intent(
+            "Dotyczące formularza A1. Prowadzę jednoosobową działalność gospodarczą.",
+            str(taxonomy_path),
+        )
+        assert result != "business_of_accounting_office"
+
+    def test_strong_slotless_signal_still_wins(self, tmp_path) -> None:
+        """A slot-less intent with a strong domain signal must still win despite the penalty."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # "biuro rachunkowe" + "cennik" = strong business_of_accounting_office signal
+        result = classify_intent(
+            "Jak ustalić cennik w biurze rachunkowym za obsługę KSeF?",
+            str(taxonomy_path),
+        )
+        assert result == "business_of_accounting_office"
+
+    def test_vague_query_prefers_slotted_intent(self, tmp_path) -> None:
+        """Context-free questions that match a slot-less intent only by 1 token
+        should prefer a slotted intent if available."""
+        taxonomy_path = tmp_path / "intent_taxonomy.json"
+        _write_taxonomy(taxonomy_path)
+        _extend_taxonomy_full(taxonomy_path)
+
+        # "kontrola" (from 'kontroli') could match both legal_procedural and
+        # business_of_accounting_office. With penalty, legal_procedural wins.
+        result = classify_intent(
+            "Jak sobie radzicie z kontrolą wszystkiego?",
+            str(taxonomy_path),
+        )
+        assert result != "business_of_accounting_office"

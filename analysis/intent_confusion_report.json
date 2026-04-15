@@ -1,0 +1,467 @@
+{
+  "total_wrong_intent_failures": 79,
+  "total_confusion_pairs": 43,
+  "pairs": [
+    {
+      "expected_intent": "legal_substantive",
+      "predicted_intent": "business_of_accounting_office",
+      "count": 6,
+      "total_frequency": 25,
+      "examples": [
+        "Jeśli spółka pieczęć lub po złożeniu zaw fa jdg profil zaufany podpis kwalifikowany?",
+        "Czy jest ktoś na grupie kto rozlicza usługi kateringowe dokładnie dostawców/menadżerów w kuchni vikinga?",
+        "Czy wie ktoś coś o systemie SENT? Jak to ma się do ubrań, jak klient wozi detaliczne ilośći ma robić wszystkie procedury?",
+        "Czy wystarczy jak Klient zbiera sobie te potwierdzenia na wypadek kontroli?",
+        "Jak będziecie sobie radzić od stycznia wprowadzać dokumenty do 20 następnego dnia miesiaca?"
+      ],
+      "suggested_fix": "Hints 'klient', 'biuro rachunkowe' are too broad and capture legal_substantive queries. Add disambiguating hints for legal_substantive."
+    },
+    {
+      "expected_intent": "legal_procedural",
+      "predicted_intent": "business_of_accounting_office",
+      "count": 9,
+      "total_frequency": 16,
+      "examples": [
+        "Chciałabym zapytać jak sprzedaje firmą towar z montażem , to fv sprzedaży trzeba rozdzielić na towar i usługę , tak żeby wszystko zgadzało się w reman",
+        "Czy to jest osobna usługa i nie stosuje proporcji? —?",
+        "Jak sobie radzicie z kontrolą wszystkiego?",
+        "Jak wiadomo, przy składaniu wniosku należy podać swoje dane i dane US. — :)?",
+        "Składając ZAWFa do urzędu skarbowego aby nadać uprawnienia do spółki cywilnej dla siebie powinnam w danych osoby uprawnionej do korzystania poddać ide"
+      ],
+      "suggested_fix": "Hints 'klient', 'biuro rachunkowe' are too broad and capture legal_procedural queries. Add disambiguating hints for legal_procedural."
+    },
+    {
+      "expected_intent": "hr",
+      "predicted_intent": "business_of_accounting_office",
+      "count": 1,
+      "total_frequency": 16,
+      "examples": [
+        "Czy to jest poprawne?"
+      ],
+      "suggested_fix": "Hints 'klient', 'biuro rachunkowe' are too broad and capture hr queries. Add disambiguating hints for hr."
+    },
+    {
+      "expected_intent": "vat_jpk_ksef",
+      "predicted_intent": "unknown",
+      "count": 1,
+      "total_frequency": 16,
+      "examples": [
+        "Czy to prawda?"
+      ],
+      "suggested_fix": "Add keyword hints for vat_jpk_ksef to INTENT_KEYWORD_HINTS (missing anchor words)."
+    },
+    {
+      "expected_intent": "zus",
+      "predicted_intent": "business_of_accounting_office",
+      "count": 4,
+      "total_frequency": 13,
+      "examples": [
+        "Jaka cena za usługę?",
+        "Czy jako biura rachunkowe, ksiegowosc macie ubezpieczenia na wypadek pomyłek?. —?",
+        "Czy zmiana formy opodatkowania jest zgłaszana tylko do US?",
+        "Dotyczące formularza A1.Prowadzę jednoosobową działalność gospodarczą w branży budowlanej w Polsce. —?"
+      ],
+      "suggested_fix": "Hints 'klient', 'biuro rachunkowe' are too broad and capture zus queries. Add disambiguating hints for zus."
+    },
+    {
+      "expected_intent": "legal_substantive",
+      "predicted_intent": "education_community",
+      "count": 2,
+      "total_frequency": 12,
+      "examples": [
+        "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+        "Osoba ma jdg, czy może otworzyć spółkę cywilną, gdzie udziałowcem będzie jdg Jan Kowalski i Jan Kowalski jako osoba fizyczna?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture legal_substantive queries. Add more specific anchors for legal_substantive."
+    },
+    {
+      "expected_intent": "software_tooling",
+      "predicted_intent": "vat_jpk_ksef",
+      "count": 3,
+      "total_frequency": 11,
+      "examples": [
+        "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że",
+        "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+        "Jak zaksięgowalibyście fakturę od Apple (NIP UE – Irlandia) jako import usług zgodnie z art. 28b ustawy o VAT?"
+      ],
+      "suggested_fix": "Broad VAT hints ('faktura', 'nip') pull software_tooling queries into vat_jpk_ksef. Add stronger anchors for software_tooling."
+    },
+    {
+      "expected_intent": "vat_jpk_ksef",
+      "predicted_intent": "pit_ryczalt",
+      "count": 2,
+      "total_frequency": 10,
+      "examples": [
+        "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
+        "Czy ktoś mógłby pomóc? Mam fakturę za leasing samochodu wystawiona 23.02, a data zakończenia 09.03? ja to rozliczyć w kosztach bilansowych i KUP? w kt"
+      ],
+      "suggested_fix": "The hint 'pit' in pit_ryczalt is overly broad — it captures vat_jpk_ksef queries that mention PIT forms. Add disambiguating hints to vat_jpk_ksef or narrow pit_ryczalt."
+    },
+    {
+      "expected_intent": "legal_substantive",
+      "predicted_intent": "out_of_scope",
+      "count": 1,
+      "total_frequency": 9,
+      "examples": [
+        "Co o tym myślicie?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate legal_substantive from out_of_scope. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "accounting_operational",
+      "predicted_intent": "business_of_accounting_office",
+      "count": 3,
+      "total_frequency": 8,
+      "examples": [
+        "Czy spółka zoo może udzielić pożyczki wspólnikowi? —?",
+        "Potrzebuję pomocy przy księgowaniu dewelopera, jeżeli ktoś miał do czynienia z takim profilem działalności, proszę o odzew?",
+        ".Jako firma (spółka akcyjna, pełne księgi) wzięliśmy udział w promocji i po spełnieniu warunków nieodpłatnie otrzymaliśmy prezent w postaci akumulator"
+      ],
+      "suggested_fix": "Hints 'klient', 'biuro rachunkowe' are too broad and capture accounting_operational queries. Add disambiguating hints for accounting_operational."
+    },
+    {
+      "expected_intent": "pit_ryczalt",
+      "predicted_intent": "vat_jpk_ksef",
+      "count": 2,
+      "total_frequency": 8,
+      "examples": [
+        "Czy jest to prawidłowe i faktura do VAT i kpir idzie w lutym czy trzeba ręcznie zmienić datę sprzedaży na 31.01?",
+        "Jak to u was wygląda w praktyce (no i w razie kontroli)klient przynosi mi zaległą fakture kosztową załóżmy faktura wystawiona w kwietniu przynosi ją p"
+      ],
+      "suggested_fix": "Broad VAT hints ('faktura', 'nip') pull pit_ryczalt queries into vat_jpk_ksef. Add stronger anchors for pit_ryczalt."
+    },
+    {
+      "expected_intent": "vat_jpk_ksef",
+      "predicted_intent": "out_of_scope",
+      "count": 1,
+      "total_frequency": 8,
+      "examples": [
+        "Jak myślicie?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate vat_jpk_ksef from out_of_scope. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "legal_substantive",
+      "predicted_intent": "accounting_operational",
+      "count": 1,
+      "total_frequency": 7,
+      "examples": [
+        "Czy są na grupie osoby prowadzące księgi rachunkowe wydawnictwa?"
+      ],
+      "suggested_fix": "Broad accounting hints pull legal_substantive queries into accounting_operational. Add domain-specific anchors for legal_substantive."
+    },
+    {
+      "expected_intent": "zus",
+      "predicted_intent": "unknown",
+      "count": 3,
+      "total_frequency": 6,
+      "examples": [
+        ", a dochód za grudzień będzie w rozliczeniu rocznym?",
+        "A grudzień 2023 jest wprowadzony?",
+        "Ale co Ty wymyślasz?"
+      ],
+      "suggested_fix": "Add keyword hints for zus to INTENT_KEYWORD_HINTS (missing anchor words)."
+    },
+    {
+      "expected_intent": "cit_wht",
+      "predicted_intent": "unknown",
+      "count": 3,
+      "total_frequency": 6,
+      "examples": [
+        "Co potrzeba?",
+        "Czy raczej zwracaja?",
+        "Czy wie ktoś jak rozwiązać poniższa sprawę?"
+      ],
+      "suggested_fix": "Add keyword hints for cit_wht to INTENT_KEYWORD_HINTS (missing anchor words)."
+    },
+    {
+      "expected_intent": "education_community",
+      "predicted_intent": "vat_jpk_ksef",
+      "count": 3,
+      "total_frequency": 6,
+      "examples": [
+        "Czy do VAT-u zaksięgować do grudnia po kursie z grudnia a do PIT do stycznia?",
+        "Czy jeśli ktoś zamierza wystawiać i odbierać faktury bezpośrednio z KSeF - aplikacji podatnika, to i tak musi pobrać certyfikaty?",
+        "Czy jeżeli dopiero zaloguje się do KSeF i pobiorę te wszystkie klucze certyfikaty itd itp 10 lutego , to czy wówczas będę mógł pobrać faktury które są"
+      ],
+      "suggested_fix": "Add out_of_scope / community anchors so queries stop matching vat_jpk_ksef."
+    },
+    {
+      "expected_intent": "hr",
+      "predicted_intent": "payroll",
+      "count": 2,
+      "total_frequency": 6,
+      "examples": [
+        "Czy przy wypłacie do 10 lutego za styczeń PIT-4 generowany jest za luty w miesiącu poniesienia kosztu czy powinien być za styczeń w miesiącu za które ",
+        "Pytanie do księgowych na b2b, w jaki sposób macie ustalone wynagrodzenie?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate hr from payroll. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "hr",
+      "predicted_intent": "accounting_operational",
+      "count": 2,
+      "total_frequency": 6,
+      "examples": [
+        "Szukam dodatkowej współpracy na umowę zlecenie z biurem rachunkowym lub firmą?",
+        "W poprzednim roku nie podpisał...Jak się lepiej opłaca?"
+      ],
+      "suggested_fix": "Broad accounting hints pull hr queries into accounting_operational. Add domain-specific anchors for hr."
+    },
+    {
+      "expected_intent": "vat_jpk_ksef",
+      "predicted_intent": "legal_substantive",
+      "count": 1,
+      "total_frequency": 6,
+      "examples": [
+        "Jak wytłumaczyć francuskim księgowym na czym polega fifo od środków własnych na walutowych rachunkach bankowych?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate vat_jpk_ksef from legal_substantive. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "legal_procedural",
+      "predicted_intent": "education_community",
+      "count": 3,
+      "total_frequency": 5,
+      "examples": [
+        "Czy jest jakieś miejsce gdzie mogę zobaczyć listę uprawnień od wszystkich klientów jak np listę Upl w eurzedzie skarbowym?",
+        "Czy macie dziś problem z dostaniem się na strony Urzędów skarbowych?",
+        "Czy do tego czynnego żalu muszę (ponownie) załączyć ten formularz?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture legal_procedural queries. Add more specific anchors for legal_procedural."
+    },
+    {
+      "expected_intent": "software_tooling",
+      "predicted_intent": "accounting_operational",
+      "count": 2,
+      "total_frequency": 5,
+      "examples": [
+        "Czy prawidłowe jest księgowanie naliczonych ujemnych odsetek od akcji na dzień bilansowy zapisem 650Ma /np 1000 zł i Wn 750 1000zł.Jakim zapisem zrobi",
+        "..nota obciazeniowa od kontrahenta zagranicznego za refakturę kosxtow windykacji...czy jest to import usług?"
+      ],
+      "suggested_fix": "Broad accounting hints pull software_tooling queries into accounting_operational. Add domain-specific anchors for software_tooling."
+    },
+    {
+      "expected_intent": "vat_jpk_ksef",
+      "predicted_intent": "accounting_operational",
+      "count": 1,
+      "total_frequency": 5,
+      "examples": [
+        ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?"
+      ],
+      "suggested_fix": "Broad accounting hints pull vat_jpk_ksef queries into accounting_operational. Add domain-specific anchors for vat_jpk_ksef."
+    },
+    {
+      "expected_intent": "vat_jpk_ksef",
+      "predicted_intent": "education_community",
+      "count": 1,
+      "total_frequency": 5,
+      "examples": [
+        "2)Jak wystawić fakturę z jdg na odsetki czy ze stawką zw?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture vat_jpk_ksef queries. Add more specific anchors for vat_jpk_ksef."
+    },
+    {
+      "expected_intent": "hr",
+      "predicted_intent": "out_of_scope",
+      "count": 2,
+      "total_frequency": 4,
+      "examples": [
+        "A jakie masz umiejetnosci?",
+        "A jakie najniższe oprocentowanie możemy wpisać w umowie pożyczki?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate hr from out_of_scope. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "cit_wht",
+      "predicted_intent": "education_community",
+      "count": 2,
+      "total_frequency": 4,
+      "examples": [
+        "Czy jedna deklaracja ma być złożona?",
+        "JDG na księgach, przekroczony limit. Często się z tym spotykacie?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture cit_wht queries. Add more specific anchors for cit_wht."
+    },
+    {
+      "expected_intent": "pit_ryczalt",
+      "predicted_intent": "unknown",
+      "count": 1,
+      "total_frequency": 4,
+      "examples": [
+        "Ktoś coś:)?"
+      ],
+      "suggested_fix": "Add keyword hints for pit_ryczalt to INTENT_KEYWORD_HINTS (missing anchor words)."
+    },
+    {
+      "expected_intent": "accounting_operational",
+      "predicted_intent": "unknown",
+      "count": 1,
+      "total_frequency": 4,
+      "examples": [
+        "Zgadza się?"
+      ],
+      "suggested_fix": "Add keyword hints for accounting_operational to INTENT_KEYWORD_HINTS (missing anchor words)."
+    },
+    {
+      "expected_intent": "hr",
+      "predicted_intent": "zus",
+      "count": 1,
+      "total_frequency": 3,
+      "examples": [
+        "Czy jeśli okres wypowiedzenia UoP to miesiąc to ZWUA składamy dopiero dzień po ustaniu okresu wypowiedzenia?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate hr from zus. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "software_tooling",
+      "predicted_intent": "pit_ryczalt",
+      "count": 1,
+      "total_frequency": 3,
+      "examples": [
+        "Data wystawienia 28.02 Data zapisania w KSeF /otrzymania 02.03.2026 Mogę zaksięgować w KPiR pod data 28.02?"
+      ],
+      "suggested_fix": "The hint 'pit' in pit_ryczalt is overly broad — it captures software_tooling queries that mention PIT forms. Add disambiguating hints to software_tooling or narrow pit_ryczalt."
+    },
+    {
+      "expected_intent": "pit_ryczalt",
+      "predicted_intent": "accounting_operational",
+      "count": 1,
+      "total_frequency": 3,
+      "examples": [
+        "Koszty w KPiR memoriałowo zaliczac do 2025 czy bieżąco styczeń 2026?"
+      ],
+      "suggested_fix": "Broad accounting hints pull pit_ryczalt queries into accounting_operational. Add domain-specific anchors for pit_ryczalt."
+    },
+    {
+      "expected_intent": "accounting_operational",
+      "predicted_intent": "education_community",
+      "count": 1,
+      "total_frequency": 3,
+      "examples": [
+        "Szukam doradcy podatkowego lub księgowej zorientowanej w temacie aportu ZCP do spółki komandytowej od strony księgowej?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture accounting_operational queries. Add more specific anchors for accounting_operational."
+    },
+    {
+      "expected_intent": "software_tooling",
+      "predicted_intent": "education_community",
+      "count": 1,
+      "total_frequency": 3,
+      "examples": [
+        "W takim razie rozliczam to jako import od kwoty brutto czy jako transakcja krajowa?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture software_tooling queries. Add more specific anchors for software_tooling."
+    },
+    {
+      "expected_intent": "cit_wht",
+      "predicted_intent": "vat_jpk_ksef",
+      "count": 1,
+      "total_frequency": 3,
+      "examples": [
+        "Zastanawiam się nad faktura korekta sprzedaży na minus roboty budowlane ( bledna kwota) data wystawienia styczeń a dotyczyła faktury grudniowej, czy d"
+      ],
+      "suggested_fix": "Broad VAT hints ('faktura', 'nip') pull cit_wht queries into vat_jpk_ksef. Add stronger anchors for cit_wht."
+    },
+    {
+      "expected_intent": "hr",
+      "predicted_intent": "pit_ryczalt",
+      "count": 1,
+      "total_frequency": 2,
+      "examples": [
+        "A wypłatę i zaliczkę za listopad miał wypłaconą w grudniu?"
+      ],
+      "suggested_fix": "The hint 'pit' in pit_ryczalt is overly broad — it captures hr queries that mention PIT forms. Add disambiguating hints to hr or narrow pit_ryczalt."
+    },
+    {
+      "expected_intent": "zus",
+      "predicted_intent": "education_community",
+      "count": 1,
+      "total_frequency": 2,
+      "examples": [
+        "Ale co ma jedno z drugim?"
+      ],
+      "suggested_fix": "Community hints ('polecacie', 'jak zaczac') capture zus queries. Add more specific anchors for zus."
+    },
+    {
+      "expected_intent": "zus",
+      "predicted_intent": "accounting_operational",
+      "count": 1,
+      "total_frequency": 2,
+      "examples": [
+        "Ale samego CIT bo ewidencję prowadzą same, czy zaksięgowanie (końcem marca, a jakże!) całego roku?"
+      ],
+      "suggested_fix": "Broad accounting hints pull zus queries into accounting_operational. Add domain-specific anchors for zus."
+    },
+    {
+      "expected_intent": "cit_wht",
+      "predicted_intent": "pit_ryczalt",
+      "count": 1,
+      "total_frequency": 2,
+      "examples": [
+        "Czy operujecie tylko czy wystawienia/sprzedazy.Jeśli data wpływu jest to 5.12 a wystawienia i sprzedaż 10.10 to jak ujmujecie w CIT i VAT?"
+      ],
+      "suggested_fix": "The hint 'pit' in pit_ryczalt is overly broad — it captures cit_wht queries that mention PIT forms. Add disambiguating hints to cit_wht or narrow pit_ryczalt."
+    },
+    {
+      "expected_intent": "cit_wht",
+      "predicted_intent": "legal_procedural",
+      "count": 1,
+      "total_frequency": 2,
+      "examples": [
+        "Meta i Google. Składać i pisać czynny żal? Ktoś złożył po terminie i były jakieś konsekwencje?"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate cit_wht from legal_procedural. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "legal_procedural",
+      "predicted_intent": "unknown",
+      "count": 1,
+      "total_frequency": 1,
+      "examples": [
+        "Co jest zatem kosztem podatkowym i jak to wyliczyć?"
+      ],
+      "suggested_fix": "Add keyword hints for legal_procedural to INTENT_KEYWORD_HINTS (missing anchor words)."
+    },
+    {
+      "expected_intent": "payroll",
+      "predicted_intent": "pit_ryczalt",
+      "count": 1,
+      "total_frequency": 1,
+      "examples": [
+        "Czy jako przedsiębiorca robiąc PIT 36 z działalności dodaje PIT-11 z tego roku przed rozpoczęciem jdg?"
+      ],
+      "suggested_fix": "The hint 'pit' in pit_ryczalt is overly broad — it captures payroll queries that mention PIT forms. Add disambiguating hints to payroll or narrow pit_ryczalt."
+    },
+    {
+      "expected_intent": "payroll",
+      "predicted_intent": "zus",
+      "count": 1,
+      "total_frequency": 1,
+      "examples": [
+        "Czy ktoś może miał taki przypadek i podpowie jak dokonać korekt ZUS, kwot do wypłaty, żeby nie korygować PIT4, PIT11 ZA 2024 rok i nie dokonywać korek"
+      ],
+      "suggested_fix": "Add disambiguating keyword hints to separate payroll from zus. Review overlapping tokens."
+    },
+    {
+      "expected_intent": "payroll",
+      "predicted_intent": "accounting_operational",
+      "count": 1,
+      "total_frequency": 1,
+      "examples": [
+        "Czy mógłby ktoś mi podpowiedzieć czy dobrze rozumuje księgowanie w bilansie i CIT wynagrodzeń i kosztów płatnika?"
+      ],
+      "suggested_fix": "Broad accounting hints pull payroll queries into accounting_operational. Add domain-specific anchors for payroll."
+    },
+    {
+      "expected_intent": "business_of_accounting_office",
+      "predicted_intent": "vat_jpk_ksef",
+      "count": 1,
+      "total_frequency": 1,
+      "examples": [
+        "Ile zarabiacie w biurze rachunkowym księgując około 40 - 50 firm w miesiącu?"
+      ],
+      "suggested_fix": "Broad VAT hints ('faktura', 'nip') pull business_of_accounting_office queries into vat_jpk_ksef. Add stronger anchors for business_of_accounting_office."
+    }
+  ]
+}

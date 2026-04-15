@@ -20,12 +20,16 @@ STOP_WORDS = {
     "ale",
     "bo",
     "co",
+    "cos",        # coś = something — pronoun, no topic signal
     "czy",
     "dla",
     "do",
     "i",
     "jak",
     "jest",
+    "kto",        # who — interrogative pronoun, noisy across many taxonomy examples
+    "ktos",       # ktoś = someone — pronoun appearing in many taxonomy examples
+    "moze",       # może = maybe/can — modal verb, no topic signal
     "na",
     "nie",
     "o",
@@ -40,6 +44,15 @@ STOP_WORDS = {
     "z",
     "za",
 }
+
+# Intents with no clarification slots defined.  Queries routed here never
+# trigger follow-up questions, so ambiguous matches are penalised to let
+# slotted intents with comparable scores win instead.
+_SLOTLESS_INTENTS = frozenset({
+    "business_of_accounting_office",
+    "education_community",
+    "out_of_scope",
+})
 
 INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
     "vat_jpk_ksef": (
@@ -75,6 +88,8 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "stawka vat",        # VAT rate query
         "proporcja vat",     # proportional VAT deduction
         "odwrotne obciazenie",  # reverse charge
+        "import uslug",      # import usług — import of services, art. 28b
+        "kase fiskaln",      # prefix: kasę fiskalną / kasy fiskalne (inflected forms)
     ),
     "zus": (
         "zus",
@@ -94,6 +109,8 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "maly zus",          # "Mały ZUS Plus" reduced contributions
         "preferencyjny",     # preferential/reduced ZUS rates
         "pfron",             # PFRON disabled-persons fund levy
+        "ubezpiecz",         # prefix: ubezpieczenie/ubezpieczenia/ubezpieczeniowe — insurance
+        "formularz a1",      # ZUS A1 form for cross-border social security
     ),
     "payroll": (
         "lista plac",
@@ -124,6 +141,9 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "nadgodziny",
         "dziecko",       # "Odnośnie ulgi na dziecko?" – child-relief employee declaration
         "zmieni",        # "Co się zmieniło?", "Co się zmienił?" – HR law updates (prefix avoids ł normalization issue)
+        "umowa zleceni",   # prefix: umowa zlecenie/zlecenia — civil law contract
+        "etat",            # full-time employment
+        "wspolprac",       # prefix: współpraca/współpracy — cooperation/employment
     ),
     "legal_substantive": (
         "ogarnac",           # "Jak to ogarnąć?"
@@ -133,13 +153,19 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "nie rozumiem",      # general confusion about a legal rule
     ),
     "pit_ryczalt": (
-        "pit",
+        # Bare "pit" removed — it matched inside unrelated words (pulpity, kapitał).
+        # Specific PIT form hints and multi-word anchors provide targeted matching.
         "pit-37",
         "pit 37",
         "pit37",
         "pit-36",
         "pit 36",
         "pit36",
+        "rozliczenie pit",   # "jak rozliczyć PIT"
+        "deklaracja pit",    # "deklaracja PIT-37"
+        "zeznanie pit",      # "zeznanie roczne PIT"
+        "pit roczny",        # "PIT roczny za 2025"
+        "pit liniowy",       # "PIT liniowy"
         "ryczalt",
         "ryczałt",
         "najem",
@@ -193,9 +219,39 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "przeksiegowanie",   # reclassification entry
         "ujac koszt",        # "jak ująć koszt" generic cost booking
     ),
-    "legal_procedural": ("korekta", "nadplata", "nadpłata", "pelnomocnictwo", "pełnomocnictwo", "upl-1", "pps-1", "czynny zal", "czynny żal"),
-    "software_tooling": ("symfonia", "comarch", "insert", "enova", "optima", "subiekt", "program", "api", "integracja"),
-    "business_of_accounting_office": ("biuro rachunkowe", "cennik", "klient", "rentownosc", "rentowność"),
+    "legal_procedural": (
+        "korekta", "nadplata", "nadpłata", "pelnomocnictwo", "pełnomocnictwo",
+        "upl-1", "pps-1", "czynny zal", "czynny żal",
+        "wezwani",           # prefix: wezwanie/wezwania/wezwań
+        "konsekwencj",       # prefix: konsekwencje/konsekwencji
+        "kara",              # kara za nieterminowe złożenie
+        "kary",              # plural: kary pieniężne
+        "sankcj",            # prefix: sankcja/sankcji/sankcje
+    ),
+    "software_tooling": (
+        "symfonia", "comarch", "insert", "enova", "optima", "subiekt",
+        "program", "api", "integracja",
+        "streamsoft",        # Streamsoft PRO — Polish ERP
+        "saldeo",            # Saldeo — document scanning / automation
+        "rewizor",           # Rewizor GT / nexo — accounting program
+        "sage",              # Sage Symfonia / Sage 50
+        "wapro",             # WAPRO ERP
+        "fakturownia",       # Fakturownia.pl — invoicing SaaS
+        "mala ksiegowosc",   # Mała Księgowość Rzeczpospolita (nominative)
+        "malej ksiegowosci", # Mała Księgowość (genitive/locative)
+        "program ksiegowy",  # generic "accounting program"
+        "programu ksiegowego", # generic (genitive)
+    ),
+    "business_of_accounting_office": (
+        "biuro rachunkowe",       # nominative (+4)
+        "cennik",
+        # Bare "klient" removed — it gave +3 to any query mentioning a client.
+        # "klient biura" adds "klient" as +1 keyword (net positive for true queries).
+        "klient biura",           # "klient biura rachunkowego"
+        "klienta biura",          # genitive: "obsługa klienta biura"
+        "rentownosc", "rentowność",
+        "prowadzenie biura",      # "prowadzenie biura rachunkowego"
+    ),
     "education_community": ("kurs", "szkolenie", "egzamin", "certyfikat", "polecacie", "jak zaczac"),
     "out_of_scope": ("co myslicie", "jak wrazenia", "czy warto"),
 }
@@ -363,7 +419,15 @@ def classify_intent(query: str, taxonomy_path: str) -> str:
         for hint in INTENT_KEYWORD_HINTS.get(intent, ()):
             normalized_hint = _normalize(hint)
             if normalized_hint in normalized_query:
-                score += 4 if " " in normalized_hint else 3
+                score += 5 if " " in normalized_hint else 4
+        # Slot-less intents (no clarification fields) act as routing
+        # "black holes": queries landing there never trigger follow-up
+        # questions and always receive raw BM25 chunks.  A small penalty
+        # ensures that a slotted intent with an equal or nearly-equal
+        # keyword score wins instead, improving behavior accuracy for
+        # ambiguous / context-free queries.
+        if intent in _SLOTLESS_INTENTS:
+            score -= 1
         if score > best_score:
             best_intent = intent
             best_score = score
