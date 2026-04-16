@@ -21,6 +21,27 @@ MAX_CONTEXT_TOKENS = int(os.getenv("AKTUO_MAX_CONTEXT_TOKENS", "1200"))
 SLANG_FILE_PATH = os.getenv("AKTUO_SLANG_FILE_PATH", "").strip()
 RRF_BM25_K = int(os.getenv("AKTUO_RRF_BM25_K", "60"))
 RRF_VECTOR_K = int(os.getenv("AKTUO_RRF_VECTOR_K", "60"))
+WORKFLOW_SEED_PATH = os.getenv(
+    "AKTUO_WORKFLOW_SEED_PATH",
+    str(PROJECT_ROOT / "data" / "workflow" / "workflow_seed.json"),
+).strip()
+WORKFLOW_CONFIDENCE_THRESHOLD = float(os.getenv("AKTUO_WORKFLOW_CONFIDENCE_THRESHOLD", "6.0"))
+WORKFLOW_ELIGIBLE_INTENTS = tuple(
+    value.strip()
+    for value in os.getenv(
+        "AKTUO_WORKFLOW_ELIGIBLE_INTENTS",
+        "workflow,software_tooling,accounting_operational,legal_procedural",
+    ).split(",")
+    if value.strip()
+)
+WORKFLOW_CONDITIONAL_INTENTS = tuple(
+    value.strip()
+    for value in os.getenv(
+        "AKTUO_WORKFLOW_CONDITIONAL_INTENTS",
+        "vat_jpk_ksef,zus",
+    ).split(",")
+    if value.strip()
+)
 INTENT_TAXONOMY_PATH = os.getenv(
     "AKTUO_INTENT_TAXONOMY_PATH",
     str(PROJECT_ROOT / "data" / "curated" / "intent_taxonomy.json"),

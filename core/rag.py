@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
-from config.settings import MAX_CONTEXT_TOKENS
+from config.settings import MAX_CONTEXT_TOKENS, WORKFLOW_SEED_PATH
 from core.anonymizer import anonymize_text
 from core.auditor import audit_answer
 from core.categorizer import categorize_query
@@ -17,7 +17,8 @@ from core.generator import (
     reset_last_generation_metrics,
     summarize_context,
 )
-from core.retriever import LawChunk, retrieve
+from core.retriever import LawChunk, analyze_query_requirements, retrieve, retrieve_chunks
+from core.workflow_retriever import is_workflow_eligible, retrieve_workflow
 
 
 @dataclass(slots=True)
@@ -33,6 +34,7 @@ class RagResult:
     output_tokens: int = 0
     estimated_cost_usd: float = 0.0
     no_match_reason: str | None = None
+    retrieval_path: str = "legal"
 
 
 def _estimate_text_tokens(text: str) -> int:
@@ -129,6 +131,25 @@ def _compress_chunks_if_needed(
     return trimmed_chunks, summary_metrics
 
 
+def _retrieve_context(
+    query: str,
+    knowledge_path: str | Path,
+    category: str,
+    intent: str,
+    limit: int = 5,
+) -> tuple[list[LawChunk], str]:
+    """Choose workflow or legal retrieval path with legal fallback."""
+
+    if is_workflow_eligible(query, intent):
+        workflow_result = retrieve_workflow(query=query, workflow_path=WORKFLOW_SEED_PATH, limit=limit)
+        if workflow_result.confident:
+            return workflow_result.chunks, "workflow"
+        legal_path = "legal_fallback" if workflow_result.chunks else "legal"
+        return retrieve_chunks(query, knowledge_path, limit), legal_path
+
+    return retrieve_chunks(query, knowledge_path, limit), "legal"
+
+
 def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api_key: str) -> RagResult:
     if not isinstance(query, str):
         raise ValueError("query must be a string")
@@ -136,10 +157,10 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
         raise ValueError("query must not be empty")
 
     redacted_query = anonymize_text(query)
-    retrieval_result = retrieve(query=redacted_query, knowledge_path=knowledge_path, limit=5)
     category = categorize_query(redacted_query)
-    if retrieval_result.needs_clarification:
-        missing_slots = retrieval_result.missing_slots or []
+    query_analysis = analyze_query_requirements(redacted_query)
+    if query_analysis.needs_clarification:
+        missing_slots = query_analysis.missing_slots or []
         audit = {
             "grounded": False,
             "context_count": 0,
@@ -160,9 +181,16 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
             needs_clarification=True,
             missing_slots=missing_slots,
             no_match_reason="clarification_required",
+            retrieval_path="clarification",
         )
 
-    chunks = retrieval_result.chunks
+    chunks, retrieval_path = _retrieve_context(
+        query=redacted_query,
+        knowledge_path=knowledge_path,
+        category=category,
+        intent=query_analysis.intent,
+        limit=5,
+    )
     low_confidence = is_low_confidence_retrieval(chunks)
     compression_metrics = GenerationMetrics()
     if not low_confidence:
@@ -197,4 +225,5 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
         output_tokens=generation_metrics.output_tokens,
         estimated_cost_usd=generation_metrics.estimated_cost_usd,
         no_match_reason="low_bm25_score" if low_confidence else None,
+        retrieval_path=retrieval_path,
     )

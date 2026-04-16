@@ -126,6 +126,9 @@ class LawChunk:
     verified_date: str
     question_intent: str = ""
     score: float = 0.0
+    source_type: str = "legal_kb"
+    workflow_area: str = ""
+    title: str = ""
 
 
 @dataclass(slots=True)
@@ -136,6 +139,15 @@ class RetrievalResult:
     intent: str
     needs_clarification: bool = False
     missing_slots: list[str] | None = None
+
+
+@dataclass(slots=True)
+class QueryAnalysis:
+    """Intent and clarification pre-check result used before retrieval."""
+
+    intent: str
+    missing_slots: list[str]
+    needs_clarification: bool
 
 
 _CACHE_LOCK = Lock()
@@ -240,6 +252,22 @@ def _detect_missing_slots(
         return []
 
     return [slot_name for slot_name, is_missing in missing_map.items() if is_missing]
+
+
+def analyze_query_requirements(
+    query: str,
+    taxonomy_path: str = INTENT_TAXONOMY_PATH,
+    slots_path: str = CLARIFICATION_SLOTS_PATH,
+) -> QueryAnalysis:
+    """Classify intent and determine whether clarification is required before retrieval."""
+
+    intent = _classify_intent_with_fallback(query, taxonomy_path)
+    missing_slots = _detect_missing_slots(query, intent, slots_path)
+    return QueryAnalysis(
+        intent=intent,
+        missing_slots=missing_slots,
+        needs_clarification=_should_require_clarification(query, missing_slots, intent),
+    )
 
 
 def _should_require_clarification(query: str, missing_slots: list[str], intent: str) -> bool:
@@ -715,19 +743,18 @@ def retrieve(
         missing, retrieval is skipped and ``needs_clarification`` is set.
     """
 
-    intent = _classify_intent_with_fallback(query, taxonomy_path)
-    missing_slots = _detect_missing_slots(query, intent, slots_path)
-    if _should_require_clarification(query, missing_slots, intent):
+    analysis = analyze_query_requirements(query, taxonomy_path, slots_path)
+    if analysis.needs_clarification:
         return RetrievalResult(
             chunks=[],
-            intent=intent,
+            intent=analysis.intent,
             needs_clarification=True,
-            missing_slots=missing_slots,
+            missing_slots=analysis.missing_slots,
         )
 
     return RetrievalResult(
         chunks=_retrieve_ranked_chunks(query, knowledge_path, limit),
-        intent=intent,
+        intent=analysis.intent,
         needs_clarification=False,
         missing_slots=[],
     )

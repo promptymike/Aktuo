@@ -110,6 +110,11 @@ def test_query_expansion_with_slang(tmp_path, monkeypatch) -> None:
     )
     monkeypatch.setattr(
         rag,
+        "analyze_query_requirements",
+        lambda query: retriever.QueryAnalysis(intent="pit_ryczalt", missing_slots=[], needs_clarification=False),
+    )
+    monkeypatch.setattr(
+        rag,
         "retrieve",
         lambda query, knowledge_path, limit=5: retriever.RetrievalResult(
             chunks=retriever.retrieve_chunks(query, knowledge_path, limit),
@@ -186,6 +191,11 @@ def test_query_expansion_deduplication(tmp_path, monkeypatch) -> None:
         rag,
         "audit_answer",
         lambda answer, chunks: {"grounded": True, "context_count": len(chunks)},
+    )
+    monkeypatch.setattr(
+        rag,
+        "analyze_query_requirements",
+        lambda query: retriever.QueryAnalysis(intent="cit_wht", missing_slots=[], needs_clarification=False),
     )
     monkeypatch.setattr(
         rag,
