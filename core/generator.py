@@ -186,6 +186,95 @@ def reset_last_generation_metrics() -> None:
     _set_last_generation_metrics(GenerationMetrics())
 
 
+def _unique_preserving_order(values: Sequence[str]) -> list[str]:
+    """Return non-empty unique strings while preserving their original order."""
+
+    seen: set[str] = set()
+    result: list[str] = []
+    for value in values:
+        cleaned = value.strip()
+        normalized = cleaned.casefold()
+        if not cleaned or normalized in seen:
+            continue
+        seen.add(normalized)
+        result.append(cleaned)
+    return result
+
+
+def _format_bullet_section(title: str, items: Sequence[str]) -> str:
+    """Render a markdown section with bullet points when items are present."""
+
+    unique_items = _unique_preserving_order(items)
+    if not unique_items:
+        return ""
+    bullets = "\n".join(f"- {item}" for item in unique_items)
+    return f"**{title}**\n{bullets}"
+
+
+def _build_workflow_summary(chunk: LawChunk) -> str:
+    """Create a short operational summary from workflow chunk metadata."""
+
+    summary_parts = [part.strip() for part in (chunk.title, chunk.workflow_area) if part.strip()]
+    if summary_parts:
+        return ". ".join(summary_parts) + "."
+
+    first_step = next((step.strip() for step in chunk.workflow_steps if step.strip()), "")
+    if first_step:
+        return f"Ten workflow dotyczy procesu: {first_step}."
+    return "To workflow operacyjny oparty na dostępnych krokach procesu."
+
+
+def format_workflow_answer(query: str, chunks: Sequence[LawChunk]) -> str:
+    """Build a deterministic workflow-style response from workflow seed chunks.
+
+    The formatter uses only structured workflow fields already present in the
+    retrieved chunks. Missing fields simply result in omitted sections.
+    """
+
+    del query  # The current formatter is deterministic and chunk-driven.
+
+    if not chunks:
+        return "Brak danych workflow do przygotowania odpowiedzi."
+
+    primary_chunk = chunks[0]
+    sections: list[str] = [f"**Krótko**\n{_build_workflow_summary(primary_chunk)}"]
+
+    steps = _unique_preserving_order(
+        [step for chunk in chunks for step in chunk.workflow_steps]
+    )
+    if steps:
+        numbered_steps = "\n".join(
+            f"{index}. {step}" for index, step in enumerate(steps, start=1)
+        )
+        sections.append(f"**Co zrób teraz**\n{numbered_steps}")
+
+    required_inputs_section = _format_bullet_section(
+        "Jakie dane / dokumenty będą potrzebne",
+        [item for chunk in chunks for item in chunk.workflow_required_inputs],
+    )
+    if required_inputs_section:
+        sections.append(required_inputs_section)
+
+    pitfalls_section = _format_bullet_section(
+        "Na co uważać",
+        [item for chunk in chunks for item in chunk.workflow_common_pitfalls],
+    )
+    if pitfalls_section:
+        sections.append(pitfalls_section)
+
+    related_items = _unique_preserving_order(
+        [
+            *[item for chunk in chunks for item in chunk.workflow_related_forms],
+            *[item for chunk in chunks for item in chunk.workflow_related_systems],
+        ]
+    )
+    related_section = _format_bullet_section("Powiązane formularze / systemy", related_items)
+    if related_section:
+        sections.append(related_section)
+
+    return "\n\n".join(section for section in sections if section.strip())
+
+
 def _execute_api_request(api_request: request.Request) -> str:
     for attempt in range(len(RETRY_BACKOFF_SECONDS) + 1):
         try:

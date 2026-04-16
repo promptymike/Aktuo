@@ -348,6 +348,15 @@ def _build_workflow_content(record: dict[str, object]) -> str:
     return "\n".join(part for part in parts if part.strip())
 
 
+def _as_clean_tuple(values: object) -> tuple[str, ...]:
+    """Normalize workflow seed list-like fields into stripped string tuples."""
+
+    if not isinstance(values, list):
+        return ()
+    cleaned = [str(value).strip() for value in values if str(value).strip()]
+    return tuple(cleaned)
+
+
 def load_workflow_documents(workflow_path: str | Path = WORKFLOW_SEED_PATH) -> list[WorkflowDocument]:
     """Load and cache workflow seed units as searchable documents."""
 
@@ -375,6 +384,11 @@ def load_workflow_documents(workflow_path: str | Path = WORKFLOW_SEED_PATH) -> l
                 source_type=str(record.get("source_type", "workflow_seed_v1")).strip() or "workflow_seed_v1",
                 workflow_area=str(record.get("workflow_area", "")).strip(),
                 title=str(record.get("title", "")).strip(),
+                workflow_steps=_as_clean_tuple(record.get("steps", [])),
+                workflow_required_inputs=_as_clean_tuple(record.get("required_inputs", [])),
+                workflow_common_pitfalls=_as_clean_tuple(record.get("common_pitfalls", [])),
+                workflow_related_forms=_as_clean_tuple(record.get("related_forms", [])),
+                workflow_related_systems=_as_clean_tuple(record.get("related_systems", [])),
             ),
             title_tokens=_tokenize(str(record.get("title", ""))),
             area_tokens=_tokenize(str(record.get("workflow_area", ""))),

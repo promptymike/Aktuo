@@ -11,6 +11,7 @@ from core.auditor import audit_answer
 from core.categorizer import categorize_query
 from core.generator import (
     GenerationMetrics,
+    format_workflow_answer,
     generate_answer,
     get_last_generation_metrics,
     is_low_confidence_retrieval,
@@ -72,6 +73,36 @@ def _merge_metrics(*metrics: GenerationMetrics) -> GenerationMetrics:
     return total
 
 
+def _copy_chunk_with_content(chunk: LawChunk, content: str) -> LawChunk:
+    """Return a shallow LawChunk copy with updated content."""
+
+    return LawChunk(
+        content=content,
+        law_name=chunk.law_name,
+        article_number=chunk.article_number,
+        category=chunk.category,
+        verified_date=chunk.verified_date,
+        question_intent=chunk.question_intent,
+        score=chunk.score,
+        source_type=chunk.source_type,
+        workflow_area=chunk.workflow_area,
+        title=chunk.title,
+        workflow_steps=chunk.workflow_steps,
+        workflow_required_inputs=chunk.workflow_required_inputs,
+        workflow_common_pitfalls=chunk.workflow_common_pitfalls,
+        workflow_related_forms=chunk.workflow_related_forms,
+        workflow_related_systems=chunk.workflow_related_systems,
+    )
+
+
+def _is_workflow_generation_context(retrieval_path: str, chunks: list[LawChunk]) -> bool:
+    """Return True when the workflow retrieval result should use workflow formatting."""
+
+    if retrieval_path != "workflow" or not chunks:
+        return False
+    return any(chunk.source_type.startswith("workflow") for chunk in chunks)
+
+
 def _compress_chunks_if_needed(
     query: str,
     chunks: list[LawChunk],
@@ -99,15 +130,7 @@ def _compress_chunks_if_needed(
         summary_metrics = _merge_metrics(summary_metrics, get_last_generation_metrics())
         summarized_content = _truncate_to_token_limit(summary or chunk.content, target_tokens_per_chunk)
         compressed_chunks.append(
-            LawChunk(
-                content=summarized_content,
-                law_name=chunk.law_name,
-                article_number=chunk.article_number,
-                category=chunk.category,
-                verified_date=chunk.verified_date,
-                question_intent=chunk.question_intent,
-                score=chunk.score,
-            )
+            _copy_chunk_with_content(chunk, summarized_content)
         )
 
     total_tokens = _count_context_tokens(compressed_chunks)
@@ -117,15 +140,7 @@ def _compress_chunks_if_needed(
     # Final defensive pass: trim each chunk further to ensure the full context fits.
     hard_limit_per_chunk = max(10, MAX_CONTEXT_TOKENS // len(compressed_chunks))
     trimmed_chunks = [
-        LawChunk(
-            content=_truncate_to_token_limit(chunk.content, hard_limit_per_chunk),
-            law_name=chunk.law_name,
-            article_number=chunk.article_number,
-            category=chunk.category,
-            verified_date=chunk.verified_date,
-            question_intent=chunk.question_intent,
-            score=chunk.score,
-        )
+        _copy_chunk_with_content(chunk, _truncate_to_token_limit(chunk.content, hard_limit_per_chunk))
         for chunk in compressed_chunks
     ]
     return trimmed_chunks, summary_metrics
@@ -191,9 +206,10 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
         intent=query_analysis.intent,
         limit=5,
     )
+    workflow_mode = _is_workflow_generation_context(retrieval_path, chunks)
     low_confidence = is_low_confidence_retrieval(chunks)
     compression_metrics = GenerationMetrics()
-    if not low_confidence:
+    if not low_confidence and not workflow_mode:
         chunks, compression_metrics = _compress_chunks_if_needed(
             query=redacted_query,
             chunks=chunks,
@@ -201,8 +217,12 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
             api_key=api_key,
         )
     reset_last_generation_metrics()
-    answer = generate_answer(query=redacted_query, chunks=chunks, system_prompt=system_prompt, api_key=api_key)
-    generation_metrics = _merge_metrics(compression_metrics, get_last_generation_metrics())
+    if workflow_mode:
+        answer = format_workflow_answer(query=redacted_query, chunks=chunks)
+        generation_metrics = GenerationMetrics()
+    else:
+        answer = generate_answer(query=redacted_query, chunks=chunks, system_prompt=system_prompt, api_key=api_key)
+        generation_metrics = _merge_metrics(compression_metrics, get_last_generation_metrics())
 
     if low_confidence:
         audit = {

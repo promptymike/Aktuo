@@ -129,6 +129,11 @@ class LawChunk:
     source_type: str = "legal_kb"
     workflow_area: str = ""
     title: str = ""
+    workflow_steps: tuple[str, ...] = ()
+    workflow_required_inputs: tuple[str, ...] = ()
+    workflow_common_pitfalls: tuple[str, ...] = ()
+    workflow_related_forms: tuple[str, ...] = ()
+    workflow_related_systems: tuple[str, ...] = ()
 
 
 @dataclass(slots=True)
