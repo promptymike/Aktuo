@@ -1,0 +1,412 @@
+[
+  {
+    "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+    "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+    "category": "rachunkowosc",
+    "question_examples": [
+      "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+      "Jak to prawidłowo ująć koszty dotyczące tamtego roku, które dopiero teraz przyszły?",
+      "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+      "Czy ktoś się spotkał z taką sytuacją?",
+      "Czy muszą być księgowane na rmk jeśli nie ma dodatkowych zapisów w polityce?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "rodzaj_ksiąg_lub_ewidencji",
+      "rodzaj_dokumentu",
+      "okres_księgowy",
+      "nazwa_systemu",
+      "czynność_operacyjna"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna."
+    ],
+    "related_forms": [],
+    "related_systems": [
+      "KPiR",
+      "księgi rachunkowe",
+      "rejestr VAT"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "decision tree",
+    "cluster_impact": {
+      "question_count": 1294,
+      "total_frequency": 1583,
+      "weighted_impact": 2374.5
+    }
+  },
+  {
+    "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka",
+    "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+    "category": "rachunkowosc",
+    "question_examples": [
+      "Dlaczego bilansowo do 10/25? Towar idzie na magazyn, to chcesz naginać rzeczywistość, że go nie było już w 2025?",
+      "Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza?",
+      "Czy muszę w takim razie sporządzać w tym roku sprawozdanie?",
+      "Czy prawidłowe jest księgowanie naliczonych ujemnych odsetek od akcji na dzień bilansowy zapisem 650Ma /np 1000 zł i Wn 750 1000zł.Jakim zapisem zrobić storno w roku następnym?",
+      "Czy w Rewizor GT wygeneruje sprawozdanie finansowe bez błędów, które pojawiają się na etapie wysyłki do KRS?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "rodzaj_dokumentu",
+      "okres_księgowy",
+      "rodzaj_ksiąg_lub_ewidencji",
+      "nazwa_systemu",
+      "czynność_operacyjna"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.",
+      "Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna."
+    ],
+    "related_forms": [
+      "e-Sprawozdanie finansowe"
+    ],
+    "related_systems": [
+      "KRS",
+      "eKRS",
+      "bramka e-Sprawozdań"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "checklist",
+    "cluster_impact": {
+      "question_count": 197,
+      "total_frequency": 255,
+      "weighted_impact": 344.25
+    }
+  },
+  {
+    "workflow_area": "KSeF issuing / correction / invoice circulation",
+    "title": "Obieg faktur, statusów i korekt w KSeF",
+    "category": "ksef",
+    "question_examples": [
+      "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+      "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że faktury pobrane do rejestru to nie mam \"V\" czy ktoś też tak ma? Dlaczego tak się dzieje?",
+      "Jakiego programu do druków i faktur używacie?",
+      "Czy komuś udało się zaimportować faktury z KSeF do programu Streamsoft PRO?",
+      "Co jest napisane na ten temat w podręcznikach KSeF na stronie ministerstwa?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "czynność_operacyjna",
+      "nazwa_systemu",
+      "okres_lub_data",
+      "rodzaj_ksiąg_lub_ewidencji",
+      "rodzaj_dokumentu"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.",
+      "Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu."
+    ],
+    "related_forms": [],
+    "related_systems": [
+      "KSeF",
+      "ERP",
+      "rejestr VAT"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "step-by-step procedure",
+    "cluster_impact": {
+      "question_count": 176,
+      "total_frequency": 215,
+      "weighted_impact": 290.25
+    }
+  },
+  {
+    "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
+    "title": "Obsługa problemów systemowych i synchronizacji danych",
+    "category": "software_tooling",
+    "question_examples": [
+      "Czy w symfoni da się usunąć fakturę korektę (sprzedaż)?",
+      "SYMFONIA Cześć Czy ktoś z Was posiada szablon faktury sprzedaży w języku angielskim i byłby chętny go udostępnić do Symfonia Handel?",
+      "W takim razie rozliczam to jako import od kwoty brutto czy jako transakcja krajowa?",
+      "Były wpisy że Comarch podrożał o 500% - zniknęły - wycofali się z tych podwyżek?",
+      "Czy jest cos poza optima co konkurowało by ceną?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "nazwa_systemu",
+      "czynność_operacyjna"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna."
+    ],
+    "related_forms": [],
+    "related_systems": [
+      "ERP",
+      "program księgowy",
+      "integracja API"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "step-by-step procedure",
+    "cluster_impact": {
+      "question_count": 110,
+      "total_frequency": 135,
+      "weighted_impact": 148.5
+    }
+  },
+  {
+    "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
+    "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+    "category": "rachunkowosc",
+    "question_examples": [
+      "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+      "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+      "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
+      "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
+      "Co macie na takiej fakturze napisane tzn, jaka nazwa towaru/usługi?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "rodzaj_ksiąg_lub_ewidencji",
+      "rodzaj_dokumentu",
+      "okres_księgowy",
+      "nazwa_systemu",
+      "czynność_operacyjna"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna."
+    ],
+    "related_forms": [],
+    "related_systems": [
+      "KPiR",
+      "magazyn",
+      "ewidencja środków trwałych"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "checklist",
+    "cluster_impact": {
+      "question_count": 83,
+      "total_frequency": 119,
+      "weighted_impact": 142.8
+    }
+  },
+  {
+    "workflow_area": "JPK filing / correction / tags",
+    "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
+    "category": "jpk",
+    "question_examples": [
+      "Do tej pory robiłam to w programie księgowym, ale teraz muszę to zrobić poza nim, bo mój podpis z nim nie współpracuje Czy jest jakaś specjalna bramka jak do JPK?",
+      "Czy w związku z obowiązkiem wysyłki ksiąg rachunkowym (JPK kr pd) potrzeba mieć w programie księgowym wyodrębnione konta analityczne na każdy środek trwały, czy wystarczy podział na grupy, bo mam sprzeczne informacje?",
+      "Jak ująć taka korektę w JPK?",
+      "Jeśli tak to czynny żal nie potrzebny, chyba że za dużo papieru w biurze?",
+      "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "nazwa_systemu",
+      "czynność_operacyjna",
+      "okres_lub_data"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.",
+      "Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego."
+    ],
+    "related_forms": [
+      "JPK_V7M",
+      "JPK_V7K"
+    ],
+    "related_systems": [
+      "JPK",
+      "e-Urząd Skarbowy"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "checklist",
+    "cluster_impact": {
+      "question_count": 58,
+      "total_frequency": 67,
+      "weighted_impact": 90.45
+    }
+  },
+  {
+    "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
+    "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+    "category": "zus",
+    "question_examples": [
+      "A nie może przez POG napisać?",
+      ". Czy będąc na umowie o pracę i płacąc składki tylko zdrowotne z działalności mogę zapisać się do dobrowolnego ZUS?",
+      "Czy ja jestem jakiś upośledzony, że nie rozumiem co mi ZUS odpisał, czy to oni tak to napisali, że nic z tego nie wynika?",
+      "Ewnetualnie czy bezpieczniej będzie napisać do ZUS żeby mieć podkładkę?",
+      "Czy do MZ+ należy przystąpić od 01.01.26 czy można w dowolnym momencie np?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.",
+      "Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "nazwa_systemu",
+      "czynność_operacyjna",
+      "typ_umowy",
+      "okres_lub_data",
+      "tytuł_ubezpieczenia"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.",
+      "Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego."
+    ],
+    "related_forms": [
+      "ZUS ZUA",
+      "ZUS ZWUA",
+      "DRA",
+      "RCA",
+      "RSA"
+    ],
+    "related_systems": [
+      "PUE ZUS",
+      "e-Płatnik"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "step-by-step procedure",
+    "cluster_impact": {
+      "question_count": 24,
+      "total_frequency": 28,
+      "weighted_impact": 36.4
+    }
+  },
+  {
+    "workflow_area": "KSeF permissions / authorization flow",
+    "title": "Nadawanie uprawnień i dostępów w KSeF",
+    "category": "ksef",
+    "question_examples": [
+      "A program który masz nie zaciąga faktur z KSeF jak będziesz miał uprawnienia?",
+      "Chciałabym potwierdzić -KSeF uprawnienia chce ściągać faktury do swojego programu księgowego - Klienci nadają mi uprawnienia po numerze NIP mojej firmy jako podmiotowi do przeglądania i wystawiania faktur?",
+      "Czy ktoś może napisać jak mam dodać uprawnienia w KSeF dla drugiego wspólnika spółki cywilnej?",
+      "Ja logujac sie profilem zaufanym (mam ZAW-FA) zastanawiam sie czy moge nadac sobie uprawnienia /certyfikaty ktore sa w stanie pobierac dokumenty do programu czy musze miec pieczec?",
+      "Jeśli nie mam upl 1 jako prezez spółki zoo to zaw-fa muszę złożyć papierowo do końca stycznia?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.",
+      "Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "nazwa_systemu",
+      "czynność_operacyjna"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.",
+      "Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego."
+    ],
+    "related_forms": [
+      "ZAW-FA",
+      "UPL-1",
+      "PPS-1"
+    ],
+    "related_systems": [
+      "KSeF",
+      "e-Urząd Skarbowy",
+      "Profil Zaufany"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "required documents/forms list",
+    "cluster_impact": {
+      "question_count": 8,
+      "total_frequency": 8,
+      "weighted_impact": 11.2
+    }
+  },
+  {
+    "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+    "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+    "category": "procedury",
+    "question_examples": [
+      "Ale czy oni się tam w US połapią, że formularz wysłałem elektronicznie a czynny żal złożyłem papierowo?",
+      "Czy PCC-3 spółki z o.o. wysyłanej prze e-urzad może podpisać księgowa?",
+      "Czy pomogę Jej napisać czynny żal, bo mąż wystawił fakturę 20?",
+      "Czy wasi klienci wysyłają przez E-urzad UPL? Jak to wyglada? No trzeba podpisac profilem zaufanym, prawda?",
+      "Klient nie płacił podatku za najem prywatny przez cały rok, czy w rozliczeniu rocznym powinnam wykazać odsetki? I czy powinnam czynny żal napisać?"
+    ],
+    "steps": [
+      "Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.",
+      "Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
+      "Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.",
+      "Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.",
+      "Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie."
+    ],
+    "required_inputs": [
+      "czynność_operacyjna",
+      "nazwa_systemu",
+      "rodzaj_ksiąg_lub_ewidencji",
+      "rodzaj_dokumentu",
+      "okres_księgowy"
+    ],
+    "common_pitfalls": [
+      "Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.",
+      "Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.",
+      "Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.",
+      "Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy."
+    ],
+    "related_forms": [
+      "UPL-1",
+      "PPS-1"
+    ],
+    "related_systems": [
+      "e-Urząd Skarbowy",
+      "Profil Zaufany",
+      "podpis kwalifikowany"
+    ],
+    "source_type": "workflow_seed_v1",
+    "user_intent": "required documents/forms list",
+    "cluster_impact": {
+      "question_count": 8,
+      "total_frequency": 8,
+      "weighted_impact": 9.6
+    }
+  }
+]

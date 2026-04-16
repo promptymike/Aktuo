@@ -1,0 +1,332 @@
+{
+  "workflow_questions_analyzed": 2152,
+  "workflow_seed_units_created": 9,
+  "top_workflow_clusters_by_impact": [
+    {
+      "cluster_name": "accounting_posting_and_periods",
+      "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+      "question_count": 1294,
+      "total_frequency": 1583,
+      "weighted_impact": 2374.5,
+      "top_examples": [
+        "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+        "Jak to prawidłowo ująć koszty dotyczące tamtego roku, które dopiero teraz przyszły?",
+        "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?"
+      ],
+      "answer_shape": "decision tree"
+    },
+    {
+      "cluster_name": "financial_statements_workflow",
+      "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka",
+      "question_count": 197,
+      "total_frequency": 255,
+      "weighted_impact": 344.25,
+      "top_examples": [
+        "Dlaczego bilansowo do 10/25? Towar idzie na magazyn, to chcesz naginać rzeczywistość, że go nie było już w 2025?",
+        "Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza?",
+        "Czy muszę w takim razie sporządzać w tym roku sprawozdanie?"
+      ],
+      "answer_shape": "checklist"
+    },
+    {
+      "cluster_name": "ksef_invoice_circulation",
+      "workflow_area": "KSeF issuing / correction / invoice circulation",
+      "question_count": 176,
+      "total_frequency": 215,
+      "weighted_impact": 290.25,
+      "top_examples": [
+        "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+        "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że faktury pobrane do rejestru to nie mam \"V\" czy ktoś też tak ma? Dlaczego tak się dzieje?",
+        "Jakiego programu do druków i faktur używacie?"
+      ],
+      "answer_shape": "step-by-step procedure"
+    },
+    {
+      "cluster_name": "fallback_other_workflow",
+      "workflow_area": "Pozostałe operacje workflow",
+      "question_count": 194,
+      "total_frequency": 265,
+      "weighted_impact": 212.0,
+      "top_examples": [
+        "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?",
+        "Jak należy postąpić w przypadkach leasingu operacyjnego z lat poprzednich, gdy samochód nie jest ujęty jako ŚT?",
+        "Czy ktos z Państwa pracuje na programie ksiegowosc 360?Czy ktos z Państwa pracuje na programie ksiegowosc 360?"
+      ],
+      "answer_shape": "checklist"
+    },
+    {
+      "cluster_name": "software_and_sync_operations",
+      "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
+      "question_count": 110,
+      "total_frequency": 135,
+      "weighted_impact": 148.5,
+      "top_examples": [
+        "Czy w symfoni da się usunąć fakturę korektę (sprzedaż)?",
+        "SYMFONIA Cześć Czy ktoś z Was posiada szablon faktury sprzedaży w języku angielskim i byłby chętny go udostępnić do Symfonia Handel?",
+        "W takim razie rozliczam to jako import od kwoty brutto czy jako transakcja krajowa?"
+      ],
+      "answer_shape": "step-by-step procedure"
+    },
+    {
+      "cluster_name": "inventory_documents_and_columns",
+      "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
+      "question_count": 83,
+      "total_frequency": 119,
+      "weighted_impact": 142.8,
+      "top_examples": [
+        "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+        "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+        "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?"
+      ],
+      "answer_shape": "checklist"
+    },
+    {
+      "cluster_name": "jpk_filing_corrections_tags",
+      "workflow_area": "JPK filing / correction / tags",
+      "question_count": 58,
+      "total_frequency": 67,
+      "weighted_impact": 90.45,
+      "top_examples": [
+        "Do tej pory robiłam to w programie księgowym, ale teraz muszę to zrobić poza nim, bo mój podpis z nim nie współpracuje Czy jest jakaś specjalna bramka jak do JPK?",
+        "Czy w związku z obowiązkiem wysyłki ksiąg rachunkowym (JPK kr pd) potrzeba mieć w programie księgowym wyodrębnione konta analityczne na każdy środek trwały, czy wystarczy podział na grupy, bo mam sprzeczne informacje?",
+        "Jak ująć taka korektę w JPK?"
+      ],
+      "answer_shape": "checklist"
+    },
+    {
+      "cluster_name": "zus_pue_registrations",
+      "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
+      "question_count": 24,
+      "total_frequency": 28,
+      "weighted_impact": 36.4,
+      "top_examples": [
+        "A nie może przez POG napisać?",
+        ". Czy będąc na umowie o pracę i płacąc składki tylko zdrowotne z działalności mogę zapisać się do dobrowolnego ZUS?",
+        "Czy ja jestem jakiś upośledzony, że nie rozumiem co mi ZUS odpisał, czy to oni tak to napisali, że nic z tego nie wynika?"
+      ],
+      "answer_shape": "step-by-step procedure"
+    },
+    {
+      "cluster_name": "ksef_permissions_authorizations",
+      "workflow_area": "KSeF permissions / authorization flow",
+      "question_count": 8,
+      "total_frequency": 8,
+      "weighted_impact": 11.2,
+      "top_examples": [
+        "A program który masz nie zaciąga faktur z KSeF jak będziesz miał uprawnienia?",
+        "Chciałabym potwierdzić -KSeF uprawnienia chce ściągać faktury do swojego programu księgowego - Klienci nadają mi uprawnienia po numerze NIP mojej firmy jako podmiotowi do przeglądania i wystawiania faktur?",
+        "Czy ktoś może napisać jak mam dodać uprawnienia w KSeF dla drugiego wspólnika spółki cywilnej?"
+      ],
+      "answer_shape": "required documents/forms list"
+    },
+    {
+      "cluster_name": "tax_authorizations_and_signatures",
+      "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+      "question_count": 8,
+      "total_frequency": 8,
+      "weighted_impact": 9.6,
+      "top_examples": [
+        "Ale czy oni się tam w US połapią, że formularz wysłałem elektronicznie a czynny żal złożyłem papierowo?",
+        "Czy PCC-3 spółki z o.o. wysyłanej prze e-urzad może podpisać księgowa?",
+        "Czy pomogę Jej napisać czynny żal, bo mąż wystawił fakturę 20?"
+      ],
+      "answer_shape": "required documents/forms list"
+    }
+  ],
+  "top_workflow_areas": [
+    {
+      "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+      "question_count": 1294
+    },
+    {
+      "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka",
+      "question_count": 197
+    },
+    {
+      "workflow_area": "Pozostałe operacje workflow",
+      "question_count": 194
+    },
+    {
+      "workflow_area": "KSeF issuing / correction / invoice circulation",
+      "question_count": 176
+    },
+    {
+      "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
+      "question_count": 110
+    },
+    {
+      "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
+      "question_count": 83
+    },
+    {
+      "workflow_area": "JPK filing / correction / tags",
+      "question_count": 58
+    },
+    {
+      "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
+      "question_count": 24
+    },
+    {
+      "workflow_area": "KSeF permissions / authorization flow",
+      "question_count": 8
+    },
+    {
+      "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+      "question_count": 8
+    }
+  ],
+  "top_missing_information_fields": [
+    {
+      "field": "rodzaj_dokumentu",
+      "count": 1290
+    },
+    {
+      "field": "rodzaj_ksiąg_lub_ewidencji",
+      "count": 1284
+    },
+    {
+      "field": "okres_księgowy",
+      "count": 1247
+    },
+    {
+      "field": "nazwa_systemu",
+      "count": 628
+    },
+    {
+      "field": "czynność_operacyjna",
+      "count": 592
+    },
+    {
+      "field": "okres_lub_data",
+      "count": 34
+    },
+    {
+      "field": "forma_opodatkowania",
+      "count": 12
+    },
+    {
+      "field": "źródło_przychodu",
+      "count": 10
+    },
+    {
+      "field": "typ_podmiotu",
+      "count": 3
+    },
+    {
+      "field": "typ_umowy",
+      "count": 3
+    }
+  ],
+  "suggested_top_10_workflow_units": [
+    {
+      "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+      "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+      "category": "rachunkowosc",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "rodzaj_ksiąg_lub_ewidencji",
+        "rodzaj_dokumentu",
+        "okres_księgowy",
+        "nazwa_systemu",
+        "czynność_operacyjna"
+      ]
+    },
+    {
+      "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+      "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka",
+      "category": "rachunkowosc",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "rodzaj_dokumentu",
+        "okres_księgowy",
+        "rodzaj_ksiąg_lub_ewidencji",
+        "nazwa_systemu",
+        "czynność_operacyjna"
+      ]
+    },
+    {
+      "title": "Obieg faktur, statusów i korekt w KSeF",
+      "workflow_area": "KSeF issuing / correction / invoice circulation",
+      "category": "ksef",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "czynność_operacyjna",
+        "nazwa_systemu",
+        "okres_lub_data",
+        "rodzaj_ksiąg_lub_ewidencji",
+        "rodzaj_dokumentu"
+      ]
+    },
+    {
+      "title": "Obsługa problemów systemowych i synchronizacji danych",
+      "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
+      "category": "software_tooling",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "nazwa_systemu",
+        "czynność_operacyjna"
+      ]
+    },
+    {
+      "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+      "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
+      "category": "rachunkowosc",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "rodzaj_ksiąg_lub_ewidencji",
+        "rodzaj_dokumentu",
+        "okres_księgowy",
+        "nazwa_systemu",
+        "czynność_operacyjna"
+      ]
+    },
+    {
+      "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
+      "workflow_area": "JPK filing / correction / tags",
+      "category": "jpk",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "nazwa_systemu",
+        "czynność_operacyjna",
+        "okres_lub_data"
+      ]
+    },
+    {
+      "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+      "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
+      "category": "zus",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "nazwa_systemu",
+        "czynność_operacyjna",
+        "typ_umowy",
+        "okres_lub_data",
+        "tytuł_ubezpieczenia"
+      ]
+    },
+    {
+      "title": "Nadawanie uprawnień i dostępów w KSeF",
+      "workflow_area": "KSeF permissions / authorization flow",
+      "category": "ksef",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "nazwa_systemu",
+        "czynność_operacyjna"
+      ]
+    },
+    {
+      "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+      "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+      "category": "procedury",
+      "question_examples_count": 5,
+      "required_inputs": [
+        "czynność_operacyjna",
+        "nazwa_systemu",
+        "rodzaj_ksiąg_lub_ewidencji",
+        "rodzaj_dokumentu",
+        "okres_księgowy"
+      ]
+    }
+  ],
+  "recommended_next_step": "Zbudować osobny indeks retrieval dla workflow_seed.json i uruchamiać go przed legal KB dla pytań o klasyfikacji workflow/software_tooling, z zachowaniem dopytań o brakujące pola wejściowe."
+}
