@@ -38,7 +38,7 @@ WORKFLOW_CONDITIONAL_INTENTS = tuple(
     value.strip()
     for value in os.getenv(
         "AKTUO_WORKFLOW_CONDITIONAL_INTENTS",
-        "vat_jpk_ksef,zus",
+        "vat_jpk_ksef,zus,pit_ryczalt,cit_wht",
     ).split(",")
     if value.strip()
 )

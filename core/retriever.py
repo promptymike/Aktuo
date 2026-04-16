@@ -165,6 +165,46 @@ _KNOWLEDGE_CACHE: dict[
 _SLANG_CACHE: tuple[str, dict[str, list[str]]] | None = None
 LOGGER = logging.getLogger(__name__)
 
+WORKFLOW_CLARIFICATION_BYPASS_INTENTS = frozenset(
+    {
+        "accounting_operational",
+        "software_tooling",
+        "legal_procedural",
+        "vat_jpk_ksef",
+        "zus",
+        "pit_ryczalt",
+        "cit_wht",
+    }
+)
+WORKFLOW_CLARIFICATION_PREFIXES = (
+    "jak zaksi",
+    "jak ujac",
+    "jak wyslac",
+    "jak zlozyc",
+    "jak ustawic",
+    "jak dodac",
+    "jak nadac",
+    "jak pobrac",
+    "jak podpisac",
+    "jak zaimport",
+    "jak zsynchroniz",
+)
+WORKFLOW_CLARIFICATION_MARKERS = (
+    "konto 300",
+    "rozliczenie zakupu",
+    "pod jaka data",
+    "data zapisania",
+    "na kontach",
+    "kolumn",
+    "kst",
+    "uprawnien",
+    "token",
+    "upl-1",
+    "pps-1",
+    "zaw-fa",
+    "profil zaufany",
+)
+
 
 def _normalize(text: str) -> str:
     translation = str.maketrans(
@@ -288,14 +328,23 @@ def _should_require_clarification(query: str, missing_slots: list[str], intent: 
     if not missing_slots:
         return False
 
+    normalized_query = _normalize(query)
+    query_tokens = re.findall(r"[a-z0-9_]+", normalized_query)
+    if (
+        intent in WORKFLOW_CLARIFICATION_BYPASS_INTENTS
+        and len(query_tokens) >= 5
+        and (
+            normalized_query.startswith(WORKFLOW_CLARIFICATION_PREFIXES)
+            or any(marker in normalized_query for marker in WORKFLOW_CLARIFICATION_MARKERS)
+        )
+    ):
+        return False
+
     # Tier 1: always fire when two or more required facts are absent.
     if len(missing_slots) >= 2:
         return True
 
     # Tier 2: exactly one missing slot — only for very short / generic queries.
-    normalized_query = _normalize(query)
-    query_tokens = re.findall(r"[a-z0-9_]+", normalized_query)
-
     generic_prefixes = (
         "jak rozliczyc",
         "jak rozliczyć",

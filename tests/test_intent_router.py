@@ -279,6 +279,29 @@ def test_classify_intent_remanent_and_srodek_trwaly_route_to_accounting(tmp_path
     ) == "accounting_operational"
 
 
+def test_classify_intent_operational_bookkeeping_phrase_routes_to_accounting(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_accounting_zus(taxonomy_path)
+    _extend_taxonomy_with_pit_cit(taxonomy_path)
+
+    assert classify_intent(
+        "A jaką datę przyjąć do zaksięgowania na koncie 300 - rozliczenie zakupu?",
+        str(taxonomy_path),
+    ) == "accounting_operational"
+
+
+def test_classify_intent_system_name_with_jpk_tags_stays_vat_not_software(tmp_path) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_full(taxonomy_path)
+
+    assert classify_intent(
+        "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?",
+        str(taxonomy_path),
+    ) == "vat_jpk_ksef"
+
+
 def test_classify_intent_pue_and_maly_zus_route_to_zus(tmp_path) -> None:
     taxonomy_path = tmp_path / "intent_taxonomy.json"
     _write_taxonomy(taxonomy_path)
@@ -354,6 +377,28 @@ def test_vat_ksef_correction_query_still_requires_clarification(tmp_path, monkey
     # Clarification must fire; ranking must NOT have been called
     assert result.needs_clarification is True
     assert call_count["n"] == 0
+
+
+def test_operational_accounting_query_bypasses_clarification_gate(tmp_path, monkeypatch) -> None:
+    taxonomy_path = tmp_path / "intent_taxonomy.json"
+    slots_path = tmp_path / "clarification_slots.json"
+    knowledge_path = tmp_path / "law_knowledge.json"
+    _write_taxonomy(taxonomy_path)
+    _extend_taxonomy_with_accounting_zus(taxonomy_path)
+    _write_slots(slots_path)
+    knowledge_path.write_text("[]", encoding="utf-8")
+
+    monkeypatch.setattr("core.retriever._retrieve_ranked_chunks", lambda q, kp, limit=5: [])
+
+    result = retrieve(
+        query="A jaką datę przyjąć do zaksięgowania na koncie 300 - rozliczenie zakupu?",
+        knowledge_path=knowledge_path,
+        taxonomy_path=str(taxonomy_path),
+        slots_path=str(slots_path),
+    )
+
+    assert result.intent == "accounting_operational"
+    assert result.needs_clarification is False
 
 
 def _write_slots_zus(path) -> None:

@@ -1,0 +1,386 @@
+{
+  "baseline_metrics": {
+    "workflow_path_precision": 0.8496,
+    "legal_path_precision": 0.7548,
+    "workflow_recall_on_workflow_questions": 0.48,
+    "legal_leakage_into_workflow": 0.1333,
+    "workflow_leakage_into_legal": 0.24,
+    "clarification_rate_per_subset": {
+      "workflow_expected": 0.8267,
+      "legal_expected": 0.84,
+      "mixed_expected": 0.5106
+    }
+  },
+  "failure_groups": {
+    "workflow_should_have_hit_but_went_legal": [
+      {
+        "topic": "other / mixed routing",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 2,
+        "total_frequency": 7,
+        "representative_examples": [
+          {
+            "question": "Zgadza się?",
+            "source_frequency": 4,
+            "predicted_intent": "unknown",
+            "selected_path": "legal",
+            "workflow_score": 0.0
+          },
+          {
+            "question": "A na jakiej podstawie?",
+            "source_frequency": 3,
+            "predicted_intent": "cit_wht",
+            "selected_path": "legal",
+            "workflow_score": 2.0
+          }
+        ]
+      },
+      {
+        "topic": "JPK tags / procedural-vs-legal ambiguity",
+        "likely_fix_type": "clarification gate masking workflow hit",
+        "count": 2,
+        "total_frequency": 4,
+        "representative_examples": [
+          {
+            "question": ". Czy będąc na umowie o pracę i płacąc składki tylko zdrowotne z działalności mogę zapisać się do dobrowolnego ZUS?",
+            "source_frequency": 2,
+            "predicted_intent": "zus",
+            "selected_path": "legal",
+            "workflow_score": 40.5
+          },
+          {
+            "question": ". Czy ktoś z Was księguje przedszkole (księgowość uproszczona)?",
+            "source_frequency": 2,
+            "predicted_intent": "hr",
+            "selected_path": "legal",
+            "workflow_score": 7.5
+          }
+        ]
+      },
+      {
+        "topic": "KSeF permissions / authorization / invoice circulation",
+        "likely_fix_type": "workflow eligibility issue",
+        "count": 1,
+        "total_frequency": 4,
+        "representative_examples": [
+          {
+            "question": "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że faktury pobrane do rejestru to nie mam \"V\" czy ktoś też tak ma? Dlaczego tak się dzieje?",
+            "source_frequency": 4,
+            "predicted_intent": "vat_jpk_ksef",
+            "selected_path": "legal",
+            "workflow_score": 67.0
+          }
+        ]
+      },
+      {
+        "topic": "accounting_operational / księgowanie / KPiR / okresy",
+        "likely_fix_type": "workflow eligibility issue",
+        "count": 1,
+        "total_frequency": 4,
+        "representative_examples": [
+          {
+            "question": "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+            "source_frequency": 4,
+            "predicted_intent": "vat_jpk_ksef",
+            "selected_path": "legal",
+            "workflow_score": 33.5
+          }
+        ]
+      },
+      {
+        "topic": "JPK tags / procedural-vs-legal ambiguity",
+        "likely_fix_type": "workflow eligibility issue",
+        "count": 1,
+        "total_frequency": 3,
+        "representative_examples": [
+          {
+            "question": "W takim razie rozliczam to jako import od kwoty brutto czy jako transakcja krajowa?",
+            "source_frequency": 3,
+            "predicted_intent": "education_community",
+            "selected_path": "legal",
+            "workflow_score": 19.5
+          }
+        ]
+      },
+      {
+        "topic": "KSeF permissions / authorization / invoice circulation",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 1,
+        "total_frequency": 3,
+        "representative_examples": [
+          {
+            "question": "Czy spółka zoo może udzielić pożyczki wspólnikowi? —?",
+            "source_frequency": 3,
+            "predicted_intent": "cit_wht",
+            "selected_path": "legal",
+            "workflow_score": 5.5
+          }
+        ]
+      },
+      {
+        "topic": "accounting_operational / księgowanie / KPiR / okresy",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 1,
+        "total_frequency": 3,
+        "representative_examples": [
+          {
+            "question": "Szukam doradcy podatkowego lub księgowej zorientowanej w temacie aportu ZCP do spółki komandytowej od strony księgowej?",
+            "source_frequency": 3,
+            "predicted_intent": "education_community",
+            "selected_path": "legal",
+            "workflow_score": 4.0
+          }
+        ]
+      },
+      {
+        "topic": "pełnomocnictwa / podpis / kanały złożenia",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 1,
+        "total_frequency": 2,
+        "representative_examples": [
+          {
+            "question": ") płacił ten abonament i to w odniesieniu do radia w samochodzie?",
+            "source_frequency": 2,
+            "predicted_intent": "cit_wht",
+            "selected_path": "legal",
+            "workflow_score": 2.0
+          }
+        ]
+      }
+    ],
+    "legal_should_have_stayed_legal_but_went_workflow": [
+      {
+        "topic": "accounting_operational / księgowanie / KPiR / okresy",
+        "likely_fix_type": "routing keyword issue",
+        "count": 3,
+        "total_frequency": 41,
+        "representative_examples": [
+          {
+            "question": "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
+            "source_frequency": 20,
+            "predicted_intent": "pit_ryczalt",
+            "selected_path": "workflow",
+            "workflow_score": 21.5
+          },
+          {
+            "question": "Czy mogę odliczyć VAT w styczniu (faktura wystawiona w grudniu), ale tylko odliczę VAT w styczniu a nie będę ujmować kosztu w kpir?",
+            "source_frequency": 16,
+            "predicted_intent": "pit_ryczalt",
+            "selected_path": "workflow",
+            "workflow_score": 12.5
+          },
+          {
+            "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
+            "source_frequency": 5,
+            "predicted_intent": "pit_ryczalt",
+            "selected_path": "workflow",
+            "workflow_score": 11.5
+          }
+        ]
+      },
+      {
+        "topic": "accounting_operational / księgowanie / KPiR / okresy",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 3,
+        "total_frequency": 23,
+        "representative_examples": [
+          {
+            "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+            "source_frequency": 9,
+            "predicted_intent": "accounting_operational",
+            "selected_path": "workflow",
+            "workflow_score": 12.0
+          },
+          {
+            "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+            "source_frequency": 8,
+            "predicted_intent": "software_tooling",
+            "selected_path": "workflow",
+            "workflow_score": 6.0
+          },
+          {
+            "question": "Jak księgujecie takie faktury?",
+            "source_frequency": 6,
+            "predicted_intent": "vat_jpk_ksef",
+            "selected_path": "workflow",
+            "workflow_score": 6.0
+          }
+        ]
+      },
+      {
+        "topic": "pełnomocnictwa / podpis / kanały złożenia",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 3,
+        "total_frequency": 18,
+        "representative_examples": [
+          {
+            "question": "Czy w Waszych biura h rachunkowych też tak jest, że potwierdzenia sald drukujecie i przychodzi je odebrać ktoś z firmy, sami podpisują i wysyłają?",
+            "source_frequency": 7,
+            "predicted_intent": "accounting_operational",
+            "selected_path": "workflow",
+            "workflow_score": 7.5
+          },
+          {
+            "question": "Https://docs.google.com/forms/d/e/1FAIpQLSceIwmXCXJrGd0jYXamfEWBbHJM-XUtYRZXaIxlzi_jRXGbaQ/viewform?",
+            "source_frequency": 6,
+            "predicted_intent": "accounting_operational",
+            "selected_path": "workflow",
+            "workflow_score": 6.0
+          },
+          {
+            "question": ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?",
+            "source_frequency": 5,
+            "predicted_intent": "accounting_operational",
+            "selected_path": "workflow",
+            "workflow_score": 7.5
+          }
+        ]
+      },
+      {
+        "topic": "KSeF permissions / authorization / invoice circulation",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 1,
+        "total_frequency": 15,
+        "representative_examples": [
+          {
+            "question": "Klient dał mi uprawnienia do przeglądania faktur i logowałam się na jego KSeF i widzę faktury ale na OPTIMIE mi ich nie pobiera, musi być token?",
+            "source_frequency": 15,
+            "predicted_intent": "vat_jpk_ksef",
+            "selected_path": "workflow",
+            "workflow_score": 27.5
+          }
+        ]
+      }
+    ],
+    "weak_mixed_routing": [
+      {
+        "topic": "JPK tags / procedural-vs-legal ambiguity",
+        "likely_fix_type": "clarification gate masking workflow hit",
+        "count": 1,
+        "total_frequency": 2,
+        "representative_examples": [
+          {
+            "question": "JPK CIT Jak ustawić w systemie oznaczenia różnic przejściowych typu ZUS , umowy zlecenie jeżeli nie mam kont pozabilansowych?",
+            "source_frequency": 2,
+            "predicted_intent": "cit_wht",
+            "selected_path": "legal",
+            "workflow_score": 17.5
+          }
+        ]
+      },
+      {
+        "topic": "other / mixed routing",
+        "likely_fix_type": "workflow confidence too low",
+        "count": 1,
+        "total_frequency": 1,
+        "representative_examples": [
+          {
+            "question": "Gdzie wpisać kwotę z poz?",
+            "source_frequency": 1,
+            "predicted_intent": "vat_jpk_ksef",
+            "selected_path": "legal",
+            "workflow_score": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "fix_type_histogram": {
+    "clarification gate masking workflow hit": 2,
+    "routing keyword issue": 1,
+    "workflow confidence too low": 8,
+    "workflow eligibility issue": 3
+  },
+  "top_recommended_fixes": [
+    {
+      "rank": 1,
+      "topic": "accounting_operational / księgowanie / KPiR / okresy",
+      "failure_group": "legal_should_have_stayed_legal_but_went_workflow",
+      "likely_fix_type": "routing keyword issue",
+      "count": 3,
+      "total_frequency": 41,
+      "suggested_fix": "Boost accounting-operational routing for księgowanie/KPiR/date-of-entry phrases and allow workflow-first on strong bookkeeping verbs."
+    },
+    {
+      "rank": 2,
+      "topic": "accounting_operational / księgowanie / KPiR / okresy",
+      "failure_group": "legal_should_have_stayed_legal_but_went_workflow",
+      "likely_fix_type": "workflow confidence too low",
+      "count": 3,
+      "total_frequency": 23,
+      "suggested_fix": "Boost accounting-operational routing for księgowanie/KPiR/date-of-entry phrases and allow workflow-first on strong bookkeeping verbs."
+    },
+    {
+      "rank": 3,
+      "topic": "pełnomocnictwa / podpis / kanały złożenia",
+      "failure_group": "legal_should_have_stayed_legal_but_went_workflow",
+      "likely_fix_type": "workflow confidence too low",
+      "count": 3,
+      "total_frequency": 18,
+      "suggested_fix": "Route form/submission/signature questions to workflow only when they ask how to submit/sign, not when they ask whether something is legally allowed."
+    },
+    {
+      "rank": 4,
+      "topic": "KSeF permissions / authorization / invoice circulation",
+      "failure_group": "legal_should_have_stayed_legal_but_went_workflow",
+      "likely_fix_type": "workflow confidence too low",
+      "count": 1,
+      "total_frequency": 15,
+      "suggested_fix": "Require stronger operational verbs for KSeF workflow-first, but explicitly allow uprawnienia/token flows when the query asks how to perform the action."
+    },
+    {
+      "rank": 5,
+      "topic": "other / mixed routing",
+      "failure_group": "workflow_should_have_hit_but_went_legal",
+      "likely_fix_type": "workflow confidence too low",
+      "count": 2,
+      "total_frequency": 7,
+      "suggested_fix": "Increase confidence weighting for title/example overlaps on operational queries and penalize shallow collisions."
+    },
+    {
+      "rank": 6,
+      "topic": "JPK tags / procedural-vs-legal ambiguity",
+      "failure_group": "workflow_should_have_hit_but_went_legal",
+      "likely_fix_type": "clarification gate masking workflow hit",
+      "count": 2,
+      "total_frequency": 4,
+      "suggested_fix": "Keep legal-first for JPK tag/RO/BFK/DI obligation questions unless the query explicitly asks how to configure or submit them in a system."
+    },
+    {
+      "rank": 7,
+      "topic": "KSeF permissions / authorization / invoice circulation",
+      "failure_group": "workflow_should_have_hit_but_went_legal",
+      "likely_fix_type": "workflow eligibility issue",
+      "count": 1,
+      "total_frequency": 4,
+      "suggested_fix": "Require stronger operational verbs for KSeF workflow-first, but explicitly allow uprawnienia/token flows when the query asks how to perform the action."
+    },
+    {
+      "rank": 8,
+      "topic": "accounting_operational / księgowanie / KPiR / okresy",
+      "failure_group": "workflow_should_have_hit_but_went_legal",
+      "likely_fix_type": "workflow eligibility issue",
+      "count": 1,
+      "total_frequency": 4,
+      "suggested_fix": "Boost accounting-operational routing for księgowanie/KPiR/date-of-entry phrases and allow workflow-first on strong bookkeeping verbs."
+    },
+    {
+      "rank": 9,
+      "topic": "JPK tags / procedural-vs-legal ambiguity",
+      "failure_group": "workflow_should_have_hit_but_went_legal",
+      "likely_fix_type": "workflow eligibility issue",
+      "count": 1,
+      "total_frequency": 3,
+      "suggested_fix": "Keep legal-first for JPK tag/RO/BFK/DI obligation questions unless the query explicitly asks how to configure or submit them in a system."
+    },
+    {
+      "rank": 10,
+      "topic": "KSeF permissions / authorization / invoice circulation",
+      "failure_group": "workflow_should_have_hit_but_went_legal",
+      "likely_fix_type": "workflow confidence too low",
+      "count": 1,
+      "total_frequency": 3,
+      "suggested_fix": "Require stronger operational verbs for KSeF workflow-first, but explicitly allow uprawnienia/token flows when the query asks how to perform the action."
+    }
+  ]
+}

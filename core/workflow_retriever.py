@@ -50,27 +50,184 @@ POLISH_STOP_WORDS = {
 }
 
 WORKFLOW_OPERATIONAL_MARKERS = (
-    "wysl",
+    "jak oznaczyc",
+    "jak wyslac",
+    "jak zlozyc",
+    "jak ustawic",
+    "jak dodac",
+    "jak nadac",
+    "jak pobrac",
+    "jak podpisac",
+    "jak zaksi",
+    "jak ujac",
+    "jak zaimport",
+    "jak zsynchroniz",
+    "gdzie klik",
+    "gdzie ustawic",
+    "wyslij",
     "zloz",
-    "oznacz",
-    "nada",
-    "doda",
-    "pobrac",
-    "podpis",
-    "zglos",
-    "wyrejestrowac",
-    "wyrejestrow",
-    "skorygow",
     "ustaw",
-    "bramka",
-    "status",
-    "uprawnienia",
+    "dodaj",
+    "nadac",
+    "nadaj",
+    "pobrac",
+    "pobier",
+    "podpisac",
+    "zaksi",
+    "ujac",
+    "zaimport",
+    "zsynchroniz",
+    "zaciag",
+    "importuj",
+    "wyeksport",
+    "oznaczyc",
+)
+
+ACCOUNTING_OPERATIONAL_MARKERS = (
+    "ksieg",
+    "zaksi",
+    "ujac",
+    "na kontach",
+    "konto",
+    "konto 300",
+    "rozliczenie zakupu",
+    "kpir",
+    "rmk",
+    "kolumn",
+    "kst",
+    "magazyn",
+    "pod jaka data",
+    "data zapisania",
+    "koszty uboczne zakupu",
+    "przeksieg",
+)
+
+PERMISSION_OPERATIONAL_MARKERS = (
     "uprawnien",
     "dostep",
     "token",
-    "pue",
-    "korekta",
+    "zaw-fa",
+    "upl-1",
+    "pps-1",
+    "profil zaufany",
+    "podpis kwalifikowany",
+    "certyfikat",
 )
+
+SOFTWARE_SYSTEM_MARKERS = (
+    "infakt",
+    "optima",
+    "comarch",
+    "symfonia",
+    "enova",
+    "streamsoft",
+    "insert",
+    "saldeo",
+    "rewizor",
+    "pue",
+    "e-platnik",
+    "erp",
+)
+
+SOFTWARE_ISSUE_MARKERS = (
+    "nie dziala",
+    "nie pobiera",
+    "nie widac",
+    "nie pojaw",
+    "nie zaciaga",
+    "blad",
+    "synchroniz",
+    "integrac",
+    "import",
+    "eksport",
+    "api",
+)
+
+SOFTWARE_RECOMMENDATION_MARKERS = (
+    "program",
+    "oprogr",
+    "wdroz",
+    "wdrozyc",
+    "polec",
+    "szukam",
+    "system",
+    "narzedzi",
+)
+
+ACCOUNTING_CONTEXT_MARKERS = (
+    "sprawozdanie",
+    "bilans",
+    "rzis",
+    "remanent",
+    "magazyn",
+    "ksiegi rachunkowe",
+    "sf",
+    "krs",
+)
+
+COMMUNITY_ONLY_MARKERS = (
+    "czy sa na grupie",
+    "szukam osoby",
+    "polecacie",
+    "jaka wasza opinia",
+)
+
+LEGAL_DECISION_MARKERS = (
+    "czy musi",
+    "czy trzeba",
+    "czy moge",
+    "czy mozna",
+    "jaka data",
+    "ostatecznie data",
+    "pod jaka data",
+)
+
+LEGAL_GUARD_MARKERS = (
+    "jaki termin",
+    "kiedy",
+    "termin",
+    "czy moge",
+    "czy mozna",
+    "czy musi",
+    "czy przysluguje",
+    "obowiazek",
+    "obowiazk",
+    "zwoln",
+    "stawka",
+    "podlega",
+    "bfk",
+    " di ",
+    " ro ",
+    "gtu",
+    "oznaczenie",
+    "oznaczenia",
+    "bez oznaczenia",
+    "vat nalezny",
+    "odliczenie vat",
+)
+
+WORKFLOW_PATH_STRONG_MATCH_BONUS = 2.0
+WORKFLOW_LEGAL_GUARD_PENALTY = 4.0
+WORKFLOW_HIGH_CONFIDENCE_DELTA = 3.0
+
+
+@dataclass(frozen=True, slots=True)
+class WorkflowQuerySignals:
+    """Deterministic query-level signals used by workflow routing and scoring."""
+
+    normalized_query: str
+    tokens: frozenset[str]
+    operational_hits: int
+    accounting_hits: int
+    permission_hits: int
+    system_hits: int
+    issue_hits: int
+    recommendation_hits: int
+    accounting_context_hits: int
+    community_hits: int
+    legal_decision_hits: int
+    legal_guard_hits: int
+    explicit_how_to: bool
 
 
 @dataclass(frozen=True, slots=True)
@@ -100,7 +257,20 @@ _WORKFLOW_CACHE: dict[str, tuple[int, tuple[WorkflowDocument, ...]]] = {}
 
 
 def _normalize(text: str) -> str:
-    normalized = unicodedata.normalize("NFKD", text.lower())
+    translation = str.maketrans(
+        {
+            "ą": "a",
+            "ć": "c",
+            "ę": "e",
+            "ł": "l",
+            "ń": "n",
+            "ó": "o",
+            "ś": "s",
+            "ż": "z",
+            "ź": "z",
+        }
+    )
+    normalized = unicodedata.normalize("NFKD", text.lower().translate(translation))
     ascii_value = normalized.encode("ascii", "ignore").decode("ascii")
     return " ".join(re.findall(r"[a-z0-9_]+", ascii_value))
 
@@ -110,6 +280,45 @@ def _tokenize(text: str) -> frozenset[str]:
         token
         for token in _normalize(text).split()
         if token and token not in POLISH_STOP_WORDS
+    )
+
+
+def _contains_marker(normalized_query: str, tokens: frozenset[str], marker: str) -> bool:
+    """Match either a phrase marker or a token-prefix marker against a query."""
+
+    normalized_marker = _normalize(marker)
+    if not normalized_marker:
+        return False
+    if " " in normalized_marker:
+        return normalized_marker in normalized_query
+    return any(token.startswith(normalized_marker) for token in tokens)
+
+
+def _count_marker_hits(normalized_query: str, tokens: frozenset[str], markers: tuple[str, ...]) -> int:
+    """Count distinct marker hits in a normalized query."""
+
+    return sum(1 for marker in markers if _contains_marker(normalized_query, tokens, marker))
+
+
+def _collect_query_signals(query: str) -> WorkflowQuerySignals:
+    """Extract deterministic workflow-routing signals from a raw query."""
+
+    normalized_query = _normalize(query)
+    tokens = _tokenize(query)
+    return WorkflowQuerySignals(
+        normalized_query=normalized_query,
+        tokens=tokens,
+        operational_hits=_count_marker_hits(normalized_query, tokens, WORKFLOW_OPERATIONAL_MARKERS),
+        accounting_hits=_count_marker_hits(normalized_query, tokens, ACCOUNTING_OPERATIONAL_MARKERS),
+        permission_hits=_count_marker_hits(normalized_query, tokens, PERMISSION_OPERATIONAL_MARKERS),
+        system_hits=_count_marker_hits(normalized_query, tokens, SOFTWARE_SYSTEM_MARKERS),
+        issue_hits=_count_marker_hits(normalized_query, tokens, SOFTWARE_ISSUE_MARKERS),
+        recommendation_hits=_count_marker_hits(normalized_query, tokens, SOFTWARE_RECOMMENDATION_MARKERS),
+        accounting_context_hits=_count_marker_hits(normalized_query, tokens, ACCOUNTING_CONTEXT_MARKERS),
+        community_hits=_count_marker_hits(normalized_query, tokens, COMMUNITY_ONLY_MARKERS),
+        legal_decision_hits=_count_marker_hits(normalized_query, tokens, LEGAL_DECISION_MARKERS),
+        legal_guard_hits=_count_marker_hits(normalized_query, tokens, LEGAL_GUARD_MARKERS),
+        explicit_how_to=normalized_query.startswith(("jak ", "gdzie ", "w jaki sposob")),
     )
 
 
@@ -186,16 +395,91 @@ def load_workflow_documents(workflow_path: str | Path = WORKFLOW_SEED_PATH) -> l
 def is_workflow_eligible(query: str, intent: str) -> bool:
     """Return True when the query should try workflow retrieval before legal KB."""
 
+    signals = _collect_query_signals(query)
+
+    if (
+        signals.community_hits > 0
+        and signals.recommendation_hits == 0
+        and signals.system_hits == 0
+        and not signals.explicit_how_to
+        and signals.issue_hits == 0
+    ):
+        return False
+
     if intent in WORKFLOW_ELIGIBLE_INTENTS:
+        if intent == "software_tooling":
+            if signals.legal_guard_hits >= 2 and not signals.explicit_how_to and signals.issue_hits == 0:
+                return False
+            return True
+
+        if intent == "accounting_operational":
+            if (
+                signals.community_hits > 0
+                and signals.accounting_hits == 0
+                and signals.accounting_context_hits == 0
+                and signals.operational_hits == 0
+                and not signals.explicit_how_to
+            ):
+                return False
+            return True
+
+        if intent == "legal_procedural":
+            if (
+                signals.legal_decision_hits > 0
+                and signals.permission_hits == 0
+                and signals.system_hits == 0
+                and signals.operational_hits == 0
+                and not signals.explicit_how_to
+            ):
+                return False
+            return True
+
         return True
     if intent not in WORKFLOW_CONDITIONAL_INTENTS:
         return False
 
-    normalized_query = _normalize(query)
-    return any(marker in normalized_query for marker in WORKFLOW_OPERATIONAL_MARKERS)
+    if intent in {"pit_ryczalt", "cit_wht"}:
+        if (
+            signals.legal_decision_hits > 0
+            and signals.accounting_hits == 0
+            and signals.accounting_context_hits == 0
+            and not signals.explicit_how_to
+        ):
+            return False
+        return (
+            signals.accounting_hits >= 1
+            or signals.accounting_context_hits >= 1
+            or signals.explicit_how_to
+        )
+
+    if intent in {"vat_jpk_ksef", "zus"}:
+        if signals.legal_decision_hits > 0 and not signals.explicit_how_to and signals.permission_hits > 0:
+            return False
+        return (
+            (
+                signals.explicit_how_to
+                and (
+                    signals.operational_hits > 0
+                    or signals.permission_hits > 0
+                    or signals.accounting_hits > 0
+                )
+            )
+            or (
+                signals.operational_hits > 0
+                and (
+                    signals.accounting_hits >= 1
+                    or signals.system_hits >= 1
+                    or signals.permission_hits >= 1
+                )
+            )
+            or (signals.system_hits >= 1 and signals.issue_hits >= 1)
+            or (signals.accounting_hits >= 2 and signals.system_hits >= 1)
+        )
+
+    return signals.operational_hits > 0
 
 
-def _score_document(query_tokens: frozenset[str], document: WorkflowDocument) -> float:
+def _score_document(query_tokens: frozenset[str], document: WorkflowDocument, signals: WorkflowQuerySignals) -> float:
     """Score one workflow document using weighted token overlap."""
 
     title_overlap = len(query_tokens & document.title_tokens)
@@ -220,6 +504,20 @@ def _score_document(query_tokens: frozenset[str], document: WorkflowDocument) ->
         score += 1.5
     if form_overlap >= 1 or system_overlap >= 1:
         score += 1.0
+
+    area_text = _normalize(document.chunk.workflow_area)
+    if signals.accounting_hits > 0 and _contains_marker(area_text, frozenset(area_text.split()), "kpir"):
+        score += WORKFLOW_PATH_STRONG_MATCH_BONUS
+    if signals.accounting_hits > 0 and _contains_marker(area_text, frozenset(area_text.split()), "ksieg"):
+        score += WORKFLOW_PATH_STRONG_MATCH_BONUS
+    if signals.permission_hits > 0 and (
+        "authorization" in area_text or "uprawnien" in area_text or "pelnomocnictwa" in area_text
+    ):
+        score += WORKFLOW_PATH_STRONG_MATCH_BONUS
+    if signals.system_hits > 0 and system_overlap >= 1:
+        score += 1.5
+    if signals.legal_guard_hits >= 2 and signals.operational_hits == 0:
+        score -= WORKFLOW_LEGAL_GUARD_PENALTY
     return score
 
 
@@ -233,12 +531,13 @@ def retrieve_workflow(
 
     documents = load_workflow_documents(workflow_path)
     query_tokens = _tokenize(query)
+    signals = _collect_query_signals(query)
     if not query_tokens:
         return WorkflowRetrievalResult(chunks=[], confident=False, top_score=0.0)
 
     ranked = sorted(
         (
-            (_score_document(query_tokens, document), document.chunk)
+            (_score_document(query_tokens, document, signals), document.chunk)
             for document in documents
         ),
         key=lambda item: (
@@ -265,8 +564,14 @@ def retrieve_workflow(
         if score > 0
     ]
     top_score = selected[0].score if selected else 0.0
+    required_threshold = confidence_threshold
+    if signals.accounting_hits >= 1 or signals.permission_hits >= 1 or signals.operational_hits >= 2:
+        required_threshold = max(4.5, confidence_threshold - 1.0)
+    if signals.legal_guard_hits >= 2 and signals.issue_hits == 0 and signals.operational_hits <= 1:
+        required_threshold = confidence_threshold + WORKFLOW_HIGH_CONFIDENCE_DELTA
+
     return WorkflowRetrievalResult(
         chunks=selected,
-        confident=bool(selected) and top_score >= confidence_threshold,
+        confident=bool(selected) and top_score >= required_threshold,
         top_score=top_score,
     )

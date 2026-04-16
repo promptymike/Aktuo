@@ -218,6 +218,16 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
         "nota ksiegowa",     # accounting note
         "przeksiegowanie",   # reclassification entry
         "ujac koszt",        # "jak ująć koszt" generic cost booking
+        "na kontach",
+        "konto 300",
+        "rozliczenie zakupu",
+        "pod jaka data",
+        "data zapisania",
+        "koszty uboczne zakupu",
+        "kolumna",
+        "kolumny",
+        "kst",
+        "zakup towarow",
     ),
     "legal_procedural": (
         "korekta", "nadplata", "nadpłata", "pelnomocnictwo", "pełnomocnictwo",
@@ -255,6 +265,50 @@ INTENT_KEYWORD_HINTS: dict[str, tuple[str, ...]] = {
     "education_community": ("kurs", "szkolenie", "egzamin", "certyfikat", "polecacie", "jak zaczac"),
     "out_of_scope": ("co myslicie", "jak wrazenia", "czy warto"),
 }
+
+ACCOUNTING_ROUTING_MARKERS = (
+    "jak zaksi",
+    "ujac",
+    "na kontach",
+    "konto 300",
+    "rozliczenie zakupu",
+    "pod jaka data",
+    "data zapisania",
+    "kolumn",
+    "pod jaki kst",
+)
+
+SOFTWARE_VENDOR_MARKERS = (
+    "infakt",
+    "optima",
+    "comarch",
+    "symfonia",
+    "enova",
+    "streamsoft",
+    "insert",
+    "saldeo",
+    "rewizor",
+    "pue",
+    "e-platnik",
+)
+
+LEGAL_DOMAIN_MARKERS = (
+    "vat",
+    "jpk",
+    "ksef",
+    "pit",
+    "cit",
+    "zus",
+    "bfk",
+    "di",
+    "ro",
+    "gtu",
+    "oznaczenie",
+    "stawka",
+    "zwolnienie",
+    "obowiazek",
+    "termin",
+)
 
 SLOT_HINTS: dict[str, tuple[str, ...]] = {
     "obszar_prawa": ("vat", "pit", "cit", "zus", "ksef", "jpk", "urlop", "umowa", "podatek"),
@@ -335,6 +389,15 @@ def _tokenize(text: str) -> list[str]:
     return [token for token in re.findall(r"[a-z0-9_]+", _normalize(text)) if token not in STOP_WORDS]
 
 
+def _matches_marker(normalized_query: str, query_tokens: set[str], marker: str) -> bool:
+    normalized_marker = _normalize(marker)
+    if not normalized_marker:
+        return False
+    if " " in normalized_marker:
+        return normalized_marker in normalized_query
+    return any(token.startswith(normalized_marker) for token in query_tokens)
+
+
 def _read_json_dict(path: str) -> dict[str, JSONDict]:
     file_path = Path(path)
     if not file_path.exists():
@@ -411,8 +474,12 @@ def classify_intent(query: str, taxonomy_path: str) -> str:
     if not query_tokens:
         return "unknown"
 
+    if any(_matches_marker(normalized_query, query_tokens, marker) for marker in ACCOUNTING_ROUTING_MARKERS):
+        return "accounting_operational"
+
     best_intent = "unknown"
     best_score = 0
+    scored_intents: list[tuple[int, str]] = []
     for intent, record in taxonomy.items():
         keywords = _intent_keywords(intent, record)
         score = sum(1 for token in query_tokens if token in keywords)
@@ -428,9 +495,25 @@ def classify_intent(query: str, taxonomy_path: str) -> str:
         # ambiguous / context-free queries.
         if intent in _SLOTLESS_INTENTS:
             score -= 1
+        scored_intents.append((score, intent))
         if score > best_score:
             best_intent = intent
             best_score = score
+
+    if (
+        best_intent == "software_tooling"
+        and any(_matches_marker(normalized_query, query_tokens, marker) for marker in SOFTWARE_VENDOR_MARKERS)
+        and any(_matches_marker(normalized_query, query_tokens, marker) for marker in LEGAL_DOMAIN_MARKERS)
+    ):
+        for score, intent in sorted(scored_intents, key=lambda item: (-item[0], item[1])):
+            if intent != "software_tooling" and score > 0:
+                return intent
+
+    if (
+        best_intent == "business_of_accounting_office"
+        and any(_matches_marker(normalized_query, query_tokens, marker) for marker in SOFTWARE_VENDOR_MARKERS)
+    ):
+        return "software_tooling"
 
     return best_intent if best_score > 0 else "unknown"
 

@@ -6,57 +6,55 @@
     "mixed_expected": 47
   },
   "metrics": {
-    "workflow_path_precision": 0.7356,
-    "legal_path_precision": 0.6188,
-    "workflow_recall_on_workflow_questions": 0.3267,
-    "legal_leakage_into_workflow": 0.1533,
-    "workflow_leakage_into_legal": 0.2933,
+    "workflow_path_precision": 0.8496,
+    "legal_path_precision": 0.7548,
+    "workflow_recall_on_workflow_questions": 0.48,
+    "legal_leakage_into_workflow": 0.1333,
+    "workflow_leakage_into_legal": 0.24,
     "clarification_rate_per_subset": {
-      "workflow_expected": 0.86,
-      "legal_expected": 0.86,
-      "mixed_expected": 0.7872
+      "workflow_expected": 0.8267,
+      "legal_expected": 0.84,
+      "mixed_expected": 0.5106
     }
   },
   "error_analysis": {
     "top_workflow_questions_incorrectly_went_to_legal": [
       {
-        "question": "Czy brać pod uwagę tylko SKWP czy może Fundację Rozwoju Rachunkowości czy Krajową Izbę Księgowych?",
+        "question": "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że faktury pobrane do rejestru to nie mam \"V\" czy ktoś też tak ma? Dlaczego tak się dzieje?",
         "subset": "workflow_expected",
         "classification": "workflow",
-        "source_category": "rachunkowosc",
+        "source_category": "ksef",
         "source_frequency": 4,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
+        "expected_behavior": "ask_follow_up",
+        "expected_law_or_area": "oprogramowanie księgowe",
         "golden_overlap": true,
-        "predicted_intent": "pit_ryczalt",
-        "clarification_flag": true,
+        "predicted_intent": "vat_jpk_ksef",
+        "clarification_flag": false,
         "missing_slots": [
-          "forma_opodatkowania",
-          "źródło_przychodu",
-          "okres_lub_data"
+          "rola_lub_status_strony"
         ],
         "workflow_eligible": false,
         "selected_path": "legal",
         "path_correct": false,
-        "workflow_score": 5.5,
-        "selected_score": 0.0308,
+        "workflow_score": 67.0,
+        "selected_score": 0.0328,
         "top_retrieved": {
-          "law_name": "Ustawa o rachunkowości",
-          "article_number": "art. 32 ust. 2",
-          "category": "amortyzacja_srodków_trwalych",
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+          "category": "ksef",
           "source_type": "legal_kb",
           "workflow_area": "",
           "title": "",
-          "score": 0.0308
+          "score": 0.0328
         },
         "workflow_top": {
           "law_name": "Workflow layer",
-          "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "category": "zus",
+          "article_number": "Obieg faktur, statusów i korekt w KSeF",
+          "category": "ksef",
           "source_type": "workflow_seed_v1",
-          "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-          "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "score": 5.5
+          "workflow_area": "KSeF issuing / correction / invoice circulation",
+          "title": "Obieg faktur, statusów i korekt w KSeF",
+          "score": 67.0
         }
       },
       {
@@ -76,7 +74,7 @@
         "workflow_eligible": false,
         "selected_path": "legal",
         "path_correct": false,
-        "workflow_score": 31.5,
+        "workflow_score": 33.5,
         "selected_score": 0.0291,
         "top_retrieved": {
           "law_name": "Ustawa o VAT",
@@ -94,86 +92,7 @@
           "source_type": "workflow_seed_v1",
           "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
           "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "score": 31.5
-        }
-      },
-      {
-        "question": "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
-        "subset": "workflow_expected",
-        "classification": "workflow",
-        "source_category": "rachunkowosc",
-        "source_frequency": 4,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
-        "golden_overlap": true,
-        "predicted_intent": "pit_ryczalt",
-        "clarification_flag": true,
-        "missing_slots": [
-          "forma_opodatkowania",
-          "źródło_przychodu",
-          "okres_lub_data"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 17.5,
-        "selected_score": 0.0318,
-        "top_retrieved": {
-          "law_name": "Ustawa o podatku dochodowym od os?b fizycznych",
-          "article_number": "art. 22a ust. 1, art. 23 ust. 1 pkt 1 lit. b i art. 14 ust. 2 pkt 1",
-          "category": "pit",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0318
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "category": "rachunkowosc",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
-          "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "score": 17.5
-        }
-      },
-      {
-        "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
-        "subset": "workflow_expected",
-        "classification": "workflow",
-        "source_category": "rachunkowosc",
-        "source_frequency": 4,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
-        "golden_overlap": true,
-        "predicted_intent": "legal_substantive",
-        "clarification_flag": true,
-        "missing_slots": [
-          "obszar_prawa",
-          "okres_lub_data"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 25.5,
-        "selected_score": 0.032,
-        "top_retrieved": {
-          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-          "article_number": "art. 4 ust. 1 pkt 6",
-          "category": "pit",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.032
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "category": "rachunkowosc",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
-          "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "score": 25.5
+          "score": 33.5
         }
       },
       {
@@ -203,46 +122,6 @@
           "score": 0.0328
         },
         "workflow_top": null
-      },
-      {
-        "question": "A jaką datę przyjąć do zaksięgowania na koncie 300- rozliczenie zakupu?",
-        "subset": "workflow_expected",
-        "classification": "workflow",
-        "source_category": "rachunkowosc",
-        "source_frequency": 3,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
-        "golden_overlap": true,
-        "predicted_intent": "pit_ryczalt",
-        "clarification_flag": true,
-        "missing_slots": [
-          "forma_opodatkowania",
-          "źródło_przychodu",
-          "okres_lub_data"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 7.5,
-        "selected_score": 0.032,
-        "top_retrieved": {
-          "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
-          "article_number": "art. 4 ust. 1 pkt 6",
-          "category": "pit",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.032
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "category": "rachunkowosc",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
-          "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
-          "score": 7.5
-        }
       },
       {
         "question": "A na jakiej podstawie?",
@@ -324,13 +203,205 @@
         }
       },
       {
-        "question": "Data wystawienia 28.02 Data zapisania w KSeF /otrzymania 02.03.2026 Mogę zaksięgować w KPiR pod data 28.02?",
+        "question": "Szukam doradcy podatkowego lub księgowej zorientowanej w temacie aportu ZCP do spółki komandytowej od strony księgowej?",
         "subset": "workflow_expected",
         "classification": "workflow",
         "source_category": "rachunkowosc",
         "source_frequency": 3,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "rachunkowość operacyjna",
+        "golden_overlap": true,
+        "predicted_intent": "education_community",
+        "clarification_flag": false,
+        "missing_slots": [],
+        "workflow_eligible": false,
+        "selected_path": "legal",
+        "path_correct": false,
+        "workflow_score": 4.0,
+        "selected_score": 0.0318,
+        "top_retrieved": {
+          "law_name": "Ordynacja podatkowa",
+          "article_number": "art. 138n",
+          "category": "ordynacja",
+          "source_type": "legal_kb",
+          "workflow_area": "",
+          "title": "",
+          "score": 0.0318
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 4.0
+        }
+      },
+      {
+        "question": "W takim razie rozliczam to jako import od kwoty brutto czy jako transakcja krajowa?",
+        "subset": "workflow_expected",
+        "classification": "workflow",
+        "source_category": "vat",
+        "source_frequency": 3,
         "expected_behavior": "ask_follow_up",
         "expected_law_or_area": "oprogramowanie księgowe",
+        "golden_overlap": true,
+        "predicted_intent": "education_community",
+        "clarification_flag": false,
+        "missing_slots": [],
+        "workflow_eligible": false,
+        "selected_path": "legal",
+        "path_correct": false,
+        "workflow_score": 19.5,
+        "selected_score": 0.0328,
+        "top_retrieved": {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 26a ust. 1",
+          "category": "miejsce_opodatkowania_import",
+          "source_type": "legal_kb",
+          "workflow_area": "",
+          "title": "",
+          "score": 0.0328
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Obsługa problemów systemowych i synchronizacji danych",
+          "category": "software_tooling",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
+          "title": "Obsługa problemów systemowych i synchronizacji danych",
+          "score": 19.5
+        }
+      },
+      {
+        "question": ") płacił ten abonament i to w odniesieniu do radia w samochodzie?",
+        "subset": "workflow_expected",
+        "classification": "workflow",
+        "source_category": "rachunkowosc",
+        "source_frequency": 2,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "rachunkowość operacyjna",
+        "golden_overlap": true,
+        "predicted_intent": "cit_wht",
+        "clarification_flag": true,
+        "missing_slots": [
+          "rodzaj_transakcji_lub_płatności",
+          "okres_lub_data"
+        ],
+        "workflow_eligible": false,
+        "selected_path": "legal",
+        "path_correct": false,
+        "workflow_score": 2.0,
+        "selected_score": 0.0323,
+        "top_retrieved": {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 106p",
+          "category": "fakturowanie",
+          "source_type": "legal_kb",
+          "workflow_area": "",
+          "title": "",
+          "score": 0.0323
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+          "category": "procedury",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+          "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+          "score": 2.0
+        }
+      },
+      {
+        "question": ". Czy będąc na umowie o pracę i płacąc składki tylko zdrowotne z działalności mogę zapisać się do dobrowolnego ZUS?",
+        "subset": "workflow_expected",
+        "classification": "workflow",
+        "source_category": "kadry",
+        "source_frequency": 2,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "oprogramowanie księgowe",
+        "golden_overlap": true,
+        "predicted_intent": "zus",
+        "clarification_flag": true,
+        "missing_slots": [
+          "tytuł_ubezpieczenia",
+          "status_osoby"
+        ],
+        "workflow_eligible": false,
+        "selected_path": "legal",
+        "path_correct": false,
+        "workflow_score": 40.5,
+        "selected_score": 0.0328,
+        "top_retrieved": {
+          "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+          "article_number": "art. 47b ust. 1",
+          "category": "Procedury elektroniczne i systemy ZUS",
+          "source_type": "legal_kb",
+          "workflow_area": "",
+          "title": "",
+          "score": 0.0328
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+          "category": "zus",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
+          "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+          "score": 40.5
+        }
+      },
+      {
+        "question": ". Czy ktoś z Was księguje przedszkole (księgowość uproszczona)?",
+        "subset": "workflow_expected",
+        "classification": "workflow",
+        "source_category": "rachunkowosc",
+        "source_frequency": 2,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "rachunkowość operacyjna",
+        "golden_overlap": true,
+        "predicted_intent": "hr",
+        "clarification_flag": true,
+        "missing_slots": [
+          "typ_umowy",
+          "etap_zatrudnienia",
+          "okres_lub_data"
+        ],
+        "workflow_eligible": false,
+        "selected_path": "legal",
+        "path_correct": false,
+        "workflow_score": 7.5,
+        "selected_score": 0.0328,
+        "top_retrieved": {
+          "law_name": "Ustawa o VAT",
+          "article_number": "art. 138",
+          "category": "vat",
+          "source_type": "legal_kb",
+          "workflow_area": "",
+          "title": "",
+          "score": 0.0328
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Obsługa problemów systemowych i synchronizacji danych",
+          "category": "software_tooling",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
+          "title": "Obsługa problemów systemowych i synchronizacji danych",
+          "score": 7.5
+        }
+      }
+    ],
+    "top_legal_questions_incorrectly_went_to_workflow": [
+      {
+        "question": "Czy jeśli faktura była w KSeF wystawiona 3 lutego ale numer nadany 5 lutego to jaka jest ostatecznie data wystawienia faktury pod którą powinnam zaksięgować koszt do kpir?",
+        "subset": "legal_expected",
+        "classification": "legal",
+        "source_category": "rachunkowosc",
+        "source_frequency": 20,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
         "golden_overlap": true,
         "predicted_intent": "pit_ryczalt",
         "clarification_flag": true,
@@ -338,19 +409,19 @@
           "forma_opodatkowania",
           "źródło_przychodu"
         ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
+        "workflow_eligible": true,
+        "selected_path": "workflow",
         "path_correct": false,
         "workflow_score": 21.5,
-        "selected_score": 0.0328,
+        "selected_score": 21.5,
         "top_retrieved": {
-          "law_name": "Ustawa o rachunkowości",
-          "article_number": "art. 12",
-          "category": "rachunkowosc",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0328
+          "law_name": "Workflow layer",
+          "article_number": "Obieg faktur, statusów i korekt w KSeF",
+          "category": "ksef",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KSeF issuing / correction / invoice circulation",
+          "title": "Obieg faktur, statusów i korekt w KSeF",
+          "score": 21.5
         },
         "workflow_top": {
           "law_name": "Workflow layer",
@@ -363,34 +434,33 @@
         }
       },
       {
-        "question": "Jaka jest wasza opinia na ten temat?",
-        "subset": "workflow_expected",
-        "classification": "workflow",
-        "source_category": "rachunkowosc",
-        "source_frequency": 3,
+        "question": "Czy mogę odliczyć VAT w styczniu (faktura wystawiona w grudniu), ale tylko odliczę VAT w styczniu a nie będę ujmować kosztu w kpir?",
+        "subset": "legal_expected",
+        "classification": "legal",
+        "source_category": "vat",
+        "source_frequency": 16,
         "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
+        "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
         "golden_overlap": true,
         "predicted_intent": "pit_ryczalt",
         "clarification_flag": true,
         "missing_slots": [
           "forma_opodatkowania",
-          "źródło_przychodu",
-          "okres_lub_data"
+          "źródło_przychodu"
         ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
+        "workflow_eligible": true,
+        "selected_path": "workflow",
         "path_correct": false,
-        "workflow_score": 5.5,
-        "selected_score": 0.0328,
+        "workflow_score": 12.5,
+        "selected_score": 12.5,
         "top_retrieved": {
-          "law_name": "Ordynacja podatkowa",
-          "article_number": "art. 14ze",
-          "category": "ordynacja",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0328
+          "law_name": "Workflow layer",
+          "article_number": "Obieg faktur, statusów i korekt w KSeF",
+          "category": "ksef",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KSeF issuing / correction / invoice circulation",
+          "title": "Obieg faktur, statusów i korekt w KSeF",
+          "score": 12.5
         },
         "workflow_top": {
           "law_name": "Workflow layer",
@@ -399,87 +469,7 @@
           "source_type": "workflow_seed_v1",
           "workflow_area": "KSeF issuing / correction / invoice circulation",
           "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 5.5
-        }
-      }
-    ],
-    "top_legal_questions_incorrectly_went_to_workflow": [
-      {
-        "question": "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?",
-        "subset": "legal_expected",
-        "classification": "legal",
-        "source_category": "jpk",
-        "source_frequency": 21,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": true,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": true,
-        "selected_path": "workflow",
-        "path_correct": false,
-        "workflow_score": 14.0,
-        "selected_score": 14.0,
-        "top_retrieved": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "category": "jpk",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "JPK filing / correction / tags",
-          "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "score": 14.0
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "category": "jpk",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "JPK filing / correction / tags",
-          "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "score": 14.0
-        }
-      },
-      {
-        "question": "Czy sprzedaż internetową na osoby prywatne na paragony bez fiskalizacji mogę wykazać zbiorczo do JPK dowolnym dokumentem bez oznaczenia RO?",
-        "subset": "legal_expected",
-        "classification": "legal",
-        "source_category": "jpk",
-        "source_frequency": 15,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": true,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": true,
-        "selected_path": "workflow",
-        "path_correct": false,
-        "workflow_score": 14.0,
-        "selected_score": 14.0,
-        "top_retrieved": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "category": "jpk",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "JPK filing / correction / tags",
-          "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "score": 14.0
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "category": "jpk",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "JPK filing / correction / tags",
-          "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "score": 14.0
+          "score": 12.5
         }
       },
       {
@@ -492,129 +482,10 @@
         "expected_law_or_area": "VAT / JPK / KSeF",
         "golden_overlap": true,
         "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
+        "clarification_flag": false,
         "missing_slots": [
           "okres_lub_data",
           "rola_lub_status_strony"
-        ],
-        "workflow_eligible": true,
-        "selected_path": "workflow",
-        "path_correct": false,
-        "workflow_score": 25.5,
-        "selected_score": 25.5,
-        "top_retrieved": {
-          "law_name": "Workflow layer",
-          "article_number": "Nadawanie uprawnień i dostępów w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF permissions / authorization flow",
-          "title": "Nadawanie uprawnień i dostępów w KSeF",
-          "score": 25.5
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Nadawanie uprawnień i dostępów w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF permissions / authorization flow",
-          "title": "Nadawanie uprawnień i dostępów w KSeF",
-          "score": 25.5
-        }
-      },
-      {
-        "question": "Czy działa Wam „ e płatnik „ na pue ZUS?",
-        "subset": "legal_expected",
-        "classification": "legal",
-        "source_category": "zus",
-        "source_frequency": 11,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "ZUS",
-        "golden_overlap": true,
-        "predicted_intent": "zus",
-        "clarification_flag": true,
-        "missing_slots": [
-          "tytuł_ubezpieczenia",
-          "status_osoby",
-          "rodzaj_składki_lub_świadczenia"
-        ],
-        "workflow_eligible": true,
-        "selected_path": "workflow",
-        "path_correct": false,
-        "workflow_score": 26.0,
-        "selected_score": 26.0,
-        "top_retrieved": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "category": "zus",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-          "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "score": 26.0
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "category": "zus",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-          "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "score": 26.0
-        }
-      },
-      {
-        "question": "Korekta in minus kosztowa: wystawiona 20.02 dot usługi z 12.02. VAT i dochodowy księguję pod datą wystawienia 20.02?",
-        "subset": "legal_expected",
-        "classification": "legal",
-        "source_category": "vat",
-        "source_frequency": 9,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF + Ordynacja podatkowa / procedury",
-        "golden_overlap": true,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "rodzaj_dokumentu",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": true,
-        "selected_path": "workflow",
-        "path_correct": false,
-        "workflow_score": 10.5,
-        "selected_score": 10.5,
-        "top_retrieved": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 10.5
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 10.5
-        }
-      },
-      {
-        "question": "W pue wyskakują mi jakieś błędy,Podpowie dobra duszyczka ile wynoszą łącznie teraz składki na ZUS preferencyjny ryczałt 60k-300k?",
-        "subset": "legal_expected",
-        "classification": "legal",
-        "source_category": "zus",
-        "source_frequency": 8,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "ZUS",
-        "golden_overlap": true,
-        "predicted_intent": "zus",
-        "clarification_flag": true,
-        "missing_slots": [
-          "tytuł_ubezpieczenia",
-          "status_osoby",
-          "rodzaj_składki_lub_świadczenia"
         ],
         "workflow_eligible": true,
         "selected_path": "workflow",
@@ -623,21 +494,99 @@
         "selected_score": 27.5,
         "top_retrieved": {
           "law_name": "Workflow layer",
-          "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "category": "zus",
+          "article_number": "Nadawanie uprawnień i dostępów w KSeF",
+          "category": "ksef",
           "source_type": "workflow_seed_v1",
-          "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-          "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+          "workflow_area": "KSeF permissions / authorization flow",
+          "title": "Nadawanie uprawnień i dostępów w KSeF",
           "score": 27.5
         },
         "workflow_top": {
           "law_name": "Workflow layer",
-          "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
-          "category": "zus",
+          "article_number": "Nadawanie uprawnień i dostępów w KSeF",
+          "category": "ksef",
           "source_type": "workflow_seed_v1",
-          "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-          "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+          "workflow_area": "KSeF permissions / authorization flow",
+          "title": "Nadawanie uprawnień i dostępów w KSeF",
           "score": 27.5
+        }
+      },
+      {
+        "question": "Jak to ująć w KPiR - przychód za okres, którego dotyczy, a wydatek pod datą wystawienia?",
+        "subset": "legal_expected",
+        "classification": "legal",
+        "source_category": "rachunkowosc",
+        "source_frequency": 9,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
+        "golden_overlap": true,
+        "predicted_intent": "accounting_operational",
+        "clarification_flag": false,
+        "missing_slots": [
+          "rodzaj_dokumentu"
+        ],
+        "workflow_eligible": true,
+        "selected_path": "workflow",
+        "path_correct": false,
+        "workflow_score": 12.0,
+        "selected_score": 12.0,
+        "top_retrieved": {
+          "law_name": "Workflow layer",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 12.0
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 12.0
+        }
+      },
+      {
+        "question": "Czy znajdzie się tutaj księgowość dla firmy (spółka z o.o.), która udostępnia w abonamencie narzędzie online dla firm (SaaS)?",
+        "subset": "legal_expected",
+        "classification": "legal",
+        "source_category": "spolki",
+        "source_frequency": 8,
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "przepisy materialne",
+        "golden_overlap": true,
+        "predicted_intent": "software_tooling",
+        "clarification_flag": true,
+        "missing_slots": [
+          "nazwa_systemu",
+          "czynność_operacyjna",
+          "kontekst_błędu_lub_integracji"
+        ],
+        "workflow_eligible": true,
+        "selected_path": "workflow",
+        "path_correct": false,
+        "workflow_score": 6.0,
+        "selected_score": 6.0,
+        "top_retrieved": {
+          "law_name": "Workflow layer",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 6.0
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 6.0
         }
       },
       {
@@ -677,45 +626,6 @@
           "workflow_area": "KSeF issuing / correction / invoice circulation",
           "title": "Obieg faktur, statusów i korekt w KSeF",
           "score": 7.5
-        }
-      },
-      {
-        "question": "Kasa fiskalna a dzierżawa gruntów sprzedaż osoby fizyczne Dzień dobry, przedsiębiorstwo dzierżawi grunty pod garaże blaszane i lokale użytkowe czy wystawiając fakturę z forma płatności przelew przedsiębiorstwo nadal musi posiadać kasę fiskalną od 1.04?",
-        "subset": "legal_expected",
-        "classification": "legal",
-        "source_category": "vat",
-        "source_frequency": 7,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": true,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": true,
-        "selected_path": "workflow",
-        "path_correct": false,
-        "workflow_score": 9.5,
-        "selected_score": 9.5,
-        "top_retrieved": {
-          "law_name": "Workflow layer",
-          "article_number": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
-          "category": "procedury",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
-          "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
-          "score": 9.5
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
-          "category": "procedury",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
-          "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
-          "score": 9.5
         }
       },
       {
@@ -759,10 +669,10 @@
         }
       },
       {
-        "question": "Jakiego oznaczenia użylibyście w przypadku faktur wewnętrznych, wykazujących VAT należny od transakcji WNT: BFK czy DI?",
+        "question": "Jak księgujecie takie faktury?",
         "subset": "legal_expected",
         "classification": "legal",
-        "source_category": "vat",
+        "source_category": "rachunkowosc",
         "source_frequency": 6,
         "expected_behavior": "ask_follow_up",
         "expected_law_or_area": "VAT / JPK / KSeF",
@@ -776,25 +686,103 @@
         "workflow_eligible": true,
         "selected_path": "workflow",
         "path_correct": false,
-        "workflow_score": 14.5,
-        "selected_score": 14.5,
+        "workflow_score": 6.0,
+        "selected_score": 6.0,
         "top_retrieved": {
           "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
           "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 14.5
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 6.0
         },
         "workflow_top": {
           "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
+          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "category": "rachunkowosc",
           "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 14.5
+          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+          "score": 6.0
+        }
+      },
+      {
+        "question": ". Klient wystawił fakturę końcem grudnia sprzedał towar handlowy samochód okazało się że bez twardego dowodu?",
+        "subset": "legal_expected",
+        "classification": "legal",
+        "source_category": "praktyka",
+        "source_frequency": 5,
+        "expected_behavior": "ask_follow_up",
+        "expected_law_or_area": "VAT / JPK / KSeF",
+        "golden_overlap": true,
+        "predicted_intent": "accounting_operational",
+        "clarification_flag": true,
+        "missing_slots": [
+          "rodzaj_ksiąg_lub_ewidencji",
+          "okres_księgowy"
+        ],
+        "workflow_eligible": true,
+        "selected_path": "workflow",
+        "path_correct": false,
+        "workflow_score": 7.5,
+        "selected_score": 7.5,
+        "top_retrieved": {
+          "law_name": "Workflow layer",
+          "article_number": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+          "category": "procedury",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+          "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+          "score": 7.5
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+          "category": "procedury",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
+          "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+          "score": 7.5
+        }
+      },
+      {
+        "question": "Czy faktura wystawiona w marcu ale za wywóz nieczystości w lutym idzie ksiegowo do dochodowego w marcu pod data wystawienia jako koszt pośredni?",
+        "subset": "legal_expected",
+        "classification": "legal",
+        "source_category": "rachunkowosc",
+        "source_frequency": 5,
+        "expected_behavior": "answer_directly",
+        "expected_law_or_area": "VAT / JPK / KSeF",
+        "golden_overlap": true,
+        "predicted_intent": "pit_ryczalt",
+        "clarification_flag": true,
+        "missing_slots": [
+          "forma_opodatkowania",
+          "źródło_przychodu"
+        ],
+        "workflow_eligible": true,
+        "selected_path": "workflow",
+        "path_correct": false,
+        "workflow_score": 11.5,
+        "selected_score": 11.5,
+        "top_retrieved": {
+          "law_name": "Workflow layer",
+          "article_number": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
+          "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+          "score": 11.5
+        },
+        "workflow_top": {
+          "law_name": "Workflow layer",
+          "article_number": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+          "category": "rachunkowosc",
+          "source_type": "workflow_seed_v1",
+          "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
+          "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+          "score": 11.5
         }
       }
     ],
@@ -840,286 +828,13 @@
         }
       },
       {
-        "question": "Jak ująć taka korektę w JPK?",
+        "question": "Gdzie wpisać kwotę z poz?",
         "subset": "mixed_expected",
         "classification": "mixed",
-        "source_category": "rachunkowosc",
-        "source_frequency": 2,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF + Ordynacja podatkowa / procedury",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 21.5,
-        "selected_score": 0.0328,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 109 ust. 3e-3g",
-          "category": "jpk",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0328
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "category": "jpk",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "JPK filing / correction / tags",
-          "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "score": 21.5
-        }
-      },
-      {
-        "question": "Jak zaksięgować to na kontach z rozliczeniem VAT?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "vat",
-        "source_frequency": 2,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "rodzaj_dokumentu",
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 5.0,
-        "selected_score": 0.0318,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
-          "category": "rachunkowosc",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0318
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 5.0
-        }
-      },
-      {
-        "question": "Pełne księgi. Jak zaksięgować? VAT i koszty do lutego?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "rachunkowosc",
-        "source_frequency": 2,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "rodzaj_dokumentu",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 10.5,
-        "selected_score": 0.0318,
-        "top_retrieved": {
-          "law_name": "Ustawa o rachunkowości",
-          "article_number": "art. 12 ust. 1",
-          "category": "otwarcie_ksiag_rachunkowych",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0318
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
-          "category": "rachunkowosc",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
-          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
-          "score": 10.5
-        }
-      },
-      {
-        "question": "Wiem, że VAT dopiero wykaże w JPK w styczniu, ale jak zaksięgować (na jakie konta) tą fakturę w 2025 roku?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "rachunkowosc",
-        "source_frequency": 2,
-        "expected_behavior": "answer_directly",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": false,
-        "missing_slots": [
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 17.5,
-        "selected_score": 0.0325,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 109 ust. 3e-3g",
-          "category": "jpk",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0325
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "category": "jpk",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "JPK filing / correction / tags",
-          "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
-          "score": 17.5
-        }
-      },
-      {
-        "question": "Wytłumaczy ktoś jak ująć fakturę z PLAY wystawioną w KSeF?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "ksef",
-        "source_frequency": 2,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 21.5,
-        "selected_score": 0.0323,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
-          "category": "ksef",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0323
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 21.5
-        }
-      },
-      {
-        "question": "...jak ując do VAT paragon za wpłatę zwrotnego depozytu OBU czechy?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "vat",
-        "source_frequency": 1,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 5.0,
-        "selected_score": 0.0309,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 106e ust. 1",
-          "category": "dokumentacja-faktury",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0309
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 5.0
-        }
-      },
-      {
-        "question": "A ja myślę że skoro nota wystawiona i otrzymana w styczniu to tak powinniśmy jak zaksięgować i zapłacić VAT za styczeń a nie dopiero jak otrzymamy zapłatę?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "vat",
-        "source_frequency": 1,
-        "expected_behavior": "ask_follow_up",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "rodzaj_dokumentu",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 12.5,
-        "selected_score": 0.0328,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
-          "category": "rachunkowosc",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0328
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 12.5
-        }
-      },
-      {
-        "question": "Canva,subskrypcja z VAT 23%, jak zaksięgować na kh?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "rachunkowosc",
+        "source_category": "pit",
         "source_frequency": 1,
         "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "VAT / JPK / KSeF",
+        "expected_law_or_area": "PIT / ryczałt",
         "golden_overlap": false,
         "predicted_intent": "vat_jpk_ksef",
         "clarification_flag": true,
@@ -1131,159 +846,111 @@
         "workflow_eligible": false,
         "selected_path": "legal",
         "path_correct": false,
-        "workflow_score": 5.0,
-        "selected_score": 0.0323,
+        "workflow_score": 0.0,
+        "selected_score": 0.032,
         "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
-          "category": "rachunkowosc",
+          "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+          "article_number": "art. 54",
+          "category": "pit",
           "source_type": "legal_kb",
           "workflow_area": "",
           "title": "",
-          "score": 0.0323
+          "score": 0.032
         },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Obieg faktur, statusów i korekt w KSeF",
-          "category": "ksef",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KSeF issuing / correction / invoice circulation",
-          "title": "Obieg faktur, statusów i korekt w KSeF",
-          "score": 5.0
-        }
-      },
-      {
-        "question": "Czy księgować w koszty netto czy brutto oraz jak zaksięgować VAT w księgach?",
-        "subset": "mixed_expected",
-        "classification": "mixed",
-        "source_category": "rachunkowosc",
-        "source_frequency": 1,
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "VAT / JPK / KSeF",
-        "golden_overlap": false,
-        "predicted_intent": "vat_jpk_ksef",
-        "clarification_flag": true,
-        "missing_slots": [
-          "rodzaj_dokumentu",
-          "okres_lub_data",
-          "rola_lub_status_strony"
-        ],
-        "workflow_eligible": false,
-        "selected_path": "legal",
-        "path_correct": false,
-        "workflow_score": 10.5,
-        "selected_score": 0.0296,
-        "top_retrieved": {
-          "law_name": "Ustawa o VAT",
-          "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
-          "category": "rachunkowosc",
-          "source_type": "legal_kb",
-          "workflow_area": "",
-          "title": "",
-          "score": 0.0296
-        },
-        "workflow_top": {
-          "law_name": "Workflow layer",
-          "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
-          "category": "rachunkowosc",
-          "source_type": "workflow_seed_v1",
-          "workflow_area": "KPiR / księgowanie / okresy i memoriał",
-          "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
-          "score": 10.5
-        }
+        "workflow_top": null
       }
     ],
     "top_workflow_areas_with_strongest_retrieval_confidence": [
       {
         "workflow_area": "JPK filing / correction / tags",
-        "avg_score": 16.0263,
+        "avg_score": 14.8421,
         "count": 19
       },
       {
         "workflow_area": "KSeF issuing / correction / invoice circulation",
-        "avg_score": 13.9688,
-        "count": 64
+        "avg_score": 14.8125,
+        "count": 56
       },
       {
         "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-        "avg_score": 10.0349,
-        "count": 43
+        "avg_score": 11.5405,
+        "count": 37
       },
       {
         "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
-        "avg_score": 9.86,
-        "count": 25
+        "avg_score": 10.8958,
+        "count": 24
       },
       {
         "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka",
-        "avg_score": 8.6977,
-        "count": 43
-      },
-      {
-        "workflow_area": "KPiR / księgowanie / okresy i memoriał",
-        "avg_score": 8.6212,
-        "count": 33
+        "avg_score": 9.6316,
+        "count": 38
       },
       {
         "workflow_area": "KSeF permissions / authorization flow",
-        "avg_score": 8.119,
-        "count": 42
+        "avg_score": 9.0625,
+        "count": 32
+      },
+      {
+        "workflow_area": "KPiR / księgowanie / okresy i memoriał",
+        "avg_score": 8.9,
+        "count": 70
       },
       {
         "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
-        "avg_score": 6.9483,
-        "count": 29
+        "avg_score": 7.6875,
+        "count": 32
       },
       {
         "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
-        "avg_score": 5.1429,
-        "count": 21
+        "avg_score": 5.5312,
+        "count": 16
       }
     ],
     "top_workflow_areas_with_weakest_retrieval_confidence": [
       {
         "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia",
-        "avg_score": 5.1429,
-        "count": 21
+        "avg_score": 5.5312,
+        "count": 16
       },
       {
         "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja",
-        "avg_score": 6.9483,
-        "count": 29
-      },
-      {
-        "workflow_area": "KSeF permissions / authorization flow",
-        "avg_score": 8.119,
-        "count": 42
+        "avg_score": 7.6875,
+        "count": 32
       },
       {
         "workflow_area": "KPiR / księgowanie / okresy i memoriał",
-        "avg_score": 8.6212,
-        "count": 33
+        "avg_score": 8.9,
+        "count": 70
+      },
+      {
+        "workflow_area": "KSeF permissions / authorization flow",
+        "avg_score": 9.0625,
+        "count": 32
       },
       {
         "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka",
-        "avg_score": 8.6977,
-        "count": 43
+        "avg_score": 9.6316,
+        "count": 38
       },
       {
         "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja",
-        "avg_score": 9.86,
-        "count": 25
+        "avg_score": 10.8958,
+        "count": 24
       },
       {
         "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania",
-        "avg_score": 10.0349,
-        "count": 43
+        "avg_score": 11.5405,
+        "count": 37
       },
       {
         "workflow_area": "KSeF issuing / correction / invoice circulation",
-        "avg_score": 13.9688,
-        "count": 64
+        "avg_score": 14.8125,
+        "count": 56
       },
       {
         "workflow_area": "JPK filing / correction / tags",
-        "avg_score": 16.0263,
+        "avg_score": 14.8421,
         "count": 19
       }
     ]

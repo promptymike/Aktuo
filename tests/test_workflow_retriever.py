@@ -141,6 +141,28 @@ def test_is_workflow_eligible_distinguishes_operational_and_deadline_jpk_queries
     assert is_workflow_eligible("Jaki jest termin złożenia JPK_V7?", "vat_jpk_ksef") is False
 
 
+def test_is_workflow_eligible_for_accounting_query_even_when_intent_looks_tax_like() -> None:
+    assert is_workflow_eligible(
+        "A jaką datę przyjąć do zaksięgowania na koncie 300 - rozliczenie zakupu?",
+        "pit_ryczalt",
+    ) is True
+
+
+def test_is_workflow_eligible_for_ksef_permissions_only_when_action_is_operational() -> None:
+    assert is_workflow_eligible("Jak nadać uprawnienia w KSeF dla wspólnika?", "vat_jpk_ksef") is True
+    assert is_workflow_eligible(
+        "Klient dał mi uprawnienia do przeglądania faktur w KSeF - czy musi być token?",
+        "vat_jpk_ksef",
+    ) is False
+
+
+def test_is_workflow_eligible_rejects_jpk_tag_questions_with_system_name_only() -> None:
+    assert is_workflow_eligible(
+        "Czy ktoś księguje w InFakt i może podpowiedzieć gdzie tu widać oznaczenia w JPK BFK itp?",
+        "vat_jpk_ksef",
+    ) is False
+
+
 def test_answer_query_falls_back_to_legal_when_workflow_confidence_is_low(tmp_path: Path, monkeypatch) -> None:
     legal_path = tmp_path / "law_knowledge.json"
     _write_json(legal_path, _legal_seed_payload())
