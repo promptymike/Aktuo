@@ -1,0 +1,473 @@
+{
+  "after_seed_unit_count": 10,
+  "before_seed_unit_count": 9,
+  "deferred_units": [],
+  "new_units_added": [
+    "Leasing, wykup samochodu i ewidencja kosztów pojazdu"
+  ],
+  "next_recommended_units": [
+    {
+      "examples": [
+        "Jaki program do księgowania polecacie do rozliczania najpierw jednej firmy a w dalszej perspektywie może kolejnych?",
+        "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+        "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?"
+      ],
+      "impact_score": 275.0,
+      "question_count": 52,
+      "title": "Wybór i wdrożenie programu księgowego",
+      "total_frequency": 171,
+      "workflow_area": "ERP / wybór systemu / wdrożenie zespołu"
+    },
+    {
+      "examples": [
+        "Czy program Rewizor jest kompatybilny z programem transportowym Marcos?",
+        "Czy w Rewizor GT wygeneruje sprawozdanie finansowe bez błędów, które pojawiają się na etapie wysyłki do KRS?",
+        "Pierwszy raz będę składać sprawozdanie do KRS. Gdzie i jak się zalogować? Czy może ktoś pomóc w formie filmików instruktażowych lub jakieś instrukcji?"
+      ],
+      "impact_score": 31.0,
+      "question_count": 7,
+      "title": "Sprawozdawczość i znaczniki w konkretnych systemach ERP",
+      "total_frequency": 17,
+      "workflow_area": "Sprawozdanie finansowe / ERP / znaczniki i walidacja"
+    },
+    {
+      "examples": [
+        "Czy muszą być księgowane na rmk jeśli nie ma dodatkowych zapisów w polityce?",
+        "Do tej pory zwrotu nie było ( zbyt małe kwoty) więc przeksięgowanie na koniec roku szło w PKO NKup. Ale może ktoś inny może coś więcej na ten temat powiedzieć?",
+        "Bilans nie gra na 31 12 2024, a co jest w rmk?"
+      ],
+      "impact_score": 15.0,
+      "question_count": 3,
+      "title": "Konta techniczne, RMK i przeksięgowania roczne",
+      "total_frequency": 9,
+      "workflow_area": "Rachunkowość operacyjna / RMK / konta techniczne"
+    },
+    {
+      "examples": [
+        "Szukam programu kadrowo placowego, coś niedrogiego może być online, jest tylko dwóch pracowników?",
+        "Czy ktoś z grupy mi pomoże i potwierdzi, że program wyliczył z błędem składkę zdrowotną?"
+      ],
+      "impact_score": 9.0,
+      "question_count": 2,
+      "title": "Kadry i płace w systemach operacyjnych",
+      "total_frequency": 5,
+      "workflow_area": "Kadry / płace / systemy kadrowo-płacowe"
+    },
+    {
+      "examples": [
+        "..nota obciazeniowa od kontrahenta zagranicznego za refakturę kosxtow windykacji...czy jest to import usług?"
+      ],
+      "impact_score": 4.0,
+      "question_count": 1,
+      "title": "Import usług i dokumentów zagranicznych w systemie księgowym",
+      "total_frequency": 2,
+      "workflow_area": "VAT / import usług / dokumenty zagraniczne w ewidencji"
+    }
+  ],
+  "safely_enriched_units": [
+    "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+    "Obsługa problemów systemowych i synchronizacji danych",
+    "Obsługa wysyłki, korekty i oznaczeń JPK",
+    "Obieg faktur, statusów i korekt w KSeF",
+    "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+    "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+    "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+    "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+    "Nadawanie uprawnień i dostępów w KSeF",
+    "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia"
+  ],
+  "selected_count": 10,
+  "selected_units": [
+    {
+      "added_question_examples": 8,
+      "after_richness": {
+        "common_pitfalls": 2,
+        "question_examples": 8,
+        "related_forms": 1,
+        "related_systems": 5,
+        "required_inputs": 7,
+        "steps": 4
+      },
+      "before_richness": {
+        "common_pitfalls": 0,
+        "question_examples": 0,
+        "related_forms": 0,
+        "related_systems": 0,
+        "required_inputs": 0,
+        "steps": 0
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 192,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 192,
+        "dataset_freq": 69,
+        "impact_score": 477.0,
+        "routing_failure_freq": 16
+      },
+      "title": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+      "top_examples": [
+        "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+        "Samochód osobowy wykorzystywany w JDG tylko do działalności, złożony VAT-26, robiona kilometrówka. Rozumiem, że możemy odliczać 100% VAT zarówno od paliwa itp, jak i od leasingu? A co z kosztami? 100% do KPiR za paliwo itp, a z leasingu proporcja do 100tys, czy w tym przypadku możemy nie stosować proporcji i ujmować 100% netto?",
+        "Odliczam 100% VAT.Leasing (kapitał) nie jest ograniczony proporcja, ponieważ samochód nie jest traktowany jako osobowy w świetle VAT/PIT?",
+        "Czy dobrze rozumiem, że faktura za wykup samochodu z leasingu stanowi koszt a fvs samochodu to przychód?",
+        "Leasing samochodu osobowego (wartość netto 170.000) który w firmie wykorzystywany jest do wynajmu, czyli 100% VAT mogę odliczyć, KUP w 2026 do limitu 100.000 jeśli chodzi o rany leasingowe a jak z kosztami typu paliwo, naprawy?"
+      ],
+      "workflow_area": "Leasing / samochód / VAT-26 / koszty i ewidencja"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 5,
+        "question_examples": 8,
+        "related_forms": 1,
+        "related_systems": 8,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 3,
+        "question_examples": 5,
+        "related_forms": 0,
+        "related_systems": 3,
+        "required_inputs": 2,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 171,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 171,
+        "dataset_freq": 29,
+        "impact_score": 390.5,
+        "routing_failure_freq": 13
+      },
+      "title": "Obsługa problemów systemowych i synchronizacji danych",
+      "top_examples": [
+        "Czy w symfoni da się usunąć fakturę korektę (sprzedaż)?",
+        "SYMFONIA Cześć Czy ktoś z Was posiada szablon faktury sprzedaży w języku angielskim i byłby chętny go udostępnić do Symfonia Handel?",
+        "W takim razie rozliczam to jako import od kwoty brutto czy jako transakcja krajowa?",
+        "Były wpisy że Comarch podrożał o 500% - zniknęły - wycofali się z tych podwyżek?",
+        "Czy jest cos poza optima co konkurowało by ceną?"
+      ],
+      "workflow_area": "Oprogramowanie księgowe / integracje / synchronizacja"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 6,
+        "question_examples": 8,
+        "related_forms": 3,
+        "related_systems": 6,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 4,
+        "question_examples": 5,
+        "related_forms": 2,
+        "related_systems": 2,
+        "required_inputs": 3,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 33,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 33,
+        "dataset_freq": 119,
+        "impact_score": 188.0,
+        "routing_failure_freq": 2
+      },
+      "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
+      "top_examples": [
+        "Do tej pory robiłam to w programie księgowym, ale teraz muszę to zrobić poza nim, bo mój podpis z nim nie współpracuje Czy jest jakaś specjalna bramka jak do JPK?",
+        "Czy w związku z obowiązkiem wysyłki ksiąg rachunkowym (JPK kr pd) potrzeba mieć w programie księgowym wyodrębnione konta analityczne na każdy środek trwały, czy wystarczy podział na grupy, bo mam sprzeczne informacje?",
+        "Jak ująć taka korektę w JPK?",
+        "Jeśli tak to czynny żal nie potrzebny, chyba że za dużo papieru w biurze?",
+        "Na bieżąco, kiedy faktycznie nastąpiła korekta danych, czy powinnam się cofnąć i zrobić to poprzez korektę deklaracji?"
+      ],
+      "workflow_area": "JPK filing / correction / tags"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 6,
+        "question_examples": 8,
+        "related_forms": 1,
+        "related_systems": 7,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 4,
+        "question_examples": 5,
+        "related_forms": 0,
+        "related_systems": 3,
+        "required_inputs": 5,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 44,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 44,
+        "dataset_freq": 65,
+        "impact_score": 165.0,
+        "routing_failure_freq": 8
+      },
+      "title": "Obieg faktur, statusów i korekt w KSeF",
+      "top_examples": [
+        "Mam fakturę wystawioną 03.02.2026 przez Miasto Stołeczne Warszawa - na górze napis Krajowy system e- Faktur, na dole kod qr a pod nim napis offline, dzis sprawdzam w systemie klienta KSeF ale faktura się nie pojawiła - czyl co oznaczac off w JPK i nie czekać bo ona już się tam nie pojawi?",
+        "Do tej pory przy pobranych fakturach z KSeF do Comarch miałam przypisane \"do rejestru VAT\" oraz obok \"V\" przy statusie, że przeniesionk. Teraz mimo że faktury pobrane do rejestru to nie mam \"V\" czy ktoś też tak ma? Dlaczego tak się dzieje?",
+        "Jakiego programu do druków i faktur używacie?",
+        "Czy komuś udało się zaimportować faktury z KSeF do programu Streamsoft PRO?",
+        "Co jest napisane na ten temat w podręcznikach KSeF na stronie ministerstwa?"
+      ],
+      "workflow_area": "KSeF issuing / correction / invoice circulation"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 6,
+        "question_examples": 8,
+        "related_forms": 2,
+        "related_systems": 4,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 4,
+        "question_examples": 5,
+        "related_forms": 1,
+        "related_systems": 3,
+        "required_inputs": 5,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 47,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 47,
+        "dataset_freq": 14,
+        "impact_score": 108.0,
+        "routing_failure_freq": 0
+      },
+      "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+      "top_examples": [
+        "Dlaczego bilansowo do 10/25? Towar idzie na magazyn, to chcesz naginać rzeczywistość, że go nie było już w 2025?",
+        "Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza?",
+        "Czy muszę w takim razie sporządzać w tym roku sprawozdanie?",
+        "Czy prawidłowe jest księgowanie naliczonych ujemnych odsetek od akcji na dzień bilansowy zapisem 650Ma /np 1000 zł i Wn 750 1000zł.Jakim zapisem zrobić storno w roku następnym?",
+        "Czy w Rewizor GT wygeneruje sprawozdanie finansowe bez błędów, które pojawiają się na etapie wysyłki do KRS?"
+      ],
+      "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 5,
+        "question_examples": 8,
+        "related_forms": 0,
+        "related_systems": 5,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 3,
+        "question_examples": 5,
+        "related_forms": 0,
+        "related_systems": 3,
+        "required_inputs": 5,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 24,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 24,
+        "dataset_freq": 45,
+        "impact_score": 93.0,
+        "routing_failure_freq": 0
+      },
+      "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+      "top_examples": [
+        "Jak zaksięgować teraz zaliczkę jeśli po dodaniu faktury kosztowej jest mniejsza niż zostało przeksięgowane?",
+        "Jak to prawidłowo ująć koszty dotyczące tamtego roku, które dopiero teraz przyszły?",
+        "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
+        "Czy ktoś się spotkał z taką sytuacją?",
+        "Czy muszą być księgowane na rmk jeśli nie ma dodatkowych zapisów w polityce?"
+      ],
+      "workflow_area": "KPiR / księgowanie / okresy i memoriał"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 5,
+        "question_examples": 8,
+        "related_forms": 1,
+        "related_systems": 4,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 3,
+        "question_examples": 5,
+        "related_forms": 0,
+        "related_systems": 3,
+        "required_inputs": 5,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 14,
+        "heuristic_priority": "high"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 14,
+        "dataset_freq": 19,
+        "impact_score": 53.0,
+        "routing_failure_freq": 4
+      },
+      "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+      "top_examples": [
+        "Czy towar idzie do kolumny \"zakup towarów\", a koszty \"koszty uboczne zakupu\", czy \"pozostałe wydatki?",
+        "Faktura za odprawę celna w GB traktujemy jak import uslug i ksiegowanie z datą grudniową/towar został wysłany w listopadzie/dziękuję?",
+        "Pod jaki KŚT dać taki zakup? 337 jako kompensatory synchroniczne?",
+        "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
+        "Co macie na takiej fakturze napisane tzn, jaka nazwa towaru/usługi?"
+      ],
+      "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 6,
+        "question_examples": 8,
+        "related_forms": 5,
+        "related_systems": 3,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 4,
+        "question_examples": 5,
+        "related_forms": 5,
+        "related_systems": 2,
+        "required_inputs": 5,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 6,
+        "heuristic_priority": "medium"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 6,
+        "dataset_freq": 15,
+        "impact_score": 30.0,
+        "routing_failure_freq": 2
+      },
+      "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+      "top_examples": [
+        "A nie może przez POG napisać?",
+        ". Czy będąc na umowie o pracę i płacąc składki tylko zdrowotne z działalności mogę zapisać się do dobrowolnego ZUS?",
+        "Czy ja jestem jakiś upośledzony, że nie rozumiem co mi ZUS odpisał, czy to oni tak to napisali, że nic z tego nie wynika?",
+        "Ewnetualnie czy bezpieczniej będzie napisać do ZUS żeby mieć podkładkę?",
+        "Czy do MZ+ należy przystąpić od 01.01.26 czy można w dowolnym momencie np?"
+      ],
+      "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 6,
+        "question_examples": 8,
+        "related_forms": 3,
+        "related_systems": 3,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 4,
+        "question_examples": 5,
+        "related_forms": 3,
+        "related_systems": 3,
+        "required_inputs": 2,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 5,
+        "heuristic_priority": "medium"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 5,
+        "dataset_freq": 16,
+        "impact_score": 26.0,
+        "routing_failure_freq": 0
+      },
+      "title": "Nadawanie uprawnień i dostępów w KSeF",
+      "top_examples": [
+        "A program który masz nie zaciąga faktur z KSeF jak będziesz miał uprawnienia?",
+        "Chciałabym potwierdzić -KSeF uprawnienia chce ściągać faktury do swojego programu księgowego - Klienci nadają mi uprawnienia po numerze NIP mojej firmy jako podmiotowi do przeglądania i wystawiania faktur?",
+        "Czy ktoś może napisać jak mam dodać uprawnienia w KSeF dla drugiego wspólnika spółki cywilnej?",
+        "Ja logujac sie profilem zaufanym (mam ZAW-FA) zastanawiam sie czy moge nadac sobie uprawnienia /certyfikaty ktore sa w stanie pobierac dokumenty do programu czy musze miec pieczec?",
+        "Jeśli nie mam upl 1 jako prezez spółki zoo to zaw-fa muszę złożyć papierowo do końca stycznia?"
+      ],
+      "workflow_area": "KSeF permissions / authorization flow"
+    },
+    {
+      "added_question_examples": 3,
+      "after_richness": {
+        "common_pitfalls": 6,
+        "question_examples": 8,
+        "related_forms": 3,
+        "related_systems": 3,
+        "required_inputs": 7,
+        "steps": 7
+      },
+      "before_richness": {
+        "common_pitfalls": 4,
+        "question_examples": 5,
+        "related_forms": 2,
+        "related_systems": 3,
+        "required_inputs": 5,
+        "steps": 5
+      },
+      "estimated_impact_on_clarification": {
+        "affected_questions": 4,
+        "heuristic_priority": "medium"
+      },
+      "safely_enriched": true,
+      "selected_because": {
+        "clarification_freq": 4,
+        "dataset_freq": 16,
+        "impact_score": 24.0,
+        "routing_failure_freq": 0
+      },
+      "title": "Pełnomocnictwa, podpisy i elektroniczne kanały złożenia",
+      "top_examples": [
+        "Ale czy oni się tam w US połapią, że formularz wysłałem elektronicznie a czynny żal złożyłem papierowo?",
+        "Czy PCC-3 spółki z o.o. wysyłanej prze e-urzad może podpisać księgowa?",
+        "Czy pomogę Jej napisać czynny żal, bo mąż wystawił fakturę 20?",
+        "Czy wasi klienci wysyłają przez E-urzad UPL? Jak to wyglada? No trzeba podpisac profilem zaufanym, prawda?",
+        "Klient nie płacił podatku za najem prywatny przez cały rok, czy w rozliczeniu rocznym powinnam wykazać odsetki? I czy powinnam czynny żal napisać?"
+      ],
+      "workflow_area": "Pełnomocnictwa / podpis / kanały złożenia"
+    }
+  ],
+  "units_safely_enriched_count": 10
+}

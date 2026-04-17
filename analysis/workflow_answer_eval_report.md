@@ -1,19 +1,19 @@
 # Workflow Answer Quality Evaluation
 
-- Records evaluated: 207
-- Workflow answer expected: 80
-- Legal answer expected: 80
+- Records evaluated: 347
+- Workflow answer expected: 150
+- Legal answer expected: 150
 - Legal fallback expected: 47
 
 ## Metrics
 
 - workflow_format_rate: 1.0
 - workflow_section_completeness: 1.0
-- sparse_unit_safety_rate: 1.0
-- legal_path_contamination_rate: 0.1732
-- workflow_fallback_safety_rate: 0.0638
-- workflow_clarification_rate: 0.8375
-- legal_safety_rate: 0.975
+- sparse_unit_safety_rate: 0.0
+- legal_path_contamination_rate: 0.1371
+- workflow_fallback_safety_rate: 0.0213
+- workflow_clarification_rate: 0.8267
+- legal_safety_rate: 0.9667
 
 ## Top Weak Workflow Answers
 
@@ -24,9 +24,9 @@
 - Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %? | path=clarification | sections=none
 - Szukam osoby do pracy w księgowości do biura rachunkowego w Rzeszowie, ze znajomością przepisów i Optimy? | path=clarification | sections=none
 - Dlaczego bilansowo do 10/25? Towar idzie na magazyn, to chcesz naginać rzeczywistość, że go nie było już w 2025? | path=clarification | sections=none
-- Czy towar idzie do kolumny "zakup towarów", a koszty "koszty uboczne zakupu", czy "pozostałe wydatki? | path=workflow | sections=Krótko
 - Jak należy postąpić w przypadkach leasingu operacyjnego z lat poprzednich, gdy samochód nie jest ujęty jako ŚT? | path=clarification | sections=none
 - Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza? | path=clarification | sections=none
+- Szukam osoby , która pracuje w programie symfonia e - biuro i jest w stanie odpłatnie wdrożyć w ten program? | path=clarification | sections=none
 
 ## Top Cases Where Workflow Formatting Should Have Happened But Did Not
 
@@ -34,16 +34,11 @@
 
 ## Top Safe Legal Fallback Cases
 
-- Jak technicznie ujmujecie rachunki z umowy zlecenie żeby zgodziły się koszty bilansowe i podatkowe (żeby dało się przyporządkować odpowiednie znaczniki a przy okazji żeby prawidłowo liczyła się zaliczka miesięczna/kwartalna na CIT)? | path=legal_fallback
-- Jak zaksiegujecie fakture kosztowa ,która jest refakturą za energie elektryczna? | path=legal_fallback
-- Kolumna 32-dochód zwolniony od podatku 253,28zl (kompensata za pranie ciuchów roboczych), gdzie wpisać w PIT-37? | path=legal
+- Kolumna 32-dochód zwolniony od podatku 253,28zl (kompensata za pranie ciuchów roboczych), gdzie wpisać w PIT-37? | path=legal_fallback
 
 ## Sparse Workflow Units To Enrich First
 
-- Klasyfikacja dokumentów, kolumn i zapisów magazynowych (4)
-- Przygotowanie, podpisanie i wysyłka sprawozdania finansowego (1)
-- Obieg faktur, statusów i korekt w KSeF (1)
-- Obsługa problemów systemowych i synchronizacji danych (1)
+- none
 
 ## Recommendation
 

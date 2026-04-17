@@ -573,6 +573,11 @@ def retrieve_workflow(
             source_type=chunk.source_type,
             workflow_area=chunk.workflow_area,
             title=chunk.title,
+            workflow_steps=chunk.workflow_steps,
+            workflow_required_inputs=chunk.workflow_required_inputs,
+            workflow_common_pitfalls=chunk.workflow_common_pitfalls,
+            workflow_related_forms=chunk.workflow_related_forms,
+            workflow_related_systems=chunk.workflow_related_systems,
         )
         for score, chunk in ranked[:limit]
         if score > 0
