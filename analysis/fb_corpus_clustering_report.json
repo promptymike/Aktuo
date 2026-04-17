@@ -1,0 +1,586 @@
+{
+  "generated_at_utc": "2026-04-17T19:12:40+00:00",
+  "params": {
+    "min_cluster_size": 35,
+    "min_samples": 10,
+    "metric": "euclidean",
+    "cluster_selection_method": "eom",
+    "umap": {
+      "enabled": true,
+      "n_components": 50,
+      "n_neighbors": 15,
+      "min_dist": 0.0,
+      "metric": "cosine",
+      "random_state": 42
+    }
+  },
+  "embed_model": "voyage-3-large",
+  "embed_dim": 1024,
+  "totals": {
+    "records": 24892,
+    "clusters": 144,
+    "noise": 7897,
+    "noise_pct": 31.73,
+    "avg_cluster_size": 118.02,
+    "high_priority_clusters": 42
+  },
+  "topic_distribution": [
+    {
+      "topic_area": "VAT",
+      "clusters": 12,
+      "posts": 1394
+    },
+    {
+      "topic_area": "PIT",
+      "clusters": 15,
+      "posts": 1566
+    },
+    {
+      "topic_area": "CIT",
+      "clusters": 4,
+      "posts": 279
+    },
+    {
+      "topic_area": "ZUS",
+      "clusters": 20,
+      "posts": 1867
+    },
+    {
+      "topic_area": "kadry",
+      "clusters": 55,
+      "posts": 6692
+    },
+    {
+      "topic_area": "KSeF",
+      "clusters": 9,
+      "posts": 1610
+    },
+    {
+      "topic_area": "JPK",
+      "clusters": 5,
+      "posts": 480
+    },
+    {
+      "topic_area": "KPiR",
+      "clusters": 4,
+      "posts": 574
+    },
+    {
+      "topic_area": "rachunkowość",
+      "clusters": 5,
+      "posts": 622
+    },
+    {
+      "topic_area": "software",
+      "clusters": 5,
+      "posts": 651
+    },
+    {
+      "topic_area": "inne",
+      "clusters": 10,
+      "posts": 1260
+    }
+  ],
+  "recommended_top_50": [
+    {
+      "rank": 1,
+      "cluster_id": 7,
+      "label": "Zaliczanie umów zlecenie i DG do stażu pracy od 2026",
+      "description": "Pytania dotyczą nowych zasad wliczania do stażu pracy okresów umów zlecenia (także studenckich) oraz prowadzenia działalności gospodarczej, a także wymaganych dokumentów (zaświadczenia z ZUS, US-7) potwierdzających te okresy.",
+      "topic_area": "kadry",
+      "size": 797,
+      "avg_comments_count": 1.221,
+      "score": 323.68
+    },
+    {
+      "rank": 2,
+      "cluster_id": 121,
+      "label": "KSeF: data wystawienia a rozliczenie VAT i KPiR",
+      "description": "Pytania dotyczą tego, którą datę (wystawienia faktury, przesłania do KSeF, sprzedaży/wykonania usługi) należy przyjąć do rozliczenia VAT i ujęcia kosztu w KPiR, zwłaszcza gdy daty te przypadają na różne miesiące. Księgowi zastanawiają się nad prawidłowym momentem odliczenia VAT i zaksięgowania faktur kosztowych w kontekście KSeF.",
+      "topic_area": "KSeF",
+      "size": 492,
+      "avg_comments_count": 1.492,
+      "score": 222.77
+    },
+    {
+      "rank": 3,
+      "cluster_id": 45,
+      "label": "Wymiar urlopu wypoczynkowego przy niepełnym etacie i zmianie wymiaru",
+      "description": "Pytania dotyczą proporcjonalnego naliczania urlopu wypoczynkowego dla pracowników zatrudnionych na część etatu (1/2, 3/4, 5/8) oraz przeliczania dni i godzin urlopu przy zmianie wymiaru etatu w trakcie roku.",
+      "topic_area": "kadry",
+      "size": 493,
+      "avg_comments_count": 1.911,
+      "score": 204.84
+    },
+    {
+      "rank": 4,
+      "cluster_id": 66,
+      "label": "Księgowanie faktur zagranicznych: WNT, import usług i towarów",
+      "description": "Pytania dotyczą prawidłowego rozliczenia VAT od faktur zakupowych od kontrahentów z UE i spoza UE, w tym klasyfikacji jako WNT, import usług lub import towarów w zależności od statusu VAT stron i miejsca dostawy.",
+      "topic_area": "VAT",
+      "size": 427,
+      "avg_comments_count": 1.213,
+      "score": 195.65
+    },
+    {
+      "rank": 5,
+      "cluster_id": 35,
+      "label": "Ewidencja i rozliczanie czasu pracy przy różnych systemach i wymiarach etatu",
+      "description": "Pytania dotyczą rozliczania czasu pracy pracowników w systemach równoważnym i zadaniowym, ustalania grafików przy niepełnych etatach oraz identyfikacji i wypłaty nadgodzin wynikających z przekroczeń norm dobowych i tygodniowych.",
+      "topic_area": "kadry",
+      "size": 409,
+      "avg_comments_count": 1.159,
+      "score": 168.24
+    },
+    {
+      "rank": 6,
+      "cluster_id": 120,
+      "label": "Korekty faktur w KSeF: ujęcie w JPK i VAT",
+      "description": "Pytania dotyczą prawidłowego ujęcia faktur korygujących wystawionych w KSeF w innym okresie niż faktura pierwotna - zwłaszcza korekt danych formalnych (NIP, nazwa, data sprzedaży) oraz korekt do zera. Księgowi mają wątpliwości, w którym miesiącu wykazać korektę w rejestrze VAT i JPK.",
+      "topic_area": "KSeF",
+      "size": 346,
+      "avg_comments_count": 1.318,
+      "score": 163.67
+    },
+    {
+      "rank": 7,
+      "cluster_id": 133,
+      "label": "Poszukiwanie księgowych, biur rachunkowych i współpracy B2B",
+      "description": "Pytania dotyczą ogłoszeń o poszukiwaniu pracy w księgowości, zleceń dla biur rachunkowych oraz osób do pomocy przy rozliczeniach JDG, spółek z o.o. i fundacji. Użytkownicy szukają zarówno pracowników zdalnych, jak i mentorów oraz specjalistów do konkretnych zadań księgowych.",
+      "topic_area": "inne",
+      "size": 394,
+      "avg_comments_count": 0.906,
+      "score": 161.22
+    },
+    {
+      "rank": 8,
+      "cluster_id": 99,
+      "label": "KSeF: nadawanie uprawnień podmiotom i certyfikaty dla biur rachunkowych",
+      "description": "Pytania dotyczą problemów z nadawaniem i weryfikacją uprawnień w KSeF — zwłaszcza dla biur rachunkowych będących spółkami, logowania przez ZAW-FA/Profil Zaufany, generowania certyfikatów w MCU oraz braku widoczności faktur klientów po zalogowaniu.",
+      "topic_area": "KSeF",
+      "size": 337,
+      "avg_comments_count": 1.522,
+      "score": 160.89
+    },
+    {
+      "rank": 9,
+      "cluster_id": 63,
+      "label": "Leasing samochodu osobowego: limity KUP i odliczenie VAT",
+      "description": "Pytania dotyczą rozliczania rat leasingu operacyjnego samochodów osobowych — stosowania limitu 150/100 tys. zł w kosztach, proporcji 75%/100% oraz odliczenia VAT (50%/100%) przy użytku mieszanym lub zgłoszeniu VAT-26.",
+      "topic_area": "PIT",
+      "size": 359,
+      "avg_comments_count": 1.44,
+      "score": 149.36
+    },
+    {
+      "rank": 10,
+      "cluster_id": 79,
+      "label": "Mały ZUS Plus: ponowne skorzystanie po przerwie i nowe zasady od 2026",
+      "description": "Pytania dotyczą warunków powrotu do ulgi Mały ZUS Plus po wykorzystaniu limitu 36/48 miesięcy, wpływu zawieszenia działalności oraz nowych zasad naliczania opartych o limit przychodu 120 tys. zł.",
+      "topic_area": "ZUS",
+      "size": 306,
+      "avg_comments_count": 1.389,
+      "score": 147.96
+    },
+    {
+      "rank": 11,
+      "cluster_id": 49,
+      "label": "Środki trwałe: jednorazowa amortyzacja vs koszty bezpośrednie",
+      "description": "Pytania dotyczą kwalifikacji zakupów do środków trwałych, wyboru między jednorazową amortyzacją a ujęciem bezpośrednio w kosztach, ulepszeń oraz rozliczenia sprzedaży ŚT. Pojawiają się też wątki KŚT i amortyzacji mieszkania jako lokalu firmy.",
+      "topic_area": "KPiR",
+      "size": 288,
+      "avg_comments_count": 1.028,
+      "score": 139.31
+    },
+    {
+      "rank": 12,
+      "cluster_id": 82,
+      "label": "Składka zdrowotna przy zmianie formy opodatkowania i odliczenia ZUS",
+      "description": "Pytania dotyczą ustalania podstawy i wysokości składki zdrowotnej (głównie na ryczałcie i po zmianie formy opodatkowania) oraz zasad odliczania zapłaconych składek społecznych i zdrowotnych w DRA, KPiR i rozliczeniu rocznym.",
+      "topic_area": "ZUS",
+      "size": 241,
+      "avg_comments_count": 1.282,
+      "score": 121.53
+    },
+    {
+      "rank": 13,
+      "cluster_id": 125,
+      "label": "Badania lekarskie po długim L4: kontrolne vs okresowe",
+      "description": "Pytania dotyczą kierowania pracowników na badania profilaktyczne (kontrolne, okresowe, wstępne) po zwolnieniu lekarskim, utraty ważności badań w trakcie L4 oraz konsekwencji ich braku.",
+      "topic_area": "kadry",
+      "size": 287,
+      "avg_comments_count": 1.564,
+      "score": 121.06
+    },
+    {
+      "rank": 14,
+      "cluster_id": 102,
+      "label": "Urlop macierzyński i rodzicielski: wnioski i 9 tygodni dla ojca",
+      "description": "Pytania dotyczą zasad wnioskowania o urlop macierzyński i rodzicielski, w tym nieprzenoszalnej części 9 tygodni dla ojca, sytuacji gdy matka nie ma prawa do zasiłku oraz wymaganych dokumentów.",
+      "topic_area": "kadry",
+      "size": 281,
+      "avg_comments_count": 1.416,
+      "score": 118.06
+    },
+    {
+      "rank": 15,
+      "cluster_id": 21,
+      "label": "Sprawozdania finansowe do KRS/KAS: schematy i składanie",
+      "description": "Pytania dotyczą sporządzania i wysyłki sprawozdań finansowych za 2025 rok - wyboru wersji schematu (1.3 vs 2.1), sposobu składania do KRS/KAS oraz dołączania uchwał i dokumentów towarzyszących.",
+      "topic_area": "rachunkowość",
+      "size": 271,
+      "avg_comments_count": 1.059,
+      "score": 112.64
+    },
+    {
+      "rank": 16,
+      "cluster_id": 137,
+      "label": "Kursy księgowości na start: SKwP, KIK i wybór ścieżki",
+      "description": "Pytania początkujących i osób przebranżawiających się o wybór kursów księgowych (głównie SKwP i Krajowa Izba Księgowych), ich przydatność w pracy oraz porównanie z studiami kierunkowymi.",
+      "topic_area": "inne",
+      "size": 266,
+      "avg_comments_count": 1.327,
+      "score": 111.71
+    },
+    {
+      "rank": 17,
+      "cluster_id": 8,
+      "label": "Nagroda jubileuszowa po doniesieniu dokumentów do stażu pracy",
+      "description": "Pytania dotyczą wypłaty nagrody jubileuszowej dla pracowników samorządowych, którzy w trakcie zatrudnienia dostarczyli zaświadczenia z ZUS (umowy zlecenia, działalność gospodarcza) zwiększające ich staż pracy wstecz. Księgowi pytają, czy należy wypłacić jubileuszówkę za wyższy próg stażowy i czy nie minął termin.",
+      "topic_area": "kadry",
+      "size": 248,
+      "avg_comments_count": 1.173,
+      "score": 103.89
+    },
+    {
+      "rank": 18,
+      "cluster_id": 143,
+      "label": "Wybór programu księgowego: KPiR, pełna księgowość, JDG i spółki",
+      "description": "Użytkownicy proszą o rekomendacje programów do prowadzenia księgowości (JDG, spółek, pełnej księgowości, ryczałtu) z uwzględnieniem ceny, funkcjonalności, obsługi JPK/KSeF oraz pracy stacjonarnej lub w chmurze.",
+      "topic_area": "software",
+      "size": 230,
+      "avg_comments_count": 1.27,
+      "score": 97.08
+    },
+    {
+      "rank": 19,
+      "cluster_id": 62,
+      "label": "VAT przy wykupie, sprzedaży i darowiźnie samochodu z firmy",
+      "description": "Pytania dotyczą skutków VAT przy wykupie samochodu z leasingu, przekazaniu na cele prywatne, darowiźnie oraz sprzedaży auta firmowego, w tym sprzedaży w procedurze VAT marża.",
+      "topic_area": "VAT",
+      "size": 179,
+      "avg_comments_count": 1.179,
+      "score": 96.32
+    },
+    {
+      "rank": 20,
+      "cluster_id": 98,
+      "label": "Zasiłek opiekuńczy ZUS: wypełnianie Z-15A i prawo do zasiłku",
+      "description": "Pytania dotyczą ustalania prawa do zasiłku opiekuńczego na chore lub zdrowe dziecko oraz sposobu wypełniania wniosku Z-15A w sytuacjach takich jak obecność drugiego rodzica w domu, urlop macierzyński współmałżonka, ferie czy weekendy w okresie zwolnienia.",
+      "topic_area": "ZUS",
+      "size": 172,
+      "avg_comments_count": 1.826,
+      "score": 96.1
+    },
+    {
+      "rank": 21,
+      "cluster_id": 10,
+      "label": "Potrącenia komornicze niealimentacyjne z wynagrodzeń i zleceń",
+      "description": "Pytania dotyczą zasad dokonywania zajęć komorniczych niealimentacyjnych: obliczania kwot potrąceń, stosowania kwoty wolnej, traktowania umów zlecenia, zasiłków, 13-stek oraz świadczeń z ZFŚS.",
+      "topic_area": "kadry",
+      "size": 212,
+      "avg_comments_count": 1.302,
+      "score": 90.01
+    },
+    {
+      "rank": 22,
+      "cluster_id": 138,
+      "label": "Kursy i szkolenia kadrowo-płacowe dla początkujących",
+      "description": "Pytania dotyczą rekomendacji kursów i szkoleń z zakresu kadr i płac – stacjonarnych, online, weekendowych, w tym szkoleń z Płatnika oraz dla konkretnych lokalizacji i branż (np. sfera budżetowa).",
+      "topic_area": "kadry",
+      "size": 198,
+      "avg_comments_count": 0.848,
+      "score": 82.59
+    },
+    {
+      "rank": 23,
+      "cluster_id": 53,
+      "label": "Najem prywatny a VAT, KSeF i JDG",
+      "description": "Pytania dotyczą rozliczania najmu prywatnego w kontekście VAT, obowiązku wysyłki faktur do KSeF oraz relacji między najmem prywatnym a prowadzoną działalnością gospodarczą (JDG, ryczałt, kasa fiskalna).",
+      "topic_area": "VAT",
+      "size": 143,
+      "avg_comments_count": 1.196,
+      "score": 81.98
+    },
+    {
+      "rank": 24,
+      "cluster_id": 107,
+      "label": "Nowe oznaczenia JPK_VAT: BFK vs DI dla faktur WNT, importu i poza KSeF",
+      "description": "Pytania dotyczą prawidłowego stosowania nowych znaczników BFK i DI w ewidencji JPK_VAT od lutego 2026 dla faktur WNT, importu usług, faktur wystawianych poza KSeF oraz paragonów z NIP. Użytkownicy mają sprzeczne informacje co do tego, które dokumenty oznaczać którym kodem i od kiedy.",
+      "topic_area": "JPK",
+      "size": 179,
+      "avg_comments_count": 1.425,
+      "score": 77.3
+    },
+    {
+      "rank": 25,
+      "cluster_id": 116,
+      "label": "Wycena usług księgowych dla JDG i sp. z o.o.",
+      "description": "Pytania dotyczą ustalenia stawek za obsługę księgową różnych podmiotów (JDG, sp. z o.o., fundacje) w oparciu o liczbę dokumentów, pracowników, VAT i transakcje zagraniczne.",
+      "topic_area": "inne",
+      "size": 175,
+      "avg_comments_count": 1.657,
+      "score": 76.63
+    },
+    {
+      "rank": 26,
+      "cluster_id": 110,
+      "label": "KPiR 2026: księgowanie faktur do paragonu i sprzedaży detalicznej",
+      "description": "Pytania dotyczą nowych zasad ewidencjonowania w KPiR od 2026 r. faktur wystawianych do paragonów (w tym dla osób fizycznych) oraz sprzedaży detalicznej z kasy fiskalnej — czy ujmować każdą fakturę osobno, czy zbiorczo na podstawie raportu miesięcznego.",
+      "topic_area": "KPiR",
+      "size": 123,
+      "avg_comments_count": 1.415,
+      "score": 74.86
+    },
+    {
+      "rank": 27,
+      "cluster_id": 15,
+      "label": "Akta osobowe: archiwizacja, układ i przechowywanie dokumentów",
+      "description": "Pytania dotyczą prowadzenia akt osobowych pracowników - gdzie wpinać poszczególne dokumenty (ZUS, listy płac, badania lekarskie), jak je archiwizować, numerować oraz postępować przy ponownym zatrudnieniu.",
+      "topic_area": "kadry",
+      "size": 170,
+      "avg_comments_count": 1.635,
+      "score": 74.54
+    },
+    {
+      "rank": 28,
+      "cluster_id": 94,
+      "label": "Powrót do zwolnienia VAT po podniesieniu limitu do 240 tys.",
+      "description": "Pytania dotyczą podatników, którzy przekroczyli limit 200 tys. zł pod koniec 2025 r. i zarejestrowali się do VAT, a chcą skorzystać z przepisów przejściowych i powrócić do zwolnienia podmiotowego od stycznia 2026 r. w związku z podniesieniem limitu do 240 tys. zł, w tym terminów i sposobu złożenia aktualizacji VAT-R.",
+      "topic_area": "VAT",
+      "size": 123,
+      "avg_comments_count": 1.285,
+      "score": 74.34
+    },
+    {
+      "rank": 29,
+      "cluster_id": 33,
+      "label": "Rozliczenie roczne zaliczek PIT-4R/CIT-8: nadpłaty, niedopłaty, odsetki",
+      "description": "Pytania dotyczą rozbieżności między zaliczkami miesięcznymi wpłaconymi do US a kwotami wykazanymi w deklaracjach rocznych (PIT-4R, PIT-8AR, CIT-8, PIT-36), w tym nadpłat, niedopłat, odsetek za nieterminową wpłatę oraz ujęcia remanentu w zaliczce za grudzień.",
+      "topic_area": "PIT",
+      "size": 168,
+      "avg_comments_count": 1.417,
+      "score": 72.87
+    },
+    {
+      "rank": 30,
+      "cluster_id": 139,
+      "label": "KSeF: obieg, archiwizacja i weryfikacja faktur w biurze",
+      "description": "Pytania dotyczą praktycznej organizacji pracy z KSeF w biurach rachunkowych i firmach: jak weryfikować i archiwizować faktury, czy je drukować, jak klient ma oznaczać faktury kosztowe oraz jak ułożyć elektroniczny obieg dokumentów.",
+      "topic_area": "KSeF",
+      "size": 109,
+      "avg_comments_count": 1.89,
+      "score": 71.16
+    },
+    {
+      "rank": 31,
+      "cluster_id": 34,
+      "label": "Odbiór dnia wolnego za święto 1 listopada w sobotę",
+      "description": "Pytania dotyczą zasad udzielania i odbioru dnia wolnego za święto przypadające w sobotę (głównie 1 listopada) w różnych sytuacjach pracowniczych: powrót z urlopu, zwolnienie lekarskie, nowe zatrudnienie, niepełny etat czy zmiana okresu rozliczeniowego.",
+      "topic_area": "kadry",
+      "size": 160,
+      "avg_comments_count": 1.519,
+      "score": 70.08
+    },
+    {
+      "rank": 32,
+      "cluster_id": 134,
+      "label": "ZUS Z-3: wynagrodzenie i zasiłek chorobowy przy firmach <20 pracowników",
+      "description": "Pytania dotyczą rozliczania zwolnień lekarskich w firmach zatrudniających poniżej 20 osób – kiedy pracodawca wypłaca wynagrodzenie chorobowe, kiedy ZUS przejmuje zasiłek (m.in. po 33 dniach lub po ustaniu zatrudnienia) oraz jak i kiedy składać druk Z-3.",
+      "topic_area": "ZUS",
+      "size": 108,
+      "avg_comments_count": 1.435,
+      "score": 68.94
+    },
+    {
+      "rank": 33,
+      "cluster_id": 90,
+      "label": "Korekty list płac: ZUS, PIT-11 i PPK",
+      "description": "Pytania dotyczą sposobu przeprowadzania korekt wynagrodzeń pracowników (nadpłaty, niedopłaty, błędne zasiłki, przekroczenie 30-krotności) oraz wpływu tych korekt na deklaracje ZUS, PIT-11 i składki PPK.",
+      "topic_area": "kadry",
+      "size": 159,
+      "avg_comments_count": 1.22,
+      "score": 68.48
+    },
+    {
+      "rank": 34,
+      "cluster_id": 69,
+      "label": "Umowa zlecenie ze studentem/uczniem do 26 r.ż. - składki ZUS",
+      "description": "Pytania dotyczą zwolnienia ze składek ZUS przy umowach zlecenia zawieranych ze studentami i uczniami do 26 roku życia, w tym wymaganej dokumentacji (oświadczenie, zaświadczenie, legitymacja) oraz zbiegów tytułów ubezpieczeń (UoP, działalność, szkoła policealna).",
+      "topic_area": "ZUS",
+      "size": 100,
+      "avg_comments_count": 1.81,
+      "score": 67.24
+    },
+    {
+      "rank": 35,
+      "cluster_id": 24,
+      "label": "Benefity pracownicze: oskładkowanie, opodatkowanie i księgowanie na liście płac",
+      "description": "Pytania dotyczą rozliczania pakietów medycznych, kart sportowych (Multisport, Pluxee) oraz ubezpieczeń grupowych finansowanych lub współfinansowanych przez pracodawcę — kwestii naliczania ZUS, podatku, PPK oraz ujęcia na liście płac i w księgach, w tym finansowania z ZFŚS.",
+      "topic_area": "kadry",
+      "size": 156,
+      "avg_comments_count": 0.955,
+      "score": 66.22
+    },
+    {
+      "rank": 36,
+      "cluster_id": 6,
+      "label": "Kaucje za butelki w KPiR i VAT (system kaucyjny)",
+      "description": "Pytania dotyczą księgowania kaucji za opakowania (butelki szklane i plastikowe) w KPiR oraz ujęcia ich w rejestrach VAT, szczególnie w kontekście nowego systemu kaucyjnego i sklepów nieprzyjmujących zwrotów.",
+      "topic_area": "KPiR",
+      "size": 102,
+      "avg_comments_count": 1.167,
+      "score": 65.47
+    },
+    {
+      "rank": 37,
+      "cluster_id": 87,
+      "label": "PIT: ulga na dziecko i rozliczenie samotnego rodzica - limity dochodów",
+      "description": "Pytania dotyczą warunków skorzystania z ulgi prorodzinnej na jedno dziecko oraz rozliczenia jako samotnie wychowujący rodzic, w kontekście limitów dochodów rodziców (56/112 tys.) i dochodów pełnoletniego uczącego się dziecka.",
+      "topic_area": "PIT",
+      "size": 150,
+      "avg_comments_count": 1.36,
+      "score": 65.44
+    },
+    {
+      "rank": 38,
+      "cluster_id": 101,
+      "label": "Zasiłek macierzyński a zgłoszenia ZUS: zlecenie, działalność, etat",
+      "description": "Pytania dotyczą obsługi ZUS w trakcie i po zasiłku macierzyńskim — kodów zgłoszeniowych (ZZA/ZWUA), wykazywania pracownika na RCA/RSA, przerejestrowań oraz uprawnień do zasiłku przy umowie zleceniu, działalności gospodarczej i urlopie wychowawczym.",
+      "topic_area": "ZUS",
+      "size": 98,
+      "avg_comments_count": 1.367,
+      "score": 64.67
+    },
+    {
+      "rank": 39,
+      "cluster_id": 85,
+      "label": "ZUS Płatnik/PUE: błędy krytyczne przy wysyłce deklaracji i korekt DRA/RCA",
+      "description": "Księgowi zgłaszają problemy techniczne z wysyłką deklaracji ZUS (DRA, RCA, ZWUA, zgłoszenia) – błędy krytyczne o niepotwierdzonych danych płatnika oraz trudności z korektami dokumentów rozliczeniowych w Płatniku i PUE ZUS.",
+      "topic_area": "ZUS",
+      "size": 97,
+      "avg_comments_count": 1.454,
+      "score": 64.62
+    },
+    {
+      "rank": 40,
+      "cluster_id": 30,
+      "label": "JPK_CIT: znaczniki kont i moment ich nadania",
+      "description": "Pytania dotyczą oznaczania kont (znaczników podatkowych, KUP/NKUP, kont pozabilansowych) na potrzeby JPK_KR_PD/JPK_CIT — kiedy je nadać, jak działają w programach (Optima, Rewizor) oraz jak łączyć analitykę bilansową z ewidencją podatkową.",
+      "topic_area": "JPK",
+      "size": 148,
+      "avg_comments_count": 1.189,
+      "score": 63.96
+    },
+    {
+      "rank": 41,
+      "cluster_id": 142,
+      "label": "Opinie i pomoc w obsłudze programów kadrowo-płacowych i ERP",
+      "description": "Użytkownicy pytają o doświadczenia i szukają pomocy w konkretnych programach do kadr, płac, księgowości i ewidencji czasu pracy (m.in. Biznesmen PRO, Arisco, Macrologic ERP, 360, Asseco Softlab). Poszukują też rekomendacji narzędzi do rozliczania czasu pracy.",
+      "topic_area": "software",
+      "size": 154,
+      "avg_comments_count": 0.539,
+      "score": 63.76
+    },
+    {
+      "rank": 42,
+      "cluster_id": 19,
+      "label": "Delegowanie i podróże służbowe pracowników za granicę: ZUS, podatek, A1",
+      "description": "Pytania dotyczą rozliczania pracowników i zleceniobiorców wysyłanych do pracy za granicę (Holandia, Niemcy, Czechy, Szwecja, Norwegia) — procedury delegowania, formularz A1, naliczanie ZUS, podatku i diet.",
+      "topic_area": "kadry",
+      "size": 153,
+      "avg_comments_count": 0.556,
+      "score": 63.42
+    },
+    {
+      "rank": 43,
+      "cluster_id": 83,
+      "label": "Zbieg tytułów ubezpieczeń przy umowach zlecenie",
+      "description": "Pytania dotyczą ustalania, jakie składki ZUS (społeczne, chorobowe, zdrowotna) należy odprowadzać od zleceniobiorców w przypadku zbiegu tytułów ubezpieczeń – z inną umową zlecenie, umową o pracę, działalnością gospodarczą lub emeryturą.",
+      "topic_area": "ZUS",
+      "size": 91,
+      "avg_comments_count": 1.495,
+      "score": 62.38
+    },
+    {
+      "rank": 44,
+      "cluster_id": 47,
+      "label": "Odliczenie VAT i księgowanie posiłków oraz cateringu dla pracowników",
+      "description": "Pytania dotyczą prawa do odliczenia VAT oraz sposobu księgowania wydatków na potrawy, catering, usługi gastronomiczne i artykuły spożywcze (kawa, herbata, pączki) dla pracowników, w tym na spotkania firmowe i wigilijne.",
+      "topic_area": "VAT",
+      "size": 93,
+      "avg_comments_count": 1.151,
+      "score": 61.8
+    },
+    {
+      "rank": 45,
+      "cluster_id": 4,
+      "label": "Zatrudnianie obywateli Ukrainy: formalności i dokumenty",
+      "description": "Pytania dotyczą obowiązków pracodawcy przy zatrudnianiu obywateli Ukrainy — wymaganych dokumentów (paszport, karta pobytu, PESEL UKR), powiadomienia urzędu pracy oraz legalizacji zatrudnienia na umowę o pracę i zlecenie.",
+      "topic_area": "kadry",
+      "size": 140,
+      "avg_comments_count": 1.443,
+      "score": 61.77
+    },
+    {
+      "rank": 46,
+      "cluster_id": 48,
+      "label": "Ryczałt: dobór stawki wg rodzaju usługi (IT, hydraulik, catering, BHP, księgowość)",
+      "description": "Pytania dotyczą ustalenia właściwej stawki ryczałtu ewidencjonowanego (3%, 5,5%, 8,5%, 12%, 17%) dla konkretnych usług oraz dopasowania jej do PKD/PKWiU. Pojawia się też wątek stawki VAT 8% przy usłudze montażowej.",
+      "topic_area": "PIT",
+      "size": 144,
+      "avg_comments_count": 1.042,
+      "score": 61.77
+    },
+    {
+      "rank": 47,
+      "cluster_id": 84,
+      "label": "ZUS: zaświadczenie o przychodach emerytów i rencistów do końca lutego",
+      "description": "Pytania dotyczą obowiązku płatnika składania do ZUS rocznego zaświadczenia o przychodach zatrudnionych emerytów i rencistów – kogo obejmuje (wiek emerytalny, emeryci mundurowi, umowy zlecenia), na jakim druku i w jakiej formie.",
+      "topic_area": "ZUS",
+      "size": 90,
+      "avg_comments_count": 1.222,
+      "score": 60.89
+    },
+    {
+      "rank": 48,
+      "cluster_id": 111,
+      "label": "KSeF: obowiązek dla nievatowców, zwolnionych z VAT i limitu 10 tys.",
+      "description": "Pytania dotyczą tego, kto i w jakich sytuacjach musi korzystać z KSeF — w szczególności podatników zwolnionych z VAT, nievatowców wystawiających rachunki, przedsiębiorców poniżej limitu 10 tys. zł, organizacji pozarządowych oraz sprzedaży zagranicznej.",
+      "topic_area": "KSeF",
+      "size": 83,
+      "avg_comments_count": 1.651,
+      "score": 59.8
+    },
+    {
+      "rank": 49,
+      "cluster_id": 51,
+      "label": "Przejęcie księgowości: korekta błędnych sald rozrachunków z BO",
+      "description": "Pytania dotyczą sposobu wyjaśnienia i wyksięgowania nieprawidłowych sald kont rozrachunkowych (z dostawcami, US, kontrahentami UE, kasą) przejętych po poprzednim biurze rachunkowym. Księgowi pytają, czy zostawić stare salda, zaksięgować w przychody/wynik finansowy, czy robić PK korygujące bilans otwarcia.",
+      "topic_area": "rachunkowość",
+      "size": 134,
+      "avg_comments_count": 1.478,
+      "score": 59.51
+    },
+    {
+      "rank": 50,
+      "cluster_id": 71,
+      "label": "Minimalne wynagrodzenie 2026: regulamin i składniki płacy",
+      "description": "Pytania dotyczą zmian minimalnego wynagrodzenia od 1 stycznia 2026, konieczności aktualizacji regulaminu wynagradzania i tabel zaszeregowania oraz tego, jakie składniki (dodatek funkcyjny, premia) wchodzą w skład płacy minimalnej.",
+      "topic_area": "kadry",
+      "size": 137,
+      "avg_comments_count": 0.993,
+      "score": 58.77
+    }
+  ]
+}
