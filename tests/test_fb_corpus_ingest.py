@@ -202,6 +202,153 @@ def test_flag_no_comments_and_too_long():
     assert "no_comments" in flags
 
 
+# --- v1.5b: cutoff stripping, expanded filters, probably_comment flag ---
+
+
+def test_strip_cutoff_suffixes_basic_cases():
+    samples = [
+        ("Witam, mam pytanie... Wyświetl więcej", "Witam, mam pytanie"),
+        ("Długi tekst posta Zobacz więcej", "Długi tekst posta"),
+        ("Tekst z unicode ellipsą …", "Tekst z unicode ellipsą"),
+        ("Tekst z asci elipsą...", "Tekst z asci elipsą"),
+        ("Bez ucinania, pełny tekst?", "Bez ucinania, pełny tekst?"),
+    ]
+    for source, expected in samples:
+        cleaned, was_stripped = ingest.strip_cutoff_suffixes(source)
+        assert cleaned == expected, (source, cleaned)
+        assert was_stripped == (cleaned != source)
+
+
+def test_strip_cutoff_suffixes_is_idempotent():
+    source = "Pytanie księgowe... Wyświetl więcej"
+    once, was_stripped = ingest.strip_cutoff_suffixes(source)
+    twice, was_stripped_again = ingest.strip_cutoff_suffixes(once)
+    assert was_stripped is True
+    assert was_stripped_again is False
+    assert once == twice == "Pytanie księgowe"
+
+
+def test_normalize_strips_cutoff_markers():
+    lhs = ingest.normalize_text("Jak rozliczyć VAT przy WDT? Wyświetl więcej")
+    rhs = ingest.normalize_text("Jak rozliczyć VAT przy WDT?")
+    assert lhs == rhs, (lhs, rhs)
+    assert "wyświetl" not in lhs
+    assert "więcej" not in lhs
+
+
+def test_build_candidates_counts_cutoff_stripped(tmp_path: Path):
+    # Two posts, one has a cutoff marker. cutoff_stripped should count 1.
+    source = ingest.RawSource(
+        path=Path("synthetic.json"),
+        group_id="group_a",
+        group_name="group_a_name",
+        scraped_at="2026-04-16T10:00:00.000Z",
+        posts=[
+            {"text": "Pierwszy pełny post, wszystko widać. Czy mogę odliczyć VAT?", "comments": []},
+            {"text": "Drugi post ma ucięte zakończenie... Wyświetl więcej", "comments": []},
+        ],
+    )
+    _, _, cutoff_stripped = ingest.build_candidates(source)
+    assert cutoff_stripped == 1
+
+
+def test_quality_filter_rejects_rekrutacja_substring():
+    # "rekrutacja" after a greeting should be caught (substring in first 50 chars).
+    record = _candidate(
+        "Witam, rekrutacja do biura rachunkowego w Krakowie, oferujemy stabilną umowę."
+    )
+    keep, reason, _ = ingest.classify_record(record)
+    assert not keep
+    assert reason == "job_ad"
+
+
+def test_quality_filter_rejects_poszukujemy():
+    record = _candidate(
+        "Poszukujemy księgowej z doświadczeniem na umowę o pracę, Warszawa centrum."
+    )
+    keep, reason, _ = ingest.classify_record(record)
+    assert not keep
+    assert reason == "job_ad"
+
+
+def test_quality_filter_rejects_sales_spam_sprzedam():
+    record = _candidate(
+        "Sprzedam biuro rachunkowe w centrum Poznania z kompletem klientów, "
+        "cena do negocjacji po pw."
+    )
+    keep, reason, _ = ingest.classify_record(record)
+    assert not keep
+    assert reason == "sales_spam"
+
+
+def test_quality_filter_rejects_marketing_bold():
+    # Head must have >=40% mathematical bold glyphs. 50 bold chars in the first
+    # 100 is a comfortable margin.
+    bold_head = "𝗧𝗼𝗷𝗲𝘀𝘁𝗻𝗮𝗷𝗹𝗲𝗽𝘀𝘇𝗮𝗼𝗸𝗮𝘇𝗷𝗮𝗶𝗻𝘄𝗲𝘀𝘁𝘆𝗰𝘆𝗷𝗻𝗮𝘁𝘆𝗹𝗸𝗼𝗱𝘇𝗶𝘀𝗶𝗮𝗷𝗭𝗮𝗿𝗮𝗯𝗶𝗮𝗷"
+    rest = " Kup teraz krypto i zarabiaj, gwarantowany zwrot 20% miesięcznie."
+    record = _candidate(bold_head + rest)
+    keep, reason, _ = ingest.classify_record(record)
+    assert not keep
+    assert reason == "marketing_bold"
+
+
+def test_quality_filter_accepts_low_bold():
+    # A legit question with a single stray bold char is not marketing.
+    record = _candidate(
+        "Czy mogę odliczyć VAT przy sprzedaży 𝗪𝗗𝗧? Potrzebuję potwierdzenia.",
+        comments=["tak, możesz"],
+    )
+    keep, reason, _ = ingest.classify_record(record)
+    assert keep, reason
+    assert reason is None
+
+
+def test_probably_comment_regex_opener():
+    # Matches a known comment opener regex.
+    assert ingest.detect_probably_comment(
+        "Tak jak pisali poprzednicy, u mnie również tak to wygląda?"
+    )
+    assert ingest.detect_probably_comment("Mam podobny problem z tym samym klientem?")
+    assert ingest.detect_probably_comment("Nie wiem skąd taka kwota, sprawdź rachunek.")
+
+
+def test_probably_comment_lowercase_opener():
+    # Lowercase first letter also trips the heuristic.
+    assert ingest.detect_probably_comment("to chyba zależy od rodzaju umowy?")
+
+
+def test_probably_comment_false_for_normal_post():
+    # A normal post starting with an uppercase greeting is not flagged.
+    assert not ingest.detect_probably_comment(
+        "Witam, mam pytanie o rozliczenie VAT przy imporcie usług z UE. Czy mogę odliczyć?"
+    )
+    assert not ingest.detect_probably_comment(
+        "Jak rozliczyć fakturę korygującą w JPK_V7M za zeszły miesiąc?"
+    )
+
+
+def test_flagged_probably_comment_kept_not_rejected():
+    # probably_comment is a FLAG, not a reject — record must survive.
+    record = _candidate(
+        "Tak jak pisali poprzednicy, u mnie w biurze stosujemy tę samą metodę. "
+        "Czy Wy też tak macie?",
+        comments=["zgadzam się"],
+    )
+    keep, reason, flags = ingest.classify_record(record)
+    assert keep, reason
+    assert reason is None
+    assert "probably_comment" in flags
+
+
+def test_marketing_bold_rejects_before_no_question():
+    # Marketing bold check fires even when the post has no "?" or question keywords.
+    bold_head = "𝗜𝗡𝗪𝗘𝗦𝗧𝗨𝗝𝗧𝗘𝗥𝗔𝗭𝗶𝗽𝗼𝗺𝗻𝗼𝘇𝗸𝗮𝗽𝗶𝘁𝗮𝗹𝘇𝗱𝘂𝘇𝘆𝗺𝘇𝘄𝗿𝗼𝘁𝗲𝗺𝗽𝗼𝗹𝗲𝗰𝗮𝗺"
+    record = _candidate(bold_head + " kontakt na priv i dostajesz dostęp do grupy.")
+    keep, reason, _ = ingest.classify_record(record)
+    assert not keep
+    assert reason == "marketing_bold"
+
+
 def test_end_to_end_report_shape(tmp_path: Path):
     sources = [
         (str(FILE1.relative_to(Path(__file__).resolve().parents[1])), "group_a", "group_a_name"),

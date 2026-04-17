@@ -48,6 +48,28 @@ TEXT_MIN_LENGTH = 20
 TEXT_FLAG_LONG = 800
 LINKS_FLAG_THRESHOLD = 5
 
+# v1.5b quality fixes
+HEAD_MATCH_CHARS = 50
+MARKETING_BOLD_HEAD_CHARS = 100
+MARKETING_BOLD_THRESHOLD = 0.40
+
+# Baseline numbers from the v1 run (Zadanie 1, commit 97a6efe) — frozen for the
+# before/after table in the regenerated report. Do not change without also
+# bumping the corpus version.
+BASELINE_V1: dict[str, int] = {
+    "raw_total": 40537,
+    "final_total": 24954,
+    "rejected_too_short": 15,
+    "rejected_no_question_pattern": 3807,
+    "rejected_job_ad": 82,
+    "rejected_community_only": 0,
+    "flagged_too_long": 0,
+    "flagged_no_comments": 7422,
+    "flagged_many_links": 0,
+    "cross_file_duplicates": 10026,
+    "duplicates_within_files": 1629,
+}
+
 QUESTION_KEYWORD_RE = re.compile(
     r"(?:^|[^\w])(jak|czy|co|kiedy|gdzie|ile|pomocy?|problem|prosz[eę]|potrzebuj|nie wiem|nie rozumiem)(?:[^\w]|$)",
     flags=re.IGNORECASE,
@@ -57,18 +79,76 @@ JOB_AD_PREFIXES: tuple[str, ...] = (
     "szukam księgowej",
     "szukam księgowego",
     "szukam pracy",
+    "szukam doświadczonego",
     "oferuj",
     "zatrudnię",
     "polecam mojego",
     "polecam moją",
     "oferta pracy",
     "poszukuję pracy",
+    "poszukujemy",
+    "rekrutacja",
+    "ogłoszenie o prac",
+    "ogloszenie o prac",
+    "do działu",
+    "starsza specjalistka",
+    "starszy specjalista",
+)
+
+SALES_SPAM_PREFIXES: tuple[str, ...] = (
+    "sprzedam",
+    "oddam",
+    "kupię",
+    "kupie",
+    "wynajmę",
 )
 
 COMMUNITY_ONLY_MARKERS: tuple[str, ...] = (
     "link w komentarzu",
     "pisz na pw",
     "pm dla zainteresowanych",
+)
+
+# Scraper truncation markers — FB injects "... Wyświetl więcej" at the UI cut-off.
+CUTOFF_SUFFIXES: tuple[str, ...] = (
+    "wyświetl więcej",
+    "zobacz więcej",
+)
+TRAILING_ELLIPSIS_RE = re.compile(r"(?:…+|\.{3,})\s*$")
+
+# Mathematical Alphanumeric Symbols — used by marketing posts for fancy bold text.
+MATH_BOLD_RE = re.compile(r"[\U0001D400-\U0001D7FF]")
+
+# Opener patterns suggesting the "post" is actually a reply/commentary.
+COMMENT_OPENER_PATTERNS: tuple[re.Pattern[str], ...] = tuple(
+    re.compile(pat)
+    for pat in (
+        r"^(Nie\s+(wiem|ma|w)\s)",
+        r"^(Jeżeli|Jesli|Jeśli)\s+(rozliczasz|chcesz|to|jest|z)",
+        r"^Zgłosić\s+do\s",
+        r"^Tak\s+jak\s+pisali\s",
+        r"^A\s+(nie|u\s+mnie|czym)\s",
+        r"^Dlaczego\s+(czekać|nie)\s",
+        r"^Mam\s+podobny\s+problem",
+        r"^Obecnie\s+od\s+\d",
+        r"^Samo\s+zaświadczenie",
+        r"^Zależy\s+(czy|od)",
+        r"^Mówi\s+Pani\s+o",
+        r"^Pytanie\s+co\s+masz",
+        r"^OC\s+zwraca",
+        r"^kogoś\s+to\s+jeszcze",
+        r"^liczysz\s+każdy",
+        r"^Uznać\s+za\s+(chorobę|wypadek)",
+        r"^Problemem\s+w\s+(takich|tym)",
+        r"^Sporo\s+z\s+nich",
+        r"^Ja\s+po\s+(poronieniu|latach)",
+        r"^Przez\s+całe\s+lata",
+        r"^to\s+chyba",
+        r"^Nasze\s+BR",
+        r"^Nic\s+nie\s+wysyłaj",
+        r"^Skoro\s+jest\s",
+        r"^Pit\s+2\s+sekcja",
+    )
 )
 
 URL_RE = re.compile(r"https?://\S+", flags=re.IGNORECASE)
@@ -105,6 +185,82 @@ POLISH_STOP_WORDS = {
     "tym", "u", "w", "we", "wie", "więc", "wy", "z", "ze", "za", "że", "zeby",
     "żeby", "który", "jakie", "jakim", "może", "mozna", "można",
 }
+
+
+# --- v1.5b quality-fix helpers ---
+
+def strip_cutoff_suffixes(text: str) -> tuple[str, bool]:
+    """Strip FB scraper truncation markers from the tail of a post.
+
+    Removes trailing ``"Wyświetl więcej"`` / ``"Zobacz więcej"`` labels and
+    unicode/ascii ellipses. Iterates until stable so stacked markers
+    (``"... Wyświetl więcej"``) collapse in one call.
+
+    Returns ``(cleaned_text, was_modified)``.
+    """
+
+    if not isinstance(text, str):
+        return "", False
+    original = text
+    cleaned = text
+    while True:
+        candidate = cleaned.rstrip()
+        lower = candidate.lower()
+        matched = False
+        for suffix in CUTOFF_SUFFIXES:
+            if lower.endswith(suffix):
+                candidate = candidate[: -len(suffix)].rstrip()
+                matched = True
+                break
+        if not matched:
+            m = TRAILING_ELLIPSIS_RE.search(candidate)
+            if m:
+                candidate = candidate[: m.start()].rstrip()
+                matched = True
+        if not matched or candidate == cleaned:
+            cleaned = candidate
+            break
+        cleaned = candidate
+    return cleaned, cleaned != original
+
+
+def is_marketing_bold(text: str) -> bool:
+    """True when the first ~100 chars are dominated by Mathematical Bold glyphs.
+
+    Marketing/crypto spam posts use U+1D400–U+1D7FF characters to render fake
+    bold text. Legit posts with a stray bold character are well below the 40%
+    threshold.
+    """
+
+    if not isinstance(text, str) or not text:
+        return False
+    head = text[:MARKETING_BOLD_HEAD_CHARS]
+    if not head:
+        return False
+    bold_count = len(MATH_BOLD_RE.findall(head))
+    return (bold_count / len(head)) >= MARKETING_BOLD_THRESHOLD
+
+
+def detect_probably_comment(text: str) -> bool:
+    """Heuristic: does this "post" actually look like a reply comment?
+
+    Triggers on 25 known comment openers (regex list) or a lowercase first
+    character — real FB posts nearly always start with an uppercase letter or
+    greeting.
+    """
+
+    if not isinstance(text, str):
+        return False
+    stripped = text.strip()
+    if not stripped:
+        return False
+    for pattern in COMMENT_OPENER_PATTERNS:
+        if pattern.match(stripped):
+            return True
+    first_char = stripped[0]
+    if first_char.isalpha() and first_char.islower():
+        return True
+    return False
 
 
 @dataclass(slots=True)
@@ -171,9 +327,13 @@ class Stats:
     rejected_no_question: int = 0
     rejected_job_ad: int = 0
     rejected_community_only: int = 0
+    rejected_marketing_bold: int = 0
+    rejected_sales_spam: int = 0
     flagged_too_long: int = 0
     flagged_no_comments: int = 0
     flagged_many_links: int = 0
+    flagged_probably_comment: int = 0
+    cutoff_stripped: int = 0
     backup_with_dup_in_newer_same_group: int = 0
     backup_total: int = 0
     group1_with_dup_in_group2: int = 0
@@ -189,7 +349,8 @@ def normalize_text(text: str) -> str:
 
     if not isinstance(text, str):
         return ""
-    stripped = URL_RE.sub(" ", text)
+    cleaned, _ = strip_cutoff_suffixes(text)
+    stripped = URL_RE.sub(" ", cleaned)
     stripped = EMOJI_RE.sub(" ", stripped)
     stripped = unicodedata.normalize("NFC", stripped)
     lowered = stripped.lower()
@@ -241,26 +402,35 @@ def _coerce_comments(value: object) -> list[str]:
     return [str(item).strip() for item in value if str(item).strip()]
 
 
-def build_candidates(source: RawSource) -> tuple[list[CandidateRecord], int]:
+def build_candidates(source: RawSource) -> tuple[list[CandidateRecord], int, int]:
     """Turn raw posts into :class:`CandidateRecord`, collapsing in-file duplicates.
 
-    Returns a ``(candidates, in_file_duplicates)`` tuple so the main pipeline can
-    report how many duplicates were removed within a single source.
+    Returns ``(candidates, in_file_duplicates, cutoff_stripped)``. The stripped
+    count is incremented once per post whose raw text contained a scraper
+    truncation marker (``"Wyświetl więcej"`` / ellipsis) — those are cleaned
+    before hashing so the marker no longer splits what is the same post
+    content.
     """
 
     by_id: dict[str, CandidateRecord] = {}
     in_file_dupes = 0
+    cutoff_stripped = 0
     source_file_name = source.path.name
     for post in source.posts:
         raw_text = str(post.get("text", "") or "").strip()
         if not raw_text:
             continue
-        normalized = normalize_text(raw_text)
+        cleaned_text, was_stripped = strip_cutoff_suffixes(raw_text)
+        if was_stripped:
+            cutoff_stripped += 1
+        if not cleaned_text:
+            continue
+        normalized = normalize_text(cleaned_text)
         if not normalized:
             continue
         record_id = compute_record_id(normalized)
         comments = _coerce_comments(post.get("comments"))
-        num_links = count_urls(raw_text)
+        num_links = count_urls(cleaned_text)
         if record_id in by_id:
             in_file_dupes += 1
             existing = by_id[record_id]
@@ -270,15 +440,15 @@ def build_candidates(source: RawSource) -> tuple[list[CandidateRecord], int]:
             id=record_id,
             group_id=source.group_id,
             group_name=source.group_name,
-            text=raw_text,
+            text=cleaned_text,
             normalized_text=normalized,
-            text_length=len(raw_text),
+            text_length=len(cleaned_text),
             comments=comments,
             scraped_at=source.scraped_at,
             source_file=source_file_name,
             num_links=num_links,
         )
-    return list(by_id.values()), in_file_dupes
+    return list(by_id.values()), in_file_dupes, cutoff_stripped
 
 
 def _merge_comments(*lists: Iterable[str]) -> list[str]:
@@ -336,18 +506,31 @@ def resolve_cross_file_duplicates(
 
 
 def classify_record(record: CandidateRecord) -> tuple[bool, str | None, list[str]]:
-    """Apply REJECT / FLAG heuristics. Returns ``(keep, reject_reason, flags)``."""
+    """Apply REJECT / FLAG heuristics. Returns ``(keep, reject_reason, flags)``.
+
+    Reject order (v1.5b): ``too_short`` → ``marketing_bold`` → ``sales_spam`` →
+    ``job_ad`` → ``community_only`` → ``no_question_pattern``. Flags (kept) add
+    ``probably_comment`` to the v1 set.
+    """
 
     if record.text_length < TEXT_MIN_LENGTH:
         return False, "too_short", []
 
-    normalized = record.normalized_text
+    if is_marketing_bold(record.text):
+        return False, "marketing_bold", []
 
-    # Job ads and community-only markers are checked before the question-pattern
-    # filter so that advertisements without a "?" are labelled accurately instead
-    # of hiding under "no_question_pattern".
+    normalized = record.normalized_text
+    head = normalized[:HEAD_MATCH_CHARS]
+
+    for prefix in SALES_SPAM_PREFIXES:
+        if head.startswith(prefix):
+            return False, "sales_spam", []
+
+    # Job-ad prefixes are matched as substrings in the first HEAD_MATCH_CHARS so
+    # that openers like "Witam, rekrutacja..." are caught without bespoke
+    # greeting handling.
     for prefix in JOB_AD_PREFIXES:
-        if normalized.startswith(prefix):
+        if prefix in head:
             return False, "job_ad", []
 
     for marker in COMMUNITY_ONLY_MARKERS:
@@ -366,6 +549,8 @@ def classify_record(record: CandidateRecord) -> tuple[bool, str | None, list[str
         flags.append("no_comments")
     if record.num_links > LINKS_FLAG_THRESHOLD:
         flags.append("many_links")
+    if detect_probably_comment(record.text):
+        flags.append("probably_comment")
     return True, None, flags
 
 
@@ -382,6 +567,10 @@ def finalize(records: Iterable[CandidateRecord], stats: Stats) -> list[FinalReco
                 stats.rejected_job_ad += 1
             elif reason == "community_only":
                 stats.rejected_community_only += 1
+            elif reason == "marketing_bold":
+                stats.rejected_marketing_bold += 1
+            elif reason == "sales_spam":
+                stats.rejected_sales_spam += 1
             continue
         if "too_long" in flags:
             stats.flagged_too_long += 1
@@ -389,6 +578,8 @@ def finalize(records: Iterable[CandidateRecord], stats: Stats) -> list[FinalReco
             stats.flagged_no_comments += 1
         if "many_links" in flags:
             stats.flagged_many_links += 1
+        if "probably_comment" in flags:
+            stats.flagged_probably_comment += 1
         finalized.append(
             FinalRecord(
                 id=record.id,
@@ -456,19 +647,26 @@ def build_reports(
 
     rejections = {
         "too_short": stats.rejected_too_short,
-        "no_question_pattern": stats.rejected_no_question,
+        "marketing_bold": stats.rejected_marketing_bold,
+        "sales_spam": stats.rejected_sales_spam,
         "job_ad": stats.rejected_job_ad,
         "community_only": stats.rejected_community_only,
+        "no_question_pattern": stats.rejected_no_question,
     }
     flags = {
         "too_long": stats.flagged_too_long,
         "no_comments": stats.flagged_no_comments,
         "many_links": stats.flagged_many_links,
+        "probably_comment": stats.flagged_probably_comment,
     }
 
     top_keywords = _top_keywords(final_records)
     random_sample = _random_sample(final_records)
     top_engaging = _top_engaging(final_records)
+    probably_comment_records = [
+        r for r in final_records if "probably_comment" in r.quality_flags
+    ]
+    probably_comment_sample = _random_sample(probably_comment_records, size=10, seed=42)
 
     def _fmt_pct(part: int, total: int) -> str:
         if total == 0:
@@ -576,7 +774,81 @@ def build_reports(
             f"| {rank} | {record.id} | {record.group_name} | {record.comments_count} | {excerpt} |"
         )
     lines.append("")
-    lines.append("## 7. Unrelated observations")
+    lines.append("## 7. Wpływ 1.5b fixes (Before / After)")
+    lines.append("")
+    lines.append(
+        "Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5b (obecny run). "
+        "v1.5b wprowadza strip cutoff markerów (`Wyświetl więcej`, ellipsis) przed "
+        "hashem, rozszerzone prefiksy `job_ad`, nowe kategorie `sales_spam` i "
+        "`marketing_bold`, oraz flagę `probably_comment`."
+    )
+    lines.append("")
+    lines.append("| Metric | v1 | v1.5b | Δ |")
+    lines.append("|---|---:|---:|---:|")
+
+    def _delta_row(label: str, v1_key: str, current: int) -> str:
+        baseline = BASELINE_V1.get(v1_key, 0)
+        delta = current - baseline
+        sign = "+" if delta > 0 else ""
+        return f"| {label} | {baseline} | {current} | {sign}{delta} |"
+
+    lines.append(_delta_row("Raw total", "raw_total", total_raw))
+    lines.append(_delta_row("Final total", "final_total", total_final))
+    lines.append(
+        _delta_row(
+            "Duplicates within files", "duplicates_within_files", stats.duplicates_within_files
+        )
+    )
+    lines.append(
+        _delta_row("Cross-file duplicates", "cross_file_duplicates", stats.cross_file_duplicates)
+    )
+    lines.append(_delta_row("Rejected: too_short", "rejected_too_short", stats.rejected_too_short))
+    lines.append(
+        _delta_row(
+            "Rejected: no_question_pattern",
+            "rejected_no_question_pattern",
+            stats.rejected_no_question,
+        )
+    )
+    lines.append(_delta_row("Rejected: job_ad", "rejected_job_ad", stats.rejected_job_ad))
+    lines.append(
+        _delta_row("Rejected: community_only", "rejected_community_only", stats.rejected_community_only)
+    )
+    lines.append(f"| Rejected: marketing_bold (new) | — | {stats.rejected_marketing_bold} | n/a |")
+    lines.append(f"| Rejected: sales_spam (new) | — | {stats.rejected_sales_spam} | n/a |")
+    lines.append(_delta_row("Flagged: too_long", "flagged_too_long", stats.flagged_too_long))
+    lines.append(_delta_row("Flagged: no_comments", "flagged_no_comments", stats.flagged_no_comments))
+    lines.append(_delta_row("Flagged: many_links", "flagged_many_links", stats.flagged_many_links))
+    lines.append(f"| Flagged: probably_comment (new) | — | {stats.flagged_probably_comment} | n/a |")
+    lines.append(f"| Cutoff markers stripped (new) | — | {stats.cutoff_stripped} | n/a |")
+    lines.append("")
+    lines.append(
+        "Uwaga: spadek `final_total` między v1 i v1.5b to suma odrzuceń z trzech nowych "
+        "reguł (`marketing_bold`, `sales_spam`, rozszerzone `job_ad`). Flagi nie "
+        "usuwają postów z korpusu."
+    )
+    lines.append("")
+    lines.append("## 8. Sample of `probably_comment` flag (10 random, seed=42)")
+    lines.append("")
+    lines.append(
+        "Posty oznaczone flagą `probably_comment` nadal są w korpusie — to sygnał "
+        "dla Zadania 2 (klasteryzacja), że prawdopodobnie są to wklejki komentarzy. "
+        "Próbka losowa (seed=42)."
+    )
+    lines.append("")
+    if probably_comment_sample:
+        for entry in probably_comment_sample:
+            excerpt = entry.text.replace("\n", " ").strip()
+            if len(excerpt) > 300:
+                excerpt = excerpt[:300].rstrip() + "…"
+            lines.append(
+                f"- **{entry.id}** · {entry.group_name} · comments: {entry.comments_count}\n"
+                f"  > {excerpt}"
+            )
+    else:
+        lines.append("- (brak rekordów z flagą `probably_comment`)")
+    lines.append("")
+    lines.append("## 9. Unrelated observations")
     lines.append("")
     if unrelated_observations:
         for note in unrelated_observations:
@@ -606,7 +878,18 @@ def build_reports(
             "final": total_final,
             "duplicates_within_files": stats.duplicates_within_files,
             "cross_file_duplicates": stats.cross_file_duplicates,
+            "cutoff_markers_stripped": stats.cutoff_stripped,
         },
+        "baseline_v1": dict(BASELINE_V1),
+        "probably_comment_sample": [
+            {
+                "id": r.id,
+                "group_name": r.group_name,
+                "comments_count": r.comments_count,
+                "text_excerpt": (r.text[:300] + "…") if len(r.text) > 300 else r.text,
+            }
+            for r in probably_comment_sample
+        ],
         "rejections": rejections,
         "flags": flags,
         "cluster_estimate": cluster_estimate,
@@ -700,8 +983,9 @@ def run(
             group_name,
             len(source.posts),
         )
-        candidates, in_file_dupes = build_candidates(source)
+        candidates, in_file_dupes, cutoff_stripped = build_candidates(source)
         stats.duplicates_within_files += in_file_dupes
+        stats.cutoff_stripped += cutoff_stripped
         per_source_candidates[source_name] = candidates
 
     total_raw = sum(per_source_raw.values())
@@ -729,14 +1013,19 @@ def run(
 
     final_records = finalize(winners, stats)
     LOGGER.info(
-        "Quality: rejected short=%d no_q=%d job=%d community=%d | flagged long=%d no_comm=%d many_links=%d",
+        "Quality: rejected short=%d no_q=%d job=%d community=%d marketing=%d sales=%d | "
+        "flagged long=%d no_comm=%d many_links=%d prob_comment=%d | cutoff_stripped=%d",
         stats.rejected_too_short,
         stats.rejected_no_question,
         stats.rejected_job_ad,
         stats.rejected_community_only,
+        stats.rejected_marketing_bold,
+        stats.rejected_sales_spam,
         stats.flagged_too_long,
         stats.flagged_no_comments,
         stats.flagged_many_links,
+        stats.flagged_probably_comment,
+        stats.cutoff_stripped,
     )
     LOGGER.info("Final corpus: %d posts", len(final_records))
 
@@ -753,17 +1042,14 @@ def run(
             "osobne uprzątnięcie legacy pipeline'u."
         ),
         (
-            "Token 'wyświetl' i 'więcej' zajmują top-8/top-2 miejsca w keywords. To artefakt "
-            "scrapera — FB ucina długie posty zostawiając UI label '... Wyświetl więcej'. "
-            "Do usunięcia albo po stronie scrapera, albo jako dodatkowy krok normalizacji przed "
-            "Zadaniem 2 (klasteryzacja)."
+            "v1.5b: usunięto scraperowe cutoff markery (`Wyświetl więcej`, ellipsis) przed "
+            "obliczeniem hasha. Efekt: mniej fałszywych duplikatów i czysty top-N keywords "
+            "bez tokenów UI."
         ),
         (
-            "Top 1 engaging post (10 komentarzy) wygląda na długi komentarz, nie post — scraper "
-            "najwyraźniej zagarnia też wątki odpowiedzi. Ryzyko dla klasteryzacji: treści "
-            "konwersacyjne zamiast pytań. Warto w Zadaniu 2 dodać filtr na brak pytajnika w "
-            "długich tekstach albo sprawdzić, czy scraper nie myli posta z najwyżej głosowanym "
-            "komentarzem."
+            "v1.5b: flaga `probably_comment` nie usuwa postów, tylko oznacza prawdopodobne "
+            "wklejki komentarzy. Klasteryzacja w Zadaniu 2 może ich używać z niższą wagą, "
+            "albo zrobić osobny klaster \"opinie/komentarze\"."
         ),
     ]
 

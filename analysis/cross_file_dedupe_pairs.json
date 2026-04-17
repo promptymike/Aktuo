@@ -1,0 +1,46 @@
+{
+  "sources": {
+    "posts_15k_ksiegowosc_moja_pasja.json": {
+      "group_id": "360545881004410",
+      "group_name": "ksiegowosc_moja_pasja",
+      "scraped_at": "2026-04-11T04:20:13.342Z",
+      "raw": 15229
+    },
+    "posts_output.json": {
+      "group_id": "507801603233194",
+      "group_name": "grupa_2_507801603233194",
+      "scraped_at": "2026-04-11T15:04:37.363Z",
+      "raw": 14608
+    },
+    "posts_output_backup.json": {
+      "group_id": "360545881004410",
+      "group_name": "ksiegowosc_moja_pasja",
+      "scraped_at": "2026-04-06T12:43:00.374Z",
+      "raw": 10700
+    }
+  },
+  "pairs": [
+    {
+      "left": "posts_15k_ksiegowosc_moja_pasja.json",
+      "left_total": 14552,
+      "right": "posts_output.json",
+      "right_total": 13977,
+      "overlap": 54
+    },
+    {
+      "left": "posts_15k_ksiegowosc_moja_pasja.json",
+      "left_total": 14552,
+      "right": "posts_output_backup.json",
+      "right_total": 10355,
+      "overlap": 9972
+    },
+    {
+      "left": "posts_output.json",
+      "left_total": 13977,
+      "right": "posts_output_backup.json",
+      "right_total": 10355,
+      "overlap": 46
+    }
+  ],
+  "cross_file_duplicates_total": 10026
+}
