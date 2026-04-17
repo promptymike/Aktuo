@@ -202,7 +202,7 @@ def test_flag_no_comments_and_too_long():
     assert "no_comments" in flags
 
 
-# --- v1.5b: cutoff stripping, expanded filters, probably_comment flag ---
+# --- v1.5b: cutoff stripping, expanded filters ---
 
 
 def test_strip_cutoff_suffixes_basic_cases():
@@ -301,57 +301,6 @@ def test_quality_filter_accepts_low_bold():
     keep, reason, _ = ingest.classify_record(record)
     assert keep, reason
     assert reason is None
-
-
-def test_probably_comment_regex_opener():
-    # Matches a known comment opener regex.
-    assert ingest.detect_probably_comment(
-        "Tak jak pisali poprzednicy, u mnie również tak to wygląda?"
-    )
-    assert ingest.detect_probably_comment("Mam podobny problem z tym samym klientem?")
-    assert ingest.detect_probably_comment("Nie wiem skąd taka kwota, sprawdź rachunek.")
-
-
-def test_probably_comment_does_not_flag_lowercase_post():
-    # v1.5c: lowercase-opener rule removed. These legit posts must NOT be
-    # flagged just because they start with a lowercase letter.
-    assert not ingest.detect_probably_comment(
-        "witam, mam pytanie o KSeF. Czy ktoś wdrażał integrację z Optimą?"
-    )
-    assert not ingest.detect_probably_comment(
-        "e-commerce 1. Czy w tej branży na KH rozliczacie rozrachunki tylko po WB?"
-    )
-    assert not ingest.detect_probably_comment(
-        "https://sejm.gov.pl/sejm10.nsf/... Czy ten przepis dotyczy też OFE?"
-    )
-
-
-def test_probably_comment_still_matches_known_pattern_after_v15c():
-    # The "to chyba" pattern is in COMMENT_OPENER_PATTERNS, so it still fires.
-    assert ingest.detect_probably_comment("to chyba zależy od rodzaju umowy?")
-
-
-def test_probably_comment_false_for_normal_post():
-    # A normal post starting with an uppercase greeting is not flagged.
-    assert not ingest.detect_probably_comment(
-        "Witam, mam pytanie o rozliczenie VAT przy imporcie usług z UE. Czy mogę odliczyć?"
-    )
-    assert not ingest.detect_probably_comment(
-        "Jak rozliczyć fakturę korygującą w JPK_V7M za zeszły miesiąc?"
-    )
-
-
-def test_flagged_probably_comment_kept_not_rejected():
-    # probably_comment is a FLAG, not a reject — record must survive.
-    record = _candidate(
-        "Tak jak pisali poprzednicy, u mnie w biurze stosujemy tę samą metodę. "
-        "Czy Wy też tak macie?",
-        comments=["zgadzam się"],
-    )
-    keep, reason, flags = ingest.classify_record(record)
-    assert keep, reason
-    assert reason is None
-    assert "probably_comment" in flags
 
 
 def test_marketing_bold_rejects_before_no_question():

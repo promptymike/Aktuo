@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-17T14:52:32+00:00",
+  "generated_at_utc": "2026-04-17T14:58:24+00:00",
   "sources": [
     {
       "file": "posts_15k_ksiegowosc_moja_pasja.json",
@@ -47,68 +47,6 @@
     "cross_file_duplicates": 10026,
     "duplicates_within_files": 1629
   },
-  "probably_comment_sample": [
-    {
-      "id": "e3106bb66148",
-      "group_name": "grupa_2_507801603233194",
-      "comments_count": 0,
-      "text_excerpt": "Jeśli zleceniobiorca z pełnymi składkami prowadzi takze działalność nierejstrowana. Wypłata ze zlecenia oraz faktury z owej działalności przekroczą minimalna krajowa czy powinnam naliczyć fundusz pracy? Czy przychody z działalności nierejstrowanej  wliczając sie do tego limitu?"
-    },
-    {
-      "id": "841b955f7757",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 8,
-      "text_excerpt": "A czym tu się załamywać ludzie Nie wiem skąd kwota kup 2000 bo nawet jak zastosowane podwyższone koszty to 300x 6. Pani robiąc pit roczny musi zastosować kup zgodny z prawdą to znaczy przez 11 mc 250 zł i 500 zł w miesiącu kiedy Pani miała dwie umowy o"
-    },
-    {
-      "id": "ecb96ae180f2",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 0,
-      "text_excerpt": "Jeżeli jest wystawiona faktura w KSeF a widnieje na niej błędna data zakończenia dostawy wówczas wystawiam korektę takiej faktury gdzie zmieniam jedynie datę a kwoty robię na 0 zł. A co z nr faktury i nr KSeF do jpk VAT? Wpisuje z faktury podstawowej czy korekt?"
-    },
-    {
-      "id": "a26b9b2e6d5e",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 0,
-      "text_excerpt": "Jeśli zaprzestanie wykonywania działaności jest z datą 31.12 to ZUS ZWUA z datą 01.01 ?"
-    },
-    {
-      "id": "0f8ca9d6cb8b",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 2,
-      "text_excerpt": "Zależy czy zarząd spółdzielni współpracuje z księgową \n u mnie nie współpracował, skończyłam księgowanie roku i oddałam w pizdu"
-    },
-    {
-      "id": "bf7de10037bf",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 6,
-      "text_excerpt": "Pytanie co masz na myśli jako usługi za granicę. Jeżeli są te usługi z terytorium Polski np. transport to musisz, ale jeśli są to usługi budowlane świadczone za granicą Polski to nie musisz."
-    },
-    {
-      "id": "bc60761a8ac6",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 0,
-      "text_excerpt": "Jeżeli zostałem na liniowym tak jak w 2025 to mogę odliczyć od kosztów składkę zdrowotną za grudzień opłaconą w styczniu?"
-    },
-    {
-      "id": "1c196b21d871",
-      "group_name": "ksiegowosc_moja_pasja",
-      "comments_count": 3,
-      "text_excerpt": "Nie wiem czy to ja jestem jakaś inna, nienormalna. Pracą w br, szef spoko, ogólnie ogarniam, wszystko mamy mniej więcej na czas zrobione. Ale niestety irytuje mnie jedna osoba z zespołu z rodziny szefa która trochę popracuje ale większość czasu jej pracy to prywatne rozmowy, prywatne maile, gadanie …"
-    },
-    {
-      "id": "953949b7a6c3",
-      "group_name": "grupa_2_507801603233194",
-      "comments_count": 2,
-      "text_excerpt": "Jeśli złożę wypowiedzenie w czwartek lub w piatek liczy sie 14 dni od niedzieli zatem obowiązuje do 15 listopada ? Jeśli do ręki pracodawca nie przyjmie wypowiedzenia mozna wysłać @ i również będzie sie liczyło? Pocztą polską natomiast liczy sie data nadania ?"
-    },
-    {
-      "id": "8f89b79f5ee0",
-      "group_name": "grupa_2_507801603233194",
-      "comments_count": 4,
-      "text_excerpt": "Nie ma różnicy, ponieważ zarówno 5.01 jak i 9.01 wypadają w tym samym tygodniu kalendarzowym, a bieg wypowiedzenia liczymy od pierwszej niedzieli po jego złożeniu."
-    }
-  ],
   "rejections": {
     "too_short": 27,
     "marketing_bold": 37,
@@ -120,8 +58,7 @@
   "flags": {
     "too_long": 0,
     "no_comments": 7388,
-    "many_links": 0,
-    "probably_comment": 91
+    "many_links": 0
   },
   "cluster_estimate": "~165-248",
   "cross_file_verification": {
@@ -401,6 +338,6 @@
     "README.md opisuje tylko wcześniejszy stateless scaffold — brak wzmianki o workflow layer, intent routing i clarification gate, które są już w repo. Dokumentacyjny dług, do naprawy osobno.",
     "fb_pipeline/posts_tagged.json (10700 rekordów) to post-processed wariant posts_output_backup.json z dodanymi polami tag/char_count. Nie jest używany w tym ingestie, ale nadal jest tracked w git i nie w .gitignore — można rozważyć osobne uprzątnięcie legacy pipeline'u.",
     "v1.5b: usunięto scraperowe cutoff markery (`Wyświetl więcej`, ellipsis) przed obliczeniem hasha. Efekt: mniej fałszywych duplikatów i czysty top-N keywords bez tokenów UI.",
-    "v1.5b: flaga `probably_comment` nie usuwa postów, tylko oznacza prawdopodobne wklejki komentarzy. Klasteryzacja w Zadaniu 2 może ich używać z niższą wagą, albo zrobić osobny klaster \"opinie/komentarze\"."
+    "v1.5d: wycofaliśmy heurystyczną flagę `probably_comment` (v1.5b/v1.5c miały za wysoki FP rate). Komentarze-jako-posty to bug scrapera — odfiltrujemy je na poziomie klastrów w Zadaniu 2 (posty i komentarze mają różny profil semantyczny: opis+pytanie vs instrukcja/opinia)."
   ]
 }

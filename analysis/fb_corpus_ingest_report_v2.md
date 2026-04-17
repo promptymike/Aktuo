@@ -1,6 +1,6 @@
 # FB corpus ingest report
 
-Generated at: 2026-04-17T14:52:32+00:00
+Generated at: 2026-04-17T14:58:24+00:00
 
 ## 1. Executive summary
 
@@ -38,7 +38,6 @@ Cross-file duplicates removed (resolved by newest scraped_at): **10025**. Duplic
 | too_long | 0 |
 | no_comments | 7388 |
 | many_links | 0 |
-| probably_comment | 91 |
 
 ### Top 20 keywords in final corpus
 
@@ -120,9 +119,9 @@ Cross-file duplicates removed (resolved by newest scraped_at): **10025**. Duplic
 
 ## 7. Wpływ 1.5b fixes (Before / After)
 
-Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5b (obecny run). v1.5b wprowadza strip cutoff markerów (`Wyświetl więcej`, ellipsis) przed hashem, rozszerzone prefiksy `job_ad`, nowe kategorie `sales_spam` i `marketing_bold`, oraz flagę `probably_comment`.
+Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5d (obecny run). Trzymane fixes: strip cutoff markerów (`Wyświetl więcej`, ellipsis) przed hashem, rozszerzone prefiksy `job_ad`, oraz nowe kategorie odrzuceń `sales_spam` i `marketing_bold`. Flaga `probably_comment` została wycofana w v1.5d (zbyt niska precyzja).
 
-| Metric | v1 | v1.5b | Δ |
+| Metric | v1 | v1.5d | Δ |
 |---|---:|---:|---:|
 | Raw total | 40537 | 40537 | 0 |
 | Final total | 24954 | 24892 | -62 |
@@ -137,39 +136,13 @@ Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5b (obecny run). v1.
 | Flagged: too_long | 0 | 0 | 0 |
 | Flagged: no_comments | 7422 | 7388 | -34 |
 | Flagged: many_links | 0 | 0 | 0 |
-| Flagged: probably_comment (new) | — | 91 | n/a |
 | Cutoff markers stripped (new) | — | 9113 | n/a |
 
 Uwaga: spadek `final_total` między v1 i v1.5b to suma odrzuceń z trzech nowych reguł (`marketing_bold`, `sales_spam`, rozszerzone `job_ad`). Flagi nie usuwają postów z korpusu.
 
-## 8. Sample of `probably_comment` flag (10 random, seed=42)
-
-Posty oznaczone flagą `probably_comment` nadal są w korpusie — to sygnał dla Zadania 2 (klasteryzacja), że prawdopodobnie są to wklejki komentarzy. Próbka losowa (seed=42).
-
-- **e3106bb66148** · grupa_2_507801603233194 · comments: 0
-  > Jeśli zleceniobiorca z pełnymi składkami prowadzi takze działalność nierejstrowana. Wypłata ze zlecenia oraz faktury z owej działalności przekroczą minimalna krajowa czy powinnam naliczyć fundusz pracy? Czy przychody z działalności nierejstrowanej  wliczając sie do tego limitu?
-- **841b955f7757** · ksiegowosc_moja_pasja · comments: 8
-  > A czym tu się załamywać ludzie Nie wiem skąd kwota kup 2000 bo nawet jak zastosowane podwyższone koszty to 300x 6. Pani robiąc pit roczny musi zastosować kup zgodny z prawdą to znaczy przez 11 mc 250 zł i 500 zł w miesiącu kiedy Pani miała dwie umowy o
-- **ecb96ae180f2** · ksiegowosc_moja_pasja · comments: 0
-  > Jeżeli jest wystawiona faktura w KSeF a widnieje na niej błędna data zakończenia dostawy wówczas wystawiam korektę takiej faktury gdzie zmieniam jedynie datę a kwoty robię na 0 zł. A co z nr faktury i nr KSeF do jpk VAT? Wpisuje z faktury podstawowej czy korekt?
-- **a26b9b2e6d5e** · ksiegowosc_moja_pasja · comments: 0
-  > Jeśli zaprzestanie wykonywania działaności jest z datą 31.12 to ZUS ZWUA z datą 01.01 ?
-- **0f8ca9d6cb8b** · ksiegowosc_moja_pasja · comments: 2
-  > Zależy czy zarząd spółdzielni współpracuje z księgową   u mnie nie współpracował, skończyłam księgowanie roku i oddałam w pizdu
-- **bf7de10037bf** · ksiegowosc_moja_pasja · comments: 6
-  > Pytanie co masz na myśli jako usługi za granicę. Jeżeli są te usługi z terytorium Polski np. transport to musisz, ale jeśli są to usługi budowlane świadczone za granicą Polski to nie musisz.
-- **bc60761a8ac6** · ksiegowosc_moja_pasja · comments: 0
-  > Jeżeli zostałem na liniowym tak jak w 2025 to mogę odliczyć od kosztów składkę zdrowotną za grudzień opłaconą w styczniu?
-- **1c196b21d871** · ksiegowosc_moja_pasja · comments: 3
-  > Nie wiem czy to ja jestem jakaś inna, nienormalna. Pracą w br, szef spoko, ogólnie ogarniam, wszystko mamy mniej więcej na czas zrobione. Ale niestety irytuje mnie jedna osoba z zespołu z rodziny szefa która trochę popracuje ale większość czasu jej pracy to prywatne rozmowy, prywatne maile, gadanie…
-- **953949b7a6c3** · grupa_2_507801603233194 · comments: 2
-  > Jeśli złożę wypowiedzenie w czwartek lub w piatek liczy sie 14 dni od niedzieli zatem obowiązuje do 15 listopada ? Jeśli do ręki pracodawca nie przyjmie wypowiedzenia mozna wysłać @ i również będzie sie liczyło? Pocztą polską natomiast liczy sie data nadania ?
-- **8f89b79f5ee0** · grupa_2_507801603233194 · comments: 4
-  > Nie ma różnicy, ponieważ zarówno 5.01 jak i 9.01 wypadają w tym samym tygodniu kalendarzowym, a bieg wypowiedzenia liczymy od pierwszej niedzieli po jego złożeniu.
-
-## 9. Unrelated observations
+## 8. Unrelated observations
 
 - README.md opisuje tylko wcześniejszy stateless scaffold — brak wzmianki o workflow layer, intent routing i clarification gate, które są już w repo. Dokumentacyjny dług, do naprawy osobno.
 - fb_pipeline/posts_tagged.json (10700 rekordów) to post-processed wariant posts_output_backup.json z dodanymi polami tag/char_count. Nie jest używany w tym ingestie, ale nadal jest tracked w git i nie w .gitignore — można rozważyć osobne uprzątnięcie legacy pipeline'u.
 - v1.5b: usunięto scraperowe cutoff markery (`Wyświetl więcej`, ellipsis) przed obliczeniem hasha. Efekt: mniej fałszywych duplikatów i czysty top-N keywords bez tokenów UI.
-- v1.5b: flaga `probably_comment` nie usuwa postów, tylko oznacza prawdopodobne wklejki komentarzy. Klasteryzacja w Zadaniu 2 może ich używać z niższą wagą, albo zrobić osobny klaster "opinie/komentarze".
+- v1.5d: wycofaliśmy heurystyczną flagę `probably_comment` (v1.5b/v1.5c miały za wysoki FP rate). Komentarze-jako-posty to bug scrapera — odfiltrujemy je na poziomie klastrów w Zadaniu 2 (posty i komentarze mają różny profil semantyczny: opis+pytanie vs instrukcja/opinia).

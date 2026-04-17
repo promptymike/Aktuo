@@ -119,38 +119,6 @@ TRAILING_ELLIPSIS_RE = re.compile(r"(?:…+|\.{3,})\s*$")
 # Mathematical Alphanumeric Symbols — used by marketing posts for fancy bold text.
 MATH_BOLD_RE = re.compile(r"[\U0001D400-\U0001D7FF]")
 
-# Opener patterns suggesting the "post" is actually a reply/commentary.
-COMMENT_OPENER_PATTERNS: tuple[re.Pattern[str], ...] = tuple(
-    re.compile(pat)
-    for pat in (
-        r"^(Nie\s+(wiem|ma|w)\s)",
-        r"^(Jeżeli|Jesli|Jeśli)\s+(rozliczasz|chcesz|to|jest|z)",
-        r"^Zgłosić\s+do\s",
-        r"^Tak\s+jak\s+pisali\s",
-        r"^A\s+(nie|u\s+mnie|czym)\s",
-        r"^Dlaczego\s+(czekać|nie)\s",
-        r"^Mam\s+podobny\s+problem",
-        r"^Obecnie\s+od\s+\d",
-        r"^Samo\s+zaświadczenie",
-        r"^Zależy\s+(czy|od)",
-        r"^Mówi\s+Pani\s+o",
-        r"^Pytanie\s+co\s+masz",
-        r"^OC\s+zwraca",
-        r"^kogoś\s+to\s+jeszcze",
-        r"^liczysz\s+każdy",
-        r"^Uznać\s+za\s+(chorobę|wypadek)",
-        r"^Problemem\s+w\s+(takich|tym)",
-        r"^Sporo\s+z\s+nich",
-        r"^Ja\s+po\s+(poronieniu|latach)",
-        r"^Przez\s+całe\s+lata",
-        r"^to\s+chyba",
-        r"^Nasze\s+BR",
-        r"^Nic\s+nie\s+wysyłaj",
-        r"^Skoro\s+jest\s",
-        r"^Pit\s+2\s+sekcja",
-    )
-)
-
 URL_RE = re.compile(r"https?://\S+", flags=re.IGNORECASE)
 
 EMOJI_RE = re.compile(
@@ -241,25 +209,6 @@ def is_marketing_bold(text: str) -> bool:
     return (bold_count / len(head)) >= MARKETING_BOLD_THRESHOLD
 
 
-def detect_probably_comment(text: str) -> bool:
-    """Heuristic: does this "post" actually look like a reply comment?
-
-    v1.5c: matches only the 25 explicit comment-opener regexes. The earlier
-    "starts with a lowercase letter" rule had a >60% false-positive rate in
-    Polish posts (legit openers like "witam", "e-commerce", URL pastes).
-    """
-
-    if not isinstance(text, str):
-        return False
-    stripped = text.strip()
-    if not stripped:
-        return False
-    for pattern in COMMENT_OPENER_PATTERNS:
-        if pattern.match(stripped):
-            return True
-    return False
-
-
 @dataclass(slots=True)
 class RawSource:
     path: Path
@@ -329,7 +278,6 @@ class Stats:
     flagged_too_long: int = 0
     flagged_no_comments: int = 0
     flagged_many_links: int = 0
-    flagged_probably_comment: int = 0
     cutoff_stripped: int = 0
     backup_with_dup_in_newer_same_group: int = 0
     backup_total: int = 0
@@ -506,8 +454,8 @@ def classify_record(record: CandidateRecord) -> tuple[bool, str | None, list[str
     """Apply REJECT / FLAG heuristics. Returns ``(keep, reject_reason, flags)``.
 
     Reject order (v1.5b): ``too_short`` → ``marketing_bold`` → ``sales_spam`` →
-    ``job_ad`` → ``community_only`` → ``no_question_pattern``. Flags (kept) add
-    ``probably_comment`` to the v1 set.
+    ``job_ad`` → ``community_only`` → ``no_question_pattern``. Flag set is
+    unchanged from v1: ``too_long`` / ``no_comments`` / ``many_links``.
     """
 
     if record.text_length < TEXT_MIN_LENGTH:
@@ -546,8 +494,6 @@ def classify_record(record: CandidateRecord) -> tuple[bool, str | None, list[str
         flags.append("no_comments")
     if record.num_links > LINKS_FLAG_THRESHOLD:
         flags.append("many_links")
-    if detect_probably_comment(record.text):
-        flags.append("probably_comment")
     return True, None, flags
 
 
@@ -575,8 +521,6 @@ def finalize(records: Iterable[CandidateRecord], stats: Stats) -> list[FinalReco
             stats.flagged_no_comments += 1
         if "many_links" in flags:
             stats.flagged_many_links += 1
-        if "probably_comment" in flags:
-            stats.flagged_probably_comment += 1
         finalized.append(
             FinalRecord(
                 id=record.id,
@@ -654,16 +598,11 @@ def build_reports(
         "too_long": stats.flagged_too_long,
         "no_comments": stats.flagged_no_comments,
         "many_links": stats.flagged_many_links,
-        "probably_comment": stats.flagged_probably_comment,
     }
 
     top_keywords = _top_keywords(final_records)
     random_sample = _random_sample(final_records)
     top_engaging = _top_engaging(final_records)
-    probably_comment_records = [
-        r for r in final_records if "probably_comment" in r.quality_flags
-    ]
-    probably_comment_sample = _random_sample(probably_comment_records, size=10, seed=42)
 
     def _fmt_pct(part: int, total: int) -> str:
         if total == 0:
@@ -774,13 +713,14 @@ def build_reports(
     lines.append("## 7. Wpływ 1.5b fixes (Before / After)")
     lines.append("")
     lines.append(
-        "Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5b (obecny run). "
-        "v1.5b wprowadza strip cutoff markerów (`Wyświetl więcej`, ellipsis) przed "
-        "hashem, rozszerzone prefiksy `job_ad`, nowe kategorie `sales_spam` i "
-        "`marketing_bold`, oraz flagę `probably_comment`."
+        "Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5d (obecny run). "
+        "Trzymane fixes: strip cutoff markerów (`Wyświetl więcej`, ellipsis) przed "
+        "hashem, rozszerzone prefiksy `job_ad`, oraz nowe kategorie odrzuceń "
+        "`sales_spam` i `marketing_bold`. Flaga `probably_comment` została wycofana "
+        "w v1.5d (zbyt niska precyzja)."
     )
     lines.append("")
-    lines.append("| Metric | v1 | v1.5b | Δ |")
+    lines.append("| Metric | v1 | v1.5d | Δ |")
     lines.append("|---|---:|---:|---:|")
 
     def _delta_row(label: str, v1_key: str, current: int) -> str:
@@ -816,7 +756,6 @@ def build_reports(
     lines.append(_delta_row("Flagged: too_long", "flagged_too_long", stats.flagged_too_long))
     lines.append(_delta_row("Flagged: no_comments", "flagged_no_comments", stats.flagged_no_comments))
     lines.append(_delta_row("Flagged: many_links", "flagged_many_links", stats.flagged_many_links))
-    lines.append(f"| Flagged: probably_comment (new) | — | {stats.flagged_probably_comment} | n/a |")
     lines.append(f"| Cutoff markers stripped (new) | — | {stats.cutoff_stripped} | n/a |")
     lines.append("")
     lines.append(
@@ -825,27 +764,7 @@ def build_reports(
         "usuwają postów z korpusu."
     )
     lines.append("")
-    lines.append("## 8. Sample of `probably_comment` flag (10 random, seed=42)")
-    lines.append("")
-    lines.append(
-        "Posty oznaczone flagą `probably_comment` nadal są w korpusie — to sygnał "
-        "dla Zadania 2 (klasteryzacja), że prawdopodobnie są to wklejki komentarzy. "
-        "Próbka losowa (seed=42)."
-    )
-    lines.append("")
-    if probably_comment_sample:
-        for entry in probably_comment_sample:
-            excerpt = entry.text.replace("\n", " ").strip()
-            if len(excerpt) > 300:
-                excerpt = excerpt[:300].rstrip() + "…"
-            lines.append(
-                f"- **{entry.id}** · {entry.group_name} · comments: {entry.comments_count}\n"
-                f"  > {excerpt}"
-            )
-    else:
-        lines.append("- (brak rekordów z flagą `probably_comment`)")
-    lines.append("")
-    lines.append("## 9. Unrelated observations")
+    lines.append("## 8. Unrelated observations")
     lines.append("")
     if unrelated_observations:
         for note in unrelated_observations:
@@ -878,15 +797,6 @@ def build_reports(
             "cutoff_markers_stripped": stats.cutoff_stripped,
         },
         "baseline_v1": dict(BASELINE_V1),
-        "probably_comment_sample": [
-            {
-                "id": r.id,
-                "group_name": r.group_name,
-                "comments_count": r.comments_count,
-                "text_excerpt": (r.text[:300] + "…") if len(r.text) > 300 else r.text,
-            }
-            for r in probably_comment_sample
-        ],
         "rejections": rejections,
         "flags": flags,
         "cluster_estimate": cluster_estimate,
@@ -1011,7 +921,7 @@ def run(
     final_records = finalize(winners, stats)
     LOGGER.info(
         "Quality: rejected short=%d no_q=%d job=%d community=%d marketing=%d sales=%d | "
-        "flagged long=%d no_comm=%d many_links=%d prob_comment=%d | cutoff_stripped=%d",
+        "flagged long=%d no_comm=%d many_links=%d | cutoff_stripped=%d",
         stats.rejected_too_short,
         stats.rejected_no_question,
         stats.rejected_job_ad,
@@ -1021,7 +931,6 @@ def run(
         stats.flagged_too_long,
         stats.flagged_no_comments,
         stats.flagged_many_links,
-        stats.flagged_probably_comment,
         stats.cutoff_stripped,
     )
     LOGGER.info("Final corpus: %d posts", len(final_records))
@@ -1044,9 +953,10 @@ def run(
             "bez tokenów UI."
         ),
         (
-            "v1.5b: flaga `probably_comment` nie usuwa postów, tylko oznacza prawdopodobne "
-            "wklejki komentarzy. Klasteryzacja w Zadaniu 2 może ich używać z niższą wagą, "
-            "albo zrobić osobny klaster \"opinie/komentarze\"."
+            "v1.5d: wycofaliśmy heurystyczną flagę `probably_comment` (v1.5b/v1.5c miały "
+            "za wysoki FP rate). Komentarze-jako-posty to bug scrapera — odfiltrujemy je "
+            "na poziomie klastrów w Zadaniu 2 (posty i komentarze mają różny profil "
+            "semantyczny: opis+pytanie vs instrukcja/opinia)."
         ),
     ]
 
