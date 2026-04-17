@@ -17,3 +17,7 @@ fb_pipeline/posts_output.json
 fb_pipeline/posts_output_backup.json
 data/corpus/
 
+# Clustering iteration logs (kept locally for debugging, not tracked).
+analysis/fb_corpus_clustering_dryrun*.log
+analysis/fb_corpus_clustering_fullrun.log
+
