@@ -124,6 +124,11 @@ class LawChunk:
     article_number: str
     category: str
     verified_date: str
+    effective_from: str = ""
+    effective_to: str = ""
+    source_url: str = ""
+    source_hash: str = ""
+    last_verified_at: str = ""
     question_intent: str = ""
     score: float = 0.0
     source_type: str = "legal_kb"
@@ -486,6 +491,11 @@ def load_chunks(knowledge_path: str | Path) -> list[LawChunk]:
             article_number=str(record.get("article_number", "")).strip(),
             category=str(record.get("category", "")).strip(),
             verified_date=str(record.get("verified_date", "")).strip(),
+            effective_from=str(record.get("effective_from", "")).strip(),
+            effective_to=str(record.get("effective_to", "")).strip(),
+            source_url=str(record.get("source_url", "")).strip(),
+            source_hash=str(record.get("source_hash", "")).strip(),
+            last_verified_at=str(record.get("last_verified_at", "")).strip(),
             question_intent=str(record.get("question_intent", "")).strip(),
         )
         for record in records
@@ -592,8 +602,21 @@ def _copy_chunk_with_score(chunk: LawChunk, score: float) -> LawChunk:
         article_number=chunk.article_number,
         category=chunk.category,
         verified_date=chunk.verified_date,
+        effective_from=chunk.effective_from,
+        effective_to=chunk.effective_to,
+        source_url=chunk.source_url,
+        source_hash=chunk.source_hash,
+        last_verified_at=chunk.last_verified_at,
         question_intent=chunk.question_intent,
         score=score,
+        source_type=chunk.source_type,
+        workflow_area=chunk.workflow_area,
+        title=chunk.title,
+        workflow_steps=chunk.workflow_steps,
+        workflow_required_inputs=chunk.workflow_required_inputs,
+        workflow_common_pitfalls=chunk.workflow_common_pitfalls,
+        workflow_related_forms=chunk.workflow_related_forms,
+        workflow_related_systems=chunk.workflow_related_systems,
     )
 
 
