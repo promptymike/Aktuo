@@ -122,62 +122,144 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Artykuł 'art. 106gb ust. 4 pkt 1 i ust. 5' ustawy o VAT nie istnieje w polskim kodeksie VAT (art. 106 to maksimum). Numery artykułów wyglądają na wymyślone lub błędnie cytowane, co podważa wiarygodność całej podstawy prawnej."
+        "description": "Artykuł 'art. 106gb ust. 4 pkt 1 i ust. 5' ustawy o VAT nie istnieje w polskim kodeksie VAT (art. 106 to maksimum). Numery artykułów wyglądają na wymyślone lub błędnie cytowane, co podważa wiarygodność całej podstawy prawnej.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB potwierdzają istnienie art. 106ga i 106gb w ustawie o VAT (rec 2 wprost wymienia oba artykuły), co obala tezę flagi że 'art. 106 to maksimum'. Jednak KB nie zawiera pełnej treści art. 106gb z jego ustępami, więc nie można zweryfikować czy ust. 4 pkt 1 i ust. 5 faktycznie istnieją w tym artykule i czy dotyczą opisanej materii (faktur poza KSeF i kontrahentów zagranicznych). Flaga jest częściowo błędna co do samego istnienia art. 106gb, ale wątpliwość co do konkretnych ustępów pozostaje nierozstrzygnięta.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy zweryfikować pełną treść art. 106gb ustawy o VAT (w wersji obowiązującej od 2026 r. po nowelizacji KSeF) pod kątem istnienia ust. 4 pkt 1 i ust. 5. Jeśli ustępy nie istnieją lub dotyczą innej materii, należy wskazać właściwy artykuł regulujący wystawianie faktur poza KSeF i wyjątki dla kontrahentów zagranicznych.",
+        "verified_at": "2026-04-17T23:35:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Rozporządzenie w sprawie JPK_V7 § 10 nie jest precyzyjnie zidentyfikowane - brakuje pełnej nazwy rozporządzenia, numeru i daty wydania. Nie wiadomo, czy odnosi się do rozporządzenia MF czy innego aktu."
+        "description": "Rozporządzenie w sprawie JPK_V7 § 10 nie jest precyzyjnie zidentyfikowane - brakuje pełnej nazwy rozporządzenia, numeru i daty wydania. Nie wiadomo, czy odnosi się do rozporządzenia MF czy innego aktu.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord KB [rec 2] potwierdza istnienie 'Rozporządzenie JPK_V7 § 10' jako odrębnego bytu w bazie wiedzy i opisuje jego treść zgodnie z tym, co draft cytuje (oznaczenia procedur i typów dokumentów w ewidencji sprzedaży). KB samo posługuje się skróconą nazwą 'Rozporządzenie JPK_V7 § 10' bez pełnej nazwy, numeru i daty, co sugeruje że taka forma identyfikacji jest akceptowalna w tym kontekście. Flaga wskazuje na brak pełnej nazwy aktu, ale KB nie dostarcza tej pełnej nazwy, więc nie można potwierdzić że draft jest nieprecyzyjny względem dostępnych danych.",
+        "verifier_confidence": 0.72,
+        "verified_at": "2026-04-17T23:36:01Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera datę 'od lutego 2026' jako przyszłą, ale metadata wskazuje 'last_verified_at': '2026-04-17', co sugeruje, że dokument jest pisany z perspektywy kwietnia 2026. Dla użytkownika w 2026 ta informacja może być już nieaktualna lub mylna."
+        "description": "Draft zawiera datę 'od lutego 2026' jako przyszłą, ale metadata wskazuje 'last_verified_at': '2026-04-17', co sugeruje, że dokument jest pisany z perspektywy kwietnia 2026. Dla użytkownika w 2026 ta informacja może być już nieaktualna lub mylna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzenia JPK_V7, kodów BFK/DI ani dat ich wejścia w życie, więc nie można potwierdzić ani obalić twierdzenia o 'lutym 2026' jako dacie przyszłej lub przeszłej. Flaga wskazuje na potencjalną niespójność czasową (metadata last_verified_at: 2026-04-17 vs. sformułowanie 'od lutego 2026' jako przyszłe), co jest logicznie uzasadnioną obserwacją, ale weryfikacja wymaga źródeł spoza dostępnego KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli dokument jest pisany z perspektywy kwietnia 2026, należy zmienić sformułowania z trybu przyszłego ('od lutego 2026 będą obowiązywać') na przeszły lub teraźniejszy ('od lutego 2026 obowiązują'), aby uniknąć dezorientacji czytelnika co do aktualności informacji.",
+        "verified_at": "2026-04-17T23:36:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "high",
-        "description": "Stanowisko MF z '18.03' (bez roku) dotyczące BFK dla WNT jest cytowane bez pełnej referencji. Brak możliwości weryfikacji, czy taki dokument rzeczywiście istnieje i jaka jest jego pełna treść."
+        "description": "Stanowisko MF z '18.03' (bez roku) dotyczące BFK dla WNT jest cytowane bez pełnej referencji. Brak możliwości weryfikacji, czy taki dokument rzeczywiście istnieje i jaka jest jego pełna treść.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Flaga jest uzasadniona. W drafcie cytowane jest 'stanowisko MF z 18.03' bez podania roku, numeru dokumentu ani pełnej nazwy, co uniemożliwia weryfikację jego istnienia i treści. KB nie zawiera żadnych informacji potwierdzających istnienie takiego dokumentu MF dotyczącego BFK/DI dla WNT. Brak pełnej referencji do dokumentu urzędowego w kontekście doradztwa podatkowego stanowi realne ryzyko wprowadzenia użytkownika w błąd.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Usunąć lub doprecyzować odniesienie do 'MF z 18.03' - podać pełną datę z rokiem, numer dokumentu (np. numer pisma, interpretacji ogólnej lub komunikatu), albo zastąpić sformułowaniem 'według niepotwierdzonych informacji ze szkoleń' lub całkowicie usunąć i pozostawić jedynie rekomendację złożenia zapytania do KIS.",
+        "verified_at": "2026-04-17T23:36:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 2 mówi, że BFK stosuje się dla faktur 'wystawionych poza KSeF mimo obowiązku', ale step 6 sugeruje, że faktury z grudnia 2025/stycznia 2026 'nie wymagają nowych oznaczeń BFK/DI' - sprzeczność w stosowaniu BFK dla dokumentów sprzed lutego 2026."
+        "description": "Step 2 mówi, że BFK stosuje się dla faktur 'wystawionych poza KSeF mimo obowiązku', ale step 6 sugeruje, że faktury z grudnia 2025/stycznia 2026 'nie wymagają nowych oznaczeń BFK/DI' - sprzeczność w stosowaniu BFK dla dokumentów sprzed lutego 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących oznaczeń BFK/DI w JPK_V7 ani rozporządzenia w sprawie JPK_V7 z 2026 roku. Nie można zweryfikować na podstawie dostępnych rekordów, czy step 6 jest sprzeczny ze step 2. Sama flaga wskazuje na potencjalną niespójność logiczną: step 6 stwierdza, że faktury sprzed lutego 2026 'nie wymagają nowych oznaczeń BFK/DI', ale jednocześnie sugeruje 'wybierz opcję odpowiadającą charakterowi dokumentu (BFK dla krajowych poza KSeF...)' - co może być faktyczną sprzecznością wewnętrzną draftu, jednak bez dostępu do właściwych przepisów rozporządzenia JPK_V7 nie można tego jednoznacznie potwierdzić.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy doprecyzować step 6: jeśli faktury sprzed lutego 2026 nie wymagają oznaczeń BFK/DI, to nie należy sugerować ich stosowania w nawiasie. Alternatywnie, jeśli program wymusza wybór kodu, należy wyraźnie zaznaczyć, że jest to wymóg techniczny systemu, a nie prawny obowiązek wynikający z przepisów.",
+        "verified_at": "2026-04-17T23:36:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje wyjaśnienia, jak oznaczać faktury korygujące (faktury VAT RR) w kontekście nowych kodów BFK/DI - czy dziedziczą oznaczenie faktury pierwotnej, czy otrzymują nowe?"
+        "description": "Brakuje wyjaśnienia, jak oznaczać faktury korygujące (faktury VAT RR) w kontekście nowych kodów BFK/DI - czy dziedziczą oznaczenie faktury pierwotnej, czy otrzymują nowe?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają przepisów dotyczących oznaczeń BFK/DI w JPK_V7 ani regulacji faktur korygujących VAT RR w tym kontekście. Flaga wskazuje na lukę informacyjną w drafcie (brak wyjaśnienia oznaczania faktur korygujących VAT RR), co jest potencjalnie zasadne, jednak KB nie dostarcza ani potwierdzenia ani zaprzeczenia tego braku - rozporządzenie w sprawie JPK_V7 nie jest reprezentowane w dostępnych rekordach.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, należy dodać do draftu krok wyjaśniający, że faktury korygujące VAT RR (korekty faktur zakupu od rolników ryczałtowych) powinny dziedziczyć oznaczenie faktury pierwotnej lub otrzymywać odrębne oznaczenie zgodnie z rozporządzeniem JPK_V7 - wymaga weryfikacji w treści rozporządzenia MF.",
+        "verified_at": "2026-04-17T23:36:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 5 mówi, że BFK/DI 'nie zastępują' dotychczasowych oznaczeń, ale nie wyjaśnia, w jakim polu JPK_V7 umieszcza się BFK/DI - czy to osobna kolumna, czy zastępuje istniejące pole?"
+        "description": "Step 5 mówi, że BFK/DI 'nie zastępują' dotychczasowych oznaczeń, ale nie wyjaśnia, w jakim polu JPK_V7 umieszcza się BFK/DI - czy to osobna kolumna, czy zastępuje istniejące pole?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących struktury technicznej JPK_V7 (rozporządzenia w sprawie JPK_V7 § 10) ani specyfikacji pól/kolumn dla kodów BFK i DI. Flaga podnosi zasadne pytanie techniczne - draft w step 5 mówi, że BFK/DI 'nie zastępują' dotychczasowych oznaczeń, ale nie precyzuje, czy są to osobne kolumny w strukturze XML JPK_V7, czy wartości w istniejącym polu. Bez dostępu do treści rozporządzenia i schematu XSD JPK_V7 nie można potwierdzić ani obalić tej luki.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W step 5 warto dodać wyjaśnienie techniczne: kody BFK/DI umieszczane są w dedykowanym polu struktury JPK_V7 (np. kolumna 'KodTransakcji' lub analogiczna), odrębnym od pól GTU i oznaczeń procedur - co oznacza, że dokument może mieć jednocześnie wypełnione pole BFK/DI oraz pole GTU i oznaczenie procedury (np. WEW, FP). Jeśli autor drafta nie ma pewności co do nazwy konkretnego pola XML, powinien to zaznaczyć lub odesłać do schematu XSD opublikowanego przez MF.",
+        "verified_at": "2026-04-17T23:36:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'Apteka wystawiająca paragon z NIP powyżej 450 zł' zawiera stwierdzenie 'fakturę do takiego paragonu z NIP nabywcy wysyłasz do KSeF' - ale nie jest jasne, czy to dotyczy wszystkich aptek czy tylko tych spełniających określone warunki (np. wielkość obrotu)."
+        "description": "Edge case 'Apteka wystawiająca paragon z NIP powyżej 450 zł' zawiera stwierdzenie 'fakturę do takiego paragonu z NIP nabywcy wysyłasz do KSeF' - ale nie jest jasne, czy to dotyczy wszystkich aptek czy tylko tych spełniających określone warunki (np. wielkość obrotu).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą ogólnych zasad wystawiania faktur do paragonów (art. 106b ust. 5, art. 111 ust. 1 i 3a), ale nie zawierają przepisów regulujących obowiązek wysyłania faktur do KSeF przez apteki ani ewentualnych wyłączeń dla aptek. KB nie pokrywa przepisów o KSeF (art. 106ga i nast.) ani specyficznych regulacji dla aptek w kontekście KSeF, więc nie można zweryfikować czy stwierdzenie 'fakturę do takiego paragonu z NIP nabywcy wysyłasz do KSeF' jest poprawne dla wszystkich aptek bez wyjątku.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Warto doprecyzować w edge case, że obowiązek wysyłania faktury do KSeF dotyczy podatników objętych obowiązkowym KSeF (od daty wejścia w życie obowiązku dla danej grupy podatników) i rozważyć dodanie zastrzeżenia o ewentualnych wyłączeniach branżowych lub podmiotowych, jeśli takie istnieją w przepisach o KSeF.",
+        "verified_at": "2026-04-17T23:36:48Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Tryb 'offline24' KSeF wspomniany w related_questions nie jest znany jako oficjalna nazwa trybu - może to być wymyślony termin lub błędna nomenklatura."
+        "description": "Tryb 'offline24' KSeF wspomniany w related_questions nie jest znany jako oficjalna nazwa trybu - może to być wymyślony termin lub błędna nomenklatura.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera informacji dotyczących nomenklatury trybów KSeF (w tym 'offline24'). Rekordy dotyczą innych zagadnień VAT. Flaga odnosi się do sekcji 'related_questions' draftu, która nie jest widoczna w przedstawionym fragmencie. Nie można potwierdzić ani obalić czy 'offline24' to oficjalna nazwa trybu KSeF na podstawie dostępnych danych.",
+        "verifier_confidence": 0.5,
+        "corrective_suggestion": "Jeśli termin 'offline24' pojawia się w drafcie, należy zweryfikować go z oficjalną dokumentacją MF/KSeF - oficjalne tryby to 'tryb offline' (awaryjny) i 'tryb online'. Jeśli 'offline24' nie jest oficjalną nazwą, należy zastąpić go poprawną nomenklaturą lub dodać wyjaśnienie skąd pochodzi ten termin.",
+        "verified_at": "2026-04-17T23:36:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Brakuje informacji, jak postępować z fakturami wystawionymi przez podatnika, który zmienia status (np. z małego podatnika na zwykłego) w trakcie okresu rozliczeniowego - czy oznaczenia się zmieniają retroaktywnie?"
+        "description": "Brakuje informacji, jak postępować z fakturami wystawionymi przez podatnika, który zmienia status (np. z małego podatnika na zwykłego) w trakcie okresu rozliczeniowego - czy oznaczenia się zmieniają retroaktywnie?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących oznaczeń JPK_V7 (BFK/DI) ani rozporządzenia w sprawie JPK_V7, które regulowałoby kwestię zmiany statusu podatnika (np. mały podatnik → zwykły) w trakcie okresu rozliczeniowego. Flaga dotyczy bardzo specyficznego edge case'u, którego draft faktycznie nie porusza, jednak KB nie dostarcza podstaw do oceny czy to pominięcie jest krytyczne z perspektywy prawa.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-17T23:36:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Limity i kwoty (np. 450 zł dla paragonów uproszczonych) mogą ulec zmianie do 2026 roku - draft nie zawiera zastrzeżenia o konieczności weryfikacji aktualnych limitów."
+        "description": "Limity i kwoty (np. 450 zł dla paragonów uproszczonych) mogą ulec zmianie do 2026 roku - draft nie zawiera zastrzeżenia o konieczności weryfikacji aktualnych limitów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących limit 450 zł dla paragonów uproszczonych (art. 106e ust. 5 pkt 3 ustawy o VAT lub rozporządzenia wykonawczego). Dostępne rekordy dotyczą innych zagadnień (faktury korygujące, TAX FREE, sankcje za faktury do paragonów bez NIP). Nie można ani potwierdzić, ani obalić ryzyka zmiany limitu 450 zł do 2026 roku na podstawie dostępnych danych KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga miałaby być potwierdzona, warto dodać w drafcie zastrzeżenie: 'Limit 450 zł dla paragonów uproszczonych obowiązuje na dzień opracowania materiału - przed wdrożeniem procedur należy zweryfikować aktualną wartość limitu w przepisach wykonawczych do ustawy o VAT.'",
+        "verified_at": "2026-04-17T23:37:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Step 7 rekomenduje 'zapytanie do KIS' w razie wątpliwości, ale wcześniejsze kroki (2-3) prezentują stanowisko jako pewne - sygnalizuje to, że draft sam nie jest pewny interpretacji BFK vs DI dla WNT."
+        "description": "Step 7 rekomenduje 'zapytanie do KIS' w razie wątpliwości, ale wcześniejsze kroki (2-3) prezentują stanowisko jako pewne - sygnalizuje to, że draft sam nie jest pewny interpretacji BFK vs DI dla WNT.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących kodów BFK i DI w JPK_V7 ani rozporządzenia w sprawie JPK_V7 z 2026 roku, więc nie można zweryfikować czy interpretacja BFK vs DI dla WNT jest jednoznaczna czy sporna. Flaga wskazuje na wewnętrzną sprzeczność drafta (kroki 2-3 prezentują pewne stanowisko, krok 7 przyznaje że są 'sprzeczne interpretacje') - jest to logicznie uzasadniona obserwacja, ale jej ocena wymaga znajomości aktualnych wytycznych MF/KIS spoza KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft ma być spójny, należy albo złagodzić pewność kroków 2-3 (dodając zastrzeżenie 'zgodnie z dominującą interpretacją'), albo usunąć z kroku 7 wzmiankę o 'sprzecznych interpretacjach' i zastąpić ją ogólnym zaleceniem ostrożności przy wysokich kwotach.",
+        "verified_at": "2026-04-17T23:37:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

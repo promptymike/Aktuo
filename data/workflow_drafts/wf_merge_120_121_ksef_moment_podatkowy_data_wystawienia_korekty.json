@@ -117,62 +117,143 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 106na ust. 1 i 3 ustawy o VAT – numery artykułów wyglądają na wymyślone; polska ustawa o VAT nie zawiera artykułów o numeracji 106na (struktura artykułów VAT to zwykle art. 1-141, bez prefiksów literowych). Należy zweryfikować prawidłowe numery artykułów definiujące datę wystawienia faktury w KSeF."
+        "description": "Art. 106na ust. 1 i 3 ustawy o VAT – numery artykułów wyglądają na wymyślone; polska ustawa o VAT nie zawiera artykułów o numeracji 106na (struktura artykułów VAT to zwykle art. 1-141, bez prefiksów literowych). Należy zweryfikować prawidłowe numery artykułów definiujące datę wystawienia faktury w KSeF.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord 1 z KB jednoznacznie potwierdza istnienie art. 106na ust. 1, 3-4 oraz art. 106gb ust. 3-6 w ustawie o VAT. Polska ustawa o VAT faktycznie zawiera artykuły z prefiksami literowymi (np. 106a, 106b, 106gb, 106na) w rozdziale dotyczącym fakturowania – jest to standardowa technika legislacyjna przy nowelizacjach. Cytowane numery artykułów są zatem prawidłowe.",
+        "verifier_confidence": 0.85,
+        "verified_at": "2026-04-17T23:49:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 106gb ust. 3 ustawy o VAT – artykuł o tej numeracji nie istnieje w polskiej ustawie o VAT. Prawidłowe przepisy dotyczące faktur korygujących w KSeF znajdują się w art. 106e-106g lub rozporządzeniach wykonawczych; należy zweryfikować dokładne źródło."
+        "description": "Art. 106gb ust. 3 ustawy o VAT – artykuł o tej numeracji nie istnieje w polskiej ustawie o VAT. Prawidłowe przepisy dotyczące faktur korygujących w KSeF znajdują się w art. 106e-106g lub rozporządzeniach wykonawczych; należy zweryfikować dokładne źródło.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord 1 z KB jednoznacznie potwierdza istnienie art. 106gb ust. 3 w ustawie o VAT, opisując jego treść dotyczącą dostępu do faktury po przesłaniu do KSeF bez uwierzytelnienia. Artykuł ten istnieje i dotyczy zasad dostępu do faktur w KSeF, co jest powiązane z fakturami korygującymi w tym systemie. Flaga błędnie sugeruje, że art. 106gb ust. 3 nie istnieje.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Opis powodu w LEGAL_ANCHORS dla art. 106gb ust. 3 powinien być doprecyzowany – artykuł reguluje dostęp do faktur w KSeF (w tym korygujących) bez uwierzytelnienia, a nie bezpośrednio 'zasady wystawiania faktur korygujących'. Warto zaktualizować opis: 'Reguluje zasady dostępu do faktur (w tym korygujących) przesłanych do KSeF bez uwierzytelnienia, co determinuje sposób ujęcia korekt w ewidencji JPK_VAT.'",
+        "verified_at": "2026-04-17T23:49:53Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "high",
-        "description": "Step 1 twierdzi, że 'datą wystawienia faktury ustrukturyzowanej jest dzień przesłania faktury do KSeF' – to może być uproszczeniem lub błędem. Ustawa o VAT rozróżnia datę wystawienia (wpisana w fakturze) od daty otrzymania (w KSeF); draft nie wyjaśnia, czy zmienia się faktycznie data wystawienia, czy tylko moment obowiązku podatkowego."
+        "description": "Step 1 twierdzi, że 'datą wystawienia faktury ustrukturyzowanej jest dzień przesłania faktury do KSeF' – to może być uproszczeniem lub błędem. Ustawa o VAT rozróżnia datę wystawienia (wpisana w fakturze) od daty otrzymania (w KSeF); draft nie wyjaśnia, czy zmienia się faktycznie data wystawienia, czy tylko moment obowiązku podatkowego.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 106na ust. 1 ustawy o VAT wprost stanowi: 'Fakturę ustrukturyzowaną uznaje się za wystawioną w dniu jej przesłania do Krajowego Systemu e-Faktur.' Draft poprawnie cytuje tę zasadę. Ustawa faktycznie zmienia definicję daty wystawienia – nie jest nią data wpisana w polu P_1, lecz dzień przesłania do KSeF. Draft w step 1 prawidłowo to opisuje i jednocześnie odróżnia datę wystawienia od daty otrzymania (dzień nadania numeru KSeF), co jest zgodne z art. 106na ust. 3.",
+        "verifier_confidence": 0.95,
+        "verified_at": "2026-04-17T23:49:57Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 2 mówi, że obowiązek VAT powstaje z chwilą dostawy (art. 19a ust. 1), ale step 3 mówi, że prawo do odliczenia powstaje 'w okresie, w którym powstał obowiązek podatkowy u sprzedawcy, ale nie wcześniej niż w okresie otrzymania faktury' – brakuje wyjaśnienia, czy dla nabywcy obowiązek powstaje w innym momencie niż dla sprzedawcy."
+        "description": "Step 2 mówi, że obowiązek VAT powstaje z chwilą dostawy (art. 19a ust. 1), ale step 3 mówi, że prawo do odliczenia powstaje 'w okresie, w którym powstał obowiązek podatkowy u sprzedawcy, ale nie wcześniej niż w okresie otrzymania faktury' – brakuje wyjaśnienia, czy dla nabywcy obowiązek powstaje w innym momencie niż dla sprzedawcy.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga sugeruje sprzeczność między step 2 a step 3, ale w rzeczywistości art. 86 ust. 10 i 10b pkt 1 ustawy o VAT celowo uzależnia prawo do odliczenia u nabywcy od dwóch warunków jednocześnie: (1) powstania obowiązku podatkowego u sprzedawcy ORAZ (2) otrzymania faktury – to nie jest sprzeczność, lecz mechanizm dwóch niezależnych przesłanek. Draft w step 3 poprawnie opisuje tę zasadę. KB potwierdza (rec 1), że dla mediów prawo do odliczenia powstaje w okresie otrzymania faktury, co jest spójne z treścią step 3. Brak wyjaśnienia 'czy dla nabywcy obowiązek powstaje w innym momencie' nie jest błędem merytorycznym – nabywca nie ma 'obowiązku podatkowego' z tytułu nabycia, lecz prawo do odliczenia, które jest odrębną instytucją.",
+        "verifier_confidence": 0.82,
+        "corrective_suggestion": "Opcjonalnie można dodać w step 3 zdanie wyjaśniające: 'Nabywca nie ma własnego obowiązku podatkowego z tytułu nabycia – warunek z art. 86 ust. 10 oznacza, że odliczenie nie może nastąpić wcześniej niż w okresie, gdy sprzedawca był już zobowiązany do rozliczenia VAT należnego.'",
+        "verified_at": "2026-04-17T23:50:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 3 nie wyjaśnia, co się dzieje, gdy faktura trafia do KSeF po upływie 3 miesięcy od dostawy – czy prawo do odliczenia wygasa, czy można je odliczyć w okresie otrzymania faktury? To kluczowe dla praktyki."
+        "description": "Step 3 nie wyjaśnia, co się dzieje, gdy faktura trafia do KSeF po upływie 3 miesięcy od dostawy – czy prawo do odliczenia wygasa, czy można je odliczyć w okresie otrzymania faktury? To kluczowe dla praktyki.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza ogólną zasadę z art. 86 ust. 10 i 10b pkt 1 (odliczenie w okresie otrzymania faktury), ale nie zawiera przepisów dotyczących art. 86 ust. 11 i 13 ustawy o VAT, które regulują właśnie kwestię odliczenia w kolejnych okresach rozliczeniowych oraz sytuację, gdy faktura wpływa z opóźnieniem (po upływie 3 miesięcy od powstania obowiązku podatkowego). Flaga wskazuje na realną lukę praktyczną w drafcie – brak wyjaśnienia konsekwencji opóźnionego trafienia faktury do KSeF – jednak KB nie dostarcza wystarczających danych, by jednoznacznie potwierdzić lub odrzucić ten zarzut.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 3 warto dodać wyjaśnienie: jeśli faktura trafi do KSeF z opóźnieniem (np. po 3 miesiącach od dostawy), prawo do odliczenia nie wygasa – można je zrealizować w rozliczeniu za okres otrzymania faktury (data nadania numeru KSeF) lub w jednym z trzech kolejnych okresów rozliczeniowych (art. 86 ust. 11 ustawy o VAT). Jeśli termin ten minął, możliwe jest odliczenie przez korektę deklaracji za okres, w którym powstało prawo do odliczenia (art. 86 ust. 13).",
+        "verified_at": "2026-04-17T23:50:15Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Step 4 wspomina 'JPK_CIT od 2025/2026' – dokument ma datę weryfikacji 2026-04-17, ale nie jest jasne, czy wymogi JPK_CIT już obowiązują w 2026 czy są planowane. Należy potwierdzić status tego obowiązku."
+        "description": "Step 4 wspomina 'JPK_CIT od 2025/2026' – dokument ma datę weryfikacji 2026-04-17, ale nie jest jasne, czy wymogi JPK_CIT już obowiązują w 2026 czy są planowane. Należy potwierdzić status tego obowiązku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących JPK_CIT ani przepisów o obowiązku jego składania od 2025/2026. Fragment drafta w step 4 wspomina JPK_CIT w kontekście dat, ale KB nie pozwala potwierdzić ani obalić aktualności tego obowiązku. Flaga jest merytorycznie zasadna jako ryzyko – status JPK_CIT (pilotaż dla dużych podatników od 2025, rozszerzenie od 2026) wymaga weryfikacji w aktualnych przepisach, których KB nie pokrywa.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W step 4 należy doprecyzować: 'JPK_CIT obowiązuje od 2025 r. dla podatników CIT z przychodami >50 mln EUR oraz podatkowych grup kapitałowych, od 2026 r. dla pozostałych podatników CIT, od 2027 r. dla podatników prowadzących KPiR – stan na dzień weryfikacji dokumentu, zalecana weryfikacja aktualnych rozporządzeń MF.'",
+        "verified_at": "2026-04-17T23:50:23Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 5 definiuje korekty z powodu 'błędu rachunkowego' vs 'przyczyn następczych', ale nie wyjaśnia, jak księgować korektę, gdy wystawca błędnie określił datę sprzedaży (np. wpisał luty zamiast stycznia) – czy to błąd rachunkowy czy następczy?"
+        "description": "Step 5 definiuje korekty z powodu 'błędu rachunkowego' vs 'przyczyn następczych', ale nie wyjaśnia, jak księgować korektę, gdy wystawca błędnie określił datę sprzedaży (np. wpisał luty zamiast stycznia) – czy to błąd rachunkowy czy następczy?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących klasyfikację błędnej daty sprzedaży jako 'błędu pierwotnego' vs 'przyczyny następczej' w kontekście faktur korygujących (brak art. 29a ust. 13-14 czy art. 106j ustawy o VAT w dostarczonych rekordach). Flaga wskazuje na realną lukę w drafcie – kwestia błędnej daty sprzedaży jest praktycznie istotna i niejednoznaczna, ale KB nie dostarcza twardego dowodu ani za potwierdzeniem, ani za odrzuceniem flagi.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 5 warto dodać wyjaśnienie: błędna data sprzedaży wpisana przez wystawcę (np. luty zamiast stycznia) traktowana jest jako błąd pierwotny (wada faktury istniejąca od początku), a nie przyczyna następcza – korektę ujmuje się zatem w okresie faktury pierwotnej (tj. w miesiącu, w którym faktycznie nastąpiła dostawa/usługa). Należy jednak zaznaczyć, że organy podatkowe mogą oceniać to indywidualnie, a podatnik powinien dysponować dokumentacją potwierdzającą rzeczywistą datę transakcji.",
+        "verified_at": "2026-04-17T23:50:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Step 6 wspomina konkretne programy (Comarch Optima, Symfonia, Enova, wFirma) i ich zachowanie przy imporcie z KSeF – bez źródła trudno zweryfikować, czy wszystkie te programy rzeczywiście zaciągają datę wystawienia zamiast daty sprzedaży z KSeF."
+        "description": "Step 6 wspomina konkretne programy (Comarch Optima, Symfonia, Enova, wFirma) i ich zachowanie przy imporcie z KSeF – bez źródła trudno zweryfikować, czy wszystkie te programy rzeczywiście zaciągają datę wystawienia zamiast daty sprzedaży z KSeF.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji o zachowaniu konkretnych programów księgowych (Comarch Optima, Symfonia, Enova, wFirma) przy imporcie danych z KSeF. Ustawa o VAT art. 106gb ust. 1 jedynie wskazuje, że faktury ustrukturyzowane są wystawiane przez oprogramowanie interfejsowe, ale nie reguluje zachowania zewnętrznych systemów księgowych. Flaga jest merytorycznie uzasadniona – twierdzenia o konkretnym zachowaniu tych programów są faktami technicznymi niemożliwymi do zweryfikowania na podstawie przepisów prawa.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Należy albo usunąć nazwy konkretnych programów i zastąpić je ogólnym sformułowaniem ('niektóre programy księgowe przy imporcie z KSeF mogą zaciągać datę wpływu zamiast daty sprzedaży'), albo dodać zastrzeżenie 'według dokumentacji producenta / stanu na [data]' oraz zalecenie weryfikacji w aktualnej dokumentacji danego oprogramowania.",
+        "verified_at": "2026-04-17T23:50:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 7 mówi 'Jeśli wystawca błędnie wystawił fakturę z datą marzec zamiast luty i skorygował ją do zera, do JPK trafia tylko prawidłowa faktura' – ale wcześniej (step 5) mówi się, że korekta z powodu błędu trafia do okresu faktury pierwotnej. Brakuje wyjaśnienia, czy błędna faktura w ogóle trafia do JPK czy jest całkowicie neutralizowana."
+        "description": "Step 7 mówi 'Jeśli wystawca błędnie wystawił fakturę z datą marzec zamiast luty i skorygował ją do zera, do JPK trafia tylko prawidłowa faktura' – ale wcześniej (step 5) mówi się, że korekta z powodu błędu trafia do okresu faktury pierwotnej. Brakuje wyjaśnienia, czy błędna faktura w ogóle trafia do JPK czy jest całkowicie neutralizowana.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących zasad ujmowania faktur i korekt w JPK_VAT ani regulacji KSeF odnoszących się do ewidencjonowania błędnych faktur. Flaga wskazuje na potencjalną niespójność logiczną między step 5 a step 7 – step 7 sugeruje, że błędna faktura jest 'neutralizowana do zera', ale nie wyjaśnia wprost czy trafia do JPK jako pozycja z korektą zerującą, czy w ogóle nie jest wykazywana. Nie można zweryfikować tej kwestii na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W step 7 warto doprecyzować: błędna faktura pierwotna (np. z datą marzec zamiast luty) TRAFIA do JPK_VAT w swoim okresie wystawienia, a korekta zerująca ją również trafia do JPK_VAT w tym samym okresie (zgodnie z zasadą z kroku 5 – błąd pierwotny = korekta do okresu faktury pierwotnej). Prawidłowa faktura wystawiana jest jako nowy dokument i trafia do właściwego okresu. Należy to wyraźnie opisać, aby uniknąć wrażenia, że błędna faktura jest 'niewidoczna' w JPK.",
+        "verified_at": "2026-04-17T23:50:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case 'Faktura VAT metoda kasowa' wspomina 'wyciągi bankowe' – ale dla metody kasowej VAT decyduje data zapłaty, a dla KPiR data dostawy; draft nie wyjaśnia, jak rozliczyć te dwie różne daty w praktyce."
+        "description": "Edge case 'Faktura VAT metoda kasowa' wspomina 'wyciągi bankowe' – ale dla metody kasowej VAT decyduje data zapłaty, a dla KPiR data dostawy; draft nie wyjaśnia, jak rozliczyć te dwie różne daty w praktyce.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga wskazuje, że draft nie wyjaśnia rozbieżności między datą zapłaty (VAT metoda kasowa, art. 21 ustawy o VAT) a datą dostawy (KPiR). Edge case w drafcie dotyczy jednak specyficznego kontekstu zmiany biura rachunkowego i weryfikacji niezapłaconych faktur – nie jest to pełny poradnik rozliczania metody kasowej, lecz praktyczna wskazówka operacyjna. KB potwierdza, że metoda kasowa VAT wiąże obowiązek z datą zapłaty (rec 2, art. 86 ust. 1), a KPiR rządzi się odrębnymi zasadami, jednak draft nie twierdzi, że te daty są tożsame – jedynie wskazuje na konieczność pobrania wyciągów bankowych. Brak szczegółowego wyjaśnienia rozbieżności dat to kwestia kompletności, nie błędu merytorycznego, a severity flagi jest 'low'.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Opcjonalnie można rozszerzyć edge case o zdanie: 'Dla KPiR koszt ujmujesz w dacie wystawienia faktury lub dostawy (niezależnie od zapłaty), natomiast VAT wykazujesz dopiero w dacie otrzymania zapłaty – prowadź równoległą ewidencję niezapłaconych faktur kasowych.'",
+        "verified_at": "2026-04-17T23:50:57Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case 'Import towarów spoza UE' wspomina 'dokument celny (SAD/PZC)' – PZC (Pismo Zatwierdzające Cło) nie jest standardowym dokumentem celnym; powinno być SAD (Pojedyncze Zgłoszenie Celne) lub inny dokument celny, ale PZC wymaga weryfikacji."
+        "description": "Edge case 'Import towarów spoza UE' wspomina 'dokument celny (SAD/PZC)' – PZC (Pismo Zatwierdzające Cło) nie jest standardowym dokumentem celnym; powinno być SAD (Pojedyncze Zgłoszenie Celne) lub inny dokument celny, ale PZC wymaga weryfikacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB wskazuje na 'dokument celny' jako podstawę odliczenia VAT z importu (art. 86 ust. 2 pkt 2), ale nie precyzuje konkretnych nazw formularzy ani skrótów (SAD, PZC, ZC299 itp.). Skrót 'PZC' nie pojawia się w KB – nie można potwierdzić ani obalić jego poprawności. SAD (Single Administrative Document) to historyczna nazwa zgłoszenia celnego, zastąpiona w Polsce przez elektroniczne zgłoszenia w systemie AES/CELINA, więc sam skrót 'SAD' też może być nieaktualny. KB nie dostarcza twardego dowodu ani za, ani przeciw fladze.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć zastąpienie 'SAD/PZC' bardziej neutralnym sformułowaniem 'dokument celny (zgłoszenie celne)' lub dodanie wyjaśnienia, że chodzi o dokument potwierdzający dopuszczenie towaru do obrotu, wystawiony przez urząd celno-skarbowy – zgodnie z brzmieniem art. 86 ust. 2 pkt 2 ustawy o VAT.",
+        "verified_at": "2026-04-17T23:51:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie wyjaśnia, jak postępować, gdy faktura w KSeF ma datę wystawienia przyszłą (np. wystawiona 01.03, ale data w polu P_1 to 05.03) – czy data wystawienia to data przesłania czy data wpisana w fakturze?"
+        "description": "Draft nie wyjaśnia, jak postępować, gdy faktura w KSeF ma datę wystawienia przyszłą (np. wystawiona 01.03, ale data w polu P_1 to 05.03) – czy data wystawienia to data przesłania czy data wpisana w fakturze?",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 106na ust. 1 ustawy o VAT jednoznacznie stanowi, że faktura ustrukturyzowana jest uznana za wystawioną w dniu jej przesłania do KSeF – nie w dniu wpisanym w polu P_1. Draft w kroku 1 wprost to wyjaśnia: 'datą wystawienia jest dzień przesłania faktury do KSeF (a nie data wpisana w polu P_1 przez wystawcę)'. Scenariusz z datą przyszłą w polu P_1 jest tym samym objęty tą regułą – data wystawienia to zawsze data przesłania, niezależnie od wartości P_1.",
+        "verifier_confidence": 0.85,
+        "verified_at": "2026-04-17T23:51:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

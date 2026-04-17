@@ -119,72 +119,168 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 23 ust. 5c PIT cytowany jako podstawa dla 'zasady ochrony praw nabytych' i przejścia limitu 150→100 tys. zł od 1.01.2026 – wymaga weryfikacji, czy ten konkretny ustęp rzeczywiście zawiera przepis przejściowy dla umów zawartych do 31.12.2025, czy jest to interpretacja wymagająca potwierdzenia w obwieszczeniu MF."
+        "description": "Art. 23 ust. 5c PIT cytowany jako podstawa dla 'zasady ochrony praw nabytych' i przejścia limitu 150→100 tys. zł od 1.01.2026 – wymaga weryfikacji, czy ten konkretny ustęp rzeczywiście zawiera przepis przejściowy dla umów zawartych do 31.12.2025, czy jest to interpretacja wymagająca potwierdzenia w obwieszczeniu MF.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera potwierdzenie dla art. 23 ust. 1 pkt 47a jako podstawy limitu leasingowego, jednak żaden z rekordów nie zawiera treści art. 23 ust. 5c ani przepisów przejściowych dotyczących zmiany limitu 150→100 tys. zł od 1.01.2026. Nie można zweryfikować, czy art. 23 ust. 5c rzeczywiście zawiera przepis przejściowy dla umów zawartych do 31.12.2025, czy jest to interpretacja oparta na innych źródłach (np. przepisach nowelizujących lub obwieszczeniu MF).",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Należy zweryfikować bezpośrednio treść art. 23 ust. 5c ustawy o PIT w aktualnym brzmieniu oraz przepisy przejściowe nowelizacji wprowadzającej limit 100 000 zł. Jeśli przepis przejściowy nie wynika wprost z art. 23 ust. 5c, lecz z ustawy nowelizującej, należy podać właściwy anchor (np. art. X ustawy z dnia ... o zmianie ustawy o PIT). Warto też wskazać konkretny akt prawny lub obwieszczenie MF jako źródło zmiany limitu od 2026 r.",
+        "verified_at": "2026-04-17T23:45:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera limit 100 tys. zł 'od 1.01.2026' dla samochodów spalinowych emitujących >50g CO2/km, ale nie wskazuje źródła tej zmiany (ustawa, rozporządzenie, data wejścia w życie) – w 2026 mogą obowiązywać inne limity lub warunki emisyjne."
+        "description": "Draft zawiera limit 100 tys. zł 'od 1.01.2026' dla samochodów spalinowych emitujących >50g CO2/km, ale nie wskazuje źródła tej zmiany (ustawa, rozporządzenie, data wejścia w życie) – w 2026 mogą obowiązywać inne limity lub warunki emisyjne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących art. 23 ust. 1 pkt 47a ustawy o PIT ani planowanych zmian limitów KUP dla samochodów osobowych od 2026 roku. Trzy dostarczone rekordy dotyczą zupełnie innych zagadnień VAT (zawiadomienia, stawki, import). Nie można ani potwierdzić, ani obalić informacji o limicie 100 000 zł od 1.01.2026 dla samochodów spalinowych emitujących >50g CO2/km na podstawie dostępnych danych KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy wskazać konkretną podstawę prawną planowanej zmiany limitu (np. numer ustawy nowelizującej, Dz.U., data wejścia w życie). Jeśli zmiana nie jest jeszcze uchwalona, draft powinien wyraźnie zaznaczyć, że jest to projekt/propozycja legislacyjna, a nie obowiązujące prawo, i usunąć lub opatrzyć zastrzeżeniem informację o limicie 100 000 zł od 1.01.2026.",
+        "verified_at": "2026-04-17T23:45:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Limit 225 tys. zł dla samochodów elektrycznych podany bez daty obowiązywania – czy dotyczy umów zawartych do 31.12.2025, czy obowiązuje również od 1.01.2026, czy ulega zmianie?"
+        "description": "Limit 225 tys. zł dla samochodów elektrycznych podany bez daty obowiązywania – czy dotyczy umów zawartych do 31.12.2025, czy obowiązuje również od 1.01.2026, czy ulega zmianie?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają informacji o art. 23 ust. 1 pkt 47a ustawy o PIT ani o limitach leasingowych dla samochodów elektrycznych (225 000 zł). Nie można na podstawie dostępnych danych potwierdzić ani obalić, czy limit 225 000 zł dla elektryków ulega zmianie od 1.01.2026. Fragment drafta w step 2 wspomina o zmianie limitu dla spalinowych od 1.01.2026, ale milczy o ewentualnej zmianie limitu dla elektryków – co może być luką lub celowym pominięciem.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy uzupełnić step 2 o jednoznaczne wskazanie, czy limit 225 000 zł dla samochodów elektrycznych obowiązuje również dla umów zawartych od 1.01.2026, czy też ulega zmianie. Jeśli limit pozostaje niezmieniony, warto to explicite zaznaczyć (np. 'limit 225 000 zł dla elektryków pozostaje bez zmian niezależnie od daty zawarcia umowy').",
+        "verified_at": "2026-04-17T23:45:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 1 mówi 'dla VAT-owca odliczającego 50% VAT – do limitu doliczasz 50% nieodliczonego VAT', ale krok 3 przykład pokazuje 'auto 200 000 zł netto, VAT 100% odliczalny' – brakuje jasnego przykładu dla VAT-owca z 50% odliczeniem, co może prowadzić do błędnego wyliczenia bazy proporcji."
+        "description": "Krok 1 mówi 'dla VAT-owca odliczającego 50% VAT – do limitu doliczasz 50% nieodliczonego VAT', ale krok 3 przykład pokazuje 'auto 200 000 zł netto, VAT 100% odliczalny' – brakuje jasnego przykładu dla VAT-owca z 50% odliczeniem, co może prowadzić do błędnego wyliczenia bazy proporcji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 86a ustawy o VAT ani art. 23 ust. 1 pkt 47a ustawy o PIT, które regulują zasady odliczenia VAT przy leasingu i limit KUP. Flaga wskazuje na brak przykładu dla VAT-owca z 50% odliczeniem w kroku 3, co jest kwestią kompletności i klarowności draftu, a nie błędu merytorycznego – nie można tego zweryfikować na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 3 drugiego przykładu: 'auto 200 000 zł netto + VAT 46 000 zł, VAT-owiec odlicza 50% → nieodliczony VAT = 23 000 zł → baza do proporcji = 200 000 + 23 000 = 223 000 zł → proporcja = 150 000 / 223 000 ≈ 67,3%', aby uniknąć nieporozumień przy wyliczaniu bazy proporcji.",
+        "verified_at": "2026-04-17T23:45:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brakuje wyjaśnienia, czy limit 150/100 tys. zł dotyczy wartości pojazdu (jak sugeruje krok 2) czy sumy rat leasingowych w części kapitałowej – to fundamentalna różnica dla wyliczenia proporcji, szczególnie w leasingu długoterminowym."
+        "description": "Brakuje wyjaśnienia, czy limit 150/100 tys. zł dotyczy wartości pojazdu (jak sugeruje krok 2) czy sumy rat leasingowych w części kapitałowej – to fundamentalna różnica dla wyliczenia proporcji, szczególnie w leasingu długoterminowym.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekordy KB (rec 1 i rec 3) potwierdzają, że art. 23 ust. 1 pkt 47a stosuje się proporcjonalnie do tej części opłaty leasingowej, która dotyczy spłaty wartości samochodu – a limit odnosi się do wartości samochodu, nie do sumy rat. Draft w kroku 1 i 3 konsekwentnie operuje pojęciem 'wartość samochodu z umowy leasingu' jako bazą do wyliczenia proporcji, co jest zgodne z brzmieniem ustawy. Krok 3 wprost wskazuje: 'Proporcja = limit KUP / wartość samochodu', a mnożnik stosuje się do 'części kapitałowej raty (spłata wartości)' – co jest prawidłowym mechanizmem. Flaga sugeruje niejednoznaczność, której w drafcie faktycznie nie ma.",
+        "verifier_confidence": 0.82,
+        "verified_at": "2026-04-17T23:45:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 4 wspomina 'współczynnik sprzedaży (art. 90 VAT)' dla podatników ze sprzedażą mieszaną, ale nie wyjaśnia, czy ten współczynnik zmniejsza również proporcję KUP czy tylko odliczenie VAT – brakuje konkretnego przykładu."
+        "description": "Krok 4 wspomina 'współczynnik sprzedaży (art. 90 VAT)' dla podatników ze sprzedażą mieszaną, ale nie wyjaśnia, czy ten współczynnik zmniejsza również proporcję KUP czy tylko odliczenie VAT – brakuje konkretnego przykładu.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga sugeruje brak wyjaśnienia, czy współczynnik z art. 90 VAT wpływa na KUP. Z KB wynika jednoznacznie, że art. 90 VAT dotyczy wyłącznie proporcji odliczenia VAT naliczonego przy sprzedaży mieszanej – nie ma żadnego związku z kosztami uzyskania przychodu (KUP). Proporcja KUP przy leasingu wynika z odrębnych przepisów PIT (art. 23 ust. 1 pkt 47a), a nie z art. 90 VAT. Draft w kroku 4 słusznie odnosi współczynnik sprzedaży wyłącznie do odliczenia VAT, co jest merytorycznie poprawne. Brak przykładu liczbowego to kwestia stylistyczna, nie błąd merytoryczny.",
+        "verifier_confidence": 0.82,
+        "verified_at": "2026-04-17T23:45:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 6 odnosi się do konkretnych modułów w programach 'Comarch Optima' (moduł Środki Trwałe → Pojazdy) i 'WFirma' (Pojazdy → Dodaj pojazd) – te ścieżki menu mogą być nieaktualne lub różnić się w zależności od wersji oprogramowania."
+        "description": "Krok 6 odnosi się do konkretnych modułów w programach 'Comarch Optima' (moduł Środki Trwałe → Pojazdy) i 'WFirma' (Pojazdy → Dodaj pojazd) – te ścieżki menu mogą być nieaktualne lub różnić się w zależności od wersji oprogramowania.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy poprawności ścieżek menu w oprogramowaniu komercyjnym (Comarch Optima, WFirma), co nie jest materią regulowaną przez przepisy prawa. KB zawiera wyłącznie akty prawne i nie zawiera żadnych informacji o interfejsach tych programów. Flaga jest merytorycznie zasadna jako ostrzeżenie o ryzyku dezaktualizacji, ale nie można jej ani potwierdzić, ani obalić na podstawie dostępnych źródeł.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Warto dodać zastrzeżenie w kroku 6, że ścieżki menu mogą różnić się w zależności od wersji oprogramowania i należy je traktować orientacyjnie, zalecając weryfikację w aktualnej dokumentacji producenta.",
+        "verified_at": "2026-04-17T23:45:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'Samochód z homologacją ciężarową' sugeruje, że pojazd może być traktowany jako osobowy dla PIT mimo VAT-26 – ale brakuje wskazania, jaki dokument/interpretacja stanowi podstawę tej klasyfikacji (czy to interpretacja indywidualna, czy utrwalona praktyka)."
+        "description": "Edge case 'Samochód z homologacją ciężarową' sugeruje, że pojazd może być traktowany jako osobowy dla PIT mimo VAT-26 – ale brakuje wskazania, jaki dokument/interpretacja stanowi podstawę tej klasyfikacji (czy to interpretacja indywidualna, czy utrwalona praktyka).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera wyłącznie przepisy dotyczące VAT (art. 86a ustawy o VAT) i nie obejmuje przepisów PIT definiujących pojęcie 'samochodu osobowego' (art. 5a pkt 19a ustawy o PIT ani przepisów odwołujących się do homologacji). Flaga dotyczy klasyfikacji pojazdu z homologacją ciężarową na gruncie PIT – KB nie pozwala ani potwierdzić, ani obalić twierdzenia drafta, że taki pojazd 'może być traktowany jako osobowy dla celów PIT'. Brak w KB interpretacji indywidualnych ani przepisów PIT definiujących samochód osobowy przez pryzmat homologacji.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy dodać do edge case'u podstawę prawną lub interpretacyjną – np. odwołanie do art. 5a pkt 19a ustawy o PIT (definicja samochodu osobowego przez odesłanie do prawa o ruchu drogowym) oraz wskazanie, że organy podatkowe w interpretacjach indywidualnych (np. 0113-KDIPT2-1.4011.xxx) uznają pojazdy z homologacją ciężarową za osobowe na gruncie PIT, jeśli nie spełniają warunków technicznych. Bez takiego zakotwiczenia edge case pozostaje niewystarczająco udokumentowany.",
+        "verified_at": "2026-04-17T23:45:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'Sprzedaż mieszana VAT' opisuje 'dwukrotne' liczenie proporcji (50% + wskaźnik sprzedaży), ale nie wyjaśnia, czy to mnożenie czy kolejne zastosowanie – przykład numeryczny byłby niezbędny."
+        "description": "Edge case 'Sprzedaż mieszana VAT' opisuje 'dwukrotne' liczenie proporcji (50% + wskaźnik sprzedaży), ale nie wyjaśnia, czy to mnożenie czy kolejne zastosowanie – przykład numeryczny byłby niezbędny.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie art. 90 ust. 5, 9a i 104 ustawy o VAT, które dotyczą ogólnych zasad obliczania proporcji sprzedaży mieszanej, ale nie rozstrzygają kwestii kolejności/sposobu łączenia art. 86a (50%) z proporcją z art. 90. Flaga wskazuje na brak przykładu numerycznego wyjaśniającego czy chodzi o mnożenie (50% × wskaźnik) czy sekwencyjne zastosowanie – jest to uzasadniona wątpliwość merytoryczna, ale KB nie dostarcza twardego dowodu potwierdzającego ani obalającego poprawność opisu w drafcie.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać przykład numeryczny: np. VAT z faktury 2300 zł → 50% z art. 86a = 1150 zł → następnie wskaźnik sprzedaży 79% × 1150 zł = 908,50 zł odliczalnego VAT. Nieodliczony VAT = 2300 - 908,50 = 1391,50 zł zwiększa wartość samochodu do proporcji KUP. Należy też wskazać podstawę prawną łączenia obu mechanizmów (art. 86a ust. 1 + art. 90 ust. 2 ustawy o VAT).",
+        "verified_at": "2026-04-17T23:46:07Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brakuje wyjaśnienia, czy 'wartość samochodu' w kroku 2 to wartość rynkowa, wartość z umowy leasingu, czy wartość przedmiotu leasingu (bez wyposażenia dodatkowego) – to wpływa na wyliczenie proporcji."
+        "description": "Brakuje wyjaśnienia, czy 'wartość samochodu' w kroku 2 to wartość rynkowa, wartość z umowy leasingu, czy wartość przedmiotu leasingu (bez wyposażenia dodatkowego) – to wpływa na wyliczenie proporcji.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Draft w kroku 1 explicite wskazuje, że wartość samochodu dla proporcji KUP pochodzi z 'wartości przedmiotu wraz z wyposażeniem dodatkowym' z umowy leasingu, a nie z wartości rynkowej. Krok 7 dla najmu wskazuje wartość z polisy AC lub od wynajmującego. Flaga sugeruje brak wyjaśnienia, ale draft faktycznie tę kwestię adresuje w kroku 1. KB (art. 23 ust. 1 pkt 47a) potwierdza, że ograniczenie dotyczy 'wartości samochodu' bez precyzowania jej definicji w ustawie, co oznacza, że draft przyjął interpretację praktyczną (wartość z umowy leasingu), która jest powszechnie stosowana.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Opcjonalnie można doprecyzować w kroku 1, że 'wartość przedmiotu wraz z wyposażeniem dodatkowym' z umowy leasingu jest tożsama z 'wartością samochodu' w rozumieniu art. 23 ust. 1 pkt 47a PIT, powołując się na interpretacje organów podatkowych potwierdzające tę metodologię.",
+        "verified_at": "2026-04-17T23:46:15Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 5 mówi 'AC/GAP – proporcja do limitu 150 000 zł liczona od wartości samochodu z polisy', ale wcześniej (krok 2) limit może być 100 tys. zł od 1.01.2026 – czy AC/GAP zawsze liczą się do 150 tys. zł czy do obowiązującego limitu?"
+        "description": "Krok 5 mówi 'AC/GAP – proporcja do limitu 150 000 zł liczona od wartości samochodu z polisy', ale wcześniej (krok 2) limit może być 100 tys. zł od 1.01.2026 – czy AC/GAP zawsze liczą się do 150 tys. zł czy do obowiązującego limitu?",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Flaga jest uzasadniona. Krok 5 drafta stosuje sztywno limit 150 000 zł dla AC/GAP, podczas gdy krok 2 słusznie wskazuje, że od 1.01.2026 limit dla samochodów spalinowych emitujących >50g CO2/km spada do 100 000 zł. Proporcja dla ubezpieczenia AC/GAP powinna być liczona od obowiązującego limitu (art. 23 ust. 1 pkt 47a ustawy o PIT), a nie zawsze od 150 000 zł. KB potwierdza, że ograniczenie z art. 23 ust. 1 pkt 47a obejmuje 'proporcję wynikającą z ustawowego limitu wartości samochodu' – co oznacza, że limit jest zmienny i zależy od daty zawarcia umowy oraz rodzaju pojazdu.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "W kroku 5 należy zastąpić 'proporcja do limitu 150 000 zł' sformułowaniem 'proporcja do obowiązującego limitu KUP (150 000 zł / 225 000 zł dla elektryków / 100 000 zł dla spalinowych >50g CO2/km od 1.01.2026) – analogicznie jak w kroku 2', aby zachować spójność z wcześniej opisanymi limitami.",
+        "verified_at": "2026-04-17T23:46:23Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 wspomina 'najem krótkoterminowy (≤6 mies.) – bez limitu wartości', ale nie wyjaśnia, czy to oznacza 100% KUP czy nadal 75% przy użytku mieszanym – brakuje jasności co do zakresu 'bez limitu'."
+        "description": "Krok 7 wspomina 'najem krótkoterminowy (≤6 mies.) – bez limitu wartości', ale nie wyjaśnia, czy to oznacza 100% KUP czy nadal 75% przy użytku mieszanym – brakuje jasności co do zakresu 'bez limitu'.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisu wprost regulującego najem krótkoterminowy (≤6 mies.) w kontekście limitów KUP. Rec 2 potwierdza, że rozróżnienie między najmem krótko- a długoterminowym wymaga analizy dodatkowych przepisów poza dostarczonymi fragmentami. Draft stwierdza 'bez limitu wartości' dla najmu ≤6 mies., co może wynikać z art. 23 ust. 1 pkt 46 (a nie 47a), ale KB nie dostarcza tego artykułu. Flaga wskazuje na brak wyjaśnienia czy nadal obowiązuje 75% KUP przy użytku mieszanym – to uzasadniona wątpliwość redakcyjna, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Doprecyzować krok 7: 'Najem krótkoterminowy (≤6 mies.) – brak limitu wartości pojazdu (art. 23 ust. 1 pkt 46), ale przy użytku mieszanym nadal obowiązuje ograniczenie 75% wydatków do KUP (art. 23 ust. 1 pkt 46a) oraz 50% odliczenia VAT.'",
+        "verified_at": "2026-04-17T23:46:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 86a ust. 1-3 VAT cytowany dla 'zasady 50% odliczenia VAT przy użytku mieszanym' – wymaga weryfikacji, czy te konkretne ustępy rzeczywiście zawierają regulację dla samochodów osobowych czy są to przepisy ogólne wymagające interpretacji."
+        "description": "Art. 86a ust. 1-3 VAT cytowany dla 'zasady 50% odliczenia VAT przy użytku mieszanym' – wymaga weryfikacji, czy te konkretne ustępy rzeczywiście zawierają regulację dla samochodów osobowych czy są to przepisy ogólne wymagające interpretacji.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord KB [rec 2] potwierdza, że art. 86a ust. 1-4 i 12-14 ustawy o VAT rzeczywiście reguluje zasadę 50% odliczenia VAT przy użytku mieszanym samochodów osobowych oraz 100% odliczenia przy spełnieniu warunków (VAT-26, ewidencja, regulamin). Draft cytuje art. 86a ust. 1-3, co jest nieco węższym zakresem niż ust. 1-4 i 12-14 wskazane w KB, ale rdzeń regulacji (50% przy mieszanym, 100% przy wyłącznie firmowym) faktycznie zawiera się w tych ustępach. Flaga sugeruje, że przepisy mogą być 'ogólne', jednak KB jednoznacznie potwierdza, że art. 86a dotyczy właśnie samochodów osobowych.",
+        "verifier_confidence": 0.82,
+        "corrective_suggestion": "Dla precyzji warto rozszerzyć cytację do 'art. 86a ust. 1-4 i 12-14' zamiast 'ust. 1-3', aby objąć również przepisy o terminie złożenia VAT-26 (ust. 12-14), które draft opisuje w kroku 4.",
+        "verified_at": "2026-04-17T23:46:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Draft zawiera 'last_verified_at': '2026-04-17' (przyszła data) – jeśli to data generacji, może wskazywać na błąd w metadanych; jeśli to rzeczywista data weryfikacji, wymaga potwierdzenia aktualności przepisów na kwiecień 2026."
+        "description": "Draft zawiera 'last_verified_at': '2026-04-17' (przyszła data) – jeśli to data generacji, może wskazywać na błąd w metadanych; jeśli to rzeczywista data weryfikacji, wymaga potwierdzenia aktualności przepisów na kwiecień 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy metadanych draftu (pole 'last_verified_at': '2026-04-17'), a nie treści merytorycznej przepisów. KB nie zawiera informacji pozwalających zweryfikować poprawność tej daty ani potwierdzić/zaprzeczyć zmianom przepisów od 2026 roku (np. obniżenia limitu do 100 000 zł dla samochodów spalinowych emitujących >50g CO2/km wspomnianego w kroku 2). Rekord KB nie pokrywa tematu metadanych ani zmian limitów KUP od 2026 roku.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy zweryfikować czy data '2026-04-17' jest datą faktycznej weryfikacji czy błędem systemowym. Jeśli draft zawiera informacje o zmianach limitów od 1.01.2026 (krok 2: limit 100 000 zł dla samochodów spalinowych), należy potwierdzić podstawę prawną tych zmian, gdyż KB nie zawiera potwierdzenia tych przepisów.",
+        "verified_at": "2026-04-17T23:46:48Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

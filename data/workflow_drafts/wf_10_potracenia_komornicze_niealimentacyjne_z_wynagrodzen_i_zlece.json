@@ -115,72 +115,169 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 87¹ KP nie istnieje w Kodeksie pracy - przepisy dotyczące potrąceń to art. 87-89 KP. Brak prawidłowego odniesienia do artykułu regulującego kwotę wolną przy zajęciach niealimentacyjnych (art. 87 § 1 KP)."
+        "description": "Art. 87¹ KP nie istnieje w Kodeksie pracy - przepisy dotyczące potrąceń to art. 87-89 KP. Brak prawidłowego odniesienia do artykułu regulującego kwotę wolną przy zajęciach niealimentacyjnych (art. 87 § 1 KP).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają treści art. 87¹ KP ani art. 87 KP w zakresie limitów potrąceń - dostępne rekordy dotyczą art. 87 § 1 KP jedynie w kontekście składek ZUS/PIT oraz art. 87 ustawy o VAT. Nie można ani potwierdzić, ani obalić istnienia art. 87¹ KP na podstawie dostępnych danych. Z wiedzy ogólnej art. 87¹ KP faktycznie istnieje w Kodeksie pracy i reguluje kwotę wolną od potrąceń, co sugerowałoby false positive, jednak KB tego nie potwierdza wprost.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-17T23:37:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Odwołanie do 'art. 833 § 2 i 2¹ KPC' wymaga weryfikacji - przepisy KPC dotyczące ochrony zasiłków i umów cywilnoprawnych mogą mieć inne numery paragrafów; brak pewności czy § 2¹ istnieje."
+        "description": "Odwołanie do 'art. 833 § 2 i 2¹ KPC' wymaga weryfikacji - przepisy KPC dotyczące ochrony zasiłków i umów cywilnoprawnych mogą mieć inne numery paragrafów; brak pewności czy § 2¹ istnieje.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera wyłącznie rekordy dotyczące art. 87 ustawy o VAT, które są całkowicie irrelewantne dla weryfikacji art. 833 § 2 i 2¹ KPC. Brak jakichkolwiek rekordów z Kodeksu postępowania cywilnego, które pozwoliłyby potwierdzić lub obalić istnienie § 2¹ w art. 833 KPC. Flaga dotyczy przepisu KPC, którego KB nie pokrywa.",
+        "verifier_confidence": 0.5,
+        "corrective_suggestion": "Należy zweryfikować treść art. 833 KPC bezpośrednio w aktualnym tekście jednolitym Kodeksu postępowania cywilnego - w szczególności czy § 2¹ został wprowadzony i kiedy wszedł w życie. Jeśli § 2¹ nie istnieje, należy skorygować odwołanie do właściwego paragrafu lub usunąć je z draftu.",
+        "verified_at": "2026-04-17T23:37:25Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Kwota wolna zasiłków określona na 825 zł (stan 2025) - dokument datowany 2026-04-17 powinien zawierać waloryzowaną kwotę na 2026 r., która mogła się zmienić w marcu 2026."
+        "description": "Kwota wolna zasiłków określona na 825 zł (stan 2025) - dokument datowany 2026-04-17 powinien zawierać waloryzowaną kwotę na 2026 r., która mogła się zmienić w marcu 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących kwoty wolnej od potrąceń zasiłków ZUS (825 zł) - te regulacje wynikają z ustawy o emeryturach i rentach z FUS lub ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego, a nie z Kodeksu pracy. Flaga wskazuje ryzyko nieaktualności kwoty 825 zł na rok 2026, co jest uzasadnionym ryzykiem (kwota jest waloryzowana), ale KB nie pozwala potwierdzić ani obalić aktualnej wartości na 2026 r.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zaktualizować kwotę wolną dla zasiłków do wartości obowiązującej w 2026 r. (po waloryzacji marcowej) lub dodać wyraźne zastrzeżenie że kwota 825 zł dotyczy 2025 r. i należy sprawdzić aktualną wartość w obwieszczeniu Ministra Rodziny na rok 2026.",
+        "verified_at": "2026-04-17T23:37:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Minimalne wynagrodzenie krajowe podane jako 'ok. 4666 zł brutto' w pytaniu przykładowym - ta kwota jest z 2025 r.; dla 2026 powinna być aktualna kwota obowiązująca od stycznia 2026."
+        "description": "Minimalne wynagrodzenie krajowe podane jako 'ok. 4666 zł brutto' w pytaniu przykładowym - ta kwota jest z 2025 r.; dla 2026 powinna być aktualna kwota obowiązująca od stycznia 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza, że kwota wolna od potrąceń jest powiązana z minimalnym wynagrodzeniem za pracę (art. 87¹ KP), ale nie zawiera konkretnych kwot minimalnego wynagrodzenia na 2025 ani 2026 rok. Flaga wskazuje ryzyko nieaktualności kwoty 'ok. 4666 zł brutto' - jest to uzasadnione ryzyko redakcyjne, jednak KB nie dostarcza twardego dowodu potwierdzającego ani obalającego tę konkretną kwotę lub jej aktualność na 2026 r.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft ma być aktualny na 2026 r., należy zaktualizować przykładową kwotę minimalnego wynagrodzenia do wartości obowiązującej od stycznia 2026 r. (ustalanej rozporządzeniem Rady Ministrów) lub zastąpić konkretną kwotę odwołaniem do 'aktualnego minimalnego wynagrodzenia za pracę ustalanego na podstawie odrębnych przepisów' bez podawania liczby.",
+        "verified_at": "2026-04-17T23:37:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Step 2 stwierdza że 'pracownik zazwyczaj nie ma potrącenia w ogóle' przy minimalnym wynagrodzeniu - brakuje precyzyjnego warunku/wariantu dla sytuacji gdy netto pracownika jest poniżej kwoty wolnej (czy potrącenie = 0 czy może być ujemne)."
+        "description": "Step 2 stwierdza że 'pracownik zazwyczaj nie ma potrącenia w ogóle' przy minimalnym wynagrodzeniu - brakuje precyzyjnego warunku/wariantu dla sytuacji gdy netto pracownika jest poniżej kwoty wolnej (czy potrącenie = 0 czy może być ujemne).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 87¹ KP (kwota wolna od potrąceń), który jest kluczowy dla weryfikacji flagi. Flaga wskazuje na brak precyzji w opisie sytuacji gdy wynagrodzenie netto pracownika jest niższe niż kwota wolna - w takim przypadku potrącenie wynosi 0 (nie może być ujemne), co jest logicznie oczywiste, ale draft rzeczywiście nie precyzuje tego warunku wprost. Bez dostępu do treści art. 87¹ KP nie mogę jednoznacznie potwierdzić ani odrzucić flagi na podstawie KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W step 2 dodać explicite: 'Jeśli wynagrodzenie netto pracownika jest równe lub niższe niż kwota wolna (100% minimalnego wynagrodzenia netto), potrącenie wynosi 0 zł - pracodawca nie dokonuje żadnego potrącenia i informuje o tym komornika.'",
+        "verified_at": "2026-04-17T23:37:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 3 mówi że 'Świadczenia z ZFŚS co do zasady NIE podlegają egzekucji' ale Step 5 opisuje limity dla zasiłków ZUS - brakuje jasnego rozróżnienia między świadczeniami ZFŚS (które nie podlegają) a zasiłkami ZUS (które podlegają)."
+        "description": "Step 3 mówi że 'Świadczenia z ZFŚS co do zasady NIE podlegają egzekucji' ale Step 5 opisuje limity dla zasiłków ZUS - brakuje jasnego rozróżnienia między świadczeniami ZFŚS (które nie podlegają) a zasiłkami ZUS (które podlegają).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy potencjalnej niespójności między Step 3 (świadczenia ZFŚS nie podlegają egzekucji) a Step 5 (limity dla zasiłków ZUS). Jednak po dokładnej analizie fragmentu drafta, Step 3 w rzeczywistości dotyczy sumowania składników wynagrodzenia, a wzmianka o ZFŚS pojawia się jedynie jako skrót ('Św…') - nie można ocenić pełnej treści. KB nie zawiera relevantnych przepisów o egzekucji ze świadczeń ZFŚS ani z zasiłków ZUS (ustawa o emeryturach i rentach), więc nie można potwierdzić ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli w Step 3 faktycznie pada stwierdzenie że świadczenia ZFŚS nie podlegają egzekucji, warto dodać wyraźne rozróżnienie: świadczenia z ZFŚS są wyłączone z egzekucji na podstawie art. 12 ust. 1 ustawy o ZFŚS, natomiast zasiłki ZUS podlegają egzekucji z limitami z ustawy o emeryturach i rentach (25% brutto, kwota wolna 825 zł). Rozróżnienie to powinno być explicite zaznaczone w drafcie.",
+        "verified_at": "2026-04-17T23:37:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 4 wymaga od zleceniobiorcę 'pisma komornika potwierdzającego że zlecenie jest jedynym źródłem utrzymania' - brakuje informacji czy to pismo musi być złożone PRZED potrąceniem czy czy pracodawca może potrącać 100% do czasu dostarczenia takiego pisma."
+        "description": "Step 4 wymaga od zleceniobiorcę 'pisma komornika potwierdzającego że zlecenie jest jedynym źródłem utrzymania' - brakuje informacji czy to pismo musi być złożone PRZED potrąceniem czy czy pracodawca może potrącać 100% do czasu dostarczenia takiego pisma.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych artykułów dotyczących egzekucji z umów cywilnoprawnych (brak art. 833 KPC ani przepisów o ochronie wynagrodzenia zleceniobiorcy). Flaga dotyczy procedury - czy pismo komornika musi być dostarczone PRZED potrąceniem - co jest kwestią praktyczną i proceduralną, której KB nie pokrywa. Nie można ani potwierdzić ani obalić tej luki na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie w step 4 wyjaśnienia, że ochrona przysługuje od momentu dostarczenia dokumentacji komornikowi/pracodawcy - do czasu jej dostarczenia pracodawca może potrącać 100%, a po dostarczeniu stosuje limity analogiczne do art. 87¹ KP. Warto też wskazać podstawę prawną (art. 833 § 2 KPC) i tryb uzyskania zaświadczenia od komornika.",
+        "verified_at": "2026-04-17T23:38:01Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 6 wspomina 'zgłoś zbieg do organu właściwego' ale nie precyzuje: do kogo dokładnie (sąd, komornik, ZUS), w jakim terminie i w jakiej formie."
+        "description": "Step 6 wspomina 'zgłoś zbieg do organu właściwego' ale nie precyzuje: do kogo dokładnie (sąd, komornik, ZUS), w jakim terminie i w jakiej formie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących procedurę zgłaszania zbiegu egzekucji (np. art. 773 KPC lub przepisów ustawy o postępowaniu egzekucyjnym w administracji), które określałyby do kogo, w jakim terminie i w jakiej formie należy zgłosić zbieg. Flaga wskazuje na realny brak informacji w drafcie, jednak bez odpowiednich przepisów w KB nie można jednoznacznie potwierdzić ani obalić jej zasadności.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł, należy uzupełnić step 6 o informację: przy zbiegu egzekucji sądowych pracodawca przekazuje środki komornikowi, który jako pierwszy dokonał zajęcia (art. 773 KPC), a przy zbiegu egzekucji sądowej i administracyjnej - do sądu rejonowego właściwego dla miejsca zamieszkania dłużnika, w formie pisemnej, niezwłocznie po stwierdzeniu zbiegu.",
+        "verified_at": "2026-04-17T23:38:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Odwołanie do 'art. 773 KPC' w kontekście pierwszeństwa komornika nad ZUS - wymaga weryfikacji czy ten artykuł rzeczywiście reguluje tę kwestię; może to być błędny numer artykułu."
+        "description": "Odwołanie do 'art. 773 KPC' w kontekście pierwszeństwa komornika nad ZUS - wymaga weryfikacji czy ten artykuł rzeczywiście reguluje tę kwestię; może to być błędny numer artykułu.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "KB potwierdza, że art. 77³ KP (Kodeks pracy) dotyczy warunków wynagradzania pracowników państwowych jednostek sfery budżetowej, a nie pierwszeństwa komornika nad ZUS ani zbiegów egzekucji. Kwestia pierwszeństwa komornika nad ZUS i zbiegów egzekucji jest regulowana przez Kodeks postępowania cywilnego (art. 773 KPC) oraz ustawę o postępowaniu egzekucyjnym w administracji - draft myli oznaczenie 'art. 773 KPC' z 'art. 77³ KP', co jest istotnym błędem numeracji/źródła.",
+        "verifier_confidence": 0.92,
+        "corrective_suggestion": "Należy zweryfikować i poprawić odwołanie do przepisu regulującego zbieg egzekucji komorniczej i administracyjnej (ZUS). Właściwym przepisem jest art. 773 KPC (Kodeks postępowania cywilnego) dotyczący zbiegu egzekucji sądowej i administracyjnej, a nie art. 77³ KP (Kodeks pracy). W drafcie należy jednoznacznie wskazać 'art. 773 KPC' (Kodeks postępowania cywilnego) jako podstawę prawną dla kwestii pierwszeństwa przy zbiegu egzekucji.",
+        "verified_at": "2026-04-17T23:38:17Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 7 mówi o 'formularzu z zajęcia' - brakuje nazwy konkretnego formularza (np. RPS-3, RPS-4) lub wskazania gdzie go znaleźć; 'formularz z zajęcia' jest zbyt ogólne."
+        "description": "Step 7 mówi o 'formularzu z zajęcia' - brakuje nazwy konkretnego formularza (np. RPS-3, RPS-4) lub wskazania gdzie go znaleźć; 'formularz z zajęcia' jest zbyt ogólne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących procedury odpowiedzi na zajęcie komornicze ani nazw konkretnych formularzy (RPS-3, RPS-4 itp.). Flaga dotyczy braku precyzji w opisie formularza komorniczego - jest to kwestia praktyczna/proceduralnej natury, której KB nie pokrywa. Nie można ani potwierdzić, ani obalić zasadności flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga jest zasadna, warto doprecyzować step 7 wskazując konkretny formularz lub odsyłając do strony Ministerstwa Sprawiedliwości / portalu komornika, gdzie pracodawca może pobrać właściwy druk odpowiedzi na zajęcie wynagrodzenia.",
+        "verified_at": "2026-04-17T23:38:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'Dwie wypłaty w jednym miesiącu' stwierdza że 'druga wypłata może w całości pójść do komornika' - to wymaga weryfikacji czy rzeczywiście można potrącić 100% z drugiej wypłaty w tym samym miesiącu, czy kwota wolna liczy się od całego miesiąca."
+        "description": "Edge case 'Dwie wypłaty w jednym miesiącu' stwierdza że 'druga wypłata może w całości pójść do komornika' - to wymaga weryfikacji czy rzeczywiście można potrącić 100% z drugiej wypłaty w tym samym miesiącu, czy kwota wolna liczy się od całego miesiąca.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera art. 87 ani art. 87¹ KP dotyczących limitów potrąceń i kwoty wolnej, więc nie można zweryfikować wprost czy kwota wolna liczy się od całego miesiąca czy od każdej wypłaty osobno. Dostępne rekordy (art. 85, 86, 221f KP) nie dotyczą mechanizmu potrąceń komorniczych. Flaga jest merytorycznie zasadna jako pytanie - praktyka i doktryna wskazują że kwota wolna jest miesięczna (nie per-wypłata), co oznacza że przy drugiej wypłacie w tym samym miesiącu kwota wolna może być już 'skonsumowana', jednak bez twardego dowodu z KB nie można potwierdzić ani obalić.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto doprecyzować edge case: 'Dwie wypłaty w jednym miesiącu - kwota wolna (minimalne wynagrodzenie netto) przysługuje raz na miesiąc kalendarzowy, nie per wypłata. Jeśli przy pierwszej wypłacie kwota wolna została w całości zastosowana, od drugiej wypłaty w tym samym miesiącu potrącenie może objąć całą kwotę (do limitu 50% netto). Zalecana weryfikacja z art. 87¹ KP i praktyką komorniczą.'",
+        "verified_at": "2026-04-17T23:38:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje wyjaśnienia jak traktować wynagrodzenie chorobowe (pierwsze 33 dni płacone przez pracodawcę) - czy to wynagrodzenie za pracę (limity KP) czy zasiłek (limity ustawy emerytalnej); related_questions to podnoszą ale nie ma odpowiedzi w answer_steps."
+        "description": "Brakuje wyjaśnienia jak traktować wynagrodzenie chorobowe (pierwsze 33 dni płacone przez pracodawcę) - czy to wynagrodzenie za pracę (limity KP) czy zasiłek (limity ustawy emerytalnej); related_questions to podnoszą ale nie ma odpowiedzi w answer_steps.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię wynagrodzenia chorobowego (art. 92 KP) ani ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa. Draft w step 5 omawia zasiłki ZUS, ale wynagrodzenie chorobowe (pierwsze 33/14 dni płacone przez pracodawcę na podstawie art. 92 KP) ma inny charakter prawny - jest wynagrodzeniem, nie zasiłkiem - co rzeczywiście może być istotną luką. Nie mogę jednak potwierdzić ani obalić flagi na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, należy dodać do step 3 lub jako osobny step wyjaśnienie: wynagrodzenie chorobowe z art. 92 KP (pierwsze 33 dni/14 dni dla 50+) traktuje się jak wynagrodzenie za pracę - podlega limitom z art. 87-87¹ KP (50% netto, kwota wolna = minimalne wynagrodzenie netto), a nie limitom ustawy zasiłkowej (25% brutto, kwota wolna 825 zł). Limity ustawy emerytalnej stosuje się dopiero do zasiłku chorobowego wypłacanego przez ZUS od 34. dnia choroby.",
+        "verified_at": "2026-04-17T23:38:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Brakuje informacji o proporcjonalnym wyliczeniu kwoty wolnej dla pracownika na część etatu - wspomina się to w related_questions ale nie ma procedury w answer_steps."
+        "description": "Brakuje informacji o proporcjonalnym wyliczeniu kwoty wolnej dla pracownika na część etatu - wspomina się to w related_questions ale nie ma procedury w answer_steps.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 87¹ KP ani przepisów o proporcjonalnym wyliczeniu kwoty wolnej dla pracownika zatrudnionego na część etatu. Flaga wskazuje na brak procedury proporcjonalnego wyliczenia kwoty wolnej przy niepełnym etacie - jest to faktycznie nieobecne w answer_steps (step 2 wspomina tylko pełny etat), jednak bez odpowiednich rekordów KB nie można potwierdzić ani obalić czy taki wymóg wynika z przepisów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli art. 87¹ KP faktycznie przewiduje proporcjonalne zmniejszenie kwoty wolnej przy niepełnym etacie, należy dodać do step 2 warunek: 'Przy niepełnym etacie kwota wolna jest proporcjonalna do wymiaru czasu pracy, np. 1/2 etatu = 50% kwoty wolnej' oraz ewentualnie dodać osobny krok dla pracowników niepełnoetatowych.",
+        "verified_at": "2026-04-17T23:38:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Odwołanie do 'Comarch Optima/Symfonia' z instrukcją 'wprowadź zajęcie jako Komornicze inne' - wymaga weryfikacji czy te systemy rzeczywiście mają taką opcję i czy nazwa jest dokładna."
+        "description": "Odwołanie do 'Comarch Optima/Symfonia' z instrukcją 'wprowadź zajęcie jako Komornicze inne' - wymaga weryfikacji czy te systemy rzeczywiście mają taką opcję i czy nazwa jest dokładna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy instrukcji obsługi systemów kadrowo-płacowych (Comarch Optima/Symfonia) i nazewnictwa opcji w tych systemach. KB zawiera wyłącznie przepisy prawne (Kodeks pracy i inne ustawy) i nie zawiera żadnych informacji o funkcjonalnościach oprogramowania kadrowego. Weryfikacja wymaga dokumentacji technicznej tych systemów, której KB nie pokrywa.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Jeśli fragment drafta zawiera konkretne instrukcje dotyczące nazw opcji w systemach kadrowych, warto dodać zastrzeżenie że nazewnictwo może się różnić w zależności od wersji oprogramowania i należy zweryfikować w dokumentacji producenta lub helpdesku.",
+        "verified_at": "2026-04-17T23:38:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

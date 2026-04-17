@@ -122,67 +122,155 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 22k ust. 14 PIT dotyczący jednorazowej amortyzacji fabrycznie nowych ŚT do 100 000 zł jest cytowany dla osób fizycznych, ale limit 100 000 zł i grupy KŚT 3–6 i 8 mogą być regulacją dedykowaną CIT (spółkom). Wymaga weryfikacji czy art. 22k ust. 14 rzeczywiście istnieje w ustawie o PIT czy jest to przepis z CIT."
+        "description": "Art. 22k ust. 14 PIT dotyczący jednorazowej amortyzacji fabrycznie nowych ŚT do 100 000 zł jest cytowany dla osób fizycznych, ale limit 100 000 zł i grupy KŚT 3–6 i 8 mogą być regulacją dedykowaną CIT (spółkom). Wymaga weryfikacji czy art. 22k ust. 14 rzeczywiście istnieje w ustawie o PIT czy jest to przepis z CIT.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord 1 z KB jednoznacznie potwierdza istnienie art. 22k ust. 14 w ustawie o podatku dochodowym od osób fizycznych (PIT), opisując dokładnie jednorazową amortyzację fabrycznie nowych ŚT z grup 3–6 i 8 do 100 000 zł. Rekord 3 (art. 22k ust. 20 PIT) dodatkowo potwierdza, że oba limity (ust. 7 i ust. 14) funkcjonują w tej samej ustawie o PIT i dotyczą podatników prowadzących działalność gospodarczą. Flaga sugerująca, że przepis może być wyłącznie z CIT, jest bezzasadna.",
+        "verifier_confidence": 0.97,
+        "verified_at": "2026-04-17T23:42:03Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 22d ust. 1 PIT jest cytowany jako podstawa do nieujmowania w ewidencji ŚT składników ≤ 10 000 zł, ale brakuje wyraźnego odniesienia do art. 22c (definicja środka trwałego) – niepewne czy art. 22d ust. 1 rzeczywiście zawiera tę regulację czy jest to uproszczenie."
+        "description": "Art. 22d ust. 1 PIT jest cytowany jako podstawa do nieujmowania w ewidencji ŚT składników ≤ 10 000 zł, ale brakuje wyraźnego odniesienia do art. 22c (definicja środka trwałego) – niepewne czy art. 22d ust. 1 rzeczywiście zawiera tę regulację czy jest to uproszczenie.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord KB [rec 2] zawiera pełną treść art. 22d ustawy o PIT. Ust. 1 tego artykułu wprost stanowi, że podatnicy mogą nie dokonywać odpisów amortyzacyjnych od składników majątku (art. 22a i 22b), których wartość początkowa nie przekracza 10 000 zł, a wydatki stanowią koszty w miesiącu oddania do używania. Draft poprawnie cytuje art. 22d ust. 1 jako podstawę do nieujmowania w ewidencji ŚT składników ≤ 10 000 zł. Brak odrębnego cytowania art. 22c nie jest błędem merytorycznym, gdyż art. 22d ust. 1 odsyła do art. 22a i 22b (definicje ŚT i WNiP), a art. 22c wymienia składniki wyłączone z amortyzacji – co jest kwestią poboczną dla opisywanego zagadnienia.",
+        "verifier_confidence": 0.95,
+        "verified_at": "2026-04-17T23:42:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Limit pomocy de minimis podany jako 300 tys. euro w 3 latach może być nieaktualny dla 2026 r. – przepisy mogły ulec zmianie, a dokument nie zawiera źródła ani daty ostatniej weryfikacji tego limitu."
+        "description": "Limit pomocy de minimis podany jako 300 tys. euro w 3 latach może być nieaktualny dla 2026 r. – przepisy mogły ulec zmianie, a dokument nie zawiera źródła ani daty ostatniej weryfikacji tego limitu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących przepisów o pomocy de minimis ani limitów z rozporządzenia UE nr 1407/2013 (lub jego następcy). Flaga dotyczy limitu 300 tys. euro w 3 latach – jest to limit ogólny pomocy de minimis z rozporządzenia UE, który faktycznie uległ zmianie: rozporządzenie 2023/2831 z grudnia 2023 r. podniosło limit do 300 tys. euro (z poprzednich 200 tys. euro), więc liczba 300 tys. euro może być aktualna dla okresu od 1 stycznia 2024 r. Jednak KB nie pokrywa tego tematu, więc nie można jednoznacznie potwierdzić ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać w drafcie przypis/źródło: rozporządzenie Komisji (UE) 2023/2831 z dnia 13 grudnia 2023 r. w sprawie stosowania art. 107 i 108 TFUE do pomocy de minimis (obowiązuje od 1.01.2024), które ustala limit 300 tys. euro w ciągu 3 lat podatkowych. Wskazać datę weryfikacji limitu i zaznaczyć, że limit de minimis z art. 22k ust. 7 PIT (50 000 euro rocznie) jest odrębny od ogólnego limitu de minimis i oba muszą być sprawdzone łącznie.",
+        "verified_at": "2026-04-17T23:42:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Próg dla małego podatnika podany jako 2 mln euro przychodu brutto może ulec zmianie w 2026 r.; dokument nie zawiera informacji o możliwych zmianach legislacyjnych ani warunkach przejściowych."
+        "description": "Próg dla małego podatnika podany jako 2 mln euro przychodu brutto może ulec zmianie w 2026 r.; dokument nie zawiera informacji o możliwych zmianach legislacyjnych ani warunkach przejściowych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają treści art. 5a pkt 20 ustawy o PIT (definicja małego podatnika) ani żadnych przepisów dotyczących progu 2 mln euro dla małego podatnika. Nie można ani potwierdzić, ani obalić flagi o ryzyku zmiany tego progu w 2026 r. na podstawie dostępnych materiałów. Flaga dotyczy ryzyka przyszłych zmian legislacyjnych, co z natury jest trudne do weryfikacji w oparciu o obecny stan KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga ma być potraktowana jako ostrzeżenie redakcyjne, warto dodać w kroku 4 adnotację: 'Próg 2 mln euro obowiązuje na rok podatkowy [rok]; przed zastosowaniem zweryfikuj aktualną wartość w obwieszczeniu MF, gdyż limit jest corocznie przeliczany według kursu NBP i może ulec zmianie.'",
+        "verified_at": "2026-04-17T23:42:27Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 2 (Opcja A) mówi o zaliczeniu bezpośrednio w koszty bez ewidencji dla ≤ 10 000 zł, ale Krok 6 wymaga zwiększenia wartości początkowej przy ulepszeniu > 10 000 zł – brakuje wyjaśnienia czy ulepszenie istniejącego ŚT poniżej 10 000 zł (które było w kosztach) zmienia jego status na ewidencjonowany."
+        "description": "Krok 2 (Opcja A) mówi o zaliczeniu bezpośrednio w koszty bez ewidencji dla ≤ 10 000 zł, ale Krok 6 wymaga zwiększenia wartości początkowej przy ulepszeniu > 10 000 zł – brakuje wyjaśnienia czy ulepszenie istniejącego ŚT poniżej 10 000 zł (które było w kosztach) zmienia jego status na ewidencjonowany.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga wskazuje na lukę w drafcie dotyczącą ulepszenia istniejącego ŚT o kwotę poniżej 10 000 zł – czy taki wydatek może być zaliczony bezpośrednio w koszty (analogicznie do Opcji A z kroku 2). KB zawiera art. 22e i 22f ustawy o PIT, ale nie zawiera art. 22g ust. 17 PIT (regulującego ulepszenia), który jest kluczowy dla weryfikacji tej kwestii. Bez treści art. 22g ust. 17 nie można jednoznacznie potwierdzić ani odrzucić, czy draft pomija istotną regułę dotyczącą ulepszeń poniżej progu 10 000 zł.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 6 (lub jako osobny podkrok) wyjaśnienia, że wydatki na ulepszenie istniejącego ŚT poniżej 10 000 zł w roku podatkowym mogą być zaliczone bezpośrednio w koszty (nie zwiększają wartości początkowej), natomiast przekroczenie progu 10 000 zł w skali roku obliguje do zwiększenia wartości początkowej zgodnie z art. 22g ust. 17 PIT – co eliminuje potencjalną sprzeczność między krokiem 2 a krokiem 6.",
+        "verified_at": "2026-04-17T23:42:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brakuje kroku dotyczącego VAT – czy wartość początkowa to cena netto czy brutto dla podatnika VAT; dokument wspomina 'netto dla czynnego podatnika VAT' w kroku 1, ale nie wyjaśnia jak to wpływa na wybór między opcjami A, B, C."
+        "description": "Brakuje kroku dotyczącego VAT – czy wartość początkowa to cena netto czy brutto dla podatnika VAT; dokument wspomina 'netto dla czynnego podatnika VAT' w kroku 1, ale nie wyjaśnia jak to wpływa na wybór między opcjami A, B, C.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie przepisy VAT dotyczące fakturowania (art. 106b, 106e ustawy o VAT), a nie przepisy regulujące ustalanie wartości początkowej środków trwałych dla podatników VAT (art. 22g ustawy o PIT). Draft w kroku 1 wspomina 'netto dla czynnego podatnika VAT', co jest standardową zasadą wynikającą z art. 22g ust. 3 ustawy o PIT, jednak KB nie zawiera tego artykułu, więc nie można zweryfikować czy brakujące wyjaśnienie wpływu statusu VAT na wybór opcji A/B/C jest rzeczywiście luką krytyczną. Flaga wskazuje na realny potencjalny problem (brak wyjaśnienia jak status VAT wpływa na progi 10 000 zł przy wyborze opcji), ale nie można go potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 2 wyjaśnienia, że próg 10 000 zł jest oceniany na podstawie wartości netto dla czynnego podatnika VAT (który odlicza VAT) lub brutto dla podatnika zwolnionego z VAT, co bezpośrednio wpływa na kwalifikację do opcji A/B/C.",
+        "verified_at": "2026-04-17T23:42:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje informacji o terminie wprowadzenia ŚT do ewidencji – czy musi to być miesiąc zakupu czy można opóźnić do następnego miesiąca; krok 5 wspomina 'miesiąc następny' ale nie jest jasne czy to obowiązek czy opcja."
+        "description": "Brakuje informacji o terminie wprowadzenia ŚT do ewidencji – czy musi to być miesiąc zakupu czy można opóźnić do następnego miesiąca; krok 5 wspomina 'miesiąc następny' ale nie jest jasne czy to obowiązek czy opcja.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera artykułów bezpośrednio regulujących termin wprowadzenia środka trwałego do ewidencji (art. 22d, 22h, 22n ustawy o PIT). Flaga wskazuje na brak wyjaśnienia czy wprowadzenie ŚT do ewidencji w miesiącu następnym po zakupie jest obowiązkiem czy opcją – jest to rzeczywiście niejasne w drafcie (krok 5 wspomina 'miesiąc następny' bez wyraźnego wskazania podstawy prawnej), jednak KB nie dostarcza materiału do potwierdzenia ani obalenia tej obserwacji.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 5 warto dodać wyjaśnienie oparte na art. 22h ust. 1 ustawy o PIT, który stanowi że odpisów amortyzacyjnych dokonuje się od miesiąca następującego po miesiącu, w którym środek trwały wprowadzono do ewidencji – co oznacza, że samo wprowadzenie do ewidencji powinno nastąpić nie później niż w miesiącu przyjęcia do używania, a amortyzacja startuje od miesiąca kolejnego.",
+        "verified_at": "2026-04-17T23:42:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 4 wspomina 'zaświadczenie z US o pomocy de minimis' ale nie wyjaśnia procedury uzyskania tego zaświadczenia ani czy jest ono wymagane przed zastosowaniem jednorazowej amortyzacji czy tylko do dokumentacji."
+        "description": "Krok 4 wspomina 'zaświadczenie z US o pomocy de minimis' ale nie wyjaśnia procedury uzyskania tego zaświadczenia ani czy jest ono wymagane przed zastosowaniem jednorazowej amortyzacji czy tylko do dokumentacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących procedurę uzyskania zaświadczenia o pomocy de minimis z US w kontekście art. 22k ust. 7 ustawy o PIT. Rekord z art. 306b Ordynacji podatkowej dotyczy ogólnych zasad wydawania zaświadczeń przez organy podatkowe, ale nie precyzuje czy zaświadczenie de minimis jest warunkiem wstępnym zastosowania jednorazowej amortyzacji czy tylko elementem dokumentacji. Flaga wskazuje na realną lukę informacyjną w drafcie, jednak bez odpowiednich przepisów w KB nie można jednoznacznie potwierdzić ani odrzucić jej zasadności.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami: w kroku 4 należy dodać informację, że zaświadczenie o pomocy de minimis (wydawane przez US na podstawie art. 306b Ordynacji podatkowej) jest wymagane do dokumentacji, a nie jako warunek wstępny zastosowania jednorazowej amortyzacji – podatnik może dokonać odpisu, a zaświadczenie uzyskać w rozsądnym terminie po jego zastosowaniu. Warto też wskazać, że wniosek składa się do właściwego US, a organ ma 7 dni na wydanie zaświadczenia (art. 306a § 5 Ordynacji podatkowej).",
+        "verified_at": "2026-04-17T23:43:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 5 wspomina konkretne programy (Comarch Optima, WFirma, Symfonia) i kody KŚT (669 dla testera diagnostycznego, 808 dla mebli) – te kody mogą być zmienione w 2026 r. lub mogą być nieprecyzyjne; wymaga weryfikacji aktualności Wykazu KŚT."
+        "description": "Krok 5 wspomina konkretne programy (Comarch Optima, WFirma, Symfonia) i kody KŚT (669 dla testera diagnostycznego, 808 dla mebli) – te kody mogą być zmienione w 2026 r. lub mogą być nieprecyzyjne; wymaga weryfikacji aktualności Wykazu KŚT.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących Klasyfikacji Środków Trwałych (KŚT) ani jej aktualności. Flaga dotyczy potencjalnej nieaktualności kodów KŚT (669, 808) – KŚT 2016 obowiązuje od 2018 r. i nie była zmieniana do 2025 r., jednak weryfikacja aktualności na 2026 r. wymaga sprawdzenia rozporządzenia Rady Ministrów w sprawie KŚT, którego KB nie pokrywa. Kody programów księgowych (Comarch Optima, WFirma, Symfonia) są przykładowe i nie wymagają podstawy prawnej.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać zastrzeżenie w kroku 5, że kody KŚT należy weryfikować według aktualnego Wykazu KŚT (Rozporządzenie Rady Ministrów w sprawie Klasyfikacji Środków Trwałych) obowiązującego w danym roku podatkowym, gdyż klasyfikacja może ulec zmianie.",
+        "verified_at": "2026-04-17T23:43:09Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Edge case o mieszkaniu jako lokalu firmy powołuje się na zmianę od 2023 r. (art. 22c pkt 2 PIT), ale dokument jest datowany na 2026 r. – brakuje informacji czy ta regulacja obowiązuje nadal czy została zmieniona."
+        "description": "Edge case o mieszkaniu jako lokalu firmy powołuje się na zmianę od 2023 r. (art. 22c pkt 2 PIT), ale dokument jest datowany na 2026 r. – brakuje informacji czy ta regulacja obowiązuje nadal czy została zmieniona.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Rekord KB (rec 1) zawiera aktualną treść art. 22c ustawy o PIT, który w pkt 2 wymienia budynki mieszkalne, lokale mieszkalne stanowiące odrębną nieruchomość oraz spółdzielcze prawa do lokalu mieszkalnego jako niepodlegające amortyzacji – bez żadnego wyjątku dla lokali używanych jako siedziba firmy. Oznacza to, że regulacja z 2023 r. (wyłączenie amortyzacji lokali mieszkalnych) nadal obowiązuje w tej formie, co potwierdza zasadność flagi: draft powołuje się na zmianę 'od 2023 r.' bez zaznaczenia, że jest to stan aktualny również w 2026 r., co może wprowadzać czytelnika w błąd co do trwałości tej regulacji.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "W drafcie należy zaktualizować sformułowanie dotyczące art. 22c pkt 2 PIT, wskazując że zakaz amortyzacji lokali mieszkalnych (wprowadzony od 2023 r.) obowiązuje nadal – zamiast opisywać go wyłącznie jako 'zmianę od 2023 r.', co sugeruje że może być to stan przejściowy lub nieaktualny.",
+        "verified_at": "2026-04-17T23:43:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o spółce z o.o. kupującej kocioł węglowy powołuje się na art. 16k ust. 14 CIT, ale dokument jest dedykowany KPiR (osobom fizycznym) – ta informacja może być myląca dla użytkownika; brakuje wyjaśnienia czy przepisy CIT mają analogię w PIT."
+        "description": "Edge case o spółce z o.o. kupującej kocioł węglowy powołuje się na art. 16k ust. 14 CIT, ale dokument jest dedykowany KPiR (osobom fizycznym) – ta informacja może być myląca dla użytkownika; brakuje wyjaśnienia czy przepisy CIT mają analogię w PIT.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Flaga jest uzasadniona. Fragment drafta jest dedykowany KPiR (osobom fizycznym prowadzącym działalność), a edge case powołuje się na art. 16k ust. 14 CIT dotyczący spółki z o.o. – to są dwa różne reżimy podatkowe. KB potwierdza istnienie art. 16k ustawy CIT. Analogiczny przepis dla PIT to art. 22k ust. 14, który jest już cytowany w LEGAL_ANCHORS drafta, ale edge case nie wyjaśnia tej analogii ani nie wskazuje, że dla osoby fizycznej właściwym przepisem byłby art. 22k ust. 14 PIT, a nie art. 16k CIT. Użytkownik prowadzący KPiR może być zdezorientowany, dlaczego w dokumencie PIT pojawia się przepis CIT dotyczący spółki z o.o.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Zastąpić lub uzupełnić edge case o spółce z o.o. i art. 16k ust. 14 CIT analogicznym przykładem dla osoby fizycznej z powołaniem na art. 22k ust. 14 PIT, albo dodać wyjaśnienie: 'Analogiczny przepis dla osób fizycznych prowadzących KPiR to art. 22k ust. 14 ustawy o PIT – limit 100 000 zł dla fabrycznie nowych ŚT z grup 3–6 i 8 KŚT.'",
+        "verified_at": "2026-04-17T23:43:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje wyjaśnienia jak traktować ŚT zakupione przed 2026 r. a amortyzowane w 2026 r. – czy obowiązują przepisy z roku zakupu czy z roku amortyzacji; istotne dla przejścia na nowe przepisy."
+        "description": "Brakuje wyjaśnienia jak traktować ŚT zakupione przed 2026 r. a amortyzowane w 2026 r. – czy obowiązują przepisy z roku zakupu czy z roku amortyzacji; istotne dla przejścia na nowe przepisy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów intertemporalnych dotyczących amortyzacji środków trwałych zakupionych przed 2026 r. Flaga dotyczy potencjalnie istotnej kwestii przejściowej, jednak draft nie wspomina o żadnych zmianach przepisów wchodzących w życie w 2026 r., więc nie jest jasne czy taka zmiana w ogóle istnieje i czy flaga jest zasadna. Brak możliwości weryfikacji na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-17T23:43:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 7 mówi o wykazaniu w PIT-36/36L zał. B, ale dla KPiR (podatnika ryczałtowego lub skali) formularz może być inny – brakuje uściślenia dla jakich podatników ten krok ma zastosowanie."
+        "description": "Krok 7 mówi o wykazaniu w PIT-36/36L zał. B, ale dla KPiR (podatnika ryczałtowego lub skali) formularz może być inny – brakuje uściślenia dla jakich podatników ten krok ma zastosowanie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących formularzy PIT-36/36L i ich załączników w kontekście sprzedaży środków trwałych. Flaga wskazuje na potencjalny problem – krok 7 zakłada KPiR i PIT-36/36L, ale nie precyzuje, że dotyczy wyłącznie podatników na skali podatkowej rozliczających się przez KPiR. Podatnicy ryczałtowi używają PIT-28, a liniowcy PIT-36L z załącznikiem B. Draft wspomina 'PIT-36/36L zał. B', co jest częściowo poprawne (obejmuje skalę i liniowy), ale brakuje wykluczenia ryczałtu i uściślenia kontekstu KPiR.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 7 dodać uściślenie: 'Krok dotyczy podatników prowadzących KPiR opodatkowanych na zasadach ogólnych (PIT-36, zał. B) lub podatkiem liniowym (PIT-36L, zał. B). Podatnicy ryczałtowi rozliczają sprzedaż ŚT odrębnie – w PIT-28 lub poza ryczałtem zgodnie z art. 12 ust. 10 ustawy o ryczałcie.'",
+        "verified_at": "2026-04-17T23:43:41Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

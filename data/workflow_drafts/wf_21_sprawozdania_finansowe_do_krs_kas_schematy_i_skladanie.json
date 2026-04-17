@@ -117,52 +117,121 @@
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne schematy XSD (załącznik nr 1 v 1.3, nr 4, nr 5) i odniesienia do wersji schematów obowiązujących za 2025 r., ale nie ma mechanizmu aktualizacji dla 2026 r. MF regularnie zmienia wersje schematów, a procedura powinna wskazywać gdzie sprawdzić aktualną wersję, nie konkretne numery."
+        "description": "Draft zawiera konkretne schematy XSD (załącznik nr 1 v 1.3, nr 4, nr 5) i odniesienia do wersji schematów obowiązujących za 2025 r., ale nie ma mechanizmu aktualizacji dla 2026 r. MF regularnie zmienia wersje schematów, a procedura powinna wskazywać gdzie sprawdzić aktualną wersję, nie konkretne numery.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza, że ustawa o rachunkowości (art. 45 ust. 1g, art. 46 ust. 5) nie wskazuje konkretnych wersji schematów XSD – wersje te są określane przez MF w rozporządzeniach/publikacjach na gov.pl. Flaga słusznie wskazuje ryzyko dezaktualizacji konkretnych numerów wersji (v1.3, nr 4, nr 5), jednak KB nie zawiera informacji o mechanizmach aktualizacji schematów MF ani o tym, czy draft faktycznie podaje błędne/nieaktualne numery wersji. Nie można jednoznacznie potwierdzić ani obalić flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 2 zamiast podawać konkretną wersję schematu (np. 'v 1.3'), draft powinien odsyłać do aktualnej listy schematów publikowanej przez MF pod adresem: https://www.gov.pl/web/kas/struktury-e-sprawozdan, z adnotacją że przed sporządzeniem SF należy pobrać aktualną wersję schematu obowiązującą dla danego roku obrotowego.",
+        "verified_at": "2026-04-17T23:40:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 45 ust. 1g UoR jest cytowany jako podstawa obowiązku elektronicznego, ale brakuje weryfikacji czy ten artykuł rzeczywiście istnieje w aktualnym brzmieniu ustawy o rachunkowości (mogły być zmiany legislacyjne do 2026 r.)."
+        "description": "Art. 45 ust. 1g UoR jest cytowany jako podstawa obowiązku elektronicznego, ale brakuje weryfikacji czy ten artykuł rzeczywiście istnieje w aktualnym brzmieniu ustawy o rachunkowości (mogły być zmiany legislacyjne do 2026 r.).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą wyłącznie art. 69 UoR i nie zawierają treści art. 45 ust. 1g UoR, który jest przedmiotem flagi. KB nie pokrywa tego artykułu, więc nie można ani potwierdzić jego istnienia w aktualnym brzmieniu, ani go obalić. Art. 45 ust. 1g faktycznie został dodany do UoR nowelizacją z 2018 r. (Dz.U. 2018 poz. 1629), jednak bez dostępu do aktualnego tekstu ustawy w KB nie można zweryfikować czy przepis nie uległ zmianie do 2026 r.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Należy zweryfikować aktualne brzmienie art. 45 ust. 1g UoR w tekście jednolitym ustawy (np. na ISAP lub LEX) i potwierdzić, że przepis nadal obowiązuje w cytowanym zakresie. Jeśli tak, flaga jest bezzasadna; jeśli przepis został przenumerowany lub zmieniony, należy zaktualizować anchor.",
+        "verified_at": "2026-04-17T23:40:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 3 wymienia możliwość złożenia 'oświadczenia jednego członka + odmowę pozostałych' zamiast podpisów wszystkich członków zarządu, ale nie precyzuje formularza, struktury tego oświadczenia ani czy wymaga ono podpisu elektronicznego - to może prowadzić do błędów proceduralnych."
+        "description": "Krok 3 wymienia możliwość złożenia 'oświadczenia jednego członka + odmowę pozostałych' zamiast podpisów wszystkich członków zarządu, ale nie precyzuje formularza, struktury tego oświadczenia ani czy wymaga ono podpisu elektronicznego - to może prowadzić do błędów proceduralnych.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 52 ust. 2 UoR (rec 1) potwierdza, że mechanizm 'oświadczenia jednego członka + odmowy pozostałych' jest uregulowany ustawowo. Przepis wprost wskazuje, że podpisy muszą być kwalifikowanymi podpisami elektronicznymi, podpisami zaufanymi lub podpisami osobistymi - draft w kroku 3 wymienia te same formy podpisu. Flaga zarzuca brak precyzji co do formularza/struktury oświadczenia, ale ustawa sama nie narzuca konkretnego formularza, więc draft nie może go wskazać - nie jest to błąd proceduralny drafta, lecz cecha samego przepisu. Wymóg podpisu elektronicznego jest zawarty w art. 52 ust. 2 i draft go uwzględnia.",
+        "verifier_confidence": 0.82,
+        "corrective_suggestion": "Opcjonalnie można doprecyzować w kroku 3, że oświadczenie/odmowa z art. 52 ust. 2 UoR musi być podpisana kwalifikowanym podpisem elektronicznym, podpisem zaufanym lub podpisem osobistym (tak samo jak SF), oraz że brak ustawowego wzoru formularza oznacza swobodę formy przy zachowaniu wymagań co do treści (potwierdzenie spełnienia wymagań ustawy).",
+        "verified_at": "2026-04-17T23:41:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 1 stwierdza że spółka cywilna prowadząca KH 'nie składa do żadnego rejestru', ale edge case mówi o 'przekroczeniu limitu obrotów' - brakuje jasnego wyjaśnienia czy limit obrotów zmienia status składania czy tylko obowiązek sporządzenia."
+        "description": "Krok 1 stwierdza że spółka cywilna prowadząca KH 'nie składa do żadnego rejestru', ale edge case mówi o 'przekroczeniu limitu obrotów' - brakuje jasnego wyjaśnienia czy limit obrotów zmienia status składania czy tylko obowiązek sporządzenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących obowiązki spółek cywilnych w kontekście składania SF do KAS vs KRS w zależności od limitu obrotów. Art. 70a UoR dotyczy spółek jawnych i partnerskich, nie spółek cywilnych. Flaga wskazuje na potencjalną niespójność w drafcie (krok 1 mówi że spółki cywilne 'nie składają do żadnego rejestru', ale edge case o limicie obrotów sugeruje zmianę statusu), jednak KB nie dostarcza wystarczających danych by jednoznacznie potwierdzić lub obalić tę niespójność.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto doprecyzować w kroku 1 lub w edge case: czy przekroczenie limitu obrotów przez spółkę cywilną powoduje obowiązek prowadzenia pełnej księgowości (art. 2 ust. 2 UoR) i w konsekwencji złożenia SF do KAS, czy też zmienia wyłącznie obowiązek sporządzenia SF bez zmiany miejsca złożenia. Należy wskazać konkretny próg (np. 2 mln euro przychodów) i skutek prawny jego przekroczenia.",
+        "verified_at": "2026-04-17T23:41:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft wspomina 'bezpłatny system RDF (Repozytorium Dokumentów Finansowych) w eKRS' - nazwa i akronim RDF powinny być zweryfikowane, gdyż mogą być zmienione lub nieaktualne w systemach KRS na 2026 r."
+        "description": "Draft wspomina 'bezpłatny system RDF (Repozytorium Dokumentów Finansowych) w eKRS' - nazwa i akronim RDF powinny być zweryfikowane, gdyż mogą być zmienione lub nieaktualne w systemach KRS na 2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają informacji o systemie RDF (Repozytorium Dokumentów Finansowych) ani eKRS - dotyczą innych artykułów UoR (art. 63b, 67, 72). Nie można ani potwierdzić, ani obalić poprawności nazwy 'RDF' i akronimu na podstawie dostępnych danych. Flaga jest potencjalnie zasadna, gdyż systemy informatyczne KRS mogą zmieniać nazewnictwo, jednak KB nie dostarcza twardego dowodu w żadną stronę.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Zaleca się weryfikację aktualnej nazwy systemu składania dokumentów finansowych w KRS na stronie ekrs.ms.gov.pl lub w przepisach wykonawczych do ustawy o KRS przed publikacją draftu.",
+        "verified_at": "2026-04-17T23:41:22Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 4 wymaga 'uchwały o stosowaniu uproszczeń (jeśli dotyczy - dołącza się do KRS wraz z SF, podpisana elektronicznie lub skan podpisanego dokumentu)' - brakuje wyjaśnienia czy skan papierowego dokumentu spełnia wymóg 'podpisanego elektronicznie' czy to dwa alternatywne warianty."
+        "description": "Krok 4 wymaga 'uchwały o stosowaniu uproszczeń (jeśli dotyczy - dołącza się do KRS wraz z SF, podpisana elektronicznie lub skan podpisanego dokumentu)' - brakuje wyjaśnienia czy skan papierowego dokumentu spełnia wymóg 'podpisanego elektronicznie' czy to dwa alternatywne warianty.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących formę dokumentów składanych do KRS wraz ze SF (np. art. 69 UoR w zakresie formy uchwał czy przepisów KPC/ustawy o KRS dotyczących skanów). Rekordy z KB dotyczą zasad istotności, dokumentacji rachunkowości i podpisów pod SF - żaden nie rozstrzyga kwestii czy skan papierowej uchwały spełnia wymogi formalne przy zgłoszeniu do RDF. Flaga wskazuje na realną niejednoznaczność w drafcie (dwa warianty: podpis elektroniczny LUB skan), ale weryfikacja wymaga przepisów o KRS/RDF których KB nie pokrywa.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 4 doprecyzować: 'uchwała o stosowaniu uproszczeń - dołączana do KRS wraz z SF; może być podpisana elektronicznie (kwalifikowany podpis, profil zaufany lub podpis osobisty) ALBO złożona jako skan papierowego dokumentu z odręcznymi podpisami - oba warianty są akceptowane przez system RDF' - o ile to faktycznie zgodne z praktyką RDF.",
+        "verified_at": "2026-04-17T23:41:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o 'spółce zawieszonej bez operacji' powołuje się na art. 3 ust. 6 UoR, ale nie wyjaśnia czy 'pojedyncza transakcja' oznacza każdą operację czy tylko operacje gospodarcze (np. czy opłacenie podatku VAT liczy się jako operacja)."
+        "description": "Edge case o 'spółce zawieszonej bez operacji' powołuje się na art. 3 ust. 6 UoR, ale nie wyjaśnia czy 'pojedyncza transakcja' oznacza każdą operację czy tylko operacje gospodarcze (np. czy opłacenie podatku VAT liczy się jako operacja).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 3 ust. 6 UoR, który jest kluczowy dla weryfikacji flagi. Dostępne rekordy dotyczą art. 20, 39 UoR oraz art. 96 ustawy o VAT - żaden nie definiuje pojęcia 'operacji gospodarczej' w kontekście zawieszenia działalności. Flaga podnosi zasadną wątpliwość interpretacyjną (czy opłacenie podatku VAT to 'operacja gospodarcza' przywracająca obowiązek SF), ale bez treści art. 3 ust. 6 UoR nie można jednoznacznie ocenić czy draft jest poprawny czy wymaga uzupełnienia.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft ma być precyzyjny, warto doprecyzować edge case: 'operacja gospodarcza' w rozumieniu art. 3 ust. 6 UoR oznacza zdarzenie powodujące zmianę stanu aktywów lub pasywów - opłacenie podatku VAT (zmiana stanu środków pieniężnych i zobowiązań podatkowych) co do zasady kwalifikuje się jako operacja gospodarcza i przywraca obowiązek sporządzenia SF.",
+        "verified_at": "2026-04-17T23:41:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Krok 5 wymaga 'PESEL osoby uprawnionej ujawnionej w KRS' do złożenia RDF, ale nie wyjaśnia co zrobić gdy osoba uprawniona nie ma PESEL (np. obcokrajowiec) - to jest powiązane z related_question ale nie rozwiązane w procedurze."
+        "description": "Krok 5 wymaga 'PESEL osoby uprawnionej ujawnionej w KRS' do złożenia RDF, ale nie wyjaśnia co zrobić gdy osoba uprawniona nie ma PESEL (np. obcokrajowiec) - to jest powiązane z related_question ale nie rozwiązane w procedurze.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących wymogi techniczne systemu RDF (Repozytorium Dokumentów Finansowych) dotyczących identyfikacji osób bez PESEL. Kwestia ta jest regulowana przepisami wykonawczymi do ustawy o KRS i regulaminem systemu eKRS, które nie są objęte dostępnymi rekordami KB. Flaga wskazuje na realną lukę praktyczną (obcokrajowcy w zarządzie), ale nie można jej potwierdzić ani obalić na podstawie dostępnych materiałów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać do kroku 5 notę: 'Jeśli osoba uprawniona nie posiada PESEL (np. obcokrajowiec), należy skontaktować się z sądem rejestrowym lub złożyć dokumenty w formie papierowej/alternatywnej zgodnie z instrukcją systemu eKRS.'",
+        "verified_at": "2026-04-17T23:41:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 6 wspomina 'art. 79 UoR - odpowiedzialność karna' za brak SF, ale nie ma weryfikacji czy ten artykuł rzeczywiście dotyczy odpowiedzialności karnej (może być to art. 77 lub inny - draft sam wspomina art. 77 w edge case)."
+        "description": "Krok 6 wspomina 'art. 79 UoR - odpowiedzialność karna' za brak SF, ale nie ma weryfikacji czy ten artykuł rzeczywiście dotyczy odpowiedzialności karnej (może być to art. 77 lub inny - draft sam wspomina art. 77 w edge case).",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 79 UoR (rec 1) rzeczywiście dotyczy odpowiedzialności karnej i wprost wymienia w pkt 3 'nie składa sprawozdania finansowego do ogłoszenia' jako czyn zagrożony sankcją karną. Draft poprawnie powołuje art. 79 UoR w kontekście braku złożenia SF. Art. 77 UoR (rec 2) dotyczy innego czynu - prowadzenia ksiąg wbrew przepisom lub podawania nierzetelnych danych, więc nie jest alternatywą dla art. 79 w tym kontekście.",
+        "verifier_confidence": 0.92,
+        "verified_at": "2026-04-17T23:41:51Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Draft zawiera termin '30 kwietnia roku następującego' dla KAS, ale nie uwzględnia potencjalnych zmian w terminie dla 2026 r. (mogą być zmiany w ustawie o podatku dochodowym lub regulacjach KAS)."
+        "description": "Draft zawiera termin '30 kwietnia roku następującego' dla KAS, ale nie uwzględnia potencjalnych zmian w terminie dla 2026 r. (mogą być zmiany w ustawie o podatku dochodowym lub regulacjach KAS).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących terminu składania SF do KAS przez osoby fizyczne prowadzące KH (art. 45 ust. 5 ustawy o PIT lub przepisów KAS). Termin '30 kwietnia roku następującego' jest powszechnie znany jako standardowy termin dla osób fizycznych, jednak KB nie dostarcza ani potwierdzenia aktualności tego terminu, ani dowodów na jego zmianę dla 2026 r. Flaga ma niską wagę i dotyczy hipotetycznej przyszłej zmiany, której nie można zweryfikować na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Opcjonalnie można dodać zastrzeżenie w drafcie: 'termin obowiązujący na dzień sporządzenia odpowiedzi - należy zweryfikować aktualność przed złożeniem SF za 2025 r.'",
+        "verified_at": "2026-04-17T23:41:58Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

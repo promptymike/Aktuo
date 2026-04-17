@@ -110,52 +110,122 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Draft powołuje się na 'znowelizowany art. 3021 Kodeksu pracy' w kroku 1, ale w legal_anchors podany jest tylko art. 22 KP. Brak potwierdzenia, czy art. 3021 rzeczywiście istnieje i czy nowelizacja weszła w życie 1 stycznia 2026 r. – wymaga weryfikacji aktualnego stanu prawnego."
+        "description": "Draft powołuje się na 'znowelizowany art. 3021 Kodeksu pracy' w kroku 1, ale w legal_anchors podany jest tylko art. 22 KP. Brak potwierdzenia, czy art. 3021 rzeczywiście istnieje i czy nowelizacja weszła w życie 1 stycznia 2026 r. – wymaga weryfikacji aktualnego stanu prawnego.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 3021 Kodeksu pracy istnieje i jest potwierdzony w KB (rec 3) – dotyczy wliczania do okresu zatrudnienia okresów prowadzenia pozarolniczej działalności gospodarczej oraz okresów pozostawania osobą współpracującą, za które opłacono składki. Flaga kwestionuje istnienie tego artykułu, ale KB jednoznacznie go potwierdza. Kwestia daty wejścia w życie (1 stycznia 2026 r.) nie jest wprost potwierdzona w KB, jednak sam artykuł istnieje, co eliminuje główny zarzut flagi dotyczący jego nieistnienia.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Warto uzupełnić legal_anchors o art. 3021 KP jako bezpośrednią podstawę prawną dla wliczania okresów DG i zlecenia do stażu pracy, zamiast opierać się wyłącznie na art. 22 KP. Datę wejścia w życie nowelizacji (1 stycznia 2026 r.) należy zweryfikować w odrębnym źródle (Dz.U.), gdyż KB nie potwierdza wprost tej daty.",
+        "verified_at": "2026-04-17T23:48:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Krok 2 odwołuje się do formularza 'US-7' jako dokumentu rozstrzygającego z ZUS, ale nie ma tego formularza w legal_anchors. Należy potwierdzić, czy US-7 to rzeczywisty, aktualny formularz ZUS czy może chodzi o inny dokument (np. zaświadczenie o okresach ubezpieczenia)."
+        "description": "Krok 2 odwołuje się do formularza 'US-7' jako dokumentu rozstrzygającego z ZUS, ale nie ma tego formularza w legal_anchors. Należy potwierdzić, czy US-7 to rzeczywisty, aktualny formularz ZUS czy może chodzi o inny dokument (np. zaświadczenie o okresach ubezpieczenia).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera informacji o formularzu ZUS US-7. Rekordy dotyczą wyłącznie art. 22 KP i ustawy o SUS, nie obejmują dokumentacji ZUS ani formularzy zaświadczeń. Nie można potwierdzić ani obalić istnienia formularza 'US-7' jako oficjalnego dokumentu ZUS na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zweryfikować bezpośrednio w dokumentacji ZUS (np. na stronie zus.pl) czy formularz US-7 istnieje i jest aktualny. Jeśli nie istnieje, należy zastąpić go właściwą nazwą dokumentu, np. 'zaświadczenie o przebiegu ubezpieczenia' lub wskazać właściwy formularz ZUS potwierdzający okresy podlegania ubezpieczeniom społecznym.",
+        "verified_at": "2026-04-17T23:48:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera konkretne nazwy systemów kadrowo-płacowych (Comarch Optima, Symfonia Kadry i Płace, Enova) w kroku 6, ale nie wiadomo, czy w 2026 r. będą to nadal dominujące rozwiązania lub czy ich interfejsy będą identyczne – może wymagać aktualizacji."
+        "description": "Draft zawiera konkretne nazwy systemów kadrowo-płacowych (Comarch Optima, Symfonia Kadry i Płace, Enova) w kroku 6, ale nie wiadomo, czy w 2026 r. będą to nadal dominujące rozwiązania lub czy ich interfejsy będą identyczne – może wymagać aktualizacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy ryzyka dezaktualizacji nazw komercyjnych systemów kadrowo-płacowych (Comarch Optima, Symfonia, Enova), co jest kwestią rynkową/techniczną, a nie prawną. Rekordy KB zawierają wyłącznie przepisy Kodeksu pracy (art. 91, 67²⁰, 150) i nie zawierają żadnych informacji o systemach IT ani ich aktualności. KB nie pozwala ani potwierdzić, ani obalić tej flagi.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Jeśli flaga ma być potraktowana jako confirmed na podstawie zdrowego rozsądku (nie KB), warto w kroku 6 zastąpić konkretne nazwy systemów ogólnym opisem: 'W używanym systemie kadrowo-płacowym (np. Comarch Optima, Symfonia, Enova lub innym)' albo dodać przypis: 'Nazwy zakładek mogą różnić się w zależności od wersji oprogramowania – zweryfikuj aktualną dokumentację producenta.'",
+        "verified_at": "2026-04-17T23:48:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brak wyjaśnienia, jak pracownik powinien złożyć wniosek o zaliczenie okresów do stażu pracy – czy to automatyczne przy zatrudnieniu, czy wymaga osobnego wniosku do pracodawcy/ZUS? Procedura inicjacji procesu nie jest jasna."
+        "description": "Brak wyjaśnienia, jak pracownik powinien złożyć wniosek o zaliczenie okresów do stażu pracy – czy to automatyczne przy zatrudnieniu, czy wymaga osobnego wniosku do pracodawcy/ZUS? Procedura inicjacji procesu nie jest jasna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących procedury zaliczania okresów pozapracowniczych (zlecenie, DG) do stażu pracy od 2026 r. – rekordy dotyczą elastycznej organizacji pracy i urlopu wychowawczego. Draft w step 2 wskazuje, że pracownik składa zaświadczenie ZUS US-7, co sugeruje inicjatywę po stronie pracownika, jednak procedura nie jest w pełni opisana (brak informacji czy jest to wniosek formalny, czy wystarczy dostarczenie dokumentu). Flaga może być częściowo zasadna, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto doprecyzować w drafcie, że pracownik składa pracodawcy pisemny wniosek o zaliczenie okresów pozapracowniczych do stażu pracy wraz z dokumentami (zaświadczenie US-7 lub zastępcze), a pracodawca dokonuje zaliczenia na tej podstawie – nie jest to proces automatyczny ani inicjowany przez ZUS.",
+        "verified_at": "2026-04-17T23:48:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 3 wspomina 'zaświadczenie/legitymację potwierdzającą status studenta', ale nie precyzuje, czy legitymacja studencka sprzed wielu lat będzie akceptowana, czy potrzebne jest zaświadczenie z uczelni – brak wytycznych czasowych."
+        "description": "Krok 3 wspomina 'zaświadczenie/legitymację potwierdzającą status studenta', ale nie precyzuje, czy legitymacja studencka sprzed wielu lat będzie akceptowana, czy potrzebne jest zaświadczenie z uczelni – brak wytycznych czasowych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących wymagań dokumentacyjnych dla zleceń studenckich w kontekście zaliczania do stażu pracy od 2026 r. Rekordy z KB dotyczą urlopów rodzicielskich i są irrelewantne dla flagi. Flaga dotyczy braku wytycznych czasowych dla legitymacji studenckiej – jest to kwestia praktyczna/administracyjna, której nie można zweryfikować na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 3 wskazówki, że zaświadczenie z uczelni powinno być aktualne na dzień wykonywania zlecenia (tj. potwierdzać status studenta w konkretnym okresie objętym umową), a legitymacja studencka może być pomocnicza, ale zaświadczenie z dziekanatu z datą wydania lub archiwalne potwierdzenie statusu studenta jest bardziej wiarygodne dla celów dokumentacyjnych.",
+        "verified_at": "2026-04-17T23:49:01Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 5 stwierdza, że 'przerwy w opłacaniu składek z tytułu zasiłku nie przerywają ciągłości ubezpieczenia', ale krok 4 mówi o 'eliminacji duplikatów' – niejasne, czy zasiłki w trakcie DG/zlecenia są traktowane jako odrębny okres czy jako kontynuacja tego samego okresu."
+        "description": "Krok 5 stwierdza, że 'przerwy w opłacaniu składek z tytułu zasiłku nie przerywają ciągłości ubezpieczenia', ale krok 4 mówi o 'eliminacji duplikatów' – niejasne, czy zasiłki w trakcie DG/zlecenia są traktowane jako odrębny okres czy jako kontynuacja tego samego okresu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących zaliczania okresów zasiłkowych do stażu pracy w kontekście zmian od 2026 r. (brak przepisów o stażu pracy dla zleceniobiorców/DG). Flaga dotyczy potencjalnej niespójności logicznej między krokiem 4 (eliminacja duplikatów) a krokiem 5 (ciągłość ubezpieczenia podczas zasiłków), ale bez odpowiednich przepisów w KB nie można jednoznacznie ocenić, czy jest to rzeczywista sprzeczność czy tylko niejasność redakcyjna. Krok 5 faktycznie nie wyjaśnia wprost relacji między 'podleganiem ubezpieczeniom' a 'pobieraniem zasiłku' w kontekście zasady niepodwajania z kroku 4.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Rozważyć doprecyzowanie w kroku 5, że okresy zasiłkowe są traktowane jako kontynuacja tego samego okresu DG/zlecenia (nie jako odrębny okres), a więc zasada niepodwajania z kroku 4 nie ma do nich zastosowania – zasiłek nie tworzy nowego, nakładającego się okresu, lecz jest częścią już liczonego okresu ubezpieczenia.",
+        "verified_at": "2026-04-17T23:49:09Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 7 rozróżnia 'staż pracy ogólny' od 'stażu urlopowego' i wspomina zasadę 'korzystniejszego dla pracownika okresu, bez podwajania' – ta zasada nie jest wyjaśniona w legal_anchors i może być interpretowana na wiele sposobów."
+        "description": "Krok 7 rozróżnia 'staż pracy ogólny' od 'stażu urlopowego' i wspomina zasadę 'korzystniejszego dla pracownika okresu, bez podwajania' – ta zasada nie jest wyjaśniona w legal_anchors i może być interpretowana na wiele sposobów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera artykułów dotyczących stażu urlopowego (art. 154¹ KP) ani zasad zaliczania okresów nauki do stażu urlopowego. Flaga wskazuje na brak wyjaśnienia zasady 'korzystniejszego okresu bez podwajania' w legal_anchors – jest to uzasadniona obserwacja, ponieważ draft w kroku 7 wprowadza tę zasadę bez oparcia w cytowanym art. 22 KP, który dotyczy wyłącznie definicji stosunku pracy. Nie można jednak potwierdzić ani obalić poprawności merytorycznej tej zasady na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.65,
+        "corrective_suggestion": "Dodać do legal_anchors art. 154¹ KP (staż urlopowy) oraz art. 155 KP (zaliczanie nauki do stażu urlopowego), a w kroku 7 explicite wyjaśnić zasadę wyboru okresu korzystniejszego dla pracownika z powołaniem na konkretny przepis lub orzecznictwo SN.",
+        "verified_at": "2026-04-17T23:49:17Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący 'brak dokumentów sprzed wielu lat' wspomina 'wniosek USP w ZUS', ale nie wyjaśnia, czy ZUS ma obowiązek wydać zaświadczenie dla okresów sprzed 2026 r., jeśli pracownik nie ma dokumentów – procedura jest niejasna."
+        "description": "Edge case dotyczący 'brak dokumentów sprzed wielu lat' wspomina 'wniosek USP w ZUS', ale nie wyjaśnia, czy ZUS ma obowiązek wydać zaświadczenie dla okresów sprzed 2026 r., jeśli pracownik nie ma dokumentów – procedura jest niejasna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących procedurę wydawania zaświadczeń przez ZUS na wniosek ubezpieczonego (np. art. 50 ustawy o systemie ubezpieczeń społecznych dotyczący informacji o ubezpieczeniu) ani przepisów dotyczących formularza USP/US-7 i zakresu danych historycznych dostępnych w ZUS. Flaga jest merytorycznie zasadna – draft nie wyjaśnia, czy ZUS ma dane i obowiązek wydania zaświadczenia dla okresów sprzed wielu lat, gdy dokumentacja może być niekompletna – ale KB nie dostarcza twardego dowodu potwierdzającego ani obalającego tę lukę.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto uzupełnić edge case o informację, że ZUS wydaje zaświadczenia o przebiegu ubezpieczenia na podstawie danych w systemie KEDU/POLTAX, jednak dla okresów sprzed 1999 r. (przed wdrożeniem systemu informatycznego ZUS) dane mogą być niedostępne lub niekompletne, a wówczas pracownik może być odesłany do archiwów pracodawcy lub sądu pracy w trybie ustalenia okresu ubezpieczenia.",
+        "verified_at": "2026-04-17T23:49:26Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, czy zaliczenie okresów do stażu pracy od 2026 r. ma charakter retroaktywny (czy można zaliczyć okresy sprzed 2026 r.) czy dotyczy tylko okresów od 1 stycznia 2026 r. – to ma znaczenie dla pracowników z historią zatrudnienia."
+        "description": "Draft nie wyjaśnia, czy zaliczenie okresów do stażu pracy od 2026 r. ma charakter retroaktywny (czy można zaliczyć okresy sprzed 2026 r.) czy dotyczy tylko okresów od 1 stycznia 2026 r. – to ma znaczenie dla pracowników z historią zatrudnienia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów przejściowych dotyczących nowelizacji Kodeksu pracy wprowadzającej zaliczanie okresów zlecenia i DG do stażu pracy od 2026 r. Brak w KB artykułów regulujących retroaktywność tych zmian (np. przepisów intertemporalnych ustawy nowelizującej). Flaga wskazuje na realną lukę informacyjną w drafcie – kwestia retroaktywności (czy zalicza się okresy sprzed 2026 r.) jest istotna praktycznie, ale nie można jej zweryfikować na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Draft powinien wprost wyjaśnić, że nowe przepisy mają charakter retroaktywny – tj. od 1 stycznia 2026 r. do stażu pracy zalicza się wszystkie kwalifikujące się okresy zlecenia i DG niezależnie od tego, kiedy przypadały (również sprzed 2026 r.), o ile spełnione są warunki podlegania ubezpieczeniom społecznym. Jeśli ustawa nowelizująca zawiera odmienne przepisy przejściowe, należy je wskazać wprost.",
+        "verified_at": "2026-04-17T23:49:34Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 6 wspomina 'adnotację zlecenie lub DG' w systemach kadrowych, ale nie ma potwierdzenia, czy wszystkie wymienione systemy obsługują takie adnotacje lub czy istnieje standardowy kod do tego celu."
+        "description": "Krok 6 wspomina 'adnotację zlecenie lub DG' w systemach kadrowych, ale nie ma potwierdzenia, czy wszystkie wymienione systemy obsługują takie adnotacje lub czy istnieje standardowy kod do tego celu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy kwestii technicznej – funkcjonalności konkretnych systemów kadrowo-płacowych (Comarch Optima, Symfonia, Enova) w zakresie obsługi adnotacji 'zlecenie'/'DG'. KB zawiera wyłącznie przepisy prawne (Kodeks pracy) i nie zawiera żadnych informacji o możliwościach tych systemów informatycznych. Nie można ani potwierdzić, ani obalić tej flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Można złagodzić sformułowanie w kroku 6, dodając zastrzeżenie: 'w zależności od wersji systemu – jeśli system nie przewiduje dedykowanego pola, użyj pola 'Uwagi' lub 'Opis' w kartotece pracownika, dokumentując rodzaj okresu pozapracowniczego'.",
+        "verified_at": "2026-04-17T23:49:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }
