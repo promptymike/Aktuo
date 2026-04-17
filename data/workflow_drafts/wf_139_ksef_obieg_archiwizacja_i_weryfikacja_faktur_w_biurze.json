@@ -1,0 +1,111 @@
+{
+  "id": "wf_139_ksef_obieg_archiwizacja_i_weryfikacja_faktur_w_biurze",
+  "title": "KSeF w biurze rachunkowym: obieg, archiwizacja i weryfikacja faktur kosztowych klientów",
+  "topic_area": "KSeF",
+  "question_examples": [
+    "Jak w praktyce zorganizować pracę z KSeF - czy klienci nadal mają dostarczać faktury, czy bazujemy tylko na tym co jest w KSeF i jak klient ma oznaczać które faktury są KUP?",
+    "Jak weryfikować faktury ściągnięte z KSeF skoro fizycznie nie mamy dokumentu - drukować wizualizacje czy pracować tylko na XML?",
+    "Jak wygląda archiwizacja faktur klientów po wejściu KSeF - czy drukujemy i wpinamy do segregatorów, czy wystarczy że są na serwerze MF?",
+    "Czy zakładać dla każdego klienta osobny folder na pliki XML z KSeF czy wystarczy automatyczny zaczyt do programu księgowego?",
+    "W jaki sposób klient ma nam potwierdzać, że daną fakturę z KSeF mamy zaksięgować (transakcja doszła do skutku, jest KUP, nie jest wystawiona błędnie na jego NIP)?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal z klientem pisemnie model obiegu faktur kosztowych",
+      "detail": "W aneksie do umowy/procedurze określ: kto pobiera faktury z KSeF (biuro czy klient), jak klient akceptuje koszty (OCR typu Saldeo/Symfonia Obieg Dokumentów, panel klienta w Comarch Optima/Enova, zestawienie Excel, mail z listą numerów KSeF do zaksięgowania) oraz jak oznacza faktury nie-KUP i błędnie wystawione na jego NIP. Bez tego biuro zaksięguje faktury, których klient nie akceptuje jako koszt.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Skonfiguruj automatyczny pobór XML z KSeF do programu księgowego",
+      "detail": "W Comarch Optima, Symfonii, Enova lub wFirma włącz integrację z KSeF tokenem/certyfikatem klienta (uprawnienie 'dostęp do faktur' nadane biuru). Ustaw harmonogram pobierania (np. codziennie) i mapowanie pól - szczególnie data sprzedaży, sposób i termin płatności, bo te pola często są puste w wizualizacji gdy sprzedawca źle je zmapował.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Wprowadź dwustopniową weryfikację kosztową przed księgowaniem",
+      "detail": "Krok A: klient w OCR/panelu zatwierdza fakturę jako KUP/nie-KUP i oznacza błędne (wystawione omyłkowo na jego NIP - takie zgłasza do sprzedawcy z żądaniem korekty do zera, bo w KSeF nie można 'odrzucić' faktury). Krok B: księgowa sprawdza w programie kompletność danych (data sprzedaży, MPP, WNT, split payment, KSeF ID) i dopiero księguje.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Ustal zasady archiwizacji plików XML i wizualizacji",
+      "detail": "Faktura ustrukturyzowana jest w KSeF przechowywana przez MF przez 10 lat - nie ma obowiązku drukowania ani dodatkowej archiwizacji po stronie biura. Rekomendowany minimalny backup: pobieraj XML do folderu klienta (np. /Klient/2026/KSeF_zakup/) co najmniej raz na okres rozliczeniowy, aby zabezpieczyć się przed awarią MF i mieć dowód przy kontroli offline.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Obsłuż faktury spoza KSeF (tryb offline, awaria, B2C, kontrahent zagraniczny, zwolnieni)",
+      "detail": "Stwórz w procedurze osobną ścieżkę dla: faktur wystawionych w trybie offline24/awaryjnym (mają kod QR, trafiają do KSeF z opóźnieniem), faktur od podatników zwolnionych z KSeF (zagraniczni bez stałego miejsca w PL, OSS/IOSS), paragonów z NIP, not księgowych i dokumentów wewnętrznych. Te klient nadal dostarcza tradycyjnie (PDF/papier) i wymagają osobnego rejestru.",
+      "condition": "if klient ma kontrahentów zwolnionych z KSeF lub dokumenty spoza systemu"
+    },
+    {
+      "step": 6,
+      "action": "Rozwiąż problem brakujących danych na wizualizacji KSeF",
+      "detail": "Jeśli wizualizacja w programie (Optima, Symfonia) nie pokazuje daty sprzedaży, terminu lub sposobu płatności - pobierz surowy XML i sprawdź węzły P_6 (data sprzedaży), Platnosc/TerminyPlatnosci. Brak danych to najczęściej wina mapowania po stronie sprzedawcy. Poproś klienta o kontakt ze sprzedawcą lub opieraj się na danych z XML, nie z wizualizacji.",
+      "condition": "if program nie wyświetla kompletnych danych faktury"
+    },
+    {
+      "step": 7,
+      "action": "Przeszkol klienta z oznaczania trybu wystawienia i numeru KSeF",
+      "detail": "Poinformuj, że tryb wystawienia (online, offline24, awaryjny) jest widoczny w XML i wpływa na moment powstania obowiązku podatkowego oraz datę otrzymania faktury. Przy masowych zaciągach plikowych ustaw w programie filtr/raport po trybie, aby nie przeglądać każdej faktury ręcznie.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 3-6 oraz art. 106na ust. 1, 3-4",
+      "reason": "Reguluje moment uznania faktury za otrzymaną w KSeF, sposób udostępniania faktury nabywcy oraz obsługę faktur poza KSeF z kodem weryfikacyjnym - kluczowe dla procedury obiegu i archiwizacji w biurze."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+      "reason": "Definiuje funkcje KSeF jako systemu przechowywania, uwierzytelniania i udostępniania faktur - uzasadnia rezygnację z dublowania archiwizacji papierowej przez biuro."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ga ust. 2",
+      "reason": "Wskazuje kategorie podatników zwolnionych z obowiązku KSeF (zagraniczni, OSS/IOSS, B2C), czyli ścieżkę faktur które klient nadal musi dostarczać poza systemem."
+    }
+  ],
+  "edge_cases": [
+    "Klient prowadzący małą firmę, której kontrahenci jeszcze nie wdrożyli KSeF - w praktyce nadal połowa faktur wpływa papierowo/PDF, więc przez okres przejściowy trzeba utrzymać równolegle obieg tradycyjny i elektroniczny.",
+    "Faktura z KSeF ma datę sprzedaży w innym miesiącu niż data wystawienia (np. sprzedaż 01/2026, wystawienie 02/2026) - w pełnych księgach decyduje data sprzedaży (moment powstania kosztu/obowiązku podatkowego), nie data wystawienia widoczna na wizualizacji.",
+    "Faktura wystawiona błędnie na NIP klienta przez obcego kontrahenta - w KSeF nie można jej 'odrzucić', jedyna droga to żądanie korekty do zera od wystawcy; do czasu korekty klient oznacza ją w OCR/panelu jako 'nie moja' i biuro jej nie księguje.",
+    "Klient nie chce wdrażać OCR/panelu akceptacji - wtedy alternatywą jest comiesięczne zestawienie (Excel/mail) faktur do zaksięgowania z numerami KSeF, ale wydłuża to zamknięcie miesiąca i zwiększa ryzyko pominięcia faktury."
+  ],
+  "common_mistakes": [
+    "Drukowanie wszystkich faktur z KSeF 'dla bezpieczeństwa' i wpinanie do segregatorów - zbędna praca, bo faktura ustrukturyzowana jest przechowywana w KSeF przez 10 lat i wizualizacja PDF nie jest dokumentem źródłowym (źródłem jest XML).",
+    "Księgowanie wszystkich faktur zaciągniętych z KSeF bez akceptacji klienta - prowadzi do zaksięgowania faktur błędnie wystawionych na NIP klienta lub niebędących kosztem uzyskania przychodu.",
+    "Opieranie się wyłącznie na wizualizacji w programie księgowym - różne programy pokazują różny zakres danych (np. Optima nie pokazuje daty sprzedaży czy sposobu płatności), co prowadzi do błędów w księgowaniu; zawsze weryfikuj XML przy niepełnych danych."
+  ],
+  "related_questions": [
+    "Jak wygląda moment powstania obowiązku podatkowego VAT i moment otrzymania faktury w KSeF przy trybie offline24 i awaryjnym?",
+    "Jak nadać biuru rachunkowemu uprawnienia do KSeF klienta i czym różni się uwierzytelnianie tokenem, certyfikatem KSeF a pieczęcią kwalifikowaną?",
+    "Jak księgować w KSeF faktury od kontrahentów zagranicznych i faktury B2C - czy w ogóle trafiają do systemu?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "139",
+    "cluster_label": "KSeF: obieg, archiwizacja i weryfikacja faktur w biurze",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "cc5cc333f5c2",
+      "7d3402451576",
+      "150ba10bb077",
+      "7d6b5192e15f",
+      "204c6f23959f",
+      "f1b9b91d4a33",
+      "972d1bebb32b",
+      "91ad8e785a7e",
+      "49ce40a7ef6c",
+      "440935078e6a",
+      "9ae0202035be"
+    ]
+  }
+}

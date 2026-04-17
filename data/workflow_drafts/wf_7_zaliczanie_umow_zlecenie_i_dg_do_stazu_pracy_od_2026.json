@@ -1,0 +1,103 @@
+{
+  "id": "wf_7_zaliczanie_umow_zlecenie_i_dg_do_stazu_pracy_od_2026",
+  "title": "Zaliczanie okresów umów zlecenie i działalności gospodarczej do stażu pracy od 1 stycznia 2026 r.",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Czy okres pracy na umowie zlecenie (także w trakcie studiów) wlicza się do stażu pracy i od kiedy można go zaliczyć?",
+    "Jakie dokumenty pracownik musi przedstawić, aby zaliczyć do stażu pracy okres prowadzenia działalności gospodarczej oraz umów zlecenia?",
+    "Czy samo zaświadczenie z ZUS wystarczy do zaliczenia umowy zlecenia do stażu pracy, czy potrzebne są też inne dokumenty?",
+    "Czy mogę zaliczyć do stażu pracy umowy zlecenie studenta (poniżej 26 lat), od których nie odprowadzano składek społecznych?",
+    "Czy okresy zasiłku chorobowego i macierzyńskiego w trakcie prowadzenia DG wliczają się do stażu pracy?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Zweryfikuj podstawę prawną i datę wejścia zmian",
+      "detail": "Od 1 stycznia 2026 r. do stażu pracy wlicza się okresy wykonywania umowy zlecenia oraz prowadzenia pozarolniczej działalności gospodarczej, w których osoba podlegała ubezpieczeniom społecznym (emerytalnemu i rentowemu) lub była z nich zwolniona z mocy ustawy. Podstawa: znowelizowany art. 3021 Kodeksu pracy.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zażądaj od pracownika zaświadczenia US-7 z ZUS",
+      "detail": "Dla okresów umów zlecenia ozusowanych oraz dla JDG – zaświadczenie ZUS US-7 (o okresach podlegania ubezpieczeniom społecznym i podstawach wymiaru składek) jest dokumentem podstawowym i rozstrzygającym. Pracownik składa wniosek przez PUE ZUS lub w placówce ZUS; ciężar udowodnienia okresu zatrudnienia spoczywa na pracowniku.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Dla zleceń studenckich (bez składek ZUS) zbierz dokumenty zastępcze",
+      "detail": "Jeżeli zleceniobiorca był studentem do 26. roku życia i nie podlegał składkom, zaświadczenie z ZUS nie wykaże tego okresu. Przyjmij: umowę zlecenie, rachunki, potwierdzenia przelewów, PIT-11, zaświadczenie od byłego zleceniodawcy z datami oraz zaświadczenie/legitymację potwierdzającą status studenta. Nowelizacja przewiduje zaliczanie tych okresów na podstawie innych dokumentów potwierdzających wykonywanie zlecenia.",
+      "condition": "if pracownik w okresie zlecenia miał status studenta poniżej 26 lat i nie były odprowadzane składki społeczne"
+    },
+    {
+      "step": 4,
+      "action": "Sprawdź nakładanie się okresów i zastosuj zasadę niepodwajania",
+      "detail": "Okresy zbiegające się (np. dwie umowy zlecenia w tym samym czasie, zlecenie + umowa o pracę, DG + zlecenie) liczą się tylko raz – analogicznie jak dwa etaty w tym samym miesiącu dają jeden miesiąc stażu. Zweryfikuj daty z US-7 i wyeliminuj duplikaty przed wprowadzeniem do systemu.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Zalicz okresy zasiłkowe w ramach DG/zlecenia",
+      "detail": "Okresy pobierania zasiłku chorobowego, macierzyńskiego i opiekuńczego w trakcie prowadzenia DG lub wykonywania zlecenia wliczają się do stażu pracy, o ile figurują w zaświadczeniu US-7 jako okresy podlegania ubezpieczeniom (przerwy w opłacaniu składek z tytułu zasiłku nie przerywają ciągłości ubezpieczenia).",
+      "condition": "if pracownik w okresie DG/zlecenia korzystał z zasiłków z ubezpieczenia społecznego"
+    },
+    {
+      "step": 6,
+      "action": "Wprowadź zaktualizowany staż pracy do systemu kadrowo-płacowego",
+      "detail": "W Comarch Optima, Symfonia Kadry i Płace lub Enova zaktualizuj kartotekę pracownika w zakładce 'Historia zatrudnienia' / 'Staż pracy', dodając okresy pozapracownicze w osobnych pozycjach z adnotacją 'zlecenie' lub 'DG' i wskazaniem dokumentu źródłowego (US-7, umowa, PIT-11). Sprawdź, czy program przelicza wymiar urlopu, nagrodę jubileuszową i dodatek stażowy.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Rozróżnij staż pracy ogólny od stażu urlopowego",
+      "detail": "Umowy zlecenia i DG wlicza się do stażu pracy ogólnego (decydującego m.in. o nagrodzie jubileuszowej, dodatku stażowym, okresie wypowiedzenia). Do stażu urlopowego nie wlicza się okresu nauki, jeśli w tym samym czasie pracownik wykonywał zlecenie – obowiązuje zasada korzystniejszego dla pracownika okresu, bez podwajania.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 22",
+      "reason": "Definiuje stosunek pracy i odróżnia go od zatrudnienia cywilnoprawnego, co jest podstawą do wyodrębnienia okresów zlecenia i DG jako okresów pozapracowniczych zaliczanych do stażu pracy od 2026 r."
+    }
+  ],
+  "edge_cases": [
+    "Umowa zlecenie studenta poniżej 26 r.ż. bez składek – brak wpisu w ZUS, zaliczenie możliwe na podstawie umowy, rachunków, przelewów i PIT-11 oraz zaświadczenia o studiach.",
+    "Nakładające się okresy (dwa zlecenia równolegle, zlecenie w trakcie umowy o pracę, DG + zlecenie) – liczą się jednokrotnie, nie sumujemy równoległych okresów.",
+    "Brak dokumentów źródłowych sprzed wielu lat (np. zlecenie z lat 2002–2003, zleceniodawca już nie istnieje) – pracownik składa wniosek USP w ZUS; jeśli okres nie był ozusowany, udowodnienie może być niemożliwe.",
+    "Okresy zasiłków (chorobowy, macierzyński, opiekuńczy) w trakcie DG – wliczają się do stażu, jeśli wynikają z zaświadczenia ZUS; sama przerwa w opłacaniu składek w tym czasie nie wyklucza zaliczenia."
+  ],
+  "common_mistakes": [
+    "Opieranie się wyłącznie na umowie zlecenia lub oświadczeniu pracownika bez zaświadczenia US-7 z ZUS – z samej umowy nie wynika, czy składki były faktycznie odprowadzane.",
+    "Podwójne liczenie nakładających się okresów (np. równoległe zlecenia u dwóch zleceniodawców lub zlecenie w trakcie etatu).",
+    "Mylenie stażu pracy ogólnego ze stażem urlopowym – zaliczanie okresu studiów i jednocześnie zlecenia wykonywanego w trakcie studiów do stażu urlopowego (podczas gdy przepisy przewidują wybór korzystniejszego, bez dublowania)."
+  ],
+  "related_questions": [
+    "Jak udokumentować staż pracy na podstawie umowy B2B wykonywanej za granicą na rzecz polskiego kontrahenta?",
+    "Czy okres pobierania zasiłku dla bezrobotnych wlicza się do stażu pracy na nowych zasadach od 2026 r.?",
+    "Jak od 2026 r. zaliczać staż pracy osobom, które prowadziły gospodarstwo rolne lub były pomocnikami rolnika (KRUS)?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "7",
+    "cluster_label": "Zaliczanie umów zlecenie i DG do stażu pracy od 2026",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "5524fe102d29",
+      "075e641c91f8",
+      "ecb07ec14ab2",
+      "c5ee58a04c1b",
+      "e421511893dd",
+      "94341fe9b112",
+      "bec7fb3eb05a",
+      "f72745fbf5da",
+      "092d5d130fbb",
+      "731739f57810",
+      "4de044192293",
+      "7e08ae2a5d4b",
+      "a2c973af8523"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "wf_107_nowe_oznaczenia_jpk_vat_bfk_vs_di_dla_faktur_wnt_importu_i_p",
+  "title": "Oznaczenia BFK vs DI w JPK_VAT od lutego 2026 - faktury WNT, import usług, poza KSeF",
+  "topic_area": "JPK",
+  "question_examples": [
+    "Jakie oznaczenie w ewidencji zakupu i sprzedaży stosować dla faktury WNT - BFK czy DI?",
+    "Jak oznaczać faktury za import usług i WNT w nowym pliku JPK - DI czy BFK?",
+    "Czy faktury sprzedaży wystawiane poza KSeF (przed wejściem obowiązku) oznaczamy kodem BFK?",
+    "Czy paragony z NIP do 450 zł (faktury uproszczone) niewysyłane do KSeF oznaczamy BFK w JPK?",
+    "Czy podmiot wchodzący do KSeF od kwietnia już w JPK za luty musi oznaczać faktury sprzedaży znacznikiem BFK?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal od kiedy obowiązuje nowa struktura JPK_V7",
+      "detail": "Nowe oznaczenia BFK i DI obowiązują w JPK_V7 od rozliczenia za luty 2026 (plik wysyłany w marcu 2026), niezależnie od daty wejścia podatnika do obowiązkowego KSeF.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zastosuj BFK dla faktur, które teoretycznie mogłyby być w KSeF, ale faktycznie są poza KSeF",
+      "detail": "Kod BFK (Brak Faktury w KSeF) stosuj dla: faktur wystawionych poza KSeF mimo obowiązku (np. awaria, tryb offline), faktur uproszczonych - paragonów z NIP do 450 zł niewysyłanych do KSeF, faktur wystawianych przez podatnika przed jego datą wejścia do KSeF, faktur B2C dla konsumentów.",
+      "condition": "if faktura dotyczy transakcji krajowej, która normalnie podlegałaby KSeF"
+    },
+    {
+      "step": 3,
+      "action": "Zastosuj DI dla dokumentów, które strukturalnie nie mieszczą się w KSeF",
+      "detail": "Kod DI (Dokument Inny/wewnętrzny) stosuj dla: faktur WNT (dostawca zagraniczny - faktura nie przechodzi przez KSeF), importu usług, importu towarów, dokumentów wewnętrznych WEW, faktur od kontrahentów zagranicznych nieposiadających polskiego NIP, eksportu towarów i WDT (według stanowiska KIS z infolinii).",
+      "condition": "if transakcja jest zagraniczna lub udokumentowana dowodem wewnętrznym"
+    },
+    {
+      "step": 4,
+      "action": "Oznacz fakturę w module handlowym/księgowym programu",
+      "detail": "W Comarch Optima oznaczenie ustawiasz w 4. zakładce 'JPK' na fakturze. W Symfonii, Enova, WFirma - w sekcji parametrów JPK/rejestru VAT. Oznaczenie powinno być nadawane już na etapie wystawiania lub księgowania dokumentu, nie dopiero przy generowaniu pliku.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Zachowaj dotychczasowe oznaczenia procedur obok nowych kodów",
+      "detail": "Nowe kody BFK/DI nie zastępują dotychczasowych oznaczeń - WEW, FP, RO, MK, GTU_01-13 itd. stosujesz dalej równolegle. Np. dokument wewnętrzny dla WNT otrzyma DI + WEW, paragon z NIP do 450 zł - BFK + FP (jeśli był wystawiony do paragonu).",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Skoryguj faktury wystawione przed lutym 2026 ujęte w JPK za luty",
+      "detail": "Faktury z grudnia 2025 i stycznia 2026 księgowane w rozliczeniu za luty 2026 nie wymagają nowych oznaczeń BFK/DI - jeśli program wymusza kod, wybierz opcję odpowiadającą charakterowi dokumentu (BFK dla krajowych poza KSeF, DI dla zagranicznych). W razie blokady rozważ korektę JPK za styczeń.",
+      "condition": "if faktury są z okresu przed lutym 2026"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj stanowisko KIS w razie wątpliwości pisemnym zapytaniem",
+      "detail": "W temacie BFK vs DI dla WNT/importu usług pojawiają się sprzeczne interpretacje (MF z 18.03 - BFK przy fakturze; szkolenia KIS - wszystko DI). Przy znacznej wartości transakcji złóż zapytanie do KIS lub wniosek o interpretację, by zabezpieczyć się przed ryzykiem sankcji.",
+      "condition": "if transakcje mają znaczną wartość lub są powtarzalne"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Rozporządzenie w sprawie JPK_V7",
+      "article_number": "§ 10",
+      "reason": "Określa zakres danych ewidencji sprzedaży, w tym oznaczenia procedur i typów dokumentów stosowane w JPK_V7 - podstawa prawna dla nowych kodów BFK i DI od lutego 2026."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 4 pkt 1 i ust. 5",
+      "reason": "Reguluje sytuacje, gdy faktura ustrukturyzowana jest udostępniana poza KSeF lub gdy kontrahent zagraniczny nie uczestniczy w KSeF - to materia, której dotyczą kody BFK (poza KSeF) i DI (kontrahent zagraniczny)."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 14",
+      "reason": "Deleguje Ministrowi Finansów kompetencję do określenia szczegółowych danych ewidencji VAT w drodze rozporządzenia - podstawa ustawowa obowiązku stosowania oznaczeń typu BFK/DI."
+    }
+  ],
+  "edge_cases": [
+    "Paragon fiskalny z NIP do 450 zł (faktura uproszczona) - nie idzie do KSeF, w JPK oznaczenie BFK (obok dotychczasowego FP jeśli dotyczy).",
+    "Apteka wystawiająca paragon z NIP powyżej 450 zł - fakturę do takiego paragonu z NIP nabywcy wysyłasz do KSeF z oznaczeniem FP (nie BFK); dla osób prywatnych faktura do paragonu - poza KSeF.",
+    "Faktura WNT/import usług - dominująca praktyka i stanowisko KIS to DI, ale część interpretacji MF z 18.03 wskazuje na BFK jeśli istnieje faktura od kontrahenta - rozbieżność interpretacyjna.",
+    "Podatnik wchodzący do obowiązkowego KSeF dopiero od 1 kwietnia 2026 - faktury sprzedaży za luty i marzec 2026 wystawione poza KSeF oznacza w JPK kodem BFK (zarówno sprzedaż jak i zakup)."
+  ],
+  "common_mistakes": [
+    "Pomijanie oznaczenia BFK dla faktur B2C i paragonów z NIP do 450 zł w przekonaniu, że skoro nie idą do KSeF, to kod nie jest potrzebny - kod BFK jest wymagany właśnie dla takich dokumentów.",
+    "Stosowanie BFK dla WNT i importu usług na podstawie samej faktury zagranicznej bez wystawiania dokumentu wewnętrznego - dominujące stanowisko KIS wskazuje, że dla transakcji transgranicznych właściwy jest DI.",
+    "Zastępowanie dotychczasowych oznaczeń (WEW, FP, GTU) nowymi kodami BFK/DI - te oznaczenia są komplementarne, stosujesz je równolegle, a nie zamiennie."
+  ],
+  "related_questions": [
+    "Czy dokumenty wewnętrzne WEW (np. rozliczenie prowizji, dokumenty na kasę fiskalną) w nowym JPK od lutego 2026 oznaczamy DI czy zachowują tylko WEW?",
+    "Jak oznaczać w JPK faktury wystawione w trybie offline24 lub podczas awarii KSeF - BFK czy innym kodem?",
+    "Czy faktury WDT i eksportowe w nowym JPK oznaczamy DI, czy pozostają bez nowego oznaczenia?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "107",
+    "cluster_label": "Nowe oznaczenia JPK_VAT: BFK vs DI dla faktur WNT, importu i poza KSeF",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "8df09435d3e5",
+      "253ca9d7afea",
+      "b6ee496c7a6a",
+      "c2074d6c6b0e",
+      "7ce1c1f2e145",
+      "41bf36519fbf",
+      "c7a0cd9a8c40",
+      "390d16ec7b81",
+      "f296da1c9a6b",
+      "566196d1d9bc",
+      "e022667d2faf",
+      "593e5e65bba7",
+      "4cb5ee9f16ec",
+      "3c052a0e1f34",
+      "bfb64fab2f2c"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "wf_62_vat_przy_wykupie_sprzedazy_i_darowiznie_samochodu_z_firmy",
+  "title": "VAT przy wykupie, sprzedaży i darowiźnie samochodu osobowego z firmy (leasing, ST, cele prywatne)",
+  "topic_area": "VAT",
+  "question_examples": [
+    "Wykupiłem samochód osobowy z leasingu operacyjnego na firmę, ale nie wprowadziłem faktury wykupu do kosztów i nie odliczyłem VAT – czy przy późniejszej sprzedaży muszę naliczyć VAT?",
+    "Klient wykupił samochód z leasingu na firmę (nie odliczył VAT, wprowadził do ŚT) – czy może darować auto ojcu bez VAT i bez PIT?",
+    "Podatnik zakupił samochód osobowy na fakturę VAT marża, wprowadził do majątku firmy bez odliczenia VAT, amortyzował – czy przy sprzedaży wystawia zwykłą fakturę z 23% VAT?",
+    "Auto kupione na umowę kupna-sprzedaży (bez VAT) i wprowadzone do firmy – czy przy sprzedaży wystąpi VAT?",
+    "Samochód po wykupie z leasingu wykupiony prywatnie (nie ŚT), chcę sprzedać przed upływem 6 lat – czy będzie VAT i PIT, czy tylko PIT?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal status pojazdu w firmie",
+      "detail": "Sprawdź, czy samochód był wprowadzony do ewidencji środków trwałych, czy wykupiony prywatnie (faktura wykupu na firmę, ale bez ujęcia w ŚT i bez odliczenia VAT), czy stanowił towar handlowy. Od tego zależy zarówno skutek w VAT, jak i w PIT.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Ustal prawo do odliczenia VAT przy nabyciu",
+      "detail": "Zweryfikuj dokument zakupu: faktura VAT zwykła (prawo do odliczenia 50% lub 100%), faktura VAT marża (brak prawa do odliczenia), umowa kupna-sprzedaży (brak VAT naliczonego). Kluczowe jest PRAWO do odliczenia, a nie faktyczne odliczenie – jeśli prawo przysługiwało, sprzedaż/darowizna będzie opodatkowana VAT nawet gdy podatnik z odliczenia nie skorzystał.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Określ sposób opodatkowania sprzedaży samochodu firmowego",
+      "detail": "Przy sprzedaży środka trwałego czynny podatnik VAT wystawia fakturę z 23% VAT od pełnej ceny sprzedaży (art. 5 i art. 41 ustawy o VAT). Jeśli auto kupione było na VAT marża i spełnione są warunki z art. 120 – można sprzedać w procedurze marży. W Comarch Optima / wFirma / Symfonia zaksięguj fakturę sprzedaży ŚT i dokonaj likwidacji ŚT z rozliczeniem niezamortyzowanej wartości w kosztach.",
+      "condition": "if samochód jest środkiem trwałym u czynnego podatnika VAT"
+    },
+    {
+      "step": 4,
+      "action": "Rozlicz wykup z leasingu przekazany na cele prywatne",
+      "detail": "Jeśli przedsiębiorca wykupił auto z leasingu fakturą na firmę, ale NIE wprowadził do ŚT, NIE ujął w kosztach i NIE odliczył VAT – uznaje się wykup za nabycie na cele prywatne. Późniejsza sprzedaż nie podlega VAT ani PIT z działalności, ale uwaga: w PIT prywatnym obowiązuje 6-letni okres (art. 10 ust. 2 pkt 4 ustawy o PIT liczony od pierwszego dnia miesiąca następującego po wycofaniu/wykupie).",
+      "condition": "if faktura wykupu nie ujęta w kosztach i VAT nieodliczony"
+    },
+    {
+      "step": 5,
+      "action": "Zweryfikuj skutki darowizny samochodu firmowego",
+      "detail": "Nieodpłatne przekazanie towaru (w tym samochodu) podlega VAT na podstawie art. 7 ust. 2 ustawy o VAT, jeżeli podatnikowi przysługiwało prawo do odliczenia VAT przy nabyciu (w całości lub w części). Oznacza to, że przy wykupie z leasingu z fakturą VAT darowizna auta córce/ojcu zwykle będzie opodatkowana VAT od wartości rynkowej, nawet jeśli podatnik nie skorzystał z odliczenia. Darowiznę udokumentuj fakturą wewnętrzną/dokumentem wewnętrznym.",
+      "condition": "if planowana darowizna samochodu z firmy"
+    },
+    {
+      "step": 6,
+      "action": "Sprawdź skutki PIT przy sprzedaży po wycofaniu na cele prywatne",
+      "detail": "Zgodnie z art. 10 ust. 2 pkt 4 ustawy o PIT – sprzedaż samochodu wycofanego z działalności przed upływem 6 lat (licząc od pierwszego dnia miesiąca po wycofaniu) stanowi przychód z działalności gospodarczej. W koszty można ująć niezamortyzowaną wartość początkową (lub wartość wykupu, jeśli nie był ŚT, ale był wykorzystywany w firmie – tu uwaga na stanowiska organów).",
+      "condition": "if sprzedaż przed upływem 6 lat od wycofania"
+    },
+    {
+      "step": 7,
+      "action": "Zgłoś darowiznę do US i rozważ alternatywy",
+      "detail": "Obdarowany z I grupy (np. córka, ojciec) składa SD-Z2 w ciągu 6 miesięcy – zwolnienie z podatku od spadków i darowizn. Jeśli obdarowany sprzeda auto po upływie 6 miesięcy od nabycia (art. 10 ust. 1 pkt 8 PIT) – nie płaci PIT. Alternatywa: sprzedaż z rabatem zamiast darowizny – prostsze podatkowo dla przedsiębiorcy, ale uwaga na wartość rynkową dla VAT (podstawa nie może być rażąco zaniżona).",
+      "condition": "if darowizna w rodzinie"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 1-3",
+      "reason": "Reguluje 50%/100% odliczenia VAT od wydatków na pojazdy samochodowe, co determinuje prawo do odliczenia przy wykupie i dalsze skutki przy sprzedaży/darowiźnie."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 5 ust. 1 pkt 1",
+      "reason": "Wskazuje, że odpłatna dostawa towaru (sprzedaż samochodu firmowego) podlega opodatkowaniu VAT – podstawa naliczenia VAT przy sprzedaży ŚT."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 7 ust. 2",
+      "reason": "Nieodpłatne przekazanie (darowizna) towaru traktuje jak dostawę opodatkowaną VAT, jeżeli przy nabyciu przysługiwało prawo do odliczenia – kluczowe dla darowizny auta z firmy."
+    }
+  ],
+  "edge_cases": [
+    "Wykup z leasingu na fakturę firmową bez ujęcia w kosztach i bez odliczenia VAT + przekazanie na cele prywatne – przy późniejszej sprzedaży prywatnej brak VAT, PIT tylko jeśli sprzedaż przed upływem 6 lat liczonych od wycofania.",
+    "Samochód kupiony na VAT marża i wprowadzony do ŚT – przy sprzedaży można zastosować procedurę marży (art. 120), jeśli spełnione warunki, zamiast 23% VAT od pełnej ceny.",
+    "Samochód kupiony na umowę kupna-sprzedaży (brak VAT naliczonego) – przy sprzedaży jako ŚT u czynnego podatnika VAT co do zasady 23% VAT od pełnej ceny, chyba że zastosowana zostanie procedura marży dla towarów używanych.",
+    "Spółka na CIT estońskim sprzedająca samochód nieujęty w ŚT – ryzyko ukrytych zysków/wydatków niezwiązanych z działalnością; sprzedaż sama w sobie nie generuje 50% CIT estońskiego, ale wcześniejsze użytkowanie prywatne może.",
+    "Darowizna towarów handlowych/samochodów (np. ojciec → córka) – VAT należny od wartości rynkowej, jeśli przysługiwało prawo odliczenia; często korzystniejsza jest sprzedaż z rabatem niż darowizna."
+  ],
+  "common_mistakes": [
+    "Mylenie 'nie odliczyłem VAT' z 'nie miałem prawa odliczyć' – dla skutków VAT przy sprzedaży/darowiźnie liczy się PRAWO do odliczenia, a nie faktyczne skorzystanie z niego.",
+    "Pominięcie VAT przy darowiźnie samochodu wykupionego z leasingu z fakturą VAT – podatnicy zakładają, że skoro nie odliczyli VAT, to darowizna jest neutralna, podczas gdy art. 7 ust. 2 wymaga opodatkowania.",
+    "Błędne liczenie 6-letniego okresu w PIT od daty zakupu zamiast od pierwszego dnia miesiąca następującego po miesiącu wycofania z działalności (art. 10 ust. 2 pkt 4 PIT)."
+  ],
+  "related_questions": [
+    "Jak rozliczyć VAT i PIT od rat leasingu operacyjnego samochodu osobowego powyżej 150 000 zł?",
+    "Czy przy wycofaniu samochodu z firmy na cele prywatne trzeba skorygować wcześniej odliczony VAT (korekta wieloletnia)?",
+    "Jak zastosować procedurę VAT marża przy sprzedaży samochodu używanego nabytego od osoby prywatnej jako towar handlowy?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "62",
+    "cluster_label": "VAT przy wykupie, sprzedaży i darowiźnie samochodu z firmy",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "d43a1bec6705",
+      "a1e8ceb1e6f3",
+      "6664543ff8bd",
+      "8e435a57f70f",
+      "2575a08012f7",
+      "8c1c03ed9204",
+      "7f474bb7dc1d",
+      "4d516701aa0c",
+      "0a870e96771d",
+      "2f51aa19b173",
+      "68b4e7c75f0e",
+      "199876631f56",
+      "3fb763039ad1",
+      "e38933f7a37a"
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "id": "wf_21_sprawozdania_finansowe_do_krs_kas_schematy_i_skladanie",
+  "title": "Sporządzanie i składanie sprawozdań finansowych do KRS/KAS - schematy, wersje, procedura",
+  "topic_area": "rachunkowość",
+  "question_examples": [
+    "Czy za 2025 rok można sporządzić sprawozdanie spółki z o.o. w wersji schemy 1.3, czy trzeba czekać na 2.1?",
+    "Na jakim schemacie (załącznik nr 1 v 1.3?) sporządzić sprawozdanie spółki z o.o. za 2025 rok?",
+    "Jak i gdzie złożyć sprawozdanie finansowe spółki z o.o. do KRS - przez S24 czy e-formularze?",
+    "Czy spółka cywilna prowadząca pełne księgi ze względu na obroty składa gdzieś sprawozdanie finansowe?",
+    "Czy uchwała o stosowaniu uproszczeń w SF musi być dołączona do zgłoszenia w KRS i podpisana elektronicznie?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal obowiązek sprawozdawczy i miejsce złożenia dla danego podmiotu",
+      "detail": "Spółki z KRS (sp. z o.o., S.A., komandytowa, jawna z pełną księgowością) - SF do KRS przez RDF (eKRS). Osoby fizyczne prowadzące KH oraz spółki cywilne osób fizycznych - SF do Szefa KAS przez e-Sprawozdania Finansowe. Spółka cywilna prowadząca KH ze względu na obroty: SF sporządza i podpisuje, ale nie składa do żadnego rejestru (pozostaje w dokumentacji jednostki).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Dobierz właściwy schemat XSD (załącznik i wersję) do rodzaju jednostki",
+      "detail": "Dla spółki z o.o. na zasadach ogólnych - załącznik nr 1 do UoR. Dla jednostki mikro - załącznik nr 4, dla małej - załącznik nr 5. Za 2025 r. obowiązuje wersja schemy opublikowana przez MF na stronie gov.pl/sf przed dniem sporządzenia - sprawdź komunikat MF. Nie sporządzaj w wersji archiwalnej jeśli MF wydał nową obowiązującą.",
+      "condition": "if jednostka kwalifikuje się jako mikro/mała - wymagana uchwała organu zatwierdzającego o stosowaniu uproszczeń"
+    },
+    {
+      "step": 3,
+      "action": "Wygeneruj plik XML w programie księgowym i podpisz elektronicznie",
+      "detail": "W Comarch Optima, Symfonia, Enova lub WFirma skorzystaj z modułu e-Sprawozdania. Podpis: kwalifikowany, profil zaufany lub podpis osobisty. SF podpisuje osoba prowadząca księgi i KAŻDY członek zarządu (można złożyć oświadczenie jednego członka + odmowę pozostałych). Termin sporządzenia: 3 miesiące od dnia bilansowego (dla roku kalendarzowego: do 31 marca).",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Przygotuj komplet dokumentów zatwierdzających",
+      "detail": "Po zatwierdzeniu SF przez organ (zgromadzenie wspólników) - do 6 miesięcy od dnia bilansowego. Skompletuj: SF (XML), uchwałę o zatwierdzeniu SF, uchwałę o podziale zysku/pokryciu straty, sprawozdanie z działalności (jeśli wymagane), opinię biegłego (jeśli badanie), uchwałę o stosowaniu uproszczeń (jeśli dotyczy - dołącza się do KRS wraz z SF, podpisana elektronicznie lub skan podpisanego dokumentu).",
+      "condition": "if spółka z o.o./S.A. - wymagane sprawozdanie z działalności zarządu"
+    },
+    {
+      "step": 5,
+      "action": "Złóż SF do właściwego rejestru w ustawowym terminie",
+      "detail": "KRS: w ciągu 15 dni od zatwierdzenia SF przez RDF (bezpłatne zgłoszenie finansowe) - NIE przez S24. Zgłoszenie RDF wymaga PESEL osoby uprawnionej ujawnionej w KRS. KAS (osoby fizyczne z KH): do 30 kwietnia roku następującego po roku podatkowym, przez bramkę e-Sprawozdania Finansowe. Do KAS nie załącza się uchwał (nie dotyczy osób fizycznych).",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "W przypadku opóźnienia - złóż SF niezwłocznie, nawet po terminie",
+      "detail": "KRS za brak SF wydaje najpierw wezwanie z grzywną przymuszającą - po złożeniu zaległego SF grzywna nieopłacona przestaje być wymagalna. Przy dużych opóźnieniach sąd może zawiadomić prokuraturę (art. 79 UoR - odpowiedzialność karna). Nie ma formalnej procedury wniosku o odstąpienie od kary, ale samo złożenie zaległych SF typowo kończy sprawę bez sankcji finansowej.",
+      "condition": "if przekroczony termin 15 dni od zatwierdzenia"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 69 ust. 1",
+      "reason": "Określa obowiązek i 15-dniowy termin złożenia SF wraz z uchwałą zatwierdzającą i uchwałą o podziale zysku we właściwym rejestrze sądowym (KRS)."
+    },
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 69 ust. 1 pkt 3",
+      "reason": "Wymaga dołączenia do zgłoszenia w KRS odpisu uchwały organu zatwierdzającego o zatwierdzeniu rocznego sprawozdania finansowego."
+    },
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 45 ust. 1g",
+      "reason": "Nakłada obowiązek sporządzenia sprawozdania finansowego w postaci elektronicznej w strukturze logicznej udostępnionej przez MF (schemy XSD)."
+    }
+  ],
+  "edge_cases": [
+    "Spółka cywilna prowadząca KH ze względu na przekroczenie limitu obrotów - sporządza i podpisuje SF, ale nie składa go do żadnego rejestru (pozostaje w dokumentacji jednostki).",
+    "Spółka zawieszona vs zamrożona: spółka zawieszona bez żadnych operacji gospodarczych w roku obrotowym może nie sporządzać SF (art. 3 ust. 6 UoR), ale pojedyncza transakcja (np. opłacenie faktury księgowej) przywraca obowiązek sporządzenia SF.",
+    "Przekształcenie sp. komandytowej w sp. z o.o. - SF sporządzone na dzień poprzedzający przekształcenie NIE jest składane do KRS (art. 12 ust. 2 pkt 3 UoR - brak zamknięcia ksiąg przy kontynuacji), ale bilansowo zamyka się księgi spółki przekształcanej.",
+    "Przejęcie spółki bez dokumentów od poprzedniego biura - zaległe SF należy odtworzyć na bazie deklaracji z US/ZUS, wyciągów bankowych, JPK; równolegle zaleca się złożenie zawiadomienia o podejrzeniu popełnienia przestępstwa do prokuratury (art. 77 UoR) jako zabezpieczenie odpowiedzialności klienta."
+  ],
+  "common_mistakes": [
+    "Próba składania SF do KRS przez portal S24 - SF składa się wyłącznie przez bezpłatny system RDF (Repozytorium Dokumentów Finansowych) w eKRS.",
+    "Dołączanie uchwały o podziale zysku do SF osoby fizycznej składanego do KAS - osoby fizyczne nie sporządzają i nie składają uchwał o podziale zysku (brak organu zatwierdzającego).",
+    "Dynamiczne korygowanie zatwierdzonego SF po zmianach stanów magazynowych - SF sporządza się na dzień bilansowy i koryguje wyłącznie w razie istotnych błędów (art. 54 UoR), a nie bieżących zmian operacyjnych po dniu bilansowym."
+  ],
+  "related_questions": [
+    "Jak podpisać e-SF gdy jeden z członków zarządu nie ma polskiego PESEL ani podpisu kwalifikowanego?",
+    "Czy sprawozdanie z działalności zarządu można dołączyć jako PDF, czy musi być w strukturze XML?",
+    "W jakim terminie i gdzie złożyć SF spółki, która zmieniła rok obrotowy w trakcie roku kalendarzowego?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "21",
+    "cluster_label": "Sprawozdania finansowe do KRS/KAS: schematy i składanie",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "c7ad127f9296",
+      "0eb0e6142629",
+      "214f7d8d83d7",
+      "bffda0b4d41e",
+      "a51bd560f9c2",
+      "a1c8ec18535e",
+      "a51bd560f9c2",
+      "d15677cdd119",
+      "227c400dc3c0",
+      "afd7c2038e98",
+      "69128abf0c6d",
+      "bad0d6d90599",
+      "ce9969991b5e",
+      "9d36c799e46d",
+      "1845d0a5f61d",
+      "d31a2f2e7159"
+    ]
+  }
+}

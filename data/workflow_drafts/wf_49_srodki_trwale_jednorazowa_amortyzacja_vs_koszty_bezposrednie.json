@@ -1,0 +1,115 @@
+{
+  "id": "wf_49_srodki_trwale_jednorazowa_amortyzacja_vs_koszty_bezposrednie",
+  "title": "Środki trwałe do 10 tys. zł i powyżej – wybór między kosztami bezpośrednimi, jednorazową amortyzacją a amortyzacją liniową",
+  "topic_area": "KPiR",
+  "question_examples": [
+    "Czy zakup sprzętu za 5 600 zł netto muszę ująć jako jednorazową amortyzację, czy mogę wrzucić bezpośrednio w koszty bez wpisu do ewidencji środków trwałych?",
+    "Czy sprzęt poniżej 10 tys. zł używany dłużej niż rok musi być wprowadzony na ewidencję środków trwałych?",
+    "Klient kupił w grudniu 4 maszyny poniżej 10 tys. zł każda – czy mogę zastosować amortyzację liniową, żeby odpisy obniżały podstawę opodatkowania w kolejnym roku?",
+    "Czy nowe meble biurowe mogę zamortyzować jednorazowo w ramach limitu 100 000 zł dla fabrycznie nowych środków trwałych (bez de minimis)?",
+    "Czy mogę jednorazowo zamortyzować środek trwały o wartości 23 tys. zł netto w ramach pomocy de minimis?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal wartość początkową składnika majątku netto (dla czynnego podatnika VAT) lub brutto (dla nie-VATowca) oraz przewidywany okres używania.",
+      "detail": "Jeśli wartość ≤ 10 000 zł i okres używania > 1 rok – masz trzy ścieżki do wyboru (patrz krok 2). Jeśli wartość > 10 000 zł i okres używania > 1 rok – musi trafić do ewidencji środków trwałych i być amortyzowany.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Wybierz jedną z trzech opcji dla składnika o wartości ≤ 10 000 zł.",
+      "detail": "Opcja A: zaliczenie bezpośrednio w koszty (kol. 13 KPiR) bez wprowadzania do ewidencji – art. 22d ust. 1 ustawy o PIT. Opcja B: wpis do ewidencji ŚT i jednorazowy odpis amortyzacyjny w miesiącu przyjęcia do używania lub miesiącu następnym – art. 22f ust. 3 PIT. Opcja C: wpis do ewidencji ŚT i amortyzacja liniowa według stawek z Wykazu. Decyzję podejmuje podatnik, kierując się optymalizacją podatkową.",
+      "condition": "if wartość początkowa ≤ 10 000 zł"
+    },
+    {
+      "step": 3,
+      "action": "Sprawdź możliwość skorzystania z jednorazowej amortyzacji dla składnika > 10 000 zł.",
+      "detail": "Dostępne są dwie ścieżki: (1) jednorazowa amortyzacja de minimis do 50 000 euro rocznie dla małych podatników i rozpoczynających działalność (art. 22k ust. 7 PIT) – obejmuje grupy KŚT 3–8 z wyłączeniem samochodów osobowych; (2) jednorazowa amortyzacja fabrycznie nowych ŚT do 100 000 zł rocznie (art. 22k ust. 14 PIT) – tylko grupy KŚT 3–6 i 8, bez grupy 7 (środki transportu).",
+      "condition": "if wartość > 10 000 zł i chcesz przyspieszyć rozliczenie"
+    },
+    {
+      "step": 4,
+      "action": "Zweryfikuj status podatnika i limity pomocy de minimis przed wyborem art. 22k ust. 7.",
+      "detail": "Mały podatnik to ten, u którego przychody brutto w poprzednim roku nie przekroczyły 2 mln euro. Przy przychodzie ok. 8 mln zł status małego podatnika jest zachowany, ale sprawdź dostępny limit de minimis (300 tys. euro w 3 latach). Pamiętaj, że pomocą de minimis jest tylko korzyść podatkowa (różnica między podatkiem przy jednorazowej a liniowej amortyzacji), a nie cała wartość odpisu.",
+      "condition": "if wybrano jednorazową amortyzację de minimis"
+    },
+    {
+      "step": 5,
+      "action": "Wprowadź środek trwały do ewidencji i zaksięguj odpis w programie księgowym.",
+      "detail": "W Comarch Optima / WFirma / Symfonia: utwórz kartę ŚT, przypisz KŚT (np. 669 dla testera diagnostycznego, 808 dla mebli biurowych), ustal metodę i stawkę amortyzacji, wygeneruj dokument OT. Odpis trafia do kol. 13 KPiR w dacie wynikającej z wybranej metody (miesiąc następny po przyjęciu dla liniowej; miesiąc przyjęcia lub następny dla jednorazowej).",
+      "condition": "if składnik trafia do ewidencji ŚT"
+    },
+    {
+      "step": 6,
+      "action": "Przy ulepszeniu istniejącego ŚT o kwotę > 10 000 zł w roku – zwiększ wartość początkową, nie księguj w koszty bezpośrednie.",
+      "detail": "Art. 22g ust. 17 PIT: suma wydatków na ulepszenie (przebudowa, rozbudowa, rekonstrukcja, adaptacja, modernizacja) przekraczająca 10 000 zł rocznie zwiększa wartość początkową ŚT. Od zwiększonej podstawy naliczasz dalsze odpisy według dotychczasowej metody. Jest to istotne wobec wchodzącego JPK_ST.",
+      "condition": "if dotyczy ulepszenia istniejącego ŚT"
+    },
+    {
+      "step": 7,
+      "action": "Przy sprzedaży ŚT wykaż w PIT-36/36L zał. B wartość początkową jako przychód i niezamortyzowaną (nieumorzoną) część jako koszt.",
+      "detail": "Kosztem uzyskania przychodów przy odpłatnym zbyciu ŚT jest wartość początkowa pomniejszona o sumę dokonanych odpisów amortyzacyjnych (art. 23 ust. 1 pkt 1 PIT). Przychodem – cena sprzedaży. W praktyce w kosztach wykazujesz wartość nieumorzoną, nie pełną wartość początkową.",
+      "condition": "if następuje sprzedaż ŚT"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22d ust. 1 oraz art. 22f ust. 3",
+      "reason": "Określa prawo podatnika do nieujmowania w ewidencji ŚT składników o wartości ≤ 10 000 zł i zaliczenia wydatku bezpośrednio w koszty lub jednorazowego odpisu."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22k ust. 7 oraz art. 22k ust. 14",
+      "reason": "Reguluje jednorazową amortyzację w ramach pomocy de minimis (limit 50 000 euro) oraz jednorazową amortyzację fabrycznie nowych ŚT z grup 3–6 i 8 (limit 100 000 zł)."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22h ust. 2",
+      "reason": "Nakazuje kontynuację raz wybranej metody amortyzacji do pełnego zamortyzowania – kluczowe przy decyzji między liniową a jednorazową."
+    }
+  ],
+  "edge_cases": [
+    "Mieszkanie wykorzystywane jako lokal firmy – od 2023 r. podatkowo nie można go amortyzować (art. 22c pkt 2 PIT), ale bilansowo amortyzacja jest nadal dokonywana.",
+    "Spółka z o.o. kupująca fabrycznie nowy kocioł węglowy (35 tys. zł) – może skorzystać z art. 16k ust. 14 CIT (limit 100 tys. zł), ale samochód dostawczy 3,5 t (grupa 7) jest wyłączony i musi być amortyzowany standardowo.",
+    "Zaświadczenie z US o pomocy de minimis pokazuje tylko korzyść podatkową (np. 4,3 tys. zł przy ŚT za 90 tys. zł), a nie pełną wartość odpisu – to różnica między podatkiem przy jednorazowej a rozłożonej amortyzacji.",
+    "Środek trwały zakupiony na fakturę z NIP-em przedsiębiorcy wprowadzamy do ewidencji na podstawie faktury zakupu + OT; oświadczenie o przekazaniu na potrzeby działalności stosuje się dla majątku prywatnego."
+  ],
+  "common_mistakes": [
+    "Wykazywanie przy sprzedaży ŚT w kosztach pełnej wartości początkowej zamiast wartości niezamortyzowanej (nieumorzonej).",
+    "Mylenie limitu jednorazowej amortyzacji fabrycznie nowych ŚT (100 tys. zł, grupy 3–6 i 8) z de minimis (50 tys. euro, grupy 3–8) – a są to dwa niezależne instrumenty.",
+    "Księgowanie ulepszenia ŚT > 10 000 zł jako niskocennego wyposażenia zamiast zwiększenia wartości początkowej środka trwałego."
+  ],
+  "related_questions": [
+    "Jak ustalić wartość początkową środka trwałego wniesionego z majątku prywatnego do działalności gospodarczej?",
+    "Jakie stawki amortyzacji indywidualnej można zastosować dla używanych środków trwałych i jakie są warunki (art. 22j PIT)?",
+    "Czy leasing operacyjny środka trwałego wyklucza możliwość późniejszej jednorazowej amortyzacji po wykupie?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "49",
+    "cluster_label": "Środki trwałe: jednorazowa amortyzacja vs koszty bezpośrednie",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "d28558e44602",
+      "03f11e507249",
+      "a75c246c7484",
+      "1445de9be31a",
+      "4ab142baaa40",
+      "22b95ef77ec3",
+      "113f97c2a1a0",
+      "b8dbe45628ed",
+      "1ba52ae2b9ef",
+      "70876af50688",
+      "54c4757d43c5",
+      "c0eece56491e",
+      "fa1369aea058",
+      "581d6a6893d2",
+      "0522495a4cf8"
+    ]
+  }
+}

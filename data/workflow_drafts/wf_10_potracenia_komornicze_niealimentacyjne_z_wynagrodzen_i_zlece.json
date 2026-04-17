@@ -1,0 +1,108 @@
+{
+  "id": "wf_10_potracenia_komornicze_niealimentacyjne_z_wynagrodzen_i_zlece",
+  "title": "Potrącenia komornicze niealimentacyjne z wynagrodzeń, zasiłków i umów zlecenia",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownik zarabia minimalne wynagrodzenie (ok. 4666 zł brutto) i ma zajęcie niealimentacyjne - czy muszę coś potrącać?",
+    "Pracownik ma umowę zlecenie ok. 1700 zł brutto, przyszło pismo od komornika - potrącam całość czy zostawiam kwotę wolną?",
+    "W grudniu wypłacam świadczenie z ZFŚS, nagrodę i wynagrodzenie - czy potrącenie komornicze liczyć osobno od każdej kwoty czy od sumy?",
+    "Pracownik ma wynagrodzenie za pracę 1108 zł brutto i zasiłek wypadkowy 4246 zł - ile potrącę z tytułu zajęcia niealimentacyjnego?",
+    "Z trzynastki potrącam 50% netto dla komornika, czy sumuję ją z wynagrodzeniem miesięcznym i liczę limit łącznie?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal tytuł zajęcia i zakres objęcia",
+      "detail": "Przeczytaj pismo komornika i sprawdź, czy zajęcie obejmuje wynagrodzenie za pracę, wierzytelności z umów cywilnoprawnych, zasiłki czy inne świadczenia. Od tego zależy, jakie limity potrąceń stosujesz (art. 87-871 KP dotyczą wyłącznie stosunku pracy).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zastosuj limit 50% wynagrodzenia netto i kwotę wolną dla umowy o pracę",
+      "detail": "Przy zajęciu niealimentacyjnym maksymalne potrącenie to 50% wynagrodzenia netto po odliczeniu ZUS, zaliczki PIT i PPK. Kwota wolna to 100% minimalnego wynagrodzenia netto (pełny etat) - w 2025/2026 przy minimalnej krajowej pracownik na pełnym etacie z podstawowymi kosztami i ulgą zazwyczaj nie ma potrącenia w ogóle. W Comarch Optima/Symfonia wprowadź zajęcie jako 'Komornicze inne' i ustaw typ 'niealimentacyjne'.",
+      "condition": "if tytuł zajęcia to wynagrodzenie ze stosunku pracy"
+    },
+    {
+      "step": 3,
+      "action": "Zsumuj wszystkie składniki wypłaty z danego miesiąca przed wyliczeniem potrącenia",
+      "detail": "Wynagrodzenie zasadnicze, premia, nagroda, trzynastka, ekwiwalent za urlop - wszystko co stanowi wynagrodzenie za pracę sumujesz i od łącznej kwoty netto liczysz 50% oraz kwotę wolną (nie osobno od każdego składnika). Świadczenia z ZFŚS co do zasady NIE podlegają egzekucji przy zajęciu wynagrodzenia (chyba że pismo obejmuje wierzytelności).",
+      "condition": "if w miesiącu wypłacasz kilka składników wynagrodzenia"
+    },
+    {
+      "step": 4,
+      "action": "Dla umowy zlecenia potrąć całą kwotę, chyba że zleceniobiorca udokumentuje ochronę",
+      "detail": "Umowy cywilnoprawne nie są chronione limitami z Kodeksu pracy. Potrącasz 100% wynagrodzenia - CHYBA że zleceniobiorca dostarczy pismo komornika potwierdzające, że zlecenie jest jego jedynym, powtarzającym się źródłem utrzymania (art. 833 § 2 i 2¹ KPC) - wtedy stosujesz limity jak przy umowie o pracę. Pracownik musi sam złożyć wniosek do komornika.",
+      "condition": "if zajęcie dotyczy umowy zlecenia"
+    },
+    {
+      "step": 5,
+      "action": "Dla zasiłków z ubezpieczenia społecznego zastosuj limity z ustawy emerytalnej",
+      "detail": "Z zasiłku chorobowego, opiekuńczego, macierzyńskiego, wypadkowego przy zajęciu niealimentacyjnym maksymalne potrącenie to 25% świadczenia brutto. Kwota wolna to 825 zł miesięcznie (stan na 2025 r., waloryzowana corocznie w marcu), liczona proporcjonalnie do liczby dni zasiłku. Limity te stosuje się osobno od limitów wynagrodzenia za pracę.",
+      "condition": "if pracownik otrzymuje zasiłek ZUS w danym miesiącu"
+    },
+    {
+      "step": 6,
+      "action": "Przy zbiegu egzekucji alimentacyjnej i niealimentacyjnej zachowaj łączny limit 60%",
+      "detail": "Najpierw potrąć alimenty (do 60% netto, bez kwoty wolnej), potem niealimentacyjne - ale łącznie nie więcej niż 60% wynagrodzenia netto. Przy zbiegu zajęć od różnych komorników lub komornik + ZUS zgłoś zbieg do organu właściwego (komornik 'wygrywa' z ZUS przy egzekucji niealimentacyjnej - patrz art. 773 KPC).",
+      "condition": "if występuje kilka zajęć jednocześnie"
+    },
+    {
+      "step": 7,
+      "action": "Przekaż potrąconą kwotę komornikowi i wyślij odpowiedź w 7 dni",
+      "detail": "W ciągu 7 dni od otrzymania pisma odpowiedz komornikowi (formularz z zajęcia): podaj wysokość wynagrodzenia, inne zajęcia, przeszkody w wypłacie. Potrąconą kwotę przelewaj w terminie wypłaty na rachunek wskazany w piśmie. Potrącenie ewidencjonuj na liście płac jako osobną pozycję - w Optimie/Symfonii/Enova dodaj element 'Potrącenie komornicze'.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 87¹",
+      "reason": "Określa kwotę wolną od potrąceń w wysokości minimalnego wynagrodzenia netto przy zajęciach niealimentacyjnych - to kluczowa podstawa ochrony pracownika."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 87",
+      "reason": "Ustala kolejność i limity potrąceń z wynagrodzenia za pracę - 50% przy egzekucji niealimentacyjnej i 60% łącznie przy zbiegu z alimentami."
+    }
+  ],
+  "edge_cases": [
+    "Umowa zlecenie jako jedyne źródło utrzymania - po dostarczeniu przez zleceniobiorcę pisma od komornika stosujemy limity jak przy umowie o pracę (art. 833 § 2¹ KPC).",
+    "Dwie wypłaty w jednym miesiącu kalendarzowym (np. wypłata grudniowa + styczniowa wypłacona 31.12) - potrącenie liczymy od łącznego przychodu miesiąca; druga wypłata może w całości pójść do komornika jeśli kwota wolna została już wykorzystana.",
+    "Pracownik tylko na zasiłku (bez wynagrodzenia za pracę) - stosujemy wyłącznie limity z ustawy emerytalnej (25% brutto, kwota wolna 825 zł proporcjonalnie), nie limity z Kodeksu pracy.",
+    "Zajęcie przez ZUS za zaległe składki z działalności - traktujemy tak samo jak zajęcie komornicze niealimentacyjne (50%, kwota wolna = minimalna krajowa netto)."
+  ],
+  "common_mistakes": [
+    "Potrącanie 50% osobno od każdego składnika wypłaty (wynagrodzenie, premia, nagroda) zamiast od łącznej sumy netto miesiąca.",
+    "Stosowanie limitów z Kodeksu pracy do umowy zlecenia bez pisma komornika potwierdzającego, że to jedyne źródło utrzymania - w efekcie zleceniobiorca dostaje za dużo, a wierzyciel za mało.",
+    "Mylenie kwoty wolnej od zasiłku (825 zł, waloryzowana) z minimalnym wynagrodzeniem netto - i odwrotnie, stosowanie kwoty wolnej z KP do zasiłków ZUS."
+  ],
+  "related_questions": [
+    "Jak rozliczyć zbieg egzekucji alimentacyjnej i niealimentacyjnej - który komornik ma pierwszeństwo?",
+    "Czy z wynagrodzenia chorobowego (pierwsze 33 dni płacone przez pracodawcę) stosujemy limity z Kodeksu pracy czy z ustawy emerytalnej?",
+    "Jak wyliczyć potrącenie komornicze dla pracownika zatrudnionego na część etatu - czy kwota wolna jest proporcjonalna?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "10",
+    "cluster_label": "Potrącenia komornicze niealimentacyjne z wynagrodzeń i zleceń",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "415cc82e63d3",
+      "8ad9d2380b5b",
+      "f73ebf4734cf",
+      "5f8c705c4f34",
+      "737be2ed09c3",
+      "f18e9e4f3685",
+      "483953e1d9e6",
+      "a9e58c01fb2c",
+      "01396068941f",
+      "3a94f51d46fd",
+      "c36b99ed3368",
+      "2350a1c97ee2",
+      "d3cc6dbb3ba4"
+    ]
+  }
+}

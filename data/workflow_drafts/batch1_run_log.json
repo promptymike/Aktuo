@@ -1,0 +1,273 @@
+{
+  "batch": "batch1",
+  "generated_at": "2026-04-17T20:06:23Z",
+  "n_specs": 10,
+  "n_ok": 10,
+  "n_failed": 0,
+  "total_input_tokens": 90205,
+  "total_output_tokens": 46587,
+  "total_cost_usd": 4.8471,
+  "elapsed_s": 634.29,
+  "results": [
+    {
+      "target_key": "merge_120_121",
+      "label": "KSeF: moment podatkowy, data wystawienia, korekty",
+      "topic_area": "KSeF",
+      "status": "ok_resumed",
+      "attempts": [],
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "elapsed_s": 0.0,
+      "material_size": null,
+      "material_avg_comments": null,
+      "centroid_n": null,
+      "high_engagement_n": null,
+      "legal_candidates_n": null,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 2
+    },
+    {
+      "target_key": "7",
+      "label": "Zaliczanie umów zlecenie i DG do stażu pracy od 2026",
+      "topic_area": "kadry",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 7635,
+          "output_tokens": 3503,
+          "raw_text_len": 7112,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 7635,
+      "output_tokens": 3503,
+      "elapsed_s": 51.84,
+      "material_size": 797,
+      "material_avg_comments": 1.221,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": true,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 1
+    },
+    {
+      "target_key": "63",
+      "label": "Leasing samochodu osobowego: limity KUP i odliczenie VAT",
+      "topic_area": "PIT",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 7749,
+          "output_tokens": 3751,
+          "raw_text_len": 7514,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 7749,
+      "output_tokens": 3751,
+      "elapsed_s": 56.9,
+      "material_size": 359,
+      "material_avg_comments": 1.44,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 3
+    },
+    {
+      "target_key": "79",
+      "label": "Mały ZUS Plus: ponowne skorzystanie po przerwie 2026",
+      "topic_area": "ZUS",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 8086,
+          "output_tokens": 3699,
+          "raw_text_len": 7226,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 8086,
+      "output_tokens": 3699,
+      "elapsed_s": 55.77,
+      "material_size": 306,
+      "material_avg_comments": 1.389,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": true,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 2
+    },
+    {
+      "target_key": "49",
+      "label": "Środki trwałe: jednorazowa amortyzacja vs koszty bezpośrednie",
+      "topic_area": "KPiR",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 7434,
+          "output_tokens": 4081,
+          "raw_text_len": 8181,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 7434,
+      "output_tokens": 4081,
+      "elapsed_s": 60.54,
+      "material_size": 288,
+      "material_avg_comments": 1.028,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 3
+    },
+    {
+      "target_key": "10",
+      "label": "Potrącenia komornicze niealimentacyjne z wynagrodzeń i zleceń",
+      "topic_area": "kadry",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 7950,
+          "output_tokens": 4096,
+          "raw_text_len": 8123,
+          "status": "parse_fail",
+          "error": "parse: JSON parse failed: Expecting ',' delimiter: line 71 column 6 (char 5436)"
+        },
+        {
+          "attempt": 2,
+          "input_tokens": 8029,
+          "output_tokens": 3776,
+          "raw_text_len": 7457,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 15979,
+      "output_tokens": 7872,
+      "elapsed_s": 117.57,
+      "material_size": 212,
+      "material_avg_comments": 1.302,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 2
+    },
+    {
+      "target_key": "107",
+      "label": "Nowe oznaczenia JPK_VAT: BFK vs DI dla faktur WNT, importu i poza KSeF",
+      "topic_area": "JPK",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 6915,
+          "output_tokens": 3531,
+          "raw_text_len": 6837,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 6915,
+      "output_tokens": 3531,
+      "elapsed_s": 54.71,
+      "material_size": 179,
+      "material_avg_comments": 1.425,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 3
+    },
+    {
+      "target_key": "62",
+      "label": "VAT przy wykupie, sprzedaży i darowiźnie samochodu z firmy",
+      "topic_area": "VAT",
+      "status": "ok_retry",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 7211,
+          "output_tokens": 4209,
+          "raw_text_len": 8337,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 7211,
+      "output_tokens": 4209,
+      "elapsed_s": 59.14,
+      "material_size": 179,
+      "material_avg_comments": 1.179,
+      "centroid_n": 10,
+      "high_engagement_n": 4,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 3
+    },
+    {
+      "target_key": "21",
+      "label": "Sprawozdania finansowe do KRS/KAS: schematy i składanie",
+      "topic_area": "rachunkowość",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 6533,
+          "output_tokens": 3729,
+          "raw_text_len": 7535,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 6533,
+      "output_tokens": 3729,
+      "elapsed_s": 57.24,
+      "material_size": 271,
+      "material_avg_comments": 1.059,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 6,
+      "n_legal_anchors": 3
+    },
+    {
+      "target_key": "139",
+      "label": "KSeF: obieg, archiwizacja i weryfikacja faktur w biurze",
+      "topic_area": "KSeF",
+      "status": "ok",
+      "attempts": [
+        {
+          "attempt": 1,
+          "input_tokens": 8162,
+          "output_tokens": 4020,
+          "raw_text_len": 8299,
+          "status": "ok"
+        }
+      ],
+      "input_tokens": 8162,
+      "output_tokens": 4020,
+      "elapsed_s": 64.51,
+      "material_size": 109,
+      "material_avg_comments": 1.89,
+      "centroid_n": 10,
+      "high_engagement_n": 5,
+      "legal_candidates_n": 10,
+      "requires_manual_legal_anchor": false,
+      "n_answer_steps": 7,
+      "n_legal_anchors": 3
+    }
+  ]
+}

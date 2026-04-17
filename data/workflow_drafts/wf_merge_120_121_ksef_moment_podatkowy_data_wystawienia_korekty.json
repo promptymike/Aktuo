@@ -1,0 +1,110 @@
+{
+  "id": "wf_merge_120_121_ksef_moment_podatkowy_data_wystawienia_korekty",
+  "title": "KSeF: moment podatkowy, data wystawienia faktury i ujęcie korekt w VAT/JPK",
+  "topic_area": "KSeF",
+  "question_examples": [
+    "Faktura kosztowa wystawiona 28 lutego, przesłana do KSeF 1 marca – w którym miesiącu odliczam VAT: w lutym czy w marcu?",
+    "Faktura korygująca sprzedaży ma datę wystawienia luty, a datę sprzedaży styczeń – w którym okresie ująć ją w rejestrze VAT i JPK?",
+    "Faktura za energię/usługę ciągłą: dostawa styczeń, data wystawienia luty – kiedy koszt w KPiR, a kiedy VAT?",
+    "Kontrahent zrobił korektę błędnych danych nabywcy (nazwa, NIP) w styczniu do faktury grudniowej – jak zaksięgować pierwotną i korektę?",
+    "Faktura z Allegro/Orange w KSeF ma 3-4 różne daty (wystawienia, sprzedaży, wysyłki do KSeF) – którą datą kierować się przy VAT i KPiR?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal datę wystawienia faktury ustrukturyzowanej",
+      "detail": "Dla faktur w KSeF datą wystawienia jest dzień przesłania faktury do KSeF (a nie data wpisana w polu P_1 przez wystawcę). Datą otrzymania jest dzień nadania numeru KSeF. Jeśli wystawca wpisał datę 28.02, ale faktura trafiła do KSeF 01.03 – data wystawienia to 01.03.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Określ moment obowiązku podatkowego w VAT po stronie sprzedawcy",
+      "detail": "Obowiązek VAT powstaje co do zasady z chwilą dokonania dostawy/wykonania usługi (art. 19a ust. 1 ustawy o VAT), niezależnie od daty wystawienia faktury w KSeF. Dla mediów, najmu, usług ciągłych – z chwilą wystawienia faktury, nie później niż z upływem terminu płatności (art. 19a ust. 5 pkt 4). Faktura z datą sprzedaży styczeń trafia do rejestru VAT stycznia, nawet gdy data wystawienia w KSeF to luty.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Ustal okres odliczenia VAT po stronie nabywcy",
+      "detail": "Prawo do odliczenia powstaje w okresie, w którym powstał obowiązek podatkowy u sprzedawcy, ale nie wcześniej niż w okresie otrzymania faktury (art. 86 ust. 10 i 10b pkt 1). W KSeF 'otrzymanie' = data nadania numeru KSeF. Faktura za styczeń z datą KSeF 09.02 – VAT odliczasz najwcześniej w lutym (lub w jednym z trzech kolejnych okresów).",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Przypisz koszt w KPiR/CIT według daty wykonania usługi lub dostawy",
+      "detail": "Zasada memoriałowa: koszt przypisujesz do miesiąca, którego dotyczy (data sprzedaży/wykonania usługi), niezależnie od daty wystawienia faktury w KSeF. Na przełomie roku jest to obligatoryjne; w ciągu roku część biur księguje kaskadowo w miesiącu faktury, ale poprawnie jest zawsze w miesiącu wykonania (istotne dla JPK_CIT od 2025/2026).",
+      "condition": "if podatnik prowadzi KPiR metodą memoriałową lub księgi rachunkowe"
+    },
+    {
+      "step": 5,
+      "action": "Rozksięguj fakturę korygującą według powodu korekty",
+      "detail": "Korekta z powodu błędu rachunkowego lub pierwotnej wady (np. błędna cena od początku, błędna stawka) – ujmij w okresie faktury pierwotnej. Korekta z przyczyn następczych (zwrot, rabat, obniżka po sprzedaży) – ujmij w okresie uzgodnienia warunków korekty po stronie sprzedawcy (art. 29a ust. 13) i otrzymania/uzgodnienia po stronie nabywcy (art. 86 ust. 19a). Korekta wyłącznie danych formalnych (nazwa, adres, NIP – poza zmianą nabywcy) nie wpływa na VAT ani KPiR – tylko podpinasz pod fakturę pierwotną.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Zweryfikuj zaciąganie dat w programie księgowym",
+      "detail": "W Comarch Optima, Symfonia, Enova i wFirma import z KSeF często zaciąga datę wystawienia i datę sprzedaży z daty wpływu do KSeF – należy ręcznie skorygować datę sprzedaży na zgodną z rzeczywistym momentem dostawy (np. 31.01 zamiast 09.02), aby faktura trafiła do właściwego okresu VAT i KPiR.",
+      "condition": "if program zaciąga datę z KSeF zamiast z treści faktury"
+    },
+    {
+      "step": 7,
+      "action": "Wykaż korektę w JPK_VAT z prawidłowymi datami",
+      "detail": "Korekta faktury wystawiona w KSeF ma własny numer KSeF – w ewidencji JPK_VAT wykazujesz zarówno fakturę pierwotną (w swoim okresie), jak i korektę (w okresie wynikającym z kroku 5). Jeśli wystawca błędnie wystawił fakturę z datą marzec zamiast luty i skorygował ją do zera, do JPK trafia tylko prawidłowa faktura – błędnej i jej korekty nie ujmujesz w rejestrze sprzedaży (są neutralne), ale pozostają w KSeF.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106na ust. 1 i 3",
+      "reason": "Definiuje datę wystawienia faktury ustrukturyzowanej jako dzień przesłania do KSeF oraz datę otrzymania jako dzień nadania numeru KSeF – kluczowe dla ustalenia momentu odliczenia VAT."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 3",
+      "reason": "Reguluje zasady wystawiania faktur korygujących w KSeF i dostępu do nich, co determinuje sposób ujęcia korekt w ewidencji JPK_VAT."
+    }
+  ],
+  "edge_cases": [
+    "Faktura VAT metoda kasowa: VAT rozliczasz w dacie zapłaty (art. 21 ustawy o VAT), niezależnie od daty wystawienia w KSeF – przy zmianie biura rachunkowego należy pobrać od klienta wyciągi bankowe i zaksięgować niezapłacone faktury dopiero po otrzymaniu płatności.",
+    "Import towarów spoza UE: faktura handlowa z Chin z grudnia trafia do KPiR w dacie wystawienia (przeliczona po kursie z dnia poprzedzającego), a VAT rozliczasz dopiero z dokumentu celnego (SAD/PZC) w styczniu – dwie różne daty dla PIT i VAT.",
+    "Samofakturowanie (np. Respect Energy): faktura przyjęta do KSeF 09.02 za dostawę styczniową – data sprzedaży 31.01 decyduje o okresie VAT i KPiR, nawet jeśli program zaciąga 09.02.",
+    "Korekta wyłącznie danych formalnych nabywcy (literówka, adres) w KSeF – od likwidacji not korygujących wystawca musi wystawić fakturę korygującą, ale nie wpływa ona ani na VAT, ani na KPiR; podpinasz ją pod fakturę pierwotną w tym samym okresie."
+  ],
+  "common_mistakes": [
+    "Utożsamianie daty wystawienia wpisanej w polu P_1 faktury z datą wystawienia w rozumieniu ustawy – w KSeF wiąże wyłącznie data przesłania faktury do systemu.",
+    "Księgowanie kosztu w miesiącu daty wystawienia faktury z KSeF zamiast w miesiącu faktycznego wykonania usługi/dostawy – narusza zasadę memoriału i jest widoczne w JPK_CIT.",
+    "Automatyczne akceptowanie dat zaciąganych przez program księgowy z KSeF bez weryfikacji daty sprzedaży z treści faktury – skutkuje błędnym okresem w JPK_VAT."
+  ],
+  "related_questions": [
+    "Jak rozliczyć w VAT i KPiR fakturę w KSeF, gdy nabywca stosuje metodę kasową VAT?",
+    "Jak ująć w JPK_VAT fakturę, która została odrzucona w KSeF i wystawiona ponownie z nowym numerem?",
+    "W jakim okresie ująć fakturę korygującą in minus po stronie nabywcy, gdy została wystawiona w KSeF, ale nie otrzymano jeszcze potwierdzenia warunków korekty?"
+  ],
+  "last_verified_at": "2026-04-17",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "merge_120_121",
+    "cluster_label": "KSeF: moment podatkowy, data wystawienia, korekty",
+    "generated_at": "2026-04-17T00:00:00Z",
+    "source_post_ids": [
+      "13ec08262051",
+      "9e3061e1d89e",
+      "0a6a302bb980",
+      "ffce92b1a111",
+      "ee1aeb71b3b3",
+      "07236587429f",
+      "51b3852c2b6d",
+      "523469be3a46",
+      "070829674796",
+      "09eada7b424a",
+      "9feb8b685618",
+      "7944deb51910",
+      "690761acb3a1",
+      "f23c99aadca1",
+      "cc7f6ae7f073"
+    ]
+  }
+}
