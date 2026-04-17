@@ -21,3 +21,8 @@ data/corpus/
 analysis/fb_corpus_clustering_dryrun*.log
 analysis/fb_corpus_clustering_fullrun.log
 
+# Local debug / superseded one-off scripts (kept locally, not tracked).
+check_env.py
+analysis/build_top60_review.py
+analysis/top60_clusters_for_review.md
+
