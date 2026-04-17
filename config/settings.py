@@ -26,6 +26,26 @@ WORKFLOW_SEED_PATH = os.getenv(
     str(PROJECT_ROOT / "data" / "workflow" / "workflow_seed.json"),
 ).strip()
 WORKFLOW_CONFIDENCE_THRESHOLD = float(os.getenv("AKTUO_WORKFLOW_CONFIDENCE_THRESHOLD", "6.0"))
+WORKFLOW_PARTIAL_ANSWER_ENABLED = os.getenv(
+    "AKTUO_WORKFLOW_PARTIAL_ANSWER_ENABLED",
+    "true",
+).strip().lower() not in {"0", "false", "no", "off"}
+WORKFLOW_PARTIAL_CONFIDENCE_THRESHOLD = float(
+    os.getenv("AKTUO_WORKFLOW_PARTIAL_CONFIDENCE_THRESHOLD", "15.0")
+)
+WORKFLOW_PARTIAL_MIN_STEPS = int(os.getenv("AKTUO_WORKFLOW_PARTIAL_MIN_STEPS", "2"))
+WORKFLOW_PARTIAL_FATAL_SLOTS = tuple(
+    value.strip()
+    for value in os.getenv(
+        "AKTUO_WORKFLOW_PARTIAL_FATAL_SLOTS",
+        (
+            "czynność_operacyjna,kontekst_błędu_lub_integracji,rodzaj_pisma_lub_wniosku,"
+            "obszar_prawa,stan_faktyczny,typ_podmiotu,forma_opodatkowania,źródło_przychodu,"
+            "rodzaj_transakcji_lub_płatności,typ_umowy,składnik_wynagrodzenia_lub_dokument"
+        ),
+    ).split(",")
+    if value.strip()
+)
 WORKFLOW_ELIGIBLE_INTENTS = tuple(
     value.strip()
     for value in os.getenv(

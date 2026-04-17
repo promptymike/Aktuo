@@ -270,3 +270,62 @@ def test_sparse_workflow_unit_does_not_create_invented_sections(monkeypatch) -> 
     assert result["workflow_formatted"] is True
     assert result["invented_sections"] == []
     assert result["sparse_workflow_safe"] is True
+
+
+def test_evaluate_case_treats_partial_workflow_answer_as_operational(monkeypatch) -> None:
+    partial_result = RagResult(
+        answer=(
+            "**Krótko**\nObieg faktur, statusów i korekt w KSeF.\n\n"
+            "**Co możesz zrobić już teraz**\n1. Sprawdź status dokumentu w KSeF.\n\n"
+            "**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Okres lub data"
+        ),
+        chunks=[
+            LawChunk(
+                content="Workflow content",
+                law_name="Workflow layer",
+                article_number="Obieg faktur, statusów i korekt w KSeF",
+                category="ksef",
+                verified_date="",
+                score=10.0,
+                source_type="workflow_seed_v1",
+                workflow_area="KSeF issuing / correction / invoice circulation",
+                title="Obieg faktur, statusów i korekt w KSeF",
+                workflow_steps=("Sprawdź status dokumentu w KSeF.",),
+            )
+        ],
+        audit={"grounded": True},
+        redacted_query="Brak faktury w KSeF",
+        category="ksef",
+        retrieval_path="workflow",
+        needs_clarification=False,
+        missing_slots=["okres_lub_data"],
+        partial_answer=True,
+    )
+
+    monkeypatch.setattr(
+        "analysis.run_workflow_answer_eval.answer_query",
+        lambda query, knowledge_path, system_prompt, api_key: partial_result,
+    )
+
+    from analysis.run_workflow_answer_eval import WorkflowAnswerEvalCase
+
+    result = evaluate_case(
+        WorkflowAnswerEvalCase(
+            question="Brak faktury w KSeF",
+            normalized_question="brak faktury w ksef",
+            subset="workflow_answer_expected",
+            classification="workflow",
+            primary_intent="vat_jpk_ksef",
+            expected_behavior="answer_directly",
+            expected_law_or_area="workflow",
+            expected_source_type="workflow_kb",
+            source_category="ksef",
+            source_frequency=9,
+            needs_clarification=False,
+            golden_overlap=True,
+        )
+    )
+
+    assert result["workflow_formatted"] is True
+    assert result["operational_answer"] is True
+    assert "Co możesz zrobić już teraz" in result["answer_sections"]

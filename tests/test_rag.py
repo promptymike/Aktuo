@@ -303,3 +303,29 @@ def test_answer_query_shortened_context_fits_under_limit(tmp_path, monkeypatch) 
     assert result.answer == "Mocked answer"
     assert captured_context_sizes
     assert captured_context_sizes[0] <= 30
+
+
+def test_answer_query_keeps_legal_clarification_behavior_for_missing_legal_facts(tmp_path, monkeypatch) -> None:
+    seed_file = tmp_path / "law_knowledge.json"
+    seed_file.write_text("[]", encoding="utf-8")
+
+    monkeypatch.setattr(
+        "core.rag.analyze_query_requirements",
+        lambda query: QueryAnalysis(
+            intent="legal_substantive",
+            missing_slots=["stan_faktyczny"],
+            needs_clarification=True,
+        ),
+    )
+
+    result = answer_query(
+        query="Czy mogę tak zrobić w VAT?",
+        knowledge_path=seed_file,
+        system_prompt="Jesteś Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.needs_clarification is True
+    assert result.retrieval_path == "clarification"
+    assert result.partial_answer is False
+    assert "Potrzebuj" in result.answer

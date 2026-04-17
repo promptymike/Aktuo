@@ -147,34 +147,6 @@
         "workflow_formatted": false
       },
       {
-        "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-        "answer_sections": [],
-        "available_workflow_sections": [],
-        "classification": "workflow",
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
-        "expected_source_type": "workflow_kb",
-        "invented_sections": [],
-        "legal_style_answer": false,
-        "missing_slots": [
-          "rodzaj_ksiąg_lub_ewidencji",
-          "rodzaj_dokumentu",
-          "okres_księgowy"
-        ],
-        "needs_clarification": true,
-        "operational_answer": false,
-        "predicted_intent": "pit",
-        "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
-        "retrieval_path": "clarification",
-        "source_category": "rachunkowosc",
-        "source_frequency": 8,
-        "sparse_workflow_safe": false,
-        "sparse_workflow_unit": false,
-        "subset": "workflow_answer_expected",
-        "top_chunk": null,
-        "workflow_formatted": false
-      },
-      {
         "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
         "answer_sections": [],
         "available_workflow_sections": [],
@@ -256,34 +228,6 @@
         "workflow_formatted": false
       },
       {
-        "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-        "answer_sections": [],
-        "available_workflow_sections": [],
-        "classification": "workflow",
-        "expected_behavior": "insufficient_data",
-        "expected_law_or_area": "rachunkowość operacyjna",
-        "expected_source_type": "workflow_kb",
-        "invented_sections": [],
-        "legal_style_answer": false,
-        "missing_slots": [
-          "rodzaj_ksiąg_lub_ewidencji",
-          "rodzaj_dokumentu",
-          "okres_księgowy"
-        ],
-        "needs_clarification": true,
-        "operational_answer": false,
-        "predicted_intent": "rachunkowosc",
-        "question": "Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza?",
-        "retrieval_path": "clarification",
-        "source_category": "rachunkowosc",
-        "source_frequency": 5,
-        "sparse_workflow_safe": false,
-        "sparse_workflow_unit": false,
-        "subset": "workflow_answer_expected",
-        "top_chunk": null,
-        "workflow_formatted": false
-      },
-      {
         "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: czynność_operacyjna, kontekst_błędu_lub_integracji.",
         "answer_sections": [],
         "available_workflow_sections": [],
@@ -309,18 +253,74 @@
         "subset": "workflow_answer_expected",
         "top_chunk": null,
         "workflow_formatted": false
+      },
+      {
+        "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: nazwa_systemu, czynność_operacyjna, kontekst_błędu_lub_integracji.",
+        "answer_sections": [],
+        "available_workflow_sections": [],
+        "classification": "workflow",
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "oprogramowanie księgowe",
+        "expected_source_type": "workflow_kb",
+        "invented_sections": [],
+        "legal_style_answer": false,
+        "missing_slots": [
+          "nazwa_systemu",
+          "czynność_operacyjna",
+          "kontekst_błędu_lub_integracji"
+        ],
+        "needs_clarification": true,
+        "operational_answer": false,
+        "predicted_intent": "ogólne",
+        "question": "Szukam wdrożeniowca/programistę/informatyka dotyczy programu Subiekt , Poznań i okolice?",
+        "retrieval_path": "clarification",
+        "source_category": "erp",
+        "source_frequency": 5,
+        "sparse_workflow_safe": false,
+        "sparse_workflow_unit": false,
+        "subset": "workflow_answer_expected",
+        "top_chunk": null,
+        "workflow_formatted": false
+      },
+      {
+        "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: forma_opodatkowania, źródło_przychodu, okres_lub_data.",
+        "answer_sections": [],
+        "available_workflow_sections": [],
+        "classification": "workflow",
+        "expected_behavior": "insufficient_data",
+        "expected_law_or_area": "rachunkowość operacyjna",
+        "expected_source_type": "workflow_kb",
+        "invented_sections": [],
+        "legal_style_answer": false,
+        "missing_slots": [
+          "forma_opodatkowania",
+          "źródło_przychodu",
+          "okres_lub_data"
+        ],
+        "needs_clarification": true,
+        "operational_answer": false,
+        "predicted_intent": "ogólne",
+        "question": "Czy brać pod uwagę tylko SKWP czy może Fundację Rozwoju Rachunkowości czy Krajową Izbę Księgowych?",
+        "retrieval_path": "clarification",
+        "source_category": "rachunkowosc",
+        "source_frequency": 4,
+        "sparse_workflow_safe": false,
+        "sparse_workflow_unit": false,
+        "subset": "workflow_answer_expected",
+        "top_chunk": null,
+        "workflow_formatted": false
       }
     ],
     "workflow_units_to_enrich_first": []
   },
   "metrics": {
-    "legal_path_contamination_rate": 0.1371,
+    "legal_path_contamination_rate": 0.203,
     "legal_safety_rate": 0.9667,
     "sparse_unit_safety_rate": 0.0,
-    "workflow_clarification_rate": 0.8267,
+    "workflow_clarification_rate": 0.78,
     "workflow_fallback_safety_rate": 0.0213,
     "workflow_format_rate": 1.0,
-    "workflow_section_completeness": 1.0
+    "workflow_section_completeness": 0.8431
   },
   "recommendation": "enrich workflow seed",
   "records": [
@@ -434,9 +434,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nLeasing, wykup samochodu i ewidencja kosztów pojazdu. Leasing / samochód / VAT-26 / koszty i ewidencja.\n\n**Co możesz zrobić już teraz**\n1. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n2. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n3. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n4. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n5. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n6. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n7. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n8. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n9. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n13. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n14. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n15. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n16. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n17. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n18. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n19. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n20. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n21. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- okres_lub_data\n- rodzaj_ewidencji\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- rola_lub_status_strony\n- zakres_uprawnienia\n- obszar_prawa\n\n**Na co uważać**\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n\n**Powiązane formularze / systemy**\n- VAT-26\n- UPL-1\n- e-Sprawozdanie finansowe\n- UPO\n- ZAW-FA\n- PPS-1\n- KPiR\n- PUE ZUS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- KSeF\n- RMK\n- magazyn\n- konto 300\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT\n- e-Urząd Skarbowy\n- Profil Zaufany",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "rachunkowość operacyjna",
@@ -448,18 +463,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "pit",
       "question": "Samochód został wykupiony z leasingu i nie przekazany do firmy, czy teraz można księgować koszty 20 %?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 8,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 29.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "workflow_area": "Leasing / samochód / VAT-26 / koszty i ewidencja"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
@@ -527,6 +550,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -587,9 +611,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nPrzygotowanie, podpisanie i wysyłka sprawozdania finansowego. Sprawozdanie finansowe / podpis / wysyłka.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n7. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n10. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n11. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n12. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n13. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n14. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n15. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n16. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n17. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n18. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n19. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_dokumentu\n- okres_księgowy\n- rodzaj_ksiąg_lub_ewidencji\n- nazwa_systemu\n- czynność_operacyjna\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- okres_lub_data\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- rola_lub_status_strony\n- zakres_uprawnienia\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n\n**Powiązane formularze / systemy**\n- e-Sprawozdanie finansowe\n- UPO\n- JPK_V7M\n- JPK_V7K\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- ZAW-FA\n- UPL-1\n- PPS-1\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- JPK\n- e-Urząd Skarbowy\n- inFakt\n- KSeF\n- bramka JPK\n- PUE ZUS\n- e-Płatnik\n- KPiR\n- Profil Zaufany",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "rachunkowość operacyjna",
@@ -601,18 +640,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Sprawozdanie finansowe Forma prawna i jest mnóstwo oznaczeń -ma ktoś spis co do którego oznacza?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 5,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 36.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: czynność_operacyjna, kontekst_błędu_lub_integracji.",
@@ -967,6 +1014,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -1000,9 +1048,24 @@
       "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nKlasyfikacja dokumentów, kolumn i zapisów magazynowych. Dokumenty księgowe / magazyn / kolumny i klasyfikacja.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n7. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n8. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n9. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n10. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n11. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n12. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n13. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n14. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.\n15. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n16. Ustal, czy sprawa dotyczy pełnomocnictwa, podpisu, czynnego żalu, UPL-1/PPS-1 czy samego kanału złożenia dokumentu.\n17. Przed wysyłką sprawdź, kto podpisuje dokument, w jakiej roli działa i przez jaki kanał ma zostać złożony.\n18. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n19. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n20. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n21. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- okres_lub_data\n- rola_podpisującego\n- kanał_złożenia\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- rodzaj_ewidencji\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.\n- Złożenie dokumentu innym kanałem niż przyjęty dla reszty sprawy bez zapisania potwierdzenia złożenia.\n- Brak ustalenia, czy podpis składa podatnik, pełnomocnik czy księgowy działający w imieniu klienta.\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n\n**Powiązane formularze / systemy**\n- UPL-1\n- e-Sprawozdanie finansowe\n- PPS-1\n- ZAW-FA\n- VAT-26\n- KPiR\n- magazyn\n- ewidencja środków trwałych\n- konto 300\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań\n- e-Urząd Skarbowy\n- Profil Zaufany\n- podpis kwalifikowany\n- PUE ZUS",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "rachunkowość operacyjna",
@@ -1014,18 +1077,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "pit",
       "question": "Prosze o pomoc jak zaksięgować fv na której jest zakup towarów do sprzedazy oraz zakup, który powinien być w kosztach?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 4,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 27.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Klasyfikacja dokumentów, kolumn i zapisów magazynowych",
+        "workflow_area": "Dokumenty księgowe / magazyn / kolumny i klasyfikacja"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
@@ -1182,6 +1253,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -1243,9 +1315,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: okres_lub_data, rola_lub_status_strony.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nObieg faktur, statusów i korekt w KSeF. KSeF issuing / correction / invoice circulation.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n7. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n10. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n11. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n12. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n13. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n14. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n15. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n16. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n17. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n18. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n19. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n20. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Okres lub data\n- Rola strony\n\n**Jakie dane / dokumenty będą potrzebne**\n- czynność_operacyjna\n- nazwa_systemu\n- okres_lub_data\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- rola_lub_status_strony\n- zakres_uprawnienia\n- obszar_prawa\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- stan_faktyczny\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- ZAW-FA\n- UPL-1\n- PPS-1\n- JPK_V7M\n- JPK_V7K\n- UPO\n- e-Sprawozdanie finansowe\n- KSeF\n- ERP\n- rejestr VAT\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- e-Urząd Skarbowy\n- Profil Zaufany\n- KPiR\n- księgi rachunkowe\n- RMK\n- inFakt\n- bramka JPK\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "ask_follow_up",
       "expected_law_or_area": "oprogramowanie księgowe",
@@ -1256,18 +1343,26 @@
         "okres_lub_data",
         "rola_lub_status_strony"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "ksef",
       "question": "Czy komuś udało się zaimportować faktury z KSeF do programu Streamsoft PRO?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "ksef",
       "source_frequency": 3,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Obieg faktur, statusów i korekt w KSeF",
+        "category": "ksef",
+        "law_name": "Workflow layer",
+        "score": 33.0,
+        "source_type": "workflow_seed_v1",
+        "title": "Obieg faktur, statusów i korekt w KSeF",
+        "workflow_area": "KSeF issuing / correction / invoice circulation"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_dokumentu, okres_księgowy.",
@@ -1353,9 +1448,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nPrzygotowanie, podpisanie i wysyłka sprawozdania finansowego. Sprawozdanie finansowe / podpis / wysyłka.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n7. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n10. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n11. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n12. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n13. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n14. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n15. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n16. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n17. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n18. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n19. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n20. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n21. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_dokumentu\n- okres_księgowy\n- rodzaj_ksiąg_lub_ewidencji\n- nazwa_systemu\n- czynność_operacyjna\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- okres_lub_data\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- rodzaj_ewidencji\n- rola_lub_status_strony\n- zakres_uprawnienia\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n\n**Powiązane formularze / systemy**\n- e-Sprawozdanie finansowe\n- UPO\n- VAT-26\n- ZAW-FA\n- UPL-1\n- PPS-1\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- KPiR\n- PUE ZUS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- KSeF\n- e-Urząd Skarbowy\n- Profil Zaufany\n- RMK",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "rachunkowość operacyjna",
@@ -1366,18 +1476,26 @@
         "rodzaj_ksiąg_lub_ewidencji",
         "rodzaj_dokumentu"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Czy muszę w takim razie sporządzać w tym roku sprawozdanie?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 3,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 22.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "**Krótko**\nPrzygotowanie, podpisanie i wysyłka sprawozdania finansowego. Sprawozdanie finansowe / podpis / wysyłka.\n\n**Co zrób teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n7. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n8. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n9. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n13. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n14. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n15. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n16. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n17. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n18. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n19. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_dokumentu\n- okres_księgowy\n- rodzaj_ksiąg_lub_ewidencji\n- nazwa_systemu\n- czynność_operacyjna\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- okres_lub_data\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n\n**Powiązane formularze / systemy**\n- e-Sprawozdanie finansowe\n- UPO\n- UPL-1\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- magazyn\n- ewidencja środków trwałych\n- konto 300\n- PUE ZUS\n- e-Płatnik",
@@ -1391,6 +1509,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -1545,6 +1664,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -1644,6 +1764,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -1827,6 +1948,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -1915,9 +2037,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nPrzygotowanie, podpisanie i wysyłka sprawozdania finansowego. Sprawozdanie finansowe / podpis / wysyłka.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n7. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n10. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n11. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n12. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n13. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n14. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n15. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n16. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n17. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n18. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n19. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_dokumentu\n- okres_księgowy\n- rodzaj_ksiąg_lub_ewidencji\n- nazwa_systemu\n- czynność_operacyjna\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- okres_lub_data\n- rola_lub_status_strony\n- zakres_uprawnienia\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n\n**Powiązane formularze / systemy**\n- e-Sprawozdanie finansowe\n- UPO\n- ZAW-FA\n- UPL-1\n- PPS-1\n- JPK_V7M\n- JPK_V7K\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- KSeF\n- e-Urząd Skarbowy\n- Profil Zaufany\n- JPK\n- inFakt\n- bramka JPK\n- PUE ZUS\n- e-Płatnik\n- KPiR",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "rachunkowość operacyjna",
@@ -1929,18 +2066,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Pierwszy raz będę składać sprawozdanie do KRS. Gdzie i jak się zalogować? Czy może ktoś pomóc w formie filmików instruktażowych lub jakieś instrukcji?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 3,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 16.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: typ_podmiotu, rodzaj_transakcji_lub_płatności, okres_lub_data.",
@@ -2211,6 +2356,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -3808,6 +3954,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -4127,9 +4274,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nPrzygotowanie, podpisanie i wysyłka sprawozdania finansowego. Sprawozdanie finansowe / podpis / wysyłka.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n7. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n10. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n11. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n12. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n13. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n14. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n15. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n16. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n17. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n18. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n19. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_dokumentu\n- okres_księgowy\n- rodzaj_ksiąg_lub_ewidencji\n- nazwa_systemu\n- czynność_operacyjna\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- okres_lub_data\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- rola_lub_status_strony\n- zakres_uprawnienia\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n\n**Powiązane formularze / systemy**\n- e-Sprawozdanie finansowe\n- UPO\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- ZAW-FA\n- UPL-1\n- PPS-1\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- PUE ZUS\n- e-Płatnik\n- KPiR\n- KSeF\n- e-Urząd Skarbowy\n- Profil Zaufany\n- rejestr VAT\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "workflow",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "rachunkowość operacyjna",
@@ -4141,18 +4303,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Czy ktoś już próbował złożyć roczne sprawozdanie finansowe?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 2,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "workflow_answer_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 22.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Przygotowanie, podpisanie i wysyłka sprawozdania finansowego",
+        "workflow_area": "Sprawozdanie finansowe / podpis / wysyłka"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
@@ -4648,6 +4818,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -5256,6 +5427,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -5786,6 +5958,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -7211,6 +7384,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -7310,6 +7484,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -7414,6 +7589,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9033,6 +9209,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9077,6 +9254,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9110,9 +9288,24 @@
       "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nUjęcie dokumentów w odpowiednim okresie i ewidencji. KPiR / księgowanie / okresy i memoriał.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n7. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n8. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n9. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n10. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n11. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n12. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n13. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n14. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n15. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n16. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n17. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n18. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n19. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n20. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- rola_lub_status_strony\n- zakres_uprawnienia\n- okres_lub_data\n- obszar_prawa\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n\n**Powiązane formularze / systemy**\n- UPL-1\n- ZAW-FA\n- PPS-1\n- JPK_V7M\n- JPK_V7K\n- UPO\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- magazyn\n- ewidencja środków trwałych\n- konto 300\n- e-Urząd Skarbowy\n- Profil Zaufany\n- JPK\n- inFakt\n- bramka JPK\n- program księgowy\n- PUE ZUS\n- e-Płatnik",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
@@ -9123,18 +9316,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Czy mógłby ktoś podpowiedzieć czy i jak zaksięgować te dokumenty w KPiR?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 2,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 17.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "workflow_area": "KPiR / księgowanie / okresy i memoriał"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: typ_podmiotu, rodzaj_transakcji_lub_płatności, okres_lub_data.",
@@ -9176,6 +9377,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9220,6 +9422,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9264,6 +9467,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9308,6 +9512,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9341,9 +9546,24 @@
       "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nLeasing, wykup samochodu i ewidencja kosztów pojazdu. Leasing / samochód / VAT-26 / koszty i ewidencja.\n\n**Co możesz zrobić już teraz**\n1. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n2. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n3. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n4. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n5. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n6. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n7. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n8. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n9. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n13. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n14. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n15. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n16. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n17. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n18. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n19. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n20. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- okres_lub_data\n- rodzaj_ewidencji\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n\n**Na co uważać**\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n\n**Powiązane formularze / systemy**\n- VAT-26\n- UPL-1\n- ZUS ZUA\n- e-Sprawozdanie finansowe\n- UPO\n- KPiR\n- PUE ZUS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- KSeF\n- RMK\n- magazyn\n- konto 300\n- ERP\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -9354,18 +9574,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Pełne księgi. Jak zaksięgować? VAT i koszty do lutego?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 2,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 21.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "workflow_area": "Leasing / samochód / VAT-26 / koszty i ewidencja"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "**Krótko**\nObsługa wysyłki, korekty i oznaczeń JPK. JPK filing / correction / tags.\n\n**Co zrób teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n7. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n8. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n9. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n13. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n14. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n15. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n16. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n17. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n18. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n19. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n20. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n21. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n\n**Jakie dane / dokumenty będą potrzebne**\n- nazwa_systemu\n- czynność_operacyjna\n- okres_lub_data\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- rodzaj_dokumentu\n- rodzaj_ksiąg_lub_ewidencji\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- rodzaj_ewidencji\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n\n**Powiązane formularze / systemy**\n- JPK_V7M\n- JPK_V7K\n- UPO\n- ZUS ZUA\n- VAT-26\n- e-Sprawozdanie finansowe\n- JPK\n- e-Urząd Skarbowy\n- inFakt\n- KSeF\n- bramka JPK\n- program księgowy\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- RMK\n- ERP\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- PUE ZUS\n- ewidencja środków trwałych\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT",
@@ -9379,6 +9607,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9412,9 +9641,24 @@
       "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nObieg faktur, statusów i korekt w KSeF. KSeF issuing / correction / invoice circulation.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n7. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n10. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n11. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n12. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n13. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n14. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n15. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n16. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n17. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n18. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n19. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n20. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- czynność_operacyjna\n- nazwa_systemu\n- okres_lub_data\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- rola_lub_status_strony\n- zakres_uprawnienia\n- obszar_prawa\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- stan_faktyczny\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- ZAW-FA\n- UPL-1\n- PPS-1\n- JPK_V7M\n- JPK_V7K\n- UPO\n- e-Sprawozdanie finansowe\n- KSeF\n- ERP\n- rejestr VAT\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- e-Urząd Skarbowy\n- Profil Zaufany\n- KPiR\n- księgi rachunkowe\n- RMK\n- inFakt\n- bramka JPK\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "ask_follow_up",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -9425,18 +9669,26 @@
         "rodzaj_ksiąg_lub_ewidencji",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "ksef",
       "question": "Wytłumaczy ktoś jak ująć fakturę z PLAY wystawioną w KSeF?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "ksef",
       "source_frequency": 2,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Obieg faktur, statusów i korekt w KSeF",
+        "category": "ksef",
+        "law_name": "Workflow layer",
+        "score": 21.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Obieg faktur, statusów i korekt w KSeF",
+        "workflow_area": "KSeF issuing / correction / invoice circulation"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
@@ -9494,9 +9746,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nLeasing, wykup samochodu i ewidencja kosztów pojazdu. Leasing / samochód / VAT-26 / koszty i ewidencja.\n\n**Co możesz zrobić już teraz**\n1. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n2. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n3. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n4. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n5. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n6. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n7. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n8. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n9. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n13. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n14. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n15. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n16. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n17. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n18. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n19. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n20. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n21. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- okres_lub_data\n- rodzaj_ewidencji\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n\n**Na co uważać**\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n\n**Powiązane formularze / systemy**\n- VAT-26\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- JPK_V7M\n- JPK_V7K\n- UPO\n- KPiR\n- PUE ZUS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- KSeF\n- RMK\n- ERP\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- e-Płatnik\n- e-Urząd Skarbowy\n- inFakt\n- bramka JPK\n- program księgowy",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "ask_follow_up",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -9507,18 +9774,26 @@
         "rodzaj_ksiąg_lub_ewidencji",
         "rodzaj_dokumentu"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "A ja myślę że skoro nota wystawiona i otrzymana w styczniu to tak powinniśmy jak zaksięgować i zapłacić VAT za styczeń a nie dopiero jak otrzymamy zapłatę?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "vat",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 14.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "workflow_area": "Leasing / samochód / VAT-26 / koszty i ewidencja"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
@@ -9576,9 +9851,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nLeasing, wykup samochodu i ewidencja kosztów pojazdu. Leasing / samochód / VAT-26 / koszty i ewidencja.\n\n**Co możesz zrobić już teraz**\n1. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n2. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n3. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n4. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n5. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n6. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n7. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n8. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n9. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n13. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n14. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n15. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n16. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n17. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n18. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n19. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n20. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- okres_lub_data\n- rodzaj_ewidencji\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n\n**Na co uważać**\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n\n**Powiązane formularze / systemy**\n- VAT-26\n- UPL-1\n- ZUS ZUA\n- e-Sprawozdanie finansowe\n- KPiR\n- PUE ZUS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- KSeF\n- RMK\n- magazyn\n- konto 300\n- ERP\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -9590,23 +9880,46 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Czy księgować w koszty netto czy brutto oraz jak zaksięgować VAT w księgach?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 21.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Leasing, wykup samochodu i ewidencja kosztów pojazdu",
+        "workflow_area": "Leasing / samochód / VAT-26 / koszty i ewidencja"
+      },
+      "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nUjęcie dokumentów w odpowiednim okresie i ewidencji. KPiR / księgowanie / okresy i memoriał.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n7. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n9. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n10. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n11. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n12. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.\n13. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n14. Ustal, czy sprawa dotyczy pełnomocnictwa, podpisu, czynnego żalu, UPL-1/PPS-1 czy samego kanału złożenia dokumentu.\n15. Przed wysyłką sprawdź, kto podpisuje dokument, w jakiej roli działa i przez jaki kanał ma zostać złożony.\n16. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n17. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n18. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n19. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n20. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- typ_umowy\n- okres_lub_data\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- rola_podpisującego\n- kanał_złożenia\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- rola_lub_status_strony\n- zakres_uprawnienia\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.\n- Złożenie dokumentu innym kanałem niż przyjęty dla reszty sprawy bez zapisania potwierdzenia złożenia.\n- Brak ustalenia, czy podpis składa podatnik, pełnomocnik czy księgowy działający w imieniu klienta.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- UPL-1\n- PPS-1\n- ZAW-FA\n- e-Sprawozdanie finansowe\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- PUE ZUS\n- e-Płatnik\n- e-Urząd Skarbowy\n- Profil Zaufany\n- podpis kwalifikowany\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "CIT / WHT",
@@ -9617,23 +9930,46 @@
         "rodzaj_ksiąg_lub_ewidencji",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Czy ktoś może dostaje faktury z E100 a sprzedawca Baltia Estonia jak zaksięgować taka fakturę?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 15.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "workflow_area": "KPiR / księgowanie / okresy i memoriał"
+      },
+      "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nUjęcie dokumentów w odpowiednim okresie i ewidencji. KPiR / księgowanie / okresy i memoriał.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n7. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n8. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n9. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n10. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n11. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n12. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n13. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n14. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n15. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n16. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n17. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n18. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n19. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n20. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n21. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- okres_lub_data\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- rodzaj_ewidencji\n- rola_lub_status_strony\n- zakres_uprawnienia\n- obszar_prawa\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- VAT-26\n- ZAW-FA\n- UPL-1\n- PPS-1\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- ERP\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- PUE ZUS\n- ewidencja środków trwałych\n- e-Urząd Skarbowy\n- Profil Zaufany\n- magazyn\n- konto 300",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
@@ -9644,18 +9980,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "Data w nr KSeF 4.02.2026r jak zaksiegujecie w met.memoriałowej kpir do dochodowego i do VAT?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 23.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "workflow_area": "KPiR / księgowanie / okresy i memoriał"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.",
@@ -9714,9 +10058,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: okres_lub_data, rola_lub_status_strony.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nObsługa wysyłki, korekty i oznaczeń JPK. JPK filing / correction / tags.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n7. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n8. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n9. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n10. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n11. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n12. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n13. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Okres lub data\n- Rola strony\n\n**Jakie dane / dokumenty będą potrzebne**\n- nazwa_systemu\n- czynność_operacyjna\n- okres_lub_data\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- rodzaj_dokumentu\n- rodzaj_ksiąg_lub_ewidencji\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n\n**Powiązane formularze / systemy**\n- JPK_V7M\n- JPK_V7K\n- UPO\n- ZUS ZUA\n- e-Sprawozdanie finansowe\n- JPK\n- e-Urząd Skarbowy\n- inFakt\n- KSeF\n- bramka JPK\n- program księgowy\n- ERP\n- rejestr VAT\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "ask_follow_up",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -9727,18 +10086,26 @@
         "okres_lub_data",
         "rola_lub_status_strony"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "jpk",
       "question": "Jak oznaczyć sprzedaż fundusz reprezentacyjny i sprzedaż reklama w JPK?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "jpk",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
+        "category": "jpk",
+        "law_name": "Workflow layer",
+        "score": 14.0,
+        "source_type": "workflow_seed_v1",
+        "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
+        "workflow_area": "JPK filing / correction / tags"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: okres_lub_data, rola_lub_status_strony.",
@@ -9768,9 +10135,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: okres_lub_data, rola_lub_status_strony.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nObieg faktur, statusów i korekt w KSeF. KSeF issuing / correction / invoice circulation.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n7. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n10. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n11. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n12. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n13. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n14. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n15. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n16. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n17. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n18. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n19. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.\n20. Ustal, czy sprawa dotyczy pełnomocnictwa, podpisu, czynnego żalu, UPL-1/PPS-1 czy samego kanału złożenia dokumentu.\n21. Przed wysyłką sprawdź, kto podpisuje dokument, w jakiej roli działa i przez jaki kanał ma zostać złożony.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Okres lub data\n- Rola strony\n\n**Jakie dane / dokumenty będą potrzebne**\n- czynność_operacyjna\n- nazwa_systemu\n- okres_lub_data\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- rola_lub_status_strony\n- zakres_uprawnienia\n- obszar_prawa\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- rola_podpisującego\n- kanał_złożenia\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy.\n- Złożenie dokumentu innym kanałem niż przyjęty dla reszty sprawy bez zapisania potwierdzenia złożenia.\n- Brak ustalenia, czy podpis składa podatnik, pełnomocnik czy księgowy działający w imieniu klienta.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- ZAW-FA\n- UPL-1\n- PPS-1\n- JPK_V7M\n- JPK_V7K\n- UPO\n- KSeF\n- ERP\n- rejestr VAT\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- e-Urząd Skarbowy\n- Profil Zaufany\n- KPiR\n- księgi rachunkowe\n- RMK\n- inFakt\n- bramka JPK\n- program księgowy\n- podpis kwalifikowany",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "Kodeks pracy",
@@ -9781,18 +10163,26 @@
         "okres_lub_data",
         "rola_lub_status_strony"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "ksef",
       "question": "Jak oznaczyć w KSeF fakture deputat dla pracowników?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "ksef",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Obieg faktur, statusów i korekt w KSeF",
+        "category": "ksef",
+        "law_name": "Workflow layer",
+        "score": 17.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Obieg faktur, statusów i korekt w KSeF",
+        "workflow_area": "KSeF issuing / correction / invoice circulation"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "**Krótko**\nLeasing, wykup samochodu i ewidencja kosztów pojazdu. Leasing / samochód / VAT-26 / koszty i ewidencja.\n\n**Co zrób teraz**\n1. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n2. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n3. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n4. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n5. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n6. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n7. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n8. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n9. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n10. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n11. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n12. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n13. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n14. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n15. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n16. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n17. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n18. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n19. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n20. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- okres_lub_data\n- rodzaj_ewidencji\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- nazwa_systemu\n- czynność_operacyjna\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n\n**Na co uważać**\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n\n**Powiązane formularze / systemy**\n- VAT-26\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- UPL-1\n- e-Sprawozdanie finansowe\n- UPO\n- KPiR\n- PUE ZUS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- e-Płatnik\n- KSeF\n- RMK\n- magazyn\n- konto 300\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT",
@@ -9806,6 +10196,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9850,6 +10241,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9894,6 +10286,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9938,6 +10331,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -9982,6 +10376,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10026,6 +10421,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10070,6 +10466,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10114,6 +10511,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10158,6 +10556,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10202,6 +10601,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10235,9 +10635,24 @@
       "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nObsługa wysyłki, korekty i oznaczeń JPK. JPK filing / correction / tags.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n7. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n8. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n9. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n10. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n11. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n12. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n13. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n14. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n15. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n16. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n17. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n18. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n19. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- nazwa_systemu\n- czynność_operacyjna\n- okres_lub_data\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- rodzaj_dokumentu\n- rodzaj_ksiąg_lub_ewidencji\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n\n**Powiązane formularze / systemy**\n- JPK_V7M\n- JPK_V7K\n- UPO\n- UPL-1\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- JPK\n- e-Urząd Skarbowy\n- inFakt\n- KSeF\n- bramka JPK\n- program księgowy\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- RMK\n- magazyn\n- ewidencja środków trwałych\n- konto 300\n- ERP\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- PUE ZUS\n- e-Płatnik",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "ask_follow_up",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -10248,23 +10663,46 @@
         "rodzaj_ksiąg_lub_ewidencji",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "jpk",
       "question": "Jestem nabywcą Czy faktura idzie tylko do JPK, czy nalezy jak zaksiegowac i \"wyzerować\"?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Obsługa wysyłki, korekty i oznaczeń JPK",
+        "category": "jpk",
+        "law_name": "Workflow layer",
+        "score": 17.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Obsługa wysyłki, korekty i oznaczeń JPK",
+        "workflow_area": "JPK filing / correction / tags"
+      },
+      "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_dokumentu, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nUjęcie dokumentów w odpowiednim okresie i ewidencji. KPiR / księgowanie / okresy i memoriał.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n7. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n8. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n9. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n10. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n11. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n12. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n13. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n14. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n15. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n16. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n17. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n18. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n19. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n20. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Rodzaj dokumentu\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- okres_lub_data\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- rola_lub_status_strony\n- zakres_uprawnienia\n- obszar_prawa\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- ZAW-FA\n- UPL-1\n- PPS-1\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- ERP\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- e-Urząd Skarbowy\n- Profil Zaufany\n- magazyn\n- ewidencja środków trwałych\n- konto 300\n- PUE ZUS\n- e-Płatnik",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "ask_follow_up",
       "expected_law_or_area": "PIT / ryczałt + rachunkowość operacyjna",
@@ -10275,18 +10713,26 @@
         "rodzaj_dokumentu",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "rachunkowosc",
       "question": "KSeF KPiR Data wystawienie 11.02, sprzedaży 31.01, jak zaksięgować?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "rachunkowosc",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "category": "rachunkowosc",
+        "law_name": "Workflow layer",
+        "score": 21.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Ujęcie dokumentów w odpowiednim okresie i ewidencji",
+        "workflow_area": "KPiR / księgowanie / okresy i memoriał"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "**Krótko**\nObsługa wysyłki, korekty i oznaczeń JPK. JPK filing / correction / tags.\n\n**Co zrób teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n7. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n8. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n9. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n10. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n11. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n12. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n13. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n14. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n15. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n16. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n17. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n18. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n19. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n20. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n\n**Jakie dane / dokumenty będą potrzebne**\n- nazwa_systemu\n- czynność_operacyjna\n- okres_lub_data\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- rodzaj_dokumentu\n- rodzaj_ksiąg_lub_ewidencji\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n\n**Powiązane formularze / systemy**\n- JPK_V7M\n- JPK_V7K\n- UPO\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- e-Sprawozdanie finansowe\n- JPK\n- e-Urząd Skarbowy\n- inFakt\n- KSeF\n- bramka JPK\n- program księgowy\n- ERP\n- rejestr VAT\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- KPiR\n- księgi rachunkowe\n- RMK\n- PUE ZUS\n- e-Płatnik\n- KRS\n- eKRS\n- bramka e-Sprawozdań\n- Rewizor GT",
@@ -10300,6 +10746,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10403,6 +10850,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10447,6 +10895,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10480,9 +10929,24 @@
       "workflow_formatted": true
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nNadawanie uprawnień i dostępów w KSeF. KSeF permissions / authorization flow.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n3. Zbierz wymagane dokumenty, uprawnienia i kanał podpisu potrzebny do wykonania czynności.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, kto nadaje dostęp, komu i czy chodzi o podgląd, wystawianie, pobieranie czy dalsze delegowanie uprawnień.\n7. Sprawdź, czy operacja wymaga tokenu, certyfikatu albo przejścia przez e-Urząd Skarbowy.\n8. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n9. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n10. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n11. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n12. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n13. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n14. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n15. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n16. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n17. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n18. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n19. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n20. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n21. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- rodzaj ksiąg lub ewidencji\n- okres księgowy\n\n**Jakie dane / dokumenty będą potrzebne**\n- nazwa_systemu\n- czynność_operacyjna\n- rola_lub_status_strony\n- zakres_uprawnienia\n- rodzaj_dokumentu\n- okres_lub_data\n- obszar_prawa\n- rodzaj_ksiąg_lub_ewidencji\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- okres_księgowy\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- typ_umowy\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Mylenie uprawnienia do podglądu z uprawnieniem do dalszego nadawania albo zarządzania dostępami.\n- Brak ustalenia, czy operacja ma być wykonana bezpośrednio w KSeF czy przez e-Urząd Skarbowy.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n\n**Powiązane formularze / systemy**\n- ZAW-FA\n- UPL-1\n- PPS-1\n- ZUS ZUA\n- JPK_V7M\n- JPK_V7K\n- UPO\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- KSeF\n- e-Urząd Skarbowy\n- Profil Zaufany\n- ERP\n- rejestr VAT\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- inFakt\n- bramka JPK\n- program księgowy\n- KPiR\n- księgi rachunkowe\n- RMK\n- PUE ZUS\n- e-Płatnik",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "answer_directly",
       "expected_law_or_area": "VAT / JPK / KSeF",
@@ -10493,18 +10957,26 @@
         "rodzaj_ksiąg_lub_ewidencji",
         "okres_księgowy"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "ksef",
       "question": "Otrzymałem w Ksef Fv samofakturującą (z datami jak na zdjęciu). Jak ująć tą fv? Czy jeżeli powinienem wystawiać fv od 01.04, a kontrahent w moim imieniu wystawił już fv w KSeF w lutym, to resztę też powinnam wystawić przez Ksef już od lutego?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "ksef",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Nadawanie uprawnień i dostępów w KSeF",
+        "category": "ksef",
+        "law_name": "Workflow layer",
+        "score": 21.5,
+        "source_type": "workflow_seed_v1",
+        "title": "Nadawanie uprawnień i dostępów w KSeF",
+        "workflow_area": "KSeF permissions / authorization flow"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "**Krótko**\nUjęcie dokumentów w odpowiednim okresie i ewidencji. KPiR / księgowanie / okresy i memoriał.\n\n**Co zrób teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Ustal właściwy wariant działania na podstawie okresu, typu ewidencji i rodzaju dokumentu.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Określ, czy pytanie dotyczy bieżącego ujęcia, korekty wcześniejszego okresu czy powiązania kosztu z okresem lub dostawą.\n7. Zanim zapiszesz dokument, rozdziel wpływ na ewidencję podatkową, bilansową i VAT, jeśli pytanie dotyczy więcej niż jednego obszaru.\n8. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n9. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n10. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n11. Najpierw doprecyzuj brakujące informacje: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n12. Najpierw ustal, czy problem dotyczy wystawienia, pobrania, statusu dokumentu, korekty czy synchronizacji z ERP.\n13. Zweryfikuj status dokumentu po stronie KSeF i po stronie systemu docelowego zanim ręcznie zmienisz rejestr lub ewidencję.\n14. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, okres_lub_data.\n15. Ustal, czy chodzi o pierwszą wysyłkę, korektę pliku, oznaczenie GTU/procedury czy techniczne złożenie JPK.\n16. Przed wysyłką sprawdź, czy zmiana dotyczy części ewidencyjnej, deklaracyjnej czy obu części pliku.\n17. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n18. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n19. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n20. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n\n**Jakie dane / dokumenty będą potrzebne**\n- rodzaj_ksiąg_lub_ewidencji\n- rodzaj_dokumentu\n- okres_księgowy\n- nazwa_systemu\n- czynność_operacyjna\n- sposób_ujęcia_lub_korekty\n- powiązanie_z_okresem_lub_dostawą\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n- okres_lub_data\n- status_dokumentu_lub_komunikat\n- kanał_wystawienia_lub_pobrania\n- typ_pliku_lub_wersja_jpk\n- rodzaj_korekty_lub_oznaczenia\n- forma_opodatkowania\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- rodzaj_ewidencji\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Mieszanie daty dokumentu z datą ujęcia bez zapisania przyjętej zasady księgowej lub podatkowej.\n- Brak rozdzielenia skutku bilansowego, podatkowego i VAT przed zaksięgowaniem korekty albo kosztu.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Brak doprecyzowania pól wejściowych: czynność_operacyjna, nazwa_systemu, okres_lub_data, rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu.\n- Zakładanie, że brak dokumentu w ERP oznacza brak dokumentu w KSeF.\n- Ręczne poprawianie ewidencji bez zapisania statusu dokumentu, numeru KSeF albo kanału obiegu.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Zmiana oznaczeń bez wskazania okresu, typu korekty albo części pliku, której dotyczy poprawka.\n- Brak zachowania UPO albo numeru referencyjnego po ponownej wysyłce pliku.\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n\n**Powiązane formularze / systemy**\n- UPL-1\n- ZUS ZUA\n- JPK_V7M\n- JPK_V7K\n- UPO\n- VAT-26\n- KPiR\n- księgi rachunkowe\n- rejestr VAT\n- KSeF\n- RMK\n- magazyn\n- ewidencja środków trwałych\n- konto 300\n- ERP\n- JPK\n- Comarch Optima\n- Symfonia\n- Streamsoft\n- e-Urząd Skarbowy\n- inFakt\n- bramka JPK\n- program księgowy\n- PUE ZUS",
@@ -10518,6 +10990,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"
@@ -10578,9 +11051,24 @@
       "workflow_formatted": false
     },
     {
-      "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: tytuł_ubezpieczenia, status_osoby, rodzaj_składki_lub_świadczenia.",
-      "answer_sections": [],
-      "available_workflow_sections": [],
+      "answer": "**Krótko**\nObsługa zgłoszeń, wyrejestrowań i deklaracji ZUS. ZUS / PUE / zgłoszenia i wyrejestrowania.\n\n**Co możesz zrobić już teraz**\n1. Ustal, jakiej czynności operacyjnej dotyczy pytanie i jaki jest oczekiwany efekt końcowy.\n2. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna, typ_umowy, okres_lub_data, tytuł_ubezpieczenia.\n3. Zbierz minimalne dane wejściowe potrzebne do wykonania czynności w systemie lub ewidencji.\n4. Zweryfikuj okres, dokument oraz rolę użytkownika przed wykonaniem operacji lub wysyłki.\n5. Wykonaj operację w odpowiednim module lub kanale i zapisz numer referencyjny, status albo potwierdzenie.\n6. Ustal, czy sprawa dotyczy zgłoszenia, wyrejestrowania, deklaracji rozliczeniowej czy odpowiedzi z PUE/ZUS.\n7. Przed wysyłką sprawdź status osoby, tytuł do ubezpieczenia i zakres dokumentu, który chcesz poprawić albo złożyć.\n8. Najpierw doprecyzuj brakujące informacje: nazwa_systemu, czynność_operacyjna.\n9. Zanotuj nazwę systemu, moduł, komunikat błędu i moment procesu, w którym pojawia się problem.\n10. Oddziel problem techniczny integracji od pytania o poprawną ewidencję albo skutki podatkowe dokumentu.\n11. Najpierw doprecyzuj brakujące informacje: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n12. Ustal, czy problem dotyczy przygotowania pliku, podpisu, wysyłki albo walidacji po stronie KRS lub bramki e-Sprawozdań.\n13. Przed wysyłką sprawdź komplet podpisów, typ jednostki i wariant dokumentu odpowiadający formie prawnej.\n14. Ustal, czy pytanie dotyczy leasingu operacyjnego, wykupu pojazdu, klasyfikacji do ewidencji czy rozliczenia kosztów po zmianie sposobu używania.\n15. Zanim zaksięgujesz dokument, rozdziel wpływ na rejestr VAT, KPiR albo księgi rachunkowe oraz ewidencję środka trwałego.\n16. Sprawdź, czy pojazd jest firmowy, prywatny po wykupie czy używany mieszanie, i odnotuj to w opisie operacji.\n17. Zapisz przyjęty wariant ewidencji oraz dokument potwierdzający status pojazdu i sposób użytkowania.\n18. Najpierw doprecyzuj brakujące informacje: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n19. Ustal, czy dokument wymaga jednego zapisu, czy podziału na część towarową, kosztową, magazynową albo środek trwały.\n20. Jeżeli pytanie dotyczy kolumn, kont albo KŚT, przygotuj wariant klasyfikacji przed księgowaniem właściwym.\n\n**Czego jeszcze brakuje do pełnej odpowiedzi**\n- Tytuł ubezpieczenia\n- Status osoby\n- rodzaj składki lub świadczenia\n\n**Jakie dane / dokumenty będą potrzebne**\n- nazwa_systemu\n- czynność_operacyjna\n- typ_umowy\n- okres_lub_data\n- tytuł_ubezpieczenia\n- status_osoby\n- rodzaj_dokumentu_zus\n- moduł_lub_funkcja\n- komunikat_błędu_lub_status\n- obszar_prawa\n- stan_faktyczny\n- rodzaj_dokumentu\n- okres_księgowy\n- rodzaj_ksiąg_lub_ewidencji\n- forma_prawna_lub_typ_jednostki\n- rodzaj_podpisu\n- rodzaj_leasingu\n- status_pojazdu_w_firmie\n- sposób_użytkowania_pojazdu\n- rodzaj_ewidencji\n- rodzaj_zapisu_lub_klasyfikacji\n- czy_dokument_wymaga_podziału\n\n**Na co uważać**\n- Rozpoczęcie operacji bez potwierdzenia okresu, dokumentu lub właściwego modułu.\n- Brak zapisania statusu, numeru referencyjnego albo potwierdzenia po wysyłce.\n- Pominięcie właściwego formularza lub podpisu elektronicznego dla danej czynności.\n- Założenie, że dane zsynchronizowały się automatycznie bez sprawdzenia statusu po stronie systemu docelowego.\n- Wysyłka formularza bez ustalenia właściwego tytułu do ubezpieczenia albo rodzaju zgłoszenia.\n- Brak rozróżnienia między pierwszym zgłoszeniem, korektą i wyrejestrowaniem.\n- Brak doprecyzowania pól wejściowych: nazwa_systemu, czynność_operacyjna.\n- Mieszanie problemu konfiguracyjnego z pytaniem o poprawną ewidencję księgową lub podatkową.\n- Brak odnotowania wersji systemu, modułu albo kanału importu i eksportu przed zgłoszeniem błędu.\n- Brak doprecyzowania pól wejściowych: rodzaj_dokumentu, okres_księgowy, rodzaj_ksiąg_lub_ewidencji, nazwa_systemu, czynność_operacyjna.\n- Mylenie błędu merytorycznego w sprawozdaniu z błędem technicznej wysyłki.\n- Brak sprawdzenia, czy wszystkie wymagane osoby mogą podpisać dokument właściwym kanałem.\n- Mieszanie skutku bilansowego, podatkowego i VAT bez rozpisania każdego obszaru osobno.\n- Brak ustalenia, czy pojazd po wykupie trafia do firmy, do majątku prywatnego czy do ewidencji środka trwałego.\n- Brak doprecyzowania pól wejściowych: rodzaj_ksiąg_lub_ewidencji, rodzaj_dokumentu, okres_księgowy, nazwa_systemu, czynność_operacyjna.\n- Księgowanie całego dokumentu jednym schematem mimo różnych części gospodarczych na fakturze.\n- Brak odnotowania, dlaczego wybrano daną kolumnę, konto, KŚT albo zapis magazynowy.\n\n**Powiązane formularze / systemy**\n- ZUS ZUA\n- ZUS ZWUA\n- DRA\n- RCA\n- RSA\n- e-Sprawozdanie finansowe\n- UPO\n- VAT-26\n- UPL-1\n- PUE ZUS\n- e-Płatnik\n- KPiR\n- ERP\n- program księgowy\n- integracja API\n- Subiekt\n- Saldeo\n- Rewizor GT\n- KRS\n- bramka e-Sprawozdań\n- eKRS\n- rejestr VAT\n- księgi rachunkowe\n- ewidencja środków trwałych\n- magazyn\n- konto 300",
+      "answer_sections": [
+        "Krótko",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
+      "available_workflow_sections": [
+        "Krótko",
+        "Co zrób teraz",
+        "Co możesz zrobić już teraz",
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        "Jakie dane / dokumenty będą potrzebne",
+        "Na co uważać",
+        "Powiązane formularze / systemy"
+      ],
       "classification": "mixed",
       "expected_behavior": "insufficient_data",
       "expected_law_or_area": "ZUS",
@@ -10592,18 +11080,26 @@
         "status_osoby",
         "rodzaj_składki_lub_świadczenia"
       ],
-      "needs_clarification": true,
-      "operational_answer": false,
+      "needs_clarification": false,
+      "operational_answer": true,
       "predicted_intent": "pit",
       "question": "Składki opłacane przez pracodawcę z dra grudniowego wrzucam na konto np. 405-99 „nkup ZUS” i potem w marcu 2026 odwrotnie jako kup? Jak ustawić w Rewizor gt aby CIT nie zaciągał tego konta nkup do wyliczeń cit?",
-      "retrieval_path": "clarification",
+      "retrieval_path": "workflow",
       "source_category": "zus",
       "source_frequency": 1,
       "sparse_workflow_safe": false,
       "sparse_workflow_unit": false,
       "subset": "legal_fallback_expected",
-      "top_chunk": null,
-      "workflow_formatted": false
+      "top_chunk": {
+        "article_number": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+        "category": "zus",
+        "law_name": "Workflow layer",
+        "score": 35.0,
+        "source_type": "workflow_seed_v1",
+        "title": "Obsługa zgłoszeń, wyrejestrowań i deklaracji ZUS",
+        "workflow_area": "ZUS / PUE / zgłoszenia i wyrejestrowania"
+      },
+      "workflow_formatted": true
     },
     {
       "answer": "Potrzebuję doprecyzowania, zanim odpowiem. Brakuje mi informacji: rodzaj_ksiąg_lub_ewidencji, okres_księgowy.",
@@ -10644,6 +11140,7 @@
       "available_workflow_sections": [
         "Krótko",
         "Co zrób teraz",
+        "Co możesz zrobić już teraz",
         "Jakie dane / dokumenty będą potrzebne",
         "Na co uważać",
         "Powiązane formularze / systemy"

@@ -2,9 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from core.generator import format_workflow_answer
+from core.generator import format_partial_workflow_answer, format_workflow_answer
 from core.rag import answer_query
 from core.retriever import LawChunk, QueryAnalysis
+from core.workflow_retriever import WorkflowRetrievalResult
 
 
 def _write_seed(path: Path) -> None:
@@ -74,6 +75,20 @@ def test_format_workflow_answer_omits_missing_sections_for_sparse_units() -> Non
     assert "**Jakie dane / dokumenty będą potrzebne**" not in answer
     assert "**Na co uważać**" not in answer
     assert "**Powiązane formularze / systemy**" not in answer
+
+
+def test_format_partial_workflow_answer_renders_missing_details_section() -> None:
+    answer = format_partial_workflow_answer(
+        "Jak nadać uprawnienia w KSeF?",
+        [_workflow_chunk()],
+        ["Okres lub data", "Rola strony"],
+    )
+
+    assert "**Krótko**" in answer
+    assert "**Co możesz zrobić już teraz**" in answer
+    assert "**Czego jeszcze brakuje do pełnej odpowiedzi**" in answer
+    assert "Okres lub data" in answer
+    assert "Rola strony" in answer
 
 
 def test_answer_query_uses_workflow_format_when_workflow_path_wins(tmp_path: Path, monkeypatch) -> None:
@@ -158,3 +173,71 @@ def test_answer_query_keeps_legal_answer_for_legal_fallback(tmp_path: Path, monk
     assert result.retrieval_path == "legal_fallback"
     assert result.answer == "Legal fallback answer"
     assert "**Krótko**" not in result.answer
+
+
+def test_answer_query_returns_partial_workflow_answer_for_non_fatal_missing_slots(
+    tmp_path: Path, monkeypatch
+) -> None:
+    seed_file = tmp_path / "law_knowledge.json"
+    _write_seed(seed_file)
+
+    monkeypatch.setattr(
+        "core.rag.analyze_query_requirements",
+        lambda query: QueryAnalysis(
+            intent="vat_jpk_ksef",
+            missing_slots=["okres_lub_data", "rola_lub_status_strony"],
+            needs_clarification=True,
+        ),
+    )
+    monkeypatch.setattr("core.rag.is_workflow_eligible", lambda query, intent: True)
+    monkeypatch.setattr(
+        "core.rag.retrieve_workflow",
+        lambda query, workflow_path, limit, confidence_threshold: WorkflowRetrievalResult(
+            chunks=[_workflow_chunk()],
+            confident=True,
+            top_score=18.0,
+        ),
+    )
+
+    result = answer_query(
+        query="Faktura offline jest w KSeF, ale nie widzę jej po stronie klienta.",
+        knowledge_path=seed_file,
+        system_prompt="Jesteś Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.retrieval_path == "workflow"
+    assert result.partial_answer is True
+    assert result.needs_clarification is False
+    assert "**Co możesz zrobić już teraz**" in result.answer
+    assert "**Czego jeszcze brakuje do pełnej odpowiedzi**" in result.answer
+    assert "Okres lub data" in result.answer
+    assert "Rola strony" in result.answer
+
+
+def test_answer_query_keeps_clarification_for_fatal_workflow_missing_slots(
+    tmp_path: Path, monkeypatch
+) -> None:
+    seed_file = tmp_path / "law_knowledge.json"
+    _write_seed(seed_file)
+
+    monkeypatch.setattr(
+        "core.rag.analyze_query_requirements",
+        lambda query: QueryAnalysis(
+            intent="software_tooling",
+            missing_slots=["czynność_operacyjna"],
+            needs_clarification=True,
+        ),
+    )
+
+    result = answer_query(
+        query="Comarch mi nie działa.",
+        knowledge_path=seed_file,
+        system_prompt="Jesteś Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.retrieval_path == "clarification"
+    assert result.partial_answer is False
+    assert result.needs_clarification is True
+    assert "Potrzebuj" in result.answer

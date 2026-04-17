@@ -275,6 +275,69 @@ def format_workflow_answer(query: str, chunks: Sequence[LawChunk]) -> str:
     return "\n\n".join(section for section in sections if section.strip())
 
 
+def format_partial_workflow_answer(
+    query: str,
+    chunks: Sequence[LawChunk],
+    missing_details: Sequence[str],
+) -> str:
+    """Build a deterministic partial workflow response for incomplete workflow queries.
+
+    The formatter uses only structured workflow fields already present in the
+    retrieved chunks. It separates actions that can be taken immediately from
+    details still needed for a fuller answer.
+    """
+
+    del query  # The current formatter is deterministic and chunk-driven.
+
+    if not chunks:
+        return "Brak danych workflow do przygotowania odpowiedzi częściowej."
+
+    primary_chunk = chunks[0]
+    sections: list[str] = [f"**Krótko**\n{_build_workflow_summary(primary_chunk)}"]
+
+    steps = _unique_preserving_order(
+        [step for chunk in chunks for step in chunk.workflow_steps]
+    )
+    if steps:
+        numbered_steps = "\n".join(
+            f"{index}. {step}" for index, step in enumerate(steps, start=1)
+        )
+        sections.append(f"**Co możesz zrobić już teraz**\n{numbered_steps}")
+
+    missing_section = _format_bullet_section(
+        "Czego jeszcze brakuje do pełnej odpowiedzi",
+        missing_details,
+    )
+    if missing_section:
+        sections.append(missing_section)
+
+    required_inputs_section = _format_bullet_section(
+        "Jakie dane / dokumenty będą potrzebne",
+        [item for chunk in chunks for item in chunk.workflow_required_inputs],
+    )
+    if required_inputs_section:
+        sections.append(required_inputs_section)
+
+    pitfalls_section = _format_bullet_section(
+        "Na co uważać",
+        [item for chunk in chunks for item in chunk.workflow_common_pitfalls],
+    )
+    if pitfalls_section:
+        sections.append(pitfalls_section)
+
+    related_items = _unique_preserving_order(
+        [
+            *[item for chunk in chunks for item in chunk.workflow_related_forms],
+            *[item for chunk in chunks for item in chunk.workflow_related_systems],
+        ]
+    )
+    related_section = _format_bullet_section("Powiązane formularze / systemy", related_items)
+    if related_section:
+        sections.append(related_section)
+
+    return "\n\n".join(section for section in sections if section.strip())
+
+
 def _execute_api_request(api_request: request.Request) -> str:
     for attempt in range(len(RETRY_BACKOFF_SECONDS) + 1):
         try:

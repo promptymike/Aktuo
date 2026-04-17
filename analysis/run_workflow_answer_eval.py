@@ -29,6 +29,8 @@ JSONDict = dict[str, Any]
 WORKFLOW_HEADERS = (
     "Krótko",
     "Co zrób teraz",
+    "Co możesz zrobić już teraz",
+    "Czego jeszcze brakuje do pełnej odpowiedzi",
     "Jakie dane / dokumenty będą potrzebne",
     "Na co uważać",
     "Powiązane formularze / systemy",
@@ -229,7 +231,7 @@ def _top_chunk_metadata(chunk: LawChunk | None) -> JSONDict | None:
     }
 
 
-def _available_workflow_sections(chunk: LawChunk | None) -> list[str]:
+def _available_workflow_sections(chunk: LawChunk | None, missing_slots: list[str]) -> list[str]:
     """List workflow sections that the top workflow chunk can legitimately support."""
 
     if chunk is None or not chunk.source_type.startswith("workflow"):
@@ -238,6 +240,9 @@ def _available_workflow_sections(chunk: LawChunk | None) -> list[str]:
     available = ["Krótko"]
     if chunk.workflow_steps:
         available.append("Co zrób teraz")
+        available.append("Co możesz zrobić już teraz")
+    if missing_slots:
+        available.append("Czego jeszcze brakuje do pełnej odpowiedzi")
     if chunk.workflow_required_inputs:
         available.append("Jakie dane / dokumenty będą potrzebne")
     if chunk.workflow_common_pitfalls:
@@ -266,7 +271,7 @@ def evaluate_case(
 
     top_chunk = result.chunks[0] if result.chunks else None
     sections_present = extract_answer_sections(result.answer)
-    workflow_available_sections = _available_workflow_sections(top_chunk)
+    workflow_available_sections = _available_workflow_sections(top_chunk, list(result.missing_slots or []))
     invented_sections = [
         section for section in sections_present if section not in workflow_available_sections
     ]
@@ -298,7 +303,9 @@ def evaluate_case(
         "invented_sections": invented_sections,
         "sparse_workflow_unit": sparse_workflow_unit,
         "sparse_workflow_safe": sparse_workflow_unit and not invented_sections,
-        "operational_answer": workflow_formatted and "Co zrób teraz" in sections_present,
+        "operational_answer": workflow_formatted and (
+            "Co zrób teraz" in sections_present or "Co możesz zrobić już teraz" in sections_present
+        ),
         "legal_style_answer": "Podstawa prawna:" in result.answer and not workflow_formatted,
     }
 
