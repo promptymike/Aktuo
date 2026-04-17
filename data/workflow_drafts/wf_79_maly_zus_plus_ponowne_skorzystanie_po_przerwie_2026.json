@@ -106,5 +106,74 @@
       "3d1f3d7ba9d7",
       "7ec80ae95c6e"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:25:51Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera solidną strukturę procedury, ale ma kilka poważnych luk w weryfikacji aktualności danych (limit 120 tys. zł, kody ZUS) oraz brakuje wyjaśnień dla złożonych scenariuszy przejścia między kodami ubezpieczenia. Wymaga weryfikacji artykułów ustawy i waloryzacji limitów na 2026 rok przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 18c ustawy o systemie ubezpieczeń społecznych jest cytowany jako źródło regulacji 36/60 miesięcy, ale brak weryfikacji czy przepis rzeczywiście zawiera wszystkie wymienione warunki (limit 120 tys. zł, 60 dni prowadzenia, przesłanki negatywne dotyczące byłego pracodawcy). Artykuł może być zmieniony lub interpretowany inaczej w 2026 roku."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 36 ust. 14 jest przywoływany dla terminu 7 dni i 31 stycznia, ale draft nie precyzuje czy przepis dotyczy dokładnie obu terminów czy tylko jednego z nich, oraz czy regulacja nie uległa zmianie między 2025 a 2026 rokiem."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Limit przychodu 120 000 zł dla 2026 roku nie jest zweryfikowany – draft zakłada że pozostanie na tym poziomie, ale limity ZUS-owe są waloryzowane corocznie i mogą ulec zmianie. Brak odniesienia do rozporządzenia waloryzacyjnego na 2026 rok."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 5 mówi o terminie 'do 31 stycznia 2026 r.' dla zgłoszenia, ale krok 6 wskazuje że jeśli działalność jest zawieszona w styczniu i wznowiona później, obowiązuje termin 7 dni. Brak jasnego wyjaśnienia czy termin 31 stycznia dotyczy tylko kontynuacji bez przerwy, czy też innych scenariuszy."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie wyjaśnia procedury dla scenariusza gdzie przedsiębiorca wykorzystał część z 36 miesięcy (np. 12 m-cy w 2025), przegapił termin 31 stycznia 2026, a następnie zawiesił i wznowił działalność – czy może wtedy wznowić ulgę na pozostałe miesiące czy licznik się zeruje?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 odwołuje się do 'PUE ZUS (zakładka Ubezpieczony → Ulgi)' ale nie wyjaśnia czy ta funkcjonalność jest dostępna dla wszystkich typów podatników lub czy interfejs PUE może się zmienić w 2026 roku. Brak alternatywnego sposobu weryfikacji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wymaga złożenia DRA II 'z wyliczeniem podstawy według dochodu z 2025 r.' ale draft nie wyjaśnia jak obliczyć podstawę jeśli dochód w 2025 roku był mieszany (część na preferencji 0570, część na dużym ZUS 0510)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft wspomina 'kod tytułu ubezpieczenia (0590)' dla Małego ZUS Plus – należy zweryfikować czy kod 0590 rzeczywiście obowiązuje w 2026 roku, ponieważ kody ZUS mogą ulec zmianie w wyniku zmian legislacyjnych."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Edge case o 'decyzjach ZUS' potwierdzających że zawieszenie nie przerywa biegu 24 miesięcy preferencji – brak konkretnych numerów decyzji lub dat, co utrudnia weryfikację tej informacji."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Draft nie pokrywa scenariusza gdzie przedsiębiorca zmienia formę opodatkowania (np. z ryczałtu na skalę podatkową) w trakcie roku – czy wpływa to na prawo do Małego ZUS Plus lub na sposób liczenia przychodu?"
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Brak wyjaśnienia co się dzieje jeśli przedsiębiorca przekroczy limit 120 tys. zł przychodu w trakcie roku korzystania z Małego ZUS Plus – czy ulga pada natychmiast, czy od następnego miesiąca, czy trzeba zwrócić składki?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft wspomina 'Comarch Optima / WFirma / Symfonia' jako systemy do ustawienia schematu składek, ale nie wyjaśnia czy wszystkie te systemy są aktualizowane dla zmian 2026 roku lub czy istnieją inne popularne systemy księgowe."
+      }
+    ]
   }
 }

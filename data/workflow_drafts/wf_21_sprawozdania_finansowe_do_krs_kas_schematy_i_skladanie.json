@@ -106,5 +106,64 @@
       "1845d0a5f61d",
       "d31a2f2e7159"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:24:41Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę proceduralną, ale ma kilka poważnych luk dotyczących aktualności schematów XSD na 2026 r., weryfikacji artykułów ustawy oraz brakuje precyzji w procedurach alternatywnych (np. oświadczenia zamiast podpisów, skan vs podpis elektroniczny). Wymaga manual legal review i aktualizacji referencji do systemów KRS.",
+    "issues": [
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne schematy XSD (załącznik nr 1 v 1.3, nr 4, nr 5) i odniesienia do wersji schematów obowiązujących za 2025 r., ale nie ma mechanizmu aktualizacji dla 2026 r. MF regularnie zmienia wersje schematów, a procedura powinna wskazywać gdzie sprawdzić aktualną wersję, nie konkretne numery."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 45 ust. 1g UoR jest cytowany jako podstawa obowiązku elektronicznego, ale brakuje weryfikacji czy ten artykuł rzeczywiście istnieje w aktualnym brzmieniu ustawy o rachunkowości (mogły być zmiany legislacyjne do 2026 r.)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 wymienia możliwość złożenia 'oświadczenia jednego członka + odmowę pozostałych' zamiast podpisów wszystkich członków zarządu, ale nie precyzuje formularza, struktury tego oświadczenia ani czy wymaga ono podpisu elektronicznego - to może prowadzić do błędów proceduralnych."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 1 stwierdza że spółka cywilna prowadząca KH 'nie składa do żadnego rejestru', ale edge case mówi o 'przekroczeniu limitu obrotów' - brakuje jasnego wyjaśnienia czy limit obrotów zmienia status składania czy tylko obowiązek sporządzenia."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft wspomina 'bezpłatny system RDF (Repozytorium Dokumentów Finansowych) w eKRS' - nazwa i akronim RDF powinny być zweryfikowane, gdyż mogą być zmienione lub nieaktualne w systemach KRS na 2026 r."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 4 wymaga 'uchwały o stosowaniu uproszczeń (jeśli dotyczy - dołącza się do KRS wraz z SF, podpisana elektronicznie lub skan podpisanego dokumentu)' - brakuje wyjaśnienia czy skan papierowego dokumentu spełnia wymóg 'podpisanego elektronicznie' czy to dwa alternatywne warianty."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o 'spółce zawieszonej bez operacji' powołuje się na art. 3 ust. 6 UoR, ale nie wyjaśnia czy 'pojedyncza transakcja' oznacza każdą operację czy tylko operacje gospodarcze (np. czy opłacenie podatku VAT liczy się jako operacja)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Krok 5 wymaga 'PESEL osoby uprawnionej ujawnionej w KRS' do złożenia RDF, ale nie wyjaśnia co zrobić gdy osoba uprawniona nie ma PESEL (np. obcokrajowiec) - to jest powiązane z related_question ale nie rozwiązane w procedurze."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 6 wspomina 'art. 79 UoR - odpowiedzialność karna' za brak SF, ale nie ma weryfikacji czy ten artykuł rzeczywiście dotyczy odpowiedzialności karnej (może być to art. 77 lub inny - draft sam wspomina art. 77 w edge case)."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Draft zawiera termin '30 kwietnia roku następującego' dla KAS, ale nie uwzględnia potencjalnych zmian w terminie dla 2026 r. (mogą być zmiany w ustawie o podatku dochodowym lub regulacjach KAS)."
+      }
+    ]
   }
 }

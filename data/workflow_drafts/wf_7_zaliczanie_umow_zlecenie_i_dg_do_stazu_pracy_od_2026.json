@@ -99,5 +99,64 @@
       "7e08ae2a5d4b",
       "a2c973af8523"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:26:06Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera solidną strukturę proceduralną, ale ma kilka poważnych luk w zakotwiczeniu prawnym (art. 3021 KP, formularz US-7) i brakuje mu jasności co do inicjacji procesu zaliczania oraz zakresu retroaktywności zmian od 2026 r. Wymaga weryfikacji aktualnego stanu ustawodawstwa i precyzacji procedur administracyjnych.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Draft powołuje się na 'znowelizowany art. 3021 Kodeksu pracy' w kroku 1, ale w legal_anchors podany jest tylko art. 22 KP. Brak potwierdzenia, czy art. 3021 rzeczywiście istnieje i czy nowelizacja weszła w życie 1 stycznia 2026 r. – wymaga weryfikacji aktualnego stanu prawnego."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Krok 2 odwołuje się do formularza 'US-7' jako dokumentu rozstrzygającego z ZUS, ale nie ma tego formularza w legal_anchors. Należy potwierdzić, czy US-7 to rzeczywisty, aktualny formularz ZUS czy może chodzi o inny dokument (np. zaświadczenie o okresach ubezpieczenia)."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera konkretne nazwy systemów kadrowo-płacowych (Comarch Optima, Symfonia Kadry i Płace, Enova) w kroku 6, ale nie wiadomo, czy w 2026 r. będą to nadal dominujące rozwiązania lub czy ich interfejsy będą identyczne – może wymagać aktualizacji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brak wyjaśnienia, jak pracownik powinien złożyć wniosek o zaliczenie okresów do stażu pracy – czy to automatyczne przy zatrudnieniu, czy wymaga osobnego wniosku do pracodawcy/ZUS? Procedura inicjacji procesu nie jest jasna."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 wspomina 'zaświadczenie/legitymację potwierdzającą status studenta', ale nie precyzuje, czy legitymacja studencka sprzed wielu lat będzie akceptowana, czy potrzebne jest zaświadczenie z uczelni – brak wytycznych czasowych."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 5 stwierdza, że 'przerwy w opłacaniu składek z tytułu zasiłku nie przerywają ciągłości ubezpieczenia', ale krok 4 mówi o 'eliminacji duplikatów' – niejasne, czy zasiłki w trakcie DG/zlecenia są traktowane jako odrębny okres czy jako kontynuacja tego samego okresu."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 rozróżnia 'staż pracy ogólny' od 'stażu urlopowego' i wspomina zasadę 'korzystniejszego dla pracownika okresu, bez podwajania' – ta zasada nie jest wyjaśniona w legal_anchors i może być interpretowana na wiele sposobów."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący 'brak dokumentów sprzed wielu lat' wspomina 'wniosek USP w ZUS', ale nie wyjaśnia, czy ZUS ma obowiązek wydać zaświadczenie dla okresów sprzed 2026 r., jeśli pracownik nie ma dokumentów – procedura jest niejasna."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, czy zaliczenie okresów do stażu pracy od 2026 r. ma charakter retroaktywny (czy można zaliczyć okresy sprzed 2026 r.) czy dotyczy tylko okresów od 1 stycznia 2026 r. – to ma znaczenie dla pracowników z historią zatrudnienia."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 6 wspomina 'adnotację zlecenie lub DG' w systemach kadrowych, ale nie ma potwierdzenia, czy wszystkie wymienione systemy obsługują takie adnotacje lub czy istnieje standardowy kod do tego celu."
+      }
+    ]
   }
 }

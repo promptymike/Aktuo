@@ -104,5 +104,84 @@
       "2350a1c97ee2",
       "d3cc6dbb3ba4"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:24:07Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera poważne błędy w cytowaniu przepisów (art. 87¹ KP nie istnieje) i potencjalne nieścisłości w datach waloryzacji (825 zł na 2025 r. w dokumencie z 2026). Brakuje precyzji w kilku kluczowych procedurach (zbieg zajęć, potrącenia z drugiej wypłaty, status wynagrodzenia chorobowego) oraz konkretnych nazw formularzy. Wymaga weryfikacji prawnej przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 87¹ KP nie istnieje w Kodeksie pracy - przepisy dotyczące potrąceń to art. 87-89 KP. Brak prawidłowego odniesienia do artykułu regulującego kwotę wolną przy zajęciach niealimentacyjnych (art. 87 § 1 KP)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Odwołanie do 'art. 833 § 2 i 2¹ KPC' wymaga weryfikacji - przepisy KPC dotyczące ochrony zasiłków i umów cywilnoprawnych mogą mieć inne numery paragrafów; brak pewności czy § 2¹ istnieje."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Kwota wolna zasiłków określona na 825 zł (stan 2025) - dokument datowany 2026-04-17 powinien zawierać waloryzowaną kwotę na 2026 r., która mogła się zmienić w marcu 2026."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Minimalne wynagrodzenie krajowe podane jako 'ok. 4666 zł brutto' w pytaniu przykładowym - ta kwota jest z 2025 r.; dla 2026 powinna być aktualna kwota obowiązująca od stycznia 2026."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Step 2 stwierdza że 'pracownik zazwyczaj nie ma potrącenia w ogóle' przy minimalnym wynagrodzeniu - brakuje precyzyjnego warunku/wariantu dla sytuacji gdy netto pracownika jest poniżej kwoty wolnej (czy potrącenie = 0 czy może być ujemne)."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 3 mówi że 'Świadczenia z ZFŚS co do zasady NIE podlegają egzekucji' ale Step 5 opisuje limity dla zasiłków ZUS - brakuje jasnego rozróżnienia między świadczeniami ZFŚS (które nie podlegają) a zasiłkami ZUS (które podlegają)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 4 wymaga od zleceniobiorcę 'pisma komornika potwierdzającego że zlecenie jest jedynym źródłem utrzymania' - brakuje informacji czy to pismo musi być złożone PRZED potrąceniem czy czy pracodawca może potrącać 100% do czasu dostarczenia takiego pisma."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 6 wspomina 'zgłoś zbieg do organu właściwego' ale nie precyzuje: do kogo dokładnie (sąd, komornik, ZUS), w jakim terminie i w jakiej formie."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Odwołanie do 'art. 773 KPC' w kontekście pierwszeństwa komornika nad ZUS - wymaga weryfikacji czy ten artykuł rzeczywiście reguluje tę kwestię; może to być błędny numer artykułu."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 7 mówi o 'formularzu z zajęcia' - brakuje nazwy konkretnego formularza (np. RPS-3, RPS-4) lub wskazania gdzie go znaleźć; 'formularz z zajęcia' jest zbyt ogólne."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'Dwie wypłaty w jednym miesiącu' stwierdza że 'druga wypłata może w całości pójść do komornika' - to wymaga weryfikacji czy rzeczywiście można potrącić 100% z drugiej wypłaty w tym samym miesiącu, czy kwota wolna liczy się od całego miesiąca."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje wyjaśnienia jak traktować wynagrodzenie chorobowe (pierwsze 33 dni płacone przez pracodawcę) - czy to wynagrodzenie za pracę (limity KP) czy zasiłek (limity ustawy emerytalnej); related_questions to podnoszą ale nie ma odpowiedzi w answer_steps."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Brakuje informacji o proporcjonalnym wyliczeniu kwoty wolnej dla pracownika na część etatu - wspomina się to w related_questions ale nie ma procedury w answer_steps."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Odwołanie do 'Comarch Optima/Symfonia' z instrukcją 'wprowadź zajęcie jako Komornicze inne' - wymaga weryfikacji czy te systemy rzeczywiście mają taką opcję i czy nazwa jest dokładna."
+      }
+    ]
   }
 }

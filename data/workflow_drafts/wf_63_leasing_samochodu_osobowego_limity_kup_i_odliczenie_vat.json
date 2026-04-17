@@ -108,5 +108,84 @@
       "894a1d6aed44",
       "6cc60c254f19"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:25:34Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera szczegółowe procedury, ale ma kilka poważnych luk: brakuje jasnego wyjaśnienia, czy limit dotyczy wartości pojazdu czy rat, brakuje konkretnych przykładów dla VAT-owców z 50% odliczeniem, a przejście limitów 150→100 tys. zł od 1.01.2026 wymaga weryfikacji źródła prawnego. Rekomendacja: wymagana weryfikacja artykułów PIT i VAT oraz potwierdzenie zmian limitów w obwieszczeniu MF przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 23 ust. 5c PIT cytowany jako podstawa dla 'zasady ochrony praw nabytych' i przejścia limitu 150→100 tys. zł od 1.01.2026 – wymaga weryfikacji, czy ten konkretny ustęp rzeczywiście zawiera przepis przejściowy dla umów zawartych do 31.12.2025, czy jest to interpretacja wymagająca potwierdzenia w obwieszczeniu MF."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera limit 100 tys. zł 'od 1.01.2026' dla samochodów spalinowych emitujących >50g CO2/km, ale nie wskazuje źródła tej zmiany (ustawa, rozporządzenie, data wejścia w życie) – w 2026 mogą obowiązywać inne limity lub warunki emisyjne."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Limit 225 tys. zł dla samochodów elektrycznych podany bez daty obowiązywania – czy dotyczy umów zawartych do 31.12.2025, czy obowiązuje również od 1.01.2026, czy ulega zmianie?"
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 1 mówi 'dla VAT-owca odliczającego 50% VAT – do limitu doliczasz 50% nieodliczonego VAT', ale krok 3 przykład pokazuje 'auto 200 000 zł netto, VAT 100% odliczalny' – brakuje jasnego przykładu dla VAT-owca z 50% odliczeniem, co może prowadzić do błędnego wyliczenia bazy proporcji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brakuje wyjaśnienia, czy limit 150/100 tys. zł dotyczy wartości pojazdu (jak sugeruje krok 2) czy sumy rat leasingowych w części kapitałowej – to fundamentalna różnica dla wyliczenia proporcji, szczególnie w leasingu długoterminowym."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 4 wspomina 'współczynnik sprzedaży (art. 90 VAT)' dla podatników ze sprzedażą mieszaną, ale nie wyjaśnia, czy ten współczynnik zmniejsza również proporcję KUP czy tylko odliczenie VAT – brakuje konkretnego przykładu."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 6 odnosi się do konkretnych modułów w programach 'Comarch Optima' (moduł Środki Trwałe → Pojazdy) i 'WFirma' (Pojazdy → Dodaj pojazd) – te ścieżki menu mogą być nieaktualne lub różnić się w zależności od wersji oprogramowania."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'Samochód z homologacją ciężarową' sugeruje, że pojazd może być traktowany jako osobowy dla PIT mimo VAT-26 – ale brakuje wskazania, jaki dokument/interpretacja stanowi podstawę tej klasyfikacji (czy to interpretacja indywidualna, czy utrwalona praktyka)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'Sprzedaż mieszana VAT' opisuje 'dwukrotne' liczenie proporcji (50% + wskaźnik sprzedaży), ale nie wyjaśnia, czy to mnożenie czy kolejne zastosowanie – przykład numeryczny byłby niezbędny."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brakuje wyjaśnienia, czy 'wartość samochodu' w kroku 2 to wartość rynkowa, wartość z umowy leasingu, czy wartość przedmiotu leasingu (bez wyposażenia dodatkowego) – to wpływa na wyliczenie proporcji."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 5 mówi 'AC/GAP – proporcja do limitu 150 000 zł liczona od wartości samochodu z polisy', ale wcześniej (krok 2) limit może być 100 tys. zł od 1.01.2026 – czy AC/GAP zawsze liczą się do 150 tys. zł czy do obowiązującego limitu?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wspomina 'najem krótkoterminowy (≤6 mies.) – bez limitu wartości', ale nie wyjaśnia, czy to oznacza 100% KUP czy nadal 75% przy użytku mieszanym – brakuje jasności co do zakresu 'bez limitu'."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 86a ust. 1-3 VAT cytowany dla 'zasady 50% odliczenia VAT przy użytku mieszanym' – wymaga weryfikacji, czy te konkretne ustępy rzeczywiście zawierają regulację dla samochodów osobowych czy są to przepisy ogólne wymagające interpretacji."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Draft zawiera 'last_verified_at': '2026-04-17' (przyszła data) – jeśli to data generacji, może wskazywać na błąd w metadanych; jeśli to rzeczywista data weryfikacji, wymaga potwierdzenia aktualności przepisów na kwiecień 2026."
+      }
+    ]
   }
 }

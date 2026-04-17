@@ -111,5 +111,79 @@
       "581d6a6893d2",
       "0522495a4cf8"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:24:59Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera wiele konkretnych artykułów i procedur, ale ma istotne luki w weryfikacji aktualności limitów de minimis i progów dla 2026 r., oraz niepewności dotyczące rzeczywistego brzmienia art. 22k ust. 14 PIT (może to być przepis CIT). Wymaga manualnej weryfikacji wszystkich cytowanych artykułów i limitów finansowych przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 22k ust. 14 PIT dotyczący jednorazowej amortyzacji fabrycznie nowych ŚT do 100 000 zł jest cytowany dla osób fizycznych, ale limit 100 000 zł i grupy KŚT 3–6 i 8 mogą być regulacją dedykowaną CIT (spółkom). Wymaga weryfikacji czy art. 22k ust. 14 rzeczywiście istnieje w ustawie o PIT czy jest to przepis z CIT."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 22d ust. 1 PIT jest cytowany jako podstawa do nieujmowania w ewidencji ŚT składników ≤ 10 000 zł, ale brakuje wyraźnego odniesienia do art. 22c (definicja środka trwałego) – niepewne czy art. 22d ust. 1 rzeczywiście zawiera tę regulację czy jest to uproszczenie."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Limit pomocy de minimis podany jako 300 tys. euro w 3 latach może być nieaktualny dla 2026 r. – przepisy mogły ulec zmianie, a dokument nie zawiera źródła ani daty ostatniej weryfikacji tego limitu."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Próg dla małego podatnika podany jako 2 mln euro przychodu brutto może ulec zmianie w 2026 r.; dokument nie zawiera informacji o możliwych zmianach legislacyjnych ani warunkach przejściowych."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 2 (Opcja A) mówi o zaliczeniu bezpośrednio w koszty bez ewidencji dla ≤ 10 000 zł, ale Krok 6 wymaga zwiększenia wartości początkowej przy ulepszeniu > 10 000 zł – brakuje wyjaśnienia czy ulepszenie istniejącego ŚT poniżej 10 000 zł (które było w kosztach) zmienia jego status na ewidencjonowany."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brakuje kroku dotyczącego VAT – czy wartość początkowa to cena netto czy brutto dla podatnika VAT; dokument wspomina 'netto dla czynnego podatnika VAT' w kroku 1, ale nie wyjaśnia jak to wpływa na wybór między opcjami A, B, C."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje informacji o terminie wprowadzenia ŚT do ewidencji – czy musi to być miesiąc zakupu czy można opóźnić do następnego miesiąca; krok 5 wspomina 'miesiąc następny' ale nie jest jasne czy to obowiązek czy opcja."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 4 wspomina 'zaświadczenie z US o pomocy de minimis' ale nie wyjaśnia procedury uzyskania tego zaświadczenia ani czy jest ono wymagane przed zastosowaniem jednorazowej amortyzacji czy tylko do dokumentacji."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 5 wspomina konkretne programy (Comarch Optima, WFirma, Symfonia) i kody KŚT (669 dla testera diagnostycznego, 808 dla mebli) – te kody mogą być zmienione w 2026 r. lub mogą być nieprecyzyjne; wymaga weryfikacji aktualności Wykazu KŚT."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Edge case o mieszkaniu jako lokalu firmy powołuje się na zmianę od 2023 r. (art. 22c pkt 2 PIT), ale dokument jest datowany na 2026 r. – brakuje informacji czy ta regulacja obowiązuje nadal czy została zmieniona."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o spółce z o.o. kupującej kocioł węglowy powołuje się na art. 16k ust. 14 CIT, ale dokument jest dedykowany KPiR (osobom fizycznym) – ta informacja może być myląca dla użytkownika; brakuje wyjaśnienia czy przepisy CIT mają analogię w PIT."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje wyjaśnienia jak traktować ŚT zakupione przed 2026 r. a amortyzowane w 2026 r. – czy obowiązują przepisy z roku zakupu czy z roku amortyzacji; istotne dla przejścia na nowe przepisy."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 7 mówi o wykazaniu w PIT-36/36L zał. B, ale dla KPiR (podatnika ryczałtowego lub skali) formularz może być inny – brakuje uściślenia dla jakich podatników ten krok ma zastosowanie."
+      }
+    ]
   }
 }

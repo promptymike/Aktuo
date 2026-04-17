@@ -111,5 +111,64 @@
       "3fb763039ad1",
       "e38933f7a37a"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:25:14Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę procedury, ale ma kilka poważnych luk: brak weryfikacji aktualności stawek VAT i limitów na 2026 r., niejasności w rozróżnieniu między scenariuszami VAT/PIT, oraz brak kroku dotyczącego korekty VAT przy wycofaniu. Wymaga uzupełnienia o brakujące kroki i wyjaśnienia sprzeczności między krokami 4 i 6.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 86a ust. 1-3 ustawy o VAT reguluje odliczenie VAT od pojazdów, ale draft nie precyzuje, czy odnosi się do art. 86a w brzmieniu obowiązującym w 2026 r. – przepis ten był wielokrotnie nowelizowany i mogą obowiązywać inne limity/warunki niż w 2024 r."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne stawki VAT (23%) i limity (150 000 zł w related_questions), ale nie wskazuje, że mogą ulec zmianie do 2026 r.; brak zastrzeżenia o konieczności weryfikacji aktualnych stawek i progów."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 stwierdza, że sprzedaż auta wycofanego na cele prywatne 'nie podlega VAT ani PIT z działalności', ale krok 6 mówi o PIT z działalności przy sprzedaży przed upływem 6 lat – brak jasnego wyjaśnienia, kiedy VAT/PIT się pojawia, a kiedy nie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie wyjaśnia, czy samochód osobowy (kategoria M1) podlega innym regułom niż pojazdy użytkowe; art. 86a VAT ma specjalne warunki dla pojazdów osobowych, ale procedura nie zawiera kroku weryfikacji kategorii pojazdu."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak kroku dotyczącego wpływu wycofania samochodu z działalności na konieczność korekty wcześniej odliczonego VAT (art. 89 VAT) – draft wspomina to w related_questions, ale nie w głównym workflow."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 3 wspomina 'Comarch Optima / wFirma / Symfonia' jako konkretne systemy księgowe – te nazwy mogą być nieaktualne w 2026 r. lub mogą być zastąpione innymi rozwiązaniami; to szczegół implementacyjny, nie przepis prawny."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 7 wspomina formularz 'SD-Z2' do zgłoszenia darowizny – należy zweryfikować, czy ta nazwa formularza jest aktualna dla 2026 r. (formularze mogą być zmieniane przez MF)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący 'Spółki na CIT estońskim' jest niejasny – draft stwierdza, że 'sprzedaż sama w sobie nie generuje 50% CIT estońskiego', ale nie wyjaśnia, jakie są rzeczywiste skutki VAT/CIT w tym scenariuszu; może być wymyślony lub niekompletny."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie zawiera kroku dotyczącego różnicy między 'wycofaniem' samochodu z działalności (zmiana przeznaczenia) a 'sprzedażą' – te dwa zdarzenia mogą mieć różne skutki VAT/PIT, ale procedura traktuje je łącznie."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 5 mówi o 'dokumencie wewnętrznym' dla darowizny, ale nie precyzuje, czy to wystarczy dla celów VAT – art. 7 ust. 2 VAT wymaga dokumentu potwierdzającego dostawę, ale draft nie wyjaśnia, jaki dokument jest wymagany."
+      }
+    ]
   }
 }

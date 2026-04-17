@@ -107,5 +107,89 @@
       "440935078e6a",
       "9ae0202035be"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:24:26Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.68,
+    "general_assessment": "Draft zawiera praktyczne kroki dla obiegu faktur KSeF w biurze rachunkowym, ale ma kilka poważnych luk: brak procedury dla biura bez dostępu do KSeF klienta, niepewne cytaty artykułów ustawy o VAT, oraz niejasności dotyczące obsługi błędów mapowania i duplikatów. Wymaga weryfikacji aktualności danych na 2026 i potwierdzenia nazw węzłów XML.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Artykuł 106gb ust. 3-6 oraz 106na ust. 1, 3-4 są cytowane jako regulujące moment uznania faktury za otrzymaną i obsługę faktur poza KSeF, ale brak weryfikacji czy te konkretne ustępy rzeczywiście zawierają te regulacje w obecnym brzmieniu ustawy o VAT (stan na 2026)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Artykuł 106nd ust. 2 pkt 1-6 i 11 - liczba punktów (11) wydaje się podejrzana dla jednego ustępu; wymaga weryfikacji czy struktura artykułu rzeczywiście zawiera 11 punktów w tym ustępie."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft wspomina okres przechowywania faktur w KSeF przez MF na 10 lat, ale nie uwzględnia potencjalnych zmian w regulacjach przechowywania danych lub archiwizacji między 2024 a 2026; wymaga potwierdzenia aktualności tego okresu."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Wymienione programy (Comarch Optima, Symfonia, Enova, wFirma) i ich funkcjonalności integracji z KSeF mogły ulec zmianom do 2026; szczególnie dotyczy to mapowania pól i dostępności OCR/paneli akceptacji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brak procedury obsługi sytuacji, gdy klient nie ma dostępu do KSeF (np. nie posiada certyfikatu, nie ma uprawnień) - draft zakłada, że klient zawsze może pobrać faktury, ale nie opisuje alternatywy dla biura bez dostępu do systemu klienta."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 wspomina 'split payment' jako element weryfikacji, ale nie wyjaśnia jak biuro ma weryfikować czy faktura podlega split payment ani jakie są konsekwencje dla księgowania - brakuje procedury obsługi tego mechanizmu."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie opisuje procedury obsługi duplikatów faktur w KSeF (np. gdy sprzedawca wystawił dwie faktury z tym samym numerem) - brakuje kroku weryfikacji unikalności faktury przed księgowaniem."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 mówi że 'nie ma obowiązku drukowania' faktur, ale Krok 5 i common_mistakes powtarzają to jako błąd - brakuje jasnego wyjaśnienia czy backup XML jest obowiązkowy czy rekomendowany, i jakie są konsekwencje braku backupu przy kontroli."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft wspomina 'kod QR' dla faktur wystawionych w trybie offline24/awaryjnym - wymaga weryfikacji czy faktury offline rzeczywiście zawierają kod QR i czy jest to standard w KSeF."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Węzły XML 'P_6' (data sprzedaży) i 'Platnosc/TerminyPlatnosci' są cytowane jako standardowe, ale brak potwierdzenia czy dokładnie tak się nazywają w schemacie XML KSeF - mogą to być uproszczenia lub nieaktualne nazwy."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Draft wspomina 'paragon z NIP' jako dokument spoza KSeF - wymaga weryfikacji czy paragony rzeczywiście mogą być wystawiane z NIP i czy trafiają do KSeF czy są zwolnione."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący faktury z datą sprzedaży w innym miesiącu niż wystawienia jest realistyczny, ale draft nie wyjaśnia jak to wpływa na moment powstania obowiązku podatkowego w praktyce księgowania (czy księgować w miesiącu sprzedaży czy wystawienia)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case 'klient nie chce wdrażać OCR/panelu' zakłada że zestawienie Excel jest realną alternatywą, ale nie opisuje jak biuro ma weryfikować czy lista numerów KSeF w Excelu jest kompletna i czy nie brakuje faktur."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak procedury obsługi błędów w mapowaniu danych przez sprzedawcę (Krok 6) - draft mówi 'poproś klienta o kontakt ze sprzedawcą', ale nie wyjaśnia co zrobić jeśli sprzedawca nie poprawi danych ani jak długo czekać przed księgowaniem na podstawie XML."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie opisuje procedury obsługi faktur korygujących w KSeF - czy są osobnym dokumentem, czy modyfikują oryginalną fakturę, i jak wpływa to na archiwizację i księgowanie."
+      }
+    ]
   }
 }

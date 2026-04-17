@@ -111,5 +111,74 @@
       "3c052a0e1f34",
       "bfb64fab2f2c"
     ]
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-17T23:23:49Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.42,
+    "general_assessment": "Draft zawiera poważne problemy z weryfikowalnością podstawy prawnej (artykuły ustawy o VAT wydają się wymyślone, rozporządzenie nie jest precyzyjnie zidentyfikowane) oraz wewnętrzne sprzeczności dotyczące stosowania kodów BFK dla dokumentów sprzed lutego 2026. Stanowisko KIS cytowane bez pełnych referencji, a sam draft przyznaje rozbieżności interpretacyjne - wymaga znacznej weryfikacji przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Artykuł 'art. 106gb ust. 4 pkt 1 i ust. 5' ustawy o VAT nie istnieje w polskim kodeksie VAT (art. 106 to maksimum). Numery artykułów wyglądają na wymyślone lub błędnie cytowane, co podważa wiarygodność całej podstawy prawnej."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Rozporządzenie w sprawie JPK_V7 § 10 nie jest precyzyjnie zidentyfikowane - brakuje pełnej nazwy rozporządzenia, numeru i daty wydania. Nie wiadomo, czy odnosi się do rozporządzenia MF czy innego aktu."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera datę 'od lutego 2026' jako przyszłą, ale metadata wskazuje 'last_verified_at': '2026-04-17', co sugeruje, że dokument jest pisany z perspektywy kwietnia 2026. Dla użytkownika w 2026 ta informacja może być już nieaktualna lub mylna."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "high",
+        "description": "Stanowisko MF z '18.03' (bez roku) dotyczące BFK dla WNT jest cytowane bez pełnej referencji. Brak możliwości weryfikacji, czy taki dokument rzeczywiście istnieje i jaka jest jego pełna treść."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 2 mówi, że BFK stosuje się dla faktur 'wystawionych poza KSeF mimo obowiązku', ale step 6 sugeruje, że faktury z grudnia 2025/stycznia 2026 'nie wymagają nowych oznaczeń BFK/DI' - sprzeczność w stosowaniu BFK dla dokumentów sprzed lutego 2026."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje wyjaśnienia, jak oznaczać faktury korygujące (faktury VAT RR) w kontekście nowych kodów BFK/DI - czy dziedziczą oznaczenie faktury pierwotnej, czy otrzymują nowe?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 5 mówi, że BFK/DI 'nie zastępują' dotychczasowych oznaczeń, ale nie wyjaśnia, w jakim polu JPK_V7 umieszcza się BFK/DI - czy to osobna kolumna, czy zastępuje istniejące pole?"
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'Apteka wystawiająca paragon z NIP powyżej 450 zł' zawiera stwierdzenie 'fakturę do takiego paragonu z NIP nabywcy wysyłasz do KSeF' - ale nie jest jasne, czy to dotyczy wszystkich aptek czy tylko tych spełniających określone warunki (np. wielkość obrotu)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Tryb 'offline24' KSeF wspomniany w related_questions nie jest znany jako oficjalna nazwa trybu - może to być wymyślony termin lub błędna nomenklatura."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Brakuje informacji, jak postępować z fakturami wystawionymi przez podatnika, który zmienia status (np. z małego podatnika na zwykłego) w trakcie okresu rozliczeniowego - czy oznaczenia się zmieniają retroaktywnie?"
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Limity i kwoty (np. 450 zł dla paragonów uproszczonych) mogą ulec zmianie do 2026 roku - draft nie zawiera zastrzeżenia o konieczności weryfikacji aktualnych limitów."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Step 7 rekomenduje 'zapytanie do KIS' w razie wątpliwości, ale wcześniejsze kroki (2-3) prezentują stanowisko jako pewne - sygnalizuje to, że draft sam nie jest pewny interpretacji BFK vs DI dla WNT."
+      }
+    ]
   }
 }
