@@ -403,7 +403,7 @@ def load_workflow_documents(workflow_path: str | Path = WORKFLOW_SEED_PATH) -> l
             category_tokens=_tokenize(str(record.get("category", ""))),
         )
         for record in records
-        if str(record.get("title", "")).strip()
+        if str(record.get("title", "")).strip() and record.get("draft") is not True
     )
 
     with _CACHE_LOCK:
