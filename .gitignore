@@ -9,3 +9,11 @@ data/seeds/law_knowledge_backup*.json
 fb_pipeline/.Rhistory
 kb-pipeline/output/reprocess/_stale_pre_canonicalize/
 kb-pipeline/output/reprocess/logs/
+
+# FB corpus — raw scrapes and derived corpus are too large for git.
+# Tracked outputs: ingest scripts + analysis/fb_corpus_ingest_report.{md,json}.
+fb_pipeline/posts_15k_ksiegowosc_moja_pasja.json
+fb_pipeline/posts_output.json
+fb_pipeline/posts_output_backup.json
+data/corpus/
+
