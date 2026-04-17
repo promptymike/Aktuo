@@ -1,0 +1,4412 @@
+{
+  "scan_date": "2026-04-17",
+  "mode": "applied",
+  "files_scanned": [
+    "data\\seeds\\law_knowledge.json",
+    "data\\seeds\\law_knowledge_additions.json",
+    "data\\seeds\\law_knowledge_curated_additions.json"
+  ],
+  "corrupted_patterns_found": {},
+  "corrupted_patterns_by_file_and_field": {
+    "data\\seeds\\law_knowledge.json": {},
+    "data\\seeds\\law_knowledge_additions.json": {},
+    "data\\seeds\\law_knowledge_curated_additions.json": {}
+  },
+  "corrections_applied": {},
+  "records_fixed": 1017,
+  "records_per_file": {
+    "data\\seeds\\law_knowledge.json": 945,
+    "data\\seeds\\law_knowledge_additions.json": 0,
+    "data\\seeds\\law_knowledge_curated_additions.json": 72
+  },
+  "unmapped_corruptions": [],
+  "potential_duplicates_after_fix": [
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 108",
+      "count": 2,
+      "record_indexes": [
+        20,
+        21
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 111",
+      "count": 2,
+      "record_indexes": [
+        25,
+        26
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 116",
+      "count": 2,
+      "record_indexes": [
+        32,
+        33
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 149",
+      "count": 2,
+      "record_indexes": [
+        71,
+        72
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 1551",
+      "count": 2,
+      "record_indexes": [
+        98,
+        99
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 171",
+      "count": 2,
+      "record_indexes": [
+        117,
+        118
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 183b",
+      "count": 2,
+      "record_indexes": [
+        150,
+        151
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 186",
+      "count": 2,
+      "record_indexes": [
+        158,
+        159
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 2",
+      "count": 3,
+      "record_indexes": [
+        183,
+        184,
+        185
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 211",
+      "count": 2,
+      "record_indexes": [
+        202,
+        203
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 221",
+      "count": 2,
+      "record_indexes": [
+        215,
+        216
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 221d",
+      "count": 2,
+      "record_indexes": [
+        220,
+        221
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 222",
+      "count": 2,
+      "record_indexes": [
+        226,
+        227
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 229",
+      "count": 2,
+      "record_indexes": [
+        235,
+        236
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 23711a",
+      "count": 2,
+      "record_indexes": [
+        251,
+        252
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 251",
+      "count": 2,
+      "record_indexes": [
+        275,
+        276
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 29",
+      "count": 2,
+      "record_indexes": [
+        294,
+        295
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 29 § 2",
+      "count": 2,
+      "record_indexes": [
+        297,
+        298
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 291",
+      "count": 2,
+      "record_indexes": [
+        299,
+        300
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 293",
+      "count": 2,
+      "record_indexes": [
+        302,
+        303
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 53",
+      "count": 2,
+      "record_indexes": [
+        350,
+        351
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 6719",
+      "count": 2,
+      "record_indexes": [
+        368,
+        369
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 85 § 5",
+      "count": 2,
+      "record_indexes": [
+        415,
+        416
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 92 § 2",
+      "count": 2,
+      "record_indexes": [
+        431,
+        432
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 97",
+      "count": 2,
+      "record_indexes": [
+        449,
+        450
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ordynacja podatkowa",
+      "article_number": "art. 56a § 1",
+      "count": 2,
+      "record_indexes": [
+        1098,
+        1099
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ordynacja podatkowa",
+      "article_number": "art. 70a",
+      "count": 2,
+      "record_indexes": [
+        1135,
+        1136
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ordynacja podatkowa",
+      "article_number": "art. 79",
+      "count": 2,
+      "record_indexes": [
+        1159,
+        1160
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 13 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1242,
+        1243
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 22",
+      "count": 2,
+      "record_indexes": [
+        1269,
+        1270
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 33",
+      "count": 2,
+      "record_indexes": [
+        1303,
+        1304
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 36",
+      "count": 2,
+      "record_indexes": [
+        1309,
+        1310
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 40",
+      "count": 3,
+      "record_indexes": [
+        1314,
+        1315,
+        1316
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 41",
+      "count": 3,
+      "record_indexes": [
+        1317,
+        1318,
+        1319
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 44",
+      "count": 3,
+      "record_indexes": [
+        1325,
+        1326,
+        1327
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 46 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1331,
+        1332
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 48",
+      "count": 3,
+      "record_indexes": [
+        1336,
+        1337,
+        1338
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 53",
+      "count": 3,
+      "record_indexes": [
+        1350,
+        1351,
+        1352
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Rozporządzenie MF o kasach rejestrujących",
+      "article_number": "§ 54",
+      "count": 2,
+      "record_indexes": [
+        1353,
+        1354
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 100 ust. 1",
+      "count": 6,
+      "record_indexes": [
+        2744,
+        2745,
+        2746,
+        2747,
+        2748,
+        2749
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 100 ust. 1 pkt 1-5",
+      "count": 2,
+      "record_indexes": [
+        2750,
+        2751
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 100 ust. 8 pkt 4",
+      "count": 2,
+      "record_indexes": [
+        2757,
+        2758
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 101",
+      "count": 2,
+      "record_indexes": [
+        2759,
+        2760
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 103 ust. 1",
+      "count": 19,
+      "record_indexes": [
+        2762,
+        2763,
+        2764,
+        2765,
+        2766,
+        2767,
+        2768,
+        2769,
+        2770,
+        2771,
+        2772,
+        2773,
+        2774,
+        2775,
+        2776,
+        2777,
+        2778,
+        2779,
+        2780
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b",
+      "count": 4,
+      "record_indexes": [
+        2787,
+        2788,
+        2789,
+        2790
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 1",
+      "count": 8,
+      "record_indexes": [
+        2791,
+        2792,
+        2793,
+        2794,
+        2795,
+        2796,
+        2797,
+        2798
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 1 pkt 1",
+      "count": 12,
+      "record_indexes": [
+        2800,
+        2801,
+        2802,
+        2803,
+        2804,
+        2805,
+        2806,
+        2807,
+        2808,
+        2809,
+        2810,
+        2811
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 1 pkt 4",
+      "count": 4,
+      "record_indexes": [
+        2812,
+        2813,
+        2814,
+        2815
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 2",
+      "count": 2,
+      "record_indexes": [
+        2817,
+        2818
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 3 pkt 1",
+      "count": 2,
+      "record_indexes": [
+        2819,
+        2820
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 3 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        2821,
+        2822
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106b ust. 5",
+      "count": 3,
+      "record_indexes": [
+        2823,
+        2824,
+        2825
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e",
+      "count": 3,
+      "record_indexes": [
+        2829,
+        2830,
+        2831
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1",
+      "count": 15,
+      "record_indexes": [
+        2832,
+        2833,
+        2834,
+        2835,
+        2836,
+        2837,
+        2838,
+        2839,
+        2840,
+        2841,
+        2842,
+        2843,
+        2844,
+        2845,
+        2846
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 12",
+      "count": 3,
+      "record_indexes": [
+        2850,
+        2851,
+        2852
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 18",
+      "count": 4,
+      "record_indexes": [
+        2854,
+        2855,
+        2856,
+        2857
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 18a",
+      "count": 3,
+      "record_indexes": [
+        2858,
+        2859,
+        2860
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 2",
+      "count": 4,
+      "record_indexes": [
+        2862,
+        2863,
+        2864,
+        2865
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 3",
+      "count": 4,
+      "record_indexes": [
+        2870,
+        2871,
+        2872,
+        2873
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 4",
+      "count": 2,
+      "record_indexes": [
+        2876,
+        2877
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 5",
+      "count": 3,
+      "record_indexes": [
+        2880,
+        2881,
+        2882
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 7",
+      "count": 3,
+      "record_indexes": [
+        2884,
+        2885,
+        2886
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 1 pkt 9",
+      "count": 2,
+      "record_indexes": [
+        2889,
+        2890
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 11",
+      "count": 4,
+      "record_indexes": [
+        2892,
+        2893,
+        2894,
+        2895
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 3",
+      "count": 3,
+      "record_indexes": [
+        2898,
+        2899,
+        2900
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106e ust. 5 pkt 3",
+      "count": 4,
+      "record_indexes": [
+        2901,
+        2902,
+        2903,
+        2904
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ga",
+      "count": 2,
+      "record_indexes": [
+        2907,
+        2908
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ga ust. 1",
+      "count": 3,
+      "record_indexes": [
+        2909,
+        2910,
+        2911
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ga ust. 2 pkt 6",
+      "count": 3,
+      "record_indexes": [
+        2914,
+        2915,
+        2916
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb",
+      "count": 29,
+      "record_indexes": [
+        2918,
+        2919,
+        2920,
+        2921,
+        2922,
+        2923,
+        2924,
+        2925,
+        2926,
+        2927,
+        2928,
+        2929,
+        2930,
+        2931,
+        2932,
+        2933,
+        2934,
+        2935,
+        2936,
+        2937,
+        2938,
+        2939,
+        2940,
+        2941,
+        2942,
+        2943,
+        2944,
+        2945,
+        2946
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 1",
+      "count": 13,
+      "record_indexes": [
+        2947,
+        2948,
+        2949,
+        2950,
+        2951,
+        2952,
+        2953,
+        2954,
+        2955,
+        2956,
+        2957,
+        2958,
+        2959
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 1-2",
+      "count": 2,
+      "record_indexes": [
+        2960,
+        2961
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 2",
+      "count": 5,
+      "record_indexes": [
+        2962,
+        2963,
+        2964,
+        2965,
+        2966
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 3",
+      "count": 7,
+      "record_indexes": [
+        2967,
+        2968,
+        2969,
+        2970,
+        2971,
+        2972,
+        2973
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gb ust. 8",
+      "count": 2,
+      "record_indexes": [
+        2979,
+        2980
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106gc ust. 1",
+      "count": 4,
+      "record_indexes": [
+        2982,
+        2983,
+        2984,
+        2985
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106h ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2987,
+        2988
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106i",
+      "count": 2,
+      "record_indexes": [
+        2989,
+        2990
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106i ust. 1",
+      "count": 22,
+      "record_indexes": [
+        2991,
+        2992,
+        2993,
+        2994,
+        2995,
+        2996,
+        2997,
+        2998,
+        2999,
+        3000,
+        3001,
+        3002,
+        3003,
+        3004,
+        3005,
+        3006,
+        3007,
+        3008,
+        3009,
+        3010,
+        3011,
+        3012
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106i ust. 2",
+      "count": 7,
+      "record_indexes": [
+        3014,
+        3015,
+        3016,
+        3017,
+        3018,
+        3019,
+        3020
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106i ust. 7",
+      "count": 2,
+      "record_indexes": [
+        3025,
+        3026
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j",
+      "count": 8,
+      "record_indexes": [
+        3028,
+        3029,
+        3030,
+        3031,
+        3032,
+        3033,
+        3034,
+        3035
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 1",
+      "count": 16,
+      "record_indexes": [
+        3037,
+        3038,
+        3039,
+        3040,
+        3041,
+        3042,
+        3043,
+        3044,
+        3045,
+        3046,
+        3047,
+        3048,
+        3049,
+        3050,
+        3051,
+        3052
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 1 pkt 1",
+      "count": 4,
+      "record_indexes": [
+        3054,
+        3055,
+        3056,
+        3057
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 1 pkt 3",
+      "count": 3,
+      "record_indexes": [
+        3060,
+        3061,
+        3062
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 1 pkt 5",
+      "count": 10,
+      "record_indexes": [
+        3065,
+        3066,
+        3067,
+        3068,
+        3069,
+        3070,
+        3071,
+        3072,
+        3073,
+        3074
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 2 pkt 5",
+      "count": 2,
+      "record_indexes": [
+        3077,
+        3078
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 2 pkt 5, 6",
+      "count": 2,
+      "record_indexes": [
+        3079,
+        3080
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 2a pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3083,
+        3084
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 3",
+      "count": 2,
+      "record_indexes": [
+        3085,
+        3086
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ni ust. 1",
+      "count": 2,
+      "record_indexes": [
+        3102,
+        3103
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ni ust. 1 pkt 1",
+      "count": 3,
+      "record_indexes": [
+        3104,
+        3105,
+        3106
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 108a ust. 1a",
+      "count": 2,
+      "record_indexes": [
+        3114,
+        3115
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        3124,
+        3125,
+        3126,
+        3127,
+        3128
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 11ia",
+      "count": 2,
+      "record_indexes": [
+        3129,
+        3130
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 3",
+      "count": 9,
+      "record_indexes": [
+        3133,
+        3134,
+        3135,
+        3136,
+        3137,
+        3138,
+        3139,
+        3140,
+        3141
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 3 pkt 3 i 4",
+      "count": 2,
+      "record_indexes": [
+        3144,
+        3145
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 8a",
+      "count": 3,
+      "record_indexes": [
+        3151,
+        3152,
+        3153
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 11 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        3156,
+        3157,
+        3158
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 111 ust. 1",
+      "count": 19,
+      "record_indexes": [
+        3166,
+        3167,
+        3168,
+        3169,
+        3170,
+        3171,
+        3172,
+        3173,
+        3174,
+        3175,
+        3176,
+        3177,
+        3178,
+        3179,
+        3180,
+        3181,
+        3182,
+        3183,
+        3184
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 111 ust. 1b",
+      "count": 2,
+      "record_indexes": [
+        3186,
+        3187
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 111 ust. 3a pkt 1",
+      "count": 9,
+      "record_indexes": [
+        3188,
+        3189,
+        3190,
+        3191,
+        3192,
+        3193,
+        3194,
+        3195,
+        3196
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 111 ust. 8",
+      "count": 2,
+      "record_indexes": [
+        3206,
+        3207
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 112",
+      "count": 2,
+      "record_indexes": [
+        3211,
+        3212
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 112 ust. 1",
+      "count": 4,
+      "record_indexes": [
+        3213,
+        3214,
+        3215,
+        3216
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 112a ust. 1",
+      "count": 6,
+      "record_indexes": [
+        3217,
+        3218,
+        3219,
+        3220,
+        3221,
+        3222
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 112b ust. 1 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3229,
+        3230
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 1",
+      "count": 19,
+      "record_indexes": [
+        3234,
+        3235,
+        3236,
+        3237,
+        3238,
+        3239,
+        3240,
+        3241,
+        3242,
+        3243,
+        3244,
+        3245,
+        3246,
+        3247,
+        3248,
+        3249,
+        3250,
+        3251,
+        3252
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 13 pkt 1 lit. f",
+      "count": 2,
+      "record_indexes": [
+        3256,
+        3257
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 13 pkt 1 lit. g",
+      "count": 2,
+      "record_indexes": [
+        3258,
+        3259
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 5",
+      "count": 4,
+      "record_indexes": [
+        3262,
+        3263,
+        3264,
+        3265
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 115 ust. 1 i 2",
+      "count": 2,
+      "record_indexes": [
+        3271,
+        3272
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 117",
+      "count": 2,
+      "record_indexes": [
+        3277,
+        3278
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 119 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        3280,
+        3281
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 120 ust. 4",
+      "count": 6,
+      "record_indexes": [
+        3287,
+        3288,
+        3289,
+        3290,
+        3291,
+        3292
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 130c ust. 1",
+      "count": 2,
+      "record_indexes": [
+        3312,
+        3313
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 14 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        3356,
+        3357
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 14 ust. 1 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3358,
+        3359
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 145a",
+      "count": 2,
+      "record_indexes": [
+        3360,
+        3361
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 145f ust. 1",
+      "count": 2,
+      "record_indexes": [
+        3367,
+        3368
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 145ka",
+      "count": 2,
+      "record_indexes": [
+        3374,
+        3375
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 145ka ust. 2",
+      "count": 2,
+      "record_indexes": [
+        3376,
+        3377
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 145l",
+      "count": 3,
+      "record_indexes": [
+        3378,
+        3379,
+        3380
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 15 ust. 1",
+      "count": 11,
+      "record_indexes": [
+        3420,
+        3421,
+        3422,
+        3423,
+        3424,
+        3425,
+        3426,
+        3427,
+        3428,
+        3429,
+        3430
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 15 ust. 1-2",
+      "count": 3,
+      "record_indexes": [
+        3431,
+        3432,
+        3433
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 176",
+      "count": 2,
+      "record_indexes": [
+        3464,
+        3465
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 19a ust. 1",
+      "count": 33,
+      "record_indexes": [
+        3473,
+        3474,
+        3475,
+        3476,
+        3477,
+        3478,
+        3479,
+        3480,
+        3481,
+        3482,
+        3483,
+        3484,
+        3485,
+        3486,
+        3487,
+        3488,
+        3489,
+        3490,
+        3491,
+        3492,
+        3493,
+        3494,
+        3495,
+        3496,
+        3497,
+        3498,
+        3499,
+        3500,
+        3501,
+        3502,
+        3503,
+        3504,
+        3505
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 19a ust. 3",
+      "count": 4,
+      "record_indexes": [
+        3506,
+        3507,
+        3508,
+        3509
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 19a ust. 5 pkt 4",
+      "count": 2,
+      "record_indexes": [
+        3512,
+        3513
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 19a ust. 5 pkt 4 lit. b",
+      "count": 2,
+      "record_indexes": [
+        3514,
+        3515
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 19a ust. 8",
+      "count": 8,
+      "record_indexes": [
+        3516,
+        3517,
+        3518,
+        3519,
+        3520,
+        3521,
+        3522,
+        3523
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 2",
+      "count": 8,
+      "record_indexes": [
+        3525,
+        3526,
+        3527,
+        3528,
+        3529,
+        3530,
+        3531,
+        3532
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 21 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        3536,
+        3537,
+        3538
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 21 ust. 3",
+      "count": 4,
+      "record_indexes": [
+        3539,
+        3540,
+        3541,
+        3542
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 21 ust. 4",
+      "count": 2,
+      "record_indexes": [
+        3543,
+        3544
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 22 ust. 1 pkt 1",
+      "count": 7,
+      "record_indexes": [
+        3545,
+        3546,
+        3547,
+        3548,
+        3549,
+        3550,
+        3551
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 22 ust. 1 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3552,
+        3553
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 26a ust. 1",
+      "count": 5,
+      "record_indexes": [
+        3558,
+        3559,
+        3560,
+        3561,
+        3562
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 26a ust. 1 i 2",
+      "count": 2,
+      "record_indexes": [
+        3563,
+        3564
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28b ust. 1",
+      "count": 3,
+      "record_indexes": [
+        3566,
+        3567,
+        3568
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28c ust. 1",
+      "count": 8,
+      "record_indexes": [
+        3569,
+        3570,
+        3571,
+        3572,
+        3573,
+        3574,
+        3575,
+        3576
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28c ust. 1, 2, 3",
+      "count": 2,
+      "record_indexes": [
+        3577,
+        3578
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28d",
+      "count": 2,
+      "record_indexes": [
+        3585,
+        3586
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28e",
+      "count": 6,
+      "record_indexes": [
+        3587,
+        3588,
+        3589,
+        3590,
+        3591,
+        3592
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28i ust. 1",
+      "count": 3,
+      "record_indexes": [
+        3597,
+        3598,
+        3599
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 29a ust. 1",
+      "count": 5,
+      "record_indexes": [
+        3607,
+        3608,
+        3609,
+        3610,
+        3611
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 29a ust. 11",
+      "count": 5,
+      "record_indexes": [
+        3614,
+        3615,
+        3616,
+        3617,
+        3618
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 3",
+      "count": 2,
+      "record_indexes": [
+        3628,
+        3629
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 30b ust. 1",
+      "count": 5,
+      "record_indexes": [
+        3632,
+        3633,
+        3634,
+        3635,
+        3636
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 30c",
+      "count": 2,
+      "record_indexes": [
+        3638,
+        3639
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 30c ust. 1",
+      "count": 5,
+      "record_indexes": [
+        3640,
+        3641,
+        3642,
+        3643,
+        3644
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 31a ust. 1",
+      "count": 5,
+      "record_indexes": [
+        3645,
+        3646,
+        3647,
+        3648,
+        3649
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 31a ust. 2",
+      "count": 4,
+      "record_indexes": [
+        3653,
+        3654,
+        3655,
+        3656
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 31a ust. 2a",
+      "count": 2,
+      "record_indexes": [
+        3657,
+        3658
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41",
+      "count": 2,
+      "record_indexes": [
+        3672,
+        3673
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41 ust. 1",
+      "count": 25,
+      "record_indexes": [
+        3674,
+        3675,
+        3676,
+        3677,
+        3678,
+        3679,
+        3680,
+        3681,
+        3682,
+        3683,
+        3684,
+        3685,
+        3686,
+        3687,
+        3688,
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697,
+        3698
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41 ust. 1, 2, 2a",
+      "count": 2,
+      "record_indexes": [
+        3700,
+        3701
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41 ust. 1-2",
+      "count": 3,
+      "record_indexes": [
+        3704,
+        3705,
+        3706
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41 ust. 1-2a",
+      "count": 5,
+      "record_indexes": [
+        3707,
+        3708,
+        3709,
+        3710,
+        3711
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41 ust. 12 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3714,
+        3715
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 41 ust. 2a",
+      "count": 3,
+      "record_indexes": [
+        3719,
+        3720,
+        3721
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 43",
+      "count": 2,
+      "record_indexes": [
+        3737,
+        3738
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 43 ust. 1",
+      "count": 7,
+      "record_indexes": [
+        3739,
+        3740,
+        3741,
+        3742,
+        3743,
+        3744,
+        3745
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 43 ust. 1 pkt 18",
+      "count": 2,
+      "record_indexes": [
+        3747,
+        3748
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 43 ust. 1 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3752,
+        3753
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 43 ust. 1 pkt 36",
+      "count": 4,
+      "record_indexes": [
+        3756,
+        3757,
+        3758,
+        3759
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 5 ust. 1",
+      "count": 10,
+      "record_indexes": [
+        3773,
+        3774,
+        3775,
+        3776,
+        3777,
+        3778,
+        3779,
+        3780,
+        3781,
+        3782
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 5 ust. 1 pkt 1",
+      "count": 7,
+      "record_indexes": [
+        3783,
+        3784,
+        3785,
+        3786,
+        3787,
+        3788,
+        3789
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 7 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        3813,
+        3814,
+        3815
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 7 ust. 2",
+      "count": 2,
+      "record_indexes": [
+        3818,
+        3819
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 8 ust. 1",
+      "count": 7,
+      "record_indexes": [
+        3832,
+        3833,
+        3834,
+        3835,
+        3836,
+        3837,
+        3838
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 83 ust. 1 pkt 23",
+      "count": 4,
+      "record_indexes": [
+        3848,
+        3849,
+        3850,
+        3851
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 1",
+      "count": 55,
+      "record_indexes": [
+        3858,
+        3859,
+        3860,
+        3861,
+        3862,
+        3863,
+        3864,
+        3865,
+        3866,
+        3867,
+        3868,
+        3869,
+        3870,
+        3871,
+        3872,
+        3873,
+        3874,
+        3875,
+        3876,
+        3877,
+        3878,
+        3879,
+        3880,
+        3881,
+        3882,
+        3883,
+        3884,
+        3885,
+        3886,
+        3887,
+        3888,
+        3889,
+        3890,
+        3891,
+        3892,
+        3893,
+        3894,
+        3895,
+        3896,
+        3897,
+        3898,
+        3899,
+        3900,
+        3901,
+        3902,
+        3903,
+        3904,
+        3905,
+        3906,
+        3907,
+        3908,
+        3909,
+        3910,
+        3911,
+        3912
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 10",
+      "count": 5,
+      "record_indexes": [
+        3915,
+        3916,
+        3917,
+        3918,
+        3919
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+      "count": 2,
+      "record_indexes": [
+        3920,
+        3921
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 10b pkt 1",
+      "count": 18,
+      "record_indexes": [
+        3923,
+        3924,
+        3925,
+        3926,
+        3927,
+        3928,
+        3929,
+        3930,
+        3931,
+        3932,
+        3933,
+        3934,
+        3935,
+        3936,
+        3937,
+        3938,
+        3939,
+        3940
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 11",
+      "count": 3,
+      "record_indexes": [
+        3941,
+        3942,
+        3943
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 19",
+      "count": 2,
+      "record_indexes": [
+        3945,
+        3946
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 2 pkt 1",
+      "count": 3,
+      "record_indexes": [
+        3948,
+        3949,
+        3950
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 2a",
+      "count": 10,
+      "record_indexes": [
+        3955,
+        3956,
+        3957,
+        3958,
+        3959,
+        3960,
+        3961,
+        3962,
+        3963,
+        3964
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 7b",
+      "count": 2,
+      "record_indexes": [
+        3965,
+        3966
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a",
+      "count": 5,
+      "record_indexes": [
+        3967,
+        3968,
+        3969,
+        3970,
+        3971
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 1",
+      "count": 12,
+      "record_indexes": [
+        3972,
+        3973,
+        3974,
+        3975,
+        3976,
+        3977,
+        3978,
+        3979,
+        3980,
+        3981,
+        3982,
+        3983
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 1 pkt 1",
+      "count": 2,
+      "record_indexes": [
+        3984,
+        3985
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 1-3 i 9",
+      "count": 2,
+      "record_indexes": [
+        3988,
+        3989
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 12",
+      "count": 2,
+      "record_indexes": [
+        3991,
+        3992
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 2 pkt 1",
+      "count": 2,
+      "record_indexes": [
+        3993,
+        3994
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 2 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        3995,
+        3996
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 2 pkt 3",
+      "count": 3,
+      "record_indexes": [
+        3997,
+        3998,
+        3999
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 3 pkt 1 lit. a",
+      "count": 7,
+      "record_indexes": [
+        4002,
+        4003,
+        4004,
+        4005,
+        4006,
+        4007,
+        4008
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 4",
+      "count": 2,
+      "record_indexes": [
+        4010,
+        4011
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86a ust. 4 pkt 1",
+      "count": 3,
+      "record_indexes": [
+        4012,
+        4013,
+        4014
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 87 ust. 1",
+      "count": 11,
+      "record_indexes": [
+        4020,
+        4021,
+        4022,
+        4023,
+        4024,
+        4025,
+        4026,
+        4027,
+        4028,
+        4029,
+        4030
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 87 ust. 2",
+      "count": 3,
+      "record_indexes": [
+        4033,
+        4034,
+        4035
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 87 ust. 5",
+      "count": 2,
+      "record_indexes": [
+        4039,
+        4040
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 88 ust. 1 pkt 4",
+      "count": 8,
+      "record_indexes": [
+        4047,
+        4048,
+        4049,
+        4050,
+        4051,
+        4052,
+        4053,
+        4054
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89a ust. 1",
+      "count": 4,
+      "record_indexes": [
+        4057,
+        4058,
+        4059,
+        4060
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89a ust. 1a",
+      "count": 3,
+      "record_indexes": [
+        4062,
+        4063,
+        4064
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89a ust. 2 pkt 5",
+      "count": 2,
+      "record_indexes": [
+        4065,
+        4066
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89a ust. 4",
+      "count": 2,
+      "record_indexes": [
+        4068,
+        4069
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89a ust. 5",
+      "count": 2,
+      "record_indexes": [
+        4070,
+        4071
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 89b ust. 1",
+      "count": 7,
+      "record_indexes": [
+        4073,
+        4074,
+        4075,
+        4076,
+        4077,
+        4078,
+        4079
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 8b ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4081,
+        4082
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 9 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        4086,
+        4087,
+        4088
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        4093,
+        4094,
+        4095
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90 ust. 3",
+      "count": 3,
+      "record_indexes": [
+        4099,
+        4100,
+        4101
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90 ust. 9a",
+      "count": 4,
+      "record_indexes": [
+        4104,
+        4105,
+        4106,
+        4107
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90b ust. 1",
+      "count": 5,
+      "record_indexes": [
+        4109,
+        4110,
+        4111,
+        4112,
+        4113
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90b ust. 2",
+      "count": 3,
+      "record_indexes": [
+        4114,
+        4115,
+        4116
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 90b ust. 4",
+      "count": 2,
+      "record_indexes": [
+        4117,
+        4118
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 96 ust. 1",
+      "count": 14,
+      "record_indexes": [
+        4127,
+        4128,
+        4129,
+        4130,
+        4131,
+        4132,
+        4133,
+        4134,
+        4135,
+        4136,
+        4137,
+        4138,
+        4139,
+        4140
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 96 ust. 12",
+      "count": 5,
+      "record_indexes": [
+        4145,
+        4146,
+        4147,
+        4148,
+        4149
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 96 ust. 5",
+      "count": 2,
+      "record_indexes": [
+        4155,
+        4156
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 97",
+      "count": 2,
+      "record_indexes": [
+        4166,
+        4167
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 97 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4168,
+        4169
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99",
+      "count": 4,
+      "record_indexes": [
+        4174,
+        4175,
+        4176,
+        4177
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 1",
+      "count": 12,
+      "record_indexes": [
+        4178,
+        4179,
+        4180,
+        4181,
+        4182,
+        4183,
+        4184,
+        4185,
+        4186,
+        4187,
+        4188,
+        4189
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 1-3",
+      "count": 2,
+      "record_indexes": [
+        4190,
+        4191
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 11b",
+      "count": 3,
+      "record_indexes": [
+        4192,
+        4193,
+        4194
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 12",
+      "count": 2,
+      "record_indexes": [
+        4197,
+        4198
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 2",
+      "count": 2,
+      "record_indexes": [
+        4199,
+        4200
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 4",
+      "count": 2,
+      "record_indexes": [
+        4203,
+        4204
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 7",
+      "count": 7,
+      "record_indexes": [
+        4205,
+        4206,
+        4207,
+        4208,
+        4209,
+        4210,
+        4211
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 99 ust. 7c",
+      "count": 7,
+      "record_indexes": [
+        4213,
+        4214,
+        4215,
+        4216,
+        4217,
+        4218,
+        4219
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "§ 10 ust. 1 pkt 7b",
+      "count": 2,
+      "record_indexes": [
+        4222,
+        4223
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "§ 14",
+      "count": 3,
+      "record_indexes": [
+        4225,
+        4226,
+        4227
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "§ 2 ust. 1, § 3",
+      "count": 3,
+      "record_indexes": [
+        4228,
+        4229,
+        4230
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o VAT",
+      "article_number": "§ 4 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        4232,
+        4233,
+        4234,
+        4235,
+        4236
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 1",
+      "count": 2,
+      "record_indexes": [
+        1391,
+        1392
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 10 ust. 1 pkt 1",
+      "count": 3,
+      "record_indexes": [
+        1394,
+        1395,
+        1396
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 10 ust. 1 pkt 6",
+      "count": 3,
+      "record_indexes": [
+        1399,
+        1400,
+        1401
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 11 ust. 1",
+      "count": 7,
+      "record_indexes": [
+        1405,
+        1406,
+        1407,
+        1408,
+        1409,
+        1410,
+        1411
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 11a ust. 1",
+      "count": 4,
+      "record_indexes": [
+        1412,
+        1413,
+        1414,
+        1965
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 12 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1415,
+        1416,
+        1417
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 14 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1418,
+        1419
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 14 ust. 1c",
+      "count": 6,
+      "record_indexes": [
+        1420,
+        1421,
+        1422,
+        1423,
+        1424,
+        1969
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 14 ust. 1e",
+      "count": 2,
+      "record_indexes": [
+        1425,
+        1426
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 19 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1433,
+        1434
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 20 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1435,
+        1436,
+        1437
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 20 ust. 1b",
+      "count": 2,
+      "record_indexes": [
+        1438,
+        1439
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 21 ust. 1 pkt 131",
+      "count": 2,
+      "record_indexes": [
+        1441,
+        1442
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 21 ust. 1 pkt 154",
+      "count": 2,
+      "record_indexes": [
+        1444,
+        1977
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22 ust. 1",
+      "count": 7,
+      "record_indexes": [
+        1451,
+        1452,
+        1453,
+        1454,
+        1455,
+        1456,
+        1457
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22 ust. 2 pkt 1",
+      "count": 2,
+      "record_indexes": [
+        1462,
+        1463
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22 ust. 2 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        1465,
+        1466
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22 ust. 5d",
+      "count": 3,
+      "record_indexes": [
+        1472,
+        1473,
+        1474
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22a ust. 1",
+      "count": 5,
+      "record_indexes": [
+        1480,
+        1481,
+        1482,
+        1483,
+        1484
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 22b ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1486,
+        1487
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 23 ust. 1 pkt 11",
+      "count": 2,
+      "record_indexes": [
+        1495,
+        1496
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 23 ust. 1 pkt 47a oraz art. 23b ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1500,
+        1501
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 23b ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1504,
+        1505,
+        1506
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 24",
+      "count": 2,
+      "record_indexes": [
+        1509,
+        2018
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 24 ust. 2",
+      "count": 5,
+      "record_indexes": [
+        1511,
+        1512,
+        1513,
+        1514,
+        1515
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26",
+      "count": 3,
+      "record_indexes": [
+        1526,
+        1527,
+        2028
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1528,
+        1529,
+        1530
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26 ust. 1 pkt 2",
+      "count": 4,
+      "record_indexes": [
+        1531,
+        1532,
+        1533,
+        1534
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26 ust. 1 pkt 2 lit. a",
+      "count": 2,
+      "record_indexes": [
+        1535,
+        1536
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26 ust. 1 pkt 6",
+      "count": 3,
+      "record_indexes": [
+        1539,
+        1540,
+        1541
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26 ust. 1 pkt 9",
+      "count": 3,
+      "record_indexes": [
+        1543,
+        1544,
+        1545
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26e",
+      "count": 12,
+      "record_indexes": [
+        1547,
+        1548,
+        1549,
+        1550,
+        1551,
+        1552,
+        1553,
+        1554,
+        1555,
+        1556,
+        1557,
+        1558
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26e ust. 1",
+      "count": 4,
+      "record_indexes": [
+        1559,
+        1560,
+        1561,
+        1562
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26ea ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1569,
+        1570
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26g",
+      "count": 2,
+      "record_indexes": [
+        1576,
+        1577
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26h",
+      "count": 3,
+      "record_indexes": [
+        1580,
+        1581,
+        1582
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26h ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1583,
+        1584,
+        1585
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26hb, art. 26hc",
+      "count": 3,
+      "record_indexes": [
+        1589,
+        1590,
+        1591
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26hc",
+      "count": 2,
+      "record_indexes": [
+        1592,
+        1593
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26hc ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1594,
+        1595
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 27 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        1598,
+        1599,
+        1600,
+        1601,
+        1602
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 27f",
+      "count": 2,
+      "record_indexes": [
+        1603,
+        2034
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 3 ust. 1",
+      "count": 10,
+      "record_indexes": [
+        1612,
+        1613,
+        1614,
+        1615,
+        1616,
+        1617,
+        1618,
+        1619,
+        1620,
+        1621
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 3 ust. 1a",
+      "count": 2,
+      "record_indexes": [
+        1623,
+        1624
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 3 ust. 2a",
+      "count": 2,
+      "record_indexes": [
+        1625,
+        1626
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30",
+      "count": 13,
+      "record_indexes": [
+        1627,
+        1628,
+        1629,
+        1630,
+        1631,
+        1632,
+        1633,
+        1634,
+        1635,
+        1636,
+        1637,
+        1638,
+        1639
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30 ust. 1",
+      "count": 10,
+      "record_indexes": [
+        1640,
+        1641,
+        1642,
+        1643,
+        1644,
+        1645,
+        1646,
+        1647,
+        1648,
+        1649
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30 ust. 8",
+      "count": 4,
+      "record_indexes": [
+        1654,
+        1655,
+        1656,
+        1657
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30, art. 30a",
+      "count": 5,
+      "record_indexes": [
+        1658,
+        1659,
+        1660,
+        1661,
+        1662
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30a ust. 1 pkt 4",
+      "count": 2,
+      "record_indexes": [
+        1666,
+        1667
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30c",
+      "count": 2,
+      "record_indexes": [
+        1675,
+        1676
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30c ust. 1",
+      "count": 7,
+      "record_indexes": [
+        1678,
+        1679,
+        1680,
+        1681,
+        1682,
+        1683,
+        1684
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30e ust. 1",
+      "count": 4,
+      "record_indexes": [
+        1689,
+        1690,
+        1691,
+        1692
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 30e ust. 4",
+      "count": 2,
+      "record_indexes": [
+        1693,
+        1694
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 31a ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1697,
+        1698
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 32 ust. 1",
+      "count": 4,
+      "record_indexes": [
+        1702,
+        1703,
+        1704,
+        1705
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 32 ust. 2",
+      "count": 2,
+      "record_indexes": [
+        1706,
+        1707
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 32 ust. 2 pkt 2 i 3",
+      "count": 2,
+      "record_indexes": [
+        1709,
+        1710
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 38 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        1715,
+        1716,
+        1717,
+        1718,
+        1719
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 39",
+      "count": 2,
+      "record_indexes": [
+        1722,
+        2056
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 39 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        1723,
+        1724,
+        1725,
+        1726,
+        1727
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 41b",
+      "count": 2,
+      "record_indexes": [
+        1729,
+        1730
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 42a ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1733,
+        1734
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 44 ust. 1 pkt 1",
+      "count": 3,
+      "record_indexes": [
+        1736,
+        1737,
+        1738
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 44 ust. 10",
+      "count": 2,
+      "record_indexes": [
+        1739,
+        1740
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 44 ust. 2",
+      "count": 2,
+      "record_indexes": [
+        1744,
+        1745
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 44 ust. 6",
+      "count": 2,
+      "record_indexes": [
+        1747,
+        1748
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45",
+      "count": 6,
+      "record_indexes": [
+        1751,
+        1752,
+        1753,
+        1754,
+        1755,
+        1756
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45 ust. 1",
+      "count": 40,
+      "record_indexes": [
+        1758,
+        1759,
+        1760,
+        1761,
+        1762,
+        1763,
+        1764,
+        1765,
+        1766,
+        1767,
+        1768,
+        1769,
+        1770,
+        1771,
+        1772,
+        1773,
+        1774,
+        1775,
+        1776,
+        1777,
+        1778,
+        1779,
+        1780,
+        1781,
+        1782,
+        1783,
+        1784,
+        1785,
+        1786,
+        1787,
+        1788,
+        1789,
+        1790,
+        1791,
+        1792,
+        1793,
+        1794,
+        1795,
+        1796,
+        1797
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45 ust. 1a",
+      "count": 5,
+      "record_indexes": [
+        1800,
+        1801,
+        1802,
+        1803,
+        1804
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45 ust. 1b",
+      "count": 3,
+      "record_indexes": [
+        1805,
+        1806,
+        1807
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45 ust. 6",
+      "count": 2,
+      "record_indexes": [
+        1814,
+        1815
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45b",
+      "count": 2,
+      "record_indexes": [
+        1816,
+        1817
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45b ust. 1 i 2",
+      "count": 2,
+      "record_indexes": [
+        1818,
+        1819
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45ba",
+      "count": 4,
+      "record_indexes": [
+        1821,
+        1822,
+        1823,
+        1824
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45c ust. 1 pkt 2",
+      "count": 2,
+      "record_indexes": [
+        1828,
+        1829
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45cd",
+      "count": 2,
+      "record_indexes": [
+        1831,
+        1832
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45cd ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1833,
+        1834,
+        1835
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45ce ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1837,
+        1838,
+        1839
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 45cf ust. 2",
+      "count": 2,
+      "record_indexes": [
+        1845,
+        1846
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 5b ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1854,
+        1855
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 6 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1858,
+        1859,
+        1860
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 6 ust. 2",
+      "count": 10,
+      "record_indexes": [
+        1862,
+        1863,
+        1864,
+        1865,
+        1866,
+        1867,
+        1868,
+        1869,
+        1870,
+        1871
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 6 ust. 3",
+      "count": 2,
+      "record_indexes": [
+        1874,
+        1875
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 6 ust. 4c",
+      "count": 5,
+      "record_indexes": [
+        1876,
+        1877,
+        1878,
+        1879,
+        1880
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 7 ust. 1",
+      "count": 13,
+      "record_indexes": [
+        1887,
+        1888,
+        1889,
+        1890,
+        1891,
+        1892,
+        1893,
+        1894,
+        1895,
+        1896,
+        1897,
+        1898,
+        1899
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 8 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1901,
+        1902
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 15 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        1913,
+        1914,
+        1915
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 21 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1925,
+        1926
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 21 ust. 1 pkt 2a",
+      "count": 2,
+      "record_indexes": [
+        1928,
+        1929
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 25 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1933,
+        1934
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 26",
+      "count": 2,
+      "record_indexes": [
+        2229,
+        2230
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 26 ust. 1",
+      "count": 4,
+      "record_indexes": [
+        1935,
+        1936,
+        1937,
+        1938
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 26a ust. 1 oraz art. 21 ust. 1 pkt 2a",
+      "count": 2,
+      "record_indexes": [
+        1939,
+        1940
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 27 ust. 1",
+      "count": 4,
+      "record_indexes": [
+        1941,
+        1942,
+        1943,
+        1944
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 3 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        1956,
+        1957
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 27 ust. 2",
+      "count": 2,
+      "record_indexes": [
+        2339,
+        2340
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 32 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        2355,
+        2356,
+        2357,
+        2358,
+        2359
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 32 ust. 3",
+      "count": 3,
+      "record_indexes": [
+        2363,
+        2364,
+        2365
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 32 ust. 6",
+      "count": 3,
+      "record_indexes": [
+        2366,
+        2367,
+        2368
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 35b ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2378,
+        2379
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 39 ust. 2 pkt 1",
+      "count": 2,
+      "record_indexes": [
+        2391,
+        2392
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 39 ust. 3",
+      "count": 2,
+      "record_indexes": [
+        2393,
+        2394
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 45 ust. 1f",
+      "count": 2,
+      "record_indexes": [
+        2406,
+        2407
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 48 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2417,
+        2418
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 52 ust. 2",
+      "count": 2,
+      "record_indexes": [
+        2429,
+        2430
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 69",
+      "count": 2,
+      "record_indexes": [
+        2477,
+        2478
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 69 ust. 1",
+      "count": 8,
+      "record_indexes": [
+        2479,
+        2480,
+        2481,
+        2482,
+        2483,
+        2484,
+        2485,
+        2486
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 18 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2549,
+        2550
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 18aa ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2553,
+        2554
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 19 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        2559,
+        2560,
+        2561
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 22 ust. 1",
+      "count": 5,
+      "record_indexes": [
+        2566,
+        2567,
+        2568,
+        2569,
+        2570
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 43a ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2617,
+        2618
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 44 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        2620,
+        2621
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o systemie ubezpieczeń społecznych",
+      "article_number": "art. 6a ust. 1 pkt 1",
+      "count": 2,
+      "record_indexes": [
+        2669,
+        2670
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 12 ust. 1 pkt 6 lit. a",
+      "count": 2,
+      "record_indexes": [
+        4240,
+        4257
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 2 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4276,
+        4277
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 21b ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4291,
+        4292
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 21c ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4299,
+        4300
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 24 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        4314,
+        4315,
+        4316
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 29 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4335,
+        4336
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 33 ust. 3",
+      "count": 2,
+      "record_indexes": [
+        4348,
+        4349
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 43 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4374,
+        4375
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 46 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4381,
+        4382
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 49 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4386,
+        4387
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 51 ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4390,
+        4391
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 57aa ust. 2",
+      "count": 2,
+      "record_indexes": [
+        4398,
+        4399
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 57c ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4408,
+        4409
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 57f",
+      "count": 2,
+      "record_indexes": [
+        4417,
+        4418
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 57h ust. 1",
+      "count": 2,
+      "record_indexes": [
+        4421,
+        4422
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 58",
+      "count": 2,
+      "record_indexes": [
+        4423,
+        4424
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge.json",
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym",
+      "article_number": "art. 9 ust. 1",
+      "count": 3,
+      "record_indexes": [
+        4435,
+        4436,
+        4437
+      ]
+    },
+    {
+      "file": "data\\seeds\\law_knowledge_additions.json",
+      "law_name": "Ustawa o podatku dochodowym od osób prawnych",
+      "article_number": "art. 26",
+      "count": 2,
+      "record_indexes": [
+        0,
+        2
+      ]
+    }
+  ],
+  "unrelated_issues_observed": [
+    "data\\seeds\\law_knowledge.json record 1940 field 'question_intent' contains 'APPLE?Czy' which looks like duplicated prompt text rather than UTF-8 corruption and was left unchanged."
+  ]
+}
