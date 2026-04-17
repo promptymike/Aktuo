@@ -239,9 +239,7 @@ def format_workflow_answer(query: str, chunks: Sequence[LawChunk]) -> str:
     primary_chunk = chunks[0]
     sections: list[str] = [f"**Krótko**\n{_build_workflow_summary(primary_chunk)}"]
 
-    steps = _unique_preserving_order(
-        [step for chunk in chunks for step in chunk.workflow_steps]
-    )
+    steps = _unique_preserving_order(list(primary_chunk.workflow_steps))
     if steps:
         numbered_steps = "\n".join(
             f"{index}. {step}" for index, step in enumerate(steps, start=1)
@@ -250,22 +248,22 @@ def format_workflow_answer(query: str, chunks: Sequence[LawChunk]) -> str:
 
     required_inputs_section = _format_bullet_section(
         "Jakie dane / dokumenty będą potrzebne",
-        [item for chunk in chunks for item in chunk.workflow_required_inputs],
+        list(primary_chunk.workflow_required_inputs),
     )
     if required_inputs_section:
         sections.append(required_inputs_section)
 
     pitfalls_section = _format_bullet_section(
         "Na co uważać",
-        [item for chunk in chunks for item in chunk.workflow_common_pitfalls],
+        list(primary_chunk.workflow_common_pitfalls),
     )
     if pitfalls_section:
         sections.append(pitfalls_section)
 
     related_items = _unique_preserving_order(
         [
-            *[item for chunk in chunks for item in chunk.workflow_related_forms],
-            *[item for chunk in chunks for item in chunk.workflow_related_systems],
+            *list(primary_chunk.workflow_related_forms),
+            *list(primary_chunk.workflow_related_systems),
         ]
     )
     related_section = _format_bullet_section("Powiązane formularze / systemy", related_items)
