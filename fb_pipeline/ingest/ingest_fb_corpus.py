@@ -244,9 +244,9 @@ def is_marketing_bold(text: str) -> bool:
 def detect_probably_comment(text: str) -> bool:
     """Heuristic: does this "post" actually look like a reply comment?
 
-    Triggers on 25 known comment openers (regex list) or a lowercase first
-    character — real FB posts nearly always start with an uppercase letter or
-    greeting.
+    v1.5c: matches only the 25 explicit comment-opener regexes. The earlier
+    "starts with a lowercase letter" rule had a >60% false-positive rate in
+    Polish posts (legit openers like "witam", "e-commerce", URL pastes).
     """
 
     if not isinstance(text, str):
@@ -257,9 +257,6 @@ def detect_probably_comment(text: str) -> bool:
     for pattern in COMMENT_OPENER_PATTERNS:
         if pattern.match(stripped):
             return True
-    first_char = stripped[0]
-    if first_char.isalpha() and first_char.islower():
-        return True
     return False
 
 

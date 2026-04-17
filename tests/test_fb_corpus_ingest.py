@@ -312,8 +312,22 @@ def test_probably_comment_regex_opener():
     assert ingest.detect_probably_comment("Nie wiem skąd taka kwota, sprawdź rachunek.")
 
 
-def test_probably_comment_lowercase_opener():
-    # Lowercase first letter also trips the heuristic.
+def test_probably_comment_does_not_flag_lowercase_post():
+    # v1.5c: lowercase-opener rule removed. These legit posts must NOT be
+    # flagged just because they start with a lowercase letter.
+    assert not ingest.detect_probably_comment(
+        "witam, mam pytanie o KSeF. Czy ktoś wdrażał integrację z Optimą?"
+    )
+    assert not ingest.detect_probably_comment(
+        "e-commerce 1. Czy w tej branży na KH rozliczacie rozrachunki tylko po WB?"
+    )
+    assert not ingest.detect_probably_comment(
+        "https://sejm.gov.pl/sejm10.nsf/... Czy ten przepis dotyczy też OFE?"
+    )
+
+
+def test_probably_comment_still_matches_known_pattern_after_v15c():
+    # The "to chyba" pattern is in COMMENT_OPENER_PATTERNS, so it still fires.
     assert ingest.detect_probably_comment("to chyba zależy od rodzaju umowy?")
 
 

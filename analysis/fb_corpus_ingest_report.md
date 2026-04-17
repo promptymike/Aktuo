@@ -1,6 +1,6 @@
 # FB corpus ingest report
 
-Generated at: 2026-04-17T14:48:10+00:00
+Generated at: 2026-04-17T14:52:32+00:00
 
 ## 1. Executive summary
 
@@ -38,7 +38,7 @@ Cross-file duplicates removed (resolved by newest scraped_at): **10025**. Duplic
 | too_long | 0 |
 | no_comments | 7388 |
 | many_links | 0 |
-| probably_comment | 557 |
+| probably_comment | 91 |
 
 ### Top 20 keywords in final corpus
 
@@ -137,7 +137,7 @@ Porównanie ilościowe v1 (commit 97a6efe, Zadanie 1) vs v1.5b (obecny run). v1.
 | Flagged: too_long | 0 | 0 | 0 |
 | Flagged: no_comments | 7422 | 7388 | -34 |
 | Flagged: many_links | 0 | 0 | 0 |
-| Flagged: probably_comment (new) | — | 557 | n/a |
+| Flagged: probably_comment (new) | — | 91 | n/a |
 | Cutoff markers stripped (new) | — | 9113 | n/a |
 
 Uwaga: spadek `final_total` między v1 i v1.5b to suma odrzuceń z trzech nowych reguł (`marketing_bold`, `sales_spam`, rozszerzone `job_ad`). Flagi nie usuwają postów z korpusu.
@@ -146,26 +146,26 @@ Uwaga: spadek `final_total` między v1 i v1.5b to suma odrzuceń z trzech nowych
 
 Posty oznaczone flagą `probably_comment` nadal są w korpusie — to sygnał dla Zadania 2 (klasteryzacja), że prawdopodobnie są to wklejki komentarzy. Próbka losowa (seed=42).
 
-- **d738b1761af8** · ksiegowosc_moja_pasja · comments: 2
-  > e-commerce 1. Czy w tej branży na KH rozliczacie rozrachunki tylko na podstawie WB? Czy może w jakiś sposób importujecie wpłaty z payu itp?  2. Wpłaty z zagranicy wpływają w PLN na konto payu? Firma nie ma konta bankowego walutowego.  3. Jeśli w PLN - czy tam jest podany kurs waluty? Jeśli jest to p…
-- **633295cd430d** · ksiegowosc_moja_pasja · comments: 2
-  > witam matka dotychczas rozliczana jako samotna z jednym dzieckiem, urodziła kolejne dziecko z innym  partnerem  mieszkaja razem (zarówno z tym pierwszym dzieckiem jak i drugim ).Czy można nadal rozliczać jako samotna ?
-- **a78627339847** · ksiegowosc_moja_pasja · comments: 2
-  > leasing,  w 2023 roku  kwota 200 337,4 zł  74,873688 % koszty KUP  teraz mam 11.12025 ubezpieczenie w którym wartośc rynkowa brutto to 175 618 zł  Ile porcent w KUP ? z pierwszego ubezpieczenia czy nowego ? Jeżeli z drugie to 85.41% bo przy ubezpieczenie nie ma vatu czy 94.22% bo 50 % vat ?  Jezu,ja…
-- **3001d31e09a8** · ksiegowosc_moja_pasja · comments: 0
-  > https://sejm.gov.pl/sejm10.nsf/transmisje.xsp...# To 200 mln EUR czy PLN? Od 1.02.26 ?
-- **8d9dd9b8fad7** · ksiegowosc_moja_pasja · comments: 0
-  > w firmie jest ZFŚS, z tych środków zakupiono paczki dla dzieci ze słodyczami, o  dwie paczki jednak było za dużosprzedano te paczki innym pracownikomczy należy doliczyć vat do tych sprzedanych produktów ?
-- **bc631b476e96** · ksiegowosc_moja_pasja · comments: 0
-  > czy są tu jacys użytkownicy dobrze znający program do KH Inserta Nexo Rewizor?
-- **06fdff6931e1** · ksiegowosc_moja_pasja · comments: 1
-  > moj klient sprzedaje do unii europejskiej i stanów zjednoczonych rękodzieła, pytanie, bo napewno zeby bylo ze stawka 0% do ue na firmę potrzebuje dokumentu cc559c, ale czy do stanów zjednocznych tez cos takiego czy potrzebuje SADU, ja się już pogubiła......zarówno tu jak i tu faktury wystawione na f…
-- **4df70ecf36cf** · ksiegowosc_moja_pasja · comments: 2
-  > wypłata gotówki z konta bankowego do kasy księgowane jest przez konto „środki pieniężne w drodze”. Czy prawidłowym jest, jeżeli prowadzę analitykę do tego konta na pracownika, żeby mieć kontrolę kto powinien wpłacić gotówkę do kasy?
-- **271766f789a8** · grupa_2_507801603233194 · comments: 3
-  > potrzebuję bardzo dobrej kadrowej, która pomoże mi rozwiązać problem z pracownikiem. Pracownik został zatrudniony 01.08.2025 r. W 2025 r. nabył 11 dni urlopu wypoczynkowego. Umowa obowiązuje do 28.02.2026 r., a na rok 2026 nabył 5 dni urlopu. Niestety pracownik jest konfliktowy. Nie planujemy przedł…
-- **7c637dcfb738** · ksiegowosc_moja_pasja · comments: 2
-  > wysłałam JPK za luty na starym formularzu (22) .... wysłać teraz na poprawnym / aktualnym formularzu (23) jako złożenie czy korekta ?
+- **e3106bb66148** · grupa_2_507801603233194 · comments: 0
+  > Jeśli zleceniobiorca z pełnymi składkami prowadzi takze działalność nierejstrowana. Wypłata ze zlecenia oraz faktury z owej działalności przekroczą minimalna krajowa czy powinnam naliczyć fundusz pracy? Czy przychody z działalności nierejstrowanej  wliczając sie do tego limitu?
+- **841b955f7757** · ksiegowosc_moja_pasja · comments: 8
+  > A czym tu się załamywać ludzie Nie wiem skąd kwota kup 2000 bo nawet jak zastosowane podwyższone koszty to 300x 6. Pani robiąc pit roczny musi zastosować kup zgodny z prawdą to znaczy przez 11 mc 250 zł i 500 zł w miesiącu kiedy Pani miała dwie umowy o
+- **ecb96ae180f2** · ksiegowosc_moja_pasja · comments: 0
+  > Jeżeli jest wystawiona faktura w KSeF a widnieje na niej błędna data zakończenia dostawy wówczas wystawiam korektę takiej faktury gdzie zmieniam jedynie datę a kwoty robię na 0 zł. A co z nr faktury i nr KSeF do jpk VAT? Wpisuje z faktury podstawowej czy korekt?
+- **a26b9b2e6d5e** · ksiegowosc_moja_pasja · comments: 0
+  > Jeśli zaprzestanie wykonywania działaności jest z datą 31.12 to ZUS ZWUA z datą 01.01 ?
+- **0f8ca9d6cb8b** · ksiegowosc_moja_pasja · comments: 2
+  > Zależy czy zarząd spółdzielni współpracuje z księgową   u mnie nie współpracował, skończyłam księgowanie roku i oddałam w pizdu
+- **bf7de10037bf** · ksiegowosc_moja_pasja · comments: 6
+  > Pytanie co masz na myśli jako usługi za granicę. Jeżeli są te usługi z terytorium Polski np. transport to musisz, ale jeśli są to usługi budowlane świadczone za granicą Polski to nie musisz.
+- **bc60761a8ac6** · ksiegowosc_moja_pasja · comments: 0
+  > Jeżeli zostałem na liniowym tak jak w 2025 to mogę odliczyć od kosztów składkę zdrowotną za grudzień opłaconą w styczniu?
+- **1c196b21d871** · ksiegowosc_moja_pasja · comments: 3
+  > Nie wiem czy to ja jestem jakaś inna, nienormalna. Pracą w br, szef spoko, ogólnie ogarniam, wszystko mamy mniej więcej na czas zrobione. Ale niestety irytuje mnie jedna osoba z zespołu z rodziny szefa która trochę popracuje ale większość czasu jej pracy to prywatne rozmowy, prywatne maile, gadanie…
+- **953949b7a6c3** · grupa_2_507801603233194 · comments: 2
+  > Jeśli złożę wypowiedzenie w czwartek lub w piatek liczy sie 14 dni od niedzieli zatem obowiązuje do 15 listopada ? Jeśli do ręki pracodawca nie przyjmie wypowiedzenia mozna wysłać @ i również będzie sie liczyło? Pocztą polską natomiast liczy sie data nadania ?
+- **8f89b79f5ee0** · grupa_2_507801603233194 · comments: 4
+  > Nie ma różnicy, ponieważ zarówno 5.01 jak i 9.01 wypadają w tym samym tygodniu kalendarzowym, a bieg wypowiedzenia liczymy od pierwszej niedzieli po jego złożeniu.
 
 ## 9. Unrelated observations
 
