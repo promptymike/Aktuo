@@ -13,13 +13,13 @@
     {
       "step": 1,
       "action": "Ustal źródło finansowania benefitu",
-      "detail": "Sprawdź, czy benefit finansowany jest ze środków obrotowych pracodawcy, czy z ZFŚS. Świadczenia z ZFŚS (przyznane wg kryterium socjalnego) są zwolnione z ZUS (§ 2 ust. 1 pkt 19 rozporządzenia składkowego z 18.12.1998) oraz z PIT do limitu 2 000 zł rocznie na pracownika (art. 21 ust. 1 pkt 67 ustawy o PIT, limit przedłużony na 2026 r.). Świadczenia ze środków obrotowych są co do zasady przychodem ze stosunku pracy (art. 12 ust. 1 ustawy o PIT) i podlegają pełnemu oskładkowaniu.",
+      "detail": "Sprawdź, czy benefit finansowany jest ze środków obrotowych pracodawcy, czy z ZFŚS. Świadczenia z ZFŚS (przyznane wg kryterium socjalnego) są zwolnione z ZUS (§ 2 ust. 1 pkt 19 rozporządzenia Ministra Pracy i Polityki Socjalnej z 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe (Dz.U. 1998 nr 161 poz. 1106, dalej: 'rozporządzenie składkowe')) oraz z PIT do limitu 2 000 zł rocznie na pracownika (art. 21 ust. 1 pkt 67 ustawy o PIT, limit przedłużony na 2026 r.). Świadczenia ze środków obrotowych są co do zasady przychodem ze stosunku pracy (art. 12 ust. 1 ustawy o PIT) i podlegają pełnemu oskładkowaniu.",
       "condition": null
     },
     {
       "step": 2,
       "action": "Zweryfikuj zapis w regulaminie wynagradzania pod kątem zwolnienia ze składek ZUS",
-      "detail": "Aby zastosować zwolnienie ze składek ZUS na podstawie § 2 ust. 1 pkt 26 rozporządzenia składkowego (korzyści materialne po cenie niższej niż detaliczna), regulamin wynagradzania lub układ zbiorowy MUSI zawierać zapis o prawie do zakupu świadczenia po cenie niższej niż detaliczna oraz pracownik MUSI ponosić choćby częściową odpłatność (min. 1 gr). Nie wpisuj konkretnych kwot — zgodnie z komentarzami praktyków wystarczy formuła „po cenie niższej niż detaliczna” plus coroczna informacja o kwotach dofinansowania. Bez takiego zapisu całe dofinansowanie pracodawcy podlega ZUS.",
+      "detail": "Aby zastosować zwolnienie ze składek ZUS na podstawie § 2 ust. 1 pkt 26 rozporządzenia składkowego (rozporządzenie MPiPS z 18.12.1998 w sprawie podstawy wymiaru składek emerytalno-rentowych, Dz.U. 1998 nr 161 poz. 1106) (korzyści materialne po cenie niższej niż detaliczna), regulamin wynagradzania lub układ zbiorowy MUSI zawierać zapis o prawie do zakupu świadczenia po cenie niższej niż detaliczna oraz pracownik MUSI ponosić choćby częściową odpłatność (min. 1 gr). Nie wpisuj konkretnych kwot — zgodnie z komentarzami praktyków wystarczy formuła „po cenie niższej niż detaliczna” plus coroczna informacja o kwotach dofinansowania. Bez takiego zapisu całe dofinansowanie pracodawcy podlega ZUS.",
       "condition": "if benefit finansowany ze środków obrotowych i pracownik partycypuje w koszcie"
     },
     {
@@ -31,7 +31,7 @@
     {
       "step": 4,
       "action": "Dolicz wartość benefitu do podstawy PPK",
-      "detail": "Podstawą naliczenia wpłat PPK jest podstawa wymiaru składek emerytalno-rentowych (art. 26 ust. 1 ustawy o PPK). Jeśli benefit podlega ZUS (scenariusz A) — wchodzi do podstawy PPK. Jeśli jest zwolniony z ZUS (scenariusz B lub C) — NIE wchodzi do podstawy PPK. Wpłata pracownika do PPK (2% lub dobrowolnie mniej) jest potrącana z netto, wpłata pracodawcy (1,5%) stanowi przychód pracownika opodatkowany PIT, ale nieoskładkowany.",
+      "detail": "Podstawą naliczenia wpłat PPK jest wynagrodzenie w rozumieniu art. 2 pkt 40 ustawy o PPK (podstawa wymiaru składek emerytalno-rentowych). Wysokość wpłaty pracodawcy 1,5% wynika z art. 26 ust. 1 ustawy o PPK. Jeśli benefit podlega ZUS (scenariusz A) — wchodzi do podstawy PPK. Jeśli jest zwolniony z ZUS (scenariusz B lub C) — NIE wchodzi do podstawy PPK. Wpłata pracownika do PPK (2% lub dobrowolnie mniej) jest potrącana z netto, wpłata pracodawcy (1,5%) stanowi przychód pracownika opodatkowany PIT, ale nieoskładkowany.",
       "condition": "if pracownik uczestniczy w PPK"
     },
     {
@@ -43,7 +43,7 @@
     {
       "step": 6,
       "action": "Rozlicz fakturę zakupową benefitu z częścią pracownika",
-      "detail": "Fakturę od dostawcy (Medicover, Benefit Systems, PZU itp.) zaksięguj w całości w koszty (konto 405 / „Świadczenia na rzecz pracowników”). VAT: jeżeli pracownik współfinansuje, od części przypadającej na pracownika wystaw fakturę wewnętrzną/refakturę lub rozpoznaj sprzedaż opodatkowaną VAT 23% (dla Multisportu — 8% jako usługi rekreacyjne; pakiet medyczny — zwolniony z VAT art. 43 ust. 1 pkt 18–19 ustawy o VAT, więc bez VAT należnego od części pracownika). Potrącenie z wynagrodzenia pracownika księguj Wn 231 / Ma 760 (lub 249 — rozrachunki z pracownikami z tyt. świadczeń).",
+      "detail": "Fakturę od dostawcy (Medicover, Benefit Systems, PZU itp.) zaksięguj w całości w koszty (konto 405 / „Świadczenia na rzecz pracowników”). VAT: jeżeli pracownik współfinansuje, REFAKTURĘ wystaw jako faktycznie dokument VAT (fakturę) na pracownika ze stawką analogiczną do faktury zakupowej — dla pakietu medycznego 'zw' (art. 43 ust. 1 pkt 18–19 ustawy o VAT), dla Multisportu 8% (poz. 186 zał. nr 3 do ustawy o VAT — usługi rekreacyjne 'wyłącznie w zakresie wstępu'). UWAGA: nie jest to tylko zapis księgowy — refaktura wymaga wystawienia dokumentu VAT (JPK_V7). Faktura wewnętrzna została zniesiona w 2014 r. i nie jest już stosowana w polskim VAT; zastąpiły ją zwykłe faktury refaktury. Potrącenie z wynagrodzenia pracownika księguj Wn 231 / Ma 760 (lub 249 — rozrachunki z pracownikami z tyt. świadczeń). Zastosowanie stawki 8% zależy od zakresu świadczenia — dla usług niesprowadzających się do samego wstępu (np. sprzedaż sprzętu, usługi indywidualne poza wstępem, pakiety z elementami towarowymi) stosuje się stawkę podstawową 23%. Przy wątpliwościach zweryfikuj z dostawcą (Benefit Systems, Medicover, PZU) klasyfikację PKWiU i zakres refakturowanej usługi — błędna stawka VAT grozi zaległością i odsetkami.",
       "condition": null
     },
     {
@@ -53,12 +53,71 @@
       "condition": "if premia jest wypłacana w kwocie netto"
     }
   ],
-  "legal_anchors": [],
+  "legal_anchors": [
+    {
+      "law_name": "Rozporządzenie Ministra Pracy i Polityki Socjalnej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe",
+      "article_number": "§ 2 ust. 1 pkt 19",
+      "description": "Zwolnienie ze składek ZUS świadczeń finansowanych z ZFŚS (kryterium socjalne).",
+      "source": "ISAP Dz.U. 1998 nr 161 poz. 1106"
+    },
+    {
+      "law_name": "Rozporządzenie Ministra Pracy i Polityki Socjalnej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe",
+      "article_number": "§ 2 ust. 1 pkt 26",
+      "description": "Zwolnienie ze składek ZUS korzyści materialnych po cenie niższej niż detaliczna (wymaga zapisu w regulaminie + odpłatność pracownika min. 1 gr).",
+      "source": "ISAP Dz.U. 1998 nr 161 poz. 1106"
+    },
+    {
+      "law_name": "Rozporządzenie Ministra Pracy i Polityki Socjalnej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe",
+      "article_number": "§ 3 pkt 3",
+      "description": "Zasady wyceny nieodpłatnego udostępnienia lokalu mieszkalnego dla celów ZUS (czynsz spółdzielczy/komunalny, stawki komunalne dla lokali własnościowych).",
+      "source": "ISAP Dz.U. 1998 nr 161 poz. 1106"
+    },
+    {
+      "law_name": "Ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 12 ust. 1",
+      "description": "Definicja przychodu ze stosunku pracy (świadczenia w naturze jako przychód).",
+      "source": "ustawa o PIT"
+    },
+    {
+      "law_name": "Ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 21 ust. 1 pkt 67",
+      "description": "Zwolnienie z PIT świadczeń finansowanych z ZFŚS do limitu 2 000 zł rocznie na pracownika (limit przedłużony na 2026 r.).",
+      "source": "ustawa o PIT"
+    },
+    {
+      "law_name": "Ustawa z dnia 4 października 2018 r. o pracowniczych planach kapitałowych",
+      "article_number": "art. 2 pkt 40",
+      "description": "Definicja 'wynagrodzenia' stanowiącego podstawę naliczania wpłat PPK — odwołanie do podstawy wymiaru składek emerytalno-rentowych (poprawna podstawa prawna dla podstawy wymiaru PPK).",
+      "source": "ustawa o PPK"
+    },
+    {
+      "law_name": "Ustawa z dnia 4 października 2018 r. o pracowniczych planach kapitałowych",
+      "article_number": "art. 26 ust. 1",
+      "description": "Wysokość wpłaty podstawowej pracodawcy do PPK (1,5% wynagrodzenia).",
+      "source": "ustawa o PPK"
+    },
+    {
+      "law_name": "Ustawa z dnia 11 marca 2004 r. o podatku od towarów i usług",
+      "article_number": "art. 43 ust. 1 pkt 18-19",
+      "description": "Zwolnienie z VAT usług w zakresie opieki medycznej (pakiety medyczne).",
+      "source": "ustawa o VAT"
+    },
+    {
+      "law_name": "Ustawa z dnia 11 marca 2004 r. o podatku od towarów i usług",
+      "article_number": "poz. 186 załącznika nr 3",
+      "description": "Stawka 8% VAT dla usług rekreacyjnych 'wyłącznie w zakresie wstępu' (karty typu Multisport).",
+      "source": "ustawa o VAT"
+    }
+  ],
   "edge_cases": [
     "Systemy kafeteryjne typu MyBenefit z punktami: zgodnie z częścią interpretacji KIS przychód powstaje dopiero w momencie wymiany punktów na świadczenie (nie w momencie zasilenia portfela punktowego), co utrudnia bieżące naliczanie ZUS — rekomendowane wystąpienie z własnym wnioskiem o interpretację indywidualną, bo praktyka bywa sprzeczna.",
     "Nieodpłatne udostępnienie pracownikowi lokalu mieszkalnego przez spółkę: podstawą ZUS i PIT jest wartość czynszu (lub wartość rynkowa najmu, jeżeli wyższa); przychód wykazujemy w PIT-11 w poz. przychodów ze stosunku pracy, składki w odpowiednich pozycjach — nie ma tu zastosowania zwolnienie z § 2 ust. 1 pkt 26 rozporządzenia składkowego.",
     "Karty przedpłacone (Pluxee, Edenred, Sodexo) zasilane kwotą pieniężną: zawsze traktowane jak ekwiwalent pieniężny — pełny PIT i ZUS od wartości doładowania, niezależnie od zapisów regulaminu; zwolnienie „po cenie niższej niż detaliczna” nie ma zastosowania do świadczeń pieniężnych.",
-    "Ubezpieczenie grupowe w pełni finansowane przez pracodawcę (pracownik nie dopłaca): pełne opodatkowanie PIT, pełne ZUS i wchodzi do podstawy PPK — traktowane jak dodatkowy składnik wynagrodzenia; zwolnienie § 2 ust. 1 pkt 26 nie ma zastosowania, bo brak odpłatności pracownika."
+    "Ubezpieczenie grupowe w pełni finansowane przez pracodawcę (pracownik nie dopłaca): pełne opodatkowanie PIT, pełne ZUS i wchodzi do podstawy PPK — traktowane jak dodatkowy składnik wynagrodzenia; zwolnienie § 2 ust. 1 pkt 26 nie ma zastosowania, bo brak odpłatności pracownika.",
+    {
+      "scenario": "Nieodpłatne udostępnienie lokalu mieszkalnego pracownikowi (mieszkanie służbowe, kwatera).",
+      "handling": "Dla ZUS wycena odbywa się wg § 3 pkt 3 rozporządzenia MPiPS z 18.12.1998 — NIE wg swobodnie ustalanej 'wartości rynkowej najmu'. Zasady: (a) lokale spółdzielcze — w wysokości czynszu spółdzielczego; (b) lokale komunalne — w wysokości czynszu komunalnego; (c) lokale własnościowe — w wysokości czynszu określonego wg zasad komunalnych dla lokali danej miejscowości; (d) domy/hotele robotnicze — wg rzeczywistych kosztów utrzymania. Dla PIT — wartość świadczenia wg art. 11 ust. 2a pkt 3 ustawy o PIT (cena stosowana wobec innych odbiorców). Obie wyceny mogą się różnić — stosuj każdą do właściwego rozliczenia (ZUS vs PIT)."
+    }
   ],
   "common_mistakes": [
     "Brak zapisu o prawie do zakupu „po cenie niższej niż detaliczna” w regulaminie wynagradzania — powoduje, że mimo współfinansowania przez pracownika dofinansowanie pracodawcy i tak podlega ZUS (ZUS przy kontroli naliczy zaległe składki z odsetkami).",
@@ -394,5 +453,42 @@
       "medium": 8,
       "low": 2
     }
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Pole `legal_anchors` jest puste, a draft zawiera liczne odwołania do konkretnych przepisów (§ 2 ust. 1 pkt 19 rozporządzenia składkowego z 18.12.1998, art. 21 ust. 1 pkt 67 ustawy o PIT, art. 26 ust. 1 ustawy o PPK, art. 43 ust. 1 pkt 18–19 ustawy o VAT). Brak strukturalnego mapowania tych artykułów do kroków procedury utrudnia weryfikację aktualności i poprawności cytowań.",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v2_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 6 wspomina 'refakturę' i 'fakturę wewnętrzną' jako sposób rozliczenia VAT od części pracownika, ale nie wyjaśnia czy refaktura wymaga wystawienia dokumentu VAT czy czy jest to tylko zapis księgowy — brak jasności co do formalnych wymogów.",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v3_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    },
+    {
+      "flag_type": "edge_case_coverage",
+      "flag_description": "Edge case o nieodpłatnym udostępnieniu lokalu mieszkalnego mówi o 'wartości rynkowej najmu, jeżeli wyższa' — brak wyjaśnienia jak pracownik/pracodawca powinni ustalić tę wartość rynkową (wycena niezależna? średnia z rynku?) i czy ZUS akceptuje takie szacunki.",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v3_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    },
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Draft wielokrotnie odwołuje się do 'rozporządzenia składkowego z 18.12.1998' bez pełnego tytułu — brak pewności czy to prawidłowe oznaczenie (Rozporządzenie Ministra Pracy i Polityki Społecznej z 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia społeczne).",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v3_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 6 wspomina VAT 8% dla Multisportu 'jako usługi rekreacyjne' — brak wyjaśnienia czy ta stawka dotyczy wszystkich dostawców (Benefit Systems, Medicover itp.) czy tylko niektórych, i czy zmienia się w zależności od zakresu usług.",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v3_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    }
+  ]
 }

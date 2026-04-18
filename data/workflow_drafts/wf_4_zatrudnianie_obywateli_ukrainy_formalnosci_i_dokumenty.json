@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Zweryfikuj aktualność statusu UKR w rejestrze PESEL",
-      "detail": "Status UKR wygasa po wyjeździe z Polski na więcej niż 30 dni lub po otrzymaniu innego tytułu pobytowego (wtedy w rejestrze pojawia się status NUE). Poproś pracownika o aktualne zaświadczenie z rejestru PESEL (lub screen z aplikacji mObywatel/Diia.pl). UWAGA: na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową obywateli Ukrainy do 4.03.2026 — zweryfikuj aktualny stan nowelizacji specustawy (pisemne zapytanie w PUP / kancelarii wojewody), bo przepisy przejściowe mogły zostać zmienione kolejną nowelizacją.",
+      "detail": "Status UKR wygasa po wyjeździe z Polski na więcej niż 30 dni lub po otrzymaniu innego tytułu pobytowego (wtedy w rejestrze pojawia się status NUE). Poproś pracownika o aktualne zaświadczenie z rejestru PESEL (lub screen z aplikacji mObywatel/Diia.pl). UWAGA: na dzień 18.04.2026 ochrona czasowa dla obywateli Ukrainy obowiązuje do 4 marca 2027 r. na podstawie decyzji Rady UE 2025/1460. Specustawa z 12.03.2022 została wygaszona ustawą z 23.01.2026 r. (wejście w życie 5.03.2026) i zastąpiona nowymi przepisami — zweryfikuj u siebie aktualny stan (gofin.pl, sejm.gov.pl), ponieważ przepisy przejściowe mogą zostać zmienione kolejną nowelizacją.",
       "condition": "if pracownik powołuje się na specustawę (status UKR)"
     },
     {
@@ -49,7 +49,7 @@
     {
       "step": 7,
       "action": "Prowadź monitoring ważności dokumentów pobytowych i pracowniczych",
-      "detail": "Ustaw alerty na: koniec ważności wizy/karty pobytu/statusu UKR, koniec ważności decyzji jednolitej, 30-dniowe wyjazdy (utrata UKR). Jeśli pracownik złoży wniosek o kolejną kartę pobytu przed upływem ważności poprzedniej — pobyt jest legalny do wydania decyzji ostatecznej, pracodawca powinien mieć w aktach potwierdzenie złożenia wniosku (żółta kartka + stempel w paszporcie wbijany przez urząd wojewódzki). Jeśli zmienią się warunki zatrudnienia (stanowisko, wymiar, stawka) — złóż nowe powiadomienie w PUP w 7 dni.",
+      "detail": "Ustaw alerty na: koniec ważności wizy/karty pobytu/statusu UKR, koniec ważności decyzji jednolitej, 30-dniowe wyjazdy (utrata UKR). Jeśli pracownik złoży wniosek o kolejną kartę pobytu przed upływem ważności poprzedniej — pobyt jest legalny do wydania decyzji ostatecznej, pracodawca powinien mieć w aktach potwierdzenie złożenia wniosku (żółta kartka + stempel w paszporcie wbijany przez urząd wojewódzki). Jeśli zmienią się warunki zatrudnienia (stanowisko, wymiar, stawka) — złóż nowe powiadomienie w PUP w 7 dni. KLUCZOWE — gdy pracownik NIE złoży wniosku o przedłużenie przed upływem ważności dokumentu: przepisy NIE przewidują automatycznego rozwiązania umowy o pracę po wygaśnięciu dokumentu pobytowego/zezwolenia. Obowiązek świadczenia pracy 'wygasa na okres' niespełnienia warunków (art. 25 ustawy z 23.01.2026 r. o zatrudnianiu cudzoziemców), a pracodawca MUSI aktywnie wypowiedzieć umowę lub zawrzeć porozumienie rozwiązujące — nie wystarczy bierne oczekiwanie. Procedura: (1) pisemne poinformowanie pracownika o zbliżającym się końcu legalnego pobytu (z co najmniej 30-dniowym wyprzedzeniem, potwierdzenie odbioru); (2) jeśli do daty wygaśnięcia nie zostanie złożony wniosek — wypowiedzenie umowy z powodu braku podstawy do wykonywania pracy (przyczyna niedotycząca pracownika sensu stricto) lub porozumienie stron; (3) w aktach osobowych załącz kopię wygasłego dokumentu + kopię pisma informacyjnego + dokument rozwiązania umowy. Nie ma okresu przejściowego — umowa nie rozwiązuje się 'sama' mimo utraty podstawy pobytu.",
       "condition": null
     }
   ],
@@ -323,5 +323,21 @@
       "medium": 6,
       "low": 1
     }
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Krok 2 zawiera stwierdzenie 'na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową obywateli Ukrainy do 4.03.2026' — ta data jest już przeszłością względem daty weryfikacji (18.04.2026), co sugeruje, że draft może zawierać nieaktualne informacje o przepisach przejściowych specustawy.",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v2_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie zawiera instrukcji, co zrobić, jeśli pracownik nie złoży wniosku o przedłużenie karty pobytu/statusu UKR przed upływem ważności — czy pracodawca ma obowiązek zawiadomienia pracownika, czy może rozwiązać umowę, czy istnieje okres przejściowy?",
+      "applied_at": "2026-04-18T16:46:00Z",
+      "source": "v2_manual",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    }
+  ]
 }
