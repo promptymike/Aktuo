@@ -37,7 +37,7 @@
     {
       "step": 5,
       "action": "Sprawdź sumę dni wynagrodzenia chorobowego z poprzednich pracodawców w tym samym roku kalendarzowym",
-      "detail": "Limit 33/14 dni wynagrodzenia chorobowego jest limitem rocznym łącznym dla pracownika w danym roku kalendarzowym u wszystkich pracodawców (art. 92 § 1 k.p., uchwała SN III UZP 5/12). Przy zmianie pracodawcy w trakcie roku wymagaj świadectwa pracy — w pkt 6 ppkt 9 wykazuje się liczbę dni, za które wypłacono wynagrodzenie chorobowe. Jeśli świadectwa brak — złóż pisemny wniosek do ZUS (formularz ZAS-12 lub zapytanie przez PUE) albo żądaj od pracownika zaświadczenia od poprzedniego pracodawcy.",
+      "detail": "Limit 33/14 dni wynagrodzenia chorobowego jest limitem rocznym łącznym dla pracownika w danym roku kalendarzowym u wszystkich pracodawców (art. 92 § 1 k.p., uchwała SN III UZP 5/12). Przy zmianie pracodawcy w trakcie roku wymagaj świadectwa pracy — w pkt 6 ppkt 9 wykazuje się liczbę dni, za które wypłacono wynagrodzenie chorobowe. Jeśli świadectwa brak — żądaj od pracownika zaświadczenia od poprzedniego pracodawcy lub złóż pisemne zapytanie bezpośrednio do ZUS (np. przez PUE ZUS). PROCEDURA PRZY BRAKU ŚWIADECTWA W TERMINIE: przepisy nie regulują wprost obowiązku wstrzymania wypłaty wynagrodzenia chorobowego z powodu braku dokumentu od poprzedniego pracodawcy. W praktyce przyjmuje się następujące podejście: (1) wypłać wynagrodzenie chorobowe w kwocie wynikającej z posiadanych informacji — jeśli pracownik złożył oświadczenie pisemne o liczbie dni wykorzystanych u poprzedniego pracodawcy, możesz oprzeć się na tym oświadczeniu; (2) jednocześnie pisemnie wezwij pracownika do dostarczenia świadectwa pracy lub zaświadczenia od poprzedniego pracodawcy w określonym terminie (np. 7 dni); (3) jeśli po dostarczeniu dokumentów okaże się, że wypłacono wynagrodzenie chorobowe ponad przysługujący limit — nadpłata podlega potrąceniu z kolejnych należności pracownika (za jego zgodą) lub dochodzeniu w trybie art. 405 k.c. w zw. z art. 300 k.p. (bezpodstawne wzbogacenie); (4) nie wstrzymuj wypłaty wynagrodzenia chorobowego wyłącznie z powodu braku świadectwa — pracownik ma prawo do świadczenia, a pracodawca ponosi ryzyko ewentualnej nadpłaty, którą może następnie odzyskać.",
       "condition": "if pracownik był w danym roku zatrudniony u innego pracodawcy"
     },
     {
@@ -49,7 +49,7 @@
     {
       "step": 7,
       "action": "Udokumentuj podstawę wymiaru świadczenia przy przełomie roku",
-      "detail": "Podstawy wymiaru NIE przelicza się przy przejściu z zasiłku na wynagrodzenie chorobowe (ani odwrotnie), jeśli przerwa w pobieraniu świadczeń jest krótsza niż 1 miesiąc kalendarzowy (art. 43 ustawy zasiłkowej) — stosujesz tę samą podstawę. Nową podstawę (12 miesięcy poprzedzających) ustalasz dopiero przy przerwie ≥ 1 miesiąc kalendarzowy między świadczeniami.",
+      "detail": "Podstawy wymiaru NIE przelicza się przy przejściu z zasiłku na wynagrodzenie chorobowe (ani odwrotnie), jeśli przerwa w pobieraniu świadczeń jest krótsza niż 3 miesiące kalendarzowe (art. 43 ustawy zasiłkowej) — stosujesz tę samą podstawę. Nową podstawę (12 miesięcy poprzedzających) ustalasz dopiero przy przerwie ≥ 3 miesiące kalendarzowe między świadczeniami.",
       "condition": null
     }
   ],
@@ -70,16 +70,16 @@
     "Pracownik po 50. r.ż.: limit 14 dni stosuje się od 1 stycznia roku NASTĘPUJĄCEGO po roku ukończenia 50 lat. W roku, w którym kończy 50 lat, nadal obowiązuje limit 33 dni.",
     "Zmiana pracodawcy w trakcie roku: limit 33/14 dni jest wspólny dla wszystkich pracodawców w danym roku — nowy pracodawca musi pomniejszyć swój limit o dni wypłacone u poprzedniego (pkt 6 ppkt 9 świadectwa pracy). Gdy pracownik nie dostarczy świadectwa — pisemne zapytanie do ZUS lub poprzedniego pracodawcy.",
     "Niezdolność w ciąży: zasiłek chorobowy wynosi 100% podstawy (kod ZUS 313 z kodem literowym B na L4) — nie jest to odrębny kod świadczenia, lecz wyższy procent zasiłku chorobowego. Wypadek w drodze do/z pracy lub choroba zawodowa: świadczenie wypłacane jest z ubezpieczenia wypadkowego i oznaczane kodem ZUS 314 (zasiłek chorobowy z ubezpieczenia wypadkowego) — jest to odrębna kategoria od zasiłku opiekuńczego (kod 312) i zasiłku macierzyńskiego (kod 311). Limit dni 33/14 wynagrodzenia chorobowego pozostaje bez zmian w obu przypadkach.",
-    "Dwa L4 w 2026 z przerwą > 60 dni: otwiera się NOWY okres zasiłkowy (182/270 dni) i przelicza się podstawę wymiaru, jeśli przerwa ≥ 1 miesiąc kalendarzowy (art. 43 ustawy zasiłkowej)."
+    "Dwa L4 w 2026 z przerwą > 60 dni: otwiera się NOWY okres zasiłkowy (182/270 dni) i przelicza się podstawę wymiaru, jeśli przerwa ≥ 3 miesiące kalendarzowe (art. 43 ustawy zasiłkowej)."
   ],
   "common_mistakes": [
     "Naliczanie nowych 33/14 dni wynagrodzenia chorobowego po 1 stycznia, gdy L4 trwa nieprzerwanie przez przełom roku (brak choćby 1 dnia przerwy) — w rzeczywistości kontynuuje się świadczenie sprzed 31.12.",
     "Mylenie resetu limitu 33/14 dni (roczny, kodeksowy — art. 92 k.p.) z okresem zasiłkowym 182/270 dni (liczony ciągle, przerywany dopiero po 60 dniach przerwy — art. 9 ustawy zasiłkowej). To dwa niezależne liczniki.",
-    "Przeliczanie podstawy wymiaru zasiłku przy każdym nowym L4 w styczniu — podstawy nie przelicza się, jeśli przerwa w pobieraniu świadczeń jest krótsza niż 1 miesiąc kalendarzowy.",
-    "Pomijanie sprawdzenia świadectwa pracy nowego pracownika pod kątem dni wynagrodzenia chorobowego wykorzystanych u poprzedniego pracodawcy w tym samym roku kalendarzowym."
+    "Przeliczanie podstawy wymiaru zasiłku przy każdym nowym L4 w styczniu — podstawy nie przelicza się, jeśli przerwa w pobieraniu świadczeń jest krótsza niż 3 miesiące kalendarzowe.",
+    "Pomijanie sprawdzenia świadectwa pracy nowego pracownika pod kątem dni wynagrodzenia chorobowego wykorzystanych u poprzedniego pracodawcy w tym samym roku kalendarzowym. Jeśli pracownik nie dostarczy świadectwa w terminie: nie wstrzymuj automatycznie wypłaty — odbierz pisemne oświadczenie pracownika o liczbie dni wykorzystanych u poprzedniego pracodawcy, wypłać wynagrodzenie chorobowe zgodnie z posiadanymi informacjami i jednocześnie pisemnie wezwij do dostarczenia dokumentu; ewentualna nadpłata wynikła z nieprawdziwego oświadczenia podlega odzyskaniu od pracownika."
   ],
   "related_questions": [
-    "Jak ustalić podstawę wymiaru wynagrodzenia chorobowego przy przerwie między zwolnieniami dłuższej niż 1 miesiąc kalendarzowy?",
+    "Jak ustalić podstawę wymiaru wynagrodzenia chorobowego przy przerwie między zwolnieniami dłuższej niż 3 miesiące kalendarzowe?",
     "Czy okres wyczekiwania (30/90 dni) biegnie od nowa przy zmianie pracodawcy i czy wliczają się studia wyższe?",
     "Kiedy wypłacamy zasiłek z kodem 314 (opieka) vs 313 (chorobowy) i jak to wpływa na limit 60/14 dni opieki w roku?"
   ],
@@ -110,6 +110,50 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Edge case 'Niezdolność w ciąży lub wypadek w drodze do/z pracy' wspomina kod 314 dla ciąży, ale brakuje wyjaśnienia, czy kod 314 to zasiłek opiekuńczy czy macierzyński — w step 6 kod 314 jest wymieniony jako 'zasiłek opiekuńczy', co może być sprzeczne.",
+      "applied_at": "2026-04-18T14:05:23Z",
+      "source": "v2",
+      "source_url": "https://przepisy.gofin.pl/przepisy,3,17,53,6205,410330,20230927,kody-wykorzystywane-przy-wypelnianiu-dokumentow.html"
+    },
+    {
+      "flag_type": "hallucination_risk",
+      "flag_description": "Step 6 wymienia 'formularz ZAS-12' jako narzędzie do zapytania ZUS o dni wynagrodzenia chorobowego — należy zweryfikować, czy ZAS-12 rzeczywiście służy temu celowi (może być to formularz do innego celu, np. zasiłek macierzyński).",
+      "applied_at": "2026-04-18T15:44:23Z",
+      "source": "v3",
+      "source_url": "https://www.zus.pl/pl/wzory-formularzy/zasilki/zasilek-chorobowy/-/publisher/details/1/zaswiadczenie-zas-12/ZAS_12"
+    },
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Draft zawiera odniesienie do 'art. 43 ustawy zasiłkowej' dotyczące przeliczania podstawy wymiaru — ta ustawa mogła być zmieniona do 2026 r., a konkretne progi (1 miesiąc kalendarzowy) mogą być nieaktualne.",
+      "applied_at": "2026-04-18T15:45:29Z",
+      "source": "v3",
+      "source_url": "https://przepisy.gofin.pl/przepisy,6,50,50,381,16568,20090701,art-43-ustawa-z-dnia-25061999-r-o-swiadczeniach-pienieznych-z.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Common mistake 'Pomijanie sprawdzenia świadectwa pracy' — brakuje procedury, co zrobić, jeśli pracownik nie dostarczy świadectwa w terminie i pracodawca musi wypłacić wynagrodzenie chorobowe — czy wypłacić pełny limit 33/14 dni czy wstrzymać?",
+      "applied_at": "2026-04-18T15:47:09Z",
+      "source": "v3",
+      "source_url": "https://www.biznes.gov.pl/pl/portal/00137"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 9,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "step_contradiction": 1,
+      "hallucination_risk": 2,
+      "missing_critical_info": 3,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 2
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -361,28 +405,5 @@
         "web_fetches_used_v3": 0
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "missing_critical_info",
-      "flag_description": "Edge case 'Niezdolność w ciąży lub wypadek w drodze do/z pracy' wspomina kod 314 dla ciąży, ale brakuje wyjaśnienia, czy kod 314 to zasiłek opiekuńczy czy macierzyński — w step 6 kod 314 jest wymieniony jako 'zasiłek opiekuńczy', co może być sprzeczne.",
-      "applied_at": "2026-04-18T14:05:23Z",
-      "source": "v2",
-      "source_url": "https://przepisy.gofin.pl/przepisy,3,17,53,6205,410330,20230927,kody-wykorzystywane-przy-wypelnianiu-dokumentow.html"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 9,
-    "by_type": {
-      "outdated_data_risk": 2,
-      "step_contradiction": 1,
-      "hallucination_risk": 2,
-      "missing_critical_info": 3,
-      "edge_case_coverage": 1
-    },
-    "severity_breakdown": {
-      "medium": 7,
-      "low": 2
-    }
   }
 }

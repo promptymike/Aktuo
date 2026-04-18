@@ -13,7 +13,7 @@
     {
       "step": 1,
       "action": "Ustal obowiązek sprawozdawczy i miejsce złożenia dla danego podmiotu",
-      "detail": "Spółki z KRS (sp. z o.o., S.A., komandytowa, jawna z pełną księgowością) - SF do KRS przez RDF (eKRS). Osoby fizyczne prowadzące KH oraz spółki cywilne osób fizycznych - SF do Szefa KAS przez e-Sprawozdania Finansowe. Spółka cywilna prowadząca KH ze względu na obroty: SF sporządza i podpisuje, ale nie składa do żadnego rejestru (pozostaje w dokumentacji jednostki).",
+      "detail": "Spółki z KRS (sp. z o.o., S.A., komandytowa, jawna z pełną księgowością) - SF do KRS przez RDF (eKRS). Osoby fizyczne prowadzące KH - SF do Szefa KAS przez e-Sprawozdania Finansowe. Spółka cywilna prowadząca KH (niezależnie od przyczyny - czy to dobrowolnie, czy ze względu na przekroczenie limitu 2 mln euro): limit obrotów decyduje wyłącznie o obowiązku prowadzenia ksiąg rachunkowych i sporządzenia SF, NIE o miejscu jego złożenia. Spółka cywilna nie jest wpisana do KRS ani nie jest podatnikiem PIT jako podmiot, dlatego nie składa SF ani do KRS, ani do KAS - sporządzone SF pozostaje wyłącznie w dokumentacji jednostki. Spółki cywilne osób fizycznych nie przekazują swojego sprawozdania finansowego nigdzie.",
       "condition": null
     },
     {
@@ -37,7 +37,7 @@
     {
       "step": 5,
       "action": "Złóż SF do właściwego rejestru w ustawowym terminie",
-      "detail": "KRS: w ciągu 15 dni od zatwierdzenia SF przez RDF (bezpłatne zgłoszenie finansowe) - NIE przez S24. Zgłoszenie RDF wymaga PESEL osoby uprawnionej ujawnionej w KRS. KAS (osoby fizyczne z KH): do 30 kwietnia roku następującego po roku podatkowym, przez bramkę e-Sprawozdania Finansowe. Do KAS nie załącza się uchwał (nie dotyczy osób fizycznych).",
+      "detail": "KRS: w ciągu 15 dni od zatwierdzenia SF przez RDF (bezpłatne zgłoszenie finansowe) - NIE przez S24. Zgłoszenie RDF wymaga PESEL osoby uprawnionej ujawnionej w KRS. KAS (osoby fizyczne z KH): do 30 kwietnia roku następującego po roku podatkowym, przez bramkę e-Sprawozdania Finansowe. Do KAS nie załącza się uchwał (nie dotyczy osób fizycznych). Spółki cywilne: nie składają SF do żadnego rejestru - SF pozostaje w dokumentacji jednostki.",
       "condition": null
     },
     {
@@ -65,13 +65,14 @@
     }
   ],
   "edge_cases": [
-    "Spółka cywilna prowadząca KH ze względu na przekroczenie limitu obrotów - sporządza i podpisuje SF, ale nie składa go do żadnego rejestru (pozostaje w dokumentacji jednostki).",
+    "Spółka cywilna prowadząca KH ze względu na przekroczenie limitu 2 mln euro obrotów - limit decyduje wyłącznie o obowiązku prowadzenia ksiąg i sporządzenia SF, nie o miejscu jego złożenia. Spółka cywilna sporządza i podpisuje SF, ale nie składa go ani do KRS, ani do KAS - SF pozostaje wyłącznie w dokumentacji jednostki.",
     "Spółka zawieszona vs zamrożona: spółka zawieszona bez żadnych operacji gospodarczych w roku obrotowym może nie sporządzać SF (art. 3 ust. 6 UoR), ale pojedyncza transakcja (np. opłacenie faktury księgowej) przywraca obowiązek sporządzenia SF.",
     "Przekształcenie sp. komandytowej w sp. z o.o. - SF sporządzone na dzień poprzedzający przekształcenie NIE jest składane do KRS (art. 12 ust. 2 pkt 3 UoR - brak zamknięcia ksiąg przy kontynuacji), ale bilansowo zamyka się księgi spółki przekształcanej.",
     "Przejęcie spółki bez dokumentów od poprzedniego biura - zaległe SF należy odtworzyć na bazie deklaracji z US/ZUS, wyciągów bankowych, JPK; równolegle zaleca się złożenie zawiadomienia o podejrzeniu popełnienia przestępstwa do prokuratury (art. 77 UoR) jako zabezpieczenie odpowiedzialności klienta."
   ],
   "common_mistakes": [
     "Próba składania SF do KRS przez portal S24 - SF składa się wyłącznie przez bezpłatny system RDF (Repozytorium Dokumentów Finansowych) w eKRS.",
+    "Błędne przekonanie, że spółka cywilna prowadząca KH ze względu na obroty powinna składać SF do KAS - spółka cywilna nie jest podatnikiem PIT jako podmiot i nie składa SF do KAS; SF pozostaje wyłącznie w dokumentacji jednostki niezależnie od przyczyny prowadzenia ksiąg rachunkowych.",
     "Dołączanie uchwały o podziale zysku do SF osoby fizycznej składanego do KAS - osoby fizyczne nie sporządzają i nie składają uchwał o podziale zysku (brak organu zatwierdzającego).",
     "Dynamiczne korygowanie zatwierdzonego SF po zmianach stanów magazynowych - SF sporządza się na dzień bilansowy i koryguje wyłącznie w razie istotnych błędów (art. 54 UoR), a nie bieżących zmian operacyjnych po dniu bilansowym.",
     "Stosowanie archiwalnej wersji struktury XSD bez weryfikacji aktualności - MF regularnie zmienia wersje schematów i wyznacza daty granicznej akceptacji starych struktur; przed sporządzeniem SF zawsze sprawdź aktualną wersję na gov.pl/web/kas/struktury-e-sprawozdan."
@@ -107,6 +108,37 @@
       "1845d0a5f61d",
       "d31a2f2e7159"
     ]
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Draft zawiera konkretne schematy XSD (załącznik nr 1 v 1.3, nr 4, nr 5) i odniesienia do wersji schematów obowiązujących za 2025 r., ale nie ma mechanizmu aktualizacji dla 2026 r. MF regularnie zmienia wersje schematów, a procedura powinna wskazywać gdzie sprawdzić aktualną wersję, nie konkretne numery.",
+      "applied_at": "2026-04-18T10:35:51Z",
+      "source": "v2",
+      "source_url": "https://czasopismaksiegowych.gofin.pl/biuletyn-informacyjny/archiwum-rocznikowe/328401/struktury-logiczne-sprawozdan-obowiazujace-od-1-stycznia-2026-r"
+    },
+    {
+      "flag_type": "step_contradiction",
+      "flag_description": "Krok 1 stwierdza że spółka cywilna prowadząca KH 'nie składa do żadnego rejestru', ale edge case mówi o 'przekroczeniu limitu obrotów' - brakuje jasnego wyjaśnienia czy limit obrotów zmienia status składania czy tylko obowiązek sporządzenia.",
+      "applied_at": "2026-04-18T16:03:58Z",
+      "source": "v3",
+      "source_url": "https://www.gofin.pl/rachunkowosc/ksiegi-rachunkowe/45745/przekazanie-sprawozdania-finansowego-i-innych-dokumentow-roznym-instytucjom"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "step_contradiction": 1,
+      "hallucination_risk": 1,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 3
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -294,29 +326,5 @@
         "ui_label": "Sprawdź aktualność danych"
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "outdated_data_risk",
-      "flag_description": "Draft zawiera konkretne schematy XSD (załącznik nr 1 v 1.3, nr 4, nr 5) i odniesienia do wersji schematów obowiązujących za 2025 r., ale nie ma mechanizmu aktualizacji dla 2026 r. MF regularnie zmienia wersje schematów, a procedura powinna wskazywać gdzie sprawdzić aktualną wersję, nie konkretne numery.",
-      "applied_at": "2026-04-18T10:35:51Z",
-      "source": "v2",
-      "source_url": "https://czasopismaksiegowych.gofin.pl/biuletyn-informacyjny/archiwum-rocznikowe/328401/struktury-logiczne-sprawozdan-obowiazujace-od-1-stycznia-2026-r"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 7,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "step_contradiction": 1,
-      "hallucination_risk": 1,
-      "missing_critical_info": 2,
-      "edge_case_coverage": 1,
-      "outdated_data_risk": 1
-    },
-    "severity_breakdown": {
-      "medium": 4,
-      "low": 3
-    }
   }
 }

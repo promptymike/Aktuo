@@ -25,7 +25,7 @@
     {
       "step": 3,
       "action": "Wlicz premie miesięczne do podstawy chorobowego w kwocie faktycznie wypłaconej, po uzupełnieniu do pełnej kwoty",
-      "detail": "Premie miesięczne pomniejszane za chorobę uzupełniasz do kwoty, jaką pracownik otrzymałby za pełny miesiąc przepracowany (analogicznie jak wynagrodzenie zasadnicze) — tylko w miesiącach, w których przepracował co najmniej połowę obowiązującego czasu pracy. Podstawę liczysz z 12 miesięcy poprzedzających miesiąc powstania niezdolności.",
+      "detail": "Premie miesięczne pomniejszane za chorobę uzupełniasz do kwoty, jaką pracownik otrzymałby za pełny miesiąc przepracowany (analogicznie jak wynagrodzenie zasadnicze) — ale wyłącznie w miesiącach, w których pracownik przepracował co najmniej połowę obowiązującego czasu pracy. Jeśli pracownik przepracował mniej niż połowę obowiązującego czasu pracy w danym miesiącu (np. był na L4 przez cały miesiąc lub przez jego większą część), miesiąc ten jest wyłączany z podstawy wymiaru w całości — nie uzupełniasz premii do 'pełnej kwoty', lecz pomijasz ten miesiąc i cofasz się o kolejny miesiąc wstecz, aż uzbierasz 12 miesięcy spełniających warunek co najmniej połowy przepracowanego czasu (art. 38 ustawy zasiłkowej). Podstawę liczysz z 12 miesięcy poprzedzających miesiąc powstania niezdolności.",
       "condition": "if premia jest miesięczna i pomniejszana za czas choroby"
     },
     {
@@ -55,7 +55,7 @@
     {
       "step": 8,
       "action": "Udokumentuj decyzję w teczce pracownika lub notatce kadrowej",
-      "detail": "Zapisz uzasadnienie kwalifikacji premii (cytat z regulaminu + decyzja kadrowa) — w razie kontroli ZUS lub PIP to podstawa obrony. Jeśli regulamin zmienia się od 1.01.2026 (np. likwidacja premii 3%), zachowaj wersję archiwalną — do podstaw chorobowego liczonych z 12 miesięcy poprzedzających styczeń 2026 nadal wliczasz premie wypłacone w 2025, jeśli były pomniejszane za chorobę.",
+      "detail": "Zapisz uzasadnienie kwalifikacji premii (cytat z regulaminu + decyzja kadrowa) — w razie kontroli ZUS lub PIP to podstawa obrony. Jeśli regulamin zmienia się od 1.01.2026 (np. likwidacja premii 3%), zachowaj wersję archiwalną — do podstaw chorobowego liczonych z 12 miesięcy poprzedzających styczeń 2026 nadal wliczasz premie wypłacone w 2025, jeśli były pomniejszane za chorobę. Mechanizm jest następujący: premie faktycznie wypłacone przed datą zmiany regulaminu (tj. w miesiącach przypadających w 12-miesięcznym oknie poprzedzającym niezdolność) wchodzą do podstawy w kwotach faktycznie wypłaconych — nawet jeśli w dniu powstania niezdolności premia już nie obowiązuje. Natomiast zlikwidowana premia regulaminowa nie jest uwzględniana w podstawie za miesiące przypadające po dacie jej likwidacji. Przykład: pracownik zatrudniony od stycznia 2025, niezdolność od marca 2026 — do podstawy wliczasz premie wypłacone w marcu 2025–lutym 2026; premie wypłacone w 2025 (przed likwidacją) wchodzą w kwotach faktycznych, a za miesiące po 1.01.2026, w których premia już nie była wypłacana, przyjmujesz zero dla tego składnika.",
       "condition": null
     }
   ],
@@ -81,13 +81,16 @@
     "Premia specjalna jednakowa dla wszystkich (np. 500 zł dla każdego pracownika niezależnie od obecności) — nie wchodzi do podstawy chorobowego, bo nie jest pomniejszana za czas choroby; może też nie wchodzić do podstawy urlopowej, jeśli nie jest związana z pracą.",
     "Premia za brak absencji pomniejszana proporcjonalnie za chorobę — wchodzi do podstawy chorobowego (pomniejszenie spełnia test art. 41 ustawy zasiłkowej) i do podstawy urlopowej jako składnik zmienny zależny od pracy.",
     "Zmiana regulaminu od 1.01.2026 likwidująca premię — do podstawy chorobowego dla niezdolności powstałej w styczniu 2026 nadal wliczasz premie wypłacone w 12 miesiącach poprzedzających (2025), o ile wtedy były pomniejszane za chorobę; nie przeliczasz wstecz.",
-    "Urlop bezpłatny trwający cały miesiąc — miesiąc taki pomijasz przy ustalaniu 12-miesięcznej podstawy i cofasz się o kolejny miesiąc wstecz; premia niepomniejszana wypłacona w tym miesiącu nie wchodzi do podstawy; premia pomniejszana wymaga uzupełnienia do pełnej kwoty, jeśli pracownik przepracował co najmniej połowę czasu pracy w tym miesiącu. Jeśli urlop bezpłatny spowodował przerwę w ubezpieczeniu chorobowym, podstawę ustala się wyłącznie z miesięcy po powrocie do ubezpieczenia."
+    "Urlop bezpłatny trwający cały miesiąc — miesiąc taki pomijasz przy ustalaniu 12-miesięcznej podstawy i cofasz się o kolejny miesiąc wstecz; premia niepomniejszana wypłacona w tym miesiącu nie wchodzi do podstawy; premia pomniejszana wymaga uzupełnienia do pełnej kwoty, jeśli pracownik przepracował co najmniej połowę czasu pracy w tym miesiącu. Jeśli urlop bezpłatny spowodował przerwę w ubezpieczeniu chorobowym, podstawę ustala się wyłącznie z miesięcy po powrocie do ubezpieczenia.",
+    "L4 przez cały miesiąc (0 dni przepracowanych) — miesiąc taki jest wyłączany z podstawy wymiaru w całości na podstawie art. 38 ustawy zasiłkowej; premii za ten miesiąc nie uzupełnia się do 'pełnej kwoty', lecz pomija się go i cofa o kolejny miesiąc wstecz, aż uzbiera się 12 miesięcy z co najmniej połową przepracowanego czasu pracy."
   ],
   "common_mistakes": [
     "Uzupełnianie premii wypłaconej obok chorobowego do 'pełnej kwoty' w miesiącu niezdolności — błąd: uzupełnia się tylko podstawę wymiaru (przyjmuje się kwotę, jaką pracownik otrzymałby za pełny miesiąc), a nie dopłaca drugiej połowy premii do bieżącej wypłaty.",
     "Automatyczne wyłączanie każdej 'premii uznaniowej' z podstawy — jeśli jest cykliczna i pomniejszana, wchodzi do podstawy mimo nazwy. Decyduje faktyczny charakter, nie etykieta w regulaminie.",
     "Wliczanie premii kwartalnej/rocznej w pełnej kwocie do miesiąca wypłaty zamiast w proporcji 1/4 lub 1/12 przez odpowiednio 3 lub 12 miesięcy (art. 42 ustawy zasiłkowej).",
-    "Pomijanie miesiąca z urlopem bezpłatnym bez uzupełnienia premii — jeśli pracownik przepracował co najmniej połowę czasu pracy w miesiącu z urlopem bezpłatnym, a premia była pomniejszana za nieobecność, należy ją uzupełnić do pełnej kwoty zamiast pomijać miesiąc."
+    "Pomijanie miesiąca z urlopem bezpłatnym bez uzupełnienia premii — jeśli pracownik przepracował co najmniej połowę czasu pracy w miesiącu z urlopem bezpłatnym, a premia była pomniejszana za nieobecność, należy ją uzupełnić do pełnej kwoty zamiast pomijać miesiąc.",
+    "Nieuwzględnianie premii wypłaconych przed zmianą regulaminu w podstawie chorobowego — błąd: premie faktycznie wypłacone w miesiącach wchodzących do 12-miesięcznego okna podstawy, nawet jeśli premia została następnie zlikwidowana zmianą regulaminu, wchodzą do podstawy w kwotach faktycznie wypłaconych. Zlikwidowana premia odpada dopiero za miesiące po dacie jej likwidacji.",
+    "Uzupełnianie premii miesięcznej do 'pełnej kwoty' w miesiącu, w którym pracownik przepracował mniej niż połowę obowiązującego czasu pracy (np. był na L4 przez cały miesiąc) — błąd: taki miesiąc należy wyłączyć z podstawy w całości (art. 38 ustawy zasiłkowej) i cofnąć się o kolejny miesiąc wstecz, a nie uzupełniać premię do kwoty za pełny miesiąc pracy."
   ],
   "related_questions": [
     "Jak obliczyć podstawę chorobowego dla pracownika zatrudnionego krócej niż 12 miesięcy?",
@@ -133,8 +136,36 @@
       "applied_at": "2026-04-18T14:04:25Z",
       "source": "v2",
       "source_url": "https://gazetapodatkowa.gofin.pl/artykul/21/z-dyskusji-na-www-forum-gofin-pl/128558/podstawa-chorobowego-przy-czestym-urlopie-bezplatnym"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brakuje wyjaśnienia, jak traktować premie wypłacane w okresach przed 1.01.2026, jeśli regulamin zmienia się od tego dnia — czy pracownik zatrudniony od 2025 r. ma prawo do 'starych' premii w podstawie chorobowego za niezdolność w 2026.",
+      "applied_at": "2026-04-18T15:37:14Z",
+      "source": "v3",
+      "source_url": "https://www.gofin.pl/skladki-zasilki-emerytury/17,1,110,253142,wplyw-zmiany-regulaminu-wynagradzania-na-podstawe-wymiaru.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 3 mówi o 'uzupełnieniu do pełnej kwoty' dla premii miesięcznych, ale nie wyjaśnia, czy dotyczy to również sytuacji, gdy pracownik był na zwolnieniu lekarskim przez cały miesiąc (czy wtedy 'pełna kwota' to 0 zł czy kwota za pełny miesiąc pracy).",
+      "applied_at": "2026-04-18T15:38:52Z",
+      "source": "v3",
+      "source_url": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-chorobowy/podstawa-wymiaru/dla-pracownikow"
     }
   ],
+  "community_feedback_summary": {
+    "total_flags": 6,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 1
+    }
+  },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:55:12Z",
@@ -336,19 +367,5 @@
         "web_fetches_used_v3": 0
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 6,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "outdated_data_risk": 1,
-      "step_contradiction": 1,
-      "missing_critical_info": 2,
-      "edge_case_coverage": 1
-    },
-    "severity_breakdown": {
-      "medium": 5,
-      "low": 1
-    }
   }
 }

@@ -18,27 +18,27 @@
     },
     {
       "step": 2,
-      "action": "Przelicz łączny staż pracy na dzień dostarczenia dokumentów",
-      "detail": "Do stażu wlicz okresy zatrudnienia z wszystkich świadectw pracy oraz — zgodnie z art. 302 Kodeksu pracy w brzmieniu od 1.01.2026 — okresy wykonywania umów zlecenia, B2B (działalności gospodarczej) i innych okresów objętych składką emerytalno-rentową, potwierdzone zaświadczeniem ZUS. Ustal dwie daty: (a) datę dostarczenia dokumentów oraz (b) datę osiągnięcia progu jubileuszowego (20/25/30/35/40/45 lat).",
+      "action": "Przelicz łączny staż pracy i ustal DWA kluczowe terminy: datę nabycia prawa oraz datę dostarczenia dokumentów",
+      "detail": "Do stażu wlicz okresy zatrudnienia z wszystkich świadectw pracy oraz — zgodnie z art. 302 Kodeksu pracy w brzmieniu od 1.01.2026 (dla pracodawców będących jednostkami sektora publicznego) lub od 1.05.2026 (dla pracodawców prywatnych, zgodnie z art. 10 ustawy nowelizującej KP, Dz.U. 2025 poz. 1423) — okresy wykonywania umów zlecenia, B2B (działalności gospodarczej) i innych okresów objętych składką emerytalno-rentową, potwierdzone zaświadczeniem ZUS. Ustal i wyraźnie rozróżnij dwie daty: (a) DATA NABYCIA PRAWA — dzień upływu okresu uprawniającego, tj. dzień, w którym pracownik faktycznie osiągnął próg jubileuszowy (20/25/30/35/40/45 lat stażu) po doliczeniu wszystkich uwzględnianych okresów; zgodnie z §8 ust. 1 rozporządzenia Rady Ministrów z 18.03.2009 r. w sprawie wynagradzania pracowników samorządowych pracownik 'nabywa prawo do nagrody jubileuszowej w dniu upływu okresu uprawniającego do nagrody' — a NIE w dniu dostarczenia dokumentów; (b) DATA DOSTARCZENIA DOKUMENTÓW — dzień, w którym pracownik złożył pracodawcy zaświadczenie ZUS lub inne dokumenty potwierdzające dodatkowe okresy stażu. Te dwie daty mogą się różnić o miesiące lub lata i mają odmienne skutki prawne: data nabycia prawa decyduje o tym, czy roszczenie w ogóle powstało i od kiedy biegnie przedawnienie; data dostarczenia dokumentów decyduje jedynie o tym, kiedy pracodawca dowiedział się o roszczeniu i kiedy powinien je niezwłocznie wypłacić.",
       "condition": null
     },
     {
       "step": 3,
-      "action": "Zweryfikuj, czy prawo do nagrody powstało przed czy po 1.01.2026",
-      "detail": "Kluczowa jest data nabycia prawa. Zgodnie z art. 6 ustawy nowelizującej Kodeks pracy (nowe brzmienie art. 302 KP obowiązuje od 1.01.2026) — okresy ze zleceń/B2B zalicza się do stażu wyłącznie od 1.01.2026. Jeżeli próg jubileuszowy przypadałby 'wstecz' przed 1.01.2026 po uwzględnieniu tych okresów — nagroda NIE przysługuje za ten okres (bo w chwili 'osiągnięcia progu' przepis jeszcze nie obowiązywał, patrz komentarz HE3/3 i HE1). Flaga niepewności: Zweryfikuj tę interpretację pisemnym zapytaniem do MRPiPS/KIS — w środowisku kadrowym funkcjonują dwa sprzeczne stanowiska (patrz HE1).",
+      "action": "Zweryfikuj, czy prawo do nagrody powstało przed czy po dacie wejścia w życie nowych przepisów",
+      "detail": "Kluczowa jest data nabycia prawa (dzień osiągnięcia progu stażu — patrz krok 2) oraz rodzaj pracodawcy. Zgodnie z art. 10 ustawy nowelizującej KP (Dz.U. 2025 poz. 1423): nowe zasady zaliczania okresów zleceń/B2B do stażu obowiązują od 1.01.2026 dla pracodawców będących jednostkami sektora publicznego (budżetówka, samorządy, jednostki państwowe) oraz od 1.05.2026 dla pracodawców prywatnych. Jeżeli data nabycia prawa (dzień osiągnięcia progu) przypadałaby 'wstecz' przed odpowiednią datą graniczną po uwzględnieniu tych okresów — nagroda NIE przysługuje za ten okres, ponieważ w chwili 'osiągnięcia progu' przepis jeszcze nie obowiązywał i roszczenie w ogóle nie powstało (por. wyrok SN II PSKP 3/21: prawo do nagrody jubileuszowej powstaje dopiero od dnia wejścia w życie przepisu ją wprowadzającego). Przykład: pracownik samorządowy dostarcza dokumenty w lutym 2026 i po przeliczeniu okazuje się, że próg 20 lat osiągnął w grudniu 2025 — data nabycia prawa (grudzień 2025) wyprzedza datę graniczną (1.01.2026), więc roszczenie nie powstało i nagroda za ten próg nie przysługuje. Gdyby natomiast próg 20 lat przypadał na styczeń 2026 lub później — roszczenie powstało i nagroda przysługuje, niezależnie od tego, kiedy pracownik dostarczył dokumenty. Konsekwencja dla kroku 4: skoro roszczenie nie powstało przed datą graniczną, przepis o 3-letnim przedawnieniu z art. 291 § 1 KP jest w takim przypadku irrelewantny — przedawnienie biegnie od dnia wymagalności roszczenia, a roszczenie, które nigdy nie powstało, nie może ulec przedawnieniu ani być przez nie 'uratowane'. Flaga niepewności: Zweryfikuj tę interpretację pisemnym zapytaniem do MRPiPS/KIS — w środowisku kadrowym funkcjonują dwa sprzeczne stanowiska (patrz HE1).",
       "condition": null
     },
     {
       "step": 4,
       "action": "Ustal datę nabycia prawa i zastosuj zasadę przedawnienia z art. 291 § 1 KP",
-      "detail": "Roszczenia ze stosunku pracy przedawniają się z upływem 3 lat. Jeżeli pracownik nabył prawo do nagrody po 1.01.2026 (np. w dniu dostarczenia dokumentów staż osiągnął 20/25/30 itd. lat) — wypłać nagrodę niezwłocznie w pełnej wysokości (zgodnie ze stanowiskiem MRPiPS). Jeżeli prawo powstało np. w lutym 2026, a pracownik zgłasza się w 2027 — nadal mieści się w 3-letnim terminie.",
+      "detail": "Roszczenia ze stosunku pracy przedawniają się z upływem 3 lat od dnia wymagalności roszczenia (art. 291 § 1 KP). Wymagalność roszczenia o nagrodę jubileuszową następuje w dacie nabycia prawa, tj. w dniu osiągnięcia progu stażu (patrz krok 2) — a NIE w dniu dostarczenia dokumentów przez pracownika. Dostarczenie dokumentów nie tworzy nowego roszczenia ani nie przesuwa daty jego wymagalności; jest jedynie zdarzeniem faktycznym umożliwiającym pracodawcy weryfikację i wypłatę. Przedawnienie ma zastosowanie wyłącznie do roszczeń, które faktycznie powstały — tj. do nagród jubileuszowych, których próg został osiągnięty po dacie wejścia w życie nowych przepisów (1.01.2026 dla sektora publicznego, 1.05.2026 dla sektora prywatnego). Jeżeli pracownik nabył prawo do nagrody np. w lutym 2026 (sektor publiczny), a zgłasza się w 2027 — roszczenie mieści się w 3-letnim terminie i należy wypłacić nagrodę niezwłocznie w pełnej wysokości (zgodnie ze stanowiskiem MRPiPS). Natomiast jeżeli krok 3 przesądził, że roszczenie w ogóle nie powstało (próg osiągnięty wstecznie przed datą graniczną), przedawnienie z art. 291 § 1 KP nie ma zastosowania — nie można dochodzić roszczenia, które nigdy nie zaistniało.",
       "condition": null
     },
     {
       "step": 5,
       "action": "Rozstrzygnij sytuację 'przeskoczenia' progu (np. z 19 na 23 lata jednym zaświadczeniem)",
-      "detail": "Jeżeli po doliczeniu okresów ZUS pracownik 'przeskakuje' próg jubileuszowy (np. z 19 na 23 lata, z 37 na 42 lata), a osiągnięcie tego progu przypadło już po 1.01.2026 — wypłać nagrodę za niższy próg niezwłocznie. Kolejny próg naliczasz dopiero po faktycznym upływie kolejnych lat pracy. Jeżeli moment osiągnięcia progu wypadł przed 1.01.2026 (bo liczymy wstecznie po doliczeniu zleceń) — nagroda co do zasady przepada.",
-      "condition": "if prawo do nagrody przypada wstecznie na okres sprzed 1.01.2026"
+      "detail": "Jeżeli po doliczeniu okresów ZUS pracownik 'przeskakuje' próg jubileuszowy (np. z 19 na 23 lata, z 37 na 42 lata), a data nabycia prawa do tego progu (dzień osiągnięcia wymaganego stażu — patrz krok 2) przypadła już po dacie wejścia w życie nowych przepisów (1.01.2026 dla sektora publicznego, 1.05.2026 dla sektora prywatnego) — wypłać nagrodę za niższy próg niezwłocznie. Kolejny próg naliczasz dopiero po faktycznym upływie kolejnych lat pracy. Jeżeli data nabycia prawa do progu wypadła przed odpowiednią datą graniczną (bo liczymy wstecznie po doliczeniu zleceń) — nagroda co do zasady przepada.",
+      "condition": "if prawo do nagrody przypada wstecznie na okres sprzed daty wejścia w życie nowych przepisów"
     },
     {
       "step": 6,
@@ -58,12 +58,15 @@
     "Pracownik dostarcza zaświadczenie ZUS tuż przed osiągnięciem kolejnego progu (np. ma 39 lat 4 mies., po doliczeniu 42 lata 3 mies.) — w praktyce bardziej opłaca się ODŁOŻYĆ dostarczenie dokumentów do momentu 'dorośnięcia' do 40 lat bez zaświadczenia, bo inaczej 40-lecie przepada jako przypadające wstecznie (komentarz HE1/2, HE3/1).",
     "Pracownik osiągnął wymagany staż przed zatrudnieniem u obecnego pracodawcy — interpretacja sporna: część kadrowych uznaje, że prawo do nagrody powstaje tylko, jeżeli staż został osiągnięty w trakcie zatrudnienia u danego pracodawcy (komentarz HE2/3); inni uznają, że liczy się sam fakt osiągnięcia progu w okresie objętym ustawą. Zalecam pisemne zapytanie do MRPiPS.",
     "Pracownik niedługo przed emeryturą — jeżeli po doliczeniu okresów ZUS brakuje mu mniej niż 12 miesięcy do kolejnego progu (np. 45 lat), zgodnie z przepisami o odprawie emerytalnej i praktyką budżetówki wypłaca się nagrodę za ten wyższy próg łącznie z odprawą emerytalną.",
-    "Sektor prywatny z regulaminową nagrodą jubileuszową — zakres wyrównania wstecz zależy wyłącznie od zapisów regulaminu wynagradzania; jeżeli regulamin milczy — stosuje się przedawnienie 3-letnie z art. 291 § 1 KP, ale brak obowiązku wyrównania 'automatycznego' jak w budżetówce (komentarz HE5/1)."
+    "Sektor prywatny z regulaminową nagrodą jubileuszową — zakres wyrównania wstecz zależy wyłącznie od zapisów regulaminu wynagradzania; jeżeli regulamin milczy — stosuje się przedawnienie 3-letnie z art. 291 § 1 KP, ale brak obowiązku wyrównania 'automatycznego' jak w budżetówce (komentarz HE5/1). Uwaga: dla pracodawców prywatnych nowe zasady zaliczania okresów zleceń/B2B do stażu wchodzą w życie dopiero od 1.05.2026 (art. 10 ustawy nowelizującej KP, Dz.U. 2025 poz. 1423)."
   ],
   "common_mistakes": [
     "Wypłacanie pracownikowi TYLKO różnicy między nagrodą za wyższy a niższy próg, gdy niższa była już wypłacona — to błąd, nagroda za każdy próg jest odrębnym świadczeniem i wypłaca się ją w pełnej wysokości podstawy z miesiąca nabycia prawa.",
-    "Automatyczne wypłacanie nagrody wstecznie za progi osiągnięte przed 1.01.2026 po doliczeniu okresów zleceń/B2B — ignoruje przepis przejściowy (art. 6 ustawy zmieniającej), zgodnie z którym nowe zasady zaliczania okresów do stażu obowiązują od 1.01.2026.",
-    "Pominięcie wyrównania dodatku stażowego za 3 lata wstecz przy okazji przeliczenia stażu — wyrównanie stażowego należy się równolegle z rozliczeniem jubileuszu (art. 291 § 1 KP, komentarz [6]/1 i [8]/2)."
+    "Automatyczne wypłacanie nagrody wstecznie za progi osiągnięte przed datą wejścia w życie nowych przepisów po doliczeniu okresów zleceń/B2B — ignoruje przepis przejściowy (art. 10 ustawy nowelizującej KP, Dz.U. 2025 poz. 1423): dla sektora publicznego data graniczna to 1.01.2026, dla sektora prywatnego 1.05.2026.",
+    "Stosowanie daty 1.01.2026 jako daty wejścia w życie nowych przepisów wobec pracodawców prywatnych — błąd, dla nich przepisy obowiązują od 1.05.2026 zgodnie z art. 10 ustawy nowelizującej KP (Dz.U. 2025 poz. 1423).",
+    "Pominięcie wyrównania dodatku stażowego za 3 lata wstecz przy okazji przeliczenia stażu — wyrównanie stażowego należy się równolegle z rozliczeniem jubileuszu (art. 291 § 1 KP, komentarz [6]/1 i [8]/2).",
+    "Błędne założenie, że 3-letnie przedawnienie z art. 291 § 1 KP 'ratuje' roszczenie o nagrodę jubileuszową za próg osiągnięty wstecznie przed datą graniczną (1.01.2026 / 1.05.2026) — przedawnienie dotyczy wyłącznie roszczeń, które faktycznie powstały; jeżeli roszczenie nie powstało (próg osiągnięty przed wejściem przepisu w życie), przedawnienie jest irrelewantne.",
+    "Mylenie daty nabycia prawa z datą dostarczenia dokumentów — data nabycia prawa to dzień osiągnięcia progu stażu (dzień upływu okresu uprawniającego), a NIE dzień złożenia zaświadczenia ZUS przez pracownika; od daty nabycia prawa biegnie przedawnienie i ona decyduje o tym, czy roszczenie w ogóle powstało; data dostarczenia dokumentów decyduje jedynie o terminie wypłaty przez pracodawcę."
   ],
   "related_questions": [
     "Jak dokumentować okres prowadzenia działalności gospodarczej do stażu pracy od 1.01.2026 — wystarczy zaświadczenie ZUS o opłacanych składkach czy potrzebny też wypis z CEIDG?",
@@ -97,6 +100,45 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "community_feedback_summary": {
+    "total_flags": 13,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "hallucination_risk": 2,
+      "outdated_data_risk": 2,
+      "step_contradiction": 2,
+      "missing_critical_info": 4,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "high": 5,
+      "medium": 6,
+      "low": 2
+    }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Draft jest datowany na 2026-04-18 i zawiera stwierdzenie 'last_verified_at': '2026-04-18', ale odnosi się do przepisów 'od 1.01.2026' jako do przyszłości. Jeśli dokument jest rzeczywiście z kwietnia 2026, przepisy powinny być już w pełni obowiązujące — brak jasności, czy dane o limitach (3 lata przedawnienia, 12 miesięcy między próbami) są aktualne dla 2026+.",
+      "applied_at": "2026-04-18T16:27:51Z",
+      "source": "v3",
+      "source_url": "https://ksiegowosc.infor.pl/zus-kadry/inne/7414860,staz-pracy-zmiany-od-2026-r-trzeba-zlozyc-wniosek-do-zus-by-uzyskac-zaswiadczenie-potwierdzajace-zlecenia-prowadzenie-firmy-czy-prace-zarobkowa-za-granica.html"
+    },
+    {
+      "flag_type": "step_contradiction",
+      "flag_description": "Krok 3 stwierdza, że prawo do nagrody za próg osiągnięty wstecznie (przed 1.01.2026) 'NIE przysługuje', ale krok 4 mówi o 3-letnim przedawnieniu z art. 291 § 1 KP bez wyraźnego wyjaśnienia, jak te dwie reguły się łączą — czy przedawnienie 'ratuje' roszczenie z okresu sprzed 1.01.2026, czy nie?",
+      "applied_at": "2026-04-18T16:29:11Z",
+      "source": "v3",
+      "source_url": "https://przepisy.gofin.pl/przepisy,3,9,9,212,462756,20250319,art-291-295-przedawnienie-roszczen.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia, czy 'data nabycia prawa' to data osiągnięcia progu stażu czy data dostarczenia dokumentów ZUS. To kluczowe dla interpretacji art. 6 ustawy nowelizującej — jeśli pracownik osiągnął 20 lat w grudniu 2025, ale dokumenty dostarczył w lutym 2026, które daty się liczy?",
+      "applied_at": "2026-04-18T16:31:04Z",
+      "source": "v3",
+      "source_url": "https://przepisy.gofin.pl/przepisy,6,18,35,471,95198,20180101,8-rozporzadzenie-rady-ministrow-z-dnia-18032009-r-w.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T12:02:15Z",
@@ -330,21 +372,5 @@
         "ui_label": "Sprawdź aktualność danych"
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 13,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "hallucination_risk": 2,
-      "outdated_data_risk": 2,
-      "step_contradiction": 2,
-      "missing_critical_info": 4,
-      "edge_case_coverage": 2
-    },
-    "severity_breakdown": {
-      "high": 5,
-      "medium": 6,
-      "low": 2
-    }
   }
 }

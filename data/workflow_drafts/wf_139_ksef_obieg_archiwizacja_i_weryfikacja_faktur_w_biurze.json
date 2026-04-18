@@ -36,18 +36,24 @@
     },
     {
       "step": 5,
+      "action": "Obsłuż faktury korygujące w KSeF",
+      "detail": "Faktura korygująca w KSeF to OSOBNY dokument XML z własnym numerem KSeF - nie modyfikuje oryginału, lecz jest odrębnym plikiem, który musi zawierać numer KSeF faktury korygowanej (art. 106j ust. 2 pkt 2a ustawy o VAT). Zasady rozliczenia VAT różnią się od faktury pierwotnej: sprzedawca obniża VAT należny w okresie wystawienia korekty in minus, natomiast nabywca zmniejsza VAT naliczony w okresie otrzymania korekty przez KSeF (tj. w dacie nadania jej numeru KSeF) - nie jest wymagane potwierdzenie odbioru ani żadne dodatkowe uzgodnienie. W procedurze biura uwzględnij: (a) automatyczny pobór korekt z KSeF w tym samym harmonogramie co faktury pierwotne, (b) powiązanie korekty z oryginałem w programie księgowym po numerze KSeF faktury korygowanej, (c) archiwizację XML korekty w tym samym folderze klienta co oryginał, (d) informowanie klienta o wpływie korekty na rozliczenie VAT w danym okresie - szczególnie gdy korekta dotyczy innego miesiąca niż faktura pierwotna.",
+      "condition": null
+    },
+    {
+      "step": 6,
       "action": "Obsłuż faktury spoza KSeF (tryb offline, awaria, B2C, kontrahent zagraniczny, zwolnieni)",
       "detail": "Stwórz w procedurze osobną ścieżkę dla: faktur wystawionych w trybie offline24/awaryjnym (mają kod QR, trafiają do KSeF z opóźnieniem), faktur od podatników zwolnionych z KSeF (zagraniczni bez stałego miejsca w PL, OSS/IOSS), paragonów z NIP, not księgowych i dokumentów wewnętrznych. Te klient nadal dostarcza tradycyjnie (PDF/papier) i wymagają osobnego rejestru.",
       "condition": "if klient ma kontrahentów zwolnionych z KSeF lub dokumenty spoza systemu"
     },
     {
-      "step": 6,
+      "step": 7,
       "action": "Rozwiąż problem brakujących danych na wizualizacji KSeF",
       "detail": "Jeśli wizualizacja w programie (Optima, Symfonia) nie pokazuje daty sprzedaży, terminu lub sposobu płatności - pobierz surowy XML i sprawdź węzły P_6 (data sprzedaży), Platnosc/TerminyPlatnosci. Brak danych to najczęściej wina mapowania po stronie sprzedawcy. Poproś klienta o kontakt ze sprzedawcą lub opieraj się na danych z XML, nie z wizualizacji.",
       "condition": "if program nie wyświetla kompletnych danych faktury"
     },
     {
-      "step": 7,
+      "step": 8,
       "action": "Przeszkol klienta z oznaczania trybu wystawienia i numeru KSeF",
       "detail": "Poinformuj, że tryb wystawienia (online, offline24, awaryjny) jest widoczny w XML i wpływa na moment powstania obowiązku podatkowego oraz datę otrzymania faktury. Przy masowych zaciągach plikowych ustaw w programie filtr/raport po trybie, aby nie przeglądać każdej faktury ręcznie.",
       "condition": null
@@ -68,18 +74,25 @@
       "law_name": "Ustawa o VAT",
       "article_number": "art. 106ga ust. 2",
       "reason": "Wskazuje kategorie podatników zwolnionych z obowiązku KSeF (zagraniczni, OSS/IOSS, B2C), czyli ścieżkę faktur które klient nadal musi dostarczać poza systemem."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106j ust. 2 pkt 2a",
+      "reason": "Nakłada obowiązek zamieszczenia w fakturze korygującej numeru KSeF faktury korygowanej - podstawa procedury powiązania korekty z oryginałem w systemie księgowym biura."
     }
   ],
   "edge_cases": [
     "Klient prowadzący małą firmę, której kontrahenci jeszcze nie wdrożyli KSeF - w praktyce nadal połowa faktur wpływa papierowo/PDF, więc przez okres przejściowy trzeba utrzymać równolegle obieg tradycyjny i elektroniczny.",
     "Faktura z KSeF ma datę sprzedaży w innym miesiącu niż data wystawienia (np. sprzedaż 01/2026, wystawienie 02/2026) - w pełnych księgach decyduje data sprzedaży (moment powstania kosztu/obowiązku podatkowego), nie data wystawienia widoczna na wizualizacji.",
     "Faktura wystawiona błędnie na NIP klienta przez obcego kontrahenta - w KSeF nie można jej 'odrzucić', jedyna droga to żądanie korekty do zera od wystawcy; do czasu korekty klient oznacza ją w OCR/panelu jako 'nie moja' i biuro jej nie księguje.",
-    "Klient nie chce wdrażać OCR/panelu akceptacji - wtedy alternatywą jest comiesięczne zestawienie (Excel/mail) faktur do zaksięgowania z numerami KSeF, ale wydłuża to zamknięcie miesiąca i zwiększa ryzyko pominięcia faktury."
+    "Klient nie chce wdrażać OCR/panelu akceptacji - wtedy alternatywą jest comiesięczne zestawienie (Excel/mail) faktur do zaksięgowania z numerami KSeF, ale wydłuża to zamknięcie miesiąca i zwiększa ryzyko pominięcia faktury.",
+    "Faktura korygująca in minus wpływa w innym miesiącu niż faktura pierwotna - nabywca musi zmniejszyć VAT naliczony w miesiącu otrzymania korekty przez KSeF (data nadania numeru KSeF korekcie), nie w miesiącu faktury pierwotnej; biuro powinno monitorować daty KSeF korekt przy zamknięciu okresu."
   ],
   "common_mistakes": [
     "Drukowanie wszystkich faktur z KSeF 'dla bezpieczeństwa' i wpinanie do segregatorów - zbędna praca, bo faktura ustrukturyzowana jest przechowywana w KSeF przez 10 lat i wizualizacja PDF nie jest dokumentem źródłowym (źródłem jest XML).",
     "Księgowanie wszystkich faktur zaciągniętych z KSeF bez akceptacji klienta - prowadzi do zaksięgowania faktur błędnie wystawionych na NIP klienta lub niebędących kosztem uzyskania przychodu.",
-    "Opieranie się wyłącznie na wizualizacji w programie księgowym - różne programy pokazują różny zakres danych (np. Optima nie pokazuje daty sprzedaży czy sposobu płatności), co prowadzi do błędów w księgowaniu; zawsze weryfikuj XML przy niepełnych danych."
+    "Opieranie się wyłącznie na wizualizacji w programie księgowym - różne programy pokazują różny zakres danych (np. Optima nie pokazuje daty sprzedaży czy sposobu płatności), co prowadzi do błędów w księgowaniu; zawsze weryfikuj XML przy niepełnych danych.",
+    "Traktowanie faktury korygującej jako modyfikacji oryginału zamiast osobnego dokumentu XML - prowadzi do błędów w archiwizacji (brak pobrania XML korekty) oraz do nieprawidłowego okresu rozliczenia VAT naliczonego u nabywcy."
   ],
   "related_questions": [
     "Jak wygląda moment powstania obowiązku podatkowego VAT i moment otrzymania faktury w KSeF przy trybie offline24 i awaryjnym?",
@@ -122,8 +135,28 @@
       "applied_at": "2026-04-18T10:35:11Z",
       "source": "v2",
       "source_url": "https://ksiegowosc.infor.pl/ksef/7483853,ksef-2026-panstwowa-infrastruktura-cyfrowa-ktora-zmienia-biznes-glebiej-niz-fakturowanie.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie opisuje procedury obsługi faktur korygujących w KSeF - czy są osobnym dokumentem, czy modyfikują oryginalną fakturę, i jak wpływa to na archiwizację i księgowanie.",
+      "applied_at": "2026-04-18T15:50:00Z",
+      "source": "v3",
+      "source_url": "https://www.biznes.gov.pl/pl/portal/004651"
     }
   ],
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "missing_critical_info": 3,
+      "step_contradiction": 1,
+      "hallucination_risk": 3,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 2
+    }
+  },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-17T23:24:26Z",
@@ -406,18 +439,5 @@
         "web_fetches_used_v3": 0
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "missing_critical_info": 3,
-      "step_contradiction": 1,
-      "hallucination_risk": 3,
-      "edge_case_coverage": 1
-    },
-    "severity_breakdown": {
-      "medium": 6,
-      "low": 2
-    }
   }
 }

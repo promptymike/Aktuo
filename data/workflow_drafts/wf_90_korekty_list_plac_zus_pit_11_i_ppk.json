@@ -31,7 +31,7 @@
     {
       "step": 4,
       "action": "Ustal sposób rozliczenia zwrotu wynagrodzenia netto przez pracownika (nadpłata brutto)",
-      "detail": "Jeśli pracownik zwraca nadpłacone wynagrodzenie w kwocie brutto — w miesiącu zwrotu zgodnie z art. 41b ustawy PIT pomniejszasz podstawę opodatkowania o kwotę zwrotu (brutto, w części nieodliczonej wcześniej) i wykazujesz pomniejszenie w PIT-11 za rok zwrotu w pozycji 'kwoty zwrócone płatnikowi'. Jeśli pracownik zwrócił tylko netto — pracodawca odzyskuje składki i podatek z właściwych urzędów (korekta PIT-4R i DRA za okres pierwotny, jeśli dotyczy tego samego roku).",
+      "detail": "Jeśli pracownik zwraca nadpłacone wynagrodzenie w kwocie brutto — w miesiącu zwrotu zgodnie z art. 41b ustawy PIT pomniejszasz podstawę opodatkowania o kwotę zwrotu (brutto, w części nieodliczonej wcześniej) i wykazujesz pomniejszenie w PIT-11 za rok zwrotu w pozycji 'kwoty zwrócone płatnikowi'. Jeśli pracownik zwrócił tylko netto — pracodawca odzyskuje składki i podatek z właściwych urzędów (korekta PIT-4R i DRA za okres pierwotny, jeśli dotyczy tego samego roku).\n\nZWROT W RATACH: Pracownik może zwracać nadpłatę w ratach — jest to dopuszczalne i zalecane przy wyższych kwotach. W takim przypadku odliczenie z art. 41b ustawy PIT stosuje się adekwatnie do każdej wpłaconej raty w miesiącu jej otrzymania, a nie jednorazowo. Każdą ratę dokumentujesz osobno i pomniejszasz podstawę opodatkowania w miesiącu wpływu danej raty.\n\nGDY PRACOWNIK ODMAWIA ZGODY NA POTRĄCENIE: Potrącenie nadpłaty wynagrodzenia spowodowanej błędem pracodawcy nie mieści się w katalogu potrąceń dopuszczalnych bez zgody pracownika (art. 87 KP). Potrącenie wymaga pisemnej zgody pracownika (art. 91 KP). Jeśli pracownik odmówi podpisania zgody na potrącenie — pracodawcy pozostaje jedynie wystąpienie na drogę sądową z powództwem cywilnym o zwrot bezpodstawnego wzbogacenia (art. 405 KC). Nie wolno dokonywać potrącenia jednostronnie bez zgody pracownika ani wstrzymywać kolejnych wypłat — grozi to roszczeniem pracownika o wynagrodzenie wraz z odsetkami. Przed skierowaniem sprawy do sądu warto skierować do pracownika pisemne wezwanie do zwrotu z wyznaczonym terminem, które stanowi dowód w postępowaniu.",
       "condition": "if doszło do nadpłaty wynagrodzenia"
     },
     {
@@ -62,7 +62,7 @@
     {
       "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
       "article_number": "art. 41b",
-      "reason": "Reguluje zasady rozliczenia zwrotu przychodów przez podatnika — kluczowa podstawa dla step 4: płatnik pomniejsza podstawę opodatkowania w miesiącu zwrotu o kwotę zwróconego przychodu (brutto, w części nieodliczonej wcześniej) i wykazuje pomniejszenie w PIT-11 za rok zwrotu."
+      "reason": "Reguluje zasady rozliczenia zwrotu przychodów przez podatnika — kluczowa podstawa dla step 4: płatnik pomniejsza podstawę opodatkowania w miesiącu zwrotu o kwotę zwróconego przychodu (brutto, w części nieodliczonej wcześniej) i wykazuje pomniejszenie w PIT-11 za rok zwrotu. Przy zwrocie w ratach odliczenie stosuje się adekwatnie do każdej raty w miesiącu jej otrzymania."
     },
     {
       "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
@@ -74,12 +74,14 @@
     "Były pracownik, z którym nie ma już stosunku pracy — zwrot nadpłaconego zasiłku/wynagrodzenia rozliczasz jako przychód w roku otrzymania zwrotu; nie korygujesz PIT-11 za lata poprzednie, a pracownikowi wystawiasz informację o kwocie zwróconej do odliczenia w zeznaniu rocznym (art. 26 ust. 1 pkt 5 ustawy PIT).",
     "Przekroczenie 30-krotności podstawy E+R (260 190 zł w 2026 r.) wykryte przez ZUS po zamknięciu roku — koryguj wyłącznie RCA za miesiąc przekroczenia i IWA; PIT-11 za rok zamknięty nie korygujesz, bo zwrot składek jest przychodem w roku wypłaty zwrotu.",
     "Urlop zamieniony na zwolnienie lekarskie po wypłacie — jeśli DRA za ten miesiąc już złożone, konieczna jest korekta listy płac i DRA; różnicę w wypłacie netto potrącasz w kolejnym miesiącu (za pisemną zgodą pracownika zgodnie z art. 91 KP, bo potrącenie z winy pracownika nie mieści się w katalogu art. 87 KP).",
-    "Umowa zlecenie vs umowa o pracę: przy zleceniu, gdy zleceniobiorca błędnie zadeklarował zbieg tytułów (minimalna krajowa 4 806 zł brutto w 2026 r.), korektę ZUS robisz na bieżąco bez korekty PIT-11/PIT-4R, bo podstawa podatkowa pozostaje prawidłowa — zmienia się tylko podział składek."
+    "Umowa zlecenie vs umowa o pracę: przy zleceniu, gdy zleceniobiorca błędnie zadeklarował zbieg tytułów (minimalna krajowa 4 806 zł brutto w 2026 r.), korektę ZUS robisz na bieżąco bez korekty PIT-11/PIT-4R, bo podstawa podatkowa pozostaje prawidłowa — zmienia się tylko podział składek.",
+    "Pracownik odmawia zgody na potrącenie nadpłaty i odmawia dobrowolnego zwrotu — pracodawca nie może jednostronnie potrącić kwoty ani wstrzymać wypłaty. Jedyną drogą jest powództwo cywilne o bezpodstawne wzbogacenie (art. 405 KC). Do czasu zwrotu lub wyroku sądowego nie dokonujesz żadnych potrąceń; rozliczenie podatkowe art. 41b PIT nastąpi dopiero w miesiącu faktycznego zwrotu."
   ],
   "common_mistakes": [
     "Automatyczne korygowanie PIT-11 za rok zamknięty przy każdej korekcie składek ZUS — PIT-11 pokazuje stan na 31.12, a zwrot/dopłata składek w roku kolejnym jest zdarzeniem bieżącym rozliczanym w roku zwrotu.",
     "Potrącanie różnicy netto wynagrodzenia z kolejnej wypłaty bez pisemnej zgody pracownika — potrącenia z winy pracownika wykraczające poza art. 87 KP wymagają zgody na piśmie (art. 91 KP) pod rygorem roszczeń pracownika.",
-    "Zwrot pracownikowi tylko różnicy składek społecznych bez opodatkowania tej kwoty — zwrócone składki E+R/chor. stanowią przychód ze stosunku pracy w miesiącu zwrotu i podlegają PIT oraz przeliczeniu składki zdrowotnej."
+    "Zwrot pracownikowi tylko różnicy składek społecznych bez opodatkowania tej kwoty — zwrócone składki E+R/chor. stanowią przychód ze stosunku pracy w miesiącu zwrotu i podlegają PIT oraz przeliczeniu składki zdrowotnej.",
+    "Stosowanie odliczenia art. 41b PIT jednorazowo od całej kwoty nadpłaty, gdy pracownik zwraca ją w ratach — odliczenie należy stosować adekwatnie do każdej wpłaconej raty w miesiącu jej otrzymania, nie z góry za całość."
   ],
   "related_questions": [
     "Jak rozliczyć nadpłacony zasiłek chorobowy/macierzyński po kontroli ZUS, gdy pracownik już nie pracuje u płatnika?",
@@ -113,6 +115,37 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Draft powołuje się na art. 39 ustawy PIT jako podstawę dla rozstrzygnięcia kiedy korygować PIT-11, ale art. 39 dotyczy obowiązku przesłania informacji PIT-11, a nie zasad jej korekty. Brakuje odniesienia do art. 41b ustawy PIT (zwrot przychodów) i art. 26 ust. 1 pkt 5 ustawy PIT (odliczenia), które są faktycznie cytowane w krokach, ale nie w legal_anchors.",
+      "applied_at": "2026-04-18T14:37:42Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brakuje procedury dla sytuacji gdy pracownik zwraca nadpłatę w ratach lub gdy pracodawca nie może potrącić całej kwoty z jednej wypłaty. Step 4 wspomina 'za pisemną zgodą' ale nie definiuje procedury gdy pracownik odmówi zgody na potrącenie.",
+      "applied_at": "2026-04-18T16:32:23Z",
+      "source": "v3",
+      "source_url": "https://www.gofin.pl/prawo-pracy/17,2,95,197608,odliczenie-nadplaty-wynagrodzenia-z-nastepnej-wyplaty.html"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 11,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 4,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 8,
+      "high": 1,
+      "low": 2
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -296,29 +329,5 @@
         "ui_label": "Możliwe brakujące informacje"
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "legal_anchor_uncertainty",
-      "flag_description": "Draft powołuje się na art. 39 ustawy PIT jako podstawę dla rozstrzygnięcia kiedy korygować PIT-11, ale art. 39 dotyczy obowiązku przesłania informacji PIT-11, a nie zasad jej korekty. Brakuje odniesienia do art. 41b ustawy PIT (zwrot przychodów) i art. 26 ust. 1 pkt 5 ustawy PIT (odliczenia), które są faktycznie cytowane w krokach, ale nie w legal_anchors.",
-      "applied_at": "2026-04-18T14:37:42Z",
-      "source": "v1"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 11,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "outdated_data_risk": 1,
-      "step_contradiction": 2,
-      "missing_critical_info": 4,
-      "hallucination_risk": 2,
-      "edge_case_coverage": 1
-    },
-    "severity_breakdown": {
-      "medium": 8,
-      "high": 1,
-      "low": 2
-    }
   }
 }

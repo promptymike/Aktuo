@@ -18,8 +18,8 @@
     },
     {
       "step": 2,
-      "action": "Wystąp o zaświadczenie A1 przed wyjazdem",
-      "detail": "Składasz ZUS US-3 (pracownik delegowany, art. 12 rozp. 883/2004) lub ZUS US-4 (praca w 2+ państwach, art. 13). Wniosek przez PUE ZUS → Usługi → Katalog usług → 'Wniosek o wydanie A1'. A1 potwierdza, że pracownik nadal podlega ustawodawstwu PL — ZUS opłacasz w Polsce. Bez A1 państwo przyjmujące może żądać składek lokalnych. Dla zleceniobiorcy wyjeżdżającego na targi do Niemiec A1 również jest wymagane (art. 12 ust. 1 rozp. 883/2004 stosuje się też do zleceń oskładkowanych w PL).",
+      "action": "Wystąp o zaświadczenie A1 przed wyjazdem — lub ustal właściwą procedurę dla kraju spoza UE/EOG/Szwajcarii",
+      "detail": "KRAJE UE/EOG/SZWAJCARIA: Składasz ZUS US-3 (pracownik delegowany, art. 12 rozp. 883/2004) lub ZUS US-4 (praca w 2+ państwach, art. 13). Wniosek przez PUE ZUS → Usługi → Katalog usług → 'Wniosek o wydanie A1'. A1 potwierdza, że pracownik nadal podlega ustawodawstwu PL — ZUS opłacasz w Polsce. Bez A1 państwo przyjmujące może żądać składek lokalnych. Dla zleceniobiorcy wyjeżdżającego na targi do Niemiec A1 również jest wymagane (art. 12 ust. 1 rozp. 883/2004 stosuje się też do zleceń oskładkowanych w PL).\n\nKRAJE SPOZA UE/EOG/SZWAJCARII (np. Wielka Brytania post-Brexit, USA, Ukraina, inne): Rozporządzenie 883/2004 NIE ma zastosowania. Obowiązują odrębne zasady:\n— Jeśli Polska zawarła z danym krajem dwustronną umowę o zabezpieczeniu społecznym (np. z USA, Kanadą, Koreą Płd., Macedonią Płn.) — sprawdź jej treść; zazwyczaj przewiduje ona zaświadczenie równoważne A1 wydawane przez ZUS na podstawie tej umowy (wniosek składasz przez PUE ZUS, sekcja 'Pracujący poza UE, EOG lub Szwajcarią').\n— Wielka Brytania post-Brexit (od 1.01.2021): stosuje się Umowę o handlu i współpracy UE–UK (TCA) z 24.12.2020, która zawiera przepisy o koordynacji systemów zabezpieczenia społecznego analogiczne do rozp. 883/2004 — pracownik delegowany do UK na do 24 miesięcy może nadal podlegać ZUS w PL; zaświadczenie wydaje ZUS na wniosek ZUS US-3 (formularz ten stosuje się również dla UK na podstawie TCA).\n— Jeśli brak umowy dwustronnej — pracownik może podlegać obowiązkowo ubezpieczeniom społecznym zarówno w PL, jak i w kraju przyjmującym (podwójne oskładkowanie); w takim przypadku skonsultuj się z doradcą i sprawdź przepisy lokalne kraju przyjmującego.\nAktualną listę krajów objętych umowami dwustronnymi znajdziesz na: https://www.zus.pl/pracujacy/pracujacy-poza-ue-eog-szwajcaria",
       "condition": null
     },
     {
@@ -49,7 +49,7 @@
     {
       "step": 7,
       "action": "Archiwizuj dokumentację delegowania na wypadek kontroli ZUS i inspekcji państwa przyjmującego",
-      "detail": "Przechowuj: A1, polecenie wyjazdu służbowego, ewidencję czasu pracy, dowody przekroczenia granicy (bilety, tankowania), rozliczenie zaliczki w 14 dni od powrotu, zgłoszenie w systemie kraju przyjmującego (np. Niemcy: Meldeportal Mindestlohn/A1-Meldung; Holandia: meldloket.postedworkers.nl; Belgia: LIMOSA; Francja: SIPSI). ZUS przy A1 na 2 kraje (art. 13) weryfikuje po roku proporcje przychodów z faktur na kontrahentów PL vs zagranicznych — musi być co najmniej 25% pracy/obrotu w kraju zamieszkania, inaczej cofa A1.",
+      "detail": "Przechowuj: A1, polecenie wyjazdu służbowego, ewidencję czasu pracy, dowody przekroczenia granicy (bilety, tankowania), rozliczenie zaliczki w 14 dni od powrotu, zgłoszenie w systemie kraju przyjmującego (np. Niemcy: Meldeportal Mindestlohn/A1-Meldung; Holandia: meldloket.postedworkers.nl; Belgia: LIMOSA; Francja: SIPSI). ZUS przy A1 na 2 kraje (art. 13) weryfikuje po roku proporcje przychodów z faktur na kontrahentów PL vs zagranicznych — musi być co najmniej 25% pracy/obrotu w kraju zamieszkania, inaczej cofa A1. Uwaga: uchylenie A1 może nastąpić z okresem wstecznym — oznacza to wyłączenie pracownika z polskiego systemu zabezpieczenia społecznego od daty, od której warunek 25% nie był spełniony, a nie dopiero od daty decyzji ZUS. Skutkiem jest konieczność zgłoszenia pracownika do systemu ubezpieczeń społecznych państwa, w którym faktycznie wykonywał pracę, oraz opłacenia tam składek za cały okres wsteczny. W praktyce może to oznaczać znaczące zaległości składkowe w kraju przyjmującym wraz z odsetkami — dlatego pracodawca powinien na bieżąco monitorować faktyczny podział czasu pracy między kraje i reagować korektą wniosku A1, zanim ZUS sam stwierdzi nieprawidłowość.",
       "condition": null
     }
   ],
@@ -152,10 +152,11 @@
     }
   ],
   "edge_cases": [
-    "Pracownik zatrudniony na UoP w PL, ale mieszkający na Litwie, jedzie na delegację na Łotwę: dietę liczysz wg stawki kraju docelowego (Łotwa 57 EUR), a nie kraju zamieszkania; miejsce pracy w umowie i rezydencja podatkowa decydują o rozliczeniu PIT, nie miejsce zamieszkania.",
+    "Pracownik zatrudniony na UoP w PL, ale mieszkający na Litwie, jedzie na delegację na Łotwę: dietę liczysz wg stawki kraju docelowego (Łotwa 57 EUR), a nie kraju zamieszkania. Rozliczenie PIT zależy od rezydencji podatkowej pracownika — a ta wynika z faktycznego centrum interesów życiowych lub faktycznego pobytu powyżej 183 dni w danym kraju, nie z treści umowy o pracę ani miejsca pracy w niej wskazanego. Pracownik mieszkający na Litwie i posiadający tam centrum interesów życiowych będzie litewskim rezydentem podatkowym niezależnie od zapisów umowy; w takim przypadku zastosowanie ma litewsko-łotewska UPO i właściwe przepisy litewskie, a nie polskie zasady opodatkowania.",
     "A1 na 2 kraje (art. 13 rozp. 883/2004) wymaga, aby co najmniej 25% pracy wykonywanej było w kraju zamieszkania — jeśli faktycznie pracownik pracuje głównie za granicą na rzecz polskiego kontrahenta, właściwsze jest A1 z art. 12 (delegowanie do 24 miesięcy).",
     "Zleceniobiorca na jednorazowy wyjazd na targi do Niemiec (1-3 dni): A1 wymagane formalnie, ale w praktyce niemieckie służby rzadko kontrolują krótkie wyjazdy targowe — mimo to brak A1 to ryzyko składek w DE. Wynagrodzenie można wypłacać w PLN, jeśli umowa tak stanowi, ale przy pobycie powyżej kilku dni stosuje się niemiecką płacę minimalną (MiLoG, 12,82 EUR/h w 2025, zweryfikuj stawkę 2026).",
-    "Przy transporcie lotniczym moment rozpoczęcia delegacji zagranicznej = moment startu samolotu z ostatniego portu w PL (a nie przekroczenie granicy fizycznej); przy transporcie lądowym — przekroczenie granicy PL (§ 21 rozporządzenia o podróżach służbowych)."
+    "Przy transporcie lotniczym moment rozpoczęcia delegacji zagranicznej = moment startu samolotu z ostatniego portu w PL (a nie przekroczenie granicy fizycznej); przy transporcie lądowym — przekroczenie granicy PL (§ 21 rozporządzenia o podróżach służbowych).",
+    "Delegowanie do kraju spoza UE/EOG/Szwajcarii (np. Wielka Brytania post-Brexit, USA, Ukraina): rozporządzenie 883/2004 nie obowiązuje. Wielka Brytania post-Brexit objęta jest Umową o handlu i współpracy UE–UK (TCA, 24.12.2020), która przewiduje koordynację systemów zabezpieczenia społecznego — pracownik delegowany do UK na do 24 miesięcy może nadal podlegać ZUS w PL na podstawie ZUS US-3. Dla pozostałych krajów trzecich sprawdź, czy Polska zawarła z danym krajem dwustronną umowę o zabezpieczeniu społecznym (lista i wnioski dostępne na zus.pl w sekcji 'Pracujący poza UE, EOG lub Szwajcarią'); jeśli umowy brak — może wystąpić podwójne oskładkowanie. W zakresie PIT: zawsze sprawdź właściwą UPO z danym krajem lub jej brak — przy braku UPO dochód może być opodatkowany zarówno w PL, jak i za granicą, z możliwością zastosowania jednostronnych metod unikania podwójnego opodatkowania z art. 27 ust. 9 ustawy o PIT."
   ],
   "common_mistakes": [
     "Mylenie podróży służbowej z delegowaniem: jeśli miejsce pracy w umowie zostaje niezmienione, a wyjazd jest incydentalny — to podróż służbowa z dietami; jeśli miejsce pracy zmienia się aneksem — to delegowanie i diety nie przysługują, tylko wynagrodzenie wg prawa kraju przyjmującego.",
@@ -210,8 +211,44 @@
       "applied_at": "2026-04-18T14:13:34Z",
       "source": "v2",
       "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/765045,Delegowanie-pracownikow-do-pracy-za-granice-obowiazki-platnika-PIT.html"
+    },
+    {
+      "flag_type": "edge_case_coverage",
+      "flag_description": "Edge case o pracowniku z Litwy delegowanym na Łotwę zawiera stwierdzenie 'miejsce pracy w umowie i rezydencja podatkowa decydują o rozliczeniu PIT, nie miejsce zamieszkania' — to uproszczenie; rezydencja podatkowa w UE zależy od faktycznego pobytu (183 dni), a nie od umowy, co może wprowadzić w błąd.",
+      "applied_at": "2026-04-18T15:57:15Z",
+      "source": "v3",
+      "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/4642630,Rezydencja-podatkowa-zagranicznego-pracownika-jak-ja-okreslic-jaki-ma-wplyw-na-wyplacane-wynagrodzenie.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak procedury dla pracownika delegowanego do kraju spoza UE (np. Szwajcaria, Wielka Brytania post-Brexit) — draft skupia się na UE i EEA, ale nie wyjaśnia, czy zasady A1 i UPO mają zastosowanie.",
+      "applied_at": "2026-04-18T16:00:04Z",
+      "source": "v3",
+      "source_url": "https://www.zus.pl/en/pracujacy/pracujacy-w-ue-eog-szwajcarii/opis-spraw"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 7 wspomina 'ZUS przy A1 na 2 kraje weryfikuje po roku proporcje przychodów' — brak wyjaśnienia, co się dzieje, jeśli pracownik nie spełnia warunku 25% pracy w kraju zamieszkania; czy A1 jest cofane wstecz, czy od daty decyzji?",
+      "applied_at": "2026-04-18T16:02:46Z",
+      "source": "v3",
+      "source_url": "https://www.zus.pl/documents/10182/167567/Jak+otrzyma%C4%87+za%C5%9Bwiadczenie+A1+2023.pdf/aa3cf785-cf27-79c3-d7b3-972b8a05662f?t=1694599893780"
     }
   ],
+  "community_feedback_summary": {
+    "total_flags": 11,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "step_contradiction": 1,
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 2,
+      "legal_anchor_uncertainty": 1
+    },
+    "severity_breakdown": {
+      "medium": 9,
+      "low": 2
+    }
+  },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:57:13Z",
@@ -518,20 +555,5 @@
         "ui_label": "Sprawdź aktualność danych"
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 11,
-    "by_type": {
-      "outdated_data_risk": 2,
-      "step_contradiction": 1,
-      "missing_critical_info": 3,
-      "hallucination_risk": 2,
-      "edge_case_coverage": 2,
-      "legal_anchor_uncertainty": 1
-    },
-    "severity_breakdown": {
-      "medium": 9,
-      "low": 2
-    }
   }
 }

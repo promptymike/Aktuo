@@ -13,7 +13,7 @@
     {
       "step": 1,
       "action": "Ustal okres przechowywania akt dla każdego pracownika osobno",
-      "detail": "10 lat od końca roku kalendarzowego ustania stosunku pracy – dla pracowników zatrudnionych od 1.01.2019 (art. 94 pkt 9b KP). 50 lat – dla zatrudnionych przed 1.01.1999. Dla zatrudnionych między 1.01.1999 a 31.12.2018 okres wynosi 50 lat, chyba że pracodawca złożył ZUS OSW i raport ZUS RIA – wtedy 10 lat. Od tego zależy decyzja o kontynuacji lub założeniu nowych akt przy ponownym zatrudnieniu.",
+      "detail": "10 lat od końca roku kalendarzowego ustania stosunku pracy – dla pracowników zatrudnionych od 1.01.2019 (art. 94 pkt 9b KP). 50 lat – dla zatrudnionych przed 1.01.1999. Dla zatrudnionych między 1.01.1999 a 31.12.2018 okres wynosi 50 lat, chyba że pracodawca złożył ZUS OSW i raport ZUS RIA – wtedy 10 lat. Od tego zależy decyzja o kontynuacji lub założeniu nowych akt przy ponownym zatrudnieniu.\n\nUWAGA – zleceniobiorcy i umowy o dzieło: Reguły 10/50 lat wynikające z ustawy z 10.01.2018 r. dotyczą nie tylko pracowników na umowę o pracę, ale również zleceniobiorców (umowa zlecenie) – ZUS potwierdza, że dokumentację pracowniczą jako pracodawca czy zleceniodawca przechowujesz 10 lat (dla umów od 2019 r.) lub 50 lat (dla wcześniejszych, bez złożenia OSW+RIA). Umowa o dzieło jest odrębnym przypadkiem: jeśli nie rodzi obowiązku ubezpieczeniowego w ZUS (np. zawarta z osobą niebędącą pracownikiem zleceniodawcy), nie stosuje się do niej tych samych reguł przechowywania dokumentacji pracowniczej – dokumenty z umów o dzieło przechowuj przez okres wynikający z przepisów podatkowych i cywilnych (co do zasady 5 lat dla celów podatkowych), a nie 10/50 lat jak akta pracownicze.",
       "condition": null
     },
     {
@@ -58,12 +58,14 @@
     "Ponowne zatrudnienie bez dnia przerwy (np. zakończenie 31.12.2025 i zatrudnienie 2.01.2026 w związku z emeryturą pomostową) – jeśli pierwsze zatrudnienie było od 2019 r., kontynuujesz te same akta dokładając nową część B2; jeśli pierwsze było np. sprzed 1999 r. (50 lat), zakładasz nowe akta 10-letnie i kopiujesz do nich ważne badania i szkolenie BHP.",
     "Zmiana stanowiska pracy u tego samego pracodawcy bez rozwiązania umowy (aneks/wypowiedzenie zmieniające) – NIE zakładaj nowych akt, dokumenty dot. nowego stanowiska (zakres obowiązków, ewentualne nowe badania, szkolenie BHP stanowiskowe) wpinasz do istniejącej części B narastająco.",
     "Dokumenty sporządzone przed datą zatrudnienia (świadectwa pracy z poprzednich zakładów, dyplomy, orzeczenia z badań wstępnych) – wpinasz do części A z rzeczywistą datą dokumentu, nie z datą zatrudnienia. Numerujesz narastająco w kolejności wpinania, nie chronologicznie według dat dokumentów.",
-    "Kary porządkowe w części D – po roku nienagannej pracy (art. 113 KP) kara ulega zatarciu, a dokument należy usunąć z akt. Numerację części D można prowadzić 'od nowa' po usunięciu, ponieważ część D ma charakter dynamiczny (inaczej niż A, B, C)."
+    "Kary porządkowe w części D – po roku nienagannej pracy (art. 113 KP) kara ulega zatarciu, a dokument należy usunąć z akt. Numerację części D można prowadzić 'od nowa' po usunięciu, ponieważ część D ma charakter dynamiczny (inaczej niż A, B, C).",
+    "Zleceniobiorca zatrudniony na umowę zlecenie – reguły 10/50 lat dotyczą również zleceniodawców (ustawa z 10.01.2018); dokumentację zleceniobiorcy przechowujesz analogicznie jak pracownika. Umowa o dzieło bez tytułu ubezpieczeniowego w ZUS nie podlega tym samym regułom – dokumenty z takich umów przechowuj przez 5 lat dla celów podatkowych."
   ],
   "common_mistakes": [
     "Wpinanie do akt osobowych list obecności, ewidencji czasu pracy i wniosków urlopowych – to dokumentacja pozaaktowa prowadzona odrębnie; wpięcie jej do akt miesza dwie kategorie dokumentacji o różnym reżimie.",
     "Przepisywanie całego spisu treści od nowa po usunięciu jednego dokumentu (np. kserokopii dowodu) – prawidłowo zostawia się pierwotną numerację z adnotacją o usunięciu, co zachowuje transparentność historii akt wobec PIP.",
-    "Zakładanie nowych akt przy każdej nowej umowie u tego samego pracodawcy bez analizy okresu przechowywania – generuje niepotrzebne duplikaty dokumentów i utrudnia archiwizację; decyduje identyczność okresu 10/50 lat, a nie sam fakt zawarcia nowej umowy."
+    "Zakładanie nowych akt przy każdej nowej umowie u tego samego pracodawcy bez analizy okresu przechowywania – generuje niepotrzebne duplikaty dokumentów i utrudnia archiwizację; decyduje identyczność okresu 10/50 lat, a nie sam fakt zawarcia nowej umowy.",
+    "Stosowanie reguł 10/50 lat wyłącznie do umów o pracę i pomijanie zleceniobiorców – ustawa z 10.01.2018 obejmuje również zleceniodawców; błąd może skutkować przedwczesnym zniszczeniem dokumentacji lub brakiem jej wydania zleceniobiorcy."
   ],
   "related_questions": [
     "Jak wystawić i kiedy wydać pracownikowi informację o okresie przechowywania dokumentacji pracowniczej (przy świadectwie pracy)?",
@@ -97,6 +99,34 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 6 wspomina 'wydawana wraz ze świadectwem pracy' informacja o okresie przechowywania, ale nie precyzuje czy jest to obowiązkowy dokument, jaki powinien zawierać i czy pracodawca musi go archiwizować jako część akt.",
+      "applied_at": "2026-04-18T14:07:37Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak procedury dla dokumentów pracownika zatrudnionego na umowę zlecenie/umowę o dzieło – draft skupia się na stosunku pracy (KP), ale nie wyjaśnia czy te same reguły 10/50 lat dotyczą innych form zatrudnienia.",
+      "applied_at": "2026-04-18T15:55:03Z",
+      "source": "v3",
+      "source_url": "https://www.zus.pl/en/firmy/przedsiebiorco-przeczytaj-wazne/e-akta"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "step_contradiction": 2,
+      "missing_critical_info": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 3
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -314,26 +344,5 @@
         "ui_label": "Niepewność w kolejności kroków"
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "missing_critical_info",
-      "flag_description": "Krok 6 wspomina 'wydawana wraz ze świadectwem pracy' informacja o okresie przechowywania, ale nie precyzuje czy jest to obowiązkowy dokument, jaki powinien zawierać i czy pracodawca musi go archiwizować jako część akt.",
-      "applied_at": "2026-04-18T14:07:37Z",
-      "source": "v1"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "step_contradiction": 2,
-      "missing_critical_info": 2,
-      "hallucination_risk": 2,
-      "edge_case_coverage": 2
-    },
-    "severity_breakdown": {
-      "medium": 5,
-      "low": 3
-    }
   }
 }

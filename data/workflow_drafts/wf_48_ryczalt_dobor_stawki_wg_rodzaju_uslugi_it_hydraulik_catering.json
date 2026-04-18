@@ -18,30 +18,36 @@
     },
     {
       "step": 2,
+      "action": "Zweryfikuj warunek przychodowy uprawniający do stosowania ryczałtu",
+      "detail": "WARUNEK WSTĘPNY: ryczałt od przychodów ewidencjonowanych może stosować podatnik, którego przychody z działalności gospodarczej w poprzednim roku podatkowym nie przekroczyły limitu 2 000 000 euro (art. 6 ust. 4 ustawy o zryczałtowanym podatku dochodowym). Limit przelicza się na złote według średniego kursu euro ogłaszanego przez NBP na pierwszy dzień roboczy października roku poprzedniego — w praktyce odpowiada to kwocie ok. 8,5–9,6 mln zł rocznie. Podatnik przekraczający ten limit traci prawo do ryczałtu i musi rozliczać się na zasadach ogólnych lub podatkiem liniowym. Sprawdź ten warunek przed doborem stawki — jeśli klient zbliża się do limitu w bieżącym roku, zaplanuj zmianę formy opodatkowania na kolejny rok.",
+      "condition": "Weryfikuj zawsze przed wyborem lub kontynuacją ryczałtu"
+    },
+    {
+      "step": 3,
       "action": "Zweryfikuj stawkę wg art. 12 ust. 1 ustawy o ryczałcie dla konkretnego PKWiU",
       "detail": "Najczęstsze przyporządkowania 2026: IT — 12% dla programistów/doradców IT (art. 12 ust. 1 pkt 2b), 8,5% dla IT niezwiązanego z oprogramowaniem (wdrożenia, help-desk bez programowania); hydraulik — 5,5% dla robót budowlanych/nowych instalacji (art. 12 ust. 1 pkt 6 lit. a), 8,5% dla napraw/serwisu/konserwacji; księgowość — 17% wolny zawód (art. 12 ust. 1 pkt 1) dla biura bez pracowników i bez zlecania na zewnątrz, 15% (art. 12 ust. 1 pkt 2 lit. m) gdy zatrudnia pracowników lub zleca czynności; catering — 3% (art. 12 ust. 1 pkt 7 lit. b) przy sprzedaży gotowych posiłków, 8,5% przy samym transporcie; BHP — szkolenia BHP 8,5% jako usługi edukacyjne, doradztwo BHP 15% (art. 12 ust. 1 pkt 2 lit. m — usługi doradcze).",
       "condition": null
     },
     {
-      "step": 3,
+      "step": 4,
       "action": "Złóż wniosek o interpretację indywidualną lub opinię klasyfikacyjną GUS, jeśli stawka jest sporna",
       "detail": "UWAGA: WIS (Wiążąca Informacja Stawkowa) to instytucja z ustawy o VAT (art. 42c ust. 1 ustawy o VAT) — służy wyłącznie do ustalania stawek VAT, nie stawek ryczałtu PIT. Nie składaj WIS w celu potwierdzenia stawki ryczałtu, bo nie ma ona zastosowania w tym kontekście.\n\nDla ryczałtu PIT właściwe narzędzia to:\n1. Interpretacja indywidualna (art. 14b Ordynacji podatkowej) — składana do Dyrektora KIS (formularz ORD-IN, opłata 40 zł); wiąże organy podatkowe wobec wnioskodawcy i chroni podatnika, który się do niej zastosował; podatnik nie jest nią związany i może stosować inne podejście na własne ryzyko. Interpretacja indywidualna nie ma ustawowo określonego terminu ważności, ale traci moc ochronną, jeśli zmieni się stan prawny lub zostanie uchylona przez sąd administracyjny — należy monitorować aktualność i w razie zmiany przepisów wystąpić o nową.\n2. Opinia klasyfikacyjna GUS (Ośrodek Klasyfikacji i Nomenklatur w Łodzi) — potwierdza właściwy symbol PKWiU; nie wiąże organów podatkowych, ale stanowi silny dowód w kontroli.\n\nUS i infolinia KIS telefonicznie nie udzielą wiążącej odpowiedzi.",
       "condition": "if PKWiU jest niejednoznaczne lub czynność mieści się na granicy dwóch grupowań"
     },
     {
-      "step": 4,
+      "step": 5,
       "action": "Prowadź odrębną ewidencję przychodów dla każdej stawki",
       "detail": "Jeśli klient wykonuje usługi opodatkowane różnymi stawkami (np. hydraulik: montaż nowej instalacji 5,5% + serwis 8,5%), w ewidencji przychodów (Comarch Optima: Ryczałt → Ewidencja przychodów; WFirma: Ewidencje → Ewidencja przychodów ryczałt) zaznacz stawkę przy każdym wpisie. Bez podziału cały przychód opodatkujesz najwyższą stawką właściwą dla któregokolwiek rodzaju działalności.",
       "condition": "if podatnik świadczy usługi objęte różnymi stawkami"
     },
     {
-      "step": 5,
+      "step": 6,
       "action": "Dopasuj opis na fakturze do faktycznie wykonanej czynności i PKWiU",
       "detail": "Opis na fakturze musi odpowiadać rzeczywistej usłudze i PKWiU — opis 'usługa transportowa' przy przygotowywaniu posiłków będzie zakwestionowany. Dla bezpieczeństwa na fakturze podawaj PKWiU (nie jest obowiązkowe dla ryczałtowca, ale ułatwia obronę w kontroli). W Comarch Optima/Symfonia ustaw domyślne PKWiU na karcie usługi.",
       "condition": null
     },
     {
-      "step": 6,
+      "step": 7,
       "action": "Udokumentuj podstawę wyboru stawki w aktach klienta",
       "detail": "Zachowaj w teczce: opinię GUS, wydruk z klasyfikacji PKWiU, opis czynności, interpretację indywidualną. To kluczowe w razie kontroli — zgodnie ze zgłoszeniami z praktyki US i KIS nie udzielają telefonicznie wiążących odpowiedzi, ciężar dowodu spoczywa na podatniku (art. 9 ust. 1 ustawy o ryczałcie).",
       "condition": null
@@ -50,8 +56,28 @@
   "legal_anchors": [
     {
       "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 6 ust. 4",
+      "reason": "Określa limit przychodów uprawniający do stosowania ryczałtu — przychody z działalności gospodarczej w poprzednim roku podatkowym nie mogą przekroczyć 2 000 000 euro; przekroczenie limitu wyklucza możliwość stosowania ryczałtu w roku następnym."
+    },
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
       "article_number": "art. 12 ust. 1 pkt 2",
-      "reason": "Zawiera katalog usług objętych stawką 15% (m.in. księgowość z pracownikami, doradztwo, w tym doradztwo BHP) oraz 12% dla IT związanego z oprogramowaniem."
+      "reason": "Zawiera katalog usług objętych stawką 15% (m.in. księgowość z pracownikami, doradztwo, w tym doradztwo BHP) — odrębna jednostka redakcyjna od pkt 2b."
+    },
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 12 ust. 1 pkt 2b",
+      "reason": "Ustanawia stawkę 12% dla usług związanych z oprogramowaniem i doradztwem w zakresie informatyki — kluczowe dla rozróżnienia programistów (12%) od help-desku i administratorów sieci bez kodowania (8,5%)."
+    },
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 12 ust. 1 pkt 6 lit. a",
+      "reason": "Ustanawia stawkę 5,5% dla działalności wytwórczej i robót budowlanych — podstawa dla hydraulika wykonującego nowe instalacje lub kompleksowy montaż (PKWiU 43.22), w odróżnieniu od serwisu i napraw opodatkowanych 8,5%."
+    },
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 12 ust. 1 pkt 7 lit. b",
+      "reason": "Ustanawia stawkę 3% dla przychodów ze sprzedaży gotowych posiłków i dań (działalność gastronomiczna, PKWiU 56.21) — kluczowe dla cateringu, gdzie przygotowywanie posiłków podlega 3%, a sam transport gotowych dań cudzej produkcji — 8,5%."
     },
     {
       "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
@@ -76,7 +102,8 @@
     "Stosowanie jednej stawki na wszystko 'dla bezpieczeństwa' bez prowadzenia odrębnej ewidencji — przy mieszanych usługach podatnik może legalnie stosować różne stawki, ale wymaga to rozdzielenia w ewidencji (art. 12 ust. 3).",
     "Opieranie się na telefonicznej odpowiedzi US/KIS lub 'księgowej koleżanki' oraz na starych interpretacjach (sprzed nowelizacji 2021/2022) — od 2022 r. zmieniły się stawki dla IT (12%), doradztwa i wielu usług; interpretacje sprzed tej daty mogą być już nieaktualne.",
     "Mylenie pośrednictwa handlowego (8,5%) z doradztwem (15%) — przedstawiciel handlowy prezentujący produkt nie świadczy doradztwa w rozumieniu art. 12 ust. 1 pkt 2 lit. m.",
-    "Składanie wniosku o WIS (Wiążącą Informację Stawkową) w celu potwierdzenia stawki ryczałtu PIT — WIS dotyczy wyłącznie stawek VAT i nie ma zastosowania do ryczałtu; właściwym narzędziem jest interpretacja indywidualna (ORD-IN) składana do Dyrektora KIS."
+    "Składanie wniosku o WIS (Wiążącą Informację Stawkową) w celu potwierdzenia stawki ryczałtu PIT — WIS dotyczy wyłącznie stawek VAT i nie ma zastosowania do ryczałtu; właściwym narzędziem jest interpretacja indywidualna (ORD-IN) składana do Dyrektora KIS.",
+    "Nieweryfikowanie limitu przychodowego przed wyborem ryczałtu — podatnik, którego przychody w poprzednim roku przekroczyły 2 000 000 euro, nie może stosować ryczałtu w roku następnym (art. 6 ust. 4); przeoczenie tego warunku skutkuje koniecznością korekty rozliczeń za cały rok."
   ],
   "related_questions": [
     "Czy przy przejściu z zasad ogólnych na ryczałt od 1.01.2026 trzeba złożyć oświadczenie do US do 20 lutego, czy wystarczy wpis w CEIDG?",
@@ -108,6 +135,43 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 3 wspomina WIS (Wstępną Interpretację Stanowiska) ale nie wyjaśnia czy WIS dla ryczałtu jest wiążący dla podatnika czy tylko dla organów podatkowych. Brakuje też informacji o terminie ważności WIS i co robić gdy WIS wygaśnie.",
+      "applied_at": "2026-04-18T14:22:15Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/podatki/17,2,62,208059,nowe-regulacje-w-zakresie-wis.html"
+    },
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Art. 12 ust. 1 pkt 2b (IT 12%) nie jest cytowany w legal_anchors, choć jest kluczowy dla rozróżnienia programistów od help-desku. Brakuje też art. 12 ust. 1 pkt 7 lit. b (catering 3%) i pkt 6 lit. a (hydraulika 5,5%), które są wymienione w answer_steps ale nie w legal_anchors.",
+      "applied_at": "2026-04-18T16:25:18Z",
+      "source": "v3",
+      "source_url": "https://www.gofin.pl/podatki/17,1,61,315460,stawka-ryczaltu-dla-uslug-informatykow-wyrok-nsa.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wspomina o warunku przychodu (limit 300 tys. zł rocznie) jako warunku stosowania ryczałtu — podatnik mogący przekroczyć limit musi wiedzieć o tym przed wyborem stawki, a to nie jest uwzględnione w workflow.",
+      "applied_at": "2026-04-18T16:26:42Z",
+      "source": "v3",
+      "source_url": "https://www.biznes.gov.pl/pl/portal/00263"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 2
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -327,28 +391,5 @@
         "kb_records_used": 3
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "missing_critical_info",
-      "flag_description": "Step 3 wspomina WIS (Wstępną Interpretację Stanowiska) ale nie wyjaśnia czy WIS dla ryczałtu jest wiążący dla podatnika czy tylko dla organów podatkowych. Brakuje też informacji o terminie ważności WIS i co robić gdy WIS wygaśnie.",
-      "applied_at": "2026-04-18T14:22:15Z",
-      "source": "v2",
-      "source_url": "https://www.gofin.pl/podatki/17,2,62,208059,nowe-regulacje-w-zakresie-wis.html"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "step_contradiction": 1,
-      "missing_critical_info": 2,
-      "hallucination_risk": 2,
-      "edge_case_coverage": 2
-    },
-    "severity_breakdown": {
-      "medium": 6,
-      "low": 2
-    }
   }
 }

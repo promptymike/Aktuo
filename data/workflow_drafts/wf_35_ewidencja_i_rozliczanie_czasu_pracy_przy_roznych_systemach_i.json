@@ -24,8 +24,8 @@
     },
     {
       "step": 3,
-      "action": "Prowadź ewidencję czasu pracy zgodnie z § 6 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej",
-      "detail": "Ewidencja musi zawierać: liczbę przepracowanych godzin (w tym niedziele, święta, porę nocną, nadliczbowe), dni wolne z oznaczeniem, urlopy, zwolnienia, dyżury, nieobecności płatne i niepłatne. Dla zadaniowego czasu pracy, kierowników i ryczałtowców - nie ewidencjonuje się godzin (art. 149 § 2 KP), ale trzeba ewidencjonować dni pracy, urlopy i nieobecności. W Comarch Optima: moduł Płace i Kadry → Kalendarze → Plan pracy i Czas pracy; w Symfonia Kadry i Płace: Kartoteka → Ewidencja czasu pracy; w enova365: Kadry → Kalendarz pracownika.",
+      "action": "Prowadź ewidencję czasu pracy zgodnie z § 6 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej (tekst jednolity: Dz.U. 2024 poz. 535, ze zm., ostatnia zmiana: Dz.U. 2026 poz. 474)",
+      "detail": "Ewidencja musi zawierać: liczbę przepracowanych godzin (w tym niedziele, święta, porę nocną, nadliczbowe), dni wolne z oznaczeniem, urlopy, zwolnienia, dyżury, nieobecności płatne i niepłatne. Dla zadaniowego czasu pracy, kierowników i ryczałtowców - nie ewidencjonuje się godzin (art. 149 § 2 KP), ale trzeba ewidencjonować dni pracy, urlopy i nieobecności. Przed zastosowaniem § 6 należy zweryfikować aktualny tekst jednolity rozporządzenia (Dz.U. 2024 poz. 535) oraz ewentualne późniejsze zmiany (Dz.U. 2025 poz. 335, Dz.U. 2026 poz. 474), gdyż rozporządzenie było wielokrotnie nowelizowane po 2018 r. W Comarch Optima: moduł Płace i Kadry → Kalendarze → Plan pracy i Czas pracy; w Symfonia Kadry i Płace: Kartoteka → Ewidencja czasu pracy; w enova365: Kadry → Kalendarz pracownika.",
       "condition": null
     },
     {
@@ -118,6 +118,36 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brakuje wyjaśnienia jak rozliczać pracę w niedzielę (art. 151a KP) - draft skupia się na sobocie i dniu wolnym z 5-dniowego tygodnia, ale nie porusza pracy w niedzielę i wymaganych dodatków.",
+      "applied_at": "2026-04-18T14:20:03Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Rozporządzenie MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej (step 3) - wymaga weryfikacji czy w 2026 nie zostało zmienione lub zastąpione nowszym rozporządzeniem dotyczącym ewidencji czasu pracy.",
+      "applied_at": "2026-04-18T16:22:44Z",
+      "source": "v3",
+      "source_url": "https://przepisy.gofin.pl/przepisy,2,18,34,5070,,20230321,rozporzadzenie-ministra-rodziny-pracy-i-polityki-spolecznej.html"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 6,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "missing_critical_info": 1,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 1,
+      "step_contradiction": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 2
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -313,28 +343,5 @@
         "ui_label": "Niepewność w kolejności kroków"
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "missing_critical_info",
-      "flag_description": "Brakuje wyjaśnienia jak rozliczać pracę w niedzielę (art. 151a KP) - draft skupia się na sobocie i dniu wolnym z 5-dniowego tygodnia, ale nie porusza pracy w niedzielę i wymaganych dodatków.",
-      "applied_at": "2026-04-18T14:20:03Z",
-      "source": "v1"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 6,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "outdated_data_risk": 1,
-      "missing_critical_info": 1,
-      "hallucination_risk": 1,
-      "edge_case_coverage": 1,
-      "step_contradiction": 1
-    },
-    "severity_breakdown": {
-      "medium": 4,
-      "low": 2
-    }
   }
 }

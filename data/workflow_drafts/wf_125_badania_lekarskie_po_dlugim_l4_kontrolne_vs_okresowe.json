@@ -36,8 +36,8 @@
     },
     {
       "step": 5,
-      "action": "Określ datę wykonania badania i moment dopuszczenia do pracy",
-      "detail": "Skierowanie możesz wystawić jeszcze w trakcie trwania L4 (z datą wystawienia podczas zwolnienia) — przepisy tego nie zakazują. Natomiast SAMO BADANIE pracownik wykonuje dopiero po zakończeniu L4, ponieważ w trakcie zwolnienia jest niezdolny do pracy. Do pracy dopuszczasz pracownika dopiero po dostarczeniu orzeczenia lekarskiego o braku przeciwwskazań.",
+      "action": "Określ datę wystawienia skierowania i moment dopuszczenia do pracy",
+      "detail": "Skierowanie wystawiasz w dniu stawienia się pracownika w pracy po zakończeniu L4 — dominująca praktyka (potwierdzona przez forum.gofin.pl) wskazuje, że skierowanie powinno być wystawione dopiero w dniu powrotu pracownika, nie w trakcie trwania zwolnienia. W trakcie L4 pracownik jest niezdolny do pracy i nie powinien wykonywać badań. Do pracy dopuszczasz pracownika dopiero po dostarczeniu orzeczenia lekarskiego o braku przeciwwskazań.",
       "condition": null
     },
     {
@@ -48,6 +48,12 @@
     },
     {
       "step": 7,
+      "action": "Postępuj w przypadku odmowy lub niestawienia się pracownika na badania kontrolne",
+      "detail": "Jeśli pracownik nie zgłosi się na badania kontrolne w wyznaczonym terminie lub odmówi ich wykonania: (1) NIE dopuszczaj pracownika do pracy — brak orzeczenia lekarskiego o braku przeciwwskazań uniemożliwia dopuszczenie do pracy; (2) Za czas niewykonywania pracy z winy pracownika (brak orzeczenia wskutek odmowy lub niestawienia się) pracownikowi NIE przysługuje wynagrodzenie; (3) Nieusprawiedliwiona nieobecność uniemożliwiająca skierowanie na badanie oraz odmowa poddania się badaniu kontrolnemu mogą stanowić podstawę rozwiązania umowy o pracę bez wypowiedzenia z winy pracownika (art. 52 KP). Udokumentuj każdy przypadek odmowy lub niestawienia się pisemnie (notatka służbowa, wezwanie do stawienia się na badania) — dokumentacja jest niezbędna w razie ewentualnego sporu pracowniczego lub kontroli PIP. (Źródło: biznes.gov.pl)",
+      "condition": "jeśli pracownik odmawia badań kontrolnych lub nie stawia się w wyznaczonym terminie"
+    },
+    {
+      "step": 8,
       "action": "Udokumentuj i zarchiwizuj orzeczenia w aktach osobowych",
       "detail": "Oryginały orzeczeń wpinasz do części B akt osobowych (zgodnie z § 3 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej). W systemie kadrowym (Enova365: Kadry → Dokumenty pracownika; Optima: Kadry → Dokumenty) wprowadź nową datę ważności badań okresowych, aby system poprawnie przypominał o kolejnym terminie.",
       "condition": null
@@ -114,7 +120,7 @@
   "common_mistakes": [
     "Wystawienie tylko skierowania na badania kontrolne, gdy okresowe wygasły w trakcie L4 — orzeczenie kontrolne ważne jest tylko do pierwotnej daty okresowego, więc już następnego dnia pracownik pracuje bez ważnych badań.",
     "Kierowanie pracownika na badania kontrolne po równo 30-dniowym L4 — przepis wymaga niezdolności DŁUŻEJ NIŻ 30 dni; przy 30 dniach kontrolne nie są wymagane.",
-    "Wysyłanie pracownika na badania wstępne/kontrolne w TRAKCIE trwania L4 — pracownik jest niezdolny do pracy, nie może wykonać badania. Skierowanie można wystawić wcześniej, ale badanie dopiero po zakończeniu zwolnienia."
+    "Wysyłanie pracownika na badania wstępne/kontrolne w TRAKCIE trwania L4 — pracownik jest niezdolny do pracy, nie może wykonać badania. Skierowanie wystawia się w dniu stawienia się pracownika w pracy po zakończeniu zwolnienia, nie wcześniej."
   ],
   "related_questions": [
     "Czy badania wstępne u poprzedniego pracodawcy można wykorzystać u nowego pracodawcy i w jakich warunkach (art. 229 § 11 KP)?",
@@ -147,6 +153,42 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 229 § 2 KP, art. 163 § 3 KP, art. 304 KP, art. 229 § 11 KP i § 3 rozporządzenia MRPiPS z 10.12.2018. Brak formalnego zakotwiczenia tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania.",
+      "applied_at": "2026-04-18T14:02:06Z",
+      "source": "v2",
+      "source_url": "https://przepisy.gofin.pl/przepisy,6,18,34,5070,216683,20181219,3-rozporzadzenie-ministra-rodziny-pracy-i-polityki.html"
+    },
+    {
+      "flag_type": "step_contradiction",
+      "flag_description": "Krok 5 stwierdza 'skierowanie możesz wystawić jeszcze w trakcie trwania L4', ale krok 3 i 4 mówią o 'dniu planowanego powrotu' i 'dniu powrotu' — brak jasności, czy data wystawienia skierowania powinna być datą w trakcie L4, czy datą powrotu, co może prowadzić do błędów administracyjnych.",
+      "applied_at": "2026-04-18T15:34:48Z",
+      "source": "v3",
+      "source_url": "https://forum.gofin.pl/1455761/archiwum/badania-kontrolne-po-l4-i-kolejne-zwolnienie-bez-powrotu-do"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia, co zrobić, gdy pracownik nie zgłosi się na badania kontrolne w wyznaczonym terminie po powrocie z L4 — brak procedury eskalacji, możliwości zawieszenia pracy czy sankcji pracowniczych, co jest kluczowe dla praktyki HR.",
+      "applied_at": "2026-04-18T15:35:58Z",
+      "source": "v3",
+      "source_url": "https://www.biznes.gov.pl/pl/portal/00183"
+    }
+  ],
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 3,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 2
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -331,27 +373,5 @@
         "ui_label": "Możliwe brakujące informacje"
       }
     ]
-  },
-  "corrections_applied": [
-    {
-      "flag_type": "legal_anchor_uncertainty",
-      "flag_description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 229 § 2 KP, art. 163 § 3 KP, art. 304 KP, art. 229 § 11 KP i § 3 rozporządzenia MRPiPS z 10.12.2018. Brak formalnego zakotwiczenia tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania.",
-      "applied_at": "2026-04-18T14:02:06Z",
-      "source": "v2",
-      "source_url": "https://przepisy.gofin.pl/przepisy,6,18,34,5070,216683,20181219,3-rozporzadzenie-ministra-rodziny-pracy-i-polityki.html"
-    }
-  ],
-  "community_feedback_summary": {
-    "total_flags": 7,
-    "by_type": {
-      "outdated_data_risk": 1,
-      "step_contradiction": 2,
-      "missing_critical_info": 3,
-      "hallucination_risk": 1
-    },
-    "severity_breakdown": {
-      "medium": 5,
-      "low": 2
-    }
   }
 }

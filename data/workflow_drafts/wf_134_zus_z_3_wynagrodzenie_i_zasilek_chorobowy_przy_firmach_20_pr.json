@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Rozlicz wynagrodzenie chorobowe u pracodawcy za pierwsze 33/14 dni",
-      "detail": "W programie (Comarch Optima: Kadry i Płace → Listy płac → nieobecność 'Zwolnienie chorobowe'; Symfonia Kadry i Płace: moduł 'Nieobecności') wprowadź L4, program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze) i ograniczy do 33 dni w roku kalendarzowym (14 dni dla ukończonych 50 lat od roku następnego po urodzinach). Weryfikuj licznik dni — jeśli pracownik zużył 33/14 dni u poprzedniego pracodawcy w tym samym roku, od pierwszego dnia u Ciebie idzie już zasiłek z ZUS.",
+      "detail": "W programie (Comarch Optima: Kadry i Płace → Listy płac → nieobecność 'Zwolnienie chorobowe'; Symfonia Kadry i Płace: moduł 'Nieobecności') wprowadź L4, program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze) i ograniczy do 33 dni w roku kalendarzowym (14 dni dla ukończonych 50 lat od roku następnego po urodzinach). Weryfikuj licznik dni — jeśli pracownik zużył 33/14 dni u poprzedniego pracodawcy w tym samym roku, od pierwszego dnia u Ciebie idzie już zasiłek z ZUS.\n\nUWAGA — obliczenie podstawy przy zmiennym wynagrodzeniu lub urlopie w okresie obliczeniowym: program nie zawsze poprawnie ustali podstawę w niestandardowych sytuacjach. Zastosuj procedurę z art. 36–37 ustawy zasiłkowej:\n\n1. Podstawa wymiaru to przeciętne miesięczne wynagrodzenie z 12 miesięcy kalendarzowych poprzedzających miesiąc niezdolności (lub z faktycznego okresu zatrudnienia, jeśli krótszego).\n\n2. Wyłącz z okresu obliczeniowego miesiące, w których pracownik przepracował mniej niż połowę obowiązującego go czasu pracy (np. z powodu urlopu bezpłatnego, choroby, urlopu wychowawczego) — takie miesiące nie wchodzą do podstawy.\n\n3. Uzupełnij wynagrodzenie za miesiące, w których pracownik przepracował co najmniej połowę czasu pracy, ale nie przepracował pełnego miesiąca (np. był na urlopie wypoczynkowym lub chorobowym przez część miesiąca): wynagrodzenie stałe uzupełnia się do pełnej miesięcznej stawki; wynagrodzenie zmienne (prowizje, premie miesięczne, nadgodziny) uzupełnia się proporcjonalnie — dzieląc faktycznie wypłacone składniki przez liczbę dni przepracowanych i mnożąc przez liczbę dni roboczych w danym miesiącu.\n\n4. Składniki wynagrodzenia wypłacane za okresy dłuższe niż miesiąc (np. premie kwartalne, roczne) uwzględnia się w podstawie w wysokości 1/12 sumy wypłaconej za 12 miesięcy poprzedzających miesiąc niezdolności.\n\n5. Po ustaleniu podstawy odejmij składki na ubezpieczenia społeczne finansowane przez pracownika (łącznie 13,71% podstawy wymiaru składek).\n\nJeśli sytuacja płacowa pracownika jest niestandardowa (zmiana etatu w okresie obliczeniowym, wynagrodzenie wyłącznie prowizyjne, brak pełnych 12 miesięcy zatrudnienia), zweryfikuj wyliczenie programu ręcznie lub skonsultuj z ZUS przed wypłatą.",
       "condition": null
     },
     {
@@ -30,8 +30,8 @@
     },
     {
       "step": 4,
-      "action": "Przy kolejnych L4 w ramach ciągłości składaj wniosek o kontynuację",
-      "detail": "Każde kolejne zaświadczenie lekarskie wymaga odrębnego wniosku o wypłatę świadczenia — złóż ZAS-53 (wniosek o zasiłek chorobowy) lub kolejne Z-3 z adnotacją 'kontynuacja'. Jeśli nie ma przerwy w niezdolności — liczy się jeden okres zasiłkowy (max 182 dni; 270 dni przy ciąży i gruźlicy — art. 8 ustawy zasiłkowej). Program płacowy często nie 'wie' o wyczerpaniu 33 dni, dlatego ręcznie skoryguj listę płac i przestaw pozycję na 'zasiłek płatny przez ZUS' od właściwego dnia.",
+      "action": "Przy kolejnych L4 uwzględnij zasady sumowania dni i okresu zasiłkowego",
+      "detail": "Każde kolejne zaświadczenie lekarskie wymaga odrębnego wniosku o wypłatę świadczenia — złóż ZAS-53 (wniosek o zasiłek chorobowy) lub kolejne Z-3 z adnotacją 'kontynuacja'. Kluczowe zasady dotyczące liczników:\n\n1. Licznik 33/14 dni wynagrodzenia chorobowego (art. 92 KP): NIE resetuje się przy przerwie między L4 — wszystkie okresy niezdolności w danym roku kalendarzowym sumują się niezależnie od długości przerw między nimi. Przykład: pracownik chorował 20 dni w marcu, przerwa 2 miesiące, potem nowe L4 — do limitu 33 dni zostało mu już tylko 13 dni wynagrodzenia chorobowego.\n\n2. Okres zasiłkowy (max 182 dni; 270 dni przy ciąży i gruźlicy — art. 8 ustawy zasiłkowej): do jednego okresu zasiłkowego zlicza się okresy niezdolności do pracy, nawet jeżeli wystąpiły między nimi przerwy, jeśli przerwa wynosi mniej niż 60 dni. Przerwa wynosząca co najmniej 60 dni powoduje, że kolejna niezdolność otwiera nowy okres zasiłkowy.\n\nProgram płacowy często nie 'wie' o wyczerpaniu 33 dni, dlatego ręcznie skoryguj listę płac i przestaw pozycję na 'zasiłek płatny przez ZUS' od właściwego dnia.",
       "condition": "if niezdolność trwa dalej po 33/14 dniach i wystawiono kolejne L4"
     },
     {
@@ -56,7 +56,7 @@
   "legal_anchors": [],
   "edge_cases": [
     "Pracownik 50+ — od roku kalendarzowego następującego po roku, w którym ukończył 50 lat, pracodawca płaci wynagrodzenie chorobowe tylko za 14 dni (a nie 33), reszta to zasiłek z ZUS (art. 92 § 1 pkt 1 KP).",
-    "Wyczerpanie 33/14 dni u poprzedniego pracodawcy w tym samym roku kalendarzowym — nowy pracodawca od pierwszego dnia L4 składa Z-3, bo limit dni jest roczny i sumuje się między pracodawcami; świadectwo pracy powinno wskazywać wykorzystane dni.",
+    "Wyczerpanie 33/14 dni u poprzedniego pracodawcy w tym samym roku kalendarzowym — nowy pracodawca od pierwszego dnia L4 składa Z-3, bo limit dni jest roczny i sumuje się między pracodawcami. Ważne ograniczenie: świadectwo pracy zawiera informację o liczbie dni wynagrodzenia chorobowego WYŁĄCZNIE w roku kalendarzowym, w którym ustał stosunek pracy (§ 2 ust. 1 pkt 6 lit. c rozporządzenia w sprawie świadectwa pracy). Jeśli pracownik zmienił pracodawcę w poprzednim roku kalendarzowym, nowy pracodawca nie uzyska tej informacji ze świadectwa. W przypadku braku lub niekompletności danych: (1) poproś pracownika o pisemne oświadczenie o liczbie dni wynagrodzenia chorobowego wykorzystanych u poprzedniego pracodawcy w bieżącym roku — pracownik ponosi odpowiedzialność za prawdziwość oświadczenia; (2) zweryfikuj dane w ZUS przez PUE (zakładka Ubezpieczony → historia świadczeń) lub złóż zapytanie do ZUS o historię wypłat; (3) jeśli dane są sprzeczne lub budzą wątpliwości, zachowaj ostrożność i od pierwszego dnia L4 traktuj świadczenie jako zasiłek z ZUS, składając Z-3 — ZUS samodzielnie ustali stan faktyczny.",
     "Zleceniobiorca z dobrowolną składką chorobową — wynagrodzenie chorobowe z art. 92 KP NIE przysługuje; od pierwszego dnia niezdolności idzie zasiłek z ZUS na podstawie Z-3a, pod warunkiem 90 dni nieprzerwanego okresu wyczekiwania (art. 4 ust. 1 pkt 2 ustawy zasiłkowej).",
     "Niezdolność po ustaniu zatrudnienia — zasiłek przysługuje, jeśli niezdolność powstała nie później niż w ciągu 14 dni od ustania tytułu (60 dni przy chorobie zakaźnej o okresie wylęgania >14 dni) i trwa nieprzerwanie min. 30 dni (art. 7 ustawy zasiłkowej)."
   ],
@@ -98,6 +98,43 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "step_contradiction": 1,
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 3
+    }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia, jak postępować, gdy pracownik ma przerwę między L4 (np. 18.11–30.11, potem przerwa, potem nowe L4) — czy licznik 33 dni resetuje się, czy nie? Krok 4 wspomina 'jeśli nie ma przerwy', ale nie definiuje długości przerwy kwalifikującej jako przerwę.",
+      "applied_at": "2026-04-18T15:39:54Z",
+      "source": "v3",
+      "source_url": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-chorobowy/z-ubezpieczenia-chorobowego/prawo-do-zasilku-i-okres-przyslugiwania"
+    },
+    {
+      "flag_type": "edge_case_coverage",
+      "flag_description": "Edge case 'Wyczerpanie 33/14 dni u poprzedniego pracodawcy' zakłada, że świadectwo pracy zawsze wskaże wykorzystane dni — w praktyce może to być niejasne lub brakować; draft nie opisuje procedury weryfikacji, jeśli pracownik nie ma świadectwa lub liczby się nie zgadzają.",
+      "applied_at": "2026-04-18T15:41:19Z",
+      "source": "v3",
+      "source_url": "https://www.gofin.pl/prawo-pracy/17,2,101,223197,okresy-nieskladkowe-i-dodatkowe-informacje-w-swiadectwie.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 2 wspomina 'program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze)', ale nie wyjaśnia, jak obsługiwać sytuacje, gdy pracownik ma zmienną pensję lub urlop w okresie obliczeniowym — brakuje procedury dla obliczenia podstawy.",
+      "applied_at": "2026-04-18T15:43:02Z",
+      "source": "v3",
+      "source_url": "https://ksiegowosc.infor.pl/zus-kadry/urlopy/128956,Zmienne-skladniki-wynagrodzenia-w-podstawie-wymiaru-zasilku-chorobowego-i-wynagrodzenia-za-urlop-wypoczynkowy.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:55:44Z",
@@ -316,19 +353,5 @@
         "ui_label": "Możliwe brakujące informacje"
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "step_contradiction": 1,
-      "missing_critical_info": 3,
-      "hallucination_risk": 2,
-      "edge_case_coverage": 1,
-      "outdated_data_risk": 1
-    },
-    "severity_breakdown": {
-      "medium": 5,
-      "low": 3
-    }
   }
 }

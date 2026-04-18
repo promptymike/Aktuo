@@ -31,7 +31,7 @@
     {
       "step": 4,
       "action": "Księguj każdą fakturę sprzedaży B2B pojedynczo (bez zapisu zbiorczego)",
-      "detail": "Od 1.01.2026 r. wyłączono z katalogu dowodów księgowych dzienne zestawienia faktur sprzedaży — nie wolno już księgować zbiorczą kwotą na koniec miesiąca. Każda faktura sprzedaży (nie wystawiona do paragonu) idzie do KPiR z osobnym wpisem, z numerem KSeF w kolumnie 3 i NIP kontrahenta w kolumnie 5. Zapisy można dokonywać najpóźniej do 20. dnia miesiąca następującego po miesiącu uzyskania przychodu — źródło: https://www.gofin.pl/rachunkowosc/17,2,84,259168,ksiega-podatkowa-na-2026-r-wedlug-nowych-zasad.html",
+      "detail": "Od 1.01.2026 r. wyłączono z katalogu dowodów księgowych dzienne zestawienia faktur sprzedaży — nie wolno już księgować zbiorczą kwotą na koniec miesiąca. Każda faktura sprzedaży (nie wystawiona do paragonu) idzie do KPiR z osobnym wpisem i NIP kontrahenta w kolumnie 5. Nowy wzór KPiR 2026 wprowadza dwie odrębne kolumny dla numeru dowodu: kolumna 3 przeznaczona wyłącznie dla numeru KSeF (dotyczy podatników objętych obowiązkiem KSeF od 1.02.2026 r., tj. co do zasady podatników VAT czynnych z obrotem powyżej 10 000 zł miesięcznie), natomiast kolumna 4 służy do wpisania numeru dowodu innego niż faktura wystawiona w KSeF — w tej kolumnie ujmuje się faktury papierowe, faktury wystawione przez podatników korzystających z odroczenia obowiązku KSeF do 2027 r. (np. sprzedaż poniżej progu) oraz faktury wystawione przed 1.01.2026 r. Jeżeli faktura nie ma numeru KSeF, kolumnę 3 pozostawia się pustą i wypełnia wyłącznie kolumnę 4. Zapisy można dokonywać najpóźniej do 20. dnia miesiąca następującego po miesiącu uzyskania przychodu — źródło: https://www.gofin.pl/rachunkowosc/17,2,84,259168,ksiega-podatkowa-na-2026-r-wedlug-nowych-zasad.html",
       "condition": null
     },
     {
@@ -48,8 +48,8 @@
     },
     {
       "step": 7,
-      "action": "Zweryfikuj obowiązek drukowania raportów zerowych i dokumentuj brak sprzedaży",
-      "detail": "Przepisy o kasach rejestrujących wymagają drukowania okresowych raportów fiskalnych także w miesiącach bez sprzedaży, o ile kasa taką funkcję posiada. Jeżeli kasa technicznie nie drukuje raportów zerowych — udokumentuj to pisemnym oświadczeniem podatnika i ewentualnym pismem serwisu kas. Przy kontroli US nie wystarczy samo oświadczenie o braku sprzedaży. W razie wątpliwości — zapytaj KIS pisemnie o stan faktyczny (wniosek o interpretację indywidualną)",
+      "action": "Dokumentuj brak sprzedaży w miesiącu — raport zerowy NIE jest obowiązkowy",
+      "detail": "Przepisy o kasach rejestrujących NIE nakładają obowiązku sporządzania raportów fiskalnych (dobowych ani miesięcznych) w okresach, w których nie wystąpiła sprzedaż podlegająca ewidencjonowaniu — obowiązek sporządzenia raportu jest uzależniony wyłącznie od wystąpienia sprzedaży. Jeżeli w danym miesiącu nie było żadnej transakcji na kasie, podatnik nie musi drukować raportu zerowego, nawet jeśli kasa technicznie taką funkcję posiada. Brak sprzedaży należy jednak udokumentować na potrzeby ewentualnej kontroli US: (a) pisemnym oświadczeniem podatnika o braku sprzedaży w danym okresie, (b) ewentualnie wydrukiem z kasy potwierdzającym zerowe obroty (jeśli kasa umożliwia taki wydruk — pomocniczo, nie obowiązkowo). Podatnicy nieposiadający kasy fiskalnej (zwolnienie podmiotowe lub przedmiotowe) dokumentują brak sprzedaży analogicznie — oświadczeniem lub brakiem wpisów w ewidencji sprzedaży. W razie wątpliwości co do konkretnego stanu faktycznego — złóż wniosek o interpretację indywidualną do KIS — źródło: https://ksiegowosc.infor.pl/podatki/vat/kasy-fiskalne/717526,Brak-sprzedazy-podlegajacej-ewidencjonowaniu-na-kasie-fiskalnej-a-obowiazek-generowania-raportow-zerowych.html",
       "condition": "if klient nie miał sprzedaży w miesiącu lub ma problemy techniczne z kasą"
     }
   ],
@@ -78,7 +78,7 @@
   ],
   "related_questions": [
     "Jak w 2026 r. dokumentować i księgować zwroty towarów zarejestrowane na kasie fiskalnej — ewidencja zwrotów czy dowód wewnętrzny?",
-    "Czy od 1.02.2026 r. faktura wystawiona w KSeF do sprzedaży już zaewidencjonowanej na kasie fiskalnej wymaga przekazania wizualizacji klientowi i jakie nowe oznaczenia w JPK_V7M(3) ją dotyczą?",
+    "Czy faktura wystawiona dobrowolnie w KSeF do sprzedaży już zaewidencjonowanej na kasie fiskalnej (art. 106gb ust. 4 ustawy o VAT) wymaga przekazania konsumentowi wizualizacji — i jakie oznaczenia w JPK_V7 ją dotyczą? (uwaga: do końca 2026 r. faktury do sprzedaży kasowej mogą być wystawiane poza KSeF na podstawie przepisów przejściowych; obowiązek przekazania wizualizacji KSeF konsumentowi powstaje wyłącznie gdy sprzedawca dobrowolnie wystawi fakturę w KSeF — brak bezwzględnego obowiązku wystawiania wizualizacji KSeF przy sprzedaży kasowej od 1.02.2026 r.)",
     "Jak prawidłowo księgować w KPiR sprzedaż nierejestrowaną (nieewidencjonowaną działalność do limitu 75% minimalnego wynagrodzenia) prowadzoną obok JDG?"
   ],
   "last_verified_at": "2026-04-18",
@@ -108,6 +108,42 @@
     "batch": "batch2",
     "used_web_search": true
   },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "hallucination_risk": 2,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 2
+    }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "hallucination_risk",
+      "flag_description": "Obowiązek wystawienia wizualizacji faktury KSeF klientowi przy sprzedaży zaewidencjonowanej na kasie (related_questions) — nie ma jasnego potwierdzenia w przepisach, że taki obowiązek istnieje od 1.02.2026 r.; może to być błędna interpretacja.",
+      "applied_at": "2026-04-18T15:30:50Z",
+      "source": "v3",
+      "source_url": "https://ksef.podatki.gov.pl/media/3zidazbw/podrecznik-ksef-2-0-cz-ii-wystawianie-i-otrzymywane-faktur-w-ksef.pdf"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 4 wymaga wpisania numeru KSeF w kolumnie 3 KPiR, ale nie wyjaśnia, co robić z fakturami wystawionymi przed 1.01.2026 r. (przed obowiązkiem KSeF) lub z fakturami papierowymi; brakuje warunku dla podatników bez KSeF.",
+      "applied_at": "2026-04-18T15:32:22Z",
+      "source": "v3",
+      "source_url": "https://gofin.pl/rachunkowosc/17,2,84,259168,ksiega-podatkowa-na-2026-r-wedlug-nowych-zasad.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 7 o raportach zerowych — procedura jest niejasna; nie wyjaśnia, czy raport zerowy musi być drukowany co miesiąc, czy tylko gdy kasa to umożliwia, ani jak dokumentować brak sprzedaży w systemach bez kasy fiskalnej.",
+      "applied_at": "2026-04-18T15:33:48Z",
+      "source": "v3",
+      "source_url": "https://ksiegowosc.infor.pl/podatki/vat/kasy-fiskalne/717526,Brak-sprzedazy-podlegajacej-ewidencjonowaniu-na-kasie-fiskalnej-a-obowiazek-generowania-raportow-zerowych.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:54:42Z",
@@ -376,18 +412,5 @@
         "ui_label": "Sprawdź aktualność danych"
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "outdated_data_risk": 2,
-      "hallucination_risk": 2,
-      "missing_critical_info": 2,
-      "edge_case_coverage": 2
-    },
-    "severity_breakdown": {
-      "medium": 6,
-      "low": 2
-    }
   }
 }

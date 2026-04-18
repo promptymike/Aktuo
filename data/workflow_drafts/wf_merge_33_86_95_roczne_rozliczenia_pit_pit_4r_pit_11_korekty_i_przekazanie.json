@@ -43,7 +43,7 @@
     {
       "step": 6,
       "action": "Wdrożyć elektroniczne przekazywanie PIT-11 pracownikom",
-      "detail": "Zbierz od pracownika pisemną zgodę (papier lub skan podpisanego oświadczenia) na bezterminowe otrzymywanie PIT-11 na wskazany adres e-mail. PIT-11 dla pracownika musi być opatrzony podpisem kwalifikowanym płatnika LUB w formie PDF wygenerowanego z UPO z e-Deklaracji (UPO jest dowodem złożenia wersji oficjalnej). Praktyka: wysyłka w dwóch mailach — PDF zahasłowany + hasło osobnym mailem/SMS-em; alternatywnie portal pracownika (e-Pracownik w Comarch Optima, Platforma Pracownika w Enova, Symfonia e-Pracownik).",
+      "detail": "Zbierz od pracownika pisemną zgodę (papier lub skan podpisanego oświadczenia) na bezterminowe otrzymywanie PIT-11 na wskazany adres e-mail. PIT-11 przekazywany pracownikowi drogą elektroniczną MUSI być w formacie nieedytowalnym (PDF) podpisanym kwalifikowanym podpisem elektronicznym płatnika — jest to jedyna prawnie skuteczna forma elektroniczna przy przekazaniu dokumentu pracownikowi. UWAGA: UPO (Urzędowe Poświadczenie Odbioru) z e-Deklaracji potwierdza wyłącznie złożenie PIT-11 do urzędu skarbowego i NIE zastępuje podpisu kwalifikowanego na dokumencie przekazywanym pracownikowi — są to dwa odrębne wymogi. Praktyka bezpiecznego przesyłania: wysyłka w dwóch mailach — PDF zahasłowany + hasło osobnym mailem lub SMS-em; alternatywnie portal pracownika zabezpieczony loginem i hasłem (e-Pracownik w Comarch Optima, Platforma Pracownika w Enova, Symfonia e-Pracownik) — w tym przypadku plik udostępniony na portalu również musi być podpisany kwalifikowanym podpisem elektronicznym.",
       "condition": "if firma chce zrezygnować z wydawania PIT-11 papierowo"
     },
     {
@@ -110,6 +110,21 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "community_feedback_summary": {
+    "total_flags": 9,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 5,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 1,
+      "high": 1
+    }
   },
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
@@ -276,19 +291,13 @@
       }
     ]
   },
-  "community_feedback_summary": {
-    "total_flags": 9,
-    "by_type": {
-      "legal_anchor_uncertainty": 1,
-      "outdated_data_risk": 1,
-      "step_contradiction": 1,
-      "missing_critical_info": 5,
-      "hallucination_risk": 1
-    },
-    "severity_breakdown": {
-      "medium": 7,
-      "low": 1,
-      "high": 1
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 6 stwierdza, że PIT-11 dla pracownika 'musi być opatrzony podpisem kwalifikowanym płatnika LUB w formie PDF z UPO' — brakuje wyjaśnienia, czy oba warianty są równoprawne, czy jeden jest preferowany; brakuje też informacji o wymaganiach dotyczących bezpieczeństwa przesyłania (szyfrowanie, hasła).",
+      "applied_at": "2026-04-18T16:33:13Z",
+      "source": "v3",
+      "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/5203571,Jak-dostarczyc-pracownikowi-PIT11.html"
     }
-  }
+  ]
 }

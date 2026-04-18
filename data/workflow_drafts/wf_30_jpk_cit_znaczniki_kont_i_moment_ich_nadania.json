@@ -48,6 +48,12 @@
     },
     {
       "step": 7,
+      "action": "Postępuj ostrożnie przy zmianie systemu FK w trakcie 2026 roku",
+      "detail": "Jeśli podatnik zmienia system księgowy w trakcie roku podatkowego (np. z Comarch Optima na Symfonię), należy pamiętać, że zgodnie z oficjalnymi wyjaśnieniami MF (Q&A opublikowane na sgk.gofin.pl) zawartość przekazywanego pliku JPK_KR_PD musi być zgodna z treścią prowadzonych ksiąg za cały raportowany rok — co oznacza, że plik musi obejmować zapisy z obu systemów. W praktyce: (a) znaczniki nadane w starym systemie muszą zostać odwzorowane w nowym systemie z zachowaniem tej samej logiki KUP/NKUP; (b) dane z okresu prowadzonego w starym systemie należy zaimportować do nowego systemu lub wygenerować dwa częściowe pliki JPK_KR_PD i scalić je przed wysyłką — o ile format techniczny na to pozwala; (c) przed migracją warto uzyskać pisemne potwierdzenie od dostawcy nowego systemu, że import historycznych zapisów zachowuje przypisane znaczniki podatkowe; (d) w razie wątpliwości co do sposobu scalenia danych z dwóch systemów zalecane jest złożenie zapytania do KIS w trybie interpretacji indywidualnej lub skorzystanie z oficjalnych Q&A MF.",
+      "condition": "if podatnik zmienia system FK w trakcie roku podatkowego objętego obowiązkiem JPK_KR_PD"
+    },
+    {
+      "step": 8,
       "action": "Udokumentuj politykę znaczników w polityce rachunkowości",
       "detail": "Zaktualizuj politykę rachunkowości jednostki o opis: (a) zasady nadawania znaczników podatkowych w planie kont, (b) metodę rozdzielania KUP/NKUP (analityka vs pozabilansowe), (c) procedurę przeglądu znaczników na koniec roku. Wymagane art. 10 ust. 1 pkt 3 ustawy o rachunkowości (dokumentacja polityki rachunkowości) — brak opisu może zostać zakwestionowany podczas kontroli JPK_CIT.",
       "condition": null
@@ -55,7 +61,7 @@
   ],
   "legal_anchors": [],
   "edge_cases": [
-    "Spółka stosująca MSSF: obowiązek JPK_KR_ST oraz JPK_KR_PD wchodzi, ale w JPK_KR_PD stosuje się tylko znaczniki podatkowe (konta zgodne z MSSF nie mapują się 1:1 na polski plan kont) — wymaga indywidualnego mapowania i jest obszarem o niepewnej praktyce; zweryfikuj pisemnym zapytaniem do KIS.",
+    "Spółka stosująca MSSF: zwolnienie z oznaczania kont (pola S_12_1–S_12_3 fakultatywne) obowiązywało wyłącznie za 2025 r. — od 2026 r. zwolnienie wygasa i obowiązek pełnego znakowania wchodzi w życie (źródło: Q&A MF, sgk.gofin.pl). Brak jest jednak oficjalnych wytycznych MF dotyczących konkretnej procedury mapowania kont MSSF na słownik znaczników JPK_KR_PD. Zalecana procedura operacyjna: (a) w pierwszej kolejności złóż zapytanie do KIS w trybie interpretacji indywidualnej — daje ochronę prawną; (b) równolegle skieruj zapytanie do helpdesk MF pod adresem jpkPD.helpdesk@mf.gov.pl — odpowiedź może być szybsza niż interpretacja KIS; (c) jeśli ani KIS, ani helpdesk MF nie udzielą jednoznacznej odpowiedzi przed terminem pierwszego księgowania 2026 r., udokumentuj pisemnie własne stanowisko w polityce rachunkowości: dla kont MSSF bez jednoznacznego odpowiednika w słowniku JPK_KR_PD stosuj znacznik INNE z opisem uzasadnienia; (d) po uzyskaniu odpowiedzi KIS lub MF zaktualizuj plan kont i znaczniki oraz sporządź notatkę o zmianie — zachowaj ją na potrzeby ewentualnej kontroli; (e) monitoruj aktualizacje Q&A MF na sgk.gofin.pl, gdyż jest to obszar o niepewnej i kształtującej się praktyce.",
     "Konta rozrachunkowe o zmiennym saldzie (201 dostawcy, 249 pożyczki): nadaj dwa znaczniki — aktywa i pasywa — bo ten sam kontrahent/pożyczkodawca może mieć saldo po różnych stronach; system na etapie generowania JPK sam dobierze właściwą stronę na podstawie salda końcowego.",
     "Plan kont rozbudowany na 4 i 5 (koszty rodzajowe + w układzie funkcjonalnym): znaczniki KUP/NKUP ustawiaj tylko na kontach zespołu 4 (koszty rodzajowe wynikowe) — zespół 5 to tylko przeksięgowanie rozliczeniowe i podwójne znakowanie zawyży kwoty NKUP w JPK.",
     "Wynagrodzenia zleceniobiorców i składki ZUS płatne w kolejnym miesiącu: w momencie naliczenia zapis na 405-NK (NKUP, znacznik NKUP), w momencie faktycznej zapłaty przeksięgowanie na 405-KUP ze znacznikiem KUP — zgodnie z art. 15 ust. 4g i art. 16 ust. 1 pkt 57, 57a ustawy o CIT."
@@ -98,6 +104,36 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "step_contradiction": 2,
+      "missing_critical_info": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 3
+    }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia, co zrobić w sytuacji, gdy podatnik zmienia system księgowy w trakcie 2026 roku (np. z Optimy na Symfonię) — czy znaczniki muszą być przeniesione, czy mogą być nadane na nowo w nowym systemie bez wpływu na wcześniejsze zapisy.",
+      "applied_at": "2026-04-18T16:19:52Z",
+      "source": "v3",
+      "source_url": "https://sgk.gofin.pl/wyjasnienia-resortowe,pokaz,26584,pytania-i-odpowiedzi-merytoryczne-min-fin-dotyczace-raport.html"
+    },
+    {
+      "flag_type": "edge_case_coverage",
+      "flag_description": "Edge case dotyczący MSSF mówi 'wymaga indywidualnego mapowania i jest obszarem o niepewnej praktyce' — to jest zbyt vague dla procedury operacyjnej; brakuje konkretnych kroków, co zrobić w tej sytuacji (zapytanie do KIS jest wskazane, ale nie ma procedury na wypadek, gdy KIS nie odpowie lub odpowiedź będzie niejasna).",
+      "applied_at": "2026-04-18T16:21:08Z",
+      "source": "v3",
+      "source_url": "https://sgk.gofin.pl/wyjasnienia-resortowe,pokaz,26584,pytania-i-odpowiedzi-merytoryczne-min-fin-dotyczace-raport.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:57:52Z",
@@ -302,19 +338,5 @@
         "ui_label": "Sprawdź aktualność danych"
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "step_contradiction": 2,
-      "missing_critical_info": 2,
-      "hallucination_risk": 2,
-      "edge_case_coverage": 1,
-      "outdated_data_risk": 1
-    },
-    "severity_breakdown": {
-      "medium": 5,
-      "low": 3
-    }
   }
 }

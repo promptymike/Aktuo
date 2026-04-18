@@ -31,13 +31,13 @@
     {
       "step": 4,
       "action": "Ustal formę dokumentu końcowego i jej wartość na rynku pracy",
-      "detail": "Różnice: 'zaświadczenie o ukończeniu kursu' (MEN, na druku MEN-I/73) wydają placówki wpisane do RSPO/ewidencji — ma moc urzędową; 'certyfikat' wewnętrzny firmy szkoleniowej — wartość marketingowa, nie urzędowa; 'świadectwo' SKwP z egzaminem — najbardziej rozpoznawalne w branży. Dla ofert pracy w budżetówce i większych firmach preferowane jest zaświadczenie MEN + egzamin.",
+      "detail": "Różnice: 'zaświadczenie o ukończeniu kursu' wydają placówki wpisane do RSPO/ewidencji — wzór określa załącznik nr 2 do rozporządzenia MEiN z 6.10.2023 r. (Dz.U. poz. 2175) i ma moc urzędową; 'certyfikat' wewnętrzny firmy szkoleniowej — wartość marketingowa, nie urzędowa; 'świadectwo' SKwP z egzaminem — najbardziej rozpoznawalne w branży. Dla ofert pracy w budżetówce i większych firmach preferowane jest zaświadczenie MEN + egzamin.",
       "condition": null
     },
     {
       "step": 5,
       "action": "Sfinansuj kurs z dostępnych dofinansowań",
-      "detail": "Sprawdź: Krajowy Fundusz Szkoleniowy (KFS) — do 80% (mikroprzedsiębiorcy do 100%) kosztów kursu pracownika, limit 300% przeciętnego wynagrodzenia na osobę rocznie, wniosek w PUP; Baza Usług Rozwojowych (BUR) — dofinansowanie do 80% dla MŚP przez operatorów wojewódzkich; bony szkoleniowe dla osób do 30 r.ż. w PUP. Osoba samozatrudniona (B2B) może zaliczyć kurs do KUP — art. 22 ust. 1 ustawy o PIT, jeśli jest związany z zakresem prowadzonej działalności.",
+      "detail": "Sprawdź: Krajowy Fundusz Szkoleniowy (KFS) — do 80% (mikroprzedsiębiorcy do 100%) kosztów kursu pracownika, limit 200% przeciętnego wynagrodzenia w danym roku na osobę rocznie (zgodnie z ustawą z dnia 20.03.2025 r. o rynku pracy i służbach zatrudnienia, obowiązującą w 2026), wniosek w PUP; Baza Usług Rozwojowych (BUR) — dofinansowanie do 80% dla MŚP przez operatorów wojewódzkich; bony szkoleniowe dla osób do 30 r.ż. w PUP. Osoba samozatrudniona (B2B) może zaliczyć kurs do KUP — art. 22 ust. 1 ustawy o PIT, jeśli jest związany z zakresem prowadzonej działalności.",
       "condition": "jeśli kurs finansuje pracodawca lub prowadzisz JDG/B2B"
     },
     {
@@ -108,6 +108,36 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "hallucination_risk": 3,
+      "missing_critical_info": 2,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 4
+    }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "hallucination_risk",
+      "flag_description": "Druk 'MEN-I/73' jako dokument zaświadczenia o ukończeniu kursu — brak pewności, czy ten konkretny numer druku istnieje lub jest aktualny. Wymaga weryfikacji w systemie MEN.",
+      "applied_at": "2026-04-18T15:47:56Z",
+      "source": "v3",
+      "source_url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20230002175/O/D20232175.pdf"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 5 wspomina 'limit 300% przeciętnego wynagrodzenia na osobę rocznie' dla KFS, ale brak informacji, jakie jest to wynagrodzenie referencyjne (GUS? MRPiPS?) i czy limit obowiązuje w 2026. Wymaga uściślenia.",
+      "applied_at": "2026-04-18T15:48:51Z",
+      "source": "v3",
+      "source_url": "https://ksiegowosc.infor.pl/obrot-gospodarczy/finanse-i-inwestycje/7554102,dofinansowanie-szkolen-pracownikow-w-2026-r-panstwo-wylozy-do-90-proc-kosztow-rozwoju-kompetencji.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:56:17Z",
@@ -286,19 +316,5 @@
         "ui_label": "Możliwe brakujące informacje"
       }
     ]
-  },
-  "community_feedback_summary": {
-    "total_flags": 8,
-    "by_type": {
-      "outdated_data_risk": 1,
-      "hallucination_risk": 3,
-      "missing_critical_info": 2,
-      "step_contradiction": 1,
-      "edge_case_coverage": 1
-    },
-    "severity_breakdown": {
-      "medium": 4,
-      "low": 4
-    }
   }
 }
