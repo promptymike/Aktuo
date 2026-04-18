@@ -229,15 +229,18 @@ def test_answer_query_keeps_legal_path_for_legal_only_query(tmp_path: Path, monk
         score=0.9,
     )
 
+    from core.workflow_retriever import WorkflowRetrievalResult as _WRR
+
     monkeypatch.setattr(
         "core.rag.analyze_query_requirements",
         lambda query: QueryAnalysis(intent="cit_wht", missing_slots=[], needs_clarification=False),
     )
-
-    def _unexpected_workflow(*args, **kwargs):  # type: ignore[no-untyped-def]
-        raise AssertionError("Workflow retriever should not be used for legal-only CIT questions")
-
-    monkeypatch.setattr("core.rag.retrieve_workflow", _unexpected_workflow)
+    # Retrieval-first gating: retrieve_workflow is always invoked. For a
+    # legal-only query, it must return non-confident so the legal path wins.
+    monkeypatch.setattr(
+        "core.rag.retrieve_workflow",
+        lambda *args, **kwargs: _WRR(chunks=[], confident=False, top_score=0.0),
+    )
     monkeypatch.setattr("core.rag.retrieve_chunks", lambda query, knowledge_path, limit=5: [legal_chunk])
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Legal answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)

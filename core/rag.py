@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -30,6 +31,11 @@ from core.generator import (
 )
 from core.retriever import LawChunk, analyze_query_requirements, retrieve, retrieve_chunks
 from core.workflow_retriever import is_workflow_eligible, retrieve_workflow
+
+
+LOGGER = logging.getLogger(__name__)
+
+WORKFLOW_V2_SOURCE_TYPE = "workflow_draft_v2"
 
 
 @dataclass(slots=True)
@@ -302,17 +308,41 @@ def _retrieve_context(
     category: str,
     intent: str,
     limit: int = 5,
-) -> tuple[list[LawChunk], str]:
-    """Choose workflow or legal retrieval path with legal fallback."""
+) -> tuple[list[LawChunk], str, bool]:
+    """Choose workflow or legal retrieval path with legal fallback.
+
+    Retrieval-first gating: the workflow retriever always gets first look. A
+    confident ``workflow_draft_v2`` hit short-circuits both the intent-based
+    ``is_workflow_eligible`` heuristic and the downstream slot-filling gate —
+    the confidence + v2 source_type combination is the authoritative signal
+    that we have a structured answer. Legacy ``workflow_seed_v1`` hits still
+    render through the workflow path but do not set ``workflow_confident`` and
+    therefore do not bypass clarification.
+
+    When no confident hit lands, behavior matches the previous flow: use
+    ``is_workflow_eligible`` to distinguish ``legal_fallback`` (query was
+    workflow-eligible but retrieval scored too low) from pure ``legal``.
+    """
+
+    workflow_result = retrieve_workflow(query=query, workflow_path=WORKFLOW_SEED_PATH, limit=limit)
+    top_is_v2 = bool(workflow_result.chunks) and (
+        workflow_result.chunks[0].source_type == WORKFLOW_V2_SOURCE_TYPE
+    )
+    # A confident v2 draft short-circuits the intent-based eligibility gate —
+    # the 42 post-merge drafts can answer beyond the narrow set of historically
+    # eligible intents (zus/vat_jpk_ksef/pit_ryczalt/cit_wht were gated out).
+    # Legacy workflow_seed_v1 still requires the old is_workflow_eligible gate
+    # for backward compat with existing test expectations.
+    if workflow_result.confident and top_is_v2:
+        return workflow_result.chunks, "workflow", True
 
     if is_workflow_eligible(query, intent):
-        workflow_result = retrieve_workflow(query=query, workflow_path=WORKFLOW_SEED_PATH, limit=limit)
         if workflow_result.confident:
-            return workflow_result.chunks, "workflow"
+            return workflow_result.chunks, "workflow", False
         legal_path = "legal_fallback" if workflow_result.chunks else "legal"
-        return retrieve_chunks(query, knowledge_path, limit), legal_path
+        return retrieve_chunks(query, knowledge_path, limit), legal_path, False
 
-    return retrieve_chunks(query, knowledge_path, limit), "legal"
+    return retrieve_chunks(query, knowledge_path, limit), "legal", False
 
 
 def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api_key: str) -> RagResult:
@@ -324,8 +354,29 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
     redacted_query = anonymize_text(query)
     category = categorize_query(redacted_query)
     query_analysis = analyze_query_requirements(redacted_query)
-    if query_analysis.needs_clarification:
+
+    # Retrieval-first gating: run retrieval before deciding whether to return a
+    # clarification prompt. When the workflow retriever returns a confident
+    # workflow_draft_v2 hit, bypass slot-filling entirely — the draft already
+    # carries the structured answer even if the query omits some "required"
+    # slots. Legacy workflow_seed_v1 hits never bypass (opt-in per architecture
+    # decision — only v2 drafts are trusted for this purpose).
+    chunks, retrieval_path, workflow_confident = _retrieve_context(
+        query=redacted_query,
+        knowledge_path=knowledge_path,
+        category=category,
+        intent=query_analysis.intent,
+        limit=5,
+    )
+
+    if query_analysis.needs_clarification and not workflow_confident:
         missing_slots = query_analysis.missing_slots or []
+        LOGGER.info(
+            "slot_fill_triggered: intent=%s missing=%s query=%s",
+            query_analysis.intent,
+            missing_slots,
+            redacted_query[:100],
+        )
         partial_result = _try_workflow_partial_answer(
             query=redacted_query,
             category=category,
@@ -358,13 +409,14 @@ def answer_query(query: str, knowledge_path: str | Path, system_prompt: str, api
             partial_answer=False,
         )
 
-    chunks, retrieval_path = _retrieve_context(
-        query=redacted_query,
-        knowledge_path=knowledge_path,
-        category=category,
-        intent=query_analysis.intent,
-        limit=5,
-    )
+    if workflow_confident and query_analysis.needs_clarification:
+        top_chunk = chunks[0]
+        LOGGER.info(
+            "slot_bypass: draft_id=%s score=%.2f query=%s",
+            top_chunk.article_number or top_chunk.title,
+            top_chunk.score,
+            redacted_query[:100],
+        )
     workflow_mode = _is_workflow_generation_context(retrieval_path, chunks)
     low_confidence = is_low_confidence_retrieval(chunks)
     compression_metrics = GenerationMetrics()

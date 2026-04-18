@@ -96,6 +96,8 @@ def test_query_expansion_with_slang(tmp_path, monkeypatch) -> None:
     monkeypatch.setenv("AKTUO_SLANG_FILE_PATH", str(slang_file))
 
     _, retriever, rag = _reload_retriever_stack()
+    from core.workflow_retriever import WorkflowRetrievalResult as _WRR
+
     monkeypatch.setattr(retriever, "CATEGORY_SYNONYM_MAP", {})
     monkeypatch.setattr(
         rag,
@@ -112,6 +114,11 @@ def test_query_expansion_with_slang(tmp_path, monkeypatch) -> None:
         rag,
         "analyze_query_requirements",
         lambda query: retriever.QueryAnalysis(intent="pit_ryczalt", missing_slots=[], needs_clarification=False),
+    )
+    monkeypatch.setattr(
+        rag,
+        "retrieve_workflow",
+        lambda *a, **kw: _WRR(chunks=[], confident=False, top_score=0.0),
     )
     monkeypatch.setattr(
         rag,

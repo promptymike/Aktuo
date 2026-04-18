@@ -6,6 +6,20 @@ import pytest
 from core.generator import GenerationMetrics
 from core.rag import _count_context_tokens, answer_query
 from core.retriever import LawChunk, QueryAnalysis, RetrievalResult
+from core.workflow_retriever import WorkflowRetrievalResult
+
+
+def _stub_empty_workflow(monkeypatch) -> None:
+    """Stub retrieve_workflow to return an empty, non-confident result.
+
+    Used by tests that want to exercise the legal retrieval path under the new
+    retrieval-first gating (where retrieve_workflow is always invoked).
+    """
+
+    monkeypatch.setattr(
+        "core.rag.retrieve_workflow",
+        lambda *args, **kwargs: WorkflowRetrievalResult(chunks=[], confident=False, top_score=0.0),
+    )
 
 
 def test_answer_query_returns_grounded_result_for_polish_question(tmp_path, monkeypatch) -> None:
@@ -27,6 +41,7 @@ def test_answer_query_returns_grounded_result_for_polish_question(tmp_path, monk
 
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    _stub_empty_workflow(monkeypatch)
 
     result = answer_query(
         query="Jan Kowalski pyta, czy błędny NIP na fakturze sprzedawcy z marca 2026 wymaga korekty.",
@@ -63,6 +78,7 @@ def test_answer_query_marks_low_confidence_retrieval(tmp_path, monkeypatch) -> N
         lambda query, chunks, system_prompt, api_key: "Nie znalazłem odpowiedzi w dostępnej bazie przepisów.",
     )
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: True)
+    _stub_empty_workflow(monkeypatch)
 
     result = answer_query(
         query="Jak rozliczyć cło importowe na fakturze podatnika za marzec 2026?",
@@ -108,6 +124,7 @@ def test_answer_query_handles_very_long_query(tmp_path, monkeypatch) -> None:
 
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    _stub_empty_workflow(monkeypatch)
     monkeypatch.setattr(
         "core.rag.analyze_query_requirements",
         lambda query: QueryAnalysis(intent="vat_jpk_ksef", missing_slots=[], needs_clarification=False),
@@ -165,6 +182,7 @@ def test_answer_query_handles_emoji_and_foreign_language_queries(query, tmp_path
 
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    _stub_empty_workflow(monkeypatch)
 
     result = answer_query(
         query=query,
@@ -212,6 +230,7 @@ def test_answer_query_triggers_context_summarization_when_context_is_too_long(tm
     monkeypatch.setattr("core.rag.generate_answer", lambda query, chunks, system_prompt, api_key: "Mocked answer")
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
     monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
+    _stub_empty_workflow(monkeypatch)
     monkeypatch.setattr(
         "core.rag.analyze_query_requirements",
         lambda query: QueryAnalysis(intent="vat_jpk_ksef", missing_slots=[], needs_clarification=False),
@@ -292,6 +311,7 @@ def test_answer_query_shortened_context_fits_under_limit(tmp_path, monkeypatch) 
     monkeypatch.setattr("core.rag.generate_answer", fake_generate_answer)
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
     monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
+    _stub_empty_workflow(monkeypatch)
 
     result = answer_query(
         query="Kiedy powstaje obowiazek podatkowy VAT przy sprzedazy fakturami nabywcy za marzec 2026?",
@@ -307,7 +327,20 @@ def test_answer_query_shortened_context_fits_under_limit(tmp_path, monkeypatch) 
 
 def test_answer_query_keeps_legal_clarification_behavior_for_missing_legal_facts(tmp_path, monkeypatch) -> None:
     seed_file = tmp_path / "law_knowledge.json"
-    seed_file.write_text("[]", encoding="utf-8")
+    seed_file.write_text(
+        json.dumps(
+            [
+                {
+                    "law_name": "Ustawa o VAT",
+                    "article_number": "art. 86 ust. 1",
+                    "category": "vat",
+                    "verified_date": "2026-04-01",
+                    "content": "Przepis ogólny o odliczeniu podatku naliczonego.",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
 
     monkeypatch.setattr(
         "core.rag.analyze_query_requirements",
@@ -317,6 +350,7 @@ def test_answer_query_keeps_legal_clarification_behavior_for_missing_legal_facts
             needs_clarification=True,
         ),
     )
+    _stub_empty_workflow(monkeypatch)
 
     result = answer_query(
         query="Czy mogę tak zrobić w VAT?",
@@ -329,3 +363,146 @@ def test_answer_query_keeps_legal_clarification_behavior_for_missing_legal_facts
     assert result.retrieval_path == "clarification"
     assert result.partial_answer is False
     assert "Potrzebuj" in result.answer
+
+
+def _workflow_chunk(source_type: str, score: float) -> LawChunk:
+    return LawChunk(
+        content="Procedura potrąceń komorniczych z wynagrodzeń.",
+        law_name="Kodeks pracy",
+        article_number="wf_10_potracenia_komornicze",
+        category="kadry",
+        verified_date="2026-04-01",
+        score=score,
+        source_type=source_type,
+        workflow_area="kadry",
+        title="Potrącenia komornicze niealimentacyjne",
+        workflow_steps=("Krok 1", "Krok 2", "Krok 3"),
+    )
+
+
+def test_workflow_confident_bypasses_clarification(tmp_path, monkeypatch) -> None:
+    """Confident workflow_draft_v2 hit must bypass slot-filling clarification."""
+
+    seed_file = tmp_path / "law_knowledge.json"
+    seed_file.write_text("[]", encoding="utf-8")
+
+    draft_chunk = _workflow_chunk(source_type="workflow_draft_v2", score=39.50)
+    generator_calls: list[str] = []
+
+    monkeypatch.setattr(
+        "core.rag.analyze_query_requirements",
+        lambda query: QueryAnalysis(
+            intent="zus",
+            missing_slots=["tytuł_ubezpieczenia", "status_osoby", "rodzaj_składki_lub_świadczenia"],
+            needs_clarification=True,
+        ),
+    )
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([draft_chunk], "workflow", True),
+    )
+    monkeypatch.setattr(
+        "core.rag.format_workflow_answer",
+        lambda query, chunks: generator_calls.append(chunks[0].article_number) or "Odpowiedź z workflow",
+    )
+    monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
+    monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
+
+    result = answer_query(
+        query="Pracownik ma minimalną, przyszedł komornik, co potrącam?",
+        knowledge_path=seed_file,
+        system_prompt="Jesteś Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.needs_clarification is False
+    assert result.retrieval_path == "workflow"
+    assert result.answer == "Odpowiedź z workflow"
+    assert generator_calls == ["wf_10_potracenia_komornicze"]
+
+
+def test_low_score_still_triggers_clarification(tmp_path, monkeypatch) -> None:
+    """Low-score retrieval must not bypass — clarification still fires."""
+
+    seed_file = tmp_path / "law_knowledge.json"
+    seed_file.write_text("[]", encoding="utf-8")
+
+    generator_calls: list[str] = []
+
+    monkeypatch.setattr(
+        "core.rag.analyze_query_requirements",
+        lambda query: QueryAnalysis(
+            intent="accounting_operational",
+            missing_slots=["rodzaj_ksiąg_lub_ewidencji", "rodzaj_dokumentu"],
+            needs_clarification=True,
+        ),
+    )
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([], "legal", False),
+    )
+    monkeypatch.setattr("core.rag._try_workflow_partial_answer", lambda **kwargs: None)
+
+    def fail_generate(query, chunks, system_prompt, api_key):
+        generator_calls.append("called")
+        return "should not happen"
+
+    monkeypatch.setattr("core.rag.generate_answer", fail_generate)
+    monkeypatch.setattr("core.rag.format_workflow_answer", fail_generate)
+
+    result = answer_query(
+        query="Jak rozliczyć X?",
+        knowledge_path=seed_file,
+        system_prompt="Jesteś Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.needs_clarification is True
+    assert result.retrieval_path == "clarification"
+    assert result.partial_answer is False
+    assert generator_calls == []
+
+
+def test_legacy_seed_does_not_bypass(tmp_path, monkeypatch) -> None:
+    """Legacy workflow_seed_v1 top hit must NOT bypass clarification, even with high score."""
+
+    seed_file = tmp_path / "law_knowledge.json"
+    seed_file.write_text("[]", encoding="utf-8")
+
+    # High-score legacy chunk — workflow retriever might have marked it confident,
+    # but _retrieve_context intentionally returns workflow_confident=False because
+    # source_type != workflow_draft_v2.
+    legacy_chunk = _workflow_chunk(source_type="workflow_seed_v1", score=39.50)
+    generator_calls: list[str] = []
+
+    monkeypatch.setattr(
+        "core.rag.analyze_query_requirements",
+        lambda query: QueryAnalysis(
+            intent="accounting_operational",
+            missing_slots=["rodzaj_ksiąg_lub_ewidencji", "rodzaj_dokumentu"],
+            needs_clarification=True,
+        ),
+    )
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([legacy_chunk], "workflow", False),
+    )
+    monkeypatch.setattr("core.rag._try_workflow_partial_answer", lambda **kwargs: None)
+
+    def fail_generate(query, chunks, system_prompt=None, api_key=None):
+        generator_calls.append("called")
+        return "should not happen"
+
+    monkeypatch.setattr("core.rag.generate_answer", fail_generate)
+    monkeypatch.setattr("core.rag.format_workflow_answer", fail_generate)
+
+    result = answer_query(
+        query="Pytanie z brakiem slotów ale trafia legacy seed",
+        knowledge_path=seed_file,
+        system_prompt="Jesteś Aktuo.",
+        api_key="test-key",
+    )
+
+    assert result.needs_clarification is True
+    assert result.retrieval_path == "clarification"
+    assert generator_calls == []

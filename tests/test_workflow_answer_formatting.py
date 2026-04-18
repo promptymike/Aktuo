@@ -102,7 +102,10 @@ def test_answer_query_uses_workflow_format_when_workflow_path_wins(tmp_path: Pat
         "core.rag.analyze_query_requirements",
         lambda query: QueryAnalysis(intent="software_tooling", missing_slots=[], needs_clarification=False),
     )
-    monkeypatch.setattr("core.rag._retrieve_context", lambda **kwargs: ([_workflow_chunk()], "workflow"))
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([_workflow_chunk()], "workflow", False),
+    )
     monkeypatch.setattr("core.rag.generate_answer", _unexpected_generate)
     monkeypatch.setattr("core.rag.is_low_confidence_retrieval", lambda chunks: False)
     monkeypatch.setattr("core.rag.audit_answer", lambda answer, chunks: {"grounded": True})
@@ -127,7 +130,10 @@ def test_answer_query_keeps_legal_answer_for_legal_path(tmp_path: Path, monkeypa
         "core.rag.analyze_query_requirements",
         lambda query: QueryAnalysis(intent="cit_wht", missing_slots=[], needs_clarification=False),
     )
-    monkeypatch.setattr("core.rag._retrieve_context", lambda **kwargs: ([_legal_chunk()], "legal"))
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([_legal_chunk()], "legal", False),
+    )
     monkeypatch.setattr(
         "core.rag.generate_answer",
         lambda query, chunks, system_prompt, api_key: "Legal answer with Podstawa prawna",
@@ -155,7 +161,10 @@ def test_answer_query_keeps_legal_answer_for_legal_fallback(tmp_path: Path, monk
         "core.rag.analyze_query_requirements",
         lambda query: QueryAnalysis(intent="vat_jpk_ksef", missing_slots=[], needs_clarification=False),
     )
-    monkeypatch.setattr("core.rag._retrieve_context", lambda **kwargs: ([_legal_chunk()], "legal_fallback"))
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([_legal_chunk()], "legal_fallback", False),
+    )
     monkeypatch.setattr(
         "core.rag.generate_answer",
         lambda query, chunks, system_prompt, api_key: "Legal fallback answer",
@@ -190,6 +199,12 @@ def test_answer_query_returns_partial_workflow_answer_for_non_fatal_missing_slot
         ),
     )
     monkeypatch.setattr("core.rag.is_workflow_eligible", lambda query, intent: True)
+    # Stub the main retrieval path so clarification fires and the partial-answer
+    # escape hatch (which uses its own retrieve_workflow call below) is exercised.
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([], "legal", False),
+    )
     monkeypatch.setattr(
         "core.rag.retrieve_workflow",
         lambda query, workflow_path, limit, confidence_threshold: WorkflowRetrievalResult(
@@ -228,6 +243,12 @@ def test_answer_query_keeps_clarification_for_fatal_workflow_missing_slots(
             missing_slots=["czynność_operacyjna"],
             needs_clarification=True,
         ),
+    )
+    # No confident v2 draft hit → clarification path fires. Partial-answer escape
+    # hatch is blocked by the fatal slot in WORKFLOW_PARTIAL_FATAL_SLOTS.
+    monkeypatch.setattr(
+        "core.rag._retrieve_context",
+        lambda **kwargs: ([], "legal", False),
     )
 
     result = answer_query(
