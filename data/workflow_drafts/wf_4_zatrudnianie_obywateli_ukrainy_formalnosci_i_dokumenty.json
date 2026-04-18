@@ -97,5 +97,79 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:59:19Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera kompleksową procedurę, ale ma poważne luki w zakresie aktualności danych (kwoty, daty przepisów przejściowych), nieprecyzyjne odwołania do artykułów (brak listy legal_anchors) oraz brakujące instrukcje dla kluczowych scenariuszy (brak PESEL, zmiana pracodawcy, brak przedłużenia dokumentów). Wymaga weryfikacji przez specjalistę ds. prawa cudzoziemców i aktualizacji danych przed wdrożeniem.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odwołania do artykułów (art. 22 specustawy, art. 108 ustawy o cudzoziemcach, art. 114, art. 29 KP, art. 120 ustawy o promocji zatrudnienia, art. 6 ustawy o pracownikach samorządowych). Brak sformalizowanej listy referencji utrudnia weryfikację poprawności cytowań."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretną kwotę minimalnego wynagrodzenia (4 806 zł brutto w 2026 r.) i stawkę godzinową (31,40 zł/h), ale nie wskazuje źródła ani daty obowiązywania. Dla 2026 r. te kwoty mogą ulec zmianie w wyniku kolejnych rozporządzeń, a draft nie zawiera mechanizmu aktualizacji."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Krok 2 zawiera stwierdzenie 'na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową obywateli Ukrainy do 4.03.2026' — ta data jest już przeszłością względem daty weryfikacji (18.04.2026), co sugeruje, że draft może zawierać nieaktualne informacje o przepisach przejściowych specustawy."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 mówi, że powiadomienie dotyczy 'zarówno umowy o pracę, umowy zlecenia, jak i innej umowy cywilnoprawnej', ale krok 6 rozróżnia ZUS ZUA (umowa o pracę) od ZUA/ZZA (umowa zlecenia). Brak jasności, czy dla wszystkich typów umów procedura powiadomienia w PUP jest identyczna."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie zawiera instrukcji, co zrobić, jeśli pracownik nie złoży wniosku o przedłużenie karty pobytu/statusu UKR przed upływem ważności — czy pracodawca ma obowiązek zawiadomienia pracownika, czy może rozwiązać umowę, czy istnieje okres przejściowy?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 wymaga 'tłumaczenia umowy na język dla niego zrozumiały' (art. 22 ust. 6 specustawy), ale nie precyzuje: czy tłumaczenie musi być certyfikowane, czy wystarczy tłumaczenie robocze, czy pracodawca ponosi koszty, czy pracownik może odmówić podpisania bez tłumaczenia."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft powołuje się na 'art. 22 ust. 6 specustawy' dotyczący obowiązku tłumaczenia umowy — wymaga weryfikacji, czy przepis o tłumaczeniu rzeczywiście znajduje się w ustawie z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2024 poz. 167 t.j.) w tym konkretnym artykule i ustępie."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 6 zawiera instrukcje dla konkretnych systemów (Comarch Optima, Symfonii Kadry i Płace) z polami 'Dane osobowe/Nierezydent' i kodami krajów — te szczegóły mogą być nieaktualne lub nieprecyzyjne dla wersji oprogramowania dostępnych w 2026 r."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący 'żółtej kartki z UW' i braku stempla w paszporcie jest opisany, ale brak jasności, czy pracodawca może legalnie przedłużyć umowę po 4.03.2026, jeśli wniosek został złożony przed tą datą, ale decyzja nie została wydana — draft sugeruje legalność, ale wymaga potwierdzenia."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie zawiera procedury na wypadek, gdy pracownik nie posiada PESEL (np. dopiero złożył wniosek) — jak pracodawca powinien wypełnić powiadomienie w PUP bez numeru PESEL i czy jest to możliwe?"
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Krok 6 zawiera informację o 'rezydencji podatkowej' i warunku '≤183 dni w roku' — ta reguła może ulec zmianie w wyniku zmian umów międzynarodowych o unikaniu podwójnego opodatkowania lub zmian w ustawie o PIT."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie zawiera instrukcji, jak postępować w przypadku, gdy pracownik zmienia pracodawcę — czy wymaga nowego powiadomienia w PUP, czy nowego zezwolenia, czy procedura różni się w zależności od typu dokumentu pobytowego (status UKR vs. karta pobytu)."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 4 mówi, że 'zmiana pracodawcy wymaga nowej decyzji lub zezwolenia typu A', ale edge case mówi o 'powiadomieniu wg specustawy' — brak jasności, czy dla obywateli Ukrainy zmiana pracodawcy wymaga powiadomienia czy zezwolenia."
+      }
+    ]
   }
 }

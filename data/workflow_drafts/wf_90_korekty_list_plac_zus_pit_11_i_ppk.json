@@ -103,5 +103,74 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:02:33Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera praktyczne kroki dla korekty list płac i deklaracji ZUS/PIT, ale ma znaczące luki w uzasadnieniu prawnym (art. 39 i 41b mogą być nieprawidłowo zastosowane), niejasności w procedurach dla sytuacji granicznych (potrącenia bez zgody, były pracownik) oraz wymaga weryfikacji konkretnych kwot i kodów systemowych na 2026 r. Wymaga konsultacji z ekspertem podatkowym przed wdrożeniem.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Draft powołuje się na art. 39 ustawy PIT jako podstawę dla rozstrzygnięcia kiedy korygować PIT-11, ale art. 39 dotyczy obowiązku przesłania informacji PIT-11, a nie zasad jej korekty. Brakuje odniesienia do art. 41b ustawy PIT (zwrot przychodów) i art. 26 ust. 1 pkt 5 ustawy PIT (odliczenia), które są faktycznie cytowane w krokach, ale nie w legal_anchors."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Step 4 powołuje się na art. 41b ustawy PIT jako podstawę dla pomniejszenia podstawy opodatkowania przy zwrocie wynagrodzenia, ale art. 41b dotyczy zwrotu przychodów przez podatnika, a nie przez pracodawcę-płatnika. Niepewne czy to prawidłowe zastosowanie przepisu."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera konkretne kwoty na 2026 r. (30-krotność 260 190 zł, minimalna krajowa 4 806 zł), ale brak źródła tych danych. Obwieszczenie MRPiPS o 30-krotności zmienia się corocznie i kwota 260 190 zł wymaga weryfikacji dla 2026 r."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 3 mówi że zwrócona pracownikowi kwota netto składek społecznych 'stanowi przychód ze stosunku pracy', ale Step 5 sugeruje że niedopłatę zaliczki PIT 'co do zasady pozostaw bez zmian'. Niejasne czy zwrot składek wymaga natychmiastowego naliczenia PIT czy rozliczenia w zeznaniu rocznym."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brakuje procedury dla sytuacji gdy pracownik zwraca nadpłatę w ratach lub gdy pracodawca nie może potrącić całej kwoty z jednej wypłaty. Step 4 wspomina 'za pisemną zgodą' ale nie definiuje procedury gdy pracownik odmówi zgody na potrącenie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 6 o PPK powołuje się na art. 28 ust. 1 ustawy o PPK, ale nie wyjaśnia czy zaległe wpłaty pracownika mogą być potrącane z przyszłych wynagrodzeń czy wymagają zgody pracownika (art. 91 KP). Niejasne czy to potrącenie z winy pracodawcy czy pracownika."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Step 2 wspomina o 'identyfikatorach 02, 03' dla korekt DRA/RCA/RSA, ale nie wyjaśnia czy to rzeczywiste kody identyfikatorów w systemie ZUS czy uproszczenie. Wymaga weryfikacji czy takie identyfikatory faktycznie istnieją w deklaracjach ZUS."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Edge case o 'umowie zlecenia' i 'minimalnej krajowej 4 806 zł brutto w 2026 r.' jest niejasny - minimalna krajowa nie dotyczy zleceń. Może to być pomyłka lub niejasne sformułowanie warunku."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o 'były pracownik' powołuje się na art. 26 ust. 1 pkt 5 ustawy PIT, ale nie wyjaśnia czy były pracownik może odliczyć zwrot w zeznaniu rocznym za rok zwrotu czy za rok, w którym pierwotnie otrzymał wynagrodzenie. Procedura wydania 'informacji o kwocie zwróconej' nie jest zdefiniowana."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia procedury dla sytuacji gdy korekta dotyczy pracownika na urlopie bezpłatnym lub zwolnieniu lekarskim - czy składki ZUS są naliczane, czy korekta wpływa na wymiar zasiłku. Step 3 wspomina zwolnienie lekarskie ale nie definiuje pełnej procedury."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Step 7 mówi że 'czynny żal nie jest wymagany' przy niedopłacie Funduszu Pracy, ale wcześniej nie wyjaśniono czy Fundusz Pracy podlega czynnemu żalowi w ogóle. Niejasne czy to odnosi się do art. 16 KKS czy do innych przepisów."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje procedury dla korekty gdy błąd dotyczy pracownika na umowie o pracę na czas określony, która już wygasła - czy korekta wymaga zgody pracownika, czy można ją przeprowadzić jednostronnie."
+      }
+    ]
   }
 }

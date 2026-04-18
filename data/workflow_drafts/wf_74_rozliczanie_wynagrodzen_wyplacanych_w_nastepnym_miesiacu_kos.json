@@ -97,5 +97,59 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:01:08Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera szczegółową i praktyczną procedurę, ale ma istotne luki w formalnym zakotwiczeniu prawnym (puste legal_anchors) oraz ryzyko dezaktualizacji danych i instrukcji dla konkretnych systemów. Wymaga weryfikacji aktualności przepisów i testowania instrukcji dla oprogramowania kadrowo-płacowego przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 11 ust. 1 PIT, art. 22 ust. 6ba PIT, art. 23 ust. 1 pkt 55 PIT, uchwała NSA II FPS 5/14). Brak sformalizowanego mapowania tych przepisów utrudnia weryfikację poprawności cytowań."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne daty (31.12.2025, 01.01.2026, 10.02.2026) i terminy (do 15.03.2026, do 20.02.2026) jako przykłady dla 2026 roku. Dla użytkownika w 2027+ roku te daty będą mylące; brakuje jasnego wskazania, że są to przykłady ilustracyjne, a zasady mają charakter ogólny."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 zawiera szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma, Symfonia/Enova) z nazwami pól i ścieżek menu. Bez dostępu do aktualnej dokumentacji tych systemów (zwłaszcza dla wersji 2026+) istnieje ryzyko, że nazwy pól lub logika konfiguracji mogą być nieaktualne lub zmienione."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, jak postępować w przypadku pracownika zatrudnionego w trakcie miesiąca, gdy zmienia się termin wypłaty - czy zerowa RCA w pierwszym miesiącu dotyczy również pracowników z datą zatrudnienia w tym miesiącu, czy tylko pracowników już zatrudnionych."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 2 mówi o 'terminowej wypłacie' jako warunku księgowania kosztu w miesiącu należności dla UoP, ale nie definiuje precyzyjnie, co stanowi 'termin wynikający z prawa pracy/regulaminu' - czy jest to termin ustawowy (np. do 10. dnia następnego miesiąca), czy może być dowolny termin określony w umowie."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący 'wypłaty gotówką 31.01.2026 do dyspozycji' przy umownym terminie 10. dnia następnego miesiąca wymaga pokwitowania z datą - ale draft nie wyjaśnia, czy pracownik/zleceniobiorca musi faktycznie odebrać pieniądze w tym dniu, czy wystarczy, że były dostępne (np. w kasie)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Odniesienie do 'uchwały NSA II FPS 5/14' jako 'kluczowej' w kontekście daty wypłaty dla PIT-11 - brak pełnego cytowania i weryfikacji, czy ta uchwała rzeczywiście dotyczy tego zagadnienia w obecnym stanie prawnym (2026)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie wspomina o procedurze postępowania w przypadku, gdy pracownik/zleceniobiorca odmówi podpisania pokwitowania lub będzie niedostępny w dniu postawienia do dyspozycji - jak udokumentować datę uzyskania przychodu."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Krok 5 wspomina o 'kodzie tytułu' w RCA - ta terminologia może być nieaktualna, jeśli ZUS zmienił strukturę deklaracji DRA/RCA po 2026 roku."
+      }
+    ]
   }
 }

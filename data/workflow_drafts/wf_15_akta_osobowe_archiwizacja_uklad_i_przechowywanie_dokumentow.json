@@ -97,5 +97,69 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:56:51Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera praktyczne i szczegółowe wytyczne, ale ma istotne luki w weryfikacji podstaw prawnych (puste legal_anchors), potencjalne sprzeczności dotyczące przechowywania list obecności vs kart wynagrodzeń, oraz ryzyko nieaktualności dat granicznych i nazw systemów informatycznych do 2026 r. Wymaga uzupełnienia referencji prawnych i weryfikacji zmian legislacyjnych.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, a draft zawiera liczne odwołania do artykułów (art. 94 pkt 9b KP, art. 22(1) KP, art. 108 KP, art. 113 KP) oraz rozporządzenia MRPiPS z 10.12.2018 bez ich weryfikacji. Brak jawnych referencji do konkretnych numerów artykułów w strukturze może utrudnić audyt zgodności."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera daty graniczne (1.01.2019, 1.01.1999, 31.12.2018) dla okresów przechowywania akt, które mogą ulec zmianie ustawą do 2026 r. Brak adnotacji o konieczności weryfikacji tych progów przed wdrożeniem procedury w praktyce."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 stwierdza, że listy obecności są 'nieobjęte obowiązkiem archiwizacji 10/50-letniej', ale krok 3 jednocześnie mówi 'Karty wynagrodzeń przechowuj 10/50 lat jak akta osobowe' – brak jasności czy listy obecności przechowuje się krócej niż karty wynagrodzeń i na jakiej podstawie prawnej."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak procedury dla dokumentów pracownika zatrudnionego na umowę zlecenie/umowę o dzieło – draft skupia się na stosunku pracy (KP), ale nie wyjaśnia czy te same reguły 10/50 lat dotyczą innych form zatrudnienia."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 6 wspomina 'wydawana wraz ze świadectwem pracy' informacja o okresie przechowywania, ale nie precyzuje czy jest to obowiązkowy dokument, jaki powinien zawierać i czy pracodawca musi go archiwizować jako część akt."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 6 wymienia konkretne systemy (Comarch Optima, Symfonia Kadry, Enova365) z dokładnymi ścieżkami menu – te ścieżki mogą być nieaktualne w wersjach z 2026 r. lub mogą nie istnieć w starszych wersjach oprogramowania."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 1 wspomina 'ZUS OSW i raport ZUS RIA' – brak weryfikacji czy te kody/raporty ZUS istnieją i czy są aktualne dla 2026 r. (mogły być zastąpione nowymi formularzami)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący 'ponownego zatrudnienia bez dnia przerwy' zakłada, że badania lekarskie i szkolenie BHP mogą być kopiowane do nowych akt – brak wyjaśnienia czy kopie mają taką samą moc prawną co oryginały wobec PIP/ZUS."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o karach porządkowych (część D) stwierdza, że 'numerację można prowadzić od nowa' – to może być sprzeczne z wymogiem transparentności historii akt wobec PIP, o którym mowa w kroku 4."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak procedury dla pracowników zatrudnionych na podstawie umów międzynarodowych (delegowani pracownicy, umowy z zagranicą) – czy okres przechowywania 10/50 lat dotyczy również ich dokumentacji?"
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 4 mówi 'NIE przepisuj całego spisu od nowa', ale edge case o karach porządkowych sugeruje możliwość przepisania numeracji części D – brak jasności czy zasada 'nie przepisuj' dotyczy wszystkich części czy tylko A/B/C."
+      }
+    ]
   }
 }

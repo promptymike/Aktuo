@@ -97,5 +97,79 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:57:36Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera szczegółową i praktyczną procedurę, ale ma poważne luki w dokumentacji prawnej (puste legal_anchors), potencjalne błędy w obliczeniach (suma składek ZUS), oraz brak weryfikacji aktualności kwot i przepisów na 2026 r. Wymaga uzupełnienia konkretnych numerów interpretacji, aktualizacji limitów i stawek, oraz wyjaśnienia sprzeczności między krokami.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole `legal_anchors` jest puste, a draft zawiera liczne odwołania do konkretnych przepisów (§ 2 ust. 1 pkt 19 rozporządzenia składkowego z 18.12.1998, art. 21 ust. 1 pkt 67 ustawy o PIT, art. 26 ust. 1 ustawy o PPK, art. 43 ust. 1 pkt 18–19 ustawy o VAT). Brak strukturalnego mapowania tych artykułów do kroków procedury utrudnia weryfikację aktualności i poprawności cytowań."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne kwoty (limit ZFŚS 2 000 zł rocznie, KUP 250/300 zł, kwota zmniejszająca 3 600 zł rocznie, stawki VAT 23%/8%) z datą weryfikacji 2026-04-18, ale brak informacji czy te limity są rzeczywiście obowiązujące w 2026 r. czy skopiowane z wcześniejszych lat. Szczególnie limity ZFŚS i KUP wymagają corocznej aktualizacji."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 (Scenariusz B) mówi o braku ZUS przy współfinansowaniu + poprawnym zapisie w regulaminie, ale Krok 2 wymaga, aby pracownik ponosił 'choćby częściową odpłatność (min. 1 gr)' — brak jasnego wyjaśnienia czy 1 gr wystarczy, czy musi to być znacząca kwota, co mogłoby prowadzić do różnych interpretacji w praktyce."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Krok 5 odwołuje się do konkretnych ścieżek w systemach (Comarch Optima, Enova, Symfonia) z nazwami menu, ale brak informacji jak postępować w innych powszechnie używanych systemach (np. Sage, Teta, Paycor) — procedura może być niepełna dla znacznej części użytkowników."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 6 wspomina 'refakturę' i 'fakturę wewnętrzną' jako sposób rozliczenia VAT od części pracownika, ale nie wyjaśnia czy refaktura wymaga wystawienia dokumentu VAT czy czy jest to tylko zapis księgowy — brak jasności co do formalnych wymogów."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 5 zawiera odwołanie do flagi 'nie wliczaj do wypłaty' / 'świadczenie w naturze' w systemach kadrowo-płacowych — ta terminologia może być nieaktualna lub różna w zależności od wersji oprogramowania, a draft nie podaje konkretnych numerów wersji lub dat aktualizacji systemów."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Edge case o systemach kafeteryjnych MyBenefit wspomina 'interpretację KIS' i 'częścią interpretacji', ale nie podaje konkretnego numeru interpretacji indywidualnej ani daty — trudne do weryfikacji czy taka interpretacja rzeczywiście istnieje."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o nieodpłatnym udostępnieniu lokalu mieszkalnego mówi o 'wartości rynkowej najmu, jeżeli wyższa' — brak wyjaśnienia jak pracownik/pracodawca powinni ustalić tę wartość rynkową (wycena niezależna? średnia z rynku?) i czy ZUS akceptuje takie szacunki."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o kartach przedpłaconych (Pluxee, Edenred, Sodexo) stwierdza że 'zawsze' są traktowane jak ekwiwalent pieniężny — brak wyjątków czy sytuacji przejściowych (np. czy dotyczy to również kart z limitami wydatkowania na konkretne kategorie)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 o ubruttawianiu premii netto zawiera odwołanie do 'stawki krańcowej (12% lub 32% PIT + składki ZUS pracownika 13,71% + 9% zdrowotnej)' — brak wyjaśnienia czy te stawki są aktualne dla 2026 r. i czy 13,71% + 9% to prawidłowa suma (powinno być 13,71% emerytalna + 9% zdrowotna = 22,71%, a nie 13,71% + 9%)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Draft wielokrotnie odwołuje się do 'rozporządzenia składkowego z 18.12.1998' bez pełnego tytułu — brak pewności czy to prawidłowe oznaczenie (Rozporządzenie Ministra Pracy i Polityki Społecznej z 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia społeczne)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 6 wspomina VAT 8% dla Multisportu 'jako usługi rekreacyjne' — brak wyjaśnienia czy ta stawka dotyczy wszystkich dostawców (Benefit Systems, Medicover itp.) czy tylko niektórych, i czy zmienia się w zależności od zakresu usług."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 4 mówi że jeśli benefit jest zwolniony z ZUS (scenariusz B lub C) to NIE wchodzi do podstawy PPK, ale Krok 3 Scenariusz B mówi o 'tylko PIT od części finansowanej przez pracodawcę, BEZ ZUS' — brak wyjaśnienia czy część finansowana przez pracownika wchodzi do PPK czy nie."
+      }
+    ]
   }
 }

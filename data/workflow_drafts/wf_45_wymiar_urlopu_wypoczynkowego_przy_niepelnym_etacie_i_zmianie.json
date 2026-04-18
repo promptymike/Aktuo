@@ -113,5 +113,74 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:58:42Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę procedury z konkretnymi przykładami i odwołaniami do przepisów, ale ma kilka istotnych luk dotyczących weryfikacji aktualności przepisów na 2026 r., brakuje wyjaśnień dla skomplikowanych sytuacji przejściowych (zmiana etatu, urlop zaległy) oraz istnieje ryzyko halucynacji w odniesieniu do konkretnych ścieżek w systemach kadrowych. Wymaga weryfikacji prawnej i uzupełnienia brakujących scenariuszy.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 1542 § 2 KP cytowany jako źródło normy '1 dzień urlopu = 8 godzin' — należy zweryfikować czy przepis rzeczywiście zawiera tę normę, czy może odnosi się do innego aspektu (np. sposobu liczenia). Norma 8 godzin może wynikać z art. 129 KP (dobowa norma pracy)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Rozporządzenie MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) cytowane w krokach 5 i 7 — brak weryfikacji czy rozporządzenie to jest aktualne dla 2026 r. i czy nie zostało zmienione lub uchylone nowszymi przepisami."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Krok 6 odnosi się do ustawy z 27.08.1997 r. o rehabilitacji zawodowej (art. 15, art. 19) — normy dotyczące 7-godzinnego dnia pracy i 10 dni dodatkowego urlopu dla niepełnosprawnych mogą ulec zmianie do 2026 r., szczególnie w kontekście zmian w systemie orzecznictwa niepełnosprawności."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 stwierdza '1 dzień urlopu = 8 godzin (lub niższa norma dobowa)' dla pracownika na 1/2 etatu po 4 h dziennie, ale następnie przykład mówi '13 dni × 8 h = 104 h (wystarcza na 26 dni urlopu po 4 h)' — to sugeruje że 104 h dzielone przez 4 h = 26 dni, co może być mylące dla czytelnika co do rzeczywistego wymiaru urlopu (13 dni vs 26 dni)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brakuje wyjaśnienia jak traktować urlop zaległy z roku poprzedniego przy zmianie etatu — krok 5 wspomina że 'nie przelicza się go na nowy wymiar etatu', ale nie wyjaśnia czy urlop zaległy może być udzielony w całości w nowym wymiarze etatu czy musi być wykorzystany w starym wymiarze."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Procedura nie zawiera kroku dotyczącego rozliczenia urlopu wypoczynkowego przy rozwiązaniu umowy o pracę w trakcie roku — brakuje informacji o ekwiwalencie pieniężnym za niewykorzystany urlop przy niepełnym etacie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 wspomina że 'niewykorzystane dni z 2025 przechodzą jako urlop zaległy bez przeliczenia na nowy etat' — brakuje wyjaśnienia czy dotyczy to również sytuacji gdy pracownik przechodzi z wyższego na niższy wymiar etatu (czy zaległy urlop może być 'zbyt duży' dla nowego wymiaru)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 4 wspomina konkretne ścieżki w systemach kadrowych (Comarch Optima: 'Kadry → Plan pracy / Nieobecności') — należy zweryfikować czy te ścieżki menu są aktualne dla wersji 2026 tych systemów, szczególnie że oprogramowanie zmienia się dynamicznie."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 7 wspomina 'kalkulator urlopu GOFIN' jako narzędzie weryfikacyjne — należy potwierdzić czy GOFIN rzeczywiście oferuje taki kalkulator i czy jest dostępny dla użytkowników w 2026 r."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący pracownika niepełnosprawnego stwierdza że 'urlop dodatkowy 10 dni nabywany jest dopiero po przepracowaniu 1 roku po dniu zaliczenia do stopnia' — brakuje wyjaśnienia czy dotyczy to również pracownika już zatrudnionego, czy tylko nowo zatrudnionego po otrzymaniu orzeczenia."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Brakuje edge case'a dotyczącego pracownika zatrudnionego na czas określony krótszy niż rok — procedura skupia się na roku kalendarzowym, ale nie wyjaśnia proporcjonalnego wyliczenia dla umów krótszych niż 12 miesięcy."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Procedura nie zawiera informacji o wpływie urlopu bezpłatnego, urlopu na żądanie czy innych nieobecności na wymiar urlopu wypoczynkowego — brakuje wyjaśnienia czy okresy te są zaliczane do stażu pracy dla celów nabycia 26 dni."
+      }
+    ]
   }
 }

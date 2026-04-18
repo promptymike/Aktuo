@@ -110,5 +110,89 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:00:02Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę proceduralną z konkretnymi krokami i odwołaniami do przepisów, ale zawiera kilka potencjalnych błędów w numeracji artykułów, brakuje procedur awaryjnych dla sytuacji gdy zarząd nie współpracuje, oraz istnieje ryzyko że konkretne numery kont i progi istotności mogą być nieaktualne dla 2026 roku. Wymaga weryfikacji wszystkich odwołań do artykułów UoR i ustawy o CIT oraz uzupełnienia procedur dla scenariuszy kryzysowych.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 18 UoR jest cytowany jako podstawa do 'zestawienia obrotów i sald', ale artykuł 18 dotyczy zasad prowadzenia ksiąg rachunkowych, nie konkretnie zestawienia obrotów i sald. Należy zweryfikować czy prawidłowy jest art. 29 lub inne przepisy dotyczące dokumentacji i raportów."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera konkretne numery kont (201, 202, 234, 249, 760, 761, 820, 860, 149) i odwołania do systemów (Comarch Optima, Symfonia FK) — te numery mogą ulec zmianie w standardzie rachunkowości do 2026 roku, szczególnie w kontekście potencjalnych zmian w UoR."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Próg istotności określony jako '0,5–1% sumy bilansowej' jest przykładowy i może być nieaktualny dla 2026 roku; brak odniesienia do konkretnych wytycznych KIBR lub standardów zawartych w uchwałach Krajowej Rady Biegłych Rewidentów."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Odwołanie do 'art. 4a UoR' dotyczące odpowiedzialności kierownika jednostki — należy potwierdzić czy artykuł 4a rzeczywiście istnieje w aktualnym brzmieniu UoR (możliwe że zmieniono numerację lub treść)."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 mówi że 'próg istotności MUSI być zapisany w polityce rachunkowości', ale krok 3 sugeruje próg '0,5–1%' jako standard — jeśli polityka nie zawiera progu, procedura pozostaje niejasna co do tego, który próg zastosować."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brak procedury na wypadek gdy zarząd odmówi wydania pisemnej decyzji (krok 2) — draft nie określa czy biuro księgowe powinno wówczas wstrzymać się z korektami, czy może działać na podstawie własnej analizy, co ma znaczenie dla odpowiedzialności."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 wymaga rozsyłania potwierdzeń sald, ale brak wskazania terminu odpowiedzi kontrahenta i procedury postępowania gdy kontrahent nie odpowiada — czy 2 monity to standard czy wymóg ustawy?"
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Odwołanie do 'wniosku przez e-Urząd Skarbowy' w edge case dotyczącym rozrachunków z US — należy zweryfikować czy taka procedura rzeczywiście istnieje i czy jest to prawidłowa nazwa narzędzia/procedury."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Konto 149 'środki pieniężne w drodze' jest wymienione w related_questions, ale nie pojawia się w głównym workflow — należy potwierdzić czy to konto rzeczywiście istnieje w polskim planie kont i czy jest właściwe dla opisanego scenariusza."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący 'totalnego bałaganu' sugeruje rezygnację z klienta jako opcję — jest to praktyczne, ale procedura nie zawiera wskazówek jak formalnie zakończyć obsługę księgowości w takiej sytuacji (zawiadomienie do organów, dokumentacja dla następcy)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 6 rozróżnia KUP i NKUP, ale brak procedury weryfikacji czy spełnione są warunki art. 16 ust. 2 ustawy o CIT — draft nie wskazuje jakie dokumenty należy zebrać przed podjęciem decyzji o KUP."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Odwołanie do 'art. 12 ust. 1 pkt 3 lit. a ustawy o CIT' — numery artykułów w ustawie o CIT mogły ulec zmianie; należy zweryfikować czy te numery są aktualne dla 2026 roku."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 5 mówi 'NIE księguj fikcyjnych KW z nieistniejącej kasy', ale wcześniej (krok 1) procedura wymaga wydruku 'raportów kasowych' — jeśli kasa nie istnieje, jakie raporty kasowe mają być wydrukowane?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Procedura nie zawiera kroku dotyczącego weryfikacji czy poprzednie biuro rachunkowe miało prawo do prowadzenia ksiąg (czy posiadało wpis do rejestru biur rachunkowych) — może to mieć znaczenie dla oceny rzetelności przejmowanych ksiąg."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "low",
+        "description": "Odwołanie do 'art. 118 KC' dotyczące przedawnienia zobowiązań — należy potwierdzić czy to prawidłowy artykuł i czy przepisy KC dotyczące przedawnienia są właściwe dla zobowiązań handlowych (mogą być inne terminy w ustawach szczególnych)."
+      }
+    ]
   }
 }

@@ -110,5 +110,64 @@
     ],
     "batch": "batch2",
     "used_web_search": true
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:03:21Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.68,
+    "general_assessment": "Draft zawiera szczegółowe procedury operacyjne ale ma kilka poważnych luk: daty graniczne z 2025-2026 mogą być nieaktualne dla obecnego okresu (dokument datowany 2026-04-18), brakuje pełnych tytułów aktów prawnych do weryfikacji, a niektóre terminy (np. 'offline24') mogą być hallucynacjami AI. Wymaga weryfikacji u źródła MF i aktualizacji dat.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Artykuły ustawy o VAT (art. 106nd ust. 2 pkt 1-6 i 11) oraz rozporządzenia (§ 6-8) są przytaczane bez pełnych tytułów rozporządzenia i bez weryfikacji czy numery paragrafów odpowiadają rzeczywistej strukturze aktu. Brak linku do tekstu ustawy/rozporządzenia utrudnia weryfikację."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera wiele dat granicznych (1.11.2025, 31.01.2026, 1.02.2026, 1.01.2026, 1.01.2027) jako fakty pewne, ale dokument jest datowany 2026-04-18 — te daty już minęły i nie można zweryfikować czy rzeczywiście miały miejsce przejścia systemowe opisane w krokach 2 i 6. Wymaga potwierdzenia czy procedura jest aktualna dla 2026."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 mówi że uprawnienia nadane przez klienta dla podmiotu-biura 'NIE dają automatycznie dostępu pracownikom', ale krok 3 sugeruje że klient nadaje uprawnienie 'biuru rachunkowemu' — niejasne czy pracownicy biura mają dostęp czy nie i kiedy dokładnie muszą być subdelegowane uprawnienia."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak wyjaśnienia procedury subdelegacji uprawnień w kroku 4 — dokładnie jakie kroki musi wykonać biuro aby pracownicy mieli dostęp do faktur klienta. Czy subdelegacja to osobny proces w MCU czy automatyczne?"
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 5 wspomina 'tryb offline24' — ta terminologia nie jest standardowa w dokumentacji KSeF; powinna być 'tryb offline' lub 'tryb awaryjny'. Brak pewności czy 'offline24' to rzeczywista nazwa funkcji czy błąd AI."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Edge case wspomina koszt pieczęci kwalifikowanej 'ok. 400–2000 zł rocznie' — brak źródła dla tej kwoty i może być nieaktualna dla 2026. Ceny usług kryptograficznych mogą się zmieniać."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Krok 6 mówi że 'od 1.01.2027 tokeny wygasają' — dokument jest datowany 2026-04-18, więc ta data jest w przyszłości, ale nie ma potwierdzenia czy ta zmiana rzeczywiście wejdzie w życie ani czy nie będzie przesunięta."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Krok 7 wspomina 'Test połączenia' w Comarch Optima ale nie wyjaśnia co zrobić jeśli test się nie powiedzie — brak procedury troubleshootingu poza wymienionymi przyczynami."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o spółce cywilnej z ZAW-FA opisuje problem ale rozwiązanie ('master nadaje SOBIE samemu uprawnienia') brzmi jak workaround — niejasne czy to oficjalna procedura MF czy empirycznie odkryta praktyka."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "low",
+        "description": "Artykuły 18a–18d ustawy o VAT są przytaczane jako źródło dla 'przedstawicielstwa podatkowego' ale bez pełnego cytatu — brak weryfikacji czy te artykuły rzeczywiście dotyczą wyłącznie podatników zagranicznych."
+      }
+    ]
   }
 }

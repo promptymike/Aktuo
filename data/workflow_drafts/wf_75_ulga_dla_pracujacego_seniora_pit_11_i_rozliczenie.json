@@ -97,5 +97,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:01:23Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera szczegółową procedurę, ale ma istotne luki w formalnych referencjach prawnych (puste legal_anchors), potencjalne błędy terminologiczne (renta wdowia) i niejasności w kluczowych momentach przejścia (data emerytury, KUP w miesiącu przejścia). Wymaga weryfikacji przez eksperta PIT i uzupełnienia legal_anchors przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na 'art. 21 ust. 1 pkt 154 ustawy o PIT' i 'art. 26 ust. 1 pkt 2 ustawy o PIT'. Brak sformalizowanych referencji do aktów prawnych utrudnia weryfikację i aktualizację."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Limit zwolnienia 85 528 zł i kwota wolna 30 000 zł są podane jako wartości na 2026 r., ale draft nie zawiera mechanizmu walidacji czy te kwoty będą aktualne w momencie użycia (szczególnie że dokument jest datowany 2026-04-18). Brak informacji o źródle tych limitów i procedurze aktualizacji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 5 wymaga 'oświadczenia PIT-2 cz. E', ale draft nie wyjaśnia: czy to rzeczywista nazwa formularza, czy pracownik wypełnia osobny dokument, czy to część standardowego PIT-2. Brak wskazania gdzie przechowywać to oświadczenie u pracodawcy."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 4 mówi 'KUP się nie stosuje za miesiące w całości objęte zwolnieniem', ale step 2 wskazuje że przychód może być częściowo w wierszu 1 i częściowo w wierszu 3 w tym samym miesiącu (wypłata 10.04 za marzec). Niejasne jak obliczać KUP w miesiącu przejścia."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft powołuje się na 'renta wdowią' jako tytuł wykluczający ulgę, ale w polskim systemie emerytalnym termin 'renta wdowia' nie jest standardowy — istnieje 'renta rodzinna' dla wdów/wdowców. Wymaga weryfikacji czy to rzeczywisty tytuł czy błąd terminologiczny."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 6 mówi o 'dacie wpływu pierwszej emerytury z ZUS', ale nie wyjaśnia: czy to data decyzji ZUS, data faktycznego przelewu, czy data pierwszego świadczenia (które mogą się różnić o kilka dni/tygodni). To kluczowe dla rozliczenia DWR i odprawy."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o pracy u dwóch pracodawców mówi że 'każdy stosuje limit osobno', ale nie wyjaśnia procedury: czy pracownik musi poinformować obu pracodawców o pracy u drugiego, czy pracodawcy mogą to sprawdzić, jakie są konsekwencje jeśli pracownik tego nie ujawni."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Step 3 zawiera odniesienia do systemów Comarch Optima i Symfonii, ale nie wyjaśnia co zrobić w innych systemach kadrowych (np. Paychex, Sage, systemy małych firm). Może być zbyt specyficzne dla polskiego rynku."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Draft wspomina 'KUP 250 zł miejscowe / 300 zł dojazdowe' bez daty obowiązywania. Te kwoty mogą się zmienić — brak mechanizmu aktualizacji lub warunku 'na dzień 2026'."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Related questions zawierają 'ulgę na powrót' — draft nie wyjaśnia czy ta ulga może być łączona z ulgą dla seniora czy są to ulgi alternatywne. Brak wskazania gdzie znaleźć odpowiedź."
+      }
+    ]
   }
 }

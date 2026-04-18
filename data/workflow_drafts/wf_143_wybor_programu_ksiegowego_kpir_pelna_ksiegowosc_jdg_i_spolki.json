@@ -95,5 +95,79 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:56:36Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera praktyczną procedurę z konkretnymi nazwami programów i datami wdrożenia KSeF, ale ma znaczące luki w weryfikacji legal-anchor-pointów, aktualności cen/dat dla 2026 oraz kilka potencjalnych hallucynacji w nomenklatury produktów. Wymaga manualnej weryfikacji u dostawców i MF przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do przepisów (art. 106ga ustawy o VAT, art. 2 ust. 1 UoR, art. 32 RODO, § 10 rozporządzenia MF z 15.10.2019, art. 9 ust. 1c ustawy o CIT, art. 30 ust. 2 UoR). Brak sformalizowanych anchor-pointów uniemożliwia weryfikację aktualności tych przepisów dla 2026."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne daty wdrożenia KSeF (1.02.2026, 1.04.2026) i progi przychodu (200 mln zł, 2 500 000 EUR za 2025 r.), ale brak źródła weryfikacji tych dat dla 2026 — mogły ulec zmianie w stosunku do momentu generowania (18.04.2026). Wymaga potwierdzenia aktualności u MF/KIS."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Krok 4 zawiera konkretną wycenę WFirma dla BR (~1100 zł/mc przy 50 klientach, ~13 200 zł/rok) — ta kwota może być nieaktualna dla 2026 bez potwierdzenia u dostawcy. Cenniki programów księgowych zmieniają się co 6–12 miesięcy."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 zaleca 'wybierz jednego dostawcę z obydwoma modułami' (KPiR + pełne księgi), ale krok 4 porównuje WFirmę (głównie KPiR/ryczałt) z Comarch Optima i Enova365 (pełna księgowość) — nie wyjaśnia, czy WFirma ma moduł pełnej księgowości, czy to sprzeczność."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 2 wymaga 'obsługi trybu offline24' w KSeF, ale nie wyjaśnia, czy to wymóg obowiązkowy czy opcjonalny dla biur rachunkowych — brak warunku, kiedy offline24 jest krytyczny (np. dla klientów bez internetu)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 6 wspomina 'JPK_KR_PD od 1.01.2025 dla największych CIT-owców i od 1.01.2026 dla pozostałych' — brak wyjaśnienia, czy biuro musi obsługiwać JPK_KR_PD czy tylko klient (rozgraniczenie odpowiedzialności)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 3 wymienia 'Mała Księgowość Rzeczpospolitej' jako program do KPiR/ryczałtu — nazwa brzmi generycznie i nie jest potwierdzana w branży; wymaga weryfikacji, czy to rzeczywisty produkt czy wygenerowana nazwa."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 3 wspomina 'Fakt Zero/Fakt Optima' — nie jest jasne, czy to dwa oddzielne produkty czy warianty tego samego programu; wymaga uściślenia nomenklatury."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 5 wspomina 'Comarch Optima w Chmurze Standard' — brak potwierdzenia, czy to oficjalna nazwa produktu czy wygenerowana nazwa wariantu."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'JDG na ryczałcie' sugeruje, że e-Mikrofirma + moduł KSeF wystarczają, ale nie wyjaśnia, czy e-Mikrofirma obsługuje KSeF w pełni (wysyłka, pobieranie, offline24) czy tylko wystawianie — może być niedostateczna dla biura prowadzącego księgowość ryczałtu."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case 'Spółka transportowa' wymienia 'rozrachunki walutowe wg art. 30 ust. 2 UoR' — brak wyjaśnienia, czy to wymóg dla transportu międzynarodowego czy dla wszystkich spółek transportowych (zbyt wąskie lub zbyt szerokie)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wymaga testu 'korekty faktury z dziedziczeniem GTU/TP/MPP' — brak wyjaśnienia, czy program powinien automatycznie dziedziczyć czy użytkownik musi ręcznie potwierdzić (wymóg funkcjonalny vs. procedurowy)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie zawiera warunku dla biur jednoosobowych (solo-praktykanci) — czy procedura dotyczy tylko biur wieloosobowych czy też solo-praktyków?"
+      }
+    ]
   }
 }

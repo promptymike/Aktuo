@@ -97,5 +97,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:03:06Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.68,
+    "general_assessment": "Draft zawiera solidną strukturę procedury, ale ma kilka poważnych luk w referencjach prawnych (puste legal_anchors) i potencjalne hallucynacje (formularz ZAS-36, sformułowania o 'wyłącznej opiece matki'). Wymaga weryfikacji aktualności danych dla 2026 oraz uzupełnienia konkretnych odniesień do artykułów ustawy zasiłkowej.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na 'art. 34 ustawy zasiłkowej' i 'art. 33 ustawy zasiłkowej' — brakuje pełnych referencji do ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (czy to ustawa z 1998 r., czy nowsza)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "high",
+        "description": "Draft powołuje się na formularz 'ZAS-36' jako 'oświadczenie' przy nagłym zamknięciu placówki (krok 6), ale nie ma pewności, czy ten kod formularza ZUS istnieje lub czy jest aktualny dla 2026 — wymaga weryfikacji w oficjalnym rejestrze formularzy ZUS."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Krok 1 odwołuje się do stanu zatrudnienia na '30.11 roku poprzedniego' jako daty granicznej dla statusu płatnika zasiłków — ta reguła mogła ulec zmianie w przepisach ZUS między 2024 a 2026, wymaga potwierdzenia aktualności."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wspomina kody ZUS '320' na eZLA dla zasiłku opiekuńczego, ale nie wyjaśnia, czy kod ten obowiązuje dla wszystkich typów zasiłków opiekuńczych (opieka nad dzieckiem vs. członkiem rodziny) czy tylko dla wybranych — brakuje mapowania kodów."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 stwierdza, że dla dzieci poniżej 2 lat 'ograniczenie innego domownika nie obowiązuje', ale krok 4 podaje limity 60 dni dla opieki nad zdrowym dzieckiem do 8 lat — niejasne, czy limit 60 dni dotyczy również dzieci poniżej 2 lat czy jest inny."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'Drugi rodzic na urlopie macierzyńskim' zawiera sformułowanie 'urlop rodzicielski obejmuje szczególny przypadek (noworodek wymagający wyłącznej opieki matki)' — to sformułowanie jest nieprecyzyjne i potencjalnie wymyślone, brakuje konkretnego odniesienia do przepisów definiujących 'wyłączną opiekę matki'."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia procedury dla pracownika zatrudnionego u pracodawcy do 20 osób — krok 1 mówi, że 'zasiłek wypłaca ZUS', ale nie precyzuje, czy pracownik sam składa Z-15A do ZUS czy przez pracodawcę, i jaki jest termin."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 5 wspomina 'dzień odbioru soboty' jako dzień wolny od pracy — to sformułowanie jest archaiczne i odnosi się do starych przepisów o rozkładzie pracy; dla 2026 wymaga weryfikacji, czy ta kategoria jeszcze istnieje w praktyce."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Krok 7 odwołuje się do konkretnych systemów (Comarch Optima, Symfonia Kadry i Płace) z kodami procedur — te systemy mogły zmienić interfejsy lub kody między 2024 a 2026, wymaga weryfikacji aktualności instrukcji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie wyjaśnia, jak rozliczyć zasiłek opiekuńczy w przypadku pracownika na urlopie bezpłatnym lub urlopie wychowawczym — czy zasiłek przysługuje i jak się go wylicza bez wynagrodzenia."
+      }
+    ]
   }
 }

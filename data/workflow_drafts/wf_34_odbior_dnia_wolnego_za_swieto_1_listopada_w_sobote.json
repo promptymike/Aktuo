@@ -97,5 +97,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:58:08Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera szczegółowe procedury, ale ma znaczące luki w weryfikacji artykułów kodeksu, brakuje jasności w sytuacjach przejściowych (pracownicy na urlopach, nowo zatrudnieni) oraz zawiera odwołania do konkretnych systemów IT bez potwierdzenia ich aktualności. Wymaga uzupełnienia legal_anchors i przeformułowania kilku sprzecznych stwierdzeń w krokach 1–3.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft odwołuje się do art. 130, 129 § 1, 81 § 1, 1513 i 15111 k.p. Brak weryfikacji, czy te numery artykułów są aktualne w Kodeksie pracy 2026 i czy ich brzmienie nie uległo zmianom."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera konkretne daty dla listopada 2026 (1.11 — sobota, 10.11 — środa, 11.11 — środa), ale nie wyjaśnia, czy 11 listopada 2026 to rzeczywiście święto ustawowe w Polsce i czy jego status nie zmienił się od czasu weryfikacji (last_verified_at: 2026-04-18)."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 stwierdza, że 'fizyczny odbiór dodatkowego dnia przysługuje tylko tym, którym harmonogram nie zapewnia już przeciętnie 5-dniowego tygodnia pracy', ale krok 1 mówi, że 'obniżenie wymiaru następuje NIEZALEŻNIE od tego, czy pracownik pracuje w soboty' — brakuje jasnego wyjaśnienia, kiedy wymiar się obniża, a kiedy pracownik otrzymuje fizyczny dzień wolny."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie wyjaśnia, co się dzieje, gdy pracownik pracuje w soboty w ramach normalnego harmonogramu (np. system 6-dniowy) — czy wtedy 1.11 (sobota) jest dla niego dniem pracy, czy wolnym, i czy przysługuje mu odbiór za święto w innym dniu."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 opisuje pracownika zatrudnionego po 1.11, ale nie wyjaśnia, czy pracownik zatrudniony PRZED 1.11, ale zwolniony PRZED 10.11, ma prawo do odbioru za święto."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 6 odwołuje się do konkretnych systemów (Comarch Optima, Symfonia Kadry i Płace) i symboli nieobecności ('W'), ale nie ma weryfikacji, czy te systemy rzeczywiście posiadają takie funkcjonalności i czy symbole są standardowe w 2026."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący pracownika na długotrwałym L4 stwierdza, że 'dzień wolny przepada', ale nie wyjaśnia, czy pracodawca ma obowiązek dokumentować tę decyzję i czy pracownik może później kwestionować brak wypłaty ekwiwalentu."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Draft nie pokrywa sytuacji, gdy pracownik jest na urlopie wypoczynkowym w dniu wyznaczonego odbioru (10.11) — krok 4 mówi, że 'dzień 10.11 jest dla niego dniem wolnym z rozkładu', ale nie wyjaśnia, czy urlop wypoczynkowy zostaje skrócony, czy pracownik otrzymuje dodatkowy dzień wolny."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje wyjaśnienia, jak rozliczyć sytuację, gdy pracownik wraca z urlopu wychowawczego dokładnie w dniu wyznaczonego odbioru (10.11) — czy ma prawo do tego dnia wolnego, czy wymiar czasu pracy jest liczony od dnia powrotu."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 7 mówi o 'co najmniej 1 tydzień przed', ale nie wyjaśnia, czy to wymóg prawny czy rekomendacja praktyczna, i czy pracodawca może wyznaczyć odbiór z krótszym wyprzedzeniem w uzasadnionych przypadkach."
+      }
+    ]
   }
 }

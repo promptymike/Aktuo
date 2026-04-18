@@ -107,5 +107,69 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:58:58Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera praktycznie użyteczne rozróżnienia między stawkami ryczałtu dla konkretnych usług, ale ma kilka poważnych luk: brakuje pełnego zakotwiczenia prawnego dla wszystkich cytowanych stawek, nie uwzględnia zmian limitów przychodów na 2026 r., a niektóre jednostki (np. Ośrodek Klasyfikacji w Łodzi) wymagają weryfikacji. Wymaga przeglądu przez eksperta podatkowego przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 12 ust. 1 pkt 2b (IT 12%) nie jest cytowany w legal_anchors, choć jest kluczowy dla rozróżnienia programistów od help-desku. Brakuje też art. 12 ust. 1 pkt 7 lit. b (catering 3%) i pkt 6 lit. a (hydraulika 5,5%), które są wymienione w answer_steps ale nie w legal_anchors."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera odniesienie do nowelizacji 2021/2022 zmieniającej stawki IT na 12%, ale nie weryfikuje czy te stawki obowiązują w 2026 r. Limity przychodów dla ryczałtu (obecnie 300 tys. zł) mogą być zmienione ustawą budżetową na 2026 r., co nie jest uwzględnione."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 2 stwierdza że 'hydraulik — 5,5% dla robót budowlanych/nowych instalacji' ale edge_case wyjaśnia że 'przy wymianie całej instalacji CO można argumentować 5,5%' — brakuje jasnej granicy między 'nową instalacją' a 'wymianą', co może prowadzić do różnych interpretacji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Step 3 wspomina WIS (Wstępną Interpretację Stanowiska) ale nie wyjaśnia czy WIS dla ryczałtu jest wiążący dla podatnika czy tylko dla organów podatkowych. Brakuje też informacji o terminie ważności WIS i co robić gdy WIS wygaśnie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wspomina o warunku przychodu (limit 300 tys. zł rocznie) jako warunku stosowania ryczałtu — podatnik mogący przekroczyć limit musi wiedzieć o tym przed wyborem stawki, a to nie jest uwzględnione w workflow."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Step 3 wspomina 'Ośrodek Klasyfikacji i Nomenklatur w Łodzi' jako jednostkę GUS wydającą opinie klasyfikacyjne — należy zweryfikować czy ta jednostka istnieje i czy rzeczywiście wydaje opinie dla PKWiU (może być to jednostka dla CN, a nie PKWiU)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Edge case o pieczatkach i wyrobach indywidualnych (5,5% vs 8,5%) zawiera bardzo szczegółowe rozróżnienie, ale brakuje odniesienia do konkretnego artykułu ustawy lub interpretacji — może być to wnioskowanie z praktyki, ale wymaga weryfikacji."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o catering wspomina że 'jeśli podatnik tylko rozwozi gotowe dania wyprodukowane przez kogoś innego — jest to transport/pośrednictwo = 8,5%' ale nie wyjaśnia czy to dotyczy też sytuacji gdy podatnik kupuje posiłki i je odsprzedaje (co mogłoby być handlem, a nie transportem)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o usługach porządkowych wspomina VAT 8% dla terenów zielonych (poz. 176 zał. nr 3), ale nie wyjaśnia czy ta stawka VAT zmienia się w 2026 r. lub czy dotyczy wszystkich odbiorców (może być inna dla firm vs osób fizycznych)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 4 wspomina że 'bez podziału cały przychód opodatkujesz najwyższą stawką' — ale nie wyjaśnia czy to dotyczy tylko przychodów z danego roku czy też wymaga retroaktywnego przeliczenia poprzednich lat, jeśli podatnik nie prowadził odrębnej ewidencji."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "low",
+        "description": "Legal_anchors zawiera art. 9 ust. 1 ustawy o ryczałcie (ciężar dowodu) ale ten artykuł nie jest wymieniony w legal_anchors — pojawia się tylko w step 6 jako odniesienie."
+      }
+    ]
   }
 }

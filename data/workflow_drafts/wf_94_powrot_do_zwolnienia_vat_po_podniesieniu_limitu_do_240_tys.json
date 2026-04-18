@@ -113,5 +113,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:02:50Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera solidną strukturę procedury, ale ma kilka poważnych luk: brak potwierdzenia aktualności limitu 240 tys. zł na kwiecień 2026 r., nieprecyzyjne powołania się na 'interpretacje MF/KIS' bez konkretnych źródeł, oraz niejasności w procedurze dla podatników, którzy byli już VAT czynni w 2025 r. Wymaga weryfikacji prawnej i uzupełnienia o konkretne numery interpretacji oraz procedury dla scenariuszy przejściowych.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 113 ust. 13 ustawy o VAT jest cytowany jako katalog wyłączeń przedmiotowych, ale draft nie precyzuje, czy lista jest zamknięta czy otwarta, ani nie wskazuje, czy przepis rzeczywiście zawiera wszystkie wymienione kategorie (usługi prawnicze, doradztwo, jubilerskie, ściąganie długów, nowe środki transportu, części samochodowe online, wyroby z metali szlachetnych)."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zakłada, że limit 240 000 zł obowiązuje od 1.01.2026 r., ale data weryfikacji to 18.04.2026 — brak potwierdzenia, czy limit nie zmienił się w międzyczasie lub czy przepisy przejściowe nie uległy modyfikacji w pierwszych miesiącach 2026 r."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 mówi o wyjątku przejściowym dla osób, które przekroczyły 200 tys. zł ale nie 240 tys. zł w 2025 r., jednak krok 6 opisuje scenariusz przekroczenia limitu w trakcie roku bez jasnego rozgraniczenia, czy dotyczy to również wyjątku przejściowego czy tylko standardowych rejestracji VAT."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie wyjaśnia, jak liczyć limit 240 000 zł dla podatników, którzy w 2025 r. byli już zarejestrowani jako VAT czynni (czy liczy się cała sprzedaż 2025 czy tylko od momentu rejestracji) — to kluczowe dla ustalenia, czy wyjątek przejściowy w ogóle się stosuje."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 wspomina o korektach VAT naliczonego (art. 91 ust. 7 i 7a), ale nie precyzuje, czy korekta dotyczy wszystkich towarów/materiałów czy tylko tych o określonym okresie użytkowania, ani nie wyjaśnia, jak praktycznie wygląda rozliczenie w systemach (wymienione są konkretne moduły, ale bez procedury krok po kroku)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft powołuje się na 'interpretacje MF i KIS' dotyczące wyjątku przejściowego dla limitu 240 tys. zł, ale nie podaje konkretnych numerów interpretacji lub dat — edge case wskazuje na 'sprzeczne stanowiska różnych US', co sugeruje, że interpretacja może nie być ujednolicona lub może nie istnieć w formie oficjalnego stanowiska."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 5 wspomina o 'Białej Liście MF' w kontekście weryfikacji statusu podatnika — termin jest używany w Polsce, ale draft nie precyzuje, czy chodzi o rejestr VAT-owców czy inny system, ani nie potwierdza, że weryfikacja trwa 'kilka–kilkanaście dni roboczych'."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący dobrowolnej rezystracji (art. 113 ust. 4) mówi, że wyjątek przejściowy nie dotyczy osób, które dobrowolnie zarejestrowały się jako VAT czynni — jednak draft nie wyjaśnia, jak odróżnić w praktyce utratę zwolnienia 'z mocy prawa' od 'dobrowolnej rezygnacji' w dokumentacji podatnika."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, czy podatnik, który przekroczył limit w grudniu 2025 r. i chce wrócić do zwolnienia od 1.01.2026, musi najpierw złożyć VAT-R rejestracyjny (jako VAT czynny) czy może bezpośrednio złożyć VAT-R powrotowy — procedura nie jest jasna dla tego scenariusza."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Krok 7 wspomina o przeprogramowaniu kas fiskalnych na stawki 'zw.', ale nie wyjaśnia, czy dotyczy to wszystkich typów kas (online, offline, hybrydowych) ani nie precyzuje, kto ponosi odpowiedzialność za przeprogramowanie (podatnik czy serwisant)."
+      }
+    ]
   }
 }

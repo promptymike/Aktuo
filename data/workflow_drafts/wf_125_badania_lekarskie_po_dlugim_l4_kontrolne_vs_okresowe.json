@@ -96,5 +96,59 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:54:55Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera szczegółową i praktyczną procedurę, ale ma kilka poważnych luk: brak formalnego zakotwiczenia przepisów prawnych, potencjalne hallucynacje dotyczące rozporządzenia MRPiPS, oraz brakujące informacje o procedurze eskalacji i statusie pracownika w okresie przejściowym. Wymaga weryfikacji prawnej i uzupełnienia brakujących scenariuszy.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 229 § 2 KP, art. 163 § 3 KP, art. 304 KP, art. 229 § 11 KP i § 3 rozporządzenia MRPiPS z 10.12.2018. Brak formalnego zakotwiczenia tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera odniesienia do konkretnych systemów kadrowych (Comarch Optima, Symfonia, WFirma, Enova365) z nazwami ścieżek menu — te interfejsy mogą się zmienić do 2026 r., a instrukcje mogą stać się nieaktualne lub mylące dla użytkowników nowych wersji oprogramowania."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 5 stwierdza 'skierowanie możesz wystawić jeszcze w trakcie trwania L4', ale krok 3 i 4 mówią o 'dniu planowanego powrotu' i 'dniu powrotu' — brak jasności, czy data wystawienia skierowania powinna być datą w trakcie L4, czy datą powrotu, co może prowadzić do błędów administracyjnych."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, co zrobić, gdy pracownik nie zgłosi się na badania kontrolne w wyznaczonym terminie po powrocie z L4 — brak procedury eskalacji, możliwości zawieszenia pracy czy sankcji pracowniczych, co jest kluczowe dla praktyki HR."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 powołuje się na '§ 3 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej' — brak weryfikacji, czy to rozporządzenie rzeczywiście istnieje i czy jego § 3 dotyczy wpinania orzeczeń do części B akt osobowych (może to być wymyślony przepis lub błędnie cytowany)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case dotyczący 'pracownika zatrudnionego w dwóch firmach' jest realistyczny, ale draft nie wyjaśnia, czy pracownik musi wykonać badania kontrolne u OBU pracodawców czy tylko u głównego, co może być źródłem nieporozumień."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie zawiera informacji o tym, czy pracownik może pracować w okresie między zakończeniem L4 a wykonaniem badań kontrolnych/okresowych — czy jest to okres zawieszenia, czy pracownik może świadczyć pracę bez orzeczenia, co jest kluczowe dla zgodności z prawem."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 6 mówi, że po urlopie macierzyńskim 'badania kontrolne NIE są wymagane', ale wcześniej (krok 1) definiuje się kontrolne jako obowiązkowe po L4 >30 dni — brak wyjaśnienia, czy urlop macierzyński liczony jest jako L4, czy jako odrębna kategoria, co może być mylące."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie wyjaśnia, czy pracownik może być kierowany na badania kontrolne/okresowe w trakcie pracy (np. w godzinach pracy) czy musi to robić we własnym czasie, co ma znaczenie dla praktyki i komunikacji z pracownikiem."
+      }
+    ]
   }
 }

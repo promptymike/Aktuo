@@ -96,5 +96,79 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:02:15Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera kompleksową procedurę, ale ma poważne luki w dokumentacji źródeł prawnych (puste legal_anchors, nieokreślone 'komentarze HE'), wewnętrzne sprzeczności między krokami (przedawnienie vs. przepadek prawa) oraz brakuje krytycznych wyjaśnień dotyczących daty nabycia prawa i procedury w sytuacjach spornych. Wymaga pisemnych potwierdzań od MRPiPS przed wdrożeniem w praktyce.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 38 ust. 2, art. 302 KP, art. 6 ustawy nowelizującej, art. 291 § 1 KP, art. 47 Karty Nauczyciela, art. 23 ustawy o pracownikach urzędów państwowych). Brak sformalizowanego listy źródeł prawnych utrudnia weryfikację i aktualizację."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "high",
+        "description": "Draft wielokrotnie odwołuje się do 'komentarzy HE' (HE5/1, HE3/3, HE1, HE4/3, HE1/2, HE3/1, HE2/3, HE5/1) oraz '[6]/1' i '[8]/2', które nie są zdefiniowane w dokumencie i nie ma pewności, czy odnoszą się do istniejących publikacji, orzeczeń czy stanowisk MRPiPS."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft jest datowany na 2026-04-18 i zawiera stwierdzenie 'last_verified_at': '2026-04-18', ale odnosi się do przepisów 'od 1.01.2026' jako do przyszłości. Jeśli dokument jest rzeczywiście z kwietnia 2026, przepisy powinny być już w pełni obowiązujące — brak jasności, czy dane o limitach (3 lata przedawnienia, 12 miesięcy między próbami) są aktualne dla 2026+."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "high",
+        "description": "Krok 3 stwierdza, że prawo do nagrody za próg osiągnięty wstecznie (przed 1.01.2026) 'NIE przysługuje', ale krok 4 mówi o 3-letnim przedawnieniu z art. 291 § 1 KP bez wyraźnego wyjaśnienia, jak te dwie reguły się łączą — czy przedawnienie 'ratuje' roszczenie z okresu sprzed 1.01.2026, czy nie?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie wyjaśnia, czy 'data nabycia prawa' to data osiągnięcia progu stażu czy data dostarczenia dokumentów ZUS. To kluczowe dla interpretacji art. 6 ustawy nowelizującej — jeśli pracownik osiągnął 20 lat w grudniu 2025, ale dokumenty dostarczył w lutym 2026, które daty się liczy?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wspomina 'podstawa wymiaru = wynagrodzenie jak do ekwiwalentu urlopowego z miesiąca nabycia prawa', ale nie wyjaśnia, jak ustalić to wynagrodzenie, gdy pracownik był na zwolnieniu, urlopie bezpłatnym lub gdy jego pensja się zmieniała — to samo pytanie pojawia się w 'related_questions'."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie zawiera procedury weryfikacji zaświadczenia ZUS — czy wystarczy samo zaświadczenie o składkach, czy trzeba sprawdzić CEIDG dla działalności gospodarczej? Pytanie pojawia się w 'related_questions', co sugeruje, że procedura jest niekompletna."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o pracowniku osiągającym staż przed zatrudnieniem u obecnego pracodawcy jest oznaczony jako 'interpretacja sporna' z zaleceniem pisemnego zapytania do MRPiPS, ale procedura nie zawiera kroku, co zrobić w praktyce, gdy księgowy czeka na odpowiedź — czy wstrzymać wypłatę, czy wypłacić wariantowo?"
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o 'opłacalności' opóźnienia dostarczenia dokumentów (aby uniknąć wstecznego przepadku progu) sugeruje, że pracownik może manipulować terminem dostarczenia — draft nie wyjaśnia, czy pracodawca ma obowiązek aktywnie żądać dokumentów czy czekać na inicjatywę pracownika."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 zawiera szczegółowe instrukcje dla systemów 'Comarch Optima' i 'Enova365' (konkretne ścieżki menu), ale brak informacji, czy te ścieżki są aktualne dla wersji 2026 tych systemów — mogą się zmienić."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 6 mówi o zasadzie '12 miesięcy między próbami' jako 'praktyka + komentarz HE4/3', ale krok 5 nie wspomina o tym warunku — czy pracownik może otrzymać nagrodę za 20 i 25 lat w tym samym miesiącu, czy musi czekać 12 miesięcy?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft wspomina 'zwolnienie ze składek ZUS' dla nagrody jubileuszowej 'wypłacanej nie częściej niż co 5 lat', ale nie wyjaśnia, czy to oznacza, że jeśli pracownik otrzyma dwie nagrody w ciągu 5 lat (za różne progi), druga podlega składkom."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Draft zawiera odniesienie do 'rozporządzenia składkowego' bez numeru — jeśli rozporządzenie zostało zmienione po 1.01.2026, procedura może być nieaktualna."
+      }
+    ]
   }
 }

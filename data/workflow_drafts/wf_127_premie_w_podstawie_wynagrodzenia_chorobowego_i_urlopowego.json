@@ -105,5 +105,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:55:12Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną logikę proceduralną i praktyczne kroki, ale ma luki w precyzji odniesień prawnych (brakuje pełnego cytowania ustawy zasiłkowej), niejasności w edge cases dotyczących zmian regulaminu i okresów zatrudnienia, oraz potencjalne zagrożenie halucynacją w nazewnictwie dokumentów kadrowych. Wymaga weryfikacji legal_anchors i doprecyzowania scenariuszy przejściowych dla 2026 r.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 92 § 2 Kodeksu pracy odsyła do zasad ustalania podstawy zasiłku, ale draft nie cytuje bezpośrednio art. 41 ustawy zasiłkowej (ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa), który jest kluczowy dla testu 'pomniejszania za chorobę'. Brakuje pełnego odniesienia do ustawy zasiłkowej w legal_anchors."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Draft powołuje się na '§ 6–8 rozporządzenia MPiPS z 8.01.1997' dla podstawy urlopowej, ale nie podaje pełnej nazwy rozporządzenia ani nie weryfikuje, czy numery paragrafów są aktualne dla 2026 (rozporządzenie mogło być zmieniane)."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera konkretne nazwy systemów (Comarch Optima, Symfonia Kadry i Płace) z opisem flag konfiguracyjnych, które mogą się zmienić w wersjach 2026 lub mogą nie być dostępne u wszystkich użytkowników; brakuje zastrzeżenia o weryfikacji u dostawcy."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 2 mówi, że jeśli premia 'NIE jest pomniejszana' to 'NIE wchodzi do podstawy', ale krok 5 stwierdza że premia za brak absencji 'wchodzi, bo jest pomniejszana' — logika jest spójna, ale sformułowanie w kroku 2 mogłoby być mylące dla czytelnika (negacja podwójna)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Draft nie wyjaśnia, jak postępować z premiami wypłaconymi w okresach, gdy pracownik był na urlopie bezpłatnym lub zawieszeniu stosunku pracy — czy takie okresy wliczają się do '12 miesięcy poprzedzających' czy są pomijane."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje wyjaśnienia, jak traktować premie wypłacane w okresach przed 1.01.2026, jeśli regulamin zmienia się od tego dnia — czy pracownik zatrudniony od 2025 r. ma prawo do 'starych' premii w podstawie chorobowego za niezdolność w 2026."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft powołuje się na 'decyzję kadrową' jako dokument do archiwizacji, ale nie wskazuje, czy taki dokument ma formalną nazwę w polskim prawie pracy lub czy jest to termin nieoficjalny; może być niejasne dla użytkownika, co dokładnie dokumentować."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o 'zmianie regulaminu od 1.01.2026' jest konkretny, ale draft nie wyjaśnia, czy zmiana regulaminu wymaga wypowiedzenia pracownikom czy może być wprowadzona jednostronnie; brakuje odniesienia do art. 8 Kodeksu pracy (zmiana warunków zatrudnienia)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Draft nie pokrywa scenariusza, gdy pracownik otrzymuje premię w formie akcji, opcji na akcje lub innych instrumentów finansowych — czy takie składniki wchodzą do podstawy chorobowego i jak je wyceniać."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 mówi o 'uzupełnieniu do pełnej kwoty' dla premii miesięcznych, ale nie wyjaśnia, czy dotyczy to również sytuacji, gdy pracownik był na zwolnieniu lekarskim przez cały miesiąc (czy wtedy 'pełna kwota' to 0 zł czy kwota za pełny miesiąc pracy)."
+      }
+    ]
   }
 }

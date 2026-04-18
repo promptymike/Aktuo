@@ -113,5 +113,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:55:27Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę procedury z konkretnymi krokami i przykładami, ale ma kilka istotnych luk: brakuje weryfikacji aktualności kwot minimalnych na 2026 r., rozbieżności między krokami dotyczące wyłączania/uzupełniania miesięcy, oraz ograniczenie do dwóch systemów księgowych. Wymaga przeglądu przed publikacją, szczególnie w zakresie danych finansowych i zakresu procedury dla różnych typów umów.",
+    "issues": [
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Dokument zawiera konkretne kwoty minimalne wynagrodzenia na 2026 r. (4 806 zł) i wyliczenia (4 147,00 zł po odjęciu 13,71%), ale nie ma źródła ani daty potwierdzenia tych kwot. Dla dokumentu operacyjnego używanego przez księgowych w 2026 r. wymaga weryfikacji aktualności przed publikacją."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Artykuły 36–42 ustawy zasiłkowej są przywołane jako zakres regulujący podstawę, ale draft nie precyzuje, czy wszystkie te artykuły są nadal aktualne bez zmian ustawowych w 2025–2026. Brakuje informacji o ewentualnych nowelizacjach."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 mówi o wyłączaniu miesięcy z mniej niż połową czasu pracy 'z powodu nieobecności z prawem do zasiłku', ale krok 4 wskazuje, że takie miesiące należy 'uzupełnić' — brakuje jasności, czy miesiąc jest wyłączany całkowicie czy uzupełniany."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 3 wspomina parametr 'Uzupełnij wynagrodzenie' w Comarch Optima i 'Podstawa naliczania zasiłków' w Symfonia, ale nie wyjaśnia, co zrobić w innych systemach księgowych (np. Enova, Teta, Sage). Procedura wydaje się ograniczona do dwóch systemów."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Wyliczenie 4 806 zł × (1 − 0,1371) = 4 147,09 zł jest podane jako 'wg wyliczenia detalicznego', ale wcześniej w tekście podano 4 147,00 zł — rozbieżność 0,09 zł może sugerować niedokładność lub zaokrąglenie, które nie jest wyjaśnione."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case dotyczący 'świadczenia rehabilitacyjnego' w punkcie pierwszym brzmi realistycznie, ale procedura główna (kroki 1–7) nie zawiera instrukcji, jak obsługiwać świadczenie rehabilitacyjne — czy to osobny workflow czy część tego samego?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 wspomina 'wyrównanie wynagrodzenia dla pracowników samorządowych' jako przykład, ale nie wyjaśnia, czy procedura obejmuje również pracowników sektora budżetowego poza samorządem (np. nauczyciele, pracownicy NFZ). Brakuje jasności zakresu."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 6 mówi, że dla pracownika pełnoetatowego podstawa nie może być niższa niż minimum, ale krok 2 wskazuje, że przy zmianie etatu na niepełny bierze się 'wyłącznie miesiące po zmianie' — brakuje wyjaśnienia, czy gwarancja minimum stosuje się do niepełnego etatu od razu czy dopiero po 12 miesiącach."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wspomina 'dobrowolną chorobową' dla zleceniobiorcy, ale nie wyjaśnia, czy procedura obejmuje również pracowników na umowie o dzieło lub umowie agencyjnej. Zakres typów umów nie jest jasny."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Dokument zawiera referencję do 'minimum 2025' (4 023,13 zł) w edge case, ale ta kwota nie jest zweryfikowana — jeśli dokument jest generowany dla 2026, ta kwota powinna być potwierdzona z oficjalnych źródeł."
+      }
+    ]
   }
 }

@@ -97,5 +97,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:57:52Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera szczegółową procedurę operacyjną, ale ma istotne luki w formalnych anchor'ach prawnych i potencjalne rozbieżności między krokami dotyczącymi momentu nadania znaczników. Wymaga weryfikacji aktualności rozporządzenia MF z 16.08.2024 oraz wyjaśnienia sprzeczności między podejściem analitycznym a pozabilansowym.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do konkretnych artykułów ustawy o CIT (art. 15 ust. 4g-4h, art. 16 ust. 1 pkt 57, 57a) i ustawy o rachunkowości (art. 10 ust. 1 pkt 3). Brak sformalizowanych anchor'ów uniemożliwia weryfikację aktualności przepisów na 2026 rok."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne daty i progi (50 mln EUR, 31.03.2027, rozporządzenie MF z 16.08.2024) bez wskazania źródła lub daty wejścia w życie. Dla 2026 roku istnieje ryzyko, że rozporządzenie MF lub przepisy dotyczące JPK_KR_PD mogły ulec zmianie między datą weryfikacji (2026-04-18) a faktycznym zastosowaniem."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 2 mówi 'PRZED pierwszym księgowaniem 2026 roku', ale krok 5 i edge case dotyczą 'różnic przejściowych na przełomie roku' — niejasne jest, czy znaczniki dla pozycji przejściowych (przychód grudzień 2026, podatek styczeń 2027) powinny być ustalone przed 01.01.2026, czy mogą być dodane w trakcie roku dla przyszłych pozycji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, co zrobić w sytuacji, gdy podatnik zmienia system księgowy w trakcie 2026 roku (np. z Optimy na Symfonię) — czy znaczniki muszą być przeniesione, czy mogą być nadane na nowo w nowym systemie bez wpływu na wcześniejsze zapisy."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft wspomina 'rozporządzenie MF z 16.08.2024 w sprawie dodatkowych danych w księgach' — nie ma potwierdzenia, że dokument o tej dokładnej dacie i tytule istnieje; wymaga weryfikacji w Dzienniku Ustaw."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 4 wymienia znaczniki 'PD_PrzPod', 'PD_PrzNiepod', 'PD_KUP', 'PD_NKUP' — draft nie potwierdza, że są to oficjalne kody znaczników w systemach Optima/Symfonia; mogą to być przykłady, ale nie jest to wyraźnie zaznaczone."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case dotyczący MSSF mówi 'wymaga indywidualnego mapowania i jest obszarem o niepewnej praktyce' — to jest zbyt vague dla procedury operacyjnej; brakuje konkretnych kroków, co zrobić w tej sytuacji (zapytanie do KIS jest wskazane, ale nie ma procedury na wypadek, gdy KIS nie odpowie lub odpowiedź będzie niejasna)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, jak obsługiwać konta rozrachunkowe z zagranicą (np. 201 dostawcy zagraniczni) — czy znaczniki KUP/NKUP mają zastosowanie, czy są inne reguły dla transakcji międzynarodowych."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 3 sugeruje 'analitykę typu 402-01 (KUP) i 402-99 (NKUP)', ale krok 4 mówi o 'kontach pozabilansowych (zespół 9xx)' — niejasne jest, czy 402-99 to analityka czy pozabilansowe, czy to dwa różne podejścia."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Draft zawiera odniesienia do konkretnych ścieżek menu w systemach (Comarch Optima: 'Księgowość → Plan kont → edycja konta → zakładka Znaczniki JPK_KR_PD') — interfejsy mogą się zmienić w wersjach wydanych w 2026 roku, co uczyni instrukcje nieaktualne."
+      }
+    ]
   }
 }

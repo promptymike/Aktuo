@@ -112,5 +112,69 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:58:24Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera poważne błędy w numeracji artykułów Kodeksu pracy (art. 1511, 1513, 15111 nie istnieją), co sugeruje halucynacje AI. Wymaga pilnej weryfikacji wszystkich odwołań do przepisów oraz aktualizacji danych o rozporządzeniach i systemach informatycznych dla 2026.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 1401 KP (ruchomy rozkład) wymieniony w step 1 - numer artykułu wygląda nieprawdopodobnie (brak takiego artykułu w KP). Powinno być art. 140 KP lub inne przepisy dotyczące rozkładu czasu pracy."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 1511 KP i art. 1513 KP cytowane w step 4 i 6 - numery artykułów wyglądają nieprawdopodobnie (KP nie ma artykułów powyżej 300). Prawidłowe to art. 151 KP (nadgodziny) i art. 151a KP (praca w dni wolne)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 15111 KP wymieniony w related_questions - taki artykuł nie istnieje w Kodeksie pracy. Przepisy o pracy w niedzielę/święto to art. 151a KP, a nie art. 15111 KP."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Rozporządzenie MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej (step 3) - wymaga weryfikacji czy w 2026 nie zostało zmienione lub zastąpione nowszym rozporządzeniem dotyczącym ewidencji czasu pracy."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 5 dotyczy tylko niepełnoetatowców, ale brakuje analogicznego kroku dla pracowników na pełnym etacie zatrudnionych w systemie równoważnym - czy limit godzin powinien być również ustalony w umowie dla nich?"
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 2 mówi że harmonogram może być na okres krótszy niż okres rozliczeniowy (ale nie krótszy niż 1 miesiąc), ale step 1 wspomina okresy rozliczeniowe do 1 miesiąca w systemie równoważnym - niejasne czy harmonogram 1-miesięczny spełnia wymóg 'nie krótszy niż 1 miesiąc'."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Step 3 wspomina konkretne moduły w systemach (Comarch Optima, Symfonia, enova365) - wymaga weryfikacji czy te funkcjonalności rzeczywiście istnieją i czy nazwy modułów są aktualne dla 2026."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje wyjaśnienia jak rozliczać pracę w niedzielę (art. 151a KP) - draft skupia się na sobocie i dniu wolnym z 5-dniowego tygodnia, ale nie porusza pracy w niedzielę i wymaganych dodatków."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o pracowniku z orzeczeniem o niepełnosprawności (35h/tydzień) - wymaga weryfikacji czy art. 15 ustawy o rehabilitacji jest prawidłowym odniesieniem i czy przepisy nie uległy zmianie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje kroku dotyczącego rozliczenia czasu pracy w systemie przerywanym (art. 139 KP) wymienionego w step 1 - draft nie wyjaśnia jak ewidencjonować i rozliczać pracę w tym systemie."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Step 6 mówi że za pracę w sobotę należy oddać 'cały dzień wolny' - niejasne czy oznacza to dokładnie 8 godzin czy rzeczywisty wymiar dnia wolnego pracownika (który może być inny dla niepełnoetatowca)."
+      }
+    ]
   }
 }

@@ -96,5 +96,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:01:40Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera szczegółową procedurę, ale ma poważne luki w legal anchors (puste pole mimo licznych powołań), zawiera konkretne kwoty podatne na zmianę w 2026 r. bez instrukcji weryfikacji, oraz zawiera sprzeczności między krokami dotyczące podstawy zdrowotnej przy zmianie formy. Wymaga uzupełnienia legal anchors i weryfikacji aktualności kwot przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 22 ust. 6bb, art. 26 ust. 1 pkt 2, art. 30c ust. 2 pkt 2 ustawy o PIT oraz 'rok składkowy zdrowotny luty–styczeń'. Brak weryfikacji czy te numery artykułów są aktualne dla 2026 i czy rzeczywiście dotyczą opisanych sytuacji."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne kwoty: duży ZUS 5 652 zł, preferencyjny 1 441,80 zł, próg ryczałtu 60 000 / 300 000 zł, limit 11 600 zł, 75% przeciętnego wynagrodzenia. Wszystkie te wartości mogą ulec zmianie w 2026 r., a draft nie zawiera instrukcji weryfikacji aktualnych kwot w komunikacie ZUS."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Krok 6 wspomina 'rok składkowy zdrowotny luty–styczeń' i że nowa podstawa zdrowotnej na skali/liniowym obowiązuje 'od lutego 2026', ale nie wyjaśnia czy to oznacza że za styczeń 2026 stosuje się STARĄ podstawę z 2025 r., czy może przejściową. Brakuje jasnego schematu dla podatnika zmieniającego formę w przełomie roku."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 2 mówi 'wpisujesz podstawę 0' za styczeń 2026 przy zmianie formy, ale krok 6 sugeruje że na ryczałcie 'nowa podstawa zdrowotnej obowiązuje już od stycznia 2026' — niejasne czy dla ryczałtu podstawa to 0 czy przychód od stycznia."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma, Enova) z ścieżkami menu typu 'Konfiguracja → Firma → Księgowość → Parametry'. Brak weryfikacji czy te ścieżki rzeczywiście istnieją w wersjach 2026 tych programów i czy są aktualne."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia procedury dla podatnika, który zmienił formę opodatkowania w trakcie roku (poza przełomem roku) — edge case wspomina 'co do zasady niedopuszczalne poza przełomem roku / rezygnacją z ryczałtu do 20 lutego', ale brakuje konkretnych kroków co zrobić w takiej sytuacji."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o zwrocie nadpłaty zdrowotnej mówi że 'zwrot pojawi się po złożeniu DRA z rocznym rozliczeniem (do 20 maja 2026)', ale nie wyjaśnia czy zwrot ten stanowi przychód do opodatkowania w nowej formie — to jest zaznaczone jako 'related_question', co sugeruje że draft nie pokrywa tego scenariusza."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 mówi o 'rocznym rozliczeniu zdrowotnej za 2026' w 'DRA za kwiecień 2027', ale nie wyjaśnia czy podatnik musi złożyć osobne DRA za 2025 r. (jeśli zmienił formę) czy czy może być to jedno rozliczenie roczne — procedura wydaje się niejasna dla przełomu roku."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Draft wspomina 'komunikat ZUS' jako źródło aktualnych wartości podstaw, ale nie podaje konkretnej nazwy dokumentu lub linku — może to być niewystarczająco precyzyjne dla księgowego szukającego konkretnego źródła."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Common mistake wspomina że 'skala — brak odliczenia' zdrowotnej od 2022 r., ale draft nie zawiera artykułu ustawy o PIT który to potwierdza — brak legal anchor dla tego kluczowego warunku."
+      }
+    ]
   }
 }

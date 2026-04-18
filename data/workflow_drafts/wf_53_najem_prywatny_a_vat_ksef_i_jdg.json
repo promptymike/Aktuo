@@ -106,5 +106,74 @@
     ],
     "batch": "batch2",
     "used_web_search": true
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:00:20Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera szczegółową i praktyczną procedurę, ale ma kilka poważnych luk w zakotwiczeniu prawnym (art. 106ga, art. 106b ust. 3) oraz ryzyko nieaktualności dat i limitów KSeF na 2026. Wymaga weryfikacji aktualnych przepisów przejściowych i konkretnych numerów interpretacji KIS przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 106ga ust. 1 ustawy o VAT jest cytowany jako podstawa obowiązku KSeF, ale harmonogram wdrażania (1.02.2026 i 1.04.2026) powinien być zakotwiczony w art. 145m lub przepisach przejściowych — art. 106ga może nie zawierać bezpośrednio dat wdrażania. Wymaga weryfikacji aktualnego brzmienia przepisów przejściowych na 2026."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne daty (1.02.2026, 1.04.2026, 31.12.2026, 1.01.2027) i limit 10 000 zł jako obowiązujące w 2026 — te daty mogły ulec zmianie w ustawach nowelizujących wydanych po wygenerowaniu (18.04.2026). Wymaga potwierdzenia aktualności harmonogramu KSeF na dzień użycia."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Krok 3 powołuje się na 'art. 106b ust. 3' jako wyłączenie obowiązku faktury dla najmu, ale nie podaje pełnego cytatu warunku — wymaga weryfikacji, czy art. 106b ust. 3 rzeczywiście dotyczy najmu czy czy to jest interpretacja wymagająca dodatkowego źródła (np. interpretacja KIS)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 odwołuje się do 'wyroku TSUE C-42/14 (Wojskowa Agencja Mieszkaniowa)' dotyczącego refaktury mediów — wymaga potwierdzenia, czy ten konkretny wyrok rzeczywiście dotyczy refaktury mediów przy najmie czy czy to jest ekstrapolacja z innego zakresu (np. VAT na usługi dodatkowe)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 6 mówi o obowiązku NIP od 1.01.2027, ale nie wyjaśnia, co się dzieje w okresie przejściowym (1.04-31.12.2026) jeśli osoba fizyczna bez NIP przekroczy 10 000 zł/mc — czy może wystawiać faktury bez NIP, czy musi go uzyskać wcześniej?"
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 mówi, że limit 10 000 zł daje odroczenie do 1.01.2027, ale jednocześnie stwierdza 'odbierać faktury w KSeF muszą na bieżąco' — nie jest jasne, czy osoba z limitem ≤10k musi mieć dostęp do KSeF do odbierania, czy to dotyczy tylko dużych podatników."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, jak liczyć limit 10 000 zł dla podatnika, który w danym miesiącu wystawia zarówno faktury B2B (podlegające KSeF) jak i B2C (dobrowolne) — czy limit dotyczy tylko B2B, czy łącznie?"
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o 'najem B2B lokalu mieszkalnego firmie, która podnajmuje pracownikom' — powołuje się na 'interpretacje KIS od 2022 r.' bez konkretnych numerów — wymaga podania konkretnych numerów interpretacji lub linków do bazy KIS."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Edge case o miejscach parkingowych powołuje się na 'rozp. MF z 17.12.2024 Dz.U. 2024 poz. 1902' — ta data jest przed datą weryfikacji (18.04.2026), ale wymaga potwierdzenia, czy rozporządzenie nie zostało zmienione w okresie 2025-2026."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 7 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, Symfonia, WFirma) z nazwami modułów — wymaga weryfikacji, czy te moduły i opcje rzeczywiście istnieją w wersji 2026 tych systemów."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie wyjaśnia, czy osoba fizyczna wynajmująca prywatnie, która wejdzie w obowiązek KSeF, musi się zarejestrować w VAT-R czy może wystawiać faktury bez rejestracji VAT (jako zwolniona lub nierejestrowa)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "low",
+        "description": "Krok 2 powołuje się na 'art. 6 ust. 1a i art. 12 ust. 1 pkt 4 lit. a ustawy o zryczałtowanym PIT' — wymaga potwierdzenia, czy te artykuły rzeczywiście dotyczą ryczałtu od najmu prywatnego (mogą być zmienione w ustawie o PIT 2026)."
+      }
+    ]
   }
 }

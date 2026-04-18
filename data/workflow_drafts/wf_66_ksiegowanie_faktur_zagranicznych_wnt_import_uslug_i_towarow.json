@@ -113,5 +113,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:00:38Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę procedury, ale zawiera kilka istotnych luk dotyczących praktycznych scenariuszy (np. refakturowanie VAT importowego przez kuriera, odmowa korekty faktury przez sprzedawcę) oraz potencjalne nieścisłości w cytowaniu artykułów i limitach kwotowych. Wymaga weryfikacji aktualności danych dla 2026 r. i uściślenia procedur dla sytuacji granicznych.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 86 ust. 10, 10b pkt 1 i 11 — cytowana jako podstawa do momentu powstania prawa do odliczenia VAT, ale przepisy o odliczeniu VAT z WNT i importu usług znajdują się przede wszystkim w art. 86 ust. 2 i art. 86a; przywołane artykuły mogą dotyczyć innych aspektów (np. dokumentacji), co wymaga weryfikacji aktualnego brzmienia ustawy o VAT."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Limit 50 000 zł dla rejestracji VAT-UE przy WNT (wspomniany w edge_case) — od 2024 r. obowiązuje limit 160 000 EUR (ok. 640 000 PLN); kwota w drafcie jest nieaktualna dla 2026 r. i może wprowadzić w błąd."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brak wyjaśnienia procedury rozliczenia VAT importowego w przypadku, gdy kurier (UPS/FedEx) odprawia towar celnie w imieniu nabywcy — draft mówi o VAT z PZC/SAD, ale nie wyjaśnia, czy nabywca otrzymuje osobny dokument celny czy tylko refakturę od kuriera, co jest kluczowe dla prawidłowego księgowania."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 5 stwierdza, że faktura z polskim NIP sprzedawcy zagranicznego to 'transakcja krajowa' bez WNT/importu, ale nie wyjaśnia, czy taki sprzedawca powinien być zawsze zarejestrowany w Polsce — brakuje warunku, co zrobić, jeśli sprzedawca nie jest zarejestrowany i wystawia fakturę z polskim NIP (potencjalna sprzeczność z wymogami podatkowymi)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 6 wspomina 'oznaczenie IMP' w Comarch Optima — nie jest jasne, czy jest to rzeczywiste pole/funkcja w systemie czy uproszczenie; wymaga weryfikacji, czy Comarch Optima rzeczywiście posiada takie dedykowane oznaczenie dla importu towarów."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brak procedury dla sytuacji, gdy sprzedawca z UE nie wystawił faktury bez VAT (WNT powinno być bez VAT), a nabywca otrzymał fakturę z lokalnym VAT — draft mówi 'żądaj korekty', ale nie wyjaśnia, co zrobić, jeśli sprzedawca odmówi, czy można odliczyć VAT lokalny, czy trzeba czekać na korektę."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o nabywcy zwolnionym podmiotowo z VAT (art. 113) — stwierdzenie, że 'i tak rozlicza import usług' i 'nie ma prawa do odliczenia' jest sprzeczne; jeśli nie ma prawa do odliczenia, to czy rzeczywiście musi wykazywać VAT w JPK_V7 i VAT-UE, czy tylko rejestruje się do VAT?"
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak wyjaśnienia, jak rozliczyć import usług, gdy sprzedawca wystawia fakturę z VAT (np. Microsoft z polskim NIP naliczył 23%) — czy nabywca rozlicza to jako krajową transakcję (krok 5) czy jako import usług (krok 3), jeśli sprzedawca jest zagranicznym podmiotem, ale zarejestrowany w Polsce?"
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Kurs przeliczenia — draft wspomina 'średni NBP z dnia roboczego poprzedzającego powstanie obowiązku podatkowego' (art. 31a), ale od 2024 r. mogą obowiązywać zmienione zasady dotyczące kursu dla VAT; wymaga weryfikacji aktualności dla 2026 r."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak procedury dla importu usług, gdy sprzedawca jest zwolniony z VAT w kraju siedziby (np. NGO) — draft stwierdza, że 'status VAT sprzedawcy nie zmienia obowiązku', ale nie wyjaśnia, czy nabywca rozlicza VAT należny i naliczony, czy tylko należny bez możliwości odliczenia."
+      }
+    ]
   }
 }

@@ -107,5 +107,79 @@
     ],
     "batch": "batch2",
     "used_web_search": true
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:54:42Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera wiele konkretnych procedur, ale opiera się na przepisach i zmianach 2026 r., które nie mogą być w pełni zweryfikowane (rozporządzenie MFiG, limity VAT, zmiany JPK_V7M). Istnieją ponadto niejasności w rozgraniczeniu między fakturami do paragonu (FP) a fakturami B2B, oraz brakuje konkretnych kroków dla systemów księgowych. Wymaga weryfikacji u źródła (MF, KIS) przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 109 ust. 3d ustawy o VAT (cytowany w step 3) — nie można zweryfikować istnienia tego konkretnego ustępu; art. 109 ustawy o VAT tradycyjnie dotyczy ewidencji VAT, ale ust. 3d dotyczący oznaczenia FP może być zmianą 2026 r. wymagającą potwierdzenia w aktualnym tekście ustawy lub rozporządzeniu MFiG."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Rozporządzenie MFiG z 6 września 2025 r. w sprawie prowadzenia PKPiR (cytowane w step 1) — data wydania (wrzesień 2025) jest przed datą weryfikacji (kwiecień 2026), ale dokument nie jest dostępny w standardowych bazach prawnych; wymaga potwierdzenia, że rozporządzenie rzeczywiście istnieje i weszło w życie 1.01.2026 r."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Limit zwolnienia z VAT art. 113 ust. 1 podany jako 240 000 zł rocznie — limit ten zmienia się co roku (w 2025 r. wynosi 300 000 zł); wartość 240 000 zł może być nieaktualna dla 2026 r. i wymaga weryfikacji w komunikacie MF na 2026 r."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Limit zwolnienia z obowiązku kasy fiskalnej podany jako 20 000 zł (step 5) — ta kwota dotyczyła lat wcześniejszych; od 2024 r. limit wynosi 100 000 zł, a dla 2026 r. może być inny; wymaga aktualizacji."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "high",
+        "description": "Zmiana JPK_V7M(3) od 1.02.2026 r. (wymieniona w related_questions) — nie ma potwierdzenia w dostępnych komunikatach MF, że od tej daty pojawią się nowe oznaczenia w JPK_V7M; ta data i zmiana mogą być wymyślone."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Obowiązek wystawienia wizualizacji faktury KSeF klientowi przy sprzedaży zaewidencjonowanej na kasie (related_questions) — nie ma jasnego potwierdzenia w przepisach, że taki obowiązek istnieje od 1.02.2026 r.; może to być błędna interpretacja."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 2 mówi, że faktura do paragonu trafia WYŁĄCZNIE do ewidencji VAT z FP i nie do KPiR, ale step 4 mówi o księgowaniu każdej faktury sprzedaży B2B pojedynczo — brakuje jasnego rozgraniczenia, które faktury to faktury do paragonu (FP), a które to faktury B2B (które mają być księgowane osobno)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 4 wymaga wpisania numeru KSeF w kolumnie 3 KPiR, ale nie wyjaśnia, co robić z fakturami wystawionymi przed 1.01.2026 r. (przed obowiązkiem KSeF) lub z fakturami papierowymi; brakuje warunku dla podatników bez KSeF."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 7 o raportach zerowych — procedura jest niejasna; nie wyjaśnia, czy raport zerowy musi być drukowany co miesiąc, czy tylko gdy kasa to umożliwia, ani jak dokumentować brak sprzedaży w systemach bez kasy fiskalnej."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o fakturze zaliczkowej — procedura opisuje problem (pomniejszenie RO o zaliczkę, doksięgowanie przy fakturze końcowej), ale nie podaje konkretnych kroków księgowania w systemach (Comarch, WFirma, Symfonia); pozostaje teoretyczne."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o fakturach uproszczonych do 450 zł — procedura wspomina możliwość zmian od 1.02.2026 r., ale nie podaje konkretnego warunku ani nie wyjaśnia, co zrobić, jeśli zmiana rzeczywiście nastąpi; pozostaje niepewne."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Limit 75% minimalnego wynagrodzenia dla nierejestrowanej działalności (related_questions) — nie ma jasnego potwierdzenia, że taki limit istnieje w przepisach o KPiR; może to być błędna interpretacja przepisów o działalności nieewidencjonowanej."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Linki do źródeł (biznes.gov.pl, podatki.biz, gofin.pl, infor.pl) mogą być nieaktualne lub prowadzić do artykułów z 2025 r.; dla 2026 r. mogą być niedostępne lub zmienione."
+      }
+    ]
   }
 }

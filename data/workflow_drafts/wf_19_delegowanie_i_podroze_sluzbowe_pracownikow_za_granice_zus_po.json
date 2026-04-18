@@ -91,5 +91,84 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:57:13Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera kompleksową procedurę, ale ma poważne luki w dokumentacji prawnej (puste legal_anchors), ryzyko nieaktualności danych liczbowych (diety, wynagrodzenia) oraz niejasności w rozliczeniu PIT/ZUS dla pracowników delegowanych za granicę. Wymaga uzupełnienia referencji prawnych i weryfikacji wszystkich kwot przed publikacją dla 2026.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 77(5) KP, art. 12 rozp. 883/2004, art. 27 ust. 8-9 ustawy o PIT, §2 pkt 15 rozp. składkowego). Brak strukturalnego mapowania tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne kwoty (dieta krajowa 45 zł/doba od 1.01.2023, prognozowane wynagrodzenie 9 203 zł na 2026, niemiecka płaca minimalna 12,82 EUR/h w 2025) — te dane wymagają weryfikacji dla 2026, szczególnie że rozporządzenie o dietach zmienia się co roku, a obwieszczenie MRiPS publikuje nowe prognozy wynagrodzeń."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Stawki diet zagranicznych (Niemcy 49 EUR, Belgia 48 EUR, Holandia 50 EUR, Norwegia 496 NOK, Szwecja 510 SEK) pochodzą z załącznika do rozporządzenia z 2013 r. — te stawki są aktualizowane co roku i mogą być nieaktualne dla 2026; brak wskazania źródła lub daty weryfikacji."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 mówi o zwolnieniu diet z PIT/ZUS 'do limitów z rozporządzenia', a krok 6 dodaje '30% diety zagranicznej za każdy dzień pobytu poza PL jest zwolnione z PIT' — nie jest jasne, czy to są dwa niezależne zwolnienia czy jedno, i jak się sumują przy obliczaniu podstawy."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Brak wyjaśnienia, jak rozliczyć pracownika delegowanego, gdy PIT należny jest w kraju przyjmującym, ale ZUS w Polsce — konkretnie: czy pracodawca musi pobrać zaliczkę PIT w Polsce za miesiące pracy za granicą, czy tylko wykazać przychód w PIT-11? Krok 6 jest niejasny na tym punkcie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 wspomina 'odliczenie równowartości diet od podstawy ZUS' — brak wyjaśnienia, czy to dotyczy również podróży służbowych (gdzie diety są zwolnione z ZUS), czy tylko delegowania; logika wydaje się sprzeczna z krokiem 4."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 7 wspomina 'Meldeportal Mindestlohn/A1-Meldung' w Niemczech — nie jest pewne, czy ta nazwa portalu jest aktualna; standardowo A1 zgłasza się przez Krankenkasse (ubezpieczenie zdrowotne), a nie przez portal płacy minimalnej."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 5 zawiera odniesienie do 'komentarz [3] w HE1' w sekcji 'common_mistakes' — nie jest jasne, co to jest 'HE1' (możliwe: Handbuch Einkommen 1? Hepatitis E1?); to wygląda na wewnętrzne odniesienie, które może nie istnieć w rzeczywistych źródłach prawnych."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o pracowniku z Litwy delegowanym na Łotwę zawiera stwierdzenie 'miejsce pracy w umowie i rezydencja podatkowa decydują o rozliczeniu PIT, nie miejsce zamieszkania' — to uproszczenie; rezydencja podatkowa w UE zależy od faktycznego pobytu (183 dni), a nie od umowy, co może wprowadzić w błąd."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o zleceniobiorcy na targach zawiera stwierdzenie 'w praktyce niemieckie służby rzadko kontrolują krótkie wyjazdy targowe' — to opinia o praktyce egzekucji, a nie prawo; może być nieaktualna i ryzykowna dla użytkownika."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brak procedury dla pracownika delegowanego do kraju spoza UE (np. Szwajcaria, Wielka Brytania post-Brexit) — draft skupia się na UE i EEA, ale nie wyjaśnia, czy zasady A1 i UPO mają zastosowanie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 7 wspomina 'ZUS przy A1 na 2 kraje weryfikuje po roku proporcje przychodów' — brak wyjaśnienia, co się dzieje, jeśli pracownik nie spełnia warunku 25% pracy w kraju zamieszkania; czy A1 jest cofane wstecz, czy od daty decyzji?"
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Odniesienie do 'art. 21 ust. 1 pkt 20 ustawy o PIT' (zwolnienie 30% diety) — ta numeracja może być nieaktualna po zmianach ustawy o PIT w ostatnich latach; wymaga weryfikacji dla 2026."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Draft zawiera datę 'last_verified_at': '2026-04-18', co sugeruje, że materiał jest z przyszłości lub data jest błędna; jeśli to data generacji, to nie jest to data weryfikacji treści merytorycznej."
+      }
+    ]
   }
 }

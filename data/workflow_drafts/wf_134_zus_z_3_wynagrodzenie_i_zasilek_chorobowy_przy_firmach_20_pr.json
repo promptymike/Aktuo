@@ -97,5 +97,69 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:55:44Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera szczegółową procedurę, ale ma poważne luki w weryfikacji artykułów (puste legal_anchors) i niejasności w rozgraniczeniu między kolejnymi wnioskami a jednorazowymi zgłoszeniami. Wymaga uzupełnienia o konkretne procedury weryfikacji dni wyczerpanych u poprzedniego pracodawcy oraz wyjaśnienia obsługi przerw między L4.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 61 ust. 1 ustawy zasiłkowej, art. 92 KP, art. 36 ust. 1, art. 8, art. 13, art. 67 ust. 1, art. 4779 KPC, art. 18 ust. 9, art. 4 ust. 1 pkt 2, art. 7). Flaga 'requires_manual_legal_anchor: true' sugeruje, że artykuły nie zostały zweryfikowane — brakuje potwierdzenia, czy wszystkie numery są aktualne dla 2026."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Limit 20 ubezpieczonych (art. 61 ust. 1 ustawy zasiłkowej) i próg 50 lat dla 14 dni wynagrodzenia chorobowego mogą ulec zmianie do 2026; draft nie zawiera wariantu awaryjnego ani daty ostatniej weryfikacji przepisów (pole 'last_verified_at' to 2026-04-18, ale to przyszłość względem daty generacji)."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 4 mówi 'każde kolejne zaświadczenie wymaga odrębnego wniosku (ZAS-53 lub Z-3 kontynuacja)', ale krok 5 stwierdza 'po ustaniu składa się raz, nie przy każdym kolejnym L4' — brakuje jasnego warunku rozgraniczającego, kiedy składać raz, a kiedy wielokrotnie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie wyjaśnia, jak postępować, gdy pracownik ma przerwę między L4 (np. 18.11–30.11, potem przerwa, potem nowe L4) — czy licznik 33 dni resetuje się, czy nie? Krok 4 wspomina 'jeśli nie ma przerwy', ale nie definiuje długości przerwy kwalifikującej jako przerwę."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Formularz 'ZAS-53 (wniosek o zasiłek chorobowy)' jest wymieniony w kroku 4, ale nie ma potwierdzenia, czy ZAS-53 to rzeczywisty druk ZUS czy może chodzi o inny dokument; draft nie rozróżnia między Z-3 a ZAS-53 w kontekście kolejnych L4."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Krok 3 wspomina 'zakładka Płatnik → Dokumenty i wiadomości → Dokumenty robocze → nowy Z-3' w PUE ZUS — ścieżka interfejsu może się zmienić; brak potwierdzenia, czy ta struktura menu jest aktualna dla 2026."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case 'Wyczerpanie 33/14 dni u poprzedniego pracodawcy' zakłada, że świadectwo pracy zawsze wskaże wykorzystane dni — w praktyce może to być niejasne lub brakować; draft nie opisuje procedury weryfikacji, jeśli pracownik nie ma świadectwa lub liczby się nie zgadzają."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 2 wspomina 'program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze)', ale nie wyjaśnia, jak obsługiwać sytuacje, gdy pracownik ma zmienną pensję lub urlop w okresie obliczeniowym — brakuje procedury dla obliczenia podstawy."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Przykłady programów (Comarch Optima, Symfonia) mogą być nieaktualne do 2026; draft nie zawiera instrukcji dla nowszych systemów lub rozwiązań chmurowych."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 6 stwierdza 'dla przedsiębiorcy nie ma 33 dni wynagrodzenia chorobowego', ale krok 2 opisuje wynagrodzenie chorobowe jako ogólną procedurę — brakuje wcześniejszego warunkowego wariantu dla przedsiębiorcy."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie wyjaśnia, jak postępować, gdy pracownik przechodzi z umowy UoP na umowę zlecenia w trakcie L4 — czy zmienia się druk z Z-3 na Z-3a i od kiedy?"
+      }
+    ]
   }
 }

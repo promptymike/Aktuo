@@ -105,5 +105,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:01:55Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera solidną strukturę i realistyczne scenariusze, ale ma krytyczne luki związane z aktualizacją danych na 2026 rok (kwoty limitów i stawek) oraz brakuje jasności w kilku kluczowych krokach (weryfikacja uczęszczania, dokumentacja samotnego wychowywania). Wymaga weryfikacji aktualności przepisów i danych liczbowych przed publikacją.",
+    "issues": [
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Kwota limitu dochodu dziecka 22 546,92 zł (12-krotność renty socjalnej za 2025) będzie nieaktualna dla rozliczeń za 2026 w 2026 roku — renta socjalna zmienia się corocznie, a draft nie zawiera mechanizmu aktualizacji ani warunkowego odniesienia do bieżącej wartości."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Stawki ulgi prorodzinnej (1 112,04 zł, 2 000,04 zł, 2 700,00 zł) są podane dla 2025 roku — dla rozliczeń za 2026 będą inne, a draft nie zawiera informacji o konieczności weryfikacji aktualnych stawek."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Odniesienie do \"art. 21 ust. 1 pkt 148\" (ulga dla młodych) nie jest w legal_anchors, a jest wielokrotnie cytowane w krokach i edge cases — brakuje pełnego zakotwiczenia tego przepisu jako źródła."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 1 stwierdza, że przychody z ryczałtu (PIT-28) nie wchodzą do limitu 112 tys., ale krok 3 i edge case o młodych mówią, że przychody z ulgi dla młodych WCHODZĄ do limitu — brakuje jasnego wyjaśnienia, które przychody są wliczane, a które nie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Draft nie zawiera kroku dotyczącego weryfikacji, czy dziecko faktycznie spełnia warunek uczęszczania do szkoły/uczelni (dla pełnoletniego do 25 lat) — to warunek konieczny do zastosowania limitu 22 546,92 zł, ale nigdzie nie ma instrukcji jak to sprawdzić."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Brakuje kroku dotyczącego dokumentacji faktycznego samotnego wychowywania (krok 4 wspomina, że US może weryfikować, ale nie ma instrukcji jakie dokumenty przygotować ani kiedy je dołączać do zeznania)."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Krok 5 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma) z nazwami ścieżek menu — te mogą być nieaktualne lub niedokładne dla wersji z 2026 roku, a draft nie zawiera disclaimer'a o weryfikacji."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o dziecku z PIT-11 mówi o zmianie obowiązującej od 2022 r., ale draft jest dla rozliczeń 2025/2026 — ta informacja historyczna może być myląca dla użytkownika, który nie wie, czy zmiana obowiązuje w 2026."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie zawiera informacji o tym, czy limit 22 546,92 zł dotyczy również dziecka niepełnoletniego czy tylko pełnoletniego uczącego się — krok 3 mówi \"pełnoletnie uczące się\", ale common_mistakes nie wyjaśniają tej granicy."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "low",
+        "description": "Odniesienie do \"art. 70 §1 Ordynacji podatkowej\" i \"art. 75 Ord. pod.\" w kroku 7 nie jest w legal_anchors — brakuje pełnego zakotwiczenia procedury korekt i wniosków o nadpłatę."
+      }
+    ]
   }
 }

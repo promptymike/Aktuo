@@ -107,5 +107,64 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:56:17Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera praktyczne wskazówki dla początkujących, ale ma poważne błędy w numerach artykułów KP (art. 9413 nie istnieje) i niepewne dane dotyczące konkretnych osób/marek szkoleniowych. Wymaga weryfikacji prawnej i aktualizacji danych przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Art. 9413 Kodeksu pracy nie istnieje — Kodeks pracy ma maksymalnie ~300 artykułów. Prawidłowy przepis to art. 94 ust. 3 KP (obowiązek pracodawcy do podnoszenia kwalifikacji) lub art. 103 KP (urlop szkoleniowy). Wymaga weryfikacji i poprawy."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 183a Kodeksu pracy — numer wygląda podejrzanie (artykuły w tym zakresie to zwykle art. 18-19 lub przepisy w rozdziale o równości). Brak pewności, czy przepis istnieje w tej formie. Wymaga potwierdzenia aktualnego brzmienia."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Koszty kursów podane jako '1 800-3 500 zł brutto w 2026' — dokument ma datę weryfikacji 2026-04-18, ale brak źródła tych kwot. Dla dokumentu z przyszłością (2026) dane mogą być spekulacyjne. Wymaga potwierdzenia aktualności."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Wymienione są konkretne osoby ('Karolina Niedzielska', 'Monika Smulewicz') jako organizatorzy szkoleń — brak weryfikacji, czy te osoby rzeczywiście prowadzą szkolenia kadrowo-płacowe w 2026 lub czy marki 'Kwadrans z HR' i 'HR na Szpilkach' są aktualne."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Druk 'MEN-I/73' jako dokument zaświadczenia o ukończeniu kursu — brak pewności, czy ten konkretny numer druku istnieje lub jest aktualny. Wymaga weryfikacji w systemie MEN."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 5 wspomina 'limit 300% przeciętnego wynagrodzenia na osobę rocznie' dla KFS, ale brak informacji, jakie jest to wynagrodzenie referencyjne (GUS? MRPiPS?) i czy limit obowiązuje w 2026. Wymaga uściślenia."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "low",
+        "description": "Krok 3 mówi 'Płatnik (darmowy ze strony ZUS)' — Płatnik jest darmowy, ale dostęp do pełnego środowiska szkoleniowego może wymagać rejestracji. Sformułowanie jest uproszczone i może wprowadzić w błąd co do rzeczywistych warunków dostępu."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case 'Kurs dofinansowany z KFS — nabór limitowany w styczeń/luty' — data ta może być nieaktualna dla 2026. Procedury KFS mogą się zmienić. Wymaga weryfikacji harmonogramu na 2026."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Wymienione są programy 'Enova365' i 'WAPRO Gang' jako alternatywy do Comarch Optima — brak pewności, czy te produkty rzeczywiście mają moduły kadrowo-płacowe lub czy są dostępne w 2026 na rynku polskim."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Krok 7 wspomina 'nowelizacja dot. stażu pracy — wliczanie okresów B2B i umów zlecenia' od 1.01.2026 — brak konkretnego odniesienia do ustawy/rozporządzenia. Wymaga potwierdzenia, czy ta zmiana rzeczywiście wejdzie w życie w tej dacie."
+      }
+    ]
   }
 }

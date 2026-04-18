@@ -91,5 +91,64 @@
     ],
     "batch": "batch2",
     "used_web_search": true
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:00:53Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.62,
+    "general_assessment": "Draft zawiera konkretne dane i procedury, ale opiera się na przyszłych rozporządzeniach (z 2026 r.) które mogą nie istnieć lub być zmienione, oraz zawiera wewnętrzne sprzeczności w instrukcjach systemowych. Wymaga weryfikacji aktualności wszystkich numerów artykułów i potwierdzenia istnienia powołanych rozporządzeń przed publikacją.",
+    "issues": [
+      {
+        "type": "hallucination_risk",
+        "severity": "high",
+        "description": "Step 4 powołuje się na 'Rozporządzenie RM z 25.02.2026 r.' (Dz.U. 2026 poz. 246) z datą ogłoszenia 2.03.2026, ale dokument jest datowany na przyszłość względem daty weryfikacji (18.04.2026). Brak możliwości weryfikacji, czy to rozporządzenie faktycznie istnieje i czy numery poz./Dz.U. są prawidłowe."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Kwota minimalnego wynagrodzenia 4 806 zł i stawka godzinowa 31,40 zł są podane jako obowiązujące od 1.01.2026, ale dokument jest weryfikowany 18.04.2026 – brak informacji czy kwoty mogły ulec zmianie w trakcie roku (np. waloryzacja w połowie roku, którą draft wyklucza, ale bez potwierdzenia aktualności)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Step 2 powołuje się na 'art. 6 ust. 5 ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę' – brak weryfikacji czy artykuł i ustęp są aktualne dla 2026 r. (mogły być zmienione nowelizacjami)."
+      },
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Edge case o cudzoziemcu powołuje się na 'art. 88z ustawy z 20.04.2004 o promocji zatrudnienia' z zastrzeżeniem 'od 1.06.2025 zastąpiona ustawą o rynku pracy i służbach zatrudnienia – zweryfikuj aktualny numer artykułu' – draft sam wskazuje niepewność, ale nie podaje numeru artykułu w nowej ustawie."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 3 instruuje aktualizację w systemach Comarch ERP Optima i Symfonia, ale nie wspomina o innych popularnych systemach (np. Enova365, Sage, Fakturia) – może prowadzić do pominięcia aktualizacji w innych systemach."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 6 mówi 'W Comarch ERP Optima / Enova365: moduł Kadry i Płace → Konfiguracja firmy → Płace → Stałe podatkowe', ale Step 3 dla Comarch wskazuje inną ścieżkę ('Konfiguracja → Płace → Wynagrodzenia') – brak spójności w instrukcjach nawigacji."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Netto dla pracownika etatowego podane jako 'ok. 3 605,85 zł' jest przybliżeniem dla konkretnych założeń (PIT-2, powyżej 26 r.ż., bez PPK) – może być mylące dla pracowników z innymi warunkami (PPK, PIT-0, poniżej 26 lat)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case o pracownikach samorządowych mówi 'za styczeń-luty 2026 naliczamy wg starej tabeli, a po wejściu w życie rozporządzenia robimy wyrównanie' – ale nie wyjaśnia, czy wyrównanie jest obowiązkowe czy fakultatywne, ani nie wskazuje terminu, w którym musi być dokonane."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Step 5 wspomina 'test 3 kryteriów z art. 5b ustawy o PIT' dla pozornego B2B, ale nie wyjaśnia jakie to kryteria – pracownik księgowy może nie wiedzieć, co sprawdzać."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Step 6 podaje konkretne kwoty pochodne (np. 'maksymalna odprawa z tytułu zwolnień grupowych = 15 × 4 806 zł = 72 090 zł'), ale nie weryfikuje czy mnożnik '15' jest aktualny dla 2026 r. – może ulec zmianie w nowelizacjach kodeksu pracy."
+      }
+    ]
   }
 }

@@ -95,5 +95,59 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T12:03:37Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.72,
+    "general_assessment": "Draft zawiera szczegółowe i praktyczne kroki, ale ma krytyczne luki w formalnych kotwicach prawnych (puste legal_anchors) oraz potencjalne problemy z aktualnością danych liczbowych i kodów systemowych dla 2026 roku. Wymaga weryfikacji przez eksperta prawa pracy i specjalistę ZUS przed publikacją.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "high",
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 31 ust. 3 ustawy zasiłkowej, art. 182(1a) §4 KP, art. 180 KP, art. 18a ustawy systemowej). Brak sformalizowanych kotwic prawnych uniemożliwia weryfikację poprawności cytowań."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "high",
+        "description": "Draft zawiera konkretne kwoty i procenty (81,5%, 30% min. wynagrodzenia, 250% prognozowanego przeciętnego wynagrodzenia) oraz daty przepisów przejściowych (2.08.2022–26.04.2023, 26.04.2023, 19.03.2024) bez wskazania źródła lub daty wejścia w życie. Dla 2026 roku wymaga weryfikacji czy limity i procenty pozostają aktualne."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Draft wspomina formularze 'Z-3a/Z-3b' i 'ZAS-54' oraz kody ZUS (0570, 0510, 311, 319, 1240) bez potwierdzenia ich aktualności. Kody systemowe mogą ulec zmianie; wymaga weryfikacji czy te formularze i kody rzeczywiście obowiązują w 2026."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Krok 2 mówi o '21 dniach od porodu' jako terminie dla zasiłku 81,5%, ale brakuje wyjaśnienia co się dzieje gdy wniosek wpłynie w 22. dniu — czy zasiłek spada natychmiast na 100%/70% czy istnieje okres przejściowy. Brak też informacji o możliwości złożenia wniosku retroaktywnie."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Krok 3 stwierdza że ojciec może wziąć '32 tyg. + swoje 9 tyg.' gdy matka nie była ubezpieczona, ale krok 2 mówi o '20 tyg. macierzyńskiego + 41 tyg. rodzicielskiego przy 1 dziecku' — brak jasnego wyjaśnienia czy 32 tyg. to część z 41 tyg. czy dodatkowe tygodnie."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "medium",
+        "description": "Edge case o macierzyńskim rozpoczętym dzień przed porodem wymienia 'zaświadczenie lekarskie o przewidywanej dacie porodu (Z-3 + ZAS-54)' — formularz ZAS-54 nie jest standardowym formularzem ZUS dla zasiłków macierzyńskich; wymaga weryfikacji czy rzeczywiście istnieje i jest wymagany."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Krok 5 zawiera instrukcje dla konkretnych systemów (Comarch Optima, Symfonia) z kodami (311, 319, 0110, 1240) — brak informacji czy te systemy i kody będą aktualne w 2026 lub czy istnieją inne systemy powszechnie używane."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "low",
+        "description": "Krok 6 wspomina '30% min. wynagrodzenia' i '250% prognozowanego przeciętnego wynagrodzenia' dla preferencyjnego ZUS w 2026 — wymaga weryfikacji czy te procenty nie uległy zmianie w stosunku do roku bieżącego."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "low",
+        "description": "Draft nie wyjaśnia procedury gdy wniosek o macierzyński/rodzicielski wpłynie po 21 dniach od porodu — czy pracownik traci prawo do zasiłku 81,5% całkowicie czy może go uzyskać za okres od złożenia wniosku."
+      }
+    ]
   }
 }

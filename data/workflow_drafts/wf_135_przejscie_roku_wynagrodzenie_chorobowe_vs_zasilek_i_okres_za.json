@@ -110,5 +110,74 @@
     ],
     "batch": "batch2",
     "used_web_search": false
+  },
+  "self_critique": {
+    "validated_by": "claude-haiku-4-5-20251001",
+    "validated_at": "2026-04-18T11:56:02Z",
+    "status": "flagged_for_review",
+    "confidence_score": 0.68,
+    "general_assessment": "Draft zawiera solidną strukturę logiczną i praktyczne kroki, ale ma kilka poważnych luk w procedurach fallback (brak świadectwa pracy, odpowiedź ZUS), potencjalne błędy w kodach ZUS (314 dla ciąży vs opieka) i wymaga weryfikacji aktualności odniesień prawnych (uchwała SN z 2012 r., zmiana art. 9 ustawy zasiłkowej od 2022 r.). Rekomendacja: przegląd przez eksperta ds. zasiłków chorobowych przed wdrożeniem.",
+    "issues": [
+      {
+        "type": "legal_anchor_uncertainty",
+        "severity": "medium",
+        "description": "Art. 92 § 4 k.p. jest cytowany jako podstawa przejścia z kodu 331 na 313, ale artykuł dotyczy przysługiwania zasiłku po wyczerpaniu wynagrodzenia chorobowego — brakuje odniesienia do art. 92 § 1 k.p. jako podstawy samego limitu 33/14 dni i resetu rocznego, co jest kluczowe dla całego workflow."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera odniesienie do 'uchwały SN III UZP 5/12' (z 2012 r.) jako uzasadnienie dla limitu 33/14 dni łącznego u wszystkich pracodawców — ta uchwała może być nieaktualna lub zastąpiona nowszą linią orzeczniczą do 2026 r., wymaga weryfikacji."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Step 5 wymaga 'świadectwa pracy — pkt 6 ppkt 9', ale brakuje wyjaśnienia, co zrobić, jeśli pracownik pracował u poprzedniego pracodawcy za granicą lub u pracodawcy, który już nie istnieje — procedura fallback nie jest jasna."
+      },
+      {
+        "type": "step_contradiction",
+        "severity": "medium",
+        "description": "Step 3 stwierdza 'od 1.01.2022 do tego samego okresu zasiłkowego zalicza się też niezdolność po przerwie, niezależnie od przyczyny, jeśli przerwa ≤ 60 dni' — ale to zmienia regułę z art. 9 ustawy zasiłkowej (wymóg tej samej/innej choroby), wymaga jasnego wskazania, czy to zmiana legislacyjna czy interpretacja."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "medium",
+        "description": "Step 6 wymienia 'formularz ZAS-12' jako narzędzie do zapytania ZUS o dni wynagrodzenia chorobowego — należy zweryfikować, czy ZAS-12 rzeczywiście służy temu celowi (może być to formularz do innego celu, np. zasiłek macierzyński)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "high",
+        "description": "Edge case 'Niezdolność w ciąży lub wypadek w drodze do/z pracy' wspomina kod 314 dla ciąży, ale brakuje wyjaśnienia, czy kod 314 to zasiłek opiekuńczy czy macierzyński — w step 6 kod 314 jest wymieniony jako 'zasiłek opiekuńczy', co może być sprzeczne."
+      },
+      {
+        "type": "outdated_data_risk",
+        "severity": "medium",
+        "description": "Draft zawiera odniesienie do 'art. 43 ustawy zasiłkowej' dotyczące przeliczania podstawy wymiaru — ta ustawa mogła być zmieniona do 2026 r., a konkretne progi (1 miesiąc kalendarzowy) mogą być nieaktualne."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 7 mówi o 'podstawach wymiaru NIE przelicza się przy przejściu z zasiłku na wynagrodzenie chorobowe', ale brakuje wyjaśnienia, jak ustalić podstawę wymiaru dla wynagrodzenia chorobowego w pierwszym miejscu (czy to średnia z 12 miesięcy czy inny okres)."
+      },
+      {
+        "type": "edge_case_coverage",
+        "severity": "low",
+        "description": "Edge case 'Pracownik po 50. r.ż.' stwierdza, że limit 14 dni stosuje się od 1 stycznia roku NASTĘPUJĄCEGO po roku ukończenia 50 lat — ale brakuje przykładu, co się dzieje w roku przejściowym (np. pracownik kończy 50 lat 15.06.2026 — czy w 2026 ma 33 czy 14 dni)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Step 5 wymaga 'pisemnego wniosku do ZUS (formularz ZAS-12 lub zapytanie przez PUE)' — brakuje informacji, jaki jest czas odpowiedzi ZUS i co zrobić, jeśli odpowiedź nie nadejdzie przed wypłatą wynagrodzenia chorobowego."
+      },
+      {
+        "type": "hallucination_risk",
+        "severity": "low",
+        "description": "Step 6 wymienia 'RCA/RSA' jako systemy do zaksięgowania — należy zweryfikować, czy to rzeczywiste nazwy systemów kadrowo-płacowych dostępnych w Polsce w 2026 r. (mogą to być skróty nieznane lub przestarzałe)."
+      },
+      {
+        "type": "missing_critical_info",
+        "severity": "medium",
+        "description": "Common mistake 'Pomijanie sprawdzenia świadectwa pracy' — brakuje procedury, co zrobić, jeśli pracownik nie dostarczy świadectwa w terminie i pracodawca musi wypłacić wynagrodzenie chorobowe — czy wypłacić pełny limit 33/14 dni czy wstrzymać?"
+      }
+    ]
   }
 }
