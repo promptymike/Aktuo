@@ -25,7 +25,7 @@
     {
       "step": 3,
       "action": "Zweryfikuj wykorzystane wcześniej miesiące Małego ZUS Plus",
-      "detail": "W danych płatnika na PUE ZUS (zakładka Ubezpieczony → Ulgi) lub w historii kodów tytułu ubezpieczenia (0590) policz, ile miesięcy Małego ZUS Plus wykorzystano w ostatnich 60 miesiącach kalendarzowych. Ulga przysługuje maksymalnie 36 miesięcy w ciągu kolejnych 60 miesięcy – po upływie 60 m-cy licznik się zeruje.",
+      "detail": "W danych płatnika na PUE ZUS (zakładka Ubezpieczony → Ulgi) lub w historii kodów tytułu ubezpieczenia (0590) policz, ile miesięcy Małego ZUS Plus wykorzystano w ostatnich 60 miesiącach kalendarzowych. Ulga przysługuje maksymalnie 36 miesięcy w ciągu kolejnych 60 miesięcy – po upływie 60 m-cy licznik się zeruje. Uwaga: niewykorzystane miesiące z bieżącego 60-miesięcznego okresu nie przechodzą na kolejny cykl – po jego upływie przepadają zgodnie ze stanowiskiem ZUS (zus.pl, \"Mały ZUS Plus – nowe zasady od 2026 r.\"): \"pozostałych miesięcy nie możesz wykorzystać w kolejnym 60-miesięcznym okresie\".",
       "condition": null
     },
     {
@@ -43,7 +43,7 @@
     {
       "step": 6,
       "action": "Zgłoś Mały ZUS Plus w ciągu 7 dni od wznowienia działalności",
-      "detail": "Jeśli działalność jest zawieszona w styczniu i wznawiana w trakcie 2026 r., przedsiębiorca ma 7 dni od dnia wznowienia na złożenie ZUA z kodem 0590. Nie obowiązuje go wtedy termin 31 stycznia.",
+      "detail": "Jeśli działalność jest zawieszona w styczniu i wznawiana w trakcie 2026 r., przedsiębiorca ma 7 dni od dnia wznowienia na złożenie ZUA z kodem 0590. Nie obowiązuje go wtedy termin 31 stycznia. Scenariusz częściowego wykorzystania ulgi + przegapiony termin 31 stycznia + zawieszenie/wznowienie: przedsiębiorca, który np. wykorzystał 12 m-cy w 2025 r. i przegapił termin styczniowy, po zawieszeniu i wznowieniu działalności może w ciągu 7 dni zgłosić się na 0590 i kontynuować ulgę w ramach pozostałych miesięcy tego samego 60-miesięcznego okresu; miesiące niewykorzystane do końca tej \"60-ki\" przepadają i nie przechodzą na kolejny cykl.",
       "condition": "if działalność zawieszona w styczniu 2026 i wznowiona później"
     },
     {
@@ -69,12 +69,14 @@
     "Zawieszenie działalności NIE przerywa biegu 24 miesięcy preferencyjnych składek (kod 0570) – ZUS liczy je ciągiem od dnia rozpoczęcia JDG, niezależnie od przerw (potwierdzone decyzjami ZUS).",
     "Jeśli przedsiębiorca kontynuuje Mały ZUS Plus z 2025 r. na 2026 r. bez wykorzystania pełnych 36 m-cy, nie musi się wyrejestrowywać ani ponownie zgłaszać z kodem 0590 – wystarczy przeliczyć podstawę i złożyć nowe DRA II.",
     "Po wykorzystaniu pełnych 36 miesięcy Małego ZUS Plus trzeba opłacać duży ZUS (0510) przez kolejne 24 miesiące, zanim licznik 60-miesięczny pozwoli ponownie skorzystać z ulgi – chyba że cała „60-ka” się zakończyła.",
-    "Świadczenie usług na rzecz byłego pracodawcy tożsamych z pracą z etatu wyklucza Mały ZUS Plus aż do momentu zaprzestania tej współpracy + upływu karencji; ta sama przesłanka wyklucza wakacje składkowe."
+    "Świadczenie usług na rzecz byłego pracodawcy tożsamych z pracą z etatu wyklucza Mały ZUS Plus aż do momentu zaprzestania tej współpracy + upływu karencji; ta sama przesłanka wyklucza wakacje składkowe.",
+    "Niewykorzystane miesiące Małego ZUS Plus z bieżącego 60-miesięcznego okresu PRZEPADAJĄ – jeśli przedsiębiorca wykorzystał np. 12 z 36 miesięcy, przegapił termin 31 stycznia, zawiesił działalność i wznowił ją później w tej samej \"60-ce\", może kontynuować ulgę (7 dni od wznowienia), ale pozostałych 24 miesięcy nie przeniesie na kolejny 60-miesięczny cykl (stanowisko ZUS, \"Mały ZUS Plus – nowe zasady od 2026 r.\": \"pozostałych miesięcy nie możesz wykorzystać w kolejnym 60-miesięcznym okresie\"). Źródło: https://www.zus.pl/en/-/%E2%80%9Ema%C5%82y-zus-plus-nowe-zasady-od-2026-r."
   ],
   "common_mistakes": [
     "Mylenie kodu preferencyjnych składek (0570) z kodem Małego ZUS Plus (0590) – po zakończeniu 24 m-cy preferencji trzeba aktywnie zgłosić się na 0590, samo pozostanie na 0570 powoduje przejście na duży ZUS.",
     "Przegapienie terminu 31 stycznia przy kontynuacji działalności – po tym terminie wejście na Mały ZUS Plus możliwe dopiero w kolejnym roku albo poprzez wznowienie zawieszonej działalności (wtedy 7 dni).",
-    "Liczenie 60 dni prowadzenia działalności łącznie z okresami zawieszenia – dni zawieszenia nie wliczają się do minimalnego okresu kwalifikującego do ulgi."
+    "Liczenie 60 dni prowadzenia działalności łącznie z okresami zawieszenia – dni zawieszenia nie wliczają się do minimalnego okresu kwalifikującego do ulgi.",
+    "Zakładanie, że niewykorzystane miesiące Małego ZUS Plus (np. 24 z 36) można \"dobrać\" w kolejnym okresie 60-miesięcznym – ZUS wprost stwierdza, że pozostałe miesiące przepadają po zakończeniu bieżącej \"60-ki\"."
   ],
   "related_questions": [
     "Jak obliczyć podstawę wymiaru składek Mały ZUS Plus na 2026 rok przy dochodzie mieszanym (część roku preferencja, część duży ZUS)?",
@@ -286,5 +288,15 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia procedury dla scenariusza gdzie przedsiębiorca wykorzystał część z 36 miesięcy (np. 12 m-cy w 2025), przegapił termin 31 stycznia 2026, a następnie zawiesił i wznowił działalność – czy może wtedy wznowić ulgę na pozostałe miesiące czy licznik się zeruje?",
+      "applied_at": "2026-04-18T10:46:37Z",
+      "source": "v2_manual",
+      "source_url": "https://www.zus.pl/en/-/%E2%80%9Ema%C5%82y-zus-plus-nowe-zasady-od-2026-r.",
+      "note": "Manual fix - LLM generated malformed JSON 3 times"
+    }
+  ]
 }
