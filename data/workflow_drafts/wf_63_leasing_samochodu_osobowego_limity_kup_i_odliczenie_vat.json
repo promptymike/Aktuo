@@ -126,7 +126,16 @@
         "corrective_suggestion": "Należy zweryfikować bezpośrednio treść art. 23 ust. 5c ustawy o PIT w aktualnym brzmieniu oraz przepisy przejściowe nowelizacji wprowadzającej limit 100 000 zł. Jeśli przepis przejściowy nie wynika wprost z art. 23 ust. 5c, lecz z ustawy nowelizującej, należy podać właściwy anchor (np. art. X ustawy z dnia ... o zmianie ustawy o PIT). Warto też wskazać konkretny akt prawny lub obwieszczenie MF jako źródło zmiany limitu od 2026 r.",
         "verified_at": "2026-04-17T23:45:08Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i podatki.biz jednoznacznie potwierdzają, że art. 23 ust. 5c PIT reguluje wyłącznie mechanizm proporcjonalnego limitowania części kapitałowej raty leasingowej – nie zawiera żadnego przepisu przejściowego chroniącego umowy zawarte do 31.12.2025. Przepis przejściowy (ochrona praw nabytych) zawarty jest w art. 30 ustawy zmieniającej z 2 grudnia 2021 r. i dotyczy WYŁĄCZNIE pojazdów wprowadzonych do ewidencji środków trwałych – nie obejmuje leasingu operacyjnego. Dyrektor KIS potwierdził w interpretacji indywidualnej, że od 1.01.2026 nowe limity (w tym 100 000 zł) stosuje się do wszystkich umów leasingu operacyjnego, również zawartych przed tą datą. Draft błędnie przypisuje 'zasadę ochrony praw nabytych' i przejście limitu 150→100 tys. zł do art. 23 ust. 5c PIT, podczas gdy ten ustęp nie zawiera przepisu przejściowego.",
+        "verifier_confidence_v2": 0.95,
+        "source_url": "https://www.podatki.biz/sn_autoryzacja/logowanie.php5/artykuly/leasing-samochodu-z-2025-r-z-nowym-limitem-kosztow-w-2026-r-fiskus-to-nie-blad-legislacyjny_63_60976.htm?idDzialu=63&idArtykulu=60976",
+        "source_quote": "od 1 stycznia 2026 r. zastosowanie mają nowe limity",
+        "verified_at_v2": "2026-04-18T00:10:04Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -138,7 +147,16 @@
         "corrective_suggestion": "Należy wskazać konkretną podstawę prawną planowanej zmiany limitu (np. numer ustawy nowelizującej, Dz.U., data wejścia w życie). Jeśli zmiana nie jest jeszcze uchwalona, draft powinien wyraźnie zaznaczyć, że jest to projekt/propozycja legislacyjna, a nie obowiązujące prawo, i usunąć lub opatrzyć zastrzeżeniem informację o limicie 100 000 zł od 1.01.2026.",
         "verified_at": "2026-04-17T23:45:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiele zaufanych źródeł (gofin.pl, ksiegowosc.infor.pl, podatki.biz) jednoznacznie potwierdza, że limit 100 000 zł od 1.01.2026 dla samochodów spalinowych z emisją ≥50g CO2/km jest prawidłowy i wynika z ustawy z 2 grudnia 2021 r. o zmianie ustawy o elektromobilności i paliwach alternatywnych (Dz.U. z 2021 r. poz. 2269). Draft poprawnie wskazuje limit i datę wejścia w życie; flaga zarzuca brak źródła ustawowego, ale sama treść merytoryczna drafta jest zgodna z obowiązującymi przepisami. Flaga jest więc false positive w zakresie poprawności danych – limit 100 000 zł i data 1.01.2026 są prawidłowe.",
+        "verifier_confidence_v2": 0.95,
+        "source_url": "https://gofin.pl/rachunkowosc/17,2,84,260118,zmienione-limity-dotyczace-leasingowanych-samochodow.html",
+        "source_quote": "100.000 zł - jeśli emisja CO2 silnika spalinowego",
+        "verified_at_v2": "2026-04-18T00:10:16Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",

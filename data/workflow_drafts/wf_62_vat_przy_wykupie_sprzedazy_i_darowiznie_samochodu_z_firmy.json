@@ -141,7 +141,16 @@
         "corrective_suggestion": "Warto dodać do draftu ogólne zastrzeżenie: 'Stawki VAT i limity podatkowe mogą ulec zmianie – przed podjęciem decyzji należy zweryfikować aktualne przepisy lub skonsultować się z doradcą podatkowym.'",
         "verified_at": "2026-04-17T23:43:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z whitelisty (podatki.gov.pl, gofin.pl) potwierdzają, że podstawowa stawka VAT wynosi 23% i pozostaje aktualna w 2025–2026 r. Limit 150 000 zł dla samochodów osobowych w kosztach PIT/CIT również figuruje jako obowiązujący w 2026 r. (gofin.pl, sklep.gofin.pl). Jedyna zmiana od 1 stycznia 2026 r. dotyczy limitu zwolnienia podmiotowego z VAT (wzrost do 200 000 zł), co nie jest przedmiotem drafta. Stawka 23% VAT przy sprzedaży samochodu firmowego jest prawidłowa i aktualna, więc flaga o ryzyku nieaktualnych danych jest nieuzasadniona.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.podatki.gov.pl/podatki-firmowe/vat/stawki-i-limity/",
+        "source_quote": "Podstawowa stawka podatku VAT wynosi 23%",
+        "verified_at_v2": "2026-04-18T00:09:50Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",

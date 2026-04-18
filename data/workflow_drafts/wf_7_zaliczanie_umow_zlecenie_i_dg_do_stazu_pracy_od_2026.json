@@ -153,7 +153,16 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie, że pracownik składa pracodawcy pisemny wniosek o zaliczenie okresów pozapracowniczych do stażu pracy wraz z dokumentami (zaświadczenie US-7 lub zastępcze), a pracodawca dokonuje zaliczenia na tej podstawie – nie jest to proces automatyczny ani inicjowany przez ZUS.",
         "verified_at": "2026-04-17T23:48:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z ZUS i ksiegowosc.infor.pl jednoznacznie potwierdzają, że zaliczenie okresów do stażu pracy NIE jest automatyczne – wymaga aktywnego działania pracownika: złożenia wniosku USP w eZUS, uzyskania zaświadczenia, a następnie przedstawienia go pracodawcy. Draft w kroku 2 wspomina o zaświadczeniu ZUS US-7, ale nie wyjaśnia wprost, że to pracownik musi samodzielnie złożyć wniosek USP w eZUS (nie US-7), a następnie dostarczyć zaświadczenie pracodawcy w ciągu 24 miesięcy. Procedura inicjacji procesu (wniosek USP przez eZUS → zaświadczenie → przekazanie pracodawcy) jest faktycznie niewyjaśniona w drafcie, co czyni flagę uzasadnioną.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://ksiegowosc.infor.pl/wiadomosci/7515117,tlumy-polakow-ruszyly-do-zus-chodzi-o-nowe-zasady-liczenia-stazu-pracy.html",
+        "source_quote": "Wniosek o wydanie zaświadczenia można złożyć wyłącznie",
+        "verified_at_v2": "2026-04-18T00:11:04Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

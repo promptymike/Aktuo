@@ -151,7 +151,16 @@
         "corrective_suggestion": "Dodać w drafcie przypis/źródło: rozporządzenie Komisji (UE) 2023/2831 z dnia 13 grudnia 2023 r. w sprawie stosowania art. 107 i 108 TFUE do pomocy de minimis (obowiązuje od 1.01.2024), które ustala limit 300 tys. euro w ciągu 3 lat podatkowych. Wskazać datę weryfikacji limitu i zaznaczyć, że limit de minimis z art. 22k ust. 7 PIT (50 000 euro rocznie) jest odrębny od ogólnego limitu de minimis i oba muszą być sprawdzone łącznie.",
         "verified_at": "2026-04-17T23:42:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Rozporządzenie Komisji (UE) 2023/2831 (ogólne rozporządzenie de minimis), które weszło w życie 1 stycznia 2024 r. i obowiązuje do 31 grudnia 2030 r., podniosło limit pomocy de minimis właśnie do 300 tys. EUR w okresie 3 lat (poprzednio było 200 tys. EUR). Limit 300 tys. euro podany w drafcie jest zatem aktualny i prawidłowy dla 2026 r. Flaga jest nieuzasadniona – dane w drafcie są zgodne z obowiązującym stanem prawnym.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://www.podatki.biz/sn_autoryzacja/logowanie.php5/artykuly/pomoc-de-minimis_51_57794.htm?idDzialu=51&idArtykulu=57794",
+        "source_quote": "zwiększeniu limitu pomocy de minimis do kwoty 300 tys. EUR",
+        "verified_at_v2": "2026-04-18T00:09:26Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -187,7 +196,16 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 2 wyjaśnienia, że próg 10 000 zł jest oceniany na podstawie wartości netto dla czynnego podatnika VAT (który odlicza VAT) lub brutto dla podatnika zwolnionego z VAT, co bezpośrednio wpływa na kwalifikację do opcji A/B/C.",
         "verified_at": "2026-04-17T23:42:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Draft w kroku 1 poprawnie wskazuje wartość netto dla czynnego podatnika VAT i brutto dla nie-VATowca. Źródło ksiegowosc.infor.pl potwierdza, że wartością graniczną 10 000 zł jest kwota netto dla czynnych podatników VAT, a podatki.biz (art. 22g ustawy o PIT) wyjaśnia, że cena nabycia jest pomniejszana o podatek VAT podlegający odliczeniu. Kwestia netto/brutto jest zatem wyjaśniona w kroku 1 i bezpośrednio determinuje próg 10 000 zł dla wyboru opcji A/B/C – draft nie pomija tej informacji, lecz ją zawiera. Flaga jest nieuzasadniona.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://ksiegowosc.infor.pl/rachunkowosc/ksiegi-rachunkowe/2764481,Srodek-trwaly-czy-wyposazenie.html",
+        "source_quote": "Wartością graniczną jest kwota 10 000 zł netto (w przypadku",
+        "verified_at_v2": "2026-04-18T00:09:38Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

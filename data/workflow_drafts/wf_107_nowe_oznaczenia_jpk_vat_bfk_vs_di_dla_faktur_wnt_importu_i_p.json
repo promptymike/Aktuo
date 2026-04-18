@@ -129,7 +129,16 @@
         "corrective_suggestion": "Należy zweryfikować pełną treść art. 106gb ustawy o VAT (w wersji obowiązującej od 2026 r. po nowelizacji KSeF) pod kątem istnienia ust. 4 pkt 1 i ust. 5. Jeśli ustępy nie istnieją lub dotyczą innej materii, należy wskazać właściwy artykuł regulujący wystawianie faktur poza KSeF i wyjątki dla kontrahentów zagranicznych.",
         "verified_at": "2026-04-17T23:35:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Artykuł 106gb istnieje w ustawie o VAT i zawiera ustępy 4 oraz 5. Potwierdzają to liczne zaufane źródła: przepisy.gofin.pl publikuje pełną treść art. 106gb obowiązującego od 1.02.2026 r., ksiegowosc.infor.pl wprost omawia art. 106gb ust. 4 pkt 1 i ust. 5 w kontekście KSeF, a isap.sejm.gov.pl (ustawa z 5.08.2025 r.) wielokrotnie odwołuje się do art. 106gb ust. 4 pkt 2–6. Flaga self_critic błędnie zakładała, że ustawa o VAT kończy się na art. 106 — tymczasem ustawa zawiera rozbudowany dział dotyczący faktur z artykułami 106a–106nh i dalej, w tym art. 106gb regulujący KSeF.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,32,32,670,403591,20260201,art-106gb-ustawa-z-dnia-11032004-r-o-podatku-od-towarow-i.html",
+        "source_quote": "Art. 106gb. 1. Faktura ustrukturyzowana jest wystawiana",
+        "verified_at_v2": "2026-04-18T00:07:48Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -152,7 +161,16 @@
         "corrective_suggestion": "Jeśli dokument jest pisany z perspektywy kwietnia 2026, należy zmienić sformułowania z trybu przyszłego ('od lutego 2026 będą obowiązywać') na przeszły lub teraźniejszy ('od lutego 2026 obowiązują'), aby uniknąć dezorientacji czytelnika co do aktualności informacji.",
         "verified_at": "2026-04-17T23:36:08Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiele wiarygodnych źródeł z whitelisty (ksiegowosc.infor.pl, podatki.gov.pl, gofin.pl) jednoznacznie potwierdza, że nowe oznaczenia BFK i DI w JPK_V7 obowiązują od rozliczenia za luty 2026 r. (plik składany do 25 marca 2026). Informacja w drafcie jest zatem faktycznie aktualna i poprawna z perspektywy kwietnia 2026 — nie jest 'przyszłą' ani nieaktualną. Flaga błędnie zakłada, że sformułowanie 'od lutego 2026' jest mylące dla użytkownika w 2026 r., podczas gdy przepisy weszły w życie zgodnie z planem i są już stosowane.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://ksiegowosc.infor.pl/wiadomosci/7537062,nowy-jpk-vat-od-rozliczenia-za-luty-2026-r-dodatkowe-symbole-w-ewidencji-dot-ksef.html",
+        "source_quote": "Zmiany obowiązują już od rozliczenia VAT za luty 2026 r.",
+        "verified_at_v2": "2026-04-18T00:07:59Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "hallucination_risk",
@@ -176,7 +194,16 @@
         "corrective_suggestion": "Należy doprecyzować step 6: jeśli faktury sprzed lutego 2026 nie wymagają oznaczeń BFK/DI, to nie należy sugerować ich stosowania w nawiasie. Alternatywnie, jeśli program wymusza wybór kodu, należy wyraźnie zaznaczyć, że jest to wymóg techniczny systemu, a nie prawny obowiązek wynikający z przepisów.",
         "verified_at": "2026-04-17T23:36:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i ksiegowosc.infor.pl jednoznacznie potwierdzają, że BFK stosuje się do faktur wystawionych poza KSeF, w tym 'faktur wystawionych przed obowiązkiem fakturowania za pośrednictwem KSeF' (MF, odpowiedź z 3.03.2026). Step 6 drafta twierdzi, że faktury z grudnia 2025/stycznia 2026 ujęte w JPK za luty 2026 'nie wymagają nowych oznaczeń BFK/DI', co jest sprzeczne z oficjalnym stanowiskiem MF: oznaczenia BFK/DI obowiązują bezwzględnie od rozliczenia za luty 2026 dla WSZYSTKICH faktur ujmowanych w tym pliku, niezależnie od daty ich wystawienia. Flaga jest zatem uzasadniona — step 6 zawiera błędną informację.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://www.gofin.pl/podatki/vat-i-akcyza/45758/nowe-oznaczenia-w-jpk-vat-takze-dla-podatnikow-nieobjetych-jeszcze-obowiazkiem-ksef-odpowiedz-min-fin-na-pytanie-naszego-wydawnictwa",
+        "source_quote": "faktury wystawione przed obowiązkiem fakturowania za pośrednictwem KSeF",
+        "verified_at_v2": "2026-04-18T00:11:16Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -188,7 +215,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, należy dodać do draftu krok wyjaśniający, że faktury korygujące VAT RR (korekty faktur zakupu od rolników ryczałtowych) powinny dziedziczyć oznaczenie faktury pierwotnej lub otrzymywać odrębne oznaczenie zgodnie z rozporządzeniem JPK_V7 - wymaga weryfikacji w treści rozporządzenia MF.",
         "verified_at": "2026-04-17T23:36:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło gofin.pl potwierdza, że przy oznaczeniu DI po stronie zakupu może wystąpić konieczność wyboru VAT_RR (faktura VAT RR), co wskazuje na odrębną ścieżkę oznaczania dla tych dokumentów. Draft nie zawiera żadnego kroku dotyczącego faktur korygujących do faktur VAT RR i zasad dziedziczenia/nadawania oznaczeń BFK/DI dla korekt — flaga o brakującej informacji jest zasadna. Żadne źródło nie rozstrzyga wprost kwestii korekt VAT RR, co potwierdza lukę informacyjną w drafcie.",
+        "verifier_confidence_v2": 0.72,
+        "source_url": "https://www.gofin.pl/17,2,7,257580,nowe-oznaczenia-w-pliku-jpkvat.html",
+        "source_quote": "VAT_RR lub WEW (po stronie zakupu)",
+        "verified_at_v2": "2026-04-18T00:11:36Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -200,7 +236,16 @@
         "corrective_suggestion": "W step 5 warto dodać wyjaśnienie techniczne: kody BFK/DI umieszczane są w dedykowanym polu struktury JPK_V7 (np. kolumna 'KodTransakcji' lub analogiczna), odrębnym od pól GTU i oznaczeń procedur - co oznacza, że dokument może mieć jednocześnie wypełnione pole BFK/DI oraz pole GTU i oznaczenie procedury (np. WEW, FP). Jeśli autor drafta nie ma pewności co do nazwy konkretnego pola XML, powinien to zaznaczyć lub odesłać do schematu XSD opublikowanego przez MF.",
         "verified_at": "2026-04-17T23:36:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła podatki.gov.pl i ksiegowosc.infor.pl jednoznacznie wskazują, że NrKSeF, OFF, BFK i DI są umieszczane w nowym, odrębnym węźle XML o nazwie 'KSeF' w strukturze JPK_V7M(3)/JPK_V7K(3) — nie zastępują istniejących pól, lecz stanowią osobną kolumnę/węzeł. Draft w step 5 pomija tę techniczną informację, co czyni flagę zasadną.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.podatki.gov.pl/aktualnosci/rozporzadzenia-wykonawcze-do-krajowego-systemu-e-faktur/",
+        "source_quote": "będą miały zastosowanie odpowiednie oznaczenia (węzeł KSeF)",
+        "verified_at_v2": "2026-04-18T00:11:50Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "edge_case_coverage",
@@ -212,7 +257,16 @@
         "corrective_suggestion": "Warto doprecyzować w edge case, że obowiązek wysyłania faktury do KSeF dotyczy podatników objętych obowiązkowym KSeF (od daty wejścia w życie obowiązku dla danej grupy podatników) i rozważyć dodanie zastrzeżenia o ewentualnych wyłączeniach branżowych lub podmiotowych, jeśli takie istnieją w przepisach o KSeF.",
         "verified_at": "2026-04-17T23:36:48Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z podatki.gov.pl i ksiegowosc.infor.pl potwierdzają, że obowiązek wystawiania faktur w KSeF dotyczy co do zasady wszystkich podatników VAT (etapami od 1.02.2026 i 1.04.2026), bez rozróżnienia na wielkość obrotu aptek. Faktura do paragonu z NIP powyżej 450 zł (niebędącego fakturą uproszczoną) powinna trafić do KSeF jako faktura ustrukturyzowana z oznaczeniem FP — co potwierdza interpretacja KIS opisana w ksiegowosc.infor.pl. Flaga sugeruje, że stwierdzenie w drafcie jest niejasne co do warunków (np. wielkość obrotu), ale przepisy nie uzależniają tego obowiązku od wielkości obrotu apteki — wyjątek dotyczy jedynie progu 10 000 zł miesięcznie (do końca 2026 r.) jako ogólnego ułatwienia dla wszystkich małych podatników, nie tylko aptek. Draft jest zatem merytorycznie poprawny, a flaga jest false positive.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/vat/jpk-vat/7554826,faktura-do-paragonu-wystawiona-w-ksef-na-zadanie-konsumenta-lub-rolnika-ryczaltowego-jak-ujac-w-ewidencji-vat-jpk-vat-z-deklaracja-dyrektor-kis-wyjasnia.html",
+        "source_quote": "Faktura wystawiona w KSeF... powinna być oznaczona symbolem „FP\"",
+        "verified_at_v2": "2026-04-18T00:12:04Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "hallucination_risk",
@@ -224,7 +278,16 @@
         "corrective_suggestion": "Jeśli termin 'offline24' pojawia się w drafcie, należy zweryfikować go z oficjalną dokumentacją MF/KSeF - oficjalne tryby to 'tryb offline' (awaryjny) i 'tryb online'. Jeśli 'offline24' nie jest oficjalną nazwą, należy zastąpić go poprawną nomenklaturą lub dodać wyjaśnienie skąd pochodzi ten termin.",
         "verified_at": "2026-04-17T23:36:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Tryb 'offline24' jest oficjalną, ustawową nazwą jednego z trybów szczególnych wystawiania faktur w KSeF, uregulowanego w art. 106nda ustawy o VAT. Nazwa ta pojawia się wprost na oficjalnej stronie podatki.gov.pl (ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryb-offline24/) oraz w materiałach Ministerstwa Finansów i serwisu ksiegowosc.infor.pl. Flaga jest zatem bezzasadna – termin 'offline24' nie jest wymyślony ani błędny.",
+        "verifier_confidence_v2": 0.98,
+        "source_url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryb-offline24/",
+        "source_quote": "Tryb offline24 to rozwiązanie, z którego można skorzystać",
+        "verified_at_v2": "2026-04-18T00:12:14Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

@@ -136,7 +136,16 @@
         "corrective_suggestion": "Należy zweryfikować bezpośrednio w tekście ustawy o VAT (Dz.U. lub ISAP) czy art. 106nd ust. 2 faktycznie zawiera punkt 11 oraz czy pominięcie pkt 7-10 jest celowe (bo nie są relevantne) czy błędne. Jeśli struktura jest inna, należy skorygować cytowanie.",
         "verified_at": "2026-04-17T23:39:07Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Wynik z sejm.gov.pl (nowelizacja 2023) pokazuje, że art. 106nd ust. 2 zawiera punkty do co najmniej pkt 10 (z lit. a, b, c) oraz dodane pkt 8a i 8b. Żadne ze źródeł z whitelisty nie potwierdza istnienia pkt 11 w tym ustępie, co czyni odwołanie 'pkt 1-6 i 11' podejrzanym — pkt 11 nie jest potwierdzony w dostępnych źródłach.",
+        "verifier_confidence_v2": 0.72,
+        "source_url": "https://orka.sejm.gov.pl/proc9.nsf/ustawy/3242_u.htm",
+        "source_quote": "po pkt 8 dodaje się pkt 8a i 8b",
+        "verified_at_v2": "2026-04-18T00:14:07Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 2
       },
       {
         "type": "outdated_data_risk",
@@ -159,7 +168,16 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie w drafcie, że funkcjonalności integracji z KSeF w wymienionych programach mogą ulec zmianie i należy weryfikować aktualną dokumentację producenta. Można też wskazać datę opracowania procedury jako punkt odniesienia.",
         "verified_at": "2026-04-17T23:39:17Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z ksiegowosc.infor.pl (kwiecień 2026) potwierdzają, że dostawcy oprogramowania (Symfonia, Comarch) przeszli głęboką przebudowę architektury produktów w związku z KSeF 2.0 – zmieniono logikę procesów, obieg dokumentów i integrację. Oznacza to, że szczegółowe funkcjonalności (mapowanie pól, OCR, panele akceptacji) opisane w drafcie mogły ulec istotnym zmianom względem stanu sprzed 2026 r. Flaga jest uzasadniona, bo draft opisuje konkretne konfiguracje techniczne programów bez zastrzeżenia, że należy je weryfikować z aktualną dokumentacją dostawcy.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/ksef/7483853,ksef-2026-panstwowa-infrastruktura-cyfrowa-ktora-zmienia-biznes-glebiej-niz-fakturowanie.html",
+        "source_quote": "producenci komercyjnych rozwiązań - takich jak Symfonia - de facto",
+        "verified_at_v2": "2026-04-18T00:14:20Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -183,7 +201,16 @@
         "corrective_suggestion": "W kroku 3 (Krok B weryfikacji) dodać: weryfikacja czy faktura zawiera oznaczenie 'mechanizm podzielonej płatności' (obowiązkowe przy fakturach >15 000 zł brutto z towarami/usługami z załącznika nr 15 do ustawy o VAT) - jeśli tak, płatność musi być zrealizowana przelewem split payment, a biuro powinno odnotować to w systemie i poinformować klienta przed terminem płatności.",
         "verified_at": "2026-04-17T23:39:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z whitelisty (biznes.gov.pl, ksiegowosc.infor.pl) potwierdzają, że weryfikacja MPP jest obowiązkiem nabywcy (biura/klienta), ale mechanizm jest dobrze uregulowany i stosunkowo prosty: faktura podlega obowiązkowemu split payment gdy zawiera towar/usługę z załącznika nr 15 do ustawy o VAT i wartość brutto przekracza 15 000 zł, a adnotacja 'mechanizm podzielonej płatności' na fakturze jest kluczowym sygnałem. Flaga wskazuje na brak procedury obsługi MPP w drafcie, jednak draft (krok 3) dotyczy weryfikacji kosztowej KUP/nie-KUP i obiegu faktur w KSeF — split payment jest odrębnym mechanizmem płatniczym, nie księgowym, i jego obsługa (weryfikacja adnotacji na fakturze + prawidłowy przelew) nie musi być elementem procedury obiegu faktur kosztowych w biurze rachunkowym. Brak szczegółowego opisu MPP w tym kroku nie stanowi krytycznego braku, gdyż jest to zagadnienie płatnicze po stronie klienta, a nie procedura archiwizacji/księgowania faktur KSeF.",
+        "verifier_confidence_v2": 0.78,
+        "source_url": "https://www.biznes.gov.pl/pl/portal/00227",
+        "source_quote": "Jeśli zapłacisz za fakturę z pominięciem MPP, taki wydatek nie",
+        "verified_at_v2": "2026-04-18T00:14:35Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

@@ -121,7 +121,16 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-17T23:37:18Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Art. 87¹ KP istnieje w Kodeksie pracy i jest odrębną jednostką redakcyjną (nie jest to błędne oznaczenie). Przepisy gofin.pl (przepisy.gofin.pl) jednoznacznie potwierdzają istnienie art. 87¹ § 1 KP, który reguluje kwotę wolną od potrąceń przy zajęciach niealimentacyjnych jako 100% minimalnego wynagrodzenia netto. Draft prawidłowo powołuje zarówno art. 87 (limity potrąceń) jak i art. 87¹ (kwota wolna) — oba artykuły istnieją i pełnią opisane w drafcie funkcje.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,9,9,212,8535,20140304,art-871-ustawa-z-dnia-26061974-r-kodeks-pracy1.html",
+        "source_quote": "Wolna od potrąceń jest kwota wynagrodzenia za pracę",
+        "verified_at_v2": "2026-04-18T00:08:10Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -133,7 +142,16 @@
         "corrective_suggestion": "Należy zweryfikować treść art. 833 KPC bezpośrednio w aktualnym tekście jednolitym Kodeksu postępowania cywilnego - w szczególności czy § 2¹ został wprowadzony i kiedy wszedł w życie. Jeśli § 2¹ nie istnieje, należy skorygować odwołanie do właściwego paragrafu lub usunąć je z draftu.",
         "verified_at": "2026-04-17T23:37:25Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło gofin.pl (art. 833 § 2¹ KPC) jednoznacznie potwierdza istnienie paragrafu 2¹ w art. 833 KPC – przepis ten stosuje się do świadczeń powtarzających się stanowiących jedyne źródło dochodu dłużnika. Flaga jest zatem słuszna: § 2¹ istnieje i jest odrębny od § 2, a draft nie odwołuje się do art. 833 KPC w ogóle (brakuje tego legal anchor), choć fragment ANSWER_STEPS go faktycznie stosuje (step 4). Jednocześnie art. 833 § 2 KPC (umowy cywilnoprawne jako jedyne źródło utrzymania) i § 2¹ (nowsza regulacja) to dwa różne paragrafy – flaga słusznie wskazuje na niepewność co do numeracji.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://www.gofin.pl/prawo-pracy/17,1,95,322841.html",
+        "source_quote": "art. 833 § 21 Kodeksu postępowania cywilnego",
+        "verified_at_v2": "2026-04-18T00:08:21Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -145,7 +163,16 @@
         "corrective_suggestion": "Zaktualizować kwotę wolną dla zasiłków do wartości obowiązującej w 2026 r. (po waloryzacji marcowej) lub dodać wyraźne zastrzeżenie że kwota 825 zł dotyczy 2025 r. i należy sprawdzić aktualną wartość w obwieszczeniu Ministra Rodziny na rok 2026.",
         "verified_at": "2026-04-17T23:37:32Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Serwis wskazniki.gofin.pl dla wskaźnika 'Kwoty wolne od potrąceń ze świadczeń z ubezpieczeń społecznych' podaje jako źródło 'Mon. Pol. z 2026 r. poz. 220', co oznacza, że w 2026 r. opublikowano nowe obwieszczenie z zaktualizowaną kwotą wolną. Draft podaje kwotę 825 zł jako 'stan na 2025 r.', co jest nieaktualne dla dokumentu datowanego 2026-04-17 — flaga jest uzasadniona.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://wskazniki.gofin.pl/wskaznik/305/kwoty-wolne-od-potracen-ze-swiadczen-z-ubezpieczen-spolecznych",
+        "source_quote": "Źródło: Mon. Pol. z 2026 r. poz. 220",
+        "verified_at_v2": "2026-04-18T00:08:47Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 1
       },
       {
         "type": "outdated_data_risk",
@@ -157,7 +184,16 @@
         "corrective_suggestion": "Jeśli draft ma być aktualny na 2026 r., należy zaktualizować przykładową kwotę minimalnego wynagrodzenia do wartości obowiązującej od stycznia 2026 r. (ustalanej rozporządzeniem Rady Ministrów) lub zastąpić konkretną kwotę odwołaniem do 'aktualnego minimalnego wynagrodzenia za pracę ustalanego na podstawie odrębnych przepisów' bez podawania liczby.",
         "verified_at": "2026-04-17T23:37:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Flaga jest słuszna. Minimalne wynagrodzenie za pracę od 1 stycznia 2026 r. wynosi 4806 zł brutto (Rozporządzenie Rady Ministrów z 11 września 2025 r., Dz.U. poz. 1242), a nie 'ok. 4666 zł brutto' podane w drafcie. Kwota 4666 zł obowiązywała w 2025 r. – różnica wynosi 140 zł brutto. Draft zawiera nieaktualną wartość, co bezpośrednio wpływa na błędne wyliczenie kwoty wolnej od potrąceń (art. 87¹ KP).",
+        "verifier_confidence_v2": 0.98,
+        "source_url": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/7490561,placa-minimalna-2026-ile-brutto-w-umowie-ile-netto-do-wyplaty-na-reke-w-ktorych-umowach-trzeba-stosowac-minimalna-stawke-godzinowa.html",
+        "source_quote": "od 1 stycznia 2026 r. minimalne wynagrodzenie za pracę wynosi",
+        "verified_at_v2": "2026-04-18T00:12:26Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -169,7 +205,16 @@
         "corrective_suggestion": "W step 2 dodać explicite: 'Jeśli wynagrodzenie netto pracownika jest równe lub niższe niż kwota wolna (100% minimalnego wynagrodzenia netto), potrącenie wynosi 0 zł - pracodawca nie dokonuje żadnego potrącenia i informuje o tym komornika.'",
         "verified_at": "2026-04-17T23:37:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i ksiegowosc.infor.pl potwierdzają, że potrącenie niealimentacyjne wynosi mniejszą z dwóch wartości: 50% netto lub (netto - kwota wolna). Gdy wynagrodzenie netto pracownika jest równe lub niższe od kwoty wolnej (= minimalne wynagrodzenie netto), różnica jest ≤ 0, więc potrącenie = 0 — nigdy ujemne. Draft w step 2 stwierdza jedynie 'zazwyczaj nie ma potrącenia', nie precyzując tego mechanizmu ani warunku granicznego (netto ≤ kwota wolna → potrącenie = 0), co stanowi realną lukę informacyjną potwierdzoną przez źródła.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/rachunkowosc/ksiegi-rachunkowe/743667,Jak-ujac-w-ksiegach-rachunkowych-zajecie-wynagrodzenia.html",
+        "source_quote": "pensja po potrąceniach nie może być niższa niż minimalne wynagrodzenie",
+        "verified_at_v2": "2026-04-18T00:09:03Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -181,7 +226,16 @@
         "corrective_suggestion": "Jeśli w Step 3 faktycznie pada stwierdzenie że świadczenia ZFŚS nie podlegają egzekucji, warto dodać wyraźne rozróżnienie: świadczenia z ZFŚS są wyłączone z egzekucji na podstawie art. 12 ust. 1 ustawy o ZFŚS, natomiast zasiłki ZUS podlegają egzekucji z limitami z ustawy o emeryturach i rentach (25% brutto, kwota wolna 825 zł). Rozróżnienie to powinno być explicite zaznaczone w drafcie.",
         "verified_at": "2026-04-17T23:37:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i ksiegowosc.infor.pl potwierdzają, że status świadczeń ZFŚS wobec egzekucji jest kontrowersyjny i niejednoznaczny: art. 12 ust. 2 ustawy o ZFŚS chroni środki funduszu przed egzekucją, ale Krajowa Rada Komornicza i oba ministerstwa uznały, że przepisy nie przewidują zwolnienia wypłaconych świadczeń z ZFŚS spod egzekucji komorniczej. Draft w Step 3 stwierdza kategorycznie 'NIE podlegają egzekucji', co jest uproszczeniem budzącym wątpliwości. Flaga jest uzasadniona — brakuje rozróżnienia i zastrzeżenia o kontrowersyjności tej kwestii, a Step 5 (zasiłki ZUS) nie jest powiązany z wyjaśnieniem różnicy względem ZFŚS.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.gofin.pl/prawo-pracy/17,2,101,132286,egzekucja-komornicza-ze-swiadczen-z-zfss.html",
+        "source_quote": "przepisy nie przewidują zwolnienia świadczeń z Funduszu spod egzekucji",
+        "verified_at_v2": "2026-04-18T00:12:38Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -193,7 +247,16 @@
         "corrective_suggestion": "Rozważyć dodanie w step 4 wyjaśnienia, że ochrona przysługuje od momentu dostarczenia dokumentacji komornikowi/pracodawcy - do czasu jej dostarczenia pracodawca może potrącać 100%, a po dostarczeniu stosuje limity analogiczne do art. 87¹ KP. Warto też wskazać podstawę prawną (art. 833 § 2 KPC) i tryb uzyskania zaświadczenia od komornika.",
         "verified_at": "2026-04-17T23:38:01Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z whitelisty (ksiegowosc.infor.pl, sejm.gov.pl) jednoznacznie potwierdzają, że ochrona wynagrodzenia ze zlecenia jest uzależniona od uprzedniego poinformowania komornika przez dłużnika i wydania przez komornika stosownego postanowienia — dopiero wtedy zleceniodawca stosuje limity. Draft w step 4 opisuje jedynie wymóg dostarczenia pisma komornika, ale nie wyjaśnia kluczowej sekwencji: to dłużnik musi NAJPIERW zawiadomić komornika, komornik wydaje postanowienie, a dopiero na jego podstawie zleceniodawca ogranicza potrącenie. Do czasu takiego postanowienia zleceniodawca potrąca 100% — co draft pomija. Flaga jest zatem uzasadniona.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/101269,Czy-wynagrodzenie-z-umowy-cywilnoprawnej-podlega-ochronie-jak-wynagrodzenie-z-umowy-o-prace.html",
+        "source_quote": "Pracodawca jest jedynie wykonawcą postanowienia egzekucyjnego i musi postępować zgodnie",
+        "verified_at_v2": "2026-04-18T00:12:51Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -205,7 +268,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł, należy uzupełnić step 6 o informację: przy zbiegu egzekucji sądowych pracodawca przekazuje środki komornikowi, który jako pierwszy dokonał zajęcia (art. 773 KPC), a przy zbiegu egzekucji sądowej i administracyjnej - do sądu rejonowego właściwego dla miejsca zamieszkania dłużnika, w formie pisemnej, niezwłocznie po stwierdzeniu zbiegu.",
         "verified_at": "2026-04-17T23:38:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i ksiegowosc.infor.pl potwierdzają, że przy zbiegu egzekucji sądowej i administracyjnej (komornik + ZUS/US) obowiązują konkretne zasady: od 8 września 2016 r. to pracodawca (art. 882¹ KPC) samodzielnie ustala pierwszeństwo i przekazuje kwoty organowi, który pierwszy dokonał zajęcia — a nie 'zgłasza zbieg do organu właściwego'. Ponadto pracodawca ma obowiązek niezwłocznie zawiadomić właściwe organy egzekucyjne o zbiegu (art. 773 §1 KPC). Draft w step 6 pomija te kluczowe szczegóły: kto zawiadamia (pracodawca), kogo (oba organy egzekucyjne), w jakim trybie (niezwłocznie) i że to pracodawca — nie sąd — rozstrzyga pierwszeństwo przy zbiegu do wynagrodzenia.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/745744,Zmiany-w-dokonywaniu-potracen-z-wynagrodzen-pracownikow.html",
+        "source_quote": "pracodawca niezwłocznie zawiadamia o zbiegu egzekucji właściwe organy",
+        "verified_at_v2": "2026-04-18T00:13:04Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "hallucination_risk",
@@ -229,7 +301,16 @@
         "corrective_suggestion": "Jeśli flaga jest zasadna, warto doprecyzować step 7 wskazując konkretny formularz lub odsyłając do strony Ministerstwa Sprawiedliwości / portalu komornika, gdzie pracodawca może pobrać właściwy druk odpowiedzi na zajęcie wynagrodzenia.",
         "verified_at": "2026-04-17T23:38:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Przepisy art. 882 KPC (potwierdzony przez gofin.pl) nakładają na pracodawcę obowiązek odpowiedzi komornikowi w ciągu tygodnia, jednak nie istnieje jeden ustandaryzowany formularz o konkretnym symbolu (np. RPS-3/RPS-4) do odpowiedzi pracodawcy — pracodawca odpowiada na piśmie w oparciu o treść wezwania komornika. Sformułowanie 'formularz z zajęcia' w drafcie odnosi się do dokumentu dołączonego przez komornika do pisma o zajęciu, co jest powszechnie stosowaną praktyką i nie wymaga podania konkretnego symbolu formularza. Flaga sugeruje brak nazwy formularza (RPS-3, RPS-4), ale takie symbole dotyczą egzekucji administracyjnej ZUS, nie komorniczej — w egzekucji sądowej nie ma jednego obowiązkowego formularza odpowiedzi pracodawcy o ustandaryzowanej nazwie.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,9,9,15,201207,20180716,art-882-ustawa-z-dnia-17111964-r-kodeks-postepowania.html",
+        "source_quote": "komornik wzywa ponadto pracodawcę, aby w ciągu tygodnia",
+        "verified_at_v2": "2026-04-18T00:13:17Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "edge_case_coverage",
@@ -241,7 +322,16 @@
         "corrective_suggestion": "Warto doprecyzować edge case: 'Dwie wypłaty w jednym miesiącu - kwota wolna (minimalne wynagrodzenie netto) przysługuje raz na miesiąc kalendarzowy, nie per wypłata. Jeśli przy pierwszej wypłacie kwota wolna została w całości zastosowana, od drugiej wypłaty w tym samym miesiącu potrącenie może objąć całą kwotę (do limitu 50% netto). Zalecana weryfikacja z art. 87¹ KP i praktyką komorniczą.'",
         "verified_at": "2026-04-17T23:38:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródło gofin.pl (powołując się na stanowisko GIP z 19.11.2012 i MPiPS) potwierdza, że przy dwóch wypłatach w tym samym miesiącu kalendarzowym świadczenia sumuje się i stosuje jedną kwotę wolną od łącznej kwoty. Oznacza to, że jeśli kwota wolna została już w całości pokryta przez pierwszą wypłatę, od drugiej wypłaty można potrącić całość (do limitu 50%) — stwierdzenie drafta jest zatem merytorycznie poprawne, a flaga jest false positive.",
+        "verifier_confidence_v2": 0.85,
+        "source_url": "https://www.gofin.pl/prawo-pracy/17,2,95,220320,zasady-dokonywania-potracen-z-wynagrodzenia-za-prace-i-innych.html",
+        "source_quote": "świadczenia sumować i od tej wielkości dokonać potrącenia, stosując jedną",
+        "verified_at_v2": "2026-04-18T00:13:32Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",
@@ -253,7 +343,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, należy dodać do step 3 lub jako osobny step wyjaśnienie: wynagrodzenie chorobowe z art. 92 KP (pierwsze 33 dni/14 dni dla 50+) traktuje się jak wynagrodzenie za pracę - podlega limitom z art. 87-87¹ KP (50% netto, kwota wolna = minimalne wynagrodzenie netto), a nie limitom ustawy zasiłkowej (25% brutto, kwota wolna 825 zł). Limity ustawy emerytalnej stosuje się dopiero do zasiłku chorobowego wypłacanego przez ZUS od 34. dnia choroby.",
         "verified_at": "2026-04-17T23:38:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło gofin.pl jednoznacznie potwierdza, że wynagrodzenie chorobowe (pierwsze 33 dni płacone przez pracodawcę) traktowane jest jako wynagrodzenie za pracę i podlega limitom z art. 87 i 87¹ KP, natomiast zasiłek chorobowy (od ZUS) podlega odrębnym limitom z art. 139 i nast. ustawy emerytalnej. Draft w step 3 sumuje 'wynagrodzenie chorobowe' razem z wynagrodzeniem za pracę (co jest poprawne), ale nigdzie explicite nie wyjaśnia tej kluczowej dystynkcji — że wynagrodzenie chorobowe (33 dni) ≠ zasiłek chorobowy i stosuje się do niego limity KP, nie ustawy emerytalnej. Flaga jest zatem uzasadniona: brakuje wyraźnego wyjaśnienia tej różnicy w answer_steps.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://www.gofin.pl/skladki-zasilki-emerytury/17,1,110,291375,ustalenie-wysokosci-potracenia-komorniczego-z-wynagrodzenia.html",
+        "source_quote": "z wynagrodzenia (w tym chorobowego) na zasadach określonych w art.",
+        "verified_at_v2": "2026-04-18T00:13:45Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

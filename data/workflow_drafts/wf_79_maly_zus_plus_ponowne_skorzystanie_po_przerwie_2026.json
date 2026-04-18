@@ -124,7 +124,16 @@
         "corrective_suggestion": "Należy uzupełnić weryfikację o pełną treść art. 18c (szczególnie ust. 3–9 lub dalsze) oraz art. 36 ust. 14 ustawy o SUS, aby potwierdzić że wszystkie wymienione warunki (60 dni, 36/60 miesięcy, przesłanki negatywne, termin 7 dni) rzeczywiście wynikają z tych przepisów, a nie z innych artykułów lub rozporządzeń wykonawczych.",
         "verified_at": "2026-04-17T23:46:56Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Art. 18c ustawy o SUS rzeczywiście reguluje Mały ZUS Plus i zawiera limit 120 000 zł przychodu (potwierdzony w tytule przepisu na gofin.pl: 'roczny przychód... nie przekroczył kwoty 120.000 złotych'). Zasada 36/60 miesięcy jest nadal aktualna w 2026 r. — od 1 stycznia 2026 r. zmieniła się jedynie jej lokalizacja w przepisie (uchylono pkt 6 ust. 11, dodano ust. 11a-11c), ale sama reguła 36 miesięcy w każdym okresie 60 miesięcy pozostaje w mocy. Draft poprawnie wskazuje art. 18c jako podstawę prawną dla wszystkich wymienionych warunków — flaga jest nieuzasadniona.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.gofin.pl/17,2,7,259113,najwazniejsze-zmiany-w-przepisach.html",
+        "source_quote": "36 miesięcy kalendarzowych w każdym okresie 60 miesięcy",
+        "verified_at_v2": "2026-04-18T00:10:27Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -148,7 +157,16 @@
         "corrective_suggestion": "Dodać zastrzeżenie w drafcie, że limit 120 000 zł obowiązuje na podstawie art. 18c ustawy o SUS w brzmieniu aktualnym na moment sporządzenia dokumentu i należy zweryfikować jego wysokość przed zastosowaniem w 2026 roku, sprawdzając ewentualne rozporządzenie waloryzacyjne lub nowelizację ustawy.",
         "verified_at": "2026-04-17T23:47:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiele zaufanych źródeł (biznes.gov.pl, zus.pl, ksiegowosc.infor.pl, podatki.biz) jednoznacznie potwierdza, że limit przychodu dla Małego ZUS Plus na 2026 rok wynosi 120 000 zł – identycznie jak w latach poprzednich. Limit ten jest zapisany wprost w art. 18c ustawy o systemie ubezpieczeń społecznych jako kwota stała (nie waloryzowana corocznie rozporządzeniem), co potwierdzają aktualne komunikaty ZUS z stycznia 2026 r. Flaga jest zatem false positive – limit 120 000 zł dla 2026 roku jest prawidłowy i zweryfikowany.",
+        "verifier_confidence_v2": 0.95,
+        "source_url": "https://ksiegowosc.infor.pl/wiadomosci/7506192,komunikat-zus-od-2026-roku-czesc-przedsiebiorcow-moze-wrocic-do-placenia-nizszych-skladek-maly-zus-plus.html",
+        "source_quote": "przychód z działalności w poprzednim roku nie przekroczył 120 tys.",
+        "verified_at_v2": "2026-04-18T00:10:39Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -172,7 +190,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta znającego art. 18c, draft powinien zawierać dodatkowy krok lub notę wyjaśniającą: czy po przegapieniu terminu 31 stycznia licznik 36 miesięcy jest kontynuowany (przedsiębiorca może wznowić ulgę w ciągu roku przy wznowieniu działalności z zachowaniem pozostałych miesięcy), czy też dany rok przepada i licznik biegnie dalej bez możliwości 'nadrobienia' utraconych miesięcy.",
         "verified_at": "2026-04-17T23:47:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło ZUS (zus.pl, nowe zasady od 2026 r.) wprost stwierdza: 'Jeżeli nie wykorzystasz wszystkich 36 miesięcy ulgi w okresie 60 miesięcy prowadzonej działalności gospodarczej, to pozostałych miesięcy nie możesz wykorzystać w kolejnym 60-miesięcznym okresie.' Draft nie opisuje tego kluczowego ograniczenia w scenariuszu zawieszenia/wznowienia po przegapieniu terminu 31 stycznia – przedsiębiorca, który np. wykorzystał 12 m-cy w 2025 r., przegapił termin i zawiesił działalność, po wznowieniu może kontynuować ulgę (7 dni od wznowienia), ale pozostałe miesiące z bieżącego 60-miesięcznego okresu przepadają po jego upływie. Draft nie wyjaśnia tej zasady przepadku niewykorzystanych miesięcy, co stanowi realną lukę informacyjną.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.zus.pl/en/-/%E2%80%9Ema%C5%82y-zus-plus-nowe-zasady-od-2026-r.",
+        "source_quote": "pozostałych miesięcy nie możesz wykorzystać w kolejnym 60-miesięcznym",
+        "verified_at_v2": "2026-04-18T00:10:52Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

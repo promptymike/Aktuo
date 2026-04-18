@@ -124,7 +124,16 @@
         "corrective_suggestion": "W kroku 2 zamiast podawać konkretną wersję schematu (np. 'v 1.3'), draft powinien odsyłać do aktualnej listy schematów publikowanej przez MF pod adresem: https://www.gov.pl/web/kas/struktury-e-sprawozdan, z adnotacją że przed sporządzeniem SF należy pobrać aktualną wersję schematu obowiązującą dla danego roku obrotowego.",
         "verified_at": "2026-04-17T23:40:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z podatki.gov.pl i gofin.pl jednoznacznie potwierdzają, że MF regularnie publikuje nowe wersje struktur logicznych XSD – od 1 stycznia 2026 r. obowiązują nowe struktury (wariant 2 wersja 1-0), a od 30.06.2026 stare struktury przestaną być akceptowane. Draft wskazuje konkretne wersje schematów obowiązujące za 2025 r. bez odesłania do aktualnego BIP MF, co czyni procedurę podatną na dezaktualizację. Flaga jest zasadna – procedura powinna wskazywać stronę gov.pl/web/kas/struktury-e-sprawozdan jako miejsce weryfikacji aktualnej wersji, a nie hardkodować konkretne numery wersji.",
+        "verifier_confidence_v2": 0.95,
+        "source_url": "https://czasopismaksiegowych.gofin.pl/biuletyn-informacyjny/archiwum-rocznikowe/328401/struktury-logiczne-sprawozdan-obowiazujace-od-1-stycznia-2026-r",
+        "source_quote": "Od 1 stycznia 2026 r. wszystkie sprawozdania finansowe należy sporządzać",
+        "verified_at_v2": "2026-04-18T00:09:16Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
