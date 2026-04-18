@@ -6,7 +6,7 @@
     "Jak rozliczyć delegację pracownika zatrudnionego na UoP w polskiej firmie, wysłanego do Belgii/Holandii — od którego momentu liczyć dietę zagraniczną i jaka stawka?",
     "Czy zleceniobiorca wyjeżdżający na targi do Niemiec musi mieć A1 i o czym jeszcze pamiętać?",
     "Pracownik jest delegowany do Szwecji na 2 tygodnie w miesiącu — czy diety i ryczałty są zwolnione z PIT i ZUS do limitów?",
-    "Jak w Comarch Optima wprowadzić składniki wynagrodzenia pracownika oddelegowanego do Norwegii, gdzie podatek płacony jest tam, a ZUS w PL?",
+    "Jak w Comarch Optima wprowadzić składniki wynagrodzenia pracownika oddelegowanego do Norwegii, gdzie podatek płacany jest tam, a ZUS w PL?",
     "Czy ZUS może zweryfikować, że praca na A1 na dwa kraje faktycznie była wykonywana w Polsce w deklarowanym zakresie?"
   ],
   "answer_steps": [
@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Wystąp o zaświadczenie A1 przed wyjazdem",
-      "detail": "Składasz ZUS US-1 (pracownik delegowany, art. 12 rozp. 883/2004) lub ZUS US-4 (praca w 2+ państwach, art. 13). Wniosek przez PUE ZUS → Usługi → Katalog usług → 'Wniosek o wydanie A1'. A1 potwierdza, że pracownik nadal podlega ustawodawstwu PL — ZUS opłacasz w Polsce. Bez A1 państwo przyjmujące może żądać składek lokalnych. Dla zleceniobiorcy wyjeżdżającego na targi do Niemiec A1 również jest wymagane (art. 12 ust. 1 rozp. 883/2004 stosuje się też do zleceń oskładkowanych w PL).",
+      "detail": "Składasz ZUS US-3 (pracownik delegowany, art. 12 rozp. 883/2004) lub ZUS US-4 (praca w 2+ państwach, art. 13). Wniosek przez PUE ZUS → Usługi → Katalog usług → 'Wniosek o wydanie A1'. A1 potwierdza, że pracownik nadal podlega ustawodawstwu PL — ZUS opłacasz w Polsce. Bez A1 państwo przyjmujące może żądać składek lokalnych. Dla zleceniobiorcy wyjeżdżającego na targi do Niemiec A1 również jest wymagane (art. 12 ust. 1 rozp. 883/2004 stosuje się też do zleceń oskładkowanych w PL).",
       "condition": null
     },
     {
@@ -31,19 +31,19 @@
     {
       "step": 4,
       "action": "Przy podróży służbowej policz dietę krajową i zagraniczną zgodnie z rozporządzeniem",
-      "detail": "Dieta krajowa: 45 zł/doba (stawka obowiązująca od 1.01.2023, bez zmian na 2026 — zweryfikuj przed wypłatą). Dieta zagraniczna wg załącznika do rozporządzenia (np. Niemcy 49 EUR, Belgia 48 EUR, Holandia 50 EUR, Norwegia 496 NOK, Szwecja 510 SEK). Dietę zagraniczną liczysz od momentu przekroczenia granicy PL (przy transporcie lądowym), a dietę krajową do granicy PL. Ryczałty: nocleg (25% limitu hotelowego), dojazdy (10% diety × liczba dób). Zwolnienie z PIT i ZUS do wysokości limitów z rozporządzenia (art. 21 ust. 1 pkt 16 ustawy o PIT; §2 pkt 15 rozp. składkowego z 18.12.1998).",
+      "detail": "Dieta krajowa: 45 zł/doba (stawka obowiązująca od 1.01.2023; uwaga — MRiPS przygotował projekt podwyżki do 60 zł, który może wejść w życie w trakcie 2026 r. — zweryfikuj aktualną stawkę przed wypłatą). Dieta zagraniczna wg załącznika do rozporządzenia (np. Niemcy 49 EUR, Belgia 48 EUR, Holandia 50 EUR, Norwegia 496 NOK, Szwecja 510 SEK). Dietę zagraniczną liczysz od momentu przekroczenia granicy PL (przy transporcie lądowym), a dietę krajową do granicy PL. Ryczałty: nocleg (25% limitu hotelowego), dojazdy (10% diety × liczba dób). Zwolnienie z PIT i ZUS do wysokości limitów z rozporządzenia (art. 21 ust. 1 pkt 16 ustawy o PIT; §2 pkt 15 rozp. składkowego z 18.12.1998).",
       "condition": "jeżeli wyjazd kwalifikuje się jako podróż służbowa, a nie delegowanie"
     },
     {
       "step": 5,
       "action": "Przy delegowaniu długoterminowym zastosuj odliczenie równowartości diet od podstawy ZUS",
-      "detail": "Dla pracownika oddelegowanego (nie podróż służbowa) podstawę wymiaru składek ZUS pomniejsza się o równowartość diety zagranicznej za każdy dzień pobytu, ale podstawa nie może być niższa niż prognozowane przeciętne wynagrodzenie (§2 ust. 1 pkt 16 rozp. z 18.12.1998, Dz.U. 1998 nr 161 poz. 1106). Na 2026 prognozowane wynagrodzenie = 9 203 zł (zweryfikuj w obwieszczeniu MRiPS). W Comarch Optima: Konfiguracja → Płace → Kalendarze → 'Oddelegowanie', następnie na wypłacie dodaj składnik 'Wynagrodzenie za oddelegowanie' i element 'Odliczenie diet'. W Symfonia Kadry i Płace: moduł 'Oddelegowania' → zdefiniuj kraj i okres.",
+      "detail": "Dla pracownika oddelegowanego (nie podróż służbowa) podstawę wymiaru składek ZUS pomniejsza się o równowartość diety zagranicznej za każdy dzień pobytu, ale podstawa nie może być niższa niż prognozowane przeciętne wynagrodzenie (§2 ust. 1 pkt 16 rozp. z 18.12.1998, Dz.U. 1998 nr 161 poz. 1106). Na 2026 prognozowane wynagrodzenie = 9 420 zł (Obwieszczenie MRiPS z 19.11.2025, M.P. poz. 1206). W Comarch Optima: Konfiguracja → Płace → Kalendarze → 'Oddelegowanie', następnie na wypłacie dodaj składnik 'Wynagrodzenie za oddelegowanie' i element 'Odliczenie diet'. W Symfonia Kadry i Płace: moduł 'Oddelegowania' → zdefiniuj kraj i okres.",
       "condition": "jeżeli to delegowanie (nie podróż służbowa) i pobyt trwa co najmniej 1 miesiąc"
     },
     {
       "step": 6,
-      "action": "Rozlicz zaliczkę PIT zgodnie z miejscem opodatkowania",
-      "detail": "Jeśli PIT w PL — płatnik (pracodawca) pobiera zaliczkę wg skali (art. 32 ustawy o PIT). Jeśli PIT za granicą — pracodawca nie pobiera zaliczki w PL za miesiące pracy za granicą (art. 32 ust. 9 ustawy o PIT — na wniosek pracownika lub z mocy UPO), ale wykazuje przychód w PIT-11 w części F (przychody zwolnione na podstawie UPO z progresją). Dodatkowo: 30% diety zagranicznej za każdy dzień pobytu poza PL jest zwolnione z PIT (art. 21 ust. 1 pkt 20 ustawy o PIT) — do limitu równego 30% diety ze stawki rozporządzenia.",
+      "action": "Rozlicz zaliczkę PIT zgodnie z miejscem opodatkowania — i ustal obowiązek wykazania w PIT-11",
+      "detail": "SCENARIUSZ A — PIT w Polsce: pracodawca pobiera zaliczkę wg skali podatkowej na zasadach ogólnych (art. 32 ustawy o PIT). Wynagrodzenie wykazujesz w PIT-11 w części E (przychody opodatkowane w PL).\n\nSCENARIUSZ B — PIT za granicą (dochód opodatkowany w kraju przyjmującym na podstawie UPO): pracodawca NIE pobiera zaliczki na PIT w Polsce za miesiące pracy za granicą — podstawa: art. 32 ust. 6 ustawy o PIT (zakład pracy nie pobiera zaliczek na podatek dochodowy od dochodów uzyskanych przez pracownika z pracy wykonywanej poza terytorium RP, jeżeli dochody te podlegają lub będą podlegać opodatkowaniu poza terytorium RP). Uwaga: draft wcześniej błędnie wskazywał ust. 9 — właściwy przepis to ust. 6. Mimo braku poboru zaliczki pracodawca MA OBOWIĄZEK wykazać te przychody w PIT-11 — w części F (przychody zwolnione od podatku lub niepodlegające opodatkowaniu w Polsce, z adnotacją o metodzie unikania podwójnego opodatkowania). Pominięcie tej części PIT-11 jest częstym błędem i może skutkować wezwaniem pracownika przez US do złożenia korekty zeznania rocznego.\n\nDodatkowo (niezależnie od scenariusza): 30% diety zagranicznej za każdy dzień pobytu poza PL jest zwolnione z PIT (art. 21 ust. 1 pkt 20 ustawy o PIT) — do limitu równego 30% stawki diety z rozporządzenia dla danego kraju. ZUS pozostaje w Polsce przez cały okres ważności A1, niezależnie od miejsca opodatkowania.",
       "condition": null
     },
     {
@@ -53,7 +53,104 @@
       "condition": null
     }
   ],
-  "legal_anchors": [],
+  "legal_anchors": [
+    {
+      "id": "la_01",
+      "short_name": "art. 77(5) KP",
+      "full_name": "Art. 77(5) ustawy z dnia 26 czerwca 1974 r. — Kodeks pracy",
+      "description": "Podstawa prawna podróży służbowej pracownika; uprawnienie do diet i innych należności.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19740240141",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_02",
+      "short_name": "rozp. MPiPS Dz.U. 2013 poz. 167",
+      "full_name": "Rozporządzenie Ministra Pracy i Polityki Społecznej z dnia 29 stycznia 2013 r. w sprawie należności przysługujących pracownikowi zatrudnionemu w państwowej lub samorządowej jednostce sfery budżetowej z tytułu podróży służbowej",
+      "description": "Stawki diet krajowych (45 zł/doba) i zagranicznych oraz ryczałtów za noclegi i dojazdy; załącznik zawiera stawki dla poszczególnych krajów.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20130000167",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_03",
+      "short_name": "art. 12 rozp. 883/2004",
+      "full_name": "Art. 12 Rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 883/2004 z dnia 29 kwietnia 2004 r. w sprawie koordynacji systemów zabezpieczenia społecznego",
+      "description": "Zasada delegowania: pracownik wysłany przez pracodawcę do innego państwa członkowskiego na okres do 24 miesięcy nadal podlega ustawodawstwu państwa wysyłającego (PL); podstawa do wydania A1 formularzem ZUS US-3.",
+      "url": "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32004R0883",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_04",
+      "short_name": "art. 13 rozp. 883/2004",
+      "full_name": "Art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (WE) nr 883/2004",
+      "description": "Praca w dwóch lub więcej państwach członkowskich; wymóg co najmniej 25% pracy w kraju zamieszkania; podstawa do wydania A1 formularzem ZUS US-4.",
+      "url": "https://eur-lex.europa.eu/legal-content/PL/TXT/?uri=CELEX%3A32004R0883",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_05",
+      "short_name": "ZUS US-3",
+      "full_name": "Formularz ZUS US-3 — Wniosek o wydanie zaświadczenia A1 dla pracownika delegowanego (art. 12 ust. 1 rozp. 883/2004)",
+      "description": "Właściwy formularz wniosku o A1 dla pracownika delegowanego przez pracodawcę do innego państwa UE/EOG/Szwajcarii. Składany przez pracodawcę przez PUE ZUS.",
+      "url": "https://druki.gofin.pl/dzial/103/druk/697/zus-us-3-wniosek-o-wydanie-zaswiadczenia-a1-dla-pracownika",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_06",
+      "short_name": "art. 21 ust. 1 pkt 16 ustawy o PIT",
+      "full_name": "Art. 21 ust. 1 pkt 16 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych",
+      "description": "Zwolnienie z PIT diet i innych należności za czas podróży służbowej do wysokości limitów określonych w rozporządzeniu MPiPS.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_07",
+      "short_name": "art. 21 ust. 1 pkt 20 ustawy o PIT",
+      "full_name": "Art. 21 ust. 1 pkt 20 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych",
+      "description": "Zwolnienie z PIT 30% diety zagranicznej za każdy dzień pobytu poza PL dla pracownika oddelegowanego (nie podróż służbowa).",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_08",
+      "short_name": "art. 27 ust. 8-9 ustawy o PIT",
+      "full_name": "Art. 27 ust. 8-9 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych",
+      "description": "Metody unikania podwójnego opodatkowania: wyłączenie z progresją (ust. 8) oraz proporcjonalne odliczenie (ust. 9) stosowane zgodnie z właściwą UPO.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_09",
+      "short_name": "art. 32 ust. 6 ustawy o PIT",
+      "full_name": "Art. 32 ust. 6 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych",
+      "description": "Zakład pracy nie pobiera zaliczek na podatek dochodowy od dochodów uzyskanych przez pracownika z pracy wykonywanej poza terytorium RP, jeżeli dochody te podlegają lub będą podlegać opodatkowaniu poza terytorium RP. Prawidłowy przepis regulujący brak poboru zaliczki przy opodatkowaniu za granicą (wcześniej w drafcie błędnie wskazywano ust. 9).",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_10",
+      "short_name": "§2 pkt 15 rozp. składkowego",
+      "full_name": "§2 ust. 1 pkt 15 rozporządzenia Ministra Pracy i Polityki Socjalnej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe (Dz.U. 1998 nr 161 poz. 1106)",
+      "description": "Wyłączenie z podstawy wymiaru składek ZUS diet i innych należności z tytułu podróży służbowej do wysokości limitów z rozporządzenia MPiPS.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981611106",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_11",
+      "short_name": "§2 ust. 1 pkt 16 rozp. składkowego",
+      "full_name": "§2 ust. 1 pkt 16 rozporządzenia Ministra Pracy i Polityki Socjalnej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe (Dz.U. 1998 nr 161 poz. 1106)",
+      "description": "Pomniejszenie podstawy wymiaru składek ZUS o równowartość diety zagranicznej za każdy dzień pobytu za granicą przy oddelegowaniu; podstawa nie może być niższa niż prognozowane przeciętne wynagrodzenie.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981611106",
+      "verified_at": "2026-04-18"
+    },
+    {
+      "id": "la_12",
+      "short_name": "ustawa z 10.06.2016 o delegowaniu",
+      "full_name": "Ustawa z dnia 10 czerwca 2016 r. o delegowaniu pracowników w ramach świadczenia usług",
+      "description": "Implementacja dyrektywy 96/71/WE; obowiązek stosowania minimalnych warunków zatrudnienia państwa przyjmującego wobec pracowników delegowanych z PL.",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20160000868",
+      "verified_at": "2026-04-18"
+    }
+  ],
   "edge_cases": [
     "Pracownik zatrudniony na UoP w PL, ale mieszkający na Litwie, jedzie na delegację na Łotwę: dietę liczysz wg stawki kraju docelowego (Łotwa 57 EUR), a nie kraju zamieszkania; miejsce pracy w umowie i rezydencja podatkowa decydują o rozliczeniu PIT, nie miejsce zamieszkania.",
     "A1 na 2 kraje (art. 13 rozp. 883/2004) wymaga, aby co najmniej 25% pracy wykonywanej było w kraju zamieszkania — jeśli faktycznie pracownik pracuje głównie za granicą na rzecz polskiego kontrahenta, właściwsze jest A1 z art. 12 (delegowanie do 24 miesięcy).",
@@ -92,6 +189,29 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 77(5) KP, art. 12 rozp. 883/2004, art. 27 ust. 8-9 ustawy o PIT, §2 pkt 15 rozp. składkowego). Brak strukturalnego mapowania tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania.",
+      "applied_at": "2026-04-18T14:09:15Z",
+      "source": "v2",
+      "source_url": "https://druki.gofin.pl/dzial/103/druk/697/zus-us-3-wniosek-o-wydanie-zaswiadczenia-a1-dla-pracownika"
+    },
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Draft zawiera konkretne kwoty (dieta krajowa 45 zł/doba od 1.01.2023, prognozowane wynagrodzenie 9 203 zł na 2026, niemiecka płaca minimalna 12,82 EUR/h w 2025) — te dane wymagają weryfikacji dla 2026, szczególnie że rozporządzenie o dietach zmienia się co roku, a obwieszczenie MRiPS publikuje nowe prognozy wynagrodzeń.",
+      "applied_at": "2026-04-18T14:11:18Z",
+      "source": "v2",
+      "source_url": "https://www.zus.pl/en/-/nowe-wysoko%C5%9Bci-sk%C5%82adek-na-ubezpieczenia-spo%C5%82eczne-w-2026-r."
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak wyjaśnienia, jak rozliczyć pracownika delegowanego, gdy PIT należny jest w kraju przyjmującym, ale ZUS w Polsce — konkretnie: czy pracodawca musi pobrać zaliczkę PIT w Polsce za miesiące pracy za granicą, czy tylko wykazać przychód w PIT-11? Krok 6 jest niejasny na tym punkcie.",
+      "applied_at": "2026-04-18T14:13:34Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/765045,Delegowanie-pracownikow-do-pracy-za-granice-obowiazki-platnika-PIT.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:57:13Z",

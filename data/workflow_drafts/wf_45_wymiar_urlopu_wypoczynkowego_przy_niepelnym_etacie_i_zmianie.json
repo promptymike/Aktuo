@@ -42,12 +42,18 @@
     },
     {
       "step": 6,
+      "action": "Uwzględnij wpływ urlopu bezpłatnego na wymiar urlopu wypoczynkowego i staż pracy",
+      "detail": "Urlop bezpłatny trwający co najmniej 1 miesiąc kalendarzowy powoduje proporcjonalne obniżenie wymiaru urlopu wypoczynkowego za dany rok — po powrocie pracownika stosuje się zasady analogiczne do art. 1552 KP (proporcjonalne ustalenie wymiaru). Urlop bezpłatny nie jest wliczany do stażu pracy dla celów nabycia prawa do 26 dni urlopu (art. 1552 KP w zw. z art. 174 § 2 KP) — oznacza to, że okres urlopu bezpłatnego przesuwa datę nabycia wyższego wymiaru urlopu. Urlop na żądanie (art. 1672 KP) jest częścią puli urlopu wypoczynkowego i nie wpływa odrębnie na wymiar — pracownik może żądać do 4 dni z przysługującego mu urlopu; dni te odejmuje się od ogólnej puli urlopu wyliczonej zgodnie z krokami 1–5.",
+      "condition": "if pracownik korzystał z urlopu bezpłatnego trwającego co najmniej 1 miesiąc lub wnioskuje o urlop na żądanie"
+    },
+    {
+      "step": 7,
       "action": "Dla pracownika z orzeczeniem o niepełnosprawności doliczaj dodatkowy urlop osobno",
       "detail": "Pracownik o stopniu znacznym lub umiarkowanym ma dobową normę 7 h i tygodniową 35 h (art. 15 ustawy z 27.08.1997 r. o rehabilitacji zawodowej). Po przepracowaniu roku po orzeczeniu nabywa 10 dni dodatkowego urlopu (art. 19 tej ustawy) — naliczamy go odrębnie od urlopu z KP, każdy zaokrąglamy do pełnego dnia osobno, dopiero po zaokrągleniu sumujemy pule godzin (10 dni × 7 h = 70 h dodatkowo). W świadectwie pracy wykazujemy je w odrębnych pozycjach.",
       "condition": "if pracownik ma orzeczenie o znacznym lub umiarkowanym stopniu niepełnosprawności"
     },
     {
-      "step": 7,
+      "step": 8,
       "action": "Zweryfikuj zaokrąglanie i sumowanie przy proporcjonalnym wyliczaniu w obrębie roku",
       "detail": "Według § 1 ust. 1 rozporządzenia MPiPS z 8.01.1997 r. — niepełny kalendarzowy miesiąc pracy zaokrągla się w górę do pełnego miesiąca, a niepełny dzień urlopu — w górę do pełnego dnia (art. 1553 § 1 KP). Łączny urlop w roku kalendarzowym nie może przekroczyć 20 lub 26 dni (art. 1553 § 2 KP). Przy wątpliwościach skorzystaj z kalkulatora urlopu GOFIN i porównaj wynik systemu kadrowego.",
       "condition": null
@@ -68,18 +74,25 @@
       "law_name": "Kodeks pracy",
       "article_number": "art. 1542 § 1 i § 2",
       "reason": "Stanowi że urlopu udziela się w dniach roboczych pracownika, a 1 dzień urlopu odpowiada 8 godzinom pracy."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 1552 i art. 174 § 2",
+      "reason": "Reguluje proporcjonalne obniżenie wymiaru urlopu po urlopie bezpłatnym trwającym co najmniej 1 miesiąc oraz wyłączenie okresu urlopu bezpłatnego ze stażu pracy dla celów nabycia prawa do 26 dni urlopu."
     }
   ],
   "edge_cases": [
     "Pierwsza praca w życiu — pracownik nabywa 1/12 z 20 dni z upływem każdego przepracowanego miesiąca (art. 153 § 1 KP), z dołu, a nie z góry; przy 5/8 etatu na pół roku liczymy 1/12 × 20 × 5/8 za każdy miesiąc i sumujemy (z zaokrągleniem na koniec).",
     "Zmiana etatu z 1/2 na 1/1 od 1 stycznia — niewykorzystany urlop z roku poprzedniego (np. 4 h) przechodzi w niezmienionej liczbie godzin jako zaległy; nie przelicza się go na nowy wymiar etatu (zasada praw nabytych, brak podstawy w KP do przeliczenia w górę).",
     "Pracownik niepełnosprawny w stopniu znacznym/umiarkowanym ma normę 7 h dziennie — 1 dzień urlopu z KP wynosi dla niego 7 h (nie 8); urlop dodatkowy 10 dni nabywany jest dopiero po przepracowaniu 1 roku po dniu zaliczenia do stopnia (art. 19 ustawy o rehabilitacji).",
-    "Umowa zlecenie i B2B — urlop wypoczynkowy z KP NIE przysługuje (dotyczy wyłącznie umowy o pracę z art. 22 § 1 KP). Ewentualne dni wolne na zleceniu wynikają tylko z zapisów umownych i nie podlegają proporcjonalnemu przeliczaniu wg art. 154 KP."
+    "Umowa zlecenie i B2B — urlop wypoczynkowy z KP NIE przysługuje (dotyczy wyłącznie umowy o pracę z art. 22 § 1 KP). Ewentualne dni wolne na zleceniu wynikają tylko z zapisów umownych i nie podlegają proporcjonalnemu przeliczaniu wg art. 154 KP.",
+    "Urlop bezpłatny trwający co najmniej 1 miesiąc — przesuwa datę nabycia prawa do 26 dni urlopu, ponieważ okres ten nie jest wliczany do stażu pracy (art. 174 § 2 KP); po powrocie pracownika wymiar urlopu za dany rok ustala się proporcjonalnie, pomijając miesiące urlopu bezpłatnego (art. 1552 KP)."
   ],
   "common_mistakes": [
     "Przeliczanie 26 dni × 8 h = 208 h i dzielenie przez dobową normę pracownika niepełnoetatowego (np. 208 / 6 = ~35 dni) — błąd: najpierw stosujemy proporcję do etatu (26 × 3/4 = 20 dni), dopiero potem mnożymy × 8 h.",
     "Mylenie 'dni urlopu' z 'dniami pracy z urlopu' — pracownik na 1/2 etatu po 4 h dziennie pn-pt z 13 dniami urlopu w skali roku faktycznie weźmie 26 dni kalendarzowo wolnych po 4 h (104 h ÷ 4 h = 26), co nie zmienia wymiaru 13 dni.",
-    "Doliczanie dni urlopu wstecznie od 1 stycznia po nabyciu 26 dni stażu w trakcie roku — wymiar 26 dni przysługuje dopiero z dniem nabycia 10 lat stażu, wcześniejszy okres rozliczamy proporcjonalnie z 20 dni (§ 4 rozporządzenia MPiPS z 8.01.1997 r.)."
+    "Doliczanie dni urlopu wstecznie od 1 stycznia po nabyciu 26 dni stażu w trakcie roku — wymiar 26 dni przysługuje dopiero z dniem nabycia 10 lat stażu, wcześniejszy okres rozliczamy proporcjonalnie z 20 dni (§ 4 rozporządzenia MPiPS z 8.01.1997 r.).",
+    "Nieuwzględnianie urlopu bezpłatnego przy obliczaniu stażu pracy dla celów nabycia 26 dni — błąd: okres urlopu bezpłatnego nie wlicza się do stażu pracy (art. 174 § 2 KP), co może przesunąć datę nabycia wyższego wymiaru urlopu."
   ],
   "related_questions": [
     "Jak wyliczyć ekwiwalent za niewykorzystany urlop wypoczynkowy przy niepełnym etacie i jakim współczynnikiem ekwiwalentu posługiwać się w 2026 r.?",
@@ -275,5 +288,13 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Procedura nie zawiera informacji o wpływie urlopu bezpłatnego, urlopu na żądanie czy innych nieobecności na wymiar urlopu wypoczynkowego — brakuje wyjaśnienia czy okresy te są zaliczane do stażu pracy dla celów nabycia 26 dni.",
+      "applied_at": "2026-04-18T14:21:19Z",
+      "source": "v1"
+    }
+  ]
 }

@@ -57,7 +57,17 @@
     {
       "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
       "article_number": "art. 39",
-      "reason": "Określa obowiązek płatnika przesłania informacji PIT-11 odzwierciedlającej faktycznie pobrane zaliczki i wypłacone przychody w danym roku — podstawa dla rozstrzygnięcia kiedy korygować PIT-11, a kiedy rozliczyć zdarzenie w roku bieżącym."
+      "reason": "Określa obowiązek płatnika sporządzenia i przesłania informacji PIT-11 odzwierciedlającej faktycznie pobrane zaliczki i wypłacone przychody w danym roku — podstawa dla ustalenia, że PIT-11 wykazuje stan na 31.12 roku podatkowego."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 41b",
+      "reason": "Reguluje zasady rozliczenia zwrotu przychodów przez podatnika — kluczowa podstawa dla step 4: płatnik pomniejsza podstawę opodatkowania w miesiącu zwrotu o kwotę zwróconego przychodu (brutto, w części nieodliczonej wcześniej) i wykazuje pomniejszenie w PIT-11 za rok zwrotu."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 26 ust. 1 pkt 5",
+      "reason": "Stanowi podstawę odliczenia przez podatnika kwot zwróconych płatnikowi — istotne w przypadku byłego pracownika, który zwraca nadpłacone wynagrodzenie i odlicza tę kwotę w zeznaniu rocznym."
     }
   ],
   "edge_cases": [
@@ -255,5 +265,13 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Draft powołuje się na art. 39 ustawy PIT jako podstawę dla rozstrzygnięcia kiedy korygować PIT-11, ale art. 39 dotyczy obowiązku przesłania informacji PIT-11, a nie zasad jej korekty. Brakuje odniesienia do art. 41b ustawy PIT (zwrot przychodów) i art. 26 ust. 1 pkt 5 ustawy PIT (odliczenia), które są faktycznie cytowane w krokach, ale nie w legal_anchors.",
+      "applied_at": "2026-04-18T14:37:42Z",
+      "source": "v1"
+    }
+  ]
 }

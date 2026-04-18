@@ -43,7 +43,7 @@
     {
       "step": 6,
       "action": "Zaksięguj świadczenie w programie kadrowo-płacowym z prawidłowym kodem ZUS",
-      "detail": "Comarch Optima: Płace i Kadry → Nieobecności → wybierz typ 'Wynagrodzenie za czas choroby' (kod 331) albo 'Zasiłek chorobowy' (kod 313); przy kontynuacji upewnij się, że zaznaczone jest 'Kontynuacja okresu zasiłkowego'. Enova365: Kadry i Płace → Nieobecności → sprawdź rok limitów w karcie pracownika i pole 'Okres zasiłkowy — dni'. Symfonia Kadry i Płace: Nieobecności → Chorobowe → wskaż kod świadczenia i zweryfikuj bilans dni 33/14. W RCA/RSA: kod 331 dla wynagrodzenia chorobowego, 313 dla zasiłku chorobowego, 314 dla zasiłku opiekuńczego, 311 macierzyński.",
+      "detail": "Comarch Optima: Płace i Kadry → Nieobecności → wybierz typ 'Wynagrodzenie za czas choroby' (kod 331) albo 'Zasiłek chorobowy' (kod 313); przy kontynuacji upewnij się, że zaznaczone jest 'Kontynuacja okresu zasiłkowego'. Enova365: Kadry i Płace → Nieobecności → sprawdź rok limitów w karcie pracownika i pole 'Okres zasiłkowy — dni'. Symfonia Kadry i Płace: Nieobecności → Chorobowe → wskaż kod świadczenia i zweryfikuj bilans dni 33/14. W RCA/RSA: kod 331 dla wynagrodzenia chorobowego, 313 dla zasiłku chorobowego, 314 dla zasiłku chorobowego z ubezpieczenia wypadkowego (wypadek przy pracy, wypadek w drodze do/z pracy, choroba zawodowa), 312 dla zasiłku opiekuńczego, 311 dla zasiłku macierzyńskiego.",
       "condition": null
     },
     {
@@ -69,7 +69,7 @@
     "Brak przerwy na przełomie roku (L4 trwa 31.12 → 1.01): nie otwierasz nowych 33/14 dni — kontynuujesz świadczenie wypłacane 31.12. Jeśli 31.12 był zasiłek, to w styczniu nadal zasiłek aż do przerwy; dopiero po przerwie i nowym L4 pojawi się nowy limit wynagrodzenia chorobowego.",
     "Pracownik po 50. r.ż.: limit 14 dni stosuje się od 1 stycznia roku NASTĘPUJĄCEGO po roku ukończenia 50 lat. W roku, w którym kończy 50 lat, nadal obowiązuje limit 33 dni.",
     "Zmiana pracodawcy w trakcie roku: limit 33/14 dni jest wspólny dla wszystkich pracodawców w danym roku — nowy pracodawca musi pomniejszyć swój limit o dni wypłacone u poprzedniego (pkt 6 ppkt 9 świadectwa pracy). Gdy pracownik nie dostarczy świadectwa — pisemne zapytanie do ZUS lub poprzedniego pracodawcy.",
-    "Niezdolność w ciąży lub wypadek w drodze do/z pracy: wynagrodzenie/zasiłek wynosi 100% podstawy, ale limit dni 33/14 pozostaje bez zmian. Kod ZUS: 314 (ciąża) lub 314/313 z odpowiednim kodem literowym B/C na L4.",
+    "Niezdolność w ciąży: zasiłek chorobowy wynosi 100% podstawy (kod ZUS 313 z kodem literowym B na L4) — nie jest to odrębny kod świadczenia, lecz wyższy procent zasiłku chorobowego. Wypadek w drodze do/z pracy lub choroba zawodowa: świadczenie wypłacane jest z ubezpieczenia wypadkowego i oznaczane kodem ZUS 314 (zasiłek chorobowy z ubezpieczenia wypadkowego) — jest to odrębna kategoria od zasiłku opiekuńczego (kod 312) i zasiłku macierzyńskiego (kod 311). Limit dni 33/14 wynagrodzenia chorobowego pozostaje bez zmian w obu przypadkach.",
     "Dwa L4 w 2026 z przerwą > 60 dni: otwiera się NOWY okres zasiłkowy (182/270 dni) i przelicza się podstawę wymiaru, jeśli przerwa ≥ 1 miesiąc kalendarzowy (art. 43 ustawy zasiłkowej)."
   ],
   "common_mistakes": [
@@ -280,5 +280,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Edge case 'Niezdolność w ciąży lub wypadek w drodze do/z pracy' wspomina kod 314 dla ciąży, ale brakuje wyjaśnienia, czy kod 314 to zasiłek opiekuńczy czy macierzyński — w step 6 kod 314 jest wymieniony jako 'zasiłek opiekuńczy', co może być sprzeczne.",
+      "applied_at": "2026-04-18T14:05:23Z",
+      "source": "v2",
+      "source_url": "https://przepisy.gofin.pl/przepisy,3,17,53,6205,410330,20230927,kody-wykorzystywane-przy-wypelnianiu-dokumentow.html"
+    }
+  ]
 }

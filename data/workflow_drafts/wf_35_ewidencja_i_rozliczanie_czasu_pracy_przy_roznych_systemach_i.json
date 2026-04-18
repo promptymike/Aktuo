@@ -48,6 +48,12 @@
     },
     {
       "step": 7,
+      "action": "Rozlicz pracę w niedzielę oddaniem dnia wolnego w ciągu 6 dni kalendarzowych lub dodatkiem 100%",
+      "detail": "Za pracę w niedzielę pracodawca ma obowiązek oddać pracownikowi dzień wolny w ciągu 6 dni kalendarzowych poprzedzających lub następujących po tej niedzieli (art. 15111 § 1 pkt 1 KP). Jeśli oddanie dnia wolnego w tym terminie nie jest możliwe - należy wypłacić dodatek 100% wynagrodzenia za każdą godzinę pracy w niedzielę. Uwaga: praca w niedzielę w godzinach nadliczbowych uprawnia do dodatku 100% z art. 1511 § 1 pkt 1b KP (za pracę w niedzielę i święto). Nie należy mylić dnia wolnego za niedzielę (termin 6 dni) z dniem wolnym za sobotę (do końca okresu rozliczeniowego) - to dwa odrębne reżimy prawne.",
+      "condition": "if praca w niedzielę"
+    },
+    {
+      "step": 8,
       "action": "Zweryfikuj zachowanie odpoczynku dobowego (11 h) i tygodniowego (35 h) oraz limit 48 h/tydzień łącznie z nadgodzinami",
       "detail": "Art. 132 KP: 11 h nieprzerwanego odpoczynku dobowego. Art. 133 KP: 35 h odpoczynku tygodniowego (w szczególnych przypadkach 24 h). Art. 131 KP: tygodniowy czas pracy łącznie z nadgodzinami nie może przekraczać przeciętnie 48 h w przyjętym okresie rozliczeniowym. Zaplanowanie pracy 6 dni po 12 h w jednym tygodniu = 72 h, co przekracza 48 h - niedopuszczalne jako plan. Uważaj też na 'rozpoczęcie pracy w tej samej dobie' (doba pracownicza to 24 h od rozpoczęcia pracy zgodnie z rozkładem) - np. pn 6-14, wt 14-22 → wt praca rozpoczyna się jeszcze w dobie poniedziałkowej i powstają nadgodziny dobowe.",
       "condition": null
@@ -259,5 +265,13 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brakuje wyjaśnienia jak rozliczać pracę w niedzielę (art. 151a KP) - draft skupia się na sobocie i dniu wolnym z 5-dniowego tygodnia, ale nie porusza pracy w niedzielę i wymaganych dodatków.",
+      "applied_at": "2026-04-18T14:20:03Z",
+      "source": "v1"
+    }
+  ]
 }

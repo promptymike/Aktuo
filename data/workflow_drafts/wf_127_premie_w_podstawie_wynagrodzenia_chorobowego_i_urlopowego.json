@@ -36,18 +36,24 @@
     },
     {
       "step": 5,
+      "action": "Ustal, jak traktować miesiące objęte urlopem bezpłatnym przy wliczaniu premii do podstawy",
+      "detail": "Urlop bezpłatny jest przerwą w ubezpieczeniu chorobowym — miesiąc, w którym pracownik korzystał z urlopu bezpłatnego, co do zasady podlega uzupełnieniu na podstawie art. 37 ustawy zasiłkowej, analogicznie jak miesiąc z inną usprawiedliwioną nieobecnością. Jeśli w danym miesiącu z 12 poprzedzających pracownik przebywał na urlopie bezpłatnym i nie otrzymał premii (bo premia była pomniejszana za nieobecność), uzupełniasz premię do kwoty, jaką otrzymałby za pełny miesiąc przepracowany — pod warunkiem że przepracował co najmniej połowę obowiązującego czasu pracy w tym miesiącu. Jeśli pracownik nie przepracował połowy czasu pracy w danym miesiącu z powodu urlopu bezpłatnego, miesiąc ten pomijasz i cofasz się o kolejny miesiąc wstecz, aż uzbierasz 12 miesięcy z co najmniej połową przepracowanego czasu. Premia wypłacona w miesiącu urlopu bezpłatnego w pełnej wysokości (niepomniejszana) nie wchodzi do podstawy — stosuje się ten sam test z art. 41 ust. 1 ustawy zasiłkowej co dla choroby. Uwaga: jeśli urlop bezpłatny trwał dłużej niż miesiąc i spowodował przerwę w ubezpieczeniu chorobowym, podstawę ustala się wyłącznie z miesięcy po powrocie do ubezpieczenia (nowy okres ubezpieczenia).",
+      "condition": "if w 12 miesiącach poprzedzających niezdolność wystąpił urlop bezpłatny"
+    },
+    {
+      "step": 6,
       "action": "Zastosuj odrębne zasady dla wynagrodzenia urlopowego i ekwiwalentu",
       "detail": "Do podstawy urlopowej (§ 6–8 rozporządzenia MPiPS z 8.01.1997 w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego) wliczasz zmienne składniki wynagrodzenia z 3 miesięcy poprzedzających (przy dużych wahaniach — do 12). NIE wliczasz składników wypłacanych niezależnie od wykonanej pracy (np. premia stała niepomniejszana, jednorazowe nagrody jubileuszowe, ekwiwalenty). Premia za brak absencji — co do zasady wchodzi, bo jest związana z wykonywaniem pracy i pomniejszana.",
       "condition": null
     },
     {
-      "step": 6,
+      "step": 7,
       "action": "Zaksięguj kod składnika w programie kadrowym zgodnie z kwalifikacją",
       "detail": "W Comarch Optima (Kadry i Płace → Konfiguracja → Typy wypłat) ustaw dla premii flagi: 'Wliczać do podstawy zasiłku' = Tak/Nie, 'Wliczać do urlopu' = Tak/Nie, 'Wliczać do ekwiwalentu' = Tak/Nie oraz sposób wliczania (miesięcznie/kwartalnie/rocznie). W Symfonia Kadry i Płace analogicznie: Ustawienia → Elementy wynagrodzenia → zakładka 'Zasiłki' i 'Urlop'. Błędna flaga powoduje systemową pomyłkę w podstawie.",
       "condition": null
     },
     {
-      "step": 7,
+      "step": 8,
       "action": "Udokumentuj decyzję w teczce pracownika lub notatce kadrowej",
       "detail": "Zapisz uzasadnienie kwalifikacji premii (cytat z regulaminu + decyzja kadrowa) — w razie kontroli ZUS lub PIP to podstawa obrony. Jeśli regulamin zmienia się od 1.01.2026 (np. likwidacja premii 3%), zachowaj wersję archiwalną — do podstaw chorobowego liczonych z 12 miesięcy poprzedzających styczeń 2026 nadal wliczasz premie wypłacone w 2025, jeśli były pomniejszane za chorobę.",
       "condition": null
@@ -63,18 +69,25 @@
       "law_name": "Kodeks pracy",
       "article_number": "art. 172",
       "reason": "Podstawa wyliczenia wynagrodzenia urlopowego — odrębna od podstawy chorobowego, z odmiennym katalogiem wliczanych składników."
+    },
+    {
+      "law_name": "Ustawa z dnia 25.06.1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa",
+      "article_number": "art. 41 ust. 1",
+      "reason": "Kluczowy przepis regulujący test 'pomniejszania za chorobę' — stanowi wprost, że przy ustalaniu podstawy wymiaru zasiłku chorobowego nie uwzględnia się składników wynagrodzenia, do których pracownik zachowuje prawo w okresie pobierania zasiłku, jeżeli są one wypłacane za ten okres. Przepis jest bezpośrednią podstawą prawną dla kroków 2 i 4 niniejszego workflow."
     }
   ],
   "edge_cases": [
     "Premia uznaniowa nazwana 'uznaniową' tylko formalnie, ale wypłacana cyklicznie w stałej wysokości i pomniejszana za chorobę — traktuj jak regulaminową i wliczaj do podstawy (decyduje treść, nie nazwa; potwierdzone w orzecznictwie SN i praktyce ZUS).",
     "Premia specjalna jednakowa dla wszystkich (np. 500 zł dla każdego pracownika niezależnie od obecności) — nie wchodzi do podstawy chorobowego, bo nie jest pomniejszana za czas choroby; może też nie wchodzić do podstawy urlopowej, jeśli nie jest związana z pracą.",
     "Premia za brak absencji pomniejszana proporcjonalnie za chorobę — wchodzi do podstawy chorobowego (pomniejszenie spełnia test art. 41 ustawy zasiłkowej) i do podstawy urlopowej jako składnik zmienny zależny od pracy.",
-    "Zmiana regulaminu od 1.01.2026 likwidująca premię — do podstawy chorobowego dla niezdolności powstałej w styczniu 2026 nadal wliczasz premie wypłacone w 12 miesiącach poprzedzających (2025), o ile wtedy były pomniejszane za chorobę; nie przeliczasz wstecz."
+    "Zmiana regulaminu od 1.01.2026 likwidująca premię — do podstawy chorobowego dla niezdolności powstałej w styczniu 2026 nadal wliczasz premie wypłacone w 12 miesiącach poprzedzających (2025), o ile wtedy były pomniejszane za chorobę; nie przeliczasz wstecz.",
+    "Urlop bezpłatny trwający cały miesiąc — miesiąc taki pomijasz przy ustalaniu 12-miesięcznej podstawy i cofasz się o kolejny miesiąc wstecz; premia niepomniejszana wypłacona w tym miesiącu nie wchodzi do podstawy; premia pomniejszana wymaga uzupełnienia do pełnej kwoty, jeśli pracownik przepracował co najmniej połowę czasu pracy w tym miesiącu. Jeśli urlop bezpłatny spowodował przerwę w ubezpieczeniu chorobowym, podstawę ustala się wyłącznie z miesięcy po powrocie do ubezpieczenia."
   ],
   "common_mistakes": [
     "Uzupełnianie premii wypłaconej obok chorobowego do 'pełnej kwoty' w miesiącu niezdolności — błąd: uzupełnia się tylko podstawę wymiaru (przyjmuje się kwotę, jaką pracownik otrzymałby za pełny miesiąc), a nie dopłaca drugiej połowy premii do bieżącej wypłaty.",
     "Automatyczne wyłączanie każdej 'premii uznaniowej' z podstawy — jeśli jest cykliczna i pomniejszana, wchodzi do podstawy mimo nazwy. Decyduje faktyczny charakter, nie etykieta w regulaminie.",
-    "Wliczanie premii kwartalnej/rocznej w pełnej kwocie do miesiąca wypłaty zamiast w proporcji 1/4 lub 1/12 przez odpowiednio 3 lub 12 miesięcy (art. 42 ustawy zasiłkowej)."
+    "Wliczanie premii kwartalnej/rocznej w pełnej kwocie do miesiąca wypłaty zamiast w proporcji 1/4 lub 1/12 przez odpowiednio 3 lub 12 miesięcy (art. 42 ustawy zasiłkowej).",
+    "Pomijanie miesiąca z urlopem bezpłatnym bez uzupełnienia premii — jeśli pracownik przepracował co najmniej połowę czasu pracy w miesiącu z urlopem bezpłatnym, a premia była pomniejszana za nieobecność, należy ją uzupełnić do pełnej kwoty zamiast pomijać miesiąc."
   ],
   "related_questions": [
     "Jak obliczyć podstawę chorobowego dla pracownika zatrudnionego krócej niż 12 miesięcy?",
@@ -106,6 +119,22 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Art. 92 § 2 Kodeksu pracy odsyła do zasad ustalania podstawy zasiłku, ale draft nie cytuje bezpośrednio art. 41 ustawy zasiłkowej (ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa), który jest kluczowy dla testu 'pomniejszania za chorobę'. Brakuje pełnego odniesienia do ustawy zasiłkowej w legal_anchors.",
+      "applied_at": "2026-04-18T14:03:05Z",
+      "source": "v2",
+      "source_url": "https://przepisy.gofin.pl/przepisy,6,17,50,381,311119,20220101,art-41-ustawa-z-dnia-25061999-r-o-swiadczeniach-pienieznych-z.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia, jak postępować z premiami wypłaconymi w okresach, gdy pracownik był na urlopie bezpłatnym lub zawieszeniu stosunku pracy — czy takie okresy wliczają się do '12 miesięcy poprzedzających' czy są pomijane.",
+      "applied_at": "2026-04-18T14:04:25Z",
+      "source": "v2",
+      "source_url": "https://gazetapodatkowa.gofin.pl/artykul/21/z-dyskusji-na-www-forum-gofin-pl/128558/podstawa-chorobowego-przy-czestym-urlopie-bezplatnym"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T11:55:12Z",

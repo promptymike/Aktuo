@@ -24,14 +24,14 @@
     },
     {
       "step": 3,
-      "action": "Sprawdź dochód pełnoletniego uczącego się dziecka — limit 22 546,92 zł",
-      "detail": "Dla dziecka pełnoletniego uczącego się do ukończenia 25. r.ż. limit własnych dochodów dziecka za 2025 r. wynosi 12-krotność renty socjalnej = 22 546,92 zł (art. 6 ust. 4e w zw. z art. 27f ust. 6 PIT). Do limitu wlicza się dochody opodatkowane skalą oraz 19% kapitałowe; NIE wlicza się przychodów objętych ulgą dla młodych (art. 21 ust. 1 pkt 148) ani renty rodzinnej. Przekroczenie limitu eliminuje zarówno ulgę prorodzinną, jak i preferencyjne rozliczenie jako samotny rodzic z tym dzieckiem.",
+      "action": "Sprawdź dochód pełnoletniego uczącego się dziecka — limit 12-krotności renty socjalnej",
+      "detail": "Dla dziecka pełnoletniego uczącego się do ukończenia 25. r.ż. limit własnych dochodów dziecka wynosi 12-krotność renty socjalnej obowiązującej w grudniu roku podatkowego (art. 6 ust. 4e w zw. z art. 27f ust. 6 PIT). Kwota zmienia się corocznie wraz ze zmianami renty socjalnej — należy każdorazowo weryfikować aktualną wartość. Dla rozliczeń za rok 2025 limit wynosi 22 546,92 zł (renta socjalna 1 878,91 zł × 12); dla rozliczeń za rok 2026 limit wynosi 23 741,88 zł (renta socjalna 1 978,49 zł × 12). Do limitu wlicza się dochody opodatkowane skalą oraz 19% kapitałowe; NIE wlicza się przychodów objętych ulgą dla młodych (art. 21 ust. 1 pkt 148) ani renty rodzinnej. Przekroczenie limitu eliminuje zarówno ulgę prorodzinną, jak i preferencyjne rozliczenie jako samotny rodzic z tym dzieckiem.",
       "condition": "if dziecko jest pełnoletnie i uczy się"
     },
     {
       "step": 4,
       "action": "Oceń prawo do statusu \"samotnie wychowującego rodzica\" niezależnie od limitu 112/56 tys.",
-      "detail": "Preferencyjne rozliczenie z dzieckiem (art. 6 ust. 4c–4g PIT) NIE ma limitu dochodu rodzica — limit 112/56 tys. dotyczy wyłącznie ulgi prorodzinnej. Warunki samotnego rodzica: stan cywilny (panna/kawaler/wdowa/rozwiedziony/separacja) oraz faktyczne samotne wychowywanie. Limit dochodu dziecka 22 546,92 zł obowiązuje tak samo jak przy uldze. Możliwe jest więc rozliczenie jako samotny rodzic BEZ stosowania ulgi prorodzinnej — jeśli tylko dziecko nie przekroczyło własnego limitu.",
+      "detail": "Preferencyjne rozliczenie z dzieckiem (art. 6 ust. 4c–4g PIT) NIE ma limitu dochodu rodzica — limit 112/56 tys. dotyczy wyłącznie ulgi prorodzinnej. Warunki samotnego rodzica: stan cywilny (panna/kawaler/wdowa/rozwiedziony/separacja) oraz faktyczne samotne wychowywanie. Limit dochodu dziecka (12-krotność renty socjalnej) obowiązuje tak samo jak przy uldze. Możliwe jest więc rozliczenie jako samotny rodzic BEZ stosowania ulgi prorodzinnej — jeśli tylko dziecko nie przekroczyło własnego limitu.",
       "condition": "if rodzic chce rozliczyć PIT ze statusem samotnie wychowującego"
     },
     {
@@ -62,17 +62,17 @@
     {
       "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
       "article_number": "art. 6 ust. 4c-4g",
-      "reason": "Reguluje preferencyjne rozliczenie samotnie wychowującego rodzica oraz limit dochodu dziecka pełnoletniego uczącego się (12-krotność renty socjalnej = 22 546,92 zł za 2025 r.) — bez limitu dochodu rodzica."
+      "reason": "Reguluje preferencyjne rozliczenie samotnie wychowującego rodzica oraz limit dochodu dziecka pełnoletniego uczącego się (12-krotność renty socjalnej obowiązującej w grudniu roku podatkowego: 22 546,92 zł za 2025 r., 23 741,88 zł za 2026 r.) — bez limitu dochodu rodzica."
     }
   ],
   "edge_cases": [
     "Małżonkowie oboje < 26 r.ż. korzystający z ulgi dla młodych (art. 21 ust. 1 pkt 148): przychody objęte ulgą dla młodych WCHODZĄ do limitu 112 tys. przy ocenie prawa do ulgi prorodzinnej (inaczej niż przy limicie dochodu dziecka) — potwierdzenie na podatki.gov.pl. Przy jednym dziecku i łącznym dochodzie > 112 tys. (nawet gdy większość to przychody z ulgi dla młodych) — ulga prorodzinna nie przysługuje.",
     "Opieka naprzemienna nad dzieckiem pełnoletnim mieszkającym głównie u jednego z rodziców: rodzic, u którego dziecko faktycznie zamieszkuje i który ponosi koszty utrzymania, ma pierwszeństwo do ulgi i statusu samotnego rodzica — niezależnie od ustalonej opieki wspólnej w wyroku.",
-    "Dziecko z PIT-11 z pracy: do limitu 22 546,92 zł wlicza się dochód (przychód minus KUP), NIE przychód brutto. Przychody objęte ulgą dla młodych dziecka nie są wliczane (zmiana obowiązująca od rozliczeń za 2022 r., ugruntowana w 2025/2026).",
+    "Dziecko z PIT-11 z pracy: do limitu 12-krotności renty socjalnej wlicza się dochód (przychód minus KUP), NIE przychód brutto. Przychody objęte ulgą dla młodych dziecka nie są wliczane (zmiana obowiązująca od rozliczeń za 2022 r., ugruntowana w 2025/2026). Limit wynosi 22 546,92 zł dla rozliczeń za 2025 r. i 23 741,88 zł dla rozliczeń za 2026 r.",
     "Samotny rodzic po rozwodzie, gdzie drugi rodzic ma sporadyczne kontakty z dzieckiem: status samotnego rodzica przysługuje, ale US może weryfikować — ugruntowana praktyka wymaga wykazania faktycznego samotnego wychowywania (koszty, zamieszkanie, podejmowanie decyzji). Samo orzeczenie rozwodu nie wystarcza."
   ],
   "common_mistakes": [
-    "Mylenie limitu dochodu rodzica (112/56 tys.) z limitem dochodu dziecka (22 546,92 zł) — to dwa różne progi z dwóch różnych przepisów. Przekroczenie przez dziecko jego limitu eliminuje oba benefity, ale limit rodzica dotyczy tylko ulgi prorodzinnej, nie statusu samotnego rodzica.",
+    "Mylenie limitu dochodu rodzica (112/56 tys.) z limitem dochodu dziecka (12-krotność renty socjalnej, corocznie aktualizowana: 22 546,92 zł za 2025 r., 23 741,88 zł za 2026 r.) — to dwa różne progi z dwóch różnych przepisów. Przekroczenie przez dziecko jego limitu eliminuje oba benefity, ale limit rodzica dotyczy tylko ulgi prorodzinnej, nie statusu samotnego rodzica.",
     "Zakładanie, że osobne rozliczenie małżonków pozwala obejść limit 112 tys. przy jednym dziecku — US zawsze sumuje dochody małżonków pozostających w związku przez cały rok.",
     "Niewykazywanie dziecka odliczanego przez drugiego rodzica w PIT/O (z 0 miesięcy i 0 zł) — powoduje, że US nie \"widzi\" trzeciego dziecka i może zakwestionować wyższą kwotę 2 000,04 zł na trzecie dziecko własne."
   ],
@@ -243,5 +243,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Kwota limitu dochodu dziecka 22 546,92 zł (12-krotność renty socjalnej za 2025) będzie nieaktualna dla rozliczeń za 2026 w 2026 roku — renta socjalna zmienia się corocznie, a draft nie zawiera mechanizmu aktualizacji ani warunkowego odniesienia do bieżącej wartości.",
+      "applied_at": "2026-04-18T14:36:31Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/ulgi-odliczenia/6523663,ulga-na-pelnoletnie-dziecko-w-pit-limit-dochodow-dziecka-ktore-dochody-wlicza-sie-do-limitu.html"
+    }
+  ]
 }

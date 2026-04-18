@@ -43,7 +43,7 @@
     {
       "step": 6,
       "action": "Zarchiwizuj akta po ustaniu zatrudnienia w Comarch Optima / Symfonia Kadry / Enova365",
-      "detail": "W programie (np. Comarch Optima moduł Kadry i Płace → Kartoteka pracownika → zmień status na 'Archiwalny'; Symfonia Kadry → Pracownicy → Zwolnieni) oznacz pracownika jako archiwalnego, wygeneruj informację o okresie przechowywania akt (obowiązkowe dla zatrudnionych od 2019 r. – wydawana wraz ze świadectwem pracy). Papierowo: zepnij komplet akt (A+B+C+D+E), opisz teczkę: imię, nazwisko, PESEL, data ustania stosunku pracy, rok zniszczenia (np. 'zniszczyć po 31.12.2036'). Przechowuj w zamykanej szafie zgodnie z art. 94 pkt 9b KP i RODO.",
+      "detail": "W programie (np. Comarch Optima moduł Kadry i Płace → Kartoteka pracownika → zmień status na 'Archiwalny'; Symfonia Kadry → Pracownicy → Zwolnieni) oznacz pracownika jako archiwalnego, wygeneruj informację o okresie przechowywania akt – jest to dokument OBOWIĄZKOWY na podstawie art. 94(6) KP, wydawany pracownikowi wraz ze świadectwem pracy (dotyczy zatrudnionych od 2019 r. lub tych, dla których skrócono okres do 10 lat przez ZUS OSW+RIA). Informacja musi zawierać wszystkie trzy elementy: (1) okres przechowywania dokumentacji pracowniczej, (2) możliwość odbioru przez pracownika lub jego bliskich dokumentacji do końca miesiąca kalendarzowego następującego po upływie okresu przechowywania, (3) informację o zniszczeniu dokumentacji w razie jej nieodebrania w tym terminie. Informację można wydać w postaci papierowej lub elektronicznej. Papierowo: zepnij komplet akt (A+B+C+D+E), opisz teczkę: imię, nazwisko, PESEL, data ustania stosunku pracy, rok zniszczenia (np. 'zniszczyć po 31.12.2036'). Przechowuj w zamykanej szafie zgodnie z art. 94 pkt 9b KP i RODO.",
       "condition": null
     },
     {
@@ -253,5 +253,13 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 6 wspomina 'wydawana wraz ze świadectwem pracy' informacja o okresie przechowywania, ale nie precyzuje czy jest to obowiązkowy dokument, jaki powinien zawierać i czy pracodawca musi go archiwizować jako część akt.",
+      "applied_at": "2026-04-18T14:07:37Z",
+      "source": "v1"
+    }
+  ]
 }

@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Zakwalifikuj jako WNT, jeżeli towar jest fizycznie transportowany z innego państwa UE do Polski, sprzedawca jest podatnikiem VAT w UE, a nabywca jest zarejestrowany do VAT-UE.",
-      "detail": "WNT rozpoznajesz zgodnie z art. 9 ust. 1 ustawy o VAT. Sprawdź aktywny VAT-UE kontrahenta w VIES — jeśli sprzedawca nie podał numeru VAT-UE, ale towar fizycznie przyjechał z UE, i tak co do zasady rozliczasz WNT (sprzedawca powinien był wystawić FV bez VAT; jeśli naliczył lokalny VAT — żądaj korekty). Wykaż w JPK_V7 po stronie należnej i naliczonej (neutralnie, jeśli 100% odliczenie) oraz w VAT-UE (informacja podsumowująca).",
+      "detail": "WNT rozpoznajesz zgodnie z art. 9 ust. 1 ustawy o VAT. Kontrahent z UE powinien wystawić fakturę bez VAT, z adnotacją o odwrotnym obciążeniu — nabywca samonalicza VAT w Polsce. Sprawdź aktywny VAT-UE kontrahenta w VIES. Jeśli sprzedawca wystawił fakturę z lokalnym VAT (np. 19% DE): (1) zażądaj korekty faktury na 0% — sprzedawca ma obowiązek wystawić fakturę bez VAT dla transakcji WNT; (2) niezależnie od tego, czy korekta wpłynęła, i tak rozliczasz WNT w Polsce — VAT naliczony przy WNT to kwota podatku należnego samonaliczonego przez nabywcę (art. 86 ust. 2 pkt 4 ustawy o VAT), a nie kwota VAT z faktury zagranicznej; (3) zagranicznego VAT z błędnej faktury NIE odliczasz w Polsce — nie jest to polski podatek naliczony; (4) jeśli sprzedawca odmówi korekty, możesz ubiegać się o zwrot zagranicznego VAT w trybie VAT-REF (procedura zwrotu VAT z innego państwa UE) — jest to odrębna procedura, niezależna od rozliczenia WNT w Polsce; (5) nie czekaj z rozliczeniem WNT na wpłynięcie korekty — obowiązek podatkowy z tytułu WNT powstaje niezależnie od treści faktury. Wykaż w JPK_V7 po stronie należnej i naliczonej (neutralnie, jeśli 100% odliczenie) oraz w VAT-UE (informacja podsumowująca).",
       "condition": "if towar transportowany z państwa UE do Polski"
     },
     {
@@ -31,7 +31,7 @@
     {
       "step": 4,
       "action": "Zakwalifikuj jako import towarów, jeżeli towar przyjeżdża spoza UE i powstaje dług celny — podstawę i VAT bierz z dokumentu celnego PZC/SAD, nie z faktury sprzedawcy.",
-      "detail": "W JPK_V7 wykaż podstawę opodatkowania i VAT z PZC/SAD, jako sprzedawcę wpisz zagranicznego dostawcę (np. chińskiego), numer dokumentu = numer zgłoszenia celnego, oznaczenie procedury: IMP. Fakturę kuriera (UPS/FedEx) za transport/odprawę księgujesz osobno — część usługowa z VAT 23% do odliczenia na zasadach ogólnych, a kwota VAT importowego zapłacona przez kuriera w Twoim imieniu NIE jest kosztem ani drugi raz VAT-em do odliczenia (VAT importowy odliczasz tylko raz, z PZC/SAD). W KPiR: wartość towaru z faktury + cło + inne opłaty niepodlegające zwrotowi.",
+      "detail": "W JPK_V7 wykaż podstawę opodatkowania i VAT z PZC/SAD, jako sprzedawcę wpisz zagranicznego dostawcę (np. chińskiego), numer dokumentu = numer zgłoszenia celnego, oznaczenie procedury: IMP. Kluczowa kwestia przy odprawie przez kuriera (UPS/FedEx): kurier działa jako przedstawiciel celny nabywcy, a nie jako podmiot przejmujący obowiązki podatkowe — obowiązki zapłaty należności publicznoprawnych (cło, VAT importowy) ciążą na odbiorcy towaru, nie na kurierze. Kurier powinien przekazać nabywcy dokument celny PZC/SAD — to ten dokument, a nie refaktura kuriera, jest jedyną podstawą do odliczenia VAT importowego. Jeśli kurier przesyła jedynie zestawienie lub refakturę za odprawę bez załączonego PZC/SAD, należy zażądać od kuriera przekazania właściwego dokumentu celnego. Fakturę kuriera (UPS/FedEx) za usługę transportową i odprawę księgujesz osobno — część usługowa z VAT 23% podlega odliczeniu na zasadach ogólnych, natomiast kwota VAT importowego ujęta na refakturze kuriera NIE uprawnia do odliczenia (VAT importowy odliczasz wyłącznie raz, z PZC/SAD — odliczenie z refaktury kuriera zamiast z PZC/SAD skutkuje podwójnym odliczeniem lub odliczeniem z niewłaściwego dokumentu). W KPiR: wartość towaru z faktury + cło + inne opłaty niepodlegające zwrotowi.",
       "condition": "if towar spoza UE i jest zgłoszenie celne"
     },
     {
@@ -66,6 +66,11 @@
     },
     {
       "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 2 pkt 4",
+      "reason": "Definicja VAT naliczonego przy WNT i imporcie usług — kwota podatku należnego samonaliczonego przez nabywcę, nie kwota z faktury zagranicznej."
+    },
+    {
+      "law_name": "Ustawa o VAT",
       "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
       "reason": "Moment powstania prawa do odliczenia VAT naliczonego z WNT i importu usług — neutralność rozliczenia."
     }
@@ -77,9 +82,10 @@
     "Nabywca zwolniony podmiotowo z VAT (art. 113) kupujący usługę z zagranicy — i tak rozlicza import usług (VAT-9M i rejestracja VAT-UE przy przekroczeniu 50 000 zł w WNT lub natychmiast dla usług z art. 28b); nie ma prawa do odliczenia."
   ],
   "common_mistakes": [
-    "Rozliczanie jako WNT faktury z zagranicznym VAT — jeśli sprzedawca naliczył lokalny VAT (np. 19% DE), nabywca NIE odlicza tego VAT w Polsce; trzeba żądać korekty faktury na 0% lub odzyskiwać VAT przez VAT-REF.",
+    "Rozliczanie jako WNT faktury z zagranicznym VAT — jeśli sprzedawca naliczył lokalny VAT (np. 19% DE), nabywca NIE odlicza tego VAT w Polsce; VAT naliczony przy WNT to kwota podatku należnego samonaliczonego przez nabywcę (art. 86 ust. 2 pkt 4), nie kwota z faktury zagranicznej; zagraniczny VAT można odzyskać wyłącznie przez procedurę VAT-REF.",
     "Odliczanie VAT z faktury kuriera (UPS/FedEx), na której ujęto VAT importowy zapłacony w imieniu nabywcy — VAT importowy odlicza się wyłącznie z dokumentu celnego PZC/SAD, a nie z refakturowania przez kuriera; w przeciwnym razie powstaje podwójne odliczenie.",
-    "Pomijanie informacji podsumowującej VAT-UE przy WNT — każda transakcja WNT od kontrahenta z aktywnym VAT-UE musi być wykazana w VAT-UE, nawet jeśli nabywca odlicza 100% VAT i efekt jest neutralny."
+    "Pomijanie informacji podsumowującej VAT-UE przy WNT — każda transakcja WNT od kontrahenta z aktywnym VAT-UE musi być wykazana w VAT-UE, nawet jeśli nabywca odlicza 100% VAT i efekt jest neutralny.",
+    "Wstrzymywanie rozliczenia WNT do czasu otrzymania korekty faktury od sprzedawcy z UE — obowiązek podatkowy z tytułu WNT powstaje niezależnie od treści faktury; należy samonaliczyć VAT w terminie, a korektę faktury rozliczyć osobno gdy wpłynie."
   ],
   "related_questions": [
     "Jak rozliczyć WDT (wewnątrzwspólnotową dostawę towarów) dla kontrahenta z UE bez aktywnego numeru VAT-UE — stawka 0% czy krajowa?",
@@ -114,6 +120,22 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak wyjaśnienia procedury rozliczenia VAT importowego w przypadku, gdy kurier (UPS/FedEx) odprawia towar celnie w imieniu nabywcy — draft mówi o VAT z PZC/SAD, ale nie wyjaśnia, czy nabywca otrzymuje osobny dokument celny czy tylko refakturę od kuriera, co jest kluczowe dla prawidłowego księgowania.",
+      "applied_at": "2026-04-18T14:31:32Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/podatki/vat/transakcje-zagraniczne/2843052,Import-towarow-o-niewielkiej-wartosci-w-formie-przesylek-pocztowych-i-kurierskch-VAT-i-clo.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak procedury dla sytuacji, gdy sprzedawca z UE nie wystawił faktury bez VAT (WNT powinno być bez VAT), a nabywca otrzymał fakturę z lokalnym VAT — draft mówi 'żądaj korekty', ale nie wyjaśnia, co zrobić, jeśli sprzedawca odmówi, czy można odliczyć VAT lokalny, czy trzeba czekać na korektę.",
+      "applied_at": "2026-04-18T14:32:50Z",
+      "source": "v2",
+      "source_url": "https://www.biznes.gov.pl/pl/portal/00267"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T12:00:38Z",

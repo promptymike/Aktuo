@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Ustal z zarządem zakres odpowiedzialności i zleć pisemne potwierdzenie",
-      "detail": "Zgodnie z art. 4a UoR odpowiedzialność za rachunkowość ponosi kierownik jednostki (zarząd). Wyślij zarządowi pisemne zestawienie błędnych sald z prośbą o decyzję: (a) czy prowadzić akcję potwierdzenia sald z kontrahentami, (b) czy uznać różnice za błąd lat ubiegłych, (c) kto obsługiwał obrót gotówkowy (najczęściej prezes → rozrachunek z zarządem, konto 234). Bez pisemnej decyzji zarządu nie księguj korekt BO.",
+      "detail": "Zgodnie z art. 4a UoR odpowiedzialność za rachunkowość ponosi kierownik jednostki (zarząd). Wyślij zarządowi pisemne zestawienie błędnych sald z prośbą o decyzję: (a) czy prowadzić akcję potwierdzenia sald z kontrahentami, (b) czy uznać różnice za błąd lat ubiegłych, (c) kto obsługiwał obrót gotówkowy (najczęściej prezes → rozrachunek z zarządem, konto 234). Bez pisemnej decyzji zarządu nie księguj korekt BO. Jeżeli zarząd odmówi wydania pisemnej decyzji lub nie odpowie w wyznaczonym terminie (rekomendowane: 14 dni z potwierdzeniem odbioru), biuro rachunkowe WSTRZYMUJE wszelkie korekty BO i dokumentuje ten fakt pisemnie (e-mail, pismo). Biuro rachunkowe ponosi własną odpowiedzialność karną z art. 77 UoR za nierzetelne prowadzenie ksiąg niezależnie od odpowiedzialności zarządu — księgowania wbrew opinii księgowego wymagają pisemnego polecenia kierownika jednostki; brak takiego polecenia nie może być zastąpiony własną oceną biura. W przypadku przedłużającej się odmowy zarządu należy rozważyć wypowiedzenie umowy o prowadzenie ksiąg rachunkowych (zgodnie z jej warunkami) oraz poinformowanie zarządu na piśmie o ryzyku naruszenia art. 77 UoR i art. 471 KC po stronie spółki.",
       "condition": null
     },
     {
@@ -311,5 +311,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak procedury na wypadek gdy zarząd odmówi wydania pisemnej decyzji (krok 2) — draft nie określa czy biuro księgowe powinno wówczas wstrzymać się z korektami, czy może działać na podstawie własnej analizy, co ma znaczenie dla odpowiedzialności.",
+      "applied_at": "2026-04-18T14:30:14Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/raport-dnia/122052,Odpowiedzialnosc-karna-ksiegowego.html"
+    }
+  ]
 }

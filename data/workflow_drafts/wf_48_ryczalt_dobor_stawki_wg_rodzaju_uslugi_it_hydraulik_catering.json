@@ -24,8 +24,8 @@
     },
     {
       "step": 3,
-      "action": "Złóż wniosek o WIS lub opinię klasyfikacyjną, jeśli stawka jest sporna",
-      "detail": "W przypadku wątpliwości złóż wniosek WIS do Dyrektora KIS w Bielsku-Białej (formularz WIS-W, opłata 40 zł) — WIS wiąże organy podatkowe. Dla klasyfikacji PKWiU możesz też wystąpić do GUS (Ośrodek Klasyfikacji i Nomenklatur w Łodzi) o opinię klasyfikacyjną — nie wiąże organów, ale stanowi silny dowód w kontroli. US i infolinia KIS telefonicznie nie udzielą wiążącej odpowiedzi.",
+      "action": "Złóż wniosek o interpretację indywidualną lub opinię klasyfikacyjną GUS, jeśli stawka jest sporna",
+      "detail": "UWAGA: WIS (Wiążąca Informacja Stawkowa) to instytucja z ustawy o VAT (art. 42c ust. 1 ustawy o VAT) — służy wyłącznie do ustalania stawek VAT, nie stawek ryczałtu PIT. Nie składaj WIS w celu potwierdzenia stawki ryczałtu, bo nie ma ona zastosowania w tym kontekście.\n\nDla ryczałtu PIT właściwe narzędzia to:\n1. Interpretacja indywidualna (art. 14b Ordynacji podatkowej) — składana do Dyrektora KIS (formularz ORD-IN, opłata 40 zł); wiąże organy podatkowe wobec wnioskodawcy i chroni podatnika, który się do niej zastosował; podatnik nie jest nią związany i może stosować inne podejście na własne ryzyko. Interpretacja indywidualna nie ma ustawowo określonego terminu ważności, ale traci moc ochronną, jeśli zmieni się stan prawny lub zostanie uchylona przez sąd administracyjny — należy monitorować aktualność i w razie zmiany przepisów wystąpić o nową.\n2. Opinia klasyfikacyjna GUS (Ośrodek Klasyfikacji i Nomenklatur w Łodzi) — potwierdza właściwy symbol PKWiU; nie wiąże organów podatkowych, ale stanowi silny dowód w kontroli.\n\nUS i infolinia KIS telefonicznie nie udzielą wiążącej odpowiedzi.",
       "condition": "if PKWiU jest niejednoznaczne lub czynność mieści się na granicy dwóch grupowań"
     },
     {
@@ -43,7 +43,7 @@
     {
       "step": 6,
       "action": "Udokumentuj podstawę wyboru stawki w aktach klienta",
-      "detail": "Zachowaj w teczce: opinię GUS/WIS, wydruk z klasyfikacji PKWiU, opis czynności, ewentualnie interpretację indywidualną. To kluczowe w razie kontroli — zgodnie ze zgłoszeniami z praktyki US i KIS nie udzielają telefonicznie wiążących odpowiedzi, ciężar dowodu spoczywa na podatniku (art. 9 ust. 1 ustawy o ryczałcie).",
+      "detail": "Zachowaj w teczce: opinię GUS, wydruk z klasyfikacji PKWiU, opis czynności, interpretację indywidualną. To kluczowe w razie kontroli — zgodnie ze zgłoszeniami z praktyki US i KIS nie udzielają telefonicznie wiążących odpowiedzi, ciężar dowodu spoczywa na podatniku (art. 9 ust. 1 ustawy o ryczałcie).",
       "condition": null
     }
   ],
@@ -75,7 +75,8 @@
     "Dobieranie stawki ryczałtu na podstawie kodu PKD zamiast PKWiU — PKD służy tylko do rejestracji w CEIDG, o stawce decyduje wyłącznie PKWiU konkretnej czynności.",
     "Stosowanie jednej stawki na wszystko 'dla bezpieczeństwa' bez prowadzenia odrębnej ewidencji — przy mieszanych usługach podatnik może legalnie stosować różne stawki, ale wymaga to rozdzielenia w ewidencji (art. 12 ust. 3).",
     "Opieranie się na telefonicznej odpowiedzi US/KIS lub 'księgowej koleżanki' oraz na starych interpretacjach (sprzed nowelizacji 2021/2022) — od 2022 r. zmieniły się stawki dla IT (12%), doradztwa i wielu usług; interpretacje sprzed tej daty mogą być już nieaktualne.",
-    "Mylenie pośrednictwa handlowego (8,5%) z doradztwem (15%) — przedstawiciel handlowy prezentujący produkt nie świadczy doradztwa w rozumieniu art. 12 ust. 1 pkt 2 lit. m."
+    "Mylenie pośrednictwa handlowego (8,5%) z doradztwem (15%) — przedstawiciel handlowy prezentujący produkt nie świadczy doradztwa w rozumieniu art. 12 ust. 1 pkt 2 lit. m.",
+    "Składanie wniosku o WIS (Wiążącą Informację Stawkową) w celu potwierdzenia stawki ryczałtu PIT — WIS dotyczy wyłącznie stawek VAT i nie ma zastosowania do ryczałtu; właściwym narzędziem jest interpretacja indywidualna (ORD-IN) składana do Dyrektora KIS."
   ],
   "related_questions": [
     "Czy przy przejściu z zasad ogólnych na ryczałt od 1.01.2026 trzeba złożyć oświadczenie do US do 20 lutego, czy wystarczy wpis w CEIDG?",
@@ -265,5 +266,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 3 wspomina WIS (Wstępną Interpretację Stanowiska) ale nie wyjaśnia czy WIS dla ryczałtu jest wiążący dla podatnika czy tylko dla organów podatkowych. Brakuje też informacji o terminie ważności WIS i co robić gdy WIS wygaśnie.",
+      "applied_at": "2026-04-18T14:22:15Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/podatki/17,2,62,208059,nowe-regulacje-w-zakresie-wis.html"
+    }
+  ]
 }

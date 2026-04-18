@@ -53,7 +53,58 @@
       "condition": null
     }
   ],
-  "legal_anchors": [],
+  "legal_anchors": [
+    {
+      "id": "la_1",
+      "act": "Ustawa z dnia 26 czerwca 1974 r. — Kodeks pracy",
+      "short": "KP",
+      "journal": "Dz.U. 1974 nr 24 poz. 141 (tekst jedn. Dz.U. 2023 poz. 1465 ze zm.)",
+      "article": "art. 229 § 2",
+      "summary": "Obowiązek skierowania pracownika na badania kontrolne po niezdolności do pracy z powodu choroby trwającej dłużej niż 30 dni.",
+      "verified": true,
+      "verification_note": "Przepis zidentyfikowany i merytorycznie potwierdzony przez przepisy.gofin.pl i isap.sejm.gov.pl."
+    },
+    {
+      "id": "la_2",
+      "act": "Ustawa z dnia 26 czerwca 1974 r. — Kodeks pracy",
+      "short": "KP",
+      "journal": "Dz.U. 1974 nr 24 poz. 141 (tekst jedn. Dz.U. 2023 poz. 1465 ze zm.)",
+      "article": "art. 229 § 11",
+      "summary": "Możliwość odstąpienia od badań wstępnych przy zmianie pracodawcy w ciągu 30 dni od rozwiązania poprzedniej umowy, przy tożsamych warunkach pracy i ważnym orzeczeniu lekarskim.",
+      "verified": true,
+      "verification_note": "Przepis zidentyfikowany i merytorycznie potwierdzony."
+    },
+    {
+      "id": "la_3",
+      "act": "Ustawa z dnia 26 czerwca 1974 r. — Kodeks pracy",
+      "short": "KP",
+      "journal": "Dz.U. 1974 nr 24 poz. 141 (tekst jedn. Dz.U. 2023 poz. 1465 ze zm.)",
+      "article": "art. 163 § 3",
+      "summary": "Prawo pracownicy do urlopu wypoczynkowego bezpośrednio po urlopie macierzyńskim, na jej wniosek.",
+      "verified": true,
+      "verification_note": "Przepis zidentyfikowany i merytorycznie potwierdzony."
+    },
+    {
+      "id": "la_4",
+      "act": "Ustawa z dnia 26 czerwca 1974 r. — Kodeks pracy",
+      "short": "KP",
+      "journal": "Dz.U. 1974 nr 24 poz. 141 (tekst jedn. Dz.U. 2023 poz. 1465 ze zm.)",
+      "article": "art. 304",
+      "summary": "Obowiązki pracodawcy w zakresie bezpieczeństwa i higieny pracy wobec osób niebędących pracownikami (m.in. zleceniobiorców) wykonujących pracę na jego terenie.",
+      "verified": true,
+      "verification_note": "Przepis zidentyfikowany i merytorycznie potwierdzony."
+    },
+    {
+      "id": "la_5",
+      "act": "Rozporządzenie Ministra Rodziny, Pracy i Polityki Społecznej z dnia 10 grudnia 2018 r. w sprawie dokumentacji pracowniczej",
+      "short": "rozporządzenie MRPiPS z 10.12.2018",
+      "journal": "Dz.U. 2018 poz. 2369 ze zm. (nowelizacje: Dz.U. 2023 poz. 471, poz. 879; Dz.U. 2024 poz. 535; Dz.U. 2025 poz. 335; Dz.U. 2026 poz. 474)",
+      "article": "§ 3",
+      "summary": "Określenie zawartości części B akt osobowych pracownika, w tym miejsca przechowywania orzeczeń lekarskich.",
+      "verified": false,
+      "verification_note": "UWAGA: Rozporządzenie było wielokrotnie nowelizowane. Treść § 3 obowiązywała w pierwotnym brzmieniu od 19.12.2018 r. do 20.03.2023 r. (źródło: przepisy.gofin.pl). Przed zastosowaniem należy zweryfikować aktualną treść § 3 w tekście jednolitym uwzględniającym wszystkie nowelizacje do Dz.U. 2026 poz. 474. Wymaga ręcznej weryfikacji (requires_manual_legal_anchor: true)."
+    }
+  ],
   "edge_cases": [
     "Pracownik na L4 równo 30 dni (np. po zabiegu) — NIE kierujesz na kontrolne, bo przepis wymaga niezdolności 'trwającej dłużej niż 30 dni'. Kluczowe są 31 dni i więcej.",
     "Zleceniobiorca po krótkim L4 w trakcie trwania umowy — nie ma przepisu KP o badaniach kontrolnych dla zleceniobiorców (art. 229 KP stosuje się do pracowników). Obowiązek badań dla zleceniobiorcy wynika wyłącznie z oceny ryzyka i charakteru pracy (art. 304 KP — obowiązki BHP).",
@@ -221,5 +272,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 229 § 2 KP, art. 163 § 3 KP, art. 304 KP, art. 229 § 11 KP i § 3 rozporządzenia MRPiPS z 10.12.2018. Brak formalnego zakotwiczenia tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania.",
+      "applied_at": "2026-04-18T14:02:06Z",
+      "source": "v2",
+      "source_url": "https://przepisy.gofin.pl/przepisy,6,18,34,5070,216683,20181219,3-rozporzadzenie-ministra-rodziny-pracy-i-polityki.html"
+    }
+  ]
 }

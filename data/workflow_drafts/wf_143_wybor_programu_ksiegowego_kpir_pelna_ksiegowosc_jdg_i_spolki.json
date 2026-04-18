@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Zweryfikuj obowiązkową integrację z KSeF w wybranym programie",
-      "detail": "Od 1.02.2026 KSeF jest obowiązkowy dla podatników, których sprzedaż (wraz z VAT) w 2024 r. przekroczyła 200 mln zł, a od 1.04.2026 dla pozostałych podatników VAT czynnych i zwolnionych (ustawa o VAT, art. 106ga). Żądaj od dostawcy: uwierzytelnienia tokenem/pieczęcią, pobieranie faktur zakupowych z KSeF, numer KSeF na fakturze, obsługa trybu offline24 i awaryjnego. Programy deklarujące pełną integrację: Comarch Optima (moduł e-Sprawy/KSeF), Symfonia, WAPRO Fakir/Kaper, WFirma, Enova365, Ognik, Fakt.",
+      "detail": "Od 1.02.2026 KSeF jest obowiązkowy dla podatników, których sprzedaż (wraz z VAT) w 2024 r. przekroczyła 200 mln zł, a od 1.04.2026 dla pozostałych podatników VAT czynnych i zwolnionych (ustawa o VAT, art. 106ga; podstawy prawne potwierdzone na ksef.podatki.gov.pl wg stanu na 18.04.2026). Żądaj od dostawcy: uwierzytelnienia tokenem/pieczęcią, pobieranie faktur zakupowych z KSeF, numer KSeF na fakturze, obsługa trybu offline24 i awaryjnego. Programy deklarujące pełną integrację: Comarch Optima (moduł e-Sprawy/KSeF), Symfonia, WAPRO Fakir/Kaper, WFirma, Enova365, Ognik, Fakt.",
       "condition": null
     },
     {
@@ -278,5 +278,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Draft zawiera konkretne daty wdrożenia KSeF (1.02.2026, 1.04.2026) i progi przychodu (200 mln zł, 2 500 000 EUR za 2025 r.), ale brak źródła weryfikacji tych dat dla 2026 — mogły ulec zmianie w stosunku do momentu generowania (18.04.2026). Wymaga potwierdzenia aktualności u MF/KIS.",
+      "applied_at": "2026-04-18T14:06:29Z",
+      "source": "v2",
+      "source_url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/podstawy-prawne-oraz-kluczowe-terminy/"
+    }
+  ]
 }

@@ -25,7 +25,7 @@
     {
       "step": 3,
       "action": "Odlicz w KPiR/ewidencji stycznia 2026 TYLKO składki społeczne i FP/FS za grudzień 2025",
-      "detail": "Składki emerytalna, rentowa, chorobowa, wypadkowa oraz FP/FS zapłacone w styczniu 2026 za grudzień 2025 są kosztem/odliczeniem niezależnie od zmiany formy opodatkowania (art. 22 ust. 6bb oraz art. 26 ust. 1 pkt 2 ustawy o PIT). Ujmujesz je w KPiR w dacie zapłaty albo odliczasz od dochodu — wg wybranej metody.",
+      "detail": "Składki emerytalna, rentowa, chorobowa, wypadkowa oraz FP/FS zapłacone w styczniu 2026 za grudzień 2025 są kosztem/odliczeniem niezależnie od zmiany formy opodatkowania (art. 22 ust. 6ba oraz art. 26 ust. 1 pkt 2 ustawy o PIT — UWAGA: numery artykułów wymagają weryfikacji w aktualnym tekście ustawy na 2026 r., patrz legal_anchors). Ujmujesz je w KPiR w dacie zapłaty albo odliczasz od dochodu — wg wybranej metody.",
       "condition": null
     },
     {
@@ -42,8 +42,8 @@
     },
     {
       "step": 6,
-      "action": "Zastosuj nowe podstawy społecznych od stycznia 2026, a zdrowotnej na skali/liniowym — od lutego 2026",
-      "detail": "Za styczeń 2026: składki społeczne + FP liczysz od nowych podstaw (duży ZUS 5 652 zł, preferencyjny 1 441,80 zł — zweryfikuj aktualne wartości w komunikacie ZUS). Minimalna składka zdrowotna na skali/liniowym za styczeń 2026 jeszcze wg 'starej' podstawy (rok składkowy zdrowotny luty–styczeń) — nowa podstawa dopiero od lutego 2026. Na ryczałcie nowa podstawa zdrowotnej obowiązuje już od stycznia 2026 (rok kalendarzowy).",
+      "action": "Zastosuj nowe podstawy społecznych od stycznia 2026, a zdrowotnej na skali/liniowym — od lutego 2026; za styczeń 2026 obowiązuje STARA minimalna podstawa zdrowotnej",
+      "detail": "Za styczeń 2026: składki społeczne + FP liczysz od nowych podstaw (duży ZUS 5 652 zł, preferencyjny 1 441,80 zł — zweryfikuj aktualne wartości w komunikacie ZUS). Minimalna składka zdrowotna na skali/liniowym za styczeń 2026 naliczana jest jeszcze wg STAREJ podstawy z poprzedniego roku składkowego (3 499,50 zł = 75% minimalnego wynagrodzenia z 1.02.2025), co daje składkę zdrowotną 314,96 zł. Nowa minimalna podstawa zdrowotnej (100% minimalnego wynagrodzenia = 4 806 zł, składka 432,54 zł) wchodzi dopiero od 1 lutego 2026 r. wraz z nowym rokiem składkowym (luty 2026 – styczeń 2027). Schemat przejściowy dla podatnika zmieniającego formę na przełomie roku: styczeń 2026 na skali/liniowym → stara minimalna podstawa 3 499,50 zł; od lutego 2026 → nowa podstawa 4 806 zł. Na ryczałcie rok składkowy zdrowotny pokrywa się z rokiem kalendarzowym, więc nowa podstawa obowiązuje już od stycznia 2026 (brak okresu przejściowego). UWAGA: kwoty podstaw i składek podane orientacyjnie — zweryfikuj aktualne wartości w komunikacie ZUS i na zus.pl.",
       "condition": null
     },
     {
@@ -53,7 +53,48 @@
       "condition": null
     }
   ],
-  "legal_anchors": [],
+  "legal_anchors": [
+    {
+      "id": "la_1",
+      "act": "Ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (t.j. Dz.U. z 2024 r. poz. 226 ze zm.)",
+      "article": "art. 22 ust. 6ba",
+      "description": "Przepis dotyczący momentu zaliczenia do kosztów uzyskania przychodów składek na ubezpieczenia społeczne zapłaconych przez przedsiębiorcę — ujmowane w dacie zapłaty. UWAGA: W drafcie pierwotnie powołano art. 22 ust. 6bb — wymaga weryfikacji, czy taki ustęp istnieje w aktualnym tekście ustawy (stan na 2026 r.) i czy dotyczy opisanej sytuacji; prawdopodobnie właściwy jest art. 22 ust. 6ba. Do potwierdzenia w aktualnym tekście jednolitym.",
+      "verified": false,
+      "requires_manual_check": true
+    },
+    {
+      "id": "la_2",
+      "act": "Ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (t.j. Dz.U. z 2024 r. poz. 226 ze zm.)",
+      "article": "art. 26 ust. 1 pkt 2",
+      "description": "Przepis regulujący odliczenie od dochodu składek na ubezpieczenia społeczne określonych w ustawie o systemie ubezpieczeń społecznych, zapłaconych w roku podatkowym bezpośrednio na własne ubezpieczenia podatnika. Dotyczy podatników rozliczających się wg skali podatkowej. UWAGA: Wymaga weryfikacji aktualnego brzmienia na 2026 r. oraz potwierdzenia, że obejmuje sytuację zapłaty składek za poprzedni miesiąc przy zmianie formy opodatkowania.",
+      "verified": false,
+      "requires_manual_check": true
+    },
+    {
+      "id": "la_3",
+      "act": "Ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (t.j. Dz.U. z 2024 r. poz. 226 ze zm.)",
+      "article": "art. 30c ust. 2 pkt 2",
+      "description": "Przepis regulujący odliczenie składek na ubezpieczenie zdrowotne przez podatników opodatkowanych podatkiem liniowym — limit 50% zapłaconych składek zdrowotnych, nie więcej niż kwota roczna określona w ustawie (ok. 11 600 zł — zweryfikować aktualną kwotę na 2026 r.). Przepis dedykowany wyłącznie formie liniowej; nie przenosi się na inne formy opodatkowania. UWAGA: Wymaga weryfikacji aktualnego brzmienia i limitu kwotowego na 2026 r.",
+      "verified": false,
+      "requires_manual_check": true
+    },
+    {
+      "id": "la_4",
+      "act": "Ustawa z dnia 27 sierpnia 2004 r. o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych (t.j. Dz.U. z 2024 r. poz. 146 ze zm.)",
+      "article": "art. 81 ust. 2, 2c, 2z",
+      "description": "Przepisy regulujące podstawę wymiaru składki zdrowotnej dla przedsiębiorców — odrębnie dla skali podatkowej, podatku liniowego i ryczałtu od przychodów ewidencjonowanych. Określają rok składkowy zdrowotny (luty–styczeń) dla skali i liniowego oraz rok kalendarzowy dla ryczałtu. UWAGA: Numery ustępów wymagają weryfikacji w aktualnym tekście ustawy na 2026 r.",
+      "verified": false,
+      "requires_manual_check": true
+    },
+    {
+      "id": "la_5",
+      "act": "Ustawa z dnia 20 listopada 1998 r. o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne (t.j. Dz.U. z 2024 r. poz. 776 ze zm.)",
+      "article": "art. 11 ust. 1 i art. 13 ust. 1",
+      "description": "Przepisy regulujące odliczenie składek społecznych i zdrowotnych od przychodu na ryczałcie od przychodów ewidencjonowanych (50% zapłaconych składek zdrowotnych). UWAGA: Numery artykułów wymagają weryfikacji w aktualnym tekście ustawy na 2026 r.",
+      "verified": false,
+      "requires_manual_check": true
+    }
+  ],
   "edge_cases": [
     "Klient cały rok na skali płacił minimalną zdrowotną (niski dochód), a w grudniu 2025 skokowy wzrost dochodu — składka za grudzień 2025 wyliczona od wysokiego dochodu, ale w rozliczeniu rocznym składki zdrowotnej za 2025 r. wychodzi nadpłata do zwrotu do poziomu sumy minimalnych — zwrot pojawi się po złożeniu DRA z rocznym rozliczeniem (do 20 maja 2026).",
     "Przejście z ryczałtu na skalę od 1.01.2026 — zdrowotna za grudzień 2025 zapłacona w styczniu 2026 była odliczana od przychodu na ryczałcie w ramach 50% limitu; w styczniu 2026 na skali NIE odliczasz jej ani w KPiR, ani od dochodu (skala nie przewiduje odliczenia zdrowotnej od 2022 r.).",
@@ -63,7 +104,7 @@
   "common_mistakes": [
     "Odliczanie składki zdrowotnej za grudzień (zapłaconej w styczniu) w nowej formie opodatkowania — każda forma traktuje zdrowotną odmiennie (skala — brak odliczenia, liniowy — 50%/limit roczny, ryczałt — 50% od przychodu, KPiR na liniowym — KUP do limitu); nie wolno tego 'przenosić' między formami.",
     "Wpisywanie w DRA za styczeń 2026 dochodu za grudzień 2025 jako podstawy zdrowotnej po zmianie formy — poprawna podstawa to 0 (dochód grudnia rozliczasz w rocznym za 2025 r. wg starej formy).",
-    "Stosowanie nowej minimalnej podstawy zdrowotnej (75% przeciętnego wynagrodzenia) już od stycznia 2026 na skali/liniowym — nowa podstawa obowiązuje dopiero od lutego 2026 (rok składkowy zdrowotny), podczas gdy społeczne i FP od stycznia wg nowych podstaw."
+    "Stosowanie nowej minimalnej podstawy zdrowotnej (100% minimalnego wynagrodzenia = 4 806 zł) już od stycznia 2026 na skali/liniowym — nowa podstawa obowiązuje dopiero od lutego 2026 (nowy rok składkowy zdrowotny luty 2026 – styczeń 2027); za styczeń 2026 obowiązuje stara podstawa 3 499,50 zł. Składki społeczne i FP naliczasz od nowych podstaw już od stycznia 2026."
   ],
   "related_questions": [
     "Jak rozliczyć roczną składkę zdrowotną za 2025 r. w DRA za kwiecień 2026, gdy podatnik zmienił formę opodatkowania od 1.01.2026?",
@@ -97,6 +138,21 @@
     "batch": "batch2",
     "used_web_search": false
   },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 22 ust. 6bb, art. 26 ust. 1 pkt 2, art. 30c ust. 2 pkt 2 ustawy o PIT oraz 'rok składkowy zdrowotny luty–styczeń'. Brak weryfikacji czy te numery artykułów są aktualne dla 2026 i czy rzeczywiście dotyczą opisanych sytuacji.",
+      "applied_at": "2026-04-18T14:34:11Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Krok 6 wspomina 'rok składkowy zdrowotny luty–styczeń' i że nowa podstawa zdrowotnej na skali/liniowym obowiązuje 'od lutego 2026', ale nie wyjaśnia czy to oznacza że za styczeń 2026 stosuje się STARĄ podstawę z 2025 r., czy może przejściową. Brakuje jasnego schematu dla podatnika zmieniającego formę w przełomie roku.",
+      "applied_at": "2026-04-18T14:35:29Z",
+      "source": "v2",
+      "source_url": "https://www.zus.pl/en/-/przedsi%C4%99biorcy-opodatkowani-na-zasadach-og%C3%B3lnych-lub-w-formie-karty-podatkowej.-minimalna-sk%C5%82adka-na-ubezpieczenie-zdrowotne-w-2026-r."
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-18T12:01:40Z",

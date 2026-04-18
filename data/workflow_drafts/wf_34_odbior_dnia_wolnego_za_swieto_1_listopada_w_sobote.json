@@ -25,7 +25,7 @@
     {
       "step": 3,
       "action": "Zweryfikuj rozkład czasu pracy pracownika — czy obowiązek udzielenia dodatkowego dnia wolnego w ogóle powstaje",
-      "detail": "Obniżenie wymiaru dotyczy wszystkich pracowników pełno- i niepełnoetatowych, ale fizyczny odbiór dodatkowego dnia przysługuje tylko tym, którym harmonogram nie zapewnia już przeciętnie 5-dniowego tygodnia pracy. Pracownik pracujący np. tylko wt–śr (2 dni w tygodniu) lub w systemie zmianowym, któremu w harmonogramie na listopad nie zaplanowano 1.11 — często ma już wystarczającą liczbę dni wolnych; wtedy NIE udziela się dodatkowego dnia, ale wymiar godzin i tak jest obniżony o 8 h.",
+      "detail": "Obowiązek wyznaczenia dodatkowego dnia wolnego za święto przypadające w sobotę dotyczy wyłącznie pracowników, dla których sobota jest dniem wolnym z tytułu przeciętnie 5-dniowego tygodnia pracy (art. 129 § 1 k.p.) — czyli typowo pracowników w systemie poniedziałek–piątek. Pracownicy w systemie 6-dniowym (sobota jest dla nich normalnym dniem roboczym) mają odmienną sytuację: 1.11 jest dla nich dniem wolnym wyłącznie z racji samego święta (nie jako odbiór za 5-dniowy tydzień pracy), a wymiar czasu pracy i tak obniża się o 8 h na mocy art. 130 § 2 k.p. — jednak mechanizm 'wyznaczenia dodatkowego dnia wolnego' nie ma do nich zastosowania, bo sobota nie jest u nich dniem wolnym wynikającym z 5-dniowego tygodnia pracy. Innymi słowy: pracownik 6-dniowy nie nabywa prawa do odbioru w innym dniu — jego 'rekompensatą' jest samo obniżenie wymiaru godzin o 8 h. Pracownik pracujący np. tylko wt–śr (2 dni w tygodniu) lub w systemie zmianowym, któremu w harmonogramie na listopad nie zaplanowano 1.11 — często ma już wystarczającą liczbę dni wolnych; wtedy NIE udziela się dodatkowego dnia, ale wymiar godzin i tak jest obniżony o 8 h.",
       "condition": null
     },
     {
@@ -58,12 +58,14 @@
     "Pracownik na długotrwałym L4 obejmującym cały okres rozliczeniowy — dzień wolny za święto w sobotę przepada, nie przenosi się na kolejny okres ani nie wypłaca ekwiwalentu (obniżenie wymiaru i tak zostało uwzględnione, a pracownik nie świadczy pracy).",
     "Pracownik w systemie zmianowym/4-brygadowym lub pracujący wt–śr — jeśli jego harmonogram w danym okresie rozliczeniowym już zapewnia przeciętnie 5-dniowy tydzień pracy i nie przekracza obniżonego wymiaru, dodatkowy dzień wolny się nie należy; liczy się bilans godzin, nie symboliczny 'odbiór'.",
     "Pracownik zatrudniony po dniu święta (np. od 3.11), gdy zakład zamknięty 10.11 — nie przysługuje mu odbiór za 1.11; na 10.11 stosuje się urlop na wniosek, przestój (art. 81 k.p.) lub pracę w innym dniu; wymiar liczony proporcjonalnie od dnia zatrudnienia.",
-    "Praca w samo święto 1.11 (sobota) rekompensowana dniem wolnym za nadgodziny świąteczne NIE zwalnia pracodawcy z obowiązku udzielenia drugiego dnia wolnego za święto przypadające w sobotę — to dwa odrębne tytuły (art. 15111 k.p. za pracę w święto + obniżenie wymiaru z art. 130 § 2 k.p.)."
+    "Praca w samo święto 1.11 (sobota) rekompensowana dniem wolnym za nadgodziny świąteczne NIE zwalnia pracodawcy z obowiązku udzielenia drugiego dnia wolnego za święto przypadające w sobotę — to dwa odrębne tytuły (art. 15111 k.p. za pracę w święto + obniżenie wymiaru z art. 130 § 2 k.p.).",
+    "Pracownik w systemie 6-dniowym (sobota jako normalny dzień roboczy) — 1.11 jest dla niego dniem wolnym wyłącznie z racji święta, nie z tytułu 5-dniowego tygodnia pracy. Mechanizm wyznaczenia dodatkowego dnia wolnego nie ma do niego zastosowania; jego 'rekompensatą' jest samo obniżenie wymiaru czasu pracy o 8 h na mocy art. 130 § 2 k.p. Nie przysługuje mu odbiór w innym dniu roboczym."
   ],
   "common_mistakes": [
     "Mylenie 'odbioru za święto w sobotę' z urlopem wypoczynkowym lub zwolnieniem od pracy — jest to dzień wolny wynikający z rozkładu (5-dniowy tydzień pracy), płatny jak dzień przepracowany, niekonsumujący puli urlopu.",
     "Przenoszenie odbioru na kolejny okres rozliczeniowy (np. wyznaczenie 'wolnego' w grudniu przy miesięcznym okresie październik, listopad) — odbiór musi nastąpić w TYM SAMYM okresie rozliczeniowym, w którym przypada święto.",
-    "Twierdzenie, że pracownikowi niepracującemu pn–pt (np. zmianowy, 2 dni/tydzień) 'w ogóle nie należy się nic' — wymiar czasu pracy i tak ulega obniżeniu o 8 h za każde święto poza niedzielą; nie należy się dodatkowy fizyczny dzień wolny, ale godziny trzeba przeliczyć."
+    "Twierdzenie, że pracownikowi niepracującemu pn–pt (np. zmianowy, 2 dni/tydzień) 'w ogóle nie należy się nic' — wymiar czasu pracy i tak ulega obniżeniu o 8 h za każde święto poza niedzielą; nie należy się dodatkowy fizyczny dzień wolny, ale godziny trzeba przeliczyć.",
+    "Stosowanie mechanizmu 'wyznaczenia dodatkowego dnia wolnego' wobec pracowników w systemie 6-dniowym — pracownicy ci nie nabywają prawa do odbioru w innym dniu, ponieważ sobota jest dla nich normalnym dniem roboczym, a nie dniem wolnym z tytułu 5-dniowego tygodnia pracy."
   ],
   "related_questions": [
     "Jak rozliczyć pracę w samo święto 1 listopada — dzień wolny czy dodatek 100%?",
@@ -241,5 +243,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Draft nie wyjaśnia, co się dzieje, gdy pracownik pracuje w soboty w ramach normalnego harmonogramu (np. system 6-dniowy) — czy wtedy 1.11 (sobota) jest dla niego dniem pracy, czy wolnym, i czy przysługuje mu odbiór za święto w innym dniu.",
+      "applied_at": "2026-04-18T14:19:01Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/zus-kadry/urlopy/7491543,dodatkowy-dzien-wolny-za-swieto-wypadajace-w-sobote-w-2026-r-wyjasnienia-pip.html"
+    }
+  ]
 }
