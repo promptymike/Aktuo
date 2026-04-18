@@ -145,8 +145,17 @@
         "verified_at": "2026-04-18T12:40:30Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Źródła z whitelisty (ksiegowosc.infor.pl, podatki.gov.pl) jednoznacznie potwierdzają, że stawki ulgi prorodzinnej w 2026 roku są identyczne jak w 2025 roku — kwoty 92,67 zł/miesiąc (1 112,04 zł/rok) na 1. i 2. dziecko, 166,67 zł/miesiąc na 3. dziecko i 225,00 zł/miesiąc na 4. i kolejne dziecko nie zmieniły się. Artykuł z ksiegowosc.infor.pl z lutego 2026 r. wprost stwierdza, że 'w 2026 roku w zakresie ulgi na dziecko obowiązują takie same przepisy jak w roku poprzednim (2025) a także w 2024 r., 2023 r. i 2022 r.'. Stawki podane w drafcie (1 112,04 zł, 2 000,04 zł, 2 700,00 zł) są zatem aktualne i poprawne dla rozliczeń za 2025 rok składanych w 2026 roku.",
+        "verifier_confidence_v3": 0.93,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/pit/pit/ulgi-odliczenia/6503869,ulga-na-jedno-dziecko-w-pit-zasady-i-warunki-odliczenia-w-2026-r-112-tys-zl-to-jeden-wspolny-limit-dochodow-rodzicow.html.amp",
+        "source_quote_v3": "w 2026 roku obowiązują takie same przepisy jak w roku",
+        "verified_at_v3": "2026-04-18T14:54:04Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "legal_anchor_uncertainty",

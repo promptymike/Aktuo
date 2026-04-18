@@ -115,8 +115,17 @@
         "verified_at": "2026-04-18T12:41:44Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wyszukiwanie potwierdziło merytoryczną poprawność wszystkich kluczowych odniesień prawnych w drafcie: art. 302 KP (nowe brzmienie od 1.01.2026 dot. zlecenia/B2B) istnieje i pochodzi z ustawy z 26.09.2025 (Dz.U. 2025 poz. 1423, isap.sejm.gov.pl); art. 47 Karty Nauczyciela dot. nagrody jubileuszowej jest potwierdzony przez przepisy.gofin.pl; art. 291 § 1 KP (przedawnienie 3 lata) jest standardowym przepisem KP. Flaga dotyczy wyłącznie braku formalnej listy 'legal_anchors' w metadanych draftu — jest to problem struktury/formatu dokumentu, a nie błędu merytorycznego. Artykuły przywołane w drafcie są realne i aktualne, więc flaga jako sygnał o błędzie prawnym jest false positive; ewentualny problem to brak pola metadanych, nie błąd w treści.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20250001423/O/D20251423.pdf",
+        "source_quote_v3": "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r.",
+        "verified_at_v3": "2026-04-18T14:54:21Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 2,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -129,8 +138,17 @@
         "verified_at": "2026-04-18T12:41:52Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Flaga dotyczy rzekomych odwołań do niezdefiniowanych 'komentarzy HE' i oznaczeń '[6]/1', '[8]/2' — jednak w przytoczonym fragmencie drafta (ANSWER_STEPS 1–7) takich oznaczeń w ogóle nie ma. Fragment zawiera wyłącznie odwołania do konkretnych przepisów prawa (art. 302 KP, art. 291 § 1 KP, art. 38 ust. 2 ustawy o pracownikach samorządowych itp.), które są weryfikowalne i potwierdzone przez isap.sejm.gov.pl (Dz.U. 2025 poz. 1423) oraz zus.pl. Flaga hallucination_risk odnosi się prawdopodobnie do innej części dokumentu niż dostarczony fragment, co czyni ją false positive w stosunku do tego konkretnego fragmentu.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20250001423/O/D20251423.pdf",
+        "source_quote_v3": "Ustawa wchodzi w życie z dniem 1 stycznia 2026 r.",
+        "verified_at_v3": "2026-04-18T14:54:34Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",
@@ -142,8 +160,17 @@
         "verified_at": "2026-04-18T12:41:57Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Ustawa nowelizująca KP (Dz.U. 2025 poz. 1423, art. 10) weszła w życie 1.01.2026 dla sektora publicznego, a wg ZUS dla sektora prywatnego dopiero od 1.05.2026. Draft datowany 18.04.2026 traktuje przepisy jednolicie jako obowiązujące 'od 1.01.2026' bez rozróżnienia tych dwóch dat, co jest błędem merytorycznym — dla pracodawców prywatnych przepisy wchodzą w życie dopiero za 2 tygodnie od daty draftu, co draft pomija.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/zus-kadry/inne/7414860,staz-pracy-zmiany-od-2026-r-trzeba-zlozyc-wniosek-do-zus-by-uzyskac-zaswiadczenie-potwierdzajace-zlecenia-prowadzenie-firmy-czy-prace-zarobkowa-za-granica.html",
+        "source_quote_v3": "od 1 stycznia 2026 r. – do pracodawców będących jednostkami",
+        "verified_at_v3": "2026-04-18T14:55:23Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -156,8 +183,17 @@
         "verified_at": "2026-04-18T12:42:07Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Draft zawiera realną sprzeczność logiczną: krok 3 stwierdza, że prawo do nagrody 'NIE przysługuje' jeśli próg osiągnięto przed 1.01.2026, ale krok 4 wprowadza 3-letnie przedawnienie z art. 291 § 1 KP bez wyjaśnienia relacji między tymi regułami. Z art. 291 § 1 KP (potwierdzony przez gofin.pl) wynika, że przedawnienie biegnie od dnia wymagalności roszczenia — a skoro krok 3 wyklucza samo powstanie roszczenia przed 1.01.2026, to przedawnienie z kroku 4 nie może go 'ratować'. Draft nie wyjaśnia tej zależności, co tworzy rzeczywistą sprzeczność merytoryczną dla czytelnika: albo roszczenie nie powstało (krok 3) i przedawnienie jest irrelewantne, albo jednak powstało i krok 3 jest zbyt kategoryczny. Orzecznictwo SN (wyrok II PSKP 3/21 cytowany przez gofin.pl) potwierdza, że prawo do nagrody jubileuszowej powstaje dopiero od dnia wejścia w życie przepisu ją wprowadzającego, co wspiera krok 3 — ale tym samym czyni krok 4 (przedawnienie) niejasnym w kontekście roszczeń sprzed 1.01.2026.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,3,9,9,212,462756,20250319,art-291-295-przedawnienie-roszczen.html",
+        "source_quote_v3": "Roszczenia ze stosunku pracy ulegają przedawnieniu z upływem 3 lat",
+        "verified_at_v3": "2026-04-18T14:55:41Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -170,8 +206,17 @@
         "verified_at": "2026-04-18T12:42:16Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z gofin.pl jednoznacznie potwierdzają, że data nabycia prawa do nagrody jubileuszowej to dzień upływu okresu uprawniającego (osiągnięcia progu stażu), a NIE dzień dostarczenia dokumentów — co wprost stwierdza §8 ust.1 rozporządzenia o pracownikach samorządowych oraz komentarze praktyków. Draft w step 2 i step 4 używa zamiennie 'dnia dostarczenia dokumentów' jako daty nabycia prawa, co jest błędem merytorycznym — flaga jest zatem uzasadniona, bo draft nie rozróżnia tych dwóch dat i może wprowadzać w błąd.",
+        "verifier_confidence_v3": 0.87,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,6,18,35,471,95198,20180101,8-rozporzadzenie-rady-ministrow-z-dnia-18032009-r-w.html",
+        "source_quote_v3": "nabywa prawo do nagrody jubileuszowej w dniu upływu okresu",
+        "verified_at_v3": "2026-04-18T14:55:52Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",

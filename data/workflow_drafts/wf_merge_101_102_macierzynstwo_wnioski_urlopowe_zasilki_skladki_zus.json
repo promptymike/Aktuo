@@ -114,8 +114,17 @@
         "verified_at": "2026-04-18T12:49:10Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Weryfikacja kluczowych kotwic prawnych z draftu wykazała ich poprawność: art. 182(1a) §4 KP faktycznie stanowi o 9 tygodniach nieprzenoszalnego urlopu rodzicielskiego (potwierdzone przez przepisy.gofin.pl i sejm.gov.pl), a art. 18a ustawy systemowej faktycznie reguluje preferencyjną podstawę składek ZUS na poziomie 30% minimalnego wynagrodzenia (potwierdzone przez zus.pl, biznes.gov.pl i ksiegowosc.infor.pl). Flaga dotyczy braku formalnego pola 'legal_anchors' w strukturze workflow, a nie błędności samych cytowań — to problem metadanych/formatu, nie merytoryczny błąd prawny w drafcie.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://ksiegowosc.infor.pl/zus-kadry/skladki/7490189,skladki-zus-2026-przedsiebiorcy-tzw-maly-zus-wolne-zawody-wspolnicy-spolek-tworcy-artysci-kwoty-skladek-i-podstaw-wymiaru.html",
+        "source_quote_v3": "Art. 18a ustawy systemowej... nie niższa niż 1441,80 zł",
+        "verified_at_v3": "2026-04-18T14:57:47Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 2,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",

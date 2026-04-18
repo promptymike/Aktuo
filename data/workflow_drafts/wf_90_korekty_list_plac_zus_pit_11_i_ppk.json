@@ -186,8 +186,17 @@
         "verified_at": "2026-04-18T12:44:14Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródło gofin.pl (art. 87 KP / stanowisko GIP) potwierdza, że gdy pracownik odmawia zgody na potrącenie nadpłaty wynagrodzenia spowodowanej błędem pracodawcy, jedyną drogą jest powództwo cywilne o bezpodstawne wzbogacenie. Draft step 4 nie opisuje tej ścieżki. Dodatkowo ksiegowosc.infor.pl potwierdza, że zwrot w ratach jest dopuszczalny i wpływa na rozliczenie art. 41b PIT (odliczenie adekwatnie do każdej raty), co również nie jest opisane w drafcie.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.gofin.pl/prawo-pracy/17,2,95,197608,odliczenie-nadplaty-wynagrodzenia-z-nastepnej-wyplaty.html",
+        "source_quote_v3": "pracodawcy pozostaje jedynie wystąpienie na drogę sądową",
+        "verified_at_v3": "2026-04-18T14:56:21Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",

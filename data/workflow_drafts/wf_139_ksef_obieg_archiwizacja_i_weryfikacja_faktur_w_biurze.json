@@ -239,8 +239,17 @@
         "verified_at": "2026-04-17T23:39:45Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "KSeF z założenia eliminuje problem duplikatów faktur z tym samym numerem wewnętrznym: system automatycznie nadaje każdej fakturze unikalny numer KSeF i – zgodnie z podatki.biz – 'automatycznie zweryfikuje, czy dany podatnik nie przesłał już wcześniej faktury o takim samym numerze wewnętrznym'. Realne ryzyko duplikatów w KSeF dotyczy innego scenariusza: ta sama faktura trafia do nabywcy zarówno przez KSeF, jak i e-mailem (PDF), co ksiegowosc.infor.pl opisuje jako problem organizacyjny, a nie luki w procedurze biura rachunkowego. Draft w kroku 3 adresuje ten problem pośrednio (weryfikacja kosztowa, oznaczanie błędnych faktur), a krok 2 zakłada pobór wyłącznie z KSeF. Brak osobnego kroku 'weryfikacji unikalności' nie jest krytycznym brakiem, bo unikalność numeru KSeF jest gwarantowana systemowo, a ryzyko podwójnego księgowania PDF+KSeF jest kwestią organizacyjną opisaną w kontekście dużych firm wielooddziałowych, nie biur rachunkowych.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/ksef/7527053,ksef-2026-problemy-z-duplikatami-podwojnym-ksiegowaniem-wydatkami-sluzbowymi-i-przyjeciem-do-magazynu-spolki-z-wieloma-oddzialami-traca-kontrole-nad-fakturami.html",
+        "source_quote_v3": "podstawą do księgowania jest wyłącznie dokument pobrany z systemu",
+        "verified_at_v3": "2026-04-18T15:07:14Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -253,8 +262,17 @@
         "verified_at": "2026-04-17T23:39:54Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalne źródło MF (ksef.podatki.gov.pl) potwierdza, że faktury są archiwizowane w KSeF przez 10 lat i nie ma obowiązku drukowania — co jest zgodne z Krokiem 4 drafta. Draft poprawnie opisuje backup XML jako 'rekomendowany', nie obowiązkowy. Flaga wskazuje na brak jasności redakcyjnej (brak wyjaśnienia konsekwencji braku backupu przy kontroli), ale nie ma rzeczywistej sprzeczności prawnej między krokami — żadne źródło z whitelisty nie nakłada obowiązku lokalnego backupu XML po stronie biura rachunkowego.",
+        "verifier_confidence_v3": 0.78,
+        "source_url_v3": "https://ksef.podatki.gov.pl/pytania-i-odpowiedzi-ksef-20/",
+        "source_quote_v3": "archiwizowana przez 10 lat... Nie drukuje",
+        "verified_at_v3": "2026-04-18T15:07:34Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -267,8 +285,17 @@
         "verified_at": "2026-04-17T23:40:02Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalne źródło podatki.gov.pl (ksef.podatki.gov.pl) jednoznacznie potwierdza, że faktury wystawione w trybie offline24 i awaryjnym udostępniane nabywcy poza KSeF są oznaczane kodami QR — przed przesłaniem do KSeF dwoma kodami QR (OFFLINE + CERTYFIKAT), a po przesłaniu jednym kodem QR z numerem KSeF. Draft jest zatem poprawny — faktury offline/awaryjne rzeczywiście mają kod QR i jest to standard w KSeF 2.0.",
+        "verifier_confidence_v3": 0.98,
+        "source_url_v3": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryb-offline24/",
+        "source_quote_v3": "powinna być oznaczona dwoma kodami QR",
+        "verified_at_v3": "2026-04-18T15:07:43Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -281,8 +308,17 @@
         "verified_at": "2026-04-17T23:40:08Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalna dokumentacja MF (broszura FA(1) na podatki.gov.pl) wprost potwierdza istnienie węzła 'Fa/Platnosc' i jego składnika 'TerminyPlatnosci' w schemacie XML KSeF. Konwencja nazewnictwa pól P_x (P_1 = data wystawienia, P_6 = data sprzedaży) jest spójna z oficjalną dokumentacją struktury logicznej e-Faktury. Nazwy węzłów w drafcie są poprawne, nie są uproszczeniami ani nieaktualnymi nazwami.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://ksef.podatki.gov.pl/media/gn2kt4gl/broszura-informacyjna-struktury-logicznej-e-faktury-fa-1-wersja-anglojezyczna.pdf",
+        "source_quote_v3": "element Fa/Platnosc and its component TerminyPlatnosci are optional",
+        "verified_at_v3": "2026-04-18T15:07:57Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -334,8 +370,17 @@
         "verified_at": "2026-04-17T23:40:37Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Przepisy i praktyka KSeF nie przewidują żadnej ustawowej procedury ani terminu oczekiwania na korektę sprzedawcy po stronie nabywcy/biura rachunkowego. Jedynym obowiązkiem jest kontakt ze sprzedawcą z żądaniem korekty zerującej — co draft w Kroku 3 i 6 faktycznie opisuje. Brak szczegółowej procedury eskalacji (co zrobić jeśli sprzedawca nie reaguje, ile czekać) nie jest luką prawną wymaganą przez przepisy, lecz kwestią wewnętrznej polityki biura rachunkowego. Źródła z ksiegowosc.infor.pl potwierdzają, że jedynym narzędziem jest faktura korygująca wystawiana przez sprzedawcę, a przepisy nie nakładają na nabywcę obowiązku wstrzymania księgowania do czasu korekty — draft nie jest więc błędny, a flaga dotyczy braku opcjonalnych wskazówek operacyjnych, nie krytycznej luki prawnej.",
+        "verifier_confidence_v3": 0.78,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/vat/faktura/7496258,korekta-faktury-wystawionej-w-ksef-z-blednym-nip-nabywcy-jak-to-zrobic-zgodnie-z-przepisami.html.amp",
+        "source_quote_v3": "jedynym dokumentem, którym będzie można korygować błędy, będzie faktura korygująca",
+        "verified_at_v3": "2026-04-18T15:08:11Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -348,8 +393,17 @@
         "verified_at": "2026-04-17T23:40:44Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelisty (biznes.gov.pl, gofin.pl, ksiegowosc.infor.pl) potwierdzają, że faktura korygująca w KSeF to OSOBNY dokument XML z własnym numerem KSeF, który musi zawierać numer KSeF faktury korygowanej (art. 106j ust. 2 pkt 2a ustawy o VAT). Istnieją odrębne zasady księgowania: sprzedawca obniża VAT należny w okresie wystawienia korekty, nabywca zmniejsza VAT naliczony w okresie otrzymania korekty przez KSeF — co jest istotną różnicą wobec faktur pierwotnych. Draft w żadnym kroku nie opisuje tej procedury (ani statusu korekty jako osobnego dokumentu, ani wpływu na moment rozliczenia VAT, ani archiwizacji korekt), co stanowi realną lukę informacyjną dla biura rachunkowego obsługującego klientów w KSeF.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/004651",
+        "source_quote_v3": "faktura korygująca musi zawierać numer KSeF faktury korygowanej",
+        "verified_at_v3": "2026-04-18T15:08:24Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       }
     ]
   },

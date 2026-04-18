@@ -145,8 +145,17 @@
         "verified_at": "2026-04-18T12:25:05Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wielokrotne źródła z whitelisty (przepisy.gofin.pl, gofin.pl, ksiegowosc.infor.pl) jednoznacznie potwierdzają, że art. 154² § 2 KP wprost stanowi normę '1 dzień urlopu = 8 godzin pracy'. Draft prawidłowo przypisuje tę normę do art. 154² § 2 KP — flaga jest bezzasadna.",
+        "verifier_confidence_v3": 0.98,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,3,9,9,212,462770,20251213,art-152-173-urlopy-wypoczynkowe.html",
+        "source_quote_v3": "jeden dzień urlopu odpowiada 8 godzinom pracy",
+        "verified_at_v3": "2026-04-18T15:20:44Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -159,8 +168,17 @@
         "verified_at": "2026-04-18T12:25:16Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Rozporządzenie MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) jest nadal obowiązujące w 2026 r. — serwis gofin.pl (wskazniki.gofin.pl) wprost powołuje je jako aktualną podstawę prawną do obliczania współczynnika urlopowego na 2026 r. (ze zmianami: Dz.U. z 2009 r. nr 174 poz. 1353), a isap.sejm.gov.pl potwierdza jego istnienie bez adnotacji o uchyleniu. Rozporządzenie było nowelizowane (ostatnio w 2009 r.), ale nie zostało uchylone — draft cytuje je prawidłowo.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://wskazniki.gofin.pl/wskaznik/235/wspolczynnik-urlopowy",
+        "source_quote_v3": "Podstawa prawna: Rozporządzenie Ministra Pracy i Polityki Socjalnej z dnia",
+        "verified_at_v3": "2026-04-18T15:20:55Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",
@@ -173,8 +191,17 @@
         "verified_at": "2026-04-18T12:25:23Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Aktualne źródła (gofin.pl, Dz.U. z 2025 r. poz. 913) potwierdzają, że art. 15 ustawy o rehabilitacji zawodowej nadal stanowi normę 7 godzin na dobę i 35 godzin tygodniowo dla osób o znacznym lub umiarkowanym stopniu niepełnosprawności — bez zmian w 2025/2026 r. Artykuł gofin.pl z grudnia 2025 r. wprost omawia wymiar czasu pracy pracowników niepełnosprawnych w 2026 r. na podstawie tych samych przepisów. Draft jest poprawny.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://gofin.pl/prawo-pracy/17,1,96,328827,wymiar-czasu-pracy-pracownikow-niepelnosprawnych-w-2026-r.html",
+        "source_quote_v3": "czas pracy pracowników niepełnosprawnych nie może przekraczać 8 godzin",
+        "verified_at_v3": "2026-04-18T15:21:09Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -220,8 +247,17 @@
         "verified_at": "2026-04-18T12:25:50Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z gofin.pl i podatki.biz jednoznacznie potwierdzają, że przy rozwiązaniu umowy o pracę pracodawca ma obowiązek wypłacić ekwiwalent pieniężny za niewykorzystany urlop (art. 171 § 1 KP), a ekwiwalent przy niepełnym etacie wymaga zastosowania współczynnika i przeliczenia godzinowego. Draft opisuje wyłącznie zasady naliczania i udzielania urlopu w trakcie zatrudnienia, nie zawiera żadnego kroku dotyczącego rozliczenia ekwiwalentu przy rozwiązaniu umowy — flaga jest zatem uzasadniona, bo brakuje tego krytycznego elementu procedury kadrowej.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.gofin.pl/prawo-pracy/17,2,95,201380,zasady-ustalania-ekwiwalentu-za-urlop.html",
+        "source_quote_v3": "Pracownikowi przysługuje ekwiwalent pieniężny za niewykorzystany urlop",
+        "verified_at_v3": "2026-04-18T15:21:20Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -234,8 +270,17 @@
         "verified_at": "2026-04-18T12:25:59Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Źródło gofin.pl (artykuł 'Wymiar urlopu zaległego po obniżeniu etatu') wprost potwierdza, że urlop zaległy nie podlega proporcjonalnemu obniżeniu przy zmianie etatu z wyższego na niższy — 'Nie ma przy tym podstaw do stosowania reguły proporcji do uprawnień nabytych za okres wcześniejszy'. Draft twierdzi to samo ('przechodzą jako urlop zaległy bez przeliczenia na nowy etat'), więc jest merytorycznie poprawny. Flaga wskazuje na brak dodatkowego wyjaśnienia, ale draft nie zawiera błędu — jest to false positive.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.gofin.pl/prawo-pracy/17,1,96,236656,wymiar-urlopu-zaleglego-po-obnizeniu-etatu.html",
+        "source_quote_v3": "Nie ma podstaw do stosowania reguły proporcji do uprawnień",
+        "verified_at_v3": "2026-04-18T15:21:37Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -249,7 +294,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z 12 zaufanych źródeł whitelisty nie zawiera oficjalnej dokumentacji ścieżek menu Comarch Optima 2026 (np. 'Kadry → Plan pracy / Nieobecności'). Wyniki z forum.gofin.pl dotyczą ogólnych dyskusji użytkowników i nie potwierdzają ani nie obalają konkretnej ścieżki nawigacyjnej w aktualnej wersji systemu. Weryfikacja ścieżek menu oprogramowania kadrowego wykracza poza zakres 12 zaufanych domen podatkowo-prawnych.",
+        "verifier_confidence_v3": 0.15,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:21:46Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -276,8 +330,17 @@
         "verified_at": "2026-04-18T12:26:22Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 19 ust. 1 ustawy o rehabilitacji stosuje tę samą zasadę (rok po dniu zaliczenia do stopnia) zarówno do pracownika nowo zatrudnionego, jak i już zatrudnionego w momencie otrzymania orzeczenia — co potwierdzają liczne przykłady gofin.pl (m.in. pracownik zatrudniony od 2 lat, który dopiero w trakcie zatrudnienia dostarczył orzeczenie, nadal musi przepracować rok). Draft nie pomija żadnej istotnej różnicy, bo jej nie ma — flaga jest bezzasadna.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.gofin.pl/prawo-pracy/17,1,96,158434,urlop-pracownika-niepelnosprawnego-zatrudnionego-na-czesc.html",
+        "source_quote_v3": "nabywa po przepracowaniu jednego roku po dniu zaliczenia",
+        "verified_at_v3": "2026-04-18T15:22:02Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",

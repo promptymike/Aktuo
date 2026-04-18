@@ -158,8 +158,17 @@
         "verified_at": "2026-04-18T12:10:13Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalne materiały ZUS (zus.pl) jednoznacznie rozgraniczają oba scenariusze: przy trwającym ubezpieczeniu (pracownik nadal zatrudniony) każde kolejne zaświadczenie za nieprzerwany okres wymaga odrębnego wniosku w postaci Z-3 wypełnionego do pkt 1 (kontynuacja), natomiast po ustaniu ubezpieczenia to sam ubezpieczony składa ZAS-53 jednorazowo. Warunek rozgraniczający jest zatem obecny w przepisach ZUS — krok 4 dotyczy okresu trwania zatrudnienia, krok 5 dotyczy okresu po ustaniu zatrudnienia — co odpowiada logice drafta. Flaga wskazuje na brak jasnego warunku rozgraniczającego, ale warunek ten jest explicite podany w nagłówkach kroków (warunek: if niezdolność trwa dalej / if umowa wygasa w trakcie), więc sprzeczność jest pozorna.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.zus.pl/documents/10182/788036/1755_18+ZAS-12_akcept.pdf/1f3f90f5-3e14-c96a-aba5-808a984186e6",
+        "source_quote_v3": "Jeśli ZUS ma ustalić prawo do zasiłku za dalszy nieprzerwany",
+        "verified_at_v3": "2026-04-18T15:03:44Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -172,8 +181,17 @@
         "verified_at": "2026-04-18T12:10:22Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła ZUS i gofin.pl jednoznacznie potwierdzają, że licznik 33 dni wynagrodzenia chorobowego NIE resetuje się przy przerwie między L4 — sumuje się wszystkie okresy niezdolności w roku kalendarzowym niezależnie od przerw (art. 92 KP). Natomiast dla okresu zasiłkowego (182 dni) obowiązuje odrębna zasada: przerwa do 60 dni (od 2022 r. bez względu na rodzaj choroby) powoduje zliczenie do jednego okresu zasiłkowego. Draft w kroku 4 wspomina jedynie 'jeśli nie ma przerwy', nie definiując progu 60 dni dla okresu zasiłkowego ani zasady sumowania 33 dni niezależnie od przerw — flaga jest zatem uzasadniona.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-chorobowy/z-ubezpieczenia-chorobowego/prawo-do-zasilku-i-okres-przyslugiwania",
+        "source_quote_v3": "nawet jeżeli wystąpiły między nimi przerwy",
+        "verified_at_v3": "2026-04-18T15:03:56Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -186,8 +204,17 @@
         "verified_at": "2026-04-18T12:10:29Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "ZAS-53 to rzeczywisty, oficjalny druk ZUS – 'Wniosek o zasiłek chorobowy', dostępny na zus.pl i zaktualizowany 1 stycznia 2026 r. Oficjalny PDF ZUS wprost wskazuje, że przy kolejnych zaświadczeniach lekarskich za okres nieprzerwanej niezdolności do pracy wnioskiem o zasiłek może być właśnie druk ZAS-53 (alternatywnie Z-3b lub wydruk e-ZLA). Draft prawidłowo rozróżnia ZAS-53 (wniosek ubezpieczonego) od Z-3 (zaświadczenie płatnika składek) i poprawnie wskazuje oba dokumenty jako opcje przy kolejnych L4.",
+        "verifier_confidence_v3": 0.97,
+        "source_url_v3": "https://www.zus.pl/en/wzory-formularzy/zasilki/zasilek-chorobowy/-/asset_publisher/TS3WYPoYHIaG/content/zaswiadczenie-zas-53",
+        "source_quote_v3": "ZAS-53 · Wniosek o zasiłek chorobowy",
+        "verified_at_v3": "2026-04-18T15:04:09Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -214,8 +241,17 @@
         "verified_at": "2026-04-18T12:10:45Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z gofin.pl i podatki.biz potwierdzają, że świadectwo pracy zawiera informację o dniach wynagrodzenia chorobowego WYŁĄCZNIE w roku kalendarzowym, w którym ustał stosunek pracy (ust. 6 pkt 8/11 świadectwa). Oznacza to, że jeśli pracownik zmienił pracodawcę w poprzednim roku kalendarzowym, nowy pracodawca nie uzyska tej informacji ze świadectwa pracy — flaga jest zasadna, bo draft zakłada, że świadectwo 'powinno wskazywać wykorzystane dni', podczas gdy przepisy ograniczają ten obowiązek tylko do roku ustania zatrudnienia. Draft nie opisuje procedury weryfikacji w przypadku braku lub niekompletności tej informacji.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.gofin.pl/prawo-pracy/17,2,101,223197,okresy-nieskladkowe-i-dodatkowe-informacje-w-swiadectwie.html",
+        "source_quote_v3": "podaje się informacje dotyczące liczby dni... wyłącznie w roku kalendarzowym,",
+        "verified_at_v3": "2026-04-18T15:04:22Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -228,8 +264,17 @@
         "verified_at": "2026-04-18T12:10:53Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z zus.pl i ksiegowosc.infor.pl potwierdzają, że obliczenie podstawy wymiaru zasiłku przy zmiennym wynagrodzeniu lub urlopie w okresie obliczeniowym wymaga stosowania procedury uzupełniania wynagrodzenia (art. 36-37 ustawy zasiłkowej) — np. wyłączenia miesięcy z przepracowaniem poniżej połowy czasu pracy, uzupełniania wynagrodzenia do pełnej wysokości, odrębnego traktowania składników zmiennych. Draft w kroku 2 pomija tę procedurę całkowicie, ograniczając się do stwierdzenia 'program wyliczy 80% podstawy', co jest niewystarczające dla użytkownika z niestandardową sytuacją płacową.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/zus-kadry/urlopy/128956,Zmienne-skladniki-wynagrodzenia-w-podstawie-wymiaru-zasilku-chorobowego-i-wynagrodzenia-za-urlop-wypoczynkowy.html",
+        "source_quote_v3": "Sposób uzupełniania wynagrodzenia zależy od zasad wynagradzania",
+        "verified_at_v3": "2026-04-18T15:04:33Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",

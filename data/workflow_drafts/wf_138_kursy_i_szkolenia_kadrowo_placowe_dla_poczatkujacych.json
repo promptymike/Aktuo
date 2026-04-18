@@ -149,7 +149,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "ui_label": "Sprawdź aktualność danych",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne ze źródeł z whitelisty (gofin.pl, ksiegowosc.infor.pl, podatki.biz) nie podaje konkretnych cen kursów 'Specjalista ds. kadr i płac' na 2026 rok. Źródła odsyłają do stron oddziałów SKwP po aktualne cenniki, ale same nie publikują kwot. Przedział 1 800–3 500 zł brutto nie może być ani potwierdzony, ani obalony na podstawie dostępnych zaufanych źródeł — flaga pozostaje nierozstrzygnięta.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:06:13Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -163,7 +172,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Wyszukiwanie na whiteliście 12 domen potwierdziło istnienie 'Akademii Mistrzostwa Kadrowo-Płacowego Moniki Smulewicz' jako realnej marki szkoleniowej (forum.gofin.pl zawiera dyskusje użytkowników o tej akademii i jej kursach online). Natomiast żadne ze źródeł z whitelisty nie zawiera informacji o 'Karolinie Niedzielskiej' ani marce 'Kwadrans z HR', co uniemożliwia pełną weryfikację obu osób i obu marek. Flaga pozostaje częściowo zasadna — Smulewicz/HR na Szpilkach jest weryfikowalna pośrednio, ale Niedzielska/Kwadrans z HR nie.",
+        "verifier_confidence_v3": 0.55,
+        "source_url_v3": "https://forum.gofin.pl/1450900/archiwum/akademia-mistrzostwa-kadrowo-placowego-moniki-smulewicz",
+        "source_quote_v3": "Akademia Mistrzostwa Kadrowo-Płacowego Moniki Smulewicz",
+        "verified_at_v3": "2026-04-18T15:06:28Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 2,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -176,8 +194,17 @@
         "verified_at": "2026-04-18T12:13:30Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Żadne ze źródeł z whitelisty (isap.sejm.gov.pl, gofin.pl) nie potwierdza istnienia druku o symbolu 'MEN-I/73'. Aktualne rozporządzenie MEiN z 6.10.2023 r. (Dz.U. poz. 2175) określa wzory zaświadczeń jako załączniki nr 1, 2 itd. do rozporządzenia — bez przypisywania im symbolu 'MEN-I/73'. Oznaczenie to nie pojawia się w żadnym akcie prawnym ani źródle z whitelisty, co potwierdza ryzyko halucynacji w drafcie.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20230002175/O/D20232175.pdf",
+        "source_quote_v3": "wzór określa załącznik nr 2 do rozporządzenia",
+        "verified_at_v3": "2026-04-18T15:06:44Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -190,8 +217,17 @@
         "verified_at": "2026-04-18T12:13:38Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z 2026 roku (ksiegowosc.infor.pl, kwiecień 2026) jednoznacznie wskazują, że w 2026 r. obowiązuje nowa ustawa o rynku pracy i limit KFS wynosi 200% przeciętnego wynagrodzenia na osobę rocznie (nie 300% jak podaje draft). Artykuł z gofin.pl (luty 2025) potwierdza, że planowane było obniżenie limitu z 300% do 200%. Draft podaje nieaktualny limit 300%, który obowiązywał przed wejściem w życie nowej ustawy o rynku pracy i służbach zatrudnienia (Ustawa z dnia 20.03.2025 r.). Flaga jest zatem uzasadniona — draft zawiera błędną wartość limitu dla 2026 r.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://ksiegowosc.infor.pl/obrot-gospodarczy/finanse-i-inwestycje/7554102,dofinansowanie-szkolen-pracownikow-w-2026-r-panstwo-wylozy-do-90-proc-kosztow-rozwoju-kompetencji.html",
+        "source_quote_v3": "200% przeciętnego wynagrodzenia w danym roku, co oznacza około 20",
+        "verified_at_v3": "2026-04-18T15:06:57Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",

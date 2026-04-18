@@ -157,7 +157,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "ui_label": "Sprawdź aktualność danych",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z 12 zaufanych źródeł z whitelisty nie zawiera aktualnego cennika wFirma dla biur rachunkowych. Cenniki oprogramowania komercyjnego (wfirma.pl) leżą poza zakresem tych domen. Flaga pozostaje nierozstrzygnięta — kwota ~1100 zł/mc przy 50 klientach nie może być ani potwierdzona, ani obalona na podstawie dostępnych źródeł.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:08:35Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -170,8 +179,17 @@
         "verified_at": "2026-04-18T12:14:37Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Forum gofin.pl (zaufana domena whitelist) jednoznacznie potwierdza, że wFirma nie posiada modułu pełnej księgowości. Draft w kroku 3 zaleca wybór jednego dostawcy z obydwoma modułami (KPiR + pełne księgi), a w kroku 4 zestawia wFirmę z Comarch Optima i Enova365 bez wyjaśnienia, że wFirma nie obsługuje pełnej księgowości — co stanowi realną sprzeczność między krokami.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://forum.gofin.pl/1318030/archiwum/wfirma-czy-systim-jaki-program-do-ksiegowosci-wybrac",
+        "source_quote_v3": "wFirma jej nie ma, a Systim ma",
+        "verified_at_v3": "2026-04-18T15:08:57Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -184,8 +202,17 @@
         "verified_at": "2026-04-18T12:14:45Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalne źródło podatki.gov.pl (ksef.podatki.gov.pl) jednoznacznie potwierdza, że tryb offline24 jest dobrowolny — 'Każdy podatnik może wystawiać faktury w trybie offline24. Ustawa nie zawiera ograniczeń w tym zakresie.' Tryb ten jest opcją, nie obowiązkiem, stosowaną m.in. przy problemach z internetem lub z wyboru wystawcy. Draft nie twierdzi, że offline24 jest obowiązkowy — wymaga jedynie weryfikacji obsługi tego trybu w programie, co jest uzasadnione jako element checklisty funkcjonalnej. Flaga zarzuca brak wyjaśnienia 'kiedy offline24 jest krytyczny', ale skoro jest to tryb dobrowolny (nie obowiązkowy), brak takiego warunku w drafcie nie stanowi błędu merytorycznego.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/tryb-offline24/",
+        "source_quote_v3": "Każdy podatnik może wystawiać faktury w trybie offline24.",
+        "verified_at_v3": "2026-04-18T15:09:09Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -198,8 +225,17 @@
         "verified_at": "2026-04-18T12:14:52Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelisty potwierdzają, że obowiązek JPK_KR_PD spoczywa na podatniku (kliencie), nie na biurze rachunkowym — biuro jedynie technicznie prowadzi księgi i może ponosić odpowiedzialność porządkową za odmowę udostępnienia danych na żądanie organu (podatki.gov.pl, gofin.pl). Draft w kroku 6 nie rozgranicza, kto faktycznie jest zobowiązanym do złożenia JPK_KR_PD (klient-podatnik CIT) a kto jedynie musi mieć odpowiednie oprogramowanie (biuro rachunkowe jako wykonawca). Ponadto ksiegowosc.infor.pl wprost wskazuje, że JPK_CIT wymaga 'jasnego określenia odpowiedzialności obu stron', co potwierdza, że brak tego rozgraniczenia w drafcie jest realnym brakiem informacyjnym istotnym dla czytelnika (biura rachunkowego).",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/wiadomosci/7523300,pelna-cyfryzacja-ksiag-rachunkowych-i-pkpir-w-2026-r-jpk-cit-jpk-pkpir-duzo-zmienia-w-firmach-i-biurach-rachunkowych.html",
+        "source_quote_v3": "konieczność jasnego określenia odpowiedzialności obu stron",
+        "verified_at_v3": "2026-04-18T15:09:23Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -212,8 +248,17 @@
         "verified_at": "2026-04-18T12:14:59Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wiele wątków na forum.gofin.pl (zaufana domena z whitelisty) jednoznacznie potwierdza istnienie produktu 'Mała Księgowość Rzeczpospolitej' — cytowana jest umowa licencyjna tego oprogramowania, opisany jest proces zakupu przez sklep.rp.pl oraz użytkownicy dyskutują o jego funkcjach (KPiR, VAT, KSeF). Produkt jest rzeczywisty, wydawany przez Rzeczpospolitą (Presspublica), a flaga hallucination_risk jest nieuzasadniona.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://forum.gofin.pl/1148561/archiwum/kupilam-program-mala-ksiegowosc-rzeczpospolita-i-nie-umiem",
+        "source_quote_v3": "klucz produktu oprogramowania Mała Księgowość Rzeczpospolitej",
+        "verified_at_v3": "2026-04-18T15:09:34Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -254,8 +299,17 @@
         "verified_at": "2026-04-18T12:15:19Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła MF (podatki.gov.pl, ksiegowosc.infor.pl) potwierdzają, że e-Mikrofirma obsługuje wystawianie i odbieranie faktur w KSeF oraz przenoszenie ich do ewidencji VAT, ale wprost wskazują, że 'nie jest kompletnym programem finansowo-księgowym'. Brak jest funkcji trybu offline24 (awaryjnego) oraz narzędzi do prowadzenia ewidencji ryczałtu — flaga jest zatem uzasadniona: draft sugeruje wystarczalność e-Mikrofirmy dla biura prowadzącego ryczałt, co jest uproszczeniem pomijającym brak modułu ewidencji przychodów ryczałtowych i brak trybu offline.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/vat/ewidencja-vat/774257,Aplikacja-emikrofirma-Ministerstwa-Finansow-funkcjonalnosci-problemy-pytania-i-odpowiedzi.html",
+        "source_quote_v3": "nie jest kompletnym programem finansowo-księgowym",
+        "verified_at_v3": "2026-04-18T15:09:45Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -282,8 +336,17 @@
         "verified_at": "2026-04-18T12:15:36Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Przepisy (rozporządzenie MF ws. JPK_VAT z deklaracją, § 10) oraz wyjaśnienia MF jednoznacznie określają, że faktury korygujące MUSZĄ być oznaczane kodami GTU/TP/MPP, jeśli korekta dotyczy towaru/usługi objętych tymi oznaczeniami — niezależnie od faktury pierwotnej. Obowiązek ten wynika z charakteru transakcji, a nie z automatycznego 'dziedziczenia' z faktury pierwotnej (np. korekta dotycząca pozycji nieobjętej GTU nie dziedziczy kodu). Draft w kroku 7 słusznie wskazuje na 'dziedziczenie oznaczeń GTU/TP/MPP z faktury pierwotnej' jako element do sprawdzenia w teście — jest to prawidłowy wymóg funkcjonalny dla oprogramowania biura rachunkowego. Flaga dotyczy braku rozróżnienia 'automatyczne vs. ręczne', ale przepisy nie narzucają konkretnego mechanizmu UX programu — wymagają jedynie poprawnego wyniku w JPK_V7, więc brak tego rozróżnienia w drafcie nie stanowi błędu merytorycznego.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/vat/jpk-vat/4663544,Faktury-korygujace-w-nowym-JPK-VAT-z-deklaracja-JPK-V7M-i-JPK-V7K.html",
+        "source_quote_v3": "Symbolami GTU należy oznaczać fakturę korygującą, w przypadku korekty",
+        "verified_at_v3": "2026-04-18T15:09:59Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",

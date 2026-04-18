@@ -146,8 +146,17 @@
         "verified_at": "2026-04-18T12:45:27Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wiele wiarygodnych źródeł z whitelisty (biznes.gov.pl, podatki.biz, gofin.pl, ksiegowosc.infor.pl) jednoznacznie potwierdza, że limit 240 000 zł obowiązuje od 1.01.2026 r. na mocy uchwalonej i opublikowanej w Dzienniku Ustaw nowelizacji ustawy o VAT (Sejm uchwalił 24.06.2025 r.). Biznes.gov.pl (aktualizacja luty 2026) wprost stosuje limit 240 000 zł w przykładach dla 2026 r. Brak jakichkolwiek sygnałów o zmianie tego limitu lub modyfikacji przepisów przejściowych w pierwszych miesiącach 2026 r. Draft jest poprawny.",
+        "verifier_confidence_v3": 0.97,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/00246",
+        "source_quote_v3": "Od 1 stycznia 2026 roku limit sprzedaży wzrósł",
+        "verified_at_v3": "2026-04-18T14:56:31Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -174,8 +183,17 @@
         "verified_at": "2026-04-18T12:45:44Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Przepis przejściowy (art. 2 ustawy nowelizującej) posługuje się pojęciem 'łączna wartość sprzedaży w 2025 r.' bez rozróżnienia na okresy przed/po rejestracji jako VAT czynny — co potwierdza interpretacja KIS z 16.10.2025 r. (nr 0114-KDIP1-3.4012.726.2025.2.LM) opisana na gofin.pl. Dla podatników rozpoczynających działalność stosuje się proporcję, ale dla podatników już działających liczy się cała sprzedaż 2025 r. Draft poprawnie wskazuje warunek 'sprzedaż 2025 w przedziale 200 001–240 000 zł' bez konieczności dodatkowego wyjaśnienia, bo przepis przejściowy nie wprowadza tu rozróżnienia. Flaga jest zatem false positive — brak wyjaśnienia nie stanowi krytycznego błędu, bo przepis jest jednoznaczny.",
+        "verifier_confidence_v3": 0.75,
+        "source_url_v3": "https://www.gofin.pl/17,2,7,257978,mozliwosc-korzystania-ze-zwolnienia-podmiotowego-z-vat.html",
+        "source_quote_v3": "łączna wartość sprzedaży w 2025 r. będzie wyższa niż 200.000",
+        "verified_at_v3": "2026-04-18T14:56:55Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",

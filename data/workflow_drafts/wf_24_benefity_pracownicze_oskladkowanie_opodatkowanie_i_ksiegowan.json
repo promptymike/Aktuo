@@ -158,8 +158,17 @@
         "verified_at": "2026-04-18T12:19:27Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Przepis § 2 ust. 1 pkt 26 rozporządzenia składkowego wymaga jedynie 'zakupu po cenach niższych niż detaliczne', a gofin.pl potwierdza, że warunkiem jest 'częściowa odpłatność' pracownika bez określenia minimalnej kwoty. Draft poprawnie wskazuje 'min. 1 gr' jako symboliczną częściową odpłatność — nie ma sprzeczności między krokami 2 i 3, bo przepis nie wymaga 'znaczącej kwoty', a każda kwota niższa od detalicznej spełnia warunek zwolnienia.",
+        "verifier_confidence_v3": 0.85,
+        "source_url_v3": "https://www.gofin.pl/skladki-zasilki-emerytury/17,2,109,237065,zasady-naliczania-skladek-zus-od-benefitow-dla-pracownikow.html",
+        "source_quote_v3": "pracownicy będą ponosili częściową odpłatność",
+        "verified_at_v3": "2026-04-18T15:15:14Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -193,8 +202,17 @@
         "verified_at": "2026-04-18T12:19:43Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelisty (gofin.pl, ksiegowosc.infor.pl) potwierdzają, że refaktura pakietu medycznego na pracownika to faktyczne świadczenie usług VAT wymagające wystawienia dokumentu VAT (faktury/refaktury ze stawką 'zw' lub 23%), a nie jedynie zapis księgowy. Draft w kroku 6 używa terminów 'refaktura' i 'faktura wewnętrzna' zamiennie, nie wyjaśniając że są to różne dokumenty o różnych skutkach VAT — refaktura to pełnoprawna faktura VAT ujmowana w JPK, natomiast 'faktura wewnętrzna' jako pojęcie przestała istnieć w polskim prawie VAT po 2013 r. Brak tego rozróżnienia w drafcie stanowi realną lukę informacyjną.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.gofin.pl/rachunkowosc/17,1,85,260582,pakiety-medyczne-dla-pracownikow.html",
+        "source_quote_v3": "podatnik musi wykazać w nowym JPK_VAT sprzedaż zwolnioną",
+        "verified_at_v3": "2026-04-18T15:15:26Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -208,7 +226,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne ze znalezionych źródeł z whitelisty nie potwierdza ani nie obala konkretnej terminologii 'nie wliczaj do wypłaty' / 'świadczenie w naturze' jako aktualnej lub nieaktualnej opcji w Comarch Optima, Enova czy Symfonii. Wyniki z forum.gofin.pl dotyczą ogólnej obsługi typów wypłat w Optimie, ale nie odnoszą się do tej konkretnej flagi konfiguracyjnej dla świadczeń niepieniężnych. Flaga dotyczy terminologii UI oprogramowania kadrowo-płacowego, która nie jest weryfikowalna przez żadne z 12 zaufanych źródeł prawno-podatkowych z whitelisty — jest to kwestia dokumentacji producenta oprogramowania, a nie prawa podatkowego.",
+        "verifier_confidence_v3": 0.62,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:15:39Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -221,8 +248,17 @@
         "verified_at": "2026-04-18T12:19:58Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wyniki wyszukiwania potwierdzają realne istnienie interpretacji indywidualnych dotyczących systemu kafeteryjnego MyBenefit — wynik z gofin.pl (interpretacje.gofin.pl) wprost wymienia 'świadczenia niepieniężnego Kafeteria MyBenefit' w kontekście interpretacji ZUS, a podatki.biz podaje interpretację ZUS stwierdzającą brak wyłączenia z podstawy składek dla systemów kafeteryjnych. Draft nie halucynuje co do istnienia takich interpretacji; brak numeru to kwestia precyzji redakcyjnej, nie halucynacji. Uwaga: znalezione interpretacje dotyczą ZUS, nie KIS — możliwa nieścisłość w drafcie co do organu, ale nie jest to halucynacja o nieistniejącej interpretacji.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "https://interpretacje.gofin.pl/142/podzial-tematyczny/ubezpieczenia-spoleczne-inbspubezpieczenia-zdrowotne/str/8",
+        "source_quote_v3": "zmienić zasady finansowania doładowań świadczenia niepieniężnego Kafeteria MyBenefit",
+        "verified_at_v3": "2026-04-18T15:15:52Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -235,8 +271,17 @@
         "verified_at": "2026-04-18T12:20:06Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła (gofin.pl, ksiegowosc.infor.pl) potwierdzają, że dla ZUS obowiązują ściśle określone zasady wyceny z § 3 pkt 3 rozporządzenia składkowego (czynsz spółdzielczy, komunalny, stawki komunalne dla lokali własnościowych) — nie jest to swobodna 'wartość rynkowa najmu, jeżeli wyższa'. Draft stosuje uproszczone sformułowanie i nie wyjaśnia tej odrębnej, ustawowej metody wyceny dla ZUS, co czyni flagę zasadną.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/5331837,Udostepnienie-lokalu-mieszkalnego-pracownikowi.html",
+        "source_quote_v3": "dla lokali własnościowych - w wysokości czynszu określonego według zasad",
+        "verified_at_v3": "2026-04-18T15:16:12Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -263,8 +308,17 @@
         "verified_at": "2026-04-18T12:20:24Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Według ZUS.pl składki społeczne pracownika wynoszą: emerytalna 9,76% + rentowa 1,5% + chorobowa 2,45% = 13,71% — co jest poprawną sumą. Składka zdrowotna to odrębne 9%. Draft prawidłowo rozdziela te dwie kategorie (13,71% składki społeczne + 9% zdrowotna = 22,71% łącznie). Flaga błędnie interpretuje zapis draftu, sugerując że 13,71% to tylko emerytalna. Stawki PIT 12%/32% są aktualne dla 2026 r.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.zus.pl/en/firmy/rozliczenia-z-zus/skladki-na-ubezpieczenia/spoleczne",
+        "source_quote_v3": "finansuje Twój pracownik lub zleceniobiorca",
+        "verified_at_v3": "2026-04-18T15:16:31Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -277,8 +331,17 @@
         "verified_at": "2026-04-18T12:20:32Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Baza ISAP (isap.sejm.gov.pl) jednoznacznie identyfikuje akt z 18.12.1998 jako 'Rozporządzenie Ministra Pracy i Polityki Socjalnej' (nie 'Społecznej' jak sugeruje draft) w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe (nie 'społeczne' jak w drafcie). Draft używa skrótu 'rozporządzenie składkowe z 18.12.1998' bez pełnego tytułu, co jest nieprecyzyjne — flaga jest uzasadniona, bo pełny tytuł różni się od sugerowanego w opisie flagi (błędna nazwa ministerstwa i zakres ubezpieczeń).",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981611106",
+        "source_quote_v3": "Ministra Pracy i Polityki Socjalnej z dnia 18 grudnia 1998",
+        "verified_at_v3": "2026-04-18T15:16:42Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -291,8 +354,17 @@
         "verified_at": "2026-04-18T12:20:41Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelisty (ksiegowosc.infor.pl, gofin.pl) potwierdzają, że stawka 8% VAT dla kart sportowych/Multisport wynika z poz. 186 załącznika nr 3 do ustawy o VAT i dotyczy usług rekreacyjnych 'wyłącznie w zakresie wstępu' — niezależnie od dostawcy (Benefit Systems, Medicover itp.). Jednak ksiegowosc.infor.pl wprost wskazuje, że 'są sytuacje, gdy trzeba zastosować stawkę podstawową VAT (23%)' — np. gdy karnet obejmuje indywidualne zajęcia z instruktorem. Draft w kroku 6 podaje stawkę 8% bez tego zastrzeżenia, co stanowi brak istotnej informacji. Flaga jest zatem uzasadniona: draft pomija warunek 'wyłącznie w zakresie wstępu' i ryzyko stawki 23% przy niektórych zakresach usług.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/vat/stawki-vat/747828,Stawka-VAT-dla-uslug-rekreacyjnych.html",
+        "source_quote_v3": "są sytuacje, gdy trzeba zastosować stawkę podstawową VAT",
+        "verified_at_v3": "2026-04-18T15:16:54Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",

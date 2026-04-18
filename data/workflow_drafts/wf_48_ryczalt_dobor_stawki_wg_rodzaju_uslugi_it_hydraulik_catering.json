@@ -127,8 +127,17 @@
         "verified_at": "2026-04-18T12:26:47Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Art. 12 ust. 1 pkt 2b to odrębna jednostka redakcyjna od pkt 2 (stawka 15%), co potwierdzają gofin.pl i ksiegowosc.infor.pl — draft błędnie łączy oba w jednym wpisie 'art. 12 ust. 1 pkt 2'. Pkt 2b (12% IT) oraz pkt 6 lit. a (5,5% hydraulika) i pkt 7 lit. b (3% catering) są wymieniane w answer_steps, ale nieobecne jako osobne wpisy w legal_anchors, co stanowi realną lukę w kotwicach prawnych.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.gofin.pl/podatki/17,1,61,315460,stawka-ryczaltu-dla-uslug-informatykow-wyrok-nsa.html",
+        "source_quote_v3": "ryczałt wynosi 12% przychodów ze świadczenia usług związanych z oprogramowaniem",
+        "verified_at_v3": "2026-04-18T15:22:31Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",
@@ -162,8 +171,17 @@
         "verified_at": "2026-04-18T12:27:02Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Źródła z whitelisty (ksiegowosc.infor.pl, forum.gofin.pl) potwierdzają, że kryterium rozróżnienia 5,5% vs 8,5% dla hydraulika nie leży w pojęciu 'nowa instalacja vs wymiana', lecz w klasyfikacji PKWiU — jeśli czynność mieści się w sekcji F (roboty budowlane, dział 43/45 PKWiU), stosuje się 5,5% niezależnie od tego, czy jest to nowa instalacja, wymiana, modernizacja czy remont. Forum gofin.pl wprost pokazuje, że modernizacja/wymiana CO opodatkowana 5,5% jest prawidłowa jako robota budowlana. Draft nie tworzy sprzeczności — edge_case o 'wymianie całej instalacji CO' jest zgodny z step 2, bo oba przypadki (nowa instalacja i wymiana) mogą być robotą budowlaną z PKWiU sekcja F. Flaga opisuje pozorną sprzeczność, która w rzeczywistości nie istnieje — kryterium jest PKWiU, a nie charakter prac (nowe vs wymiana).",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://forum.gofin.pl/1494733/archiwum/modernizacja-co-czy-to-stawka-ryczaltu-55",
+        "source_quote_v3": "robót budowlanych polegających na modernizacji CO... stawką 8,5%?",
+        "verified_at_v3": "2026-04-18T15:22:45Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -197,8 +215,17 @@
         "verified_at": "2026-04-18T12:27:21Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelist jednoznacznie potwierdzają, że warunkiem stosowania ryczałtu jest nieprzekroczenie limitu przychodów w roku poprzednim — wynoszącego 2 000 000 euro (art. 6 ust. 4 ustawy o zryczałtowanym podatku dochodowym). Draft workflow w żadnym ze swoich 6 kroków nie wspomina o tym limicie, co stanowi realną lukę informacyjną dla podatnika rozważającego wybór ryczałtu. Flaga jest zatem uzasadniona — brak wzmianki o limicie przychodowym to missing_critical_info, choć należy zaznaczyć, że limit wynosi 2 mln euro (ok. 8,5–9,6 mln zł), a nie 300 tys. zł jak podano w opisie flagi — opis flagi zawiera błędną kwotę, ale sam problem braku informacji o limicie jest realny.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/00263",
+        "source_quote_v3": "przychody w poprzednim roku podatkowym nie przekroczyły limitu 2 mln",
+        "verified_at_v3": "2026-04-18T15:22:57Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -211,8 +238,17 @@
         "verified_at": "2026-04-18T12:27:29Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Ośrodek Klasyfikacji i Nomenklatur Urzędu Statystycznego w Łodzi istnieje i rzeczywiście wydaje opinie klasyfikacyjne dotyczące PKWiU 2015 (m.in. dla celów podatku dochodowego). Potwierdza to oficjalna strona lodz.stat.gov.pl oraz ksiegowosc.infor.pl. Jednostka obsługuje zarówno PKWiU, jak i CN/PKOB — nie jest ograniczona wyłącznie do CN. Draft jest poprawny.",
+        "verifier_confidence_v3": 0.97,
+        "source_url_v3": "https://lodz.stat.gov.pl/osrodki/osrodek-klasyfikacji-i-nomenklatur-urzedu-statystycznego-w-lodzi/",
+        "source_quote_v3": "określenie klasyfikacji PKWIU 2015 dla celów podatku dochodowego",
+        "verified_at_v3": "2026-04-18T15:23:06Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -240,7 +276,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "ui_label": "Nietypowy przypadek - sprawdź",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Znalezione źródła (ksiegowosc.infor.pl, podatki.biz) potwierdzają że działalność gastronomiczna w rozumieniu ustawy o ryczałcie obejmuje 'przygotowywanie posiłków oraz sprzedaż posiłków i towarów' (art. 4 ust. 1 pkt 2), co sugeruje że sama odsprzedaż bez przygotowania może być traktowana inaczej niż gastronomia — jednak żadne źródło z whitelisty nie rozstrzyga wprost czy odsprzedaż gotowych posiłków (bez transportu, bez przygotowania) to handel (3% lub inna stawka) czy usługa (8,5%) w kontekście ryczałtu PIT. Flaga wskazuje na realną lukę w drafcie, ale jej zasadność nie może być jednoznacznie potwierdzona ani obalona na podstawie dostępnych źródeł.",
+        "verifier_confidence_v3": 0.45,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:23:25Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 1
       },
       {
         "type": "edge_case_coverage",

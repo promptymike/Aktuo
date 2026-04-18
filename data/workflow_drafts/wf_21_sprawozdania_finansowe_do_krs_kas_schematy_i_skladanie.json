@@ -147,8 +147,17 @@
         "verified_at": "2026-04-17T23:40:59Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 45 ust. 1g UoR istnieje i jest aktywnie stosowany. Ustawa z 14.10.2021 r. o zmianie ustawy o rachunkowości wprost odwołuje się do 'struktury logicznej udostępnianej na podstawie art. 45 ust. 1g ustawy o rachunkowości', co potwierdza że przepis ten obowiązuje. Artykuł wszedł w życie 1.10.2018 r. i nie był uchylony — nowelizacja z 2021 r. jedynie dodała ust. 1ga, pozostawiając 1g bez zmian.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,4,42,42,6795,,,ustawa-z-dnia-14102021-r-o-zmianie-ustawy-o-rachunkowosci.html",
+        "source_quote_v3": "strukturze logicznej udostępnianej na podstawie art. 45 ust. 1g",
+        "verified_at_v3": "2026-04-18T15:14:15Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -173,8 +182,17 @@
         "verified_at": "2026-04-17T23:41:16Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła gofin.pl jednoznacznie potwierdzają, że spółka cywilna nie jest podatnikiem pdof i nie składa SF do KAS niezależnie od limitu obrotów — limit 2 mln euro decyduje wyłącznie o obowiązku prowadzenia ksiąg i sporządzenia SF, nie o miejscu złożenia. Gdy brak obowiązku badania SF, spółka cywilna 'nie przekazuje swojego sprawozdania finansowego nigdzie'. Draft w kroku 1 błędnie przypisuje spółkom cywilnym obowiązek składania SF do KAS, a flaga słusznie wskazuje brak wyjaśnienia tej kwestii w kontekście edge case o limicie obrotów.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.gofin.pl/rachunkowosc/ksiegi-rachunkowe/45745/przekazanie-sprawozdania-finansowego-i-innych-dokumentow-roznym-instytucjom",
+        "source_quote_v3": "nie przekazuje swojego sprawozdania finansowego nigdzie",
+        "verified_at_v3": "2026-04-18T15:14:33Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -187,8 +205,17 @@
         "verified_at": "2026-04-17T23:41:22Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wiele aktualnych źródeł z whitelisty (biznes.gov.pl, podatki.gov.pl, gofin.pl) jednoznacznie potwierdzają, że nazwa 'Repozytorium Dokumentów Finansowych' i akronim 'RDF' są aktualne i obowiązujące w 2026 r. Co więcej, gofin.pl informuje wprost, że od 23 lutego 2026 r. funkcjonuje 'nowe Repozytorium Dokumentów Finansowych (RDF)', a podatki.gov.pl z lutego 2026 r. używa sformułowania 'systemu RDF' w kontekście bieżących obowiązków sprawozdawczych. Draft jest poprawny.",
+        "verifier_confidence_v3": 0.98,
+        "source_url_v3": "https://gazetapodatkowa.gofin.pl/64/wazne-informacje/9650/nowy-system-rdf-ale-zasady-skladania-dokumentow-finansowych-do-krs-bez-zmian",
+        "source_quote_v3": "Od 23 lutego 2026 r. funkcjonuje nowe Repozytorium Dokumentów Finansowych",
+        "verified_at_v3": "2026-04-18T15:14:44Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -201,8 +228,17 @@
         "verified_at": "2026-04-17T23:41:31Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Źródła z whitelisty (biznes.gov.pl, gofin.pl, sgk.gofin.pl) jednoznacznie potwierdzają, że uchwała o zatwierdzeniu SF (i analogicznie uchwała o stosowaniu uproszczeń) NIE musi być sporządzona w postaci elektronicznej — dopuszczalne jest dołączenie jej skanu do zgłoszenia w KRS. Skan i podpis elektroniczny to dwa alternatywne warianty, a nie wymóg łączny. Draft opisuje to poprawnie jako 'podpisana elektronicznie lub skan podpisanego dokumentu', co jest zgodne z oficjalnym stanowiskiem Ministerstwa Sprawiedliwości i biznes.gov.pl. Flaga sugeruje brak wyjaśnienia tej alternatywy, ale sam draft już ją zawiera ('lub'), więc zarzut jest bezzasadny.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/ou643",
+        "source_quote_v3": "Nie musisz przygotowywać w postaci elektronicznej (możesz dołączyć skany)",
+        "verified_at_v3": "2026-04-18T15:14:56Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",

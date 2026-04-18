@@ -136,8 +136,17 @@
         "verified_at": "2026-04-18T12:23:37Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 140¹ KP (zapisywany jako art. 1401) istnieje w Kodeksie pracy i reguluje ruchomy rozkład czasu pracy — potwierdzają to zarówno przepisy.gofin.pl, jak i tekst ustawy zmieniającej KP z 12 lipca 2013 r. (sejm.gov.pl). Art. 140 KP to odrębny przepis dotyczący zadaniowego czasu pracy. Flaga błędnie zakwestionowała istnienie art. 140¹ KP.",
+        "verifier_confidence_v3": 0.98,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,3,9,9,212,355157,20230407,art-135-150-systemy-i-rozklady-czasu-pracy.html",
+        "source_quote_v3": "Art. 1401 § 1. Rozkład czasu pracy może przewidywać",
+        "verified_at_v3": "2026-04-18T15:19:59Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -183,8 +192,17 @@
         "verified_at": "2026-04-18T12:24:02Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Rozporządzenie MRPiPS z 10.12.2018 (Dz.U. 2018 poz. 2369) nadal obowiązuje, ale było wielokrotnie nowelizowane: w 2023 r. (Dz.U. 2023 poz. 471 i poz. 879), w 2024 r. (Dz.U. 2024 poz. 535 – tekst jednolity) oraz w 2025 r. (Dz.U. 2025 poz. 335), a nawet w 2026 r. (Dz.U. 2026 poz. 474). Draft powołuje się wyłącznie na pierwotne rozporządzenie z 2018 r. bez wskazania aktualnego tekstu jednolitego ani późniejszych zmian, co czyni flagę uzasadnioną – odesłanie do §6 rozporządzenia może nie uwzględniać zmian wprowadzonych nowelizacjami z 2023–2026.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,2,18,34,5070,,20230321,rozporzadzenie-ministra-rodziny-pracy-i-polityki-spolecznej.html",
+        "source_quote_v3": "Dz. U. z 2026 r. poz. 474",
+        "verified_at_v3": "2026-04-18T15:20:11Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -196,8 +214,17 @@
         "verified_at": "2026-04-18T12:24:08Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 151 § 5 KP jednoznacznie dotyczy WYŁĄCZNIE pracowników zatrudnionych w niepełnym wymiarze czasu pracy. Dla pracowników pełnoetatowych w systemie równoważnym nadgodziny dobowe powstają z mocy prawa po przekroczeniu przedłużonego wymiaru dobowego (np. ponad 10h przy zaplanowanych 10h) — brak analogicznego wymogu umownego. Draft poprawnie ogranicza step 5 warunkiem 'if pracownik jest zatrudniony na niepełny etat', co jest zgodne z brzmieniem przepisu i praktyką.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,3,9,9,212,398511,20250201,art-151-1516-praca-w-godzinach-nadliczbowych.html",
+        "source_quote_v3": "Strony ustalają w umowie o pracę dopuszczalną liczbę godzin",
+        "verified_at_v3": "2026-04-18T15:20:23Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -222,7 +249,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Wyniki z whitelisty (gofin.pl) potwierdzają istnienie modułu 'Kadry i Płace' w Comarch Optima oraz wzmiankują enova365 jako istniejący system ERP z funkcjami kadrowymi. Jednak żadne ze źródeł z whitelisty nie weryfikuje szczegółowych nazw modułów dla Symfonii ani nie potwierdza aktualności nazewnictwa na 2026 r. Flaga dotyczy ryzyka halucynacji co do konkretnych nazw modułów — istnienie samych systemów jest potwierdzone, ale precyzja nazw (np. 'Comarch Optima Kadry i Płace Plus', 'enova365 Kadry Płace') nie może być rozstrzygnięta wyłącznie na podstawie dostępnych źródeł z whitelisty.",
+        "verifier_confidence_v3": 0.62,
+        "source_url_v3": "https://forum.gofin.pl/1072190/archiwum/comarch-optima-dla-biur-rachunkowych-inne",
+        "source_quote_v3": "moduły Księga Podatkowa, Płace i Kadry oraz Środki Trwałe",
+        "verified_at_v3": "2026-04-18T15:20:35Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 2,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",

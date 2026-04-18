@@ -153,8 +153,17 @@
         "verified_at": "2026-04-18T12:08:49Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Tekst jednolity ustawy zasiłkowej z Dz. U. z 2025 r. poz. 501 (ISAP, obwieszczenie z 24.03.2025) potwierdza, że art. 36, 40, 43 i 45 brzmią dokładnie tak jak opisuje draft. Nowelizacja z 2026 r. (Dz. U. poz. 26) widoczna w gofin.pl dotyczy innych rozdziałów ustawy, nie rozdziału 8 (art. 36–47). Artykuły przywołane w drafcie są aktualne i niezmienione w 2025–2026.",
+        "verifier_confidence_v3": 0.87,
+        "source_url_v3": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20250000501/T/D20250501L.pdf",
+        "source_quote_v3": "przerwa była krótsza niż miesiąc kalendarzowy",
+        "verified_at_v3": "2026-04-18T15:03:00Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -166,8 +175,17 @@
         "verified_at": "2026-04-18T12:08:56Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 38 ust. 2 ustawy zasiłkowej (potwierdzony przez przepisy.gofin.pl i zus.pl) przewiduje dwa odrębne mechanizmy: wyłączenie miesiąca gdy przepracowano MNIEJ niż połowę czasu pracy (krok 3 drafta) oraz uzupełnienie wynagrodzenia gdy przepracowano CO NAJMNIEJ połowę (krok 4 drafta). To nie jest sprzeczność — to dwa różne przypadki z pkt 1 i pkt 2 tego samego przepisu, opisane w osobnych krokach z właściwymi warunkami. Flaga błędnie interpretuje podział na dwa kroki jako niespójność.",
+        "verifier_confidence_v3": 0.93,
+        "source_url_v3": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-wyrownawczy/podstawa-wymiaru",
+        "source_quote_v3": "wyłącza się wynagrodzenie za miesiące... przyjmuje się - po uzupełnieniu",
+        "verified_at_v3": "2026-04-18T15:03:17Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -180,8 +198,17 @@
         "verified_at": "2026-04-18T12:09:04Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Flaga dotyczy braku instrukcji dla systemów Enova, Teta, Sage w kroku 3. Jednak procedura opisana w drafcie jest procedurą prawno-merytoryczną (art. 36–43 ustawy zasiłkowej) — niezależną od konkretnego oprogramowania kadrowego. Żadne ze źródeł z whitelisty (ZUS, gofin.pl, ksiegowosc.infor.pl) nie wskazuje, że procedura ustalania podstawy wymiaru zasiłku wymaga odrębnych instrukcji per system IT. Wzmianka o Comarch Optima i Symfonii to jedynie przykłady implementacji, a nie element merytoryczny procedury. Draft nie jest błędny — jest to kwestia zakresu dokumentu (workflow merytoryczny vs. instrukcja obsługi oprogramowania), a nie brakującej informacji krytycznej prawnie.",
+        "verifier_confidence_v3": 0.85,
+        "source_url_v3": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-chorobowy/podstawa-wymiaru/dla-pracownikow",
+        "source_quote_v3": "podstawę wymiaru zasiłku stanowi przeciętne miesięczne wynagrodzenie",
+        "verified_at_v3": "2026-04-18T15:03:31Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",

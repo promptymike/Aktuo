@@ -157,8 +157,17 @@
         "verified_at": "2026-04-18T12:21:18Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Flaga sugeruje sprzeczność między krokiem 2 ('PRZED pierwszym księgowaniem 2026') a krokiem 5 (różnice przejściowe na przełomie roku). Jednak z praktyki JPK_KR_PD wynika, że znaczniki są przypisywane do kont w planie kont (jako etykiety kont), a nie do poszczególnych zapisów. Konta pozabilansowe dla różnic przejściowych (np. PD_PB) muszą istnieć w planie kont zanim zostaną użyte — co jest spójne z zaleceniem kroku 2. Krok 5 nie mówi, że znaczniki są dodawane 'w trakcie roku dla przyszłych pozycji', lecz że konta z odpowiednimi znacznikami są stosowane gdy wystąpią różnice przejściowe. Nie ma tu logicznej sprzeczności — oba kroki są komplementarne: znaczniki nadaje się przed pierwszym użyciem konta, a konta pozabilansowe dla różnic przejściowych zakłada się z wyprzedzeniem (przed pierwszym księgowaniem lub gdy pojawi się potrzeba). Źródło gofin.pl potwierdza, że 'znaczniki nie stanowią planu kont same w sobie — są to dodatkowe etykiety, którymi należy oznaczyć konta księgowe', co oznacza że logika kroku 2 i kroku 5 jest spójna.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.gofin.pl/rachunkowosc/17,2,85,253557,system-znacznikow-kont-dla-jpkkrpd-a-organizacja-ksiag.html",
+        "source_quote_v3": "znaczniki nie stanowią planu kont same w sobie",
+        "verified_at_v3": "2026-04-18T15:17:09Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -170,8 +179,17 @@
         "verified_at": "2026-04-18T12:21:23Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Oficjalne wyjaśnienia MF (opublikowane na sgk.gofin.pl) wprost adresują scenariusz migracji systemu FK w trakcie roku podatkowego: plik JPK_KR_PD musi obejmować całość zapisów za cały rok i odzwierciedlać prowadzone księgi za raportowany okres — co oznacza, że kwestia przeniesienia danych/znaczników przy zmianie systemu jest realnym, nietrywialnym problemem wymagającym wyjaśnienia. Draft nie porusza tego zagadnienia, mimo że MF uznało je za na tyle istotne, by odpowiedzieć na nie w oficjalnych Q&A. Flaga jest zatem uzasadniona — brak tej informacji w drafcie stanowi lukę w krytycznych wskazówkach.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://sgk.gofin.pl/wyjasnienia-resortowe,pokaz,26584,pytania-i-odpowiedzi-merytoryczne-min-fin-dotyczace-raport.html",
+        "source_quote_v3": "zawartość przekazywanego pliku JPK_KR_PD musi być zgodna z treścią prowadzonych",
+        "verified_at_v3": "2026-04-18T15:17:24Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -184,8 +202,17 @@
         "verified_at": "2026-04-18T12:21:30Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Rozporządzenie MF z dnia 16 sierpnia 2024 r. w sprawie dodatkowych danych, o które należy uzupełnić prowadzone księgi rachunkowe, zostało potwierdzone przez wiele wiarygodnych źródeł z whitelisty. Opublikowano je w Dz.U. z 2024 r. pod poz. 1314 (isap.sejm.gov.pl, gofin.pl, ksiegowosc.infor.pl). Tytuł i data w drafcie są prawidłowe — flaga hallucination_risk jest bezzasadna.",
+        "verifier_confidence_v3": 0.98,
+        "source_url_v3": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20240001314",
+        "source_quote_v3": "Rozporządzenie Ministra Finansów z dnia 16 sierpnia 2024 r.",
+        "verified_at_v3": "2026-04-18T15:17:36Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -212,8 +239,17 @@
         "verified_at": "2026-04-18T12:21:46Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródło MF (gofin.pl/wyjaśnienia resortowe) potwierdza, że jednostki stosujące MSSF miały w 2025 r. zwolnienie z oznaczania kont (pola S_12_1–S_12_3 fakultatywne), ale od 2026 r. zwolnienie wygasa i obowiązek pełnego znakowania wchodzi w życie. Brak jest jednak jakichkolwiek oficjalnych wytycznych MF dotyczących konkretnej procedury mapowania kont MSSF na słownik znaczników JPK_KR_PD — co potwierdza, że jest to obszar o niepewnej praktyce. Draft ogranicza się do ogólnego zalecenia 'zapytaj KIS', nie podając kroków alternatywnych (np. eskalacja do helpdesk MF: jpkPD.helpdesk@mf.gov.pl, dokumentowanie stanowiska własnego, stosowanie znacznika INNE dla kont bez jednoznacznego mapowania). Flaga jest zatem zasadna — edge case jest realny i procedura operacyjna jest niekompletna.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "https://sgk.gofin.pl/wyjasnienia-resortowe,pokaz,26584,pytania-i-odpowiedzi-merytoryczne-min-fin-dotyczace-raport.html",
+        "source_quote_v3": "zwolnienie obejmuje za 2025 r. wyłącznie podatników stosujących MSSF",
+        "verified_at_v3": "2026-04-18T15:18:25Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -225,8 +261,17 @@
         "verified_at": "2026-04-18T12:21:51Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Przepisy JPK_KR_PD (rozporządzenie MF z 16.08.2024) nie wprowadzają odrębnych reguł dla kont rozrachunkowych z zagranicą (np. 201 dostawcy zagraniczni) — zasady znakowania są jednolite dla wszystkich kont rozrachunkowych niezależnie od kraju kontrahenta. Konta bilansowe (rozrachunkowe) otrzymują znaczniki bilansowe (aktywa/pasywa), a nie znaczniki KUP/NKUP — te ostatnie dotyczą wyłącznie kont wynikowych (kosztowych/przychodowych). Jedyna specyfika dla zagranicy to pole NIP kontrahenta, gdzie 'numer identyfikacji podatkowej kontrahenta należy wskazać, o ile został nadany' — co jest naturalną obsługą braku polskiego NIP u zagranicznego dostawcy. Draft w step 4 poprawnie opisuje ogólne zasady znakowania kont rozrachunkowych (dwa znaczniki bilansowe dla kont aktywno-pasywnych), co jest zgodne ze znalezionymi źródłami. Flaga wskazuje na brak informacji, która w świetle przepisów nie istnieje jako odrębna kategoria — brak specjalnych reguł dla transakcji zagranicznych w kontekście znaczników JPK_KR_PD nie jest luką draftu.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/rachunkowosc/ksiegi-rachunkowe/6539023,zmiany-w-rachunkowosci-od-2025-roku-oprocz-jpk-kr-ksiegi-rachunkowe-bedzie-jpk-st-srodki-trwale.html",
+        "source_quote_v3": "Numer identyfikacji podatkowej kontrahenta należy wskazać, o ile został nadany",
+        "verified_at_v3": "2026-04-18T15:18:39Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",

@@ -140,8 +140,17 @@
         "verified_at": "2026-04-18T12:11:29Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalna strona ZUS (zus.pl) wprost potwierdza, że limit 33/14 dni wynagrodzenia chorobowego jest liczony łącznie u wszystkich pracodawców w roku kalendarzowym — co jest zgodne z treścią drafta. Zasada ta wynika bezpośrednio z art. 92 § 1 k.p. i jest aktualnie stosowana. Uchwała SN III UZP 5/12 pełni rolę pomocniczego uzasadnienia doktrynalnego, ale sama reguła jest zakotwiczona w ustawie i potwierdzona przez ZUS — brak sygnałów o zmianie linii orzeczniczej.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-chorobowy/z-ubezpieczenia-chorobowego/prawo-do-zasilku-i-okres-przyslugiwania",
+        "source_quote_v3": "jeżeli w danym roku byłeś zatrudniony u więcej niż jednego",
+        "verified_at_v3": "2026-04-18T15:04:46Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -175,8 +184,17 @@
         "verified_at": "2026-04-18T12:11:48Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Zmiana art. 9 ust. 2 ustawy zasiłkowej od 1.01.2022 r. (ustawa z 24.06.2021 r., Dz.U. poz. 1621) jest potwierdzona przez ZUS (zus.pl) i gofin.pl: od tej daty do okresu zasiłkowego wlicza się poprzednie niezdolności do pracy niezależnie od przyczyny/rodzaju schorzenia, jeśli przerwa ≤ 60 dni. Draft w step 3 poprawnie opisuje tę zmianę legislacyjną — nie jest to interpretacja, lecz wprost znowelizowany przepis. Flaga step_contradiction jest bezzasadna.",
+        "verifier_confidence_v3": 0.97,
+        "source_url_v3": "https://www.zus.pl/en/-/zmiany-w-zasilkach-od-2022-roku",
+        "source_quote_v3": "Od nowego roku nie będzie miała znaczenia przyczyna niezdolności",
+        "verified_at_v3": "2026-04-18T15:04:58Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -189,8 +207,17 @@
         "verified_at": "2026-04-18T12:11:56Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Formularz ZAS-12 według oficjalnej strony ZUS (zus.pl) to 'Zaświadczenie płatnika składek - dotyczy: ustalenia prawa do zasiłku chorobowego lub opiekuńczego za dalszy okres' — służy więc do przekazania ZUS informacji przy ubieganiu się o zasiłek chorobowy/opiekuńczy za dalszy okres, a NIE do zapytania ZUS o liczbę dni wynagrodzenia chorobowego wypłaconych przez poprzednich pracodawców. Draft błędnie opisuje przeznaczenie formularza ZAS-12.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://www.zus.pl/pl/wzory-formularzy/zasilki/zasilek-chorobowy/-/publisher/details/1/zaswiadczenie-zas-12/ZAS_12",
+        "source_quote_v3": "ustalenia prawa do zasiłku chorobowego lub opiekuńczego za dalszy okres",
+        "verified_at_v3": "2026-04-18T15:05:07Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -224,8 +251,17 @@
         "verified_at": "2026-04-18T12:12:12Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Aktualny tekst art. 43 ustawy zasiłkowej (przepisy.gofin.pl, stan na 2025 r.) brzmi: podstawy wymiaru nie ustala się na nowo, jeśli przerwa była krótsza niż 3 miesiące kalendarzowe. Draft podaje próg '1 miesiąc kalendarzowy', co odpowiada starszemu brzmieniu przepisu sprzed nowelizacji — jest to błąd merytoryczny potwierdzający zasadność flagi outdated_data_risk.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,6,50,50,381,16568,20090701,art-43-ustawa-z-dnia-25061999-r-o-swiadczeniach-pienieznych-z.html",
+        "source_quote_v3": "przerwa była krótsza niż 3 miesiące kalendarzowe",
+        "verified_at_v3": "2026-04-18T15:05:24Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -238,8 +274,17 @@
         "verified_at": "2026-04-18T12:12:21Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 92 § 2 k.p. wprost stanowi, że wynagrodzenie chorobowe 'oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego' (tj. ustawa zasiłkowa, przeciętne wynagrodzenie z 12 miesięcy). Draft w step 7 odsyła do art. 43 ustawy zasiłkowej (brak przeliczenia przy przerwie < 1 miesiąca), co jest poprawną regułą szczegółową. Brak osobnego wyjaśnienia okresu 12 miesięcy w step 7 nie jest błędem krytycznym — ustawa wprost odsyła do tych samych zasad co zasiłek, a draft nie twierdzi nic sprzecznego. Flaga wskazuje na brak informacji, ale draft nie jest błędny — jest jedynie skrótowy, co przy medium severity nie uzasadnia potwierdzenia flagi jako realnego problemu.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisyno,212,92303,0,0,20090101,3,0.html",
+        "source_quote_v3": "oblicza się według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku",
+        "verified_at_v3": "2026-04-18T15:05:37Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -267,7 +312,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "ui_label": "Możliwe brakujące informacje",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Wyniki z zus.pl potwierdzają istnienie formularza ZAS-12 i procedury jego składania, jednak żadne ze znalezionych źródeł z whitelisty nie zawiera informacji o ustawowym lub praktycznym czasie odpowiedzi ZUS na wniosek ZAS-12 ani o procedurze postępowania pracodawcy w przypadku braku odpowiedzi przed terminem wypłaty wynagrodzenia chorobowego. Flaga wskazuje na brakującą informację praktyczną (czas odpowiedzi ZUS, fallback przy braku odpowiedzi), której nie można potwierdzić ani obalić na podstawie dostępnych źródeł z whitelisty.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:05:48Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -294,8 +348,17 @@
         "verified_at": "2026-04-18T12:12:56Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła (biznes.gov.pl, gofin.pl, podatki.biz) potwierdzają, że świadectwo pracy zawiera informację o liczbie dni wynagrodzenia chorobowego w roku ustania zatrudnienia (art. 92 KP), a nowy pracodawca musi tę informację uwzględnić przy ustalaniu limitu 33/14 dni. Draft w step 5 wspomina o sprawdzeniu świadectwa pracy, ale nie zawiera żadnej procedury postępowania w sytuacji, gdy pracownik nie dostarczy świadectwa w terminie — brakuje wskazówki, czy pracodawca powinien wypłacić pełny limit 33/14 dni (zakładając brak wcześniejszego wynagrodzenia chorobowego) czy wstrzymać wypłatę. Jest to realny gap proceduralny, potwierdzony przez biznes.gov.pl: 'Informacje o liczbie dni wypłacania wynagrodzenia chorobowego w danym roku należy umieścić w świadectwie pracy pracownika' — co implikuje obowiązek weryfikacji, ale przepisy nie regulują wprost co zrobić przy braku dokumentu.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/00137",
+        "source_quote_v3": "Informacje o liczbie dni wypłacania wynagrodzenia chorobowego",
+        "verified_at_v3": "2026-04-18T15:06:00Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       }
     ]
   },

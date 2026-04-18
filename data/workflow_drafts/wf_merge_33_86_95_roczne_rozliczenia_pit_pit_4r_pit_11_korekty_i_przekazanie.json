@@ -184,8 +184,17 @@
         "verified_at": "2026-04-18T12:50:50Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z ksiegowosc.infor.pl (interpretacje KIS) jednoznacznie wskazują, że elektroniczne przekazanie PIT-11 pracownikowi wymaga pliku w formacie nieedytowalnym (PDF) podpisanego kwalifikowanym podpisem elektronicznym — wariant 'PDF z UPO' opisany w drafcie nie jest równoprawną alternatywą dla podpisu kwalifikowanego przy przekazaniu pracownikowi (UPO dotyczy potwierdzenia złożenia do US, nie podpisu na dokumencie dla pracownika). Draft myli dwa odrębne wymogi: podpis kwalifikowany na dokumencie dla pracownika vs. UPO jako dowód złożenia do urzędu. Brakuje też informacji o wymaganiu nieedytowalności pliku i zabezpieczeniu platformy (login/hasło), co potwierdza zasadność flagi missing_critical_info.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/5203571,Jak-dostarczyc-pracownikowi-PIT11.html",
+        "source_quote_v3": "w pliku PDF podpisanego kwalifikowanym podpisem elektronicznym",
+        "verified_at_v3": "2026-04-18T14:57:59Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",

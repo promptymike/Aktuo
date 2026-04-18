@@ -141,8 +141,17 @@
         "verified_at": "2026-04-18T12:48:00Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Oficjalne źródło podatki.gov.pl (ksef.podatki.gov.pl) potwierdza, że wszystkie daty graniczne wymienione w drafcie są faktycznie obowiązującymi datami: KSeF 2.0 w wersji produkcyjnej został udostępniony 1.02.2026, przerwa techniczna między 26 a 31.01.2026 jest potwierdzona przez gofin.pl, data 1.01.2027 dla najmniejszych podmiotów jest potwierdzona przez podatki.gov.pl i gofin.pl. Draft jest aktualny i zgodny z obowiązującym stanem prawnym na dzień 18.04.2026.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/podstawy-prawne-oraz-kluczowe-terminy/",
+        "source_quote_v3": "KSeF w wersji produkcyjnej 2.0 został udostępniony 1 lutego 2026",
+        "verified_at_v3": "2026-04-18T14:57:31Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",

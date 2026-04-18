@@ -158,8 +158,17 @@
         "verified_at": "2026-04-18T12:16:08Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Gofin.pl (powołując stanowisko MRPiPS z 7.02.2019 r.) jednoznacznie potwierdza, że zbiorcze listy obecności nie są częścią dokumentacji pracowniczej i przechowuje się je max 3 lata, natomiast karty wynagrodzeń podlegają 50/10-letniemu obowiązkowi z art. 125a ustawy emerytalnej. Rozróżnienie w drafcie jest merytorycznie poprawne i ma podstawę prawną — flaga jest false positive.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://poznajprodukty.gofin.pl/czytaj-online/uipp/305851",
+        "source_quote_v3": "listy obecności mogą być przechowywane najdłużej przez okres trzech lat",
+        "verified_at_v3": "2026-04-18T15:10:17Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -172,8 +181,17 @@
         "verified_at": "2026-04-18T12:16:16Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła ZUS i podatki.biz jednoznacznie potwierdzają, że reguły 10/50 lat dotyczą zarówno pracowników, jak i zleceniobiorców (ustawa z 10.01.2018). Draft skupia się wyłącznie na stosunku pracy (KP) i nie wspomina o zleceniobiorcach, co stanowi realną lukę informacyjną. Umowa o dzieło jest odrębnym przypadkiem (nie podlega tym samym przepisom ZUS), co draft również pomija.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.zus.pl/en/firmy/przedsiebiorco-przeczytaj-wazne/e-akta",
+        "source_quote_v3": "akta pracownicze jako pracodawca czy zleceniodawca będziesz przechowywał 10 lat",
+        "verified_at_v3": "2026-04-18T15:10:27Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -199,7 +217,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z 12 zaufanych źródeł whitelisty nie zawiera oficjalnej dokumentacji technicznej Comarch Optima, Symfonii Kadry ani Enova365 z 2026 r. potwierdzającej lub obalającej konkretne ścieżki menu opisane w drafcie. Wyniki z forum.gofin.pl potwierdzają istnienie modułu 'Kadry i Płace' w Comarch Optima i pojęcia 'kartoteka pracownika', ale nie weryfikują dokładnej ścieżki 'status Archiwalny'. Flaga dotyczy ryzyka nieaktualności ścieżek menu w oprogramowaniu komercyjnym — co jest z natury niemożliwe do zweryfikowania przez zaufane źródła prawno-podatkowe z whitelisty.",
+        "verifier_confidence_v3": 0.55,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:10:38Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -227,7 +254,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "ui_label": "Nietypowy przypadek - sprawdź",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z przeszukanych źródeł z whitelisty nie odnosi się wprost do kwestii mocy prawnej kopii badań lekarskich i szkoleń BHP wpiętych do nowych akt osobowych przy ponownym zatrudnieniu (scenariusz różnych okresów przechowywania). Rozporządzenie MRPiPS z 10.12.2018 r. reguluje strukturę akt i zasady przechowywania, ale nie rozstrzyga expressis verbis, czy kopia dokumentu z poprzednich akt ma taką samą moc dowodową co oryginał wobec PIP/ZUS. Kwestia ta pozostaje nierozstrzygnięta w dostępnych źródłach z whitelisty.",
+        "verifier_confidence_v3": 0.35,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:10:52Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 2
       },
       {
         "type": "edge_case_coverage",
@@ -253,7 +289,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "ui_label": "Możliwe brakujące informacje",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne ze znalezionych źródeł z whitelisty nie odnosi się wprost do odrębnych zasad przechowywania akt osobowych pracowników zatrudnionych na podstawie umów międzynarodowych lub delegowanych z zagranicy. Przepisy art. 94 pkt 9b KP oraz ustawa z 10.01.2018 r. posługują się ogólnym pojęciem 'pracownika' bez wyłączeń dla umów międzynarodowych. Brak jest jednak w dostępnych źródłach jednoznacznego potwierdzenia, że reguły 10/50 lat stosuje się identycznie do pracowników delegowanych z zagranicy (np. objętych prawem obcym lub umowami dwustronnymi), co oznacza, że flaga wskazuje na lukę, której nie można rozstrzygnąć na podstawie dostępnych źródeł z whitelisty.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "https://www.zus.pl/en/firmy/przedsiebiorco-przeczytaj-wazne/e-akta",
+        "source_quote_v3": "dla wszystkich nowo zatrudnianych osób akta pracownicze",
+        "verified_at_v3": "2026-04-18T15:11:05Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",

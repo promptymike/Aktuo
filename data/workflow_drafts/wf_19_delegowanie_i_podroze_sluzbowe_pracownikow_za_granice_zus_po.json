@@ -272,8 +272,17 @@
         "verified_at": "2026-04-18T12:17:27Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Stawki diet zagranicznych z rozporządzenia MPiPS z 2013 r. nie są aktualizowane co roku — ostatnia zmiana to Dz.U. 2023 poz. 2190 i te stawki obowiązują nadal w 2026 r. Gofin.pl w artykule z 9.04.2026 r. potwierdza stawkę dla Holandii 50 EUR (zgodnie z draftem), bez żadnej wzmianki o nowelizacji. Flaga błędnie zakłada coroczną aktualizację stawek zagranicznych.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.gofin.pl/pit/dochody-zagraniczne/45388/odliczenie-od-zagranicznego-przychodu-30-diety",
+        "source_quote_v3": "Dieta za dobę podróży służbowej w Holandii wynosi 50 euro.",
+        "verified_at_v3": "2026-04-18T15:11:23Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -286,8 +295,17 @@
         "verified_at": "2026-04-18T12:17:36Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 21 ust. 1 pkt 16 (podróż służbowa, diety do limitu) i pkt 20 (oddelegowanie, 30% diety zagranicznej) to dwa odrębne, wzajemnie wykluczające się zwolnienia — art. 21 ust. 15 pkt 1 wprost wyłącza stosowanie pkt 20 do pracownika odbywającego podróż służbową. Draft prawidłowo przypisuje pkt 16 do kroku 4 (podróż służbowa) i pkt 20 do kroku 5/6 (oddelegowanie), więc nie ma sprzeczności ani ryzyka sumowania — to dwa alternatywne reżimy dla różnych stanów faktycznych.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/733882,Oddelegowanie-pracownicze-kiedy-podroz-sluzbowa-a-kiedy-oddelegowanie.html",
+        "source_quote_v3": "możliwość pomniejszenia kwoty przychodów o kwotę 30% diety",
+        "verified_at_v3": "2026-04-18T15:11:42Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -321,8 +339,17 @@
         "verified_at": "2026-04-18T12:17:54Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Draft poprawnie rozdziela dwa odrębne reżimy: §2 pkt 15 rozp. składkowego (podróż służbowa – diety zwolnione z ZUS do limitu, krok 4) i §2 pkt 16 (oddelegowanie – odliczenie równowartości diety od podstawy ZUS, krok 5). Krok 5 zawiera wyraźny warunek 'jeżeli to delegowanie (nie podróż służbowa)', co eliminuje rzekomą sprzeczność z krokiem 4. Źródło gofin.pl i tekst rozporządzenia na przepisy.gofin.pl potwierdzają, że oba przepisy funkcjonują równolegle dla różnych sytuacji.",
+        "verifier_confidence_v3": 0.93,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,4,17,53,360,,,rozporzadzenie-ministra-pracy-i-polityki-socjalnej-z-dnia.html",
+        "source_quote_v3": "diety i inne należności z tytułu podróży służbowej pracownika",
+        "verified_at_v3": "2026-04-18T15:12:02Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -336,7 +363,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z 12 zaufanych polskich źródeł z whitelisty nie zawiera informacji o nazwie 'Meldeportal Mindestlohn' jako portalu do zgłaszania delegowania w Niemczech. Źródła potwierdzają jedynie, że A1 wystawia ZUS (nie Krankenkasse), co częściowo obala opis flagi, ale kwestia aktualności nazwy samego portalu niemieckiego pozostaje poza zasięgiem dostępnych źródeł. Weryfikacja wymagałaby sięgnięcia do źródeł spoza whitelisty (np. zoll.de).",
+        "verifier_confidence_v3": 0.35,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:12:18Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -350,7 +386,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z przeszukanych źródeł z whitelisty (ksiegowosc.infor.pl, zus.pl, biznes.gov.pl) nie zawiera skrótu 'HE1' jako dokumentu prawnego, komentarza ani podręcznika. Skrót ten nie istnieje w polskim systemie prawnym ani w praktyce kadrowo-podatkowej. Jednocześnie w dostarczonym fragmencie ANSWER_STEPS krok 5 nie zawiera jawnego odwołania do 'HE1', więc nie można potwierdzić ani obalić flagi na podstawie widocznego tekstu drafta — flaga może dotyczyć niewidocznej części dokumentu.",
+        "verifier_confidence_v3": 0.55,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:12:37Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -363,8 +408,17 @@
         "verified_at": "2026-04-18T12:18:21Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelisty (ksiegowosc.infor.pl, biznes.gov.pl, podatki.gov.pl) jednoznacznie potwierdzają, że rezydencja podatkowa w Polsce (i analogicznie w UE) zależy od faktycznego centrum interesów życiowych LUB pobytu powyżej 183 dni — nie od miejsca pracy wskazanego w umowie. Draft stwierdza 'miejsce pracy w umowie i rezydencja podatkowa decydują o rozliczeniu PIT, nie miejsce zamieszkania', co jest uproszczeniem: pracownik mieszkający na Litwie może być litewskim rezydentem podatkowym niezależnie od treści umowy, a reguła 183 dni dotyczy pobytu faktycznego w danym kraju, nie zapisu umownego. Flaga jest zatem uzasadniona.",
+        "verifier_confidence_v3": 0.85,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/4642630,Rezydencja-podatkowa-zagranicznego-pracownika-jak-ja-okreslic-jaki-ma-wplyw-na-wyplacane-wynagrodzenie.html",
+        "source_quote_v3": "centrum interesów życiowych, będzie ona potraktowana jako polski rezydent",
+        "verified_at_v3": "2026-04-18T15:12:52Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -391,8 +445,17 @@
         "verified_at": "2026-04-18T12:18:37Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "ZUS.pl wyraźnie wyodrębnia kategorię 'Pracujący poza UE, EOG lub Szwajcarią' jako osobną sekcję z odrębnymi zasadami (umowy dwustronne o zabezpieczeniu społecznym). Draft opisuje procedurę A1 wyłącznie dla UE/EOG/Szwajcarii (rozp. 883/2004), nie wspominając o odmiennej ścieżce dla krajów takich jak Wielka Brytania post-Brexit, gdzie stosuje się umowy bilateralne lub brak koordynacji — co stanowi realną lukę informacyjną dla użytkownika delegującego pracownika do UK.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.zus.pl/en/pracujacy/pracujacy-w-ue-eog-szwajcarii/opis-spraw",
+        "source_quote_v3": "Pracujący poza UE, EOG lub Szwajcarią",
+        "verified_at_v3": "2026-04-18T15:13:06Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -405,8 +468,17 @@
         "verified_at": "2026-04-18T12:18:46Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Oficjalny poradnik ZUS (sekcja 3.6) jednoznacznie stwierdza, że uchylenie A1 może skutkować wyłączeniem z polskiego systemu ZUS z okresem wstecznym oraz koniecznością zgłoszenia do systemu innego państwa i opłacenia tam składek. Draft w kroku 7 nie informuje o tym skutku, co stanowi brakującą informację krytyczną dla czytelnika workflow.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.zus.pl/documents/10182/167567/Jak+otrzyma%C4%87+za%C5%9Bwiadczenie+A1+2023.pdf/aa3cf785-cf27-79c3-d7b3-972b8a05662f?t=1694599893780",
+        "source_quote_v3": "wyłączeniem osoby z polskiego systemu zabezpieczenia społecznego z okresem wstecznym",
+        "verified_at_v3": "2026-04-18T15:13:50Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 1
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -419,8 +491,17 @@
         "verified_at": "2026-04-18T12:18:55Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Zarówno gofin.pl (styczeń 2026) jak i ksiegowosc.infor.pl jednoznacznie potwierdzają, że zwolnienie 30% diety zagranicznej dla pracownika przebywającego czasowo za granicą nadal funkcjonuje pod numeracją art. 21 ust. 1 pkt 20 ustawy o PIT. Przepis nie zmienił swojej numeracji — flaga o potencjalnej nieaktualności numeracji jest nieuzasadniona.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://www.gofin.pl/17,8,212,1542,odliczenie-od-zagranicznego-przychodu-30-diety.html",
+        "source_quote_v3": "art. 21 ust. 1 pkt 20 updof nie ma zastosowania",
+        "verified_at_v3": "2026-04-18T15:14:04Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",

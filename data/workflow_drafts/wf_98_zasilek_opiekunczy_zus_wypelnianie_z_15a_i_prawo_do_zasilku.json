@@ -116,8 +116,17 @@
         "verified_at": "2026-04-18T12:46:42Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Wyniki z gofin.pl (przepisy.gofin.pl) jednoznacznie potwierdzają istnienie art. 33 i art. 34 ustawy z dnia 25.06.1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa. Art. 33 reguluje limity dni zasiłku opiekuńczego (60 dni), a art. 34 dotyczy wyłączenia zasiłku przy obecności innego domownika (z wyjątkiem dziecka do 2 lat) — dokładnie tak jak opisuje draft. Ustawa jest jednoznacznie identyfikowalna jako ustawa z 25.06.1999 r. (Dz.U. z 2025 r. poz. 501 — aktualny tekst jednolity), więc brak pełnej referencji w polu 'legal_anchors' drafta jest uchybieniem formalnym, ale treść merytoryczna art. 33 i 34 powołanych w drafcie jest prawidłowa i odnosi się do właściwej, istniejącej ustawy.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,3,238,238,381,359940,20230201,art-32-35-zasilek-opiekunczy.html",
+        "source_quote_v3": "Art. 34. Zasiłek opiekuńczy nie przysługuje, jeżeli poza",
+        "verified_at_v3": "2026-04-18T14:57:08Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -130,8 +139,17 @@
         "verified_at": "2026-04-18T12:46:47Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Formularz ZAS-36 istnieje i jest aktualny — oficjalna strona ZUS (zus.pl) potwierdza jego istnienie jako 'Oświadczenie o sprawowaniu opieki nad dzieckiem w wieku do 8 lat', z ostatnią aktualizacją formularza datowaną na 1 stycznia 2025 r. Formularz jest dostępny na PUE ZUS jako usługa 'Złożenie dokumentu ZAS-36' i dotyczy dokładnie przypadku opisanego w drafcie — nieprzewidzianego zamknięcia żłobka/przedszkola/szkoły. Draft jest poprawny.",
+        "verifier_confidence_v3": 0.98,
+        "source_url_v3": "https://www.zus.pl/en/-/o%C5%9Bwiadczenie-zas-36",
+        "source_quote_v3": "Aktualizacja formularza: 1 stycznia 2025 r.",
+        "verified_at_v3": "2026-04-18T14:57:18Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",

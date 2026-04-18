@@ -174,8 +174,17 @@
         "verified_at": "2026-04-18T12:07:33Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Weryfikuję artykuł ustawy"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Rozporządzenie MPiPS z 8.01.1997 r. nadal obowiązuje (ostatnia zmiana 2009 r.), a §6–8 dotyczące podstawy urlopowej są aktualne i poprawne: §6 – katalog składników, §7 – składniki stałe miesięczne, §8 – składniki zmienne (3/12 miesięcy). Numery paragrafów nie uległy zmianie. Brak pełnej nazwy rozporządzenia w drafcie to kwestia stylistyczna, nie błąd merytoryczny.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://przepisy.gofin.pl/przepisy,4,18,37,321,,,rozporzadzenie-ministra-pracy-i-polityki-socjalnej-z-dnia.html",
+        "source_quote_v3": "§ 6 … § 7 … § 8 … wynagrodzenie",
+        "verified_at_v3": "2026-04-18T15:01:28Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",
@@ -189,7 +198,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "ui_label": "Sprawdź aktualność danych",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Wyniki z whitelisty (forum.gofin.pl) potwierdzają istnienie ścieżki konfiguracyjnej 'Konfiguracja → firma → płace → typy wypłat' w Comarch Optima, co jest spójne z opisem w drafcie. Jednak żadne ze znalezionych źródeł nie zawiera informacji o zmianach flag konfiguracyjnych w wersji 2026 ani o braku tych flag u niektórych użytkowników. Flaga dotyczy ryzyka dezaktualizacji opisu interfejsu oprogramowania komercyjnego — weryfikacja tego wymaga oficjalnej dokumentacji Comarch (spoza whitelisty), której 12 zaufanych domen nie obejmuje.",
+        "verifier_confidence_v3": 0.55,
+        "source_url_v3": "https://forum.gofin.pl/936703/archiwum/wspolczynnik-w-comarch-optima-gdzie-zmienic-inne",
+        "source_quote_v3": "Konfiguracja-> firma -> płace ->typy wypłat",
+        "verified_at_v3": "2026-04-18T15:01:39Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -202,8 +220,17 @@
         "verified_at": "2026-04-18T12:07:47Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Art. 41 ust. 1 ustawy zasiłkowej jednoznacznie stanowi, że składnik NIE wchodzi do podstawy, jeśli pracownik zachowuje do niego prawo w czasie zasiłku (nie jest pomniejszany). Logika kroków 2 i 5 drafta jest spójna z przepisem i praktyką (gofin.pl potwierdza: premia pomniejszana za absencję wchodzi do podstawy, niepomniejszana — nie wchodzi). Flaga opisuje jedynie potencjalną trudność redakcyjną (podwójna negacja), a nie rzeczywistą sprzeczność merytoryczną między krokami.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://podpowiada.gofin.pl/345/ubezpieczenia-i-swiadczenia/7027/komentarz-do-ustawy-zasilkowej-czesc-ii/310102",
+        "source_quote_v3": "Wysokość premii jest pomniejszana — premia podlega uwzględnieniu w podstawie",
+        "verified_at_v3": "2026-04-18T15:01:50Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -237,8 +264,17 @@
         "verified_at": "2026-04-18T12:08:05Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródło gofin.pl (grudzień 2025) potwierdza, że zmiana regulaminu wynagradzania od 1.01 powoduje, iż zlikwidowana premia regulaminowa nie jest uwzględniana w podstawie wymiaru świadczeń chorobowych — draft w kroku 8 jedynie nakazuje archiwizację regulaminu, ale nie wyjaśnia wprost mechanizmu: premie wypłacone przed zmianą (w 12 miesiącach poprzedzających) wchodzą do podstawy w kwotach faktycznie wypłaconych, a po zmianie zlikwidowana premia odpada. To jest informacja krytyczna dla pracownika zatrudnionego od 2025 r. z niezdolnością w 2026 r., której brakuje w drafcie.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://www.gofin.pl/skladki-zasilki-emerytury/17,1,110,253142,wplyw-zmiany-regulaminu-wynagradzania-na-podstawe-wymiaru.html",
+        "source_quote_v3": "pracodawca nie uwzględnił zlikwidowanej premii regulaminowej",
+        "verified_at_v3": "2026-04-18T15:02:16Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -287,8 +323,17 @@
         "verified_at": "2026-04-18T12:08:35Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Przepisy art. 38 ustawy zasiłkowej (potwierdzone przez zus.pl i ksiegowosc.infor.pl) jednoznacznie stanowią, że miesiąc, w którym pracownik przepracował mniej niż połowę obowiązującego czasu pracy, jest wyłączany z podstawy wymiaru — nie uzupełniany. Draft w kroku 3 opisuje wyłącznie mechanizm uzupełnienia, nie wyjaśniając, że miesiąc z L4 przez cały miesiąc (0 dni przepracowanych) jest wyłączany z podstawy, a nie uzupełniany do 'pełnej kwoty'. To realna luka informacyjna potwierdzająca flagę.",
+        "verifier_confidence_v3": 0.85,
+        "source_url_v3": "https://www.zus.pl/en/swiadczenia/zasilki/zasilek-chorobowy/podstawa-wymiaru/dla-pracownikow",
+        "source_quote_v3": "wyłącza się wynagrodzenie za miesiące, w których pracownik przepracował mniej",
+        "verified_at_v3": "2026-04-18T15:02:38Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       }
     ]
   },

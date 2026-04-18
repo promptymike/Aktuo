@@ -139,8 +139,17 @@
         "verified_at": "2026-04-18T12:22:28Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Ustawa z dnia 18 stycznia 1951 r. o dniach wolnych od pracy (isap.sejm.gov.pl) oraz potwierdzenie z ksiegowosc.infor.pl jednoznacznie wskazują, że 11 listopada – Narodowe Święto Niepodległości – jest stałym dniem ustawowo wolnym od pracy w Polsce. Status tego święta nie zmienił się i nie ma żadnych przesłanek wskazujących na zmianę. Draft poprawnie traktuje 11.11.2026 jako święto ustawowe obniżające wymiar czasu pracy.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/urzad-skarbowy/terminy-podatkowe/225265,Dzien-wolny-od-pracy-a-obliczenie-terminu-podatkowego.html",
+        "source_quote_v3": "11 listopada - Narodowe Święto Niepodległości",
+        "verified_at_v3": "2026-04-18T15:18:50Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -152,8 +161,17 @@
         "verified_at": "2026-04-18T12:22:33Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Źródła (gofin.pl, ksiegowosc.infor.pl, sejm.gov.pl) potwierdzają, że krok 1 i krok 3 opisują dwa odrębne, niesprzeczne mechanizmy: art. 130 §2 k.p. obniża wymiar arytmetycznie dla wszystkich pracowników (krok 1), natomiast fizyczny dzień wolny przysługuje wyłącznie pracownikom z wolną sobotą z tytułu 5-dniowego tygodnia (krok 3). Draft rozdziela te mechanizmy poprawnie — brak pomostu wyjaśniającego ich relację to co najwyżej luka redakcyjna, nie logiczna sprzeczność kroków.",
+        "verifier_confidence_v3": 0.82,
+        "source_url_v3": "https://ksiegowosc.infor.pl/zus-kadry/inne/5632327,dodatkowy-dzien-wolny-od-pracy-w-2025-r-za-swieto-wypadajace-w-sobote-lub-niedziele-kto-powinien-dostac.html",
+        "source_quote_v3": "pracownikom należy się dodatkowy dzień wolny tylko za święta wypadające",
+        "verified_at_v3": "2026-04-18T15:19:12Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -188,7 +206,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "ui_label": "Możliwe brakujące informacje",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Znalezione źródła (gofin.pl, ksiegowosc.infor.pl, podatki.biz) omawiają prawo do dnia wolnego za święto w sobotę dla pracowników zatrudnionych w całym okresie rozliczeniowym oraz dla pracowników nieobecnych (choroba, urlop). Żadne ze źródeł nie porusza wprost sytuacji pracownika zatrudnionego PRZED 1.11, ale zwolnionego PRZED wyznaczonym dniem odbioru (np. przed 10.11) — czyli czy taki pracownik nabywa prawo do odbioru lub ekwiwalentu. Flaga dotyczy luki w drafcie dotyczącej tej konkretnej sytuacji brzegowej, której żadne z przeszukanych źródeł z whitelisty nie rozstrzyga jednoznacznie.",
+        "verifier_confidence_v3": 0.35,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:19:23Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -202,7 +229,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "ui_label": "Wymaga weryfikacji źródła",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Wyniki z forum.gofin.pl potwierdzają istnienie funkcjonalności kalendarzy i dni wolnych w Comarch Optima (wynik 4: pytanie o oznaczenie dnia wolnego za święto jako 'W5') oraz w Symfonii Kadry (wynik 5: ścieżka 'wzorce dni → dni wolne → zamiana za święto'), co częściowo uwiarygodnia draft. Jednak żadne ze znalezionych źródeł z whitelisty nie potwierdza wprost, że symbol 'W' (wolny z rozkładu) jest standardowym, oficjalnym symbolem w Comarch Optima w 2026, ani nie weryfikuje dokładnej ścieżki nawigacji opisanej w drafcie. Flaga dotyczy precyzji technicznej (konkretny symbol i ścieżka), której nie można jednoznacznie potwierdzić ani obalić na podstawie dostępnych wyników.",
+        "verifier_confidence_v3": 0.35,
+        "source_url_v3": "https://forum.gofin.pl/1308587/archiwum/optima-dzien-wolny",
+        "source_quote_v3": "dzień wolny za święto 15-go / odbiór, jako W5",
+        "verified_at_v3": "2026-04-18T15:19:35Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -215,8 +251,17 @@
         "verified_at": "2026-04-18T12:23:10Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Źródła z whitelisty (ksiegowosc.infor.pl — wyjaśnienia PIP, gofin.pl — stanowisko MRPiPS z 19.07.2016) jednoznacznie potwierdzają, że gdy pracownik przebywa na L4 w dniu wyznaczonym jako wolny za święto w sobotę, pracodawca NIE ma obowiązku udzielania kolejnego dnia wolnego — dzień uznaje się za 'wykorzystany', bo pracownik nie świadczył pracy. Draft poprawnie stwierdza, że dzień wolny 'przepada'. Flaga zarzuca brak wyjaśnienia obowiązku dokumentowania i możliwości kwestionowania przez pracownika — jednak kwestia ta nie jest wymagana w kontekście edge case'u dotyczącego czasu pracy (nie ekwiwalentu urlopowego), a mechanizm 'przepadku' jest ugruntowany stanowiskiem PIP i MRPiPS, więc nie ma tu luki merytorycznej wymagającej korekty draftu.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://ksiegowosc.infor.pl/zus-kadry/urlopy/7491543,dodatkowy-dzien-wolny-za-swieto-wypadajace-w-sobote-w-2026-r-wyjasnienia-pip.html",
+        "source_quote_v3": "pracodawca nie ma obowiązku udzielania innego dnia wolnego",
+        "verified_at_v3": "2026-04-18T15:19:50Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",

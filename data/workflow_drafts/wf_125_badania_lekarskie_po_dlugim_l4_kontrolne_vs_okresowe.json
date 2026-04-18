@@ -188,7 +188,16 @@
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
         "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "ui_label": "Sprawdź aktualność danych",
+        "verdict_v3": "still_cannot_verify",
+        "verifier_reasoning_v3": "Żadne z 12 zaufanych źródeł whitelisty nie zawiera oficjalnej dokumentacji ścieżek menu Comarch Optima, Symfonia, WFirma ani Enova365 w wersji 2025/2026. Wyniki z forum.gofin.pl potwierdzają, że nazwy zakładek (np. 'Nieobecności', 'Badania lekarskie') są używane przez praktyków i wydają się stabilne, jednak żadne źródło z whitelisty nie weryfikuje aktualności konkretnych ścieżek menu wymienionych w drafcie. Flaga dotyczy ryzyka dezaktualizacji interfejsów oprogramowania komercyjnego — jest to ryzyko z natury niemożliwe do rozstrzygnięcia przez prawno-podatkowe źródła z whitelisty (eureka.mf.gov.pl, orzeczenia.nsa.gov.pl, stat.gov.pl nie zawierają takich informacji).",
+        "verifier_confidence_v3": 0.55,
+        "source_url_v3": "",
+        "source_quote_v3": "",
+        "verified_at_v3": "2026-04-18T15:00:17Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",
@@ -201,8 +210,17 @@
         "verified_at": "2026-04-18T12:06:27Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Niepewność w kolejności kroków"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z gofin.pl (forum praktyczne) wskazują, że dominującą praktyką jest wystawienie skierowania dopiero w dniu powrotu pracownika do pracy, a nie w trakcie trwania L4. Komentarz na forum.gofin.pl stwierdza wprost: 'nie powinnaś robić badań kontrolnych w trakcie trwania zwolnienia chorobowego' i 'najlepiej jakby skierowanie wystawił dopiero 11 lipca po twoim stawieniu się w pracy'. Draft w kroku 5 twierdzi, że skierowanie 'możesz wystawić jeszcze w trakcie trwania L4' — co jest sprzeczne z praktyką opisaną w źródłach i może prowadzić do błędów administracyjnych, co potwierdza zasadność flagi step_contradiction między krokiem 5 a krokami 3/4.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "https://forum.gofin.pl/1455761/archiwum/badania-kontrolne-po-l4-i-kolejne-zwolnienie-bez-powrotu-do",
+        "source_quote_v3": "skierowanie wystawił dopiero 11 lipca po twoim stawieniu się",
+        "verified_at_v3": "2026-04-18T15:00:30Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -215,8 +233,17 @@
         "verified_at": "2026-04-18T12:06:36Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródło biznes.gov.pl (whitelist) jednoznacznie potwierdza istnienie sankcji pracowniczych za niepoddanie się badaniom kontrolnym: nieobecność nieusprawiedliwiona uniemożliwiająca skierowanie na badanie oraz odmowa poddania się badaniu mogą skutkować rozwiązaniem umowy bez wypowiedzenia, a za czas niewykonywania pracy z winy pracownika (brak orzeczenia) nie przysługuje wynagrodzenie. Draft nie zawiera żadnej z tych informacji (ani zakazu dopuszczenia do pracy bez orzeczenia, ani utraty wynagrodzenia, ani możliwości rozwiązania umowy), co potwierdza, że flaga missing_critical_info jest uzasadniona — brakuje kluczowej procedury eskalacji i sankcji.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/00183",
+        "source_quote_v3": "niepoddanie się badaniu kontrolnemu może skutkować rozwiązaniem umowy",
+        "verified_at_v3": "2026-04-18T15:00:42Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -229,8 +256,17 @@
         "verified_at": "2026-04-18T12:06:43Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Rozporządzenie MRPiPS z 10.12.2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369) istnieje i jest potwierdzone przez isap.sejm.gov.pl oraz gofin.pl. § 3 tego rozporządzenia rzeczywiście reguluje podział i zawartość akt osobowych (części A–E), co wprost potwierdzają biznes.gov.pl i gofin.pl. Powołanie w drafcie jest merytorycznie prawidłowe; zastrzeżenie o nowelizacjach jest zasadne, ale nie czyni przepisu wymyślonym.",
+        "verifier_confidence_v3": 0.93,
+        "source_url_v3": "https://www.biznes.gov.pl/pl/portal/00101",
+        "source_quote_v3": "zakres dokumentów... opisany w § 3... Rozporządzenia MRPiPS z dnia",
+        "verified_at_v3": "2026-04-18T15:00:58Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -254,8 +290,17 @@
         "verified_at": "2026-04-18T12:06:55Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Draft w step 5 i step 6 wprost adresuje kwestię okresu między zakończeniem L4 a wykonaniem badań kontrolnych: wskazuje, że badanie wykonuje się po zakończeniu L4, a jeśli pracownik idzie na urlop bezpośrednio po L4 — badania wykonuje po powrocie z urlopu, przed faktycznym dopuszczeniem do pracy. Źródła z gofin.pl i biznes.gov.pl potwierdzają, że zakaz dotyczy dopuszczenia do ŚWIADCZENIA PRACY bez orzeczenia, a nie okresu oczekiwania na badania (urlop, czas organizacyjny). Flaga sugeruje brak tej informacji, ale draft ją zawiera — jest to false positive.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://www.gofin.pl/prawo-pracy/17,1,101,306191,skutki-braku-badan-okresowych-pracownika.html",
+        "source_quote_v3": "Badania te są niezbędne przed dopuszczeniem do wykonywania pracy",
+        "verified_at_v3": "2026-04-18T15:01:14Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "step_contradiction",

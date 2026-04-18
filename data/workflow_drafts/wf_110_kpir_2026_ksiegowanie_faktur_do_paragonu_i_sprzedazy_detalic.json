@@ -189,8 +189,17 @@
         "verified_at": "2026-04-18T12:04:55Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Sprawdź aktualność danych"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Rozporządzenie MF z 17.12.2024 r. (obowiązujące od 1.01.2025 r., obejmujące lata 2025–2027) utrzymało limit zwolnienia podmiotowego z obowiązku kasy fiskalnej na poziomie 20 000 zł — zarówno dla podatników kontynuujących, jak i rozpoczynających działalność. Flaga sugerowała zmianę limitu do 100 000 zł od 2024 r., co jest nieprawdą. Draft podaje kwotę 20 000 zł prawidłowo.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://www.podatki.biz/artykuly/kasy-fiskalne-2025-2027-co-zmienilo-sie-w-zwolnieniach_56_56368.htm",
+        "source_quote_v3": "Utrzymano na dotychczasowym poziomie kryterium wartości sprzedaży, tj. 20 tys.",
+        "verified_at_v3": "2026-04-18T14:58:09Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "hallucination_risk",
@@ -224,8 +233,17 @@
         "verified_at": "2026-04-18T12:05:10Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Oficjalny Podręcznik KSeF 2.0 MF (stan prawny 1.02.2026) potwierdza, że do końca 2026 r. faktury do sprzedaży zaewidencjonowanej na kasie fiskalnej mogą być wystawiane poza KSeF (art. 106gb ust. 4 + przepisy przejściowe). Obowiązek przekazania wizualizacji KSeF konsumentowi istnieje tylko gdy sprzedawca dobrowolnie wystawi fakturę w KSeF — nie ma bezwzględnego obowiązku wystawiania wizualizacji KSeF przy sprzedaży kasowej od 1.02.2026 r. Draft sugeruje taki obowiązek, co jest błędną interpretacją.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://ksef.podatki.gov.pl/media/3zidazbw/podrecznik-ksef-2-0-cz-ii-wystawianie-i-otrzymywane-faktur-w-ksef.pdf",
+        "source_quote_v3": "nabywcą jest osoba fizyczna nieprowadząca działalności",
+        "verified_at_v3": "2026-04-18T14:58:54Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 1
       },
       {
         "type": "step_contradiction",
@@ -250,8 +268,17 @@
         "verified_at": "2026-04-18T12:05:28Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z gofin.pl i ksiegowosc.infor.pl potwierdzają, że nowy wzór KPiR 2026 ma dwie odrębne kolumny: kolumna 3 wyłącznie dla numeru KSeF, a kolumna 4 dla numeru dowodu innego niż faktura KSeF (w tym faktur papierowych). Draft step 4 nie wyjaśnia tego rozróżnienia ani nie wskazuje, co wpisać w przypadku faktur wystawionych przed obowiązkiem KSeF lub przez podatników z odroczeniem do 2027 r. (sprzedaż poniżej 10 000 zł/mies.). Flaga jest słuszna — brakuje warunku dla faktur bez numeru KSeF.",
+        "verifier_confidence_v3": 0.92,
+        "source_url_v3": "https://gofin.pl/rachunkowosc/17,2,84,259168,ksiega-podatkowa-na-2026-r-wedlug-nowych-zasad.html",
+        "source_quote_v3": "Numer dowodu innego niż faktura wystawiona w KSeF",
+        "verified_at_v3": "2026-04-18T14:59:19Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "missing_critical_info",
@@ -264,8 +291,17 @@
         "verified_at": "2026-04-18T12:05:37Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Możliwe brakujące informacje"
+        "final_status": "confirmed",
+        "ui_label": null,
+        "verdict_v3": "confirmed",
+        "verifier_reasoning_v3": "Źródła z whitelisty (ksiegowosc.infor.pl, podatki.biz, gofin.pl) jednoznacznie potwierdzają, że draft w step 7 jest błędny w swojej tezie: przepisy NIE wymagają drukowania raportów zerowych — ani dobowych, ani miesięcznych — w okresach bez sprzedaży. Obowiązek sporządzania raportów fiskalnych jest uzależniony wyłącznie od wystąpienia sprzedaży podlegającej ewidencjonowaniu. Draft twierdzi, że 'przepisy wymagają drukowania raportów fiskalnych także w miesiącach bez sprzedaży, o ile kasa taką funkcję posiada' — co jest nieprecyzyjne i wprowadzające w błąd. Flaga missing_critical_info jest zatem uzasadniona: procedura w drafcie zawiera błędne założenie co do obowiązku drukowania raportów zerowych, a kwestia dokumentowania braku sprzedaży w systemach bez kasy fiskalnej pozostaje niewyjaśniona.",
+        "verifier_confidence_v3": 0.88,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/vat/kasy-fiskalne/717526,Brak-sprzedazy-podlegajacej-ewidencjonowaniu-na-kasie-fiskalnej-a-obowiazek-generowania-raportow-zerowych.html",
+        "source_quote_v3": "nie ma obowiązku sporządzania raportów fiskalnych miesięcznych, w miesiącach",
+        "verified_at_v3": "2026-04-18T14:59:33Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -278,8 +314,17 @@
         "verified_at": "2026-04-18T12:05:46Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Nietypowy przypadek - sprawdź"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Flaga zarzuca, że edge case o fakturze zaliczkowej jest jedynie teoretyczny i brakuje konkretnych kroków księgowania w systemach (Comarch, WFirma, Symfonia). Jednak charakter edge case'ów w drafcie jest z założenia opisowy/prawny — wskazują na ryzyko błędu i mechanizm (pomniejszenie RO, doksięgowanie przy fakturze końcowej), a nie na instrukcje obsługi konkretnych programów. Źródła z whitelisty (ksiegowosc.infor.pl) potwierdzają, że zasada pomniejszenia raportu dobowego o zaliczkę i doksięgowania przy fakturze końcowej jest prawidłowo opisana merytorycznie. Brak instrukcji systemowych (Comarch/WFirma) nie jest błędem draftu — to świadoma granica zakresu dokumentu prawno-księgowego, nie luka merytoryczna wymagająca flagi.",
+        "verifier_confidence_v3": 0.72,
+        "source_url_v3": "https://ksiegowosc.infor.pl/podatki/kpir/dowody-ksiegowe/232953,Faktura-zaliczkowa-a-ewidencja-w-kpir.html",
+        "source_quote_v3": "Ewidencji podlegają obroty z raportów dobowych pomniejszone o faktury",
+        "verified_at_v3": "2026-04-18T14:59:52Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "edge_case_coverage",
@@ -305,8 +350,17 @@
         "verified_at": "2026-04-18T12:05:59Z",
         "verified_by": "claude-sonnet-4-6",
         "kb_records_used": 3,
-        "final_status": "community_feedback_needed",
-        "ui_label": "Wymaga weryfikacji źródła"
+        "final_status": "false_positive",
+        "ui_label": null,
+        "verdict_v3": "false_positive",
+        "verifier_reasoning_v3": "Limit 75% minimalnego wynagrodzenia dla działalności nierejestrowanej (nieewidencjonowanej) jest realnym przepisem — wynika wprost z art. 5 ust. 1 ustawy Prawo przedsiębiorców (obowiązywał do 31.12.2025 r.). Potwierdzają to zarówno podatki.gov.pl (MF), biznes.gov.pl, jak i podatki.biz oraz ksiegowosc.infor.pl. Od 1.01.2026 r. limit zmienił się na 225% minimalnego wynagrodzenia kwartalnie, więc wzmianka o 75% w kontekście historycznym lub related_questions jest poprawna. Flaga jest bezzasadna — limit istnieje w przepisach i jest powszechnie potwierdzony.",
+        "verifier_confidence_v3": 0.95,
+        "source_url_v3": "https://www.podatki.gov.pl/poradniki-i-informatory/dzialalnosc-nierejestrowana/",
+        "source_quote_v3": "nie mógł przekroczyć 75% minimalnego wynagrodzenia za pracę",
+        "verified_at_v3": "2026-04-18T15:00:03Z",
+        "verified_by_v3": "claude-sonnet-4-6",
+        "web_searches_used_v3": 1,
+        "web_fetches_used_v3": 0
       },
       {
         "type": "outdated_data_risk",
