@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Porównaj wartość samochodu z obowiązującym limitem KUP",
-      "detail": "Limit 150 000 zł stosujesz dla umów zawartych do 31.12.2025 (samochody spalinowe/hybrydowe) oraz 225 000 zł dla elektryków. Od 1.01.2026 limit dla samochodów spalinowych emitujących >50g CO2/km spada do 100 000 zł (umowy zawarte od tej daty). Umowa podpisana i auto wydane do 31.12.2025 – zachowuje limit 150 000 zł na cały okres leasingu.",
+      "detail": "Limit 150 000 zł stosuje się dla umów leasingu operacyjnego zawartych do 31.12.2025 (samochody spalinowe/hybrydowe) oraz 225 000 zł dla elektryków. Od 1.01.2026 limit dla samochodów spalinowych emitujących >50g CO2/km spada do 100 000 zł. Uwaga: zgodnie z interpretacjami Dyrektora KIS nowy limit 100 000 zł od 1.01.2026 stosuje się do wszystkich umów leasingu operacyjnego, również zawartych przed tą datą – brak przepisu przejściowego chroniącego umowy leasingowe (przepis przejściowy z art. 30 ustawy zmieniającej z 2 grudnia 2021 r. dotyczy wyłącznie pojazdów wprowadzonych do ewidencji środków trwałych, nie leasingu operacyjnego).",
       "condition": "if wartość samochodu > obowiązujący limit"
     },
     {
@@ -37,7 +37,7 @@
     {
       "step": 5,
       "action": "Zaksięguj koszty eksploatacji odrębnie od rat leasingowych",
-      "detail": "Paliwo, naprawy, myjnia, części: przy użytku mieszanym – 75% w KUP i 50% VAT; przy VAT-26 – 100% KUP i 100% VAT. Ubezpieczenie OC/NNW/Assistance wyodrębnione na polisie – 100% KUP. AC/GAP – proporcja do limitu 150 000 zł liczona od wartości samochodu z polisy.",
+      "detail": "Paliwo, naprawy, myjnia, części: przy użytku mieszanym – 75% w KUP i 50% VAT; przy VAT-26 – 100% KUP i 100% VAT. Ubezpieczenie OC/NNW/Assistance wyodrębnione na polisie – 100% KUP. AC/GAP – proporcja do obowiązującego limitu KUP (150 000 zł dla spalinowych/hybrydowych przy umowach zawartych do 31.12.2025 / 225 000 zł dla elektryków / 100 000 zł dla spalinowych emitujących >50g CO2/km od 1.01.2026) liczona od wartości samochodu z polisy – analogicznie jak w kroku 2.",
       "condition": null
     },
     {
@@ -62,16 +62,21 @@
     {
       "law_name": "Ustawa o PIT",
       "article_number": "art. 23 ust. 1 pkt 47a oraz ust. 5c",
-      "reason": "Wprowadza limit 150 000 zł (225 000 zł dla elektryków) dla opłat leasingowych w części dotyczącej spłaty wartości samochodu osobowego oraz zasadę proporcjonalnego zaliczania do KUP."
+      "reason": "Wprowadza limit 150 000 zł (225 000 zł dla elektryków) dla opłat leasingowych w części dotyczącej spłaty wartości samochodu osobowego oraz zasadę proporcjonalnego zaliczania do KUP. Art. 23 ust. 5c reguluje wyłącznie mechanizm proporcjonalnego limitowania części kapitałowej raty leasingowej – nie zawiera przepisu przejściowego."
     },
     {
       "law_name": "Ustawa o PIT",
       "article_number": "art. 23 ust. 1 pkt 46a",
       "reason": "Określa zaliczanie 75% wydatków eksploatacyjnych do KUP przy użytku mieszanym samochodu osobowego."
+    },
+    {
+      "law_name": "Ustawa zmieniająca z 2 grudnia 2021 r.",
+      "article_number": "art. 30",
+      "reason": "Przepis przejściowy dotyczący ochrony praw nabytych – stosuje się wyłącznie do pojazdów wprowadzonych do ewidencji środków trwałych, nie obejmuje umów leasingu operacyjnego."
     }
   ],
   "edge_cases": [
-    "Umowa leasingu zawarta do 31.12.2025 – zachowuje limit 150 000 zł przez cały okres trwania, nawet po wejściu nowego limitu 100 000 zł od 1.01.2026 (zasada ochrony praw nabytych, art. 23 ust. 5c PIT).",
+    "Umowa leasingu operacyjnego zawarta do 31.12.2025 – od 1.01.2026 podlega nowemu limitowi 100 000 zł dla samochodów spalinowych emitujących >50g CO2/km. Brak przepisu przejściowego chroniącego umowy leasingowe (w odróżnieniu od środków trwałych). Stanowisko potwierdzone przez Dyrektora KIS w interpretacjach indywidualnych.",
     "Samochód z homologacją ciężarową (np. Renault Master z częścią ładunkową, brak wpisu VAT w dowodzie) – mimo zgłoszenia VAT-26 może być traktowany jako osobowy dla celów PIT, co wymusza proporcję KUP do limitu.",
     "Sprzedaż mieszana VAT (proporcja sprzedaży np. 79%) – odliczenie VAT liczysz dwukrotnie: najpierw 50% z art. 86a, następnie wskaźnikiem sprzedaży. Nieodliczony VAT zwiększa wartość samochodu przyjmowaną do proporcji KUP.",
     "Wykup z leasingu do majątku prywatnego + dalsze wykorzystanie do działalności bez wprowadzania do EŚT – brak prawa do odliczenia VAT z faktury wykupu; przy bieżących wydatkach eksploatacyjnych przysługuje 20% KUP i 50% VAT (auto prywatne używane w firmie)."
@@ -79,7 +84,8 @@
   "common_mistakes": [
     "Stosowanie proporcji 75% KUP do części kapitałowej raty leasingu operacyjnego zamiast proporcji wartościowej (limit/wartość auta) – 75% dotyczy tylko wydatków eksploatacyjnych, nie rat leasingowych.",
     "Ograniczanie części odsetkowej raty leasingowej proporcją – część odsetkowa zalicza się w 100% do KUP bez względu na wartość samochodu.",
-    "Przyjmowanie wartości netto do proporcji przy użytku mieszanym (50% VAT) – prawidłowa podstawa to netto + 50% nieodliczonego VAT (wartość 'przeliczeniowa')."
+    "Przyjmowanie wartości netto do proporcji przy użytku mieszanym (50% VAT) – prawidłowa podstawa to netto + 50% nieodliczonego VAT (wartość 'przeliczeniowa').",
+    "Zakładanie, że umowy leasingu operacyjnego zawarte do 31.12.2025 zachowują limit 150 000 zł po 1.01.2026 – przepis przejściowy (art. 30 ustawy zmieniającej z 2 grudnia 2021 r.) chroni wyłącznie środki trwałe wprowadzone do EŚT, nie umowy leasingu operacyjnego."
   ],
   "related_questions": [
     "Jak rozliczyć wykup samochodu z leasingu operacyjnego do majątku prywatnego i późniejszą sprzedaż – kiedy powstaje przychód z działalności?",
@@ -109,6 +115,21 @@
       "6cc60c254f19"
     ]
   },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Art. 23 ust. 5c PIT cytowany jako podstawa dla 'zasady ochrony praw nabytych' i przejścia limitu 150→100 tys. zł od 1.01.2026 – wymaga weryfikacji, czy ten konkretny ustęp rzeczywiście zawiera przepis przejściowy dla umów zawartych do 31.12.2025, czy jest to interpretacja wymagająca potwierdzenia w obwieszczeniu MF.",
+      "applied_at": "2026-04-18T10:38:13Z",
+      "source": "v2",
+      "source_url": "https://www.podatki.biz/sn_autoryzacja/logowanie.php5/artykuly/leasing-samochodu-z-2025-r-z-nowym-limitem-kosztow-w-2026-r-fiskus-to-nie-blad-legislacyjny_63_60976.htm?idDzialu=63&idArtykulu=60976"
+    },
+    {
+      "flag_type": "step_contradiction",
+      "flag_description": "Krok 5 mówi 'AC/GAP – proporcja do limitu 150 000 zł liczona od wartości samochodu z polisy', ale wcześniej (krok 2) limit może być 100 tys. zł od 1.01.2026 – czy AC/GAP zawsze liczą się do 150 tys. zł czy do obowiązującego limitu?",
+      "applied_at": "2026-04-18T10:39:20Z",
+      "source": "v1"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-17T23:25:34Z",

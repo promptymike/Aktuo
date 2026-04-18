@@ -3,7 +3,7 @@
   "title": "Potrącenia komornicze niealimentacyjne z wynagrodzeń, zasiłków i umów zlecenia",
   "topic_area": "kadry",
   "question_examples": [
-    "Pracownik zarabia minimalne wynagrodzenie (ok. 4666 zł brutto) i ma zajęcie niealimentacyjne - czy muszę coś potrącać?",
+    "Pracownik zarabia minimalne wynagrodzenie (ok. 4806 zł brutto) i ma zajęcie niealimentacyjne - czy muszę coś potrącać?",
     "Pracownik ma umowę zlecenie ok. 1700 zł brutto, przyszło pismo od komornika - potrącam całość czy zostawiam kwotę wolną?",
     "W grudniu wypłacam świadczenie z ZFŚS, nagrodę i wynagrodzenie - czy potrącenie komornicze liczyć osobno od każdej kwoty czy od sumy?",
     "Pracownik ma wynagrodzenie za pracę 1108 zł brutto i zasiłek wypadkowy 4246 zł - ile potrącę z tytułu zajęcia niealimentacyjnego?",
@@ -19,31 +19,31 @@
     {
       "step": 2,
       "action": "Zastosuj limit 50% wynagrodzenia netto i kwotę wolną dla umowy o pracę",
-      "detail": "Przy zajęciu niealimentacyjnym maksymalne potrącenie to 50% wynagrodzenia netto po odliczeniu ZUS, zaliczki PIT i PPK. Kwota wolna to 100% minimalnego wynagrodzenia netto (pełny etat) - w 2025/2026 przy minimalnej krajowej pracownik na pełnym etacie z podstawowymi kosztami i ulgą zazwyczaj nie ma potrącenia w ogóle. W Comarch Optima/Symfonia wprowadź zajęcie jako 'Komornicze inne' i ustaw typ 'niealimentacyjne'.",
+      "detail": "Przy zajęciu niealimentacyjnym maksymalne potrącenie to 50% wynagrodzenia netto po odliczeniu ZUS, zaliczki PIT i PPK. Kwota wolna to 100% minimalnego wynagrodzenia netto (pełny etat). Potrącenie obliczasz jako mniejszą z dwóch wartości: 50% netto lub (netto − kwota wolna). Gdy wynagrodzenie netto pracownika jest równe lub niższe od kwoty wolnej, różnica wynosi ≤ 0, a potrącenie = 0 (nigdy ujemne) - pensja po potrąceniu nie może być niższa niż minimalne wynagrodzenie netto. W praktyce w 2025/2026 pracownik na pełnym etacie z minimalnym wynagrodzeniem i podstawowymi kosztami uzyskania oraz ulgą podatkową zazwyczaj nie ma potrącenia, właśnie dlatego że jego netto nie przekracza kwoty wolnej. W Comarch Optima/Symfonia wprowadź zajęcie jako 'Komornicze inne' i ustaw typ 'niealimentacyjne'.",
       "condition": "if tytuł zajęcia to wynagrodzenie ze stosunku pracy"
     },
     {
       "step": 3,
       "action": "Zsumuj wszystkie składniki wypłaty z danego miesiąca przed wyliczeniem potrącenia",
-      "detail": "Wynagrodzenie zasadnicze, premia, nagroda, trzynastka, ekwiwalent za urlop - wszystko co stanowi wynagrodzenie za pracę sumujesz i od łącznej kwoty netto liczysz 50% oraz kwotę wolną (nie osobno od każdego składnika). Świadczenia z ZFŚS co do zasady NIE podlegają egzekucji przy zajęciu wynagrodzenia (chyba że pismo obejmuje wierzytelności).",
+      "detail": "Wynagrodzenie zasadnicze, premia, nagroda, trzynastka, ekwiwalent za urlop - wszystko co stanowi wynagrodzenie za pracę sumujesz i od łącznej kwoty netto liczysz 50% oraz kwotę wolną (nie osobno od każdego składnika). Ważna distinkcja: wynagrodzenie chorobowe (pierwsze 33 dni niezdolności do pracy w roku kalendarzowym, wypłacane przez pracodawcę na podstawie art. 92 KP) traktowane jest jako wynagrodzenie za pracę - sumujesz je razem z pozostałymi składnikami wynagrodzenia i stosujesz do niego limity z art. 87 i 87¹ KP (50% netto, kwota wolna = minimalne wynagrodzenie netto). Nie należy go mylić z zasiłkiem chorobowym wypłacanym przez ZUS od 34. dnia niezdolności do pracy - ten ostatni podlega odrębnym limitom opisanym w kroku 5. Świadczenia z ZFŚS mają niejednoznaczny status wobec egzekucji komorniczej: art. 12 ust. 2 ustawy o ZFŚS chroni środki funduszu przed egzekucją skierowaną do pracodawcy jako dłużnika, jednak Krajowa Rada Komornicza oraz stanowiska ministerstw wskazują, że przepisy nie przewidują zwolnienia już wypłaconych świadczeń z ZFŚS spod egzekucji - komornik może więc skutecznie zająć wypłacone świadczenie w rękach pracownika. W razie wątpliwości skonsultuj się z prawnikiem lub zweryfikuj treść pisma komornika, czy obejmuje ono wierzytelności z ZFŚS. Świadczenia z ZFŚS nie są zasiłkami ZUS - do tych ostatnich stosuje się odrębne limity opisane w kroku 5.",
       "condition": "if w miesiącu wypłacasz kilka składników wynagrodzenia"
     },
     {
       "step": 4,
       "action": "Dla umowy zlecenia potrąć całą kwotę, chyba że zleceniobiorca udokumentuje ochronę",
-      "detail": "Umowy cywilnoprawne nie są chronione limitami z Kodeksu pracy. Potrącasz 100% wynagrodzenia - CHYBA że zleceniobiorca dostarczy pismo komornika potwierdzające, że zlecenie jest jego jedynym, powtarzającym się źródłem utrzymania (art. 833 § 2 i 2¹ KPC) - wtedy stosujesz limity jak przy umowie o pracę. Pracownik musi sam złożyć wniosek do komornika.",
+      "detail": "Umowy cywilnoprawne nie są chronione limitami z Kodeksu pracy. Domyślnie potrącasz 100% wynagrodzenia z umowy zlecenia i jest to prawidłowe postępowanie do czasu otrzymania postanowienia komornika o zastosowaniu ochrony. Sekwencja uzyskania ochrony jest następująca: (1) zleceniobiorca (dłużnik) musi NAJPIERW sam zawiadomić komornika, że zlecenie stanowi jego jedyne, powtarzające się źródło utrzymania (art. 833 § 2¹ KPC); (2) komornik wydaje postanowienie potwierdzające objęcie zlecenia ochroną; (3) dopiero po doręczeniu tego postanowienia zleceniodawcy stosujesz limity jak przy umowie o pracę (50% wynagrodzenia netto, kwota wolna = minimalne wynagrodzenie netto). Jako zleceniodawca jesteś wyłącznie wykonawcą postanowienia egzekucyjnego - nie możesz samodzielnie zdecydować o zastosowaniu ochrony bez postanowienia komornika, nawet jeśli zleceniobiorca ustnie zapewnia, że zlecenie to jego jedyne źródło dochodu. Do czasu doręczenia postanowienia potrącasz 100% wynagrodzenia.",
       "condition": "if zajęcie dotyczy umowy zlecenia"
     },
     {
       "step": 5,
       "action": "Dla zasiłków z ubezpieczenia społecznego zastosuj limity z ustawy emerytalnej",
-      "detail": "Z zasiłku chorobowego, opiekuńczego, macierzyńskiego, wypadkowego przy zajęciu niealimentacyjnym maksymalne potrącenie to 25% świadczenia brutto. Kwota wolna to 825 zł miesięcznie (stan na 2025 r., waloryzowana corocznie w marcu), liczona proporcjonalnie do liczby dni zasiłku. Limity te stosuje się osobno od limitów wynagrodzenia za pracę.",
+      "detail": "Z zasiłku chorobowego, opiekuńczego, macierzyńskiego, wypadkowego przy zajęciu niealimentacyjnym maksymalne potrącenie to 25% świadczenia brutto. Kwota wolna jest waloryzowana corocznie w marcu obwieszczeniem Ministra Rodziny - od marca 2026 r. obowiązuje kwota zaktualizowana obwieszczeniem opublikowanym w Mon. Pol. z 2026 r. poz. 220 (zweryfikuj aktualną wartość w wskazniki.gofin.pl lub treści obwieszczenia przed zastosowaniem). Kwota wolna liczona jest proporcjonalnie do liczby dni zasiłku. Limity te stosuje się osobno od limitów wynagrodzenia za pracę. Uwaga: zasiłki ZUS (chorobowy od 34. dnia niezdolności do pracy, opiekuńczy, macierzyński, wypadkowy) to świadczenia z ubezpieczenia społecznego - nie należy ich mylić z wynagrodzeniem chorobowym (pierwsze 33 dni płacone przez pracodawcę z art. 92 KP, które podlega limitom KP opisanym w kroku 3) ani ze świadczeniami z ZFŚS, które mają odrębny i niejednoznaczny status opisany w kroku 3.",
       "condition": "if pracownik otrzymuje zasiłek ZUS w danym miesiącu"
     },
     {
       "step": 6,
       "action": "Przy zbiegu egzekucji alimentacyjnej i niealimentacyjnej zachowaj łączny limit 60%",
-      "detail": "Najpierw potrąć alimenty (do 60% netto, bez kwoty wolnej), potem niealimentacyjne - ale łącznie nie więcej niż 60% wynagrodzenia netto. Przy zbiegu zajęć od różnych komorników lub komornik + ZUS zgłoś zbieg do organu właściwego (komornik 'wygrywa' z ZUS przy egzekucji niealimentacyjnej - patrz art. 773 KPC).",
+      "detail": "Najpierw potrąć alimenty (do 60% netto, bez kwoty wolnej), potem niealimentacyjne - ale łącznie nie więcej niż 60% wynagrodzenia netto. Przy zbiegu zajęć od różnych komorników lub komornik + ZUS/US: od 8 września 2016 r. (art. 882¹ KPC) to pracodawca samodzielnie ustala pierwszeństwo i przekazuje potrąconą kwotę organowi, który pierwszy dokonał zajęcia - nie ma potrzeby kierowania sprawy do sądu. Jednocześnie pracodawca ma obowiązek niezwłocznie zawiadomić oba organy egzekucyjne (komornika sądowego oraz ZUS/US) o fakcie zbiegu egzekucji (art. 773 KPC - Kodeks postępowania cywilnego) - zawiadomienie kierujesz do każdego z organów osobno, w formie pisemnej, bez zbędnej zwłoki po otrzymaniu drugiego tytułu zajęcia. Pierwszeństwo przy zbiegu egzekucji sądowej i administracyjnej do wynagrodzenia rozstrzyga pracodawca według daty pierwszego zajęcia - nie sąd ani komornik.",
       "condition": "if występuje kilka zajęć jednocześnie"
     },
     {
@@ -63,18 +63,25 @@
       "law_name": "Kodeks pracy",
       "article_number": "art. 87",
       "reason": "Ustala kolejność i limity potrąceń z wynagrodzenia za pracę - 50% przy egzekucji niealimentacyjnej i 60% łącznie przy zbiegu z alimentami."
+    },
+    {
+      "law_name": "Kodeks postępowania cywilnego",
+      "article_number": "art. 833 § 2¹",
+      "reason": "Rozszerza ochronę limitami jak przy wynagrodzeniu za pracę na świadczenia powtarzające się z umów cywilnoprawnych (np. zlecenie), gdy stanowią jedyne źródło utrzymania dłużnika - podstawa stosowania kwoty wolnej i limitu 50% do umów zlecenia."
     }
   ],
   "edge_cases": [
     "Umowa zlecenie jako jedyne źródło utrzymania - po dostarczeniu przez zleceniobiorcę pisma od komornika stosujemy limity jak przy umowie o pracę (art. 833 § 2¹ KPC).",
     "Dwie wypłaty w jednym miesiącu kalendarzowym (np. wypłata grudniowa + styczniowa wypłacona 31.12) - potrącenie liczymy od łącznego przychodu miesiąca; druga wypłata może w całości pójść do komornika jeśli kwota wolna została już wykorzystana.",
-    "Pracownik tylko na zasiłku (bez wynagrodzenia za pracę) - stosujemy wyłącznie limity z ustawy emerytalnej (25% brutto, kwota wolna 825 zł proporcjonalnie), nie limity z Kodeksu pracy.",
+    "Pracownik tylko na zasiłku (bez wynagrodzenia za pracę) - stosujemy wyłącznie limity z ustawy emerytalnej (25% brutto, kwota wolna waloryzowana corocznie w marcu - zweryfikuj aktualną wartość obowiązującą od marca 2026 r. w Mon. Pol. z 2026 r. poz. 220), nie limity z Kodeksu pracy.",
     "Zajęcie przez ZUS za zaległe składki z działalności - traktujemy tak samo jak zajęcie komornicze niealimentacyjne (50%, kwota wolna = minimalna krajowa netto)."
   ],
   "common_mistakes": [
     "Potrącanie 50% osobno od każdego składnika wypłaty (wynagrodzenie, premia, nagroda) zamiast od łącznej sumy netto miesiąca.",
     "Stosowanie limitów z Kodeksu pracy do umowy zlecenia bez pisma komornika potwierdzającego, że to jedyne źródło utrzymania - w efekcie zleceniobiorca dostaje za dużo, a wierzyciel za mało.",
-    "Mylenie kwoty wolnej od zasiłku (825 zł, waloryzowana) z minimalnym wynagrodzeniem netto - i odwrotnie, stosowanie kwoty wolnej z KP do zasiłków ZUS."
+    "Mylenie kwoty wolnej od zasiłku (waloryzowana corocznie w marcu, od 2026 r. zgodnie z Mon. Pol. z 2026 r. poz. 220) z minimalnym wynagrodzeniem netto - i odwrotnie, stosowanie kwoty wolnej z KP do zasiłków ZUS.",
+    "Przyjmowanie, że świadczenia z ZFŚS są bezwzględnie wyłączone spod egzekucji - art. 12 ust. 2 ustawy o ZFŚS chroni środki funduszu przed egzekucją skierowaną do pracodawcy, ale nie zwalnia wypłaconych świadczeń spod egzekucji w rękach pracownika.",
+    "Stosowanie limitów z ustawy emerytalnej (25% brutto, kwota wolna waloryzowana) do wynagrodzenia chorobowego wypłacanego przez pracodawcę za pierwsze 33 dni niezdolności do pracy - wynagrodzenie chorobowe z art. 92 KP podlega limitom Kodeksu pracy (50% netto, kwota wolna = minimalne wynagrodzenie netto), nie limitom właściwym dla zasiłków ZUS."
   ],
   "related_questions": [
     "Jak rozliczyć zbieg egzekucji alimentacyjnej i niealimentacyjnej - który komornik ma pierwszeństwo?",
@@ -105,6 +112,70 @@
       "d3cc6dbb3ba4"
     ]
   },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Odwołanie do 'art. 833 § 2 i 2¹ KPC' wymaga weryfikacji - przepisy KPC dotyczące ochrony zasiłków i umów cywilnoprawnych mogą mieć inne numery paragrafów; brak pewności czy § 2¹ istnieje.",
+      "applied_at": "2026-04-18T09:32:09Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/prawo-pracy/17,1,95,322841.html"
+    },
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Kwota wolna zasiłków określona na 825 zł (stan 2025) - dokument datowany 2026-04-17 powinien zawierać waloryzowaną kwotę na 2026 r., która mogła się zmienić w marcu 2026.",
+      "applied_at": "2026-04-18T09:32:53Z",
+      "source": "v2",
+      "source_url": "https://wskazniki.gofin.pl/wskaznik/305/kwoty-wolne-od-potracen-ze-swiadczen-z-ubezpieczen-spolecznych"
+    },
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Minimalne wynagrodzenie krajowe podane jako 'ok. 4666 zł brutto' w pytaniu przykładowym - ta kwota jest z 2025 r.; dla 2026 powinna być aktualna kwota obowiązująca od stycznia 2026.",
+      "applied_at": "2026-04-18T09:33:46Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/7490561,placa-minimalna-2026-ile-brutto-w-umowie-ile-netto-do-wyplaty-na-reke-w-ktorych-umowach-trzeba-stosowac-minimalna-stawke-godzinowa.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 2 stwierdza że 'pracownik zazwyczaj nie ma potrącenia w ogóle' przy minimalnym wynagrodzeniu - brakuje precyzyjnego warunku/wariantu dla sytuacji gdy netto pracownika jest poniżej kwoty wolnej (czy potrącenie = 0 czy może być ujemne).",
+      "applied_at": "2026-04-18T10:25:18Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/rachunkowosc/ksiegi-rachunkowe/743667,Jak-ujac-w-ksiegach-rachunkowych-zajecie-wynagrodzenia.html"
+    },
+    {
+      "flag_type": "step_contradiction",
+      "flag_description": "Step 3 mówi że 'Świadczenia z ZFŚS co do zasady NIE podlegają egzekucji' ale Step 5 opisuje limity dla zasiłków ZUS - brakuje jasnego rozróżnienia między świadczeniami ZFŚS (które nie podlegają) a zasiłkami ZUS (które podlegają).",
+      "applied_at": "2026-04-18T10:26:31Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/prawo-pracy/17,2,101,132286,egzekucja-komornicza-ze-swiadczen-z-zfss.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 4 wymaga od zleceniobiorcę 'pisma komornika potwierdzającego że zlecenie jest jedynym źródłem utrzymania' - brakuje informacji czy to pismo musi być złożone PRZED potrąceniem czy czy pracodawca może potrącać 100% do czasu dostarczenia takiego pisma.",
+      "applied_at": "2026-04-18T10:28:08Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/101269,Czy-wynagrodzenie-z-umowy-cywilnoprawnej-podlega-ochronie-jak-wynagrodzenie-z-umowy-o-prace.html"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 6 wspomina 'zgłoś zbieg do organu właściwego' ale nie precyzuje: do kogo dokładnie (sąd, komornik, ZUS), w jakim terminie i w jakiej formie.",
+      "applied_at": "2026-04-18T10:29:46Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/745744,Zmiany-w-dokonywaniu-potracen-z-wynagrodzen-pracownikow.html"
+    },
+    {
+      "flag_type": "hallucination_risk",
+      "flag_description": "Odwołanie do 'art. 773 KPC' w kontekście pierwszeństwa komornika nad ZUS - wymaga weryfikacji czy ten artykuł rzeczywiście reguluje tę kwestię; może to być błędny numer artykułu.",
+      "applied_at": "2026-04-18T10:31:39Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brakuje wyjaśnienia jak traktować wynagrodzenie chorobowe (pierwsze 33 dni płacone przez pracodawcę) - czy to wynagrodzenie za pracę (limity KP) czy zasiłek (limity ustawy emerytalnej); related_questions to podnoszą ale nie ma odpowiedzi w answer_steps.",
+      "applied_at": "2026-04-18T10:33:40Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/skladki-zasilki-emerytury/17,1,110,291375,ustalenie-wysokosci-potracenia-komorniczego-z-wynagrodzenia.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-17T23:24:07Z",

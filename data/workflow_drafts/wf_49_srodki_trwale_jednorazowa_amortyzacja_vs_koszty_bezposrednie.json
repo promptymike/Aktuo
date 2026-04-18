@@ -71,8 +71,8 @@
     }
   ],
   "edge_cases": [
-    "Mieszkanie wykorzystywane jako lokal firmy – od 2023 r. podatkowo nie można go amortyzować (art. 22c pkt 2 PIT), ale bilansowo amortyzacja jest nadal dokonywana.",
-    "Spółka z o.o. kupująca fabrycznie nowy kocioł węglowy (35 tys. zł) – może skorzystać z art. 16k ust. 14 CIT (limit 100 tys. zł), ale samochód dostawczy 3,5 t (grupa 7) jest wyłączony i musi być amortyzowany standardowo.",
+    "Mieszkanie wykorzystywane jako lokal firmy – na podstawie art. 22c pkt 2 PIT amortyzacja lokali mieszkalnych jest trwale wyłączona z kosztów podatkowych (zakaz obowiązuje od 2023 r. i pozostaje w mocy); bilansowo amortyzacja jest nadal dokonywana.",
+    "Osoba fizyczna prowadząca KPiR kupuje fabrycznie nowy kocioł grzewczy (35 tys. zł, grupa KŚT 6) – może skorzystać z jednorazowej amortyzacji na podstawie art. 22k ust. 14 ustawy o PIT (limit 100 000 zł rocznie, grupy KŚT 3–6 i 8). Uwaga: samochód dostawczy 3,5 t (grupa KŚT 7) jest wyłączony z tego przepisu i musi być amortyzowany standardowo. Analogiczny instrument dla spółek z o.o. to art. 16k ust. 14 CIT – jednak przepisy CIT nie mają zastosowania do podatników rozliczających się na KPiR.",
     "Zaświadczenie z US o pomocy de minimis pokazuje tylko korzyść podatkową (np. 4,3 tys. zł przy ŚT za 90 tys. zł), a nie pełną wartość odpisu – to różnica między podatkiem przy jednorazowej a rozłożonej amortyzacji.",
     "Środek trwały zakupiony na fakturę z NIP-em przedsiębiorcy wprowadzamy do ewidencji na podstawie faktury zakupu + OT; oświadczenie o przekazaniu na potrzeby działalności stosuje się dla majątku prywatnego."
   ],
@@ -112,6 +112,20 @@
       "0522495a4cf8"
     ]
   },
+  "corrections_applied": [
+    {
+      "flag_type": "hallucination_risk",
+      "flag_description": "Edge case o mieszkaniu jako lokalu firmy powołuje się na zmianę od 2023 r. (art. 22c pkt 2 PIT), ale dokument jest datowany na 2026 r. – brakuje informacji czy ta regulacja obowiązuje nadal czy została zmieniona.",
+      "applied_at": "2026-04-18T10:36:29Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "edge_case_coverage",
+      "flag_description": "Edge case o spółce z o.o. kupującej kocioł węglowy powołuje się na art. 16k ust. 14 CIT, ale dokument jest dedykowany KPiR (osobom fizycznym) – ta informacja może być myląca dla użytkownika; brakuje wyjaśnienia czy przepisy CIT mają analogię w PIT.",
+      "applied_at": "2026-04-18T10:37:31Z",
+      "source": "v1"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-17T23:24:59Z",

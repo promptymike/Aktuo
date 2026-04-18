@@ -18,8 +18,8 @@
     },
     {
       "step": 2,
-      "action": "Zażądaj od pracownika zaświadczenia US-7 z ZUS",
-      "detail": "Dla okresów umów zlecenia ozusowanych oraz dla JDG – zaświadczenie ZUS US-7 (o okresach podlegania ubezpieczeniom społecznym i podstawach wymiaru składek) jest dokumentem podstawowym i rozstrzygającym. Pracownik składa wniosek przez PUE ZUS lub w placówce ZUS; ciężar udowodnienia okresu zatrudnienia spoczywa na pracowniku.",
+      "action": "Poinformuj pracownika, że zaliczenie NIE jest automatyczne – wymaga jego aktywnego działania",
+      "detail": "Zaliczenie okresów zlecenia lub DG do stażu pracy nie następuje z urzędu ani automatycznie przy zatrudnieniu. Pracownik musi samodzielnie zainicjować cały proces: (1) złożyć wniosek USP (nie US-7) w eZUS (portal PUE/eZUS) lub osobiście w placówce ZUS o wydanie zaświadczenia o okresach podlegania ubezpieczeniom społecznym; (2) odebrać zaświadczenie wydane przez ZUS na podstawie wniosku USP; (3) dostarczyć zaświadczenie pracodawcy – przepisy przewidują na to termin 24 miesięcy od daty zatrudnienia lub od 1 stycznia 2026 r. (dla już zatrudnionych). Dopiero po otrzymaniu dokumentu od pracownika pracodawca może zaktualizować staż pracy w aktach osobowych i systemie kadrowo-płacowym. Ciężar udowodnienia okresu i inicjatywa procesowa leżą wyłącznie po stronie pracownika.",
       "condition": null
     },
     {
@@ -31,19 +31,19 @@
     {
       "step": 4,
       "action": "Sprawdź nakładanie się okresów i zastosuj zasadę niepodwajania",
-      "detail": "Okresy zbiegające się (np. dwie umowy zlecenia w tym samym czasie, zlecenie + umowa o pracę, DG + zlecenie) liczą się tylko raz – analogicznie jak dwa etaty w tym samym miesiącu dają jeden miesiąc stażu. Zweryfikuj daty z US-7 i wyeliminuj duplikaty przed wprowadzeniem do systemu.",
+      "detail": "Okresy zbiegające się (np. dwie umowy zlecenia w tym samym czasie, zlecenie + umowa o pracę, DG + zlecenie) liczą się tylko raz – analogicznie jak dwa etaty w tym samym miesiącu dają jeden miesiąc stażu. Zweryfikuj daty z zaświadczenia ZUS i wyeliminuj duplikaty przed wprowadzeniem do systemu.",
       "condition": null
     },
     {
       "step": 5,
       "action": "Zalicz okresy zasiłkowe w ramach DG/zlecenia",
-      "detail": "Okresy pobierania zasiłku chorobowego, macierzyńskiego i opiekuńczego w trakcie prowadzenia DG lub wykonywania zlecenia wliczają się do stażu pracy, o ile figurują w zaświadczeniu US-7 jako okresy podlegania ubezpieczeniom (przerwy w opłacaniu składek z tytułu zasiłku nie przerywają ciągłości ubezpieczenia).",
+      "detail": "Okresy pobierania zasiłku chorobowego, macierzyńskiego i opiekuńczego w trakcie prowadzenia DG lub wykonywania zlecenia wliczają się do stażu pracy, o ile figurują w zaświadczeniu ZUS jako okresy podlegania ubezpieczeniom (przerwy w opłacaniu składek z tytułu zasiłku nie przerywają ciągłości ubezpieczenia).",
       "condition": "if pracownik w okresie DG/zlecenia korzystał z zasiłków z ubezpieczenia społecznego"
     },
     {
       "step": 6,
       "action": "Wprowadź zaktualizowany staż pracy do systemu kadrowo-płacowego",
-      "detail": "W Comarch Optima, Symfonia Kadry i Płace lub Enova zaktualizuj kartotekę pracownika w zakładce 'Historia zatrudnienia' / 'Staż pracy', dodając okresy pozapracownicze w osobnych pozycjach z adnotacją 'zlecenie' lub 'DG' i wskazaniem dokumentu źródłowego (US-7, umowa, PIT-11). Sprawdź, czy program przelicza wymiar urlopu, nagrodę jubileuszową i dodatek stażowy.",
+      "detail": "W Comarch Optima, Symfonia Kadry i Płace lub Enova zaktualizuj kartotekę pracownika w zakładce 'Historia zatrudnienia' / 'Staż pracy', dodając okresy pozapracownicze w osobnych pozycjach z adnotacją 'zlecenie' lub 'DG' i wskazaniem dokumentu źródłowego (zaświadczenie ZUS z wniosku USP, umowa, PIT-11). Sprawdź, czy program przelicza wymiar urlopu, nagrodę jubileuszową i dodatek stażowy.",
       "condition": null
     },
     {
@@ -67,9 +67,10 @@
     "Okresy zasiłków (chorobowy, macierzyński, opiekuńczy) w trakcie DG – wliczają się do stażu, jeśli wynikają z zaświadczenia ZUS; sama przerwa w opłacaniu składek w tym czasie nie wyklucza zaliczenia."
   ],
   "common_mistakes": [
-    "Opieranie się wyłącznie na umowie zlecenia lub oświadczeniu pracownika bez zaświadczenia US-7 z ZUS – z samej umowy nie wynika, czy składki były faktycznie odprowadzane.",
+    "Opieranie się wyłącznie na umowie zlecenia lub oświadczeniu pracownika bez zaświadczenia ZUS uzyskanego na wniosek USP – z samej umowy nie wynika, czy składki były faktycznie odprowadzane.",
     "Podwójne liczenie nakładających się okresów (np. równoległe zlecenia u dwóch zleceniodawców lub zlecenie w trakcie etatu).",
-    "Mylenie stażu pracy ogólnego ze stażem urlopowym – zaliczanie okresu studiów i jednocześnie zlecenia wykonywanego w trakcie studiów do stażu urlopowego (podczas gdy przepisy przewidują wybór korzystniejszego, bez dublowania)."
+    "Mylenie stażu pracy ogólnego ze stażem urlopowym – zaliczanie okresu studiów i jednocześnie zlecenia wykonywanego w trakcie studiów do stażu urlopowego (podczas gdy przepisy przewidują wybór korzystniejszego, bez dublowania).",
+    "Oczekiwanie przez pracodawcę na automatyczne zaliczenie okresów – zaliczenie wymaga aktywnego złożenia wniosku USP przez pracownika w eZUS i dostarczenia zaświadczenia pracodawcy; bez tego działania pracodawca nie ma podstaw do aktualizacji stażu."
   ],
   "related_questions": [
     "Jak udokumentować staż pracy na podstawie umowy B2B wykonywanej za granicą na rzecz polskiego kontrahenta?",
@@ -237,5 +238,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brak wyjaśnienia, jak pracownik powinien złożyć wniosek o zaliczenie okresów do stażu pracy – czy to automatyczne przy zatrudnieniu, czy wymaga osobnego wniosku do pracodawcy/ZUS? Procedura inicjacji procesu nie jest jasna.",
+      "applied_at": "2026-04-18T10:42:11Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/wiadomosci/7515117,tlumy-polakow-ruszyly-do-zus-chodzi-o-nowe-zasady-liczenia-stazu-pracy.html"
+    }
+  ]
 }

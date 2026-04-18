@@ -13,13 +13,13 @@
     {
       "step": 1,
       "action": "Ustal z klientem pisemnie model obiegu faktur kosztowych",
-      "detail": "W aneksie do umowy/procedurze określ: kto pobiera faktury z KSeF (biuro czy klient), jak klient akceptuje koszty (OCR typu Saldeo/Symfonia Obieg Dokumentów, panel klienta w Comarch Optima/Enova, zestawienie Excel, mail z listą numerów KSeF do zaksięgowania) oraz jak oznacza faktury nie-KUP i błędnie wystawione na jego NIP. Bez tego biuro zaksięguje faktury, których klient nie akceptuje jako koszt.",
+      "detail": "W aneksie do umowy/procedurze określ: kto pobiera faktury z KSeF (biuro czy klient), jak klient akceptuje koszty (OCR typu Saldeo/Symfonia Obieg Dokumentów, panel klienta w Comarch Optima/Enova, zestawienie Excel, mail z listą numerów KSeF do zaksięgowania) oraz jak oznacza faktury nie-KUP i błędnie wystawione na jego NIP. Bez tego biuro zaksięguje faktury, których klient nie akceptuje jako koszt. Uwaga: funkcjonalności paneli akceptacji i OCR poszczególnych dostawców mogły ulec zmianom w związku z KSeF 2.0 - weryfikuj dostępne opcje z aktualną dokumentacją swojego dostawcy oprogramowania.",
       "condition": null
     },
     {
       "step": 2,
       "action": "Skonfiguruj automatyczny pobór XML z KSeF do programu księgowego",
-      "detail": "W Comarch Optima, Symfonii, Enova lub wFirma włącz integrację z KSeF tokenem/certyfikatem klienta (uprawnienie 'dostęp do faktur' nadane biuru). Ustaw harmonogram pobierania (np. codziennie) i mapowanie pól - szczególnie data sprzedaży, sposób i termin płatności, bo te pola często są puste w wizualizacji gdy sprzedawca źle je zmapował.",
+      "detail": "W Comarch Optima, Symfonii, Enova lub wFirma włącz integrację z KSeF tokenem/certyfikatem klienta (uprawnienie 'dostęp do faktur' nadane biuru). Ustaw harmonogram pobierania (np. codziennie) i mapowanie pól - szczególnie data sprzedaży, sposób i termin płatności, bo te pola często są puste w wizualizacji gdy sprzedawca źle je zmapował. Uwaga: dostawcy oprogramowania (Comarch, Symfonia, Enova, wFirma) przeprowadzili głęboką przebudowę architektury produktów w związku z KSeF 2.0, zmieniając logikę procesów i integracji - szczegółowe kroki konfiguracji oraz dostępność poszczególnych funkcji należy weryfikować z aktualną dokumentacją i wsparciem technicznym danego dostawcy.",
       "condition": null
     },
     {
@@ -61,8 +61,8 @@
     },
     {
       "law_name": "Ustawa o VAT",
-      "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
-      "reason": "Definiuje funkcje KSeF jako systemu przechowywania, uwierzytelniania i udostępniania faktur - uzasadnia rezygnację z dublowania archiwizacji papierowej przez biuro."
+      "article_number": "art. 106nd ust. 2 pkt 1-6",
+      "reason": "Definiuje funkcje KSeF jako systemu przechowywania, uwierzytelniania i udostępniania faktur - uzasadnia rezygnację z dublowania archiwizacji papierowej przez biuro. Uwaga: odwołanie ograniczone do pkt 1-6; istnienie pkt 11 w tym ustępie nie zostało potwierdzone w dostępnych źródłach legislacyjnych."
     },
     {
       "law_name": "Ustawa o VAT",
@@ -108,6 +108,22 @@
       "9ae0202035be"
     ]
   },
+  "corrections_applied": [
+    {
+      "flag_type": "legal_anchor_uncertainty",
+      "flag_description": "Artykuł 106nd ust. 2 pkt 1-6 i 11 - liczba punktów (11) wydaje się podejrzana dla jednego ustępu; wymaga weryfikacji czy struktura artykułu rzeczywiście zawiera 11 punktów w tym ustępie.",
+      "applied_at": "2026-04-18T10:34:21Z",
+      "source": "v2",
+      "source_url": "https://orka.sejm.gov.pl/proc9.nsf/ustawy/3242_u.htm"
+    },
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Wymienione programy (Comarch Optima, Symfonia, Enova, wFirma) i ich funkcjonalności integracji z KSeF mogły ulec zmianom do 2026; szczególnie dotyczy to mapowania pól i dostępności OCR/paneli akceptacji.",
+      "applied_at": "2026-04-18T10:35:11Z",
+      "source": "v2",
+      "source_url": "https://ksiegowosc.infor.pl/ksef/7483853,ksef-2026-panstwowa-infrastruktura-cyfrowa-ktora-zmienia-biznes-glebiej-niz-fakturowanie.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-17T23:24:26Z",

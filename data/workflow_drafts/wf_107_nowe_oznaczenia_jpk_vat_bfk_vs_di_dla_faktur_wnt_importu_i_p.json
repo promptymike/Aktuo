@@ -37,19 +37,25 @@
     {
       "step": 5,
       "action": "Zachowaj dotychczasowe oznaczenia procedur obok nowych kodów",
-      "detail": "Nowe kody BFK/DI nie zastępują dotychczasowych oznaczeń - WEW, FP, RO, MK, GTU_01-13 itd. stosujesz dalej równolegle. Np. dokument wewnętrzny dla WNT otrzyma DI + WEW, paragon z NIP do 450 zł - BFK + FP (jeśli był wystawiony do paragonu).",
+      "detail": "Nowe kody BFK/DI nie zastępują dotychczasowych oznaczeń - WEW, FP, RO, MK, GTU_01-13 itd. stosujesz dalej równolegle. Technicznie: BFK i DI (podobnie jak NrKSeF i OFF) są umieszczane w nowym, odrębnym węźle XML o nazwie 'KSeF' w strukturze JPK_V7M(3)/JPK_V7K(3) - nie zastępują istniejących pól ewidencji, lecz stanowią osobną kolumnę/węzeł w pliku. Np. dokument wewnętrzny dla WNT otrzyma DI w węźle KSeF + WEW w dotychczasowym polu oznaczenia, paragon z NIP do 450 zł - BFK w węźle KSeF + FP w dotychczasowym polu (jeśli był wystawiony do paragonu).",
       "condition": null
     },
     {
       "step": 6,
-      "action": "Skoryguj faktury wystawione przed lutym 2026 ujęte w JPK za luty",
-      "detail": "Faktury z grudnia 2025 i stycznia 2026 księgowane w rozliczeniu za luty 2026 nie wymagają nowych oznaczeń BFK/DI - jeśli program wymusza kod, wybierz opcję odpowiadającą charakterowi dokumentu (BFK dla krajowych poza KSeF, DI dla zagranicznych). W razie blokady rozważ korektę JPK za styczeń.",
-      "condition": "if faktury są z okresu przed lutym 2026"
+      "action": "Stosuj oznaczenia BFK/DI dla wszystkich faktur ujmowanych w JPK za luty 2026, niezależnie od daty ich wystawienia",
+      "detail": "Oznaczenia BFK i DI obowiązują bezwzględnie od rozliczenia za luty 2026 dla WSZYSTKICH faktur ujmowanych w tym pliku - w tym faktur z grudnia 2025 i stycznia 2026 księgowanych w rozliczeniu za luty 2026. Zgodnie ze stanowiskiem MF (odpowiedź z 3.03.2026) kod BFK dotyczy również faktur wystawionych przed obowiązkiem fakturowania za pośrednictwem KSeF. Wybierz oznaczenie odpowiadające charakterowi dokumentu: BFK dla krajowych poza KSeF, DI dla zagranicznych i dokumentów wewnętrznych.",
+      "condition": "if faktury są z okresu przed lutym 2026, ale ujmowane w JPK za luty 2026 lub później"
     },
     {
       "step": 7,
+      "action": "Ustal oznaczenie BFK/DI dla faktur korygujących i faktur VAT RR",
+      "detail": "Faktury korygujące co do zasady dziedziczą oznaczenie faktury pierwotnej - korekta do faktury z BFK otrzymuje BFK, korekta do dokumentu z DI otrzymuje DI. Szczególna ścieżka dotyczy faktur VAT RR (faktury wystawiane przez nabywcę rolnikowi ryczałtowemu): po stronie zakupu faktura VAT RR może otrzymać oznaczenie VAT_RR w dotychczasowym polu ewidencji, a w węźle KSeF - DI (jako dokument strukturalnie nieprzechodzący przez KSeF, analogicznie do innych dokumentów zakupowych od podmiotów nieobjętych KSeF). Korekta faktury VAT RR powinna zachować to samo oznaczenie DI w węźle KSeF. Uwaga: żadne źródło urzędowe nie rozstrzyga wprost kwestii korekt VAT RR w kontekście BFK/DI - przy wątpliwościach zalecane jest złożenie zapytania do KIS.",
+      "condition": "if dokument jest fakturą korygującą lub fakturą VAT RR"
+    },
+    {
+      "step": 8,
       "action": "Zweryfikuj stanowisko KIS w razie wątpliwości pisemnym zapytaniem",
-      "detail": "W temacie BFK vs DI dla WNT/importu usług pojawiają się sprzeczne interpretacje (MF z 18.03 - BFK przy fakturze; szkolenia KIS - wszystko DI). Przy znacznej wartości transakcji złóż zapytanie do KIS lub wniosek o interpretację, by zabezpieczyć się przed ryzykiem sankcji.",
+      "detail": "W temacie BFK vs DI dla WNT/importu usług pojawiają się sprzeczne interpretacje - według niepotwierdzonych informacji ze szkoleń część głosów wskazuje na BFK przy fakturze zagranicznej, natomiast dominujące stanowisko KIS z infolinii wskazuje na DI dla wszystkich transakcji transgranicznych. Przy znacznej wartości transakcji złóż zapytanie do KIS lub wniosek o interpretację, by zabezpieczyć się przed ryzykiem sankcji.",
       "condition": "if transakcje mają znaczną wartość lub są powtarzalne"
     }
   ],
@@ -73,13 +79,15 @@
   "edge_cases": [
     "Paragon fiskalny z NIP do 450 zł (faktura uproszczona) - nie idzie do KSeF, w JPK oznaczenie BFK (obok dotychczasowego FP jeśli dotyczy).",
     "Apteka wystawiająca paragon z NIP powyżej 450 zł - fakturę do takiego paragonu z NIP nabywcy wysyłasz do KSeF z oznaczeniem FP (nie BFK); dla osób prywatnych faktura do paragonu - poza KSeF.",
-    "Faktura WNT/import usług - dominująca praktyka i stanowisko KIS to DI, ale część interpretacji MF z 18.03 wskazuje na BFK jeśli istnieje faktura od kontrahenta - rozbieżność interpretacyjna.",
-    "Podatnik wchodzący do obowiązkowego KSeF dopiero od 1 kwietnia 2026 - faktury sprzedaży za luty i marzec 2026 wystawione poza KSeF oznacza w JPK kodem BFK (zarówno sprzedaż jak i zakup)."
+    "Faktura WNT/import usług - dominująca praktyka i stanowisko KIS z infolinii wskazuje na DI; w obiegu szkoleniowym pojawiają się niejednolite głosy sugerujące BFK przy istnieniu faktury od kontrahenta zagranicznego, jednak brak potwierdzonych dokumentów urzędowych w tej kwestii - rozbieżność interpretacyjna.",
+    "Podatnik wchodzący do obowiązkowego KSeF dopiero od 1 kwietnia 2026 - faktury sprzedaży za luty i marzec 2026 wystawione poza KSeF oznacza w JPK kodem BFK (zarówno sprzedaż jak i zakup).",
+    "Faktura VAT RR i jej korekta - po stronie zakupu faktura VAT RR otrzymuje oznaczenie VAT_RR w dotychczasowym polu ewidencji oraz DI w węźle KSeF; korekta faktury VAT RR zachowuje oznaczenie DI. Brak jednoznacznego stanowiska urzędowego - zalecane zapytanie do KIS przy wątpliwościach."
   ],
   "common_mistakes": [
     "Pomijanie oznaczenia BFK dla faktur B2C i paragonów z NIP do 450 zł w przekonaniu, że skoro nie idą do KSeF, to kod nie jest potrzebny - kod BFK jest wymagany właśnie dla takich dokumentów.",
     "Stosowanie BFK dla WNT i importu usług na podstawie samej faktury zagranicznej bez wystawiania dokumentu wewnętrznego - dominujące stanowisko KIS wskazuje, że dla transakcji transgranicznych właściwy jest DI.",
-    "Zastępowanie dotychczasowych oznaczeń (WEW, FP, GTU) nowymi kodami BFK/DI - te oznaczenia są komplementarne, stosujesz je równolegle, a nie zamiennie."
+    "Zastępowanie dotychczasowych oznaczeń (WEW, FP, GTU) nowymi kodami BFK/DI - te oznaczenia są komplementarne, stosujesz je równolegle, a nie zamiennie.",
+    "Nadawanie fakturom korygującym oznaczenia BFK/DI niezgodnego z fakturą pierwotną - korekta powinna dziedziczyć oznaczenie dokumentu, do którego się odnosi."
   ],
   "related_questions": [
     "Czy dokumenty wewnętrzne WEW (np. rozliczenie prowizji, dokumenty na kasę fiskalną) w nowym JPK od lutego 2026 oznaczamy DI czy zachowują tylko WEW?",
@@ -112,6 +120,35 @@
       "bfb64fab2f2c"
     ]
   },
+  "corrections_applied": [
+    {
+      "flag_type": "hallucination_risk",
+      "flag_description": "Stanowisko MF z '18.03' (bez roku) dotyczące BFK dla WNT jest cytowane bez pełnej referencji. Brak możliwości weryfikacji, czy taki dokument rzeczywiście istnieje i jaka jest jego pełna treść.",
+      "applied_at": "2026-04-18T09:26:38Z",
+      "source": "v1"
+    },
+    {
+      "flag_type": "step_contradiction",
+      "flag_description": "Step 2 mówi, że BFK stosuje się dla faktur 'wystawionych poza KSeF mimo obowiązku', ale step 6 sugeruje, że faktury z grudnia 2025/stycznia 2026 'nie wymagają nowych oznaczeń BFK/DI' - sprzeczność w stosowaniu BFK dla dokumentów sprzed lutego 2026.",
+      "applied_at": "2026-04-18T09:27:37Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/podatki/vat-i-akcyza/45758/nowe-oznaczenia-w-jpk-vat-takze-dla-podatnikow-nieobjetych-jeszcze-obowiazkiem-ksef-odpowiedz-min-fin-na-pytanie-naszego-wydawnictwa"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Step 5 mówi, że BFK/DI 'nie zastępują' dotychczasowych oznaczeń, ale nie wyjaśnia, w jakim polu JPK_V7 umieszcza się BFK/DI - czy to osobna kolumna, czy zastępuje istniejące pole?",
+      "applied_at": "2026-04-18T09:31:32Z",
+      "source": "v2",
+      "source_url": "https://www.podatki.gov.pl/aktualnosci/rozporzadzenia-wykonawcze-do-krajowego-systemu-e-faktur/"
+    },
+    {
+      "flag_type": "missing_critical_info",
+      "flag_description": "Brakuje wyjaśnienia, jak oznaczać faktury korygujące (faktury VAT RR) w kontekście nowych kodów BFK/DI - czy dziedziczą oznaczenie faktury pierwotnej, czy otrzymują nowe?",
+      "applied_at": "2026-04-18T10:23:59Z",
+      "source": "v2",
+      "source_url": "https://www.gofin.pl/17,2,7,257580,nowe-oznaczenia-w-pliku-jpkvat.html"
+    }
+  ],
   "self_critique": {
     "validated_by": "claude-haiku-4-5-20251001",
     "validated_at": "2026-04-17T23:23:49Z",

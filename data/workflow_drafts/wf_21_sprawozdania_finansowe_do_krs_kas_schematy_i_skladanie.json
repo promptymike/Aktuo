@@ -19,7 +19,7 @@
     {
       "step": 2,
       "action": "Dobierz właściwy schemat XSD (załącznik i wersję) do rodzaju jednostki",
-      "detail": "Dla spółki z o.o. na zasadach ogólnych - załącznik nr 1 do UoR. Dla jednostki mikro - załącznik nr 4, dla małej - załącznik nr 5. Za 2025 r. obowiązuje wersja schemy opublikowana przez MF na stronie gov.pl/sf przed dniem sporządzenia - sprawdź komunikat MF. Nie sporządzaj w wersji archiwalnej jeśli MF wydał nową obowiązującą.",
+      "detail": "Dla spółki z o.o. na zasadach ogólnych - załącznik nr 1 do UoR. Dla jednostki mikro - załącznik nr 4, dla małej - załącznik nr 5. Konkretną obowiązującą wersję struktury logicznej XSD dla danego roku sprawozdawczego sprawdź każdorazowo na stronie gov.pl/web/kas/struktury-e-sprawozdan (MF regularnie publikuje nowe wersje i wyznacza daty, od których stare struktury przestają być akceptowane). Nie sporządzaj SF w wersji archiwalnej, jeśli MF opublikował nową obowiązującą strukturę.",
       "condition": "if jednostka kwalifikuje się jako mikro/mała - wymagana uchwała organu zatwierdzającego o stosowaniu uproszczeń"
     },
     {
@@ -73,7 +73,8 @@
   "common_mistakes": [
     "Próba składania SF do KRS przez portal S24 - SF składa się wyłącznie przez bezpłatny system RDF (Repozytorium Dokumentów Finansowych) w eKRS.",
     "Dołączanie uchwały o podziale zysku do SF osoby fizycznej składanego do KAS - osoby fizyczne nie sporządzają i nie składają uchwał o podziale zysku (brak organu zatwierdzającego).",
-    "Dynamiczne korygowanie zatwierdzonego SF po zmianach stanów magazynowych - SF sporządza się na dzień bilansowy i koryguje wyłącznie w razie istotnych błędów (art. 54 UoR), a nie bieżących zmian operacyjnych po dniu bilansowym."
+    "Dynamiczne korygowanie zatwierdzonego SF po zmianach stanów magazynowych - SF sporządza się na dzień bilansowy i koryguje wyłącznie w razie istotnych błędów (art. 54 UoR), a nie bieżących zmian operacyjnych po dniu bilansowym.",
+    "Stosowanie archiwalnej wersji struktury XSD bez weryfikacji aktualności - MF regularnie zmienia wersje schematów i wyznacza daty granicznej akceptacji starych struktur; przed sporządzeniem SF zawsze sprawdź aktualną wersję na gov.pl/web/kas/struktury-e-sprawozdan."
   ],
   "related_questions": [
     "Jak podpisać e-SF gdy jeden z członków zarządu nie ma polskiego PESEL ani podpisu kwalifikowanego?",
@@ -243,5 +244,14 @@
         "kb_records_used": 3
       }
     ]
-  }
+  },
+  "corrections_applied": [
+    {
+      "flag_type": "outdated_data_risk",
+      "flag_description": "Draft zawiera konkretne schematy XSD (załącznik nr 1 v 1.3, nr 4, nr 5) i odniesienia do wersji schematów obowiązujących za 2025 r., ale nie ma mechanizmu aktualizacji dla 2026 r. MF regularnie zmienia wersje schematów, a procedura powinna wskazywać gdzie sprawdzić aktualną wersję, nie konkretne numery.",
+      "applied_at": "2026-04-18T10:35:51Z",
+      "source": "v2",
+      "source_url": "https://czasopismaksiegowych.gofin.pl/biuletyn-informacyjny/archiwum-rocznikowe/328401/struktury-logiczne-sprawozdan-obowiazujace-od-1-stycznia-2026-r"
+    }
+  ]
 }
