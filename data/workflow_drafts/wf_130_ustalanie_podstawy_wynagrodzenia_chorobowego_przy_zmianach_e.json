@@ -1,0 +1,117 @@
+{
+  "id": "wf_130_ustalanie_podstawy_wynagrodzenia_chorobowego_przy_zmianach_e",
+  "title": "Ustalanie podstawy wynagrodzenia chorobowego przy zmianach etatu, podwyżkach i wzroście płacy minimalnej (2026)",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownik zachorował w marcu 2026 — biorę podstawę z 12 miesięcy (03.2025–02.2026). W marcu dostanie wyrównanie wynagrodzenia od stycznia 2026 dla pracowników samorządowych. Czy to wyrównanie doliczyć do podstawy za styczeń i luty?",
+    "Pracownikowi 15.09 zmieniła się kwota wynagrodzenia (bez zmiany etatu), w październiku zachorował. Jaką kwotę przyjąć za wrzesień do podstawy — sprzed zmiany, po zmianie, czy faktyczne brutto?",
+    "Od stycznia 2026 obowiązuje nowa płaca minimalna 4 806 zł, pracownik zarabiał wcześniej 4 666 zł i zachorował 28–30.01.2026. Czy podstawę liczyć od nowego minimalnego (4 806 zł), czy z 12 miesięcy wstecz?",
+    "Pracownikowi zmienił się etat od stycznia z pełnego na 3/4, w lutym jest na L4. Liczę podstawę z jednego miesiąca po zmianie etatu — co z nagrodą roczną (13-stką) i premią wypłaconą w 2025 r.?",
+    "Pracownica miała L4 w 10.2025 i 11.2025 (podstawa z 10.2024–09.2025), kolejne L4 jest 05.02.2026. Czy muszę ustalić podstawę od nowa (02.2025–01.2026), bo minął miesiąc kalendarzowy między zwolnieniami?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Sprawdź czy między poprzednią a bieżącą niezdolnością do pracy wystąpiła przerwa krótsza niż miesiąc kalendarzowy",
+      "detail": "Jeżeli przerwa < 1 miesiąc kalendarzowy — stosujesz TĘ SAMĄ podstawę co poprzednio (art. 43 ustawy zasiłkowej). Jeżeli przerwa ≥ 1 miesiąc kalendarzowy (uwaga: miesiąc kalendarzowy, a nie 30 dni!) — ustalasz podstawę od nowa z 12 miesięcy poprzedzających miesiąc powstania niezdolności. Przykład: L4 w 11.2025 i ponownie 05.02.2026 → nowa podstawa 02.2025–01.2026.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Ustal czy w okresie 12 miesięcy poprzedzających niezdolność wystąpiła zmiana wymiaru etatu",
+      "detail": "Jeżeli zmiana etatu (np. z 1/1 na 3/4) — podstawę ustalasz WYŁĄCZNIE z miesięcy po zmianie etatu (art. 40 ustawy zasiłkowej), nawet gdy to tylko 1 miesiąc. Składniki roczne/kwartalne sprzed zmiany etatu (13-stka, premia roczna 2025) NIE wchodzą do podstawy. Jeżeli zmieniło się tylko wynagrodzenie bez zmiany etatu — bierzesz normalne 12 miesięcy i kwoty faktycznie wypłacone (podwyżka nie wywołuje przeliczenia).",
+      "condition": "if zmiana wymiaru czasu pracy w okresie 12 m-cy"
+    },
+    {
+      "step": 3,
+      "action": "Wylicz przeciętne miesięczne wynagrodzenie z 12 miesięcy (lub krótszego okresu zatrudnienia) po odjęciu 13,71% (składki pracownika ZUS emerytalno-rentowa i chorobowa)",
+      "detail": "Bierzesz wynagrodzenie BRUTTO wypłacone w danym miesiącu po pomniejszeniu o 13,71%. Miesiące, w których pracownik przepracował mniej niż połowę obowiązującego go czasu pracy z powodu nieobecności z prawem do zasiłku — wyłączasz całkowicie. Nieobecność nieusprawiedliwiona i urlop bezpłatny NIE uzasadniają wyłączenia miesiąca, ale wynagrodzenie za ten miesiąc dopełniasz do kwoty, jaką pracownik by otrzymał, gdyby przepracował pełny miesiąc.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Uzupełnij składniki stałe i zmienne odrębnie przy miesiącach niepełnych",
+      "detail": "Składniki STAŁE (wynagrodzenie zasadnicze miesięczne) — przyjmujesz w kwocie jaka przysługiwałaby za cały miesiąc. Składniki ZMIENNE (godziny nocne, nadgodziny, prowizje, akord, wynagrodzenie godzinowe) — dopełniasz proporcjonalnie: kwota faktyczna ÷ dni/godziny przepracowane × dni/godziny obowiązujące w tym miesiącu. W Comarch Optima: Kadry i Płace → Listy płac → parametr 'Uzupełnij wynagrodzenie' na elemencie wypłaty; w Symfonia Kadry i Płace: kartoteka → 'Podstawa naliczania zasiłków' (automatyczne dopełnianie, ale zweryfikuj ręcznie składniki niestandardowe).",
+      "condition": "if w miesiącu wystąpiła nieobecność usprawiedliwiona z prawem do wynagrodzenia/zasiłku"
+    },
+    {
+      "step": 5,
+      "action": "Rozstrzygnij kwestię podwyżek i wyrównań wypłacanych z datą wsteczną",
+      "detail": "Wyrównanie wynagrodzenia za okres wchodzący w podstawę (np. wyrównanie od 01.2026 wypłacone w 03.2026 za styczeń i luty) — DOLICZASZ do miesięcy, których dotyczy (styczeń i luty), a nie do miesiąca wypłaty. Dotyczy to zwłaszcza pracowników samorządowych i budżetówki po zmianach rozporządzenia płacowego. Podwyżka bieżąca bez wyrównania wstecznego — wchodzi w podstawę dopiero od miesiąca, w którym została faktycznie wypłacona.",
+      "condition": "if pracodawca wypłacił wyrównanie wynagrodzenia z datą wsteczną"
+    },
+    {
+      "step": 6,
+      "action": "Porównaj ustaloną podstawę z gwarantowanym minimum dla pełnego etatu",
+      "detail": "Podstawa wymiaru zasiłku/wynagrodzenia chorobowego dla pracownika pełnoetatowego NIE może być niższa niż minimalne wynagrodzenie pomniejszone o 13,71%. W 2026 r.: 4 806 zł × (1 − 0,1371) = 4 806 − 659,00 = 4 147,00 zł (4 147,09 zł wg wyliczenia detalicznego). Dla niepełnego etatu — proporcjonalnie do wymiaru. Jeżeli pracownik zarabiał 4 666 zł (min. 2025) i zachoruje w 2026 — podstawa 'wskakuje' automatycznie na 4 147,00 zł (nowe minimum 2026), bez liczenia 12 m-cy wstecz.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj źródło zatrudnienia składników wchodzących do podstawy",
+      "detail": "Do podstawy wynagrodzenia chorobowego z umowy o pracę bierzesz WYŁĄCZNIE wynagrodzenie ze stosunku pracy. Wcześniejsza umowa zlecenia u tego samego pracodawcy (nawet jeśli była objęta dobrowolną chorobową) NIE wchodzi do podstawy z etatu — to odrębny tytuł ubezpieczenia. Dla zleceniobiorcy z dobrowolną chorobową: podstawa z 12 m-cy zlecenia, miesiąc rozpoczęcia (niepełny) wyłączasz, miesiące z mniej niż połową dni kalendarzowych ubezpieczenia — wyłączasz.",
+      "condition": "if pracownik miał wcześniej inną umowę u tego samego pracodawcy lub równolegle inne tytuły"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa",
+      "article_number": "art. 36–42",
+      "reason": "Reguluje ustalanie podstawy wymiaru zasiłku chorobowego — okres 12 miesięcy, wyłączanie miesięcy, uzupełnianie wynagrodzenia, minimum = min. wynagrodzenie − 13,71%."
+    },
+    {
+      "law_name": "Ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa",
+      "article_number": "art. 40",
+      "reason": "Przepis o ponownym ustalaniu podstawy przy zmianie wymiaru czasu pracy — podstawę ustala się z miesięcy po zmianie etatu."
+    },
+    {
+      "law_name": "Ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa",
+      "article_number": "art. 43",
+      "reason": "Zasada: podstawy nie ustala się na nowo, jeżeli między okresami pobierania zasiłków nie było przerwy albo przerwa była krótsza niż miesiąc kalendarzowy."
+    }
+  ],
+  "edge_cases": [
+    "Świadczenie rehabilitacyjne przyznane na podstawie wcześniejszej podstawy — podwyżka wynagrodzenia w trakcie pobierania świadczenia NIE zmienia podstawy świadczenia rehabilitacyjnego (pozostaje 'stara' podstawa do końca okresu zasiłkowego/rehabilitacyjnego).",
+    "Pracownik zachorował w 2. miesiącu zatrudnienia (1. miesiąc niepełny) — podstawą jest wynagrodzenie z miesiąca, w którym powstała niezdolność, UZUPEŁNIONE do kwoty, jaką pracownik otrzymałby, gdyby przepracował cały miesiąc (zarówno składniki stałe, jak i zmienne — proporcjonalnie).",
+    "Wzrost minimalnego wynagrodzenia od 01.2026 (4 806 zł) — dla pracownika zarabiającego najniższą krajową, który chorował wcześniej z podstawą 4 023,13 zł (minimum 2025), od stycznia 2026 podstawa automatycznie rośnie do 4 147,00 zł, nawet jeśli stosuje się 'starą' podstawę z poprzedniej niezdolności (mechanizm gwarancji minimum).",
+    "Zleceniobiorca z dobrowolną chorobową zgłoszony w trakcie miesiąca (np. 08.05) — miesiąc rozpoczęcia ubezpieczenia wyłącza się z podstawy jako niepełny; kolejne miesiące wyłączasz tylko wtedy, gdy wg dni kalendarzowych ubezpieczenia było mniej niż połowa miesiąca z powodu pobierania zasiłku (wykazanego w RSA)."
+  ],
+  "common_mistakes": [
+    "Przeliczanie podstawy od nowa przy każdej podwyżce lub zmianie stawki bez zmiany etatu — BŁĄD: podwyżka wynagrodzenia bez zmiany wymiaru czasu pracy NIE powoduje ponownego ustalania podstawy; nadal obowiązuje 12 m-cy poprzedzających.",
+    "Liczenie przerwy między zwolnieniami jako '30 dni' zamiast 'miesiąc kalendarzowy' — art. 43 ustawy zasiłkowej mówi o miesiącu kalendarzowym (np. od 15.10 do 15.11), a nie 30 dniach.",
+    "Wliczanie do podstawy chorobowego z etatu wynagrodzenia z wcześniejszej umowy zlecenia u tego samego pracodawcy — podstawę liczy się wyłącznie z tytułu, z którego obecnie należy się świadczenie (umowa o pracę = tylko wynagrodzenie z etatu)."
+  ],
+  "related_questions": [
+    "Jak ustalić podstawę zasiłku macierzyńskiego, jeżeli pracownica w okresie 12 miesięcy miała zmianę etatu i długą nieobecność?",
+    "Czy premia kwartalna/roczna wypłacona po powrocie z urlopu macierzyńskiego wchodzi do podstawy zasiłku chorobowego?",
+    "Jak liczyć podstawę zasiłku chorobowego dla zleceniobiorcy objętego dobrowolną chorobową krócej niż pełny miesiąc kalendarzowy?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "130",
+    "cluster_label": "Ustalanie podstawy wynagrodzenia chorobowego przy zmianach etatu i płacy",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "42143d89f28d",
+      "5fcf4806b659",
+      "6d30a7a7c05d",
+      "1904db033ebd",
+      "562f974dcb80",
+      "f2d8bf63b303",
+      "db5bd5b3ce93",
+      "021643e19ce2",
+      "05c27916a1eb",
+      "8cadd9299deb",
+      "f2888f2a0bab",
+      "93e618eb4fb5",
+      "010f61af3e44",
+      "caae1d8459fa",
+      "97c51d225745"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

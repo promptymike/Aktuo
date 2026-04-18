@@ -1,0 +1,117 @@
+{
+  "id": "wf_94_powrot_do_zwolnienia_vat_po_podniesieniu_limitu_do_240_tys",
+  "title": "Powrót do zwolnienia podmiotowego VAT po podniesieniu limitu do 240 000 zł od 1.01.2026",
+  "topic_area": "VAT",
+  "question_examples": [
+    "Podatnik przekroczył w grudniu 2025 limit 200 tys. zł i zarejestrował się do VAT, ale nie przekroczy 240 tys. zł — kiedy i jak może wrócić do zwolnienia podmiotowego w 2026 r.?",
+    "Do kiedy należy złożyć aktualizację VAT-R, żeby skorzystać ze zwolnienia od 1 stycznia 2026 r.?",
+    "Jestem VAT-owcem od kilku lat, w 2025 r. nie przekroczyłem 200 tys. zł — czy mogę od stycznia 2026 wrócić na zwolnienie z VAT?",
+    "Przegapiłem termin złożenia VAT-R na styczeń — czy mogę zgłosić powrót do zwolnienia od lutego (lub dowolnego innego miesiąca)?",
+    "Czy po przekroczeniu limitu w grudniu wszystkie faktury z tego dnia mają być z VAT, czy tylko ta, którą limit został przekroczony?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal wartość sprzedaży netto za cały rok kalendarzowy",
+      "detail": "Zsumuj sprzedaż netto z całego 2025 r. (lub odpowiednio 2026 r.) wyłączając pozycje wymienione w art. 113 ust. 2 ustawy o VAT (m.in. WDT, sprzedaż środków trwałych). Limit do porównania od 1.01.2026: 240 000 zł netto (podniesiony z 200 000 zł). Jeżeli podatnik zaczął działalność w trakcie roku — limit liczy się proporcjonalnie do liczby dni prowadzenia działalności.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj brak wyłączeń przedmiotowych ze zwolnienia",
+      "detail": "Sprawdź, czy podatnik nie wykonuje czynności wymienionych w art. 113 ust. 13 ustawy o VAT (m.in. usługi prawnicze, doradztwo z wyjątkiem rolniczego, jubilerskie, ściągania długów, sprzedaż nowych środków transportu, części samochodowych online, wyrobów z metali szlachetnych). Jeżeli tak — powrót do zwolnienia jest niedopuszczalny, niezależnie od wysokości obrotu.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Zastosuj regułę „rok po utracie/rezygnacji” z art. 113 ust. 11",
+      "detail": "Zasada podstawowa: podatnik, który utracił prawo do zwolnienia lub z niego zrezygnował, może do niego wrócić najwcześniej po upływie roku, licząc od końca roku, w którym utracił prawo/zrezygnował. Wyjątek przejściowy 2026: w związku z podniesieniem limitu do 240 000 zł, podatnik, który w 2025 r. przekroczył 200 000 zł, ale nie przekroczył 240 000 zł, może wrócić do zwolnienia od 1.01.2026 (interpretacje MF i KIS) — w tym przypadku nie stosuje się okresu karencji.",
+      "condition": "if sprzedaż 2025 mieści się w przedziale 200 001 – 240 000 zł netto"
+    },
+    {
+      "step": 4,
+      "action": "Złóż aktualizację VAT-R w odpowiednim terminie",
+      "detail": "W VAT-R zaznacz część C.1 poz. „podatnik będzie korzystał (korzysta) ze zwolnienia, o którym mowa w art. 113 ust. 1 lub 9” i wskaż datę rezygnacji z opodatkowania = 1. dzień miesiąca powrotu do zwolnienia. Termin: do 7. dnia miesiąca, od którego podatnik chce korzystać ze zwolnienia (powrót od 1.01.2026 → VAT-R do 7.01.2026; od 1.02.2026 → do 7.02.2026 itd.). Zgłoszenie możliwe w dowolnym miesiącu roku, nie tylko od stycznia.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Rozlicz ostatnie faktury z okresu VAT czynnego i ewentualny remanent likwidacyjny na cele zwolnienia",
+      "detail": "Za ostatni miesiąc VAT czynnego złóż JPK_V7M (lub V7K przy kwartałach) i zapłać VAT należny. Rozważ korektę VAT naliczonego od towarów/materiałów pozostałych na stanie na dzień powrotu do zwolnienia (art. 91 ust. 7 i 7a ustawy o VAT) — w praktyce: oddanie części VAT odliczonego przy zakupie środków trwałych w okresie korekty (5/10 lat) i towarów handlowych/materiałów. W Comarch Optima: moduł „Rejestry VAT → Korekty roczne”; w Symfonia Finanse i Księgowość / WFirma: „VAT → Korekta odliczeń”.",
+      "condition": "if podatnik odliczał VAT od zakupów wykorzystywanych nadal w działalności zwolnionej"
+    },
+    {
+      "step": 6,
+      "action": "Oznacz prawidłowo faktury z dnia przekroczenia limitu",
+      "detail": "Jeżeli limit został przekroczony konkretną fakturą — ta faktura i kolejne w danym dniu/miesiącu są już opodatkowane VAT, ale faktury wystawione wcześniej tego samego dnia (przed przekroczeniem) pozostają bez VAT i wliczają się do limitu (art. 113 ust. 5). Zarejestruj podatnika jako VAT czynnego z datą dnia przekroczenia — VAT-R składa sam podatnik lub pełnomocnik z aktywnym UPL-1.",
+      "condition": "if przekroczenie limitu nastąpiło w trakcie roku"
+    },
+    {
+      "step": 7,
+      "action": "Poinformuj klienta o obowiązku kontaktu kas fiskalnych i o skutkach operacyjnych",
+      "detail": "Po powrocie na zwolnienie: faktury wystawiane bez VAT z adnotacją „zwolnienie na podstawie art. 113 ust. 1 ustawy o VAT”, brak składania JPK_V7, brak prawa do odliczenia VAT z zakupów. Jeżeli podatnik używa kasy fiskalnej — przeprogramowanie stawek na „zw.”. Weryfikacja statusu na Białej Liście MF może trwać kilka–kilkanaście dni roboczych od złożenia VAT-R.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 1",
+      "reason": "Określa podmiotowe zwolnienie z VAT i limit wartości sprzedaży (od 1.01.2026 r. — 240 000 zł netto)."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 5",
+      "reason": "Reguluje utratę zwolnienia w momencie przekroczenia limitu — opodatkowana jest czynność, którą limit został przekroczony, w części nadwyżki."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 11",
+      "reason": "Określa zasady powrotu do zwolnienia po upływie roku od utraty/rezygnacji oraz podstawę do wyjątku przejściowego w związku z podniesieniem limitu do 240 000 zł."
+    }
+  ],
+  "edge_cases": [
+    "Podatnik przekroczył w 2025 r. limit 200 tys. zł, ale nie przekroczył 240 tys. zł — zgodnie z interpretacjami MF/KIS w związku z przepisami przejściowymi może wrócić do zwolnienia od 1.01.2026, bez oczekiwania pełnego roku karencji. Zweryfikuj tę interpretację pisemnym zapytaniem do KIS, jeżeli urząd skarbowy kwestionuje prawo do powrotu (w dyskusjach pojawiają się sprzeczne stanowiska różnych US i infolinii).",
+    "Przegapienie terminu 7 stycznia nie zamyka drogi — podatnik może złożyć VAT-R do 7. dnia kolejnego miesiąca i wrócić na zwolnienie np. od 1.02.2026 lub 1.03.2026 (przepisy nie ograniczają powrotu wyłącznie do stycznia).",
+    "Podatnik, który dobrowolnie zarejestrował się jako VAT czynny (art. 113 ust. 4), musi odczekać pełen rok od końca roku rezygnacji — wyjątek przejściowy 240 tys. zł dotyczy tych, którzy utracili zwolnienie z mocy prawa w 2025 r., nie zaś rezygnujących dobrowolnie.",
+    "Wykonywanie choćby jednej czynności z katalogu art. 113 ust. 13 (np. doradztwo, usługi prawnicze, sprzedaż wyrobów z metali szlachetnych) — całkowicie wyklucza powrót do zwolnienia niezależnie od obrotu."
+  ],
+  "common_mistakes": [
+    "Składanie VAT-R za klienta bez aktywnego pełnomocnictwa UPL-1 — biuro rachunkowe ponosi wtedy solidarną odpowiedzialność za zaległości VAT klienta przez 6 miesięcy od dnia rejestracji (art. 96 ust. 4b ustawy o VAT).",
+    "Pominięcie remanentu / korekty VAT naliczonego od towarów handlowych, materiałów i środków trwałych pozostałych na stanie w dniu powrotu do zwolnienia (art. 91 ust. 7 ustawy o VAT) — urząd zwykle wykrywa to przy kontroli krzyżowej.",
+    "Uznawanie, że skoro limit 2026 to 240 tys. zł, to faktury wystawione po przekroczeniu 200 tys. zł w grudniu 2025 r. są „bez VAT” — są one opodatkowane od momentu przekroczenia, mimo że podatnik może wrócić na zwolnienie od 1 stycznia 2026."
+  ],
+  "related_questions": [
+    "Jak rozliczyć remanent i korektę VAT naliczonego (art. 91) przy powrocie ze statusu VAT czynnego na zwolnienie podmiotowe?",
+    "Czy podatnik na zwolnieniu podmiotowym z VAT ma obowiązek rejestracji VAT-UE przy imporcie usług z UE powyżej 50 tys. zł?",
+    "Jak wygląda przeliczenie limitu 240 tys. zł przy działalności rozpoczętej w trakcie roku (proporcja dni) i jak liczyć limit dla najmu prywatnego?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "94",
+    "cluster_label": "Powrót do zwolnienia VAT po podniesieniu limitu do 240 tys.",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "e41d99c07dd9",
+      "e496b2ae1cfb",
+      "9ce5e0150234",
+      "6631d84f1402",
+      "e6df24de67d9",
+      "7cf9c5b37fa2",
+      "ae49e1aa8968",
+      "61250247b2a4",
+      "b5905c3afc90",
+      "6902916018fc",
+      "335036769bd6",
+      "f00c925bc482",
+      "cff62307c70a",
+      "fb954a096c70",
+      "1fd9870c7d01"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "wf_143_wybor_programu_ksiegowego_kpir_pelna_ksiegowosc_jdg_i_spolki",
+  "title": "Wybór programu księgowego dla biura rachunkowego i JDG: KPiR, ryczałt, pełna księgowość, integracja z KSeF (2026)",
+  "topic_area": "software",
+  "question_examples": [
+    "Jaki tani program do prowadzenia księgowości dwóch firm, z których jedna jest VAT-owcem (wysyłka JPK)?",
+    "Jaki program do pełnej księgowości spółki z o.o. — stacjonarny czy w chmurze (Optima, Ognik, WAPRO Fakir, Finka FK)?",
+    "Jaki program polecacie do biura prowadzącego KPiR i ryczałt, z panelem klienta, OCR i integracją z KSeF?",
+    "Jaki darmowy program do wystawiania 2 faktur miesięcznie zintegrowany z KSeF (e-Mikrofirma, Fakturownia)?",
+    "Jaki program polecacie do KPiR i pełnej księgowości — funkcjonalny i przystępny cenowo, przy 50 klientach biura?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Zdefiniuj zakres księgowy klientów biura",
+      "detail": "Policz osobno: ilu klientów na KPiR/ryczałcie (ustawa o PIT, rozporządzenie MF w sprawie KPiR), ilu na pełnych księgach (ustawa o rachunkowości — obowiązkowo sp. z o.o., SA, PSA oraz JDG i sp. osobowe po przekroczeniu 2 500 000 EUR przychodu za 2025 r., art. 2 ust. 1 UoR), ilu jest czynnymi podatnikami VAT (JPK_V7M/V7K) i ilu ma kadry/płace. Bez tej mapy nie da się policzyć TCO.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj obowiązkową integrację z KSeF w wybranym programie",
+      "detail": "Od 1.02.2026 KSeF jest obowiązkowy dla podatników, których sprzedaż (wraz z VAT) w 2024 r. przekroczyła 200 mln zł, a od 1.04.2026 dla pozostałych podatników VAT czynnych i zwolnionych (ustawa o VAT, art. 106ga). Żądaj od dostawcy: uwierzytelnienia tokenem/pieczęcią, pobieranie faktur zakupowych z KSeF, numer KSeF na fakturze, obsługa trybu offline24 i awaryjnego. Programy deklarujące pełną integrację: Comarch Optima (moduł e-Sprawy/KSeF), Symfonia, WAPRO Fakir/Kaper, WFirma, Enova365, Ognik, Fakt.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Dobierz segment programu do formy księgowości",
+      "detail": "Dla KPiR/ryczałtu i małych biur: WFirma, Mała Księgowość Rzeczpospolitej, Fakt Zero/Fakt Optima, Comarch Optima (moduł Książka Podatkowa). Dla pełnej księgowości: Comarch Optima (Księga Handlowa), Symfonia Finanse i Księgowość, WAPRO Fakir, Enova365 (moduł Księga Handlowa), Finka-FK, Insert Rewizor nexo. Dla spółek transportowych dodaj moduł środków trwałych i rozliczeń walutowych (FK + HM/Handel).",
+      "condition": "jeśli biuro obsługuje zarówno KPiR, jak i pełne księgi — wybierz jednego dostawcę z obydwoma modułami, żeby nie duplikować bazy kontrahentów"
+    },
+    {
+      "step": 4,
+      "action": "Policz TCO w modelu 'per klient' na 12 miesięcy",
+      "detail": "Zbuduj tabelę: licencja biura + cena za klienta + moduł kadr + moduł KSeF/OCR + moduł JPK + serwer/chmura. Przykładowo WFirma dla BR liczy miesięcznie za klienta (przy 50 klientach ok. 1100 zł/mc, tj. ~13 200 zł/rok — zgodnie z dyskusją w klastrze). Comarch Optima i Enova365 wyceniaj per stanowisko + moduły + asysta (pakiet Biuro Rachunkowe). Porównaj z darmowymi/tanimi dla JDG: e-Mikrofirma (MF) i wtyczka KSeF — wyłącznie do wystawiania faktur, nie do prowadzenia ksiąg.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Ustal model wdrożenia: chmura vs instalacja lokalna",
+      "detail": "Chmura (WFirma, Comarch Optima w Chmurze Standard, Enova365 w chmurze, Ognik): dostęp zdalny, backup po stronie dostawcy, szybsze aktualizacje pod KSeF. Stacjonarne (WAPRO Fakir, Finka-FK, Symfonia on-premise, Insert): pełna kontrola nad bazą, wymagany serwer SQL + backup + procedura RODO (art. 32 RODO — środki techniczne). Dla klientów wymagających offline24 w KSeF sprawdź, czy wersja desktopowa ma zaimplementowany token offline.",
+      "condition": "jeśli klient wymaga pracy stacjonarnej (np. kancelarie, sektor regulowany) — zawęź do WAPRO Fakir lub Finka-FK"
+    },
+    {
+      "step": 6,
+      "action": "Zweryfikuj funkcje operacyjne biura: OCR, panel klienta, e-ZUS, JPK",
+      "detail": "Checklist minimum 2026: (a) wysyłka JPK_V7M/V7K i JPK_CIT (obowiązkowe JPK_KR_PD od 1.01.2025 dla największych CIT-owców i od 1.01.2026 dla pozostałych CIT-owców obowiązanych do JPK_V7 — art. 9 ust. 1c ustawy o CIT), (b) panel dla klienta do dekretacji i podglądu podatku, (c) OCR faktur zakupu, (d) import wyciągów MT940, (e) generowanie DRA do ZUS PUE. WFirma, Comarch Optima (Pulpit Menadżera/Biuro), Enova365 (Pulpity Klienta) mają komplet; Mała Księgowość Rzeczpospolitej i Fakt Zero nie mają pełnego panelu klienta.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Przed zakupem uruchom 14–30 dni testu na realnych danych jednego klienta",
+      "detail": "Wgraj do wersji demo: 10 faktur sprzedaży (w tym 1 korekta — sprawdź dziedziczenie oznaczeń GTU/TP/MPP z faktury pierwotnej w JPK_V7, zgodnie z § 10 rozporządzenia MF z 15.10.2019 ws. JPK_VAT z deklaracją), 10 faktur zakupu (w tym 1 z KSeF), 1 list płac dla umowy o pracę, 1 rachunek do zlecenia, DRA do ZUS. Zweryfikuj, czy korekta faktury dziedziczy GTU/procedury (zasada: dziedziczy; wyjątek — korekta zmieniająca przedmiot transakcji wymaga aktualizacji oznaczenia).",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "JDG na ryczałcie wystawiająca 2 faktury/mc: wystarczy bezpłatna aplikacja e-Mikrofirma MF + moduł KSeF lub Fakturownia (free tier) — pełny program księgowy jest nieopłacalny; księgowość ryczałtu może prowadzić biuro w dowolnym narzędziu.",
+    "Biuro z mieszanym portfelem (KPiR + pełna księgowość + spółki) — przy Optimie/Enovie opłaca się pakiet 'dla Biur Rachunkowych' (licencja bazowa + koszt per klient), który wychodzi taniej niż WFirma powyżej ~40–50 klientów.",
+    "Spółka transportowa z pełnymi księgami: standardowy moduł FK nie wystarczy — potrzebna integracja z systemem TMS (np. wyliczanie diet, rozrachunki walutowe wg art. 30 ust. 2 UoR); rozważ Comarch Optima HM + FK lub Symfonia ERP.",
+    "Klient prowadzący magazyn i wystawiający faktury w swoim systemie (np. Subiekt GT/nexo) — nie dubluj wprowadzania; ustaw eksport JPK_FA lub integrację API z programem biura, żeby uniknąć 'samoobsługi' JPK przez klienta."
+  ],
+  "common_mistakes": [
+    "Wybór programu wyłącznie po cenie licencji bez policzenia kosztu modułów (KSeF, OCR, kadry, e-Deklaracje, asysta) — realne TCO bywa 2–3× wyższe niż cena bazowa.",
+    "Zakup programu bez testu integracji z KSeF na środowisku produkcyjnym — po 1.04.2026 brak poprawnej obsługi KSeF blokuje wystawianie faktur B2B (art. 106ga ustawy o VAT).",
+    "Zakładanie, że faktura korygująca 'czyści' oznaczenia GTU/procedur w JPK_V7 — korekta dziedziczy oznaczenia faktury pierwotnej; program musi to robić automatycznie, inaczej JPK będzie niespójny."
+  ],
+  "related_questions": [
+    "Jak skonfigurować integrację KSeF w Comarch Optima / WFirma krok po kroku (token, certyfikat, tryb offline24)?",
+    "Czy biuro rachunkowe może wystawiać faktury w KSeF w imieniu klienta i jakie uprawnienia nadać w ZAW-FA?",
+    "Jak migrować bazę księgową (plan kont, rozrachunki, środki trwałe) między programami w trakcie roku obrotowego?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "143",
+    "cluster_label": "Wybór programu księgowego: KPiR, pełna księgowość, JDG i spółki",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "9484dbacac32",
+      "1d21ee1e6385",
+      "df4ef90a3d16",
+      "305ae0adbe6c",
+      "886de158dce9",
+      "a65100ce15a8",
+      "79b8a12fd26b",
+      "a43377216753",
+      "e0ec2e6476bd",
+      "a1ffd9f6e75d",
+      "576e678a724c",
+      "872312e31b1a",
+      "6833b50afb1f"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

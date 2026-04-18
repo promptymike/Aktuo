@@ -1,0 +1,109 @@
+{
+  "id": "wf_87_pit_ulga_na_dziecko_i_rozliczenie_samotnego_rodzica_limity_d",
+  "title": "PIT: ulga prorodzinna i status samotnego rodzica — limity dochodów rodzica i dziecka (rozliczenie za 2025 w 2026)",
+  "topic_area": "PIT",
+  "question_examples": [
+    "Czy matka może rozliczyć się jako samotnie wychowująca, jeśli pełnoletnie uczące się dziecko przekroczyło limit własnego dochodu 22 546,92 zł?",
+    "Małżeństwo, jedno dziecko: tata ryczałt 35 tys. przychodu, mama etat 64 tys. dochodu — czy mama może odliczyć całą ulgę prorodzinną w PIT-37?",
+    "Rozliczam się osobno z mężem, mój dochód > 56 tys., ale łącznie mieścimy się w 112 tys. — czy mogę skorzystać z ulgi na jedno dziecko?",
+    "Podatnik ma dwoje dzieci z dwoma różnymi kobietami, jego dochód > 56 tys.; jedna matka odlicza całe jedno dziecko, druga ma dochód > 56 tys. — czy podatnik może odliczyć drugie dziecko?",
+    "Mam troje dzieci, ale 17-latka odlicza w całości była żona. Jak wykazać go w załączniku PIT/O — z kwotą 0, żeby widoczna była trójka dzieci, a na pozostałe dwoje odliczyć 1112,04 zł i 2000,04 zł?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal liczbę dzieci wykazywanych do ulgi i sprawdź próg dochodowy rodzica",
+      "detail": "Przy JEDNYM dziecku limit roczny dochodu rodzica wynosi 112 000 zł łącznie dla małżonków lub samotnego rodzica, albo 56 000 zł gdy rodzic nie jest w związku małżeńskim przez cały rok (art. 27f ust. 2 pkt 1 ustawy PIT). Przy DWOJGU i więcej dzieciach — brak limitu dochodu rodzica. Do limitu liczymy dochód z art. 27 (skala), art. 30b (kapitały) oraz dochód z działalności opodatkowanej 19% pomniejszony o składki ZUS; nie wlicza się przychodów z ryczałtu (PIT-28) — dlatego w przykładzie tata na ryczałcie 35 tys. nie wchodzi do limitu mamy.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj warunek \"jedno dziecko\" dla małżonków rozliczających się osobno",
+      "detail": "Limit 112 000 zł dotyczy SUMY dochodów obojga małżonków pozostających w związku przez cały rok, niezależnie od tego czy rozliczają się wspólnie czy osobno. Nie można obejść limitu rozliczeniem indywidualnym — US widzi dochód wspólny. W przypadku z komentarza [post 7035ad915d52]: jeśli łącznie > 112 tys., ulga przy jednym dziecku nie przysługuje nikomu z małżonków.",
+      "condition": "if podatnik ma tylko jedno dziecko i jest w związku małżeńskim"
+    },
+    {
+      "step": 3,
+      "action": "Sprawdź dochód pełnoletniego uczącego się dziecka — limit 22 546,92 zł",
+      "detail": "Dla dziecka pełnoletniego uczącego się do ukończenia 25. r.ż. limit własnych dochodów dziecka za 2025 r. wynosi 12-krotność renty socjalnej = 22 546,92 zł (art. 6 ust. 4e w zw. z art. 27f ust. 6 PIT). Do limitu wlicza się dochody opodatkowane skalą oraz 19% kapitałowe; NIE wlicza się przychodów objętych ulgą dla młodych (art. 21 ust. 1 pkt 148) ani renty rodzinnej. Przekroczenie limitu eliminuje zarówno ulgę prorodzinną, jak i preferencyjne rozliczenie jako samotny rodzic z tym dzieckiem.",
+      "condition": "if dziecko jest pełnoletnie i uczy się"
+    },
+    {
+      "step": 4,
+      "action": "Oceń prawo do statusu \"samotnie wychowującego rodzica\" niezależnie od limitu 112/56 tys.",
+      "detail": "Preferencyjne rozliczenie z dzieckiem (art. 6 ust. 4c–4g PIT) NIE ma limitu dochodu rodzica — limit 112/56 tys. dotyczy wyłącznie ulgi prorodzinnej. Warunki samotnego rodzica: stan cywilny (panna/kawaler/wdowa/rozwiedziony/separacja) oraz faktyczne samotne wychowywanie. Limit dochodu dziecka 22 546,92 zł obowiązuje tak samo jak przy uldze. Możliwe jest więc rozliczenie jako samotny rodzic BEZ stosowania ulgi prorodzinnej — jeśli tylko dziecko nie przekroczyło własnego limitu.",
+      "condition": "if rodzic chce rozliczyć PIT ze statusem samotnie wychowującego"
+    },
+    {
+      "step": 5,
+      "action": "Wypełnij załącznik PIT/O i część D zeznania PIT-36/PIT-37",
+      "detail": "W PIT/O część E wpisz PESEL każdego dziecka, liczbę miesięcy i kwotę odliczenia. Stawki 2025: 1. i 2. dziecko — po 1 112,04 zł/rok (92,67 zł × 12), 3. dziecko — 2 000,04 zł, 4. i każde kolejne — 2 700,00 zł. Jeśli ulgę na dane dziecko odlicza w 100% drugi rodzic, wpisz PESEL z liczbą miesięcy 0 i kwotą 0 zł — żeby US widział pełną liczbę dzieci i prawidłowo zastosował progresję kwot na kolejne dziecko. W Comarch Optima: Księgowość → Deklaracje → PIT-37/36 → załącznik PIT/O → zakładka \"Ulga prorodzinna\"; w WFirmie: Start → Podatki → PIT roczny → PIT/O.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Uzgodnij podział ulgi między rodzicami i zastosuj regułę proporcji",
+      "detail": "Ulgę na to samo dziecko rodzice mogą dzielić w dowolnej proporcji (np. 50/50, 100/0), pod warunkiem zgodnego oświadczenia. Przy braku porozumienia — po 50%, chyba że dziecko zamieszkuje z jednym z rodziców i ten sprawuje faktyczną opiekę (wtedy 100% dla rodzica wykonującego opiekę). UWAGA: jeśli drugi rodzic nie ma prawa do władzy rodzicielskiej/nie wychowuje faktycznie — nie może odliczać, nawet za porozumieniem (art. 27f ust. 1 PIT wymaga wykonywania władzy rodzicielskiej).",
+      "condition": "if dziecko jest odliczane przez dwoje rodziców"
+    },
+    {
+      "step": 7,
+      "action": "W razie wcześniejszego błędnego odliczenia przez drugiego rodzica — przygotuj korektę PIT i wniosek o stwierdzenie nadpłaty",
+      "detail": "Jeśli drugi rodzic nienależnie odliczył ulgę w latach ubiegłych, a faktycznie wychowywał dziecko inny rodzic — można złożyć korekty PIT za ostatnie 5 lat (art. 70 §1 Ordynacji podatkowej) wraz z wnioskiem o stwierdzenie nadpłaty (art. 75 Ord. pod.). Dołącz uzasadnienie i dokumenty (wyrok rozwodowy, postanowienie o władzy rodzicielskiej). US ma prawo wezwać oboje rodziców do wyjaśnień.",
+      "condition": "if stwierdzono nienależne odliczenie przez drugiego rodzica w latach poprzednich"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 27f",
+      "reason": "Podstawowy przepis ulgi prorodzinnej — określa kwoty odliczenia, limit 112/56 tys. przy jednym dziecku, warunek władzy rodzicielskiej i zasady podziału ulgi między rodzicami."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 6 ust. 4c-4g",
+      "reason": "Reguluje preferencyjne rozliczenie samotnie wychowującego rodzica oraz limit dochodu dziecka pełnoletniego uczącego się (12-krotność renty socjalnej = 22 546,92 zł za 2025 r.) — bez limitu dochodu rodzica."
+    }
+  ],
+  "edge_cases": [
+    "Małżonkowie oboje < 26 r.ż. korzystający z ulgi dla młodych (art. 21 ust. 1 pkt 148): przychody objęte ulgą dla młodych WCHODZĄ do limitu 112 tys. przy ocenie prawa do ulgi prorodzinnej (inaczej niż przy limicie dochodu dziecka) — potwierdzenie na podatki.gov.pl. Przy jednym dziecku i łącznym dochodzie > 112 tys. (nawet gdy większość to przychody z ulgi dla młodych) — ulga prorodzinna nie przysługuje.",
+    "Opieka naprzemienna nad dzieckiem pełnoletnim mieszkającym głównie u jednego z rodziców: rodzic, u którego dziecko faktycznie zamieszkuje i który ponosi koszty utrzymania, ma pierwszeństwo do ulgi i statusu samotnego rodzica — niezależnie od ustalonej opieki wspólnej w wyroku.",
+    "Dziecko z PIT-11 z pracy: do limitu 22 546,92 zł wlicza się dochód (przychód minus KUP), NIE przychód brutto. Przychody objęte ulgą dla młodych dziecka nie są wliczane (zmiana obowiązująca od rozliczeń za 2022 r., ugruntowana w 2025/2026).",
+    "Samotny rodzic po rozwodzie, gdzie drugi rodzic ma sporadyczne kontakty z dzieckiem: status samotnego rodzica przysługuje, ale US może weryfikować — ugruntowana praktyka wymaga wykazania faktycznego samotnego wychowywania (koszty, zamieszkanie, podejmowanie decyzji). Samo orzeczenie rozwodu nie wystarcza."
+  ],
+  "common_mistakes": [
+    "Mylenie limitu dochodu rodzica (112/56 tys.) z limitem dochodu dziecka (22 546,92 zł) — to dwa różne progi z dwóch różnych przepisów. Przekroczenie przez dziecko jego limitu eliminuje oba benefity, ale limit rodzica dotyczy tylko ulgi prorodzinnej, nie statusu samotnego rodzica.",
+    "Zakładanie, że osobne rozliczenie małżonków pozwala obejść limit 112 tys. przy jednym dziecku — US zawsze sumuje dochody małżonków pozostających w związku przez cały rok.",
+    "Niewykazywanie dziecka odliczanego przez drugiego rodzica w PIT/O (z 0 miesięcy i 0 zł) — powoduje, że US nie \"widzi\" trzeciego dziecka i może zakwestionować wyższą kwotę 2 000,04 zł na trzecie dziecko własne."
+  ],
+  "related_questions": [
+    "Czy do limitu dochodu dziecka 22 546,92 zł wlicza się renta rodzinna i stypendium socjalne?",
+    "Jak rozliczyć ulgę prorodzinną w roku urodzenia dziecka — czy liczymy pełne 12 miesięcy czy od miesiąca urodzenia?",
+    "Czy rodzic prowadzący działalność na podatku liniowym (19%) może skorzystać z ulgi prorodzinnej, skoro nie rozlicza się według skali?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "87",
+    "cluster_label": "PIT: ulga na dziecko i rozliczenie samotnego rodzica - limity dochodów",
+    "generated_at": "2026-04-18T12:00:00Z",
+    "source_post_ids": [
+      "94192d8158d7",
+      "000cc56a2819",
+      "366ba8fe9540",
+      "9697f58f2685",
+      "3ceed9e078df",
+      "c7b0f1ee6450",
+      "7035ad915d52",
+      "0efae5c5b2ef",
+      "5010060ac009",
+      "11f3574dbaf0",
+      "2201255fb6e0",
+      "cefeb410f542"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

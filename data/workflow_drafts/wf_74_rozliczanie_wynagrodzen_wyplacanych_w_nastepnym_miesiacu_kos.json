@@ -1,0 +1,101 @@
+{
+  "id": "wf_74_rozliczanie_wynagrodzen_wyplacanych_w_nastepnym_miesiacu_kos",
+  "title": "Rozliczanie wynagrodzeń wypłacanych w następnym miesiącu (KPiR/KH, ZUS DRA, PIT-4, PIT-11) - UoP vs zlecenie",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Wynagrodzenie z umowy o pracę za styczeń 2026 wypłacone 10.02.2026 - w jakim miesiącu ująć brutto w KPiR i w jakiej DRA wykazać składki ZUS?",
+    "Umowa zlecenie za grudzień 2025 wypłacona w styczniu 2026 - czy trafia do PIT-11 za 2025 czy za 2026 rok?",
+    "Zmiana terminu wypłaty wynagrodzenia od stycznia na 10. dzień następnego miesiąca - czy trzeba zgłosić to do ZUS i jak wypełnić styczniową RCA?",
+    "W WFirma/Optimie przy wypłacie 10.02.2026 okres deklaracji ZUS i PIT-4 pokazuje luty - czy to prawidłowo ustawione?",
+    "Składnik wynagrodzenia za grudzień 2025 wypłacony 9.01.2026 - kiedy wykazać go w RPA: w RCA styczniowej czy lutowej?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal datę faktycznej wypłaty (postawienia do dyspozycji) i termin wypłaty wynikający z umowy/regulaminu pracy",
+      "detail": "Dla PIT i ZUS decyduje zasada kasowa - dzień uzyskania przychodu to dzień wypłaty lub postawienia do dyspozycji (art. 11 ust. 1 ustawy PIT, art. 4 pkt 9 ustawy o systemie ubezpieczeń społecznych). Jeśli termin wypłaty to np. 10. dzień następnego miesiąca, to wynagrodzenie za styczeń 2026 wypłacone 10.02.2026 jest przychodem lutego 2026 dla celów PIT-11/PIT-4 i DRA.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zaksięguj koszt brutto wynagrodzenia z UoP w miesiącu, za który jest należne - pod warunkiem terminowej wypłaty",
+      "detail": "Dla umowy o pracę: brutto jest kosztem miesiąca, którego dotyczy (art. 22 ust. 6ba ustawy PIT / art. 15 ust. 4g ustawy CIT) - o ile wypłacone w terminie wynikającym z prawa pracy/regulaminu. Wynagrodzenie za 01/2026 wypłacone 10.02.2026 w terminie = koszt stycznia 2026 w KPiR (kolumna 12) lub w księgach handlowych. Jeśli wypłata po terminie - koszt dopiero w miesiącu faktycznej wypłaty (art. 23 ust. 1 pkt 55 PIT).",
+      "condition": "if umowa o pracę i wypłata w terminie"
+    },
+    {
+      "step": 3,
+      "action": "Zaksięguj koszt brutto wynagrodzenia ze zlecenia/dzieła w miesiącu faktycznej wypłaty",
+      "detail": "Dla umów cywilnoprawnych (zlecenie, dzieło, kontrakt menedżerski) obowiązuje zasada kasowa - art. 23 ust. 1 pkt 55 ustawy PIT. Zlecenie za 01/2026 wypłacone 10.02.2026 = koszt lutego 2026, wpis do KPiR kolumna 12 z datą wypłaty. Tak samo w księgach rachunkowych zobowiązanie tworzy się w styczniu, ale koszt podatkowy dopiero w lutym.",
+      "condition": "if umowa zlecenie/dzieło/B2B z osobą fizyczną"
+    },
+    {
+      "step": 4,
+      "action": "Zaksięguj składki ZUS płatnika (emerytalna, rentowa, wypadkowa, FP, FS, FGŚP) oraz PPK pracodawcy zgodnie z terminem zapłaty",
+      "detail": "Dla UoP: składki ZUS finansowane przez pracodawcę od wynagrodzenia należnego za 01/2026 są kosztem stycznia, jeżeli zapłacone w ustawowym terminie - czyli do 15.03.2026 (art. 22 ust. 6bb PIT / art. 15 ust. 4h CIT). Dla zleceń: składki płatnika są kosztem w miesiącu ich faktycznej zapłaty (art. 23 ust. 1 pkt 55a PIT). PPK pracodawcy - koszt w miesiącu zapłaty (art. 22 ust. 6bc PIT).",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Wykaż wypłatę w RCA/DRA za miesiąc faktycznej wypłaty, a w miesiącu należności wyślij RCA zerową z kodem tytułu",
+      "detail": "Przykład: zmiana terminu od 01/2026 na 10. następnego miesiąca. Styczniowa DRA/RCA (składana do 20.02.2026): podstawy i składki 0,00 zł przy aktywnych pracownikach (trzeba wykazać pracownika z zerową podstawą, chyba że był cały miesiąc na zwolnieniu - wtedy RSA). Lutowa DRA/RCA (do 20.03.2026): pełne podstawy i składki z wypłaty styczniowej. Przerwy (zwolnienia, urlopy bezpłatne) wykazujesz w RSA w miesiącu, w którym miały miejsce, niezależnie od daty wypłaty.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Odprowadź zaliczkę PIT-4 i wykaż ją w PIT-4R za miesiąc wypłaty, nie za miesiąc należności",
+      "detail": "Zaliczka na PIT od wynagrodzenia wypłaconego 10.02.2026 płatna do 20.03.2026 (art. 38 ust. 1 PIT) i w PIT-4R wchodzi do wiersza za luty. W PIT-11 za 2026 r. ujmujesz wszystkie wypłaty od 01.01.2026 do 31.12.2026 - czyli wynagrodzenie za grudzień 2025 wypłacone w styczniu 2026 NIE wchodzi do PIT-11 za 2025, tylko za 2026 (art. 32 i 39 ust. 1 PIT, uchwała NSA II FPS 5/14 - kluczowa data wypłaty).",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Skonfiguruj poprawnie okres deklaracji i datę wypłaty w programie kadrowo-płacowym",
+      "detail": "Comarch Optima: Listy płac → parametr 'Miesiąc deklaracji' musi być zgodny z miesiącem wypłaty; ustaw 'Data wypłaty' na faktyczny dzień przelewu. WFirma: Kadry → Lista płac → pole 'Data wypłaty' - jeśli ustawisz 10.02.2026, okres deklaracji ZUS i PIT automatycznie wejdzie na luty. Symfonia/Enova: zakładka 'Okres deklaracji' na liście płac - ustaw miesiąc wypłaty. W karcie wynagrodzeń (PIT-11) styczeń 2025 przy zmianie terminu pokaże 0 zł - to prawidłowe.",
+      "condition": "if używasz oprogramowania kadrowo-płacowego"
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Wypłata opóźniona z przyczyn technicznych: jeśli lista miała datę 31.12.2025, ale przelew faktycznie wyszedł 02.01.2026, przychód pracownika powstaje w styczniu 2026 (data postawienia do dyspozycji). Pracownik może zakwestionować PIT-11 za 2025, jeśli pracodawca ujął tam to wynagrodzenie - trzeba wystawić korektę PIT-11/PIT-4R.",
+    "Przejęcie księgowości z błędną praktyką (PIT-11 sporządzany memoriałowo, nie kasowo): należy wystawić korekty PIT-11 i PIT-4R za lata otwarte (5 lat wstecz od końca roku złożenia deklaracji - art. 70 Ordynacji podatkowej) oraz rozważyć korekty DRA/RCA. Konieczne zapytanie do KIS o sposób korekty, by nie dublować przychodu u pracownika.",
+    "Wypłata zlecenia gotówką 31.01.2026 'do dyspozycji' przy umownym terminie 10. dnia następnego miesiąca: jeśli zleceniobiorca faktycznie otrzymał/mógł odebrać pieniądze 31.01, to dzień uzyskania przychodu = 31.01 i koszt w styczniu. Wymagane pokwitowanie/KW z datą 31.01.2026.",
+    "Składniki roczne (premia roczna, trzynastka) wypłacone w styczniu za rok poprzedni: dla UoP wchodzą do PIT-11 roku wypłaty, ale w RPA (blok III.B RCA) wykazujesz je z oznaczeniem roku, którego dotyczą - w miesiącu wypłaty, nie w miesiącu następnym."
+  ],
+  "common_mistakes": [
+    "Księgowanie wynagrodzenia ze zlecenia w miesiącu należności zamiast w miesiącu wypłaty - dla zleceń zawsze kasowo (art. 23 ust. 1 pkt 55 PIT), w przeciwieństwie do UoP wypłaconej w terminie.",
+    "Ujmowanie w PIT-11 wynagrodzenia za grudzień wypłaconego w styczniu w rocznej informacji za rok, którego dotyczyła praca, a nie za rok wypłaty - to zawyża przychód pracownika i generuje spór przy rozliczeniu rocznym.",
+    "Brak zerowej RCA w miesiącu zmiany terminu wypłaty - przy przejściu na wypłatę 10. następnego miesiąca w pierwszej DRA trzeba wykazać pracownika z zerową podstawą, inaczej ZUS zgłasza niezgodność z Z-3/Z-3a (warto dopisać wyjaśnienie w uwagach Z-3)."
+  ],
+  "related_questions": [
+    "Jak rozliczyć w KPiR i PIT-11 wynagrodzenie wypłacone po terminie wynikającym z regulaminu pracy (np. z dwumiesięcznym opóźnieniem)?",
+    "Czy składki ZUS od wynagrodzenia za grudzień 2025 wypłaconego w styczniu 2026 i zapłaconego do 15.02.2026 są kosztem grudnia czy stycznia przy CIT?",
+    "Jak wykazać w RPA w RCA wynagrodzenie za okres dłuższy niż miesiąc (np. premia kwartalna) wypłacone w następnym miesiącu?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "74",
+    "cluster_label": "Rozliczanie wynagrodzeń wypłacanych w następnym miesiącu: koszty, ZUS, PIT",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "56282a69e462",
+      "5eb4bd9ad45a",
+      "5beacd4cab3a",
+      "84394a679bbf",
+      "daf518c92193",
+      "9c55ae4e244a",
+      "c645760aefd1",
+      "e2610aa9ffdd",
+      "bb3cba3eaee2",
+      "f022def9dcf5",
+      "264d62416a34",
+      "882348afffca",
+      "f3d03c4ab7c7",
+      "def81e0ad771",
+      "90b1017e36e2"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

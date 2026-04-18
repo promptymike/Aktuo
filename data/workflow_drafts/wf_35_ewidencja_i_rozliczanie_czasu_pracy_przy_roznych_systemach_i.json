@@ -1,0 +1,116 @@
+{
+  "id": "wf_35_ewidencja_i_rozliczanie_czasu_pracy_przy_roznych_systemach_i",
+  "title": "Ewidencja i rozliczanie czasu pracy przy różnych systemach i wymiarach etatu (pełny etat, niepełnoetatowcy, równoważny, zadaniowy, ruchomy)",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Jak ewidencjonować czas pracy pracownika pn-pt 9-17 i sobota 8-14, jeśli dzień wolny z tytułu 5-dniowego tygodnia pracy jest ustalany planem, a pracownik przychodzi w sobotę i ma mniej godzin niż wymiar?",
+    "Czy pracownika na 1/4 etatu mogę zaplanować na 1 dzień w tygodniu po 8-9 h? Jak to rozliczyć i czy należy się dodatek?",
+    "Jak rozliczyć zadaniowy czas pracy z miesięcznym okresem rozliczeniowym, gdy pracownik codziennie pracuje w różnych godzinach i wychodzą nadgodziny?",
+    "Pracownik na 1/2 etatu w równoważnym systemie - czy mogę zaplanować 8 h dziennie przez 5 dni, a kolejny tydzień wolny? Jaka jest maksymalna dobowa norma?",
+    "Niepełnoetatowiec 3/4 etatu - jaki limit godzin wpisać w umowie, powyżej którego należy się dodatek jak za nadgodziny? Czy mogę wpisać 'powyżej przeciętnie 39 h tygodniowo'?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal system czasu pracy i zapisz go w regulaminie pracy lub obwieszczeniu",
+      "detail": "Wybierz jeden z systemów z Kodeksu pracy: podstawowy (art. 129 KP - 8h/40h przeciętnie), równoważny (art. 135 KP - do 12h/dobę, okres do 1 m-ca; art. 136 KP - do 16h przy dozorze; art. 137 KP - do 24h przy pilnowaniu), zadaniowy (art. 140 KP), przerywany (art. 139 KP), ruchomy rozkład (art. 1401 KP). Dla niepełnoetatowca dobowa norma pozostaje 8 h - '1/2 etatu' nie oznacza normy 4 h, tylko wymiar. W równoważnym można zaplanować 12 h także niepełnoetatowcowi.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Sporządź harmonogram (grafik) na cały okres rozliczeniowy i doręcz pracownikowi min. 1 tydzień przed jego rozpoczęciem",
+      "detail": "Zgodnie z art. 129 § 3 KP harmonogram może być na okres krótszy niż okres rozliczeniowy, ale nie krótszy niż 1 miesiąc. Suma zaplanowanych godzin musi być równa wymiarowi czasu pracy w danym okresie (art. 130 KP - wymiar = 40h × liczba tygodni + 8h × dni wystające, minus 8h za każde święto przypadające w innym dniu niż niedziela). Plan NIE może zakładać mniej godzin niż wymiar - jeśli tak jest, to błąd pracodawcy i pracownik zachowuje prawo do pełnego wynagrodzenia (gotowość do pracy - art. 81 KP).",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Prowadź ewidencję czasu pracy zgodnie z § 6 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej",
+      "detail": "Ewidencja musi zawierać: liczbę przepracowanych godzin (w tym niedziele, święta, porę nocną, nadliczbowe), dni wolne z oznaczeniem, urlopy, zwolnienia, dyżury, nieobecności płatne i niepłatne. Dla zadaniowego czasu pracy, kierowników i ryczałtowców - nie ewidencjonuje się godzin (art. 149 § 2 KP), ale trzeba ewidencjonować dni pracy, urlopy i nieobecności. W Comarch Optima: moduł Płace i Kadry → Kalendarze → Plan pracy i Czas pracy; w Symfonia Kadry i Płace: Kartoteka → Ewidencja czasu pracy; w enova365: Kadry → Kalendarz pracownika.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Porównaj plan (harmonogram) z wykonaniem na koniec okresu rozliczeniowego i zidentyfikuj przekroczenia",
+      "detail": "Rozróżnij: (a) godziny nadliczbowe dobowe - praca ponad 8 h/dobę (dla pełnego etatu) lub ponad przedłużoną normę w równoważnym - dodatek 50% lub 100% (art. 1511 KP); (b) godziny nadliczbowe średniotygodniowe - ponad przeciętnie 40 h/tydzień w okresie rozliczeniowym - dodatek 100%; (c) godziny ponadwymiarowe u niepełnoetatowca - praca ponad planowany wymiar, ale poniżej 8h/40h - tylko normalne wynagrodzenie, chyba że przekroczony został limit z umowy (art. 151 § 5 KP).",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Wpisz w umowie o pracę z niepełnoetatowcem limit godzin, powyżej którego należy się dodatek jak za nadgodziny",
+      "detail": "Art. 151 § 5 KP wymaga, aby strony ustaliły w umowie limit godzin (dopuszczalną liczbę godzin pracy ponad określony wymiar), po przekroczeniu którego pracownik ma prawo do dodatku jak za nadgodziny. Limit można wskazać w godzinach miesięcznie (np. '1/2 etatu - dodatek powyżej 140 h/miesiąc'), procentowo od etatu (np. 'powyżej 0,85 etatu w miesiącu') lub tygodniowo. UWAGA: zapis 'dodatek dopiero po przekroczeniu 39 h tygodniowo' dla każdego niepełnoetatowca jest w praktyce kwestionowany przez PIP jako próba obejścia art. 151 § 5 KP - limit powinien być adekwatny do wymiaru etatu.",
+      "condition": "if pracownik jest zatrudniony na niepełny etat"
+    },
+    {
+      "step": 6,
+      "action": "Rozlicz pracę w sobotę (dniu wolnym z tytułu 5-dniowego tygodnia pracy) oddaniem całego dnia wolnego lub dodatkiem 100%",
+      "detail": "Za pracę w dniu wolnym wynikającym z przeciętnie 5-dniowego tygodnia pracy (najczęściej sobota) pracodawca ma obowiązek oddać inny cały dzień wolny do końca okresu rozliczeniowego (art. 1513 KP) - niezależnie od tego, ile godzin pracownik przepracował w sobotę (nawet 1 godzina = cały dzień wolny). Jeśli nie odda dnia wolnego - należy wypłacić normalne wynagrodzenie + dodatek 100% za każdą godzinę. Jeśli plan zakłada mniej godzin niż wymiar w miesiącu - jest to błąd planowania; pracownik ma prawo do wynagrodzenia za pełny wymiar (gotowość do pracy).",
+      "condition": "if praca w sobotę lub innym dniu wolnym z tytułu 5-dniowego tygodnia"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj zachowanie odpoczynku dobowego (11 h) i tygodniowego (35 h) oraz limit 48 h/tydzień łącznie z nadgodzinami",
+      "detail": "Art. 132 KP: 11 h nieprzerwanego odpoczynku dobowego. Art. 133 KP: 35 h odpoczynku tygodniowego (w szczególnych przypadkach 24 h). Art. 131 KP: tygodniowy czas pracy łącznie z nadgodzinami nie może przekraczać przeciętnie 48 h w przyjętym okresie rozliczeniowym. Zaplanowanie pracy 6 dni po 12 h w jednym tygodniu = 72 h, co przekracza 48 h - niedopuszczalne jako plan. Uważaj też na 'rozpoczęcie pracy w tej samej dobie' (doba pracownicza to 24 h od rozpoczęcia pracy zgodnie z rozkładem) - np. pn 6-14, wt 14-22 → wt praca rozpoczyna się jeszcze w dobie poniedziałkowej i powstają nadgodziny dobowe.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 149 § 1 i § 2",
+      "reason": "Podstawa obowiązku prowadzenia ewidencji czasu pracy oraz wyłączenia dla zadaniowego czasu pracy, kierowników zakładu i ryczałtowców."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 135",
+      "reason": "Definiuje system równoważnego czasu pracy z dopuszczalnym przedłużeniem doby do 12 h - kluczowe dla pytań o 1/2 etatu w równoważnym i planowanie 8-12 h/dobę."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 128",
+      "reason": "Zawiera legalną definicję czasu pracy, doby pracowniczej i tygodnia - niezbędną do prawidłowego rozliczenia przekroczeń dobowych i średniotygodniowych."
+    }
+  ],
+  "edge_cases": [
+    "Niepełnoetatowiec w równoważnym systemie: dobowa norma to nadal 8 h (nie proporcjonalna do etatu), ale harmonogram może przewidywać do 12 h/dobę - dopiero praca ponad zaplanowaną dniówkę to godziny ponadwymiarowe lub nadliczbowe (zależnie od limitu z umowy i przekroczenia 8 h).",
+    "Zadaniowy czas pracy (art. 140 KP): pracodawca ustala zadania w wymiarze możliwym do wykonania w normie 8h/40h; nie prowadzi się ewidencji godzin, ale jeśli pracownik regularnie przekracza normę, bo zadań jest za dużo - może domagać się wynagrodzenia za nadgodziny (wyroki SN). Nie nadaje się dla stanowisk, gdzie pracodawca kontroluje godziny rozpoczęcia/zakończenia.",
+    "Dwaj pracownicy umawiają się na 'zamiany' grafiku (tydzień pracy / tydzień wolny po 12 h) - niedopuszczalne, jeśli narusza 48 h/tydzień z art. 131 KP i tworzy nadgodziny planowe (nadgodzin nie planujemy).",
+    "Pracownik z orzeczeniem o umiarkowanym/znacznym stopniu niepełnosprawności ma skrócony czas pracy 7h/35h (ustawa o rehabilitacji - art. 15) - ewidencja i wymiar liczone od 35 h/tydzień; przekroczenia powyżej 7 h/dobę to nadgodziny (chyba że lekarz medycyny pracy zniósł to ograniczenie)."
+  ],
+  "common_mistakes": [
+    "Mylenie godzin ponadwymiarowych (niepełnoetatowiec między swoim wymiarem a pełnym etatem - tylko normalne wynagrodzenie lub z dodatkiem, jeśli przekroczony limit umowny) z nadliczbowymi (ponad 8h/dobę lub przeciętnie 40h/tydzień - zawsze z dodatkiem 50%/100%).",
+    "Planowanie harmonogramu z mniejszą liczbą godzin niż wymiar czasu pracy w danym miesiącu i rozliczanie braku jako 'wniosku pracownika o odbiór' - to błąd; pracownik ma prawo do wynagrodzenia za pełny wymiar, a pracodawca musi uzupełnić plan.",
+    "Oddawanie jednego dnia wolnego za pracę w sobotę tylko wtedy, gdy pracownik przepracował 8 h - nieprawidłowe; art. 1513 KP wymaga oddania całego dnia wolnego niezależnie od liczby godzin przepracowanych w dniu wolnym z tytułu 5-dniowego tygodnia pracy."
+  ],
+  "related_questions": [
+    "Jak rozliczyć pracę w niedzielę i święto oraz jaki jest termin oddania dnia wolnego (art. 15111 KP)?",
+    "Jak ustalać wymiar czasu pracy i urlopu dla pracownika zatrudnionego w trakcie miesiąca na niepełny etat?",
+    "Jak prowadzić ewidencję czasu pracy kierowcy zawodowego (ustawa o czasie pracy kierowców) - czy różni się od KP?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "35",
+    "cluster_label": "Ewidencja i rozliczanie czasu pracy przy różnych systemach i wymiarach etatu",
+    "generated_at": "2026-04-18T12:00:00Z",
+    "source_post_ids": [
+      "97809c5b23fd",
+      "11d13afe2453",
+      "c058063f53e0",
+      "513206ecce20",
+      "cbc38270f7fd",
+      "c1b1855b0fc1",
+      "2d53da00c31e",
+      "ab330cabd9a8",
+      "7fe9cb0e9540",
+      "f0a04c9fd81e",
+      "e46569391911",
+      "1c3754974e4e",
+      "05bf3b91de88",
+      "362f4df56746"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

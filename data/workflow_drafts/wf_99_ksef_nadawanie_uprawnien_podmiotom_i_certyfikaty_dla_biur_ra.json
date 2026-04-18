@@ -1,0 +1,114 @@
+{
+  "id": "wf_99_ksef_nadawanie_uprawnien_podmiotom_i_certyfikaty_dla_biur_ra",
+  "title": "KSeF 2.0: nadawanie uprawnień biuru rachunkowemu (podmiotowi) i generowanie certyfikatów w MCU / Aplikacji Podatnika KSeF",
+  "topic_area": "KSeF",
+  "question_examples": [
+    "Spółka z o.o. złożyła ZAW-FA, po zalogowaniu do KSeF nie widzimy wystawionych na nas faktur — czy trzeba jeszcze coś zrobić?",
+    "Biuro rachunkowe jako spółka ma nadane przez klientów uprawnienia dla podmiotu do przeglądania i wystawiania faktur; prezes loguje się na NIP biura profilem zaufanym i nie widzi nadanych uprawnień — dlaczego?",
+    "Prezes nadał mi uprawnienia w KSeF — jak sprawdzić czy je mam, skąd pobrać 2 certyfikaty (uwierzytelniający i offline) i czy wgrać je do Comarch Optima?",
+    "Czy do pobierania faktur klienta w programie księgowym wystarczy mi sam certyfikat, czy klient musi dodatkowo nadać mi uprawnienia?",
+    "Spółka cywilna złożyła ZAW-FA, master zalogował się do MCU, ale przy generowaniu tokena zablokowane są opcje wystawiania/przeglądania faktur — co zrobić?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal formę prawną klienta i właściwą ścieżkę uzyskania uprawnień właścicielskich",
+      "detail": "Dla JDG — uprawnienia właścicielskie są przypisane automatycznie do NIP po uwierzytelnieniu Profilem Zaufanym/podpisem kwalifikowanym. Dla spółek/podmiotów niebędących osobami fizycznymi — albo pieczęć kwalifikowana z NIP podmiotu (wtedy pełne uprawnienia właścicielskie od ręki), albo ZAW-FA papierowo lub przez e-Urząd Skarbowy (UWAGA: od 1.01.2026 ZAW-FA przez ePUAP nie jest skutecznie doręczone — tylko e-US/e-Doręczenia lub papier). Źródło: https://www.biznes.gov.pl/pl/portal/004651 oraz https://www.gofin.pl/17,2,2,261219,krajowy-system-e-faktur-w-malej-firmie.html",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj w jakim module działać — do 31.01.2026 MCU, od 1.02.2026 Aplikacja Podatnika KSeF 2.0 / API",
+      "detail": "Od 1.11.2025 do końca stycznia 2026 nadawanie uprawnień i wnioskowanie o certyfikaty wyłącznie w MCU (mcu.mf.gov.pl/web). Między 26 a 31.01.2026 przerwa techniczna, a od 1.02.2026 funkcjonalność przenosi się do Aplikacji Podatnika KSeF 2.0 i programów komercyjnych zintegrowanych z API 2.0 (Comarch Optima, Symfonia, Enova, WAPRO, WFirma). Uprawnienia nadane w MCU zostają zachowane i przeniesione. Źródło: https://ksef.podatki.gov.pl/modul-certyfikatow-i-uprawnien-mcu/ oraz https://ksef.podatki.gov.pl/etapy-wdrozenia-ksef/",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Nadaj biuru rachunkowemu uprawnienie jako PODMIOTOWI (nie jako przedstawicielowi podatkowemu!)",
+      "detail": "Klient po zalogowaniu do MCU/Aplikacji Podatnika wybiera: Uprawnienia → Nadaj uprawnienia → Rodzaj uprawnień: 'Podmiotowi do wystawiania i przeglądania faktur', wpisuje NIP biura rachunkowego, wskazuje zakres (np. 'przeglądanie faktur' lub 'wystawianie i przeglądanie', opcjonalnie 'z prawem do dalszego przekazywania uprawnień'). NIE wybierać 'przedstawiciel podatkowy' — to zupełnie inna instytucja (art. 18a–18d ustawy o VAT, dotyczy podatników zagranicznych) i powoduje, że biuro nie widzi faktur. Źródło: https://www.gofin.pl/17,2,2,261219,krajowy-system-e-faktur-w-malej-firmie.html",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Po stronie biura rachunkowego (spółki) — zaloguj się w kontekście NIP biura i nadaj uprawnienia konkretnym pracownikom/certyfikatom",
+      "detail": "Biuro będące spółką samo uwierzytelnia się pieczęcią kwalifikowaną na NIP spółki ALBO osoba z ZAW-FA biura loguje się Profilem Zaufanym i wybiera kontekst = NIP biura (nie własny PESEL!). Następnie w MCU/Aplikacji Podatnika biuro nadaje swoim pracownikom uprawnienia do wystawiania/przeglądania faktur — ale UWAGA: uprawnienia nadane przez klienta dla podmiotu-biura NIE dają automatycznie dostępu pracownikom biura; biuro musi je subdelegować na osoby fizyczne lub wygenerować tokeny/certyfikaty podmiotowe. Źródło: https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/",
+      "condition": "if biuro rachunkowe jest spółką (nie JDG)"
+    },
+    {
+      "step": 5,
+      "action": "Wygeneruj certyfikaty KSeF: typ 1 (uwierzytelnianie) i/lub typ 2 (offline / podpis linku weryfikacji wystawcy)",
+      "detail": "W MCU lub Aplikacji Podatnika KSeF 2.0: Certyfikaty → Wnioskuj o certyfikat. Typ 1 ('Uwierzytelnienie w systemie KSeF') służy do logowania z poziomu programu komercyjnego (Comarch Optima: Konfiguracja → KSeF → Certyfikat; Symfonia/Enova: analogiczny moduł). Typ 2 ('Podpis linku do weryfikacji wystawcy') potrzebny TYLKO gdy wystawiasz faktury w trybie offline24 lub awaryjnym. Certyfikat ważny maks. 2 lata; plik .key pobierasz JEDEN RAZ i hasła nie da się odzyskać. Jednocześnie można mieć 2 aktywne certyfikaty. Źródło: https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/ oraz https://ksiegowosc.infor.pl/ksef/7527870",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Jeśli używasz tokena zamiast certyfikatu (do końca 2026) — pamiętaj o zakresie i pułapce 'mastera'",
+      "detail": "Token ma 'zaszyte' uprawnienia osoby, która go wygenerowała w momencie generowania — użytkownik może wygenerować token TYLKO w zakresie uprawnień, które sam już posiada. Jeśli master spółki po ZAW-FA ma tylko 'zarządzanie uprawnieniami/jednostkami', musi NAJPIERW nadać sobie uprawnienia do wystawiania/przeglądania faktur, WYLOGOWAĆ się i zalogować ponownie — dopiero wtedy odblokują się te opcje przy generowaniu tokena. Od 1.01.2027 tokeny wygasają — pozostaną wyłącznie certyfikaty KSeF. Źródło: https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/certyfikaty-ksef/",
+      "condition": "if podmiot korzysta z tokena (np. integracja z zewnętrznym systemem obiegu dokumentów)"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj działanie — zaloguj się w kontekście NIP klienta i sprawdź listę faktur",
+      "detail": "Biuro loguje się Profilem Zaufanym / certyfikatem KSeF → wybór kontekstu: NIP klienta (nie NIP biura i nie PESEL). Faktury kosztowe klienta powinny pojawić się w zakładce 'Lista faktur'. Jeśli nie widać — najczęstsze przyczyny: (a) wybrano zły kontekst logowania, (b) nadano uprawnienie typu 'przedstawiciel podatkowy', (c) klient nadał uprawnienia na KSeF 1.0 po 31.10.2025 (trzeba ponowić w MCU), (d) należy się wylogować i zalogować ponownie. W Comarch Optima: Konfiguracja → Firma → Dane → KSeF → Test połączenia.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106nd ust. 2 pkt 1-6 i 11",
+      "reason": "Przepis określa zakres funkcji KSeF, w tym nadawanie, zmianę i odbieranie uprawnień do korzystania z systemu oraz uwierzytelnianie — podstawa prawna dla całego procesu opisanego w workflow."
+    },
+    {
+      "law_name": "Rozporządzenie Ministra Finansów i Gospodarki w sprawie korzystania z KSeF",
+      "article_number": "§ 6 ust. 1 oraz § 7 ust. 1-2 i § 8",
+      "reason": "Reguluje sposoby uwierzytelniania (środek identyfikacji elektronicznej, podpis/pieczęć kwalifikowana, certyfikat KSeF) i rodzaje uprawnień — kluczowe dla kroków 3-5."
+    }
+  ],
+  "edge_cases": [
+    "Spółka cywilna z ZAW-FA — 'master' po zalogowaniu do MCU widzi tylko 'zarządzanie uprawnieniami i jednostkami', a opcje wystawiania/przeglądania są wyszarzone. Rozwiązanie: master nadaje SOBIE samemu uprawnienia do wystawiania/przeglądania i do uprawnień, wylogowuje się i loguje ponownie — dopiero wtedy może wygenerować token z pełnym zakresem.",
+    "Biuro rachunkowe jako spółka z o.o. bez pieczęci kwalifikowanej — klient nadaje uprawnienie na NIP biura, ale pracownicy biura nie mają dostępu. Biuro musi albo kupić pieczęć kwalifikowaną (ok. 400–2000 zł rocznie) i wygenerować certyfikat podmiotowy, albo osoba z ZAW-FA biura loguje się PZ w kontekście NIP biura i subdeleguje uprawnienia na pracowników.",
+    "Uprawnienia nadane w KSeF 1.0 do 31.10.2025 dla osób fizycznych zostały przeniesione do MCU, ale uprawnienia dla PODMIOTÓW nadane do 31.10.2025 wymagają ponownego nadania w MCU, aby działały od 1.02.2026.",
+    "Certyfikat osobowy (wydany osobie fizycznej) NIE może być udostępniany innej osobie — MF wprost zakazuje. W biurze rachunkowym należy stosować certyfikaty podmiotowe (wydane na NIP biura po uwierzytelnieniu pieczęcią), które można przekazywać pracownikom z zachowaniem wewnętrznych procedur rejestracji i unieważniania.",
+    "Faktury korygujące w KSeF — co do zasady korekta dziedziczy charakter i oznaczenia faktury pierwotnej; każda faktura korygująca w KSeF musi zawierać numer KSeF faktury korygowanej. Uprawnienia do wystawiania obejmują także korekty (nie ma osobnego uprawnienia)."
+  ],
+  "common_mistakes": [
+    "Wybór rodzaju uprawnienia 'przedstawiciel podatkowy' zamiast 'podmiotowi do wystawiania i przeglądania faktur' — przedstawicielstwo podatkowe to instytucja z art. 18a–18d ustawy o VAT dotycząca wyłącznie podatników zagranicznych; w efekcie biuro loguje się i nie widzi żadnych faktur klientów.",
+    "Logowanie się w złym kontekście — prezes biura loguje się Profilem Zaufanym na swój PESEL zamiast wybrać kontekst NIP biura lub NIP klienta. Każde nawiązanie sesji wymaga zadeklarowania identyfikatora, w imieniu którego działa użytkownik.",
+    "Składanie ZAW-FA przez ePUAP po 1.01.2026 — od tej daty zawiadomienie złożone przez ePUAP nie jest uznawane za skutecznie doręczone; należy użyć e-Urzędu Skarbowego, e-Doręczeń lub formy papierowej.",
+    "Mylenie certyfikatu typu 1 z typu 2 — typ 1 do uwierzytelniania w API programu księgowego, typ 2 wymagany tylko w trybach offline. Nie wolno wystawić offline fakturą, oznaczając ją certyfikatem typu 1."
+  ],
+  "related_questions": [
+    "Jak biuro rachunkowe powinno zorganizować obieg certyfikatów podmiotowych (nadawanie, przekazywanie pracownikom, unieważnianie) zgodnie z rekomendacjami MF?",
+    "Jak wystawiać faktury w trybie offline24 i awaryjnym oraz jakie są terminy przesłania ich do KSeF?",
+    "Jak konfigurować Comarch Optima / Symfonię / Enovę do obsługi wielu klientów w KSeF 2.0 z użyciem jednego certyfikatu biura rachunkowego?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "99",
+    "cluster_label": "KSeF: nadawanie uprawnień podmiotom i certyfikaty dla biur rachunkowych",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "e610a37393bf",
+      "c23b89fa3f30",
+      "b17dbe8eb5b8",
+      "9c82f4b87d86",
+      "95d0635084f6",
+      "6294d47cb64b",
+      "7be3414bfbb4",
+      "8f7a0cc9b271",
+      "17bd66508d14",
+      "d9f1b1a699cf",
+      "2fca95643b1c",
+      "ba1059ae4895",
+      "83409e26f64e",
+      "86b03dc82c6d",
+      "362e9fc05c16"
+    ],
+    "batch": "batch2",
+    "used_web_search": true
+  }
+}

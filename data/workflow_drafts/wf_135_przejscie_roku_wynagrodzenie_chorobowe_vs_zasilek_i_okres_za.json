@@ -1,0 +1,114 @@
+{
+  "id": "wf_135_przejscie_roku_wynagrodzenie_chorobowe_vs_zasilek_i_okres_za",
+  "title": "Przejście roku kalendarzowego: wynagrodzenie chorobowe (33/14 dni) vs zasiłek chorobowy i ciągłość okresu zasiłkowego",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownik miał zasiłek chorobowy do 31.12.2025, a kolejne L4 od 10.01.2026 — wypłacam zasiłek czy wynagrodzenie chorobowe?",
+    "Pracownik jest na L4 od 21.12.2025 nieprzerwanie do 13.01.2026 i przedłuża zwolnienie — czy od 1.01.2026 liczą się nowe 33 dni wynagrodzenia chorobowego?",
+    "Pracownik po 50 r.ż. wykorzystał 14 dni wynagrodzenia chorobowego w listopadzie 2025 i 1 dzień zasiłku; w styczniu 2026 znów L4 — nowe 14 dni wynagrodzenia czy kontynuacja zasiłku?",
+    "L4 z kodem A na przełomie roku (zasiłek do 06.01.2026, przerwa 07–10.01, kolejne L4 od 11.01) — kod 313 czy 331?",
+    "Pracownik był zatrudniony w firmie A i wykorzystał tam 60 dni L4 w 2025 r., od czerwca pracuje w firmie B — czy w firmie B ma jeszcze prawo do wynagrodzenia chorobowego w 2025 r.?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal czy między dwoma zwolnieniami jest choćby jeden dzień przerwy w niezdolności do pracy",
+      "detail": "Kluczowe rozróżnienie: jeśli 31.12 pracownik jest na L4 i 1.01 L4 trwa dalej (ciągłość) — w nowym roku KONTYNUUJESZ świadczenie, które było wypłacane 31.12 (jeśli był zasiłek — dalej zasiłek; jeśli wynagrodzenie chorobowe — dalej wynagrodzenie chorobowe, aż do wyczerpania limitu 33/14 dni z 2025 r.). Jeśli jest choć 1 dzień przerwy w niezdolności między zwolnieniami na przełomie roku — w nowym roku otwierasz nowy limit 33/14 dni wynagrodzenia chorobowego (art. 92 § 1 k.p.).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Ustal limit wynagrodzenia chorobowego na 2026 r. w zależności od wieku pracownika",
+      "detail": "33 dni w roku kalendarzowym — dla pracowników, którzy w danym roku nie ukończyli 50. roku życia. 14 dni — dla pracowników, którzy ukończyli 50. rok życia w roku poprzedzającym (liczy się od 1 stycznia roku następującego po ukończeniu 50 lat — art. 92 § 1 pkt 1 k.p.). Limit dni jest niezależny dla każdego roku kalendarzowego i każdego pracodawcy.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Ustal czy trwa ten sam okres zasiłkowy (182/270 dni) czy otwiera się nowy",
+      "detail": "Do jednego okresu zasiłkowego wlicza się wszystkie okresy nieprzerwanej niezdolności do pracy ORAZ okresy poprzedniej niezdolności, jeśli przerwa między nimi nie przekroczyła 60 dni i niezdolność była spowodowana tą samą lub inną chorobą (art. 9 ustawy zasiłkowej). Uwaga: od 1.01.2022 do tego samego okresu zasiłkowego zalicza się też niezdolność po przerwie, niezależnie od przyczyny, jeśli przerwa ≤ 60 dni. Przejście roku kalendarzowego NIE otwiera nowego okresu zasiłkowego — liczy się tylko długość przerwy.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Połącz oba testy i zakwalifikuj świadczenie w styczniu 2026",
+      "detail": "Typowy scenariusz z klastra: zasiłek 28–31.12.2025, przerwa, nowe L4 w 2026 → w 2026 wypłacasz NAJPIERW wynagrodzenie chorobowe (nowy limit 33/14 dni z kodem ZUS 331), a po jego wyczerpaniu zasiłek (kod 313) — ale dni L4 w 2026 nadal zaliczasz do TEGO SAMEGO okresu zasiłkowego (182/270 dni), bo przerwa ≤ 60 dni. Gdy L4 trwa nieprzerwanie przez 31.12 → 1.01 — kontynuujesz świadczenie sprzed przełomu (najczęściej zasiłek), bez resetu limitu 33/14.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Sprawdź sumę dni wynagrodzenia chorobowego z poprzednich pracodawców w tym samym roku kalendarzowym",
+      "detail": "Limit 33/14 dni wynagrodzenia chorobowego jest limitem rocznym łącznym dla pracownika w danym roku kalendarzowym u wszystkich pracodawców (art. 92 § 1 k.p., uchwała SN III UZP 5/12). Przy zmianie pracodawcy w trakcie roku wymagaj świadectwa pracy — w pkt 6 ppkt 9 wykazuje się liczbę dni, za które wypłacono wynagrodzenie chorobowe. Jeśli świadectwa brak — złóż pisemny wniosek do ZUS (formularz ZAS-12 lub zapytanie przez PUE) albo żądaj od pracownika zaświadczenia od poprzedniego pracodawcy.",
+      "condition": "if pracownik był w danym roku zatrudniony u innego pracodawcy"
+    },
+    {
+      "step": 6,
+      "action": "Zaksięguj świadczenie w programie kadrowo-płacowym z prawidłowym kodem ZUS",
+      "detail": "Comarch Optima: Płace i Kadry → Nieobecności → wybierz typ 'Wynagrodzenie za czas choroby' (kod 331) albo 'Zasiłek chorobowy' (kod 313); przy kontynuacji upewnij się, że zaznaczone jest 'Kontynuacja okresu zasiłkowego'. Enova365: Kadry i Płace → Nieobecności → sprawdź rok limitów w karcie pracownika i pole 'Okres zasiłkowy — dni'. Symfonia Kadry i Płace: Nieobecności → Chorobowe → wskaż kod świadczenia i zweryfikuj bilans dni 33/14. W RCA/RSA: kod 331 dla wynagrodzenia chorobowego, 313 dla zasiłku chorobowego, 314 dla zasiłku opiekuńczego, 311 macierzyński.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Udokumentuj podstawę wymiaru świadczenia przy przełomie roku",
+      "detail": "Podstawy wymiaru NIE przelicza się przy przejściu z zasiłku na wynagrodzenie chorobowe (ani odwrotnie), jeśli przerwa w pobieraniu świadczeń jest krótsza niż 1 miesiąc kalendarzowy (art. 43 ustawy zasiłkowej) — stosujesz tę samą podstawę. Nową podstawę (12 miesięcy poprzedzających) ustalasz dopiero przy przerwie ≥ 1 miesiąc kalendarzowy między świadczeniami.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 92 § 1 pkt 1",
+      "reason": "Reguluje limit 33 dni (14 dni dla pracowników po 50. r.ż.) wynagrodzenia chorobowego w roku kalendarzowym wypłacanego przez pracodawcę — oraz resetowanie limitu z początkiem każdego roku kalendarzowego."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 92 § 4",
+      "reason": "Po wyczerpaniu 33/14 dni wynagrodzenia chorobowego pracownikowi przysługuje zasiłek chorobowy na zasadach ustawy zasiłkowej — co wyznacza moment przejścia z kodu 331 na 313."
+    }
+  ],
+  "edge_cases": [
+    "Brak przerwy na przełomie roku (L4 trwa 31.12 → 1.01): nie otwierasz nowych 33/14 dni — kontynuujesz świadczenie wypłacane 31.12. Jeśli 31.12 był zasiłek, to w styczniu nadal zasiłek aż do przerwy; dopiero po przerwie i nowym L4 pojawi się nowy limit wynagrodzenia chorobowego.",
+    "Pracownik po 50. r.ż.: limit 14 dni stosuje się od 1 stycznia roku NASTĘPUJĄCEGO po roku ukończenia 50 lat. W roku, w którym kończy 50 lat, nadal obowiązuje limit 33 dni.",
+    "Zmiana pracodawcy w trakcie roku: limit 33/14 dni jest wspólny dla wszystkich pracodawców w danym roku — nowy pracodawca musi pomniejszyć swój limit o dni wypłacone u poprzedniego (pkt 6 ppkt 9 świadectwa pracy). Gdy pracownik nie dostarczy świadectwa — pisemne zapytanie do ZUS lub poprzedniego pracodawcy.",
+    "Niezdolność w ciąży lub wypadek w drodze do/z pracy: wynagrodzenie/zasiłek wynosi 100% podstawy, ale limit dni 33/14 pozostaje bez zmian. Kod ZUS: 314 (ciąża) lub 314/313 z odpowiednim kodem literowym B/C na L4.",
+    "Dwa L4 w 2026 z przerwą > 60 dni: otwiera się NOWY okres zasiłkowy (182/270 dni) i przelicza się podstawę wymiaru, jeśli przerwa ≥ 1 miesiąc kalendarzowy (art. 43 ustawy zasiłkowej)."
+  ],
+  "common_mistakes": [
+    "Naliczanie nowych 33/14 dni wynagrodzenia chorobowego po 1 stycznia, gdy L4 trwa nieprzerwanie przez przełom roku (brak choćby 1 dnia przerwy) — w rzeczywistości kontynuuje się świadczenie sprzed 31.12.",
+    "Mylenie resetu limitu 33/14 dni (roczny, kodeksowy — art. 92 k.p.) z okresem zasiłkowym 182/270 dni (liczony ciągle, przerywany dopiero po 60 dniach przerwy — art. 9 ustawy zasiłkowej). To dwa niezależne liczniki.",
+    "Przeliczanie podstawy wymiaru zasiłku przy każdym nowym L4 w styczniu — podstawy nie przelicza się, jeśli przerwa w pobieraniu świadczeń jest krótsza niż 1 miesiąc kalendarzowy.",
+    "Pomijanie sprawdzenia świadectwa pracy nowego pracownika pod kątem dni wynagrodzenia chorobowego wykorzystanych u poprzedniego pracodawcy w tym samym roku kalendarzowym."
+  ],
+  "related_questions": [
+    "Jak ustalić podstawę wymiaru wynagrodzenia chorobowego przy przerwie między zwolnieniami dłuższej niż 1 miesiąc kalendarzowy?",
+    "Czy okres wyczekiwania (30/90 dni) biegnie od nowa przy zmianie pracodawcy i czy wliczają się studia wyższe?",
+    "Kiedy wypłacamy zasiłek z kodem 314 (opieka) vs 313 (chorobowy) i jak to wpływa na limit 60/14 dni opieki w roku?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "135",
+    "cluster_label": "Przejście roku: wynagrodzenie chorobowe vs zasiłek i okres zasiłkowy",
+    "generated_at": "2026-04-18T12:00:00Z",
+    "source_post_ids": [
+      "2a4600d92b3c",
+      "e339fb47a3f9",
+      "8e561a1c6609",
+      "0d4c6995cd70",
+      "b0bfa3070efb",
+      "0b04ae5fd375",
+      "4223b93b1c3f",
+      "0b89e572c319",
+      "873d9c90ebef",
+      "8428d4ef4bb3",
+      "29b9f0e9fe80",
+      "8478b435e9f2",
+      "5a720b4d5418",
+      "c7a5671fe474",
+      "271e25a78406"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

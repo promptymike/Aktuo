@@ -1,0 +1,114 @@
+{
+  "id": "wf_51_przejecie_ksiegowosci_korekta_blednych_sald_rozrachunkow_z_b",
+  "title": "Przejęcie księgowości spółki: korekta błędnych sald rozrachunków i kasy z bilansu otwarcia",
+  "topic_area": "rachunkowość",
+  "question_examples": [
+    "Przejęłam księgowość sp. z o.o. i na kontach 201/202 wiszą od lat salda zobowiązań wobec dostawców (paliwo, drobne zakupy), o których wiadomo, że były zapłacone — jak je wyksięgować?",
+    "Salda rozrachunków z bilansu otwarcia są 'wystrzelone w kosmos' — czy prawidłowo jest zrobić PK i zamknąć je przez wynik lat ubiegłych, czy trzeba szukać źródła błędu?",
+    "Saldo kasy na 31.12.2025 jest fikcyjne — zarząd informuje, że kasy fizycznie nie ma w spółce, a w księgach są KP/KW z ostatnich lat. Co z tym zrobić?",
+    "Na koncie 221 (rozrachunki z US) wisi od kilku lat kwota po poprzednim biurze (korekty, zwroty) — jak ją wyksięgować, skoro merytorycznie wszystko jest rozliczone?",
+    "Na 201 wobec kontrahenta UE widnieją od lat salda wynikające prawdopodobnie z błędnego księgowania WNT (zobowiązanie zamiast należności). Czy wyksięgować przez 'zysk/strata z lat ubiegłych'?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Udokumentuj stan zastany przed jakąkolwiek korektą BO",
+      "detail": "Wydrukuj z systemu (Comarch Optima: Księgowość → Rozrachunki wg kont/kontrahentów; Symfonia FK: Zestawienia → Rozrachunki nierozliczone) zestawienie obrotów i sald na dzień przejęcia, listę wszystkich nierozliczonych pozycji 201/202/234/249 oraz raporty kasowe. Protokół przekazania ksiąg podpisany z poprzednim biurem jest podstawą dowodową — bez tego zarząd nie powinien akceptować korekt.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Ustal z zarządem zakres odpowiedzialności i zleć pisemne potwierdzenie",
+      "detail": "Zgodnie z art. 4a UoR odpowiedzialność za rachunkowość ponosi kierownik jednostki (zarząd). Wyślij zarządowi pisemne zestawienie błędnych sald z prośbą o decyzję: (a) czy prowadzić akcję potwierdzenia sald z kontrahentami, (b) czy uznać różnice za błąd lat ubiegłych, (c) kto obsługiwał obrót gotówkowy (najczęściej prezes → rozrachunek z zarządem, konto 234). Bez pisemnej decyzji zarządu nie księguj korekt BO.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Roześlij potwierdzenia sald do istotnych kontrahentów",
+      "detail": "Dla sald powyżej progu istotności (zwykle 0,5–1% sumy bilansowej lub kwotowo ustalonego w polityce rachunkowości) wyślij potwierdzenia sald na druku (Comarch Optima: Rozrachunki → Potwierdzenie salda; Symfonia: Rozrachunki → Wydruki → Potwierdzenie). Dopiero rozbieżność potwierdzona przez kontrahenta (lub brak odpowiedzi po 2 monitach) jest podstawą do wyksięgowania.",
+      "condition": "if kwota salda przekracza próg istotności ustalony w polityce rachunkowości"
+    },
+    {
+      "step": 4,
+      "action": "Zakwalifikuj błąd jako istotny vs nieistotny zgodnie z polityką rachunkowości",
+      "detail": "Art. 54 ust. 1-3 UoR: błąd istotny poprzednich lat (wpływający na ocenę sytuacji jednostki) koryguje się przez konto 'Zysk/strata z lat ubiegłych' (konto 820/860) i wymaga ujawnienia w informacji dodatkowej oraz — jeżeli dotyczy zatwierdzonego sprawozdania — przekształcenia danych porównawczych. Błąd nieistotny odnosi się na wynik bieżącego okresu (pozostałe przychody/koszty operacyjne — konto 760/761). Próg istotności MUSI być zapisany w polityce rachunkowości spółki.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Wyksięguj zobowiązania zapłacone gotówką nieujętą w kasie przez rozrachunki z zarządem",
+      "detail": "Jeżeli zarząd potwierdzi, że faktury z 201 były płacone gotówką prywatną prezesa/wspólnika (a kasy spółki faktycznie nie było): WN 201 / MA 234 'Rozrachunki z zarządem' (lub 249). NIE księguj fikcyjnych KW z nieistniejącej kasy. Jeśli zarząd nie żąda zwrotu — saldo 234 rozwiąż przez pozostałe przychody operacyjne (nieistotne) lub wynik lat ubiegłych (istotne), po pisemnej decyzji zarządu o umorzeniu.",
+      "condition": "if istniały płatności gotówkowe bez realnej kasy w spółce"
+    },
+    {
+      "step": 6,
+      "action": "Wyksięguj przedawnione należności i zobowiązania zgodnie z KC i UoR",
+      "detail": "Zobowiązania przedawnione (co do zasady 3 lata dla świadczeń związanych z działalnością gospodarczą — art. 118 KC, z końcem roku kalendarzowego) i niezapłacone → WN 201/202, MA 760 pozostałe przychody operacyjne (przychód podatkowy — art. 12 ust. 1 pkt 3 lit. a ustawy o CIT). Należności nieściągalne uprawdopodobnione lub przedawnione → WN 761 pozostałe koszty operacyjne, MA 201/202; KUP tylko przy spełnieniu warunków art. 16 ust. 1 pkt 25 i ust. 2 ustawy o CIT (postanowienie o nieściągalności, wykreślenie dłużnika itp.) — w pozostałych przypadkach NKUP.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj saldo kasy i rozlicz różnicę inwentaryzacyjną",
+      "detail": "Art. 26 ust. 1 pkt 1 UoR wymaga inwentaryzacji kasy na ostatni dzień roku drogą spisu z natury. Jeśli stan księgowy różni się od rzeczywistego — sporządź protokół inwentaryzacyjny podpisany przez komisję i zarząd. Niedobór niezawiniony → 761; niedobór zawiniony obciąża osobę odpowiedzialną materialnie (234/249). Zapis wyłącznie na podstawie protokołu — nigdy 'po uważaniu'.",
+      "condition": "if saldo kasy w księgach nie zgadza się ze stanem faktycznym"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 54 ust. 1-3",
+      "reason": "Reguluje sposób ujęcia błędów poprzednich lat — błąd istotny przez kapitał własny (wynik lat ubiegłych), błąd nieistotny w wyniku bieżącego roku; kluczowe dla rozstrzygnięcia sposobu korekty BO."
+    },
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 26 ust. 1",
+      "reason": "Obowiązek inwentaryzacji aktywów pieniężnych (w tym kasy) drogą spisu z natury — podstawa do korekty fikcyjnego salda kasy wykazywanego po przejęciu ksiąg."
+    },
+    {
+      "law_name": "Ustawa o rachunkowości",
+      "article_number": "art. 18",
+      "reason": "Zestawienie obrotów i sald jest dokumentem wyjściowym do weryfikacji rozbieżności BO — obligatoryjne narzędzie kontroli rzetelności ksiąg przejmowanej spółki."
+    }
+  ],
+  "edge_cases": [
+    "Kontrahent UE na 201/202 z błędnie zaksięgowanym WNT (zobowiązanie zamiast należności lub odwrotnie) — najpierw zweryfikuj czy nie doszło do zawyżenia/zaniżenia VAT należnego i naliczonego; korekta WNT może wymagać korekty JPK_V7 za okresy ubiegłe, a nie tylko storna bilansowego.",
+    "Saldo na 221 'Rozrachunki z US' po poprzednim biurze — przed wyksięgowaniem pobierz zaświadczenie o niezaleganiu i potwierdzenie salda z US (wniosek przez e-Urząd Skarbowy); dopiero gdy US potwierdzi saldo zerowe, rozwiąż różnicę przez 760/761 lub wynik lat ubiegłych.",
+    "Drobne różnice groszowe (0,01–0,10 zł) przy rozliczaniu płatności — nadpłatę od kontrahenta uznaj jako pozostały przychód operacyjny (przychód podatkowy), niedopłatę umorzoną księgujemy w pozostałe koszty operacyjne (w praktyce NKUP jeśli brak dokumentu umorzenia).",
+    "Totalny bałagan (nie zgadza się nic — rozrachunki, magazyn, VAT): zgodnie z praktyką wyrażoną w komentarzach społeczności — nie 'prostuj' bezpłatnie całego roku; przedstaw zarządowi raport rozbieżności, wycenę prac naprawczych i rozważ rezygnację z klienta, jeśli zarząd odmawia współpracy lub poniesienia kosztów."
+  ],
+  "common_mistakes": [
+    "Księgowanie fikcyjnych KW z nieistniejącej kasy, aby 'zgodzić' rozrachunek — zafałszowuje księgi i może stanowić naruszenie art. 77 UoR (odpowiedzialność karna za nierzetelne prowadzenie ksiąg); prawidłowo — przez konto 234 rozrachunki z zarządem.",
+    "Zbiorcze 'wrzucenie' wszystkich różnic BO jednym PK na wynik lat ubiegłych bez analizy istotności, bez potwierdzeń sald i bez decyzji zarządu — biuro przejmuje wówczas odpowiedzialność za cudze błędy.",
+    "Mylenie wyksięgowania bilansowego z konsekwencjami podatkowymi — przedawnione zobowiązanie to zawsze przychód podatkowy (art. 12 ust. 1 pkt 3 lit. a CIT), a spisana należność jest KUP tylko przy spełnieniu warunków udokumentowania nieściągalności (art. 16 ust. 2 CIT)."
+  ],
+  "related_questions": [
+    "Jak udokumentować i rozliczyć nieściągalne należności przeterminowane od kilku lat, aby zaliczyć je do KUP?",
+    "Jak rozliczać płatności bez dokumentów (wpływy/wydatki z WB bez faktur) — konto 149 środki pieniężne w drodze czy 249 pozostałe rozrachunki?",
+    "Jak postąpić, gdy kontrahent płaci wszystko gotówką, raporty kasowe są niezgodne i narastają miliony nierozliczonych zobowiązań — kiedy zgłosić brak rzetelności ksiąg?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "51",
+    "cluster_label": "Przejęcie księgowości: korekta błędnych sald rozrachunków z BO",
+    "generated_at": "2026-04-18T10:00:00Z",
+    "source_post_ids": [
+      "a969b859ea15",
+      "243ab8694a0e",
+      "cf12d74b75cb",
+      "91c209f4e326",
+      "f017f7fc6409",
+      "ce8335651ea4",
+      "462e78eb7e59",
+      "70030b4963a3",
+      "03a84aedab23",
+      "0383b36905e6",
+      "d97a6c3387b2",
+      "ba4142be48be"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

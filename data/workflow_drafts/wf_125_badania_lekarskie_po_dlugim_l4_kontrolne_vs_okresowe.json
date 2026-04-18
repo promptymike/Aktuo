@@ -1,0 +1,100 @@
+{
+  "id": "wf_125_badania_lekarskie_po_dlugim_l4_kontrolne_vs_okresowe",
+  "title": "Badania lekarskie po długim L4 — kontrolne i okresowe: kiedy jedno, a kiedy oba skierowania",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownica wróciła po długim L4, w trakcie którego skończyła się ważność badań okresowych. Została skierowana tylko na kontrolne — czy to wystarczy, czy potrzebne są też okresowe?",
+    "Pracownik jest na L4 równo 30 dni po zabiegu — czy przed powrotem muszę wystawić skierowanie na badania kontrolne?",
+    "Pracownik wraca po kilkumiesięcznym zwolnieniu i w tym czasie skończyły się badania okresowe — wystawiam dwa skierowania (kontrolne i okresowe) czy jedno łączone?",
+    "Pracownik po długim L4 chce od razu iść na urlop wypoczynkowy — czy najpierw muszę go skierować na badania kontrolne, czy mogę udzielić urlopu?",
+    "Czy skierowanie na badania kontrolne mogę wystawić jeszcze w trakcie trwania zwolnienia lekarskiego, zanim pracownik formalnie wróci do pracy?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal długość niezdolności do pracy",
+      "detail": "Sprawdź w systemie kadrowym (Comarch Optima: Kadry → Nieobecności; Symfonia Kadry i Płace: Ewidencja nieobecności) łączny okres L4. Badania kontrolne są wymagane dla każdej niezdolności do pracy z powodu choroby trwającej DŁUŻEJ NIŻ 30 dni — dokładnie 31 dni i więcej. Zwolnienie trwające równo 30 dni NIE rodzi obowiązku skierowania na kontrolne.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj ważność badań okresowych na dzień planowanego powrotu",
+      "detail": "W kartotece pracownika (Optima: Kadry → Pracownik → Profilaktyka/Badania; WFirma: Kadry → Badania lekarskie) sprawdź datę końca ważności orzeczenia okresowego. Jeśli termin upłynął w trakcie L4 lub upłynie w dniu powrotu — potrzebne są DWA badania.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Wystaw JEDNO skierowanie tylko na badania kontrolne",
+      "detail": "Jeśli okresowe są nadal ważne — wystaw skierowanie wyłącznie na badania kontrolne (zgodnie z art. 229 § 2 KP). Orzeczenie z badania kontrolnego NIE przedłuża ważności badania okresowego — okresowe pozostaje ważne do swojej pierwotnej daty.",
+      "condition": "jeśli L4 > 30 dni ORAZ badania okresowe nadal ważne na dzień powrotu"
+    },
+    {
+      "step": 4,
+      "action": "Wystaw DWA skierowania — na kontrolne i na okresowe",
+      "detail": "W praktyce wystawia się dwa odrębne skierowania (lub jedno z zaznaczeniem obu rodzajów badania) do tego samego lekarza medycyny pracy. Pracownik otrzymuje dwa orzeczenia: kontrolne (dopuszczające do pracy po chorobie) i okresowe (z nowym terminem ważności). Samo kontrolne NIE wystarczy — jego ważność ograniczona jest datą poprzedniego badania okresowego.",
+      "condition": "jeśli L4 > 30 dni ORAZ badania okresowe wygasły w trakcie L4 lub wygasają w dniu powrotu"
+    },
+    {
+      "step": 5,
+      "action": "Określ datę wykonania badania i moment dopuszczenia do pracy",
+      "detail": "Skierowanie możesz wystawić jeszcze w trakcie trwania L4 (z datą wystawienia podczas zwolnienia) — przepisy tego nie zakazują. Natomiast SAMO BADANIE pracownik wykonuje dopiero po zakończeniu L4, ponieważ w trakcie zwolnienia jest niezdolny do pracy. Do pracy dopuszczasz pracownika dopiero po dostarczeniu orzeczenia lekarskiego o braku przeciwwskazań.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Rozstrzygnij sytuację urlopu wypoczynkowego bezpośrednio po L4/macierzyńskim",
+      "detail": "Jeśli pracownik bezpośrednio po L4 trwającym >30 dni idzie na urlop wypoczynkowy — badania kontrolne wykonuje PO powrocie z urlopu, przed faktycznym dopuszczeniem do pracy (w trakcie urlopu nie świadczy pracy). Po urlopie macierzyńskim, gdy pracownica bezpośrednio korzysta z urlopu wypoczynkowego (art. 163 § 3 KP), nie ma obowiązku stawienia się w pracy na badania kontrolne — przepisy o kontrolnych dotyczą niezdolności z powodu choroby, nie macierzyńskiego.",
+      "condition": "jeśli pracownik wnioskuje o urlop wypoczynkowy bezpośrednio po L4 lub macierzyńskim"
+    },
+    {
+      "step": 7,
+      "action": "Udokumentuj i zarchiwizuj orzeczenia w aktach osobowych",
+      "detail": "Oryginały orzeczeń wpinasz do części B akt osobowych (zgodnie z § 3 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej). W systemie kadrowym (Enova365: Kadry → Dokumenty pracownika; Optima: Kadry → Dokumenty) wprowadź nową datę ważności badań okresowych, aby system poprawnie przypominał o kolejnym terminie.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Pracownik na L4 równo 30 dni (np. po zabiegu) — NIE kierujesz na kontrolne, bo przepis wymaga niezdolności 'trwającej dłużej niż 30 dni'. Kluczowe są 31 dni i więcej.",
+    "Zleceniobiorca po krótkim L4 w trakcie trwania umowy — nie ma przepisu KP o badaniach kontrolnych dla zleceniobiorców (art. 229 KP stosuje się do pracowników). Obowiązek badań dla zleceniobiorcy wynika wyłącznie z oceny ryzyka i charakteru pracy (art. 304 KP — obowiązki BHP).",
+    "Pracownik po urlopie macierzyńskim/rodzicielskim — orzecznictwo i stanowisko PIP: badania kontrolne NIE są wymagane, bo macierzyński to nie niezdolność do pracy z powodu choroby. Jeśli w tym czasie wygasły okresowe — wysyłasz tylko na okresowe.",
+    "Pracownik zatrudniony w dwóch firmach na tym samym stanowisku — badań OKRESOWYCH ani KONTROLNYCH nie można 'przenieść' między pracodawcami. Każdy pracodawca kieruje osobno. Wyjątek (art. 229 § 11 KP) dotyczy tylko badań WSTĘPNYCH przy zmianie pracodawcy w ciągu 30 dni po rozwiązaniu poprzedniej umowy, przy tożsamych warunkach pracy i ważnym orzeczeniu."
+  ],
+  "common_mistakes": [
+    "Wystawienie tylko skierowania na badania kontrolne, gdy okresowe wygasły w trakcie L4 — orzeczenie kontrolne ważne jest tylko do pierwotnej daty okresowego, więc już następnego dnia pracownik pracuje bez ważnych badań.",
+    "Kierowanie pracownika na badania kontrolne po równo 30-dniowym L4 — przepis wymaga niezdolności DŁUŻEJ NIŻ 30 dni; przy 30 dniach kontrolne nie są wymagane.",
+    "Wysyłanie pracownika na badania wstępne/kontrolne w TRAKCIE trwania L4 — pracownik jest niezdolny do pracy, nie może wykonać badania. Skierowanie można wystawić wcześniej, ale badanie dopiero po zakończeniu zwolnienia."
+  ],
+  "related_questions": [
+    "Czy badania wstępne u poprzedniego pracodawcy można wykorzystać u nowego pracodawcy i w jakich warunkach (art. 229 § 11 KP)?",
+    "Jak rozwiązać umowę z pracownikiem, który po zakończeniu L4 odmawia wykonania badań kontrolnych?",
+    "Czy pracownica wracająca z urlopu macierzyńskiego musi mieć aktualne badania okresowe, jeśli wygasły w trakcie urlopu?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "125",
+    "cluster_label": "Badania lekarskie po długim L4: kontrolne vs okresowe",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "561c829ae276",
+      "92b9e849018c",
+      "41c5d40ccdef",
+      "e582af550d34",
+      "0d66d8013066",
+      "4708ff914a67",
+      "e83ffb0e6fb5",
+      "b166648e5d08",
+      "7a1c6c2c43d0",
+      "6d83be3f4938",
+      "00e818f31d24",
+      "6b9057b31a58",
+      "1d37563aa99e",
+      "4707683878c1"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

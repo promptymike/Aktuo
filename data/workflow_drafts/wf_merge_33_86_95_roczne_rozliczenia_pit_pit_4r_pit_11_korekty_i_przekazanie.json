@@ -1,0 +1,114 @@
+{
+  "id": "wf_merge_33_86_95_roczne_rozliczenia_pit_pit_4r_pit_11_korekty_i_przekazanie",
+  "title": "PIT-11 i PIT-4R: kiedy korygować, jak przekazać pracownikowi i jak ujmować różnice w zaliczkach",
+  "topic_area": "PIT",
+  "question_examples": [
+    "Wysłałam PIT-11 do niewłaściwego urzędu skarbowego — czy muszę składać korektę, czy urzędy przekażą między sobą?",
+    "W PIT-11 wpisano nieprawidłowy adres zamieszkania pracownika (np. zameldowania zamiast zamieszkania) — czy robić korektę, czy pracownik sam poprawi w zeznaniu rocznym?",
+    "Jak opisać w PIT-4R wyjaśnienie różnicy między zaliczką pobraną a wpłaconą — czy wystarczy ogólna informacja, czy trzeba wskazać konkretnego pracownika?",
+    "Pracodawca zapłacił PIT-4 z odsetkami za zwłokę — czy odsetki wykazujemy gdzieś w PIT-4R?",
+    "Co jest potrzebne, żeby wysyłać pracownikom PIT-11 mailem zamiast wydawać osobiście — jaka zgoda i jaki podpis elektroniczny?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal czy błąd w PIT-11 wymaga korekty, czy jest obojętny podatkowo",
+      "detail": "Korekta PIT-11 jest OBOWIĄZKOWA tylko wtedy, gdy zmienia się kwota przychodu, kosztów, zaliczki lub składek ZUS/zdrowotnej, albo błędny jest identyfikator podatkowy (PESEL/NIP). Błędny adres zamieszkania, błędny kod pocztowy, błędnie wskazany urząd skarbowy — NIE wymagają korekty; podatnik wpisze poprawny adres i US w swoim zeznaniu rocznym (PIT-37/PIT-36), a urzędy przekażą deklarację między sobą z urzędu.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Wyślij korektę PIT-11 do 'nowego' urzędu skarbowego, jeśli błąd dotyczy danych merytorycznych",
+      "detail": "W Comarch Optima (Kadry i Płace → Deklaracje PIT pracowników → Korekta) lub Symfonia Kadry i Płace zaznacz pole 'korekta informacji' (cel złożenia: korekta), wygeneruj nowy PIT-11 z poprawnymi kwotami, podpisz podpisem kwalifikowanym właściciela/osoby upoważnionej (UPL-1) i wyślij przez bramkę e-Deklaracje. Jednocześnie dostarcz pracownikowi skorygowaną wersję (PDF + hasło w osobnym mailu).",
+      "condition": "if błąd dotyczy kwot (przychód, KUP, zaliczka, składki ZUS) lub PESEL/NIP"
+    },
+    {
+      "step": 3,
+      "action": "Zaktualizuj dane adresowe pracownika w ZUS zgłoszeniem ZUA w trybie zmiany",
+      "detail": "Jeśli pracownik zgłosił zmianę adresu zamieszkania, wyślij ZUA z kodem trybu 'zmiana/korekta danych' — dzięki temu w kolejnym roku PIT-11 zaczyta poprawny adres. Sam PIT-11 za rok bieżący nie wymaga z tego tytułu korekty — identyfikatorem podatnika jest PESEL/NIP, a nie adres.",
+      "condition": "if zmiana dotyczy danych adresowych/US"
+    },
+    {
+      "step": 4,
+      "action": "Wyjaśnij w PIT-4R różnicę między zaliczką należną a wpłaconą w polu 'Wyjaśnienie różnicy'",
+      "detail": "Opis może być ogólny, bez wskazywania imienia i nazwiska konkretnego pracownika — wystarczy przyczyna i miesiąc, np. 'Niedopłata zaliczki za 06/2025 w kwocie X zł wynikała z korekty wynagrodzenia; wyrównanie wpłacone DD.MM.RRRR wraz z odsetkami'. Podaj datę wpłaty wyrównania.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "NIE wykazuj odsetek za zwłokę w PIT-4R",
+      "detail": "W PIT-4R wykazujesz wyłącznie kwoty zaliczek należnych i pobranych (podatek). Odsetki od nieterminowej wpłaty są zobowiązaniem płatnika, księgowane na koncie 755/761 (koszt NKUP) — nie stanowią elementu deklaracji PIT-4R. W razie większej różnicy opisz ją jedynie w polu 'Wyjaśnienie różnicy'.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Wdrożyć elektroniczne przekazywanie PIT-11 pracownikom",
+      "detail": "Zbierz od pracownika pisemną zgodę (papier lub skan podpisanego oświadczenia) na bezterminowe otrzymywanie PIT-11 na wskazany adres e-mail. PIT-11 dla pracownika musi być opatrzony podpisem kwalifikowanym płatnika LUB w formie PDF wygenerowanego z UPO z e-Deklaracji (UPO jest dowodem złożenia wersji oficjalnej). Praktyka: wysyłka w dwóch mailach — PDF zahasłowany + hasło osobnym mailem/SMS-em; alternatywnie portal pracownika (e-Pracownik w Comarch Optima, Platforma Pracownika w Enova, Symfonia e-Pracownik).",
+      "condition": "if firma chce zrezygnować z wydawania PIT-11 papierowo"
+    },
+    {
+      "step": 7,
+      "action": "Zamknij rok w księgach po otrzymaniu UPO i uzgodnij konta zaliczek",
+      "detail": "Uzgodnij saldo konta 220 'Rozrachunki z US — PIT-4' z sumą PIT-4R pozycja 'do wpłaty' narastająco. Dla CIT: jeżeli zaliczki zapłacone > podatek roczny z CIT-8, nadpłatę przeksięguj z 870 na 220-CIT (należność z tytułu nadpłaty); konto 871 'Podatek dochodowy — część bieżąca' powinno się równać kwocie podatku z CIT-8 (w przypadku zerowego podatku = 0).",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 39 ust. 1",
+      "reason": "Nakłada na płatnika obowiązek sporządzenia i przesłania PIT-11 podatnikowi oraz właściwemu urzędowi skarbowemu — jest podstawą obowiązku wystawienia i ewentualnej korekty informacji."
+    },
+    {
+      "law_name": "Ustawa Ordynacja podatkowa",
+      "article_number": "art. 81",
+      "reason": "Reguluje prawo i obowiązek płatnika do skorygowania deklaracji/informacji (w tym PIT-11 i PIT-4R) w razie stwierdzenia błędu w wykazanych kwotach."
+    },
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 38 ust. 1a",
+      "reason": "Określa obowiązek składania przez płatnika rocznej deklaracji PIT-4R o pobranych zaliczkach na podatek dochodowy od wynagrodzeń."
+    }
+  ],
+  "edge_cases": [
+    "PIT-11 wysłany do niewłaściwego US tylko z powodu błędnego adresu — nie koryguj; US właściwy przekaże go między sobą, a podatnik w PIT-37/PIT-36 wskaże właściwy US sam.",
+    "Pracownik w oświadczeniu wskazał inny US niż wynika z jego adresu zamieszkania — wiążąca jest decyzja pracownika; płatnik wysyła PIT-11 do urzędu wskazanego przez pracownika (to podatnik rozlicza się ze swoim US zamieszkania).",
+    "Korekta PIT-11 po rozliczeniu rocznym pracownika (po 30.04) — i tak trzeba wysłać; pracownik złoży korektę swojego zeznania.",
+    "Korekty z kontroli ZUS sporządzane w Płatniku: jeśli masz tylko protokół (bez decyzji), pole 'znak i numer decyzji pokontrolnej' pozostaw puste — decyzji nie wpisuje się na podstawie samego protokołu."
+  ],
+  "common_mistakes": [
+    "Wysyłanie korekty PIT-11 z powodu błędnego adresu lub kodu pocztowego — identyfikatorem podatnika jest PESEL/NIP, adres nie wymaga korekty informacji.",
+    "Wpisywanie odsetek od nieterminowej zaliczki PIT-4 do PIT-4R — deklaracja wykazuje tylko zaliczki należne i pobrane; odsetki są kosztem NKUP płatnika.",
+    "Brak wyjaśnienia różnicy między zaliczką pobraną a wpłaconą w PIT-4R — każda różnica (nawet wynikła z korekty listy płac) wymaga krótkiego komentarza w polu 'Wyjaśnienie różnicy'."
+  ],
+  "related_questions": [
+    "Jak rozliczyć w CIT-8 sytuację, w której roczny podatek jest niższy od sumy wpłaconych zaliczek (nadpłata CIT) — jakie PK i jakie konta (870, 871, 220)?",
+    "Jak zaksięgować nadpłatę CIT na koniec roku i wykazać ją w bilansie oraz rachunku zysków i strat?",
+    "Czy w CIT-2/CIT-8 zaliczki miesięczne narastająco mogą być wyższe niż roczny podatek i jak prawidłowo odczytać pozycję 'suma należnych zaliczek od początku roku'?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "merge_33_86_95",
+    "cluster_label": "Roczne rozliczenia PIT: PIT-4R, PIT-11, korekty i przekazanie",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "c03457bd3f2d",
+      "4a54af5e5b02",
+      "78c9b6bd2bcd",
+      "65dc1fd2fc17",
+      "61db3632ba4f",
+      "34c6272f9739",
+      "929a3612894a",
+      "5bf7d234cc5c",
+      "a58cbf0ce693",
+      "be88af89990b",
+      "325608e3f01c",
+      "6daa4152df21"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

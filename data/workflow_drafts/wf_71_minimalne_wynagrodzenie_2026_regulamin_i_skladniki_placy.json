@@ -1,0 +1,95 @@
+{
+  "id": "wf_71_minimalne_wynagrodzenie_2026_regulamin_i_skladniki_placy",
+  "title": "Minimalne wynagrodzenie 2026 (4 806 zł): regulamin wynagradzania i składniki wliczane do płacy minimalnej",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Czy od 1 stycznia 2026 wynagrodzenie zasadnicze musi być równe minimalnemu, czy nadal można uzupełniać je premią uznaniową?",
+    "Jaka jest nowa stawka minimalnego wynagrodzenia od stycznia 2026 i czy będzie podnoszona w połowie roku?",
+    "Czy od 2026 r. dodatek funkcyjny (i inne dodatki) nadal wchodzi do płacy minimalnej, czy już nie?",
+    "Czy trzeba zmieniać w regulaminie wynagradzania tabele stawek zasadniczych, jeśli wszyscy pracownicy mieszczą się w widełkach i zarabiają powyżej minimalnej?",
+    "Czy w budżetówce / JST od 2026 r. obowiązuje nowa tabela minimalnego wynagrodzenia zasadniczego w kategoriach zaszeregowania i od kiedy stosować podwyżki?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal obowiązującą kwotę minimalnego wynagrodzenia 2026 i stawki godzinowej",
+      "detail": "Od 1.01.2026 minimalne wynagrodzenie za pracę to 4 806 zł brutto, a minimalna stawka godzinowa (dla umów zlecenia i świadczenia usług w rozumieniu ustawy) – 31,40 zł (Rozporządzenie RM z 11.09.2025, Dz.U. 2025 poz. 1242). Netto dla pracownika etatowego z PIT-2, po 26 r.ż., bez PPK to ok. 3 605,85 zł. W 2026 r. przewidziana jest jedna waloryzacja (inflacja < 5%), brak drugiej podwyżki w połowie roku. Źródła: https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20250001242 oraz https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/7490561",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj jakie składniki wliczasz do porównania z minimalnym wynagrodzeniem, a jakie wyłączasz",
+      "detail": "Zgodnie z art. 6 ust. 5 ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę do porównania z kwotą 4 806 zł NIE wlicza się: nagrody jubileuszowej, odprawy emerytalno-rentowej, wynagrodzenia za nadgodziny, dodatku za pracę w porze nocnej, dodatku za staż pracy oraz dodatku za szczególne warunki pracy. Premia regulaminowa/uznaniowa, dodatek funkcyjny, premia za dyżur – CO DO ZASADY wliczają się (art. 6 ust. 4). Pracodawca może więc nadal wyrównać wynagrodzenie zasadnicze niższe od minimalnego premią regulaminową – NIE ma obowiązku, żeby samo zasadnicze równało się 4 806 zł (projekt wymuszający to przesunięto). Źródło: https://www.biznes.gov.pl/pl/portal/0083",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Zaktualizuj regulamin wynagradzania i tabelę stawek zasadniczych",
+      "detail": "Jeżeli w regulaminie masz kwotowe widełki/tabelę stawek zasadniczych – zmień DOLNĄ granicę tak, aby nie była niższa niż 4 806 zł (dla pełnego etatu). Aneksuj umowy tylko pracownikom, u których wynagrodzenie ZASADNICZE jest określone kwotowo i niższe niż 4 806 zł. Nie trzeba aneksować, jeśli umowa zawiera klauzulę „wynagrodzenie w wysokości minimalnego wynagrodzenia za pracę wynikającego z rozporządzenia RM”. W Comarch ERP Optima: Konfiguracja → Płace → Wynagrodzenia → aktualizuj „Najniższe wynagrodzenie” od 1.01.2026; w Symfonia Kadry i Płace: Ustawienia → Stałe podatkowe i ZUS → Minimalne wynagrodzenie. Źródło: https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/7490561",
+      "condition": "if w regulaminie/umowach wynagrodzenie zasadnicze jest określone kwotowo i niższe niż 4 806 zł"
+    },
+    {
+      "step": 4,
+      "action": "Sprawdź nową tabelę dla pracowników samorządowych i jednostek budżetowych",
+      "detail": "Rozporządzenie RM z 25.02.2026 r. zmieniające rozporządzenie w sprawie wynagradzania pracowników samorządowych (Dz.U. 2026 poz. 246, ogłoszone 2.03.2026) wprowadza nowe kwoty minimalnego miesięcznego wynagrodzenia zasadniczego w kategoriach zaszeregowania (zał. nr 3) ze stosowaniem DO WYNAGRODZEŃ NALEŻNYCH OD 1.01.2026 – tj. z wyrównaniem od stycznia. Jednostki samorządowe muszą dostosować regulamin wynagradzania i uzgodnić zmiany ze związkami zawodowymi, jeśli działają u pracodawcy. Źródło: https://przepisy.gofin.pl/przepisy,4,42,42,9222,,,rozporzadzenie-rady-ministrow-z-dnia-25022026-r-zmieniajace.html",
+      "condition": "if pracodawca jest JST / jednostką budżetową objętą rozporządzeniem o pracownikach samorządowych"
+    },
+    {
+      "step": 5,
+      "action": "Ustal zasady dla niepełnego etatu, umowy zlecenia i B2B",
+      "detail": "UMOWA O PRACĘ (niepełny etat): minimalne wynagrodzenie proporcjonalnie – np. 1/2 etatu = 2 403 zł brutto (art. 8 ustawy o min. wynagr.). UMOWA ZLECENIA / UMOWA O ŚWIADCZENIE USŁUG: obowiązuje minimalna stawka godzinowa 31,40 zł brutto za każdą godzinę wykonania zlecenia (art. 8a–8d ustawy o min. wynagr.) – ewidencja godzin obowiązkowa, zapis w umowie. B2B (kontrakt z jednoosobową DG): NIE obowiązuje ani 4 806 zł, ani 31,40 zł – strony ustalają wynagrodzenie swobodnie, ale przy pozornym B2B (test 3 kryteriów z art. 5b ustawy o PIT) ZUS/PIP może zakwalifikować kontrakt jako stosunek pracy.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Przelicz świadczenia pochodne, które zależą od minimalnego wynagrodzenia",
+      "detail": "Od 1.01.2026: minimalna podstawa zasiłku chorobowego = 4 806 zł − 13,71% = 4 147,10 zł; maksymalna odprawa z tytułu zwolnień grupowych = 15 × 4 806 zł = 72 090 zł; kwota wolna od potrąceń niealimentacyjnych = 100% minimalnego wynagrodzenia netto; minimalne odszkodowanie za mobbing/nierówne traktowanie – nie niższe niż 4 806 zł. W Comarch ERP Optima / Enova365: moduł Kadry i Płace → Konfiguracja firmy → Płace → Stałe podatkowe – należy zaktualizować wskaźniki na 1.01.2026 (zwykle paczka aktualizacyjna producenta). Źródło: https://ksiegowosc.infor.pl/zus-kadry/wynagrodzenia/7500885",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Cudzoziemiec na UoP z kwotą zasadniczą niższą niż 4 806 zł uzupełnianą premią: system PUPP/praca.gov.pl przy powiadomieniu o powierzeniu pracy blokuje zbyt niską kwotę – w powiadomieniu należy wskazać wynagrodzenie razem z premią regulaminową (zalicza się do min. wynagrodzenia) albo podnieść zasadnicze; podstawa: art. 88z ustawy z 20.04.2004 o promocji zatrudnienia (od 1.06.2025 zastąpiona ustawą o rynku pracy i służbach zatrudnienia – zweryfikuj aktualny numer artykułu w obowiązującej ustawie).",
+    "Pracownik z ryczałtem za nadgodziny i dyżur: wynagrodzenie za nadgodziny i dodatek nocny NIE wliczają się do minimalnego, ale ryczałt za dyżur pełniony poza normalnymi godzinami pracy (art. 1515 § 3 KP) – wliczać TYLKO w części odpowiadającej wynagrodzeniu za czas gotowości, nie za faktyczną pracę; w razie wątpliwości wystąp z zapytaniem do PIP.",
+    "Pracodawca zatrudniający < 50 osób: nie ma obowiązku wydawania regulaminu wynagradzania (art. 772 § 1 KP) – wystarczy indywidualna umowa o pracę; przy 50+ regulamin obowiązkowy (chyba że obowiązuje układ zbiorowy).",
+    "Pracownicy samorządowi: za styczeń-luty 2026 naliczamy wynagrodzenie wg starej tabeli, a po wejściu w życie rozporządzenia z 25.02.2026 (Dz.U. poz. 246) robimy wyrównanie od 1.01.2026 jedną listą płac korygującą – można zrobić w marcu lub kwietniu (regulamin wewnętrzny decyduje o terminie)."
+  ],
+  "common_mistakes": [
+    "Mylenie zasady „zasadnicze = minimalne” – projekt ustawy wymuszający, aby samo wynagrodzenie zasadnicze równało się minimalnemu, został przesunięty; w 2026 r. nadal można uzupełniać premią regulaminową do poziomu 4 806 zł.",
+    "Wliczanie do porównania z minimalnym wynagrodzeniem dodatku za pracę w nocy, dodatku stażowego, nagrody jubileuszowej lub wynagrodzenia za nadgodziny – te składniki są wyłączone przez art. 6 ust. 5 ustawy o min. wynagr. i muszą być wypłacone PONAD minimalne.",
+    "Liczenie podstawy zasiłku chorobowego od kwoty „na rękę” po premii – podstawę zasiłku zawsze liczy się od wynagrodzenia BRUTTO (po pomniejszeniu o 13,71% składek pracownika), nie od kwoty uzupełnionej o składniki wyłączone z podstawy zasiłkowej."
+  ],
+  "related_questions": [
+    "Jak ustalić proporcjonalne minimalne wynagrodzenie dla pracownika niepełnoetatowego (1/2, 3/4, 1/8 etatu) w 2026 r.?",
+    "Czy minimalna stawka godzinowa 31,40 zł dotyczy umowy o dzieło albo kontraktu menedżerskiego?",
+    "Jak prawidłowo naliczyć wyrównanie do minimalnej krajowej przy zmiennym czasie pracy i systemie akordowym?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "71",
+    "cluster_label": "Minimalne wynagrodzenie 2026: regulamin i składniki płacy",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "38d75eae24f6",
+      "e02ca17b206c",
+      "5d424215ecaf",
+      "df3e285c73bd",
+      "8d2ebaf6a81d",
+      "5d36994987fa",
+      "3fbe538d7cae",
+      "42b11b5cf079",
+      "a002ce0ffb57",
+      "d67cb0f29bbd",
+      "fdf84cdda0c3",
+      "f3e252f906e6",
+      "ed1aa303439f",
+      "e1b95a45c9e3",
+      "28feac224657"
+    ],
+    "batch": "batch2",
+    "used_web_search": true
+  }
+}

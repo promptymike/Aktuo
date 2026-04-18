@@ -1,0 +1,101 @@
+{
+  "id": "wf_98_zasilek_opiekunczy_zus_wypelnianie_z_15a_i_prawo_do_zasilku",
+  "title": "Zasiłek opiekuńczy ZUS: wypełnianie Z-15A i ustalanie prawa do zasiłku",
+  "topic_area": "ZUS",
+  "question_examples": [
+    "Pracownik złożył Z-15A na chore dziecko poniżej 2 lat i zaznaczył, że drugi rodzic nie pracuje — czy zasiłek opiekuńczy przysługuje?",
+    "Żona pracownika przebywa na zasiłku macierzyńskim na młodsze dziecko — czy pracownikowi należy się zasiłek opiekuńczy na starsze chore dziecko?",
+    "Pracownik ma zwolnienie na chore dziecko na 2 tygodnie łącznie z weekendami, a matka dziecka ma wolne weekendy — jak wypełnić Z-15A?",
+    "Pracownik dostał zwolnienie na dziecko w okresie ferii zimowych — czy zasiłek opiekuńczy przysługuje, skoro dziecko i tak nie chodzi do szkoły?",
+    "Pracodawca zatrudnia do 20 osób i nie jest płatnikiem zasiłków — kto składa Z-15A i Z-3, i jak tę dokumentację przekazać do ZUS?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal status płatnika zasiłków u pracodawcy",
+      "detail": "Sprawdź stan zatrudnienia na 30.11 roku poprzedniego: jeśli pracodawca zgłasza do ubezpieczenia chorobowego powyżej 20 osób — sam wypłaca zasiłek opiekuńczy; jeśli do 20 osób — zasiłek wypłaca ZUS, a pracodawca przekazuje do ZUS druk Z-3 (pracownicy) lub Z-3a (zleceniobiorcy) wraz z Z-15A jako załącznikiem.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Odbierz od pracownika Z-15A i zweryfikuj kluczowe pola",
+      "detail": "Pracownik wypełnia Z-15A samodzielnie. W polu 'Okres, za który ubiegasz się o zasiłek' wpisuje WYŁĄCZNIE dni, w których faktycznie sprawował opiekę — pomija dni, gdy opiekę przejmował drugi rodzic/inny domowik. W sekcji o innych członkach rodziny wskazuje, czy w gospodarstwie domowym jest inna osoba mogąca zapewnić opiekę.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Sprawdź wiek chorego dziecka i wpływ na prawo do zasiłku",
+      "detail": "Jeżeli dziecko ma poniżej 2 lat — zasiłek opiekuńczy przysługuje nawet jeśli w domu jest inny członek rodziny mogący zapewnić opiekę (w tym drugi rodzic na urlopie macierzyńskim/rodzicielskim/bezrobotny). Dla dzieci 2+ lat oraz innych członków rodziny — jeśli w domu jest inna osoba mogąca zapewnić opiekę, zasiłek NIE przysługuje (art. 34 ustawy zasiłkowej).",
+      "condition": "if wiek dziecka < 2 lat → ograniczenie 'innego domownika' nie obowiązuje"
+    },
+    {
+      "step": 4,
+      "action": "Sprawdź limit dni zasiłku opiekuńczego w roku kalendarzowym",
+      "detail": "Limity na rodzinę (łącznie dla obojga rodziców/ubezpieczonych): 60 dni — opieka nad zdrowym dzieckiem do 8 lat lub chorym dzieckiem do 14 lat; 14 dni — opieka nad chorym członkiem rodziny lub dzieckiem powyżej 14 lat; 30 dni — opieka nad chorym dzieckiem niepełnosprawnym do 18 lat. Łączny limit nie może przekroczyć 60 dni w roku kalendarzowym (art. 33 ustawy zasiłkowej).",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Zweryfikuj dni wolne od pracy w okresie opieki",
+      "detail": "Jeżeli pracownik w Z-15A zadeklarował opiekę tylko w dni rozkładowo wolne (weekend, święto, dzień odbioru soboty) — zasiłek za te dni PRZYSŁUGUJE (liczy się okres sprawowania opieki, nie dni robocze pracownika). Wynagrodzenie za miesiąc naliczasz normalnie za dni przepracowane, a zasiłek za dni wskazane w Z-15A. Zasiłek: 80% podstawy wymiaru.",
+      "condition": "if opieka przypada w dni wolne od pracy pracownika"
+    },
+    {
+      "step": 6,
+      "action": "Obsłuż przypadek zamknięcia żłobka/przedszkola/szkoły — Z-15A + ZAS-36",
+      "detail": "Przy nagłym (nieprzewidzianym, krócej niż 7 dni wcześniej ogłoszonym) zamknięciu placówki dla dziecka do 8 lat pracownik składa Z-15A oraz oświadczenie ZAS-36. Zasiłek 80% podstawy, w ramach limitu 60 dni.",
+      "condition": "if nagłe zamknięcie żłobka/przedszkola/szkoły dziecka do 8 lat"
+    },
+    {
+      "step": 7,
+      "action": "Wprowadź zasiłek do programu kadrowo-płacowego",
+      "detail": "W Comarch Optima: Płace i Kadry → Listy płac → dodaj nieobecność 'Urlop opiekuńczy ZUS (Z-15A)' z właściwym kodem ZUS 320 na eZLA, system automatycznie wyliczy zasiłek 80%. W Symfonia Kadry i Płace: Nieobecności → Opieka nad dzieckiem/członkiem rodziny, zaznacz 'płatne przez ZUS' jeśli płatnikiem zasiłków jest ZUS. Bez Z-15A NIE wypłacaj zasiłku — przy kontroli ZUS podlega zwrotowi.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Drugi rodzic na urlopie macierzyńskim/rodzicielskim: co do zasady uznaje się, że może sprawować opiekę nad innym chorym dzieckiem — zasiłek opiekuńczy NIE przysługuje, chyba że chore dziecko ma poniżej 2 lat lub urlop rodzicielski obejmuje szczególny przypadek (noworodek wymagający wyłącznej opieki matki).",
+    "Pracownik wziął u lekarza zwolnienie na opiekę, ale finalnie pracował zdalnie po uzgodnieniu z kierownikiem — wystarczy, że nie złoży Z-15A. Brak Z-15A = brak wniosku o zasiłek; nie ma obowiązku anulowania eZLA u lekarza.",
+    "Matka samotnie wychowująca dziecko, gdy ojciec ma status bezrobotnego ale mieszka osobno — w Z-15A w polu o drugim rodzicu wpisuje 'nie dotyczy' (nie prowadzą wspólnego gospodarstwa domowego), nawet bez formalnego rozwodu.",
+    "Pracownicy notorycznie nie dostarczają Z-15A: zasiłek opiekuńczy przysługuje wyłącznie na wniosek — bez Z-15A nie wypłacaj. Wypłata bez wniosku przy kontroli ZUS podlega zwrotowi przez płatnika. Rekomendowana procedura: wypłata po dostarczeniu Z-15A (ewentualnie korekta listy płac w kolejnym miesiącu)."
+  ],
+  "common_mistakes": [
+    "Wpisywanie w Z-15A w polu 'okres za który ubiegasz się o zasiłek' całego okresu eZLA łącznie z dniami, gdy opiekę faktycznie sprawował drugi rodzic — prowadzi do zawyżenia zasiłku i ryzyka zwrotu po kontroli ZUS.",
+    "Mylenie wynagrodzenia chorobowego z zasiłkiem opiekuńczym: za opiekę nad dzieckiem NIE ma 33/14 dni wynagrodzenia chorobowego pracodawcy — od pierwszego dnia to zasiłek opiekuńczy ZUS (80% podstawy), bez względu na wiek ubezpieczonego.",
+    "Wypłacanie zasiłku opiekuńczego bez wniosku Z-15A 'z dobrej woli', by nie zaniżyć pracownikowi wypłaty — ZUS przy kontroli żąda zwrotu całego zasiłku wypłaconego bez wniosku."
+  ],
+  "related_questions": [
+    "Jak liczyć podstawę wymiaru zasiłku opiekuńczego dla pracownika zatrudnionego krócej niż 12 miesięcy?",
+    "Czy zleceniobiorca (umowa zlecenia z dobrowolnym ubezpieczeniem chorobowym) może otrzymać zasiłek opiekuńczy i jakie druki składa?",
+    "Jak rozliczyć zasiłek opiekuńczy, gdy okres opieki nakłada się z urlopem wypoczynkowym lub urlopem rodzicielskim drugiego rodzica?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "98",
+    "cluster_label": "Zasiłek opiekuńczy ZUS: wypełnianie Z-15A i prawo do zasiłku",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "36c28597c058",
+      "381844d9c99f",
+      "8f5bd5a7865b",
+      "eaf2b13df538",
+      "840498e2a0b7",
+      "69f2f7094a71",
+      "98cd6085effa",
+      "30295a24c14f",
+      "4cc24e8fef41",
+      "ab7757141afa",
+      "6b2c16d62204",
+      "f2980300867c",
+      "dc911b218ec9",
+      "311265b56279",
+      "4268ec8dfa29"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

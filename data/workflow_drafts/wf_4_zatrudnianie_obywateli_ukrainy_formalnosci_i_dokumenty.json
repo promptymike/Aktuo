@@ -1,0 +1,101 @@
+{
+  "id": "wf_4_zatrudnianie_obywateli_ukrainy_formalnosci_i_dokumenty",
+  "title": "Zatrudnianie obywateli Ukrainy w 2026 r. — formalności, dokumenty i powiadomienie do PUP",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Chcemy zatrudnić obywatela Ukrainy, który ma kartę pobytu (zezwolenie na pobyt czasowy do 31.08.2028) z adnotacją o dostępie do rynku pracy — czy wystarczy powiadomienie o powierzeniu pracy do PUP, czy potrzebne jest zezwolenie na pracę?",
+    "Osoba z Ukrainy ma PESEL ze statusem UKR (przyjechała po 24.02.2022) — jakie dokumenty muszę zgromadzić i czy zatrudnienie wygląda tak samo jak w przypadku obywatela polskiego?",
+    "Zatrudniam obywatela Ukrainy na umowę zlecenia — czy oprócz powiadomienia w portalu praca.gov.pl muszę jeszcze dopełnić innych formalności (ZUS, akta, PIT)?",
+    "Cudzoziemka złożyła wniosek o kartę pobytu pocztą, ma żółtą kartkę z urzędu wojewódzkiego, ale nie ma stempla w paszporcie — czy po 4.03.2026 mogę legalnie przedłużyć jej umowę o pracę?",
+    "Pracownik z Ukrainy ma decyzję jednolitą (zezwolenie na pobyt czasowy i pracę) ważną do maja 2026, ale nie ma statusu UKR — co zrobić, jeśli nie zdąży złożyć kolejnego wniosku przed końcem ważności decyzji?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal podstawę legalnego pobytu cudzoziemca w Polsce",
+      "detail": "Zażądaj oryginału paszportu (lub dokumentu podróży) i ustal podstawę pobytu: (a) PESEL ze statusem UKR + wjazd po 24.02.2022 — pobyt legalny na podstawie specustawy (ustawa z 12.03.2022 o pomocy obywatelom Ukrainy, Dz.U. 2024 poz. 167 t.j.); (b) wiza krajowa/Schengen — sprawdź daty ważności i adnotację o pracy; (c) karta pobytu — sprawdź artykuł ustawy o cudzoziemcach, na podstawie którego wydano zezwolenie, bo to determinuje czy potrzebne jest zezwolenie na pracę; (d) stempel w paszporcie + potwierdzenie złożenia wniosku — pobyt legalny do wydania decyzji ostatecznej (art. 108 ustawy o cudzoziemcach). Zrób kopię/skan wszystkich dokumentów do akt osobowych (część A).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj aktualność statusu UKR w rejestrze PESEL",
+      "detail": "Status UKR wygasa po wyjeździe z Polski na więcej niż 30 dni lub po otrzymaniu innego tytułu pobytowego (wtedy w rejestrze pojawia się status NUE). Poproś pracownika o aktualne zaświadczenie z rejestru PESEL (lub screen z aplikacji mObywatel/Diia.pl). UWAGA: na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową obywateli Ukrainy do 4.03.2026 — zweryfikuj aktualny stan nowelizacji specustawy (pisemne zapytanie w PUP / kancelarii wojewody), bo przepisy przejściowe mogły zostać zmienione kolejną nowelizacją.",
+      "condition": "if pracownik powołuje się na specustawę (status UKR)"
+    },
+    {
+      "step": 3,
+      "action": "Złóż Powiadomienie o powierzeniu wykonywania pracy obywatelowi Ukrainy w PUP",
+      "detail": "Powiadomienie składasz wyłącznie elektronicznie przez portal praca.gov.pl w terminie 7 dni od dnia podjęcia pracy przez cudzoziemca (art. 22 specustawy). Dotyczy to zarówno umowy o pracę, umowy zlecenia, jak i innej umowy cywilnoprawnej. W powiadomieniu podaj: dane pracodawcy, dane cudzoziemca (w tym PESEL), rodzaj umowy, stawkę (nie niższą niż min. wynagrodzenie 4 806 zł brutto w 2026 r. przy pełnym etacie / 31,40 zł/h przy zleceniu), PKD, zawód. Zachowaj UPP (urzędowe potwierdzenie przedłożenia) w aktach.",
+      "condition": "if pracownik korzysta ze specustawy (status UKR) LUB ma kartę pobytu z dostępem do rynku pracy na podstawie art. umożliwiającego zatrudnienie bez zezwolenia"
+    },
+    {
+      "step": 4,
+      "action": "Sprawdź czy wymagane jest zezwolenie na pracę (a nie tylko powiadomienie)",
+      "detail": "Samo „dostęp do rynku pracy” na karcie pobytu nie zawsze wystarcza — kluczowy jest artykuł, na podstawie którego wydano decyzję (np. zezwolenie jednolite na pobyt i pracę z art. 114 ustawy o cudzoziemcach zwalnia z obowiązku uzyskania odrębnego zezwolenia, ale tylko u pracodawcy i na warunkach wskazanych w decyzji — zmiana pracodawcy wymaga nowej decyzji lub zezwolenia typu A). Poproś pracownika o kopię decyzji wojewody (nie samej karty). Jeśli w decyzji nie ma Twojej firmy jako pracodawcy — wystąp o zezwolenie na pracę typu A w urzędzie wojewódzkim lub, dla obywateli Ukrainy, wystarczy powiadomienie wg specustawy (jeśli wjazd po 24.02.2022 i aktywny status UKR).",
+      "condition": "if pracownik ma kartę pobytu (zezwolenie jednolite)"
+    },
+    {
+      "step": 5,
+      "action": "Zawrzyj umowę i przekaż jej tłumaczenie",
+      "detail": "Podpisz umowę o pracę / zlecenia w formie pisemnej przed dopuszczeniem do pracy (art. 29 § 2 KP). Przekaż cudzoziemcowi tłumaczenie umowy na język dla niego zrozumiały (art. 22 ust. 6 specustawy — obowiązek pracodawcy). Dla umowy o pracę: skierowanie na badania wstępne, szkolenie BHP wstępne, informacja o warunkach zatrudnienia (art. 29 § 3 KP) — wszystko jak przy Polaku. Dla umowy zlecenia: umowa + klauzula RODO + oświadczenia podatkowe (rezydencja, PIT-2 jeśli dotyczy).",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Zgłoś do ZUS w ciągu 7 dni od daty rozpoczęcia pracy",
+      "detail": "Umowa o pracę — ZUS ZUA z kodem 01 10 XX, pełne składki. Umowa zlecenia — ZUA lub ZZA (jeśli student do 26 r.ż. — brak składek). Sprawdź rezydencję podatkową: jeśli cudzoziemiec przebywa w PL ≤183 dni w roku i nie ma centrum interesów życiowych w PL — nierezydent, potrącasz 20% zryczałtowany PIT (art. 29 ust. 1 pkt 1 ustawy o PIT) i wystawiasz IFT-1R; jeśli rezydent — zasady ogólne i PIT-11. W Comarch Optima: moduł Płace i Kadry → Pracownicy → zakładka „Dane osobowe/Nierezydent” + kod kraju UA; w Symfonii Kadry i Płace: Kartoteka pracownika → Dane podatkowe → rezydencja podatkowa.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Prowadź monitoring ważności dokumentów pobytowych i pracowniczych",
+      "detail": "Ustaw alerty na: koniec ważności wizy/karty pobytu/statusu UKR, koniec ważności decyzji jednolitej, 30-dniowe wyjazdy (utrata UKR). Jeśli pracownik złoży wniosek o kolejną kartę pobytu przed upływem ważności poprzedniej — pobyt jest legalny do wydania decyzji ostatecznej, pracodawca powinien mieć w aktach potwierdzenie złożenia wniosku (żółta kartka + stempel w paszporcie wbijany przez urząd wojewódzki). Jeśli zmienią się warunki zatrudnienia (stanowisko, wymiar, stawka) — złóż nowe powiadomienie w PUP w 7 dni.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Pracownik ma złożony wniosek o kartę pobytu (żółta kartka z UW), ale nie dostał jeszcze stempla w paszporcie — pobyt legalny do wydania decyzji ostatecznej, pracę można kontynuować; dla bezpieczeństwa pracodawcy warto uzyskać z UW zaświadczenie o złożeniu wniosku (tzw. potwierdzenie z datą wpływu).",
+    "Status NUE w rejestrze PESEL — oznacza, że cudzoziemiec utracił status UKR (np. wyjazd >30 dni lub uzyskanie karty pobytu); wtedy specustawa nie ma zastosowania i podstawą pracy musi być wiza + zezwolenie na pracę lub karta pobytu z dostępem do rynku pracy.",
+    "Zatrudnienie w urzędzie/jednostce samorządu terytorialnego — co do zasady wymagane jest obywatelstwo polskie (art. 6 ustawy o pracownikach samorządowych), ale specustawa o pomocy Ukrainie przewiduje wyjątki dla stanowisk nieurzędniczych i pomocniczych — każdy przypadek wymaga indywidualnej analizy i akceptacji kierownika urzędu.",
+    "Decyzja jednolita (zezwolenie na pobyt czasowy i pracę z art. 114 ustawy o cudzoziemcach) jest wydana na konkretnego pracodawcę — zmiana pracodawcy wymaga nowej decyzji lub złożenia powiadomienia wg specustawy (dla obywateli Ukrainy z aktywnym statusem UKR)."
+  ],
+  "common_mistakes": [
+    "Zakładanie, że adnotacja „dostęp do rynku pracy” na karcie pobytu automatycznie zwalnia pracodawcę z wszelkich obowiązków — w rzeczywistości trzeba zweryfikować artykuł ustawy o cudzoziemcach, na podstawie którego wydano decyzję, bo niektóre zezwolenia są wydane „na konkretnego pracodawcę” (art. 114) i zmiana pracodawcy wymaga nowego zezwolenia.",
+    "Niezłożenie powiadomienia do PUP w terminie 7 dni od podjęcia pracy — powoduje, że praca jest uznawana za nielegalną, a pracodawca podlega karze grzywny od 3 000 zł do 50 000 zł (art. 120 ustawy o promocji zatrudnienia).",
+    "Pominięcie weryfikacji aktualności statusu UKR w rejestrze PESEL — pracodawca opiera się na nieaktualnym zaświadczeniu sprzed kilku miesięcy, podczas gdy pracownik w międzyczasie wyjechał na >30 dni i utracił status, co oznacza nielegalny pobyt i nielegalne zatrudnienie."
+  ],
+  "related_questions": [
+    "Jak rozliczyć PIT i składki ZUS cudzoziemca-nierezydenta zatrudnionego na umowę zlecenia (kiedy 20% ryczałt, a kiedy zasady ogólne)?",
+    "Jakie są różnice w zatrudnianiu obywateli Białorusi, Gruzji, Mołdawii i Armenii w porównaniu do obywateli Ukrainy — czy mogą korzystać z uproszczonego trybu?",
+    "Czy biuro rachunkowe może świadczyć usługi legalizacji pobytu i pracy cudzoziemców, czy to domena wyspecjalizowanych kancelarii imigracyjnych?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "4",
+    "cluster_label": "Zatrudnianie obywateli Ukrainy: formalności i dokumenty",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "36461de6eb85",
+      "b120abcc50bb",
+      "26a76ed00a81",
+      "c9f223696eb3",
+      "d6b90f21db96",
+      "1b4506132827",
+      "8dfad9255108",
+      "5ecbdb1df3e1",
+      "78d32b1269f7",
+      "8784b21db22e",
+      "26e96aa8320d",
+      "32f2fbadfc5b",
+      "110e9e14700a",
+      "e43b6d282c9c",
+      "65b5b6db9a4f"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

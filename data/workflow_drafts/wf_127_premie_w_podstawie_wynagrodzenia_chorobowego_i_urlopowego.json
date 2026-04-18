@@ -1,0 +1,109 @@
+{
+  "id": "wf_127_premie_w_podstawie_wynagrodzenia_chorobowego_i_urlopowego",
+  "title": "Premie i dodatki w podstawie wynagrodzenia chorobowego, zasiłku i urlopu",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Czy premia regulaminowa wypłacana co miesiąc w stałej kwocie, niepomniejszana za czas choroby, wchodzi do podstawy wynagrodzenia chorobowego?",
+    "Premia miesięczna 1000 zł jest pomniejszana za czas choroby — czy przy ustalaniu podstawy zasiłku uzupełniam ją do pełnej kwoty?",
+    "Czy premia uznaniowa wypłacana cyklicznie co miesiąc (bez pomniejszeń za nieobecność) wchodzi do podstawy zasiłku i do wynagrodzenia urlopowego?",
+    "Czy premia kwartalna/roczna (np. procent od sprzedaży) wchodzi do podstawy chorobowego i jak ją rozliczyć w czasie?",
+    "Czy premia za brak absencji oraz premia motywacyjna wchodzą do podstawy wynagrodzenia urlopowego i ekwiwalentu za urlop?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Sprawdź charakter premii w regulaminie wynagradzania / umowie o pracę",
+      "detail": "Ustal czy premia jest regulaminowa (roszczeniowa, z określonymi warunkami) czy uznaniowa (nagroda — bez roszczenia). Jeśli brak regulaminu, a premia jest wypłacana cyklicznie w jednakowej wysokości, traktuje się ją w praktyce jak składnik roszczeniowy (premia, nie nagroda).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Ustal, czy premia jest pomniejszana za okresy pobierania wynagrodzenia chorobowego/zasiłku",
+      "detail": "To jest kluczowy test z art. 41 ust. 1 ustawy zasiłkowej: jeśli składnik wynagrodzenia jest wypłacany za okres choroby w pełnej wysokości (nie jest pomniejszany) — NIE wchodzi do podstawy wymiaru zasiłku i wynagrodzenia chorobowego. Jeśli jest pomniejszany proporcjonalnie za dni choroby — wchodzi do podstawy.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Wlicz premie miesięczne do podstawy chorobowego w kwocie faktycznie wypłaconej, po uzupełnieniu do pełnej kwoty",
+      "detail": "Premie miesięczne pomniejszane za chorobę uzupełniasz do kwoty, jaką pracownik otrzymałby za pełny miesiąc przepracowany (analogicznie jak wynagrodzenie zasadnicze) — tylko w miesiącach, w których przepracował co najmniej połowę obowiązującego czasu pracy. Podstawę liczysz z 12 miesięcy poprzedzających miesiąc powstania niezdolności.",
+      "condition": "if premia jest miesięczna i pomniejszana za czas choroby"
+    },
+    {
+      "step": 4,
+      "action": "Doliczaj premie kwartalne i roczne w proporcji 1/4 i 1/12",
+      "detail": "Premie kwartalne wlicz w wysokości 1/4 kwot wypłaconych za 4 kwartały poprzedzające miesiąc niezdolności, a premie roczne w wysokości 1/12 kwoty wypłaconej za rok poprzedzający (art. 42 ustawy zasiłkowej). Warunek ten sam: muszą być pomniejszane za okresy pobierania zasiłku. Jeśli pracownik był zatrudniony krócej niż pełny okres — podziel przez liczbę miesięcy zatrudnienia (np. premia roczna za 3 miesiące → dzielisz przez 3 i dodajesz 1/3 do każdego miesiąca podstawy).",
+      "condition": "if premia jest kwartalna lub roczna"
+    },
+    {
+      "step": 5,
+      "action": "Zastosuj odrębne zasady dla wynagrodzenia urlopowego i ekwiwalentu",
+      "detail": "Do podstawy urlopowej (§ 6–8 rozporządzenia MPiPS z 8.01.1997 w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego) wliczasz zmienne składniki wynagrodzenia z 3 miesięcy poprzedzających (przy dużych wahaniach — do 12). NIE wliczasz składników wypłacanych niezależnie od wykonanej pracy (np. premia stała niepomniejszana, jednorazowe nagrody jubileuszowe, ekwiwalenty). Premia za brak absencji — co do zasady wchodzi, bo jest związana z wykonywaniem pracy i pomniejszana.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Zaksięguj kod składnika w programie kadrowym zgodnie z kwalifikacją",
+      "detail": "W Comarch Optima (Kadry i Płace → Konfiguracja → Typy wypłat) ustaw dla premii flagi: 'Wliczać do podstawy zasiłku' = Tak/Nie, 'Wliczać do urlopu' = Tak/Nie, 'Wliczać do ekwiwalentu' = Tak/Nie oraz sposób wliczania (miesięcznie/kwartalnie/rocznie). W Symfonia Kadry i Płace analogicznie: Ustawienia → Elementy wynagrodzenia → zakładka 'Zasiłki' i 'Urlop'. Błędna flaga powoduje systemową pomyłkę w podstawie.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Udokumentuj decyzję w teczce pracownika lub notatce kadrowej",
+      "detail": "Zapisz uzasadnienie kwalifikacji premii (cytat z regulaminu + decyzja kadrowa) — w razie kontroli ZUS lub PIP to podstawa obrony. Jeśli regulamin zmienia się od 1.01.2026 (np. likwidacja premii 3%), zachowaj wersję archiwalną — do podstaw chorobowego liczonych z 12 miesięcy poprzedzających styczeń 2026 nadal wliczasz premie wypłacone w 2025, jeśli były pomniejszane za chorobę.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 92 § 2",
+      "reason": "Odsyła do ustalania wynagrodzenia za czas choroby według zasad obowiązujących przy ustalaniu podstawy wymiaru zasiłku chorobowego — baza całej logiki."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 172",
+      "reason": "Podstawa wyliczenia wynagrodzenia urlopowego — odrębna od podstawy chorobowego, z odmiennym katalogiem wliczanych składników."
+    }
+  ],
+  "edge_cases": [
+    "Premia uznaniowa nazwana 'uznaniową' tylko formalnie, ale wypłacana cyklicznie w stałej wysokości i pomniejszana za chorobę — traktuj jak regulaminową i wliczaj do podstawy (decyduje treść, nie nazwa; potwierdzone w orzecznictwie SN i praktyce ZUS).",
+    "Premia specjalna jednakowa dla wszystkich (np. 500 zł dla każdego pracownika niezależnie od obecności) — nie wchodzi do podstawy chorobowego, bo nie jest pomniejszana za czas choroby; może też nie wchodzić do podstawy urlopowej, jeśli nie jest związana z pracą.",
+    "Premia za brak absencji pomniejszana proporcjonalnie za chorobę — wchodzi do podstawy chorobowego (pomniejszenie spełnia test art. 41 ustawy zasiłkowej) i do podstawy urlopowej jako składnik zmienny zależny od pracy.",
+    "Zmiana regulaminu od 1.01.2026 likwidująca premię — do podstawy chorobowego dla niezdolności powstałej w styczniu 2026 nadal wliczasz premie wypłacone w 12 miesiącach poprzedzających (2025), o ile wtedy były pomniejszane za chorobę; nie przeliczasz wstecz."
+  ],
+  "common_mistakes": [
+    "Uzupełnianie premii wypłaconej obok chorobowego do 'pełnej kwoty' w miesiącu niezdolności — błąd: uzupełnia się tylko podstawę wymiaru (przyjmuje się kwotę, jaką pracownik otrzymałby za pełny miesiąc), a nie dopłaca drugiej połowy premii do bieżącej wypłaty.",
+    "Automatyczne wyłączanie każdej 'premii uznaniowej' z podstawy — jeśli jest cykliczna i pomniejszana, wchodzi do podstawy mimo nazwy. Decyduje faktyczny charakter, nie etykieta w regulaminie.",
+    "Wliczanie premii kwartalnej/rocznej w pełnej kwocie do miesiąca wypłaty zamiast w proporcji 1/4 lub 1/12 przez odpowiednio 3 lub 12 miesięcy (art. 42 ustawy zasiłkowej)."
+  ],
+  "related_questions": [
+    "Jak obliczyć podstawę chorobowego dla pracownika zatrudnionego krócej niż 12 miesięcy?",
+    "Czy dodatek stażowy i dodatek funkcyjny wchodzą do podstawy wynagrodzenia chorobowego i urlopowego?",
+    "Jak rozliczyć premię wypłaconą po rozwiązaniu stosunku pracy w kontekście ekwiwalentu za urlop?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "127",
+    "cluster_label": "Premie w podstawie wynagrodzenia chorobowego i urlopowego",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "4a6f1ffec586",
+      "b721d2ab6d6b",
+      "b799d2a2d7cd",
+      "30d1af2cb195",
+      "431416df37ed",
+      "320e821d53d5",
+      "249f359b4f96",
+      "2de1523c0dd6",
+      "c20228eacf13",
+      "9ffbc3ddcf9d",
+      "240d73c510a1",
+      "e95ac77c0bec"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "wf_8_nagroda_jubileuszowa_po_doniesieniu_dokumentow_do_stazu_prac",
+  "title": "Nagroda jubileuszowa po doniesieniu dokumentów do stażu pracy (sfera budżetowa, od 1.01.2026)",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownik samorządowy miał 19 lat i 5 miesięcy stażu, dostarczył zaświadczenie ZUS o składkach z umowy zlecenia — po przeliczeniu wyszło 23 lata 11 miesięcy. Czy należy wypłacić jubileusz za 20 lat wstecz?",
+    "Pracownik dostarczył dokumenty i okazało się, że 8 miesięcy temu osiągnął 35 lat pracy. Czy wypłacić teraz jubileusz za 35 lat, czy przepada i dostanie dopiero za 40 lat?",
+    "W kwietniu 2025 wypłaciliśmy jubileusz za 20 lat. Teraz pracownik przynosi dokumenty z ZUS i jego staż wynosi ponad 31 lat — wypłacić pełną nagrodę za 30 lat czy różnicę do nagrody już wypłaconej?",
+    "Pracownik samorządowy w styczniu 2026 ma 17 lat stażu, 14.01.2026 dostarczył zaświadczenie ZUS o umowie zleceniu i staż wzrósł do 22 lat — czy należy mu się jubileusz za 20 lat w styczniu 2026?",
+    "Długoletni pracownik ma 39 lat 4 miesiące stażu. Po 1.01.2026 donosi zaświadczenie ZUS o działalności i wychodzi mu 42 lata 3 miesiące — czy jubileusz za 40 lat mu przysługuje, czy przepadł?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal, czy pracodawca jest objęty przepisami o nagrodzie jubileuszowej",
+      "detail": "Nagroda jubileuszowa jest obligatoryjna wyłącznie w sferze budżetowej (np. ustawa o pracownikach samorządowych — art. 38 ust. 2, Karta Nauczyciela — art. 47, ustawa o pracownikach urzędów państwowych — art. 23). W sektorze prywatnym wypłaca się ją tylko jeżeli przewiduje to regulamin wynagradzania / układ zbiorowy — wtedy wstecznego wyrównania co do zasady się nie stosuje (patrz komentarz HE5/1).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Przelicz łączny staż pracy na dzień dostarczenia dokumentów",
+      "detail": "Do stażu wlicz okresy zatrudnienia z wszystkich świadectw pracy oraz — zgodnie z art. 302 Kodeksu pracy w brzmieniu od 1.01.2026 — okresy wykonywania umów zlecenia, B2B (działalności gospodarczej) i innych okresów objętych składką emerytalno-rentową, potwierdzone zaświadczeniem ZUS. Ustal dwie daty: (a) datę dostarczenia dokumentów oraz (b) datę osiągnięcia progu jubileuszowego (20/25/30/35/40/45 lat).",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Zweryfikuj, czy prawo do nagrody powstało przed czy po 1.01.2026",
+      "detail": "Kluczowa jest data nabycia prawa. Zgodnie z art. 6 ustawy nowelizującej Kodeks pracy (nowe brzmienie art. 302 KP obowiązuje od 1.01.2026) — okresy ze zleceń/B2B zalicza się do stażu wyłącznie od 1.01.2026. Jeżeli próg jubileuszowy przypadałby 'wstecz' przed 1.01.2026 po uwzględnieniu tych okresów — nagroda NIE przysługuje za ten okres (bo w chwili 'osiągnięcia progu' przepis jeszcze nie obowiązywał, patrz komentarz HE3/3 i HE1). Flaga niepewności: Zweryfikuj tę interpretację pisemnym zapytaniem do MRPiPS/KIS — w środowisku kadrowym funkcjonują dwa sprzeczne stanowiska (patrz HE1).",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Ustal datę nabycia prawa i zastosuj zasadę przedawnienia z art. 291 § 1 KP",
+      "detail": "Roszczenia ze stosunku pracy przedawniają się z upływem 3 lat. Jeżeli pracownik nabył prawo do nagrody po 1.01.2026 (np. w dniu dostarczenia dokumentów staż osiągnął 20/25/30 itd. lat) — wypłać nagrodę niezwłocznie w pełnej wysokości (zgodnie ze stanowiskiem MRPiPS). Jeżeli prawo powstało np. w lutym 2026, a pracownik zgłasza się w 2027 — nadal mieści się w 3-letnim terminie.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Rozstrzygnij sytuację 'przeskoczenia' progu (np. z 19 na 23 lata jednym zaświadczeniem)",
+      "detail": "Jeżeli po doliczeniu okresów ZUS pracownik 'przeskakuje' próg jubileuszowy (np. z 19 na 23 lata, z 37 na 42 lata), a osiągnięcie tego progu przypadło już po 1.01.2026 — wypłać nagrodę za niższy próg niezwłocznie. Kolejny próg naliczasz dopiero po faktycznym upływie kolejnych lat pracy. Jeżeli moment osiągnięcia progu wypadł przed 1.01.2026 (bo liczymy wstecznie po doliczeniu zleceń) — nagroda co do zasady przepada.",
+      "condition": "if prawo do nagrody przypada wstecznie na okres sprzed 1.01.2026"
+    },
+    {
+      "step": 6,
+      "action": "Zastosuj zasady przy wcześniej wypłaconej nagrodzie za niższy próg",
+      "detail": "Jeżeli pracownik już otrzymał nagrodę za niższy próg (np. 20 lat w 2025), a po przeliczeniu w 2026 okazuje się, że osiągnął już kolejny próg (np. 30 lat) — wypłać nagrodę za wyższy próg w PEŁNEJ WYSOKOŚCI (nie różnicę), bo to odrębne świadczenie. Zasada: od poprzedniej wypłaty musi upłynąć co najmniej 12 miesięcy (praktyka + komentarz HE4/3).",
+      "condition": "if pracownik otrzymał już nagrodę za niższy próg u tego samego pracodawcy"
+    },
+    {
+      "step": 7,
+      "action": "Nalicz wyrównanie dodatku stażowego i udokumentuj wypłatę w systemie kadrowym",
+      "detail": "Równolegle z jubileuszem wyrównaj dodatek stażowy (za 3 lata wstecz — art. 291 § 1 KP). W Comarch Optima: Kadry i Płace → Lista pracowników → Zapisy historyczne → Staż pracy (aktualizuj z datą dostarczenia dokumentów) → dodaj element 'Nagroda jubileuszowa' na liście płac; analogicznie w Enova365: Kadry → Pracownicy → Historia zatrudnienia → przeliczenie stażu → Wypłata dodatkowa. Podstawa wymiaru = wynagrodzenie jak do ekwiwalentu urlopowego z miesiąca nabycia prawa. Nagroda jubileuszowa wypłacana nie częściej niż co 5 lat jest zwolniona ze składek ZUS (§ 2 ust. 1 pkt 1 rozporządzenia składkowego) — podlega PIT.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Pracownik dostarcza zaświadczenie ZUS tuż przed osiągnięciem kolejnego progu (np. ma 39 lat 4 mies., po doliczeniu 42 lata 3 mies.) — w praktyce bardziej opłaca się ODŁOŻYĆ dostarczenie dokumentów do momentu 'dorośnięcia' do 40 lat bez zaświadczenia, bo inaczej 40-lecie przepada jako przypadające wstecznie (komentarz HE1/2, HE3/1).",
+    "Pracownik osiągnął wymagany staż przed zatrudnieniem u obecnego pracodawcy — interpretacja sporna: część kadrowych uznaje, że prawo do nagrody powstaje tylko, jeżeli staż został osiągnięty w trakcie zatrudnienia u danego pracodawcy (komentarz HE2/3); inni uznają, że liczy się sam fakt osiągnięcia progu w okresie objętym ustawą. Zalecam pisemne zapytanie do MRPiPS.",
+    "Pracownik niedługo przed emeryturą — jeżeli po doliczeniu okresów ZUS brakuje mu mniej niż 12 miesięcy do kolejnego progu (np. 45 lat), zgodnie z przepisami o odprawie emerytalnej i praktyką budżetówki wypłaca się nagrodę za ten wyższy próg łącznie z odprawą emerytalną.",
+    "Sektor prywatny z regulaminową nagrodą jubileuszową — zakres wyrównania wstecz zależy wyłącznie od zapisów regulaminu wynagradzania; jeżeli regulamin milczy — stosuje się przedawnienie 3-letnie z art. 291 § 1 KP, ale brak obowiązku wyrównania 'automatycznego' jak w budżetówce (komentarz HE5/1)."
+  ],
+  "common_mistakes": [
+    "Wypłacanie pracownikowi TYLKO różnicy między nagrodą za wyższy a niższy próg, gdy niższa była już wypłacona — to błąd, nagroda za każdy próg jest odrębnym świadczeniem i wypłaca się ją w pełnej wysokości podstawy z miesiąca nabycia prawa.",
+    "Automatyczne wypłacanie nagrody wstecznie za progi osiągnięte przed 1.01.2026 po doliczeniu okresów zleceń/B2B — ignoruje przepis przejściowy (art. 6 ustawy zmieniającej), zgodnie z którym nowe zasady zaliczania okresów do stażu obowiązują od 1.01.2026.",
+    "Pominięcie wyrównania dodatku stażowego za 3 lata wstecz przy okazji przeliczenia stażu — wyrównanie stażowego należy się równolegle z rozliczeniem jubileuszu (art. 291 § 1 KP, komentarz [6]/1 i [8]/2)."
+  ],
+  "related_questions": [
+    "Jak dokumentować okres prowadzenia działalności gospodarczej do stażu pracy od 1.01.2026 — wystarczy zaświadczenie ZUS o opłacanych składkach czy potrzebny też wypis z CEIDG?",
+    "Czy okres pobierania zasiłku dla bezrobotnych wlicza się do stażu dla potrzeb nagrody jubileuszowej w jednostce samorządowej?",
+    "Jak ustalić podstawę wymiaru nagrody jubileuszowej, gdy w miesiącu nabycia prawa pracownik był na zwolnieniu lekarskim lub urlopie bezpłatnym?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "8",
+    "cluster_label": "Nagroda jubileuszowa po doniesieniu dokumentów do stażu pracy",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "0523754dde22",
+      "23d9b6e78aaf",
+      "667a7375cf31",
+      "f9ec90c554ac",
+      "f073de3cd8a1",
+      "bf5e9ca20c7d",
+      "33e649bfa748",
+      "7e8492d4273c",
+      "ac06acb24d4f",
+      "6c54d8765e89",
+      "a53b8bc0fefd",
+      "33b6fa6bbda8",
+      "e1391499d07d",
+      "a1fadd85ba0c"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

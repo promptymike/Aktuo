@@ -1,0 +1,101 @@
+{
+  "id": "wf_34_odbior_dnia_wolnego_za_swieto_1_listopada_w_sobote",
+  "title": "Odbiór dnia wolnego za święto przypadające w sobotę (np. 1 listopada)",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Czy za Wszystkich Świętych (1 listopada), które przypada w sobotę, należy oddać pracownikowi inny dzień wolny?",
+    "Pracownica wraca z urlopu wychowawczego 6 listopada — czy przysługuje jej dzień wolny 10.11 wyznaczony jako odbiór za 1 listopada?",
+    "Pracownik zatrudniony od 3 listopada — czy należy mu się wolne za 1.11 przypadające w sobotę, skoro zakład jest zamknięty 10.11?",
+    "Pracownik cały listopad przebywał na zwolnieniu lekarskim — czy dzień wolny za święto w sobotę mu przepada, czy odbiera go po powrocie?",
+    "Pracownik na 1/4 etatu w systemie ruchomego czasu pracy, pracuje też w soboty — czy przysługuje mu dzień wolny za święto w sobotę i jaki jest wymiar czasu pracy w listopadzie?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal wymiar czasu pracy w okresie rozliczeniowym zgodnie z art. 130 Kodeksu pracy",
+      "detail": "Każde święto występujące w okresie rozliczeniowym i przypadające w innym dniu niż niedziela obniża wymiar czasu pracy o 8 godzin. Dla listopada 2026 (1.11 — sobota, 11.11 — środa) wymiar pełnego etatu = (4 tyg. × 40 h) + (2 dni × 8 h) − (2 święta × 8 h) = 160 + 16 − 16 = 160 h. Dla 1/4 etatu: 160 × 1/4 = 40 h. Obniżenie wymiaru następuje NIEZALEŻNIE od tego, czy pracownik pracuje w soboty.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Wyznacz dzień wolny jako odbiór za święto w sobotę w obrębie okresu rozliczeniowego",
+      "detail": "Pracodawca (nie pracownik) wyznacza dzień wolny zarządzeniem/komunikatem — najczęściej całemu zakładowi (np. 10.11.2026 za 1.11.2026). Dzień musi przypaść w tym samym okresie rozliczeniowym co święto (miesięczny → do 30.11; kwartalny X–XII → do 31.12; 4-miesięczny → do końca danego okresu). Zasada wynika z konieczności zachowania przeciętnie 5-dniowego tygodnia pracy (art. 129 § 1 k.p.).",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Zweryfikuj rozkład czasu pracy pracownika — czy obowiązek udzielenia dodatkowego dnia wolnego w ogóle powstaje",
+      "detail": "Obniżenie wymiaru dotyczy wszystkich pracowników pełno- i niepełnoetatowych, ale fizyczny odbiór dodatkowego dnia przysługuje tylko tym, którym harmonogram nie zapewnia już przeciętnie 5-dniowego tygodnia pracy. Pracownik pracujący np. tylko wt–śr (2 dni w tygodniu) lub w systemie zmianowym, któremu w harmonogramie na listopad nie zaplanowano 1.11 — często ma już wystarczającą liczbę dni wolnych; wtedy NIE udziela się dodatkowego dnia, ale wymiar godzin i tak jest obniżony o 8 h.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Rozstrzygnij sytuację pracowników nieobecnych w dniu wyznaczonego odbioru (10.11)",
+      "detail": "Jeśli pracownik 10.11 jest na urlopie wypoczynkowym, zwolnieniu lekarskim, urlopie macierzyńskim/rodzicielskim/wychowawczym — dzień 10.11 jest dla niego dniem wolnym z rozkładu, nie konsumuje urlopu ani L4 za ten dzień. Jeżeli pracownik jest na L4 przez cały okres rozliczeniowy i nie miał fizycznej możliwości odbioru — dzień wolny przepada (nie ma podstawy do wypłaty ekwiwalentu ani przeniesienia poza okres rozliczeniowy).",
+      "condition": "if pracownik nieobecny w dniu wyznaczonego odbioru"
+    },
+    {
+      "step": 5,
+      "action": "Ustal zasady dla pracownika zatrudnionego po dacie święta (np. od 3.11), gdy zakład jest zamknięty 10.11",
+      "detail": "Pracownik zatrudniony po 1.11 nie nabywa prawa do odbioru za święto z 1.11 (nie był wówczas pracownikiem). Na dzień 10.11, w którym zakład jest zamknięty, należy: (a) udzielić urlopu wypoczynkowego na wniosek pracownika, (b) polecić pracę w innym dniu tygodnia, jeśli harmonogram na to pozwala, albo (c) potraktować jako przestój z przyczyn dotyczących pracodawcy z wynagrodzeniem postojowym wg art. 81 § 1 k.p. (wynagrodzenie wynikające z osobistego zaszeregowania lub 60% wynagrodzenia). Wymiar czasu pracy liczy się proporcjonalnie od dnia zatrudnienia.",
+      "condition": "if pracownik zatrudniony po dniu święta"
+    },
+    {
+      "step": 6,
+      "action": "Wprowadź odbiór do systemu kadrowo-płacowego",
+      "detail": "W Comarch Optima: Kadry i Płace → Kalendarze → edycja kalendarza firmowego lub indywidualnego, oznacz 10.11 jako 'dzień wolny od pracy (odbiór za święto)' — symbol nieobecności/typu dnia 'W' (wolny z rozkładu), NIE jako urlop. W Symfonia Kadry i Płace: moduł Kalendarz pracy → zmiana typu dnia na 'dzień wolny wynikający z 5-dniowego tygodnia pracy'. Dzień taki jest płatny na zasadach ogólnych (wynagrodzenie zasadnicze wypłaca się jak za dzień przepracowany — nie potrąca się stawki).",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Udokumentuj decyzję zarządzeniem i poinformuj załogę co najmniej na 1 tydzień przed",
+      "detail": "Wydaj zarządzenie/komunikat wewnętrzny wskazujący: święto w sobotę (data), dzień wyznaczony jako odbiór, okres rozliczeniowy, zakres osób objętych. Przy indywidualnych harmonogramach odbiór może być uzgodniony indywidualnie (grafik). Pamiętaj: praca w wyznaczonym dniu odbioru to praca w dniu wolnym wynikającym z 5-dniowego tygodnia pracy — rozliczana zgodnie z art. 1513 k.p. (inny dzień wolny lub dodatek 100%).",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Pracownik na długotrwałym L4 obejmującym cały okres rozliczeniowy — dzień wolny za święto w sobotę przepada, nie przenosi się na kolejny okres ani nie wypłaca ekwiwalentu (obniżenie wymiaru i tak zostało uwzględnione, a pracownik nie świadczy pracy).",
+    "Pracownik w systemie zmianowym/4-brygadowym lub pracujący wt–śr — jeśli jego harmonogram w danym okresie rozliczeniowym już zapewnia przeciętnie 5-dniowy tydzień pracy i nie przekracza obniżonego wymiaru, dodatkowy dzień wolny się nie należy; liczy się bilans godzin, nie symboliczny 'odbiór'.",
+    "Pracownik zatrudniony po dniu święta (np. od 3.11), gdy zakład zamknięty 10.11 — nie przysługuje mu odbiór za 1.11; na 10.11 stosuje się urlop na wniosek, przestój (art. 81 k.p.) lub pracę w innym dniu; wymiar liczony proporcjonalnie od dnia zatrudnienia.",
+    "Praca w samo święto 1.11 (sobota) rekompensowana dniem wolnym za nadgodziny świąteczne NIE zwalnia pracodawcy z obowiązku udzielenia drugiego dnia wolnego za święto przypadające w sobotę — to dwa odrębne tytuły (art. 15111 k.p. za pracę w święto + obniżenie wymiaru z art. 130 § 2 k.p.)."
+  ],
+  "common_mistakes": [
+    "Mylenie 'odbioru za święto w sobotę' z urlopem wypoczynkowym lub zwolnieniem od pracy — jest to dzień wolny wynikający z rozkładu (5-dniowy tydzień pracy), płatny jak dzień przepracowany, niekonsumujący puli urlopu.",
+    "Przenoszenie odbioru na kolejny okres rozliczeniowy (np. wyznaczenie 'wolnego' w grudniu przy miesięcznym okresie październik, listopad) — odbiór musi nastąpić w TYM SAMYM okresie rozliczeniowym, w którym przypada święto.",
+    "Twierdzenie, że pracownikowi niepracującemu pn–pt (np. zmianowy, 2 dni/tydzień) 'w ogóle nie należy się nic' — wymiar czasu pracy i tak ulega obniżeniu o 8 h za każde święto poza niedzielą; nie należy się dodatkowy fizyczny dzień wolny, ale godziny trzeba przeliczyć."
+  ],
+  "related_questions": [
+    "Jak rozliczyć pracę w samo święto 1 listopada — dzień wolny czy dodatek 100%?",
+    "Czy pracownikowi na 1/2 etatu wymiar czasu pracy obniża się o 8 h czy o 4 h za święto przypadające w sobotę?",
+    "Jak wyznaczyć odbiór za święto w sobotę przy 4-miesięcznym okresie rozliczeniowym i co jeśli pracownik rozwiąże umowę przed odbiorem?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "34",
+    "cluster_label": "Odbiór dnia wolnego za święto 1 listopada w sobotę",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "e3d63dee2474",
+      "d33ca1dcb346",
+      "c7df6857a89e",
+      "2153ed250ed7",
+      "5eef5fc7d38f",
+      "c03a16a27b6f",
+      "455b3570165c",
+      "2c8872d05d4e",
+      "85e5aca9cfeb",
+      "098022a59ed9",
+      "56e0c2fb0317",
+      "202704df26ac",
+      "d4313f5477e8",
+      "db7d538fd7d3",
+      "65e1e63933be"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

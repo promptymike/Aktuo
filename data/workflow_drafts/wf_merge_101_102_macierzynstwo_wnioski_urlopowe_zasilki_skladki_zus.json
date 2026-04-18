@@ -1,0 +1,99 @@
+{
+  "id": "wf_merge_101_102_macierzynstwo_wnioski_urlopowe_zasilki_skladki_zus",
+  "title": "Urlop macierzyński i rodzicielski 2026: wnioski, zasiłek 81,5%, 9 tygodni dla ojca i składki ZUS",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownica urodziła dziecko i chce wykorzystać cały macierzyński oraz rodzicielski z zasiłkiem 81,5% — jakie wnioski i w jakim terminie ma złożyć?",
+    "Czy ojciec może wykorzystać 9 tygodni urlopu rodzicielskiego, jeśli matka nie była zatrudniona i nie miała prawa do zasiłku macierzyńskiego?",
+    "Jak prawidłowo udokumentować 9 tygodni rodzicielskiego dla ojca — czy potrzebne jest zaświadczenie od płatnika składek matki i czy ZUS takie wydaje?",
+    "Pracownica rozpoczęła macierzyński 28.10.2025 (dzień przed porodem), urodziła 29.10.2025, wniosek złożyła 3.11.2025 — jakie dokumenty są konieczne?",
+    "Przedsiębiorczyni na preferencyjnym ZUS dowiedziała się o ciąży — czy może zwiększyć podstawę chorobowego, by uzyskać wyższy zasiłek macierzyński?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal formę zatrudnienia matki/ojca i płatnika zasiłku",
+      "detail": "Sprawdź czy rodzic jest na umowie o pracę (płatnikiem zasiłku może być pracodawca >20 ubezpieczonych albo ZUS), umowie zlecenia z dobrowolnym chorobowym, czy prowadzi działalność (płatnikiem zasiłku jest ZUS, druki ZUS Z-3a/Z-3b). Forma rzutuje na komplet dokumentów: pracownik składa wniosek do pracodawcy + ewentualnie Z-3, zleceniobiorca/przedsiębiorca składa Z-3a/Z-3b bezpośrednio do ZUS przez PUE.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Przyjmij wniosek o macierzyński i rodzicielski w terminie 21 dni od porodu, aby uzyskać zasiłek 81,5%",
+      "detail": "Aby zasiłek za cały okres (20 tyg. macierzyńskiego + 41 tyg. rodzicielskiego przy 1 dziecku, w tym 9 tyg. nieprzenoszalnej części dla drugiego rodzica) wynosił uśrednione 81,5% podstawy, wniosek o oba urlopy łącznie musi wpłynąć w 21 dni od porodu (art. 31 ust. 3 ustawy zasiłkowej). Po tym terminie macierzyński płatny 100%, rodzicielski 70% (matka pobiera 41 tyg. tylko jeśli ojciec nie korzysta — własna pula matki to 32 tyg. + 9 tyg. ojca = 41 tyg.). Komplet: wniosek o urlopy + odpis skrócony aktu urodzenia + wniosek o wypłatę zasiłku 81,5%.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Zweryfikuj prawo ojca do 9 tygodni nieprzenoszalnej części urlopu rodzicielskiego",
+      "detail": "9 tygodni rodzicielskiego (art. 182(1a) §4 KP — dyrektywa work-life balance, nowelizacja z 26.04.2023) przysługuje każdemu z rodziców niezależnie i nie można go przenieść na drugiego rodzica. Prawo to przysługuje także gdy matka nie była ubezpieczona i nie miała prawa do zasiłku macierzyńskiego — ojciec-pracownik może wziąć całe 32 tyg. + swoje 9 tyg. Dla dzieci urodzonych między 2.08.2022 a 26.04.2023 obowiązuje przepis przejściowy: rodzicom, którzy w tym okresie korzystali z rodzicielskiego, przysługują dodatkowe 9 tyg.",
+      "condition": "if drugim rodzicem ubiegającym się o urlop jest ojciec dziecka"
+    },
+    {
+      "step": 4,
+      "action": "Skompletuj dokumenty potwierdzające wykorzystanie urlopu przez drugiego rodzica",
+      "detail": "Do wniosku ojca (lub matki o swoje 32 tyg.) dołącz oświadczenie drugiego rodzica o niekorzystaniu/zakresie wykorzystania rodzicielskiego — w praktyce wystarczające jest oświadczenie pracownika wnioskującego z wpisaniem dat i liczby części, w jakich drugi rodzic z urlopu korzystał. Jeśli płatnikiem zasiłku drugiego rodzica był ZUS — ZUS nie wydaje typowego \"zaświadczenia płatnika\", dane potwierdza się oświadczeniem (ZUS sam zweryfikuje na koncie). Jeśli pracodawca — można poprosić go o zaświadczenie o okresie wypłaconego zasiłku.",
+      "condition": "if drugi rodzic korzystał lub korzysta z rodzicielskiego/macierzyńskiego"
+    },
+    {
+      "step": 5,
+      "action": "Wprowadź urlop i zasiłek do programu kadrowego oraz wykaż w RCA/RSA",
+      "detail": "W Comarch Optima: Kadry i Płace → Lista pracowników → Nieobecności → \"Urlop macierzyński\"/\"Urlop rodzicielski\" (kody ZUS 311 macierzyński, 319 rodzicielski). W Symfonia Kadry i Płace: Ewidencja → Nieobecności → wybór typu urlopu. W RSA wykaż okres zasiłku z odpowiednim kodem świadczenia (311/319) i kodem tytułu 0110 (pracownik) lub 1240 (osoba na zasiłku macierzyńskim po ustaniu zatrudnienia). W RCA wykaż składki tylko emerytalno-rentowe finansowane z budżetu państwa — chorobowa, wypadkowa i zdrowotna nie są naliczane od zasiłku macierzyńskiego.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Dla przedsiębiorczyni na preferencyjnym ZUS — zwiększ zadeklarowaną podstawę składek społecznych zamiast przechodzić na duży ZUS",
+      "detail": "Na preferencyjnym ZUS (art. 18a ustawy systemowej, kod 0570) minimalna podstawa w 2026 to 30% min. wynagrodzenia, ale można zadeklarować podstawę wyższą — aż do 250% prognozowanego przeciętnego wynagrodzenia. Im wyższa podstawa chorobowego (z minimum 90 dni opłacania), tym wyższy zasiłek macierzyński. Uwaga: podstawa zasiłku liczona jest jako średnia z 12 miesięcy kalendarzowych poprzedzających miesiąc nabycia prawa (art. 48–48a ustawy zasiłkowej), więc skokowe podniesienie tuż przed porodem daje ograniczony efekt. Przejście z 0570 na 0510 (duży ZUS) przed upływem 24 miesięcy nie jest dopuszczalne.",
+      "condition": "if ubezpieczona prowadzi działalność gospodarczą"
+    },
+    {
+      "step": 7,
+      "action": "Sprawdź uprawnienie do urlopu uzupełniającego dla wcześniaków i hospitalizacji noworodka",
+      "detail": "Urlop macierzyński uzupełniający (art. 180(1) KP, obowiązuje od 19.03.2024) przysługuje matce/ojcu, który wykorzystywał macierzyński, jeśli dziecko było hospitalizowane lub urodziło się przed 28. tygodniem ciąży albo z masą ≤1000 g (do 15 tyg.), 28–36 tydz. lub waga 1000–1500 g (do 8 tyg.), albo po 36 tyg. z hospitalizacją min. 2 dni do 8 tyg. tygodnia od porodu (do 8 tyg.). UWAGA: urlop uzupełniający przysługuje tylko temu rodzicowi, który korzystał z macierzyńskiego — nie z rodzicielskiego. Jeśli ojciec korzysta wyłącznie z rodzicielskiego, uzupełniający może wykorzystać matka.",
+      "condition": "if dziecko było hospitalizowane po porodzie lub urodziło się jako wcześniak"
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Matka niezatrudniona/bez prawa do zasiłku (np. zarejestrowana w PUP bez prawa do zasiłku) — ojciec-pracownik może wziąć pełny urlop rodzicielski 32 tyg. + własne 9 tyg., ale nie można jednocześnie pobierać zasiłku macierzyńskiego z tytułu urlopu rodzicielskiego ojca i tzw. kosiniakowego dla matki na to samo dziecko.",
+    "Macierzyński rozpoczęty dzień przed porodem (do 6 tyg. przed planowanym terminem porodu — art. 180 §2 KP) — gdy płatnikiem zasiłku jest ZUS, wymagane może być zaświadczenie lekarskie o przewidywanej dacie porodu (Z-3 + ZAS-54); gdy płatnikiem jest pracodawca, w praktyce wystarczy akt urodzenia, ale w razie kontroli ZUS może żądać zaświadczenia.",
+    "Dziecko urodzone w okresie 2.08.2022 – 26.04.2023 — rodzice mają prawo do dodatkowych 9 tygodni rodzicielskiego (przepis przejściowy z nowelizacji wdrażającej dyrektywę WLB), niezależnie od tego, że zasiłek za pierwotny rodzicielski został już wypłacony.",
+    "Wniosek o przedłużenie urlopu rodzicielskiego z powodu hospitalizacji dziecka — rodzicielski ma sztywny limit 41 tyg. (1 dziecko) i nie podlega wydłużeniu o pobyt w szpitalu; wydłużeniu w określonych warunkach podlega tylko macierzyński (urlop uzupełniający). Na pobyt z dzieckiem w szpitalu po wyczerpaniu rodzicielskiego przysługuje zasiłek opiekuńczy (do 60 dni rocznie do 14 r.ż. dziecka)."
+  ],
+  "common_mistakes": [
+    "Wnioskowanie przez matkę o 41 tygodni rodzicielskiego \"dla siebie\" — własna pula matki to 32 tyg., pozostałe 9 tyg. to nieprzenoszalna część drugiego rodzica i przepada, jeśli ojciec ich nie wykorzysta.",
+    "Zakładanie, że bez oświadczenia drugiego rodzica nie można udzielić urlopu — od 26.04.2023 wystarcza oświadczenie wnioskodawcy o okresach i częściach urlopu wykorzystanych przez drugiego rodzica; nie jest wymagany podpis drugiego rodzica ani zaświadczenie od jego pracodawcy/ZUS jako warunek formalny (poza weryfikacją w razie wątpliwości).",
+    "Próba przejścia z preferencyjnego ZUS (kod 0570) na duży ZUS (0510) tuż przed porodem dla podniesienia zasiłku — nie jest to dopuszczalne przed upływem 24 miesięcy preferencji; właściwe rozwiązanie to podwyższenie zadeklarowanej podstawy w ramach 0570, z uwzględnieniem 12-miesięcznego uśredniania podstawy zasiłku."
+  ],
+  "related_questions": [
+    "Jak rozliczyć zasiłek macierzyński w PIT-11 i czy stosować kwotę zmniejszającą zaliczkę PIT, gdy płatnikiem zasiłku jest ZUS?",
+    "Czy pracownica wracająca z rodzicielskiego ma prawo do zaległego urlopu wypoczynkowego za cały okres nieobecności i jak naliczyć ekwiwalent?",
+    "Jak wygląda urlop ojcowski (2 tygodnie) względem 9 tygodni rodzicielskiego dla ojca — czy można je łączyć i w jakiej kolejności składać wnioski?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "merge_101_102",
+    "cluster_label": "Macierzyństwo: wnioski urlopowe, zasiłki, składki ZUS",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "1e86b7c2b7d6",
+      "f79a1fafab26",
+      "4afbf8d91fa5",
+      "ae7dafde2032",
+      "4f8a5fac996e",
+      "1ab43b0ff4fb",
+      "bd3ae9d90b3f",
+      "c635d106dfbe",
+      "e0cb57e13252",
+      "4a27b62ca568",
+      "1f1abb91ff76",
+      "0d9233c325c0",
+      "e588be5df223"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

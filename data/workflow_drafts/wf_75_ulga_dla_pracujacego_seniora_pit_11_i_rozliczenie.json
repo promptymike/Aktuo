@@ -1,0 +1,101 @@
+{
+  "id": "wf_75_ulga_dla_pracujacego_seniora_pit_11_i_rozliczenie",
+  "title": "Ulga dla pracującego seniora: wykazanie w PIT-11 i rozliczenie roczne",
+  "topic_area": "PIT",
+  "question_examples": [
+    "W której rubryce PIT-11 wykazać przychód pracownika UoP pobierającego emeryturę, który nie korzysta z ulgi dla seniora?",
+    "Pracownik ukończył 65 lat 14 kwietnia, wypłata za marzec wpłynęła 10 kwietnia — czy można ją zaliczyć do ulgi dla seniora i wiersza 3 części E PIT-11?",
+    "Senior osiągnął wiek emerytalny w lutym 2025, pracuje cały rok i korzysta z ulgi — czy w PIT rocznym odlicza pełne KUP 3 600 zł czy tylko proporcjonalnie do miesięcy opodatkowanych?",
+    "Pracujący senior z ulgą przeszedł na emeryturę 26 lutego 2026, 4 marca dostanie DWR za 2025 — pobrać podatek czy zastosować ulgę, skoro pierwszej emerytury jeszcze nie otrzymał?",
+    "Senior pracuje u dwóch pracodawców, każdy zastosował ulgę do 85 528 zł — jak rozliczyć nadwyżkę i czy składki społeczne od kwoty zwolnionej pomniejszają dochód opodatkowany?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal datę graniczną ukończenia wieku emerytalnego",
+      "detail": "Sprawdź dzień ukończenia 60 lat (kobieta) lub 65 lat (mężczyzna). Ulga PIT-0 dla seniora (art. 21 ust. 1 pkt 154 ustawy o PIT) obowiązuje wyłącznie dla przychodów otrzymanych (zasada kasowa) po tej dacie, pod warunkiem podlegania ubezpieczeniu społecznemu z danego tytułu i nieotrzymywania emerytury/renty. Limit zwolnienia w 2026 r. to 85 528 zł rocznie (plus 30 000 zł kwoty wolnej przy skali podatkowej).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Podziel przychody w PIT-11 wg momentu wypłaty, nie miesiąca za który są należne",
+      "detail": "Przychody wypłacone PRZED dniem 60/65 urodzin wykaż w standardowych wierszach części E (np. wiersz 1 — stosunek pracy, poz. 29-34). Przychody wypłacone PO tej dacie, objęte zwolnieniem z art. 21 ust. 1 pkt 154, wykaż w wierszu 3 części E (poz. 43-49) jako 'Przychody z pracy otrzymane przez podatnika do ukończenia 26. roku życia oraz ulga dla pracujących seniorów'. Wypłata z 10 kwietnia za marzec u pracownika kończącego 65 lat 14 kwietnia idzie jeszcze do wiersza 1 — liczy się data wypłaty, nie okres.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Wykaż przychód pracującego emeryta niekorzystającego z ulgi w wierszu 2 części E",
+      "detail": "Jeśli pracownik pobiera emeryturę (lub ma inny tytuł wykluczający ulgę — np. rentę rodzinną, rentę z tytułu niezdolności do pracy) i nie korzysta z ulgi dla seniora, przychody z UoP wykaż w wierszu 2 części E PIT-11 ('Należności ze stosunku pracy... otrzymane przez podatnika po ukończeniu wieku emerytalnego'). Nie jest to wiersz 1 — wiersz 1 dotyczy przychodów sprzed wieku emerytalnego. W Comarch Optima: Kadry → Listy płac → konfiguracja kodu tytułu ubezpieczenia; w Symfonii: Kadry i Płace → Kartoteka pracownika → zakładka Podatki.",
+      "condition": "if pracownik osiągnął wiek emerytalny i nie korzysta z ulgi dla seniora"
+    },
+    {
+      "step": 4,
+      "action": "Zastosuj koszty uzyskania przychodu proporcjonalnie do miesięcy opodatkowanych",
+      "detail": "Zryczałtowane KUP (250 zł miejscowe / 300 zł dojazdowe) przysługują za miesiące, w których pracownik uzyskał przychód OPODATKOWANY. Za miesiące w całości objęte zwolnieniem dla seniora KUP się nie stosuje (bo brak podstawy opodatkowania). W PIT-11 w poz. 35 wykaż łączną kwotę KUP faktycznie zastosowaną przy zaliczkach. Przy przekroczeniu limitu 85 528 zł — KUP stosuje się do nadwyżki opodatkowanej. W PIT rocznym podatnik może zweryfikować i zastosować KUP faktycznie należne.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Pobierz oświadczenie PIT-2 cz. E (wniosek o stosowanie ulgi dla seniora) przed pierwszą wypłatą",
+      "detail": "Pracodawca stosuje ulgę dopiero od miesiąca następującego po złożeniu wniosku. Wniosek obowiązuje bezterminowo do czasu wycofania lub zmiany okoliczności. Odpowiedzialność za prawdziwość oświadczenia (w szczególności: nieotrzymywanie emerytury/renty) spoczywa na podatniku — płatnik nie weryfikuje tego w ZUS. Jeśli pracownik pobrał emeryturę w trakcie roku i nie wycofał oświadczenia — konsekwencje (dopłata podatku) ponosi sam przy rozliczeniu rocznym.",
+      "condition": "if pracownik chce stosować ulgę już przy zaliczkach"
+    },
+    {
+      "step": 6,
+      "action": "Rozlicz odprawę emerytalną i DWR z zachowaniem warunku 'nieotrzymania emerytury'",
+      "detail": "Odprawa emerytalna oraz DWR wypłacone przed otrzymaniem pierwszego świadczenia emerytalnego korzystają z ulgi, jeżeli pracownik spełnia pozostałe warunki (wiek + tytuł do ubezpieczeń społecznych w momencie wypłaty). Kluczowa jest data wpływu pierwszej emerytury z ZUS — do tego dnia włącznie stosuje się ulgę. Po otrzymaniu emerytury ulga wygasa i kolejne wypłaty (np. DWR wypłacony już po pierwszej emeryturze) podlegają opodatkowaniu na zasadach ogólnych.",
+      "condition": "if pracownik przechodzi na emeryturę w trakcie roku"
+    },
+    {
+      "step": 7,
+      "action": "Rozlicz składki społeczne przy przekroczeniu limitu i pracy u dwóch pracodawców",
+      "detail": "Jeśli suma przychodów przekroczy 85 528 zł, nadwyżka jest opodatkowana (plus 30 000 zł kwoty wolnej w PIT rocznym). Składki społeczne od części zwolnionej NIE pomniejszają dochodu (art. 26 ust. 1 pkt 2 lit. a ustawy o PIT — zakaz odliczania składek od przychodu zwolnionego). Składki od nadwyżki opodatkowanej — odliczalne proporcjonalnie. Przy dwóch pracodawcach każdy stosuje limit osobno — nadwyżka ponad łączne 85 528 zł zostanie opodatkowana w zeznaniu rocznym (PIT-37), gdzie należy zsumować przychody i obliczyć faktyczny limit.",
+      "condition": "if przychody roczne przekraczają 85 528 zł lub pracownik ma kilku płatników"
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Pracownik kończy 65 lat 14.04, wypłata za marzec wpływa 10.04 — idzie jeszcze do wiersza 1 części E (opodatkowanie normalne), bo decyduje data otrzymania przychodu, nie okres za który jest należny.",
+    "Senior pobierający emeryturę po zmarłym małżonku (renta rodzinna) lub rentę wdowią — NIE może korzystać z ulgi dla seniora, nawet jeśli pracuje; warunkiem ulgi jest nieotrzymywanie żadnej emerytury/renty z FUS.",
+    "Praca u dwóch pracodawców z podwójnym zastosowaniem limitu 85 528 zł — każdy płatnik stosuje limit niezależnie, ale w rozliczeniu rocznym limit jest jeden; nadwyżka do dopłaty.",
+    "Odprawa emerytalna lub DWR wypłacone w dniu lub przed dniem pierwszej emerytury z ZUS — objęte ulgą; wypłacone po otrzymaniu pierwszej emerytury — opodatkowane na zasadach ogólnych."
+  ],
+  "common_mistakes": [
+    "Wykazywanie przychodów sprzed dnia ukończenia 60/65 lat w wierszu 3 części E PIT-11 — błąd; wiersz 3 dotyczy wyłącznie przychodów otrzymanych PO dacie urodzin.",
+    "Stosowanie pełnych KUP rocznych (3 600 zł) mimo że większość miesięcy była objęta zwolnieniem i nie generowała dochodu do opodatkowania — KUP przysługują tylko od przychodu opodatkowanego.",
+    "Odliczanie składek ZUS społecznych pobranych od przychodu zwolnionego z ulgi seniora — zakaz wynikający z art. 26 ust. 1 pkt 2 ustawy o PIT; odliczalne są wyłącznie składki od dochodu opodatkowanego."
+  ],
+  "related_questions": [
+    "Jak rozliczyć w PIT-11 pracownika korzystającego równocześnie z ulgi dla seniora i ulgi na powrót?",
+    "Czy zasiłek chorobowy wypłacany seniorowi z ZUS korzysta z ulgi dla pracującego seniora?",
+    "Jak ująć w PIT-11 premie roczne wypłacone w styczniu następnego roku, gdy pracownik w poprzednim roku osiągnął wiek emerytalny?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "75",
+    "cluster_label": "Ulga dla pracującego seniora: PIT-11 i rozliczenie",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "457ab05617f9",
+      "0983839f3968",
+      "7107023889f5",
+      "d5035f7dbb1a",
+      "15625f7c8a70",
+      "bb4af48088f9",
+      "2c9e59a8cd35",
+      "c5aa1451bf3b",
+      "be511c5e7be6",
+      "22fccfdc40ff",
+      "49866bd4c19a",
+      "ded5b37f3d2d",
+      "e29231b8abce",
+      "31596a418b72",
+      "1198ce438d0c"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

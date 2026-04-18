@@ -1,0 +1,101 @@
+{
+  "id": "wf_30_jpk_cit_znaczniki_kont_i_moment_ich_nadania",
+  "title": "JPK_CIT (JPK_KR_PD): znaczniki kont podatkowych — moment nadania i rozdzielenie KUP/NKUP",
+  "topic_area": "JPK",
+  "question_examples": [
+    "Czy znaczniki kont na potrzeby JPK_KR_PD trzeba nadać przed księgowaniami za 2026 rok, czy można to zrobić później, skoro plik i tak będzie składany dopiero w 2027?",
+    "Jeśli w Comarch Optima nadam znaczniki dopiero w trakcie 2026 roku, czy system poprawnie wygeneruje JPK_KR_PD za cały rok?",
+    "Czy przy JPK_CIT muszę prowadzić konta pozabilansowe dla NKUP, czy wystarczy dobre mapowanie znaczników na kontach analitycznych (np. 402-99)?",
+    "Jak oznaczyć konto, na którym są i KUP i NKUP — wystarczy analityka 4xx-99 ze znacznikiem NKUP, czy konieczny jest podział planu kont 4/5 na podatkową i niepodatkową?",
+    "Jak nadać znaczniki podatkowe dla różnic między wynikiem bilansowym a podatkowym (np. wynagrodzenia zleceniobiorców, składki ZUS, amortyzacja samochodu osobowego 50% VAT)?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal zakres obowiązku JPK_CIT dla podatnika za 2026 rok",
+      "detail": "Zweryfikuj czy jednostka jest w pierwszej fali objętej JPK_KR_PD od 1.01.2026 (podatkowe grupy kapitałowe oraz podatnicy CIT o przychodach > 50 mln EUR za poprzedni rok — zgodnie z rozporządzeniem MF z 16.08.2024 w sprawie dodatkowych danych w księgach). Pozostali podatnicy CIT prowadzący księgi — od 1.01.2026 również muszą mieć znaczniki, ale pierwsze przesłanie pliku dopiero za 2026 rok w terminie złożenia zeznania CIT-8 (do końca 3. miesiąca po zakończeniu roku, zwykle 31.03.2027). JPK_KR_ST (środki trwałe) — dla podatników CIT objętych obowiązkiem od 2026 r.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Nadaj znaczniki podatkowe w planie kont PRZED pierwszym księgowaniem 2026 roku",
+      "detail": "Choć technicznie programy pozwalają dodawać/modyfikować znaczniki w trakcie roku (Comarch Optima: Księgowość → Plan kont → edycja konta → zakładka 'Znaczniki JPK_KR_PD'; Symfonia Finanse i Księgowość: Plan kont → Definicje → Znaczniki podatkowe; Rewizor GT/nexo: Plan kont → edycja konta → 'Znaczniki podatkowe'), z perspektywy kontroli wewnętrznej i spójności danych znaczniki powinny być ustalone na 01.01.2026. Późniejsza zmiana znacznika aktualizuje go dla całego konta, także dla wcześniejszych zapisów — co może być pułapką przy audycie.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Rozdziel KUP i NKUP na poziomie konta analitycznego lub pozabilansowego",
+      "detail": "Jeżeli na jednym koncie (np. 402 Usługi obce) występują zarówno KUP, jak i NKUP, utwórz analitykę typu 402-01 (KUP) i 402-99 (NKUP) ze znacznikiem podatkowym NKUP — tak, aby jeden znacznik odpowiadał jednej kategorii podatkowej. Alternatywa stosowana w praktyce: konta pozabilansowe (zespół 9xx) tylko do ewidencji różnic podatkowych — wtedy zapis bilansowy idzie na 4xx KUP, a równolegle na konto pozabilansowe 9xx NKUP po jednej stronie (Optima i Symfonia na to pozwalają, niektóre wersje Enova wymagają zapisu dwustronnego z kontem technicznym).",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Przypisz znaczniki kont bilansowych (PD_KontoZespol) i wynikowych (PD_PrzKosz) oraz znaczniki podatkowe",
+      "detail": "Dla kont bilansowych nadaj znacznik wg strony bilansu, do której dane konto trafia (aktywa albo pasywa — przy kontach rozrachunkowych o zmiennym saldzie, jak 201 Rozrachunki z dostawcami lub 249 Pożyczki, nadaj oba: aktywa i pasywa). Dla kont wynikowych nadaj znaczniki rodzajowe (np. PD_PrzPod — przychód podatkowy, PD_PrzNiepod — przychód niepodatkowy, PD_KUP, PD_NKUP). Dla pozycji różniących wynik bilansowy od podatkowego (amortyzacja > limit 150 tys. przy osobowych, reprezentacja, składki ZUS pracodawcy niezapłacone, wynagrodzenia z umów zlecenia wypłacane w kolejnym miesiącu — art. 15 ust. 4g-4h oraz art. 16 ust. 1 pkt 57, 57a ustawy o CIT) użyj odrębnych kont analitycznych albo pozabilansowych ze znacznikiem NKUP.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Obsłuż różnice przejściowe na przełomie roku (przychód/koszt bilansowy vs podatkowy w innym okresie)",
+      "detail": "Dla pozycji typu 'przychód bilansowy grudnia 2026, podatkowy styczeń 2027' lub 'koszt bilansowy grudnia 2026, podatkowy styczeń–luty 2027' stosuj konto pozabilansowe z odpowiednim znacznikiem (np. PD_PrzPod_przyszly, PD_KUP_przyszly) — zapis nie wchodzi do wyniku bilansowego, ale znacznik pozwala poprawnie zmapować pozycję do kalkulacji CIT. Alternatywnie — osobna analityka na kontach PPO/PKO (przychody/koszty podatkowe odroczone) z odpowiednim znacznikiem.",
+      "condition": "if występują różnice czasowe między ujęciem bilansowym a podatkowym"
+    },
+    {
+      "step": 6,
+      "action": "Zweryfikuj kompletność mapowania testowo na wstępnym JPK_KR_PD",
+      "detail": "Po zaksięgowaniu 1-2 miesięcy 2026 wygeneruj testowo JPK_KR_PD w Optimie (JPK → JPK_KR_PD → Podgląd) lub Symfonii i sprawdź: (a) czy wszystkie konta wynikowe mają znacznik KUP albo NKUP (konta bez znacznika sygnalizują błąd), (b) czy suma KUP + NKUP = suma obrotów konta wynikowego, (c) czy kalkulacja wyniku podatkowego ze znaczników zgadza się z kalkulacją 'ręczną' z CIT-8. Rozbieżność = błąd w planie kont lub znacznikach.",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Udokumentuj politykę znaczników w polityce rachunkowości",
+      "detail": "Zaktualizuj politykę rachunkowości jednostki o opis: (a) zasady nadawania znaczników podatkowych w planie kont, (b) metodę rozdzielania KUP/NKUP (analityka vs pozabilansowe), (c) procedurę przeglądu znaczników na koniec roku. Wymagane art. 10 ust. 1 pkt 3 ustawy o rachunkowości (dokumentacja polityki rachunkowości) — brak opisu może zostać zakwestionowany podczas kontroli JPK_CIT.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Spółka stosująca MSSF: obowiązek JPK_KR_ST oraz JPK_KR_PD wchodzi, ale w JPK_KR_PD stosuje się tylko znaczniki podatkowe (konta zgodne z MSSF nie mapują się 1:1 na polski plan kont) — wymaga indywidualnego mapowania i jest obszarem o niepewnej praktyce; zweryfikuj pisemnym zapytaniem do KIS.",
+    "Konta rozrachunkowe o zmiennym saldzie (201 dostawcy, 249 pożyczki): nadaj dwa znaczniki — aktywa i pasywa — bo ten sam kontrahent/pożyczkodawca może mieć saldo po różnych stronach; system na etapie generowania JPK sam dobierze właściwą stronę na podstawie salda końcowego.",
+    "Plan kont rozbudowany na 4 i 5 (koszty rodzajowe + w układzie funkcjonalnym): znaczniki KUP/NKUP ustawiaj tylko na kontach zespołu 4 (koszty rodzajowe wynikowe) — zespół 5 to tylko przeksięgowanie rozliczeniowe i podwójne znakowanie zawyży kwoty NKUP w JPK.",
+    "Wynagrodzenia zleceniobiorców i składki ZUS płatne w kolejnym miesiącu: w momencie naliczenia zapis na 405-NK (NKUP, znacznik NKUP), w momencie faktycznej zapłaty przeksięgowanie na 405-KUP ze znacznikiem KUP — zgodnie z art. 15 ust. 4g i art. 16 ust. 1 pkt 57, 57a ustawy o CIT."
+  ],
+  "common_mistakes": [
+    "Nadawanie znaczników dopiero pod koniec 2026 roku 'bo plik składamy w 2027' — zmiana znacznika działa wstecznie na wszystkie zapisy konta; jeśli konto miało mieszane KUP/NKUP bez analityki, nie da się tego rozdzielić po fakcie bez przeksięgowań.",
+    "Pozostawianie KUP i NKUP na jednym koncie (np. 402 Usługi obce) z zamiarem 'wyłapania różnic w arkuszu' — narusza logikę JPK_KR_PD (jeden znacznik = jedno konto) i skutkuje błędnym plikiem; konieczna jest analityka 402-01 (KUP) / 402-99 (NKUP) albo ewidencja pozabilansowa.",
+    "Podwójne znakowanie tej samej pozycji — raz na koncie zespołu 4 i ponownie na pozabilansowym 9xx ze znacznikiem NKUP; prowadzi do zdublowania NKUP w pliku. Wybierz jedną metodę (analityka LUB pozabilansowe) i stosuj konsekwentnie."
+  ],
+  "related_questions": [
+    "Czy do JPK_KR_ST trzeba prowadzić ewidencję środków trwałych w tym samym programie co księgi, czy można importować z zewnętrznego modułu ŚT?",
+    "Jak oznaczyć w JPK_KR_PD kontrahenta zagranicznego bez polskiego NIP — wystarczy numer VAT UE czy konieczne jest pole 'kod kraju'?",
+    "Czy mały podatnik CIT (przychody < 50 mln EUR) musi składać JPK_KR_PD za 2026 rok, czy dopiero za 2027?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "30",
+    "cluster_label": "JPK_CIT: znaczniki kont i moment ich nadania",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "3dc4a416a54c",
+      "2b710f6a5899",
+      "8448b8c35671",
+      "df92d8586599",
+      "db5044cd9b20",
+      "8e8d1ae300d8",
+      "d742cdb5fdf2",
+      "b46021a0d6ac",
+      "0d30bfc69c75",
+      "16f21ff2e8b0",
+      "41cdd211ac06",
+      "82d566a41956",
+      "769377af7357",
+      "c80aa32961d9",
+      "c2f7ae0321b6"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

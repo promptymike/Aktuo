@@ -1,0 +1,110 @@
+{
+  "id": "wf_53_najem_prywatny_a_vat_ksef_i_jdg",
+  "title": "Najem prywatny a VAT i KSeF 2026 — fakturowanie, limit 10 000 zł, relacja z JDG",
+  "topic_area": "VAT",
+  "question_examples": [
+    "Osoba fizyczna wynajmuje lokale firmom — czy od 1 kwietnia 2026 musi wysyłać faktury za najem przez KSeF?",
+    "Najem prywatny wystawiony na firmę u podatnika zwolnionego z VAT (inny biznes, nie przekroczył limitu) — czy faktura, czy rachunek i czy idzie do KSeF?",
+    "Prowadzę JDG z VAT, kupiłem prywatnie mieszkanie na kredyt — czy pokoje mogę rozliczać ryczałtem najmu prywatnego, czy muszę wrzucić do JDG i wystawiać FV z VAT?",
+    "Najem prywatny osobom fizycznym na cele mieszkaniowe (stawka ZW) — czy faktury na konsumentów muszę wysyłać do KSeF i od kiedy?",
+    "Nie prowadzę działalności, wynajmuję mieszkanie osobie mającej JDG (nie na cele firmowe), rachunek na firmę — czy KSeF mnie dotyczy?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal status wynajmującego na gruncie VAT",
+      "detail": "Sam fakt najmu czyni wynajmującego podatnikiem VAT w rozumieniu art. 15 ust. 1 ustawy o VAT, nawet bez formalnej JDG. Sprawdź, czy wynajmujący jest: (a) VAT czynny, (b) zwolniony podmiotowo z art. 113 (limit 200 000 zł rocznie, proporcjonalnie w roku rozpoczęcia), (c) zwolniony przedmiotowo — najem lokalu mieszkalnego na cele mieszkaniowe = stawka ZW z art. 43 ust. 1 pkt 36. Uwaga: najem lokalu użytkowego / pod biuro / miejsca parkingowego = VAT 23%, nie korzysta ze zwolnienia przedmiotowego. Źródło: https://ksef.podatki.gov.pl/konsumenci-i-osoby-fizyczne/",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Rozgranicz najem prywatny od najmu w ramach JDG (PIT vs VAT to dwie różne osie)",
+      "detail": "Na gruncie PIT najem składników majątku prywatnego rozlicza się wyłącznie ryczałtem (8,5% do 100 000 zł, 12,5% powyżej — art. 6 ust. 1a i art. 12 ust. 1 pkt 4 lit. a ustawy o zryczałtowanym PIT; obowiązkowo od 2023 r.). Na gruncie VAT — ten sam najem i tak może być czynnością opodatkowaną, niezależnie od tego, że w PIT idzie w ryczałcie prywatnym. W Comarch Optima zaewidencjonuj: moduł Kasa/Bank → wpływy najmu prywatnego poza JDG, ale w rejestrze VAT (Rejestr sprzedaży VAT → Rodzaj: najem prywatny / NIP wynajmującego ten sam co w JDG, bo osoba fizyczna ma jeden NIP).",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Ustal czy w ogóle istnieje obowiązek wystawienia faktury (a nie rachunku)",
+      "detail": "Podatnik VAT (czynny lub zwolniony) dokumentuje sprzedaż na rzecz innego podatnika fakturą — art. 106b ust. 1 pkt 1 ustawy o VAT. Podatnicy zwolnieni z VAT powinni – na żądanie nabywcy – wystawiać faktury, a nie rachunki. Dla najmu na rzecz konsumenta (B2C) obowiązek wystawienia faktury generalnie nie istnieje — W przypadku wynajmu mieszkania na cele prywatne, gdy nabywcą usługi jest osoba fizyczna nieprowadząca działalności gospodarczej, nie ma obowiązku wystawiania faktur dla najemców. Dzieje się tak nawet wtedy, kiedy najemca zażąda faktury. Obowiązek wydania faktury na żądanie jest bowiem wyłączony w przypadku najmu (art. 106b ust. 3 wyłącza najem). Dla B2B — faktura jest obowiązkowa.",
+      "condition": "if najem na rzecz firmy (B2B) — faktura obowiązkowa; if najem B2C konsumentowi — faktura dobrowolna"
+    },
+    {
+      "step": 4,
+      "action": "Zweryfikuj obowiązek KSeF wg harmonogramu 2026 i limitu 10 000 zł",
+      "detail": "W 2026 roku wprowadzony zostanie obowiązek wystawiania faktur wyłącznie w formie ustrukturyzowanej, w dwóch etapach: od 1 lutego 2026 – dla przedsiębiorców, których łączna wartość sprzedaży brutto (z VAT) przekroczyła 200 mln zł w 2024 roku, od 1 kwietnia 2026 – dla pozostałych przedsiębiorców (w tym podatników zwolnionych z VAT). Podatnicy, u których wartość sprzedaży (z VAT) udokumentowana fakturami elektronicznymi lub fakturami w postaci papierowej, w danym miesiącu nie przekracza 10 000 zł, otrzymali odroczenie obowiązku do 1 stycznia 2027 roku. Odroczenie to dotyczy wyłącznie wystawiania faktur, natomiast odbierać faktury w KSeF muszą na bieżąco. Dla najmu B2B na rzecz firmy: wynajmujący (nawet zwolniony z VAT i bez JDG) ma obowiązek KSeF od 1.04.2026, chyba że miesięczna sprzedaż ≤ 10 000 zł brutto — wówczas do 31.12.2026 faktura papierowa/PDF, od 1.01.2027 obligatoryjnie KSeF. Źródło: https://ksef.podatki.gov.pl/ponizej-10-000-zl/",
+      "condition": "if miesięczna wartość faktur ≤ 10 000 zł brutto → faktury poza KSeF do 31.12.2026; if > 10 000 zł w danym miesiącu → obowiązek KSeF od faktury przekraczającej limit"
+    },
+    {
+      "step": 5,
+      "action": "Wyklucz obowiązek KSeF dla najmu B2C (konsument)",
+      "detail": "Zarówno przed 1 lutego 2026 r. jak i po tej dacie wystawianie faktur B2C (na rzecz osób prywatnych – konsumentów) w KSeF jest dobrowolne. Najem lokalu mieszkalnego osobie fizycznej na cele mieszkaniowe (stawka ZW) udokumentowany fakturą — do KSeF nie idzie. Najem konsumentowi garażu/miejsca parkingowego — gdyby wystawiać fakturę, też B2C poza KSeF, ale uwaga na kasę fiskalną (zwolnienie przedmiotowe z § 2 rozp. o zwolnieniach z kas nie obejmuje miejsc parkingowych — jeśli nie ma innego tytułu zwolnienia, kasa fiskalna wymagana).",
+      "condition": "if najemca = konsument (osoba fizyczna nieprowadząca DG, cele prywatne)"
+    },
+    {
+      "step": 6,
+      "action": "Uzyskaj NIP jeśli wynajmujący go nie ma i wejdzie w obowiązek KSeF",
+      "detail": "Podmioty te, jeśli nie posługują się identyfikatorem podatkowym NIP, będą zobowiązane do wystąpienia o ten numer do organu podatkowego. W obecnym stanie prawnym, jak również po wdrożeniu KSeF (po 1 lutego 2026 r.) osoby fizyczne prowadzące działalność nierejestrową, które będą zobligowane do wystawienia faktury, będą mogły uzyskać NIP — formularz NIP-7. Obowiązek wystąpienia o NIP u tych podmiotów nastąpi zasadniczo dopiero 1 stycznia 2027 r. Zgodnie bowiem z art. 145m ustawy o VAT podatnicy obowiązani do wystawiania faktur ustrukturyzowanych, w okresie od 1 kwietnia do 31 grudnia 2026 r., mogą wystawiać faktury elektroniczne lub faktury w postaci papierowej, jeżeli łączna wartość sprzedaży wraz z kwotą podatku u tych podatników udokumentowana tymi fakturami wystawionymi w danym miesiącu jest mniejsza lub równa 10.000 zł. Ważne: osoba fizyczna ma JEDEN NIP — ten sam dla JDG i dla najmu prywatnego (faktura najmu prywatnego zawiera NIP, nawet jeśli wystawiona poza JDG).",
+      "condition": "if wynajmujący bez NIP i miesięcznie > 10 000 zł faktur B2B"
+    },
+    {
+      "step": 7,
+      "action": "Wystaw fakturę w odpowiednim programie i zastosuj zasady korekt oraz refaktury mediów",
+      "detail": "W Comarch Optima: moduł Rejestry VAT → Rejestr sprzedaży → Nowa faktura → zaznacz „Wyślij do KSeF” (od 1.04.2026 dla JDG VAT > 10 000 zł/mc). W Symfonia Handel / Finanse i Księgowość: Dokumenty → Faktura sprzedaży → integracja KSeF 2.0. W WFirma: Przychody → Sprzedaż → Wystaw fakturę → checkbox KSeF. Refaktura mediów (prąd, woda) przy najmie lokalu użytkowego: co do zasady z VAT takim samym jak usługa zasadnicza (najem 23%) jako jedna pozycja lub osobne pozycje zgodnie z wyrokiem TSUE C-42/14 (Wojskowa Agencja Mieszkaniowa) — jeśli najemca może wybrać dostawcę i ma podliczniki, media jako odrębna usługa. Zaliczki na media pokazuj poza podsumowaniem VAT, rozliczenie roczne fakturą korygującą. FAKTURY KORYGUJĄCE dziedziczą reżim faktury pierwotnej: jeśli pierwotna była w KSeF, korekta też musi iść przez KSeF; jeśli pierwotna była wystawiona poza KSeF (limit 10k lub okres przejściowy), korektę można wystawić w tej samej formie — z wyjątkiem sytuacji, gdy w momencie korekty podatnik już wszedł w obowiązek KSeF (wtedy korekta w KSeF).",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 106ga ust. 1",
+      "reason": "Stanowi ogólną podstawę obowiązku wystawiania faktur ustrukturyzowanych przez KSeF od 1.02.2026 / 1.04.2026 — obejmuje również podatników zwolnionych podmiotowo oraz osoby fizyczne prowadzące najem prywatny wystawiające faktury B2B."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 15 ust. 1",
+      "reason": "Definiuje, że wynajmujący (nawet bez JDG, najem prywatny) jest podatnikiem VAT, bo najem to samodzielna działalność gospodarcza w rozumieniu ustawy — kluczowe dla odróżnienia statusu na gruncie VAT od reżimu PIT."
+    }
+  ],
+  "edge_cases": [
+    "Wynajmujący = VAT zwolniony z art. 113 i jednocześnie prowadzi JDG w innej branży — ten sam NIP, limit 200 000 zł liczony łącznie dla JDG + najmu prywatnego (art. 113 ust. 1 i 2). Po przekroczeniu — obowiązek rejestracji VAT-R i 23% od najmu lokalu użytkowego; najem na cele mieszkaniowe nadal ZW z art. 43 ust. 1 pkt 36.",
+    "Najem B2B lokalu mieszkalnego firmie, która podnajmuje pracownikom na cele mieszkaniowe — stawka ZW z art. 43 ust. 1 pkt 36 (potwierdzone w interpretacjach KIS od 2022 r.), ale faktura obowiązkowa i podlega KSeF po przekroczeniu 10 000 zł/mc.",
+    "Najem B2C konsumentowi miejsca parkingowego / garażu — nie korzysta ze zwolnienia z kasy fiskalnej (inaczej niż lokal mieszkalny rozliczany przelewem — poz. 37 załącznika do rozp. MF z 17.12.2024 Dz.U. 2024 poz. 1902). Zweryfikuj aktualny stan rozporządzenia o zwolnieniach z kas na 2026 — wymaga pisemnego zapytania KIS przy niestandardowym stanie faktycznym.",
+    "Refaktura mediów (prąd, woda) przy najmie: jeśli najemca nie może wybrać dostawcy i nie ma podliczników — media jako element usługi najmu (stawka jak najem); jeśli ma podliczniki i samodzielność — osobna usługa ze stawką właściwą dla mediów (TSUE C-42/14). Do limitu 10 000 zł KSeF wlicza się wartość brutto całej faktury, łącznie z refakturą mediów."
+  ],
+  "common_mistakes": [
+    "Błąd: „Najem prywatny jest zawsze poza KSeF.” W rzeczywistości — najem B2B firmie na cele firmowe podlega KSeF od 1.04.2026 (z odroczeniem do 1.01.2027 przy sprzedaży ≤ 10 000 zł/mc), niezależnie od tego, że w PIT jest rozliczany jako prywatny ryczałt.",
+    "Błąd: wystawianie „rachunku” zamiast faktury przez podatnika zwolnionego z VAT prowadzącego najem dla firmy. Zwolniony z VAT (art. 113) musi wystawić fakturę na żądanie nabywcy-podatnika — nie rachunek (art. 106b ust. 1 pkt 1 w zw. z art. 106e ustawy o VAT).",
+    "Błąd: doliczanie do limitu 10 000 zł sprzedaży B2C i paragonów z kas fiskalnych. Do limitu 10 000 zł wlicza się kwoty brutto ze sprzedaży udokumentowane fakturami i tylko faktury, które obowiązkowo należy wystawić w KSeF. Nie wlicza się sprzedaży z raportów kasowych oraz sprzedaży niedokumentowanej ani fakturą, ani paragonem. Nie uwzględnia się: faktur wystawianych przy użyciu kas fiskalnych; paragonów do 450 zł uznanych za faktury ani faktur B2C na żądanie konsumenta."
+  ],
+  "related_questions": [
+    "Jak rozliczyć VAT od najmu krótkoterminowego (Booking/Airbnb) — PKWiU 55 vs 68.20, stawka 8% zamiast 23%, obowiązek kasy fiskalnej?",
+    "Czy małżonkowie wynajmujący prywatnie mieszkanie ze wspólności majątkowej rozliczają VAT łącznie czy osobno i który NIP podawać na fakturze B2B?",
+    "Najem prywatny a składka zdrowotna 2026 — czy przychód z najmu prywatnego (ryczałt 8,5%/12,5%) powiększa podstawę składki zdrowotnej w JDG?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "53",
+    "cluster_label": "Najem prywatny a VAT, KSeF i JDG",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "8a0d409bd299",
+      "542fa1f69e76",
+      "dccb417eabec",
+      "44a6c67a4881",
+      "9f2fa9593b22",
+      "60b56088e374",
+      "575e3b51988c",
+      "008955a7f523",
+      "876b044419ce",
+      "f2579c88163f",
+      "ee88391c13f7",
+      "1aba38da6bad",
+      "f528fbe072c1"
+    ],
+    "batch": "batch2",
+    "used_web_search": true
+  }
+}

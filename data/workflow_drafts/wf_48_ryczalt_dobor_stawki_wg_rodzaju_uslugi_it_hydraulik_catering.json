@@ -1,0 +1,111 @@
+{
+  "id": "wf_48_ryczalt_dobor_stawki_wg_rodzaju_uslugi_it_hydraulik_catering",
+  "title": "Ryczałt: jak dobrać prawidłową stawkę wg rodzaju usługi (IT, hydraulik, catering, BHP, księgowość)",
+  "topic_area": "PIT",
+  "question_examples": [
+    "Jaka stawka ryczałtu dla usług hydraulicznych — 5,5% czy 8,5% i kiedy którą stosować?",
+    "Kiedy mogę zastosować stawkę 12% ryczałtu przy usługach IT, żeby kontrola nie miała pytań?",
+    "Klient rozwozi catering (PKD 56.21.Z), ale faktura opisana jako usługa transportowa — czy może być 8,5% zamiast 3%?",
+    "Jaka stawka ryczałtu dla usług księgowych — 15% czy 17%? Różne są informacje.",
+    "Czy usługi stałej obsługi BHP mogą być opodatkowane ryczałtem 8,5%, a co z doradztwem BHP?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal dokładny symbol PKWiU 2015 dla konkretnej czynności",
+      "detail": "PKD służy tylko do rejestracji działalności — stawka ryczałtu zależy wyłącznie od PKWiU konkretnej usługi (art. 4 ust. 1 pkt 1 ustawy o zryczałtowanym podatku dochodowym). Jedna działalność (np. catering PKD 56.21.Z) może zawierać różne PKWiU: przygotowywanie posiłków (56.21 — 3%) vs sam transport gotowych dań (49.41 — 5,5% lub 8,5%). Poproś klienta o opis czynności krok po kroku.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj stawkę wg art. 12 ust. 1 ustawy o ryczałcie dla konkretnego PKWiU",
+      "detail": "Najczęstsze przyporządkowania 2026: IT — 12% dla programistów/doradców IT (art. 12 ust. 1 pkt 2b), 8,5% dla IT niezwiązanego z oprogramowaniem (wdrożenia, help-desk bez programowania); hydraulik — 5,5% dla robót budowlanych/nowych instalacji (art. 12 ust. 1 pkt 6 lit. a), 8,5% dla napraw/serwisu/konserwacji; księgowość — 17% wolny zawód (art. 12 ust. 1 pkt 1) dla biura bez pracowników i bez zlecania na zewnątrz, 15% (art. 12 ust. 1 pkt 2 lit. m) gdy zatrudnia pracowników lub zleca czynności; catering — 3% (art. 12 ust. 1 pkt 7 lit. b) przy sprzedaży gotowych posiłków, 8,5% przy samym transporcie; BHP — szkolenia BHP 8,5% jako usługi edukacyjne, doradztwo BHP 15% (art. 12 ust. 1 pkt 2 lit. m — usługi doradcze).",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Złóż wniosek o WIS lub opinię klasyfikacyjną, jeśli stawka jest sporna",
+      "detail": "W przypadku wątpliwości złóż wniosek WIS do Dyrektora KIS w Bielsku-Białej (formularz WIS-W, opłata 40 zł) — WIS wiąże organy podatkowe. Dla klasyfikacji PKWiU możesz też wystąpić do GUS (Ośrodek Klasyfikacji i Nomenklatur w Łodzi) o opinię klasyfikacyjną — nie wiąże organów, ale stanowi silny dowód w kontroli. US i infolinia KIS telefonicznie nie udzielą wiążącej odpowiedzi.",
+      "condition": "if PKWiU jest niejednoznaczne lub czynność mieści się na granicy dwóch grupowań"
+    },
+    {
+      "step": 4,
+      "action": "Prowadź odrębną ewidencję przychodów dla każdej stawki",
+      "detail": "Jeśli klient wykonuje usługi opodatkowane różnymi stawkami (np. hydraulik: montaż nowej instalacji 5,5% + serwis 8,5%), w ewidencji przychodów (Comarch Optima: Ryczałt → Ewidencja przychodów; WFirma: Ewidencje → Ewidencja przychodów ryczałt) zaznacz stawkę przy każdym wpisie. Bez podziału cały przychód opodatkujesz najwyższą stawką właściwą dla któregokolwiek rodzaju działalności.",
+      "condition": "if podatnik świadczy usługi objęte różnymi stawkami"
+    },
+    {
+      "step": 5,
+      "action": "Dopasuj opis na fakturze do faktycznie wykonanej czynności i PKWiU",
+      "detail": "Opis na fakturze musi odpowiadać rzeczywistej usłudze i PKWiU — opis 'usługa transportowa' przy przygotowywaniu posiłków będzie zakwestionowany. Dla bezpieczeństwa na fakturze podawaj PKWiU (nie jest obowiązkowe dla ryczałtowca, ale ułatwia obronę w kontroli). W Comarch Optima/Symfonia ustaw domyślne PKWiU na karcie usługi.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Udokumentuj podstawę wyboru stawki w aktach klienta",
+      "detail": "Zachowaj w teczce: opinię GUS/WIS, wydruk z klasyfikacji PKWiU, opis czynności, ewentualnie interpretację indywidualną. To kluczowe w razie kontroli — zgodnie ze zgłoszeniami z praktyki US i KIS nie udzielają telefonicznie wiążących odpowiedzi, ciężar dowodu spoczywa na podatniku (art. 9 ust. 1 ustawy o ryczałcie).",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 12 ust. 1 pkt 2",
+      "reason": "Zawiera katalog usług objętych stawką 15% (m.in. księgowość z pracownikami, doradztwo, w tym doradztwo BHP) oraz 12% dla IT związanego z oprogramowaniem."
+    },
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 12 ust. 3",
+      "reason": "Nakłada obowiązek prowadzenia ewidencji umożliwiającej rozdzielenie przychodów wg stawek; bez tego stosuje się stawkę najwyższą — kluczowe dla hydraulika łączącego 5,5% i 8,5%."
+    },
+    {
+      "law_name": "Ustawa o zryczałtowanym podatku dochodowym od niektórych przychodów osiąganych przez osoby fizyczne",
+      "article_number": "art. 12 ust. 1 pkt 1",
+      "reason": "Definiuje stawkę 17% dla wolnych zawodów — istotne dla księgowego prowadzącego działalność samodzielnie bez pracowników."
+    }
+  ],
+  "edge_cases": [
+    "Hydraulik: nowa instalacja / kompleksowy montaż = 5,5% (działalność budowlana, PKWiU 43.22), ale sam serwis, naprawa, konserwacja = 8,5%. Przy wymianie całej instalacji CO można argumentować 5,5%, przy naprawie tylko fragmentu — 8,5%.",
+    "IT: programista piszący/modyfikujący kod = 12% (art. 12 ust. 1 pkt 2b), ale tester manualny, administrator sieci, help-desk, wdrożeniowiec bez kodowania = 8,5%. Doradztwo IT = 12%.",
+    "Catering (PKD 56.21.Z): przygotowywanie i dostarczanie posiłków = 3% (działalność gastronomiczna, art. 12 ust. 1 pkt 7), ale jeśli podatnik tylko rozwozi gotowe dania wyprodukowane przez kogoś innego — jest to transport/pośrednictwo = 8,5%.",
+    "Pieczątki i wyroby indywidualne: jeśli podatnik je wytwarza — to działalność wytwórcza 5,5% (art. 12 ust. 1 pkt 6), jeśli tylko pośredniczy/zleca wykonanie — usługa 8,5%. Przedstawiciel handlowy (np. Thermomix) — pośrednictwo detaliczne 8,5%, nie doradztwo (nie mylić z 15%).",
+    "Usługi porządkowe: zagospodarowanie terenów zielonych, odśnieżanie, zamiatanie ulic — 8,5% ryczałt; VAT 8% dla usług związanych z terenami zielonymi (poz. 176 zał. nr 3 do ustawy o VAT) niezależnie od odbiorcy."
+  ],
+  "common_mistakes": [
+    "Dobieranie stawki ryczałtu na podstawie kodu PKD zamiast PKWiU — PKD służy tylko do rejestracji w CEIDG, o stawce decyduje wyłącznie PKWiU konkretnej czynności.",
+    "Stosowanie jednej stawki na wszystko 'dla bezpieczeństwa' bez prowadzenia odrębnej ewidencji — przy mieszanych usługach podatnik może legalnie stosować różne stawki, ale wymaga to rozdzielenia w ewidencji (art. 12 ust. 3).",
+    "Opieranie się na telefonicznej odpowiedzi US/KIS lub 'księgowej koleżanki' oraz na starych interpretacjach (sprzed nowelizacji 2021/2022) — od 2022 r. zmieniły się stawki dla IT (12%), doradztwa i wielu usług; interpretacje sprzed tej daty mogą być już nieaktualne.",
+    "Mylenie pośrednictwa handlowego (8,5%) z doradztwem (15%) — przedstawiciel handlowy prezentujący produkt nie świadczy doradztwa w rozumieniu art. 12 ust. 1 pkt 2 lit. m."
+  ],
+  "related_questions": [
+    "Czy przy przejściu z zasad ogólnych na ryczałt od 1.01.2026 trzeba złożyć oświadczenie do US do 20 lutego, czy wystarczy wpis w CEIDG?",
+    "Jak rozliczyć VAT dla usług montażu wallboxa w budynku mieszkalnym — stawka 8% czy 23%?",
+    "Kiedy działalność wytwórcza (5,5%) przechodzi w usługową (8,5%) — np. przy produkcji pieczątek na zamówienie?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "48",
+    "cluster_label": "Ryczałt: dobór stawki wg rodzaju usługi (IT, hydraulik, catering, BHP, księgowość)",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "fdcdcedd226d",
+      "f4ede36351ac",
+      "db109870bfc4",
+      "67a537ea0fb0",
+      "ef2de4ada84e",
+      "880b2435cd5c",
+      "62512361678a",
+      "d0cc72f39976",
+      "a5134f4bb4b5",
+      "c25f5ad3c1b9",
+      "b53aa3c5a0b8",
+      "d6a0a481527a",
+      "10501a12f2d1"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

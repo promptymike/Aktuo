@@ -1,0 +1,100 @@
+{
+  "id": "wf_82_skladka_zdrowotna_przy_zmianie_formy_opodatkowania_i_odlicze",
+  "title": "Składka zdrowotna i odliczenia ZUS przy zmianie formy opodatkowania (skala/liniowy/ryczałt) na przełomie roku",
+  "topic_area": "ZUS",
+  "question_examples": [
+    "Klient do końca 2025 był na liniówce, od stycznia 2026 przechodzi na ryczałt — czy w styczniu w KPiR mogę odliczyć składki społeczne i 50% zdrowotnej zapłaconej za grudzień?",
+    "Zmiana formy z zasad ogólnych na liniowy — jaką podstawę składki zdrowotnej za styczeń 2026 wpisać w DRA: zero czy dochód za grudzień?",
+    "Czy na ryczałcie mogę co miesiąc w DRA wykazywać 'surowy' przychód, a dopiero w rozliczeniu rocznym składki zdrowotnej odjąć opłacone za cały rok składki społeczne?",
+    "Zmiana z ryczałtu na skalę od 2026 — składka zdrowotna za grudzień 2025 zapłacona w styczniu 2026 — czy ujmuję ją w KPiR w styczniu?",
+    "Podatnik na ryczałcie ma przychód 310 000 zł i zapłacone 19 000 zł składek społecznych — czy podstawą do zdrowotnej jest 291 000 zł?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal formę opodatkowania obowiązującą w każdym z miesięcy rozliczanych w DRA",
+      "detail": "W DRA składanej w lutym 2026 (za styczeń 2026) rozliczasz składkę zdrowotną wg nowej formy opodatkowania obowiązującej od 1.01.2026. Składka zdrowotna za grudzień 2025 (płatna w styczniu 2026) była naliczona wg starej formy — obu składek nie wolno mieszać ani 'przenosić' odliczeń między formami.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Wpisz podstawę zdrowotnej za styczeń 2026 = 0 przy przejściu ze skali/liniowego na ryczałt lub odwrotnie",
+      "detail": "Przy zmianie formy opodatkowania za styczeń 2026 nie masz dochodu/przychodu z nowej formy za miesiąc poprzedni — wpisujesz podstawę 0 (na skali/liniowym naliczasz minimalną składkę zdrowotną wg 75% przeciętnego wynagrodzenia; na ryczałcie — wg progu przychodowego narastająco od stycznia 2026). Dochód/przychód grudnia 2025 rozliczasz wyłącznie w rocznym rozliczeniu składki zdrowotnej za 2025 r. wg poprzedniej formy.",
+      "condition": "if zmiana formy opodatkowania od 1.01.2026"
+    },
+    {
+      "step": 3,
+      "action": "Odlicz w KPiR/ewidencji stycznia 2026 TYLKO składki społeczne i FP/FS za grudzień 2025",
+      "detail": "Składki emerytalna, rentowa, chorobowa, wypadkowa oraz FP/FS zapłacone w styczniu 2026 za grudzień 2025 są kosztem/odliczeniem niezależnie od zmiany formy opodatkowania (art. 22 ust. 6bb oraz art. 26 ust. 1 pkt 2 ustawy o PIT). Ujmujesz je w KPiR w dacie zapłaty albo odliczasz od dochodu — wg wybranej metody.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "NIE odliczaj w 2026 r. składki zdrowotnej zapłaconej w styczniu 2026 za grudzień 2025",
+      "detail": "Składka zdrowotna dotyczy formy opodatkowania, za którą została naliczona. Przy zmianie formy od 1.01.2026 składka zdrowotna za grudzień 2025 (naliczona wg starej formy) nie podlega ujęciu ani jako koszt KPiR w 2026, ani jako odliczenie od przychodu na ryczałcie w 2026, ani w ramach limitu 50%/11 600 zł na liniówce w 2026 — bo limity te dotyczą składek z danej formy opodatkowania w danym roku.",
+      "condition": "if zmiana formy opodatkowania na 1.01.2026"
+    },
+    {
+      "step": 5,
+      "action": "Na ryczałcie ustal miesięczną podstawę zdrowotnej od przychodu pomniejszonego o zapłacone składki społeczne",
+      "detail": "Próg przychodowy (60 000 / 300 000 zł) liczysz narastająco od stycznia. Możesz miesięcznie w DRA wykazywać przychód 'surowy' i pomniejszać go o zapłacone składki społeczne albo na bieżąco odejmować społeczne od przychodu — kluczowe jest prawidłowe rozliczenie roczne (DRA za kwiecień 2027 z rocznym rozliczeniem zdrowotnej za 2026). Przy przychodzie 310 000 zł i zapłaconych 19 000 zł społecznych — podstawą do zdrowotnej jest 291 000 zł (trzeci próg).",
+      "condition": "if forma = ryczałt od przychodów ewidencjonowanych"
+    },
+    {
+      "step": 6,
+      "action": "Zastosuj nowe podstawy społecznych od stycznia 2026, a zdrowotnej na skali/liniowym — od lutego 2026",
+      "detail": "Za styczeń 2026: składki społeczne + FP liczysz od nowych podstaw (duży ZUS 5 652 zł, preferencyjny 1 441,80 zł — zweryfikuj aktualne wartości w komunikacie ZUS). Minimalna składka zdrowotna na skali/liniowym za styczeń 2026 jeszcze wg 'starej' podstawy (rok składkowy zdrowotny luty–styczeń) — nowa podstawa dopiero od lutego 2026. Na ryczałcie nowa podstawa zdrowotnej obowiązuje już od stycznia 2026 (rok kalendarzowy).",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Wprowadź zmianę formy w programie księgowym i zweryfikuj konfigurację właściciela",
+      "detail": "Comarch Optima: Konfiguracja → Firma → Księgowość → Parametry + karta właściciela (Ogólne → Kwoty indywidualne → Forma opodatkowania od 01.2026). WFirma: Ustawienia → Podatki → Podatek dochodowy → Zmień formę. Enova: Kadry i Płace → Właściciel → Formy opodatkowania. Po zmianie przelicz DRA za styczeń — program nie przeniesie automatycznie dochodu grudniowego do podstawy zdrowotnej stycznia.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Klient cały rok na skali płacił minimalną zdrowotną (niski dochód), a w grudniu 2025 skokowy wzrost dochodu — składka za grudzień 2025 wyliczona od wysokiego dochodu, ale w rozliczeniu rocznym składki zdrowotnej za 2025 r. wychodzi nadpłata do zwrotu do poziomu sumy minimalnych — zwrot pojawi się po złożeniu DRA z rocznym rozliczeniem (do 20 maja 2026).",
+    "Przejście z ryczałtu na skalę od 1.01.2026 — zdrowotna za grudzień 2025 zapłacona w styczniu 2026 była odliczana od przychodu na ryczałcie w ramach 50% limitu; w styczniu 2026 na skali NIE odliczasz jej ani w KPiR, ani od dochodu (skala nie przewiduje odliczenia zdrowotnej od 2022 r.).",
+    "Przejście z liniowego na ryczałt od 1.01.2026 — 50% składki zdrowotnej za grudzień 2025 zapłaconej w styczniu 2026 NIE odliczasz już na ryczałcie (limit 50% jest dedykowany dla liniówki — art. 30c ust. 2 pkt 2 ustawy o PIT dotyczy składek opłaconych w roku opodatkowania wg tej formy). Część komentarzy w grupie sugeruje odmiennie — zweryfikuj stanowisko pisemnym zapytaniem do KIS, jeśli kwota jest istotna.",
+    "Przy zmianie formy opodatkowania w trakcie roku (co do zasady niedopuszczalne poza przełomem roku / rezygnacją z ryczałtu do 20 lutego) — zachowaj podział roczny składki zdrowotnej: osobno rozliczenie za miesiące w starej formie, osobno w nowej; obie w DRA rocznym za kwiecień."
+  ],
+  "common_mistakes": [
+    "Odliczanie składki zdrowotnej za grudzień (zapłaconej w styczniu) w nowej formie opodatkowania — każda forma traktuje zdrowotną odmiennie (skala — brak odliczenia, liniowy — 50%/limit roczny, ryczałt — 50% od przychodu, KPiR na liniowym — KUP do limitu); nie wolno tego 'przenosić' między formami.",
+    "Wpisywanie w DRA za styczeń 2026 dochodu za grudzień 2025 jako podstawy zdrowotnej po zmianie formy — poprawna podstawa to 0 (dochód grudnia rozliczasz w rocznym za 2025 r. wg starej formy).",
+    "Stosowanie nowej minimalnej podstawy zdrowotnej (75% przeciętnego wynagrodzenia) już od stycznia 2026 na skali/liniowym — nowa podstawa obowiązuje dopiero od lutego 2026 (rok składkowy zdrowotny), podczas gdy społeczne i FP od stycznia wg nowych podstaw."
+  ],
+  "related_questions": [
+    "Jak rozliczyć roczną składkę zdrowotną za 2025 r. w DRA za kwiecień 2026, gdy podatnik zmienił formę opodatkowania od 1.01.2026?",
+    "Czy zwrot nadpłaty zdrowotnej otrzymany od ZUS w 2026 r. za 2025 r. stanowi przychód do opodatkowania w nowej formie?",
+    "Jak rozliczyć składkę zdrowotną przy sprzedaży środka trwałego na ryczałcie — czy przychód ze sprzedaży wchodzi do podstawy zdrowotnej?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "82",
+    "cluster_label": "Składka zdrowotna przy zmianie formy opodatkowania i odliczenia ZUS",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "0b01e4223296",
+      "0056919e3bcb",
+      "c0ba34d89e7d",
+      "6f4e73ac6d3b",
+      "115174c379f2",
+      "b0e66ac2a1f4",
+      "d8568f3e9c52",
+      "c014d799ccf9",
+      "0b9ff3812009",
+      "30eaf9d2fcdc",
+      "cc0df39853d3",
+      "0b0cbcfc286e",
+      "1280efa79f6a",
+      "5cc20281260b"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "id": "wf_24_benefity_pracownicze_oskladkowanie_opodatkowanie_i_ksiegowan",
+  "title": "Benefity pracownicze (Multisport, pakiet medyczny, ubezpieczenie grupowe): oskładkowanie, opodatkowanie i księgowanie na liście płac",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracodawca w całości finansuje pakiet medyczny dla pracowników — jak zaksięgować to na liście płac, żeby naliczył się ZUS i podatek, a jednocześnie zamknął się rozrachunek (kwota nie została przecież wypłacona pracownikowi)?",
+    "Czy od dofinansowanej przez pracodawcę części karty Multisport naliczamy tylko podatek, czy także składki ZUS, jeśli pracownik partycypuje w koszcie?",
+    "Pracownik dostał kartę Pluxee zasiloną na 300 zł — czy muszę tę kwotę ubruttowić i doliczyć PIT oraz ZUS?",
+    "Czy wartość pakietu medycznego finansowanego przez pracodawcę wchodzi do podstawy PPK?",
+    "Czy do przychodu pracownika z tytułu pakietu sportowego wliczamy kwotę brutto czy netto z faktury (pakiet współfinansowany)?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal źródło finansowania benefitu",
+      "detail": "Sprawdź, czy benefit finansowany jest ze środków obrotowych pracodawcy, czy z ZFŚS. Świadczenia z ZFŚS (przyznane wg kryterium socjalnego) są zwolnione z ZUS (§ 2 ust. 1 pkt 19 rozporządzenia składkowego z 18.12.1998) oraz z PIT do limitu 2 000 zł rocznie na pracownika (art. 21 ust. 1 pkt 67 ustawy o PIT, limit przedłużony na 2026 r.). Świadczenia ze środków obrotowych są co do zasady przychodem ze stosunku pracy (art. 12 ust. 1 ustawy o PIT) i podlegają pełnemu oskładkowaniu.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zweryfikuj zapis w regulaminie wynagradzania pod kątem zwolnienia ze składek ZUS",
+      "detail": "Aby zastosować zwolnienie ze składek ZUS na podstawie § 2 ust. 1 pkt 26 rozporządzenia składkowego (korzyści materialne po cenie niższej niż detaliczna), regulamin wynagradzania lub układ zbiorowy MUSI zawierać zapis o prawie do zakupu świadczenia po cenie niższej niż detaliczna oraz pracownik MUSI ponosić choćby częściową odpłatność (min. 1 gr). Nie wpisuj konkretnych kwot — zgodnie z komentarzami praktyków wystarczy formuła „po cenie niższej niż detaliczna” plus coroczna informacja o kwotach dofinansowania. Bez takiego zapisu całe dofinansowanie pracodawcy podlega ZUS.",
+      "condition": "if benefit finansowany ze środków obrotowych i pracownik partycypuje w koszcie"
+    },
+    {
+      "step": 3,
+      "action": "Ustal zasady opodatkowania i oskładkowania dla typowych scenariuszy",
+      "detail": "Scenariusz A (pracodawca 100% ze środków obrotowych, brak dopłaty pracownika): pełny PIT + pełny ZUS od wartości brutto benefitu. Scenariusz B (współfinansowanie + poprawny zapis w regulaminie): tylko PIT od części finansowanej przez pracodawcę, BEZ ZUS. Scenariusz C (ZFŚS, kryterium socjalne): bez ZUS, PIT dopiero po przekroczeniu 2 000 zł rocznie. Scenariusz D (karty przedpłacone typu Pluxee/bony): traktowane jak ekwiwalent pieniężny — pełny PIT i pełny ZUS od wartości doładowania, bez możliwości zastosowania § 2 ust. 1 pkt 26. Podstawą przychodu jest kwota brutto z faktury (z VAT) w części przypadającej na pracownika.",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Dolicz wartość benefitu do podstawy PPK",
+      "detail": "Podstawą naliczenia wpłat PPK jest podstawa wymiaru składek emerytalno-rentowych (art. 26 ust. 1 ustawy o PPK). Jeśli benefit podlega ZUS (scenariusz A) — wchodzi do podstawy PPK. Jeśli jest zwolniony z ZUS (scenariusz B lub C) — NIE wchodzi do podstawy PPK. Wpłata pracownika do PPK (2% lub dobrowolnie mniej) jest potrącana z netto, wpłata pracodawcy (1,5%) stanowi przychód pracownika opodatkowany PIT, ale nieoskładkowany.",
+      "condition": "if pracownik uczestniczy w PPK"
+    },
+    {
+      "step": 5,
+      "action": "Zaksięguj benefit na liście płac jako świadczenie niepieniężne z potrąceniem zwrotnym",
+      "detail": "W programie kadrowo-płacowym (Comarch Optima: Konfiguracja → Płace → Typy wypłat; Enova: Kadry i Płace → Elementy wynagrodzenia; Symfonia Kadry i Płace: Definicje składników) utwórz DWA składniki: (1) „Pakiet medyczny/Multisport — przychód” — dodatni, opodatkowany i oskładkowany wg scenariusza, nie wpływa na kwotę do wypłaty (flaga „nie wliczaj do wypłaty” / „świadczenie w naturze”); (2) „Potrącenie pakietu — część pracownika” — potrącenie z netto. Dzięki temu podstawy PIT/ZUS są prawidłowe, a rozrachunek z pracownikiem zamyka się, bo świadczenie rzeczowe zostało fizycznie dostarczone zamiast gotówki.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Rozlicz fakturę zakupową benefitu z częścią pracownika",
+      "detail": "Fakturę od dostawcy (Medicover, Benefit Systems, PZU itp.) zaksięguj w całości w koszty (konto 405 / „Świadczenia na rzecz pracowników”). VAT: jeżeli pracownik współfinansuje, od części przypadającej na pracownika wystaw fakturę wewnętrzną/refakturę lub rozpoznaj sprzedaż opodatkowaną VAT 23% (dla Multisportu — 8% jako usługi rekreacyjne; pakiet medyczny — zwolniony z VAT art. 43 ust. 1 pkt 18–19 ustawy o VAT, więc bez VAT należnego od części pracownika). Potrącenie z wynagrodzenia pracownika księguj Wn 231 / Ma 760 (lub 249 — rozrachunki z pracownikami z tyt. świadczeń).",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Przy premii netto ubruttowij poprawnie, uwzględniając KUP i ulgę tylko raz",
+      "detail": "KUP (250 zł / 300 zł miesięcznie) i kwota zmniejszająca zaliczkę (1/12, 1/24 lub 1/36 z 3 600 zł rocznie) mają zastosowanie raz w miesiącu — do łącznego wynagrodzenia, nie osobno do każdego składnika. Prawidłowa metoda: policz netto od wynagrodzenia zasadniczego z pełnym KUP i ulgą, następnie od oczekiwanego netto premii ubruttowij stosując stawkę krańcową (12% lub 32% PIT + składki ZUS pracownika 13,71% + 9% zdrowotnej) bez KUP i ulgi. W Comarch Optima: Płace → Wypłaty → kalkulator „brutto od netto”.",
+      "condition": "if premia jest wypłacana w kwocie netto"
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Systemy kafeteryjne typu MyBenefit z punktami: zgodnie z częścią interpretacji KIS przychód powstaje dopiero w momencie wymiany punktów na świadczenie (nie w momencie zasilenia portfela punktowego), co utrudnia bieżące naliczanie ZUS — rekomendowane wystąpienie z własnym wnioskiem o interpretację indywidualną, bo praktyka bywa sprzeczna.",
+    "Nieodpłatne udostępnienie pracownikowi lokalu mieszkalnego przez spółkę: podstawą ZUS i PIT jest wartość czynszu (lub wartość rynkowa najmu, jeżeli wyższa); przychód wykazujemy w PIT-11 w poz. przychodów ze stosunku pracy, składki w odpowiednich pozycjach — nie ma tu zastosowania zwolnienie z § 2 ust. 1 pkt 26 rozporządzenia składkowego.",
+    "Karty przedpłacone (Pluxee, Edenred, Sodexo) zasilane kwotą pieniężną: zawsze traktowane jak ekwiwalent pieniężny — pełny PIT i ZUS od wartości doładowania, niezależnie od zapisów regulaminu; zwolnienie „po cenie niższej niż detaliczna” nie ma zastosowania do świadczeń pieniężnych.",
+    "Ubezpieczenie grupowe w pełni finansowane przez pracodawcę (pracownik nie dopłaca): pełne opodatkowanie PIT, pełne ZUS i wchodzi do podstawy PPK — traktowane jak dodatkowy składnik wynagrodzenia; zwolnienie § 2 ust. 1 pkt 26 nie ma zastosowania, bo brak odpłatności pracownika."
+  ],
+  "common_mistakes": [
+    "Brak zapisu o prawie do zakupu „po cenie niższej niż detaliczna” w regulaminie wynagradzania — powoduje, że mimo współfinansowania przez pracownika dofinansowanie pracodawcy i tak podlega ZUS (ZUS przy kontroli naliczy zaległe składki z odsetkami).",
+    "Księgowanie benefitu tylko jako przychodu na liście płac bez przeciwstawnego potrącenia z netto — rozrachunek z pracownikiem nie zamyka się, bo świadczenie niepieniężne zostało już dostarczone w naturze; konieczny jest drugi składnik typu „potrącenie” o tej samej wartości.",
+    "Doliczanie KUP i ulgi podatkowej osobno do premii przy ubruttawianiu — prowadzi do zaniżenia zaliczki PIT; KUP i 1/12 kwoty zmniejszającej stosujemy raz miesięcznie do sumy przychodów, od premii liczymy pełne 12%/32% zaliczki."
+  ],
+  "related_questions": [
+    "Jak rozliczyć bony świąteczne i paczki dla dzieci pracowników finansowane z ZFŚS — jakie są limity zwolnień w 2026 r.?",
+    "Czy dofinansowanie do okularów korekcyjnych dla pracownika pracującego przy monitorze podlega PIT i ZUS?",
+    "Jak rozliczyć na liście płac samochód służbowy wykorzystywany do celów prywatnych — ryczałt 250/400 zł a podstawa ZUS i PPK?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "24",
+    "cluster_label": "Benefity pracownicze: oskładkowanie, opodatkowanie i księgowanie na liście płac",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "314b22834802",
+      "311b4e1959c4",
+      "72c8cc97f4c6",
+      "e923c2584b1c",
+      "8b47d1e57187",
+      "9b858a608275",
+      "286786fcfeb7",
+      "663eec608cae",
+      "0f5f3eba0fb2",
+      "fe5e9d07f090",
+      "4f1993cf13c1",
+      "5079698cb8a5",
+      "5b1080cf9e5f",
+      "4bd0e814856b",
+      "18a55e8b73bc"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

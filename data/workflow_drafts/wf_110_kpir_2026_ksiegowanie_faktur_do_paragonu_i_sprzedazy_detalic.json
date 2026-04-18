@@ -1,0 +1,111 @@
+{
+  "id": "wf_110_kpir_2026_ksiegowanie_faktur_do_paragonu_i_sprzedazy_detalic",
+  "title": "KPiR 2026: księgowanie faktur do paragonu, raportów fiskalnych i sprzedaży detalicznej",
+  "topic_area": "KPiR",
+  "question_examples": [
+    "Jak w KPiR od 2026 r. księgować faktury sprzedaży wystawione dla osób fizycznych, które wcześniej zostały zaewidencjonowane na kasie fiskalnej — raportem miesięcznym czy każdą fakturę osobno?",
+    "Czy od 2026 r. w rejestrze VAT każda faktura do paragonu wykazywana jest osobno z oznaczeniem FP, a w KPiR pod raportem miesięcznym (bez zdublowania przychodu)?",
+    "Czy nowy zakaz księgowania sprzedaży jednym zapisem na koniec miesiąca dotyczy tylko faktur, czy również sprzedaży paragonowej i bezrachunkowej?",
+    "JDG sprzedaje plany treningowe online, do każdej transakcji automatycznie wystawia fakturę dla osoby fizycznej — czy w KPiR 2026 możliwe jest zbiorcze ujęcie na koniec miesiąca, czy trzeba każdą fakturę pojedynczo?",
+    "Jak księgować faktury do paragonu u podatnika zwolnionego z VAT (art. 113) — czy wystarczy raport fiskalny w KPiR, czy trzeba każdą fakturę osobno?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal źródło sprzedaży detalicznej B2C",
+      "detail": "Rozdziel trzy strumienie: (a) sprzedaż zaewidencjonowana na kasie fiskalnej (raport dobowy/miesięczny RO), (b) faktury wystawione do paragonu na żądanie nabywcy (oznaczenie FP w JPK_V7), (c) sprzedaż bezrachunkowa dla podatników bez kasy fiskalnej korzystających ze zwolnienia. Od 1.01.2026 r. obowiązuje nowe rozporządzenie MFiG z 6 września 2025 r. w sprawie prowadzenia PKPiR — źródło: https://www.biznes.gov.pl/pl/portal/00233",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zaksięguj sprzedaż z kasy fiskalnej w KPiR na podstawie raportu (dobowego lub miesięcznego)",
+      "detail": "Nowe rozporządzenie zachowuje zasadę, że podatnicy NIE wpisują do KPiR kwot wynikających z faktur dokumentujących sprzedaż uprzednio ujętą w ewidencji kasy rejestrującej — podstawą zapisu jest raport fiskalny. W Comarch Optima: Kasa/Bank → Ewidencja sprzedaży → Raport fiskalny miesięczny; w WFirma: Przychody → Dodaj przychód → Raport fiskalny. Faktura do paragonu trafia WYŁĄCZNIE do ewidencji VAT z oznaczeniem FP, nie do KPiR — źródło: https://www.podatki.biz/artykuly/zmiany-2026-r-prowadzenie-pkpir-kilkanascie-waznych-modyfikacji_34_60855.htm",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Wykaż fakturę do paragonu w JPK_V7 z oznaczeniem FP (bez zwiększania podatku należnego)",
+      "detail": "Faktura wystawiona do sprzedaży zaewidencjonowanej na kasie (w tym faktura z KSeF wystawiona na żądanie konsumenta lub rolnika ryczałtowego) w ewidencji VAT otrzymuje oznaczenie FP — zgodnie z art. 109 ust. 3d ustawy o VAT ma charakter wyłącznie ewidencyjny i nie zwiększa obrotu ani podatku należnego (obrót wynika z dokumentu RO). W Symfonia/Enova: moduł Rejestr VAT sprzedaży → typ dokumentu FP. Dotyczy to również kontroli zgodności RO ≥ FP — źródło: https://ksiegowosc.infor.pl/ksef/7540074,paragony-vs-ksef-2026-koniec-paragonow-z-nip.html",
+      "condition": "if podatnik jest czynnym podatnikiem VAT i wystawia faktury do paragonów"
+    },
+    {
+      "step": 4,
+      "action": "Księguj każdą fakturę sprzedaży B2B pojedynczo (bez zapisu zbiorczego)",
+      "detail": "Od 1.01.2026 r. wyłączono z katalogu dowodów księgowych dzienne zestawienia faktur sprzedaży — nie wolno już księgować zbiorczą kwotą na koniec miesiąca. Każda faktura sprzedaży (nie wystawiona do paragonu) idzie do KPiR z osobnym wpisem, z numerem KSeF w kolumnie 3 i NIP kontrahenta w kolumnie 5. Zapisy można dokonywać najpóźniej do 20. dnia miesiąca następującego po miesiącu uzyskania przychodu — źródło: https://www.gofin.pl/rachunkowosc/17,2,84,259168,ksiega-podatkowa-na-2026-r-wedlug-nowych-zasad.html",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Dla sprzedaży bezrachunkowej (bez kasy i bez faktur) prowadź ewidencję sprzedaży lub wystaw dowód wewnętrzny na koniec dnia",
+      "detail": "Zasady sprzedaży bezrachunkowej NIE zmieniły się — podatnicy bez kasy fiskalnej nadal mogą wykazywać przychody nieudokumentowane fakturami na podstawie: (a) dowodu wewnętrznego wystawionego na koniec dnia (jedna kwota dzienna), albo (b) prowadzonego zestawienia sprzedaży (ewidencji sprzedaży). Wpis dokonywany raz dziennie po zakończeniu dnia, nie później niż przed rozpoczęciem działalności następnego dnia. Zmiana 2026 dotyczy WYŁĄCZNIE zakazu zbiorczego księgowania faktur — źródło: https://ksiegowosc.infor.pl/wiadomosci/6896079,pkpir-2026-nowe-rozporzadzenie.html",
+      "condition": "if podatnik nie ma kasy fiskalnej (np. zwolnienie podmiotowe do 240 000 zł rocznie z art. 113 ust. 1 ustawy o VAT lub zwolnienie z obowiązku kasy do 20 000 zł)"
+    },
+    {
+      "step": 6,
+      "action": "Korekty raportów fiskalnych udokumentuj dowodem wewnętrznym (nie adnotacją na odwrocie raportu)",
+      "detail": "Od 2026 r. korekty danych z raportów fiskalnych dobowych lub miesięcznych, które nie podlegają ujęciu w odrębnych ewidencjach (np. oczywiste pomyłki, niezafiskalizowana sprzedaż wychwycona później), dokonuje się na podstawie dowodu wewnętrznego — już NIE poprzez opis na odwrocie raportu. W Comarch Optima: Kasa/Bank → Dowód wewnętrzny → Korekta raportu fiskalnego. Korekta dziedziczy charakter faktury pierwotnej — jeśli korygowana jest faktura do paragonu z FP, korekta również idzie do JPK_V7 z FP i nie zwiększa/nie zmniejsza podstawy opodatkowania — źródło: https://www.podatki.biz/artykuly/zmiany-2026-r-prowadzenie-pkpir-kilkanascie-waznych-modyfikacji_34_60855.htm",
+      "condition": "if wystąpiła różnica FP vs RO lub oczywista pomyłka na kasie"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj obowiązek drukowania raportów zerowych i dokumentuj brak sprzedaży",
+      "detail": "Przepisy o kasach rejestrujących wymagają drukowania okresowych raportów fiskalnych także w miesiącach bez sprzedaży, o ile kasa taką funkcję posiada. Jeżeli kasa technicznie nie drukuje raportów zerowych — udokumentuj to pisemnym oświadczeniem podatnika i ewentualnym pismem serwisu kas. Przy kontroli US nie wystarczy samo oświadczenie o braku sprzedaży. W razie wątpliwości — zapytaj KIS pisemnie o stan faktyczny (wniosek o interpretację indywidualną)",
+      "condition": "if klient nie miał sprzedaży w miesiącu lub ma problemy techniczne z kasą"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 109 ust. 3",
+      "reason": "Określa obowiązek prowadzenia ewidencji VAT zawierającej dane pozwalające prawidłowo rozliczyć podatek — podstawa osobnego wykazywania każdej faktury (w tym FP) w JPK_V7, nawet gdy sprzedaż idzie na kasę fiskalną."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 113 ust. 1",
+      "reason": "Reguluje zwolnienie podmiotowe z VAT do 240 000 zł rocznie (od 2026 r.) — istotne dla podatników prowadzących sprzedaż bezrachunkowa bez kasy fiskalnej, księgujących przychody dowodem wewnętrznym."
+    }
+  ],
+  "edge_cases": [
+    "Faktura zaliczkowa nabita na kasę fiskalną i oznaczona FP — do JPK_V7 trafia z FP, ale w KPiR przychód rozpoznajemy dopiero przy fakturze końcowej (art. 14 ust. 1c ustawy o PIT); jeżeli księgujemy raport RO w miesiącu zaliczki, trzeba go pomniejszyć o zaliczkę i doksięgować w miesiącu rozliczenia końcowego — bardzo podatne na błędy.",
+    "Faktury uproszczone (paragon z NIP do 450 zł) nabite na kasie — dziedziczą reżim raportu fiskalnego (RO); w KPiR nie księguje się ich odrębnie, a do JPK_V7 trafiają zbiorczo w kwocie raportu (chyba że pojawi się obowiązek osobnego wykazania po zmianach KSeF/JPK od 1.02.2026 — zweryfikować bieżący komunikat MF).",
+    "Podatnik zwolniony z VAT (art. 113) wystawiający faktury do paragonu — faktury NIE są księgowane odrębnie w KPiR (podstawa to raport fiskalny), do ewidencji VAT nie idą, bo podatnik nie składa JPK_V7; wystarczy archiwizacja faktur z paragonami.",
+    "Korekty faktur do paragonu (zwrot towaru, rabat) — dziedziczą oznaczenie FP faktury pierwotnej w JPK_V7; faktycznej korekty obrotu dokonuje się przez ewidencję zwrotów i korekt przy kasie fiskalnej (a nie przez zmianę wartości FP w JPK)."
+  ],
+  "common_mistakes": [
+    "Księgowanie faktury do paragonu dwukrotnie — raz jako RO (raport), drugi raz jako osobny zapis w KPiR; skutkuje zdublowaniem przychodu i podatku należnego. Faktura do sprzedaży zaewidencjonowanej na kasie idzie WYŁĄCZNIE do ewidencji VAT z FP.",
+    "Dalsze stosowanie w 2026 r. zbiorczego zapisu sprzedaży fakturowej na koniec miesiąca (jednym wpisem w kolumnie 7 KPiR) — od 1.01.2026 r. zakazane; każda faktura musi mieć osobny wpis z numerem KSeF i NIP nabywcy.",
+    "Mylenie zmian 2026: błędne przekonanie, że zniesiono także zestawienia sprzedaży bezrachunkowej. W rzeczywistości zmiana dotyczy tylko faktur — sprzedaż bezrachunkowa (bez faktur, bez kasy) nadal jest wykazywana dowodem wewnętrznym lub ewidencją sprzedaży na starych zasadach."
+  ],
+  "related_questions": [
+    "Jak w 2026 r. dokumentować i księgować zwroty towarów zarejestrowane na kasie fiskalnej — ewidencja zwrotów czy dowód wewnętrzny?",
+    "Czy od 1.02.2026 r. faktura wystawiona w KSeF do sprzedaży już zaewidencjonowanej na kasie fiskalnej wymaga przekazania wizualizacji klientowi i jakie nowe oznaczenia w JPK_V7M(3) ją dotyczą?",
+    "Jak prawidłowo księgować w KPiR sprzedaż nierejestrowaną (nieewidencjonowaną działalność do limitu 75% minimalnego wynagrodzenia) prowadzoną obok JDG?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "110",
+    "cluster_label": "KPiR 2026: księgowanie faktur do paragonu i sprzedaży detalicznej",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "9693e56dd286",
+      "9d48e1a84c90",
+      "c5485cbadc87",
+      "d064164e51d9",
+      "7fad87fdb7b4",
+      "3e0be20489ee",
+      "42da4388ab9c",
+      "4bcb3fecd93d",
+      "1b861a8b7b95",
+      "28d4e2e54995",
+      "73e6d7b4c056",
+      "3c7bb9635206",
+      "7ab98192b736",
+      "da285f980146"
+    ],
+    "batch": "batch2",
+    "used_web_search": true
+  }
+}

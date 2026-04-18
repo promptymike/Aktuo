@@ -1,0 +1,101 @@
+{
+  "id": "wf_134_zus_z_3_wynagrodzenie_i_zasilek_chorobowy_przy_firmach_20_pr",
+  "title": "ZUS Z-3: wynagrodzenie chorobowe vs zasiłek chorobowy u płatnika niebędącego płatnikiem zasiłków (<20 ubezpieczonych)",
+  "topic_area": "ZUS",
+  "question_examples": [
+    "Mam firmę zatrudniającą poniżej 20 pracowników, wpłynęło L4 — czy składam Z-3 do ZUS, a pracownikowi wypłacam tylko pomniejszone wynagrodzenie?",
+    "Pracownik dostał L4 w listopadzie do końca roku, 31.12 kończy się umowa — kto płaci za dni po ustaniu zatrudnienia i na jakim druku?",
+    "33 dni wynagrodzenia chorobowego kończy się 23.01.2026 — od 24.01 to już zasiłek z ZUS, czy nadal wynagrodzenie? Program płacowy liczy wyn. chorobowe do 2.02 — błąd?",
+    "Pracodawca (osoba fizyczna prowadząca DG) dostał zwolnienie lekarskie — czy składam Z-3, czy inny druk, żeby dostał zasiłek?",
+    "Pierwsze L4 było do 18.11, kolejne od 19.11 do 30.11 — czy trzeba ponownie coś wysyłać do ZUS, czy wystarczy jedno Z-3?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal status płatnika zasiłków na 30.11 roku poprzedniego",
+      "detail": "Sprawdź liczbę osób zgłoszonych do ubezpieczenia chorobowego na 30 listopada roku poprzedniego (art. 61 ust. 1 ustawy zasiłkowej). Jeśli ≤ 20 ubezpieczonych — płatnikiem zasiłków jest ZUS, a pracodawca wypłaca tylko wynagrodzenie chorobowe za pierwsze 33 dni (14 dni dla pracownika 50+) zgodnie z art. 92 Kodeksu pracy. Od 34. dnia (odpowiednio 15.) zasiłek wypłaca ZUS na podstawie Z-3.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Rozlicz wynagrodzenie chorobowe u pracodawcy za pierwsze 33/14 dni",
+      "detail": "W programie (Comarch Optima: Kadry i Płace → Listy płac → nieobecność 'Zwolnienie chorobowe'; Symfonia Kadry i Płace: moduł 'Nieobecności') wprowadź L4, program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze) i ograniczy do 33 dni w roku kalendarzowym (14 dni dla ukończonych 50 lat od roku następnego po urodzinach). Weryfikuj licznik dni — jeśli pracownik zużył 33/14 dni u poprzedniego pracodawcy w tym samym roku, od pierwszego dnia u Ciebie idzie już zasiłek z ZUS.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Wystaw i wyślij Z-3 przez PUE/ZUS PUE po wyczerpaniu 33/14 dni",
+      "detail": "Po wyczerpaniu okresu wynagrodzenia chorobowego, przy kontynuacji niezdolności, złóż Z-3 przez PUE ZUS (zakładka Płatnik → Dokumenty i wiadomości → Dokumenty robocze → nowy Z-3). Z-3 wypełniasz dla pracownika zatrudnionego na UoP — dla zleceniobiorcy składasz Z-3a, dla osoby prowadzącej działalność (właściciela firmy, wspólnika) — Z-3b. W Z-3 wpisz podstawę wymiaru z 12 miesięcy poprzedzających miesiąc niezdolności (art. 36 ust. 1 ustawy zasiłkowej).",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Przy kolejnych L4 w ramach ciągłości składaj wniosek o kontynuację",
+      "detail": "Każde kolejne zaświadczenie lekarskie wymaga odrębnego wniosku o wypłatę świadczenia — złóż ZAS-53 (wniosek o zasiłek chorobowy) lub kolejne Z-3 z adnotacją 'kontynuacja'. Jeśli nie ma przerwy w niezdolności — liczy się jeden okres zasiłkowy (max 182 dni; 270 dni przy ciąży i gruźlicy — art. 8 ustawy zasiłkowej). Program płacowy często nie 'wie' o wyczerpaniu 33 dni, dlatego ręcznie skoryguj listę płac i przestaw pozycję na 'zasiłek płatny przez ZUS' od właściwego dnia.",
+      "condition": "if niezdolność trwa dalej po 33/14 dniach i wystawiono kolejne L4"
+    },
+    {
+      "step": 5,
+      "action": "Przy ustaniu zatrudnienia w trakcie L4 złóż Z-3 jednorazowo za okres po ustaniu",
+      "detail": "Jeśli umowa kończy się w trakcie niezdolności, pracodawca wypłaca wynagrodzenie chorobowe/zasiłek do dnia ustania zatrudnienia, a za okres po ustaniu — zasiłek wypłaca ZUS bezpośrednio pracownikowi na podstawie Z-3 (po ustaniu składa się raz, nie przy każdym kolejnym L4). Pracownik dodatkowo składa samodzielnie Z-10 (oświadczenie o braku innego tytułu do ubezpieczenia). Uwaga: zasiłek po ustaniu nie przysługuje, jeśli osoba ma inne tytuły do ubezpieczenia lub kontynuuje działalność zarobkową (art. 13 ustawy zasiłkowej).",
+      "condition": "if umowa o pracę wygasa w trakcie niezdolności do pracy"
+    },
+    {
+      "step": 6,
+      "action": "Dla pracodawcy-przedsiębiorcy (nie pracownika) użyj Z-3b",
+      "detail": "Gdy niezdolność dotyczy samego przedsiębiorcy (JDG, wspólnika spółki) opłacającego dobrowolne chorobowe min. 90 dni — składasz Z-3b przez PUE. W Płatniku/programie obniżasz podstawy składek proporcjonalnie do dni niezdolności (art. 18 ust. 9 ustawy systemowej). Zasiłek wypłaca ZUS w całości (dla przedsiębiorcy nie ma 33 dni wynagrodzenia chorobowego — to dotyczy tylko pracowników z art. 92 KP).",
+      "condition": "if niezdolność dotyczy przedsiębiorcy, a nie pracownika"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj termin przedawnienia i procedurę odwoławczą przy odmowie ZUS",
+      "detail": "Roszczenie o wypłatę zasiłku chorobowego przedawnia się po 6 miesiącach od ostatniego dnia okresu, za który zasiłek przysługuje (art. 67 ust. 1 ustawy zasiłkowej). Jeśli ZUS odmówił z powodu braku dokumentów od pracodawcy — pracownik ma 1 miesiąc na odwołanie do sądu (art. 4779 KPC), a pracodawca powinien pilnie złożyć korektę Z-3/raportów ZUS RSA. Zweryfikuj pisemnie u ZUS status sprawy przed upływem 6 miesięcy.",
+      "condition": "if ZUS wydał decyzję odmowną lub wezwanie do uzupełnienia"
+    }
+  ],
+  "legal_anchors": [],
+  "edge_cases": [
+    "Pracownik 50+ — od roku kalendarzowego następującego po roku, w którym ukończył 50 lat, pracodawca płaci wynagrodzenie chorobowe tylko za 14 dni (a nie 33), reszta to zasiłek z ZUS (art. 92 § 1 pkt 1 KP).",
+    "Wyczerpanie 33/14 dni u poprzedniego pracodawcy w tym samym roku kalendarzowym — nowy pracodawca od pierwszego dnia L4 składa Z-3, bo limit dni jest roczny i sumuje się między pracodawcami; świadectwo pracy powinno wskazywać wykorzystane dni.",
+    "Zleceniobiorca z dobrowolną składką chorobową — wynagrodzenie chorobowe z art. 92 KP NIE przysługuje; od pierwszego dnia niezdolności idzie zasiłek z ZUS na podstawie Z-3a, pod warunkiem 90 dni nieprzerwanego okresu wyczekiwania (art. 4 ust. 1 pkt 2 ustawy zasiłkowej).",
+    "Niezdolność po ustaniu zatrudnienia — zasiłek przysługuje, jeśli niezdolność powstała nie później niż w ciągu 14 dni od ustania tytułu (60 dni przy chorobie zakaźnej o okresie wylęgania >14 dni) i trwa nieprzerwanie min. 30 dni (art. 7 ustawy zasiłkowej)."
+  ],
+  "common_mistakes": [
+    "Mylenie Z-3 (pracownik UoP), Z-3a (zleceniobiorca) i Z-3b (przedsiębiorca/wspólnik) — złożenie niewłaściwego druku skutkuje wezwaniem do korekty i opóźnieniem wypłaty zasiłku.",
+    "Zaufanie programowi płacowemu bez weryfikacji licznika 33/14 dni — systemy typu Comarch Optima czy Symfonia nie zawsze uwzględnią dni wykorzystane u poprzedniego pracodawcy, przez co naliczą wynagrodzenie chorobowe zamiast przekazać sprawę do ZUS.",
+    "Niewysyłanie kolejnego wniosku (ZAS-53) lub nowego Z-3 'kontynuacja' przy kolejnym L4 w trakcie trwającego zatrudnienia — ZUS nie wypłaci zasiłku automatycznie; każde nowe zaświadczenie wymaga odrębnego wniosku (po ustaniu zatrudnienia odwrotnie — wystarczy jedno Z-3)."
+  ],
+  "related_questions": [
+    "Jak ustalić podstawę wymiaru zasiłku chorobowego, jeśli pracownik był zatrudniony krócej niż 12 miesięcy lub miał zmianę etatu?",
+    "Jakie są skutki kontroli L4 przez ZUS i obniżenia podstawy zasiłku do 100% minimalnego wynagrodzenia po ustaniu zatrudnienia?",
+    "Czy zleceniobiorca do 26. roku życia (student) może mieć dobrowolne ubezpieczenie chorobowe i pobierać zasiłek?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "134",
+    "cluster_label": "ZUS Z-3: wynagrodzenie i zasiłek chorobowy przy firmach <20 pracowników",
+    "generated_at": "2026-04-18T12:00:00Z",
+    "source_post_ids": [
+      "a19d1d056f19",
+      "9af03890ff02",
+      "aa8d6b663ddb",
+      "9d1bf7535126",
+      "0130884d448f",
+      "c21beecd1fd4",
+      "ac06f96e722b",
+      "7fe08c989483",
+      "d0c41f0b9485",
+      "90d760ca25cd",
+      "4b0dd9697307",
+      "6f16c59eaf6f",
+      "ce32abf0a4d8",
+      "27046ed5aa0e",
+      "2f7df2ce332d"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

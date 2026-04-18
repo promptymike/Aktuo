@@ -1,0 +1,117 @@
+{
+  "id": "wf_45_wymiar_urlopu_wypoczynkowego_przy_niepelnym_etacie_i_zmianie",
+  "title": "Wymiar urlopu wypoczynkowego przy niepełnym etacie i zmianie wymiaru w trakcie roku",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownik zatrudniony na 1/2 etatu po 4 godziny dziennie od pn-pt — ile dni urlopu mu się należy z 26 dni rocznie?",
+    "Pracownik na 3/4 etatu (6 h dziennie) ma prawo do 26 dni urlopu — ile to dni i jak to wpisać do systemu w godzinach?",
+    "Pracownik do końca 2025 r. był na 1/2 etatu, od 1.01.2026 przechodzi na cały etat, a 17.04.2026 nabywa prawo do 26 dni — jak prawidłowo wyliczyć urlop na 2026 r.?",
+    "Pracownik zatrudniony na 5/8 etatu od 12.11.2025 do 31.05.2026 (pierwsza praca) — ile urlopu mu przysługuje?",
+    "Pracownik do września pracował na cały etat (20 dni urlopu), od października 4/5 etatu, a od połowy października nabył prawo do 26 dni — jak policzyć wymiar urlopu za rok?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal podstawowy wymiar urlopu pracownika w danym roku kalendarzowym",
+      "detail": "20 dni — staż pracy (łącznie z okresami z tytułu wykształcenia) krótszy niż 10 lat; 26 dni — staż co najmniej 10 lat (art. 154 § 1 KP). Sprawdź datę nabycia prawa do 26 dni — wymiar zwiększa się z dniem nabycia stażu, nie wstecznie od 1 stycznia. Dla pierwszej pracy stosuj art. 153 KP (1/12 z 20 dni za każdy przepracowany miesiąc, naliczane z dołu).",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Przelicz wymiar proporcjonalnie do wymiaru etatu",
+      "detail": "Wzór: wymiar roczny × ułamek etatu, niepełny dzień zaokrąglamy w GÓRĘ do pełnego dnia (art. 154 § 2 KP, art. 1553 § 1 KP). Przykłady 2026: 26 × 1/2 = 13 dni; 26 × 3/4 = 19,5 → 20 dni; 20 × 5/8 = 12,5 → 13 dni; 26 × 4/5 = 20,8 → 21 dni.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Przelicz dni urlopu na godziny zgodnie z dobową normą pracownika",
+      "detail": "Zgodnie z art. 1542 § 2 KP: 1 dzień urlopu = 8 godzin (lub niższa norma dobowa wynikająca z odrębnych przepisów). Pula godzin = liczba dni × 8 h, niezależnie od tego ile godzin dziennie pracownik faktycznie pracuje. Przykłady: 1/2 etatu 4 h dziennie → 13 dni × 8 h = 104 h (wystarcza na 26 dni urlopu po 4 h); 3/4 etatu 6 h dziennie → 20 dni × 8 h = 160 h (≈ 26 dni po 6 h + 4 h).",
+      "condition": null
+    },
+    {
+      "step": 4,
+      "action": "Udzielaj urlopu w dniach pracy, a odejmuj w godzinach faktycznego harmonogramu",
+      "detail": "Za każdy dzień urlopu odejmuj z puli dokładnie tyle godzin, ile pracownik miałby przepracować zgodnie z grafikiem (art. 1542 § 1 KP). W systemach kadrowych (Comarch Optima: Kadry → Plan pracy / Nieobecności; Symfonia Kadry i Płace: Kalendarz → Nieobecności; Enova: Kadry → Czas pracy) ustaw normę dobową pracownika i wymiar etatu — system sam przeliczy odjęcie godzin.",
+      "condition": null
+    },
+    {
+      "step": 5,
+      "action": "Przy zmianie wymiaru etatu w trakcie roku zastosuj wyliczenie proporcjonalne za każdy okres",
+      "detail": "Zgodnie z § 1 i § 2 rozporządzenia MPiPS z 8.01.1997 r. w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego (Dz.U. 1997 nr 2 poz. 14): za każdy okres zatrudnienia w danym wymiarze ustal urlop proporcjonalnie (1/12 rocznego wymiaru za każdy miesiąc), zaokrąglając niepełny miesiąc w górę i sumując. Przy przejściu z 1/2 na 1/1 etatu od 1.01.2026 — od stycznia liczymy już z pełnego wymiaru, a niewykorzystane dni z 2025 (np. 4 h) przechodzą jako urlop zaległy bez przeliczenia na nowy etat (prawo nabyte).",
+      "condition": "if w trakcie roku zmienia się wymiar etatu lub pracownik nabywa prawo do 26 dni"
+    },
+    {
+      "step": 6,
+      "action": "Dla pracownika z orzeczeniem o niepełnosprawności doliczaj dodatkowy urlop osobno",
+      "detail": "Pracownik o stopniu znacznym lub umiarkowanym ma dobową normę 7 h i tygodniową 35 h (art. 15 ustawy z 27.08.1997 r. o rehabilitacji zawodowej). Po przepracowaniu roku po orzeczeniu nabywa 10 dni dodatkowego urlopu (art. 19 tej ustawy) — naliczamy go odrębnie od urlopu z KP, każdy zaokrąglamy do pełnego dnia osobno, dopiero po zaokrągleniu sumujemy pule godzin (10 dni × 7 h = 70 h dodatkowo). W świadectwie pracy wykazujemy je w odrębnych pozycjach.",
+      "condition": "if pracownik ma orzeczenie o znacznym lub umiarkowanym stopniu niepełnosprawności"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj zaokrąglanie i sumowanie przy proporcjonalnym wyliczaniu w obrębie roku",
+      "detail": "Według § 1 ust. 1 rozporządzenia MPiPS z 8.01.1997 r. — niepełny kalendarzowy miesiąc pracy zaokrągla się w górę do pełnego miesiąca, a niepełny dzień urlopu — w górę do pełnego dnia (art. 1553 § 1 KP). Łączny urlop w roku kalendarzowym nie może przekroczyć 20 lub 26 dni (art. 1553 § 2 KP). Przy wątpliwościach skorzystaj z kalkulatora urlopu GOFIN i porównaj wynik systemu kadrowego.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 154 § 1 i § 2",
+      "reason": "Określa podstawowy wymiar urlopu (20/26 dni) oraz proporcjonalne ustalanie wymiaru przy niepełnym etacie."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 1553 § 1 i § 2",
+      "reason": "Reguluje zaokrąglanie niepełnego dnia urlopu w górę i limit roczny wymiaru urlopu."
+    },
+    {
+      "law_name": "Kodeks pracy",
+      "article_number": "art. 1542 § 1 i § 2",
+      "reason": "Stanowi że urlopu udziela się w dniach roboczych pracownika, a 1 dzień urlopu odpowiada 8 godzinom pracy."
+    }
+  ],
+  "edge_cases": [
+    "Pierwsza praca w życiu — pracownik nabywa 1/12 z 20 dni z upływem każdego przepracowanego miesiąca (art. 153 § 1 KP), z dołu, a nie z góry; przy 5/8 etatu na pół roku liczymy 1/12 × 20 × 5/8 za każdy miesiąc i sumujemy (z zaokrągleniem na koniec).",
+    "Zmiana etatu z 1/2 na 1/1 od 1 stycznia — niewykorzystany urlop z roku poprzedniego (np. 4 h) przechodzi w niezmienionej liczbie godzin jako zaległy; nie przelicza się go na nowy wymiar etatu (zasada praw nabytych, brak podstawy w KP do przeliczenia w górę).",
+    "Pracownik niepełnosprawny w stopniu znacznym/umiarkowanym ma normę 7 h dziennie — 1 dzień urlopu z KP wynosi dla niego 7 h (nie 8); urlop dodatkowy 10 dni nabywany jest dopiero po przepracowaniu 1 roku po dniu zaliczenia do stopnia (art. 19 ustawy o rehabilitacji).",
+    "Umowa zlecenie i B2B — urlop wypoczynkowy z KP NIE przysługuje (dotyczy wyłącznie umowy o pracę z art. 22 § 1 KP). Ewentualne dni wolne na zleceniu wynikają tylko z zapisów umownych i nie podlegają proporcjonalnemu przeliczaniu wg art. 154 KP."
+  ],
+  "common_mistakes": [
+    "Przeliczanie 26 dni × 8 h = 208 h i dzielenie przez dobową normę pracownika niepełnoetatowego (np. 208 / 6 = ~35 dni) — błąd: najpierw stosujemy proporcję do etatu (26 × 3/4 = 20 dni), dopiero potem mnożymy × 8 h.",
+    "Mylenie 'dni urlopu' z 'dniami pracy z urlopu' — pracownik na 1/2 etatu po 4 h dziennie pn-pt z 13 dniami urlopu w skali roku faktycznie weźmie 26 dni kalendarzowo wolnych po 4 h (104 h ÷ 4 h = 26), co nie zmienia wymiaru 13 dni.",
+    "Doliczanie dni urlopu wstecznie od 1 stycznia po nabyciu 26 dni stażu w trakcie roku — wymiar 26 dni przysługuje dopiero z dniem nabycia 10 lat stażu, wcześniejszy okres rozliczamy proporcjonalnie z 20 dni (§ 4 rozporządzenia MPiPS z 8.01.1997 r.)."
+  ],
+  "related_questions": [
+    "Jak wyliczyć ekwiwalent za niewykorzystany urlop wypoczynkowy przy niepełnym etacie i jakim współczynnikiem ekwiwalentu posługiwać się w 2026 r.?",
+    "Jak rozliczyć urlop wypoczynkowy pracownika, który w trakcie roku przechodzi z umowy o pracę na umowę zlecenie u tego samego pracodawcy?",
+    "Czy okres urlopu rodzicielskiego/wychowawczego wpływa na proporcjonalne obniżenie wymiaru urlopu wypoczynkowego za dany rok kalendarzowy?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "45",
+    "cluster_label": "Wymiar urlopu wypoczynkowego przy niepełnym etacie i zmianie wymiaru",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "452562129f68",
+      "294da0fbc478",
+      "2e4842adb815",
+      "f1b4303182d9",
+      "e85e0d39dbef",
+      "16f21fb29593",
+      "cc71fd97c055",
+      "03999a04eae0",
+      "0d0bec024422",
+      "f9de809ffabe",
+      "146590abf37f",
+      "01d29ed02735",
+      "daff20da5e6f",
+      "dfe2645cf307",
+      "96f5be950a68"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

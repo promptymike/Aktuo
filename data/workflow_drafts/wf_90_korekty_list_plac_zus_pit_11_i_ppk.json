@@ -1,0 +1,107 @@
+{
+  "id": "wf_90_korekty_list_plac_zus_pit_11_i_ppk",
+  "title": "Korekty list płac: rozliczenie ZUS, PIT-11 i PPK przy nadpłacie/niedopłacie wynagrodzenia",
+  "topic_area": "kadry",
+  "question_examples": [
+    "Pracownik przekroczył roczny limit 30-krotności składek emerytalno-rentowych (260 190 zł w 2026 r. zgodnie z obwieszczeniem MRPiPS) — jak zrobić korektę listy płac, deklaracji ZUS i czy korygować PIT-11 za rok poprzedni?",
+    "W 2025 r. pracownik otrzymał zawyżone wynagrodzenie (błędny dodatek stażowy), w 2026 r. zwrócił nadpłatę — czy koryguję wszystkie listy płac, DRA i PIT-11, czy rozliczam na bieżąco?",
+    "Po wypłacie wynagrodzenia pracownik dostarczył zwolnienie lekarskie (ZUS ZLA) za miesiąc już rozliczony — czy robić korektę listy płac, czy rozliczyć różnicę w kolejnym miesiącu?",
+    "Kadrowa nie naliczyła PPK za poprzednią wypłatę mimo aktywnego uczestnictwa pracownika — jak odkręcić sytuację i czy robić korektę listy płac?",
+    "Nie naliczyłam Funduszu Pracy przez 3 miesiące u jednego pracownika — jak skorygować DRA i uregulować niedopłatę bez bałaganu w księgowaniu?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal czy błąd dotyczy roku bieżącego czy zamkniętego roku podatkowego",
+      "detail": "Jeśli korekta dotyczy roku bieżącego (2026) — korygujesz listę płac, DRA i zaliczkę PIT-4 w bieżących rozliczeniach. Jeśli błąd dotyczy roku zamkniętego (np. 2025), a zwrot/wypłata następuje w 2026 — PIT-11 za 2025 CO DO ZASADY nie korygujesz (PIT-11 odzwierciedla stan faktyczny wypłat i pobranych zaliczek w danym roku), a rozliczenie księgujesz w roku zwrotu zgodnie z art. 41b ustawy PIT.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Skoryguj listę płac w module kadrowym i wygeneruj korektę DRA/RCA/RSA",
+      "detail": "W Comarch Optima: Kadry i Płace → Wypłaty pracowników → Anuluj wypłatę → Nalicz ponownie → Eksport do Płatnika jako korekta (identyfikator 02, 03...). W Symfonia Kadry i Płace: Płace → Listy płac → Korekta listy → wygeneruj RCA/RSA korygujące. Wyślij zestaw DRA + RCA + RSA za dany miesiąc z kolejnym numerem identyfikatora.",
+      "condition": null
+    },
+    {
+      "step": 3,
+      "action": "Rozlicz nadpłacone/niedopłacone składki ZUS w bieżącej deklaracji",
+      "detail": "Różnica składek (nadpłata lub niedopłata) wchodzi do salda rozliczenia z ZUS za bieżący miesiąc — nie wpłacasz/nie odzyskujesz osobno. Zwróconą pracownikowi kwotę netto składek społecznych (E+R+chor.) opodatkuj jako przychód w miesiącu zwrotu — zgodnie z art. 12 ustawy PIT stanowi przychód ze stosunku pracy. Od zwracanych składek pobierz zaliczkę na PIT i przelicz składkę zdrowotną od nowej podstawy.",
+      "condition": "if nadpłata składek E+R wynika z przekroczenia 30-krotności (260 190 zł w 2026 r.)"
+    },
+    {
+      "step": 4,
+      "action": "Ustal sposób rozliczenia zwrotu wynagrodzenia netto przez pracownika (nadpłata brutto)",
+      "detail": "Jeśli pracownik zwraca nadpłacone wynagrodzenie w kwocie brutto — w miesiącu zwrotu zgodnie z art. 41b ustawy PIT pomniejszasz podstawę opodatkowania o kwotę zwrotu (brutto, w części nieodliczonej wcześniej) i wykazujesz pomniejszenie w PIT-11 za rok zwrotu w pozycji 'kwoty zwrócone płatnikowi'. Jeśli pracownik zwrócił tylko netto — pracodawca odzyskuje składki i podatek z właściwych urzędów (korekta PIT-4R i DRA za okres pierwotny, jeśli dotyczy tego samego roku).",
+      "condition": "if doszło do nadpłaty wynagrodzenia"
+    },
+    {
+      "step": 5,
+      "action": "Podejmij decyzję o korekcie zaliczki PIT i PIT-11",
+      "detail": "Niedopłatę zaliczki PIT wynikającą z korekty składek ZUS w ciągu roku co do zasady pozostaw bez zmian — pracownik rozliczy to w zeznaniu rocznym (stanowisko dominujące w komentarzach społeczności i praktyce). PIT-11 za rok bieżący wykaże faktycznie pobrane zaliczki. Korekta PIT-11 za rok zamknięty jest konieczna tylko, gdy pierwotny PIT-11 zawierał błąd (zła kwota przychodu lub pobranej zaliczki na dzień 31.12) — nie robisz jej, gdy zdarzenie (zwrot, nadpłata składek) wydarzyło się w roku kolejnym.",
+      "condition": null
+    },
+    {
+      "step": 6,
+      "action": "Skoryguj PPK jeśli wpłaty nie zostały naliczone lub naliczone błędnie",
+      "detail": "Zgodnie z art. 28 ust. 1 ustawy o PPK wpłaty nalicza się od wynagrodzenia wypłaconego w danym miesiącu. Jeśli wpłata nie została odprowadzona — nalicz zaległą wpłatę pracownika i pracodawcy, potrąć część pracownika z najbliższej wypłaty (za zgodą lub w ramach korekty listy) i przekaż do instytucji finansowej z opisem okresu korekty. W Comarch Optima: Kadry → PPK → Wpłaty korygujące. Poinformuj pracownika pisemnie o przyczynie korekty.",
+      "condition": "if błąd dotyczy naliczenia/nienaliczenia PPK"
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj konieczność czynnego żalu i udokumentuj przyczynę korekty",
+      "detail": "Czynny żal (art. 16 KKS) nie jest wymagany, jeśli korekta dokumentów ZUS/podatkowych jest konsekwencją okoliczności niezależnych od płatnika (np. pracownik nie zgłosił dochodów z innego tytułu powodując przekroczenie 30-krotności). Przy niedopłacie Funduszu Pracy z winy płatnika — samo złożenie korekty DRA i dopłata odsetek wystarczy; czynny żal rozważ, jeśli niedopłata dotyczy zaliczek PIT i była znacząca. Zachowaj w aktach oświadczenie pracownika o zwrocie oraz wydruk korekty listy płac.",
+      "condition": null
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o podatku dochodowym od osób fizycznych",
+      "article_number": "art. 39",
+      "reason": "Określa obowiązek płatnika przesłania informacji PIT-11 odzwierciedlającej faktycznie pobrane zaliczki i wypłacone przychody w danym roku — podstawa dla rozstrzygnięcia kiedy korygować PIT-11, a kiedy rozliczyć zdarzenie w roku bieżącym."
+    }
+  ],
+  "edge_cases": [
+    "Były pracownik, z którym nie ma już stosunku pracy — zwrot nadpłaconego zasiłku/wynagrodzenia rozliczasz jako przychód w roku otrzymania zwrotu; nie korygujesz PIT-11 za lata poprzednie, a pracownikowi wystawiasz informację o kwocie zwróconej do odliczenia w zeznaniu rocznym (art. 26 ust. 1 pkt 5 ustawy PIT).",
+    "Przekroczenie 30-krotności podstawy E+R (260 190 zł w 2026 r.) wykryte przez ZUS po zamknięciu roku — koryguj wyłącznie RCA za miesiąc przekroczenia i IWA; PIT-11 za rok zamknięty nie korygujesz, bo zwrot składek jest przychodem w roku wypłaty zwrotu.",
+    "Urlop zamieniony na zwolnienie lekarskie po wypłacie — jeśli DRA za ten miesiąc już złożone, konieczna jest korekta listy płac i DRA; różnicę w wypłacie netto potrącasz w kolejnym miesiącu (za pisemną zgodą pracownika zgodnie z art. 91 KP, bo potrącenie z winy pracownika nie mieści się w katalogu art. 87 KP).",
+    "Umowa zlecenie vs umowa o pracę: przy zleceniu, gdy zleceniobiorca błędnie zadeklarował zbieg tytułów (minimalna krajowa 4 806 zł brutto w 2026 r.), korektę ZUS robisz na bieżąco bez korekty PIT-11/PIT-4R, bo podstawa podatkowa pozostaje prawidłowa — zmienia się tylko podział składek."
+  ],
+  "common_mistakes": [
+    "Automatyczne korygowanie PIT-11 za rok zamknięty przy każdej korekcie składek ZUS — PIT-11 pokazuje stan na 31.12, a zwrot/dopłata składek w roku kolejnym jest zdarzeniem bieżącym rozliczanym w roku zwrotu.",
+    "Potrącanie różnicy netto wynagrodzenia z kolejnej wypłaty bez pisemnej zgody pracownika — potrącenia z winy pracownika wykraczające poza art. 87 KP wymagają zgody na piśmie (art. 91 KP) pod rygorem roszczeń pracownika.",
+    "Zwrot pracownikowi tylko różnicy składek społecznych bez opodatkowania tej kwoty — zwrócone składki E+R/chor. stanowią przychód ze stosunku pracy w miesiącu zwrotu i podlegają PIT oraz przeliczeniu składki zdrowotnej."
+  ],
+  "related_questions": [
+    "Jak rozliczyć nadpłacony zasiłek chorobowy/macierzyński po kontroli ZUS, gdy pracownik już nie pracuje u płatnika?",
+    "Czy korekta listy płac z tytułu zamiany urlopu na zwolnienie lekarskie wymaga korekty zaliczki PIT-4R w miesiącu pierwotnym?",
+    "Jak rozliczyć zaległe wpłaty PPK za kilka miesięcy wstecz, gdy pracownik był zgłoszony, ale system nie naliczał wpłat?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": true,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "90",
+    "cluster_label": "Korekty list płac: ZUS, PIT-11 i PPK",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "d9766c664d17",
+      "dce1f3c18fbd",
+      "10e13c9cb919",
+      "b14ef826826a",
+      "2b30a4f3bd21",
+      "696fa8550919",
+      "5b1b552c9eb2",
+      "5c1d134a9d47",
+      "876f51e9b283",
+      "b37154f8b6a4",
+      "0872033c3f8e",
+      "e21b32d43825",
+      "9e39a5ccf99a",
+      "b5810c13aec3",
+      "b597462f0922"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "wf_66_ksiegowanie_faktur_zagranicznych_wnt_import_uslug_i_towarow",
+  "title": "Księgowanie faktur zagranicznych: kwalifikacja jako WNT, import usług lub import towarów",
+  "topic_area": "VAT",
+  "question_examples": [
+    "Mam fakturę od Media Markt z niemieckim VAT ID, kwoty w PLN netto/VAT/brutto — księguję jako zakup krajowy czy WNT?",
+    "Faktura zakupu towaru od kontrahenta niemieckiego z polskim NIP, towar dostarczony z Niemiec, stawka 0% — czy to WNT, czy transakcja krajowa?",
+    "Faktura z Microsoft z polskim NIP sprzedawcy (widoczna na białej liście) z VAT 23% — rozliczam jako import usług czy zakup krajowy?",
+    "Import towaru z Azji przez kuriera UPS/FedEx — co wpisuję do JPK_V7 z dokumentu SAD/PZC, a co z faktury kuriera i jak oznaczyć IMP?",
+    "Pierwsza faktura za usługę z zagranicy, kontrahent pisze że jest zwolniony z VAT — czy i tak rozliczam import usług z art. 28b?"
+  ],
+  "answer_steps": [
+    {
+      "step": 1,
+      "action": "Ustal charakter transakcji na podstawie trzech cech: przedmiot (towar/usługa), kraj wysyłki/świadczenia oraz status sprzedawcy.",
+      "detail": "Zadaj trzy pytania: (a) czy to towar czy usługa, (b) skąd fizycznie wyjeżdża towar lub gdzie faktycznie świadczona jest usługa, (c) jakim NIP-em posługuje się sprzedawca (kraj UE, kraj trzeci, polski NIP rejestracji VAT). Dopiero to decyduje o kwalifikacji — nie sama treść faktury ani sama stawka VAT.",
+      "condition": null
+    },
+    {
+      "step": 2,
+      "action": "Zakwalifikuj jako WNT, jeżeli towar jest fizycznie transportowany z innego państwa UE do Polski, sprzedawca jest podatnikiem VAT w UE, a nabywca jest zarejestrowany do VAT-UE.",
+      "detail": "WNT rozpoznajesz zgodnie z art. 9 ust. 1 ustawy o VAT. Sprawdź aktywny VAT-UE kontrahenta w VIES — jeśli sprzedawca nie podał numeru VAT-UE, ale towar fizycznie przyjechał z UE, i tak co do zasady rozliczasz WNT (sprzedawca powinien był wystawić FV bez VAT; jeśli naliczył lokalny VAT — żądaj korekty). Wykaż w JPK_V7 po stronie należnej i naliczonej (neutralnie, jeśli 100% odliczenie) oraz w VAT-UE (informacja podsumowująca).",
+      "condition": "if towar transportowany z państwa UE do Polski"
+    },
+    {
+      "step": 3,
+      "action": "Zakwalifikuj jako import usług, gdy usługodawca ma siedzibę poza Polską, a miejsce świadczenia określa art. 28b ustawy o VAT (B2B — kraj nabywcy).",
+      "detail": "Dotyczy usług typu SaaS, reklama, licencje, usługi doradcze, subskrypcje od Google/Meta/Amazon AWS itd. Rozliczasz VAT w Polsce metodą odwrotnego obciążenia — VAT należny + naliczony po tej samej stronie. Status VAT sprzedawcy (czynny/zwolniony) nie zmienia obowiązku rozliczenia importu usług po stronie polskiego nabywcy. Wyjątki: usługi związane z nieruchomością (art. 28e), wstęp na imprezy, transport osób, restauracyjne.",
+      "condition": "if usługa od podmiotu zagranicznego i miejsce świadczenia = Polska"
+    },
+    {
+      "step": 4,
+      "action": "Zakwalifikuj jako import towarów, jeżeli towar przyjeżdża spoza UE i powstaje dług celny — podstawę i VAT bierz z dokumentu celnego PZC/SAD, nie z faktury sprzedawcy.",
+      "detail": "W JPK_V7 wykaż podstawę opodatkowania i VAT z PZC/SAD, jako sprzedawcę wpisz zagranicznego dostawcę (np. chińskiego), numer dokumentu = numer zgłoszenia celnego, oznaczenie procedury: IMP. Fakturę kuriera (UPS/FedEx) za transport/odprawę księgujesz osobno — część usługowa z VAT 23% do odliczenia na zasadach ogólnych, a kwota VAT importowego zapłacona przez kuriera w Twoim imieniu NIE jest kosztem ani drugi raz VAT-em do odliczenia (VAT importowy odliczasz tylko raz, z PZC/SAD). W KPiR: wartość towaru z faktury + cło + inne opłaty niepodlegające zwrotowi.",
+      "condition": "if towar spoza UE i jest zgłoszenie celne"
+    },
+    {
+      "step": 5,
+      "action": "Zweryfikuj przypadek faktury z polskim NIP sprzedawcy zagranicznego (Microsoft, Google, Amazon PL) — traktuj jako transakcję krajową, nie import.",
+      "detail": "Jeśli sprzedawca zarejestrował się do VAT w Polsce i wystawia fakturę z polskim NIP i polskim VAT 23%, jest polskim podatnikiem dla danej transakcji — odliczasz VAT na zasadach ogólnych (art. 86 ustawy o VAT), bez WNT i bez importu usług. Nie wpisujesz tego do VAT-UE. Analogicznie: faktura z UK NIP, ale towar wysłany z magazynu w Polsce — to nie WNT (brak przemieszczenia wewnątrzwspólnotowego); jeżeli sprzedawca nie naliczył polskiego VAT, trzeba żądać korekty lub wyjaśnienia, bo prawdopodobnie powinien być zarejestrowany w PL.",
+      "condition": "if sprzedawca zagraniczny posługuje się polskim NIP"
+    },
+    {
+      "step": 6,
+      "action": "Zaksięguj dokument w programie księgowym z właściwym typem transakcji i oznaczeniami JPK_V7.",
+      "detail": "Comarch Optima: Rejestry VAT zakupu → rodzaj transakcji 'Wewnątrzunijna' (WNT), 'Import usług — podatnikiem jest nabywca', 'Import — odprawa celna' z numerem SAD/PZC; w Comarch dodaj oznaczenie IMP dla importu towarów. WFirma: Wydatki → Import usług spoza UE / WNT / Import towarów — program sam generuje dowód wewnętrzny z VAT należnym i naliczonym. Symfonia/Enova: analogiczne rejestry dedykowane WNT/IU/IMP. Kurs przeliczenia: średni NBP z dnia roboczego poprzedzającego powstanie obowiązku podatkowego (art. 31a ustawy o VAT).",
+      "condition": null
+    },
+    {
+      "step": 7,
+      "action": "Zweryfikuj zachowanie oznaczeń JPK przy korektach — faktura korygująca dziedziczy kwalifikację i oznaczenia (IMP, WNT) faktury pierwotnej.",
+      "detail": "Korekta WNT → nadal WNT w JPK_V7 i w VAT-UE (informacja podsumowująca koryguje pierwotny okres lub bieżący — zależnie od przyczyny). Korekta importu towarów z PZC/SAD → oznaczenie IMP pozostaje. Wyjątek: jeśli pierwotnie błędnie zakwalifikowano transakcję (np. jako krajową zamiast WNT), konieczna jest korekta JPK_V7 z właściwą kwalifikacją od podstaw, a nie zwykła faktura korygująca.",
+      "condition": "if pojawia się faktura korygująca do transakcji zagranicznej"
+    }
+  ],
+  "legal_anchors": [
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 9 ust. 1",
+      "reason": "Definicja WNT — podstawa kwalifikacji transakcji z UE jako wewnątrzwspólnotowe nabycie towarów."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 28b",
+      "reason": "Miejsce świadczenia usług B2B — podstawa rozliczenia importu usług przez nabywcę w Polsce."
+    },
+    {
+      "law_name": "Ustawa o VAT",
+      "article_number": "art. 86 ust. 10, 10b pkt 1 i 11",
+      "reason": "Moment powstania prawa do odliczenia VAT naliczonego z WNT i importu usług — neutralność rozliczenia."
+    }
+  ],
+  "edge_cases": [
+    "Faktura z UK/DE NIP, ale towar wysyłany z magazynu w Polsce (Amazon FBA) — to NIE WNT; jeśli sprzedawca nie naliczył polskiego VAT, powinien zarejestrować się do VAT w PL, nabywca nie rozlicza WNT ani odwrotnego obciążenia.",
+    "Usługa budowlana/remontowa związana z nieruchomością za granicą — miejsce świadczenia wg art. 28e (lokalizacja nieruchomości), a nie art. 28b; dla polskiego wykonawcy zwolnionego z VAT świadczącego usługę na nieruchomości w SK → rejestracja i rozliczenie VAT w Słowacji (lub reverse charge u słowackiego nabywcy wg przepisów SK).",
+    "Faktura z Azji/USA za usługę od podmiotu bez siedziby w UE (np. subskrypcja SaaS) — to nadal import usług rozliczany w Polsce, nawet jeśli sprzedawca nie ma żadnego numeru VAT; nie wykazuje się w VAT-UE (tylko dla UE), ale ujmuje w JPK_V7.",
+    "Nabywca zwolniony podmiotowo z VAT (art. 113) kupujący usługę z zagranicy — i tak rozlicza import usług (VAT-9M i rejestracja VAT-UE przy przekroczeniu 50 000 zł w WNT lub natychmiast dla usług z art. 28b); nie ma prawa do odliczenia."
+  ],
+  "common_mistakes": [
+    "Rozliczanie jako WNT faktury z zagranicznym VAT — jeśli sprzedawca naliczył lokalny VAT (np. 19% DE), nabywca NIE odlicza tego VAT w Polsce; trzeba żądać korekty faktury na 0% lub odzyskiwać VAT przez VAT-REF.",
+    "Odliczanie VAT z faktury kuriera (UPS/FedEx), na której ujęto VAT importowy zapłacony w imieniu nabywcy — VAT importowy odlicza się wyłącznie z dokumentu celnego PZC/SAD, a nie z refakturowania przez kuriera; w przeciwnym razie powstaje podwójne odliczenie.",
+    "Pomijanie informacji podsumowującej VAT-UE przy WNT — każda transakcja WNT od kontrahenta z aktywnym VAT-UE musi być wykazana w VAT-UE, nawet jeśli nabywca odlicza 100% VAT i efekt jest neutralny."
+  ],
+  "related_questions": [
+    "Jak rozliczyć WDT (wewnątrzwspólnotową dostawę towarów) dla kontrahenta z UE bez aktywnego numeru VAT-UE — stawka 0% czy krajowa?",
+    "Jak księgować faktury z procedury OSS/IOSS przy sprzedaży do konsumentów w UE i czy kupujący B2B w Polsce może odliczyć z nich VAT?",
+    "Jak rozliczyć zaliczkę zapłaconą kontrahentowi z UE przed dostawą towaru — kiedy powstaje obowiązek podatkowy z tytułu WNT?"
+  ],
+  "last_verified_at": "2026-04-18",
+  "draft": true,
+  "requires_manual_legal_anchor": false,
+  "generation_metadata": {
+    "model": "claude-opus-4-7",
+    "cluster_id": "66",
+    "cluster_label": "Księgowanie faktur zagranicznych: WNT, import usług i towarów",
+    "generated_at": "2026-04-18T00:00:00Z",
+    "source_post_ids": [
+      "1f86f654be0f",
+      "cd8d52f0b2b3",
+      "e41385475e6c",
+      "3d17480e5bc4",
+      "165403f5288c",
+      "b29f633a06e1",
+      "7a04c2a6c598",
+      "60587e8cc1c5",
+      "0c9ff06febdc",
+      "0fdadcfbd1c2",
+      "62b5efc94dde",
+      "01daef7f69dc",
+      "feb8f28aebf3",
+      "3f68b87a0d37",
+      "9f9eee388c46"
+    ],
+    "batch": "batch2",
+    "used_web_search": false
+  }
+}
