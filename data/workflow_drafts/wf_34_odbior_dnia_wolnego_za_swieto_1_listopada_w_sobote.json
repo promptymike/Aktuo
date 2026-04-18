@@ -138,7 +138,9 @@
         "corrective_suggestion": "Dodać w drafcie explicite odniesienie do ustawy z dnia 18 stycznia 1951 r. o dniach wolnych od pracy (Dz.U. z 2020 r. poz. 1920 ze zm.), art. 1 pkt 11, który wymienia 11 listopada – Narodowe Święto Niepodległości jako dzień ustawowo wolny od pracy, co potwierdziłoby aktualność danych.",
         "verified_at": "2026-04-18T12:22:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -149,7 +151,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:22:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -182,7 +186,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 5 lub jako osobny krok informacji o pracowniku, którego stosunek pracy ustał przed wyznaczonym dniem odbioru (np. zwolnionym 5.11): czy pracodawca ma obowiązek wypłaty ekwiwalentu lub innego świadczenia, czy też prawo do odbioru wygasa wraz z ustaniem zatrudnienia.",
         "verified_at": "2026-04-18T12:22:51Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -194,7 +200,9 @@
         "corrective_suggestion": "Rozważ usunięcie lub uogólnienie kroku 6 — zamiast podawać konkretne ścieżki menu i symbole dla Comarch Optima, opisz ogólną zasadę (oznacz dzień jako 'wolny z rozkładu/odbiór za święto', nie jako nieobecność) i zaznacz, że konkretna ścieżka zależy od wersji i konfiguracji systemu. Można dodać adnotację: 'Szczegółowa ścieżka może się różnić w zależności od wersji oprogramowania — zweryfikuj w dokumentacji producenta lub z administratorem systemu.'",
         "verified_at": "2026-04-18T12:22:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -206,7 +214,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto uzupełnić edge case o informację: (1) pracodawca powinien udokumentować fakt przepadku dnia wolnego w dokumentacji kadrowej (np. adnotacja w harmonogramie lub zarządzeniu), (2) pracownik nie ma roszczenia o ekwiwalent pieniężny za przepadły dzień wolny z tytułu art. 130 § 2 KP, gdyż przepis ten reguluje jedynie wymiar czasu pracy, a nie prawo do dodatkowego wynagrodzenia — warto powołać się na art. 130 § 2 KP i ewentualnie orzecznictwo SN potwierdzające brak ekwiwalentu.",
         "verified_at": "2026-04-18T12:23:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -240,7 +250,9 @@
         "corrective_suggestion": "Warto doprecyzować w kroku 7, że wymóg co najmniej 1 tygodnia wyprzedzenia nie wynika wprost z przepisów KP (które nie określają minimalnego terminu powiadomienia dla tego przypadku), lecz jest rekomendacją praktyczną opartą na zasadach ogólnych (art. 150 KP — rozkład czasu pracy podawany z wyprzedzeniem). Pracodawca może wyznaczyć dzień wolny z krótszym wyprzedzeniem, jednak naraża się na zarzut naruszenia zasad organizacji pracy.",
         "verified_at": "2026-04-18T12:23:30Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
   },
@@ -252,5 +264,19 @@
       "source": "v2",
       "source_url": "https://ksiegowosc.infor.pl/zus-kadry/urlopy/7491543,dodatkowy-dzien-wolny-za-swieto-wypadajace-w-sobote-w-2026-r-wyjasnienia-pip.html"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 6,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 1,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 1
+    }
+  }
 }

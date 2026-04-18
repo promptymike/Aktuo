@@ -152,7 +152,9 @@
         "corrective_suggestion": "Aby rozwiać wątpliwość, należy zweryfikować tekst jednolity ustawy zasiłkowej (Dz.U. z aktualnego roku) pod kątem ewentualnych nowelizacji art. 36–42 i dodać w drafcie adnotację o dacie weryfikacji aktualności przepisów lub powołać się na konkretny tekst jednolity.",
         "verified_at": "2026-04-18T12:08:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "step_contradiction",
@@ -163,7 +165,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:08:56Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -175,7 +179,9 @@
         "corrective_suggestion": "Jeśli draft ma być uniwersalny, warto dodać ogólną wskazówkę: 'W innych systemach kadrowo-płacowych (Enova, Teta, Sage itp.) należy odszukać parametr odpowiadający podstawie wymiaru zasiłku i upewnić się, że system stosuje pomniejszenie o 13,71% oraz prawidłowo uzupełnia miesiące niepełne zgodnie z art. 36–42 ustawy zasiłkowej.'",
         "verified_at": "2026-04-18T12:09:04Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -187,7 +193,9 @@
         "corrective_suggestion": "Należy ujednolicić kwotę w drafcie i dodać wyjaśnienie zasady zaokrąglenia, np. 'zaokrąglone do pełnych złotych zgodnie z praktyką ZUS' lub podać dokładną kwotę 4 147,07 zł i wskazać podstawę zaokrąglenia.",
         "verified_at": "2026-04-18T12:09:11Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -199,7 +207,9 @@
         "corrective_suggestion": "Jeśli świadczenie rehabilitacyjne jest istotnym przypadkiem użycia tego workflow, warto dodać krok lub podkrok wyjaśniający, że świadczenie rehabilitacyjne jest regulowane odrębnymi przepisami (art. 18–21 ustawy zasiłkowej) i stanowi osobny workflow, albo explicite wskazać, że edge case z punktu 1 jest jedynie informacją uzupełniającą, a nie częścią procedury głównej.",
         "verified_at": "2026-04-18T12:09:18Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -222,7 +232,9 @@
         "corrective_suggestion": "W kroku 6 warto dodać wyjaśnienie: dla pracownika niepełnoetatowego minimum ustala się proporcjonalnie do wymiaru czasu pracy (np. 3/4 etatu → minimum × 3/4), i zasada ta obowiązuje od razu po zmianie etatu, niezależnie od liczby miesięcy po zmianie.",
         "verified_at": "2026-04-18T12:09:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -246,8 +258,25 @@
         "corrective_suggestion": "Należy zweryfikować kwotę minimalnego wynagrodzenia za 2025 r. (4 666 zł brutto od 01.2025 lub 4 300 zł od 01.2025 — zależnie od okresu) oraz za 2026 r. z oficjalnych rozporządzeń Rady Ministrów, a następnie przeliczyć wartości po odjęciu 13,71% i zaktualizować obie kwoty w dokumencie.",
         "verified_at": "2026-04-18T12:09:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 1,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 3,
+      "low": 4
+    }
   }
 }

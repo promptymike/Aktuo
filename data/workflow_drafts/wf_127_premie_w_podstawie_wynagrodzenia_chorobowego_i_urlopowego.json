@@ -173,7 +173,9 @@
         "corrective_suggestion": "W drafcie należy podać pełną nazwę rozporządzenia: 'rozporządzenie Ministra Pracy i Polityki Socjalnej z dnia 8 stycznia 1997 r. w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego, ustalania i wypłacania wynagrodzenia za czas urlopu oraz ekwiwalentu pieniężnego za urlop (Dz.U. 1997 nr 2 poz. 14 ze zm.)' oraz zweryfikować aktualność numeracji §§ 6–8 w tekście jednolitym obowiązującym na 2026 r.",
         "verified_at": "2026-04-18T12:07:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -185,7 +187,9 @@
         "corrective_suggestion": "Warto dodać w kroku 6 zastrzeżenie: 'Nazwy flag i ścieżki menu mogą różnić się w zależności od wersji oprogramowania — przed konfiguracją zweryfikuj aktualne oznaczenia w dokumentacji dostawcy lub module pomocy programu.'",
         "verified_at": "2026-04-18T12:07:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -197,7 +201,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona jako problem redakcyjny, krok 2 można przeformułować na: 'Jeśli premia jest pomniejszana za czas choroby → wchodzi do podstawy; jeśli wypłacana w pełnej wysokości niezależnie od choroby → nie wchodzi do podstawy' — eliminując podwójną negację.",
         "verified_at": "2026-04-18T12:07:47Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -230,7 +236,9 @@
         "corrective_suggestion": "Warto dodać w kroku 7 lub jako osobny krok wyjaśnienie, że do podstawy wymiaru zasiłku/wynagrodzenia chorobowego za niezdolność przypadającą po 1.01.2026 wlicza się premie faktycznie wypłacone w 12 miesiącach poprzedzających (art. 36 ustawy zasiłkowej), niezależnie od tego, czy były wypłacone na podstawie 'starego' czy 'nowego' regulaminu — liczy się fakt wypłaty i jej charakter (pomniejszana/niepomniejszana) w danym miesiącu.",
         "verified_at": "2026-04-18T12:08:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -264,7 +272,9 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać edge case: 'Premia w formie akcji lub opcji na akcje — co do zasady nie wchodzi do podstawy wymiaru zasiłku chorobowego, gdyż jej wartość nie jest pomniejszana za okres choroby w rozumieniu art. 41 ustawy zasiłkowej; w razie wątpliwości należy wystąpić o interpretację do ZUS lub oprzeć się na indywidualnej interpretacji podatkowej dotyczącej momentu i wartości przychodu.'",
         "verified_at": "2026-04-18T12:08:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -276,8 +286,24 @@
         "corrective_suggestion": "W kroku 3 należy dodać zastrzeżenie: miesiące, w których pracownik nie przepracował ani jednego dnia (np. był chory przez cały miesiąc), są pomijane przy obliczaniu podstawy wymiaru zasiłku (art. 38 ust. 2 ustawy zasiłkowej) — nie uzupełnia się ich do 'pełnej kwoty', lecz wyklucza z podstawy.",
         "verified_at": "2026-04-18T12:08:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 6,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 1
+    }
   }
 }

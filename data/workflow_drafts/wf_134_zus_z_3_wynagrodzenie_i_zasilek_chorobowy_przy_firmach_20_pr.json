@@ -157,7 +157,9 @@
         "corrective_suggestion": "Dodać w kroku 4 i 5 wyraźne oznaczenie kontekstu: krok 4 = 'dotyczy wyłącznie sytuacji gdy zatrudnienie trwa', krok 5 = 'dotyczy wyłącznie sytuacji gdy umowa wygasła w trakcie niezdolności — wtedy Z-3 składa się jednorazowo za cały okres po ustaniu, bez konieczności ponownego składania przy każdym kolejnym L4 po ustaniu zatrudnienia'.",
         "verified_at": "2026-04-18T12:10:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -169,7 +171,9 @@
         "corrective_suggestion": "W kroku 4 należy dodać wyjaśnienie: jeśli przerwa między zwolnieniami wynosi mniej niż 60 dni i niezdolność spowodowana jest tą samą chorobą, okresy sumują się do limitu 33/14 dni (art. 9 ust. 2 ustawy zasiłkowej); jeśli przerwa wynosi co najmniej 60 dni lub niezdolność wynika z innej choroby — licznik 33/14 dni resetuje się.",
         "verified_at": "2026-04-18T12:10:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -181,7 +185,9 @@
         "corrective_suggestion": "Zweryfikować w oficjalnym katalogu formularzy ZUS (zus.pl) czy druk ZAS-53 istnieje i dotyczy zasiłku chorobowego. Jeśli nie — zastąpić go właściwym formularzem (np. Z-3 z adnotacją 'kontynuacja') i usunąć odniesienie do ZAS-53 lub zastąpić go prawidłową nazwą druku.",
         "verified_at": "2026-04-18T12:10:29Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -193,7 +199,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie uznana za istotną, warto dodać zastrzeżenie w drafcie: 'Ścieżka menu może ulec zmianie — w razie wątpliwości skorzystaj z wyszukiwarki dokumentów w PUE ZUS lub aktualnej instrukcji ZUS dostępnej na zus.pl'.",
         "verified_at": "2026-04-18T12:10:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -205,7 +213,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta domenowego, warto dodać do edge case'u wskazówkę: w razie braku świadectwa pracy lub niejasności co do liczby wykorzystanych dni — pracodawca może zweryfikować dane w ZUS (platforma PUE, historia ubezpieczonego) lub poprosić pracownika o oświadczenie pisemne, a w razie wątpliwości złożyć Z-3 od pierwszego dnia i poinformować ZUS o niepewności co do limitu.",
         "verified_at": "2026-04-18T12:10:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -217,7 +227,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto dodać do kroku 2 notę: 'Przy zmiennym wynagrodzeniu podstawę stanowi średnia z 12 miesięcy poprzedzających miesiąc zachorowania (art. 36 ustawy zasiłkowej); miesiące z urlopem bezpłatnym lub niepełnym wymiarem czasu pracy podlegają wyłączeniu lub uzupełnieniu zgodnie z art. 38-40 ustawy zasiłkowej.'",
         "verified_at": "2026-04-18T12:10:53Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -229,7 +241,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać zastrzeżenie w drafcie: 'Ścieżki menu mogą różnić się w zależności od wersji oprogramowania — w przypadku systemów chmurowych (np. Comarch ERP XT, Symfonia Online) należy skonsultować się z dokumentacją dostawcy lub działem IT.'",
         "verified_at": "2026-04-18T12:11:01Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -252,8 +266,24 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł: warto dodać krok lub adnotację wyjaśniającą, że przy zmianie tytułu ubezpieczenia z UoP na umowę zlecenia w trakcie L4 należy złożyć Z-3a (dla zleceniobiorcy) zamiast Z-3, a zmiana druku następuje od dnia zmiany tytułu ubezpieczenia, z jednoczesnym rozliczeniem okresu na UoP na Z-3.",
         "verified_at": "2026-04-18T12:11:15Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "step_contradiction": 1,
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 3
+    }
   }
 }

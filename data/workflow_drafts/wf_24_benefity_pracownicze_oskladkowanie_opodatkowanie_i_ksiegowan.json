@@ -157,7 +157,9 @@
         "corrective_suggestion": "W kroku 2 warto dodać wyjaśnienie, że zgodnie z interpretacjami ZUS i orzecznictwem sądowym warunek 'ceny niższej niż detaliczna' jest spełniony nawet przy symbolicznej dopłacie pracownika (np. 1 gr), o ile regulamin wyraźnie przewiduje taką odpłatność — jednak zaleca się konsultację z ZUS lub doradcą w przypadku wątpliwości co do akceptowalności symbolicznych kwot.",
         "verified_at": "2026-04-18T12:19:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -190,7 +192,9 @@
         "corrective_suggestion": "W kroku 6 warto doprecyzować, że refaktura części kosztów na pracownika (gdy pracownik jest podatnikiem VAT lub gdy pracodawca odsprzedaje usługę) wymaga wystawienia faktury VAT zgodnie z art. 106b ustawy o VAT, natomiast jeśli pracownik jest osobą fizyczną nieprowadzącą działalności, rozliczenie może nastąpić przez notę obciążeniową lub potrącenie z wynagrodzenia bez konieczności wystawiania faktury VAT — należy wskazać, który przypadek dotyczy typowego scenariusza pracowniczego.",
         "verified_at": "2026-04-18T12:19:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -202,7 +206,9 @@
         "corrective_suggestion": "Jeśli draft ma być precyzyjny, warto dodać zastrzeżenie że nazwy ścieżek menu i terminologia składników mogą różnić się w zależności od wersji oprogramowania, oraz zalecić weryfikację w aktualnej dokumentacji producenta lub z administratorem systemu.",
         "verified_at": "2026-04-18T12:19:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -214,7 +220,9 @@
         "corrective_suggestion": "Jeśli draft powołuje się na interpretację KIS dotyczącą systemów kafeteryjnych MyBenefit, należy podać konkretny numer interpretacji indywidualnej (np. 0113-KDIPT2-3.4011.XXX.20XX.X.XX) oraz datę jej wydania, lub usunąć odwołanie do interpretacji i zastąpić je bezpośrednim odwołaniem do przepisu (§ 2 ust. 1 pkt 26 rozporządzenia składkowego z 18.12.1998).",
         "verified_at": "2026-04-18T12:19:58Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -226,7 +234,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto rozszerzyć edge case o wskazówkę: wartość rynkową najmu ustala się na podstawie cen rynkowych podobnych lokali w danej lokalizacji (np. ogłoszenia, operaty szacunkowe), a ZUS w razie wątpliwości może zakwestionować zaniżoną wartość — rekomendowane jest posiadanie dokumentacji potwierdzającej przyjętą wartość (np. wydruki z portali nieruchomości lub operat rzeczoznawcy).",
         "verified_at": "2026-04-18T12:20:06Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -238,7 +248,9 @@
         "corrective_suggestion": "Jeśli chcemy zachować ostrożność, warto dodać zastrzeżenie: 'Dotyczy kart zasilanych środkami pieniężnymi bez ograniczeń kategorii wydatków; karty z limitami na konkretne kategorie (np. wyłącznie posiłki) mogą być przedmiotem odmiennych interpretacji — rekomendowane wystąpienie z wnioskiem o interpretację indywidualną.'",
         "verified_at": "2026-04-18T12:20:15Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -250,7 +262,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy w kroku 7 doprecyzować: '13,71% to suma składek emerytalno-rentowych i chorobowej po stronie pracownika (9,76% + 1,5% + 2,45%), a 9% to składka zdrowotna — łącznie 22,71% po stronie pracownika' oraz dodać zastrzeżenie o aktualności stawek dla roku podatkowego 2026.",
         "verified_at": "2026-04-18T12:20:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -262,7 +276,9 @@
         "corrective_suggestion": "Warto rozważyć podanie pełnego tytułu rozporządzenia przy pierwszym odwołaniu: 'Rozporządzenie Ministra Pracy i Polityki Społecznej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe (Dz.U. z 1998 r. Nr 161, poz. 1106 ze zm.)' — uwaga: pełny tytuł dotyczy składek emerytalno-rentowych, nie 'społecznych' ogólnie, co warto sprawdzić.",
         "verified_at": "2026-04-18T12:20:32Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "missing_critical_info",
@@ -274,7 +290,9 @@
         "corrective_suggestion": "W kroku 6 warto doprecyzować, że stawka 8% VAT na usługi rekreacyjne (np. Multisport) wynika z załącznika nr 3 poz. 179 do ustawy o VAT i dotyczy usług sklasyfikowanych w PKWiU 93.1 (usługi związane ze sportem). Należy zaznaczyć, że faktyczna stawka zależy od klasyfikacji usługi przez dostawcę i może się różnić w zależności od zakresu pakietu (np. pakiety łączone z usługami medycznymi mogą podlegać innej stawce lub zwolnieniu).",
         "verified_at": "2026-04-18T12:20:41Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -285,8 +303,24 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:20:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 10,
+    "by_type": {
+      "step_contradiction": 2,
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 2,
+      "legal_anchor_uncertainty": 1
+    },
+    "severity_breakdown": {
+      "medium": 8,
+      "low": 2
+    }
   }
 }

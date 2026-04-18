@@ -144,7 +144,9 @@
         "corrective_suggestion": "Zaleca się weryfikację brzmienia art. 154² § 2 KP w aktualnym tekście jednolitym. Jeśli przepis rzeczywiście stanowi, że 1 dzień urlopu = 8 godzin (lub odpowiada dobowej normie czasu pracy pracownika), cytowanie jest prawidłowe. Warto rozważyć doprecyzowanie w drafcie, że '8 godzin' wynika z dobowej normy czasu pracy (art. 129 KP) stosowanej przez odesłanie w art. 154² § 2 KP, co zwiększa precyzję prawną.",
         "verified_at": "2026-04-18T12:25:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -156,7 +158,9 @@
         "corrective_suggestion": "Należy zweryfikować w systemie ISAP (isap.sejm.gov.pl) czy rozporządzenie MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) pozostaje w mocy w 2026 r. i czy nie zostało zmienione lub zastąpione nowszym aktem. Jeśli rozporządzenie jest nadal obowiązujące, warto dodać adnotację potwierdzającą jego aktualność; jeśli zostało zmienione — zaktualizować cytowania w krokach 5 i 7.",
         "verified_at": "2026-04-18T12:25:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -168,7 +172,9 @@
         "corrective_suggestion": "Jeśli draft ma być aktualny na 2026 r., warto dodać adnotację że art. 15 i art. 19 ustawy rehabilitacyjnej należy zweryfikować pod kątem ewentualnych nowelizacji związanych z reformą systemu orzecznictwa o niepełnosprawności (planowaną na lata 2024-2026).",
         "verified_at": "2026-04-18T12:25:23Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -213,7 +219,9 @@
         "corrective_suggestion": "Rozważyć dodanie kroku dotyczącego ekwiwalentu pieniężnego za niewykorzystany urlop przy rozwiązaniu umowy (art. 171 § 1 KP), z uwzględnieniem specyfiki obliczania ekwiwalentu dla pracownika niepełnoetatowego zgodnie z rozporządzeniem MPiPS z 8.01.1997 r.",
         "verified_at": "2026-04-18T12:25:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -225,7 +233,9 @@
         "corrective_suggestion": "Warto dodać w kroku 5 wyjaśnienie, że urlop zaległy (z poprzedniego roku) nie podlega przeliczeniu przy zmianie wymiaru etatu — zachowuje swoją pierwotną liczbę dni niezależnie od nowego etatu, co może skutkować sytuacją, gdy zaległy urlop przekracza bieżący roczny wymiar. Należy jednak zweryfikować to z aktualnym orzecznictwem lub stanowiskiem PIP, gdyż KB nie pokrywa tej kwestii wprost.",
         "verified_at": "2026-04-18T12:25:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -237,7 +247,9 @@
         "corrective_suggestion": "Rozważ usunięcie konkretnych ścieżek menu z drafta lub dodanie zastrzeżenia: 'Ścieżki menu mogą różnić się w zależności od wersji oprogramowania — należy zweryfikować w aktualnej dokumentacji producenta.' Alternatywnie opisz funkcjonalność ogólnie (np. 'moduł nieobecności/planowania pracy') bez wskazywania konkretnych ścieżek.",
         "verified_at": "2026-04-18T12:26:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -249,7 +261,9 @@
         "corrective_suggestion": "Jeśli draft ma być odporny na zmiany dostępności zewnętrznych narzędzi, warto zastąpić konkretną nazwę 'kalkulator urlopu GOFIN' ogólniejszym sformułowaniem, np. 'kalkulator urlopu dostępny na stronach wydawnictw kadrowych (np. GOFIN, Infor)' lub usunąć referencję do konkretnego narzędzia i zastąpić ją opisem metody ręcznej weryfikacji.",
         "verified_at": "2026-04-18T12:26:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -261,7 +275,9 @@
         "corrective_suggestion": "Jeśli art. 19 ustawy o rehabilitacji nie różnicuje sytuacji nowo zatrudnionego od już zatrudnionego pracownika (co jest powszechnie przyjętą interpretacją — reguła dotyczy każdego pracownika niezależnie od momentu zatrudnienia), warto dodać w edge case wyjaśnienie: 'Zasada ta dotyczy każdego pracownika — zarówno nowo zatrudnionego po uzyskaniu orzeczenia, jak i pracownika już zatrudnionego, który uzyskał orzeczenie w trakcie zatrudnienia; w obu przypadkach liczy się rok od dnia zaliczenia do stopnia niepełnosprawności.'",
         "verified_at": "2026-04-18T12:26:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -296,5 +312,19 @@
       "applied_at": "2026-04-18T14:21:19Z",
       "source": "v1"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "legal_anchor_uncertainty": 2,
+      "outdated_data_risk": 1,
+      "missing_critical_info": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 1
+    }
+  }
 }

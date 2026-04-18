@@ -155,7 +155,9 @@
         "corrective_suggestion": "Dodaj zastrzeżenie w drafcie przy wycenie WFirma: 'cena orientacyjna wg cennika z [data weryfikacji] — przed zakupem zweryfikuj aktualny cennik na wfirma.pl/biuro-rachunkowe', aby użytkownik wiedział, że kwota wymaga potwierdzenia u dostawcy.",
         "verified_at": "2026-04-18T12:14:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -167,7 +169,9 @@
         "corrective_suggestion": "W kroku 4 warto explicite zaznaczyć, że WFirma obsługuje wyłącznie KPiR/ryczałt i nie posiada modułu pełnej księgowości (Księgi Handlowej), a zatem dla biur obsługujących oba typy klientów rekomendacja z kroku 3 ('wybierz jednego dostawcę z obydwoma modułami') wskazuje na Comarch Optima lub Enova365 — nie WFirmę.",
         "verified_at": "2026-04-18T12:14:37Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -179,7 +183,9 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać w kroku 2 warunek: tryb offline24 jest krytyczny dla klientów działających w miejscach z niestabilnym łączem internetowym lub dla biur obsługujących klientów z sektorów regulowanych wymagających ciągłości operacyjnej — w takich przypadkach weryfikacja dostępności offline24 w programie powinna być wymogiem obligatoryjnym, nie opcjonalnym.",
         "verified_at": "2026-04-18T12:14:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -191,7 +197,9 @@
         "corrective_suggestion": "Warto dodać w kroku 6 wyjaśnienie: JPK_KR_PD jest obowiązkiem podatnika (klienta CIT), ale biuro rachunkowe jako podmiot prowadzący księgi jest faktycznie odpowiedzialne za techniczną generację i wysyłkę pliku — należy wskazać, że program biura musi obsługiwać generowanie JPK_KR_PD w imieniu klientów CIT spełniających kryteria.",
         "verified_at": "2026-04-18T12:14:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -203,7 +211,9 @@
         "corrective_suggestion": "Zweryfikować istnienie produktu 'Mała Księgowość Rzeczpospolitej' w zewnętrznych źródłach (strona Rzeczpospolitej, rejestry oprogramowania). Jeśli produkt nie istnieje lub jest nieaktualny, zastąpić go potwierdzonym odpowiednikiem, np. 'Mała Księgowość' firmy Rzeczpospolita (jeśli istnieje) lub innym weryfikowalnym programem dla KPiR/ryczałtu.",
         "verified_at": "2026-04-18T12:14:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -215,7 +225,9 @@
         "corrective_suggestion": "Warto uściślić zapis jako 'Fakt (warianty: Zero i Optima)' lub podać pełne nazwy produktów z odniesieniem do oferty producenta, aby uniknąć niejednoznaczności dla czytelnika.",
         "verified_at": "2026-04-18T12:15:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -227,7 +239,9 @@
         "corrective_suggestion": "Zaleca się zastąpienie 'Comarch Optima w Chmurze Standard' ogólniejszym sformułowaniem 'Comarch Optima w wariancie chmurowym' lub dodanie przypisu wskazującego na konieczność weryfikacji aktualnej oferty Comarch SA, gdyż nazwy wariantów produktowych mogą się zmieniać.",
         "verified_at": "2026-04-18T12:15:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -239,7 +253,9 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto doprecyzować w edge case 'JDG na ryczałcie', że e-Mikrofirma MF obsługuje wyłącznie wystawianie faktur ustrukturyzowanych (wysyłkę do KSeF), natomiast pobieranie faktur zakupowych z KSeF oraz tryb offline24 mogą wymagać dodatkowych narzędzi lub weryfikacji aktualnych możliwości aplikacji na stronie MF.",
         "verified_at": "2026-04-18T12:15:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -251,7 +267,9 @@
         "corrective_suggestion": "Doprecyzować edge case: 'Spółka transportowa prowadząca transport międzynarodowy (rozrachunki w walutach obcych)' — art. 30 ust. 2 UoR dotyczy wszystkich jednostek z transakcjami walutowymi, nie tylko transportu, więc warunek stosowania powinien być powiązany z faktem występowania walut obcych, a nie z branżą transportową jako taką.",
         "verified_at": "2026-04-18T12:15:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -263,7 +281,9 @@
         "corrective_suggestion": "W kroku 7 warto doprecyzować: 'Sprawdź, czy program automatycznie przenosi oznaczenia GTU/TP/MPP z faktury pierwotnej na korektę (tryb automatyczny) czy wymaga ręcznego potwierdzenia przez użytkownika — oba podejścia są dopuszczalne, jednak automatyczne dziedziczenie zmniejsza ryzyko błędu w JPK_V7.'",
         "verified_at": "2026-04-18T12:15:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -275,7 +295,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta domenowego, warto dodać w step 3 lub jako osobny krok uwagę: 'Dla biur jednoosobowych (solo-praktykant obsługujący do ~15-20 klientów) wystarczające mogą być rozwiązania uproszczone (np. WFirma Solo, inFakt dla biur) bez modułów wielostanowiskowych — zweryfikuj czy licencja biurowa dostawcy wymaga minimalnej liczby użytkowników.'",
         "verified_at": "2026-04-18T12:15:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
   },
@@ -287,5 +309,19 @@
       "source": "v2",
       "source_url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/podstawy-prawne-oraz-kluczowe-terminy/"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 11,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 4,
+      "hallucination_risk": 3,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 4
+    }
+  }
 }

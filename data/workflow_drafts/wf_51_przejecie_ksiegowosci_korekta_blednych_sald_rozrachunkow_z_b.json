@@ -182,7 +182,9 @@
         "corrective_suggestion": "Można doprecyzować krok 3 przez dodanie klauzuli: 'jeśli polityka rachunkowości nie określa progu kwotowego, stosuj próg 0,5–1% sumy bilansowej jako wartość domyślną do czasu aktualizacji polityki', co eliminuje niespójność między krokami 3 i 4.",
         "verified_at": "2026-04-18T12:30:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -215,7 +217,9 @@
         "corrective_suggestion": "W kroku 3 warto dodać: (1) sugerowany termin oczekiwania na odpowiedź kontrahenta (np. 14-21 dni), (2) procedurę przy braku odpowiedzi — zaznaczenie że milczenie kontrahenta nie jest potwierdzeniem salda i należy udokumentować próby kontaktu, (3) wyraźne wskazanie że 2 monity to praktyka/standard audytorski (np. MSB 505), a nie wymóg ustawowy.",
         "verified_at": "2026-04-18T12:30:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -227,7 +231,9 @@
         "corrective_suggestion": "Należy zweryfikować w aktualnej dokumentacji KAS/e-US czy opisana procedura istnieje pod tą nazwą. Jeśli nie można potwierdzić, warto zastąpić odwołanie do 'e-Urząd Skarbowy' ogólniejszym sformułowaniem np. 'wniosku złożonego do właściwego urzędu skarbowego (pisemnie lub przez portal e-US, jeśli dana usługa jest dostępna)' z zastrzeżeniem konieczności weryfikacji dostępności usługi.",
         "verified_at": "2026-04-18T12:30:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -238,7 +244,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:30:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -250,7 +258,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta domenowego, warto dodać do edge case 'totalny bałagan' wskazówki: (1) pisemne wypowiedzenie umowy z zachowaniem okresu wypowiedzenia, (2) sporządzenie protokołu zdawczo-odbiorczego dokumentacji dla klienta/następcy, (3) poinformowanie klienta o obowiązkach wobec US i ZUS wynikających z art. 4a UoR (odpowiedzialność kierownika jednostki), (4) archiwizacja własnej dokumentacji roboczej zgodnie z art. 74 UoR.",
         "verified_at": "2026-04-18T12:31:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -296,7 +306,9 @@
         "corrective_suggestion": "Jeśli flaga ma być uwzględniona, należy dodać notę wyjaśniającą, że od 2014 roku (deregulacja zawodów) nie istnieje rejestr biur rachunkowych jako wymóg formalny — weryfikacja uprawnień poprzedniego biura nie jest krokiem wymaganym prawnie, choć ocena rzetelności ksiąg pozostaje zasadna i jest już objęta krokami 1-4 procedury.",
         "verified_at": "2026-04-18T12:31:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -308,7 +320,9 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie, że art. 118 KC stosuje się jako zasadę ogólną, ale należy każdorazowo zweryfikować czy dla danego rodzaju zobowiązania nie obowiązuje termin szczególny (np. art. 554 KC dla roszczeń z umowy sprzedaży — 2 lata, art. 646 KC dla umowy o dzieło — 2 lata). Dodanie takiego zastrzeżenia zwiększy precyzję prawną dokumentu.",
         "verified_at": "2026-04-18T12:31:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       }
     ]
   },
@@ -320,5 +334,19 @@
       "source": "v2",
       "source_url": "https://ksiegowosc.infor.pl/raport-dnia/122052,Odpowiedzialnosc-karna-ksiegowego.html"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "step_contradiction": 1,
+      "missing_critical_info": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1,
+      "legal_anchor_uncertainty": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 2
+    }
+  }
 }

@@ -128,7 +128,9 @@
         "corrective_suggestion": "Jeśli art. 39 ust. 4 ustawy o PIT rzeczywiście reguluje tryb korekty informacji PIT-11, warto rozważyć jego dodanie jako dodatkowej podstawy prawnej obok art. 81 Ordynacji podatkowej. Należy sprawdzić aktualną treść art. 39 ust. 4 ustawy o PIT oraz ewentualne rozporządzenie Ministra Finansów w sprawie wzorów informacji podatkowych.",
         "verified_at": "2026-04-18T12:50:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -140,7 +142,9 @@
         "corrective_suggestion": "Rozważyć dodanie zastrzeżenia w drafcie: 'Ścieżki menu podane dla Comarch Optima, Symfonia i Enova są aktualne na dzień [data] — przed wykonaniem kroków zweryfikuj aktualną strukturę menu w posiadanej wersji oprogramowania.' Warto też dodać ogólny wariant dla systemów niewymienionych: 'W innych systemach kadrowych wyszukaj funkcję korekty/anulowania deklaracji PIT lub skontaktuj się z dostawcą systemu.'",
         "verified_at": "2026-04-18T12:50:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -152,7 +156,9 @@
         "corrective_suggestion": "W kroku 2 warto dodać wyjaśnienie: korektę PIT-11 zawierającą błędy merytoryczne wysyła się do urzędu skarbowego właściwego dla pracownika (podatnika) — tego samego, do którego pierwotnie wysłano PIT-11. Jeśli zmienił się US pracownika, należy wysłać korektę do urzędu, do którego pierwotnie złożono informację, a nowy PIT-11 za kolejny rok — do nowego US.",
         "verified_at": "2026-04-18T12:50:37Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -164,7 +170,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła (np. interpretacje MF lub przepisy wykonawcze), warto w kroku 6 doprecyzować: (1) że zgoda jest bezterminowa do momentu jej odwołania przez pracownika, (2) że pracownik może ją wycofać w dowolnym momencie na piśmie, (3) że płatnik powinien przechowywać kopię zgody przez okres przedawnienia zobowiązań podatkowych (5 lat).",
         "verified_at": "2026-04-18T12:50:44Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -175,7 +183,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:50:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -187,7 +197,9 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy odwołać się do rozporządzenia Ministra Rodziny i Polityki Społecznej w sprawie określenia wzorów zgłoszeń do ubezpieczeń społecznych i ubezpieczenia zdrowotnego oraz wzorów dokumentów rozliczeniowych. W drafcie warto doprecyzować, że ZUA składa się z kodem '02' (zmiana/korekta danych) zgodnie z instrukcją ZUS do formularza ZUA, zamiast używać nieformalnego opisu 'zmiana/korekta danych'.",
         "verified_at": "2026-04-18T12:50:58Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -199,7 +211,9 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie, że w przypadku kontroli US może zażądać bardziej szczegółowego wyjaśnienia na podstawie art. 155 Ordynacji podatkowej (wezwanie do złożenia wyjaśnień), oraz dodać przykład dla sytuacji korekty listy płac po złożeniu PIT-4R, np. 'Korekta listy płac za 03/2025 złożona po terminie wpłaty zaliczki — różnica X zł wyrównana w dniu DD.MM.RRRR'.",
         "verified_at": "2026-04-18T12:51:06Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -222,7 +236,9 @@
         "corrective_suggestion": "Rozważyć dodanie do kroku 7 informacji: (1) w razie rozbieżności między kontem 220 a PIT-4R — zidentyfikować miesiąc błędu, złożyć korektę PIT-4R na podstawie art. 81 Ordynacji podatkowej, dopłacić zaległość wraz z odsetkami; (2) PIT-4R nie podlega formalnej 'akceptacji' przez US — urząd może jedynie wszcząć kontrolę lub czynności sprawdzające, w takim przypadku płatnik ma prawo złożyć wyjaśnienia i korektę.",
         "verified_at": "2026-04-18T12:51:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -245,8 +261,25 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać w kroku 2 notę: UPL-1 składa się jednorazowo do właściwego US płatnika i zachowuje ważność bezterminowo (do odwołania); nie trzeba go ponownie składać przy każdej korekcie — płatnik przechowuje kopię, oryginał jest w aktach US.",
         "verified_at": "2026-04-18T12:51:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 9,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 5,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 1,
+      "high": 1
+    }
   }
 }

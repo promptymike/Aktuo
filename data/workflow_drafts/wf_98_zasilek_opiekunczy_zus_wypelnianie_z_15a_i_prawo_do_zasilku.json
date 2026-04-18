@@ -115,7 +115,9 @@
         "corrective_suggestion": "W polu 'legal_anchors' należy dodać pełne referencje: ustawa z dnia 25 czerwca 1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (Dz.U. z 2023 r. poz. 2780 t.j.) — art. 33 (limit dni zasiłku opiekuńczego) i art. 34 (zasady ustalania prawa do zasiłku opiekuńczego). Należy zweryfikować aktualny tekst jednolity ustawy.",
         "verified_at": "2026-04-18T12:46:42Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "hallucination_risk",
@@ -127,7 +129,9 @@
         "corrective_suggestion": "Należy zweryfikować istnienie i aktualność formularza ZAS-36 bezpośrednio w oficjalnym rejestrze formularzy ZUS (zus.pl). Jeśli formularz nie istnieje lub ma inną nazwę, należy go zastąpić właściwym dokumentem lub opisem 'oświadczenie o zamknięciu placówki' bez podawania konkretnego kodu formularza.",
         "verified_at": "2026-04-18T12:46:47Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "outdated_data_risk",
@@ -139,7 +143,9 @@
         "corrective_suggestion": "Należy zweryfikować art. 61 ustawy z dnia 25 czerwca 1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (ustawa zasiłkowa) — przepis ten reguluje próg 20 ubezpieczonych i datę graniczną 30 listopada. Jeśli przepis nie uległ zmianie, flaga jest false positive; w przeciwnym razie należy zaktualizować krok 1.",
         "verified_at": "2026-04-18T12:46:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -151,7 +157,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto w kroku 7 doprecyzować, że kod 320 dotyczy zasiłku opiekuńczego ogólnie, lub podać mapowanie: np. kod 320 dla opieki nad dzieckiem, ewentualnie inny kod dla opieki nad chorym członkiem rodziny — zgodnie z aktualną dokumentacją ZUS dotyczącą eZLA.",
         "verified_at": "2026-04-18T12:47:03Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -163,7 +171,9 @@
         "corrective_suggestion": "W kroku 4 warto dodać wyjaśnienie, że limit 60 dni dotyczy łącznie opieki nad dziećmi do 8 lat (w tym poniżej 2 lat) — wyłączenie z kroku 3 dotyczy jedynie warunku obecności innego domownika, a nie samego limitu dni zasiłkowych.",
         "verified_at": "2026-04-18T12:47:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "edge_case_coverage",
@@ -175,7 +185,9 @@
         "corrective_suggestion": "Zastąpić sformułowanie 'urlop rodzicielski obejmuje szczególny przypadek (noworodek wymagający wyłącznej opieki matki)' odwołaniem do art. 34 ustawy zasiłkowej: 'drugi rodzic nie może sprawować opieki z powodów wskazanych w art. 34 ustawy zasiłkowej (np. stan zdrowia, niemożność sprawowania opieki)' — lub usunąć ten nawias jako nieweryfikowalny.",
         "verified_at": "2026-04-18T12:47:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -187,7 +199,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł (np. ustawa zasiłkowa, rozporządzenie MRPiPS), należy w kroku 1 lub 2 dodać: 'W przypadku pracodawcy do 20 osób pracownik składa Z-15A pracodawcy, który przekazuje dokumenty do ZUS w terminie 7 dni (art. 61 ustawy zasiłkowej); ZUS wypłaca zasiłek bezpośrednio na konto pracownika.'",
         "verified_at": "2026-04-18T12:47:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -199,7 +213,9 @@
         "corrective_suggestion": "Warto zastąpić sformułowanie 'dzień odbioru soboty' bardziej precyzyjnym: 'dzień wolny wynikający z rozkładu czasu pracy (np. dzień wolny udzielony w zamian za pracę w sobotę)' — jest to neutralne i aktualne sformułowanie zgodne z Kodeksem pracy.",
         "verified_at": "2026-04-18T12:47:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "outdated_data_risk",
@@ -211,7 +227,9 @@
         "corrective_suggestion": "Dodać zastrzeżenie w kroku 7, że ścieżki menu i kody mogą się różnić w zależności od wersji oprogramowania i należy zweryfikować z aktualną dokumentacją producenta lub działem IT.",
         "verified_at": "2026-04-18T12:47:41Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -222,8 +240,26 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:47:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 10,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "hallucination_risk": 2,
+      "outdated_data_risk": 2,
+      "missing_critical_info": 3,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "high": 2,
+      "medium": 5,
+      "low": 3
+    }
   }
 }

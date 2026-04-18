@@ -157,7 +157,9 @@
         "corrective_suggestion": "Dodać zastrzeżenie w kroku 7, że nazwy pól i ścieżki menu mogą różnić się w zależności od wersji oprogramowania i należy zweryfikować z aktualną dokumentacją producenta lub działem wsparcia technicznego danego systemu.",
         "verified_at": "2026-04-18T12:36:42Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -169,7 +171,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać do step 5 wyjaśnienie: pracownicy zatrudnieni w miesiącu zmiany terminu wypłaty powinni być wykazani w RCA z faktyczną podstawą i składkami za przepracowany okres, gdyż zerowa RCA dotyczy wyłącznie pracowników, dla których wynagrodzenie za dany miesiąc zostanie wypłacone w miesiącu następnym zgodnie z nowym terminem.",
         "verified_at": "2026-04-18T12:36:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -181,7 +185,9 @@
         "corrective_suggestion": "W kroku 2 warto doprecyzować, że 'termin wynikający z prawa pracy/regulaminu' oznacza termin ustalony przez pracodawcę w regulaminie pracy lub umowie, jednak nie później niż do 10. dnia następnego miesiąca kalendarzowego (art. 85 § 2 KP) - i że właśnie ten termin (lub wcześniejszy, jeśli tak stanowi regulamin) jest warunkiem zaliczenia kosztu do miesiąca należności.",
         "verified_at": "2026-04-18T12:36:57Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "edge_case_coverage",
@@ -193,7 +199,9 @@
         "corrective_suggestion": "Warto dodać do edge_case wyjaśnienie, że zgodnie z art. 11 ust. 1 ustawy PIT 'postawienie do dyspozycji' oznacza, że środki były faktycznie dostępne dla zleceniobiorcy (np. gotówka w kasie z możliwością odbioru), nawet jeśli fizycznie ich nie odebrał - i że samo wystawienie KW z datą 31.01 bez realnej dostępności środków nie wystarczy. Należy też wskazać, że ciężar dowodu spoczywa na płatniku.",
         "verified_at": "2026-04-18T12:37:06Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "hallucination_risk",
@@ -205,7 +213,9 @@
         "corrective_suggestion": "Należy zweryfikować treść uchwały NSA II FPS 5/14 bezpośrednio w bazie orzeczeń NSA oraz sprawdzić, czy jej tezy pozostają aktualne po ewentualnych zmianach legislacyjnych. Jeśli uchwała jest cytowana jako 'kluczowa', warto podać jej pełną tezę lub zastąpić odwołaniem do konkretnego przepisu ustawy PIT.",
         "verified_at": "2026-04-18T12:37:14Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -216,7 +226,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:37:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -227,8 +239,24 @@
         "verifier_confidence": 0.6,
         "verified_at": "2026-04-18T12:37:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "hallucination_risk": 2,
+      "missing_critical_info": 2,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 3
+    }
   }
 }

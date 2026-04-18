@@ -147,7 +147,9 @@
         "corrective_suggestion": "Dodać przypis lub adnotację wskazującą źródło przedziału cenowego (np. aktualne oferty SKwP, Cedoz, OTI) oraz datę weryfikacji cen. Alternatywnie zmienić sformułowanie na 'orientacyjnie 1 800–3 500 zł brutto (ceny wg ofert z początku 2026, zalecana weryfikacja u organizatora)' aby zaznaczyć szacunkowy charakter danych.",
         "verified_at": "2026-04-18T12:13:14Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "hallucination_risk",
@@ -159,7 +161,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi metodami, należy usunąć konkretne nazwiska i nazwy marek lub zastąpić je opisem kategorii (np. 'popularne kanały edukacyjne na YouTube/social media prowadzone przez praktyków HR') z adnotacją, że aktualność oferty należy zweryfikować samodzielnie przed zakupem.",
         "verified_at": "2026-04-18T12:13:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -171,7 +175,9 @@
         "corrective_suggestion": "Zaleca się usunięcie konkretnego numeru druku 'MEN-I/73' lub zastąpienie go opisowym sformułowaniem, np. 'zaświadczenie o ukończeniu kursu wydawane przez placówki wpisane do ewidencji/RSPO na podstawie rozporządzenia MEN w sprawie kształcenia ustawicznego w formach pozaszkolnych', bez podawania numeru druku, którego aktualność jest niepewna.",
         "verified_at": "2026-04-18T12:13:30Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -183,7 +189,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto doprecyzować w drafcie, że limit 300% odnosi się do przeciętnego wynagrodzenia w gospodarce narodowej ogłaszanego przez GUS (zgodnie z art. 2 ust. 1 pkt 28 ustawy o promocji zatrudnienia) oraz wskazać, że limity KFS są ustalane corocznie w planie wydatków KFS przez MRPiPS i mogą ulec zmianie w 2026 r.",
         "verified_at": "2026-04-18T12:13:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -195,7 +203,9 @@
         "corrective_suggestion": "Można doprecyzować sformułowanie na: 'Płatnik (bezpłatny do pobrania ze strony ZUS, wymagana rejestracja konta na PUE ZUS)' — eliminuje potencjalne nieporozumienie co do warunków dostępu.",
         "verified_at": "2026-04-18T12:13:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "edge_case_coverage",
@@ -207,7 +217,9 @@
         "corrective_suggestion": "Jeśli chcemy zachować ostrożność, warto dodać zastrzeżenie w edge case: 'Harmonogram naborów KFS ustalany jest corocznie przez MRPiPS — przed złożeniem wniosku sprawdź aktualny kalendarz naborów na stronie PUP lub praca.gov.pl (dane na 2026 mogą się różnić od lat poprzednich).'",
         "verified_at": "2026-04-18T12:13:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "hallucination_risk",
@@ -219,7 +231,9 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie w drafcie, że nazwy konkretnych programów kadrowo-płacowych mogą ulec zmianie i zaleca się weryfikację aktualnej oferty producentów przed wyborem kursu. Alternatywnie można ograniczyć się do ogólnego sformułowania 'programy kadrowo-płacowe dostępne na rynku' zamiast wymieniać konkretne produkty.",
         "verified_at": "2026-04-18T12:13:58Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -231,8 +245,24 @@
         "corrective_suggestion": "Jeśli zmiana rzeczywiście istnieje, należy podać konkretną nazwę ustawy nowelizującej (np. ustawa z dnia X o zmianie ustawy – Kodeks pracy) oraz numer Dz.U. Jeśli nie można tego potwierdzić, należy usunąć lub oznaczyć tę informację jako niepotwierdzoną/projektowaną.",
         "verified_at": "2026-04-18T12:14:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "hallucination_risk": 3,
+      "missing_critical_info": 2,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 4
+    }
   }
 }

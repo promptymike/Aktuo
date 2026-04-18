@@ -131,7 +131,9 @@
         "corrective_suggestion": "Warto w drafcie dodać zastrzeżenie, że art. 113 ust. 13 zawiera katalog zamknięty wyłączeń przedmiotowych (lista enumeratywna) i przytoczyć konkretne punkty/litery przepisu dla każdej wymienionej kategorii, np. 'art. 113 ust. 13 pkt 1 lit. a (nowe środki transportu)', 'pkt 2 lit. b (doradztwo)' itp., zamiast ogólnego odesłania do całego ustępu.",
         "verified_at": "2026-04-18T12:45:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -143,7 +145,9 @@
         "corrective_suggestion": "Zaleca się weryfikację aktualnego brzmienia art. 113 ust. 1 ustawy o VAT w oficjalnym źródle (ISAP/Dziennik Ustaw) na dzień 18.04.2026 r. oraz sprawdzenie, czy nie zostały opublikowane przepisy zmieniające limit lub przepisy przejściowe po 1.01.2026 r.",
         "verified_at": "2026-04-18T12:45:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -155,7 +159,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 6 explicite zastrzeżenia, że mechanizm przekroczenia limitu w trakcie roku (art. 113 ust. 5) dotyczy podatników aktywnie korzystających ze zwolnienia, natomiast wyjątek przejściowy z kroku 3 odnosi się wyłącznie do możliwości powrotu do zwolnienia — i że oba scenariusze są rozłączne (wyjątek przejściowy dotyczy powrotu do zwolnienia, a nie jego utraty w trakcie roku).",
         "verified_at": "2026-04-18T12:45:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -167,7 +173,9 @@
         "corrective_suggestion": "Jeśli przepisy przejściowe do nowelizacji podwyższającej limit do 240 000 zł zawierają szczegółowe zasady liczenia sprzedaży dla podatników już zarejestrowanych jako VAT czynni, draft powinien to wyjaśnić w kroku 3 — wskazując wprost, czy do porównania z limitem 240 000 zł bierze się całą sprzedaż 2025 r. (od 1 stycznia), czy tylko sprzedaż od momentu rejestracji jako VAT czynny.",
         "verified_at": "2026-04-18T12:45:44Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -178,7 +186,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:45:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -190,7 +200,9 @@
         "corrective_suggestion": "Jeśli draft powołuje się na 'interpretacje MF i KIS', należy albo podać konkretne sygnatury i daty tych interpretacji, albo zmienić sformułowanie na 'brak jednolitego stanowiska organów podatkowych — zalecana indywidualna interpretacja podatkowa' oraz wyraźnie zaznaczyć, że wyjątek przejściowy wynika z przepisów przejściowych ustawy nowelizującej (podać numer Dz.U.), a nie z interpretacji.",
         "verified_at": "2026-04-18T12:45:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -202,7 +214,9 @@
         "corrective_suggestion": "Jeśli w innej części drafta rzeczywiście pojawia się termin 'Biała Lista MF', należy doprecyzować, że chodzi o wykaz podatników VAT prowadzony przez Szefa KAS na podstawie art. 96b ustawy o VAT, dostępny na stronie podatki.gov.pl, a twierdzenie o czasie weryfikacji 'kilka–kilkanaście dni roboczych' powinno być usunięte lub poparte konkretną podstawą prawną, gdyż ustawa nie określa takiego terminu dla weryfikacji statusu.",
         "verified_at": "2026-04-18T12:46:07Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -214,7 +228,9 @@
         "corrective_suggestion": "Rozważyć dodanie w EDGE_CASES lub ANSWER_STEPS wskazówki praktycznej: kryterium rozróżnienia to złożony VAT-R z zaznaczeniem dobrowolnej rezygnacji (część C.3 formularza) vs. brak takiego zgłoszenia przy przekroczeniu limitu. Podatnik, który nigdy nie składał VAT-R z zaznaczeniem dobrowolnej rezygnacji i utracił zwolnienie wyłącznie wskutek przekroczenia limitu, może powołać się na wyjątek przejściowy; w razie wątpliwości zalecane jest uzyskanie indywidualnej interpretacji KIS.",
         "verified_at": "2026-04-18T12:46:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -226,7 +242,9 @@
         "corrective_suggestion": "Warto dodać w kroku 4 wyjaśnienie dla scenariusza, gdy podatnik przekroczył limit i nie zdążył zarejestrować się jako VAT czynny przed planowanym powrotem do zwolnienia — wskazać, że w praktyce należy skonsultować z urzędem skarbowym, czy wymagana jest najpierw rejestracja VAT-R jako czynny podatnik, a następnie aktualizacja do zwolnienia, czy wystarczy jedno zgłoszenie aktualizacyjne.",
         "verified_at": "2026-04-18T12:46:25Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -238,8 +256,26 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać w kroku 7 wzmiankę, że przeprogramowanie kasy fiskalnej (niezależnie od typu: online, offline, hybrydowej) wymaga kontaktu z autoryzowanym serwisantem kasy, który dokonuje zmiany stawek i odnotowuje to w książce serwisowej — obowiązek inicjowania tej czynności spoczywa na podatniku.",
         "verified_at": "2026-04-18T12:46:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 10,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 4,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "high": 2,
+      "low": 2
+    }
   }
 }

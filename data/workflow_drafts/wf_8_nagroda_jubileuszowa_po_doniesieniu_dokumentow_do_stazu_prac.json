@@ -114,7 +114,9 @@
         "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o sformalizowaną listę: ['art. 38 ust. 2 ustawy o pracownikach samorządowych', 'art. 47 Karty Nauczyciela', 'art. 23 ustawy o pracownikach urzędów państwowych', 'art. 302 KP', 'art. 291 § 1 KP', 'art. 6 ustawy nowelizującej KP (nowe brzmienie art. 302 KP od 1.01.2026)']. Należy też zweryfikować istnienie i treść 'art. 302 KP w brzmieniu od 1.01.2026' oraz 'art. 6 ustawy nowelizującej', gdyż mogą to być przepisy projektowane lub nieistniejące.",
         "verified_at": "2026-04-18T12:41:44Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "hallucination_risk",
@@ -126,7 +128,9 @@
         "corrective_suggestion": "Należy zidentyfikować i rozwinąć wszystkie skróty 'HE' oraz '[6]/1', '[8]/2' w drafcie — podać pełne tytuły publikacji, autorów, wydania lub inne dane bibliograficzne. Jeśli źródła nie istnieją, należy je usunąć lub zastąpić weryfikowalnymi odwołaniami do aktów prawnych lub orzecznictwa.",
         "verified_at": "2026-04-18T12:41:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "outdated_data_risk",
@@ -137,7 +141,9 @@
         "verifier_confidence": 0.3,
         "verified_at": "2026-04-18T12:41:57Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -149,7 +155,9 @@
         "corrective_suggestion": "W kroku 4 należy wprost wyjaśnić, że art. 291 § 1 KP (3-letnie przedawnienie) dotyczy wyłącznie roszczeń, które w ogóle powstały (tj. po 1.01.2026), i nie 'ratuje' roszczeń za progi osiągnięte przed tą datą — bo te roszczenia nigdy nie powstały na podstawie nowych przepisów. Krok 3 i krok 4 powinny być spójnie powiązane: najpierw ustal czy prawo w ogóle powstało (krok 3), a dopiero jeśli tak — sprawdź czy nie uległo przedawnieniu (krok 4).",
         "verified_at": "2026-04-18T12:42:07Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -161,7 +169,9 @@
         "corrective_suggestion": "W step 3 lub step 4 należy explicite wyjaśnić, że 'data nabycia prawa' to data faktycznego osiągnięcia progu stażowego (np. 20 lat), a nie data dostarczenia dokumentów — dokumenty jedynie potwierdzają fakt, który nastąpił wcześniej. Jeśli pracownik osiągnął 20 lat w grudniu 2025, prawo nabyto przed 1.01.2026 i nowe przepisy o zleceniach/B2B nie mają zastosowania do tego progu. Należy dodać przykład ilustrujący tę różnicę.",
         "verified_at": "2026-04-18T12:42:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -173,7 +183,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, należy w kroku 7 dodać odniesienie do rozporządzenia Ministra Pracy i Polityki Socjalnej z 8.01.1997 r. w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego (§ 14-19) i wyjaśnić, że przy nieobecnościach (zwolnienie, urlop bezpłatny) stosuje się wynagrodzenie z miesięcy, w których pracownik przepracował pełny miesiąc, a przy zmianach wynagrodzenia — wynagrodzenie z miesiąca nabycia prawa.",
         "verified_at": "2026-04-18T12:42:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -185,7 +197,9 @@
         "corrective_suggestion": "Jeśli flaga jest zasadna, warto dodać w kroku 2 lub jako osobny krok: wskazówkę, że zaświadczenie ZUS o przebiegu ubezpieczeń (ZUS US-7 lub wydruk z PUE) dokumentuje okresy składkowe, natomiast dla działalności B2B należy dodatkowo zweryfikować wpis w CEIDG (daty rozpoczęcia/zawieszenia/zakończenia działalności), gdyż zaświadczenie ZUS może nie obejmować pełnego okresu prowadzenia działalności.",
         "verified_at": "2026-04-18T12:42:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -197,7 +211,9 @@
         "corrective_suggestion": "Dodać do edge case'u o spornej interpretacji konkretną instrukcję awaryjną: np. 'Do czasu uzyskania odpowiedzi MRPiPS zastosuj wariant ostrożnościowy — wypłać nagrodę w pełnej wysokości (ryzyko nadpłaty jest niższe niż ryzyko naruszenia praw pracownika) i udokumentuj wypłatę jako warunkową z adnotacją o toczącym się zapytaniu interpretacyjnym; alternatywnie — jeśli pracodawca preferuje wstrzymanie — poinformuj pracownika pisemnie o przyczynie opóźnienia i szacowanym terminie rozstrzygnięcia.'",
         "verified_at": "2026-04-18T12:42:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -209,7 +225,9 @@
         "corrective_suggestion": "Draft powinien wyjaśnić, że zgodnie z ogólną praktyką i przepisami sektorowymi (np. rozporządzenia wykonawcze do ustaw budżetowych) to pracownik ma obowiązek dostarczyć dokumenty potwierdzające staż, jednak pracodawca powinien poinformować pracownika o możliwości uzupełnienia dokumentacji — szczególnie przy wdrożeniu nowych przepisów od 1.01.2026. Warto dodać zalecenie, aby pracodawca aktywnie wezwał pracowników do złożenia zaświadczeń ZUS, co eliminuje ryzyko zarzutu działania na niekorzyść pracownika.",
         "verified_at": "2026-04-18T12:43:00Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "hallucination_risk",
@@ -221,7 +239,9 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie w kroku 7, że podane ścieżki menu są przykładowe i mogą różnić się w zależności od wersji oprogramowania — zalecana weryfikacja z aktualną dokumentacją producenta lub działem IT.",
         "verified_at": "2026-04-18T12:43:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "step_contradiction",
@@ -233,7 +253,9 @@
         "corrective_suggestion": "Należy uzupełnić krok 5 o wyraźne odniesienie do warunku minimalnego odstępu czasowego między wypłatami nagród za kolejne progi (jeśli taka zasada faktycznie obowiązuje), albo wyjaśnić w kroku 6, że zasada 12 miesięcy dotyczy wyłącznie sytuacji opisanej w tym kroku, a nie scenariusza 'przeskoczenia' z kroku 5.",
         "verified_at": "2026-04-18T12:43:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -245,7 +267,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać wyjaśnienie: zwolnienie ze składek ZUS dla nagrody jubileuszowej dotyczy nagród wypłacanych nie częściej niż co 5 lat — jeśli pracownik otrzymuje dwie nagrody w krótszym odstępie (np. za przeskoczony próg), druga nagroda może podlegać składkom ZUS, co wymaga weryfikacji z działem kadr/księgowości.",
         "verified_at": "2026-04-18T12:43:20Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -256,8 +280,26 @@
         "verifier_confidence": 0.8,
         "verified_at": "2026-04-18T12:43:26Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 13,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "hallucination_risk": 2,
+      "outdated_data_risk": 2,
+      "step_contradiction": 2,
+      "missing_critical_info": 4,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "high": 5,
+      "medium": 6,
+      "low": 2
+    }
   }
 }

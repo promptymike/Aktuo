@@ -186,7 +186,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać zastrzeżenie w drafcie: 'Ścieżki menu podane są dla wersji aktualnej na dzień opracowania — w przypadku nowszych wersji oprogramowania należy zweryfikować lokalizację funkcji w dokumentacji producenta.'",
         "verified_at": "2026-04-18T12:06:20Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -198,7 +200,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto w kroku 5 explicite doprecyzować: 'Skierowanie możesz wystawić w trakcie L4 (data wystawienia = dzień przed planowanym powrotem lub wcześniej), jednak w skierowaniu wskaż planowaną datę powrotu jako datę, od której pracownik ma być dopuszczony do pracy' — eliminując niejednoznaczność co do daty wystawienia vs. daty powrotu.",
         "verified_at": "2026-04-18T12:06:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -210,7 +214,9 @@
         "corrective_suggestion": "Jeśli flaga miałaby być potwierdzona na podstawie wiedzy prawnej (poza KB): draft powinien zawierać krok opisujący, że pracodawca nie może dopuścić pracownika do pracy bez orzeczenia (art. 229 § 4 KP), co de facto stanowi mechanizm 'zawieszenia' — brak badania = brak dopuszczenia do pracy, a nieusprawiedliwiona nieobecność na badaniach może być podstawą do zastosowania sankcji porządkowych (art. 108 KP).",
         "verified_at": "2026-04-18T12:06:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -222,7 +228,9 @@
         "corrective_suggestion": "Należy zweryfikować bezpośrednio treść rozporządzenia Ministra Rodziny, Pracy i Polityki Społecznej z dnia 10 grudnia 2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369) — sprawdzić czy § 3 rzeczywiście reguluje zawartość części B akt osobowych i czy obejmuje orzeczenia lekarskie. Jeśli tak, flaga jest false positive; jeśli § 3 dotyczy innej kwestii, należy wskazać właściwy paragraf (prawdopodobnie § 6 lub załącznik do rozporządzenia).",
         "verified_at": "2026-04-18T12:06:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -245,7 +253,9 @@
         "corrective_suggestion": "Rozważyć dodanie w step 5 lub osobnym kroku wyraźnej informacji: pracodawca NIE może dopuścić pracownika do pracy bez orzeczenia lekarskiego stwierdzającego brak przeciwwskazań (art. 229 § 4 KP) — pracownik nie może świadczyć pracy w dniu powrotu z L4 do czasu uzyskania orzeczenia kontrolnego.",
         "verified_at": "2026-04-18T12:06:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -257,7 +267,9 @@
         "corrective_suggestion": "Warto w kroku 6 dodać wyjaśnienie, że urlop macierzyński NIE jest traktowany jako niezdolność do pracy z powodu choroby (L4) w rozumieniu art. 229 § 2 KP, dlatego po samym urlopie macierzyńskim (bez poprzedzającego L4 >30 dni) badania kontrolne nie są wymagane — co rozwieje potencjalne nieporozumienie sygnalizowane przez flagę.",
         "verified_at": "2026-04-18T12:07:04Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -269,7 +281,9 @@
         "corrective_suggestion": "Rozważyć dodanie w drafcie informacji, że zgodnie z art. 229 § 3 KP badania profilaktyczne są wykonywane w miarę możliwości w godzinach pracy, a pracownik zachowuje za ten czas prawo do wynagrodzenia, oraz że pracodawca pokrywa koszty tych badań.",
         "verified_at": "2026-04-18T12:07:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
   },
@@ -281,5 +295,18 @@
       "source": "v2",
       "source_url": "https://przepisy.gofin.pl/przepisy,6,18,34,5070,216683,20181219,3-rozporzadzenie-ministra-rodziny-pracy-i-polityki.html"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 3,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 2
+    }
+  }
 }

@@ -151,7 +151,9 @@
         "corrective_suggestion": "Należy bezpośrednio sprawdzić aktualny tekst jednolity ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę (Dz.U. 2002 nr 200 poz. 1679 ze zm.) w systemie prawnym (np. ISAP/LEX), aby potwierdzić, że art. 6 ust. 5 nadal obowiązuje w tej numeracji i treści po ewentualnych nowelizacjach do 2026 r.",
         "verified_at": "2026-04-18T12:35:25Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -163,7 +165,9 @@
         "corrective_suggestion": "Należy zidentyfikować odpowiedni artykuł w ustawie o rynku pracy i służbach zatrudnienia (obowiązującej od 1.06.2025) regulujący zatrudnienie cudzoziemców i zastąpić odwołanie do art. 88z ustawy z 20.04.2004 aktualnym przepisem, albo wyraźnie zaznaczyć że weryfikacja jest wymagana przed użyciem dokumentu.",
         "verified_at": "2026-04-18T12:35:32Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "missing_critical_info",
@@ -175,7 +179,9 @@
         "corrective_suggestion": "Jeśli draft ma charakter praktycznego przewodnika, warto dodać ogólną notę: 'Zaktualizuj ustawienia minimalnego wynagrodzenia we wszystkich używanych systemach kadrowo-płacowych (np. Comarch ERP Optima, Symfonia, Enova365, Sage, R2Płatnik itp.) zgodnie z dokumentacją producenta.'",
         "verified_at": "2026-04-18T12:35:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -187,7 +193,9 @@
         "corrective_suggestion": "Należy zweryfikować ścieżki nawigacji bezpośrednio w dokumentacji Comarch ERP Optima i Enova365 lub w samych systemach, a następnie ujednolicić instrukcje w krokach 3 i 6 drafta.",
         "verified_at": "2026-04-18T12:35:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "outdated_data_risk",
@@ -199,7 +207,9 @@
         "corrective_suggestion": "Jeśli kwota netto pojawia się w drafcie, należy dodać wyraźne zastrzeżenie: 'kwota orientacyjna przy założeniu: złożony PIT-2, pracownik powyżej 26 r.ż., bez PPK – dla innych warunków kwota netto będzie inna'.",
         "verified_at": "2026-04-18T12:35:53Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "edge_case_coverage",
@@ -211,7 +221,9 @@
         "corrective_suggestion": "Jeśli wyrównanie wynagrodzenia pracowników samorządowych wynika z przepisów rozporządzenia z mocą wsteczną od 1.01.2026, to jest ono obowiązkowe (nie fakultatywne) – należy to wprost wskazać w edge case. Warto też podać konkretny termin (np. 'najpóźniej z wypłatą wynagrodzenia za marzec 2026') zamiast ogólnego 'regulamin wewnętrzny decyduje o terminie', gdyż regulamin wewnętrzny nie może wyłączyć obowiązku wynikającego z przepisów prawa.",
         "verified_at": "2026-04-18T12:36:02Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -235,8 +247,25 @@
         "corrective_suggestion": "Należy zweryfikować art. 8 ust. 4 ustawy z 13.03.2003 r. o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn niedotyczących pracowników (Dz.U. 2018 poz. 1969 ze zm.) – jeśli mnożnik 15 jest tam aktualnie zapisany, draft jest poprawny; jeśli był nowelizowany, należy zaktualizować kwotę i wskazać właściwy przepis.",
         "verified_at": "2026-04-18T12:36:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "legal_anchor_uncertainty": 2,
+      "missing_critical_info": 1,
+      "step_contradiction": 1,
+      "outdated_data_risk": 1,
+      "edge_case_coverage": 1,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 2
+    }
   }
 }

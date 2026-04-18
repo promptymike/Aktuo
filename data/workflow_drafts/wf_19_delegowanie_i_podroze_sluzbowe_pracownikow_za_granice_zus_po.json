@@ -271,7 +271,9 @@
         "corrective_suggestion": "Dodaj przy stawkach diet zagranicznych adnotację: '(stawki wg załącznika do rozp. MPiPS z 29.01.2013 ze zm. — zweryfikuj aktualną wersję rozporządzenia przed wypłatą, stawki mogą być zmienione)' analogicznie do zastrzeżenia już zawartego przy diecie krajowej 45 zł.",
         "verified_at": "2026-04-18T12:17:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -283,7 +285,9 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie, że zwolnienie z PIT diet w podróży służbowej (krok 4) wynika z art. 21 ust. 1 pkt 16 ustawy o PIT do wysokości limitów rozporządzenia, natomiast 30% diety zagranicznej zwolnione z PIT (jeśli taki mechanizm istnieje) dotyczy odrębnej sytuacji delegowania długoterminowego i powinno być opisane w osobnym kroku z wyraźnym wskazaniem podstawy prawnej i relacji do kroku 4.",
         "verified_at": "2026-04-18T12:17:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -316,7 +320,9 @@
         "corrective_suggestion": "Warto dodać w kroku 5 wyraźne wyjaśnienie, że mechanizm odliczenia diet od podstawy ZUS dotyczy wyłącznie delegowania (nie podróży służbowej) i wynika z odrębnych przepisów niż zwolnienie diet z ZUS przy podróży służbowej — np. powołując się na § 2 ust. 1 pkt 16 rozporządzenia MPiPS z 18.12.1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek.",
         "verified_at": "2026-04-18T12:17:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -328,7 +334,9 @@
         "corrective_suggestion": "Rozdziel w drafcie dwa odrębne obowiązki: (1) zgłoszenie do Zollamt/Bundesfinanzdirektion przez portal Meldeportal Mindestlohn (obowiązek wynikający z MiLoG §16 dla pracowników delegowanych do Niemiec) oraz (2) zaświadczenie A1 wydawane przez ZUS, które pracownik powinien mieć przy sobie — nie jest ono zgłaszane przez portal płacy minimalnej.",
         "verified_at": "2026-04-18T12:18:03Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -340,7 +348,9 @@
         "corrective_suggestion": "Jeśli 'komentarz [3] w HE1' faktycznie pojawia się w sekcji common_mistakes, należy zastąpić to odniesienie konkretnym, weryfikowalnym źródłem prawnym (np. rozporządzenie, ustawa, interpretacja ZUS) lub usunąć je jako niezidentyfikowane wewnętrzne odniesienie.",
         "verified_at": "2026-04-18T12:18:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -352,7 +362,9 @@
         "corrective_suggestion": "Zmienić sformułowanie edge case'u na: 'miejsce pracy w umowie wskazuje na polskiego pracodawcę jako płatnika, natomiast rezydencja podatkowa pracownika (ustalana wg faktycznego pobytu i ośrodka interesów życiowych, nie treści umowy) oraz właściwa UPO (PL-LT lub PL-LV) decydują o tym, w którym kraju wynagrodzenie podlega opodatkowaniu — zweryfikuj z doradcą podatkowym.'",
         "verified_at": "2026-04-18T12:18:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -364,7 +376,9 @@
         "corrective_suggestion": "Usunąć lub przeformułować zdanie o rzadkich kontrolach, zastępując je neutralnym: 'Brak A1 stanowi ryzyko naliczenia składek w DE niezależnie od długości wyjazdu.' Zachować informację o ryzyku składkowym i MiLoG jako jedyne relewantne prawnie ostrzeżenia.",
         "verified_at": "2026-04-18T12:18:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -376,7 +390,9 @@
         "corrective_suggestion": "Jeśli flaga ma być potwierdzona na podstawie wiedzy domenowej: warto dodać krok lub uwagę wyjaśniającą, że dla krajów spoza UE/EOG (np. Wielka Brytania po Brexicie, Szwajcaria) stosuje się odrębne umowy bilateralne o zabezpieczeniu społecznym (lub ich brak), a zaświadczenie A1 na podstawie rozp. 883/2004 nie ma zastosowania — należy sprawdzić właściwą umowę dwustronną lub brak takiej umowy i wynikające z tego konsekwencje składkowe.",
         "verified_at": "2026-04-18T12:18:37Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -388,7 +404,9 @@
         "corrective_suggestion": "Warto rozważyć dodanie w kroku 7 (lub osobnym kroku) informacji: jeśli ZUS po weryfikacji rocznej stwierdzi niespełnienie warunku 25%, może cofnąć A1 ze skutkiem wstecznym (ex tunc), co oznacza konieczność opłacenia składek w kraju faktycznego wykonywania pracy — należy to skonsultować z ZUS lub doradcą ds. koordynacji systemów zabezpieczenia społecznego.",
         "verified_at": "2026-04-18T12:18:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -400,7 +418,9 @@
         "corrective_suggestion": "Należy bezpośrednio zweryfikować aktualny tekst art. 21 ust. 1 pkt 20 ustawy o PIT w Dzienniku Ustaw lub systemie ISAP pod kątem brzmienia obowiązującego w 2026 r. i ewentualnie zaktualizować numer punktu lub dodać adnotację o konieczności weryfikacji.",
         "verified_at": "2026-04-18T12:18:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -412,8 +432,25 @@
         "corrective_suggestion": "Jeśli data '2026-04-18' jest datą generacji/weryfikacji, należy ją oznaczyć jako 'generated_at' lub 'draft_date', a nie 'last_verified_at', co sugeruje faktyczną weryfikację merytoryczną treści. Warto też dodać adnotację, że stawki (np. dieta 45 zł) powinny być weryfikowane przed użyciem.",
         "verified_at": "2026-04-18T12:19:01Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 11,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "step_contradiction": 1,
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 2,
+      "legal_anchor_uncertainty": 1
+    },
+    "severity_breakdown": {
+      "medium": 9,
+      "low": 2
+    }
   }
 }

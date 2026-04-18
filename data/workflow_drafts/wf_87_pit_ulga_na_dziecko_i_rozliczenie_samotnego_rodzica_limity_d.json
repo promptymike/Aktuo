@@ -144,7 +144,9 @@
         "corrective_suggestion": "Dodać w drafcie wyraźną adnotację: 'Stawki ulgi prorodzinnej podane są według stanu na rok podatkowy 2025. Przed rozliczeniem za 2026 rok należy zweryfikować aktualne kwoty odliczenia w obowiązującym brzmieniu art. 27f ustawy PIT lub komunikatach MF/KAS.'",
         "verified_at": "2026-04-18T12:40:30Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -156,7 +158,9 @@
         "corrective_suggestion": "Dodać do LEGAL_ANCHORS wpis: {\"law_name\": \"Ustawa o podatku dochodowym od osób fizycznych\", \"article_number\": \"art. 21 ust. 1 pkt 148\", \"reason\": \"Ulga dla młodych — zwolnienie z PIT przychodów ze stosunku pracy i umów zlecenia do 85 528 zł rocznie dla osób do 26. roku życia; wpływa na obliczenie dochodu rodzica przy weryfikacji limitu 112/56 tys. zł dla ulgi prorodzinnej.\"}",
         "verified_at": "2026-04-18T12:40:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "step_contradiction",
@@ -168,7 +172,9 @@
         "corrective_suggestion": "W kroku 1 lub w osobnym edge case należy wyraźnie wyjaśnić, że do limitu 112/56 tys. wlicza się: dochody opodatkowane wg skali (art. 27) ORAZ przychody zwolnione z PIT na podstawie ulgi dla młodych (art. 21 ust. 1 pkt 148) — natomiast NIE wlicza się przychodów z ryczałtu ewidencjonowanego (PIT-28) ani z podatku liniowego (PIT-36L), powołując się na art. 27f ust. 2 pkt 1 i definicję 'dochodu' tam użytą.",
         "verified_at": "2026-04-18T12:40:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -180,7 +186,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać do kroku 3 instrukcję: zażądaj od podatnika zaświadczenia ze szkoły/uczelni potwierdzającego status ucznia/studenta w roku podatkowym oraz sprawdź, czy dziecko nie ukończyło 25 lat przed końcem roku podatkowego.",
         "verified_at": "2026-04-18T12:40:58Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -192,7 +200,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 4 informacji o dokumentach mogących potwierdzić faktyczne samotne wychowywanie (np. orzeczenie sądu o separacji/rozwodzie, zaświadczenie o zameldowaniu dziecka, dokumenty szkolne, korespondencja z ZUS/MOPS), z zastrzeżeniem że US może wezwać do ich przedłożenia w trybie art. 155 Ordynacji podatkowej.",
         "verified_at": "2026-04-18T12:41:06Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -204,7 +214,9 @@
         "corrective_suggestion": "Jeśli pełna treść kroku 5 (za wielokropkiem) faktycznie zawiera instrukcje dla Comarch Optima/WFirma z nazwami ścieżek menu, należy dodać disclaimer: 'Nazwy ścieżek menu mogą różnić się w zależności od wersji oprogramowania — zweryfikuj z aktualną dokumentacją producenta.'",
         "verified_at": "2026-04-18T12:41:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -216,7 +228,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona, warto przeformułować edge case na: 'Przychody objęte ulgą dla młodych dziecka nie są wliczane do limitu 22 546,92 zł (art. 21 ust. 1 pkt 148 w zw. z art. 27f ust. 6 ustawy PIT — zasada obowiązująca od 2022 r. i aktualna dla rozliczeń za 2025 r.)' — usuwając wzmiankę historyczną i zastępując ją jednoznacznym potwierdzeniem aktualności.",
         "verified_at": "2026-04-18T12:41:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -228,7 +242,9 @@
         "corrective_suggestion": "W kroku 3 warto dodać wyraźne zastrzeżenie: limit 22 546,92 zł dotyczy WYŁĄCZNIE dzieci pełnoletnich uczących się (do ukończenia 25. r.ż.) — dla dzieci niepełnoletnich limit dochodów dziecka nie obowiązuje przy uldze prorodzinnej.",
         "verified_at": "2026-04-18T12:41:29Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -240,7 +256,9 @@
         "corrective_suggestion": "Dodać do sekcji LEGAL_ANCHORS wpisy dla art. 70 §1 Ordynacji podatkowej (przedawnienie zobowiązań podatkowych — 5 lat) oraz art. 75 Ordynacji podatkowej (wniosek o stwierdzenie nadpłaty), aby zapewnić pełne zakotwiczenie procedury opisanej w kroku 7.",
         "verified_at": "2026-04-18T12:41:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       }
     ]
   },
@@ -252,5 +270,21 @@
       "source": "v2",
       "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/ulgi-odliczenia/6523663,ulga-na-pelnoletnie-dziecko-w-pit-limit-dochodow-dziecka-ktore-dochody-wlicza-sie-do-limitu.html"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 9,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "legal_anchor_uncertainty": 2,
+      "step_contradiction": 1,
+      "missing_critical_info": 3,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "high": 1,
+      "medium": 5,
+      "low": 3
+    }
+  }
 }

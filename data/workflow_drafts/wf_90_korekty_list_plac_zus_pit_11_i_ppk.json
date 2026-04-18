@@ -143,7 +143,9 @@
         "corrective_suggestion": "Należy zweryfikować pełną treść art. 41b ustawy PIT — jeśli przepis dotyczy wyłącznie podatnika (a nie płatnika), prawidłową podstawą dla pomniejszenia podstawy opodatkowania przez pracodawcę-płatnika w miesiącu zwrotu wynagrodzenia może być art. 32 ust. 2 ustawy PIT (dotyczący obliczania zaliczek przez płatnika). Warto rozważyć powołanie się na oba przepisy lub zastąpienie art. 41b właściwym przepisem dotyczącym płatnika.",
         "verified_at": "2026-04-18T12:43:44Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -155,7 +157,9 @@
         "corrective_suggestion": "Dodaj przypis lub adnotację wskazującą źródło kwoty 260 190 zł (np. obwieszczenie MRPiPS/GUS na 2026 r.) oraz kwoty minimalnego wynagrodzenia 4 806 zł (rozporządzenie Rady Ministrów). Jeśli kwoty nie zostały jeszcze oficjalnie ogłoszone, zaznacz że są szacunkowe i wymagają aktualizacji po publikacji właściwych aktów prawnych.",
         "verified_at": "2026-04-18T12:43:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -167,7 +171,9 @@
         "corrective_suggestion": "Warto doprecyzować w Step 3 i Step 5 relację między obowiązkiem opodatkowania zwrotu składek (Step 3) a decyzją o pozostawieniu niedopłaty zaliczki bez zmian (Step 5) — np. wskazać wprost, że płatnik pobiera zaliczkę PIT od zwrotu składek w miesiącu wypłaty (Step 3), natomiast ewentualna niedopłata wynikająca z innych korekt (np. zmiany kosztów uzyskania) może być rozliczona przez pracownika w zeznaniu rocznym (Step 5), co eliminuje pozorną sprzeczność.",
         "verified_at": "2026-04-18T12:44:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -179,7 +185,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez weryfikację art. 87-91 KP, należy dodać do step 4 informację: (1) przy odmowie zgody pracownika na potrącenie — pracodawca może dochodzić zwrotu na drodze cywilnoprawnej (powództwo o zwrot nienależnego świadczenia); (2) przy rozłożeniu zwrotu na raty — każda rata traktowana jest jako zwrot w miesiącu jej faktycznego otrzymania dla celów art. 41b ustawy PIT; (3) limit potrąceń z wynagrodzenia bez zgody pracownika wynosi 1/2 wynagrodzenia netto (art. 87 § 3 KP).",
         "verified_at": "2026-04-18T12:44:14Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -191,7 +199,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł, należy dodać do step 6 wyjaśnienie: zaległe wpłaty PPK pracownika (część pracownicza) mogą być potrącone z wynagrodzenia bez odrębnej zgody pracownika, gdyż obowiązek ich naliczania wynika wprost z ustawy o PPK - nie jest to potrącenie w rozumieniu art. 91 KP wymagające zgody. Warto jednak wskazać, że pracodawca powinien udokumentować przyczynę zaległości (błąd pracodawcy vs. brak danych od pracownika).",
         "verified_at": "2026-04-18T12:44:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -203,7 +213,9 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie, że identyfikatory 02/03 odnoszą się do pól technicznych w programie Płatnik (typ dokumentu korygującego), i dodać odesłanie do aktualnej dokumentacji technicznej ZUS lub instrukcji Płatnika, aby uniknąć ryzyka dezinformacji w przypadku zmiany specyfikacji.",
         "verified_at": "2026-04-18T12:44:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -215,7 +227,9 @@
         "corrective_suggestion": "Jeśli w pełnym drafcie pojawia się wzmianka o 'minimalnej krajowej' w kontekście umów zlecenia, należy doprecyzować, że chodzi o minimalną stawkę godzinową dla zleceniobiorców (regulowaną ustawą o minimalnym wynagrodzeniu za pracę), a nie o minimalne wynagrodzenie za pracę sensu stricto, które dotyczy stosunku pracy.",
         "verified_at": "2026-04-18T12:44:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -227,7 +241,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, należy uzupełnić edge case o: (1) wskazanie, że odliczenie na podstawie art. 26 ust. 1 pkt 5 ustawy PIT przysługuje w zeznaniu za rok, w którym nastąpił zwrot (nie rok pierwotnego przychodu); (2) opis procedury wystawienia informacji o kwocie zwróconej — płatnik wystawia ją na żądanie byłego pracownika lub z własnej inicjatywy, wskazując kwotę zwrotu i podstawę prawną.",
         "verified_at": "2026-04-18T12:44:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -238,7 +254,9 @@
         "verifier_confidence": 0.3,
         "verified_at": "2026-04-18T12:44:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -250,7 +268,9 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać wyjaśnienie że Fundusz Pracy (jako składka ZUS) podlega tym samym zasadom KKS co inne składki, a czynny żal z art. 16 KKS może być rozważany przy zaległościach składkowych - lub explicite wskazać że Fundusz Pracy nie jest objęty zakresem tego kroku.",
         "verified_at": "2026-04-18T12:44:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -262,7 +282,9 @@
         "corrective_suggestion": "Jeśli flaga ma być potwierdzona, należałoby sprawdzić przepisy ustawy o systemie ubezpieczeń społecznych (art. 41 ust. 6-7 dotyczący korekt RCA) oraz stanowisko ZUS/KIS w zakresie korekt dokumentów dla byłych pracowników - korekty dokumentów ZUS i PIT-11 płatnik może przeprowadzić jednostronnie bez zgody byłego pracownika, jednak odzyskanie nadpłaty od byłego pracownika wymaga odrębnej procedury (wezwanie do zwrotu, ewentualnie droga sądowa). Warto dodać tę informację do draftu.",
         "verified_at": "2026-04-18T12:45:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
   },
@@ -273,5 +295,21 @@
       "applied_at": "2026-04-18T14:37:42Z",
       "source": "v1"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 11,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 4,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 8,
+      "high": 1,
+      "low": 2
+    }
+  }
 }

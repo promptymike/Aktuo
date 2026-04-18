@@ -140,7 +140,9 @@
         "corrective_suggestion": "Dodać do draftu zastrzeżenie, że daty przejść systemowych (MCU → Aplikacja Podatnika KSeF 2.0) należy zweryfikować z aktualnym komunikatem Ministerstwa Finansów, ponieważ harmonogram wdrożenia KSeF był wielokrotnie zmieniany. Wskazać źródło weryfikacji: ksef.mf.gov.pl lub oficjalne komunikaty MF.",
         "verified_at": "2026-04-18T12:48:00Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -152,7 +154,9 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie: (1) że uprawnienia nadane przez klienta dla NIP biura rachunkowego NIE dają automatycznie dostępu pracownikom biura, (2) że krok 4 jest ZAWSZE wymagany gdy biuro jest spółką, oraz (3) dodać wyraźną notę przy kroku 3 że nadanie uprawnień podmiotowi (NIP biura) to warunek konieczny, ale niewystarczający — biuro musi następnie subdelegować dostęp swoim pracownikom/certyfikatom.",
         "verified_at": "2026-04-18T12:48:08Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -164,7 +168,9 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy sięgnąć do dokumentacji technicznej MCU/Aplikacji Podatnika KSeF 2.0 (MF) lub rozporządzenia wykonawczego w sprawie korzystania z KSeF — KB nie dostarcza wystarczających danych do potwierdzenia lub odrzucenia flagi.",
         "verified_at": "2026-04-18T12:48:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -176,7 +182,9 @@
         "corrective_suggestion": "Jeśli termin 'offline24' pojawia się w drafcie, należy go zastąpić oficjalną terminologią z dokumentacji KSeF MF — prawdopodobnie 'tryb offline' lub 'tryb awaryjny KSeF'. Warto zweryfikować bezpośrednio w dokumentacji technicznej KSeF dostępnej na stronie podatki.gov.pl.",
         "verified_at": "2026-04-18T12:48:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -188,7 +196,9 @@
         "corrective_suggestion": "Dodać zastrzeżenie przy kwocie, np. 'orientacyjnie ok. 400–2000 zł rocznie (ceny wg ofert dostawców na 2024/2025 r. — należy zweryfikować aktualny cennik wybranego dostawcy)' lub usunąć konkretną kwotę i zastąpić ją odesłaniem do aktualnych cenników dostawców kwalifikowanych usług zaufania (np. Certum, EuroCert, Sigillum).",
         "verified_at": "2026-04-18T12:48:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "outdated_data_risk",
@@ -200,7 +210,9 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy sprawdzić aktualne rozporządzenia MF dotyczące KSeF oraz komunikaty Ministerstwa Finansów w sprawie harmonogramu wdrożenia KSeF i planowanych zmian w zakresie tokenów. Warto dodać w drafcie zastrzeżenie, że termin 1.01.2027 może ulec zmianie i należy weryfikować aktualne komunikaty MF.",
         "verified_at": "2026-04-18T12:48:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -212,7 +224,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie uznana za zasadną, warto dodać do kroku 7 podpunkt z najczęstszymi przyczynami błędów testu połączenia (np. nieprawidłowy certyfikat, brak uprawnień w KSeF, błędny NIP kontekstu) oraz wskazać gdzie szukać pomocy (logi Comarch Optima, infolinia MF, dokumentacja API KSeF).",
         "verified_at": "2026-04-18T12:48:47Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -224,7 +238,9 @@
         "corrective_suggestion": "Warto dodać adnotację przy tym edge case wskazującą źródło informacji (np. 'zgodnie z dokumentacją techniczną MF / praktyką potwierdzoną przez helpdesk KSeF / komunikatem MF z dnia X') lub oznaczyć jako 'praktyka empiryczna — do weryfikacji z MF', aby użytkownik wiedział, że nie jest to procedura wprost wynikająca z przepisów prawa.",
         "verified_at": "2026-04-18T12:48:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -238,5 +254,20 @@
         "kb_records_used": 3
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "step_contradiction": 1,
+      "missing_critical_info": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "high": 1,
+      "medium": 5,
+      "low": 2
+    }
   }
 }

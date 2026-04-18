@@ -188,7 +188,9 @@
         "corrective_suggestion": "Zweryfikować aktualną treść rozporządzenia Ministra Finansów w sprawie zwolnień z obowiązku prowadzenia ewidencji sprzedaży przy zastosowaniu kas rejestrujących i zaktualizować kwotę limitu w step 5 do wartości obowiązującej w 2026 r. Jeśli limit wynosi 100 000 zł, należy zastąpić '20 000 zł' właściwą kwotą z powołaniem na konkretne rozporządzenie.",
         "verified_at": "2026-04-18T12:04:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "hallucination_risk",
@@ -221,7 +223,9 @@
         "corrective_suggestion": "Zweryfikować w przepisach o KSeF (ustawa o VAT art. 106na i nast. w brzmieniu od 2026 r.) czy istnieje obowiązek udostępnienia wizualizacji faktury ustrukturyzowanej konsumentowi przy sprzedaży kasowej, a jeśli tak — wskazać konkretny artykuł jako anchor; jeśli nie — usunąć lub doprecyzować sformułowanie w drafcie.",
         "verified_at": "2026-04-18T12:05:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "step_contradiction",
@@ -245,7 +249,9 @@
         "corrective_suggestion": "Rozważyć dodanie w step 4 warunku: 'jeżeli faktura nie posiada numeru KSeF (np. wystawiona przed 1.01.2026 r. lub w formie papierowej w przypadku zwolnienia z KSeF), w kolumnie 3 KPiR wpisuje się numer faktury lub pozostawia pole puste zgodnie z obowiązującymi przepisami przejściowymi' — po uprzedniej weryfikacji przepisów rozporządzenia o KPiR i przepisów przejściowych KSeF.",
         "verified_at": "2026-04-18T12:05:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -257,7 +263,9 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy przeszukać KB pod kątem rozporządzeń MF o kasach rejestrujących (np. § dotyczące raportów okresowych). Jeśli draft ma być poprawiony niezależnie od weryfikacji — warto doprecyzować w step 7: (a) powołać konkretny przepis rozporządzenia o kasach rejestrujących nakładający obowiązek raportu zerowego, (b) wskazać wprost, że przy braku technicznej możliwości wydruku raportu zerowego należy sporządzić notatkę/dowód wewnętrzny, (c) oddzielnie opisać sytuację podatnika bez kasy fiskalnej (wystarczy dowód wewnętrzny z step 5).",
         "verified_at": "2026-04-18T12:05:37Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -269,7 +277,9 @@
         "corrective_suggestion": "Jeśli draft ma być praktycznym przewodnikiem, warto rozbudować edge case o konkretne kroki: np. w Comarch ERP Optima — ręczna korekta zapisu RO przez dokument różnicowy; w WFirma — osobny zapis przychodu przy fakturze końcowej z adnotacją o zaliczce; w Symfonii — storno częściowe raportu i doksięgowanie przy fakturze końcowej. Alternatywnie można dodać odesłanie do dokumentacji producenta systemu.",
         "verified_at": "2026-04-18T12:05:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -281,7 +291,9 @@
         "corrective_suggestion": "Jeśli zmiana od 1.02.2026 r. jest realna, warto dodać konkretny warunek: 'Jeżeli MF potwierdzi obowiązek osobnego wykazywania faktur uproszczonych w JPK_V7, należy je wykazać analogicznie do FP z oznaczeniem [X] — do czasu potwierdzenia stosuj zasadę zbiorczego ujęcia w RO.' Pozwoli to użytkownikowi działać w obu scenariuszach.",
         "verified_at": "2026-04-18T12:05:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "hallucination_risk",
@@ -292,7 +304,9 @@
         "verifier_confidence": 0.6,
         "verified_at": "2026-04-18T12:05:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "outdated_data_risk",
@@ -303,8 +317,23 @@
         "verifier_confidence": 0.5,
         "verified_at": "2026-04-18T12:06:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "hallucination_risk": 2,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 2
+    }
   }
 }

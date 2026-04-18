@@ -153,7 +153,9 @@
         "corrective_suggestion": "Należy zweryfikować aktualne brzmienie art. 86 ust. 10, 10b pkt 1 i ust. 11 ustawy o VAT bezpośrednio w tekście ustawy. Art. 86 ust. 10b pkt 1 reguluje warunek odliczenia VAT z WNT (posiadanie faktury), a ust. 11 dotyczy terminu odliczenia w kolejnym okresie — jeśli tak jest, cytowanie jest prawidłowe i flaga jest false positive; jeśli brzmienie jest inne, należy skorygować podstawę prawną.",
         "verified_at": "2026-04-18T12:33:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -165,7 +167,9 @@
         "corrective_suggestion": "Jeśli w pełnym drafcie (w sekcji edge_cases) faktycznie pojawia się kwota 50 000 zł jako limit WNT dla rejestracji VAT-UE, należy ją zaktualizować zgodnie z aktualnym brzmieniem art. 97 ust. 1 i art. 10 ust. 1 pkt 2 ustawy o VAT oraz sprawdzić aktualny próg obowiązujący w 2026 r.",
         "verified_at": "2026-04-18T12:33:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -198,7 +202,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 5 zastrzeżenia: 'Przed odliczeniem VAT zweryfikuj aktywność polskiego NIP sprzedawcy w rejestrze podatników VAT (Biała Lista). Jeśli NIP jest nieaktywny lub fikcyjny, transakcja może wymagać reklasyfikacji jako WNT lub import usług, a odliczenie VAT z takiej faktury może być zakwestionowane.'",
         "verified_at": "2026-04-18T12:34:07Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -210,7 +216,9 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie, że 'IMP' to oznaczenie wymagane w JPK_V7 zgodnie z rozporządzeniem MF, a sposób jego wprowadzenia w Comarch Optima może wymagać weryfikacji w dokumentacji producenta lub poprzez ręczne ustawienie w konfiguracji rejestru VAT.",
         "verified_at": "2026-04-18T12:34:14Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -243,7 +251,9 @@
         "corrective_suggestion": "Doprecyzować edge case: podmiot zwolniony z VAT (art. 113) nabywający usługi z art. 28b składa VAT-9M (nie JPK_V7), rejestruje się do VAT-UE (art. 97 ust. 3 pkt 2) przy usługach z UE, ale nie odlicza VAT — VAT staje się kosztem. Usunąć wzmiankę o JPK_V7 w kontekście tego podmiotu lub wyraźnie zaznaczyć, że JPK_V7 dotyczy tylko czynnych podatników VAT.",
         "verified_at": "2026-04-18T12:34:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -255,7 +265,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać do kroku 5 lub 3 wyjaśnienie: gdy zagraniczny podmiot (np. Microsoft Ireland) jest zarejestrowany do VAT w Polsce i wystawia fakturę z polskim NIP i VAT 23%, nabywca traktuje to jako transakcję krajową (odliczenie na zasadach art. 86 ust. 1) — nie stosuje mechanizmu importu usług. Import usług (krok 3) dotyczy wyłącznie sytuacji, gdy sprzedawca NIE jest zarejestrowany do VAT w Polsce i nie nalicza polskiego VAT.",
         "verified_at": "2026-04-18T12:34:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -278,8 +290,24 @@
         "corrective_suggestion": "W step 3 należy dodać zastrzeżenie: jeśli nabywca korzysta ze zwolnienia podmiotowego (art. 113 ustawy o VAT) lub przedmiotowego, rozlicza VAT należny z importu usług (art. 17 ust. 1 pkt 4), ale nie ma prawa do odliczenia VAT naliczonego (art. 86 ust. 1 — prawo do odliczenia przysługuje tylko w zakresie, w jakim towary/usługi są wykorzystywane do czynności opodatkowanych). W takim przypadku VAT staje się kosztem, a nie neutralnym rozliczeniem.",
         "verified_at": "2026-04-18T12:35:02Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 1,
+      "missing_critical_info": 2
+    },
+    "severity_breakdown": {
+      "medium": 7
+    }
   }
 }

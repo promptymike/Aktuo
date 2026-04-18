@@ -139,7 +139,9 @@
         "corrective_suggestion": "Zaleca się weryfikację uchwały SN III UZP 5/12 w oficjalnej bazie orzeczeń SN lub Lex/Legalis pod kątem ewentualnych późniejszych uchwał lub wyroków zmieniających linię orzeczniczą. Jeśli uchwała pozostaje aktualna, warto dodać adnotację o jej potwierdzeniu; jeśli zastąpiona — zaktualizować powołanie do nowszego orzeczenia.",
         "verified_at": "2026-04-18T12:11:29Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -172,7 +174,9 @@
         "corrective_suggestion": "Należy wprost wskazać w drafcie podstawę prawną zmiany z 1.01.2022 (jeśli taka nastąpiła) — tj. konkretną nowelizację ustawy zasiłkowej lub wyraźnie zaznaczyć, że reguła 60 dni + ta sama choroba wynika z art. 9 ust. 2 ustawy zasiłkowej w brzmieniu obowiązującym, bez sugerowania zmiany legislacyjnej jeśli jej nie było.",
         "verified_at": "2026-04-18T12:11:48Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -184,7 +188,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona zewnętrznie: usunąć odniesienie do 'formularza ZAS-12' w step 6 lub zastąpić go prawidłowym narzędziem (np. wnioskiem o informację do ZUS w formie pisemnej lub przez PUE ZUS — zakładka 'Informacje o świadczeniach'), ewentualnie wskazać pracodawcy, że powinien poprosić pracownika o zaświadczenie od poprzedniego pracodawcy (druk ZUS Z-3) lub sprawdzić historię w PUE.",
         "verified_at": "2026-04-18T12:11:56Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -217,7 +223,9 @@
         "corrective_suggestion": "Należy zweryfikować aktualną treść art. 43 ustawy z dnia 25 czerwca 1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (Dz.U. 1999 nr 60 poz. 636 ze zm.) — w szczególności czy próg 'krótszy niż 1 miesiąc kalendarzowy' jako warunek nieprzeliczania podstawy wymiaru pozostaje aktualny na 2026 r.",
         "verified_at": "2026-04-18T12:12:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -229,7 +237,9 @@
         "corrective_suggestion": "Jeśli workflow ma być kompletny, warto dodać w step 7 wzmiankę: 'Podstawę wymiaru wynagrodzenia chorobowego ustala się jako średnie miesięczne wynagrodzenie z 12 miesięcy kalendarzowych poprzedzających miesiąc, w którym powstała niezdolność (art. 36 ust. 1 ustawy zasiłkowej), a przy krótszym zatrudnieniu — z faktycznego okresu zatrudnienia.'",
         "verified_at": "2026-04-18T12:12:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -241,7 +251,9 @@
         "corrective_suggestion": "Rozważyć dodanie do edge case 'Pracownik po 50. r.ż.' konkretnego przykładu: 'Pracownik kończy 50 lat 15.06.2026 — w całym 2026 r. obowiązuje go limit 33 dni; limit 14 dni zacznie obowiązywać dopiero od 1.01.2027.' Zwiększyłoby to klarowność bez zmiany merytorycznej treści.",
         "verified_at": "2026-04-18T12:12:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -253,7 +265,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać do step 5 informację: ZUS ma 7 dni roboczych na odpowiedź przez PUE (praktyka), a w przypadku braku odpowiedzi przed terminem wypłaty pracodawca powinien wypłacić wynagrodzenie chorobowe zachowawczo (zakładając pełny limit 33/14 dni) i dokonać korekty po otrzymaniu informacji — z ewentualnym potrąceniem nadpłaty z kolejnego wynagrodzenia za zgodą pracownika (art. 91 k.p.).",
         "verified_at": "2026-04-18T12:12:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -265,7 +279,9 @@
         "corrective_suggestion": "Jeśli RCA/RSA faktycznie pojawia się w drafcie, należy zweryfikować czy są to rzeczywiste, powszechnie używane nazwy systemów kadrowo-płacowych w Polsce, lub zastąpić je konkretnymi, weryfikowalnymi nazwami (np. Comarch Optima, Symfonia, Enova365, SAP HCM) albo użyć ogólnego sformułowania 'program kadrowo-płacowy'.",
         "verified_at": "2026-04-18T12:12:47Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -277,7 +293,9 @@
         "corrective_suggestion": "Rozważyć dodanie w step 5 informacji: pracodawca nie może wstrzymać wypłaty wynagrodzenia chorobowego z powodu niedostarczenia świadectwa pracy — powinien wypłacić pełny limit 33/14 dni, a następnie dochodzić ewentualnych roszczeń regresowych lub korekt po otrzymaniu dokumentu. Wymaga weryfikacji z art. 92 KP i przepisami ustawy zasiłkowej.",
         "verified_at": "2026-04-18T12:12:56Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
   },
@@ -289,5 +307,19 @@
       "source": "v2",
       "source_url": "https://przepisy.gofin.pl/przepisy,3,17,53,6205,410330,20230927,kody-wykorzystywane-przy-wypelnianiu-dokumentow.html"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 9,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "step_contradiction": 1,
+      "hallucination_risk": 2,
+      "missing_critical_info": 3,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 2
+    }
+  }
 }

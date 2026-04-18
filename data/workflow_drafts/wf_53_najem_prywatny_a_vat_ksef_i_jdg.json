@@ -166,7 +166,9 @@
         "corrective_suggestion": "Dodać do LEGAL_ANCHORS explicite art. 106b ust. 3 z pełnym cytatem warunku zwolnienia z obowiązku wystawienia faktury (np. 'podatnik nie ma obowiązku wystawienia faktury w odniesieniu do sprzedaży zwolnionej od podatku na podstawie art. 43 ust. 1...') oraz wskazać, że wyłączenie dla B2C wynika z art. 106b ust. 2 (brak obowiązku wystawienia faktury konsumentowi bez żądania), a nie ust. 3 — co wymaga weryfikacji w aktualnym tekście ustawy.",
         "verified_at": "2026-04-18T12:32:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "hallucination_risk",
@@ -178,7 +180,9 @@
         "corrective_suggestion": "Zaleca się weryfikację wyroku TSUE C-42/14 bezpośrednio w bazie EUR-Lex lub Lex/Legalis i precyzyjne opisanie jego tezy w drafcie — np. 'wyrok TSUE C-42/14 z 16.04.2015 r. dotyczący traktowania dostawy mediów jako świadczeń odrębnych lub pomocniczych przy najmie nieruchomości'. Jeśli wyrok nie dotyczy wprost refaktury mediów, należy go zastąpić właściwym orzeczeniem lub usunąć odwołanie.",
         "verified_at": "2026-04-18T12:32:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -190,7 +194,9 @@
         "corrective_suggestion": "Warto uzupełnić krok 6 o wyjaśnienie, że obowiązek uzyskania NIP przed wystawieniem faktury w KSeF istnieje od momentu przekroczenia limitu 10 000 zł/mc (tj. od 1.04.2026 dla tej grupy podatników), a nie dopiero od 1.01.2027 — jeśli taka jest intencja draftu, należy podać podstawę prawną tego terminu lub zaznaczyć, że kwestia wymaga weryfikacji w aktualnych przepisach wykonawczych.",
         "verified_at": "2026-04-18T12:32:30Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -202,7 +208,9 @@
         "corrective_suggestion": "Warto rozdzielić w kroku 4 dwie kwestie: (1) obowiązek WYSTAWIANIA faktur w KSeF (odroczony do 1.01.2027 dla podatników z obrotem ≤10k zł/mc) oraz (2) obowiązek ODBIERANIA faktur w KSeF — jeśli ten drugi obowiązuje od wcześniejszej daty niezależnie od limitu, należy to wyraźnie zaznaczyć z podaniem podstawy prawnej.",
         "verified_at": "2026-04-18T12:32:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -214,7 +222,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, draft powinien wyraźnie wskazać, że limit 10 000 zł brutto dotyczy wyłącznie faktur objętych obowiązkiem KSeF (B2B), a faktury B2C dobrowolne nie wliczają się do tego limitu — lub odwrotnie, jeśli przepis stanowi inaczej. Należy zacytować konkretny artykuł ustawy lub przepisu przejściowego regulującego sposób liczenia limitu.",
         "verified_at": "2026-04-18T12:32:48Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -226,7 +236,9 @@
         "corrective_suggestion": "Podać konkretne numery interpretacji indywidualnych KIS (np. z bazy EUREKA na podatki.gov.pl) potwierdzających stosowanie ZW z art. 43 ust. 1 pkt 36 przy najmie B2B lokalu mieszkalnego firmie podnajmującej pracownikom, lub zastąpić sformułowanie 'potwierdzone w interpretacjach KIS od 2022 r.' ostrożniejszym 'zgodnie z dominującą linią interpretacyjną — zalecana weryfikacja w bazie KIS lub zapytanie o interpretację indywidualną'.",
         "verified_at": "2026-04-18T12:32:57Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "outdated_data_risk",
@@ -238,7 +250,9 @@
         "corrective_suggestion": "Należy ręcznie zweryfikować w ISAP aktualny stan rozporządzenia MF z 17.12.2024 (Dz.U. 2024 poz. 1902) oraz sprawdzić, czy nie zostało zmienione lub zastąpione nowszym aktem wykonawczym w 2025-2026 r. Jeśli brak potwierdzenia aktualności — dodać zastrzeżenie w drafcie o konieczności weryfikacji stanu prawnego na dzień stosowania.",
         "verified_at": "2026-04-18T12:33:04Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "hallucination_risk",
@@ -250,7 +264,9 @@
         "corrective_suggestion": "Zaleca się usunięcie lub uogólnienie instrukcji dla konkretnych programów (Comarch Optima, Symfonia, WFirma) albo dodanie zastrzeżenia: 'Nazwy modułów i ścieżki nawigacji mogą różnić się w zależności od wersji oprogramowania — należy zweryfikować z aktualną dokumentacją producenta lub działem wsparcia technicznego.' Alternatywnie można opisać ogólny proces (wystawienie faktury → integracja z KSeF) bez podawania konkretnych ścieżek menu.",
         "verified_at": "2026-04-18T12:33:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -262,7 +278,9 @@
         "corrective_suggestion": "Warto dodać w kroku 1 lub 6 wyjaśnienie, że osoba fizyczna wynajmująca prywatnie, która jest podatnikiem VAT zwolnionym podmiotowo (art. 113 ustawy o VAT) i wchodzi w obowiązek KSeF, nie musi rejestrować się jako VAT czynny — może wystawiać faktury zwolnione bez rejestracji VAT-R, choć uzyskanie NIP pozostaje konieczne. Jeśli natomiast przekroczy limit zwolnienia podmiotowego, rejestracja VAT-R staje się obowiązkowa.",
         "verified_at": "2026-04-18T12:33:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -274,8 +292,25 @@
         "corrective_suggestion": "Zalecana ręczna weryfikacja treści art. 6 ust. 1a i art. 12 ust. 1 pkt 4 lit. a ustawy z dnia 20 listopada 1998 r. o zryczałtowanym podatku dochodowym w aktualnym brzmieniu (Dz.U. 2024 poz. 776 t.j.) pod kątem ewentualnych zmian obowiązujących od 2026 r.",
         "verified_at": "2026-04-18T12:33:29Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 10,
+    "by_type": {
+      "legal_anchor_uncertainty": 2,
+      "hallucination_risk": 2,
+      "missing_critical_info": 3,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 3
+    }
   }
 }

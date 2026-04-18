@@ -135,7 +135,9 @@
         "verifier_confidence": 0.55,
         "verified_at": "2026-04-18T12:23:37Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -180,7 +182,9 @@
         "corrective_suggestion": "Zaleca się weryfikację aktualności rozporządzenia MRPiPS z 10.12.2018 r. (Dz.U. 2018 poz. 2369) w bazie ISAP lub Dzienniku Ustaw pod kątem ewentualnych nowelizacji. Jeśli rozporządzenie było zmieniane, należy zaktualizować odniesienie do właściwego paragrafu i daty tekstu jednolitego lub nowelizacji.",
         "verified_at": "2026-04-18T12:24:02Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -191,7 +195,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-18T12:24:08Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -214,7 +220,9 @@
         "corrective_suggestion": "Jeśli w innej części drafta (np. step 3 lub dodatkowe wskazówki) faktycznie wymieniono konkretne nazwy modułów systemów kadrowych, należy albo usunąć te nazwy i zastąpić ogólnym opisem funkcjonalności, albo dodać zastrzeżenie że nazwy modułów mogą się różnić w zależności od wersji oprogramowania i należy je zweryfikować z aktualną dokumentacją producenta.",
         "verified_at": "2026-04-18T12:24:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -238,7 +246,9 @@
         "corrective_suggestion": "Należy zweryfikować aktualną treść art. 15 ustawy z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych (Dz.U. z 2023 r. poz. 100 ze zm.) - w szczególności czy norma 7h/35h dla stopnia umiarkowanego i znacznego nadal obowiązuje bez zmian, oraz czy warunek zniesienia ograniczenia przez lekarza medycyny pracy jest prawidłowo opisany (ustawa mówi o lekarzu przeprowadzającym badania profilaktyczne lub lekarzu sprawującym opiekę nad osobą niepełnosprawną).",
         "verified_at": "2026-04-18T12:24:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -262,7 +272,9 @@
         "corrective_suggestion": "Warto doprecyzować w step 6, że 'cały dzień wolny' oznacza dzień wolny od pracy (bez wskazywania konkretnej liczby godzin), a dla niepełnoetatowców należy odwołać się do ich indywidualnego rozkładu czasu pracy i wymiaru dnia pracy wynikającego z umowy.",
         "verified_at": "2026-04-18T12:24:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
   },
@@ -273,5 +285,20 @@
       "applied_at": "2026-04-18T14:20:03Z",
       "source": "v1"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 6,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "missing_critical_info": 1,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 1,
+      "step_contradiction": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 2
+    }
+  }
 }

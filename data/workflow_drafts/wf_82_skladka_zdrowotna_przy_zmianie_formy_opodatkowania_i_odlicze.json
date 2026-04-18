@@ -215,7 +215,9 @@
         "corrective_suggestion": "Należy doprecyzować w drafcie, że krok 2 (podstawa 0) dotyczy wyłącznie formy skali/liniowego (gdzie podstawa to dochód z poprzedniego miesiąca), natomiast na ryczałcie podstawa zdrowotnej za styczeń 2026 jest liczona od przychodu osiągniętego w styczniu 2026 (nie z poprzedniego miesiąca), więc nie wynosi 0 — co eliminuje pozorną sprzeczność między krokami 2 i 6.",
         "verified_at": "2026-04-18T12:39:20Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -227,7 +229,9 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie w kroku 7, że podane ścieżki menu są orientacyjne i mogą różnić się w zależności od wersji programu, zalecając weryfikację w dokumentacji producenta lub helpdesku danego oprogramowania.",
         "verified_at": "2026-04-18T12:39:29Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -239,7 +243,9 @@
         "corrective_suggestion": "Jeśli zmiana formy opodatkowania w trakcie roku jest niedopuszczalna (poza wyjątkami jak rezygnacja z ryczałtu do 20 lutego), draft powinien to explicite stwierdzić z powołaniem na odpowiedni przepis (art. 9a ustawy o PIT lub art. 9 ustawy o ryczałcie), zamiast pozostawiać użytkownika bez informacji o konsekwencjach próby takiej zmiany.",
         "verified_at": "2026-04-18T12:39:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -251,7 +257,9 @@
         "corrective_suggestion": "Rozważyć dodanie do edge_cases informacji, że zwrot nadpłaty składki zdrowotnej co do zasady nie stanowi przychodu podatkowego (jest zwrotem składki, nie przychodem z działalności), jednak jeśli składka była wcześniej odliczona od podatku lub zaliczona do kosztów, jej zwrot może zwiększać podstawę opodatkowania — warto odesłać do art. 14 ust. 2 pkt 7b ustawy o PIT lub zalecić weryfikację w KIS przy istotnych kwotach.",
         "verified_at": "2026-04-18T12:39:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -263,7 +271,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać w kroku 5 (lub osobnym kroku) wyjaśnienie: roczne rozliczenie składki zdrowotnej za dany rok kalendarzowy składa się w DRA za kwiecień roku następnego — jedno rozliczenie obejmuje cały rok, w którym obowiązywała dana forma opodatkowania; przy zmianie formy w trakcie roku mogą być wymagane dwa osobne rozliczenia roczne (jedno za okres starej formy, drugie za okres nowej formy).",
         "verified_at": "2026-04-18T12:39:57Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -275,7 +285,9 @@
         "corrective_suggestion": "Warto doprecyzować źródło, np.: 'zweryfikuj w komunikacie Prezesa ZUS w sprawie kwoty prognozowanego przeciętnego wynagrodzenia miesięcznego w gospodarce narodowej na dany rok składkowy (publikowanym w Monitorze Polskim)' lub podać bezpośredni link do strony ZUS z aktualnymi podstawami.",
         "verified_at": "2026-04-18T12:40:04Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -287,8 +299,24 @@
         "corrective_suggestion": "Warto dodać do draftu explicit legal anchor, np.: 'Na podstawie art. 27b ustawy o PIT (w brzmieniu po nowelizacji z 1.01.2022 r. — Polski Ład) składka zdrowotna nie podlega odliczeniu od podatku przy opodatkowaniu na zasadach ogólnych (skala podatkowa).' Należy zweryfikować aktualny stan art. 27b ustawy o PIT.",
         "verified_at": "2026-04-18T12:40:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "step_contradiction": 1,
+      "hallucination_risk": 2,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 1,
+      "legal_anchor_uncertainty": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 1
+    }
   }
 }

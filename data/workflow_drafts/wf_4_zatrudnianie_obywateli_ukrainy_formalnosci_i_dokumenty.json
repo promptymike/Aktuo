@@ -210,7 +210,9 @@
         "corrective_suggestion": "Jeśli art. 22 ust. 6 specustawy rzeczywiście nie precyzuje formy tłumaczenia ani kwestii kosztów, warto dodać do kroku 5 notę praktyczną: tłumaczenie nie musi być certyfikowane (brak wymogu ustawowego), koszty ponosi pracodawca jako podmiot zobowiązany, a pracownik ma prawo odmówić podpisania umowy bez otrzymania tłumaczenia — co należy udokumentować.",
         "verified_at": "2026-04-18T12:28:57Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -222,7 +224,9 @@
         "corrective_suggestion": "Należy bezpośrednio zweryfikować treść art. 22 ust. 6 ustawy z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2024 poz. 167 t.j.) — jeśli przepis o tłumaczeniu umowy nie istnieje w tym konkretnym ustępie, należy wskazać właściwy artykuł lub usunąć powołanie na konkretny ustęp, zastępując ogólnym odwołaniem do specustawy lub innej podstawy prawnej (np. art. 29 § 2 KP w zw. z zasadą równego traktowania).",
         "verified_at": "2026-04-18T12:29:06Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -234,7 +238,9 @@
         "corrective_suggestion": "Rozważ usunięcie lub uogólnienie instrukcji specyficznych dla konkretnych wersji oprogramowania, zastępując je ogólnym opisem wymaganych danych (np. 'oznacz pracownika jako nierezydenta i wprowadź kod kraju rezydencji podatkowej zgodnie z dokumentacją używanego systemu kadrowo-płacowego').",
         "verified_at": "2026-04-18T12:29:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -246,7 +252,9 @@
         "corrective_suggestion": "Należy uzupełnić edge case o wyraźne zastrzeżenie: 'Legalność pobytu i pracy po 4.03.2026 (lub innej dacie wygaśnięcia specustawy) przy złożonym, ale nierozpatrzonym wniosku wymaga weryfikacji na podstawie aktualnych przepisów przejściowych specustawy lub ustawy o cudzoziemcach — zalecana konsultacja z prawnikiem specjalizującym się w prawie migracyjnym.'",
         "verified_at": "2026-04-18T12:29:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -258,7 +266,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać do kroku 3 informację: w przypadku braku numeru PESEL (np. wniosek złożony, ale jeszcze nienadany) pracodawca powinien skontaktować się z właściwym PUP w celu ustalenia trybu postępowania, ewentualnie złożyć powiadomienie z dostępnymi danymi identyfikacyjnymi (imię, nazwisko, data urodzenia, numer paszportu) i uzupełnić PESEL niezwłocznie po jego nadaniu.",
         "verified_at": "2026-04-18T12:29:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -281,7 +291,9 @@
         "corrective_suggestion": "Jeśli flaga ma być potwierdzona na podstawie wiedzy merytorycznej: przy statusie UKR zmiana pracodawcy wymaga nowego powiadomienia w PUP w ciągu 7 dni (art. 22 specustawy dotyczy konkretnego pracodawcy); przy zezwoleniu jednolitym (karta pobytu z art. 114 ustawy o cudzoziemcach) zmiana pracodawcy co do zasady wymaga nowego zezwolenia lub zmiany decyzji. Draft powinien zawierać krok lub notę wyjaśniającą te różnice.",
         "verified_at": "2026-04-18T12:29:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -293,8 +305,23 @@
         "corrective_suggestion": "Warto w drafcie explicite rozróżnić dwa przypadki: (1) obywatel Ukrainy ze statusem UKR — zmiana pracodawcy wymaga nowego powiadomienia w PUP w ciągu 7 dni (art. 22 specustawy), bez konieczności uzyskania nowego zezwolenia; (2) cudzoziemiec z zezwoleniem jednolitym (karta pobytu z art. 114 ustawy o cudzoziemcach) — zmiana pracodawcy co do zasady wymaga nowej decyzji/zezwolenia, chyba że karta pobytu daje nieograniczony dostęp do rynku pracy.",
         "verified_at": "2026-04-18T12:29:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1,
+      "step_contradiction": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 1
+    }
   }
 }

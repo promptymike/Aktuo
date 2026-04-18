@@ -157,7 +157,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy doprecyzować w step 5: (1) że PIT-2 to standardowy formularz, a część E dotyczy ulgi dla seniora (art. 32 ust. 3 ustawy o PIT), (2) że oświadczenie składa się na formularzu PIT-2 (lub w innej formie pisemnej dopuszczonej przez przepisy), (3) że pracodawca przechowuje oświadczenie w aktach osobowych pracownika lub dokumentacji płacowej przez okres wymagany przepisami o rachunkowości.",
         "verified_at": "2026-04-18T12:37:51Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -169,7 +171,9 @@
         "corrective_suggestion": "Rozważyć doprecyzowanie step 4: jeśli w danym miesiącu pracownik uzyskał zarówno przychód opodatkowany, jak i zwolniony (np. część wypłaty przed, część po dacie urodzin), KUP powinny być stosowane proporcjonalnie do przychodu opodatkowanego lub w pełnej wysokości za ten miesiąc — należy wskazać jednoznaczną zasadę z powołaniem na konkretną interpretację lub przepis.",
         "verified_at": "2026-04-18T12:38:00Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -192,7 +196,9 @@
         "corrective_suggestion": "Warto doprecyzować w step 6, że 'otrzymanie pierwszego świadczenia emerytalnego' oznacza datę faktycznego wpływu środków na rachunek bankowy (zasada kasowa w PIT), a nie datę decyzji ZUS przyznającej emeryturę — co jest spójne z ogólną zasadą kasową stosowaną przy uldze dla seniora (art. 21 ust. 1 pkt 154 ustawy o PIT). Zalecane powołanie się na interpretacje indywidualne KIS potwierdzające tę wykładnię.",
         "verified_at": "2026-04-18T12:38:14Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -204,7 +210,9 @@
         "corrective_suggestion": "Rozważyć dodanie do edge case'u o dwóch pracodawcach informacji, że pracownik składa oświadczenie PIT-2 (cz. E) u każdego pracodawcy osobno i ponosi odpowiedzialność za prawdziwość danych; pracodawca nie ma narzędzi do weryfikacji zatrudnienia u innego płatnika, a konsekwencją niedopłaty jest obowiązek dopłaty podatku w zeznaniu rocznym przez pracownika.",
         "verified_at": "2026-04-18T12:38:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -216,7 +224,9 @@
         "corrective_suggestion": "Jeśli w pełnej wersji draftu rzeczywiście znajdują się instrukcje specyficzne dla Comarch Optima i Symfonii, warto dodać ogólną notę że zasady wykazywania w PIT-11 są systemowo-niezależne i wynikają z przepisów, a ścieżki w konkretnych programach mogą się różnić.",
         "verified_at": "2026-04-18T12:38:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -228,7 +238,9 @@
         "corrective_suggestion": "Dodaj w drafcie adnotację 'według stanu na rok 2025/2026' przy kwotach KUP lub odesłanie do art. 22 ust. 2 ustawy o PIT jako źródła aktualnych wartości, aby użytkownik mógł samodzielnie zweryfikować obowiązujące kwoty.",
         "verified_at": "2026-04-18T12:38:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -240,8 +252,23 @@
         "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać notę: 'Ulga dla seniora (pkt 154) i ulga na powrót (pkt 152) są odrębnymi zwolnieniami — podatnik może korzystać tylko z jednego tytułu zwolnienia dla tego samego przychodu; szczegóły łączenia ulg należy zweryfikować w art. 21 ust. 1 pkt 152 i 154 ustawy o PIT oraz objaśnieniach MF.'",
         "verified_at": "2026-04-18T12:38:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "missing_critical_info": 4,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 3
+    }
   }
 }
