@@ -130,7 +130,9 @@
         "corrective_suggestion": "Należy zweryfikować bezpośrednio w dokumentacji ZUS (np. na stronie zus.pl) czy formularz US-7 istnieje i jest aktualny. Jeśli nie istnieje, należy zastąpić go właściwą nazwą dokumentu, np. 'zaświadczenie o przebiegu ubezpieczenia' lub wskazać właściwy formularz ZUS potwierdzający okresy podlegania ubezpieczeniom społecznym.",
         "verified_at": "2026-04-17T23:48:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -142,7 +144,9 @@
         "corrective_suggestion": "Jeśli flaga ma być potraktowana jako confirmed na podstawie zdrowego rozsądku (nie KB), warto w kroku 6 zastąpić konkretne nazwy systemów ogólnym opisem: 'W używanym systemie kadrowo-płacowym (np. Comarch Optima, Symfonia, Enova lub innym)' albo dodać przypis: 'Nazwy zakładek mogą różnić się w zależności od wersji oprogramowania – zweryfikuj aktualną dokumentację producenta.'",
         "verified_at": "2026-04-17T23:48:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -175,7 +179,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 3 wskazówki, że zaświadczenie z uczelni powinno być aktualne na dzień wykonywania zlecenia (tj. potwierdzać status studenta w konkretnym okresie objętym umową), a legitymacja studencka może być pomocnicza, ale zaświadczenie z dziekanatu z datą wydania lub archiwalne potwierdzenie statusu studenta jest bardziej wiarygodne dla celów dokumentacyjnych.",
         "verified_at": "2026-04-17T23:49:01Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -187,7 +193,9 @@
         "corrective_suggestion": "Rozważyć doprecyzowanie w kroku 5, że okresy zasiłkowe są traktowane jako kontynuacja tego samego okresu DG/zlecenia (nie jako odrębny okres), a więc zasada niepodwajania z kroku 4 nie ma do nich zastosowania – zasiłek nie tworzy nowego, nakładającego się okresu, lecz jest częścią już liczonego okresu ubezpieczenia.",
         "verified_at": "2026-04-17T23:49:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -199,7 +207,9 @@
         "corrective_suggestion": "Dodać do legal_anchors art. 154¹ KP (staż urlopowy) oraz art. 155 KP (zaliczanie nauki do stażu urlopowego), a w kroku 7 explicite wyjaśnić zasadę wyboru okresu korzystniejszego dla pracownika z powołaniem na konkretny przepis lub orzecznictwo SN.",
         "verified_at": "2026-04-17T23:49:17Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -211,7 +221,9 @@
         "corrective_suggestion": "Warto uzupełnić edge case o informację, że ZUS wydaje zaświadczenia o przebiegu ubezpieczenia na podstawie danych w systemie KEDU/POLTAX, jednak dla okresów sprzed 1999 r. (przed wdrożeniem systemu informatycznego ZUS) dane mogą być niedostępne lub niekompletne, a wówczas pracownik może być odesłany do archiwów pracodawcy lub sądu pracy w trybie ustalenia okresu ubezpieczenia.",
         "verified_at": "2026-04-17T23:49:26Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -223,7 +235,9 @@
         "corrective_suggestion": "Draft powinien wprost wyjaśnić, że nowe przepisy mają charakter retroaktywny – tj. od 1 stycznia 2026 r. do stażu pracy zalicza się wszystkie kwalifikujące się okresy zlecenia i DG niezależnie od tego, kiedy przypadały (również sprzed 2026 r.), o ile spełnione są warunki podlegania ubezpieczeniom społecznym. Jeśli ustawa nowelizująca zawiera odmienne przepisy przejściowe, należy je wskazać wprost.",
         "verified_at": "2026-04-17T23:49:34Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -235,7 +249,9 @@
         "corrective_suggestion": "Można złagodzić sformułowanie w kroku 6, dodając zastrzeżenie: 'w zależności od wersji systemu – jeśli system nie przewiduje dedykowanego pola, użyj pola 'Uwagi' lub 'Opis' w kartotece pracownika, dokumentując rodzaj okresu pozapracowniczego'.",
         "verified_at": "2026-04-17T23:49:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       }
     ]
   },
@@ -247,5 +263,20 @@
       "source": "v2",
       "source_url": "https://ksiegowosc.infor.pl/wiadomosci/7515117,tlumy-polakow-ruszyly-do-zus-chodzi-o-nowe-zasady-liczenia-stazu-pracy.html"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "outdated_data_risk": 1,
+      "missing_critical_info": 2,
+      "step_contradiction": 1,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 1
+    }
+  }
 }

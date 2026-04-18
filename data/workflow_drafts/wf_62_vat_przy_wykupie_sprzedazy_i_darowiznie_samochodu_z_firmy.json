@@ -129,7 +129,9 @@
         "corrective_suggestion": "Jeśli draft dotyczy stanu prawnego na 2026 r., należy dodać zastrzeżenie, że powołanie na art. 86a ust. 1-3 odnosi się do brzmienia przepisu obowiązującego na dzień sporządzenia analizy i zalecić weryfikację aktualności przepisu przed zastosowaniem w 2026 r.",
         "verified_at": "2026-04-17T23:43:48Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -162,7 +164,9 @@
         "corrective_suggestion": "Warto doprecyzować w drafcie, że krok 4 dotyczy sytuacji, gdy auto NIGDY nie było środkiem trwałym ani nie generowało kosztów/odliczeń w firmie (wykup prywatny), natomiast krok 6 dotyczy auta, które BYŁO w firmie (ŚT lub koszty) i zostało formalnie wycofane – wtedy 6-letni okres z art. 10 ust. 2 pkt 4 ustawy o PIT ma zastosowanie. Rozróżnienie tych dwóch ścieżek powinno być wyraźnie zaznaczone.",
         "verified_at": "2026-04-17T23:44:03Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -198,7 +202,9 @@
         "corrective_suggestion": "Jeśli nazwy systemów księgowych faktycznie pojawiają się w drafcie, warto zastąpić je ogólnym sformułowaniem np. 'program księgowy / system FK' lub dodać zastrzeżenie, że nazwy są przykładowe i mogą ulec zmianie, gdyż nie są elementem przepisów prawnych.",
         "verified_at": "2026-04-17T23:44:28Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -210,7 +216,9 @@
         "corrective_suggestion": "Zaleca się weryfikację aktualnej nazwy formularza na stronie Ministerstwa Finansów lub w rozporządzeniu wykonawczym do ustawy o podatku od spadków i darowizn. Jeśli formularz zmienił nazwę, należy zaktualizować krok 7 draftu.",
         "verified_at": "2026-04-17T23:44:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -222,7 +230,9 @@
         "corrective_suggestion": "Rozwinąć edge case o CIT estońskim: wskazać, że zgodnie z art. 28m ust. 1 pkt 3 ustawy o CIT ukryte zyski (np. wartość prywatnego użytkowania samochodu) podlegają opodatkowaniu ryczałtem, a stawka wynosi 10% lub 20% (nie 50%), oraz że sprzedaż samochodu po wartości rynkowej nie generuje ukrytych zysków, natomiast sprzedaż poniżej wartości rynkowej lub nieodpłatne przekazanie może je generować.",
         "verified_at": "2026-04-17T23:44:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -234,7 +244,9 @@
         "corrective_suggestion": "Rozważyć dodanie osobnego kroku opisującego skutki samego aktu wycofania samochodu z działalności (zmiana przeznaczenia na cele prywatne): potencjalna korekta VAT odliczonego przy nabyciu (art. 91 ustawy o VAT), moment powstania przychodu/kosztu w PIT oraz odróżnienie tego zdarzenia od późniejszej sprzedaży wycofanego pojazdu.",
         "verified_at": "2026-04-17T23:44:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -246,8 +258,24 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto w kroku 5 dodać informację, że nieodpłatne przekazanie (darowizna) powinno być udokumentowane fakturą wewnętrzną lub fakturą VAT wystawioną przez podatnika (zgodnie z art. 106b ust. 1 pkt 1 w zw. z art. 7 ust. 2 ustawy o VAT), wskazując podstawę opodatkowania i stawkę VAT.",
         "verified_at": "2026-04-17T23:44:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "step_contradiction": 2,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 1,
+      "missing_critical_info": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 2
+    }
   }
 }

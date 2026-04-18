@@ -146,7 +146,9 @@
         "corrective_suggestion": "Należy zweryfikować aktualne brzmienie art. 45 ust. 1g UoR w tekście jednolitym ustawy (np. na ISAP lub LEX) i potwierdzić, że przepis nadal obowiązuje w cytowanym zakresie. Jeśli tak, flaga jest bezzasadna; jeśli przepis został przenumerowany lub zmieniony, należy zaktualizować anchor.",
         "verified_at": "2026-04-17T23:40:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "missing_critical_info",
@@ -170,7 +172,9 @@
         "corrective_suggestion": "Warto doprecyzować w kroku 1 lub w edge case: czy przekroczenie limitu obrotów przez spółkę cywilną powoduje obowiązek prowadzenia pełnej księgowości (art. 2 ust. 2 UoR) i w konsekwencji złożenia SF do KAS, czy też zmienia wyłącznie obowiązek sporządzenia SF bez zmiany miejsca złożenia. Należy wskazać konkretny próg (np. 2 mln euro przychodów) i skutek prawny jego przekroczenia.",
         "verified_at": "2026-04-17T23:41:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -182,7 +186,9 @@
         "corrective_suggestion": "Zaleca się weryfikację aktualnej nazwy systemu składania dokumentów finansowych w KRS na stronie ekrs.ms.gov.pl lub w przepisach wykonawczych do ustawy o KRS przed publikacją draftu.",
         "verified_at": "2026-04-17T23:41:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "missing_critical_info",
@@ -194,7 +200,9 @@
         "corrective_suggestion": "W kroku 4 doprecyzować: 'uchwała o stosowaniu uproszczeń - dołączana do KRS wraz z SF; może być podpisana elektronicznie (kwalifikowany podpis, profil zaufany lub podpis osobisty) ALBO złożona jako skan papierowego dokumentu z odręcznymi podpisami - oba warianty są akceptowane przez system RDF' - o ile to faktycznie zgodne z praktyką RDF.",
         "verified_at": "2026-04-17T23:41:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "edge_case_coverage",
@@ -206,7 +214,9 @@
         "corrective_suggestion": "Jeśli draft ma być precyzyjny, warto doprecyzować edge case: 'operacja gospodarcza' w rozumieniu art. 3 ust. 6 UoR oznacza zdarzenie powodujące zmianę stanu aktywów lub pasywów - opłacenie podatku VAT (zmiana stanu środków pieniężnych i zobowiązań podatkowych) co do zasady kwalifikuje się jako operacja gospodarcza i przywraca obowiązek sporządzenia SF.",
         "verified_at": "2026-04-17T23:41:39Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -218,7 +228,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać do kroku 5 notę: 'Jeśli osoba uprawniona nie posiada PESEL (np. obcokrajowiec), należy skontaktować się z sądem rejestrowym lub złożyć dokumenty w formie papierowej/alternatywnej zgodnie z instrukcją systemu eKRS.'",
         "verified_at": "2026-04-17T23:41:46Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -241,7 +253,9 @@
         "corrective_suggestion": "Opcjonalnie można dodać zastrzeżenie w drafcie: 'termin obowiązujący na dzień sporządzenia odpowiedzi - należy zweryfikować aktualność przed złożeniem SF za 2025 r.'",
         "verified_at": "2026-04-17T23:41:58Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
   },
@@ -253,5 +267,20 @@
       "source": "v2",
       "source_url": "https://czasopismaksiegowych.gofin.pl/biuletyn-informacyjny/archiwum-rocznikowe/328401/struktury-logiczne-sprawozdan-obowiazujace-od-1-stycznia-2026-r"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "step_contradiction": 1,
+      "hallucination_risk": 1,
+      "missing_critical_info": 2,
+      "edge_case_coverage": 1,
+      "outdated_data_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 4,
+      "low": 3
+    }
+  }
 }

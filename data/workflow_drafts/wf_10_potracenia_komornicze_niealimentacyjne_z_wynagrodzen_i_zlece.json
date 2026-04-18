@@ -435,7 +435,9 @@
         "corrective_suggestion": "Jeśli art. 87¹ KP faktycznie przewiduje proporcjonalne zmniejszenie kwoty wolnej przy niepełnym etacie, należy dodać do step 2 warunek: 'Przy niepełnym etacie kwota wolna jest proporcjonalna do wymiaru czasu pracy, np. 1/2 etatu = 50% kwoty wolnej' oraz ewentualnie dodać osobny krok dla pracowników niepełnoetatowych.",
         "verified_at": "2026-04-17T23:38:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -447,8 +449,20 @@
         "corrective_suggestion": "Jeśli fragment drafta zawiera konkretne instrukcje dotyczące nazw opcji w systemach kadrowych, warto dodać zastrzeżenie że nazewnictwo może się różnić w zależności od wersji oprogramowania i należy zweryfikować w dokumentacji producenta lub helpdesku.",
         "verified_at": "2026-04-17T23:38:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 2,
+    "by_type": {
+      "missing_critical_info": 1,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "low": 2
+    }
   }
 }

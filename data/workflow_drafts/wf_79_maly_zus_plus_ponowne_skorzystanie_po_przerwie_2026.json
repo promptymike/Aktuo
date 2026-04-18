@@ -147,7 +147,9 @@
         "corrective_suggestion": "Należy uzupełnić KB o pełną treść art. 36 ust. 14 ustawy o systemie ubezpieczeń społecznych i zweryfikować, czy przepis ten faktycznie obejmuje oba terminy. Jeśli termin 31 stycznia wynika z innego przepisu (np. art. 18c ust. 11 lub odrębnego ustępu art. 36), należy wskazać właściwy anchor dla każdego terminu osobno.",
         "verified_at": "2026-04-17T23:47:03Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Weryfikuję artykuł ustawy"
       },
       {
         "type": "outdated_data_risk",
@@ -180,7 +182,9 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy dodać do KB treść art. 18c ust. 11 i art. 36 ust. 14 ustawy o SUS. W drafcie warto rozważyć dodanie w kroku 5 lub 6 wyraźnej noty: 'Terminy są wzajemnie wykluczające się: termin 31 stycznia dotyczy wyłącznie kontynuacji bez przerwy; termin 7 dni dotyczy wznowienia po zawieszeniu.'",
         "verified_at": "2026-04-17T23:47:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -213,7 +217,9 @@
         "corrective_suggestion": "Można doprecyzować krok 3 dodając: 'Jeśli zakładka Ubezpieczony → Ulgi jest niedostępna (np. dla pełnomocnika lub przy określonych uprawnieniach konta), alternatywnie zweryfikuj historię kodów tytułu ubezpieczenia 0590 w dokumentach ZUS lub złóż wniosek o informację do ZUS (formularz ZUS-IWU).'",
         "verified_at": "2026-04-17T23:47:36Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -225,7 +231,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona po weryfikacji art. 18c ustawy o SUS, należy w kroku 7 dodać wyjaśnienie: przy mieszanym roku 2025 (część na 0570, część na 0510) dochód do podstawy Małego ZUS Plus ustala się proporcjonalnie za okresy faktycznego korzystania z preferencji (0570), a okresy na dużym ZUS (0510) mogą wymagać odrębnego przeliczenia lub konsultacji z ZUS.",
         "verified_at": "2026-04-17T23:47:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -237,7 +245,9 @@
         "corrective_suggestion": "Zweryfikować kod 0590 bezpośrednio w aktualnym rozporządzeniu Ministra Rodziny i Polityki Społecznej w sprawie określenia wzorów zgłoszeń do ubezpieczeń społecznych oraz w dokumentacji ZUS (np. Poradnik dla płatników składek) obowiązującym w 2026 roku. Jeśli kod jest potwierdzony, warto dodać przypis do źródła rozporządzenia w drafcie.",
         "verified_at": "2026-04-17T23:47:52Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -249,7 +259,9 @@
         "corrective_suggestion": "Jeśli draft powołuje się na praktykę decyzyjną ZUS w kwestii zawieszenia a biegu 24 miesięcy, należy albo usunąć to odwołanie, albo zastąpić je odesłaniem do konkretnego przepisu (np. art. 18c ust. X ustawy o sus) lub interpretacji ogólnej ZUS z podaniem daty/numeru. Alternatywnie można sformułować to jako 'zgodnie z interpretacją ZUS' bez sugerowania istnienia konkretnych decyzji.",
         "verified_at": "2026-04-17T23:48:01Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -261,7 +273,9 @@
         "corrective_suggestion": "Rozważyć dodanie edge case'a dotyczącego zmiany formy opodatkowania w trakcie roku – np. wskazanie, że przy mieszanym roku (część na ryczałcie, część na skali) należy ustalić przychód/dochód proporcjonalnie lub według zasad właściwych dla formy obowiązującej na koniec roku, oraz że warto zweryfikować to z art. 18c ust. 1 pkt 1 ustawy o sus i ewentualnie z interpretacją ZUS.",
         "verified_at": "2026-04-17T23:48:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -273,7 +287,9 @@
         "corrective_suggestion": "Należy uzupełnić sekcję EDGE_CASES o informację dotyczącą skutków przekroczenia limitu 120 tys. zł przychodu w trakcie roku – zgodnie z art. 18c ustawy o sus limit dotyczy przychodu z poprzedniego roku kalendarzowego (warunek wejścia), a nie bieżącego, więc przekroczenie w trakcie roku korzystania z ulgi co do zasady nie powoduje jej utraty w tym roku. Warto to jednak explicite wyjaśnić w drafcie, powołując się na brzmienie art. 18c, aby uniknąć nieporozumień.",
         "verified_at": "2026-04-17T23:48:18Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -285,7 +301,9 @@
         "corrective_suggestion": "Flaga ma niską wagę (low severity) i dotyczy praktycznej wskazówki technicznej, a nie kwestii prawnej. Można rozważyć dodanie zastrzeżenia w drafcie: 'Przed ustawieniem schematu składek upewnij się, że używana wersja oprogramowania jest zaktualizowana do przepisów obowiązujących od 2026 r.' - bez wskazywania konkretnych systemów jako gwarantowanie aktualnych.",
         "verified_at": "2026-04-17T23:48:25Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
   },
@@ -298,5 +316,19 @@
       "source_url": "https://www.zus.pl/en/-/%E2%80%9Ema%C5%82y-zus-plus-nowe-zasady-od-2026-r.",
       "note": "Manual fix - LLM generated malformed JSON 3 times"
     }
-  ]
+  ],
+  "community_feedback_summary": {
+    "total_flags": 9,
+    "by_type": {
+      "legal_anchor_uncertainty": 1,
+      "step_contradiction": 1,
+      "missing_critical_info": 3,
+      "hallucination_risk": 2,
+      "edge_case_coverage": 2
+    },
+    "severity_breakdown": {
+      "medium": 7,
+      "low": 2
+    }
+  }
 }

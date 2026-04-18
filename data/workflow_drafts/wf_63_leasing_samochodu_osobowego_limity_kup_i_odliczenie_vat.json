@@ -189,7 +189,9 @@
         "corrective_suggestion": "Należy uzupełnić step 2 o jednoznaczne wskazanie, czy limit 225 000 zł dla samochodów elektrycznych obowiązuje również dla umów zawartych od 1.01.2026, czy też ulega zmianie. Jeśli limit pozostaje niezmieniony, warto to explicite zaznaczyć (np. 'limit 225 000 zł dla elektryków pozostaje bez zmian niezależnie od daty zawarcia umowy').",
         "verified_at": "2026-04-17T23:45:24Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -201,7 +203,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 3 drugiego przykładu: 'auto 200 000 zł netto + VAT 46 000 zł, VAT-owiec odlicza 50% → nieodliczony VAT = 23 000 zł → baza do proporcji = 200 000 + 23 000 = 223 000 zł → proporcja = 150 000 / 223 000 ≈ 67,3%', aby uniknąć nieporozumień przy wyliczaniu bazy proporcji.",
         "verified_at": "2026-04-17T23:45:32Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -235,7 +239,9 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie w kroku 6, że ścieżki menu mogą różnić się w zależności od wersji oprogramowania i należy je traktować orientacyjnie, zalecając weryfikację w aktualnej dokumentacji producenta.",
         "verified_at": "2026-04-17T23:45:49Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -247,7 +253,9 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy dodać do edge case'u podstawę prawną lub interpretacyjną – np. odwołanie do art. 5a pkt 19a ustawy o PIT (definicja samochodu osobowego przez odesłanie do prawa o ruchu drogowym) oraz wskazanie, że organy podatkowe w interpretacjach indywidualnych (np. 0113-KDIPT2-1.4011.xxx) uznają pojazdy z homologacją ciężarową za osobowe na gruncie PIT, jeśli nie spełniają warunków technicznych. Bez takiego zakotwiczenia edge case pozostaje niewystarczająco udokumentowany.",
         "verified_at": "2026-04-17T23:45:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "edge_case_coverage",
@@ -259,7 +267,9 @@
         "corrective_suggestion": "Warto dodać przykład numeryczny: np. VAT z faktury 2300 zł → 50% z art. 86a = 1150 zł → następnie wskaźnik sprzedaży 79% × 1150 zł = 908,50 zł odliczalnego VAT. Nieodliczony VAT = 2300 - 908,50 = 1391,50 zł zwiększa wartość samochodu do proporcji KUP. Należy też wskazać podstawę prawną łączenia obu mechanizmów (art. 86a ust. 1 + art. 90 ust. 2 ustawy o VAT).",
         "verified_at": "2026-04-17T23:46:07Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -295,7 +305,9 @@
         "corrective_suggestion": "Doprecyzować krok 7: 'Najem krótkoterminowy (≤6 mies.) – brak limitu wartości pojazdu (art. 23 ust. 1 pkt 46), ale przy użytku mieszanym nadal obowiązuje ograniczenie 75% wydatków do KUP (art. 23 ust. 1 pkt 46a) oraz 50% odliczenia VAT.'",
         "verified_at": "2026-04-17T23:46:32Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -319,8 +331,24 @@
         "corrective_suggestion": "Należy zweryfikować czy data '2026-04-17' jest datą faktycznej weryfikacji czy błędem systemowym. Jeśli draft zawiera informacje o zmianach limitów od 1.01.2026 (krok 2: limit 100 000 zł dla samochodów spalinowych), należy potwierdzić podstawę prawną tych zmian, gdyż KB nie zawiera potwierdzenia tych przepisów.",
         "verified_at": "2026-04-17T23:46:48Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "outdated_data_risk": 2,
+      "step_contradiction": 1,
+      "hallucination_risk": 1,
+      "edge_case_coverage": 2,
+      "missing_critical_info": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 1
+    }
   }
 }

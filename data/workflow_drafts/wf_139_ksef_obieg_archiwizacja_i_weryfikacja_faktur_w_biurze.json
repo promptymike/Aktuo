@@ -238,7 +238,9 @@
         "corrective_suggestion": "Jeśli flaga ma być potwierdzona merytorycznie (nie prawnie), warto rozważyć dodanie w kroku 2 lub 3 informacji o weryfikacji unikalności numeru KSeF (NumerKSeF) przed zaksięgowaniem - każda faktura w KSeF ma unikalny identyfikator nadawany przez system MF, co technicznie eliminuje duplikaty po stronie KSeF, ale nie eliminuje ryzyka dwukrotnego zaimportowania tej samej faktury do programu księgowego.",
         "verified_at": "2026-04-17T23:39:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -250,7 +252,9 @@
         "corrective_suggestion": "W Kroku 4 należy jednoznacznie rozróżnić: (1) brak ustawowego obowiązku dodatkowej archiwizacji po stronie biura (MF przechowuje przez 10 lat w KSeF) oraz (2) rekomendowany backup XML jako dobra praktyka operacyjna (np. na wypadek awarii KSeF, utraty dostępu, kontroli wymagającej szybkiego dostępu). Dodać zdanie o konsekwencjach braku backupu: brak sankcji ustawowych, ale ryzyko operacyjne przy niedostępności KSeF podczas kontroli.",
         "verified_at": "2026-04-17T23:39:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "hallucination_risk",
@@ -262,7 +266,9 @@
         "corrective_suggestion": "Zweryfikować w art. 106na ust. 3-4 ustawy o VAT oraz rozporządzeniu MF w sprawie KSeF, czy faktury wystawione w trybie offline24/awaryjnym rzeczywiście zawierają kod QR jako element obowiązkowy. Jeśli kod QR nie jest wymagany przepisami, usunąć tę wzmiankę lub zastąpić ją opisem faktycznego oznaczenia (np. numer referencyjny offline).",
         "verified_at": "2026-04-17T23:40:02Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -274,7 +280,9 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie w drafcie, że nazwy węzłów XML (P_6, Platnosc/TerminyPlatnosci) odnoszą się do aktualnego schematu FA(2) KSeF i należy je weryfikować z oficjalną dokumentacją XSD dostępną na stronie MF/KSeF, gdyż schemat może ulec zmianie.",
         "verified_at": "2026-04-17T23:40:08Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -286,7 +294,9 @@
         "corrective_suggestion": "Jeśli draft ma wspominać paragon z NIP, warto dodać wyraźne zastrzeżenie: paragon fiskalny z NIP nabywcy do 450 zł stanowi fakturę uproszczoną (art. 106e ust. 5 pkt 3 ustawy o VAT) i zgodnie z projektowanymi przepisami KSeF może podlegać odrębnym regulacjom - należy zweryfikować aktualny status tych dokumentów w kontekście obowiązkowego KSeF przed publikacją drafta.",
         "verified_at": "2026-04-17T23:40:16Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "edge_case_coverage",
@@ -309,7 +319,9 @@
         "corrective_suggestion": "Można rozszerzyć edge case o zdanie: 'Biuro powinno krzyżowo weryfikować zestawienie Excel z raportem pobranych XML z KSeF (np. przez porównanie liczby faktur w systemie z liczbą pozycji w zestawieniu) lub pobierać samodzielnie pełną listę faktur z KSeF tokenem i prosić klienta jedynie o oznaczenie które zaksięgować.'",
         "verified_at": "2026-04-17T23:40:29Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -321,7 +333,9 @@
         "corrective_suggestion": "W Kroku 6 warto dodać: (1) termin oczekiwania na korektę sprzedawcy (np. 14 dni), (2) procedurę eskalacyjną gdy sprzedawca nie reaguje (np. księgowanie na podstawie XML z adnotacją o sporze, ewentualne zawiadomienie US), (3) informację że w KSeF nie można odrzucić faktury - nabywca może jedynie żądać korekty do zera od wystawcy.",
         "verified_at": "2026-04-17T23:40:37Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -333,8 +347,23 @@
         "corrective_suggestion": "Rozważ dodanie kroku lub podpunktu opisującego obsługę faktur korygujących w KSeF: są one osobnymi dokumentami (nie modyfikują oryginału), mają własny numer KSeF, a ich archiwizacja i księgowanie powinny być opisane analogicznie do faktur pierwotnych - z uwzględnieniem momentu otrzymania korekty in minus (zgoda nabywcy lub brak sprzeciwu) zgodnie z art. 86 ust. 19a ustawy o VAT.",
         "verified_at": "2026-04-17T23:40:44Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 8,
+    "by_type": {
+      "missing_critical_info": 3,
+      "step_contradiction": 1,
+      "hallucination_risk": 3,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 2
+    }
   }
 }

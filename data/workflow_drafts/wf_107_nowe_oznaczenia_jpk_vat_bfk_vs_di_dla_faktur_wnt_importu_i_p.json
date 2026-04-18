@@ -335,7 +335,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-17T23:36:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -347,7 +349,9 @@
         "corrective_suggestion": "Jeśli flaga miałaby być potwierdzona, warto dodać w drafcie zastrzeżenie: 'Limit 450 zł dla paragonów uproszczonych obowiązuje na dzień opracowania materiału - przed wdrożeniem procedur należy zweryfikować aktualną wartość limitu w przepisach wykonawczych do ustawy o VAT.'",
         "verified_at": "2026-04-17T23:37:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -359,8 +363,21 @@
         "corrective_suggestion": "Jeśli draft ma być spójny, należy albo złagodzić pewność kroków 2-3 (dodając zastrzeżenie 'zgodnie z dominującą interpretacją'), albo usunąć z kroku 7 wzmiankę o 'sprzecznych interpretacjach' i zastąpić ją ogólnym zaleceniem ostrożności przy wysokich kwotach.",
         "verified_at": "2026-04-17T23:37:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 3,
+    "by_type": {
+      "missing_critical_info": 1,
+      "outdated_data_risk": 1,
+      "step_contradiction": 1
+    },
+    "severity_breakdown": {
+      "low": 3
+    }
   }
 }

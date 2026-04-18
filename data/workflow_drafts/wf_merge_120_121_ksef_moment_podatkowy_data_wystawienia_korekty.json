@@ -170,7 +170,9 @@
         "corrective_suggestion": "W kroku 3 warto dodać wyjaśnienie: jeśli faktura trafi do KSeF z opóźnieniem (np. po 3 miesiącach od dostawy), prawo do odliczenia nie wygasa – można je zrealizować w rozliczeniu za okres otrzymania faktury (data nadania numeru KSeF) lub w jednym z trzech kolejnych okresów rozliczeniowych (art. 86 ust. 11 ustawy o VAT). Jeśli termin ten minął, możliwe jest odliczenie przez korektę deklaracji za okres, w którym powstało prawo do odliczenia (art. 86 ust. 13).",
         "verified_at": "2026-04-17T23:50:15Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "outdated_data_risk",
@@ -182,7 +184,9 @@
         "corrective_suggestion": "W step 4 należy doprecyzować: 'JPK_CIT obowiązuje od 2025 r. dla podatników CIT z przychodami >50 mln EUR oraz podatkowych grup kapitałowych, od 2026 r. dla pozostałych podatników CIT, od 2027 r. dla podatników prowadzących KPiR – stan na dzień weryfikacji dokumentu, zalecana weryfikacja aktualnych rozporządzeń MF.'",
         "verified_at": "2026-04-17T23:50:23Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "missing_critical_info",
@@ -194,7 +198,9 @@
         "corrective_suggestion": "W kroku 5 warto dodać wyjaśnienie: błędna data sprzedaży wpisana przez wystawcę (np. luty zamiast stycznia) traktowana jest jako błąd pierwotny (wada faktury istniejąca od początku), a nie przyczyna następcza – korektę ujmuje się zatem w okresie faktury pierwotnej (tj. w miesiącu, w którym faktycznie nastąpiła dostawa/usługa). Należy jednak zaznaczyć, że organy podatkowe mogą oceniać to indywidualnie, a podatnik powinien dysponować dokumentacją potwierdzającą rzeczywistą datę transakcji.",
         "verified_at": "2026-04-17T23:50:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -206,7 +212,9 @@
         "corrective_suggestion": "Należy albo usunąć nazwy konkretnych programów i zastąpić je ogólnym sformułowaniem ('niektóre programy księgowe przy imporcie z KSeF mogą zaciągać datę wpływu zamiast daty sprzedaży'), albo dodać zastrzeżenie 'według dokumentacji producenta / stanu na [data]' oraz zalecenie weryfikacji w aktualnej dokumentacji danego oprogramowania.",
         "verified_at": "2026-04-17T23:50:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "step_contradiction",
@@ -218,7 +226,9 @@
         "corrective_suggestion": "W step 7 warto doprecyzować: błędna faktura pierwotna (np. z datą marzec zamiast luty) TRAFIA do JPK_VAT w swoim okresie wystawienia, a korekta zerująca ją również trafia do JPK_VAT w tym samym okresie (zgodnie z zasadą z kroku 5 – błąd pierwotny = korekta do okresu faktury pierwotnej). Prawidłowa faktura wystawiana jest jako nowy dokument i trafia do właściwego okresu. Należy to wyraźnie opisać, aby uniknąć wrażenia, że błędna faktura jest 'niewidoczna' w JPK.",
         "verified_at": "2026-04-17T23:50:47Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "edge_case_coverage",
@@ -242,7 +252,9 @@
         "corrective_suggestion": "Rozważyć zastąpienie 'SAD/PZC' bardziej neutralnym sformułowaniem 'dokument celny (zgłoszenie celne)' lub dodanie wyjaśnienia, że chodzi o dokument potwierdzający dopuszczenie towaru do obrotu, wystawiony przez urząd celno-skarbowy – zgodnie z brzmieniem art. 86 ust. 2 pkt 2 ustawy o VAT.",
         "verified_at": "2026-04-17T23:51:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Nietypowy przypadek - sprawdź"
       },
       {
         "type": "missing_critical_info",
@@ -256,5 +268,19 @@
         "kb_records_used": 3
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 6,
+    "by_type": {
+      "missing_critical_info": 2,
+      "outdated_data_risk": 1,
+      "hallucination_risk": 1,
+      "step_contradiction": 1,
+      "edge_case_coverage": 1
+    },
+    "severity_breakdown": {
+      "medium": 5,
+      "low": 1
+    }
   }
 }

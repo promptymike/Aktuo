@@ -186,7 +186,9 @@
         "corrective_suggestion": "Jeśli flaga ma być potraktowana jako ostrzeżenie redakcyjne, warto dodać w kroku 4 adnotację: 'Próg 2 mln euro obowiązuje na rok podatkowy [rok]; przed zastosowaniem zweryfikuj aktualną wartość w obwieszczeniu MF, gdyż limit jest corocznie przeliczany według kursu NBP i może ulec zmianie.'",
         "verified_at": "2026-04-17T23:42:27Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Sprawdź aktualność danych"
       },
       {
         "type": "step_contradiction",
@@ -198,7 +200,9 @@
         "corrective_suggestion": "Rozważyć dodanie w kroku 6 (lub jako osobny podkrok) wyjaśnienia, że wydatki na ulepszenie istniejącego ŚT poniżej 10 000 zł w roku podatkowym mogą być zaliczone bezpośrednio w koszty (nie zwiększają wartości początkowej), natomiast przekroczenie progu 10 000 zł w skali roku obliguje do zwiększenia wartości początkowej zgodnie z art. 22g ust. 17 PIT – co eliminuje potencjalną sprzeczność między krokiem 2 a krokiem 6.",
         "verified_at": "2026-04-17T23:42:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       },
       {
         "type": "missing_critical_info",
@@ -231,7 +235,9 @@
         "corrective_suggestion": "W kroku 5 warto dodać wyjaśnienie oparte na art. 22h ust. 1 ustawy o PIT, który stanowi że odpisów amortyzacyjnych dokonuje się od miesiąca następującego po miesiącu, w którym środek trwały wprowadzono do ewidencji – co oznacza, że samo wprowadzenie do ewidencji powinno nastąpić nie później niż w miesiącu przyjęcia do używania, a amortyzacja startuje od miesiąca kolejnego.",
         "verified_at": "2026-04-17T23:42:54Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "missing_critical_info",
@@ -243,7 +249,9 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami: w kroku 4 należy dodać informację, że zaświadczenie o pomocy de minimis (wydawane przez US na podstawie art. 306b Ordynacji podatkowej) jest wymagane do dokumentacji, a nie jako warunek wstępny zastosowania jednorazowej amortyzacji – podatnik może dokonać odpisu, a zaświadczenie uzyskać w rozsądnym terminie po jego zastosowaniu. Warto też wskazać, że wniosek składa się do właściwego US, a organ ma 7 dni na wydanie zaświadczenia (art. 306a § 5 Ordynacji podatkowej).",
         "verified_at": "2026-04-17T23:43:02Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "hallucination_risk",
@@ -255,7 +263,9 @@
         "corrective_suggestion": "Dodać zastrzeżenie w kroku 5, że kody KŚT należy weryfikować według aktualnego Wykazu KŚT (Rozporządzenie Rady Ministrów w sprawie Klasyfikacji Środków Trwałych) obowiązującego w danym roku podatkowym, gdyż klasyfikacja może ulec zmianie.",
         "verified_at": "2026-04-17T23:43:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Wymaga weryfikacji źródła"
       },
       {
         "type": "hallucination_risk",
@@ -290,7 +300,9 @@
         "verifier_confidence": 0.4,
         "verified_at": "2026-04-17T23:43:32Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Możliwe brakujące informacje"
       },
       {
         "type": "step_contradiction",
@@ -302,8 +314,23 @@
         "corrective_suggestion": "W kroku 7 dodać uściślenie: 'Krok dotyczy podatników prowadzących KPiR opodatkowanych na zasadach ogólnych (PIT-36, zał. B) lub podatkiem liniowym (PIT-36L, zał. B). Podatnicy ryczałtowi rozliczają sprzedaż ŚT odrębnie – w PIT-28 lub poza ryczałtem zgodnie z art. 12 ust. 10 ustawy o ryczałcie.'",
         "verified_at": "2026-04-17T23:43:41Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "final_status": "community_feedback_needed",
+        "ui_label": "Niepewność w kolejności kroków"
       }
     ]
+  },
+  "community_feedback_summary": {
+    "total_flags": 7,
+    "by_type": {
+      "outdated_data_risk": 1,
+      "step_contradiction": 2,
+      "missing_critical_info": 3,
+      "hallucination_risk": 1
+    },
+    "severity_breakdown": {
+      "medium": 6,
+      "low": 1
+    }
   }
 }
