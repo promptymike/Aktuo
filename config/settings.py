@@ -25,6 +25,10 @@ WORKFLOW_SEED_PATH = os.getenv(
     "AKTUO_WORKFLOW_SEED_PATH",
     str(PROJECT_ROOT / "data" / "workflow" / "workflow_seed.json"),
 ).strip()
+WORKFLOW_DRAFTS_DIR = os.getenv(
+    "AKTUO_WORKFLOW_DRAFTS_DIR",
+    str(PROJECT_ROOT / "data" / "workflow_drafts"),
+).strip()
 WORKFLOW_CONFIDENCE_THRESHOLD = float(os.getenv("AKTUO_WORKFLOW_CONFIDENCE_THRESHOLD", "6.0"))
 WORKFLOW_PARTIAL_ANSWER_ENABLED = os.getenv(
     "AKTUO_WORKFLOW_PARTIAL_ANSWER_ENABLED",

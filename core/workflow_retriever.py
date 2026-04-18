@@ -10,6 +10,7 @@ from threading import Lock
 from config.settings import (
     WORKFLOW_CONDITIONAL_INTENTS,
     WORKFLOW_CONFIDENCE_THRESHOLD,
+    WORKFLOW_DRAFTS_DIR,
     WORKFLOW_ELIGIBLE_INTENTS,
     WORKFLOW_SEED_PATH,
 )
@@ -275,12 +276,43 @@ def _normalize(text: str) -> str:
     return " ".join(re.findall(r"[a-z0-9_]+", ascii_value))
 
 
+_POLISH_SUFFIXES = tuple(
+    sorted(
+        {
+            "iejsze", "iejszy", "iejsza", "iejszych",
+            "owego", "owemu", "owych", "owymi", "owska", "owski",
+            "ejsze", "ejszy", "ejsza",
+            "owie", "owym", "owej",
+            "ego", "emu", "ymi", "imi", "owi", "owa", "owe", "owy",
+            "ami", "ach", "iem", "iam",
+            "om", "ej", "ie", "ia", "iu", "ym", "im", "um", "mu", "em",
+            "y", "i", "a", "e", "u", "o",
+        },
+        key=len,
+        reverse=True,
+    )
+)
+
+
+def _stem(token: str, min_stem_len: int = 4) -> str:
+    """Strip one common Polish declension suffix, preserving a minimum stem length."""
+
+    for suffix in _POLISH_SUFFIXES:
+        if len(suffix) < len(token) and token.endswith(suffix):
+            stem = token[: -len(suffix)]
+            if len(stem) >= min_stem_len:
+                return stem
+    return token
+
+
 def _tokenize(text: str) -> frozenset[str]:
-    return frozenset(
+    base = [
         token
         for token in _normalize(text).split()
         if token and token not in POLISH_STOP_WORDS
-    )
+    ]
+    stems = [_stem(token) for token in base]
+    return frozenset(base) | frozenset(stems)
 
 
 def _contains_marker(normalized_query: str, tokens: frozenset[str], marker: str) -> bool:
@@ -357,57 +389,260 @@ def _as_clean_tuple(values: object) -> tuple[str, ...]:
     return tuple(cleaned)
 
 
+def _render_answer_steps(answer_steps: object) -> tuple[str, ...]:
+    """Flatten workflow_draft `answer_steps` dicts into legacy-compatible step strings."""
+
+    if not isinstance(answer_steps, list):
+        return ()
+    rendered: list[str] = []
+    for entry in answer_steps:
+        if not isinstance(entry, dict):
+            text = str(entry).strip()
+            if text:
+                rendered.append(text)
+            continue
+        action = str(entry.get("action", "")).strip()
+        detail = str(entry.get("detail", "")).strip()
+        condition = str(entry.get("condition") or "").strip()
+        parts = [part for part in (action, detail) if part]
+        if condition:
+            parts.append(f"(warunek: {condition})")
+        if parts:
+            rendered.append(" — ".join(parts))
+    return tuple(rendered)
+
+
+def _render_legal_anchors(legal_anchors: object) -> tuple[str, ...]:
+    """Flatten heterogeneous legal_anchors dicts (v1/v2 schema) into display strings."""
+
+    if not isinstance(legal_anchors, list):
+        return ()
+    rendered: list[str] = []
+    for entry in legal_anchors:
+        if not isinstance(entry, dict):
+            text = str(entry).strip()
+            if text:
+                rendered.append(text)
+            continue
+        law_name = str(entry.get("law_name") or entry.get("full_name") or entry.get("short_name") or "").strip()
+        article = str(entry.get("article_number") or entry.get("short_name") or "").strip()
+        reason = str(entry.get("reason") or entry.get("description") or "").strip()
+        head = " ".join(part for part in (law_name, article) if part).strip()
+        if head and reason:
+            rendered.append(f"{head} — {reason}")
+        elif head:
+            rendered.append(head)
+        elif reason:
+            rendered.append(reason)
+    return tuple(rendered)
+
+
+def _build_draft_content(record: dict[str, object]) -> str:
+    """Render a workflow_draft (new schema) into plain context text for the generator."""
+
+    title = str(record.get("title", "")).strip()
+    topic_area = str(record.get("topic_area", "")).strip()
+    steps = _render_answer_steps(record.get("answer_steps"))
+    legal = _render_legal_anchors(record.get("legal_anchors"))
+    edge_cases = _as_clean_tuple(record.get("edge_cases", []))
+    mistakes = _as_clean_tuple(record.get("common_mistakes", []))
+
+    parts = []
+    if topic_area:
+        parts.append(f"Workflow area: {topic_area}")
+    if title:
+        parts.append(f"Title: {title}")
+    if steps:
+        parts.append("Steps: " + " ".join(f"{i}. {step}" for i, step in enumerate(steps, start=1)))
+    if legal:
+        parts.append("Legal anchors: " + "; ".join(legal))
+    if edge_cases:
+        parts.append("Edge cases: " + "; ".join(edge_cases))
+    if mistakes:
+        parts.append("Common pitfalls: " + "; ".join(mistakes))
+    return "\n".join(part for part in parts if part.strip())
+
+
+def _build_document_from_legacy_seed(record: dict[str, object]) -> WorkflowDocument:
+    """Build WorkflowDocument from legacy workflow_seed.json record (v1 schema)."""
+
+    return WorkflowDocument(
+        chunk=LawChunk(
+            content=_build_workflow_content(record),
+            law_name="Workflow layer",
+            article_number=str(record.get("title", "")).strip(),
+            category=str(record.get("category", "")).strip(),
+            verified_date="",
+            effective_from="",
+            effective_to="",
+            source_url="",
+            source_hash="",
+            last_verified_at="",
+            question_intent=" | ".join(str(item).strip() for item in record.get("question_examples", [])[:3]),
+            source_type=str(record.get("source_type", "workflow_seed_v1")).strip() or "workflow_seed_v1",
+            workflow_area=str(record.get("workflow_area", "")).strip(),
+            title=str(record.get("title", "")).strip(),
+            workflow_steps=_as_clean_tuple(record.get("steps", [])),
+            workflow_required_inputs=_as_clean_tuple(record.get("required_inputs", [])),
+            workflow_common_pitfalls=_as_clean_tuple(record.get("common_pitfalls", [])),
+            workflow_related_forms=_as_clean_tuple(record.get("related_forms", [])),
+            workflow_related_systems=_as_clean_tuple(record.get("related_systems", [])),
+        ),
+        title_tokens=_tokenize(str(record.get("title", ""))),
+        area_tokens=_tokenize(str(record.get("workflow_area", ""))),
+        example_tokens=_tokenize(" ".join(str(item) for item in record.get("question_examples", []))),
+        form_tokens=_tokenize(" ".join(str(item) for item in record.get("related_forms", []))),
+        system_tokens=_tokenize(" ".join(str(item) for item in record.get("related_systems", []))),
+        category_tokens=_tokenize(str(record.get("category", ""))),
+    )
+
+
+def _build_document_from_draft(record: dict[str, object]) -> WorkflowDocument:
+    """Build WorkflowDocument from workflow_drafts/*.json record (v2 schema)."""
+
+    title = str(record.get("title", "")).strip()
+    topic_area = str(record.get("topic_area", "")).strip()
+    draft_id = str(record.get("id", "")).strip()
+    steps = _render_answer_steps(record.get("answer_steps"))
+    legal = _render_legal_anchors(record.get("legal_anchors"))
+    edge_cases = _as_clean_tuple(record.get("edge_cases", []))
+    mistakes = _as_clean_tuple(record.get("common_mistakes", []))
+    question_examples = record.get("question_examples", [])
+    # common_mistakes + edge_cases bundled as pitfalls for legacy UI hooks
+    pitfalls = tuple(list(mistakes) + [f"Edge case: {ec}" for ec in edge_cases])
+
+    # Rich body text (answer_steps details + edge_cases + common_mistakes) is folded
+    # into example_tokens so queries that use morphologically different forms than
+    # `title`/`question_examples` can still match via the draft's body text.
+    body_tokenization_source = " ".join(
+        [
+            " ".join(str(item) for item in question_examples),
+            " ".join(steps),
+            " ".join(edge_cases),
+            " ".join(mistakes),
+        ]
+    )
+
+    return WorkflowDocument(
+        chunk=LawChunk(
+            content=_build_draft_content(record),
+            law_name="Workflow draft",
+            article_number=draft_id or title,
+            category=topic_area,
+            verified_date=str(record.get("last_verified_at", "")).strip(),
+            effective_from="",
+            effective_to="",
+            source_url="",
+            source_hash="",
+            last_verified_at=str(record.get("last_verified_at", "")).strip(),
+            question_intent=" | ".join(str(item).strip() for item in question_examples[:3]),
+            source_type="workflow_draft_v2",
+            workflow_area=topic_area,
+            title=title,
+            workflow_steps=steps,
+            workflow_required_inputs=(),
+            workflow_common_pitfalls=pitfalls,
+            workflow_related_forms=(),
+            workflow_related_systems=(),
+        ),
+        title_tokens=_tokenize(title),
+        area_tokens=_tokenize(" ".join([topic_area, title])),
+        example_tokens=_tokenize(body_tokenization_source),
+        form_tokens=_tokenize(" ".join(legal)),
+        system_tokens=frozenset(),
+        category_tokens=_tokenize(topic_area),
+    )
+
+
+def _load_legacy_seed(path: Path) -> tuple[WorkflowDocument, ...]:
+    if not path.exists():
+        return ()
+    try:
+        records = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return ()
+    if not isinstance(records, list):
+        return ()
+    return tuple(
+        _build_document_from_legacy_seed(record)
+        for record in records
+        if isinstance(record, dict)
+        and str(record.get("title", "")).strip()
+        and record.get("draft") is not True
+    )
+
+
+def _load_drafts_dir(drafts_dir: Path) -> tuple[WorkflowDocument, ...]:
+    if not drafts_dir.exists() or not drafts_dir.is_dir():
+        return ()
+    documents: list[WorkflowDocument] = []
+    for entry in sorted(drafts_dir.glob("wf_*.json")):
+        try:
+            record = json.loads(entry.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+        if not isinstance(record, dict):
+            continue
+        if not str(record.get("title", "")).strip():
+            continue
+        if "answer_steps" not in record and "steps" not in record:
+            continue
+        documents.append(_build_document_from_draft(record))
+    return tuple(documents)
+
+
+def _drafts_dir_revision(drafts_dir: Path) -> int:
+    """Max mtime across wf_*.json files in drafts_dir (0 if empty/missing)."""
+
+    if not drafts_dir.exists() or not drafts_dir.is_dir():
+        return 0
+    latest = 0
+    for entry in drafts_dir.glob("wf_*.json"):
+        try:
+            mtime = entry.stat().st_mtime_ns
+        except OSError:
+            continue
+        if mtime > latest:
+            latest = mtime
+    return latest
+
+
 def load_workflow_documents(workflow_path: str | Path = WORKFLOW_SEED_PATH) -> list[WorkflowDocument]:
-    """Load and cache workflow seed units as searchable documents."""
+    """Load and cache workflow units as searchable documents.
+
+    Merges two sources when invoked with the default WORKFLOW_SEED_PATH:
+      - Legacy seed records from `workflow_path` (v1 schema, 10 units).
+      - New drafts from `WORKFLOW_DRAFTS_DIR` (v2 schema, `wf_*.json`).
+
+    When called with an explicit non-default `workflow_path` (e.g. test fixtures),
+    only the seed file is loaded; drafts dir is skipped so tests stay isolated.
+    """
 
     path = Path(workflow_path).resolve()
-    if not path.exists():
+    default_seed = Path(WORKFLOW_SEED_PATH).resolve()
+    merge_drafts = path == default_seed
+
+    if not path.exists() and not merge_drafts:
         return []
-    mtime_ns = path.stat().st_mtime_ns
-    cache_key = str(path)
+
+    seed_mtime = path.stat().st_mtime_ns if path.exists() else 0
+    drafts_dir = Path(WORKFLOW_DRAFTS_DIR).resolve() if merge_drafts else None
+    drafts_rev = _drafts_dir_revision(drafts_dir) if drafts_dir is not None else 0
+
+    cache_key = f"{path}::{drafts_dir if drafts_dir else ''}"
+    cache_revision = seed_mtime + drafts_rev
 
     with _CACHE_LOCK:
         cached = _WORKFLOW_CACHE.get(cache_key)
-        if cached and cached[0] == mtime_ns:
+        if cached and cached[0] == cache_revision:
             return list(cached[1])
 
-    records = json.loads(path.read_text(encoding="utf-8"))
-    documents: tuple[WorkflowDocument, ...] = tuple(
-        WorkflowDocument(
-            chunk=LawChunk(
-                content=_build_workflow_content(record),
-                law_name="Workflow layer",
-                article_number=str(record.get("title", "")).strip(),
-                category=str(record.get("category", "")).strip(),
-                verified_date="",
-                effective_from="",
-                effective_to="",
-                source_url="",
-                source_hash="",
-                last_verified_at="",
-                question_intent=" | ".join(str(item).strip() for item in record.get("question_examples", [])[:3]),
-                source_type=str(record.get("source_type", "workflow_seed_v1")).strip() or "workflow_seed_v1",
-                workflow_area=str(record.get("workflow_area", "")).strip(),
-                title=str(record.get("title", "")).strip(),
-                workflow_steps=_as_clean_tuple(record.get("steps", [])),
-                workflow_required_inputs=_as_clean_tuple(record.get("required_inputs", [])),
-                workflow_common_pitfalls=_as_clean_tuple(record.get("common_pitfalls", [])),
-                workflow_related_forms=_as_clean_tuple(record.get("related_forms", [])),
-                workflow_related_systems=_as_clean_tuple(record.get("related_systems", [])),
-            ),
-            title_tokens=_tokenize(str(record.get("title", ""))),
-            area_tokens=_tokenize(str(record.get("workflow_area", ""))),
-            example_tokens=_tokenize(" ".join(str(item) for item in record.get("question_examples", []))),
-            form_tokens=_tokenize(" ".join(str(item) for item in record.get("related_forms", []))),
-            system_tokens=_tokenize(" ".join(str(item) for item in record.get("related_systems", []))),
-            category_tokens=_tokenize(str(record.get("category", ""))),
-        )
-        for record in records
-        if str(record.get("title", "")).strip() and record.get("draft") is not True
-    )
+    seed_docs = _load_legacy_seed(path)
+    draft_docs = _load_drafts_dir(drafts_dir) if drafts_dir is not None else ()
+    documents = tuple(draft_docs) + tuple(seed_docs)
 
     with _CACHE_LOCK:
-        _WORKFLOW_CACHE[cache_key] = (mtime_ns, documents)
+        _WORKFLOW_CACHE[cache_key] = (cache_revision, documents)
     return list(documents)
 
 
