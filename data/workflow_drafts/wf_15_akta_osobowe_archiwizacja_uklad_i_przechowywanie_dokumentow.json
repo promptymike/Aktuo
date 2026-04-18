@@ -108,57 +108,131 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, a draft zawiera liczne odwołania do artykułów (art. 94 pkt 9b KP, art. 22(1) KP, art. 108 KP, art. 113 KP) oraz rozporządzenia MRPiPS z 10.12.2018 bez ich weryfikacji. Brak jawnych referencji do konkretnych numerów artykułów w strukturze może utrudnić audyt zgodności."
+        "description": "Pole 'legal_anchors' jest puste, a draft zawiera liczne odwołania do artykułów (art. 94 pkt 9b KP, art. 22(1) KP, art. 108 KP, art. 113 KP) oraz rozporządzenia MRPiPS z 10.12.2018 bez ich weryfikacji. Brak jawnych referencji do konkretnych numerów artykułów w strukturze może utrudnić audyt zgodności.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie art. 22 KP (dotyczący stosunku pracy), który nie pokrywa kluczowych artykułów cytowanych w drafcie: art. 94 pkt 9b KP (okresy przechowywania akt), art. 22(1) KP (dane osobowe żądane przez pracodawcę), art. 108 KP, art. 113 KP, ani rozporządzenia MRPiPS z 10.12.2018. Flaga jest merytorycznie uzasadniona jako ryzyko audytowe — brak legal_anchors w strukturze rekordu utrudnia weryfikację poprawności cytowanych przepisów — jednak KB nie dostarcza dowodów ani potwierdzających, ani obalających poprawność tych konkretnych odwołań.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o pełne referencje: art. 94 pkt 9b KP, art. 22(1) KP, art. 108 KP, art. 113 KP oraz Rozporządzenie MRPiPS z 10.12.2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369), a następnie zweryfikować brzmienie każdego artykułu względem aktualnego tekstu ustawy.",
+        "verified_at": "2026-04-18T12:15:53Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera daty graniczne (1.01.2019, 1.01.1999, 31.12.2018) dla okresów przechowywania akt, które mogą ulec zmianie ustawą do 2026 r. Brak adnotacji o konieczności weryfikacji tych progów przed wdrożeniem procedury w praktyce."
+        "description": "Draft zawiera daty graniczne (1.01.2019, 1.01.1999, 31.12.2018) dla okresów przechowywania akt, które mogą ulec zmianie ustawą do 2026 r. Brak adnotacji o konieczności weryfikacji tych progów przed wdrożeniem procedury w praktyce.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają art. 94 pkt 9b KP ani przepisów o okresach przechowywania akt (10/50 lat, daty graniczne 1.01.1999, 1.01.2019, 31.12.2018). Dostępny rekord art. 94⁹ KP dotyczy jedynie informowania pracowników o zmianie postaci dokumentacji, a nie okresów przechowywania. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych KB. Sama flaga dotyczy ryzyka przyszłych zmian legislacyjnych do 2026 r., co jest z natury trudne do weryfikacji na podstawie obecnych przepisów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga ma być potraktowana jako ostrzeżenie redakcyjne, warto dodać w drafcie adnotację: 'Daty graniczne (1.01.1999, 1.01.2019, 31.12.2018) oraz okresy przechowywania należy zweryfikować przed wdrożeniem procedury pod kątem ewentualnych zmian legislacyjnych.' Wymaga to jednak weryfikacji w aktualnym brzmieniu art. 94 pkt 9b KP i przepisów przejściowych.",
+        "verified_at": "2026-04-18T12:16:01Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 stwierdza, że listy obecności są 'nieobjęte obowiązkiem archiwizacji 10/50-letniej', ale krok 3 jednocześnie mówi 'Karty wynagrodzeń przechowuj 10/50 lat jak akta osobowe' – brak jasności czy listy obecności przechowuje się krócej niż karty wynagrodzeń i na jakiej podstawie prawnej."
+        "description": "Krok 3 stwierdza, że listy obecności są 'nieobjęte obowiązkiem archiwizacji 10/50-letniej', ale krok 3 jednocześnie mówi 'Karty wynagrodzeń przechowuj 10/50 lat jak akta osobowe' – brak jasności czy listy obecności przechowuje się krócej niż karty wynagrodzeń i na jakiej podstawie prawnej.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących okresu przechowywania list obecności ani kart wynagrodzeń (brak przepisów z rozporządzenia MRPiPS z 10.12.2018 ani art. 94 KP w kontekście dokumentacji pozaaktowej). Flaga wskazuje na potencjalną niespójność – draft twierdzi że listy obecności są 'nieobjęte obowiązkiem archiwizacji 10/50-letniej' powołując się na 'komentarz społeczności' (nie na przepis), podczas gdy karty wynagrodzeń mają być przechowywane 10/50 lat. Nie można potwierdzić ani obalić tej sprzeczności na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy wskazać konkretną podstawę prawną dla okresu przechowywania list obecności (np. rozporządzenie MRPiPS z 10.12.2018 § 6 lub art. 94 pkt 9b KP) i wyraźnie odróżnić listy obecności (ewidencja czasu pracy – przechowywana przez okres zatrudnienia + okres przedawnienia roszczeń) od kart wynagrodzeń (dokumentacja płacowa – 10/50 lat). Usunąć odwołanie do 'komentarza społeczności' jako podstawy prawnej.",
+        "verified_at": "2026-04-18T12:16:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brak procedury dla dokumentów pracownika zatrudnionego na umowę zlecenie/umowę o dzieło – draft skupia się na stosunku pracy (KP), ale nie wyjaśnia czy te same reguły 10/50 lat dotyczą innych form zatrudnienia."
+        "description": "Brak procedury dla dokumentów pracownika zatrudnionego na umowę zlecenie/umowę o dzieło – draft skupia się na stosunku pracy (KP), ale nie wyjaśnia czy te same reguły 10/50 lat dotyczą innych form zatrudnienia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących przechowywania dokumentacji dla zleceniobiorców/wykonawców dzieła (ustawa o systemie ubezpieczeń społecznych, przepisy archiwalne dla umów cywilnoprawnych). Draft rzeczywiście skupia się wyłącznie na stosunku pracy (KP, rozporządzenie MRPiPS), nie poruszając kwestii umów zlecenia/o dzieło. Flaga wskazuje na realną lukę informacyjną, ale KB nie dostarcza materiału do jej potwierdzenia ani obalenia.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać notę: dla zleceniobiorców i wykonawców dzieła nie stosuje się przepisów KP o aktach osobowych – dokumentację przechowuje się przez okres wynikający z przepisów podatkowych (5 lat) i ZUS (5 lat od daty płatności składek), a nie 10/50 lat jak przy stosunku pracy.",
+        "verified_at": "2026-04-18T12:16:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 6 wspomina 'wydawana wraz ze świadectwem pracy' informacja o okresie przechowywania, ale nie precyzuje czy jest to obowiązkowy dokument, jaki powinien zawierać i czy pracodawca musi go archiwizować jako część akt."
+        "description": "Krok 6 wspomina 'wydawana wraz ze świadectwem pracy' informacja o okresie przechowywania, ale nie precyzuje czy jest to obowiązkowy dokument, jaki powinien zawierać i czy pracodawca musi go archiwizować jako część akt.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Art. 94(6) KP jednoznacznie określa, że informacja wydawana wraz ze świadectwem pracy jest obowiązkowa i musi zawierać trzy konkretne elementy: (1) okres przechowywania dokumentacji, (2) możliwość odbioru dokumentacji do końca miesiąca po upływie okresu przechowywania, (3) informację o zniszczeniu dokumentacji w razie nieodebrania. Draft w kroku 6 wspomina jedynie o 'generowaniu informacji o okresie przechowywania' bez wskazania wszystkich trzech wymaganych elementów ani obowiązkowego charakteru tego dokumentu.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "W kroku 6 należy doprecyzować, że informacja wydawana wraz ze świadectwem pracy jest obowiązkowa (art. 94(6) KP) i musi zawierać wszystkie trzy elementy: okres przechowywania, możliwość odbioru dokumentacji do końca miesiąca po upływie okresu przechowywania oraz informację o zniszczeniu dokumentacji w razie jej nieodebrania. Warto też wskazać, że informacja może być wydana w postaci papierowej lub elektronicznej.",
+        "verified_at": "2026-04-18T12:16:23Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 6 wymienia konkretne systemy (Comarch Optima, Symfonia Kadry, Enova365) z dokładnymi ścieżkami menu – te ścieżki mogą być nieaktualne w wersjach z 2026 r. lub mogą nie istnieć w starszych wersjach oprogramowania."
+        "description": "Krok 6 wymienia konkretne systemy (Comarch Optima, Symfonia Kadry, Enova365) z dokładnymi ścieżkami menu – te ścieżki mogą być nieaktualne w wersjach z 2026 r. lub mogą nie istnieć w starszych wersjach oprogramowania.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących oprogramowania kadrowo-płacowego (Comarch Optima, Symfonia Kadry, Enova365) ani ich ścieżek menu. Flaga dotyczy ryzyka nieaktualności interfejsów konkretnych produktów komercyjnych, co jest uzasadnionym ryzykiem merytorycznym – ścieżki menu w oprogramowaniu zmieniają się między wersjami – jednak KB nie dostarcza ani potwierdzenia, ani zaprzeczenia tego faktu.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Zalecane jest usunięcie konkretnych ścieżek menu lub dodanie zastrzeżenia: 'Ścieżki menu mogą różnić się w zależności od wersji oprogramowania – zweryfikuj w aktualnej dokumentacji producenta lub module pomocy programu.' Można też opisać krok 6 ogólnie (oznaczenie pracownika jako archiwalnego w systemie kadrowym) bez podawania konkretnych ścieżek.",
+        "verified_at": "2026-04-18T12:16:29Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 1 wspomina 'ZUS OSW i raport ZUS RIA' – brak weryfikacji czy te kody/raporty ZUS istnieją i czy są aktualne dla 2026 r. (mogły być zastąpione nowymi formularzami)."
+        "description": "Krok 1 wspomina 'ZUS OSW i raport ZUS RIA' – brak weryfikacji czy te kody/raporty ZUS istnieją i czy są aktualne dla 2026 r. (mogły być zastąpione nowymi formularzami).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera przepisy ustawy o systemie ubezpieczeń społecznych dotyczące raportów miesięcznych i zgłoszeń, ale nie wymienia konkretnych kodów formularzy ZUS OSW ani ZUS RIA. Przepisy mówią ogólnie o 'imiennych raportach miesięcznych' i 'zgłoszeniach do ubezpieczeń społecznych' bez podawania symboli druków. Nie można na podstawie dostępnych rekordów ani potwierdzić, ani obalić istnienia i aktualności tych konkretnych kodów formularzy.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Warto zweryfikować na stronie ZUS (zus.pl) lub w aktualnym wykazie formularzy ZUS czy kody ZUS OSW i ZUS RIA są nadal obowiązujące w 2026 r. i czy nie zostały zastąpione nowymi symbolami. Jeśli draft je wymienia, powinien wskazać źródło lub datę weryfikacji aktualności tych formularzy.",
+        "verified_at": "2026-04-18T12:16:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący 'ponownego zatrudnienia bez dnia przerwy' zakłada, że badania lekarskie i szkolenie BHP mogą być kopiowane do nowych akt – brak wyjaśnienia czy kopie mają taką samą moc prawną co oryginały wobec PIP/ZUS."
+        "description": "Edge case dotyczący 'ponownego zatrudnienia bez dnia przerwy' zakłada, że badania lekarskie i szkolenie BHP mogą być kopiowane do nowych akt – brak wyjaśnienia czy kopie mają taką samą moc prawną co oryginały wobec PIP/ZUS.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących mocy prawnej kopii dokumentów (badań lekarskich, szkoleń BHP) w aktach osobowych wobec PIP/ZUS. Rekordy z KB dotyczą orzecznictwa ZUS i kontroli niezdolności do pracy, co jest tematem niezwiązanym z flagą. Rozporządzenie MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej (§ 5 i nast.) reguluje zasady prowadzenia akt, ale nie jest dostępne w KB, więc nie można jednoznacznie potwierdzić ani obalić czy kopie badań/BHP mają taką samą moc co oryginały.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać w edge case wyjaśnienie, że zgodnie z § 5 rozporządzenia MRPiPS z 10.12.2018 pracodawca może przechowywać w aktach kopie (odpisy) dokumentów, a ich moc dowodowa wobec PIP jest taka sama jak oryginałów, o ile są czytelne i kompletne. Zalecane jest jednak zachowanie oryginałów lub poświadczonych kopii, szczególnie orzeczeń lekarskich.",
+        "verified_at": "2026-04-18T12:16:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o karach porządkowych (część D) stwierdza, że 'numerację można prowadzić od nowa' – to może być sprzeczne z wymogiem transparentności historii akt wobec PIP, o którym mowa w kroku 4."
+        "description": "Edge case o karach porządkowych (część D) stwierdza, że 'numerację można prowadzić od nowa' – to może być sprzeczne z wymogiem transparentności historii akt wobec PIP, o którym mowa w kroku 4.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej ani przepisów o kontroli PIP w zakresie wymogów numeracji akt osobowych. Flaga dotyczy potencjalnej sprzeczności między praktyką 'numeracji od nowa' w części D a wymogiem transparentności wobec PIP, jednak żaden z dostarczonych rekordów KB nie reguluje tej kwestii. Art. 113 KP (zatarcie kary) jest powszechnie znany, ale szczegółowe wymogi dotyczące numeracji dokumentów w aktach osobowych wymagają weryfikacji w rozporządzeniu wykonawczym, którego KB nie pokrywa.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:16:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brak procedury dla pracowników zatrudnionych na podstawie umów międzynarodowych (delegowani pracownicy, umowy z zagranicą) – czy okres przechowywania 10/50 lat dotyczy również ich dokumentacji?"
+        "description": "Brak procedury dla pracowników zatrudnionych na podstawie umów międzynarodowych (delegowani pracownicy, umowy z zagranicą) – czy okres przechowywania 10/50 lat dotyczy również ich dokumentacji?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących przepisów o przechowywaniu dokumentacji pracowniczej w kontekście pracowników delegowanych lub zatrudnionych na podstawie umów międzynarodowych. Dostępne rekordy dotyczą kas rejestrujących, ZUS i wniosków o zmianę umowy – żaden nie odnosi się do art. 94 KP ani rozporządzenia MRPiPS z 10.12.2018 w zakresie pracowników delegowanych. Nie można ani potwierdzić, ani obalić zasadności flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:16:58Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 4 mówi 'NIE przepisuj całego spisu od nowa', ale edge case o karach porządkowych sugeruje możliwość przepisania numeracji części D – brak jasności czy zasada 'nie przepisuj' dotyczy wszystkich części czy tylko A/B/C."
+        "description": "Krok 4 mówi 'NIE przepisuj całego spisu od nowa', ale edge case o karach porządkowych sugeruje możliwość przepisania numeracji części D – brak jasności czy zasada 'nie przepisuj' dotyczy wszystkich części czy tylko A/B/C.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej ani zasad prowadzenia akt osobowych (części A-E). Flaga dotyczy wewnętrznej spójności draftu (krok 4 vs edge case o karach porządkowych), a nie zgodności z przepisami prawa – KB nie pozwala zweryfikować tej kwestii.",
+        "verifier_confidence": 0.3,
+        "verified_at": "2026-04-18T12:17:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

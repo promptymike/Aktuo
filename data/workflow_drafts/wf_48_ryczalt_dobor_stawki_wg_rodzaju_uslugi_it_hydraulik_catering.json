@@ -118,57 +118,133 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 12 ust. 1 pkt 2b (IT 12%) nie jest cytowany w legal_anchors, choć jest kluczowy dla rozróżnienia programistów od help-desku. Brakuje też art. 12 ust. 1 pkt 7 lit. b (catering 3%) i pkt 6 lit. a (hydraulika 5,5%), które są wymienione w answer_steps ale nie w legal_anchors."
+        "description": "Art. 12 ust. 1 pkt 2b (IT 12%) nie jest cytowany w legal_anchors, choć jest kluczowy dla rozróżnienia programistów od help-desku. Brakuje też art. 12 ust. 1 pkt 7 lit. b (catering 3%) i pkt 6 lit. a (hydraulika 5,5%), które są wymienione w answer_steps ale nie w legal_anchors.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 12 ust. 1 ustawy o zryczałtowanym podatku dochodowym, więc nie można potwierdzić ani obalić istnienia konkretnych punktów (2b, 7 lit. b, 6 lit. a). Flaga wskazuje na realną niespójność strukturalną drafta: answer_steps powołuje art. 12 ust. 1 pkt 2b, 7 lit. b i 6 lit. a, natomiast legal_anchors zawiera tylko ogólne art. 12 ust. 1 pkt 2 i pkt 1 — brak precyzyjnych podpunktów. To potencjalny problem redakcyjny, ale bez dostępu do treści ustawy ryczałtowej nie można zweryfikować czy te podpunkty faktycznie istnieją i czy są kluczowe.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli art. 12 ust. 1 pkt 2b (12% IT), pkt 6 lit. a (5,5% roboty budowlane) i pkt 7 lit. b (3% catering) faktycznie istnieją w ustawie o ryczałcie, należy dodać je jako osobne wpisy w legal_anchors z opisem roli każdego z nich w rozróżnieniu stawek dla omawianych branż.",
+        "verified_at": "2026-04-18T12:26:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera odniesienie do nowelizacji 2021/2022 zmieniającej stawki IT na 12%, ale nie weryfikuje czy te stawki obowiązują w 2026 r. Limity przychodów dla ryczałtu (obecnie 300 tys. zł) mogą być zmienione ustawą budżetową na 2026 r., co nie jest uwzględnione."
+        "description": "Draft zawiera odniesienie do nowelizacji 2021/2022 zmieniającej stawki IT na 12%, ale nie weryfikuje czy te stawki obowiązują w 2026 r. Limity przychodów dla ryczałtu (obecnie 300 tys. zł) mogą być zmienione ustawą budżetową na 2026 r., co nie jest uwzględnione.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą wyłącznie ustawy o VAT i nie zawierają treści ustawy o zryczałtowanym podatku dochodowym ani art. 12 ust. 1 pkt 2b w wersji obowiązującej w 2026 r. Nie można potwierdzić ani obalić, czy stawka 12% dla IT oraz limity przychodów dla ryczałtu pozostają niezmienione na 2026 r. Flaga wskazuje realny obszar ryzyka (zmiany ustawowe), ale KB nie dostarcza dowodów ani w jedną, ani w drugą stronę.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodaj w drafcie zastrzeżenie, że stawki i limity należy zweryfikować według stanu prawnego na dzień stosowania (np. 'stawka 12% obowiązuje na podstawie art. 12 ust. 1 pkt 2b ustawy w brzmieniu obowiązującym od 2022 r. — zweryfikuj aktualność przed zastosowaniem w 2026 r.') oraz wskaż źródło weryfikacji (np. tekst jednolity na ISAP lub interpretacje KIS).",
+        "verified_at": "2026-04-18T12:26:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 2 stwierdza że 'hydraulik — 5,5% dla robót budowlanych/nowych instalacji' ale edge_case wyjaśnia że 'przy wymianie całej instalacji CO można argumentować 5,5%' — brakuje jasnej granicy między 'nową instalacją' a 'wymianą', co może prowadzić do różnych interpretacji."
+        "description": "Step 2 stwierdza że 'hydraulik — 5,5% dla robót budowlanych/nowych instalacji' ale edge_case wyjaśnia że 'przy wymianie całej instalacji CO można argumentować 5,5%' — brakuje jasnej granicy między 'nową instalacją' a 'wymianą', co może prowadzić do różnych interpretacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących ustawy o zryczałtowanym podatku dochodowym ani klasyfikacji PKWiU dla usług hydraulicznych, więc nie można zweryfikować czy granica między 'nową instalacją' (5,5%) a 'wymianą/serwisem' (8,5%) jest jednoznacznie określona w przepisach. Flaga wskazuje na realną niejednoznaczność interpretacyjną w drafcie, ale bez dostępu do odpowiednich przepisów ryczałtowych i klasyfikacji PKWiU nie można potwierdzić ani odrzucić czy ta granica jest faktycznie nieostra w prawie.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć doprecyzowanie w step 2 kryterium rozróżnienia: np. wskazać konkretne grupowania PKWiU (np. 43.22.1 dla robót instalacyjnych vs 43.22.2 dla konserwacji/napraw) jako podstawę rozróżnienia stawek 5,5% i 8,5%, zamiast opisowego kryterium 'nowa instalacja vs wymiana'.",
+        "verified_at": "2026-04-18T12:27:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Step 3 wspomina WIS (Wstępną Interpretację Stanowiska) ale nie wyjaśnia czy WIS dla ryczałtu jest wiążący dla podatnika czy tylko dla organów podatkowych. Brakuje też informacji o terminie ważności WIS i co robić gdy WIS wygaśnie."
+        "description": "Step 3 wspomina WIS (Wstępną Interpretację Stanowiska) ale nie wyjaśnia czy WIS dla ryczałtu jest wiążący dla podatnika czy tylko dla organów podatkowych. Brakuje też informacji o terminie ważności WIS i co robić gdy WIS wygaśnie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących WIS (Wiążącą Informację Stawkową) w kontekście ryczałtu — rekordy dotyczą VAT art. 29a, VAT art. 7 ust. 2 oraz ryczałtu art. 29 ust. 1, żaden nie odnosi się do instytucji WIS. Draft w step 3 stwierdza jedynie 'WIS wiąże organy podatkowe', co jest informacją niepełną — brakuje wyjaśnienia zakresu ochrony dla podatnika, terminu ważności WIS (co do zasady WIS jest bezterminowy, ale może wygasnąć przy zmianie przepisów) oraz konsekwencji wygaśnięcia. Flaga wskazuje realną lukę informacyjną, jednak bez odpowiednich przepisów w KB nie mogę jej jednoznacznie potwierdzić ani odrzucić.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W step 3 należy doprecyzować: (1) WIS wiąże organy podatkowe i zapewnia ochronę podatnikowi stosującemu się do WIS (analogicznie do interpretacji indywidualnej — art. 14k-14m Ordynacji podatkowej stosowane odpowiednio); (2) WIS co do zasady nie ma terminu ważności, ale traci moc przy zmianie przepisów lub klasyfikacji statystycznych; (3) po wygaśnięciu WIS należy złożyć nowy wniosek WIS-W.",
+        "verified_at": "2026-04-18T12:27:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wspomina o warunku przychodu (limit 300 tys. zł rocznie) jako warunku stosowania ryczałtu — podatnik mogący przekroczyć limit musi wiedzieć o tym przed wyborem stawki, a to nie jest uwzględnione w workflow."
+        "description": "Draft nie wspomina o warunku przychodu (limit 300 tys. zł rocznie) jako warunku stosowania ryczałtu — podatnik mogący przekroczyć limit musi wiedzieć o tym przed wyborem stawki, a to nie jest uwzględnione w workflow.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie przepisy VAT (art. 113, art. 21 ustawy o VAT), które nie dotyczą limitu przychodów dla ryczałtu ewidencjonowanego. Flaga odnosi się do art. 6 ust. 4 ustawy o zryczałtowanym podatku dochodowym (limit 2 mln euro, nie 300 tys. zł — co samo w sobie może być błędem w opisie flagi), jednak KB nie zawiera tego przepisu, więc nie można ani potwierdzić, ani obalić zarzutu na podstawie dostępnych rekordów. Warto odnotować, że limit 300 tys. zł nie jest standardowym progiem w ustawie o ryczałcie — co budzi dodatkowe wątpliwości co do trafności opisu flagi.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Zweryfikować w ustawie o zryczałtowanym podatku dochodowym (art. 6 ust. 4) rzeczywisty limit przychodów warunkujący prawo do ryczałtu (2 mln euro) i jeśli draft go pomija — dodać krok weryfikacji czy podatnik nie przekroczył limitu w poprzednim roku podatkowym.",
+        "verified_at": "2026-04-18T12:27:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Step 3 wspomina 'Ośrodek Klasyfikacji i Nomenklatur w Łodzi' jako jednostkę GUS wydającą opinie klasyfikacyjne — należy zweryfikować czy ta jednostka istnieje i czy rzeczywiście wydaje opinie dla PKWiU (może być to jednostka dla CN, a nie PKWiU)."
+        "description": "Step 3 wspomina 'Ośrodek Klasyfikacji i Nomenklatur w Łodzi' jako jednostkę GUS wydającą opinie klasyfikacyjne — należy zweryfikować czy ta jednostka istnieje i czy rzeczywiście wydaje opinie dla PKWiU (może być to jednostka dla CN, a nie PKWiU).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają informacji o 'Ośrodku Klasyfikacji i Nomenklatur w Łodzi' ani o procedurze wydawania opinii klasyfikacyjnych PKWiU przez GUS. KB pokrywa jedynie przepisy o WIS (art. 42h ustawy o VAT) i inne niezwiązane tematy. Nie można ani potwierdzić, ani obalić istnienia tej jednostki i jej kompetencji w zakresie PKWiU na podstawie dostępnych danych.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto zweryfikować bezpośrednio na stronie GUS czy Ośrodek Klasyfikacji i Nomenklatur w Łodzi wydaje opinie dla PKWiU (a nie tylko dla CN/PCN). Jeśli okaże się, że jednostka ta obsługuje wyłącznie CN, należy wskazać właściwą jednostkę GUS odpowiedzialną za klasyfikacje PKWiU lub usunąć tę informację i ograniczyć się do rekomendacji złożenia WIS.",
+        "verified_at": "2026-04-18T12:27:29Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Edge case o pieczatkach i wyrobach indywidualnych (5,5% vs 8,5%) zawiera bardzo szczegółowe rozróżnienie, ale brakuje odniesienia do konkretnego artykułu ustawy lub interpretacji — może być to wnioskowanie z praktyki, ale wymaga weryfikacji."
+        "description": "Edge case o pieczatkach i wyrobach indywidualnych (5,5% vs 8,5%) zawiera bardzo szczegółowe rozróżnienie, ale brakuje odniesienia do konkretnego artykułu ustawy lub interpretacji — może być to wnioskowanie z praktyki, ale wymaga weryfikacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących ustawy o zryczałtowanym podatku dochodowym ani art. 12 ust. 1 tej ustawy, który reguluje stawki 5,5% i 8,5%. Rekordy dotyczą VAT i kas fiskalnych, więc nie można ani potwierdzić, ani obalić szczegółowego rozróżnienia między stawkami dla hydraulika (roboty budowlane 5,5% vs serwis 8,5%). Flaga wskazuje na brak cytowania konkretnego artykułu dla tego edge case'u, co jest zasadną obserwacją — draft nie podaje podstawy prawnej dla tego rozróżnienia wprost.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Dodać do LEGAL_ANCHORS wpis dla art. 12 ust. 1 pkt 6 lit. a (5,5% dla robót budowlanych, PKWiU 41-43) oraz art. 12 ust. 1 pkt 5 lit. a (8,5% dla usług serwisowych/naprawczych) ustawy o zryczałtowanym podatku dochodowym, aby rozróżnienie 5,5%/8,5% dla hydraulika miało wyraźne zakotwiczenie prawne.",
+        "verified_at": "2026-04-18T12:27:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o catering wspomina że 'jeśli podatnik tylko rozwozi gotowe dania wyprodukowane przez kogoś innego — jest to transport/pośrednictwo = 8,5%' ale nie wyjaśnia czy to dotyczy też sytuacji gdy podatnik kupuje posiłki i je odsprzedaje (co mogłoby być handlem, a nie transportem)."
+        "description": "Edge case o catering wspomina że 'jeśli podatnik tylko rozwozi gotowe dania wyprodukowane przez kogoś innego — jest to transport/pośrednictwo = 8,5%' ale nie wyjaśnia czy to dotyczy też sytuacji gdy podatnik kupuje posiłki i je odsprzedaje (co mogłoby być handlem, a nie transportem).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 12 ust. 1 ustawy o zryczałtowanym podatku dochodowym w zakresie klasyfikacji cateringu/handlu/transportu. Flaga wskazuje na lukę w edge case (brak rozróżnienia między odsprzedażą posiłków jako handel a transportem), co jest merytorycznie zasadnym pytaniem — handel detaliczny żywnością mógłby podlegać innej stawce niż transport/pośrednictwo — jednak bez odpowiednich rekordów KB nie można potwierdzić ani obalić tej obserwacji.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie do edge case cateringu wyjaśnienia: jeśli podatnik kupuje gotowe posiłki i odsprzedaje je we własnym imieniu (handel), może to być działalność handlowa objęta stawką 3% (art. 12 ust. 1 pkt 7 dla gastronomii) lub inną stawką zależnie od PKWiU — należy uzyskać WIS lub opinię GUS dla konkretnego przypadku.",
+        "verified_at": "2026-04-18T12:27:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o usługach porządkowych wspomina VAT 8% dla terenów zielonych (poz. 176 zał. nr 3), ale nie wyjaśnia czy ta stawka VAT zmienia się w 2026 r. lub czy dotyczy wszystkich odbiorców (może być inna dla firm vs osób fizycznych)."
+        "description": "Edge case o usługach porządkowych wspomina VAT 8% dla terenów zielonych (poz. 176 zał. nr 3), ale nie wyjaśnia czy ta stawka VAT zmienia się w 2026 r. lub czy dotyczy wszystkich odbiorców (może być inna dla firm vs osób fizycznych).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących załącznika nr 3 do ustawy o VAT (poz. 176) ani planowanych zmian stawek VAT na 2026 r. dla usług związanych z terenami zielonymi. Flaga wskazuje na brak wyjaśnienia czy stawka 8% VAT różnicuje odbiorców (B2B vs B2C) — draft stwierdza 'niezależnie od odbiorcy', co jest twierdzeniem merytorycznym, ale nie można go zweryfikować ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli chcemy potwierdzić poprawność draftu, należy sprawdzić treść poz. 176 zał. nr 3 do ustawy o VAT — stawka 8% w zał. nr 3 dotyczy dostaw/usług dla każdego nabywcy (nie jest to zał. nr 4 z usługami wyłącznie dla osób fizycznych). Warto dodać krótką notę że brak planowanych zmian tej stawki w 2026 r. lub oznaczyć jako wymagające weryfikacji przed publikacją.",
+        "verified_at": "2026-04-18T12:27:53Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 4 wspomina że 'bez podziału cały przychód opodatkujesz najwyższą stawką' — ale nie wyjaśnia czy to dotyczy tylko przychodów z danego roku czy też wymaga retroaktywnego przeliczenia poprzednich lat, jeśli podatnik nie prowadził odrębnej ewidencji."
+        "description": "Step 4 wspomina że 'bez podziału cały przychód opodatkujesz najwyższą stawką' — ale nie wyjaśnia czy to dotyczy tylko przychodów z danego roku czy też wymaga retroaktywnego przeliczenia poprzednich lat, jeśli podatnik nie prowadził odrębnej ewidencji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie ogólny opis art. 12 ust. 1 pkt 1 (stawka 17% dla wolnych zawodów) i nie zawiera pełnej treści art. 12 ust. 3, który jest kluczowy dla weryfikacji flagi. Flaga dotyczy kwestii retroaktywnego przeliczenia poprzednich lat przy braku odrębnej ewidencji — KB nie dostarcza żadnych informacji na ten temat. Sam art. 12 ust. 3 ustawy o ryczałcie reguluje stosowanie najwyższej stawki w przypadku braku ewidencji, ale jego zakres czasowy (czy dotyczy tylko bieżącego roku czy też lat poprzednich) nie może być zweryfikowany na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez analizę pełnej treści art. 12 ust. 3, warto dodać w step 4 wyjaśnienie, że konsekwencja braku ewidencji (zastosowanie najwyższej stawki) dotyczy przychodów z danego roku podatkowego, w którym ewidencja nie była prowadzona — bez retroaktywnego skutku dla lat poprzednich, o ile były one prawidłowo rozliczane.",
+        "verified_at": "2026-04-18T12:28:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "low",
-        "description": "Legal_anchors zawiera art. 9 ust. 1 ustawy o ryczałcie (ciężar dowodu) ale ten artykuł nie jest wymieniony w legal_anchors — pojawia się tylko w step 6 jako odniesienie."
+        "description": "Legal_anchors zawiera art. 9 ust. 1 ustawy o ryczałcie (ciężar dowodu) ale ten artykuł nie jest wymieniony w legal_anchors — pojawia się tylko w step 6 jako odniesienie.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga sugeruje, że art. 9 ust. 1 ustawy o ryczałcie dotyczący ciężaru dowodu nie jest wymieniony w legal_anchors. Jednak z KB wynika, że art. 9 ust. 1 ustawy o ryczałcie reguluje procedurę złożenia oświadczenia o wyborze ryczałtu (terminy, organ), a nie ciężar dowodu. W step 6 drafta art. 9 ust. 1 pojawia się jedynie jako kontekstowe odniesienie do dokumentowania podstawy wyboru stawki — nie jest to kluczowy anchor merytoryczny wymagający umieszczenia w legal_anchors. Brak tego artykułu w legal_anchors jest uzasadniony, bo legal_anchors skupiają się na stawkach (art. 12 ust. 1) i ewidencji (art. 12 ust. 3), co jest rdzeniem odpowiedzi.",
+        "verifier_confidence": 0.85,
+        "verified_at": "2026-04-18T12:28:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

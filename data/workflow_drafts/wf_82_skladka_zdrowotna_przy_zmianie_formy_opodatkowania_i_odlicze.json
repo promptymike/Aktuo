@@ -107,52 +107,122 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 22 ust. 6bb, art. 26 ust. 1 pkt 2, art. 30c ust. 2 pkt 2 ustawy o PIT oraz 'rok składkowy zdrowotny luty–styczeń'. Brak weryfikacji czy te numery artykułów są aktualne dla 2026 i czy rzeczywiście dotyczą opisanych sytuacji."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 22 ust. 6bb, art. 26 ust. 1 pkt 2, art. 30c ust. 2 pkt 2 ustawy o PIT oraz 'rok składkowy zdrowotny luty–styczeń'. Brak weryfikacji czy te numery artykułów są aktualne dla 2026 i czy rzeczywiście dotyczą opisanych sytuacji.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "KB zawiera art. 22 ust. 6ba (rec 3), ale draft powołuje się na art. 22 ust. 6bb oraz art. 26 ust. 1 pkt 2 ustawy o PIT. KB nie potwierdza istnienia art. 22 ust. 6bb ani art. 26 ust. 1 pkt 2 w kontekście opisanym w drafcie (odliczenie składek społecznych zapłaconych za poprzedni miesiąc). Brak weryfikacji tych numerów artykułów w KB jest realnym problemem — art. 22 ust. 6bb może nie istnieć lub dotyczyć innej materii, a art. 26 ust. 1 pkt 2 odnosi się do odliczeń od dochodu, co wymaga potwierdzenia aktualności na 2026 r. Flaga jest uzasadniona, ponieważ legal_anchors są puste mimo konkretnych powołań prawnych w treści drafta.",
+        "verifier_confidence": 0.82,
+        "corrective_suggestion": "Należy zweryfikować w aktualnym tekście ustawy o PIT (stan na 2026 r.) czy art. 22 ust. 6bb istnieje i dotyczy składek społecznych przedsiębiorcy, oraz czy art. 26 ust. 1 pkt 2 obejmuje opisaną sytuację. Jeśli art. 22 ust. 6bb nie istnieje, prawdopodobnie chodzi o art. 22 ust. 6ba lub inny ustęp. Uzupełnić pole legal_anchors o zweryfikowane referencje z podaniem pełnej nazwy ustawy i aktualnego brzmienia.",
+        "verified_at": "2026-04-18T12:38:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne kwoty: duży ZUS 5 652 zł, preferencyjny 1 441,80 zł, próg ryczałtu 60 000 / 300 000 zł, limit 11 600 zł, 75% przeciętnego wynagrodzenia. Wszystkie te wartości mogą ulec zmianie w 2026 r., a draft nie zawiera instrukcji weryfikacji aktualnych kwot w komunikacie ZUS."
+        "description": "Draft zawiera konkretne kwoty: duży ZUS 5 652 zł, preferencyjny 1 441,80 zł, próg ryczałtu 60 000 / 300 000 zł, limit 11 600 zł, 75% przeciętnego wynagrodzenia. Wszystkie te wartości mogą ulec zmianie w 2026 r., a draft nie zawiera instrukcji weryfikacji aktualnych kwot w komunikacie ZUS.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga wskazuje na brak instrukcji weryfikacji aktualnych kwot, jednak sam draft w step 6 już zawiera taką instrukcję: 'zweryfikuj aktualne wartości w komunikacie ZUS'. KB potwierdza, że kwoty składek ZUS są ogłaszane corocznie (art. 19 ust. 1 ustawy o SUS), co uzasadnia podejście drafta — podanie przykładowych wartości z jednoczesnym zaleceniem weryfikacji. Draft nie twierdzi, że kwoty są definitywne na 2026 r., lecz podaje je jako punkt odniesienia z zastrzeżeniem.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Opcjonalnie można wzmocnić zastrzeżenie w step 6 i dodać analogiczne przypomnienie przy progach ryczałtu (60 000 / 300 000 zł) oraz limicie 11 600 zł, np.: 'Progi przychodowe ryczałtu i limit odliczenia zdrowotnej — zweryfikuj w aktualnych przepisach na 2026 r.'",
+        "verified_at": "2026-04-18T12:39:03Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Krok 6 wspomina 'rok składkowy zdrowotny luty–styczeń' i że nowa podstawa zdrowotnej na skali/liniowym obowiązuje 'od lutego 2026', ale nie wyjaśnia czy to oznacza że za styczeń 2026 stosuje się STARĄ podstawę z 2025 r., czy może przejściową. Brakuje jasnego schematu dla podatnika zmieniającego formę w przełomie roku."
+        "description": "Krok 6 wspomina 'rok składkowy zdrowotny luty–styczeń' i że nowa podstawa zdrowotnej na skali/liniowym obowiązuje 'od lutego 2026', ale nie wyjaśnia czy to oznacza że za styczeń 2026 stosuje się STARĄ podstawę z 2025 r., czy może przejściową. Brakuje jasnego schematu dla podatnika zmieniającego formę w przełomie roku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają przepisów dotyczących roku składkowego zdrowotnego ani zasad ustalania podstawy składki zdrowotnej przy zmianie formy opodatkowania na przełomie roku. Draft w kroku 6 stwierdza że 'minimalna składka zdrowotna na skali/liniowym za styczeń...' (tekst urwany), co sugeruje że kwestia jest częściowo omówiona, ale KB nie pozwala zweryfikować czy wyjaśnienie jest kompletne i poprawne w zakresie przejścia styczeń/luty 2026.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga jest zasadna, należy w kroku 6 lub osobnym kroku explicite wyjaśnić: za styczeń 2026 na skali/liniowym stosuje się minimalną podstawę zdrowotną (75% przeciętnego wynagrodzenia z poprzedniego kwartału) niezależnie od dochodu, ponieważ rok składkowy zdrowotny trwa luty–styczeń i rozliczenie roczne następuje dopiero po jego zakończeniu; nowa podstawa wynikająca z dochodu 2026 pojawi się dopiero w DRA za luty 2026 składanej w marcu 2026.",
+        "verified_at": "2026-04-18T12:39:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 2 mówi 'wpisujesz podstawę 0' za styczeń 2026 przy zmianie formy, ale krok 6 sugeruje że na ryczałcie 'nowa podstawa zdrowotnej obowiązuje już od stycznia 2026' — niejasne czy dla ryczałtu podstawa to 0 czy przychód od stycznia."
+        "description": "Krok 2 mówi 'wpisujesz podstawę 0' za styczeń 2026 przy zmianie formy, ale krok 6 sugeruje że na ryczałcie 'nowa podstawa zdrowotnej obowiązuje już od stycznia 2026' — niejasne czy dla ryczałtu podstawa to 0 czy przychód od stycznia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących wprost zasady ustalania podstawy składki zdrowotnej przy zmianie formy opodatkowania (brak przepisów ustawy o świadczeniach opieki zdrowotnej ani rozporządzeń ZUS). Flaga wskazuje na potencjalną niespójność: krok 2 mówi o podstawie 0 za styczeń 2026 przy zmianie formy, a krok 6 sugeruje że nowa podstawa zdrowotnej na ryczałcie obowiązuje od stycznia 2026 — jednak KB nie pozwala jednoznacznie rozstrzygnąć, czy na ryczałcie podstawa za styczeń 2026 wynosi 0 (brak przychodu z poprzedniego miesiąca) czy jest liczona od bieżącego przychodu.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Należy doprecyzować w drafcie, że krok 2 (podstawa 0) dotyczy wyłącznie formy skali/liniowego (gdzie podstawa to dochód z poprzedniego miesiąca), natomiast na ryczałcie podstawa zdrowotnej za styczeń 2026 jest liczona od przychodu osiągniętego w styczniu 2026 (nie z poprzedniego miesiąca), więc nie wynosi 0 — co eliminuje pozorną sprzeczność między krokami 2 i 6.",
+        "verified_at": "2026-04-18T12:39:20Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 7 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma, Enova) z ścieżkami menu typu 'Konfiguracja → Firma → Księgowość → Parametry'. Brak weryfikacji czy te ścieżki rzeczywiście istnieją w wersjach 2026 tych programów i czy są aktualne."
+        "description": "Krok 7 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma, Enova) z ścieżkami menu typu 'Konfiguracja → Firma → Księgowość → Parametry'. Brak weryfikacji czy te ścieżki rzeczywiście istnieją w wersjach 2026 tych programów i czy są aktualne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących ścieżek menu w programach Comarch Optima, WFirma ani Enova. Flaga dotyczy ryzyka nieaktualności konkretnych ścieżek nawigacji w oprogramowaniu księgowym (wersje 2026), co jest kwestią techniczną niemożliwą do zweryfikowania na podstawie przepisów prawnych. Ryzyko wskazane przez self_critic jest realnie uzasadnione - ścieżki menu mogą się zmieniać między wersjami programów, jednak KB nie dostarcza ani potwierdzenia ani zaprzeczenia.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać zastrzeżenie w kroku 7, że podane ścieżki menu są orientacyjne i mogą różnić się w zależności od wersji programu, zalecając weryfikację w dokumentacji producenta lub helpdesku danego oprogramowania.",
+        "verified_at": "2026-04-18T12:39:29Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia procedury dla podatnika, który zmienił formę opodatkowania w trakcie roku (poza przełomem roku) — edge case wspomina 'co do zasady niedopuszczalne poza przełomem roku / rezygnacją z ryczałtu do 20 lutego', ale brakuje konkretnych kroków co zrobić w takiej sytuacji."
+        "description": "Draft nie wyjaśnia procedury dla podatnika, który zmienił formę opodatkowania w trakcie roku (poza przełomem roku) — edge case wspomina 'co do zasady niedopuszczalne poza przełomem roku / rezygnacją z ryczałtu do 20 lutego', ale brakuje konkretnych kroków co zrobić w takiej sytuacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących zmiany formy opodatkowania PIT w trakcie roku (ustawa o PIT, ustawa o ryczałcie). Rekordy z KB dotyczą VAT i CIT-COVID, więc nie można zweryfikować ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Flaga wskazuje na brak procedury dla edge case'u zmiany formy w trakcie roku — draft faktycznie skupia się wyłącznie na przełomie roku (1.01.2026), co może być uzasadnione tym, że zmiana w trakcie roku jest co do zasady niedopuszczalna, ale brak wyjaśnienia tego ograniczenia w drafcie jest potencjalnym problemem.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli zmiana formy opodatkowania w trakcie roku jest niedopuszczalna (poza wyjątkami jak rezygnacja z ryczałtu do 20 lutego), draft powinien to explicite stwierdzić z powołaniem na odpowiedni przepis (art. 9a ustawy o PIT lub art. 9 ustawy o ryczałcie), zamiast pozostawiać użytkownika bez informacji o konsekwencjach próby takiej zmiany.",
+        "verified_at": "2026-04-18T12:39:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o zwrocie nadpłaty zdrowotnej mówi że 'zwrot pojawi się po złożeniu DRA z rocznym rozliczeniem (do 20 maja 2026)', ale nie wyjaśnia czy zwrot ten stanowi przychód do opodatkowania w nowej formie — to jest zaznaczone jako 'related_question', co sugeruje że draft nie pokrywa tego scenariusza."
+        "description": "Edge case o zwrocie nadpłaty zdrowotnej mówi że 'zwrot pojawi się po złożeniu DRA z rocznym rozliczeniem (do 20 maja 2026)', ale nie wyjaśnia czy zwrot ten stanowi przychód do opodatkowania w nowej formie — to jest zaznaczone jako 'related_question', co sugeruje że draft nie pokrywa tego scenariusza.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię opodatkowania zwrotu nadpłaty składki zdrowotnej w kontekście zmiany formy opodatkowania. Rekordy z KB dotyczą nadpłat podatkowych w Ordynacji podatkowej i CIT, a nie składek zdrowotnych ZUS. Flaga wskazuje na lukę w drafcie — brak wyjaśnienia czy zwrot nadpłaty zdrowotnej stanowi przychód w nowej formie opodatkowania — co jest faktycznie nieporuszonym zagadnieniem w edge_cases, jednak nie można potwierdzić ani obalić tej luki na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie do edge_cases informacji, że zwrot nadpłaty składki zdrowotnej co do zasady nie stanowi przychodu podatkowego (jest zwrotem składki, nie przychodem z działalności), jednak jeśli składka była wcześniej odliczona od podatku lub zaliczona do kosztów, jej zwrot może zwiększać podstawę opodatkowania — warto odesłać do art. 14 ust. 2 pkt 7b ustawy o PIT lub zalecić weryfikację w KIS przy istotnych kwotach.",
+        "verified_at": "2026-04-18T12:39:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 5 mówi o 'rocznym rozliczeniu zdrowotnej za 2026' w 'DRA za kwiecień 2027', ale nie wyjaśnia czy podatnik musi złożyć osobne DRA za 2025 r. (jeśli zmienił formę) czy czy może być to jedno rozliczenie roczne — procedura wydaje się niejasna dla przełomu roku."
+        "description": "Krok 5 mówi o 'rocznym rozliczeniu zdrowotnej za 2026' w 'DRA za kwiecień 2027', ale nie wyjaśnia czy podatnik musi złożyć osobne DRA za 2025 r. (jeśli zmienił formę) czy czy może być to jedno rozliczenie roczne — procedura wydaje się niejasna dla przełomu roku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą VAT i podatku dochodowego od przychodów, a nie procedury składania DRA i rocznego rozliczenia składki zdrowotnej w ZUS. KB nie zawiera przepisów regulujących zasady składania DRA przy zmianie formy opodatkowania ani procedury rocznego rozliczenia składki zdrowotnej (ustawa o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych, art. 81 i nast.). Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać w kroku 5 (lub osobnym kroku) wyjaśnienie: roczne rozliczenie składki zdrowotnej za dany rok kalendarzowy składa się w DRA za kwiecień roku następnego — jedno rozliczenie obejmuje cały rok, w którym obowiązywała dana forma opodatkowania; przy zmianie formy w trakcie roku mogą być wymagane dwa osobne rozliczenia roczne (jedno za okres starej formy, drugie za okres nowej formy).",
+        "verified_at": "2026-04-18T12:39:57Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Draft wspomina 'komunikat ZUS' jako źródło aktualnych wartości podstaw, ale nie podaje konkretnej nazwy dokumentu lub linku — może to być niewystarczająco precyzyjne dla księgowego szukającego konkretnego źródła."
+        "description": "Draft wspomina 'komunikat ZUS' jako źródło aktualnych wartości podstaw, ale nie podaje konkretnej nazwy dokumentu lub linku — może to być niewystarczająco precyzyjne dla księgowego szukającego konkretnego źródła.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera informacji o konkretnych komunikatach ZUS dotyczących podstaw wymiaru składek na 2026 rok. Flaga jest merytorycznie zasadna — 'komunikat ZUS' to nieprecyzyjna nazwa dokumentu, jednak KB nie dostarcza ani potwierdzenia ani zaprzeczenia tej kwestii. Wartości 5 652 zł i 1 441,80 zł podane w drafcie wymagają weryfikacji w oficjalnych komunikatach Prezesa GUS/ZUS, których nazwy nie są wskazane.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto doprecyzować źródło, np.: 'zweryfikuj w komunikacie Prezesa ZUS w sprawie kwoty prognozowanego przeciętnego wynagrodzenia miesięcznego w gospodarce narodowej na dany rok składkowy (publikowanym w Monitorze Polskim)' lub podać bezpośredni link do strony ZUS z aktualnymi podstawami.",
+        "verified_at": "2026-04-18T12:40:04Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Common mistake wspomina że 'skala — brak odliczenia' zdrowotnej od 2022 r., ale draft nie zawiera artykułu ustawy o PIT który to potwierdza — brak legal anchor dla tego kluczowego warunku."
+        "description": "Common mistake wspomina że 'skala — brak odliczenia' zdrowotnej od 2022 r., ale draft nie zawiera artykułu ustawy o PIT który to potwierdza — brak legal anchor dla tego kluczowego warunku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera bezpośrednich przepisów dotyczących braku możliwości odliczenia składki zdrowotnej od podatku na skali podatkowej po zmianach z 2022 r. (Polski Ład). Rekord art. 26 ust. 1 potwierdza istnienie przepisu o odliczeniach składek ubezpieczeniowych, ale nie zawiera treści pozwalającej zweryfikować kwestię składki zdrowotnej. Flaga jest merytorycznie zasadna jako obserwacja — draft rzeczywiście nie cytuje konkretnego artykułu ustawy o PIT (np. art. 27b, który regulował odliczenie składki zdrowotnej i został zmieniony przez Polski Ład), jednak KB nie dostarcza twardego dowodu ani w jedną, ani w drugą stronę.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać do draftu explicit legal anchor, np.: 'Na podstawie art. 27b ustawy o PIT (w brzmieniu po nowelizacji z 1.01.2022 r. — Polski Ład) składka zdrowotna nie podlega odliczeniu od podatku przy opodatkowaniu na zasadach ogólnych (skala podatkowa).' Należy zweryfikować aktualny stan art. 27b ustawy o PIT.",
+        "verified_at": "2026-04-18T12:40:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

@@ -114,62 +114,145 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Draft powołuje się na art. 39 ustawy PIT jako podstawę dla rozstrzygnięcia kiedy korygować PIT-11, ale art. 39 dotyczy obowiązku przesłania informacji PIT-11, a nie zasad jej korekty. Brakuje odniesienia do art. 41b ustawy PIT (zwrot przychodów) i art. 26 ust. 1 pkt 5 ustawy PIT (odliczenia), które są faktycznie cytowane w krokach, ale nie w legal_anchors."
+        "description": "Draft powołuje się na art. 39 ustawy PIT jako podstawę dla rozstrzygnięcia kiedy korygować PIT-11, ale art. 39 dotyczy obowiązku przesłania informacji PIT-11, a nie zasad jej korekty. Brakuje odniesienia do art. 41b ustawy PIT (zwrot przychodów) i art. 26 ust. 1 pkt 5 ustawy PIT (odliczenia), które są faktycznie cytowane w krokach, ale nie w legal_anchors.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Rekord z KB (rec 2) potwierdza, że art. 39 ust. 1 ustawy PIT dotyczy ogólnego obowiązku przesłania imiennych informacji, a nie zasad korekty PIT-11. Draft używa art. 39 jako 'podstawy dla rozstrzygnięcia kiedy korygować PIT-11', co jest nieścisłe — art. 39 reguluje sam obowiązek wystawienia informacji, nie procedurę jej korekty. Jednocześnie draft w krokach powołuje art. 41b ustawy PIT (step 4) jako podstawę dla rozliczenia zwrotu wynagrodzenia, ale ten artykuł nie pojawia się w legal_anchors, co stanowi niekompletność zakotwiczenia prawnego.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Uzupełnić legal_anchors o art. 41b ustawy PIT (zwrot przychodów przez podatnika) jako kluczową podstawę dla step 4. Rozważyć dodanie art. 26 ust. 1 pkt 2 ustawy PIT (odliczenie składek ZUS). Opis roli art. 39 w legal_anchors powinien być zawężony do 'obowiązku wystawienia PIT-11' bez rozszerzania go na zasady korekty, które wynikają z innych przepisów lub praktyki administracyjnej.",
+        "verified_at": "2026-04-18T12:43:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Step 4 powołuje się na art. 41b ustawy PIT jako podstawę dla pomniejszenia podstawy opodatkowania przy zwrocie wynagrodzenia, ale art. 41b dotyczy zwrotu przychodów przez podatnika, a nie przez pracodawcę-płatnika. Niepewne czy to prawidłowe zastosowanie przepisu."
+        "description": "Step 4 powołuje się na art. 41b ustawy PIT jako podstawę dla pomniejszenia podstawy opodatkowania przy zwrocie wynagrodzenia, ale art. 41b dotyczy zwrotu przychodów przez podatnika, a nie przez pracodawcę-płatnika. Niepewne czy to prawidłowe zastosowanie przepisu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekord KB dla art. 41b ustawy PIT jest bardzo ogólny i nie pozwala jednoznacznie ocenić, czy przepis ten ma zastosowanie do płatnika (pracodawcy) czy wyłącznie do podatnika. Opis w KB mówi o 'płacących zaliczki', co mogłoby sugerować podatnika, ale nie wyklucza płatnika. Flaga wskazuje na potencjalnie istotną różnicę między podmiotem stosującym art. 41b (podatnik vs. płatnik), jednak KB nie dostarcza treści samego artykułu w stopniu wystarczającym do potwierdzenia lub obalenia tej wątpliwości.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy zweryfikować pełną treść art. 41b ustawy PIT — jeśli przepis dotyczy wyłącznie podatnika (a nie płatnika), prawidłową podstawą dla pomniejszenia podstawy opodatkowania przez pracodawcę-płatnika w miesiącu zwrotu wynagrodzenia może być art. 32 ust. 2 ustawy PIT (dotyczący obliczania zaliczek przez płatnika). Warto rozważyć powołanie się na oba przepisy lub zastąpienie art. 41b właściwym przepisem dotyczącym płatnika.",
+        "verified_at": "2026-04-18T12:43:44Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera konkretne kwoty na 2026 r. (30-krotność 260 190 zł, minimalna krajowa 4 806 zł), ale brak źródła tych danych. Obwieszczenie MRPiPS o 30-krotności zmienia się corocznie i kwota 260 190 zł wymaga weryfikacji dla 2026 r."
+        "description": "Draft zawiera konkretne kwoty na 2026 r. (30-krotność 260 190 zł, minimalna krajowa 4 806 zł), ale brak źródła tych danych. Obwieszczenie MRPiPS o 30-krotności zmienia się corocznie i kwota 260 190 zł wymaga weryfikacji dla 2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera wyłącznie rekordy dotyczące ustawy o VAT, które nie są relevantne dla weryfikacji kwoty 30-krotności (260 190 zł) ani minimalnego wynagrodzenia (4 806 zł) na 2026 r. Flaga jest merytorycznie uzasadniona — kwota 30-krotności przeciętnego wynagrodzenia zmienia się corocznie na podstawie obwieszczenia GUS/MRPiPS i wymaga weryfikacji, jednak KB nie pozwala potwierdzić ani obalić poprawności podanej kwoty 260 190 zł dla 2026 r.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodaj przypis lub adnotację wskazującą źródło kwoty 260 190 zł (np. obwieszczenie MRPiPS/GUS na 2026 r.) oraz kwoty minimalnego wynagrodzenia 4 806 zł (rozporządzenie Rady Ministrów). Jeśli kwoty nie zostały jeszcze oficjalnie ogłoszone, zaznacz że są szacunkowe i wymagają aktualizacji po publikacji właściwych aktów prawnych.",
+        "verified_at": "2026-04-18T12:43:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 3 mówi że zwrócona pracownikowi kwota netto składek społecznych 'stanowi przychód ze stosunku pracy', ale Step 5 sugeruje że niedopłatę zaliczki PIT 'co do zasady pozostaw bez zmian'. Niejasne czy zwrot składek wymaga natychmiastowego naliczenia PIT czy rozliczenia w zeznaniu rocznym."
+        "description": "Step 3 mówi że zwrócona pracownikowi kwota netto składek społecznych 'stanowi przychód ze stosunku pracy', ale Step 5 sugeruje że niedopłatę zaliczki PIT 'co do zasady pozostaw bez zmian'. Niejasne czy zwrot składek wymaga natychmiastowego naliczenia PIT czy rozliczenia w zeznaniu rocznym.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza że zwrócone składki mogą stanowić przychód ze stosunku pracy (art. 12 ust. 1), co jest zgodne z Step 3. Jednak KB nie zawiera przepisów dotyczących art. 41b ustawy PIT ani zasad rozliczania niedopłaty zaliczki PIT przez płatnika vs. przez pracownika w zeznaniu rocznym, co jest sednem potencjalnej sprzeczności między Step 3 a Step 5. Flaga wskazuje na realną niejasność w drafcie (kiedy płatnik musi pobrać PIT od zwrotu składek, a kiedy może pozostawić rozliczenie pracownikowi), ale KB nie dostarcza wystarczających podstaw do jednoznacznego potwierdzenia lub odrzucenia tej sprzeczności.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto doprecyzować w Step 3 i Step 5 relację między obowiązkiem opodatkowania zwrotu składek (Step 3) a decyzją o pozostawieniu niedopłaty zaliczki bez zmian (Step 5) — np. wskazać wprost, że płatnik pobiera zaliczkę PIT od zwrotu składek w miesiącu wypłaty (Step 3), natomiast ewentualna niedopłata wynikająca z innych korekt (np. zmiany kosztów uzyskania) może być rozliczona przez pracownika w zeznaniu rocznym (Step 5), co eliminuje pozorną sprzeczność.",
+        "verified_at": "2026-04-18T12:44:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brakuje procedury dla sytuacji gdy pracownik zwraca nadpłatę w ratach lub gdy pracodawca nie może potrącić całej kwoty z jednej wypłaty. Step 4 wspomina 'za pisemną zgodą' ale nie definiuje procedury gdy pracownik odmówi zgody na potrącenie."
+        "description": "Brakuje procedury dla sytuacji gdy pracownik zwraca nadpłatę w ratach lub gdy pracodawca nie może potrącić całej kwoty z jednej wypłaty. Step 4 wspomina 'za pisemną zgodą' ale nie definiuje procedury gdy pracownik odmówi zgody na potrącenie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących procedury potrąceń z wynagrodzenia (art. 87-91 KP) ani art. 41b ustawy PIT regulującego zwrot nadpłaconego wynagrodzenia. Flaga wskazuje na brak procedury dla odmowy zgody pracownika i rozłożenia zwrotu na raty — są to rzeczywiście istotne kwestie praktyczne, ale bez dostępu do art. 87 i 91 KP nie można jednoznacznie potwierdzić czy draft jest niekompletny w sposób naruszający wymogi prawne.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez weryfikację art. 87-91 KP, należy dodać do step 4 informację: (1) przy odmowie zgody pracownika na potrącenie — pracodawca może dochodzić zwrotu na drodze cywilnoprawnej (powództwo o zwrot nienależnego świadczenia); (2) przy rozłożeniu zwrotu na raty — każda rata traktowana jest jako zwrot w miesiącu jej faktycznego otrzymania dla celów art. 41b ustawy PIT; (3) limit potrąceń z wynagrodzenia bez zgody pracownika wynosi 1/2 wynagrodzenia netto (art. 87 § 3 KP).",
+        "verified_at": "2026-04-18T12:44:14Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 6 o PPK powołuje się na art. 28 ust. 1 ustawy o PPK, ale nie wyjaśnia czy zaległe wpłaty pracownika mogą być potrącane z przyszłych wynagrodzeń czy wymagają zgody pracownika (art. 91 KP). Niejasne czy to potrącenie z winy pracodawcy czy pracownika."
+        "description": "Step 6 o PPK powołuje się na art. 28 ust. 1 ustawy o PPK, ale nie wyjaśnia czy zaległe wpłaty pracownika mogą być potrącane z przyszłych wynagrodzeń czy wymagają zgody pracownika (art. 91 KP). Niejasne czy to potrącenie z winy pracodawcy czy pracownika.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów ustawy o PPK (art. 28 ust. 1) ani art. 91 KP w brzmieniu dotyczącym potrąceń z wynagrodzenia (rec 1 zawiera art. 91 KP, ale dotyczy zawieszenia przepisów prawa pracy, nie potrąceń). Nie można zweryfikować czy flaga jest słuszna na podstawie dostępnych rekordów. Sama flaga wskazuje na realną lukę informacyjną w drafcie - kwestia czy zaległe wpłaty PPK pracownika wymagają jego zgody (art. 91 KP o potrąceniach) jest praktycznie istotna, ale KB nie dostarcza dowodów ani za, ani przeciw.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł, należy dodać do step 6 wyjaśnienie: zaległe wpłaty PPK pracownika (część pracownicza) mogą być potrącone z wynagrodzenia bez odrębnej zgody pracownika, gdyż obowiązek ich naliczania wynika wprost z ustawy o PPK - nie jest to potrącenie w rozumieniu art. 91 KP wymagające zgody. Warto jednak wskazać, że pracodawca powinien udokumentować przyczynę zaległości (błąd pracodawcy vs. brak danych od pracownika).",
+        "verified_at": "2026-04-18T12:44:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Step 2 wspomina o 'identyfikatorach 02, 03' dla korekt DRA/RCA/RSA, ale nie wyjaśnia czy to rzeczywiste kody identyfikatorów w systemie ZUS czy uproszczenie. Wymaga weryfikacji czy takie identyfikatory faktycznie istnieją w deklaracjach ZUS."
+        "description": "Step 2 wspomina o 'identyfikatorach 02, 03' dla korekt DRA/RCA/RSA, ale nie wyjaśnia czy to rzeczywiste kody identyfikatorów w systemie ZUS czy uproszczenie. Wymaga weryfikacji czy takie identyfikatory faktycznie istnieją w deklaracjach ZUS.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera przepisy ustawy o systemie ubezpieczeń społecznych dotyczące obowiązku przekazywania dokumentów i korekt (art. 47a), ale nie zawiera szczegółowych specyfikacji technicznych systemu ZUS (Płatnik/ePłatnik) dotyczących identyfikatorów dokumentów korygujących (02, 03). Identyfikatory te są elementem technicznej dokumentacji ZUS/Płatnika, a nie przepisów ustawowych, więc KB nie pozwala ani potwierdzić, ani obalić ich poprawności.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto doprecyzować w drafcie, że identyfikatory 02/03 odnoszą się do pól technicznych w programie Płatnik (typ dokumentu korygującego), i dodać odesłanie do aktualnej dokumentacji technicznej ZUS lub instrukcji Płatnika, aby uniknąć ryzyka dezinformacji w przypadku zmiany specyfikacji.",
+        "verified_at": "2026-04-18T12:44:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Edge case o 'umowie zlecenia' i 'minimalnej krajowej 4 806 zł brutto w 2026 r.' jest niejasny - minimalna krajowa nie dotyczy zleceń. Może to być pomyłka lub niejasne sformułowanie warunku."
+        "description": "Edge case o 'umowie zlecenia' i 'minimalnej krajowej 4 806 zł brutto w 2026 r.' jest niejasny - minimalna krajowa nie dotyczy zleceń. Może to być pomyłka lub niejasne sformułowanie warunku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Fragment drafta, do którego odnosi się flaga, nie zawiera bezpośrednio wzmianki o 'umowie zlecenia' ani 'minimalnej krajowej 4 806 zł brutto w 2026 r.' - te elementy nie są widoczne w przedstawionym fragmencie. KB nie zawiera rekordów dotyczących minimalnego wynagrodzenia za pracę ani stawki minimalnej dla umów zlecenia, więc nie można zweryfikować poprawności tej kwoty ani kontekstu jej użycia.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli w pełnym drafcie pojawia się wzmianka o 'minimalnej krajowej' w kontekście umów zlecenia, należy doprecyzować, że chodzi o minimalną stawkę godzinową dla zleceniobiorców (regulowaną ustawą o minimalnym wynagrodzeniu za pracę), a nie o minimalne wynagrodzenie za pracę sensu stricto, które dotyczy stosunku pracy.",
+        "verified_at": "2026-04-18T12:44:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o 'były pracownik' powołuje się na art. 26 ust. 1 pkt 5 ustawy PIT, ale nie wyjaśnia czy były pracownik może odliczyć zwrot w zeznaniu rocznym za rok zwrotu czy za rok, w którym pierwotnie otrzymał wynagrodzenie. Procedura wydania 'informacji o kwocie zwróconej' nie jest zdefiniowana."
+        "description": "Edge case o 'były pracownik' powołuje się na art. 26 ust. 1 pkt 5 ustawy PIT, ale nie wyjaśnia czy były pracownik może odliczyć zwrot w zeznaniu rocznym za rok zwrotu czy za rok, w którym pierwotnie otrzymał wynagrodzenie. Procedura wydania 'informacji o kwocie zwróconej' nie jest zdefiniowana.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 26 ust. 1 pkt 5 ustawy PIT dotyczącego odliczenia zwróconych świadczeń, więc nie można potwierdzić ani obalić poprawności powołania tego przepisu. Flaga podnosi zasadny problem praktyczny: draft nie precyzuje, w zeznaniu za który rok były pracownik odlicza zwrot (rok zwrotu vs rok pierwotnego przychodu) ani jak wygląda procedura wystawienia 'informacji o kwocie zwróconej'. Brak tych informacji może być istotną luką, ale KB nie dostarcza dowodów do jednoznacznej weryfikacji.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, należy uzupełnić edge case o: (1) wskazanie, że odliczenie na podstawie art. 26 ust. 1 pkt 5 ustawy PIT przysługuje w zeznaniu za rok, w którym nastąpił zwrot (nie rok pierwotnego przychodu); (2) opis procedury wystawienia informacji o kwocie zwróconej — płatnik wystawia ją na żądanie byłego pracownika lub z własnej inicjatywy, wskazując kwotę zwrotu i podstawę prawną.",
+        "verified_at": "2026-04-18T12:44:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia procedury dla sytuacji gdy korekta dotyczy pracownika na urlopie bezpłatnym lub zwolnieniu lekarskim - czy składki ZUS są naliczane, czy korekta wpływa na wymiar zasiłku. Step 3 wspomina zwolnienie lekarskie ale nie definiuje pełnej procedury."
+        "description": "Draft nie wyjaśnia procedury dla sytuacji gdy korekta dotyczy pracownika na urlopie bezpłatnym lub zwolnieniu lekarskim - czy składki ZUS są naliczane, czy korekta wpływa na wymiar zasiłku. Step 3 wspomina zwolnienie lekarskie ale nie definiuje pełnej procedury.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą ogólnych definicji płatnika składek i gospodarki FRD - nie zawierają przepisów regulujących naliczanie składek ZUS podczas urlopu bezpłatnego ani wpływu korekt wynagrodzenia na podstawę wymiaru zasiłku. Flaga wskazuje na brak procedury dla specyficznych przypadków (urlop bezpłatny, zwolnienie lekarskie), ale KB nie dostarcza materiału do oceny czy draft powinien te przypadki obejmować. Brak możliwości weryfikacji na podstawie dostarczonych rekordów.",
+        "verifier_confidence": 0.3,
+        "verified_at": "2026-04-18T12:44:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Step 7 mówi że 'czynny żal nie jest wymagany' przy niedopłacie Funduszu Pracy, ale wcześniej nie wyjaśniono czy Fundusz Pracy podlega czynnemu żalowi w ogóle. Niejasne czy to odnosi się do art. 16 KKS czy do innych przepisów."
+        "description": "Step 7 mówi że 'czynny żal nie jest wymagany' przy niedopłacie Funduszu Pracy, ale wcześniej nie wyjaśniono czy Fundusz Pracy podlega czynnemu żalowi w ogóle. Niejasne czy to odnosi się do art. 16 KKS czy do innych przepisów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 16 KKS (Kodeks karny skarbowy) ani przepisów o Funduszu Pracy w kontekście czynnego żalu. Flaga wskazuje na niejasność w drafcie - step 7 mówi ogólnie o czynnym żalu przy korektach ZUS/podatkowych, ale nie adresuje wprost Funduszu Pracy. Nie można ani potwierdzić ani obalić tej obserwacji na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać wyjaśnienie że Fundusz Pracy (jako składka ZUS) podlega tym samym zasadom KKS co inne składki, a czynny żal z art. 16 KKS może być rozważany przy zaległościach składkowych - lub explicite wskazać że Fundusz Pracy nie jest objęty zakresem tego kroku.",
+        "verified_at": "2026-04-18T12:44:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje procedury dla korekty gdy błąd dotyczy pracownika na umowie o pracę na czas określony, która już wygasła - czy korekta wymaga zgody pracownika, czy można ją przeprowadzić jednostronnie."
+        "description": "Brakuje procedury dla korekty gdy błąd dotyczy pracownika na umowie o pracę na czas określony, która już wygasła - czy korekta wymaga zgody pracownika, czy można ją przeprowadzić jednostronnie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy procedury korekty listy płac/dokumentów ZUS/PIT dla byłego pracownika (umowa na czas określony, która wygasła) - kwestii prawa podatkowego i ubezpieczeń społecznych, nie prawa pracy. Rekordy KB dotyczą art. 25, 70 i 293 KP (rodzaje umów, odwołanie ze stanowiska, wniosek o zmianę umowy) i nie zawierają przepisów regulujących tryb korekty rozliczeń płacowych po wygaśnięciu stosunku pracy. Brak w KB przepisów ustawy o systemie ubezpieczeń społecznych ani ustawy PIT w zakresie korekt dotyczących byłych pracowników, co uniemożliwia jednoznaczną weryfikację.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga ma być potwierdzona, należałoby sprawdzić przepisy ustawy o systemie ubezpieczeń społecznych (art. 41 ust. 6-7 dotyczący korekt RCA) oraz stanowisko ZUS/KIS w zakresie korekt dokumentów dla byłych pracowników - korekty dokumentów ZUS i PIT-11 płatnik może przeprowadzić jednostronnie bez zgody byłego pracownika, jednak odzyskanie nadpłaty od byłego pracownika wymaga odrębnej procedury (wezwanie do zwrotu, ewentualnie droga sądowa). Warto dodać tę informację do draftu.",
+        "verified_at": "2026-04-18T12:45:09Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

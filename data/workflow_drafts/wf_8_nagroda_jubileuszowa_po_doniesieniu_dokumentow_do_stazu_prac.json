@@ -107,67 +107,156 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 38 ust. 2, art. 302 KP, art. 6 ustawy nowelizującej, art. 291 § 1 KP, art. 47 Karty Nauczyciela, art. 23 ustawy o pracownikach urzędów państwowych). Brak sformalizowanego listy źródeł prawnych utrudnia weryfikację i aktualizację."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 38 ust. 2, art. 302 KP, art. 6 ustawy nowelizującej, art. 291 § 1 KP, art. 47 Karty Nauczyciela, art. 23 ustawy o pracownikach urzędów państwowych). Brak sformalizowanego listy źródeł prawnych utrudnia weryfikację i aktualizację.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku sformalizowanej listy źródeł prawnych (legal_anchors) w metadanych draftu, co jest kwestią struktury dokumentu, a nie merytorycznej poprawności przepisów. KB nie zawiera rekordów dotyczących art. 38 ust. 2 ustawy o pracownikach samorządowych, art. 47 Karty Nauczyciela, art. 23 ustawy o pracownikach urzędów państwowych, art. 302 KP ani art. 291 § 1 KP, więc nie można zweryfikować poprawności cytowanych przepisów. Flaga jest zasadna z perspektywy zarządzania dokumentem (brak legal_anchors utrudnia weryfikację), ale KB nie dostarcza dowodów potwierdzających ani obalających ten problem.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o sformalizowaną listę: ['art. 38 ust. 2 ustawy o pracownikach samorządowych', 'art. 47 Karty Nauczyciela', 'art. 23 ustawy o pracownikach urzędów państwowych', 'art. 302 KP', 'art. 291 § 1 KP', 'art. 6 ustawy nowelizującej KP (nowe brzmienie art. 302 KP od 1.01.2026)']. Należy też zweryfikować istnienie i treść 'art. 302 KP w brzmieniu od 1.01.2026' oraz 'art. 6 ustawy nowelizującej', gdyż mogą to być przepisy projektowane lub nieistniejące.",
+        "verified_at": "2026-04-18T12:41:44Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "high",
-        "description": "Draft wielokrotnie odwołuje się do 'komentarzy HE' (HE5/1, HE3/3, HE1, HE4/3, HE1/2, HE3/1, HE2/3, HE5/1) oraz '[6]/1' i '[8]/2', które nie są zdefiniowane w dokumencie i nie ma pewności, czy odnoszą się do istniejących publikacji, orzeczeń czy stanowisk MRPiPS."
+        "description": "Draft wielokrotnie odwołuje się do 'komentarzy HE' (HE5/1, HE3/3, HE1, HE4/3, HE1/2, HE3/1, HE2/3, HE5/1) oraz '[6]/1' i '[8]/2', które nie są zdefiniowane w dokumencie i nie ma pewności, czy odnoszą się do istniejących publikacji, orzeczeń czy stanowisk MRPiPS.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących 'komentarzy HE' ani publikacji oznaczonych jako HE5/1, HE3/3, HE1/2 itp. Fragment drafta w przedstawionym wycinku nie zawiera bezpośrednich odwołań do tych komentarzy (są one wymienione w opisie flagi jako obecne w drafcie), więc nie można ocenić kontekstu ich użycia. Flaga wskazuje na realny problem — nieznane skróty bibliograficzne bez definicji mogą być halucynacją lub odwołaniem do nieistniejących źródeł, ale KB nie pozwala tego potwierdzić ani obalić.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zidentyfikować i rozwinąć wszystkie skróty 'HE' oraz '[6]/1', '[8]/2' w drafcie — podać pełne tytuły publikacji, autorów, wydania lub inne dane bibliograficzne. Jeśli źródła nie istnieją, należy je usunąć lub zastąpić weryfikowalnymi odwołaniami do aktów prawnych lub orzecznictwa.",
+        "verified_at": "2026-04-18T12:41:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft jest datowany na 2026-04-18 i zawiera stwierdzenie 'last_verified_at': '2026-04-18', ale odnosi się do przepisów 'od 1.01.2026' jako do przyszłości. Jeśli dokument jest rzeczywiście z kwietnia 2026, przepisy powinny być już w pełni obowiązujące — brak jasności, czy dane o limitach (3 lata przedawnienia, 12 miesięcy między próbami) są aktualne dla 2026+."
+        "description": "Draft jest datowany na 2026-04-18 i zawiera stwierdzenie 'last_verified_at': '2026-04-18', ale odnosi się do przepisów 'od 1.01.2026' jako do przyszłości. Jeśli dokument jest rzeczywiście z kwietnia 2026, przepisy powinny być już w pełni obowiązujące — brak jasności, czy dane o limitach (3 lata przedawnienia, 12 miesięcy między próbami) są aktualne dla 2026+.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą ustawy o rachunkowości i VAT, a nie Kodeksu pracy ani przepisów o nagrodzie jubileuszowej. Brak w KB jakichkolwiek danych o art. 302 KP, ustawie nowelizującej KP od 1.01.2026, ani o terminach przedawnienia z art. 291 § 1 KP — nie można ani potwierdzić, ani obalić flagi dotyczącej aktualności tych przepisów i spójności dat w drafcie.",
+        "verifier_confidence": 0.3,
+        "verified_at": "2026-04-18T12:41:57Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "high",
-        "description": "Krok 3 stwierdza, że prawo do nagrody za próg osiągnięty wstecznie (przed 1.01.2026) 'NIE przysługuje', ale krok 4 mówi o 3-letnim przedawnieniu z art. 291 § 1 KP bez wyraźnego wyjaśnienia, jak te dwie reguły się łączą — czy przedawnienie 'ratuje' roszczenie z okresu sprzed 1.01.2026, czy nie?"
+        "description": "Krok 3 stwierdza, że prawo do nagrody za próg osiągnięty wstecznie (przed 1.01.2026) 'NIE przysługuje', ale krok 4 mówi o 3-letnim przedawnieniu z art. 291 § 1 KP bez wyraźnego wyjaśnienia, jak te dwie reguły się łączą — czy przedawnienie 'ratuje' roszczenie z okresu sprzed 1.01.2026, czy nie?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 291 § 1 KP (przedawnienie roszczeń ze stosunku pracy), art. 302 KP (staż pracy) ani przepisów przejściowych ustawy nowelizującej KP od 1.01.2026. Nie można więc ani potwierdzić, ani obalić zarzutu sprzeczności między krokiem 3 a krokiem 4. Flaga wskazuje na realny problem logiczny w drafcie — brak wyjaśnienia relacji między zasadą 'brak prawa do nagrody za okres sprzed 1.01.2026' a 3-letnim przedawnieniem — ale weryfikacja merytoryczna wymaga źródeł których KB nie dostarcza.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W kroku 4 należy wprost wyjaśnić, że art. 291 § 1 KP (3-letnie przedawnienie) dotyczy wyłącznie roszczeń, które w ogóle powstały (tj. po 1.01.2026), i nie 'ratuje' roszczeń za progi osiągnięte przed tą datą — bo te roszczenia nigdy nie powstały na podstawie nowych przepisów. Krok 3 i krok 4 powinny być spójnie powiązane: najpierw ustal czy prawo w ogóle powstało (krok 3), a dopiero jeśli tak — sprawdź czy nie uległo przedawnieniu (krok 4).",
+        "verified_at": "2026-04-18T12:42:07Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Draft nie wyjaśnia, czy 'data nabycia prawa' to data osiągnięcia progu stażu czy data dostarczenia dokumentów ZUS. To kluczowe dla interpretacji art. 6 ustawy nowelizującej — jeśli pracownik osiągnął 20 lat w grudniu 2025, ale dokumenty dostarczył w lutym 2026, które daty się liczy?"
+        "description": "Draft nie wyjaśnia, czy 'data nabycia prawa' to data osiągnięcia progu stażu czy data dostarczenia dokumentów ZUS. To kluczowe dla interpretacji art. 6 ustawy nowelizującej — jeśli pracownik osiągnął 20 lat w grudniu 2025, ale dokumenty dostarczył w lutym 2026, które daty się liczy?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących art. 302 KP, art. 291 § 1 KP ani art. 6 ustawy nowelizującej Kodeks pracy w zakresie nagrody jubileuszowej. Flaga wskazuje na realną lukę interpretacyjną w drafcie — draft w step 3 i step 4 używa zamiennie 'daty nabycia prawa' i 'daty dostarczenia dokumentów' bez jednoznacznego rozstrzygnięcia, które zdarzenie konstytuuje nabycie prawa. To faktyczna niejednoznaczność, ale bez dostępu do właściwych przepisów nie można potwierdzić ani obalić flagi na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W step 3 lub step 4 należy explicite wyjaśnić, że 'data nabycia prawa' to data faktycznego osiągnięcia progu stażowego (np. 20 lat), a nie data dostarczenia dokumentów — dokumenty jedynie potwierdzają fakt, który nastąpił wcześniej. Jeśli pracownik osiągnął 20 lat w grudniu 2025, prawo nabyto przed 1.01.2026 i nowe przepisy o zleceniach/B2B nie mają zastosowania do tego progu. Należy dodać przykład ilustrujący tę różnicę.",
+        "verified_at": "2026-04-18T12:42:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 wspomina 'podstawa wymiaru = wynagrodzenie jak do ekwiwalentu urlopowego z miesiąca nabycia prawa', ale nie wyjaśnia, jak ustalić to wynagrodzenie, gdy pracownik był na zwolnieniu, urlopie bezpłatnym lub gdy jego pensja się zmieniała — to samo pytanie pojawia się w 'related_questions'."
+        "description": "Krok 7 wspomina 'podstawa wymiaru = wynagrodzenie jak do ekwiwalentu urlopowego z miesiąca nabycia prawa', ale nie wyjaśnia, jak ustalić to wynagrodzenie, gdy pracownik był na zwolnieniu, urlopie bezpłatnym lub gdy jego pensja się zmieniała — to samo pytanie pojawia się w 'related_questions'.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących ustalania podstawy wymiaru nagrody jubileuszowej ani zasad obliczania ekwiwalentu urlopowego (rozporządzenie urlopowe). Rekordy dotyczą podatku ryczałtowego, pełnomocnictw podatkowych i odprawy pośmiertnej — żaden nie jest relevantny dla weryfikacji tej flagi. Nie można ani potwierdzić, ani obalić zarzutu o brakujących informacjach dotyczących podstawy wymiaru przy zwolnieniu/urlopie bezpłatnym/zmianie wynagrodzenia.",
+        "verifier_confidence": 0.5,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, należy w kroku 7 dodać odniesienie do rozporządzenia Ministra Pracy i Polityki Socjalnej z 8.01.1997 r. w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego (§ 14-19) i wyjaśnić, że przy nieobecnościach (zwolnienie, urlop bezpłatny) stosuje się wynagrodzenie z miesięcy, w których pracownik przepracował pełny miesiąc, a przy zmianach wynagrodzenia — wynagrodzenie z miesiąca nabycia prawa.",
+        "verified_at": "2026-04-18T12:42:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie zawiera procedury weryfikacji zaświadczenia ZUS — czy wystarczy samo zaświadczenie o składkach, czy trzeba sprawdzić CEIDG dla działalności gospodarczej? Pytanie pojawia się w 'related_questions', co sugeruje, że procedura jest niekompletna."
+        "description": "Draft nie zawiera procedury weryfikacji zaświadczenia ZUS — czy wystarczy samo zaświadczenie o składkach, czy trzeba sprawdzić CEIDG dla działalności gospodarczej? Pytanie pojawia się w 'related_questions', co sugeruje, że procedura jest niekompletna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących procedury weryfikacji zaświadczeń ZUS w kontekście zaliczania okresów do stażu pracy (art. 302 KP). Rekordy z KB dotyczą zupełnie innych aspektów ustawy o systemie ubezpieczeń społecznych (decyzje elektroniczne, terminy DRA, kontrole). Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga jest zasadna, warto dodać w kroku 2 lub jako osobny krok: wskazówkę, że zaświadczenie ZUS o przebiegu ubezpieczeń (ZUS US-7 lub wydruk z PUE) dokumentuje okresy składkowe, natomiast dla działalności B2B należy dodatkowo zweryfikować wpis w CEIDG (daty rozpoczęcia/zawieszenia/zakończenia działalności), gdyż zaświadczenie ZUS może nie obejmować pełnego okresu prowadzenia działalności.",
+        "verified_at": "2026-04-18T12:42:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o pracowniku osiągającym staż przed zatrudnieniem u obecnego pracodawcy jest oznaczony jako 'interpretacja sporna' z zaleceniem pisemnego zapytania do MRPiPS, ale procedura nie zawiera kroku, co zrobić w praktyce, gdy księgowy czeka na odpowiedź — czy wstrzymać wypłatę, czy wypłacić wariantowo?"
+        "description": "Edge case o pracowniku osiągającym staż przed zatrudnieniem u obecnego pracodawcy jest oznaczony jako 'interpretacja sporna' z zaleceniem pisemnego zapytania do MRPiPS, ale procedura nie zawiera kroku, co zrobić w praktyce, gdy księgowy czeka na odpowiedź — czy wstrzymać wypłatę, czy wypłacić wariantowo?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących nagród jubileuszowych ani procedur postępowania w przypadku spornych interpretacji kadrowych. Flaga dotyczy luki proceduralnej w drafcie (brak instrukcji co robić w oczekiwaniu na odpowiedź MRPiPS), co jest zasadną obserwacją merytoryczną — draft rzeczywiście nie zawiera takiego kroku — jednak weryfikacja tego edge case'u wymaga wiedzy o praktyce kadrowej i przepisach branżowych, których KB nie pokrywa.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać do edge case'u o spornej interpretacji konkretną instrukcję awaryjną: np. 'Do czasu uzyskania odpowiedzi MRPiPS zastosuj wariant ostrożnościowy — wypłać nagrodę w pełnej wysokości (ryzyko nadpłaty jest niższe niż ryzyko naruszenia praw pracownika) i udokumentuj wypłatę jako warunkową z adnotacją o toczącym się zapytaniu interpretacyjnym; alternatywnie — jeśli pracodawca preferuje wstrzymanie — poinformuj pracownika pisemnie o przyczynie opóźnienia i szacowanym terminie rozstrzygnięcia.'",
+        "verified_at": "2026-04-18T12:42:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o 'opłacalności' opóźnienia dostarczenia dokumentów (aby uniknąć wstecznego przepadku progu) sugeruje, że pracownik może manipulować terminem dostarczenia — draft nie wyjaśnia, czy pracodawca ma obowiązek aktywnie żądać dokumentów czy czekać na inicjatywę pracownika."
+        "description": "Edge case o 'opłacalności' opóźnienia dostarczenia dokumentów (aby uniknąć wstecznego przepadku progu) sugeruje, że pracownik może manipulować terminem dostarczenia — draft nie wyjaśnia, czy pracodawca ma obowiązek aktywnie żądać dokumentów czy czekać na inicjatywę pracownika.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących nagrody jubileuszowej ani regulacji określających, kto ma inicjatywę w dostarczaniu dokumentów potwierdzających staż pracy (pracownik czy pracodawca). Rekordy z KB dotyczą kas rejestrujących, ordynacji podatkowej i ubezpieczeń społecznych — są całkowicie irrelewantne dla weryfikacji tej flagi. Sama flaga wskazuje na lukę merytoryczną w drafcie (brak wyjaśnienia obowiązku pracodawcy vs. inicjatywy pracownika), co jest zasadną obserwacją, ale nie można jej potwierdzić ani obalić na podstawie dostępnych danych.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Draft powinien wyjaśnić, że zgodnie z ogólną praktyką i przepisami sektorowymi (np. rozporządzenia wykonawcze do ustaw budżetowych) to pracownik ma obowiązek dostarczyć dokumenty potwierdzające staż, jednak pracodawca powinien poinformować pracownika o możliwości uzupełnienia dokumentacji — szczególnie przy wdrożeniu nowych przepisów od 1.01.2026. Warto dodać zalecenie, aby pracodawca aktywnie wezwał pracowników do złożenia zaświadczeń ZUS, co eliminuje ryzyko zarzutu działania na niekorzyść pracownika.",
+        "verified_at": "2026-04-18T12:43:00Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 7 zawiera szczegółowe instrukcje dla systemów 'Comarch Optima' i 'Enova365' (konkretne ścieżki menu), ale brak informacji, czy te ścieżki są aktualne dla wersji 2026 tych systemów — mogą się zmienić."
+        "description": "Krok 7 zawiera szczegółowe instrukcje dla systemów 'Comarch Optima' i 'Enova365' (konkretne ścieżki menu), ale brak informacji, czy te ścieżki są aktualne dla wersji 2026 tych systemów — mogą się zmienić.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących systemów kadrowo-płacowych Comarch Optima ani Enova365, ich wersji ani ścieżek menu. Flaga dotyczy ryzyka nieaktualności instrukcji obsługi oprogramowania komercyjnego, co jest poza zakresem polskich ustaw. Nie można ani potwierdzić, ani obalić tej flagi na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Warto dodać zastrzeżenie w kroku 7, że podane ścieżki menu są przykładowe i mogą różnić się w zależności od wersji oprogramowania — zalecana weryfikacja z aktualną dokumentacją producenta lub działem IT.",
+        "verified_at": "2026-04-18T12:43:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 6 mówi o zasadzie '12 miesięcy między próbami' jako 'praktyka + komentarz HE4/3', ale krok 5 nie wspomina o tym warunku — czy pracownik może otrzymać nagrodę za 20 i 25 lat w tym samym miesiącu, czy musi czekać 12 miesięcy?"
+        "description": "Krok 6 mówi o zasadzie '12 miesięcy między próbami' jako 'praktyka + komentarz HE4/3', ale krok 5 nie wspomina o tym warunku — czy pracownik może otrzymać nagrodę za 20 i 25 lat w tym samym miesiącu, czy musi czekać 12 miesięcy?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących nagród jubileuszowych ani zasady '12 miesięcy między próbami'. Dostępne rekordy dotyczą pracy zdalnej, umów na czas określony i urlopu wychowawczego — żaden nie jest relevantny dla weryfikacji tej flagi. Flaga wskazuje na potencjalną niespójność wewnętrzną draftu (krok 5 vs krok 6), ale bez dostępu do właściwych przepisów (np. ustawa o pracownikach samorządowych, Karta Nauczyciela) nie można potwierdzić ani obalić zasady 12 miesięcy.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy uzupełnić krok 5 o wyraźne odniesienie do warunku minimalnego odstępu czasowego między wypłatami nagród za kolejne progi (jeśli taka zasada faktycznie obowiązuje), albo wyjaśnić w kroku 6, że zasada 12 miesięcy dotyczy wyłącznie sytuacji opisanej w tym kroku, a nie scenariusza 'przeskoczenia' z kroku 5.",
+        "verified_at": "2026-04-18T12:43:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft wspomina 'zwolnienie ze składek ZUS' dla nagrody jubileuszowej 'wypłacanej nie częściej niż co 5 lat', ale nie wyjaśnia, czy to oznacza, że jeśli pracownik otrzyma dwie nagrody w ciągu 5 lat (za różne progi), druga podlega składkom."
+        "description": "Draft wspomina 'zwolnienie ze składek ZUS' dla nagrody jubileuszowej 'wypłacanej nie częściej niż co 5 lat', ale nie wyjaśnia, czy to oznacza, że jeśli pracownik otrzyma dwie nagrody w ciągu 5 lat (za różne progi), druga podlega składkom.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą ogólnych definicji w ustawie o systemie ubezpieczeń społecznych i procedur składania wniosków o zwolnienie ze składek, ale nie zawierają przepisów regulujących zwolnienie ze składek ZUS dla nagród jubileuszowych (które wynika z rozporządzenia w sprawie szczegółowych zasad ustalania podstawy wymiaru składek). KB nie dostarcza dowodów ani potwierdzających, ani obalających flagę dotyczącą warunku 'nie częściej niż co 5 lat' i jego konsekwencji dla drugiej nagrody w tym okresie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać wyjaśnienie: zwolnienie ze składek ZUS dla nagrody jubileuszowej dotyczy nagród wypłacanych nie częściej niż co 5 lat — jeśli pracownik otrzymuje dwie nagrody w krótszym odstępie (np. za przeskoczony próg), druga nagroda może podlegać składkom ZUS, co wymaga weryfikacji z działem kadr/księgowości.",
+        "verified_at": "2026-04-18T12:43:20Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Draft zawiera odniesienie do 'rozporządzenia składkowego' bez numeru — jeśli rozporządzenie zostało zmienione po 1.01.2026, procedura może być nieaktualna."
+        "description": "Draft zawiera odniesienie do 'rozporządzenia składkowego' bez numeru — jeśli rozporządzenie zostało zmienione po 1.01.2026, procedura może być nieaktualna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy 'rozporządzenia składkowego' w kontekście naliczania nagrody jubileuszowej i składek ZUS, jednak KB zawiera wyłącznie rekordy dotyczące rozporządzenia MF o kasach rejestrujących, które są całkowicie irrelewantne dla tematu. Brak w KB jakichkolwiek danych o rozporządzeniu składkowym ZUS, które pozwoliłyby potwierdzić lub obalić flagę. Sama flaga ma niską wagę (severity: low), a w analizowanym fragmencie drafta nie widać bezpośredniego odwołania do 'rozporządzenia składkowego' — fragment dotyczy głównie art. 302 KP i art. 291 KP.",
+        "verifier_confidence": 0.8,
+        "verified_at": "2026-04-18T12:43:26Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

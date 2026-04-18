@@ -116,52 +116,122 @@
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Kwota limitu dochodu dziecka 22 546,92 zł (12-krotność renty socjalnej za 2025) będzie nieaktualna dla rozliczeń za 2026 w 2026 roku — renta socjalna zmienia się corocznie, a draft nie zawiera mechanizmu aktualizacji ani warunkowego odniesienia do bieżącej wartości."
+        "description": "Kwota limitu dochodu dziecka 22 546,92 zł (12-krotność renty socjalnej za 2025) będzie nieaktualna dla rozliczeń za 2026 w 2026 roku — renta socjalna zmienia się corocznie, a draft nie zawiera mechanizmu aktualizacji ani warunkowego odniesienia do bieżącej wartości.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza istnienie mechanizmu 12-krotności renty socjalnej jako limitu dochodu dziecka (art. 6 ust. 4e), co jest zgodne z draftem. Jednak KB nie zawiera aktualnej wysokości renty socjalnej ani mechanizmu jej corocznej waloryzacji, więc nie można zweryfikować czy kwota 22 546,92 zł jest poprawna dla 2025 r. ani ocenić ryzyka dezaktualizacji dla rozliczeń za 2026 r. Flaga dotyczy ryzyka przyszłej nieaktualności — co jest merytorycznie zasadne (renta socjalna jest waloryzowana), ale KB nie dostarcza twardego dowodu potwierdzającego ani obalającego to ryzyko.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Zamiast podawać konkretną kwotę 22 546,92 zł jako stałą, draft powinien odwoływać się do mechanizmu ustawowego: '12-krotność kwoty renty socjalnej obowiązującej w grudniu roku podatkowego' z adnotacją, że kwota zmienia się corocznie i należy ją weryfikować przed złożeniem zeznania.",
+        "verified_at": "2026-04-18T12:40:22Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Stawki ulgi prorodzinnej (1 112,04 zł, 2 000,04 zł, 2 700,00 zł) są podane dla 2025 roku — dla rozliczeń za 2026 będą inne, a draft nie zawiera informacji o konieczności weryfikacji aktualnych stawek."
+        "description": "Stawki ulgi prorodzinnej (1 112,04 zł, 2 000,04 zł, 2 700,00 zł) są podane dla 2025 roku — dla rozliczeń za 2026 będą inne, a draft nie zawiera informacji o konieczności weryfikacji aktualnych stawek.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 27f ustawy PIT, który określa kwoty ulgi prorodzinnej. Nie można potwierdzić ani obalić, czy stawki 1 112,04 zł, 2 000,04 zł i 2 700,00 zł są aktualne na 2025 r. ani czy ulegną zmianie na 2026 r. Flaga wskazuje ryzyko nieaktualności danych przy rozliczeniu za 2026 rok, co jest merytorycznie uzasadnionym zastrzeżeniem, ale KB nie dostarcza twardego dowodu potwierdzającego lub obalającego tę tezę.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Dodać w drafcie wyraźną adnotację: 'Stawki ulgi prorodzinnej podane są według stanu na rok podatkowy 2025. Przed rozliczeniem za 2026 rok należy zweryfikować aktualne kwoty odliczenia w obowiązującym brzmieniu art. 27f ustawy PIT lub komunikatach MF/KAS.'",
+        "verified_at": "2026-04-18T12:40:30Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Odniesienie do \"art. 21 ust. 1 pkt 148\" (ulga dla młodych) nie jest w legal_anchors, a jest wielokrotnie cytowane w krokach i edge cases — brakuje pełnego zakotwiczenia tego przepisu jako źródła."
+        "description": "Odniesienie do \"art. 21 ust. 1 pkt 148\" (ulga dla młodych) nie jest w legal_anchors, a jest wielokrotnie cytowane w krokach i edge cases — brakuje pełnego zakotwiczenia tego przepisu jako źródła.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordu dotyczącego art. 21 ust. 1 pkt 148 ustawy o PIT (ulga dla młodych). Dostępne rekordy dotyczą art. 21 ustawy o rachunkowości oraz ustawy o ryczałcie — są to inne akty prawne. Flaga jest merytorycznie zasadna: draft wielokrotnie odnosi się do ulgi dla młodych w answer_steps i edge_cases, ale art. 21 ust. 1 pkt 148 ustawy PIT nie figuruje w sekcji LEGAL_ANCHORS, co stanowi lukę w zakotwiczeniu prawnym. Nie mogę jednak potwierdzić ani obalić flagi na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać do LEGAL_ANCHORS wpis: {\"law_name\": \"Ustawa o podatku dochodowym od osób fizycznych\", \"article_number\": \"art. 21 ust. 1 pkt 148\", \"reason\": \"Ulga dla młodych — zwolnienie z PIT przychodów ze stosunku pracy i umów zlecenia do 85 528 zł rocznie dla osób do 26. roku życia; wpływa na obliczenie dochodu rodzica przy weryfikacji limitu 112/56 tys. zł dla ulgi prorodzinnej.\"}",
+        "verified_at": "2026-04-18T12:40:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 1 stwierdza, że przychody z ryczałtu (PIT-28) nie wchodzą do limitu 112 tys., ale krok 3 i edge case o młodych mówią, że przychody z ulgi dla młodych WCHODZĄ do limitu — brakuje jasnego wyjaśnienia, które przychody są wliczane, a które nie."
+        "description": "Krok 1 stwierdza, że przychody z ryczałtu (PIT-28) nie wchodzą do limitu 112 tys., ale krok 3 i edge case o młodych mówią, że przychody z ulgi dla młodych WCHODZĄ do limitu — brakuje jasnego wyjaśnienia, które przychody są wliczane, a które nie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza, że przychody z ryczałtu (art. 30 ust. 8) nie łączą się z dochodami ze skali (art. 27), co wspiera tezę kroku 1 o wyłączeniu PIT-28 z limitu 112 tys. Jednak KB nie zawiera bezpośrednich przepisów art. 27f ust. 2 pkt 1 definiujących, co dokładnie wchodzi do limitu dochodowego przy uldze prorodzinnej — w szczególności brak przepisów dotyczących traktowania przychodów zwolnionych z PIT (ulga dla młodych, art. 21 ust. 1 pkt 148), które mogą być wliczane do limitu mimo zwolnienia. Flaga wskazuje na realną lukę wyjaśniającą w drafcie, ale nie można jej jednoznacznie potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 1 lub w osobnym edge case należy wyraźnie wyjaśnić, że do limitu 112/56 tys. wlicza się: dochody opodatkowane wg skali (art. 27) ORAZ przychody zwolnione z PIT na podstawie ulgi dla młodych (art. 21 ust. 1 pkt 148) — natomiast NIE wlicza się przychodów z ryczałtu ewidencjonowanego (PIT-28) ani z podatku liniowego (PIT-36L), powołując się na art. 27f ust. 2 pkt 1 i definicję 'dochodu' tam użytą.",
+        "verified_at": "2026-04-18T12:40:50Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie zawiera kroku dotyczącego weryfikacji, czy dziecko faktycznie spełnia warunek uczęszczania do szkoły/uczelni (dla pełnoletniego do 25 lat) — to warunek konieczny do zastosowania limitu 22 546,92 zł, ale nigdzie nie ma instrukcji jak to sprawdzić."
+        "description": "Draft nie zawiera kroku dotyczącego weryfikacji, czy dziecko faktycznie spełnia warunek uczęszczania do szkoły/uczelni (dla pełnoletniego do 25 lat) — to warunek konieczny do zastosowania limitu 22 546,92 zł, ale nigdzie nie ma instrukcji jak to sprawdzić.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 27f ustawy PIT ani art. 6 ust. 4c-4g PIT, które są podstawą flagi. Nie można zweryfikować na podstawie dostępnych rekordów, czy draft faktycznie pomija wymagany krok weryfikacji uczęszczania dziecka do szkoły/uczelni. Sam draft w kroku 3 wspomina o 'pełnoletnim uczącym się dziecku', ale nie zawiera instrukcji jak udokumentować/zweryfikować ten status — flaga może być zasadna merytorycznie, lecz KB nie dostarcza twardego dowodu.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać do kroku 3 instrukcję: zażądaj od podatnika zaświadczenia ze szkoły/uczelni potwierdzającego status ucznia/studenta w roku podatkowym oraz sprawdź, czy dziecko nie ukończyło 25 lat przed końcem roku podatkowego.",
+        "verified_at": "2026-04-18T12:40:58Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje kroku dotyczącego dokumentacji faktycznego samotnego wychowywania (krok 4 wspomina, że US może weryfikować, ale nie ma instrukcji jakie dokumenty przygotować ani kiedy je dołączać do zeznania)."
+        "description": "Brakuje kroku dotyczącego dokumentacji faktycznego samotnego wychowywania (krok 4 wspomina, że US może weryfikować, ale nie ma instrukcji jakie dokumenty przygotować ani kiedy je dołączać do zeznania).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza warunki statusu samotnie wychowującego rodzica (art. 6 ust. 4c), ale nie zawiera przepisów określających obowiązek dołączania konkretnych dokumentów do zeznania podatkowego ani listy dokumentów wymaganych przez US przy weryfikacji. Flaga dotyczy praktycznej instrukcji dokumentacyjnej, której brak w KB uniemożliwia jednoznaczną ocenę czy draft jest niekompletny w sposób prawnie istotny.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 4 informacji o dokumentach mogących potwierdzić faktyczne samotne wychowywanie (np. orzeczenie sądu o separacji/rozwodzie, zaświadczenie o zameldowaniu dziecka, dokumenty szkolne, korespondencja z ZUS/MOPS), z zastrzeżeniem że US może wezwać do ich przedłożenia w trybie art. 155 Ordynacji podatkowej.",
+        "verified_at": "2026-04-18T12:41:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 5 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma) z nazwami ścieżek menu — te mogą być nieaktualne lub niedokładne dla wersji z 2026 roku, a draft nie zawiera disclaimer'a o weryfikacji."
+        "description": "Krok 5 zawiera bardzo szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma) z nazwami ścieżek menu — te mogą być nieaktualne lub niedokładne dla wersji z 2026 roku, a draft nie zawiera disclaimer'a o weryfikacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Fragment drafta w kroku 5 dotyczy wypełniania PIT/O i PIT-36/PIT-37, ale nie zawiera żadnych konkretnych nazw programów (Comarch Optima, WFirma) ani ścieżek menu — flaga opisuje coś, czego nie ma w przedstawionym fragmencie. KB potwierdza jedynie, że ustawa nie wskazuje konkretnych programów (art. 109 ust. 8a VAT), ale nie odnosi się do treści kroku 5. Nie można zweryfikować czy pominięty fragment drafta (skrócony wielokropkiem) zawiera instrukcje dla konkretnych programów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli pełna treść kroku 5 (za wielokropkiem) faktycznie zawiera instrukcje dla Comarch Optima/WFirma z nazwami ścieżek menu, należy dodać disclaimer: 'Nazwy ścieżek menu mogą różnić się w zależności od wersji oprogramowania — zweryfikuj z aktualną dokumentacją producenta.'",
+        "verified_at": "2026-04-18T12:41:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o dziecku z PIT-11 mówi o zmianie obowiązującej od 2022 r., ale draft jest dla rozliczeń 2025/2026 — ta informacja historyczna może być myląca dla użytkownika, który nie wie, czy zmiana obowiązuje w 2026."
+        "description": "Edge case o dziecku z PIT-11 mówi o zmianie obowiązującej od 2022 r., ale draft jest dla rozliczeń 2025/2026 — ta informacja historyczna może być myląca dla użytkownika, który nie wie, czy zmiana obowiązuje w 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 27f ani art. 21 ust. 1 pkt 148 ustawy PIT w kontekście ulgi prorodzinnej i limitu dochodu dziecka, więc nie można zweryfikować czy zmiana z 2022 r. dotycząca wyłączenia przychodów objętych ulgą dla młodych z limitu dochodu dziecka faktycznie obowiązuje w 2025/2026. Sama flaga wskazuje na potencjalną niejednoznaczność dla użytkownika, ale draft wyraźnie dodaje doprecyzowanie 'ugruntowana w 2025/2026', co częściowo adresuje problem. Bez dostępu do aktualnych przepisów nie można jednoznacznie ocenić czy informacja jest myląca czy wystarczająco jasna.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona, warto przeformułować edge case na: 'Przychody objęte ulgą dla młodych dziecka nie są wliczane do limitu 22 546,92 zł (art. 21 ust. 1 pkt 148 w zw. z art. 27f ust. 6 ustawy PIT — zasada obowiązująca od 2022 r. i aktualna dla rozliczeń za 2025 r.)' — usuwając wzmiankę historyczną i zastępując ją jednoznacznym potwierdzeniem aktualności.",
+        "verified_at": "2026-04-18T12:41:22Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie zawiera informacji o tym, czy limit 22 546,92 zł dotyczy również dziecka niepełnoletniego czy tylko pełnoletniego uczącego się — krok 3 mówi \"pełnoletnie uczące się\", ale common_mistakes nie wyjaśniają tej granicy."
+        "description": "Draft nie zawiera informacji o tym, czy limit 22 546,92 zł dotyczy również dziecka niepełnoletniego czy tylko pełnoletniego uczącego się — krok 3 mówi \"pełnoletnie uczące się\", ale common_mistakes nie wyjaśniają tej granicy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 27f ust. 6 ani art. 6 ust. 4e ustawy PIT, które regulują limit dochodów dziecka i zakres jego stosowania (pełnoletnie vs. niepełnoletnie). Nie można potwierdzić ani obalić flagi na podstawie dostępnych rekordów. Flaga wskazuje na potencjalną lukę informacyjną — limit 22 546,92 zł dotyczy wyłącznie dzieci pełnoletnich uczących się (do 25. r.ż.), a nie dzieci niepełnoletnich, co draft faktycznie pomija w wyjaśnieniu.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W kroku 3 warto dodać wyraźne zastrzeżenie: limit 22 546,92 zł dotyczy WYŁĄCZNIE dzieci pełnoletnich uczących się (do ukończenia 25. r.ż.) — dla dzieci niepełnoletnich limit dochodów dziecka nie obowiązuje przy uldze prorodzinnej.",
+        "verified_at": "2026-04-18T12:41:29Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "low",
-        "description": "Odniesienie do \"art. 70 §1 Ordynacji podatkowej\" i \"art. 75 Ord. pod.\" w kroku 7 nie jest w legal_anchors — brakuje pełnego zakotwiczenia procedury korekt i wniosków o nadpłatę."
+        "description": "Odniesienie do \"art. 70 §1 Ordynacji podatkowej\" i \"art. 75 Ord. pod.\" w kroku 7 nie jest w legal_anchors — brakuje pełnego zakotwiczenia procedury korekt i wniosków o nadpłatę.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 70 §1 ani art. 75 Ordynacji podatkowej, więc nie można potwierdzić ani obalić poprawności tych odniesień na podstawie dostępnych danych. Flaga wskazuje na brak zakotwiczenia tych przepisów w sekcji LEGAL_ANCHORS, co jest obserwacją formalnie trafną — draft rzeczywiście powołuje się na te artykuły w kroku 7, ale nie wymienia ich w legal_anchors. Nie można jednak ocenić, czy same cytowania są merytorycznie poprawne.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać do sekcji LEGAL_ANCHORS wpisy dla art. 70 §1 Ordynacji podatkowej (przedawnienie zobowiązań podatkowych — 5 lat) oraz art. 75 Ordynacji podatkowej (wniosek o stwierdzenie nadpłaty), aby zapewnić pełne zakotwiczenie procedury opisanej w kroku 7.",
+        "verified_at": "2026-04-18T12:41:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

@@ -108,67 +108,156 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odwołania do artykułów (art. 22 specustawy, art. 108 ustawy o cudzoziemcach, art. 114, art. 29 KP, art. 120 ustawy o promocji zatrudnienia, art. 6 ustawy o pracownikach samorządowych). Brak sformalizowanej listy referencji utrudnia weryfikację poprawności cytowań."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odwołania do artykułów (art. 22 specustawy, art. 108 ustawy o cudzoziemcach, art. 114, art. 29 KP, art. 120 ustawy o promocji zatrudnienia, art. 6 ustawy o pracownikach samorządowych). Brak sformalizowanej listy referencji utrudnia weryfikację poprawności cytowań.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku sformalizowanej listy 'legal_anchors' w metadanych draftu, co jest kwestią strukturalną/formalną, a nie merytoryczną. KB nie zawiera rekordów dotyczących specustawy ukraińskiej (art. 22), ustawy o cudzoziemcach (art. 108, 114), ustawy o promocji zatrudnienia (art. 120) ani ustawy o pracownikach samorządowych (art. 6), więc nie można zweryfikować poprawności cytowanych artykułów. Rekordy KB potwierdzają istnienie art. 29 KP (choć draft cytuje art. 29 § 2, a KB pokazuje § 1), co sugeruje że cytowanie KP jest co do zasady poprawne, ale brak legal_anchors jako problem formalny pozostaje nieweryfikowalny przez KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o sformalizowane referencje: ustawa z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2022 poz. 583) art. 22; ustawa z 12.12.2013 o cudzoziemcach art. 108, art. 114; Kodeks pracy art. 29 § 2; ustawa z 20.04.2004 o promocji zatrudnienia i instytucjach rynku pracy art. 120; ustawa z 21.11.2008 o pracownikach samorządowych art. 6.",
+        "verified_at": "2026-04-18T12:28:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretną kwotę minimalnego wynagrodzenia (4 806 zł brutto w 2026 r.) i stawkę godzinową (31,40 zł/h), ale nie wskazuje źródła ani daty obowiązywania. Dla 2026 r. te kwoty mogą ulec zmianie w wyniku kolejnych rozporządzeń, a draft nie zawiera mechanizmu aktualizacji."
+        "description": "Draft zawiera konkretną kwotę minimalnego wynagrodzenia (4 806 zł brutto w 2026 r.) i stawkę godzinową (31,40 zł/h), ale nie wskazuje źródła ani daty obowiązywania. Dla 2026 r. te kwoty mogą ulec zmianie w wyniku kolejnych rozporządzeń, a draft nie zawiera mechanizmu aktualizacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzeń w sprawie minimalnego wynagrodzenia na 2026 r. Dostępne rekordy dotyczą Kodeksu pracy (art. 81 - ogólna zasada minimalnego wynagrodzenia), VAT i specustawy ukraińskiej - żaden nie potwierdza ani nie zaprzecza konkretnym kwotom 4 806 zł i 31,40 zł/h na 2026 r. Flaga jest merytorycznie uzasadniona jako ryzyko (kwoty minimalne są ustalane rozporządzeniami i mogą się zmieniać), ale nie można jej potwierdzić ani obalić na podstawie dostępnych danych KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać w drafcie przypis lub adnotację: 'Kwoty minimalne obowiązujące od [data] na podstawie Rozporządzenia Rady Ministrów z dnia [...] (Dz.U. [...]) - należy weryfikować przed zastosowaniem, gdyż mogą ulec zmianie.' oraz wskazać mechanizm aktualizacji (np. link do aktualnego rozporządzenia na isap.sejm.gov.pl).",
+        "verified_at": "2026-04-18T12:28:26Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Krok 2 zawiera stwierdzenie 'na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową obywateli Ukrainy do 4.03.2026' — ta data jest już przeszłością względem daty weryfikacji (18.04.2026), co sugeruje, że draft może zawierać nieaktualne informacje o przepisach przejściowych specustawy."
+        "description": "Krok 2 zawiera stwierdzenie 'na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową obywateli Ukrainy do 4.03.2026' — ta data jest już przeszłością względem daty weryfikacji (18.04.2026), co sugeruje, że draft może zawierać nieaktualne informacje o przepisach przejściowych specustawy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą przepisów VAT i PIT, a nie specustawy o pomocy obywatelom Ukrainy (ustawa z 12.03.2022). KB nie zawiera żadnych rekordów dotyczących terminów obowiązywania ochrony czasowej obywateli Ukrainy ani przepisów przedłużających tę ochronę, dlatego nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.5,
+        "corrective_suggestion": "Należy zweryfikować aktualny stan prawny specustawy ukraińskiej i ewentualnych nowelizacji przedłużających ochronę czasową — jeśli data 4.03.2026 jest faktycznie przeszłością względem daty weryfikacji, draft powinien zostać zaktualizowany o aktualnie obowiązujące terminy lub opatrzony zastrzeżeniem o konieczności weryfikacji bieżącego stanu prawnego.",
+        "verified_at": "2026-04-18T12:28:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 mówi, że powiadomienie dotyczy 'zarówno umowy o pracę, umowy zlecenia, jak i innej umowy cywilnoprawnej', ale krok 6 rozróżnia ZUS ZUA (umowa o pracę) od ZUA/ZZA (umowa zlecenia). Brak jasności, czy dla wszystkich typów umów procedura powiadomienia w PUP jest identyczna."
+        "description": "Krok 3 mówi, że powiadomienie dotyczy 'zarówno umowy o pracę, umowy zlecenia, jak i innej umowy cywilnoprawnej', ale krok 6 rozróżnia ZUS ZUA (umowa o pracę) od ZUA/ZZA (umowa zlecenia). Brak jasności, czy dla wszystkich typów umów procedura powiadomienia w PUP jest identyczna.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga wskazuje na sprzeczność między krokiem 3 (powiadomienie dla wszystkich typów umów) a krokiem 6 (różne kody ZUS dla różnych umów). Jednak nie jest to sprzeczność — krok 3 dotyczy procedury w PUP (powiadomienie na praca.gov.pl), a krok 6 dotyczy zgłoszenia do ZUS. Są to dwa odrębne obowiązki administracyjne, które mogą mieć różne zasady dla różnych typów umów bez wzajemnej sprzeczności. Draft nie twierdzi, że procedura ZUS jest identyczna dla wszystkich umów — wręcz przeciwnie, krok 6 wyraźnie je rozróżnia. KB potwierdza, że ustawa o SUS faktycznie różnicuje pracowników i zleceniobiorców (art. 6, 8, 9 ustawy o SUS).",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:28:42Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Draft nie zawiera instrukcji, co zrobić, jeśli pracownik nie złoży wniosku o przedłużenie karty pobytu/statusu UKR przed upływem ważności — czy pracodawca ma obowiązek zawiadomienia pracownika, czy może rozwiązać umowę, czy istnieje okres przejściowy?"
+        "description": "Draft nie zawiera instrukcji, co zrobić, jeśli pracownik nie złoży wniosku o przedłużenie karty pobytu/statusu UKR przed upływem ważności — czy pracodawca ma obowiązek zawiadomienia pracownika, czy może rozwiązać umowę, czy istnieje okres przejściowy?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą prawa podatkowego (ryczałt, VAT, ordynacja podatkowa) i są całkowicie irrelewantne dla kwestii zatrudnienia cudzoziemców i specustawy ukraińskiej. KB nie zawiera przepisów specustawy z 12.03.2022 ani ustawy o cudzoziemcach w zakresie skutków wygaśnięcia statusu UKR dla stosunku pracy. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy dodać do step 7 instrukcję: co pracodawca powinien zrobić gdy pracownik NIE złoży wniosku przed upływem ważności dokumentu — w szczególności czy istnieje obowiązek zawiadomienia pracownika, czy możliwe jest rozwiązanie umowy z powodu utraty legalności pobytu/pracy, oraz czy specustawa lub ustawa o cudzoziemcach przewiduje jakikolwiek okres przejściowy lub tolerancji.",
+        "verified_at": "2026-04-18T12:28:50Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 5 wymaga 'tłumaczenia umowy na język dla niego zrozumiały' (art. 22 ust. 6 specustawy), ale nie precyzuje: czy tłumaczenie musi być certyfikowane, czy wystarczy tłumaczenie robocze, czy pracodawca ponosi koszty, czy pracownik może odmówić podpisania bez tłumaczenia."
+        "description": "Krok 5 wymaga 'tłumaczenia umowy na język dla niego zrozumiały' (art. 22 ust. 6 specustawy), ale nie precyzuje: czy tłumaczenie musi być certyfikowane, czy wystarczy tłumaczenie robocze, czy pracodawca ponosi koszty, czy pracownik może odmówić podpisania bez tłumaczenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 22 ust. 6 specustawy z 12.03.2022 o pomocy obywatelom Ukrainy. Dostępne rekordy dotyczą art. 22 KP, CIT i ustawy o rachunkowości — żaden nie odnosi się do specustawy ukraińskiej. Nie można więc ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Sama flaga wskazuje na realną lukę praktyczną (brak precyzji co do formy tłumaczenia, kosztów, uprawnień pracownika), ale bez treści przepisu nie można ocenić czy draft ją pomija zasadnie czy nie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli art. 22 ust. 6 specustawy rzeczywiście nie precyzuje formy tłumaczenia ani kwestii kosztów, warto dodać do kroku 5 notę praktyczną: tłumaczenie nie musi być certyfikowane (brak wymogu ustawowego), koszty ponosi pracodawca jako podmiot zobowiązany, a pracownik ma prawo odmówić podpisania umowy bez otrzymania tłumaczenia — co należy udokumentować.",
+        "verified_at": "2026-04-18T12:28:57Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft powołuje się na 'art. 22 ust. 6 specustawy' dotyczący obowiązku tłumaczenia umowy — wymaga weryfikacji, czy przepis o tłumaczeniu rzeczywiście znajduje się w ustawie z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2024 poz. 167 t.j.) w tym konkretnym artykule i ustępie."
+        "description": "Draft powołuje się na 'art. 22 ust. 6 specustawy' dotyczący obowiązku tłumaczenia umowy — wymaga weryfikacji, czy przepis o tłumaczeniu rzeczywiście znajduje się w ustawie z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2024 poz. 167 t.j.) w tym konkretnym artykule i ustępie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają treści ustawy z 12.03.2022 o pomocy obywatelom Ukrainy (specustawy ukraińskiej) — wszystkie trzy rekordy dotyczą innych aktów prawnych (ustawa o SUS, ustawa CIT). Nie można ani potwierdzić, ani obalić istnienia art. 22 ust. 6 specustawy nakładającego obowiązek tłumaczenia umowy. Flaga pozostaje nierozstrzygnięta na podstawie dostępnych danych KB.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Należy bezpośrednio zweryfikować treść art. 22 ust. 6 ustawy z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2024 poz. 167 t.j.) — jeśli przepis o tłumaczeniu umowy nie istnieje w tym konkretnym ustępie, należy wskazać właściwy artykuł lub usunąć powołanie na konkretny ustęp, zastępując ogólnym odwołaniem do specustawy lub innej podstawy prawnej (np. art. 29 § 2 KP w zw. z zasadą równego traktowania).",
+        "verified_at": "2026-04-18T12:29:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 6 zawiera instrukcje dla konkretnych systemów (Comarch Optima, Symfonii Kadry i Płace) z polami 'Dane osobowe/Nierezydent' i kodami krajów — te szczegóły mogą być nieaktualne lub nieprecyzyjne dla wersji oprogramowania dostępnych w 2026 r."
+        "description": "Krok 6 zawiera instrukcje dla konkretnych systemów (Comarch Optima, Symfonii Kadry i Płace) z polami 'Dane osobowe/Nierezydent' i kodami krajów — te szczegóły mogą być nieaktualne lub nieprecyzyjne dla wersji oprogramowania dostępnych w 2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących oprogramowania kadrowo-płacowego (Comarch Optima, Symfonia Kadry i Płace) ani ich interfejsów użytkownika. Flaga dotyczy potencjalnej nieaktualności szczegółów technicznych konkretnych systemów informatycznych, co jest poza zakresem polskich ustaw. Nie można ani potwierdzić, ani obalić tej flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Rozważ usunięcie lub uogólnienie instrukcji specyficznych dla konkretnych wersji oprogramowania, zastępując je ogólnym opisem wymaganych danych (np. 'oznacz pracownika jako nierezydenta i wprowadź kod kraju rezydencji podatkowej zgodnie z dokumentacją używanego systemu kadrowo-płacowego').",
+        "verified_at": "2026-04-18T12:29:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący 'żółtej kartki z UW' i braku stempla w paszporcie jest opisany, ale brak jasności, czy pracodawca może legalnie przedłużyć umowę po 4.03.2026, jeśli wniosek został złożony przed tą datą, ale decyzja nie została wydana — draft sugeruje legalność, ale wymaga potwierdzenia."
+        "description": "Edge case dotyczący 'żółtej kartki z UW' i braku stempla w paszporcie jest opisany, ale brak jasności, czy pracodawca może legalnie przedłużyć umowę po 4.03.2026, jeśli wniosek został złożony przed tą datą, ale decyzja nie została wydana — draft sugeruje legalność, ale wymaga potwierdzenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą Kodeksu pracy (art. 224, 361, 178¹) i nie zawierają przepisów specustawy z 12.03.2022 o pomocy obywatelom Ukrainy ani ustawy o cudzoziemcach, które regulują kwestię legalności pobytu i pracy podczas oczekiwania na decyzję po złożeniu wniosku. Nie można zweryfikować, czy draft poprawnie opisuje sytuację po 4.03.2026 (ewentualnym wygaśnięciu specustawy) w kontekście złożonego wniosku bez wydanej decyzji. Flaga wskazuje na realną lukę prawną wymagającą potwierdzenia w przepisach specustawy i ustawy o cudzoziemcach, których KB nie pokrywa.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Należy uzupełnić edge case o wyraźne zastrzeżenie: 'Legalność pobytu i pracy po 4.03.2026 (lub innej dacie wygaśnięcia specustawy) przy złożonym, ale nierozpatrzonym wniosku wymaga weryfikacji na podstawie aktualnych przepisów przejściowych specustawy lub ustawy o cudzoziemcach — zalecana konsultacja z prawnikiem specjalizującym się w prawie migracyjnym.'",
+        "verified_at": "2026-04-18T12:29:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie zawiera procedury na wypadek, gdy pracownik nie posiada PESEL (np. dopiero złożył wniosek) — jak pracodawca powinien wypełnić powiadomienie w PUP bez numeru PESEL i czy jest to możliwe?"
+        "description": "Draft nie zawiera procedury na wypadek, gdy pracownik nie posiada PESEL (np. dopiero złożył wniosek) — jak pracodawca powinien wypełnić powiadomienie w PUP bez numeru PESEL i czy jest to możliwe?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów specustawy ukraińskiej (ustawa z 12.03.2022) ani rozporządzeń dotyczących formularzy powiadomień w PUP, więc nie można zweryfikować na podstawie dostępnych rekordów, czy powiadomienie przez praca.gov.pl wymaga obligatoryjnie numeru PESEL i czy istnieje procedura zastępcza. Flaga wskazuje na potencjalnie istotną lukę praktyczną (brak PESEL przy nowo przybyłych), ale bez dostępu do treści art. 22 specustawy i wzoru formularza powiadomienia nie można potwierdzić ani odrzucić jej zasadności.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać do kroku 3 informację: w przypadku braku numeru PESEL (np. wniosek złożony, ale jeszcze nienadany) pracodawca powinien skontaktować się z właściwym PUP w celu ustalenia trybu postępowania, ewentualnie złożyć powiadomienie z dostępnymi danymi identyfikacyjnymi (imię, nazwisko, data urodzenia, numer paszportu) i uzupełnić PESEL niezwłocznie po jego nadaniu.",
+        "verified_at": "2026-04-18T12:29:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Krok 6 zawiera informację o 'rezydencji podatkowej' i warunku '≤183 dni w roku' — ta reguła może ulec zmianie w wyniku zmian umów międzynarodowych o unikaniu podwójnego opodatkowania lub zmian w ustawie o PIT."
+        "description": "Krok 6 zawiera informację o 'rezydencji podatkowej' i warunku '≤183 dni w roku' — ta reguła może ulec zmianie w wyniku zmian umów międzynarodowych o unikaniu podwójnego opodatkowania lub zmian w ustawie o PIT.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord KB [rec 3] potwierdza, że art. 3 ust. 1a ustawy o PIT faktycznie zawiera regułę 183 dni jako kryterium rezydencji podatkowej. Draft poprawnie odwołuje się do tej zasady. Flaga sugeruje ryzyko dezaktualizacji, ale reguła 183 dni jest standardem OECD zakorzenionym w polskim prawie i umowach o UPO — nie jest to informacja niestabilna wymagająca specjalnego ostrzeżenia w kontekście tego workflow.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:29:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie zawiera instrukcji, jak postępować w przypadku, gdy pracownik zmienia pracodawcę — czy wymaga nowego powiadomienia w PUP, czy nowego zezwolenia, czy procedura różni się w zależności od typu dokumentu pobytowego (status UKR vs. karta pobytu)."
+        "description": "Draft nie zawiera instrukcji, jak postępować w przypadku, gdy pracownik zmienia pracodawcę — czy wymaga nowego powiadomienia w PUP, czy nowego zezwolenia, czy procedura różni się w zależności od typu dokumentu pobytowego (status UKR vs. karta pobytu).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących specustawy o pomocy obywatelom Ukrainy (ustawa z 12.03.2022) ani ustawy o cudzoziemcach w zakresie procedur przy zmianie pracodawcy. Dostarczone rekordy (art. 63² KP, art. 16 KP, art. 224 KP) nie są relevantne dla weryfikacji tej flagi. Nie można potwierdzić ani obalić, czy draft powinien zawierać instrukcje dotyczące zmiany pracodawcy przez cudzoziemca.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga ma być potwierdzona na podstawie wiedzy merytorycznej: przy statusie UKR zmiana pracodawcy wymaga nowego powiadomienia w PUP w ciągu 7 dni (art. 22 specustawy dotyczy konkretnego pracodawcy); przy zezwoleniu jednolitym (karta pobytu z art. 114 ustawy o cudzoziemcach) zmiana pracodawcy co do zasady wymaga nowego zezwolenia lub zmiany decyzji. Draft powinien zawierać krok lub notę wyjaśniającą te różnice.",
+        "verified_at": "2026-04-18T12:29:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 4 mówi, że 'zmiana pracodawcy wymaga nowej decyzji lub zezwolenia typu A', ale edge case mówi o 'powiadomieniu wg specustawy' — brak jasności, czy dla obywateli Ukrainy zmiana pracodawcy wymaga powiadomienia czy zezwolenia."
+        "description": "Krok 4 mówi, że 'zmiana pracodawcy wymaga nowej decyzji lub zezwolenia typu A', ale edge case mówi o 'powiadomieniu wg specustawy' — brak jasności, czy dla obywateli Ukrainy zmiana pracodawcy wymaga powiadomienia czy zezwolenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają przepisów specustawy z 12.03.2022 o pomocy obywatelom Ukrainy ani ustawy o cudzoziemcach, które byłyby niezbędne do weryfikacji czy zmiana pracodawcy przez obywatela Ukrainy wymaga powiadomienia czy nowego zezwolenia. KB dostarcza jedynie przepisy z zakresu rachunkowości, ordynacji podatkowej i ubezpieczeń społecznych, które są irrelewantne dla tej flagi.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Warto w drafcie explicite rozróżnić dwa przypadki: (1) obywatel Ukrainy ze statusem UKR — zmiana pracodawcy wymaga nowego powiadomienia w PUP w ciągu 7 dni (art. 22 specustawy), bez konieczności uzyskania nowego zezwolenia; (2) cudzoziemiec z zezwoleniem jednolitym (karta pobytu z art. 114 ustawy o cudzoziemcach) — zmiana pracodawcy co do zasady wymaga nowej decyzji/zezwolenia, chyba że karta pobytu daje nieograniczony dostęp do rynku pracy.",
+        "verified_at": "2026-04-18T12:29:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

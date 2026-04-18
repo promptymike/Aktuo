@@ -102,52 +102,122 @@
       {
         "type": "hallucination_risk",
         "severity": "high",
-        "description": "Step 4 powołuje się na 'Rozporządzenie RM z 25.02.2026 r.' (Dz.U. 2026 poz. 246) z datą ogłoszenia 2.03.2026, ale dokument jest datowany na przyszłość względem daty weryfikacji (18.04.2026). Brak możliwości weryfikacji, czy to rozporządzenie faktycznie istnieje i czy numery poz./Dz.U. są prawidłowe."
+        "description": "Step 4 powołuje się na 'Rozporządzenie RM z 25.02.2026 r.' (Dz.U. 2026 poz. 246) z datą ogłoszenia 2.03.2026, ale dokument jest datowany na przyszłość względem daty weryfikacji (18.04.2026). Brak możliwości weryfikacji, czy to rozporządzenie faktycznie istnieje i czy numery poz./Dz.U. są prawidłowe.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących rozporządzenia RM w sprawie wynagradzania pracowników samorządowych ani Dz.U. 2026 poz. 246. Flaga wskazuje na dokument z datą przyszłą (25.02.2026) względem daty weryfikacji (18.04.2026) – co jest wewnętrznie sprzeczne, bo 18.04.2026 jest PO 25.02.2026, więc dokument nie jest 'z przyszłości'. Niemniej KB nie pozwala potwierdzić ani zaprzeczyć istnieniu tego konkretnego rozporządzenia i poprawności numeru Dz.U. 2026 poz. 246.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Należy zweryfikować istnienie Rozporządzenia RM z 25.02.2026 r. (Dz.U. 2026 poz. 246) bezpośrednio w Dzienniku Ustaw (isap.sejm.gov.pl) lub ISAP. Jeśli rozporządzenie nie istnieje lub numery są błędne, należy usunąć lub skorygować step 4 albo oznaczyć go jako wymagający weryfikacji przed zastosowaniem.",
+        "verified_at": "2026-04-18T12:35:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Kwota minimalnego wynagrodzenia 4 806 zł i stawka godzinowa 31,40 zł są podane jako obowiązujące od 1.01.2026, ale dokument jest weryfikowany 18.04.2026 – brak informacji czy kwoty mogły ulec zmianie w trakcie roku (np. waloryzacja w połowie roku, którą draft wyklucza, ale bez potwierdzenia aktualności)."
+        "description": "Kwota minimalnego wynagrodzenia 4 806 zł i stawka godzinowa 31,40 zł są podane jako obowiązujące od 1.01.2026, ale dokument jest weryfikowany 18.04.2026 – brak informacji czy kwoty mogły ulec zmianie w trakcie roku (np. waloryzacja w połowie roku, którą draft wyklucza, ale bez potwierdzenia aktualności).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzenia RM z 11.09.2025 (Dz.U. 2025 poz. 1242) ustalającego minimalne wynagrodzenie na 2026 rok ani informacji o ewentualnej waloryzacji śródrocznej. Historycznie w Polsce minimalne wynagrodzenie było podnoszone dwukrotnie w roku (od 2023 do 2024), jednak od 2025 roku powrócono do jednej podwyżki rocznie – ale KB nie potwierdza ani nie zaprzecza tej zmianie dla 2026 roku. Flaga jest merytorycznie zasadna jako ryzyko, lecz nie można jej ani potwierdzić, ani obalić na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać w drafcie wyraźną adnotację: 'W 2026 roku minimalne wynagrodzenie ustalono jednorazowo od 1.01.2026 – brak drugiej podwyżki śródrocznej (zgodnie z Rozporządzeniem RM z 11.09.2025, Dz.U. 2025 poz. 1242). Należy monitorować ewentualne zmiany rozporządzenia w trakcie roku.' Pozwoli to czytelnikowi wiedzieć, że kwestia jednorazowości podwyżki była świadomie zweryfikowana.",
+        "verified_at": "2026-04-18T12:35:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Step 2 powołuje się na 'art. 6 ust. 5 ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę' – brak weryfikacji czy artykuł i ustęp są aktualne dla 2026 r. (mogły być zmienione nowelizacjami)."
+        "description": "Step 2 powołuje się na 'art. 6 ust. 5 ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę' – brak weryfikacji czy artykuł i ustęp są aktualne dla 2026 r. (mogły być zmienione nowelizacjami).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Baza wiedzy nie zawiera rekordów dotyczących ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę ani jej art. 6 ust. 5. Dostępne rekordy dotyczą ustawy o PIT, ustawy o VAT i ustawy o rachunkowości – żaden nie pozwala zweryfikować aktualności powołanego przepisu dla 2026 r.",
+        "verifier_confidence": 0.15,
+        "corrective_suggestion": "Należy bezpośrednio sprawdzić aktualny tekst jednolity ustawy z 10.10.2002 o minimalnym wynagrodzeniu za pracę (Dz.U. 2002 nr 200 poz. 1679 ze zm.) w systemie prawnym (np. ISAP/LEX), aby potwierdzić, że art. 6 ust. 5 nadal obowiązuje w tej numeracji i treści po ewentualnych nowelizacjach do 2026 r.",
+        "verified_at": "2026-04-18T12:35:25Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Edge case o cudzoziemcu powołuje się na 'art. 88z ustawy z 20.04.2004 o promocji zatrudnienia' z zastrzeżeniem 'od 1.06.2025 zastąpiona ustawą o rynku pracy i służbach zatrudnienia – zweryfikuj aktualny numer artykułu' – draft sam wskazuje niepewność, ale nie podaje numeru artykułu w nowej ustawie."
+        "description": "Edge case o cudzoziemcu powołuje się na 'art. 88z ustawy z 20.04.2004 o promocji zatrudnienia' z zastrzeżeniem 'od 1.06.2025 zastąpiona ustawą o rynku pracy i służbach zatrudnienia – zweryfikuj aktualny numer artykułu' – draft sam wskazuje niepewność, ale nie podaje numeru artykułu w nowej ustawie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących ustawy z 20.04.2004 o promocji zatrudnienia ani ustawy o rynku pracy i służbach zatrudnienia, więc nie można zweryfikować czy art. 88z istnieje/istniał ani jaki jest odpowiedni artykuł w nowej ustawie. Flaga jest jednak merytorycznie uzasadniona – draft sam przyznaje niepewność co do aktualnego numeru artykułu w nowej ustawie obowiązującej od 1.06.2025, co stanowi realną lukę prawną w dokumencie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zidentyfikować odpowiedni artykuł w ustawie o rynku pracy i służbach zatrudnienia (obowiązującej od 1.06.2025) regulujący zatrudnienie cudzoziemców i zastąpić odwołanie do art. 88z ustawy z 20.04.2004 aktualnym przepisem, albo wyraźnie zaznaczyć że weryfikacja jest wymagana przed użyciem dokumentu.",
+        "verified_at": "2026-04-18T12:35:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 3 instruuje aktualizację w systemach Comarch ERP Optima i Symfonia, ale nie wspomina o innych popularnych systemach (np. Enova365, Sage, Fakturia) – może prowadzić do pominięcia aktualizacji w innych systemach."
+        "description": "Step 3 instruuje aktualizację w systemach Comarch ERP Optima i Symfonia, ale nie wspomina o innych popularnych systemach (np. Enova365, Sage, Fakturia) – może prowadzić do pominięcia aktualizacji w innych systemach.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych przepisów regulujących obowiązek aktualizacji konkretnych systemów ERP (Comarch, Symfonia, Enova365, Sage itp.) – kwestia ta leży poza zakresem prawa pracy i ustaw o minimalnym wynagrodzeniu. Flaga dotyczy kompletności praktycznych wskazówek operacyjnych, a nie zgodności z przepisami prawa. Nie można ani potwierdzić, ani obalić jej zasadności na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli draft ma charakter praktycznego przewodnika, warto dodać ogólną notę: 'Zaktualizuj ustawienia minimalnego wynagrodzenia we wszystkich używanych systemach kadrowo-płacowych (np. Comarch ERP Optima, Symfonia, Enova365, Sage, R2Płatnik itp.) zgodnie z dokumentacją producenta.'",
+        "verified_at": "2026-04-18T12:35:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 6 mówi 'W Comarch ERP Optima / Enova365: moduł Kadry i Płace → Konfiguracja firmy → Płace → Stałe podatkowe', ale Step 3 dla Comarch wskazuje inną ścieżkę ('Konfiguracja → Płace → Wynagrodzenia') – brak spójności w instrukcjach nawigacji."
+        "description": "Step 6 mówi 'W Comarch ERP Optima / Enova365: moduł Kadry i Płace → Konfiguracja firmy → Płace → Stałe podatkowe', ale Step 3 dla Comarch wskazuje inną ścieżkę ('Konfiguracja → Płace → Wynagrodzenia') – brak spójności w instrukcjach nawigacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy spójności instrukcji nawigacji w oprogramowaniu Comarch ERP Optima / Enova365 (ścieżki menu w systemach kadrowo-płacowych). KB zawiera wyłącznie przepisy prawne (Ordynacja podatkowa) i nie zawiera żadnych informacji o interfejsie ani strukturze menu tych systemów. Nie można zweryfikować ani potwierdzić, ani odrzucić tej flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.9,
+        "corrective_suggestion": "Należy zweryfikować ścieżki nawigacji bezpośrednio w dokumentacji Comarch ERP Optima i Enova365 lub w samych systemach, a następnie ujednolicić instrukcje w krokach 3 i 6 drafta.",
+        "verified_at": "2026-04-18T12:35:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Netto dla pracownika etatowego podane jako 'ok. 3 605,85 zł' jest przybliżeniem dla konkretnych założeń (PIT-2, powyżej 26 r.ż., bez PPK) – może być mylące dla pracowników z innymi warunkami (PPK, PIT-0, poniżej 26 lat)."
+        "description": "Netto dla pracownika etatowego podane jako 'ok. 3 605,85 zł' jest przybliżeniem dla konkretnych założeń (PIT-2, powyżej 26 r.ż., bez PPK) – może być mylące dla pracowników z innymi warunkami (PPK, PIT-0, poniżej 26 lat).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy przybliżonej kwoty netto 'ok. 3 605,85 zł' dla pracownika etatowego, jednak fragment drafta przedstawiony do weryfikacji nie zawiera tej konkretnej kwoty – dotyczy on kroków dotyczących minimalnego wynagrodzenia brutto i świadczeń pochodnych. KB nie zawiera rekordów pozwalających zweryfikować poprawność wyliczenia netto ani założeń (PIT-2, wiek, PPK). Flaga jest merytorycznie zasadna jako uwaga redakcyjna (brak zastrzeżeń co do założeń kalkulacji), ale nie można jej potwierdzić ani obalić na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli kwota netto pojawia się w drafcie, należy dodać wyraźne zastrzeżenie: 'kwota orientacyjna przy założeniu: złożony PIT-2, pracownik powyżej 26 r.ż., bez PPK – dla innych warunków kwota netto będzie inna'.",
+        "verified_at": "2026-04-18T12:35:53Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o pracownikach samorządowych mówi 'za styczeń-luty 2026 naliczamy wg starej tabeli, a po wejściu w życie rozporządzenia robimy wyrównanie' – ale nie wyjaśnia, czy wyrównanie jest obowiązkowe czy fakultatywne, ani nie wskazuje terminu, w którym musi być dokonane."
+        "description": "Edge case o pracownikach samorządowych mówi 'za styczeń-luty 2026 naliczamy wg starej tabeli, a po wejściu w życie rozporządzenia robimy wyrównanie' – ale nie wyjaśnia, czy wyrównanie jest obowiązkowe czy fakultatywne, ani nie wskazuje terminu, w którym musi być dokonane.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących rozporządzenia o wynagradzaniu pracowników samorządowych ani regulacji określających obowiązkowość/fakultatywność wyrównania wynagrodzenia po wejściu w życie nowego rozporządzenia. Flaga wskazuje na realną lukę w drafcie – brak wskazania czy wyrównanie jest obowiązkowe i w jakim terminie – jednak bez odpowiednich przepisów w KB nie można jednoznacznie potwierdzić ani obalić tej obserwacji. Sam draft stwierdza 'regulamin wewnętrzny decyduje o terminie', co może być uproszczeniem, ale nie można tego zweryfikować na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli wyrównanie wynagrodzenia pracowników samorządowych wynika z przepisów rozporządzenia z mocą wsteczną od 1.01.2026, to jest ono obowiązkowe (nie fakultatywne) – należy to wprost wskazać w edge case. Warto też podać konkretny termin (np. 'najpóźniej z wypłatą wynagrodzenia za marzec 2026') zamiast ogólnego 'regulamin wewnętrzny decyduje o terminie', gdyż regulamin wewnętrzny nie może wyłączyć obowiązku wynikającego z przepisów prawa.",
+        "verified_at": "2026-04-18T12:36:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Step 5 wspomina 'test 3 kryteriów z art. 5b ustawy o PIT' dla pozornego B2B, ale nie wyjaśnia jakie to kryteria – pracownik księgowy może nie wiedzieć, co sprawdzać."
+        "description": "Step 5 wspomina 'test 3 kryteriów z art. 5b ustawy o PIT' dla pozornego B2B, ale nie wyjaśnia jakie to kryteria – pracownik księgowy może nie wiedzieć, co sprawdzać.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekordy KB potwierdzają istnienie art. 5b ust. 1 ustawy o PIT i opisują jego treść: trzy warunki to (1) zlecający ponosi odpowiedzialność wobec osób trzecich, (2) czynności wykonywane są pod kierownictwem oraz w miejscu i czasie wyznaczonym przez zlecającego, (3) wykonujący nie ponosi ryzyka gospodarczego. Draft wspomina 'test 3 kryteriów z art. 5b ustawy o PIT' bez ich rozwinięcia, jednak flaga ma severity 'low' i dotyczy jedynie czytelności instrukcji dla pracownika księgowego, a nie błędu merytorycznego. Brak rozwinięcia kryteriów to kwestia stylistyczna/pedagogiczna, nie błąd faktyczny.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Opcjonalnie można rozwinąć step 5 o wyliczenie 3 kryteriów z art. 5b ust. 1 ustawy o PIT: (1) odpowiedzialność wobec osób trzecich za rezultat ponosi zlecający, (2) czynności wykonywane są pod kierownictwem oraz w miejscu i czasie wyznaczonym przez zlecającego, (3) wykonujący nie ponosi ryzyka gospodarczego – jeśli wszystkie trzy zachodzą łącznie, umowa B2B może zostać przekwalifikowana.",
+        "verified_at": "2026-04-18T12:36:11Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Step 6 podaje konkretne kwoty pochodne (np. 'maksymalna odprawa z tytułu zwolnień grupowych = 15 × 4 806 zł = 72 090 zł'), ale nie weryfikuje czy mnożnik '15' jest aktualny dla 2026 r. – może ulec zmianie w nowelizacjach kodeksu pracy."
+        "description": "Step 6 podaje konkretne kwoty pochodne (np. 'maksymalna odprawa z tytułu zwolnień grupowych = 15 × 4 806 zł = 72 090 zł'), ale nie weryfikuje czy mnożnik '15' jest aktualny dla 2026 r. – może ulec zmianie w nowelizacjach kodeksu pracy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera artykułu ustawy o zwolnieniach grupowych (ustawa z 13.03.2003 r.) określającego mnożnik 15-krotności minimalnego wynagrodzenia jako limit odprawy. Rekordy z KB dotyczą odprawy pośmiertnej (art. 93 KP) i emerytalno-rentowej (art. 92¹ KP), a nie odprawy z tytułu zwolnień grupowych. Nie można więc ani potwierdzić, ani obalić poprawności mnożnika '15' na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zweryfikować art. 8 ust. 4 ustawy z 13.03.2003 r. o szczególnych zasadach rozwiązywania z pracownikami stosunków pracy z przyczyn niedotyczących pracowników (Dz.U. 2018 poz. 1969 ze zm.) – jeśli mnożnik 15 jest tam aktualnie zapisany, draft jest poprawny; jeśli był nowelizowany, należy zaktualizować kwotę i wskazać właściwy przepis.",
+        "verified_at": "2026-04-18T12:36:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

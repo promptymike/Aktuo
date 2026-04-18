@@ -108,52 +108,121 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na 'art. 21 ust. 1 pkt 154 ustawy o PIT' i 'art. 26 ust. 1 pkt 2 ustawy o PIT'. Brak sformalizowanych referencji do aktów prawnych utrudnia weryfikację i aktualizację."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na 'art. 21 ust. 1 pkt 154 ustawy o PIT' i 'art. 26 ust. 1 pkt 2 ustawy o PIT'. Brak sformalizowanych referencji do aktów prawnych utrudnia weryfikację i aktualizację.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku formalnych referencji w polu 'legal_anchors', co jest kwestią struktury metadanych draftu, a nie poprawności merytorycznej cytowanych przepisów. KB nie zawiera rekordów potwierdzających ani zaprzeczających istnieniu art. 21 ust. 1 pkt 154 ustawy o PIT (ulga dla seniora) ani art. 26 ust. 1 pkt 2 lit. a ustawy o PIT w kontekście składek od przychodów zwolnionych. Rekordy KB dotyczą ustawy o CIT (rec 1) lub innych przepisów ustawy o PIT (rec 2, rec 3), więc nie można zweryfikować poprawności powołanych artykułów ani ocenić zasadności braku formalnych anchors.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o formalne referencje: ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (Dz.U. z 2024 r. poz. 226 ze zm.), art. 21 ust. 1 pkt 154 oraz art. 26 ust. 1 pkt 2 lit. a. Jednocześnie zweryfikować aktualność tych przepisów w obowiązującym tekście ustawy o PIT.",
+        "verified_at": "2026-04-18T12:37:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Limit zwolnienia 85 528 zł i kwota wolna 30 000 zł są podane jako wartości na 2026 r., ale draft nie zawiera mechanizmu walidacji czy te kwoty będą aktualne w momencie użycia (szczególnie że dokument jest datowany 2026-04-18). Brak informacji o źródle tych limitów i procedurze aktualizacji."
+        "description": "Limit zwolnienia 85 528 zł i kwota wolna 30 000 zł są podane jako wartości na 2026 r., ale draft nie zawiera mechanizmu walidacji czy te kwoty będą aktualne w momencie użycia (szczególnie że dokument jest datowany 2026-04-18). Brak informacji o źródle tych limitów i procedurze aktualizacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą amortyzacji środków trwałych i VAT, nie zawierają informacji o limitach ulgi dla seniora (art. 21 ust. 1 pkt 154 ustawy o PIT), kwocie wolnej 30 000 zł ani limicie 85 528 zł. Nie można na podstawie dostępnych rekordów potwierdzić ani obalić aktualności tych kwot na 2026 r. Sama flaga dotyczy ryzyka proceduralnego (brak mechanizmu walidacji aktualności danych), a nie błędu merytorycznego, co jest trudne do weryfikacji przez KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga ma być potraktowana jako ostrzeżenie redakcyjne, warto dodać w drafcie przypis wskazujący źródło limitów (np. art. 27 ust. 1 ustawy o PIT dla kwoty wolnej i art. 21 ust. 1 pkt 154 dla limitu 85 528 zł) oraz adnotację, że kwoty obowiązują na rok podatkowy 2026 i powinny być zweryfikowane przed użyciem w kolejnych latach.",
+        "verified_at": "2026-04-18T12:37:41Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 5 wymaga 'oświadczenia PIT-2 cz. E', ale draft nie wyjaśnia: czy to rzeczywista nazwa formularza, czy pracownik wypełnia osobny dokument, czy to część standardowego PIT-2. Brak wskazania gdzie przechowywać to oświadczenie u pracodawcy."
+        "description": "Step 5 wymaga 'oświadczenia PIT-2 cz. E', ale draft nie wyjaśnia: czy to rzeczywista nazwa formularza, czy pracownik wypełnia osobny dokument, czy to część standardowego PIT-2. Brak wskazania gdzie przechowywać to oświadczenie u pracodawcy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących formularza PIT-2 ani jego struktury (części E), więc nie można potwierdzić ani obalić czy 'PIT-2 cz. E' to prawidłowa nazwa/oznaczenie. Flaga podnosi zasadny problem terminologiczny i proceduralny (przechowywanie oświadczenia), ale brak materiału w KB do weryfikacji. Kwestia ta wymaga sprawdzenia w rozporządzeniu MF dotyczącym wzoru PIT-2.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy doprecyzować w step 5: (1) że PIT-2 to standardowy formularz, a część E dotyczy ulgi dla seniora (art. 32 ust. 3 ustawy o PIT), (2) że oświadczenie składa się na formularzu PIT-2 (lub w innej formie pisemnej dopuszczonej przez przepisy), (3) że pracodawca przechowuje oświadczenie w aktach osobowych pracownika lub dokumentacji płacowej przez okres wymagany przepisami o rachunkowości.",
+        "verified_at": "2026-04-18T12:37:51Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 4 mówi 'KUP się nie stosuje za miesiące w całości objęte zwolnieniem', ale step 2 wskazuje że przychód może być częściowo w wierszu 1 i częściowo w wierszu 3 w tym samym miesiącu (wypłata 10.04 za marzec). Niejasne jak obliczać KUP w miesiącu przejścia."
+        "description": "Step 4 mówi 'KUP się nie stosuje za miesiące w całości objęte zwolnieniem', ale step 2 wskazuje że przychód może być częściowo w wierszu 1 i częściowo w wierszu 3 w tym samym miesiącu (wypłata 10.04 za marzec). Niejasne jak obliczać KUP w miesiącu przejścia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących KUP przy uldze dla seniora (art. 21 ust. 1 pkt 154 ustawy o PIT) ani zasad stosowania zryczałtowanych kosztów uzyskania przychodu w miesiącu przejścia między statusem opodatkowanym a zwolnionym. Flaga wskazuje na realną niejednoznaczność w drafcie — step 4 mówi o miesiącach 'w całości objętych zwolnieniem', ale step 2 opisuje sytuację częściowego podziału przychodu w tym samym miesiącu (np. wypłata 10.04 za marzec), co sugeruje że miesiąc może być tylko częściowo objęty zwolnieniem. Bez dostępu do właściwych przepisów lub interpretacji podatkowych nie można jednoznacznie potwierdzić ani odrzucić flagi.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć doprecyzowanie step 4: jeśli w danym miesiącu pracownik uzyskał zarówno przychód opodatkowany, jak i zwolniony (np. część wypłaty przed, część po dacie urodzin), KUP powinny być stosowane proporcjonalnie do przychodu opodatkowanego lub w pełnej wysokości za ten miesiąc — należy wskazać jednoznaczną zasadę z powołaniem na konkretną interpretację lub przepis.",
+        "verified_at": "2026-04-18T12:38:00Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft powołuje się na 'renta wdowią' jako tytuł wykluczający ulgę, ale w polskim systemie emerytalnym termin 'renta wdowia' nie jest standardowy — istnieje 'renta rodzinna' dla wdów/wdowców. Wymaga weryfikacji czy to rzeczywisty tytuł czy błąd terminologiczny."
+        "description": "Draft powołuje się na 'renta wdowią' jako tytuł wykluczający ulgę, ale w polskim systemie emerytalnym termin 'renta wdowia' nie jest standardowy — istnieje 'renta rodzinna' dla wdów/wdowców. Wymaga weryfikacji czy to rzeczywisty tytuł czy błąd terminologiczny.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Fragment drafta w kroku 3 używa poprawnej terminologii: 'rentę rodzinną, rentę z tytułu niezdolności do pracy' — nie pojawia się termin 'renta wdowia'. Flaga opisuje problem z terminem 'renta wdowia', ale draft faktycznie stosuje prawidłowe określenie 'renta rodzinna'. Opis flagi jest zatem niezgodny z treścią drafta — draft nie zawiera błędu terminologicznego, który flaga zarzuca.",
+        "verifier_confidence": 0.85,
+        "verified_at": "2026-04-18T12:38:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 6 mówi o 'dacie wpływu pierwszej emerytury z ZUS', ale nie wyjaśnia: czy to data decyzji ZUS, data faktycznego przelewu, czy data pierwszego świadczenia (które mogą się różnić o kilka dni/tygodni). To kluczowe dla rozliczenia DWR i odprawy."
+        "description": "Step 6 mówi o 'dacie wpływu pierwszej emerytury z ZUS', ale nie wyjaśnia: czy to data decyzji ZUS, data faktycznego przelewu, czy data pierwszego świadczenia (które mogą się różnić o kilka dni/tygodni). To kluczowe dla rozliczenia DWR i odprawy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących definicję 'otrzymania pierwszego świadczenia emerytalnego' w kontekście ulgi PIT-0 dla seniora (art. 21 ust. 1 pkt 154 ustawy o PIT). Rekordy z KB dotyczą nienależnych świadczeń ZUS i procedur administracyjnych, a nie momentu 'otrzymania emerytury' dla celów podatkowych. Flaga wskazuje na realną niejednoznaczność praktyczną (data decyzji vs. data przelewu vs. data pierwszego świadczenia), która może mieć znaczenie dla rozliczenia DWR i odprawy, jednak bez odpowiednich przepisów podatkowych lub interpretacji KIS nie można jednoznacznie potwierdzić ani odrzucić tej wątpliwości.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto doprecyzować w step 6, że 'otrzymanie pierwszego świadczenia emerytalnego' oznacza datę faktycznego wpływu środków na rachunek bankowy (zasada kasowa w PIT), a nie datę decyzji ZUS przyznającej emeryturę — co jest spójne z ogólną zasadą kasową stosowaną przy uldze dla seniora (art. 21 ust. 1 pkt 154 ustawy o PIT). Zalecane powołanie się na interpretacje indywidualne KIS potwierdzające tę wykładnię.",
+        "verified_at": "2026-04-18T12:38:14Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o pracy u dwóch pracodawców mówi że 'każdy stosuje limit osobno', ale nie wyjaśnia procedury: czy pracownik musi poinformować obu pracodawców o pracy u drugiego, czy pracodawcy mogą to sprawdzić, jakie są konsekwencje jeśli pracownik tego nie ujawni."
+        "description": "Edge case o pracy u dwóch pracodawców mówi że 'każdy stosuje limit osobno', ale nie wyjaśnia procedury: czy pracownik musi poinformować obu pracodawców o pracy u drugiego, czy pracodawcy mogą to sprawdzić, jakie są konsekwencje jeśli pracownik tego nie ujawni.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy procedury informowania pracodawców o pracy u drugiego pracodawcy w kontekście ulgi PIT-0 dla seniora i limitu 85 528 zł. KB nie zawiera przepisów regulujących obowiązek informowania pracodawcy o zatrudnieniu u innego pracodawcy w kontekście tej ulgi. Rekordy z KB dotyczą wyłącznie kosztów uzyskania przychodu (art. 22 ust. 2 pkt 3-4 ustawy o PIT) i przepisów KP o delegacjach zagranicznych, co jest irrelewantne dla weryfikacji tej flagi.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Rozważyć dodanie do edge case'u o dwóch pracodawcach informacji, że pracownik składa oświadczenie PIT-2 (cz. E) u każdego pracodawcy osobno i ponosi odpowiedzialność za prawdziwość danych; pracodawca nie ma narzędzi do weryfikacji zatrudnienia u innego płatnika, a konsekwencją niedopłaty jest obowiązek dopłaty podatku w zeznaniu rocznym przez pracownika.",
+        "verified_at": "2026-04-18T12:38:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Step 3 zawiera odniesienia do systemów Comarch Optima i Symfonii, ale nie wyjaśnia co zrobić w innych systemach kadrowych (np. Paychex, Sage, systemy małych firm). Może być zbyt specyficzne dla polskiego rynku."
+        "description": "Step 3 zawiera odniesienia do systemów Comarch Optima i Symfonii, ale nie wyjaśnia co zrobić w innych systemach kadrowych (np. Paychex, Sage, systemy małych firm). Może być zbyt specyficzne dla polskiego rynku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących systemów kadrowych (Comarch Optima, Symfonia, Paychex, Sage) ani instrukcji ich obsługi. Fragment drafta w step 3 dotyczy wyłącznie zasad wykazywania przychodów w PIT-11 (wiersze części E) i nie zawiera żadnych odniesień do konkretnych systemów informatycznych - flaga opisuje coś, czego w przytoczonym fragmencie nie ma. Możliwe, że flaga odnosi się do innej części dokumentu niż przytoczony fragment.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Jeśli w pełnej wersji draftu rzeczywiście znajdują się instrukcje specyficzne dla Comarch Optima i Symfonii, warto dodać ogólną notę że zasady wykazywania w PIT-11 są systemowo-niezależne i wynikają z przepisów, a ścieżki w konkretnych programach mogą się różnić.",
+        "verified_at": "2026-04-18T12:38:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Draft wspomina 'KUP 250 zł miejscowe / 300 zł dojazdowe' bez daty obowiązywania. Te kwoty mogą się zmienić — brak mechanizmu aktualizacji lub warunku 'na dzień 2026'."
+        "description": "Draft wspomina 'KUP 250 zł miejscowe / 300 zł dojazdowe' bez daty obowiązywania. Te kwoty mogą się zmienić — brak mechanizmu aktualizacji lub warunku 'na dzień 2026'.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera wyłącznie przepisy ustawy o VAT, które nie są relevantne dla weryfikacji kwot KUP (250 zł / 300 zł) z ustawy o PIT. Nie można potwierdzić ani obalić aktualności tych kwot na podstawie dostępnych rekordów. Flaga dotyczy ryzyka dezaktualizacji danych liczbowych — jest to uzasadniona obserwacja metodologiczna, ale wymaga weryfikacji w przepisach ustawy o PIT (art. 22 ust. 2).",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Dodaj w drafcie adnotację 'według stanu na rok 2025/2026' przy kwotach KUP lub odesłanie do art. 22 ust. 2 ustawy o PIT jako źródła aktualnych wartości, aby użytkownik mógł samodzielnie zweryfikować obowiązujące kwoty.",
+        "verified_at": "2026-04-18T12:38:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Related questions zawierają 'ulgę na powrót' — draft nie wyjaśnia czy ta ulga może być łączona z ulgą dla seniora czy są to ulgi alternatywne. Brak wskazania gdzie znaleźć odpowiedź."
+        "description": "Related questions zawierają 'ulgę na powrót' — draft nie wyjaśnia czy ta ulga może być łączona z ulgą dla seniora czy są to ulgi alternatywne. Brak wskazania gdzie znaleźć odpowiedź.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą VAT i Ordynacji podatkowej, nie zawierają żadnych informacji o uldze na powrót (art. 21 ust. 1 pkt 152 ustawy o PIT) ani jej relacji do ulgi dla seniora (art. 21 ust. 1 pkt 154). Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Sama flaga ma severity 'low' i dotyczy braku informacji uzupełniającej, a nie błędu merytorycznego w drafcie.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać notę: 'Ulga dla seniora (pkt 154) i ulga na powrót (pkt 152) są odrębnymi zwolnieniami — podatnik może korzystać tylko z jednego tytułu zwolnienia dla tego samego przychodu; szczegóły łączenia ulg należy zweryfikować w art. 21 ust. 1 pkt 152 i 154 ustawy o PIT oraz objaśnieniach MF.'",
+        "verified_at": "2026-04-18T12:38:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

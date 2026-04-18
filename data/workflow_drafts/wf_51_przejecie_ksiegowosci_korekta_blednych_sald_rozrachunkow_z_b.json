@@ -121,77 +121,176 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 18 UoR jest cytowany jako podstawa do 'zestawienia obrotów i sald', ale artykuł 18 dotyczy zasad prowadzenia ksiąg rachunkowych, nie konkretnie zestawienia obrotów i sald. Należy zweryfikować czy prawidłowy jest art. 29 lub inne przepisy dotyczące dokumentacji i raportów."
+        "description": "Art. 18 UoR jest cytowany jako podstawa do 'zestawienia obrotów i sald', ale artykuł 18 dotyczy zasad prowadzenia ksiąg rachunkowych, nie konkretnie zestawienia obrotów i sald. Należy zweryfikować czy prawidłowy jest art. 29 lub inne przepisy dotyczące dokumentacji i raportów.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 18 UoR wprost reguluje zestawienie obrotów i sald — rekord KB [rec 1] potwierdza, że art. 18 ust. 1 UoR nakazuje sporządzanie zestawienia obrotów i sald na koniec każdego okresu sprawozdawczego, zawierającego symbole kont, salda otwarcia, obroty i salda zamknięcia. Draft prawidłowo cytuje art. 18 jako podstawę prawną dla zestawienia obrotów i sald.",
+        "verifier_confidence": 0.97,
+        "verified_at": "2026-04-18T12:29:53Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera konkretne numery kont (201, 202, 234, 249, 760, 761, 820, 860, 149) i odwołania do systemów (Comarch Optima, Symfonia FK) — te numery mogą ulec zmianie w standardzie rachunkowości do 2026 roku, szczególnie w kontekście potencjalnych zmian w UoR."
+        "description": "Draft zawiera konkretne numery kont (201, 202, 234, 249, 760, 761, 820, 860, 149) i odwołania do systemów (Comarch Optima, Symfonia FK) — te numery mogą ulec zmianie w standardzie rachunkowości do 2026 roku, szczególnie w kontekście potencjalnych zmian w UoR.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Numery kont (201, 202, 234, 249, 760, 761, 820, 860, 149) to numery z zakładowego planu kont, który jest tworzony przez jednostkę zgodnie z art. 10 UoR — nie są one standaryzowane ustawowo i nie podlegają zmianom w wyniku nowelizacji UoR. Ustawa o rachunkowości nie narzuca konkretnych numerów kont syntetycznych, więc ryzyko 'dezaktualizacji' tych numerów wskutek zmian legislacyjnych jest minimalne. Odwołania do systemów Comarch Optima i Symfonia FK to wskazówki praktyczne, nie elementy prawne, i ich ewentualna zmiana interfejsu nie wpływa na merytoryczną poprawność draftu.",
+        "verifier_confidence": 0.82,
+        "verified_at": "2026-04-18T12:30:00Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Próg istotności określony jako '0,5–1% sumy bilansowej' jest przykładowy i może być nieaktualny dla 2026 roku; brak odniesienia do konkretnych wytycznych KIBR lub standardów zawartych w uchwałach Krajowej Rady Biegłych Rewidentów."
+        "description": "Próg istotności określony jako '0,5–1% sumy bilansowej' jest przykładowy i może być nieaktualny dla 2026 roku; brak odniesienia do konkretnych wytycznych KIBR lub standardów zawartych w uchwałach Krajowej Rady Biegłych Rewidentów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących wytycznych KIBR, uchwał Krajowej Rady Biegłych Rewidentów ani standardów istotności. Flaga wskazuje na ryzyko nieaktualności progu 0,5–1% sumy bilansowej jako przykładowego — jest to uzasadniona obserwacja metodologiczna, jednak KB nie dostarcza ani potwierdzenia, ani zaprzeczenia tej tezy. Próg istotności w polskim prawie rachunkowości nie jest ustawowo skodyfikowany w UoR, lecz wynika z praktyki i wytycznych KIBR, których KB nie pokrywa.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać zastrzeżenie, że podany próg 0,5–1% sumy bilansowej jest jedynie przykładowy i orientacyjny, a rzeczywisty próg istotności powinien wynikać z polityki rachunkowości jednostki oraz aktualnych wytycznych KIBR/KSR obowiązujących w danym roku. Można też usunąć konkretny zakres procentowy i zastąpić go odwołaniem wyłącznie do polityki rachunkowości jednostki.",
+        "verified_at": "2026-04-18T12:30:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Odwołanie do 'art. 4a UoR' dotyczące odpowiedzialności kierownika jednostki — należy potwierdzić czy artykuł 4a rzeczywiście istnieje w aktualnym brzmieniu UoR (możliwe że zmieniono numerację lub treść)."
+        "description": "Odwołanie do 'art. 4a UoR' dotyczące odpowiedzialności kierownika jednostki — należy potwierdzić czy artykuł 4a rzeczywiście istnieje w aktualnym brzmieniu UoR (możliwe że zmieniono numerację lub treść).",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekord z KB (rec 2) jednoznacznie potwierdza istnienie art. 4a ust. 1 i 2 Ustawy o rachunkowości, który reguluje odpowiedzialność kierownika jednostki za sprawozdania finansowe. Treść rekordu odpowiada dokładnie temu, do czego odwołuje się draft w step 2 — odpowiedzialność kierownika jednostki (zarządu) za rachunkowość. Artykuł 4a istnieje w aktualnym brzmieniu UoR i ma właściwą numerację.",
+        "verifier_confidence": 0.85,
+        "verified_at": "2026-04-18T12:30:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 4 mówi że 'próg istotności MUSI być zapisany w polityce rachunkowości', ale krok 3 sugeruje próg '0,5–1%' jako standard — jeśli polityka nie zawiera progu, procedura pozostaje niejasna co do tego, który próg zastosować."
+        "description": "Krok 4 mówi że 'próg istotności MUSI być zapisany w polityce rachunkowości', ale krok 3 sugeruje próg '0,5–1%' jako standard — jeśli polityka nie zawiera progu, procedura pozostaje niejasna co do tego, który próg zastosować.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza (art. 10 ust. 1 UoR), że polityka rachunkowości powinna zawierać metody wyceny i zasady klasyfikacji, ale nie precyzuje wprost, czy próg istotności MUSI być w niej zapisany. Flaga wskazuje na potencjalną niespójność między krokiem 3 (sugestia 0,5–1% jako standard) a krokiem 4 (wymóg zapisu w polityce), jednak KB nie dostarcza twardego dowodu potwierdzającego ani obalającego ten wymóg. Ustawa o rachunkowości nie definiuje wprost pojęcia 'istotności' ani nie nakazuje zapisania progu w polityce rachunkowości — brak stosownego artykułu w dostępnych rekordach KB.",
+        "verifier_confidence": 0.45,
+        "corrective_suggestion": "Można doprecyzować krok 3 przez dodanie klauzuli: 'jeśli polityka rachunkowości nie określa progu kwotowego, stosuj próg 0,5–1% sumy bilansowej jako wartość domyślną do czasu aktualizacji polityki', co eliminuje niespójność między krokami 3 i 4.",
+        "verified_at": "2026-04-18T12:30:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brak procedury na wypadek gdy zarząd odmówi wydania pisemnej decyzji (krok 2) — draft nie określa czy biuro księgowe powinno wówczas wstrzymać się z korektami, czy może działać na podstawie własnej analizy, co ma znaczenie dla odpowiedzialności."
+        "description": "Brak procedury na wypadek gdy zarząd odmówi wydania pisemnej decyzji (krok 2) — draft nie określa czy biuro księgowe powinno wówczas wstrzymać się z korektami, czy może działać na podstawie własnej analizy, co ma znaczenie dla odpowiedzialności.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących procedurę postępowania biura rachunkowego w przypadku odmowy wydania pisemnej decyzji przez zarząd. Art. 4a UoR (cytowany w drafcie) wskazuje odpowiedzialność kierownika jednostki, ale KB nie dostarcza przepisów określających uprawnienia/obowiązki biura księgowego w sytuacji braku współpracy zarządu. Flaga wskazuje na realną lukę proceduralną w drafcie — brak instrukcji co robić gdy zarząd nie odpowiada — jednak KB nie pozwala jednoznacznie potwierdzić ani obalić czy taka procedura jest prawnie wymagana.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie do kroku 2 klauzuli awaryjnej: jeśli zarząd nie udzieli pisemnej odpowiedzi w określonym terminie (np. 7 dni roboczych), biuro księgowe powinno udokumentować brak odpowiedzi, wstrzymać się z korektami istotnymi i poinformować zarząd pisemnie o ryzyku odpowiedzialności za nierzetelność ksiąg (art. 4a UoR), pozostawiając decyzję o dalszym działaniu kierownikowi jednostki.",
+        "verified_at": "2026-04-18T12:30:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 3 wymaga rozsyłania potwierdzeń sald, ale brak wskazania terminu odpowiedzi kontrahenta i procedury postępowania gdy kontrahent nie odpowiada — czy 2 monity to standard czy wymóg ustawy?"
+        "description": "Krok 3 wymaga rozsyłania potwierdzeń sald, ale brak wskazania terminu odpowiedzi kontrahenta i procedury postępowania gdy kontrahent nie odpowiada — czy 2 monity to standard czy wymóg ustawy?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących procedury potwierdzania sald (art. 26 ust. 2 UoR lub rozporządzeń wykonawczych), które mogłyby potwierdzić lub obalić wymóg 2 monitów. Potwierdzanie sald jest praktyką inwentaryzacyjną regulowaną przez art. 26 UoR, jednak szczegółowe procedury (terminy odpowiedzi, liczba monitów) nie wynikają wprost z ustawy lecz z praktyki audytorskiej i wewnętrznych polityk — draft nie wskazuje tego rozróżnienia, co może być faktycznym brakiem informacyjnym.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 3 warto dodać: (1) sugerowany termin oczekiwania na odpowiedź kontrahenta (np. 14-21 dni), (2) procedurę przy braku odpowiedzi — zaznaczenie że milczenie kontrahenta nie jest potwierdzeniem salda i należy udokumentować próby kontaktu, (3) wyraźne wskazanie że 2 monity to praktyka/standard audytorski (np. MSB 505), a nie wymóg ustawowy.",
+        "verified_at": "2026-04-18T12:30:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Odwołanie do 'wniosku przez e-Urząd Skarbowy' w edge case dotyczącym rozrachunków z US — należy zweryfikować czy taka procedura rzeczywiście istnieje i czy jest to prawidłowa nazwa narzędzia/procedury."
+        "description": "Odwołanie do 'wniosku przez e-Urząd Skarbowy' w edge case dotyczącym rozrachunków z US — należy zweryfikować czy taka procedura rzeczywiście istnieje i czy jest to prawidłowa nazwa narzędzia/procedury.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Fragment drafta zawiera odwołanie do 'wniosku przez e-Urząd Skarbowy' w kontekście rozrachunków z US, jednak dostarczone rekordy KB nie pokrywają tej procedury. Rekordy dotyczą przechowywania zbiorów (art. 76 UoR), powiadamiania urzędu skarbowego o miejscu prowadzenia ksiąg (art. 11a UoR) oraz rozliczeń międzyokresowych (art. 39 UoR) — żaden z nich nie potwierdza ani nie zaprzecza istnieniu procedury 'wniosku przez e-Urząd Skarbowy'. Platforma e-Urząd Skarbowy (e-US) faktycznie istnieje jako portal KAS, jednak weryfikacja czy konkretna procedura składania wniosków w kontekście rozrachunków z US jest tam dostępna wymaga źródeł spoza dostarczonego KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zweryfikować w aktualnej dokumentacji KAS/e-US czy opisana procedura istnieje pod tą nazwą. Jeśli nie można potwierdzić, warto zastąpić odwołanie do 'e-Urząd Skarbowy' ogólniejszym sformułowaniem np. 'wniosku złożonego do właściwego urzędu skarbowego (pisemnie lub przez portal e-US, jeśli dana usługa jest dostępna)' z zastrzeżeniem konieczności weryfikacji dostępności usługi.",
+        "verified_at": "2026-04-18T12:30:50Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Konto 149 'środki pieniężne w drodze' jest wymienione w related_questions, ale nie pojawia się w głównym workflow — należy potwierdzić czy to konto rzeczywiście istnieje w polskim planie kont i czy jest właściwe dla opisanego scenariusza."
+        "description": "Konto 149 'środki pieniężne w drodze' jest wymienione w related_questions, ale nie pojawia się w głównym workflow — należy potwierdzić czy to konto rzeczywiście istnieje w polskim planie kont i czy jest właściwe dla opisanego scenariusza.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących planu kont ani rozporządzenia Ministra Finansów w sprawie szczegółowych zasad rachunkowości, które definiowałoby konto 149 'środki pieniężne w drodze'. Dostępne rekordy (art. 41, 81, 76h UoR) nie są relevantne dla weryfikacji istnienia tego konta. Konto 149 jest powszechnie stosowane w praktyce rachunkowości polskiej jako konto przejściowe dla środków pieniężnych w drodze, jednak nie można tego potwierdzić na podstawie dostępnych materiałów z KB.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:30:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący 'totalnego bałaganu' sugeruje rezygnację z klienta jako opcję — jest to praktyczne, ale procedura nie zawiera wskazówek jak formalnie zakończyć obsługę księgowości w takiej sytuacji (zawiadomienie do organów, dokumentacja dla następcy)."
+        "description": "Edge case dotyczący 'totalnego bałaganu' sugeruje rezygnację z klienta jako opcję — jest to praktyczne, ale procedura nie zawiera wskazówek jak formalnie zakończyć obsługę księgowości w takiej sytuacji (zawiadomienie do organów, dokumentacja dla następcy).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących formalne procedury zakończenia obsługi księgowej przez biuro rachunkowe (np. obowiązki wobec organów podatkowych, przekazanie dokumentacji następcy). Flaga dotyczy luki proceduralnej w drafcie — brak wskazówek jak formalnie zakończyć obsługę — co jest zasadną obserwacją praktyczną, ale KB nie dostarcza ani potwierdzenia ani zaprzeczenia tego wymogu. Weryfikacja wymagałaby sprawdzenia przepisów o usługowym prowadzeniu ksiąg rachunkowych (ustawa o rachunkowości art. 76a-76l) oraz ewentualnych regulacji KRBR.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta domenowego, warto dodać do edge case 'totalny bałagan' wskazówki: (1) pisemne wypowiedzenie umowy z zachowaniem okresu wypowiedzenia, (2) sporządzenie protokołu zdawczo-odbiorczego dokumentacji dla klienta/następcy, (3) poinformowanie klienta o obowiązkach wobec US i ZUS wynikających z art. 4a UoR (odpowiedzialność kierownika jednostki), (4) archiwizacja własnej dokumentacji roboczej zgodnie z art. 74 UoR.",
+        "verified_at": "2026-04-18T12:31:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 6 rozróżnia KUP i NKUP, ale brak procedury weryfikacji czy spełnione są warunki art. 16 ust. 2 ustawy o CIT — draft nie wskazuje jakie dokumenty należy zebrać przed podjęciem decyzji o KUP."
+        "description": "Krok 6 rozróżnia KUP i NKUP, ale brak procedury weryfikacji czy spełnione są warunki art. 16 ust. 2 ustawy o CIT — draft nie wskazuje jakie dokumenty należy zebrać przed podjęciem decyzji o KUP.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga odnosi się do art. 16 ust. 2 ustawy o CIT w kontekście KUP/NKUP, jednak fragment drafta (kroki 1-7) dotyczy wyłącznie korekty bilansu otwarcia, wyksięgowania błędnych sald, inwentaryzacji kasy i rozliczenia przedawnionych należności/zobowiązań — nie zawiera żadnego kroku dotyczącego klasyfikacji kosztów podatkowych (KUP/NKUP). KB potwierdza, że art. 16 ust. 2 ustawy o CIT nie jest objęty żadnym z przytoczonych rekordów, a sam draft nie porusza tematyki kosztów uzyskania przychodów w cytowanym fragmencie. Flaga wydaje się odnosić do innego kroku (prawdopodobnie kroku 6 dotyczącego przedawnionych zobowiązań jako przychodów), ale nawet tam draft nie klasyfikuje KUP/NKUP — mówi o przychodach operacyjnych (MA 760), nie o kosztach podatkowych.",
+        "verifier_confidence": 0.82,
+        "verified_at": "2026-04-18T12:31:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Odwołanie do 'art. 12 ust. 1 pkt 3 lit. a ustawy o CIT' — numery artykułów w ustawie o CIT mogły ulec zmianie; należy zweryfikować czy te numery są aktualne dla 2026 roku."
+        "description": "Odwołanie do 'art. 12 ust. 1 pkt 3 lit. a ustawy o CIT' — numery artykułów w ustawie o CIT mogły ulec zmianie; należy zweryfikować czy te numery są aktualne dla 2026 roku.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga dotyczy 'art. 12 ust. 1 pkt 3 lit. a ustawy o CIT', jednak analizowany fragment drafta w sekcji LEGAL_ANCHORS i ANSWER_STEPS nie zawiera żadnego odwołania do tego konkretnego przepisu. Draft odwołuje się wyłącznie do Ustawy o rachunkowości (art. 54, art. 26, art. 18, art. 4a) oraz art. 118 KC. Flaga wydaje się być skierowana do niewłaściwego fragmentu lub dotyczy innej części dokumentu niewidocznej w tym fragmencie.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Należy zweryfikować, czy odwołanie do 'art. 12 ust. 1 pkt 3 lit. a ustawy o CIT' pojawia się w innej części draftu (np. w krokach niewidocznych w tym fragmencie). Jeśli tak, wówczas flaga powinna być przypisana do tamtego fragmentu i zweryfikowana osobno.",
+        "verified_at": "2026-04-18T12:31:20Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 5 mówi 'NIE księguj fikcyjnych KW z nieistniejącej kasy', ale wcześniej (krok 1) procedura wymaga wydruku 'raportów kasowych' — jeśli kasa nie istnieje, jakie raporty kasowe mają być wydrukowane?"
+        "description": "Krok 5 mówi 'NIE księguj fikcyjnych KW z nieistniejącej kasy', ale wcześniej (krok 1) procedura wymaga wydruku 'raportów kasowych' — jeśli kasa nie istnieje, jakie raporty kasowe mają być wydrukowane?",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga opiera się na błędnym założeniu, że 'raporty kasowe' w kroku 1 odnoszą się wyłącznie do fizycznej kasy. Krok 1 mówi o 'zestawieniu obrotów i sald' oraz 'listę nierozliczonych pozycji' — są to standardowe raporty księgowe z systemu (Comarch Optima, Symfonia FK), a nie raporty kasowe sensu stricto. Krok 5 natomiast precyzuje, że jeśli kasy faktycznie nie było, nie należy księgować fikcyjnych KW — co jest logicznie spójne: wydruk zestawień z systemu jest możliwy nawet gdy saldo kasy jest fikcyjne (właśnie po to, by zidentyfikować i skorygować błąd). Nie ma tu sprzeczności merytorycznej.",
+        "verifier_confidence": 0.82,
+        "verified_at": "2026-04-18T12:31:26Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Procedura nie zawiera kroku dotyczącego weryfikacji czy poprzednie biuro rachunkowe miało prawo do prowadzenia ksiąg (czy posiadało wpis do rejestru biur rachunkowych) — może to mieć znaczenie dla oceny rzetelności przejmowanych ksiąg."
+        "description": "Procedura nie zawiera kroku dotyczącego weryfikacji czy poprzednie biuro rachunkowe miało prawo do prowadzenia ksiąg (czy posiadało wpis do rejestru biur rachunkowych) — może to mieć znaczenie dla oceny rzetelności przejmowanych ksiąg.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących rejestru biur rachunkowych ani wymogów weryfikacji uprawnień poprzedniego biura rachunkowego. Flaga odnosi się do potencjalnego wymogu sprawdzenia wpisu do rejestru biur rachunkowych, jednak ustawa o rachunkowości (w dostępnych rekordach KB) nie reguluje tej kwestii wprost. Warto odnotować, że od 2014 roku obowiązek wpisu do rejestru biur rachunkowych został zniesiony — usługowe prowadzenie ksiąg rachunkowych jest wolnym zawodem, więc flaga może być oparta na nieaktualnym założeniu.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga ma być uwzględniona, należy dodać notę wyjaśniającą, że od 2014 roku (deregulacja zawodów) nie istnieje rejestr biur rachunkowych jako wymóg formalny — weryfikacja uprawnień poprzedniego biura nie jest krokiem wymaganym prawnie, choć ocena rzetelności ksiąg pozostaje zasadna i jest już objęta krokami 1-4 procedury.",
+        "verified_at": "2026-04-18T12:31:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "low",
-        "description": "Odwołanie do 'art. 118 KC' dotyczące przedawnienia zobowiązań — należy potwierdzić czy to prawidłowy artykuł i czy przepisy KC dotyczące przedawnienia są właściwe dla zobowiązań handlowych (mogą być inne terminy w ustawach szczególnych)."
+        "description": "Odwołanie do 'art. 118 KC' dotyczące przedawnienia zobowiązań — należy potwierdzić czy to prawidłowy artykuł i czy przepisy KC dotyczące przedawnienia są właściwe dla zobowiązań handlowych (mogą być inne terminy w ustawach szczególnych).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 118 KC, więc nie można bezpośrednio potwierdzić ani obalić poprawności cytowania. Jednak art. 118 KC rzeczywiście reguluje ogólne terminy przedawnienia (w tym 3-letni dla roszczeń związanych z działalnością gospodarczą), co jest powszechnie znane. Flaga słusznie zwraca uwagę, że dla zobowiązań handlowych mogą obowiązywać terminy szczególne (np. 2 lata dla roszczeń z umowy sprzedaży konsumenckiej, inne w prawie wekslowym itp.), jednak w kontekście typowych zobowiązań B2B art. 118 KC jest właściwą podstawą.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto doprecyzować w drafcie, że art. 118 KC stosuje się jako zasadę ogólną, ale należy każdorazowo zweryfikować czy dla danego rodzaju zobowiązania nie obowiązuje termin szczególny (np. art. 554 KC dla roszczeń z umowy sprzedaży — 2 lata, art. 646 KC dla umowy o dzieło — 2 lata). Dodanie takiego zastrzeżenia zwiększy precyzję prawną dokumentu.",
+        "verified_at": "2026-04-18T12:31:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

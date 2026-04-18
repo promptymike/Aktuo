@@ -121,52 +121,121 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Artykuły ustawy o VAT (art. 106nd ust. 2 pkt 1-6 i 11) oraz rozporządzenia (§ 6-8) są przytaczane bez pełnych tytułów rozporządzenia i bez weryfikacji czy numery paragrafów odpowiadają rzeczywistej strukturze aktu. Brak linku do tekstu ustawy/rozporządzenia utrudnia weryfikację."
+        "description": "Artykuły ustawy o VAT (art. 106nd ust. 2 pkt 1-6 i 11) oraz rozporządzenia (§ 6-8) są przytaczane bez pełnych tytułów rozporządzenia i bez weryfikacji czy numery paragrafów odpowiadają rzeczywistej strukturze aktu. Brak linku do tekstu ustawy/rozporządzenia utrudnia weryfikację.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekordy KB (rec 1 i rec 2) potwierdzają dokładnie te same numery artykułów i paragrafów co draft: art. 106nd ust. 2 pkt 1-6 i 11 ustawy o VAT oraz § 6 ust. 1, § 7 ust. 1-2 i § 8 rozporządzenia. Struktura numeracji jest zgodna z KB, co wskazuje że cytowania są poprawne. Brak pełnego tytułu rozporządzenia w drafcie jest niedoskonałością redakcyjną, ale KB potwierdza że numery paragrafów odpowiadają rzeczywistej strukturze aktu.",
+        "verifier_confidence": 0.82,
+        "corrective_suggestion": "Dla kompletności warto uzupełnić pełny tytuł rozporządzenia (np. 'Rozporządzenie Ministra Finansów z dnia ... w sprawie korzystania z Krajowego Systemu e-Faktur') wraz z numerem Dz.U., jednak sama numeracja artykułów i paragrafów jest prawidłowa.",
+        "verified_at": "2026-04-18T12:47:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera wiele dat granicznych (1.11.2025, 31.01.2026, 1.02.2026, 1.01.2026, 1.01.2027) jako fakty pewne, ale dokument jest datowany 2026-04-18 — te daty już minęły i nie można zweryfikować czy rzeczywiście miały miejsce przejścia systemowe opisane w krokach 2 i 6. Wymaga potwierdzenia czy procedura jest aktualna dla 2026."
+        "description": "Draft zawiera wiele dat granicznych (1.11.2025, 31.01.2026, 1.02.2026, 1.01.2026, 1.01.2027) jako fakty pewne, ale dokument jest datowany 2026-04-18 — te daty już minęły i nie można zweryfikować czy rzeczywiście miały miejsce przejścia systemowe opisane w krokach 2 i 6. Wymaga potwierdzenia czy procedura jest aktualna dla 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą JPK_VAT i faktur korygujących, a nie harmonogramu wdrożenia KSeF ani dat przejścia między MCU a Aplikacją Podatnika KSeF 2.0. KB nie zawiera przepisów regulujących daty 1.11.2025, 31.01.2026, 1.02.2026 ani harmonogram migracji systemu, więc nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Flaga jest merytorycznie zasadna jako ryzyko — dokument datowany 2026-04-18 opisuje daty przejść systemowych, które już minęły, a KB nie pozwala zweryfikować ich aktualności.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać do draftu zastrzeżenie, że daty przejść systemowych (MCU → Aplikacja Podatnika KSeF 2.0) należy zweryfikować z aktualnym komunikatem Ministerstwa Finansów, ponieważ harmonogram wdrożenia KSeF był wielokrotnie zmieniany. Wskazać źródło weryfikacji: ksef.mf.gov.pl lub oficjalne komunikaty MF.",
+        "verified_at": "2026-04-18T12:48:00Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 4 mówi że uprawnienia nadane przez klienta dla podmiotu-biura 'NIE dają automatycznie dostępu pracownikom', ale krok 3 sugeruje że klient nadaje uprawnienie 'biuru rachunkowemu' — niejasne czy pracownicy biura mają dostęp czy nie i kiedy dokładnie muszą być subdelegowane uprawnienia."
+        "description": "Krok 4 mówi że uprawnienia nadane przez klienta dla podmiotu-biura 'NIE dają automatycznie dostępu pracownikom', ale krok 3 sugeruje że klient nadaje uprawnienie 'biuru rachunkowemu' — niejasne czy pracownicy biura mają dostęp czy nie i kiedy dokładnie muszą być subdelegowane uprawnienia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera art. 106nd ust. 2 pkt 1-6 potwierdzający istnienie systemu uprawnień w KSeF, ale nie precyzuje mechanizmu subdelegacji uprawnień przez podmiot (biuro rachunkowe) do jego pracowników. Flaga dotyczy logiki wewnętrznej draftu (sprzeczność między krokiem 3 a 4), a nie bezpośrednio treści przepisów — KB nie dostarcza wystarczających danych by potwierdzić lub obalić czy opisany mechanizm subdelegacji jest poprawny lub sprzeczny.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Warto doprecyzować w drafcie: (1) że uprawnienia nadane przez klienta dla NIP biura rachunkowego NIE dają automatycznie dostępu pracownikom biura, (2) że krok 4 jest ZAWSZE wymagany gdy biuro jest spółką, oraz (3) dodać wyraźną notę przy kroku 3 że nadanie uprawnień podmiotowi (NIP biura) to warunek konieczny, ale niewystarczający — biuro musi następnie subdelegować dostęp swoim pracownikom/certyfikatom.",
+        "verified_at": "2026-04-18T12:48:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brak wyjaśnienia procedury subdelegacji uprawnień w kroku 4 — dokładnie jakie kroki musi wykonać biuro aby pracownicy mieli dostęp do faktur klienta. Czy subdelegacja to osobny proces w MCU czy automatyczne?"
+        "description": "Brak wyjaśnienia procedury subdelegacji uprawnień w kroku 4 — dokładnie jakie kroki musi wykonać biuro aby pracownicy mieli dostęp do faktur klienta. Czy subdelegacja to osobny proces w MCU czy automatyczne?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera szczegółowych przepisów regulujących procedurę subdelegacji uprawnień wewnątrz podmiotu (biura rachunkowego) w KSeF. Art. 106nd ust. 2 pkt 1-6 i 11 ustawy o VAT jedynie ogólnie wskazuje, że KSeF służy do nadawania/zmiany/odbierania uprawnień, ale nie precyzuje mechanizmu subdelegacji. Draft w kroku 4 opisuje ogólnie że biuro 'nadaje uprawnienia konkretnym pracownikom/certyfikatom', jednak bez szczegółów technicznych procesu — flaga wskazuje na brak tych szczegółów, co jest kwestią merytoryczną/techniczną, której KB nie pokrywa wystarczająco.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy sięgnąć do dokumentacji technicznej MCU/Aplikacji Podatnika KSeF 2.0 (MF) lub rozporządzenia wykonawczego w sprawie korzystania z KSeF — KB nie dostarcza wystarczających danych do potwierdzenia lub odrzucenia flagi.",
+        "verified_at": "2026-04-18T12:48:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 5 wspomina 'tryb offline24' — ta terminologia nie jest standardowa w dokumentacji KSeF; powinna być 'tryb offline' lub 'tryb awaryjny'. Brak pewności czy 'offline24' to rzeczywista nazwa funkcji czy błąd AI."
+        "description": "Krok 5 wspomina 'tryb offline24' — ta terminologia nie jest standardowa w dokumentacji KSeF; powinna być 'tryb offline' lub 'tryb awaryjny'. Brak pewności czy 'offline24' to rzeczywista nazwa funkcji czy błąd AI.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących terminologii KSeF, certyfikatów ani trybu offline/awaryjnego. Fragment drafta w kroku 5 wspomina 'offline / podpis linku weryfikacji wystawcy' jako opis certyfikatu typ 2, ale nie używa wprost terminu 'offline24'. Flaga odnosi się do terminu 'offline24' który nie jest widoczny w przytoczonym fragmencie drafta — możliwe że pochodzi z innej części dokumentu. Bez dostępu do dokumentacji technicznej KSeF nie można potwierdzić ani obalić czy 'offline24' to oficjalna nazwa funkcji.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli termin 'offline24' pojawia się w drafcie, należy go zastąpić oficjalną terminologią z dokumentacji KSeF MF — prawdopodobnie 'tryb offline' lub 'tryb awaryjny KSeF'. Warto zweryfikować bezpośrednio w dokumentacji technicznej KSeF dostępnej na stronie podatki.gov.pl.",
+        "verified_at": "2026-04-18T12:48:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Edge case wspomina koszt pieczęci kwalifikowanej 'ok. 400–2000 zł rocznie' — brak źródła dla tej kwoty i może być nieaktualna dla 2026. Ceny usług kryptograficznych mogą się zmieniać."
+        "description": "Edge case wspomina koszt pieczęci kwalifikowanej 'ok. 400–2000 zł rocznie' — brak źródła dla tej kwoty i może być nieaktualna dla 2026. Ceny usług kryptograficznych mogą się zmieniać.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących cen pieczęci kwalifikowanych ani usług kryptograficznych. Flaga dotyczy kwestii rynkowej (cennik dostawców usług zaufania), a nie przepisów prawnych, więc KB oparta na ustawach polskich nie jest właściwym źródłem do weryfikacji tej kwoty. Sama flaga jest merytorycznie zasadna — ceny usług kryptograficznych mogą się zmieniać i brak źródła dla podanego przedziału 400–2000 zł jest rzeczywistą luką, ale nie można tego potwierdzić ani obalić na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Dodać zastrzeżenie przy kwocie, np. 'orientacyjnie ok. 400–2000 zł rocznie (ceny wg ofert dostawców na 2024/2025 r. — należy zweryfikować aktualny cennik wybranego dostawcy)' lub usunąć konkretną kwotę i zastąpić ją odesłaniem do aktualnych cenników dostawców kwalifikowanych usług zaufania (np. Certum, EuroCert, Sigillum).",
+        "verified_at": "2026-04-18T12:48:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Krok 6 mówi że 'od 1.01.2027 tokeny wygasają' — dokument jest datowany 2026-04-18, więc ta data jest w przyszłości, ale nie ma potwierdzenia czy ta zmiana rzeczywiście wejdzie w życie ani czy nie będzie przesunięta."
+        "description": "Krok 6 mówi że 'od 1.01.2027 tokeny wygasają' — dokument jest datowany 2026-04-18, więc ta data jest w przyszłości, ale nie ma potwierdzenia czy ta zmiana rzeczywiście wejdzie w życie ani czy nie będzie przesunięta.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących tokenów KSeF, ich ważności ani planowanych zmian od 1.01.2027. Trzy dostarczone rekordy dotyczą zupełnie innych kwestii (art. 82a, 86, 86a ustawy o VAT). Nie można ani potwierdzić, ani obalić twierdzenia o wygasaniu tokenów od 1.01.2027 na podstawie dostępnych materiałów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy sprawdzić aktualne rozporządzenia MF dotyczące KSeF oraz komunikaty Ministerstwa Finansów w sprawie harmonogramu wdrożenia KSeF i planowanych zmian w zakresie tokenów. Warto dodać w drafcie zastrzeżenie, że termin 1.01.2027 może ulec zmianie i należy weryfikować aktualne komunikaty MF.",
+        "verified_at": "2026-04-18T12:48:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Krok 7 wspomina 'Test połączenia' w Comarch Optima ale nie wyjaśnia co zrobić jeśli test się nie powiedzie — brak procedury troubleshootingu poza wymienionymi przyczynami."
+        "description": "Krok 7 wspomina 'Test połączenia' w Comarch Optima ale nie wyjaśnia co zrobić jeśli test się nie powiedzie — brak procedury troubleshootingu poza wymienionymi przyczynami.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku procedury troubleshootingu dla testu połączenia w Comarch Optima — jest to kwestia techniczna/proceduralną dotycząca oprogramowania, a nie zagadnienie prawne. Rekordy z KB dotyczą przepisów VAT (art. 106b, 120 ust. 4, 86 ust. 10b) i nie zawierają żadnych informacji o procedurach technicznych KSeF ani Comarch Optima. KB nie pokrywa tego tematu, więc nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych źródeł.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Jeśli flaga zostanie uznana za zasadną, warto dodać do kroku 7 podpunkt z najczęstszymi przyczynami błędów testu połączenia (np. nieprawidłowy certyfikat, brak uprawnień w KSeF, błędny NIP kontekstu) oraz wskazać gdzie szukać pomocy (logi Comarch Optima, infolinia MF, dokumentacja API KSeF).",
+        "verified_at": "2026-04-18T12:48:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o spółce cywilnej z ZAW-FA opisuje problem ale rozwiązanie ('master nadaje SOBIE samemu uprawnienia') brzmi jak workaround — niejasne czy to oficjalna procedura MF czy empirycznie odkryta praktyka."
+        "description": "Edge case o spółce cywilnej z ZAW-FA opisuje problem ale rozwiązanie ('master nadaje SOBIE samemu uprawnienia') brzmi jak workaround — niejasne czy to oficjalna procedura MF czy empirycznie odkryta praktyka.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących procedurę techniczną nadawania uprawnień w MCU ani mechanizmu 'master nadaje sobie samemu uprawnienia' dla spółki cywilnej z ZAW-FA. Dostępne rekordy (art. 106gb ust. 3, § 2-3 ustawy o VAT) dotyczą ogólnych zasad uwierzytelniania i uprawnień, ale nie opisują tej konkretnej ścieżki. Flaga jest merytorycznie zasadna jako pytanie o źródło tej praktyki — nie można jej ani potwierdzić, ani obalić na podstawie dostępnych danych z KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać adnotację przy tym edge case wskazującą źródło informacji (np. 'zgodnie z dokumentacją techniczną MF / praktyką potwierdzoną przez helpdesk KSeF / komunikatem MF z dnia X') lub oznaczyć jako 'praktyka empiryczna — do weryfikacji z MF', aby użytkownik wiedział, że nie jest to procedura wprost wynikająca z przepisów prawa.",
+        "verified_at": "2026-04-18T12:48:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "low",
-        "description": "Artykuły 18a–18d ustawy o VAT są przytaczane jako źródło dla 'przedstawicielstwa podatkowego' ale bez pełnego cytatu — brak weryfikacji czy te artykuły rzeczywiście dotyczą wyłącznie podatników zagranicznych."
+        "description": "Artykuły 18a–18d ustawy o VAT są przytaczane jako źródło dla 'przedstawicielstwa podatkowego' ale bez pełnego cytatu — brak weryfikacji czy te artykuły rzeczywiście dotyczą wyłącznie podatników zagranicznych.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga dotyczy art. 18a–18d ustawy o VAT jako źródła dla 'przedstawicielstwa podatkowego', jednak w analizowanym fragmencie drafta te artykuły w ogóle nie są przytaczane — LEGAL_ANCHORS zawierają wyłącznie art. 106nd ust. 2 pkt 1-6 i 11 oraz przepisy rozporządzenia KSeF. W treści kroków pojawia się wzmianka o 'przedstawicielu podatkowym' jedynie jako negatywne rozróżnienie ('nie jako przedstawicielowi podatkowemu!'), bez powoływania się na art. 18a–18d. Flaga odnosi się do elementu, który nie istnieje w analizowanym fragmencie.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:49:01Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

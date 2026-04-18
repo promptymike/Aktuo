@@ -123,57 +123,131 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 1401 KP (ruchomy rozkład) wymieniony w step 1 - numer artykułu wygląda nieprawdopodobnie (brak takiego artykułu w KP). Powinno być art. 140 KP lub inne przepisy dotyczące rozkładu czasu pracy."
+        "description": "Art. 1401 KP (ruchomy rozkład) wymieniony w step 1 - numer artykułu wygląda nieprawdopodobnie (brak takiego artykułu w KP). Powinno być art. 140 KP lub inne przepisy dotyczące rozkładu czasu pracy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy art. 140¹ KP (ruchomy rozkład czasu pracy), jednak w analizowanym fragmencie drafta nie ma bezpośredniego odwołania do art. 140¹ KP - fragment zawiera odwołania do art. 129, 130, 135, 136, 137, 131, 132, 133, 149, 151, 151¹, 151³ KP. Artykuł 140¹ KP faktycznie istnieje w Kodeksie pracy (dotyczy ruchomego rozkładu czasu pracy, dodany nowelizacją z 2013 r.), więc sama flaga o 'nieprawdopodobnym numerze' może być błędna. KB nie zawiera rekordu potwierdzającego ani zaprzeczającego istnieniu art. 140¹ KP, a flaga odnosi się do 'step 1' który w dostępnym fragmencie nie zawiera tego artykułu.",
+        "verifier_confidence": 0.55,
+        "verified_at": "2026-04-18T12:23:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 1511 KP i art. 1513 KP cytowane w step 4 i 6 - numery artykułów wyglądają nieprawdopodobnie (KP nie ma artykułów powyżej 300). Prawidłowe to art. 151 KP (nadgodziny) i art. 151a KP (praca w dni wolne)."
+        "description": "Art. 1511 KP i art. 1513 KP cytowane w step 4 i 6 - numery artykułów wyglądają nieprawdopodobnie (KP nie ma artykułów powyżej 300). Prawidłowe to art. 151 KP (nadgodziny) i art. 151a KP (praca w dni wolne).",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Artykuły 151¹ KP i 151³ KP to standardowe oznaczenia artykułów z indeksem górnym (superscript) w Kodeksie pracy - są to art. 151¹ (dodatki za nadgodziny) i art. 151³ (dzień wolny za pracę w dniu wolnym z tytułu 5-dniowego tygodnia). KP posiada wiele artykułów z indeksami (np. art. 151, 151¹, 151², 151³, 151⁴, 151⁵), co jest typową techniką legislacyjną przy nowelizacjach. Flaga błędnie interpretuje zapis '1511' i '1513' jako liczby czterocyfrowe, podczas gdy są to artykuły 151 z indeksem górnym 1 i 3. KB nie zawiera bezpośrednio tych artykułów, ale kontekst draftu (dodatek 50%/100% za nadgodziny, dzień wolny za sobotę) jest zgodny z powszechnie znanymi przepisami art. 151¹ i 151³ KP.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Dla uniknięcia niejednoznaczności w przyszłości warto zapisywać artykuły z indeksem górnym jako 'art. 151¹ KP' zamiast 'art. 1511 KP', aby odróżnić je od hipotetycznych artykułów czterocyfrowych.",
+        "verified_at": "2026-04-18T12:23:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 15111 KP wymieniony w related_questions - taki artykuł nie istnieje w Kodeksie pracy. Przepisy o pracy w niedzielę/święto to art. 151a KP, a nie art. 15111 KP."
+        "description": "Art. 15111 KP wymieniony w related_questions - taki artykuł nie istnieje w Kodeksie pracy. Przepisy o pracy w niedzielę/święto to art. 151a KP, a nie art. 15111 KP.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 151¹¹ KP ani art. 151a KP (praca w niedzielę/święto), więc nie można jednoznacznie potwierdzić ani obalić flagi na podstawie dostępnych danych. Flaga dotyczy sekcji 'related_questions' drafta, która nie jest widoczna w przedstawionym fragmencie - nie można ocenić czy art. 151¹¹ faktycznie tam figuruje. Warto jednak odnotować, że w polskim KP numeracja 'art. 151¹¹' jest niestandardowa i budzi uzasadnione wątpliwości.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Zweryfikować ręcznie czy w sekcji related_questions drafta faktycznie pojawia się art. 151¹¹ KP. Jeśli tak, należy sprawdzić aktualny tekst KP - przepisy o pracy w niedzielę i święta reguluje art. 151¹⁰ i art. 151¹¹ KP (dodane nowelizacją), przy czym art. 151a KP dotyczy systemu skróconego tygodnia pracy. Wymaga weryfikacji w aktualnym tekście ujednoliconym KP.",
+        "verified_at": "2026-04-18T12:23:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Rozporządzenie MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej (step 3) - wymaga weryfikacji czy w 2026 nie zostało zmienione lub zastąpione nowszym rozporządzeniem dotyczącym ewidencji czasu pracy."
+        "description": "Rozporządzenie MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej (step 3) - wymaga weryfikacji czy w 2026 nie zostało zmienione lub zastąpione nowszym rozporządzeniem dotyczącym ewidencji czasu pracy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera art. 298 KP, który wskazuje delegację ustawową dla ministra właściwego ds. pracy do wydania rozporządzenia w sprawie dokumentacji pracowniczej, co potwierdza istnienie podstawy prawnej dla rozporządzenia MRPiPS z 10.12.2018. Jednak KB nie zawiera samego rozporządzenia ani jego ewentualnych nowelizacji, więc nie można zweryfikować czy rozporządzenie z 2018 r. pozostaje aktualne w 2026 r. i czy § 6 dotyczący ewidencji czasu pracy nie został zmieniony.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Zaleca się weryfikację aktualności rozporządzenia MRPiPS z 10.12.2018 r. (Dz.U. 2018 poz. 2369) w bazie ISAP lub Dzienniku Ustaw pod kątem ewentualnych nowelizacji. Jeśli rozporządzenie było zmieniane, należy zaktualizować odniesienie do właściwego paragrafu i daty tekstu jednolitego lub nowelizacji.",
+        "verified_at": "2026-04-18T12:24:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 5 dotyczy tylko niepełnoetatowców, ale brakuje analogicznego kroku dla pracowników na pełnym etacie zatrudnionych w systemie równoważnym - czy limit godzin powinien być również ustalony w umowie dla nich?"
+        "description": "Step 5 dotyczy tylko niepełnoetatowców, ale brakuje analogicznego kroku dla pracowników na pełnym etacie zatrudnionych w systemie równoważnym - czy limit godzin powinien być również ustalony w umowie dla nich?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera art. 151 § 5 KP ani art. 135 KP w pełnym brzmieniu, które pozwoliłyby zweryfikować, czy dla pracowników pełnoetatowych w systemie równoważnym istnieje analogiczny wymóg umownego ustalenia limitu godzin. Flaga podnosi kwestię merytoryczną - art. 151 § 5 KP dotyczy wyłącznie niepełnoetatowców i nie ma analogicznego przepisu dla pełnoetatowców w równoważnym, więc brak takiego kroku w drafcie może być celowy i poprawny, ale nie można tego jednoznacznie potwierdzić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:24:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 2 mówi że harmonogram może być na okres krótszy niż okres rozliczeniowy (ale nie krótszy niż 1 miesiąc), ale step 1 wspomina okresy rozliczeniowe do 1 miesiąca w systemie równoważnym - niejasne czy harmonogram 1-miesięczny spełnia wymóg 'nie krótszy niż 1 miesiąc'."
+        "description": "Step 2 mówi że harmonogram może być na okres krótszy niż okres rozliczeniowy (ale nie krótszy niż 1 miesiąc), ale step 1 wspomina okresy rozliczeniowe do 1 miesiąca w systemie równoważnym - niejasne czy harmonogram 1-miesięczny spełnia wymóg 'nie krótszy niż 1 miesiąc'.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga wskazuje na sprzeczność między step 1 (okresy rozliczeniowe do 1 miesiąca w systemie równoważnym) a step 2 (harmonogram nie krótszy niż 1 miesiąc). Jednak nie ma tu faktycznej sprzeczności: harmonogram 1-miesięczny spełnia wymóg 'nie krótszy niż 1 miesiąc' - jest dokładnie równy minimalnemu wymaganiu. Art. 135 KP potwierdza, że okres rozliczeniowy w systemie równoważnym wynosi do 1 miesiąca (lub do 3 miesięcy w szczególnych przypadkach), co jest spójne z harmonogramem 1-miesięcznym. Wymóg z art. 129 § 3 KP (harmonogram nie krótszy niż 1 miesiąc) jest kompatybilny z 1-miesięcznym okresem rozliczeniowym.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:24:15Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Step 3 wspomina konkretne moduły w systemach (Comarch Optima, Symfonia, enova365) - wymaga weryfikacji czy te funkcjonalności rzeczywiście istnieją i czy nazwy modułów są aktualne dla 2026."
+        "description": "Step 3 wspomina konkretne moduły w systemach (Comarch Optima, Symfonia, enova365) - wymaga weryfikacji czy te funkcjonalności rzeczywiście istnieją i czy nazwy modułów są aktualne dla 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy weryfikacji konkretnych modułów w systemach Comarch Optima, Symfonia i enova365, jednak fragment drafta przedstawiony do weryfikacji (LEGAL_ANCHORS i ANSWER_STEPS) nie zawiera żadnych wzmianek o tych systemach ani ich modułach. Rekordy z KB dotyczą przepisów Kodeksu pracy i nie pokrywają tematyki oprogramowania kadrowo-płacowego. Nie można potwierdzić ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Jeśli w innej części drafta (np. step 3 lub dodatkowe wskazówki) faktycznie wymieniono konkretne nazwy modułów systemów kadrowych, należy albo usunąć te nazwy i zastąpić ogólnym opisem funkcjonalności, albo dodać zastrzeżenie że nazwy modułów mogą się różnić w zależności od wersji oprogramowania i należy je zweryfikować z aktualną dokumentacją producenta.",
+        "verified_at": "2026-04-18T12:24:22Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje wyjaśnienia jak rozliczać pracę w niedzielę (art. 151a KP) - draft skupia się na sobocie i dniu wolnym z 5-dniowego tygodnia, ale nie porusza pracy w niedzielę i wymaganych dodatków."
+        "description": "Brakuje wyjaśnienia jak rozliczać pracę w niedzielę (art. 151a KP) - draft skupia się na sobocie i dniu wolnym z 5-dniowego tygodnia, ale nie porusza pracy w niedzielę i wymaganych dodatków.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "KB potwierdza istnienie odrębnych regulacji dla pracy w niedzielę: art. 151¹¹ KP nakłada obowiązek zapewnienia dnia wolnego w zamian za pracę w niedzielę w ciągu 6 dni kalendarzowych poprzedzających lub następujących po tej niedzieli (inny tryb niż dla dnia wolnego z 5-dniowego tygodnia), a art. 151¹ § 1 pkt 1b KP przewiduje dodatek 100% za nadgodziny w niedziele niebędące dla pracownika dniami pracy. Draft w step 6 omawia wyłącznie sobotę/dzień wolny z 5-dniowego tygodnia (art. 151³ KP), pomijając całkowicie odrębny reżim rozliczania pracy w niedzielę (art. 151¹¹ KP) i związane z tym terminy oddania dnia wolnego.",
+        "verifier_confidence": 0.82,
+        "corrective_suggestion": "Dodać step 6a (lub rozszerzyć step 6): 'Rozlicz pracę w niedzielę oddaniem dnia wolnego w ciągu 6 dni kalendarzowych poprzedzających lub następujących po tej niedzieli (art. 151¹¹ § 1 pkt 1 KP); jeśli nie jest to możliwe – wypłać dodatek 100% wynagrodzenia. Pamiętaj, że praca w niedzielę w godzinach nadliczbowych uprawnia do dodatku 100% z art. 151¹ § 1 pkt 1b KP.'",
+        "verified_at": "2026-04-18T12:24:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o pracowniku z orzeczeniem o niepełnosprawności (35h/tydzień) - wymaga weryfikacji czy art. 15 ustawy o rehabilitacji jest prawidłowym odniesieniem i czy przepisy nie uległy zmianie."
+        "description": "Edge case o pracowniku z orzeczeniem o niepełnosprawności (35h/tydzień) - wymaga weryfikacji czy art. 15 ustawy o rehabilitacji jest prawidłowym odniesieniem i czy przepisy nie uległy zmianie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 15 ustawy o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych. Dostępne rekordy dotyczą art. 15 KP (BHP), art. 142¹ KP (elastyczny czas pracy) oraz art. 15 ustawy o VAT - żaden nie potwierdza ani nie zaprzecza treści art. 15 ustawy o rehabilitacji w zakresie skróconego czasu pracy 7h/35h dla osób z umiarkowanym/znacznym stopniem niepełnosprawności. Flaga wskazuje na potencjalną zmianę przepisów, której nie można zweryfikować na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zweryfikować aktualną treść art. 15 ustawy z dnia 27 sierpnia 1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych (Dz.U. z 2023 r. poz. 100 ze zm.) - w szczególności czy norma 7h/35h dla stopnia umiarkowanego i znacznego nadal obowiązuje bez zmian, oraz czy warunek zniesienia ograniczenia przez lekarza medycyny pracy jest prawidłowo opisany (ustawa mówi o lekarzu przeprowadzającym badania profilaktyczne lub lekarzu sprawującym opiekę nad osobą niepełnosprawną).",
+        "verified_at": "2026-04-18T12:24:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje kroku dotyczącego rozliczenia czasu pracy w systemie przerywanym (art. 139 KP) wymienionego w step 1 - draft nie wyjaśnia jak ewidencjonować i rozliczać pracę w tym systemie."
+        "description": "Brakuje kroku dotyczącego rozliczenia czasu pracy w systemie przerywanym (art. 139 KP) wymienionego w step 1 - draft nie wyjaśnia jak ewidencjonować i rozliczać pracę w tym systemie.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga sugeruje brak wyjaśnienia rozliczenia systemu przerywanego (art. 139 KP), jednak draft w step 1 jedynie wymienia systemy czasu pracy jako punkt wyjścia do ustalenia systemu - nie jest to workflow dedykowany wyłącznie systemowi przerywanemu. Draft obejmuje ogólne zasady ewidencji i rozliczania czasu pracy wspólne dla wszystkich systemów (steps 3-4). System przerywany jest jednym z wielu możliwych systemów i jego specyfika (przerwa do 5h, wynagrodzenie za przerwę w wys. 50%) mogłaby być uwzględniona jako warunek wariantowy, ale brak tego szczegółu nie stanowi krytycznego braku - draft nie pretenduje do wyczerpującego opisu każdego systemu z osobna.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Opcjonalnie można dodać w step 1 lub jako osobny step warunkowy (if system przerywany): informację że przerwa do 5h nie wlicza się do czasu pracy, ale pracownikowi przysługuje 50% wynagrodzenia za przestój (art. 139 § 1 KP), co należy uwzględnić w ewidencji i rozliczeniu wynagrodzenia.",
+        "verified_at": "2026-04-18T12:24:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Step 6 mówi że za pracę w sobotę należy oddać 'cały dzień wolny' - niejasne czy oznacza to dokładnie 8 godzin czy rzeczywisty wymiar dnia wolnego pracownika (który może być inny dla niepełnoetatowca)."
+        "description": "Step 6 mówi że za pracę w sobotę należy oddać 'cały dzień wolny' - niejasne czy oznacza to dokładnie 8 godzin czy rzeczywisty wymiar dnia wolnego pracownika (który może być inny dla niepełnoetatowca).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 151³ KP, który jest kluczowy dla weryfikacji tej flagi. Flaga dotyczy zasadnej wątpliwości interpretacyjnej: art. 151³ KP mówi o oddaniu 'dnia wolnego', ale nie precyzuje wprost czy chodzi o 8 godzin czy o wymiar dnia wolnego pracownika. Dla niepełnoetatowca kwestia ta może być niejednoznaczna, jednak bez treści art. 151³ w KB nie można jednoznacznie potwierdzić ani odrzucić flagi.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto doprecyzować w step 6, że 'cały dzień wolny' oznacza dzień wolny od pracy (bez wskazywania konkretnej liczby godzin), a dla niepełnoetatowców należy odwołać się do ich indywidualnego rozkładu czasu pracy i wymiaru dnia pracy wynikającego z umowy.",
+        "verified_at": "2026-04-18T12:24:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

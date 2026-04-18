@@ -121,57 +121,131 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 39 ust. 1 ustawy o PIT odnosi się do obowiązku wystawienia PIT-11, ale nie wprost reguluje obowiązek korekty — powołanie na art. 81 Ordynacji podatkowej jest bardziej precyzyjne, jednak brakuje odniesienia do konkretnych przepisów o procedurze korekty PIT-11 (np. art. 39 ust. 4 lub rozporządzenia wykonawczego)."
+        "description": "Art. 39 ust. 1 ustawy o PIT odnosi się do obowiązku wystawienia PIT-11, ale nie wprost reguluje obowiązek korekty — powołanie na art. 81 Ordynacji podatkowej jest bardziej precyzyjne, jednak brakuje odniesienia do konkretnych przepisów o procedurze korekty PIT-11 (np. art. 39 ust. 4 lub rozporządzenia wykonawczego).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza, że art. 39 ust. 1 ustawy o PIT nakłada obowiązek wystawienia PIT-11, a art. 81 Ordynacji podatkowej reguluje prawo do korekty deklaracji — oba powołania są merytorycznie uzasadnione. Flaga wskazuje na brak odniesienia do art. 39 ust. 4 lub rozporządzenia wykonawczego dotyczącego procedury korekty PIT-11, jednak KB nie zawiera treści art. 39 ust. 4 ustawy o PIT ani rozporządzeń wykonawczych, co uniemożliwia weryfikację czy te przepisy faktycznie precyzują procedurę korekty w sposób wymagający ich powołania.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli art. 39 ust. 4 ustawy o PIT rzeczywiście reguluje tryb korekty informacji PIT-11, warto rozważyć jego dodanie jako dodatkowej podstawy prawnej obok art. 81 Ordynacji podatkowej. Należy sprawdzić aktualną treść art. 39 ust. 4 ustawy o PIT oraz ewentualne rozporządzenie Ministra Finansów w sprawie wzorów informacji podatkowych.",
+        "verified_at": "2026-04-18T12:50:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft wspomina konkretne systemy (Comarch Optima, Symfonia, Enova) i ich moduły (np. 'Kadry i Płace → Deklaracje PIT pracowników → Korekta', 'e-Pracownik', 'Platforma Pracownika') — interfejsy i nazwy funkcji w tych systemach mogą się zmienić do 2026 roku, a draft nie zawiera wariantu dla innych systemów kadrowych."
+        "description": "Draft wspomina konkretne systemy (Comarch Optima, Symfonia, Enova) i ich moduły (np. 'Kadry i Płace → Deklaracje PIT pracowników → Korekta', 'e-Pracownik', 'Platforma Pracownika') — interfejsy i nazwy funkcji w tych systemach mogą się zmienić do 2026 roku, a draft nie zawiera wariantu dla innych systemów kadrowych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy ryzyka dezaktualizacji nazw interfejsów w konkretnych systemach kadrowych (Comarch Optima, Symfonia, Enova) — jest to ryzyko faktyczne i uzasadnione, ale KB nie zawiera żadnych rekordów dotyczących tych systemów ani ich modułów. Nie można ani potwierdzić, ani obalić tej flagi na podstawie dostępnych materiałów prawnych. Ryzyko jest realne z perspektywy praktycznej (interfejsy oprogramowania zmieniają się niezależnie od przepisów), lecz wykracza poza zakres weryfikacji prawnej.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Rozważyć dodanie zastrzeżenia w drafcie: 'Ścieżki menu podane dla Comarch Optima, Symfonia i Enova są aktualne na dzień [data] — przed wykonaniem kroków zweryfikuj aktualną strukturę menu w posiadanej wersji oprogramowania.' Warto też dodać ogólny wariant dla systemów niewymienionych: 'W innych systemach kadrowych wyszukaj funkcję korekty/anulowania deklaracji PIT lub skontaktuj się z dostawcą systemu.'",
+        "verified_at": "2026-04-18T12:50:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 2 mówi o wysłaniu korekty do 'nowego' urzędu skarbowego, ale wcześniej w kroku 1 wskazano, że błędny US nie wymaga korekty — brakuje jasnego wyjaśnienia, kiedy wysyłać do starego, a kiedy do nowego US w przypadku korekty merytorycznej."
+        "description": "Krok 2 mówi o wysłaniu korekty do 'nowego' urzędu skarbowego, ale wcześniej w kroku 1 wskazano, że błędny US nie wymaga korekty — brakuje jasnego wyjaśnienia, kiedy wysyłać do starego, a kiedy do nowego US w przypadku korekty merytorycznej.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących właściwość urzędu skarbowego przy korekcie PIT-11 (art. 39 ust. 1 updof ani art. 81 Ordynacji podatkowej nie są dostępne w dostarczonych rekordach). Flaga wskazuje na potencjalną niespójność między krokiem 1 (błędny US nie wymaga korekty) a krokiem 2 (korekta do 'nowego' US), jednak draft faktycznie nie wyjaśnia wprost, czy korektę merytoryczną wysyła się do urzędu właściwego dla pracownika (nowego) czy płatnika — co może być realną luką redakcyjną, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W kroku 2 warto dodać wyjaśnienie: korektę PIT-11 zawierającą błędy merytoryczne wysyła się do urzędu skarbowego właściwego dla pracownika (podatnika) — tego samego, do którego pierwotnie wysłano PIT-11. Jeśli zmienił się US pracownika, należy wysłać korektę do urzędu, do którego pierwotnie złożono informację, a nowy PIT-11 za kolejny rok — do nowego US.",
+        "verified_at": "2026-04-18T12:50:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 6 wymaga 'pisemnej zgody' pracownika na e-mail, ale nie precyzuje: czy zgoda musi być w każdym roku, czy jest bezterminowa; czy pracownik może ją wycofać; czy istnieje wymóg przechowywania kopii zgody przez określony czas (art. 39 ust. 1 PIT nie zawiera szczegółów procedury)."
+        "description": "Krok 6 wymaga 'pisemnej zgody' pracownika na e-mail, ale nie precyzuje: czy zgoda musi być w każdym roku, czy jest bezterminowa; czy pracownik może ją wycofać; czy istnieje wymóg przechowywania kopii zgody przez określony czas (art. 39 ust. 1 PIT nie zawiera szczegółów procedury).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB potwierdzają, że art. 39 ust. 1 ustawy o PIT nie zawiera szczegółów proceduralnych dotyczących formy i zakresu zgody pracownika na elektroniczne doręczanie PIT-11. Flaga wskazuje na brak precyzji w drafcie co do trwałości zgody, możliwości jej wycofania i obowiązku przechowywania — są to kwestie proceduralne, których KB nie pokrywa wprost. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła (np. interpretacje MF lub przepisy wykonawcze), warto w kroku 6 doprecyzować: (1) że zgoda jest bezterminowa do momentu jej odwołania przez pracownika, (2) że pracownik może ją wycofać w dowolnym momencie na piśmie, (3) że płatnik powinien przechowywać kopię zgody przez okres przedawnienia zobowiązań podatkowych (5 lat).",
+        "verified_at": "2026-04-18T12:50:44Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Krok 6 stwierdza, że PIT-11 dla pracownika 'musi być opatrzony podpisem kwalifikowanym płatnika LUB w formie PDF z UPO' — brakuje wyjaśnienia, czy oba warianty są równoprawne, czy jeden jest preferowany; brakuje też informacji o wymaganiach dotyczących bezpieczeństwa przesyłania (szyfrowanie, hasła)."
+        "description": "Krok 6 stwierdza, że PIT-11 dla pracownika 'musi być opatrzony podpisem kwalifikowanym płatnika LUB w formie PDF z UPO' — brakuje wyjaśnienia, czy oba warianty są równoprawne, czy jeden jest preferowany; brakuje też informacji o wymaganiach dotyczących bezpieczeństwa przesyłania (szyfrowanie, hasła).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą doręczeń przez organy podatkowe (Ordynacja podatkowa art. 144b, art. 126) oraz nadpłat zryczałtowanego podatku (art. 31d UPDOF), a nie zasad elektronicznego przekazywania PIT-11 przez płatnika pracownikom. Kwestia równoprawności podpisu kwalifikowanego vs. PDF z UPO oraz wymagań bezpieczeństwa przesyłania (szyfrowanie, hasła) nie jest uregulowana w dostępnych rekordach KB. Brak podstawy do potwierdzenia lub obalenia flagi na podstawie dostarczonych materiałów.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:50:50Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 3 wspomina 'ZUA z kodem trybu zmiana/korekta danych' — formularz ZUA (Zmiana Ubezpieczenia Społecznego) istnieje, ale draft nie precyzuje, czy kod trybu 'zmiana/korekta danych' jest oficjalną nomenklaturą ZUS czy uproszczonym opisem; brakuje odniesienia do konkretnego rozporządzenia ZUS."
+        "description": "Krok 3 wspomina 'ZUA z kodem trybu zmiana/korekta danych' — formularz ZUA (Zmiana Ubezpieczenia Społecznego) istnieje, ale draft nie precyzuje, czy kod trybu 'zmiana/korekta danych' jest oficjalną nomenklaturą ZUS czy uproszczonym opisem; brakuje odniesienia do konkretnego rozporządzenia ZUS.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą art. 68b, 50d i 50f ustawy o systemie ubezpieczeń społecznych i nie zawierają informacji o formularzu ZUA ani kodach trybu zgłoszeń ZUS. KB nie pokrywa tematu nomenklatury formularzy ZUS (ZUA, kody trybu), więc nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Formularz ZUA i jego kody trybu są regulowane rozporządzeniem Ministra Rodziny i Polityki Społecznej w sprawie określenia wzorów zgłoszeń, które nie jest dostępne w KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy odwołać się do rozporządzenia Ministra Rodziny i Polityki Społecznej w sprawie określenia wzorów zgłoszeń do ubezpieczeń społecznych i ubezpieczenia zdrowotnego oraz wzorów dokumentów rozliczeniowych. W drafcie warto doprecyzować, że ZUA składa się z kodem '02' (zmiana/korekta danych) zgodnie z instrukcją ZUS do formularza ZUA, zamiast używać nieformalnego opisu 'zmiana/korekta danych'.",
+        "verified_at": "2026-04-18T12:50:58Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 4 mówi, że opis różnicy w PIT-4R 'może być ogólny' — brakuje wskazania minimalnej długości, formatu lub wymagań co do szczegółowości, które mogą być wymagane przez US w przypadku kontroli; brakuje też przykładu dla sytuacji, gdy różnica wynika z korekty listy płac po złożeniu PIT-4R."
+        "description": "Krok 4 mówi, że opis różnicy w PIT-4R 'może być ogólny' — brakuje wskazania minimalnej długości, formatu lub wymagań co do szczegółowości, które mogą być wymagane przez US w przypadku kontroli; brakuje też przykładu dla sytuacji, gdy różnica wynika z korekty listy płac po złożeniu PIT-4R.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących wymagania formalne dotyczące treści pola 'Wyjaśnienie różnicy' w PIT-4R. Ordynacja podatkowa art. 81 (cytowany w legal_anchors) reguluje prawo do korekty deklaracji, ale nie określa minimalnych wymagań co do szczegółowości opisów w deklaracjach. Brak w KB materiału pozwalającego potwierdzić lub obalić, że opis 'może być ogólny' jest wystarczający z perspektywy wymogów kontrolnych US.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać zastrzeżenie, że w przypadku kontroli US może zażądać bardziej szczegółowego wyjaśnienia na podstawie art. 155 Ordynacji podatkowej (wezwanie do złożenia wyjaśnień), oraz dodać przykład dla sytuacji korekty listy płac po złożeniu PIT-4R, np. 'Korekta listy płac za 03/2025 złożona po terminie wpłaty zaliczki — różnica X zł wyrównana w dniu DD.MM.RRRR'.",
+        "verified_at": "2026-04-18T12:51:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case 'Pracownik w oświadczeniu wskazał inny US' — draft nie wyjaśnia, czy płatnik ma obowiązek weryfikować zgodność wskazanego US z adresem zamieszkania pracownika ani jakie są konsekwencje wysłania PIT-11 do US wskazanego przez pracownika, jeśli jest on niewłaściwy."
+        "description": "Edge case 'Pracownik w oświadczeniu wskazał inny US' — draft nie wyjaśnia, czy płatnik ma obowiązek weryfikować zgodność wskazanego US z adresem zamieszkania pracownika ani jakie są konsekwencje wysłania PIT-11 do US wskazanego przez pracownika, jeśli jest on niewłaściwy.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Draft w sekcji EDGE_CASES wprost adresuje ten scenariusz: 'Pracownik w oświadczeniu wskazał inny US niż wynika z jego adresu zamieszkania — wiążąca jest decyzja pracownika; płatnik wysyła PIT-11 do urzędu wskazanego przez pracownika (to podatnik rozlicza się ze swoim US zamieszkania).' Flaga sugeruje brak wyjaśnienia tego przypadku, ale draft go pokrywa. KB (art. 39 PIT) potwierdza, że obowiązek płatnika to przesłanie do 'właściwego urzędu skarbowego', jednak kwestia weryfikacji wskazania przez pracownika nie jest uregulowana w dostępnych rekordach KB — draft przyjmuje praktyczne stanowisko, że wskazanie pracownika jest wiążące dla płatnika, co jest powszechnie akceptowaną interpretacją.",
+        "verifier_confidence": 0.72,
+        "verified_at": "2026-04-18T12:51:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 wspomina uzgodnienie konta 220 'Rozrachunki z US — PIT-4' z PIT-4R, ale nie wyjaśnia, jak postępować w przypadku rozbieżności (np. błąd w księgowaniu, niedopłata, przesłanie); brakuje też procedury dla sytuacji, gdy PIT-4R nie zostanie zaakceptowany przez US."
+        "description": "Krok 7 wspomina uzgodnienie konta 220 'Rozrachunki z US — PIT-4' z PIT-4R, ale nie wyjaśnia, jak postępować w przypadku rozbieżności (np. błąd w księgowaniu, niedopłata, przesłanie); brakuje też procedury dla sytuacji, gdy PIT-4R nie zostanie zaakceptowany przez US.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga wskazuje na brak procedury postępowania przy rozbieżnościach na koncie 220 oraz przy nieakceptacji PIT-4R przez US. KB nie zawiera artykułów bezpośrednio regulujących te kwestie (art. 81 Ordynacji podatkowej o korekcie deklaracji jest wymieniony w legal_anchors drafta, ale nie pojawia się w dostarczonych rekordach KB). Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych — brakuje treści art. 81 OP i przepisów o postępowaniu przy rozbieżnościach w PIT-4R.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie do kroku 7 informacji: (1) w razie rozbieżności między kontem 220 a PIT-4R — zidentyfikować miesiąc błędu, złożyć korektę PIT-4R na podstawie art. 81 Ordynacji podatkowej, dopłacić zaległość wraz z odsetkami; (2) PIT-4R nie podlega formalnej 'akceptacji' przez US — urząd może jedynie wszcząć kontrolę lub czynności sprawdzające, w takim przypadku płatnik ma prawo złożyć wyjaśnienia i korektę.",
+        "verified_at": "2026-04-18T12:51:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Draft wspomina 'podpis kwalifikowany' bez odwołania do aktualnych wymogów eIDAS 2.0 lub zmian w regulacjach dotyczących podpisów elektronicznych, które mogą wejść w życie przed 2026 rokiem."
+        "description": "Draft wspomina 'podpis kwalifikowany' bez odwołania do aktualnych wymogów eIDAS 2.0 lub zmian w regulacjach dotyczących podpisów elektronicznych, które mogą wejść w życie przed 2026 rokiem.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga dotyczy braku odniesienia do eIDAS 2.0, jednak draft operuje w kontekście polskiego prawa podatkowego, gdzie podpis kwalifikowany jest pojęciem uregulowanym przez Ordynację podatkową (art. 3b, art. 144b). KB potwierdza, że polskie przepisy podatkowe posługują się pojęciem 'kwalifikowanego podpisu elektronicznego' jako aktualnym standardem. eIDAS 2.0 to rozporządzenie UE, którego pełne wdrożenie i wpływ na polskie przepisy podatkowe dotyczące PIT-11 nie jest przesądzony przed 2026 rokiem, a draft nie zawiera twierdzeń o konkretnych datach obowiązywania regulacji.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:51:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 2 wspomina 'UPL-1' (upoważnienie) — draft nie wyjaśnia, czy UPL-1 musi być złożone w US przed wysłaniem korekty PIT-11 czy czy może być przechowywane u płatnika; brakuje też informacji o terminie ważności UPL-1."
+        "description": "Krok 2 wspomina 'UPL-1' (upoważnienie) — draft nie wyjaśnia, czy UPL-1 musi być złożone w US przed wysłaniem korekty PIT-11 czy czy może być przechowywane u płatnika; brakuje też informacji o terminie ważności UPL-1.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących UPL-1 (upoważnienia do podpisywania deklaracji w imieniu podatnika/płatnika) ani rozporządzenia regulującego zasady jego składania i przechowywania. Flaga wskazuje na brak wyjaśnienia w drafcie kwestii proceduralnych UPL-1 (złożenie w US vs. przechowywanie u płatnika, termin ważności) — są to informacje praktycznie istotne, ale KB nie pozwala potwierdzić ani obalić ich poprawności.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać w kroku 2 notę: UPL-1 składa się jednorazowo do właściwego US płatnika i zachowuje ważność bezterminowo (do odwołania); nie trzeba go ponownie składać przy każdej korekcie — płatnik przechowuje kopię, oryginał jest w aktach US.",
+        "verified_at": "2026-04-18T12:51:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

@@ -118,67 +118,156 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 109 ust. 3d ustawy o VAT (cytowany w step 3) — nie można zweryfikować istnienia tego konkretnego ustępu; art. 109 ustawy o VAT tradycyjnie dotyczy ewidencji VAT, ale ust. 3d dotyczący oznaczenia FP może być zmianą 2026 r. wymagającą potwierdzenia w aktualnym tekście ustawy lub rozporządzeniu MFiG."
+        "description": "Art. 109 ust. 3d ustawy o VAT (cytowany w step 3) — nie można zweryfikować istnienia tego konkretnego ustępu; art. 109 ustawy o VAT tradycyjnie dotyczy ewidencji VAT, ale ust. 3d dotyczący oznaczenia FP może być zmianą 2026 r. wymagającą potwierdzenia w aktualnym tekście ustawy lub rozporządzeniu MFiG.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera rekordy dotyczące art. 109 ust. 3, 3e-3g oraz ust. 1 ustawy o VAT, ale nie zawiera rekordu dla art. 109 ust. 3d. Rekord dla ust. 3e-3g sugeruje, że ustępy 3d i wyższe istnieją w ustawie (numeracja jest ciągła), co pośrednio wspiera istnienie ust. 3d, jednak KB nie potwierdza wprost jego treści ani że dotyczy oznaczenia FP. Flaga jest uzasadniona — nie można zweryfikować na podstawie dostępnych danych czy ust. 3d faktycznie reguluje oznaczenie FP w JPK_V7, czy też wynika to z rozporządzenia wykonawczego.",
+        "verifier_confidence": 0.65,
+        "corrective_suggestion": "Należy zweryfikować aktualny tekst art. 109 ust. 3d ustawy o VAT (np. w Dzienniku Ustaw lub ISAP). Jeśli ust. 3d nie istnieje lub ma inną treść, podstawę prawną dla oznaczenia FP należy poszukać w rozporządzeniu Ministra Finansów w sprawie szczegółowego zakresu danych zawartych w deklaracjach podatkowych i w ewidencji w zakresie podatku VAT (rozporządzenie JPK_VAT). W drafcie warto dodać alternatywną podstawę: 'art. 109 ust. 3d ustawy o VAT lub § X rozporządzenia MF w sprawie JPK_VAT'.",
+        "verified_at": "2026-04-18T12:04:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Rozporządzenie MFiG z 6 września 2025 r. w sprawie prowadzenia PKPiR (cytowane w step 1) — data wydania (wrzesień 2025) jest przed datą weryfikacji (kwiecień 2026), ale dokument nie jest dostępny w standardowych bazach prawnych; wymaga potwierdzenia, że rozporządzenie rzeczywiście istnieje i weszło w życie 1.01.2026 r."
+        "description": "Rozporządzenie MFiG z 6 września 2025 r. w sprawie prowadzenia PKPiR (cytowane w step 1) — data wydania (wrzesień 2025) jest przed datą weryfikacji (kwiecień 2026), ale dokument nie jest dostępny w standardowych bazach prawnych; wymaga potwierdzenia, że rozporządzenie rzeczywiście istnieje i weszło w życie 1.01.2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących rozporządzenia MFiG z 6 września 2025 r. w sprawie prowadzenia PKPiR. Dostępne rekordy dotyczą wyłącznie ustawy o VAT (art. 109 ust. 1, 3). Nie można ani potwierdzić, ani obalić istnienia tego rozporządzenia na podstawie dostępnych danych — flaga pozostaje zasadna jako sygnał wymagający weryfikacji w oficjalnych źródłach (Dziennik Ustaw, ISAP).",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Należy zweryfikować istnienie rozporządzenia MFiG z 6 września 2025 r. w bazie ISAP lub Dzienniku Ustaw. Jeśli rozporządzenie nie zostało odnalezione, draft powinien odwołać się do aktualnie obowiązującego rozporządzenia w sprawie PKPiR (np. rozporządzenie Ministra Finansów z 23 grudnia 2019 r.) lub wskazać projekt rozporządzenia z zastrzeżeniem, że wejście w życie wymaga potwierdzenia.",
+        "verified_at": "2026-04-18T12:04:40Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Limit zwolnienia z VAT art. 113 ust. 1 podany jako 240 000 zł rocznie — limit ten zmienia się co roku (w 2025 r. wynosi 300 000 zł); wartość 240 000 zł może być nieaktualna dla 2026 r. i wymaga weryfikacji w komunikacie MF na 2026 r."
+        "description": "Limit zwolnienia z VAT art. 113 ust. 1 podany jako 240 000 zł rocznie — limit ten zmienia się co roku (w 2025 r. wynosi 300 000 zł); wartość 240 000 zł może być nieaktualna dla 2026 r. i wymaga weryfikacji w komunikacie MF na 2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB konsekwentnie podają limit 240 000 zł w art. 113 ust. 1, co jest zgodne z draftem. Jednakże KB może zawierać nieaktualne dane (stan na 2024 r. lub wcześniej), a flaga dotyczy właśnie ryzyka, że limit 240 000 zł jest nieaktualny dla 2025/2026 r. — KB nie zawiera informacji o limicie 300 000 zł na 2025 r. ani o planowanym limicie na 2026 r., więc nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zweryfikować aktualny limit zwolnienia podmiotowego z VAT w komunikacie Ministerstwa Finansów na 2026 r. Jeśli limit wynosi 300 000 zł (lub inną kwotę), zaktualizować wszystkie wystąpienia wartości 240 000 zł w drafcie oraz w LEGAL_ANCHORS.",
+        "verified_at": "2026-04-18T12:04:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Limit zwolnienia z obowiązku kasy fiskalnej podany jako 20 000 zł (step 5) — ta kwota dotyczyła lat wcześniejszych; od 2024 r. limit wynosi 100 000 zł, a dla 2026 r. może być inny; wymaga aktualizacji."
+        "description": "Limit zwolnienia z obowiązku kasy fiskalnej podany jako 20 000 zł (step 5) — ta kwota dotyczyła lat wcześniejszych; od 2024 r. limit wynosi 100 000 zł, a dla 2026 r. może być inny; wymaga aktualizacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza, że limit zwolnienia z obowiązku kasy fiskalnej wynika z rozporządzenia wykonawczego (art. 111 ust. 8 ustawy o VAT), a nie z samej ustawy. KB nie zawiera jednak treści aktualnego rozporządzenia o zwolnieniach z obowiązku ewidencji, więc nie można zweryfikować czy limit 20 000 zł jest aktualny czy przestarzały. Flaga wskazuje na zmianę do 100 000 zł od 2024 r. — jest to informacja zewnętrzna, której KB nie potwierdza ani nie zaprzecza.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Zweryfikować aktualną treść rozporządzenia Ministra Finansów w sprawie zwolnień z obowiązku prowadzenia ewidencji sprzedaży przy zastosowaniu kas rejestrujących i zaktualizować kwotę limitu w step 5 do wartości obowiązującej w 2026 r. Jeśli limit wynosi 100 000 zł, należy zastąpić '20 000 zł' właściwą kwotą z powołaniem na konkretne rozporządzenie.",
+        "verified_at": "2026-04-18T12:04:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "high",
-        "description": "Zmiana JPK_V7M(3) od 1.02.2026 r. (wymieniona w related_questions) — nie ma potwierdzenia w dostępnych komunikatach MF, że od tej daty pojawią się nowe oznaczenia w JPK_V7M; ta data i zmiana mogą być wymyślone."
+        "description": "Zmiana JPK_V7M(3) od 1.02.2026 r. (wymieniona w related_questions) — nie ma potwierdzenia w dostępnych komunikatach MF, że od tej daty pojawią się nowe oznaczenia w JPK_V7M; ta data i zmiana mogą być wymyślone.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą art. 106e i art. 86 ust. 2a ustawy o VAT i nie zawierają żadnych informacji o zmianach struktury JPK_V7M(3) ani o dacie 1.02.2026 r. jako terminie wejścia w życie nowych oznaczeń w JPK. KB nie potwierdza ani nie zaprzecza tej informacji, więc nie można jednoznacznie ocenić czy flaga jest słuszna czy nie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft zawiera wzmiankę o JPK_V7M(3) od 1.02.2026 r., należy zweryfikować tę datę bezpośrednio w komunikatach Ministerstwa Finansów lub rozporządzeniu w sprawie zakresu danych zawartych w deklaracjach podatkowych i w ewidencji w zakresie podatku VAT. Jeśli brak potwierdzenia — usunąć lub oznaczyć jako niepotwierdzone.",
+        "verified_at": "2026-04-18T12:05:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Obowiązek wystawienia wizualizacji faktury KSeF klientowi przy sprzedaży zaewidencjonowanej na kasie (related_questions) — nie ma jasnego potwierdzenia w przepisach, że taki obowiązek istnieje od 1.02.2026 r.; może to być błędna interpretacja."
+        "description": "Obowiązek wystawienia wizualizacji faktury KSeF klientowi przy sprzedaży zaewidencjonowanej na kasie (related_questions) — nie ma jasnego potwierdzenia w przepisach, że taki obowiązek istnieje od 1.02.2026 r.; może to być błędna interpretacja.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących obowiązku wystawienia wizualizacji faktury KSeF klientowi przy sprzedaży zaewidencjonowanej na kasie fiskalnej od 1.02.2026 r. Dostępne rekordy dotyczą art. 106b ust. 1, 106e ust. 1 i 19a ust. 5 — żaden z nich nie reguluje kwestii wizualizacji faktury ustrukturyzowanej dla konsumenta. Fragment drafta nie zawiera wprost twierdzenia o takim obowiązku (mówi o 'fakturze z KSeF wystawionej na żądanie konsumenta'), więc nie można jednoznacznie potwierdzić ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zweryfikować w przepisach o KSeF (ustawa o VAT art. 106na i nast. w brzmieniu od 2026 r.) czy istnieje obowiązek udostępnienia wizualizacji faktury ustrukturyzowanej konsumentowi przy sprzedaży kasowej, a jeśli tak — wskazać konkretny artykuł jako anchor; jeśli nie — usunąć lub doprecyzować sformułowanie w drafcie.",
+        "verified_at": "2026-04-18T12:05:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 2 mówi, że faktura do paragonu trafia WYŁĄCZNIE do ewidencji VAT z FP i nie do KPiR, ale step 4 mówi o księgowaniu każdej faktury sprzedaży B2B pojedynczo — brakuje jasnego rozgraniczenia, które faktury to faktury do paragonu (FP), a które to faktury B2B (które mają być księgowane osobno)."
+        "description": "Step 2 mówi, że faktura do paragonu trafia WYŁĄCZNIE do ewidencji VAT z FP i nie do KPiR, ale step 4 mówi o księgowaniu każdej faktury sprzedaży B2B pojedynczo — brakuje jasnego rozgraniczenia, które faktury to faktury do paragonu (FP), a które to faktury B2B (które mają być księgowane osobno).",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Draft w step 2 i step 4 faktycznie zawiera rozgraniczenie: step 2 dotyczy sprzedaży z kasy fiskalnej (raport RO jako podstawa KPiR), step 3 dotyczy faktur do paragonu (FP — tylko ewidencja VAT, nie KPiR), a step 4 explicite wskazuje 'każda faktura sprzedaży (nie wystawiona do paragonu)'. Rozgraniczenie jest obecne w drafcie, choć wymaga uważnego czytania. KB nie dostarcza dowodów potwierdzających sprzeczność — rekordy dotyczą art. 111 ust. 3a i nie odnoszą się do zasad księgowania w KPiR ani do rozróżnienia FP vs B2B.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Dla większej klarowności warto w step 4 dodać explicite zdanie: 'Faktury wystawione do paragonów (oznaczone FP) NIE są księgowane w KPiR — zostały już ujęte przez raport fiskalny w step 2. Do KPiR trafiają wyłącznie faktury B2B nieudokumentowane paragonem fiskalnym.' To wyeliminuje potencjalne nieporozumienie bez zmiany merytorycznej treści.",
+        "verified_at": "2026-04-18T12:05:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 4 wymaga wpisania numeru KSeF w kolumnie 3 KPiR, ale nie wyjaśnia, co robić z fakturami wystawionymi przed 1.01.2026 r. (przed obowiązkiem KSeF) lub z fakturami papierowymi; brakuje warunku dla podatników bez KSeF."
+        "description": "Step 4 wymaga wpisania numeru KSeF w kolumnie 3 KPiR, ale nie wyjaśnia, co robić z fakturami wystawionymi przed 1.01.2026 r. (przed obowiązkiem KSeF) lub z fakturami papierowymi; brakuje warunku dla podatników bez KSeF.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących obowiązek wpisywania numeru KSeF w kolumnie 3 KPiR ani przepisów przejściowych dotyczących faktur wystawionych przed 1.01.2026 r. Fragment draftu w step 4 rzeczywiście wspomina o wpisywaniu numeru KSeF do KPiR, ale KB nie pozwala zweryfikować ani potwierdzić, czy brak wyjaśnienia dla faktur sprzed KSeF lub faktur papierowych stanowi istotne pominięcie. Flaga wskazuje na potencjalną lukę informacyjną, która może być zasadna, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie w step 4 warunku: 'jeżeli faktura nie posiada numeru KSeF (np. wystawiona przed 1.01.2026 r. lub w formie papierowej w przypadku zwolnienia z KSeF), w kolumnie 3 KPiR wpisuje się numer faktury lub pozostawia pole puste zgodnie z obowiązującymi przepisami przejściowymi' — po uprzedniej weryfikacji przepisów rozporządzenia o KPiR i przepisów przejściowych KSeF.",
+        "verified_at": "2026-04-18T12:05:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 7 o raportach zerowych — procedura jest niejasna; nie wyjaśnia, czy raport zerowy musi być drukowany co miesiąc, czy tylko gdy kasa to umożliwia, ani jak dokumentować brak sprzedaży w systemach bez kasy fiskalnej."
+        "description": "Step 7 o raportach zerowych — procedura jest niejasna; nie wyjaśnia, czy raport zerowy musi być drukowany co miesiąc, czy tylko gdy kasa to umożliwia, ani jak dokumentować brak sprzedaży w systemach bez kasy fiskalnej.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzeń o kasach rejestrujących (np. rozporządzenia MF w sprawie kas rejestrujących), które regulowałyby obowiązek drukowania raportów zerowych. Trzy dostarczone rekordy dotyczą procedury call-off stock, odliczenia VAT od samochodów i procedury importu — żaden nie odnosi się do raportów fiskalnych zerowych. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy przeszukać KB pod kątem rozporządzeń MF o kasach rejestrujących (np. § dotyczące raportów okresowych). Jeśli draft ma być poprawiony niezależnie od weryfikacji — warto doprecyzować w step 7: (a) powołać konkretny przepis rozporządzenia o kasach rejestrujących nakładający obowiązek raportu zerowego, (b) wskazać wprost, że przy braku technicznej możliwości wydruku raportu zerowego należy sporządzić notatkę/dowód wewnętrzny, (c) oddzielnie opisać sytuację podatnika bez kasy fiskalnej (wystarczy dowód wewnętrzny z step 5).",
+        "verified_at": "2026-04-18T12:05:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o fakturze zaliczkowej — procedura opisuje problem (pomniejszenie RO o zaliczkę, doksięgowanie przy fakturze końcowej), ale nie podaje konkretnych kroków księgowania w systemach (Comarch, WFirma, Symfonia); pozostaje teoretyczne."
+        "description": "Edge case o fakturze zaliczkowej — procedura opisuje problem (pomniejszenie RO o zaliczkę, doksięgowanie przy fakturze końcowej), ale nie podaje konkretnych kroków księgowania w systemach (Comarch, WFirma, Symfonia); pozostaje teoretyczne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku konkretnych kroków księgowania w systemach (Comarch, WFirma, Symfonia) dla faktury zaliczkowej. KB potwierdza podstawę prawną (art. 106f ust. 3 ustawy o VAT) dotyczącą pomniejszenia faktury końcowej o zaliczki, ale KB nie zawiera żadnych informacji o procedurach w konkretnych systemach księgowych. Flaga jest merytorycznie trafna — edge case opisuje problem na poziomie teoretycznym bez kroków systemowych — jednak weryfikacja tego zarzutu wykracza poza zakres KB (przepisy prawne nie regulują obsługi systemów księgowych).",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft ma być praktycznym przewodnikiem, warto rozbudować edge case o konkretne kroki: np. w Comarch ERP Optima — ręczna korekta zapisu RO przez dokument różnicowy; w WFirma — osobny zapis przychodu przy fakturze końcowej z adnotacją o zaliczce; w Symfonii — storno częściowe raportu i doksięgowanie przy fakturze końcowej. Alternatywnie można dodać odesłanie do dokumentacji producenta systemu.",
+        "verified_at": "2026-04-18T12:05:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o fakturach uproszczonych do 450 zł — procedura wspomina możliwość zmian od 1.02.2026 r., ale nie podaje konkretnego warunku ani nie wyjaśnia, co zrobić, jeśli zmiana rzeczywiście nastąpi; pozostaje niepewne."
+        "description": "Edge case o fakturach uproszczonych do 450 zł — procedura wspomina możliwość zmian od 1.02.2026 r., ale nie podaje konkretnego warunku ani nie wyjaśnia, co zrobić, jeśli zmiana rzeczywiście nastąpi; pozostaje niepewne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących faktur uproszczonych (paragonów z NIP do 450 zł) ani planowanych zmian KSeF/JPK od 1.02.2026 r. Flaga wskazuje na brak konkretnego warunku i instrukcji postępowania w razie zmiany — co jest zasadną obserwacją redakcyjną, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów KB. Draft uczciwie sygnalizuje niepewność ('zweryfikować bieżący komunikat MF'), co jest podejściem ostrożnym, lecz może być niewystarczające dla użytkownika procedury.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli zmiana od 1.02.2026 r. jest realna, warto dodać konkretny warunek: 'Jeżeli MF potwierdzi obowiązek osobnego wykazywania faktur uproszczonych w JPK_V7, należy je wykazać analogicznie do FP z oznaczeniem [X] — do czasu potwierdzenia stosuj zasadę zbiorczego ujęcia w RO.' Pozwoli to użytkownikowi działać w obu scenariuszach.",
+        "verified_at": "2026-04-18T12:05:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Limit 75% minimalnego wynagrodzenia dla nierejestrowanej działalności (related_questions) — nie ma jasnego potwierdzenia, że taki limit istnieje w przepisach o KPiR; może to być błędna interpretacja przepisów o działalności nieewidencjonowanej."
+        "description": "Limit 75% minimalnego wynagrodzenia dla nierejestrowanej działalności (related_questions) — nie ma jasnego potwierdzenia, że taki limit istnieje w przepisach o KPiR; może to być błędna interpretacja przepisów o działalności nieewidencjonowanej.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy limitu 75% minimalnego wynagrodzenia dla działalności nieewidencjonowanej (nierejestrowanej), który wynika z ustawy o działalności nieewidencjonowanej (Prawo przedsiębiorców art. 5), a nie z przepisów o KPiR. KB nie zawiera rekordów dotyczących tej ustawy ani przepisów o działalności nieewidencjonowanej, więc nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Fragment drafta nie zawiera bezpośrednio tego limitu — flaga odnosi się do 'related_questions', które nie są widoczne w analizowanym fragmencie.",
+        "verifier_confidence": 0.6,
+        "verified_at": "2026-04-18T12:05:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Linki do źródeł (biznes.gov.pl, podatki.biz, gofin.pl, infor.pl) mogą być nieaktualne lub prowadzić do artykułów z 2025 r.; dla 2026 r. mogą być niedostępne lub zmienione."
+        "description": "Linki do źródeł (biznes.gov.pl, podatki.biz, gofin.pl, infor.pl) mogą być nieaktualne lub prowadzić do artykułów z 2025 r.; dla 2026 r. mogą być niedostępne lub zmienione.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy potencjalnej nieaktualności zewnętrznych linków do stron internetowych (biznes.gov.pl, podatki.biz, gofin.pl, infor.pl), jednak w analizowanym fragmencie drafta nie ma żadnych takich linków — fragment zawiera wyłącznie LEGAL_ANCHORS i ANSWER_STEPS bez URL-i. KB nie pokrywa kwestii aktualności zewnętrznych zasobów internetowych, a rekordy dotyczą art. 86a ustawy o VAT (pojazdy), co jest irrelewantne dla weryfikowanej flagi.",
+        "verifier_confidence": 0.5,
+        "verified_at": "2026-04-18T12:06:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

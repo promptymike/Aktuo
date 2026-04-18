@@ -116,52 +116,120 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Art. 92 § 2 Kodeksu pracy odsyła do zasad ustalania podstawy zasiłku, ale draft nie cytuje bezpośrednio art. 41 ustawy zasiłkowej (ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa), który jest kluczowy dla testu 'pomniejszania za chorobę'. Brakuje pełnego odniesienia do ustawy zasiłkowej w legal_anchors."
+        "description": "Art. 92 § 2 Kodeksu pracy odsyła do zasad ustalania podstawy zasiłku, ale draft nie cytuje bezpośrednio art. 41 ustawy zasiłkowej (ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa), który jest kluczowy dla testu 'pomniejszania za chorobę'. Brakuje pełnego odniesienia do ustawy zasiłkowej w legal_anchors.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza istnienie art. 92 § 2 KP i jego odesłanie do zasad zasiłkowych, ale nie zawiera rekordów z ustawy zasiłkowej z 25.06.1999 (art. 41 ani art. 42), które są cytowane w treści drafta. Flaga wskazuje na brak art. 41 ustawy zasiłkowej w sekcji LEGAL_ANCHORS — draft faktycznie powołuje ten artykuł w ANSWER_STEPS (step 2, step 4 z art. 42), ale nie umieszcza go jako formalnego legal_anchor. Nie mogę jednak jednoznacznie ocenić czy to błąd wymagający korekty, bo KB nie pokrywa ustawy zasiłkowej.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie do LEGAL_ANCHORS wpisu: {\"law_name\": \"Ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa\", \"article_number\": \"art. 41 ust. 1\", \"reason\": \"Kluczowy test: składnik nieobniżany za czas choroby nie wchodzi do podstawy wymiaru zasiłku\"} oraz analogicznego dla art. 42 (premie kwartalne/roczne).",
+        "verified_at": "2026-04-18T12:07:20Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Draft powołuje się na '§ 6–8 rozporządzenia MPiPS z 8.01.1997' dla podstawy urlopowej, ale nie podaje pełnej nazwy rozporządzenia ani nie weryfikuje, czy numery paragrafów są aktualne dla 2026 (rozporządzenie mogło być zmieniane)."
+        "description": "Draft powołuje się na '§ 6–8 rozporządzenia MPiPS z 8.01.1997' dla podstawy urlopowej, ale nie podaje pełnej nazwy rozporządzenia ani nie weryfikuje, czy numery paragrafów są aktualne dla 2026 (rozporządzenie mogło być zmieniane).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie rekordy dotyczące Kodeksu pracy (art. 92 § 1-3) i nie obejmuje rozporządzenia MPiPS z 8.01.1997 r. w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego, ustalania i wypłacania wynagrodzenia za czas urlopu oraz ekwiwalentu pieniężnego za urlop. Nie można na podstawie dostępnych rekordów potwierdzić ani obalić, czy §§ 6–8 tego rozporządzenia są aktualne i poprawnie numerowane dla 2026 r. Flaga wskazuje realny problem braku pełnej nazwy aktu i potencjalnej dezaktualizacji numeracji paragrafów, co jest uzasadnioną wątpliwością, ale KB nie dostarcza dowodów do jej rozstrzygnięcia.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W drafcie należy podać pełną nazwę rozporządzenia: 'rozporządzenie Ministra Pracy i Polityki Socjalnej z dnia 8 stycznia 1997 r. w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego, ustalania i wypłacania wynagrodzenia za czas urlopu oraz ekwiwalentu pieniężnego za urlop (Dz.U. 1997 nr 2 poz. 14 ze zm.)' oraz zweryfikować aktualność numeracji §§ 6–8 w tekście jednolitym obowiązującym na 2026 r.",
+        "verified_at": "2026-04-18T12:07:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera konkretne nazwy systemów (Comarch Optima, Symfonia Kadry i Płace) z opisem flag konfiguracyjnych, które mogą się zmienić w wersjach 2026 lub mogą nie być dostępne u wszystkich użytkowników; brakuje zastrzeżenia o weryfikacji u dostawcy."
+        "description": "Draft zawiera konkretne nazwy systemów (Comarch Optima, Symfonia Kadry i Płace) z opisem flag konfiguracyjnych, które mogą się zmienić w wersjach 2026 lub mogą nie być dostępne u wszystkich użytkowników; brakuje zastrzeżenia o weryfikacji u dostawcy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy aktualności nazw systemów kadrowych (Comarch Optima, Symfonia) i ich flag konfiguracyjnych — jest to kwestia techniczna/produktowa, a nie prawna. KB zawiera wyłącznie przepisy prawa polskiego i nie pokrywa specyfikacji oprogramowania kadrowego. Nie można ani potwierdzić, ani obalić ryzyka dezaktualizacji interfejsu tych systemów na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać w kroku 6 zastrzeżenie: 'Nazwy flag i ścieżki menu mogą różnić się w zależności od wersji oprogramowania — przed konfiguracją zweryfikuj aktualne oznaczenia w dokumentacji dostawcy lub module pomocy programu.'",
+        "verified_at": "2026-04-18T12:07:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 2 mówi, że jeśli premia 'NIE jest pomniejszana' to 'NIE wchodzi do podstawy', ale krok 5 stwierdza że premia za brak absencji 'wchodzi, bo jest pomniejszana' — logika jest spójna, ale sformułowanie w kroku 2 mogłoby być mylące dla czytelnika (negacja podwójna)."
+        "description": "Krok 2 mówi, że jeśli premia 'NIE jest pomniejszana' to 'NIE wchodzi do podstawy', ale krok 5 stwierdza że premia za brak absencji 'wchodzi, bo jest pomniejszana' — logika jest spójna, ale sformułowanie w kroku 2 mogłoby być mylące dla czytelnika (negacja podwójna).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy potencjalnej niejednoznaczności sformułowania w kroku 2 (podwójna negacja: 'NIE jest pomniejszana → NIE wchodzi do podstawy'), a nie błędu merytorycznego. KB nie zawiera art. 41 ust. 1 ustawy zasiłkowej ani przepisów rozporządzenia MPiPS z 8.01.1997, które są kluczowe dla weryfikacji logiki kroków 2 i 5. Sama logika (premia niepomniejszana = nie wchodzi do podstawy; premia pomniejszana = wchodzi) jest standardową interpretacją art. 41 ustawy zasiłkowej, więc flaga opisuje problem redakcyjny, nie merytoryczny — ale bez dostępu do pełnej treści ustawy zasiłkowej w KB nie można tego jednoznacznie potwierdzić ani odrzucić.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona jako problem redakcyjny, krok 2 można przeformułować na: 'Jeśli premia jest pomniejszana za czas choroby → wchodzi do podstawy; jeśli wypłacana w pełnej wysokości niezależnie od choroby → nie wchodzi do podstawy' — eliminując podwójną negację.",
+        "verified_at": "2026-04-18T12:07:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Draft nie wyjaśnia, jak postępować z premiami wypłaconymi w okresach, gdy pracownik był na urlopie bezpłatnym lub zawieszeniu stosunku pracy — czy takie okresy wliczają się do '12 miesięcy poprzedzających' czy są pomijane."
+        "description": "Draft nie wyjaśnia, jak postępować z premiami wypłaconymi w okresach, gdy pracownik był na urlopie bezpłatnym lub zawieszeniu stosunku pracy — czy takie okresy wliczają się do '12 miesięcy poprzedzających' czy są pomijane.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących ustalania podstawy wymiaru zasiłku chorobowego w kontekście urlopu bezpłatnego (ustawa zasiłkowa, art. 36-38 ustawy z 25.06.1999). Rekordy z KB dotyczą urlopu bezpłatnego w związku z wyborem (art. 74 KP) i zawieszenia przepisów prawa pracy (art. 91 KP), co nie jest tożsame z zagadnieniem poruszonym w fladze. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać krok wyjaśniający, że zgodnie z art. 36 ust. 2 ustawy zasiłkowej miesiące, w których pracownik nie osiągnął wynagrodzenia z powodu urlopu bezpłatnego, są wyłączane z okresu 12 miesięcy i zastępowane wcześniejszymi miesiącami, w których wynagrodzenie było osiągane.",
+        "verified_at": "2026-04-18T12:07:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje wyjaśnienia, jak traktować premie wypłacane w okresach przed 1.01.2026, jeśli regulamin zmienia się od tego dnia — czy pracownik zatrudniony od 2025 r. ma prawo do 'starych' premii w podstawie chorobowego za niezdolność w 2026."
+        "description": "Brakuje wyjaśnienia, jak traktować premie wypłacane w okresach przed 1.01.2026, jeśli regulamin zmienia się od tego dnia — czy pracownik zatrudniony od 2025 r. ma prawo do 'starych' premii w podstawie chorobowego za niezdolność w 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących ustalania podstawy wymiaru zasiłku chorobowego (ustawa zasiłkowa, art. 41-42) ani przepisów intertemporalnych dotyczących zmiany regulaminów wynagradzania. Flaga dotyczy kwestii przejściowej (premie wypłacone przed 1.01.2026 a podstawa chorobowego po tej dacie), która jest realnym problemem praktycznym, jednak nie można jej zweryfikować na podstawie dostępnych rekordów KB. Draft w kroku 7 jedynie wzmiankuje archiwizację starego regulaminu, ale nie wyjaśnia wprost zasad intertemporalnych dla podstawy zasiłku.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać w kroku 7 lub jako osobny krok wyjaśnienie, że do podstawy wymiaru zasiłku/wynagrodzenia chorobowego za niezdolność przypadającą po 1.01.2026 wlicza się premie faktycznie wypłacone w 12 miesiącach poprzedzających (art. 36 ustawy zasiłkowej), niezależnie od tego, czy były wypłacone na podstawie 'starego' czy 'nowego' regulaminu — liczy się fakt wypłaty i jej charakter (pomniejszana/niepomniejszana) w danym miesiącu.",
+        "verified_at": "2026-04-18T12:08:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft powołuje się na 'decyzję kadrową' jako dokument do archiwizacji, ale nie wskazuje, czy taki dokument ma formalną nazwę w polskim prawie pracy lub czy jest to termin nieoficjalny; może być niejasne dla użytkownika, co dokładnie dokumentować."
+        "description": "Draft powołuje się na 'decyzję kadrową' jako dokument do archiwizacji, ale nie wskazuje, czy taki dokument ma formalną nazwę w polskim prawie pracy lub czy jest to termin nieoficjalny; może być niejasne dla użytkownika, co dokładnie dokumentować.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Termin 'decyzja kadrowa' w drafcie jest użyty w kontekście praktycznym jako nieformalne określenie wewnętrznego dokumentu pracodawcy uzasadniającego kwalifikację premii — nie jest to powołanie się na formalny akt prawny. Polskie prawo pracy nie definiuje zamkniętego katalogu nazw dokumentów wewnętrznych pracodawcy; pracodawca ma swobodę w ich nazewnictwie. KB nie zawiera przepisu wymagającego konkretnej nazwy takiego dokumentu. Draft wyraźnie opisuje treść dokumentu ('cytat z regulaminu + decyzja kadrowa'), co wystarczająco precyzuje, co należy archiwizować.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:08:11Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o 'zmianie regulaminu od 1.01.2026' jest konkretny, ale draft nie wyjaśnia, czy zmiana regulaminu wymaga wypowiedzenia pracownikom czy może być wprowadzona jednostronnie; brakuje odniesienia do art. 8 Kodeksu pracy (zmiana warunków zatrudnienia)."
+        "description": "Edge case o 'zmianie regulaminu od 1.01.2026' jest konkretny, ale draft nie wyjaśnia, czy zmiana regulaminu wymaga wypowiedzenia pracownikom czy może być wprowadzona jednostronnie; brakuje odniesienia do art. 8 Kodeksu pracy (zmiana warunków zatrudnienia).",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga sugeruje brak odniesienia do art. 8 KP w kontekście zmiany regulaminu, jednak art. 8 KP dotyczy nadużycia prawa (klauzula generalna), a nie procedury zmiany regulaminu wynagradzania. Procedura zmiany regulaminu wynagradzania regulowana jest przez art. 77² KP (wypowiedzenie zmieniające warunki płacy) i art. 24113 KP (zmiana regulaminu wynagradzania), a nie art. 8 KP. Draft w edge case dotyczącym zmiany regulaminu od 1.01.2026 skupia się wyłącznie na kwestii wliczania premii do podstawy chorobowego — co jest prawidłowym i wystarczającym zakresem dla kontekstu pytania. Brak omówienia procedury zmiany regulaminu jest uzasadniony zakresem pytania (kwalifikacja premii do podstawy), a wskazany art. 8 KP jest irrelewantny dla tej kwestii.",
+        "verifier_confidence": 0.82,
+        "verified_at": "2026-04-18T12:08:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Draft nie pokrywa scenariusza, gdy pracownik otrzymuje premię w formie akcji, opcji na akcje lub innych instrumentów finansowych — czy takie składniki wchodzą do podstawy chorobowego i jak je wyceniać."
+        "description": "Draft nie pokrywa scenariusza, gdy pracownik otrzymuje premię w formie akcji, opcji na akcje lub innych instrumentów finansowych — czy takie składniki wchodzą do podstawy chorobowego i jak je wyceniać.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów ustawy zasiłkowej (art. 41, 42) ani rozporządzeń dotyczących podstawy wymiaru zasiłku chorobowego, które regulowałyby kwestię wliczania instrumentów finansowych (akcji, opcji) do podstawy chorobowego. Flaga dotyczy rzeczywistej luki w drafcie — scenariusz z wynagrodzeniem w formie akcji/opcji jest specyficzny i nietrywialny (wymaga wyceny wartości pieniężnej, ustalenia momentu przychodu), jednak KB nie dostarcza materiału do potwierdzenia ani obalenia tej luki.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać edge case: 'Premia w formie akcji lub opcji na akcje — co do zasady nie wchodzi do podstawy wymiaru zasiłku chorobowego, gdyż jej wartość nie jest pomniejszana za okres choroby w rozumieniu art. 41 ustawy zasiłkowej; w razie wątpliwości należy wystąpić o interpretację do ZUS lub oprzeć się na indywidualnej interpretacji podatkowej dotyczącej momentu i wartości przychodu.'",
+        "verified_at": "2026-04-18T12:08:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 3 mówi o 'uzupełnieniu do pełnej kwoty' dla premii miesięcznych, ale nie wyjaśnia, czy dotyczy to również sytuacji, gdy pracownik był na zwolnieniu lekarskim przez cały miesiąc (czy wtedy 'pełna kwota' to 0 zł czy kwota za pełny miesiąc pracy)."
+        "description": "Krok 3 mówi o 'uzupełnieniu do pełnej kwoty' dla premii miesięcznych, ale nie wyjaśnia, czy dotyczy to również sytuacji, gdy pracownik był na zwolnieniu lekarskim przez cały miesiąc (czy wtedy 'pełna kwota' to 0 zł czy kwota za pełny miesiąc pracy).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących zasad uzupełniania podstawy wymiaru zasiłku chorobowego (ustawa zasiłkowa, art. 36-42). Flaga dotyczy rzeczywistej luki merytorycznej w drafcie - kwestia miesiąca, w którym pracownik był chory przez cały miesiąc (0 dni przepracowanych), jest niejednoznaczna w kontekście 'uzupełnienia do pełnej kwoty'. Zgodnie z art. 38 ust. 2 ustawy zasiłkowej miesiące, w których pracownik nie przepracował ani jednego dnia, są wyłączane z podstawy obliczenia, co faktycznie nie jest wyjaśnione w drafcie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 3 należy dodać zastrzeżenie: miesiące, w których pracownik nie przepracował ani jednego dnia (np. był chory przez cały miesiąc), są pomijane przy obliczaniu podstawy wymiaru zasiłku (art. 38 ust. 2 ustawy zasiłkowej) — nie uzupełnia się ich do 'pełnej kwoty', lecz wyklucza z podstawy.",
+        "verified_at": "2026-04-18T12:08:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

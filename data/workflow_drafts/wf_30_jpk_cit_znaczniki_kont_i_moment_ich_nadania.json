@@ -108,52 +108,119 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do konkretnych artykułów ustawy o CIT (art. 15 ust. 4g-4h, art. 16 ust. 1 pkt 57, 57a) i ustawy o rachunkowości (art. 10 ust. 1 pkt 3). Brak sformalizowanych anchor'ów uniemożliwia weryfikację aktualności przepisów na 2026 rok."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do konkretnych artykułów ustawy o CIT (art. 15 ust. 4g-4h, art. 16 ust. 1 pkt 57, 57a) i ustawy o rachunkowości (art. 10 ust. 1 pkt 3). Brak sformalizowanych anchor'ów uniemożliwia weryfikację aktualności przepisów na 2026 rok.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku sformalizowanych legal_anchors dla art. 15 ust. 4g-4h CIT, art. 16 ust. 1 pkt 57/57a CIT oraz art. 10 ust. 1 pkt 3 UoR. KB potwierdza istnienie art. 10 ust. 1 pkt 3 UoR (rec 3) i art. 16 ust. 1 pkt 28 CIT (rec 1), ale nie zawiera rekordów dotyczących art. 15 ust. 4g-4h ani art. 16 ust. 1 pkt 57/57a CIT, ani rozporządzenia MF z 16.08.2024 o JPK_CIT. Nie można zweryfikować aktualności tych przepisów na 2026 rok na podstawie dostępnego KB. Sam problem braku anchor'ów w metadanych draftu jest realny proceduralnie, ale KB nie dostarcza twardego dowodu błędu merytorycznego w treści draftu.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Uzupełnić pole legal_anchors o: art. 15 ust. 4g-4h ustawy o CIT, art. 16 ust. 1 pkt 57 i 57a ustawy o CIT, art. 10 ust. 1 pkt 3 ustawy o rachunkowości oraz rozporządzenie MF z 16.08.2024 w sprawie JPK_KR_PD. Następnie zweryfikować aktualność tych przepisów w kontekście 2026 roku.",
+        "verified_at": "2026-04-18T12:21:03Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne daty i progi (50 mln EUR, 31.03.2027, rozporządzenie MF z 16.08.2024) bez wskazania źródła lub daty wejścia w życie. Dla 2026 roku istnieje ryzyko, że rozporządzenie MF lub przepisy dotyczące JPK_KR_PD mogły ulec zmianie między datą weryfikacji (2026-04-18) a faktycznym zastosowaniem."
+        "description": "Draft zawiera konkretne daty i progi (50 mln EUR, 31.03.2027, rozporządzenie MF z 16.08.2024) bez wskazania źródła lub daty wejścia w życie. Dla 2026 roku istnieje ryzyko, że rozporządzenie MF lub przepisy dotyczące JPK_KR_PD mogły ulec zmianie między datą weryfikacji (2026-04-18) a faktycznym zastosowaniem.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzenia MF z 16.08.2024 w sprawie JPK_CIT/JPK_KR_PD ani progów przychodowych (50 mln EUR) czy dat wdrożenia (1.01.2026, 31.03.2027). Dostępne rekordy dotyczą kas rejestrujących, KSeF i VAT — tematycznie niezwiązanych z flagowanym fragmentem. Nie można ani potwierdzić, ani obalić poprawności przytoczonych danych na podstawie dostępnego KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy dodać do KB treść rozporządzenia MF z 16.08.2024 w sprawie dodatkowych danych, o które należy uzupełnić prowadzone księgi rachunkowe (JPK_KR_PD). W drafcie warto dodać przypis z pełną nazwą rozporządzenia i numerem Dz.U. oraz zastrzeżenie, że daty i progi należy weryfikować przed zastosowaniem, gdyż przepisy mogły ulec zmianie.",
+        "verified_at": "2026-04-18T12:21:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 2 mówi 'PRZED pierwszym księgowaniem 2026 roku', ale krok 5 i edge case dotyczą 'różnic przejściowych na przełomie roku' — niejasne jest, czy znaczniki dla pozycji przejściowych (przychód grudzień 2026, podatek styczeń 2027) powinny być ustalone przed 01.01.2026, czy mogą być dodane w trakcie roku dla przyszłych pozycji."
+        "description": "Krok 2 mówi 'PRZED pierwszym księgowaniem 2026 roku', ale krok 5 i edge case dotyczą 'różnic przejściowych na przełomie roku' — niejasne jest, czy znaczniki dla pozycji przejściowych (przychód grudzień 2026, podatek styczeń 2027) powinny być ustalone przed 01.01.2026, czy mogą być dodane w trakcie roku dla przyszłych pozycji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących JPK_CIT/JPK_KR_PD ani rozporządzenia MF z 16.08.2024, które regulowałyby terminy i zasady nadawania znaczników podatkowych. Flaga dotyczy wewnętrznej spójności draftu (krok 2 vs krok 5), a nie zgodności z przepisami prawa — KB nie dostarcza podstawy do oceny czy wymóg 'PRZED pierwszym księgowaniem' jest bezwzględny czy dopuszcza wyjątki dla pozycji przejściowych.",
+        "verifier_confidence": 0.3,
+        "verified_at": "2026-04-18T12:21:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, co zrobić w sytuacji, gdy podatnik zmienia system księgowy w trakcie 2026 roku (np. z Optimy na Symfonię) — czy znaczniki muszą być przeniesione, czy mogą być nadane na nowo w nowym systemie bez wpływu na wcześniejsze zapisy."
+        "description": "Draft nie wyjaśnia, co zrobić w sytuacji, gdy podatnik zmienia system księgowy w trakcie 2026 roku (np. z Optimy na Symfonię) — czy znaczniki muszą być przeniesione, czy mogą być nadane na nowo w nowym systemie bez wpływu na wcześniejsze zapisy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie dotyczą JPK_CIT/JPK_KR_PD ani rozporządzenia MF z 16.08.2024 w sprawie JPK dla podatników CIT. KB nie zawiera przepisów regulujących kwestię przenoszenia znaczników podatkowych przy zmianie systemu księgowego w trakcie roku. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych materiałów.",
+        "verifier_confidence": 0.3,
+        "verified_at": "2026-04-18T12:21:23Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft wspomina 'rozporządzenie MF z 16.08.2024 w sprawie dodatkowych danych w księgach' — nie ma potwierdzenia, że dokument o tej dokładnej dacie i tytule istnieje; wymaga weryfikacji w Dzienniku Ustaw."
+        "description": "Draft wspomina 'rozporządzenie MF z 16.08.2024 w sprawie dodatkowych danych w księgach' — nie ma potwierdzenia, że dokument o tej dokładnej dacie i tytule istnieje; wymaga weryfikacji w Dzienniku Ustaw.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają żadnych informacji dotyczących rozporządzenia MF w sprawie JPK_CIT/JPK_KR_PD ani dodatkowych danych w księgach podatkowych. KB dostarcza jedynie przepisy z Kodeksu pracy, ustawy o VAT i Ordynacji podatkowej, które są całkowicie irrelewantne dla weryfikacji tej flagi. Nie można ani potwierdzić, ani obalić istnienia rozporządzenia MF z 16.08.2024 o wskazanym tytule na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Należy zweryfikować istnienie rozporządzenia bezpośrednio w Dzienniku Ustaw (isap.sejm.gov.pl) pod kątem daty 16.08.2024 i tytułu dotyczącego dodatkowych danych w księgach. Jeśli data lub tytuł są nieprecyzyjne, należy podać pełną sygnaturę aktu (Dz.U. rok, poz. numer) zamiast samej daty.",
+        "verified_at": "2026-04-18T12:21:30Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 4 wymienia znaczniki 'PD_PrzPod', 'PD_PrzNiepod', 'PD_KUP', 'PD_NKUP' — draft nie potwierdza, że są to oficjalne kody znaczników w systemach Optima/Symfonia; mogą to być przykłady, ale nie jest to wyraźnie zaznaczone."
+        "description": "Krok 4 wymienia znaczniki 'PD_PrzPod', 'PD_PrzNiepod', 'PD_KUP', 'PD_NKUP' — draft nie potwierdza, że są to oficjalne kody znaczników w systemach Optima/Symfonia; mogą to być przykłady, ale nie jest to wyraźnie zaznaczone.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera wyłącznie przepisy VAT i nie pokrywa specyfikacji technicznych JPK_CIT/JPK_KR_PD ani nazewnictwa znaczników w systemach Comarch Optima czy Symfonia. Nie można ani potwierdzić, ani obalić że 'PD_PrzPod', 'PD_PrzNiepod', 'PD_KUP', 'PD_NKUP' są oficjalnymi kodami znaczników — weryfikacja wymagałaby dokumentacji technicznej MF (schemat XSD JPK_KR_PD) lub dokumentacji producenta oprogramowania.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać w drafcie zastrzeżenie, że podane nazwy znaczników (PD_PrzPod, PD_PrzNiepod, PD_KUP, PD_NKUP) są przykładowymi/roboczymi nazwami stosowanymi w opisie, a faktyczne kody należy zweryfikować w schemacie XSD JPK_KR_PD opublikowanym przez MF oraz w dokumentacji konkretnego oprogramowania (Optima/Symfonia).",
+        "verified_at": "2026-04-18T12:21:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący MSSF mówi 'wymaga indywidualnego mapowania i jest obszarem o niepewnej praktyce' — to jest zbyt vague dla procedury operacyjnej; brakuje konkretnych kroków, co zrobić w tej sytuacji (zapytanie do KIS jest wskazane, ale nie ma procedury na wypadek, gdy KIS nie odpowie lub odpowiedź będzie niejasna)."
+        "description": "Edge case dotyczący MSSF mówi 'wymaga indywidualnego mapowania i jest obszarem o niepewnej praktyce' — to jest zbyt vague dla procedury operacyjnej; brakuje konkretnych kroków, co zrobić w tej sytuacji (zapytanie do KIS jest wskazane, ale nie ma procedury na wypadek, gdy KIS nie odpowie lub odpowiedź będzie niejasna).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących JPK_CIT/JPK_KR_PD ani przepisów o MSSF w kontekście JPK, więc nie można zweryfikować merytorycznie poprawności edge case'u. Sama flaga dotyczy jakości proceduralnej draftu (brak kroków fallback gdy KIS nie odpowie lub odpowiedź jest niejasna), co jest zasadną obserwacją operacyjną — jednak KB nie dostarcza podstawy do potwierdzenia ani obalenia tej oceny.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważ rozszerzenie edge case'u o konkretne kroki fallback: (1) jeśli KIS nie odpowie w terminie 3 miesięcy — zastosuj ostrożne podejście konserwatywne (mapowanie 1:1 tam gdzie możliwe, pozostałe konta oznacz jako 'do wyjaśnienia' z adnotacją w polityce rachunkowości); (2) jeśli odpowiedź KIS jest niejasna — skonsultuj z biegłym rewidentem lub doradcą podatkowym i udokumentuj stanowisko w aktach sprawy; (3) wskaż termin graniczny (np. Q3 2025) po którym brak interpretacji wymusza decyzję zarządczą.",
+        "verified_at": "2026-04-18T12:21:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, jak obsługiwać konta rozrachunkowe z zagranicą (np. 201 dostawcy zagraniczni) — czy znaczniki KUP/NKUP mają zastosowanie, czy są inne reguły dla transakcji międzynarodowych."
+        "description": "Draft nie wyjaśnia, jak obsługiwać konta rozrachunkowe z zagranicą (np. 201 dostawcy zagraniczni) — czy znaczniki KUP/NKUP mają zastosowanie, czy są inne reguły dla transakcji międzynarodowych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących JPK_CIT/JPK_KR_PD ani rozporządzenia MF z 16.08.2024 w sprawie znaczników podatkowych dla kont rozrachunkowych z zagranicą. Dostępne rekordy dotyczą ZUS, PIT i VAT UE — żaden nie odnosi się do specyfiki kont 201 dla dostawców zagranicznych w kontekście JPK_KR_PD. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.3,
+        "verified_at": "2026-04-18T12:21:51Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 3 sugeruje 'analitykę typu 402-01 (KUP) i 402-99 (NKUP)', ale krok 4 mówi o 'kontach pozabilansowych (zespół 9xx)' — niejasne jest, czy 402-99 to analityka czy pozabilansowe, czy to dwa różne podejścia."
+        "description": "Krok 3 sugeruje 'analitykę typu 402-01 (KUP) i 402-99 (NKUP)', ale krok 4 mówi o 'kontach pozabilansowych (zespół 9xx)' — niejasne jest, czy 402-99 to analityka czy pozabilansowe, czy to dwa różne podejścia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących JPK_CIT, JPK_KR_PD, planu kont ani zasad rachunkowości podatkowej. Flaga dotyczy wewnętrznej spójności drafta (kwestia techniczno-rachunkowa), a nie przepisów podatkowych. Analiza samego drafta wskazuje, że krok 3 opisuje dwa alternatywne podejścia (analityka LUB pozabilansowe), a krok 7 wprost wymienia 'metodę rozdzielania KUP/NKUP (analityka vs pozabilansowe)' — co sugeruje, że draft traktuje je jako warianty, nie sprzeczność. Jednak bez KB potwierdzającego standardy JPK_KR_PD nie można jednoznacznie ocenić czy opis jest wystarczająco jasny.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Opcjonalnie w kroku 3 dodać wyraźne zdanie: 'Możliwe są dwa podejścia: (a) analityka bilansowa — 402-01 (KUP) i 402-99 (NKUP), lub (b) konto pozabilansowe z zespołu 9xx — wybierz jedno podejście i stosuj konsekwentnie w całym roku.'",
+        "verified_at": "2026-04-18T12:22:00Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Draft zawiera odniesienia do konkretnych ścieżek menu w systemach (Comarch Optima: 'Księgowość → Plan kont → edycja konta → zakładka Znaczniki JPK_KR_PD') — interfejsy mogą się zmienić w wersjach wydanych w 2026 roku, co uczyni instrukcje nieaktualne."
+        "description": "Draft zawiera odniesienia do konkretnych ścieżek menu w systemach (Comarch Optima: 'Księgowość → Plan kont → edycja konta → zakładka Znaczniki JPK_KR_PD') — interfejsy mogą się zmienić w wersjach wydanych w 2026 roku, co uczyni instrukcje nieaktualne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących interfejsów systemów Comarch Optima ani Symfonia Finanse i Księgowość, ani przepisów regulujących ścieżki menu w tych programach. Flaga dotyczy ryzyka dezaktualizacji instrukcji technicznych (ścieżki menu), co jest realnym ryzykiem operacyjnym, ale KB opiera się na aktach prawnych i nie może potwierdzić ani obalić tego ryzyka. Flaga jest merytorycznie zasadna jako ostrzeżenie o charakterze technicznym, jednak jej weryfikacja wymaga dokumentacji producenta oprogramowania.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Można dodać zastrzeżenie w drafcie: 'Ścieżki menu podane dla Comarch Optima i Symfonii są aktualne na dzień opracowania instrukcji — przed wdrożeniem należy zweryfikować ich aktualność w dokumentacji producenta lub aktualnej wersji programu.'",
+        "verified_at": "2026-04-18T12:22:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

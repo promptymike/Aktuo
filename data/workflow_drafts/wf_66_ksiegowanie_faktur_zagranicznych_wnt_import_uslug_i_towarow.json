@@ -124,52 +124,121 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 86 ust. 10, 10b pkt 1 i 11 — cytowana jako podstawa do momentu powstania prawa do odliczenia VAT, ale przepisy o odliczeniu VAT z WNT i importu usług znajdują się przede wszystkim w art. 86 ust. 2 i art. 86a; przywołane artykuły mogą dotyczyć innych aspektów (np. dokumentacji), co wymaga weryfikacji aktualnego brzmienia ustawy o VAT."
+        "description": "Art. 86 ust. 10, 10b pkt 1 i 11 — cytowana jako podstawa do momentu powstania prawa do odliczenia VAT, ale przepisy o odliczeniu VAT z WNT i importu usług znajdują się przede wszystkim w art. 86 ust. 2 i art. 86a; przywołane artykuły mogą dotyczyć innych aspektów (np. dokumentacji), co wymaga weryfikacji aktualnego brzmienia ustawy o VAT.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie rekordy dotyczące art. 86a (odliczenie VAT od pojazdów samochodowych), które nie są relevantne dla weryfikacji art. 86 ust. 10, 10b pkt 1 i 11 dotyczących momentu powstania prawa do odliczenia VAT z WNT i importu usług. Nie można na podstawie dostępnych rekordów potwierdzić ani obalić, czy przywołane ustępy faktycznie regulują moment odliczenia dla WNT/importu usług. Flaga wskazuje na potencjalnie zasadną wątpliwość — art. 86 ust. 10b pkt 1 dotyczy WNT, a ust. 11 terminu odliczenia, co jest zgodne z draftem, jednak bez pełnego brzmienia przepisów z KB nie można tego jednoznacznie zweryfikować.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Należy zweryfikować aktualne brzmienie art. 86 ust. 10, 10b pkt 1 i ust. 11 ustawy o VAT bezpośrednio w tekście ustawy. Art. 86 ust. 10b pkt 1 reguluje warunek odliczenia VAT z WNT (posiadanie faktury), a ust. 11 dotyczy terminu odliczenia w kolejnym okresie — jeśli tak jest, cytowanie jest prawidłowe i flaga jest false positive; jeśli brzmienie jest inne, należy skorygować podstawę prawną.",
+        "verified_at": "2026-04-18T12:33:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Limit 50 000 zł dla rejestracji VAT-UE przy WNT (wspomniany w edge_case) — od 2024 r. obowiązuje limit 160 000 EUR (ok. 640 000 PLN); kwota w drafcie jest nieaktualna dla 2026 r. i może wprowadzić w błąd."
+        "description": "Limit 50 000 zł dla rejestracji VAT-UE przy WNT (wspomniany w edge_case) — od 2024 r. obowiązuje limit 160 000 EUR (ok. 640 000 PLN); kwota w drafcie jest nieaktualna dla 2026 r. i może wprowadzić w błąd.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Fragment drafta, do którego odnosi się flaga, nie zawiera żadnej wzmianki o limicie 50 000 zł ani 160 000 EUR dla rejestracji VAT-UE przy WNT. Flaga odwołuje się do 'edge_case' który nie jest widoczny w dostarczonym fragmencie. Rekordy KB (art. 86 ust. 1, art. 106i ust. 3 pkt 4, art. 43 ust. 1 pkt 19) nie dotyczą limitów rejestracji VAT-UE, więc nie można zweryfikować ani potwierdzić, ani odrzucić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Jeśli w pełnym drafcie (w sekcji edge_cases) faktycznie pojawia się kwota 50 000 zł jako limit WNT dla rejestracji VAT-UE, należy ją zaktualizować zgodnie z aktualnym brzmieniem art. 97 ust. 1 i art. 10 ust. 1 pkt 2 ustawy o VAT oraz sprawdzić aktualny próg obowiązujący w 2026 r.",
+        "verified_at": "2026-04-18T12:33:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brak wyjaśnienia procedury rozliczenia VAT importowego w przypadku, gdy kurier (UPS/FedEx) odprawia towar celnie w imieniu nabywcy — draft mówi o VAT z PZC/SAD, ale nie wyjaśnia, czy nabywca otrzymuje osobny dokument celny czy tylko refakturę od kuriera, co jest kluczowe dla prawidłowego księgowania."
+        "description": "Brak wyjaśnienia procedury rozliczenia VAT importowego w przypadku, gdy kurier (UPS/FedEx) odprawia towar celnie w imieniu nabywcy — draft mówi o VAT z PZC/SAD, ale nie wyjaśnia, czy nabywca otrzymuje osobny dokument celny czy tylko refakturę od kuriera, co jest kluczowe dla prawidłowego księgowania.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię dokumentacji celnej przy odprawie przez kuriera (UPS/FedEx) jako przedstawiciela pośredniego lub bezpośredniego — brak art. 33, 33a, 34 ustawy o VAT ani przepisów prawa celnego dotyczących PZC/SAD i uprawnień do odliczenia VAT importowego. Draft w step 4 wspomina o PZC/SAD jako podstawie do JPK_V7, ale rzeczywiście nie wyjaśnia, czy nabywca otrzymuje własny dokument celny czy refakturę od kuriera — co jest praktycznie istotne. Nie mogę jednak potwierdzić flagi jako 'confirmed', bo KB nie dostarcza twardego dowodu na brakujący element.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W step 4 warto dodać wyjaśnienie: gdy kurier (UPS/FedEx) działa jako przedstawiciel pośredni w odprawie celnej, nabywca nie jest stroną zgłoszenia celnego i nie otrzymuje PZC na swoje dane — zamiast tego kurier wystawia refakturę cła i VAT importowego. W takim przypadku podstawą do odliczenia VAT jest refaktura kuriera (jeśli zawiera kwotę VAT z odprawy) lub uzyskany od kuriera dokument PZC/SAD — należy wskazać, że nabywca powinien zażądać od kuriera kopii dokumentu celnego (PZC) z numerem zgłoszenia, aby prawidłowo wypełnić JPK_V7 z oznaczeniem IMP.",
+        "verified_at": "2026-04-18T12:33:56Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 5 stwierdza, że faktura z polskim NIP sprzedawcy zagranicznego to 'transakcja krajowa' bez WNT/importu, ale nie wyjaśnia, czy taki sprzedawca powinien być zawsze zarejestrowany w Polsce — brakuje warunku, co zrobić, jeśli sprzedawca nie jest zarejestrowany i wystawia fakturę z polskim NIP (potencjalna sprzeczność z wymogami podatkowymi)."
+        "description": "Krok 5 stwierdza, że faktura z polskim NIP sprzedawcy zagranicznego to 'transakcja krajowa' bez WNT/importu, ale nie wyjaśnia, czy taki sprzedawca powinien być zawsze zarejestrowany w Polsce — brakuje warunku, co zrobić, jeśli sprzedawca nie jest zarejestrowany i wystawia fakturę z polskim NIP (potencjalna sprzeczność z wymogami podatkowymi).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących obowiązek rejestracji zagranicznego podatnika w Polsce ani konsekwencji wystawienia faktury z polskim NIP przez podmiot niezarejestrowany. Rekordy z KB dotyczą importu towarów (art. 26a), e-faktur (art. 106gb) i WNT (art. 9 ust. 2) — żaden nie adresuje wprost scenariusza opisanego w fladze. Draft w kroku 5 opisuje realną praktykę (Microsoft PL, Google PL, Amazon PL są faktycznie zarejestrowane w Polsce), ale flaga słusznie wskazuje brak warunku obsługi przypadku, gdy sprzedawca posługuje się polskim NIP bez faktycznej rejestracji — tego KB nie rozstrzyga.",
+        "verifier_confidence": 0.45,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 5 zastrzeżenia: 'Przed odliczeniem VAT zweryfikuj aktywność polskiego NIP sprzedawcy w rejestrze podatników VAT (Biała Lista). Jeśli NIP jest nieaktywny lub fikcyjny, transakcja może wymagać reklasyfikacji jako WNT lub import usług, a odliczenie VAT z takiej faktury może być zakwestionowane.'",
+        "verified_at": "2026-04-18T12:34:07Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 6 wspomina 'oznaczenie IMP' w Comarch Optima — nie jest jasne, czy jest to rzeczywiste pole/funkcja w systemie czy uproszczenie; wymaga weryfikacji, czy Comarch Optima rzeczywiście posiada takie dedykowane oznaczenie dla importu towarów."
+        "description": "Krok 6 wspomina 'oznaczenie IMP' w Comarch Optima — nie jest jasne, czy jest to rzeczywiste pole/funkcja w systemie czy uproszczenie; wymaga weryfikacji, czy Comarch Optima rzeczywiście posiada takie dedykowane oznaczenie dla importu towarów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera informacji o funkcjonalnościach systemu Comarch Optima ani o oznaczeniu 'IMP' jako dedykowanym polu w tym systemie. Flaga dotyczy kwestii technicznej (interfejs oprogramowania księgowego), a nie prawnej — KB obejmuje wyłącznie przepisy prawa polskiego. Warto jednak zauważyć, że oznaczenie 'IMP' w JPK_V7 jest wymagane przepisami (rozporządzenie MF w sprawie JPK_VAT), więc pytanie brzmi czy Comarch Optima ma dedykowane pole o tej nazwie, czy użytkownik musi je dodać ręcznie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto doprecyzować w drafcie, że 'IMP' to oznaczenie wymagane w JPK_V7 zgodnie z rozporządzeniem MF, a sposób jego wprowadzenia w Comarch Optima może wymagać weryfikacji w dokumentacji producenta lub poprzez ręczne ustawienie w konfiguracji rejestru VAT.",
+        "verified_at": "2026-04-18T12:34:14Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brak procedury dla sytuacji, gdy sprzedawca z UE nie wystawił faktury bez VAT (WNT powinno być bez VAT), a nabywca otrzymał fakturę z lokalnym VAT — draft mówi 'żądaj korekty', ale nie wyjaśnia, co zrobić, jeśli sprzedawca odmówi, czy można odliczyć VAT lokalny, czy trzeba czekać na korektę."
+        "description": "Brak procedury dla sytuacji, gdy sprzedawca z UE nie wystawił faktury bez VAT (WNT powinno być bez VAT), a nabywca otrzymał fakturę z lokalnym VAT — draft mówi 'żądaj korekty', ale nie wyjaśnia, co zrobić, jeśli sprzedawca odmówi, czy można odliczyć VAT lokalny, czy trzeba czekać na korektę.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy specyficznego scenariusza: sprzedawca z UE wystawił fakturę z lokalnym VAT zamiast faktury bez VAT (WNT), a nabywca chce wiedzieć co zrobić gdy sprzedawca odmówi korekty i czy można odliczyć zagraniczny VAT. KB nie zawiera przepisów regulujących wprost ten scenariusz (np. art. 88 ustawy o VAT dotyczący zakazu odliczenia VAT zagranicznego, ani przepisów o zwrocie VAT z innych krajów UE - dyrektywa 2008/9/WE). Rekordy z KB dotyczą art. 86 ust. 10b pkt 1 (moment odliczenia) i art. 106e (wymogi faktury), ale nie odpowiadają na pytanie o odliczalność zagranicznego VAT naliczonego przez sprzedawcę z UE.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Draft powinien uzupełnić krok dotyczący WNT o procedurę awaryjną: (1) polskiego VAT z WNT rozliczasz niezależnie od faktury zagranicznej, (2) zagranicznego VAT naliczonego przez sprzedawcę z UE NIE można odliczyć w polskim JPK — nie jest to polski VAT naliczony, (3) jeśli sprzedawca odmawia korekty, nabywca może ubiegać się o zwrot zagranicznego VAT w trybie VAT Refund (wniosek przez portal e-Urząd Skarbowy do kraju UE sprzedawcy, na podstawie dyrektywy 2008/9/WE), (4) rozliczenie WNT w Polsce następuje niezależnie od statusu faktury zagranicznej.",
+        "verified_at": "2026-04-18T12:34:25Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o nabywcy zwolnionym podmiotowo z VAT (art. 113) — stwierdzenie, że 'i tak rozlicza import usług' i 'nie ma prawa do odliczenia' jest sprzeczne; jeśli nie ma prawa do odliczenia, to czy rzeczywiście musi wykazywać VAT w JPK_V7 i VAT-UE, czy tylko rejestruje się do VAT?"
+        "description": "Edge case o nabywcy zwolnionym podmiotowo z VAT (art. 113) — stwierdzenie, że 'i tak rozlicza import usług' i 'nie ma prawa do odliczenia' jest sprzeczne; jeśli nie ma prawa do odliczenia, to czy rzeczywiście musi wykazywać VAT w JPK_V7 i VAT-UE, czy tylko rejestruje się do VAT?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 17 ust. 1 pkt 4 (import usług przez nabywcę zwolnionego z VAT), art. 97 ust. 3 (rejestracja VAT-UE dla podmiotów zwolnionych) ani art. 99 ust. 9 (VAT-9M). Flaga wskazuje na potencjalną niespójność w drafcie: stwierdzenie 'i tak rozlicza import usług' oraz 'nie ma prawa do odliczenia' jest co do zasady poprawne — podmiot zwolniony z art. 113 jest zobowiązany do rozliczenia VAT z tytułu importu usług (art. 17 ust. 1 pkt 4) i składa VAT-9M, ale nie odlicza VAT naliczonego; nie musi jednak składać JPK_V7 (bo nie jest czynnym podatnikiem VAT). Draft myli JPK_V7 z VAT-9M, co może być realnym błędem, ale KB nie dostarcza twardego dowodu potwierdzającego lub obalającego tę interpretację.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Doprecyzować edge case: podmiot zwolniony z VAT (art. 113) nabywający usługi z art. 28b składa VAT-9M (nie JPK_V7), rejestruje się do VAT-UE (art. 97 ust. 3 pkt 2) przy usługach z UE, ale nie odlicza VAT — VAT staje się kosztem. Usunąć wzmiankę o JPK_V7 w kontekście tego podmiotu lub wyraźnie zaznaczyć, że JPK_V7 dotyczy tylko czynnych podatników VAT.",
+        "verified_at": "2026-04-18T12:34:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brak wyjaśnienia, jak rozliczyć import usług, gdy sprzedawca wystawia fakturę z VAT (np. Microsoft z polskim NIP naliczył 23%) — czy nabywca rozlicza to jako krajową transakcję (krok 5) czy jako import usług (krok 3), jeśli sprzedawca jest zagranicznym podmiotem, ale zarejestrowany w Polsce?"
+        "description": "Brak wyjaśnienia, jak rozliczyć import usług, gdy sprzedawca wystawia fakturę z VAT (np. Microsoft z polskim NIP naliczył 23%) — czy nabywca rozlicza to jako krajową transakcję (krok 5) czy jako import usług (krok 3), jeśli sprzedawca jest zagranicznym podmiotem, ale zarejestrowany w Polsce?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących miejsca świadczenia usług (art. 28b ustawy o VAT), rejestracji zagranicznego podatnika w Polsce ani zasad kwalifikacji transakcji gdy zagraniczny podmiot posługuje się polskim NIP. Rekordy z KB dotyczą wyłącznie fakturowania i zaliczek (art. 106b, 106i), co jest irrelewantne dla weryfikacji tej flagi. Draft w kroku 5 wskazuje, że faktura z polskim NIP = transakcja krajowa, ale nie adresuje wprost scenariusza opisanego w fladze (zagraniczny podmiot zarejestrowany w Polsce wystawia fakturę z VAT 23% za usługę). Nie mogę potwierdzić ani obalić flagi na podstawie dostępnych danych KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać do kroku 5 lub 3 wyjaśnienie: gdy zagraniczny podmiot (np. Microsoft Ireland) jest zarejestrowany do VAT w Polsce i wystawia fakturę z polskim NIP i VAT 23%, nabywca traktuje to jako transakcję krajową (odliczenie na zasadach art. 86 ust. 1) — nie stosuje mechanizmu importu usług. Import usług (krok 3) dotyczy wyłącznie sytuacji, gdy sprzedawca NIE jest zarejestrowany do VAT w Polsce i nie nalicza polskiego VAT.",
+        "verified_at": "2026-04-18T12:34:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Kurs przeliczenia — draft wspomina 'średni NBP z dnia roboczego poprzedzającego powstanie obowiązku podatkowego' (art. 31a), ale od 2024 r. mogą obowiązywać zmienione zasady dotyczące kursu dla VAT; wymaga weryfikacji aktualności dla 2026 r."
+        "description": "Kurs przeliczenia — draft wspomina 'średni NBP z dnia roboczego poprzedzającego powstanie obowiązku podatkowego' (art. 31a), ale od 2024 r. mogą obowiązywać zmienione zasady dotyczące kursu dla VAT; wymaga weryfikacji aktualności dla 2026 r.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Rekordy KB potwierdzają, że art. 31a ustawy o VAT nadal stosuje kurs średni NBP z ostatniego dnia roboczego poprzedzającego powstanie obowiązku podatkowego (ust. 1) lub dzień wystawienia faktury (ust. 2), co jest zgodne z tym, co sugeruje draft. KB nie wskazuje na żadne zmiany tych zasad od 2024 r. Fragment drafta nie cytuje wprost art. 31a, więc flaga dotyczy ryzyka pośredniego, które nie jest potwierdzone dostępnymi danymi.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:34:51Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brak procedury dla importu usług, gdy sprzedawca jest zwolniony z VAT w kraju siedziby (np. NGO) — draft stwierdza, że 'status VAT sprzedawcy nie zmienia obowiązku', ale nie wyjaśnia, czy nabywca rozlicza VAT należny i naliczony, czy tylko należny bez możliwości odliczenia."
+        "description": "Brak procedury dla importu usług, gdy sprzedawca jest zwolniony z VAT w kraju siedziby (np. NGO) — draft stwierdza, że 'status VAT sprzedawcy nie zmienia obowiązku', ale nie wyjaśnia, czy nabywca rozlicza VAT należny i naliczony, czy tylko należny bez możliwości odliczenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera artykułów bezpośrednio regulujących prawo do odliczenia VAT naliczonego przy imporcie usług (art. 86 ust. 1, art. 88 ustawy o VAT) ani przepisów dotyczących ograniczeń odliczenia dla nabywców zwolnionych podmiotowo. Dostępne rekordy dotyczą przewozu drogowego (art. 134a, 96a) oraz zwolnienia dla podatników z innych państw UE (art. 113a), co nie pozwala zweryfikować, czy draft poprawnie pomija kwestię braku prawa do odliczenia przez nabywcę zwolnionego z VAT. Flaga wskazuje na realną lukę merytoryczną — nabywca zwolniony z VAT (np. na podstawie art. 113 ustawy o VAT) rozlicza VAT należny z importu usług, ale nie ma prawa do odliczenia VAT naliczonego, co czyni transakcję kosztową, a draft tego nie wyjaśnia.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W step 3 należy dodać zastrzeżenie: jeśli nabywca korzysta ze zwolnienia podmiotowego (art. 113 ustawy o VAT) lub przedmiotowego, rozlicza VAT należny z importu usług (art. 17 ust. 1 pkt 4), ale nie ma prawa do odliczenia VAT naliczonego (art. 86 ust. 1 — prawo do odliczenia przysługuje tylko w zakresie, w jakim towary/usługi są wykorzystywane do czynności opodatkowanych). W takim przypadku VAT staje się kosztem, a nie neutralnym rozliczeniem.",
+        "verified_at": "2026-04-18T12:35:02Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

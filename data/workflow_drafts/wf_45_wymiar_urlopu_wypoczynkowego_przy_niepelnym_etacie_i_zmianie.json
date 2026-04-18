@@ -124,62 +124,146 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 1542 § 2 KP cytowany jako źródło normy '1 dzień urlopu = 8 godzin' — należy zweryfikować czy przepis rzeczywiście zawiera tę normę, czy może odnosi się do innego aspektu (np. sposobu liczenia). Norma 8 godzin może wynikać z art. 129 KP (dobowa norma pracy)."
+        "description": "Art. 1542 § 2 KP cytowany jako źródło normy '1 dzień urlopu = 8 godzin' — należy zweryfikować czy przepis rzeczywiście zawiera tę normę, czy może odnosi się do innego aspektu (np. sposobu liczenia). Norma 8 godzin może wynikać z art. 129 KP (dobowa norma pracy).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają treści art. 154² KP, więc nie można bezpośrednio potwierdzić ani obalić, czy § 2 tego artykułu rzeczywiście stanowi, że '1 dzień urlopu = 8 godzin'. Flaga jest merytorycznie zasadna jako ostrzeżenie — norma 8 godzin może wynikać z art. 154² § 2 KP (który reguluje przeliczanie dni urlopu na godziny), ale powiązanie z art. 129 KP (dobowa norma czasu pracy) jest też możliwe. Bez treści art. 154² KP w KB nie można wydać jednoznacznego werdyktu.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zaleca się weryfikację brzmienia art. 154² § 2 KP w aktualnym tekście jednolitym. Jeśli przepis rzeczywiście stanowi, że 1 dzień urlopu = 8 godzin (lub odpowiada dobowej normie czasu pracy pracownika), cytowanie jest prawidłowe. Warto rozważyć doprecyzowanie w drafcie, że '8 godzin' wynika z dobowej normy czasu pracy (art. 129 KP) stosowanej przez odesłanie w art. 154² § 2 KP, co zwiększa precyzję prawną.",
+        "verified_at": "2026-04-18T12:25:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Rozporządzenie MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) cytowane w krokach 5 i 7 — brak weryfikacji czy rozporządzenie to jest aktualne dla 2026 r. i czy nie zostało zmienione lub uchylone nowszymi przepisami."
+        "description": "Rozporządzenie MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) cytowane w krokach 5 i 7 — brak weryfikacji czy rozporządzenie to jest aktualne dla 2026 r. i czy nie zostało zmienione lub uchylone nowszymi przepisami.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących rozporządzenia MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) w sprawie szczegółowych zasad udzielania urlopu wypoczynkowego, ani informacji o jego ewentualnych zmianach lub uchyleniu. Flaga jest merytorycznie zasadna jako pytanie — rozporządzenie pochodzi z 1997 r. i jego aktualność na 2026 r. wymaga weryfikacji w oficjalnych źródłach (ISAP), czego KB nie umożliwia.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Należy zweryfikować w systemie ISAP (isap.sejm.gov.pl) czy rozporządzenie MPiPS z 8.01.1997 r. (Dz.U. 1997 nr 2 poz. 14) pozostaje w mocy w 2026 r. i czy nie zostało zmienione lub zastąpione nowszym aktem. Jeśli rozporządzenie jest nadal obowiązujące, warto dodać adnotację potwierdzającą jego aktualność; jeśli zostało zmienione — zaktualizować cytowania w krokach 5 i 7.",
+        "verified_at": "2026-04-18T12:25:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Krok 6 odnosi się do ustawy z 27.08.1997 r. o rehabilitacji zawodowej (art. 15, art. 19) — normy dotyczące 7-godzinnego dnia pracy i 10 dni dodatkowego urlopu dla niepełnosprawnych mogą ulec zmianie do 2026 r., szczególnie w kontekście zmian w systemie orzecznictwa niepełnosprawności."
+        "description": "Krok 6 odnosi się do ustawy z 27.08.1997 r. o rehabilitacji zawodowej (art. 15, art. 19) — normy dotyczące 7-godzinnego dnia pracy i 10 dni dodatkowego urlopu dla niepełnosprawnych mogą ulec zmianie do 2026 r., szczególnie w kontekście zmian w systemie orzecznictwa niepełnosprawności.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów z ustawy z 27.08.1997 r. o rehabilitacji zawodowej (art. 15 i art. 19), które są przedmiotem flagi. Dostępne rekordy dotyczą Kodeksu pracy art. 15 (BHP) oraz ustawy o systemie ubezpieczeń społecznych art. 19 — żaden nie pozwala zweryfikować aktualności norm 7-godzinnego dnia pracy i 10 dni dodatkowego urlopu dla niepełnosprawnych. Flaga wskazuje ryzyko przyszłych zmian do 2026 r. w kontekście reformy orzecznictwa, co jest spekulatywne i nie może być potwierdzone ani obalona na podstawie dostępnych danych.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft ma być aktualny na 2026 r., warto dodać adnotację że art. 15 i art. 19 ustawy rehabilitacyjnej należy zweryfikować pod kątem ewentualnych nowelizacji związanych z reformą systemu orzecznictwa o niepełnosprawności (planowaną na lata 2024-2026).",
+        "verified_at": "2026-04-18T12:25:23Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 stwierdza '1 dzień urlopu = 8 godzin (lub niższa norma dobowa)' dla pracownika na 1/2 etatu po 4 h dziennie, ale następnie przykład mówi '13 dni × 8 h = 104 h (wystarcza na 26 dni urlopu po 4 h)' — to sugeruje że 104 h dzielone przez 4 h = 26 dni, co może być mylące dla czytelnika co do rzeczywistego wymiaru urlopu (13 dni vs 26 dni)."
+        "description": "Krok 3 stwierdza '1 dzień urlopu = 8 godzin (lub niższa norma dobowa)' dla pracownika na 1/2 etatu po 4 h dziennie, ale następnie przykład mówi '13 dni × 8 h = 104 h (wystarcza na 26 dni urlopu po 4 h)' — to sugeruje że 104 h dzielone przez 4 h = 26 dni, co może być mylące dla czytelnika co do rzeczywistego wymiaru urlopu (13 dni vs 26 dni).",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 154² § 2 KP jednoznacznie stanowi, że 1 dzień urlopu = 8 godzin pracy, niezależnie od faktycznego wymiaru dobowego pracownika. Draft poprawnie opisuje mechanizm: pracownik na 1/2 etatu (4h/dzień) ma 13 dni urlopu × 8h = 104h puli, a przy udzielaniu urlopu odejmuje się faktyczne godziny z harmonogramu (4h/dzień), co daje 104h ÷ 4h = 26 dni urlopowych. To nie jest sprzeczność — to prawidłowe odzwierciedlenie dwuetapowego mechanizmu z art. 154² § 1 i § 2 KP. Potencjalna 'mylność' wynika z natury przepisu, a nie z błędu drafta.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Można dodać wyjaśnienie w kroku 3, że '26 dni urlopowych' to liczba dni faktycznie wolnych od pracy (przy 4h/dzień), a nie wymiar urlopu w rozumieniu KP (który wynosi 13 dni). Np.: 'Uwaga: pracownik faktycznie korzysta z 26 dni wolnych, ale jego wymiar urlopu to 13 dni — różnica wynika z mechanizmu godzinowego rozliczania.'",
+        "verified_at": "2026-04-18T12:25:34Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Brakuje wyjaśnienia jak traktować urlop zaległy z roku poprzedniego przy zmianie etatu — krok 5 wspomina że 'nie przelicza się go na nowy wymiar etatu', ale nie wyjaśnia czy urlop zaległy może być udzielony w całości w nowym wymiarze etatu czy musi być wykorzystany w starym wymiarze."
+        "description": "Brakuje wyjaśnienia jak traktować urlop zaległy z roku poprzedniego przy zmianie etatu — krok 5 wspomina że 'nie przelicza się go na nowy wymiar etatu', ale nie wyjaśnia czy urlop zaległy może być udzielony w całości w nowym wymiarze etatu czy musi być wykorzystany w starym wymiarze.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię urlopu zaległego przy zmianie wymiaru etatu w trakcie roku (brak art. 168 KP o urlopie zaległym ani przepisów rozporządzenia MPiPS z 8.01.1997 r. dotyczących tego zagadnienia). Flaga wskazuje na realną lukę informacyjną w drafcie — kwestia czy urlop zaległy z poprzedniego roku przelicza się na nowy wymiar etatu jest praktycznie istotna, jednak dostępne rekordy KB (art. 1541, 1551, 163 KP) nie pozwalają jednoznacznie potwierdzić ani obalić tej flagi.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać w kroku 5 lub osobnym kroku wyjaśnienie dotyczące urlopu zaległego: zgodnie z utrwaloną praktyką i stanowiskiem PIP, urlop zaległy z poprzedniego roku nie podlega przeliczeniu na nowy wymiar etatu — jest udzielany w wymiarze ustalonym dla roku, w którym urlop powstał, niezależnie od późniejszej zmiany etatu. Należy jednak zweryfikować to z aktualnym stanowiskiem PIP lub orzecznictwem i powołać konkretną podstawę prawną lub interpretację.",
+        "verified_at": "2026-04-18T12:25:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Procedura nie zawiera kroku dotyczącego rozliczenia urlopu wypoczynkowego przy rozwiązaniu umowy o pracę w trakcie roku — brakuje informacji o ekwiwalencie pieniężnym za niewykorzystany urlop przy niepełnym etacie."
+        "description": "Procedura nie zawiera kroku dotyczącego rozliczenia urlopu wypoczynkowego przy rozwiązaniu umowy o pracę w trakcie roku — brakuje informacji o ekwiwalencie pieniężnym za niewykorzystany urlop przy niepełnym etacie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących ekwiwalentu pieniężnego za niewykorzystany urlop (art. 171 KP) ani rozliczenia urlopu przy rozwiązaniu umowy. Flaga wskazuje na brak kroku dotyczącego ekwiwalentu przy niepełnym etacie — jest to potencjalnie zasadna uwaga, ponieważ draft skupia się wyłącznie na ustalaniu i udzielaniu urlopu, nie obejmując scenariusza rozwiązania umowy. Jednak bez odpowiednich rekordów KB nie można jednoznacznie potwierdzić ani odrzucić tej flagi.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie kroku dotyczącego ekwiwalentu pieniężnego za niewykorzystany urlop przy rozwiązaniu umowy (art. 171 § 1 KP), z uwzględnieniem specyfiki obliczania ekwiwalentu dla pracownika niepełnoetatowego zgodnie z rozporządzeniem MPiPS z 8.01.1997 r.",
+        "verified_at": "2026-04-18T12:25:50Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 5 wspomina że 'niewykorzystane dni z 2025 przechodzą jako urlop zaległy bez przeliczenia na nowy etat' — brakuje wyjaśnienia czy dotyczy to również sytuacji gdy pracownik przechodzi z wyższego na niższy wymiar etatu (czy zaległy urlop może być 'zbyt duży' dla nowego wymiaru)."
+        "description": "Krok 5 wspomina że 'niewykorzystane dni z 2025 przechodzą jako urlop zaległy bez przeliczenia na nowy etat' — brakuje wyjaśnienia czy dotyczy to również sytuacji gdy pracownik przechodzi z wyższego na niższy wymiar etatu (czy zaległy urlop może być 'zbyt duży' dla nowego wymiaru).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię traktowania urlopu zaległego przy zmianie wymiaru etatu z wyższego na niższy (np. rozporządzenia MPiPS z 8.01.1997 r. § 1-2). Flaga wskazuje na lukę informacyjną w drafcie dotyczącą specyficznego scenariusza (przejście z wyższego na niższy etat), co jest merytorycznie zasadnym pytaniem — urlop zaległy nabyty przy wyższym etacie może przekraczać proporcjonalny wymiar dla nowego etatu, jednak KB nie dostarcza przepisów potwierdzających ani wykluczających tę interpretację.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać w kroku 5 wyjaśnienie, że urlop zaległy (z poprzedniego roku) nie podlega przeliczeniu przy zmianie wymiaru etatu — zachowuje swoją pierwotną liczbę dni niezależnie od nowego etatu, co może skutkować sytuacją, gdy zaległy urlop przekracza bieżący roczny wymiar. Należy jednak zweryfikować to z aktualnym orzecznictwem lub stanowiskiem PIP, gdyż KB nie pokrywa tej kwestii wprost.",
+        "verified_at": "2026-04-18T12:25:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 4 wspomina konkretne ścieżki w systemach kadrowych (Comarch Optima: 'Kadry → Plan pracy / Nieobecności') — należy zweryfikować czy te ścieżki menu są aktualne dla wersji 2026 tych systemów, szczególnie że oprogramowanie zmienia się dynamicznie."
+        "description": "Krok 4 wspomina konkretne ścieżki w systemach kadrowych (Comarch Optima: 'Kadry → Plan pracy / Nieobecności') — należy zweryfikować czy te ścieżki menu są aktualne dla wersji 2026 tych systemów, szczególnie że oprogramowanie zmienia się dynamicznie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy aktualności ścieżek menu w oprogramowaniu kadrowym (Comarch Optima, Symfonia) dla wersji 2026. KB zawiera wyłącznie przepisy prawne (Kodeks pracy i inne ustawy) i nie zawiera żadnych informacji o interfejsach systemów kadrowych. Nie można ani potwierdzić, ani obalić poprawności tych ścieżek na podstawie dostępnych zasobów.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Rozważ usunięcie konkretnych ścieżek menu z drafta lub dodanie zastrzeżenia: 'Ścieżki menu mogą różnić się w zależności od wersji oprogramowania — należy zweryfikować w aktualnej dokumentacji producenta.' Alternatywnie opisz funkcjonalność ogólnie (np. 'moduł nieobecności/planowania pracy') bez wskazywania konkretnych ścieżek.",
+        "verified_at": "2026-04-18T12:26:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 7 wspomina 'kalkulator urlopu GOFIN' jako narzędzie weryfikacyjne — należy potwierdzić czy GOFIN rzeczywiście oferuje taki kalkulator i czy jest dostępny dla użytkowników w 2026 r."
+        "description": "Krok 7 wspomina 'kalkulator urlopu GOFIN' jako narzędzie weryfikacyjne — należy potwierdzić czy GOFIN rzeczywiście oferuje taki kalkulator i czy jest dostępny dla użytkowników w 2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera wyłącznie przepisy prawne (Kodeks pracy, ustawy) i nie zawiera żadnych informacji o narzędziach zewnętrznych takich jak kalkulator GOFIN. Flaga dotyczy weryfikacji istnienia konkretnego narzędzia komercyjnego/internetowego, co wykracza poza zakres KB. Nie można ani potwierdzić, ani obalić twierdzenia o dostępności kalkulatora GOFIN w 2026 r. na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Jeśli draft ma być odporny na zmiany dostępności zewnętrznych narzędzi, warto zastąpić konkretną nazwę 'kalkulator urlopu GOFIN' ogólniejszym sformułowaniem, np. 'kalkulator urlopu dostępny na stronach wydawnictw kadrowych (np. GOFIN, Infor)' lub usunąć referencję do konkretnego narzędzia i zastąpić ją opisem metody ręcznej weryfikacji.",
+        "verified_at": "2026-04-18T12:26:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący pracownika niepełnosprawnego stwierdza że 'urlop dodatkowy 10 dni nabywany jest dopiero po przepracowaniu 1 roku po dniu zaliczenia do stopnia' — brakuje wyjaśnienia czy dotyczy to również pracownika już zatrudnionego, czy tylko nowo zatrudnionego po otrzymaniu orzeczenia."
+        "description": "Edge case dotyczący pracownika niepełnosprawnego stwierdza że 'urlop dodatkowy 10 dni nabywany jest dopiero po przepracowaniu 1 roku po dniu zaliczenia do stopnia' — brakuje wyjaśnienia czy dotyczy to również pracownika już zatrudnionego, czy tylko nowo zatrudnionego po otrzymaniu orzeczenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 19 ustawy z 27.08.1997 r. o rehabilitacji zawodowej i społecznej oraz zatrudnianiu osób niepełnosprawnych, który reguluje nabycie dodatkowego urlopu. Flaga wskazuje na brak wyjaśnienia czy reguła '1 roku po orzeczeniu' dotyczy zarówno pracownika już zatrudnionego jak i nowo zatrudnionego — jest to rzeczywiście potencjalny edge case, ale bez treści art. 19 ustawy o rehabilitacji nie można jednoznacznie potwierdzić ani obalić, że draft pomija istotne rozróżnienie.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli art. 19 ustawy o rehabilitacji nie różnicuje sytuacji nowo zatrudnionego od już zatrudnionego pracownika (co jest powszechnie przyjętą interpretacją — reguła dotyczy każdego pracownika niezależnie od momentu zatrudnienia), warto dodać w edge case wyjaśnienie: 'Zasada ta dotyczy każdego pracownika — zarówno nowo zatrudnionego po uzyskaniu orzeczenia, jak i pracownika już zatrudnionego, który uzyskał orzeczenie w trakcie zatrudnienia; w obu przypadkach liczy się rok od dnia zaliczenia do stopnia niepełnosprawności.'",
+        "verified_at": "2026-04-18T12:26:22Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Brakuje edge case'a dotyczącego pracownika zatrudnionego na czas określony krótszy niż rok — procedura skupia się na roku kalendarzowym, ale nie wyjaśnia proporcjonalnego wyliczenia dla umów krótszych niż 12 miesięcy."
+        "description": "Brakuje edge case'a dotyczącego pracownika zatrudnionego na czas określony krótszy niż rok — procedura skupia się na roku kalendarzowym, ale nie wyjaśnia proporcjonalnego wyliczenia dla umów krótszych niż 12 miesięcy.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga wskazuje na brak obsługi umów krótszych niż rok, jednak draft już zawiera mechanizmy proporcjonalnego wyliczania: step 5 i step 7 opisują proporcjonalne wyliczenie za każdy miesiąc zatrudnienia, a edge case 'Pierwsza praca w życiu' wprost pokazuje metodę 1/12 za każdy przepracowany miesiąc. Pracownik na umowie terminowej krótszej niż rok jest objęty tymi samymi regułami proporcjonalności z art. 1553 KP i rozporządzenia MPiPS z 8.01.1997 r. KB potwierdza art. 154 KP bez specjalnego przepisu dla umów krótszych niż rok — stosuje się ogólne zasady proporcji miesięcznej.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Opcjonalnie można dodać edge case explicite: 'Umowa na czas określony krótszy niż 12 miesięcy — urlop proporcjonalny: za każdy pełny miesiąc zatrudnienia 1/12 rocznego wymiaru (po zaokrągleniu etatu), niepełny miesiąc zaokrągla się w górę do pełnego (§ 1 rozporządzenia MPiPS z 8.01.1997 r.).' Nie jest to jednak luka merytoryczna, lecz kwestia czytelności.",
+        "verified_at": "2026-04-18T12:26:30Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Procedura nie zawiera informacji o wpływie urlopu bezpłatnego, urlopu na żądanie czy innych nieobecności na wymiar urlopu wypoczynkowego — brakuje wyjaśnienia czy okresy te są zaliczane do stażu pracy dla celów nabycia 26 dni."
+        "description": "Procedura nie zawiera informacji o wpływie urlopu bezpłatnego, urlopu na żądanie czy innych nieobecności na wymiar urlopu wypoczynkowego — brakuje wyjaśnienia czy okresy te są zaliczane do stażu pracy dla celów nabycia 26 dni.",
+        "verdict": "confirmed",
+        "verifier_reasoning": "Art. 155² KP (rec 1) wprost reguluje wpływ urlopu bezpłatnego trwającego co najmniej 1 miesiąc na proporcjonalne ustalanie wymiaru urlopu wypoczynkowego — pracownik powracający po takim urlopie nabywa urlop proporcjonalnie. Draft nie zawiera żadnej wzmianki o tym przepisie ani o konsekwencjach urlopu bezpłatnego dla wymiaru urlopu, co stanowi lukę w procedurze. Brak tej informacji może prowadzić do błędnego naliczenia urlopu w praktyce kadrowej.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Dodać krok lub uwagę w procedurze dotyczącą art. 155² KP: jeśli pracownik korzystał z urlopu bezpłatnego trwającego co najmniej 1 miesiąc, po powrocie stosuje się proporcjonalne ustalenie wymiaru urlopu (analogicznie jak przy art. 155¹ § 1 pkt 2 KP). Należy również wskazać, że urlop bezpłatny nie jest wliczany do stażu pracy dla celów nabycia prawa do 26 dni urlopu.",
+        "verified_at": "2026-04-18T12:26:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

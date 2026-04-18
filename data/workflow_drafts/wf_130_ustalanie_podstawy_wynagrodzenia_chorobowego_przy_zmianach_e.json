@@ -124,52 +124,120 @@
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Dokument zawiera konkretne kwoty minimalne wynagrodzenia na 2026 r. (4 806 zł) i wyliczenia (4 147,00 zł po odjęciu 13,71%), ale nie ma źródła ani daty potwierdzenia tych kwot. Dla dokumentu operacyjnego używanego przez księgowych w 2026 r. wymaga weryfikacji aktualności przed publikacją."
+        "description": "Dokument zawiera konkretne kwoty minimalne wynagrodzenia na 2026 r. (4 806 zł) i wyliczenia (4 147,00 zł po odjęciu 13,71%), ale nie ma źródła ani daty potwierdzenia tych kwot. Dla dokumentu operacyjnego używanego przez księgowych w 2026 r. wymaga weryfikacji aktualności przed publikacją.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących minimalnego wynagrodzenia na 2026 r. ani rozporządzenia Rady Ministrów ustalającego jego wysokość. Flaga jest merytorycznie uzasadniona — kwota 4 806 zł jako minimalne wynagrodzenie w 2026 r. wymaga potwierdzenia w rozporządzeniu RM, a KB nie dostarcza ani potwierdzenia ani zaprzeczenia tej wartości. Nie można ocenić poprawności kwoty na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać przypis lub adnotację wskazującą źródło kwoty minimalnego wynagrodzenia (rozporządzenie Rady Ministrów w sprawie wysokości minimalnego wynagrodzenia za pracę oraz wysokości minimalnej stawki godzinowej w 2026 r.) oraz datę weryfikacji, aby użytkownicy dokumentu mogli potwierdzić aktualność przed zastosowaniem.",
+        "verified_at": "2026-04-18T12:08:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Artykuły 36–42 ustawy zasiłkowej są przywołane jako zakres regulujący podstawę, ale draft nie precyzuje, czy wszystkie te artykuły są nadal aktualne bez zmian ustawowych w 2025–2026. Brakuje informacji o ewentualnych nowelizacjach."
+        "description": "Artykuły 36–42 ustawy zasiłkowej są przywołane jako zakres regulujący podstawę, ale draft nie precyzuje, czy wszystkie te artykuły są nadal aktualne bez zmian ustawowych w 2025–2026. Brakuje informacji o ewentualnych nowelizacjach.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą wyłącznie ustawy o VAT (art. 43 ust. 1 pkt 36) i nie zawierają żadnych informacji o ustawie zasiłkowej ani jej art. 36–43. KB nie pokrywa tematu nowelizacji ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa, więc nie można ani potwierdzić, ani obalić flagi dotyczącej aktualności tych przepisów w 2025–2026.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Aby rozwiać wątpliwość, należy zweryfikować tekst jednolity ustawy zasiłkowej (Dz.U. z aktualnego roku) pod kątem ewentualnych nowelizacji art. 36–42 i dodać w drafcie adnotację o dacie weryfikacji aktualności przepisów lub powołać się na konkretny tekst jednolity.",
+        "verified_at": "2026-04-18T12:08:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 mówi o wyłączaniu miesięcy z mniej niż połową czasu pracy 'z powodu nieobecności z prawem do zasiłku', ale krok 4 wskazuje, że takie miesiące należy 'uzupełnić' — brakuje jasności, czy miesiąc jest wyłączany całkowicie czy uzupełniany."
+        "description": "Krok 3 mówi o wyłączaniu miesięcy z mniej niż połową czasu pracy 'z powodu nieobecności z prawem do zasiłku', ale krok 4 wskazuje, że takie miesiące należy 'uzupełnić' — brakuje jasności, czy miesiąc jest wyłączany całkowicie czy uzupełniany.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów ustawy zasiłkowej (art. 36-42), które regulują kwestię wyłączania vs uzupełniania miesięcy niepełnych. Flaga wskazuje na potencjalną niespójność między krokiem 3 (wyłączanie miesięcy z mniej niż połową czasu pracy) a krokiem 4 (uzupełnianie miesięcy niepełnych), jednak bez dostępu do treści art. 38 i 36 ustawy zasiłkowej nie można jednoznacznie ocenić, czy draft poprawnie rozróżnia te dwa mechanizmy (wyłączenie całkowite vs uzupełnienie). W praktyce ustawa zasiłkowa przewiduje oba mechanizmy dla różnych sytuacji, ale weryfikacja wymaga treści konkretnych przepisów.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:08:56Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 3 wspomina parametr 'Uzupełnij wynagrodzenie' w Comarch Optima i 'Podstawa naliczania zasiłków' w Symfonia, ale nie wyjaśnia, co zrobić w innych systemach księgowych (np. Enova, Teta, Sage). Procedura wydaje się ograniczona do dwóch systemów."
+        "description": "Krok 3 wspomina parametr 'Uzupełnij wynagrodzenie' w Comarch Optima i 'Podstawa naliczania zasiłków' w Symfonia, ale nie wyjaśnia, co zrobić w innych systemach księgowych (np. Enova, Teta, Sage). Procedura wydaje się ograniczona do dwóch systemów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy zakresu procedury obsługi systemów księgowych (Enova, Teta, Sage) w kontekście naliczania podstawy zasiłku. KB nie zawiera żadnych rekordów dotyczących tej kwestii — dostępne rekordy odnoszą się do kas fiskalnych i podatku ryczałtowego. Nie można ani potwierdzić, ani obalić zasadności flagi na podstawie dostępnych danych. Sama flaga wskazuje na potencjalną niekompletność procedury, ale jest to kwestia zakresu dokumentacji, a nie błędu prawnego.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli draft ma być uniwersalny, warto dodać ogólną wskazówkę: 'W innych systemach kadrowo-płacowych (Enova, Teta, Sage itp.) należy odszukać parametr odpowiadający podstawie wymiaru zasiłku i upewnić się, że system stosuje pomniejszenie o 13,71% oraz prawidłowo uzupełnia miesiące niepełne zgodnie z art. 36–42 ustawy zasiłkowej.'",
+        "verified_at": "2026-04-18T12:09:04Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Wyliczenie 4 806 zł × (1 − 0,1371) = 4 147,09 zł jest podane jako 'wg wyliczenia detalicznego', ale wcześniej w tekście podano 4 147,00 zł — rozbieżność 0,09 zł może sugerować niedokładność lub zaokrąglenie, które nie jest wyjaśnione."
+        "description": "Wyliczenie 4 806 zł × (1 − 0,1371) = 4 147,09 zł jest podane jako 'wg wyliczenia detalicznego', ale wcześniej w tekście podano 4 147,00 zł — rozbieżność 0,09 zł może sugerować niedokładność lub zaokrąglenie, które nie jest wyjaśnione.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących minimalnego wynagrodzenia ani ustawy zasiłkowej, więc nie można zweryfikować poprawności wyliczenia 4 806 zł × (1 − 0,1371). Rozbieżność między 4 147,09 zł (wynik matematyczny: 4806 × 0,8629 = 4 147,07 zł) a podaną w drafcie kwotą 4 147,00 zł jest rzeczywista — draft stosuje zaokrąglenie do pełnych złotych bez wyjaśnienia tej zasady, co może być celowe (praktyka ZUS) lub błędem.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy ujednolicić kwotę w drafcie i dodać wyjaśnienie zasady zaokrąglenia, np. 'zaokrąglone do pełnych złotych zgodnie z praktyką ZUS' lub podać dokładną kwotę 4 147,07 zł i wskazać podstawę zaokrąglenia.",
+        "verified_at": "2026-04-18T12:09:11Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case dotyczący 'świadczenia rehabilitacyjnego' w punkcie pierwszym brzmi realistycznie, ale procedura główna (kroki 1–7) nie zawiera instrukcji, jak obsługiwać świadczenie rehabilitacyjne — czy to osobny workflow czy część tego samego?"
+        "description": "Edge case dotyczący 'świadczenia rehabilitacyjnego' w punkcie pierwszym brzmi realistycznie, ale procedura główna (kroki 1–7) nie zawiera instrukcji, jak obsługiwać świadczenie rehabilitacyjne — czy to osobny workflow czy część tego samego?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących ustawy zasiłkowej ani świadczenia rehabilitacyjnego — wszystkie 3 rekordy dotyczą ustawy o VAT, co uniemożliwia weryfikację merytoryczną. Sama flaga dotyczy kwestii strukturalnej draftu (brak instrukcji obsługi świadczenia rehabilitacyjnego w krokach 1–7), a nie błędu prawnego — edge case wspomina o świadczeniu rehabilitacyjnym, ale procedura główna rzeczywiście nie zawiera dedykowanego kroku dla tego scenariusza.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli świadczenie rehabilitacyjne jest istotnym przypadkiem użycia tego workflow, warto dodać krok lub podkrok wyjaśniający, że świadczenie rehabilitacyjne jest regulowane odrębnymi przepisami (art. 18–21 ustawy zasiłkowej) i stanowi osobny workflow, albo explicite wskazać, że edge case z punktu 1 jest jedynie informacją uzupełniającą, a nie częścią procedury głównej.",
+        "verified_at": "2026-04-18T12:09:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 5 wspomina 'wyrównanie wynagrodzenia dla pracowników samorządowych' jako przykład, ale nie wyjaśnia, czy procedura obejmuje również pracowników sektora budżetowego poza samorządem (np. nauczyciele, pracownicy NFZ). Brakuje jasności zakresu."
+        "description": "Krok 5 wspomina 'wyrównanie wynagrodzenia dla pracowników samorządowych' jako przykład, ale nie wyjaśnia, czy procedura obejmuje również pracowników sektora budżetowego poza samorządem (np. nauczyciele, pracownicy NFZ). Brakuje jasności zakresu.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Fragment drafta w kroku 5 opisuje ogólną zasadę dotyczącą wyrównań wynagrodzenia wypłacanych z datą wsteczną w kontekście ustalania podstawy wymiaru zasiłku chorobowego (ustawa zasiłkowa art. 36-42). Wzmianka o 'pracownikach samorządowych' jest jedynie przykładem ilustrującym zasadę, a nie ograniczeniem zakresu stosowania. Przepisy ustawy zasiłkowej mają charakter powszechny i dotyczą wszystkich pracowników objętych ubezpieczeniem chorobowym. KB nie zawiera rekordów podważających tę interpretację ani wskazujących na konieczność odrębnego traktowania nauczycieli czy pracowników NFZ w tym kontekście.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:09:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 6 mówi, że dla pracownika pełnoetatowego podstawa nie może być niższa niż minimum, ale krok 2 wskazuje, że przy zmianie etatu na niepełny bierze się 'wyłącznie miesiące po zmianie' — brakuje wyjaśnienia, czy gwarancja minimum stosuje się do niepełnego etatu od razu czy dopiero po 12 miesiącach."
+        "description": "Krok 6 mówi, że dla pracownika pełnoetatowego podstawa nie może być niższa niż minimum, ale krok 2 wskazuje, że przy zmianie etatu na niepełny bierze się 'wyłącznie miesiące po zmianie' — brakuje wyjaśnienia, czy gwarancja minimum stosuje się do niepełnego etatu od razu czy dopiero po 12 miesiącach.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych rekordów dotyczących art. 36-42 ustawy zasiłkowej, które pozwoliłyby zweryfikować, czy gwarancja minimum wynagrodzenia (art. 45 ustawy zasiłkowej) stosuje się proporcjonalnie do wymiaru etatu od razu po zmianie, czy dopiero po 12 miesiącach. Flaga wskazuje na potencjalną lukę w drafcie — brak wyjaśnienia relacji między krokiem 2 (wyłącznie miesiące po zmianie etatu) a krokiem 6 (minimum dla pełnego etatu) — co jest logicznie uzasadnioną obserwacją, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W kroku 6 warto dodać wyjaśnienie: dla pracownika niepełnoetatowego minimum ustala się proporcjonalnie do wymiaru czasu pracy (np. 3/4 etatu → minimum × 3/4), i zasada ta obowiązuje od razu po zmianie etatu, niezależnie od liczby miesięcy po zmianie.",
+        "verified_at": "2026-04-18T12:09:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 wspomina 'dobrowolną chorobową' dla zleceniobiorcy, ale nie wyjaśnia, czy procedura obejmuje również pracowników na umowie o dzieło lub umowie agencyjnej. Zakres typów umów nie jest jasny."
+        "description": "Krok 7 wspomina 'dobrowolną chorobową' dla zleceniobiorcy, ale nie wyjaśnia, czy procedura obejmuje również pracowników na umowie o dzieło lub umowie agencyjnej. Zakres typów umów nie jest jasny.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Krok 7 drafta dotyczy wyłącznie ustalania podstawy wymiaru wynagrodzenia/zasiłku chorobowego z umowy o pracę i wyraźnie wskazuje, że wcześniejsza umowa zlecenia NIE wchodzi do podstawy. Procedura jest skierowana do pracowników (stosunek pracy), a wzmianka o 'dobrowolnej chorobowej' zleceniobiorcy służy jedynie jako kontrprzykład/wyjaśnienie, dlaczego takie składniki są wyłączane. Umowy o dzieło z zasady nie podlegają ubezpieczeniu chorobowemu (ani obowiązkowemu, ani dobrowolnemu), więc ich pominięcie jest merytorycznie uzasadnione. KB nie zawiera rekordów bezpośrednio dotyczących tej kwestii, jednak kontekst drafta wskazuje, że zakres procedury (umowa o pracę) jest jasno określony.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Opcjonalnie można dodać krótką notę wyjaśniającą, że procedura dotyczy wyłącznie pracowników na umowie o pracę, a umowy o dzieło nie podlegają ubezpieczeniu chorobowemu, natomiast umowy zlecenia/agencyjne mogą podlegać dobrowolnemu ubezpieczeniu chorobowemu, lecz ich podstawa jest ustalana odrębnie.",
+        "verified_at": "2026-04-18T12:09:42Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Dokument zawiera referencję do 'minimum 2025' (4 023,13 zł) w edge case, ale ta kwota nie jest zweryfikowana — jeśli dokument jest generowany dla 2026, ta kwota powinna być potwierdzona z oficjalnych źródeł."
+        "description": "Dokument zawiera referencję do 'minimum 2025' (4 023,13 zł) w edge case, ale ta kwota nie jest zweryfikowana — jeśli dokument jest generowany dla 2026, ta kwota powinna być potwierdzona z oficjalnych źródeł.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących minimalnego wynagrodzenia na 2025 lub 2026 rok ani przepisów ustawy zasiłkowej. Fragment drafta w step 6 podaje kwotę 4 806 zł jako minimalne wynagrodzenie w 2026 r., natomiast flaga odnosi się do kwoty 4 023,13 zł jako 'minimum 2025' — ta kwota nie pojawia się w przytoczonym fragmencie drafta, co utrudnia weryfikację. KB nie pokrywa tematu minimalnego wynagrodzenia, więc nie można potwierdzić ani obalić poprawności żadnej z tych kwot.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy zweryfikować kwotę minimalnego wynagrodzenia za 2025 r. (4 666 zł brutto od 01.2025 lub 4 300 zł od 01.2025 — zależnie od okresu) oraz za 2026 r. z oficjalnych rozporządzeń Rady Ministrów, a następnie przeliczyć wartości po odjęciu 13,71% i zaktualizować obie kwoty w dokumencie.",
+        "verified_at": "2026-04-18T12:09:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

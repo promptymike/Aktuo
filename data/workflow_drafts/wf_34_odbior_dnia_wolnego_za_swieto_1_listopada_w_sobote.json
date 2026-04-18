@@ -108,52 +108,119 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft odwołuje się do art. 130, 129 § 1, 81 § 1, 1513 i 15111 k.p. Brak weryfikacji, czy te numery artykułów są aktualne w Kodeksie pracy 2026 i czy ich brzmienie nie uległo zmianom."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft odwołuje się do art. 130, 129 § 1, 81 § 1, 1513 i 15111 k.p. Brak weryfikacji, czy te numery artykułów są aktualne w Kodeksie pracy 2026 i czy ich brzmienie nie uległo zmianom.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą przepisów VAT i PIT, a nie Kodeksu pracy. Brak w KB artykułów 130, 129 § 1, 81 § 1, 151³ i 151¹¹ k.p., które pozwoliłyby zweryfikować ich aktualność i brzmienie w 2026 r. Flaga jest merytorycznie uzasadniona (puste legal_anchors przy licznych odwołaniach do k.p.), ale KB nie dostarcza materiału do potwierdzenia lub obalenia.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Uzupełnić pole legal_anchors o cytowane artykuły k.p. i zweryfikować ich aktualne brzmienie w tekście jednolitym Kodeksu pracy obowiązującym w 2026 r., w szczególności art. 130 (wymiar czasu pracy), art. 129 § 1 (normy czasu pracy), art. 81 § 1 (wynagrodzenie za czas niewykonywania pracy), art. 151³ (dzień wolny za święto w sobotę) i art. 151¹¹ (praca w niedziele i święta).",
+        "verified_at": "2026-04-18T12:22:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera konkretne daty dla listopada 2026 (1.11 — sobota, 10.11 — środa, 11.11 — środa), ale nie wyjaśnia, czy 11 listopada 2026 to rzeczywiście święto ustawowe w Polsce i czy jego status nie zmienił się od czasu weryfikacji (last_verified_at: 2026-04-18)."
+        "description": "Draft zawiera konkretne daty dla listopada 2026 (1.11 — sobota, 10.11 — środa, 11.11 — środa), ale nie wyjaśnia, czy 11 listopada 2026 to rzeczywiście święto ustawowe w Polsce i czy jego status nie zmienił się od czasu weryfikacji (last_verified_at: 2026-04-18).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą wyłącznie ustawy o VAT i nie zawierają żadnych informacji o ustawie o dniach wolnych od pracy ani Kodeksie pracy. Nie można na ich podstawie potwierdzić ani obalić, czy 11 listopada 2026 jest ustawowym świętem w Polsce. Flaga dotyczy potencjalnego ryzyka nieaktualności danych o statusie święta, co jest realnym ryzykiem, ale KB nie dostarcza materiału do weryfikacji.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Dodać w drafcie explicite odniesienie do ustawy z dnia 18 stycznia 1951 r. o dniach wolnych od pracy (Dz.U. z 2020 r. poz. 1920 ze zm.), art. 1 pkt 11, który wymienia 11 listopada – Narodowe Święto Niepodległości jako dzień ustawowo wolny od pracy, co potwierdziłoby aktualność danych.",
+        "verified_at": "2026-04-18T12:22:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 stwierdza, że 'fizyczny odbiór dodatkowego dnia przysługuje tylko tym, którym harmonogram nie zapewnia już przeciętnie 5-dniowego tygodnia pracy', ale krok 1 mówi, że 'obniżenie wymiaru następuje NIEZALEŻNIE od tego, czy pracownik pracuje w soboty' — brakuje jasnego wyjaśnienia, kiedy wymiar się obniża, a kiedy pracownik otrzymuje fizyczny dzień wolny."
+        "description": "Krok 3 stwierdza, że 'fizyczny odbiór dodatkowego dnia przysługuje tylko tym, którym harmonogram nie zapewnia już przeciętnie 5-dniowego tygodnia pracy', ale krok 1 mówi, że 'obniżenie wymiaru następuje NIEZALEŻNIE od tego, czy pracownik pracuje w soboty' — brakuje jasnego wyjaśnienia, kiedy wymiar się obniża, a kiedy pracownik otrzymuje fizyczny dzień wolny.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych artykułów dotyczących art. 130 KP ani zasad udzielania dnia wolnego za święto przypadające w sobotę. Dostępne rekordy dotyczą art. 138 KP (praca w ruchu ciągłym), podatku dochodowego i VAT — żaden nie pozwala zweryfikować, czy opisana w drafcie logika (obniżenie wymiaru dla wszystkich vs. fizyczny dzień wolny tylko dla niektórych) jest poprawna lub sprzeczna wewnętrznie.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:22:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Draft nie wyjaśnia, co się dzieje, gdy pracownik pracuje w soboty w ramach normalnego harmonogramu (np. system 6-dniowy) — czy wtedy 1.11 (sobota) jest dla niego dniem pracy, czy wolnym, i czy przysługuje mu odbiór za święto w innym dniu."
+        "description": "Draft nie wyjaśnia, co się dzieje, gdy pracownik pracuje w soboty w ramach normalnego harmonogramu (np. system 6-dniowy) — czy wtedy 1.11 (sobota) jest dla niego dniem pracy, czy wolnym, i czy przysługuje mu odbiór za święto w innym dniu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera bezpośrednio art. 130 KP ani przepisów regulujących kwestię obniżenia wymiaru czasu pracy przy święcie w sobotę dla pracowników w systemie 6-dniowym. Draft w step 3 wspomina, że 'fizyczny odbiór dodatkowego dnia przysługuje tylko tym, którym harmonogram nie zapewnia już przeciętnie 5-dniowego tygodnia pracy', co sugeruje częściowe pokrycie tematu, ale fragment jest ucięty i nie wiadomo, czy wyjaśnia wprost sytuację pracownika z harmonogramem 6-dniowym (sobota jako dzień roboczy). Flaga wskazuje na potencjalnie brakującą informację, ale bez pełnego tekstu step 3 i bez art. 130 KP w KB nie można jednoznacznie potwierdzić ani odrzucić.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli draft nie wyjaśnia wprost: dla pracownika, któremu sobota jest normalnym dniem pracy w harmonogramie, 1.11 (sobota) jest dniem świątecznym — nie pracuje, a wymiar czasu pracy jest obniżony o 8h na podstawie art. 130 § 2 KP. Nie przysługuje mu dodatkowy dzień wolny 'w zamian', bo święto już obniżyło jego wymiar. Warto dodać tę informację explicite w step 3.",
+        "verified_at": "2026-04-18T12:22:42Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 5 opisuje pracownika zatrudnionego po 1.11, ale nie wyjaśnia, czy pracownik zatrudniony PRZED 1.11, ale zwolniony PRZED 10.11, ma prawo do odbioru za święto."
+        "description": "Krok 5 opisuje pracownika zatrudnionego po 1.11, ale nie wyjaśnia, czy pracownik zatrudniony PRZED 1.11, ale zwolniony PRZED 10.11, ma prawo do odbioru za święto.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera artykułów regulujących kwestię prawa do dnia wolnego za święto przypadające w sobotę (art. 130 § 2 KP) ani zasad proporcjonalnego nabywania tego prawa w trakcie okresu rozliczeniowego. Flaga wskazuje na lukę informacyjną dotyczącą pracownika zwolnionego przed dniem odbioru (10.11), co jest odrębnym przypadkiem od opisanego w kroku 5 (pracownik zatrudniony po święcie). Nie można potwierdzić ani odrzucić zasadności flagi bez dostępu do właściwych przepisów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 5 lub jako osobny krok informacji o pracowniku, którego stosunek pracy ustał przed wyznaczonym dniem odbioru (np. zwolnionym 5.11): czy pracodawca ma obowiązek wypłaty ekwiwalentu lub innego świadczenia, czy też prawo do odbioru wygasa wraz z ustaniem zatrudnienia.",
+        "verified_at": "2026-04-18T12:22:51Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 6 odwołuje się do konkretnych systemów (Comarch Optima, Symfonia Kadry i Płace) i symboli nieobecności ('W'), ale nie ma weryfikacji, czy te systemy rzeczywiście posiadają takie funkcjonalności i czy symbole są standardowe w 2026."
+        "description": "Krok 6 odwołuje się do konkretnych systemów (Comarch Optima, Symfonia Kadry i Płace) i symboli nieobecności ('W'), ale nie ma weryfikacji, czy te systemy rzeczywiście posiadają takie funkcjonalności i czy symbole są standardowe w 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących systemów kadrowo-płacowych (Comarch Optima, Symfonia) ani standardów symboli nieobecności. Flaga dotyczy kwestii techniczno-produktowej (funkcjonalności konkretnego oprogramowania), a nie prawnej, więc KB oparte na polskich ustawach nie może jej ani potwierdzić, ani obalić. Sama flaga jest merytorycznie zasadna jako ryzyko — interfejsy i symbole w systemach kadrowych mogą się różnić między wersjami i konfiguracjami.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Rozważ usunięcie lub uogólnienie kroku 6 — zamiast podawać konkretne ścieżki menu i symbole dla Comarch Optima, opisz ogólną zasadę (oznacz dzień jako 'wolny z rozkładu/odbiór za święto', nie jako nieobecność) i zaznacz, że konkretna ścieżka zależy od wersji i konfiguracji systemu. Można dodać adnotację: 'Szczegółowa ścieżka może się różnić w zależności od wersji oprogramowania — zweryfikuj w dokumentacji producenta lub z administratorem systemu.'",
+        "verified_at": "2026-04-18T12:22:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący pracownika na długotrwałym L4 stwierdza, że 'dzień wolny przepada', ale nie wyjaśnia, czy pracodawca ma obowiązek dokumentować tę decyzję i czy pracownik może później kwestionować brak wypłaty ekwiwalentu."
+        "description": "Edge case dotyczący pracownika na długotrwałym L4 stwierdza, że 'dzień wolny przepada', ale nie wyjaśnia, czy pracodawca ma obowiązek dokumentować tę decyzję i czy pracownik może później kwestionować brak wypłaty ekwiwalentu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię dokumentowania decyzji o przepadku dnia wolnego za święto w sobotę ani prawa pracownika do kwestionowania braku ekwiwalentu w przypadku długotrwałego L4. Art. 130 § 2 KP (obniżenie wymiaru) i zasady dotyczące ekwiwalentu nie są pokryte w dostępnych rekordach KB. Flaga wskazuje na realną lukę informacyjną w drafcie — brak wyjaśnienia obowiązków dokumentacyjnych pracodawcy i uprawnień pracownika do kwestionowania decyzji — jednak nie można potwierdzić ani obalić jej zasadności na podstawie dostępnych materiałów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto uzupełnić edge case o informację: (1) pracodawca powinien udokumentować fakt przepadku dnia wolnego w dokumentacji kadrowej (np. adnotacja w harmonogramie lub zarządzeniu), (2) pracownik nie ma roszczenia o ekwiwalent pieniężny za przepadły dzień wolny z tytułu art. 130 § 2 KP, gdyż przepis ten reguluje jedynie wymiar czasu pracy, a nie prawo do dodatkowego wynagrodzenia — warto powołać się na art. 130 § 2 KP i ewentualnie orzecznictwo SN potwierdzające brak ekwiwalentu.",
+        "verified_at": "2026-04-18T12:23:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Draft nie pokrywa sytuacji, gdy pracownik jest na urlopie wypoczynkowym w dniu wyznaczonego odbioru (10.11) — krok 4 mówi, że 'dzień 10.11 jest dla niego dniem wolnym z rozkładu', ale nie wyjaśnia, czy urlop wypoczynkowy zostaje skrócony, czy pracownik otrzymuje dodatkowy dzień wolny."
+        "description": "Draft nie pokrywa sytuacji, gdy pracownik jest na urlopie wypoczynkowym w dniu wyznaczonego odbioru (10.11) — krok 4 mówi, że 'dzień 10.11 jest dla niego dniem wolnym z rozkładu', ale nie wyjaśnia, czy urlop wypoczynkowy zostaje skrócony, czy pracownik otrzymuje dodatkowy dzień wolny.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Draft w kroku 4 explicite stwierdza, że jeśli pracownik 10.11 jest na urlopie wypoczynkowym, to '10.11 jest dla niego dniem wolnym z rozkładu, nie konsumuje urlopu ani L4 za ten dzień' — co bezpośrednio odpowiada na wątpliwość flagi: urlop nie zostaje skrócony, a pracownik de facto zyskuje dzień wolny (nie traci dnia urlopu). KB nie zawiera relevantnych artykułów KP dotyczących tej kwestii (art. 130 § 2, art. 166 KP), więc weryfikacja opiera się na treści drafta, który jednak jednoznacznie pokrywa opisany edge case.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:23:15Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Brakuje wyjaśnienia, jak rozliczyć sytuację, gdy pracownik wraca z urlopu wychowawczego dokładnie w dniu wyznaczonego odbioru (10.11) — czy ma prawo do tego dnia wolnego, czy wymiar czasu pracy jest liczony od dnia powrotu."
+        "description": "Brakuje wyjaśnienia, jak rozliczyć sytuację, gdy pracownik wraca z urlopu wychowawczego dokładnie w dniu wyznaczonego odbioru (10.11) — czy ma prawo do tego dnia wolnego, czy wymiar czasu pracy jest liczony od dnia powrotu.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Draft w kroku 4 explicite rozstrzyga sytuację pracownika nieobecnego w dniu wyznaczonego odbioru (10.11), wskazując że urlop wychowawczy jest jednym z wymienionych przypadków i że dzień 10.11 jest dla takiego pracownika dniem wolnym z rozkładu. Flaga sugeruje brak tej informacji, ale fragment drafta wyraźnie wymienia 'urlop wychowawczy' w kroku 4. KB (art. 155² KP) potwierdza specyficzne zasady proporcjonalnego wymiaru urlopu dla powracających z urlopu wychowawczego, ale nie dotyczy bezpośrednio kwestii dnia wolnego za święto w sobotę — draft nie musi tego rozstrzygać w kontekście art. 130 KP.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:23:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 7 mówi o 'co najmniej 1 tydzień przed', ale nie wyjaśnia, czy to wymóg prawny czy rekomendacja praktyczna, i czy pracodawca może wyznaczyć odbiór z krótszym wyprzedzeniem w uzasadnionych przypadkach."
+        "description": "Krok 7 mówi o 'co najmniej 1 tydzień przed', ale nie wyjaśnia, czy to wymóg prawny czy rekomendacja praktyczna, i czy pracodawca może wyznaczyć odbiór z krótszym wyprzedzeniem w uzasadnionych przypadkach.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą prawa podatkowego (leasing, grupy kapitałowe) i są całkowicie irrelewantne dla kwestii wyznaczania dnia wolnego za święto w sobotę w prawie pracy. KB nie zawiera przepisów Kodeksu pracy (art. 130, 129, 150 KP) regulujących tryb i terminy wyznaczania dni wolnych za święta przypadające w sobotę. Nie można zweryfikować, czy wymóg '1 tygodnia' jest wymogiem prawnym czy rekomendacją praktyczną.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Warto doprecyzować w kroku 7, że wymóg co najmniej 1 tygodnia wyprzedzenia nie wynika wprost z przepisów KP (które nie określają minimalnego terminu powiadomienia dla tego przypadku), lecz jest rekomendacją praktyczną opartą na zasadach ogólnych (art. 150 KP — rozkład czasu pracy podawany z wyprzedzeniem). Pracodawca może wyznaczyć dzień wolny z krótszym wyprzedzeniem, jednak naraża się na zarzut naruszenia zasad organizacji pracy.",
+        "verified_at": "2026-04-18T12:23:30Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

@@ -106,47 +106,109 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 31 ust. 3 ustawy zasiłkowej, art. 182(1a) §4 KP, art. 180 KP, art. 18a ustawy systemowej). Brak sformalizowanych kotwic prawnych uniemożliwia weryfikację poprawności cytowań."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 31 ust. 3 ustawy zasiłkowej, art. 182(1a) §4 KP, art. 180 KP, art. 18a ustawy systemowej). Brak sformalizowanych kotwic prawnych uniemożliwia weryfikację poprawności cytowań.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku sformalizowanych kotwic prawnych (legal_anchors) przy jednoczesnym obecności licznych cytowań artykułów w treści drafta. KB potwierdza istnienie art. 180 KP (urlop macierzyński) zgodnie z draftem, jednak nie pokrywa art. 182(1a) §4 KP, art. 18a ustawy systemowej ani art. 31 ust. 3 ustawy zasiłkowej. Brak możliwości pełnej weryfikacji poprawności cytowań bez dostępu do tych przepisów w KB, co jest właśnie problemem wskazywanym przez flagę.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Uzupełnić pole legal_anchors o sformalizowane kotwice: art. 180 KP, art. 182(1a) §4 KP, art. 180(1) KP, art. 18a ustawy z 13.10.1998 o systemie ubezpieczeń społecznych, art. 31 ust. 3 ustawy z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa — co umożliwi ich systematyczną weryfikację.",
+        "verified_at": "2026-04-18T12:49:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne kwoty i procenty (81,5%, 30% min. wynagrodzenia, 250% prognozowanego przeciętnego wynagrodzenia) oraz daty przepisów przejściowych (2.08.2022–26.04.2023, 26.04.2023, 19.03.2024) bez wskazania źródła lub daty wejścia w życie. Dla 2026 roku wymaga weryfikacji czy limity i procenty pozostają aktualne."
+        "description": "Draft zawiera konkretne kwoty i procenty (81,5%, 30% min. wynagrodzenia, 250% prognozowanego przeciętnego wynagrodzenia) oraz daty przepisów przejściowych (2.08.2022–26.04.2023, 26.04.2023, 19.03.2024) bez wskazania źródła lub daty wejścia w życie. Dla 2026 roku wymaga weryfikacji czy limity i procenty pozostają aktualne.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "KB potwierdza, że limit 250% prognozowanego przeciętnego wynagrodzenia dla dobrowolnego ubezpieczenia chorobowego wynika z art. 20 ust. 3 ustawy systemowej i jest przepisem stałym (nie kwotowym, lecz procentowym), więc nie jest 'przestarzały'. Limit 30% minimalnego wynagrodzenia dla preferencyjnego ZUS (art. 18a) jest również przepisem stałym procentowym. Procent 81,5% zasiłku macierzyńskiego oraz daty nowelizacji (26.04.2023, 19.03.2024) są elementami prawnymi wynikającymi z konkretnych ustaw, a KB nie zawiera dowodów na ich zmianę. Flaga wskazuje ryzyko nieaktualności, ale nie dostarcza dowodu że dane są faktycznie nieaktualne na 2026 rok.",
+        "verifier_confidence": 0.72,
+        "corrective_suggestion": "Dla pewności warto dodać w drafcie odniesienie do konkretnych artykułów (np. art. 20 ust. 3 ustawy systemowej dla limitu 250%, art. 18a dla 30% minimalnego wynagrodzenia) oraz zastrzeżenie, że kwoty minimalne i prognozowane wynagrodzenia są aktualizowane corocznie i należy je weryfikować na dany rok.",
+        "verified_at": "2026-04-18T12:49:18Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft wspomina formularze 'Z-3a/Z-3b' i 'ZAS-54' oraz kody ZUS (0570, 0510, 311, 319, 1240) bez potwierdzenia ich aktualności. Kody systemowe mogą ulec zmianie; wymaga weryfikacji czy te formularze i kody rzeczywiście obowiązują w 2026."
+        "description": "Draft wspomina formularze 'Z-3a/Z-3b' i 'ZAS-54' oraz kody ZUS (0570, 0510, 311, 319, 1240) bez potwierdzenia ich aktualności. Kody systemowe mogą ulec zmianie; wymaga weryfikacji czy te formularze i kody rzeczywiście obowiązują w 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają informacji potwierdzających ani zaprzeczających aktualności formularzy Z-3a/Z-3b, ZAS-54 ani kodów ZUS (0570, 0510, 311, 319, 1240) w 2026 roku. Rec 1 wprost stwierdza, że 'kwestia konkretnych kodów ubezpieczenia wykracza poza zakres tego artykułu i wymaga weryfikacji w przepisach ZUS', co potwierdza że KB nie pokrywa tego tematu wystarczająco. Flaga jest merytorycznie uzasadniona jako ryzyko, ale nie można jej potwierdzić ani obalić na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać zastrzeżenie w drafcie, że kody ZUS, numery formularzy i stawki procentowe należy zweryfikować w aktualnych komunikatach ZUS i rozporządzeniach obowiązujących w danym roku, gdyż mogą ulec zmianie.",
+        "verified_at": "2026-04-18T12:49:25Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 2 mówi o '21 dniach od porodu' jako terminie dla zasiłku 81,5%, ale brakuje wyjaśnienia co się dzieje gdy wniosek wpłynie w 22. dniu — czy zasiłek spada natychmiast na 100%/70% czy istnieje okres przejściowy. Brak też informacji o możliwości złożenia wniosku retroaktywnie."
+        "description": "Krok 2 mówi o '21 dniach od porodu' jako terminie dla zasiłku 81,5%, ale brakuje wyjaśnienia co się dzieje gdy wniosek wpłynie w 22. dniu — czy zasiłek spada natychmiast na 100%/70% czy istnieje okres przejściowy. Brak też informacji o możliwości złożenia wniosku retroaktywnie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących zasiłku macierzyńskiego i terminów składania wniosków (ustawa zasiłkowa, rozporządzenia ZUS). Rekordy dotyczą ordynacji podatkowej i ogólnych definicji z ustawy systemowej, co nie pozwala zweryfikować czy flaga jest słuszna. Kwestia skutków złożenia wniosku po 21. dniu od porodu (art. 30a ustawy zasiłkowej) wymaga sprawdzenia w przepisach, których KB nie pokrywa.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy dodać do kroku 2 informację: wniosek złożony po 21. dniu skutkuje zasiłkiem macierzyńskim 100% za pierwsze 26 tygodni i 60% za pozostały okres rodzicielskiego (brak uśrednienia do 81,5%), bez możliwości retroaktywnego przywrócenia stawki 81,5%.",
+        "verified_at": "2026-04-18T12:49:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 stwierdza że ojciec może wziąć '32 tyg. + swoje 9 tyg.' gdy matka nie była ubezpieczona, ale krok 2 mówi o '20 tyg. macierzyńskiego + 41 tyg. rodzicielskiego przy 1 dziecku' — brak jasnego wyjaśnienia czy 32 tyg. to część z 41 tyg. czy dodatkowe tygodnie."
+        "description": "Krok 3 stwierdza że ojciec może wziąć '32 tyg. + swoje 9 tyg.' gdy matka nie była ubezpieczona, ale krok 2 mówi o '20 tyg. macierzyńskiego + 41 tyg. rodzicielskiego przy 1 dziecku' — brak jasnego wyjaśnienia czy 32 tyg. to część z 41 tyg. czy dodatkowe tygodnie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera artykułów bezpośrednio regulujących podział tygodni urlopu rodzicielskiego (art. 182(1a) KP) ani przepisów dotyczących uprawnień ojca gdy matka nie była ubezpieczona. Flaga wskazuje na potencjalną niespójność: draft w kroku 2 mówi o '41 tyg. rodzicielskiego' jako całości, a krok 3/4 wspomina '32 tyg. + 9 tyg.' — co matematycznie daje 41 tyg., ale nie jest to wyraźnie wyjaśnione w drafcie. Bez dostępu do art. 182(1a) KP nie można jednoznacznie potwierdzić ani obalić flagi.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga jest zasadna, warto w kroku 3 lub 4 dodać wyjaśnienie: '32 tyg. to część z 41 tyg. urlopu rodzicielskiego przypadająca na matkę/ojca po odjęciu 9 tyg. nieprzenoszalnej części drugiego rodzica — łącznie 32+9=41 tyg.' Ułatwiłoby to zrozumienie struktury urlopów.",
+        "verified_at": "2026-04-18T12:49:41Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o macierzyńskim rozpoczętym dzień przed porodem wymienia 'zaświadczenie lekarskie o przewidywanej dacie porodu (Z-3 + ZAS-54)' — formularz ZAS-54 nie jest standardowym formularzem ZUS dla zasiłków macierzyńskich; wymaga weryfikacji czy rzeczywiście istnieje i jest wymagany."
+        "description": "Edge case o macierzyńskim rozpoczętym dzień przed porodem wymienia 'zaświadczenie lekarskie o przewidywanej dacie porodu (Z-3 + ZAS-54)' — formularz ZAS-54 nie jest standardowym formularzem ZUS dla zasiłków macierzyńskich; wymaga weryfikacji czy rzeczywiście istnieje i jest wymagany.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają informacji o formularzach ZUS stosowanych przy zasiłkach macierzyńskich (Z-3, ZAS-54). Formularz Z-3 jest standardowym wnioskiem o zasiłek chorobowy/macierzyński składanym przez pracodawcę, natomiast ZAS-54 nie jest powszechnie rozpoznawanym standardowym formularzem ZUS dla zasiłków macierzyńskich — w praktyce ZUS stosuje formularze z serii ZAS (np. ZAS-53 dla zasiłku macierzyńskiego). Flaga wydaje się merytorycznie uzasadniona, ale KB nie pozwala jednoznacznie potwierdzić ani obalić istnienia formularza ZAS-54.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zweryfikować w aktualnym katalogu formularzy ZUS czy formularz ZAS-54 istnieje i dotyczy zasiłku macierzyńskiego. Jeśli nie istnieje, zastąpić go właściwym formularzem (np. ZAS-53 lub innym aktualnym drukiem ZUS wymaganym przy wniosku o zasiłek macierzyński przed porodem).",
+        "verified_at": "2026-04-18T12:49:48Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Krok 5 zawiera instrukcje dla konkretnych systemów (Comarch Optima, Symfonia) z kodami (311, 319, 0110, 1240) — brak informacji czy te systemy i kody będą aktualne w 2026 lub czy istnieją inne systemy powszechnie używane."
+        "description": "Krok 5 zawiera instrukcje dla konkretnych systemów (Comarch Optima, Symfonia) z kodami (311, 319, 0110, 1240) — brak informacji czy te systemy i kody będą aktualne w 2026 lub czy istnieją inne systemy powszechnie używane.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących systemów kadrowo-płacowych (Comarch Optima, Symfonia) ani kodów ZUS używanych w tych systemach. Flaga dotyczy kwestii techniczno-programowej, a nie prawnej, więc weryfikacja na podstawie ustaw jest niemożliwa. Sama obserwacja w fladze jest merytorycznie zasadna (kody i ścieżki menu w oprogramowaniu mogą się zmieniać między wersjami), ale nie można tego potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Można dodać zastrzeżenie w kroku 5: 'Ścieżki menu i kody mogą różnić się w zależności od wersji oprogramowania — zweryfikuj w aktualnej dokumentacji producenta lub helpdesku systemu.'",
+        "verified_at": "2026-04-18T12:49:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Krok 6 wspomina '30% min. wynagrodzenia' i '250% prognozowanego przeciętnego wynagrodzenia' dla preferencyjnego ZUS w 2026 — wymaga weryfikacji czy te procenty nie uległy zmianie w stosunku do roku bieżącego."
+        "description": "Krok 6 wspomina '30% min. wynagrodzenia' i '250% prognozowanego przeciętnego wynagrodzenia' dla preferencyjnego ZUS w 2026 — wymaga weryfikacji czy te procenty nie uległy zmianie w stosunku do roku bieżącego.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Art. 20 ust. 3 ustawy systemowej potwierdza, że górna granica podstawy wymiaru składek na dobrowolne ubezpieczenie chorobowe wynosi 250% prognozowanego przeciętnego wynagrodzenia — co jest zgodne z draftem. Dolna granica 30% minimalnego wynagrodzenia dla preferencyjnego ZUS (art. 18a) nie jest wprost cytowana w dostarczonych rekordach KB, ale jest to utrwalona, wieloletnia regulacja, a KB potwierdza mechanizm 250%. Flaga sugeruje ryzyko zmiany procentów, jednak oba progi (30% i 250%) są zakorzenione w ustawie systemowej i nie ulegały zmianie — draft nie podaje konkretnych kwot, tylko procenty, które są stałe ustawowo.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:50:03Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie wyjaśnia procedury gdy wniosek o macierzyński/rodzicielski wpłynie po 21 dniach od porodu — czy pracownik traci prawo do zasiłku 81,5% całkowicie czy może go uzyskać za okres od złożenia wniosku."
+        "description": "Draft nie wyjaśnia procedury gdy wniosek o macierzyński/rodzicielski wpłynie po 21 dniach od porodu — czy pracownik traci prawo do zasiłku 81,5% całkowicie czy może go uzyskać za okres od złożenia wniosku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów ustawy zasiłkowej (ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa) regulujących skutki złożenia wniosku po 21 dniach od porodu dla wysokości zasiłku. Dostępne rekordy dotyczą ochrony stosunku pracy (art. 177 KP), łączenia urlopu z pracą (art. 182¹e KP) i powrotu po urlopie (art. 186⁴ KP) — żaden nie odnosi się do kwestii zasiłkowej wskazanej w fladze. Nie można ani potwierdzić, ani odrzucić zasadności flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła: w step 2 warto dodać wyjaśnienie, że złożenie wniosku po 21 dniach od porodu skutkuje zasiłkiem 81,5% tylko za okres od złożenia wniosku (a nie od porodu), natomiast za wcześniejszy okres zasiłek macierzyński wynosi 100% podstawy — zgodnie z art. 31 ust. 3 ustawy zasiłkowej.",
+        "verified_at": "2026-04-18T12:50:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

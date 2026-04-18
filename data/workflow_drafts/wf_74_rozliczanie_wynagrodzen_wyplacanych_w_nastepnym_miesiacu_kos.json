@@ -108,47 +108,108 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 11 ust. 1 PIT, art. 22 ust. 6ba PIT, art. 23 ust. 1 pkt 55 PIT, uchwała NSA II FPS 5/14). Brak sformalizowanego mapowania tych przepisów utrudnia weryfikację poprawności cytowań."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 11 ust. 1 PIT, art. 22 ust. 6ba PIT, art. 23 ust. 1 pkt 55 PIT, uchwała NSA II FPS 5/14). Brak sformalizowanego mapowania tych przepisów utrudnia weryfikację poprawności cytowań.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku formalnego mapowania legal_anchors w metadanych draftu, a nie błędności samych cytowań. KB nie zawiera rekordów pokrywających art. 11 ust. 1 PIT, art. 22 ust. 6ba PIT, art. 23 ust. 1 pkt 55 PIT ani art. 38 ust. 1 PIT, więc nie można zweryfikować poprawności cytowanych przepisów. Flaga ma charakter strukturalny (brak mapowania), a nie merytoryczny, co KB nie może potwierdzić ani obalić.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o sformalizowane wpisy: {art: '11 ust. 1', ustawa: 'PIT'}, {art: '22 ust. 6ba', ustawa: 'PIT'}, {art: '23 ust. 1 pkt 55', ustawa: 'PIT'}, {art: '38 ust. 1', ustawa: 'PIT'}, {art: '22 ust. 6bb', ustawa: 'PIT'}, {ref: 'uchwała NSA II FPS 5/14'}, co umożliwi automatyczną weryfikację cytowań.",
+        "verified_at": "2026-04-18T12:36:26Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne daty (31.12.2025, 01.01.2026, 10.02.2026) i terminy (do 15.03.2026, do 20.02.2026) jako przykłady dla 2026 roku. Dla użytkownika w 2027+ roku te daty będą mylące; brakuje jasnego wskazania, że są to przykłady ilustracyjne, a zasady mają charakter ogólny."
+        "description": "Draft zawiera konkretne daty (31.12.2025, 01.01.2026, 10.02.2026) i terminy (do 15.03.2026, do 20.02.2026) jako przykłady dla 2026 roku. Dla użytkownika w 2027+ roku te daty będą mylące; brakuje jasnego wskazania, że są to przykłady ilustracyjne, a zasady mają charakter ogólny.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 22 ust. 6ba/6bb ustawy PIT, art. 15 ust. 4g/4h ustawy CIT ani art. 38 ust. 1 ustawy PIT, które są cytowane w drafcie. Flaga dotyczy jednak nie poprawności przepisów, lecz ryzyka dezaktualizacji konkretnych dat przykładowych (2026). Problem jest realny z perspektywy UX - daty 31.12.2025, 01.01.2026, 10.02.2026, 15.03.2026, 20.02.2026 są osadzone jako konkretne przykłady bez wyraźnego oznaczenia ich ilustracyjnego charakteru, co może wprowadzać w błąd użytkowników w latach 2027+. KB nie pozwala jednak potwierdzić ani obalić tej oceny na podstawie przepisów prawa.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodaj wyraźne oznaczenie przy każdym przykładzie z datą, np. '[PRZYKŁAD dla roku 2026 - zastąp aktualnymi datami]' lub wprowadź zmienne symboliczne (np. 'rok X', 'miesiąc M+1') zamiast konkretnych dat, z jednorazowym wyjaśnieniem na początku sekcji, że daty są ilustracyjne.",
+        "verified_at": "2026-04-18T12:36:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 7 zawiera szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma, Symfonia/Enova) z nazwami pól i ścieżek menu. Bez dostępu do aktualnej dokumentacji tych systemów (zwłaszcza dla wersji 2026+) istnieje ryzyko, że nazwy pól lub logika konfiguracji mogą być nieaktualne lub zmienione."
+        "description": "Krok 7 zawiera szczegółowe instrukcje dla konkretnych programów (Comarch Optima, WFirma, Symfonia/Enova) z nazwami pól i ścieżek menu. Bez dostępu do aktualnej dokumentacji tych systemów (zwłaszcza dla wersji 2026+) istnieje ryzyko, że nazwy pól lub logika konfiguracji mogą być nieaktualne lub zmienione.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących oprogramowania kadrowo-płacowego (Comarch Optima, WFirma, Symfonia/Enova) ani ich interfejsów użytkownika. Rekordy z KB dotyczą wyłącznie przepisów podatkowych (PIT, VAT) i nie pozwalają zweryfikować poprawności nazw pól i ścieżek menu w konkretnych programach. Flaga jest merytorycznie uzasadniona jako ryzyko (nazwy pól w oprogramowaniu mogą się zmieniać między wersjami), ale KB nie dostarcza dowodów ani potwierdzających, ani obalających tę obawę.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Dodać zastrzeżenie w kroku 7, że nazwy pól i ścieżki menu mogą różnić się w zależności od wersji oprogramowania i należy zweryfikować z aktualną dokumentacją producenta lub działem wsparcia technicznego danego systemu.",
+        "verified_at": "2026-04-18T12:36:42Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, jak postępować w przypadku pracownika zatrudnionego w trakcie miesiąca, gdy zmienia się termin wypłaty - czy zerowa RCA w pierwszym miesiącu dotyczy również pracowników z datą zatrudnienia w tym miesiącu, czy tylko pracowników już zatrudnionych."
+        "description": "Draft nie wyjaśnia, jak postępować w przypadku pracownika zatrudnionego w trakcie miesiąca, gdy zmienia się termin wypłaty - czy zerowa RCA w pierwszym miesiącu dotyczy również pracowników z datą zatrudnienia w tym miesiącu, czy tylko pracowników już zatrudnionych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących zasad składania zerowych RCA/DRA w ZUS ani przepisów ustawy o systemie ubezpieczeń społecznych regulujących tę kwestię. Flaga dotyczy specyficznego przypadku pracownika zatrudnionego w trakcie miesiąca zmiany terminu wypłaty - jest to pytanie o praktykę ZUS i interpretację przepisów ubezpieczeniowych, których KB nie pokrywa.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać do step 5 wyjaśnienie: pracownicy zatrudnieni w miesiącu zmiany terminu wypłaty powinni być wykazani w RCA z faktyczną podstawą i składkami za przepracowany okres, gdyż zerowa RCA dotyczy wyłącznie pracowników, dla których wynagrodzenie za dany miesiąc zostanie wypłacone w miesiącu następnym zgodnie z nowym terminem.",
+        "verified_at": "2026-04-18T12:36:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 2 mówi o 'terminowej wypłacie' jako warunku księgowania kosztu w miesiącu należności dla UoP, ale nie definiuje precyzyjnie, co stanowi 'termin wynikający z prawa pracy/regulaminu' - czy jest to termin ustawowy (np. do 10. dnia następnego miesiąca), czy może być dowolny termin określony w umowie."
+        "description": "Krok 2 mówi o 'terminowej wypłacie' jako warunku księgowania kosztu w miesiącu należności dla UoP, ale nie definiuje precyzyjnie, co stanowi 'termin wynikający z prawa pracy/regulaminu' - czy jest to termin ustawowy (np. do 10. dnia następnego miesiąca), czy może być dowolny termin określony w umowie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 22 ust. 6ba ustawy PIT ani art. 15 ust. 4g ustawy CIT, które regulują warunek 'terminowej wypłaty' wynagrodzenia z UoP. Flaga dotyczy braku precyzji w definicji 'terminu wynikającego z prawa pracy/regulaminu' - Kodeks pracy (art. 85 § 2 KP) wskazuje, że wynagrodzenie wypłaca się co najmniej raz w miesiącu, w stałym i ustalonym z góry terminie, nie później niż w ciągu pierwszych 10 dni następnego miesiąca, ale KB nie pokrywa tego przepisu. Nie można jednoznacznie potwierdzić ani odrzucić flagi na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 2 warto doprecyzować, że 'termin wynikający z prawa pracy/regulaminu' oznacza termin ustalony przez pracodawcę w regulaminie pracy lub umowie, jednak nie później niż do 10. dnia następnego miesiąca kalendarzowego (art. 85 § 2 KP) - i że właśnie ten termin (lub wcześniejszy, jeśli tak stanowi regulamin) jest warunkiem zaliczenia kosztu do miesiąca należności.",
+        "verified_at": "2026-04-18T12:36:57Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący 'wypłaty gotówką 31.01.2026 do dyspozycji' przy umownym terminie 10. dnia następnego miesiąca wymaga pokwitowania z datą - ale draft nie wyjaśnia, czy pracownik/zleceniobiorca musi faktycznie odebrać pieniądze w tym dniu, czy wystarczy, że były dostępne (np. w kasie)."
+        "description": "Edge case dotyczący 'wypłaty gotówką 31.01.2026 do dyspozycji' przy umownym terminie 10. dnia następnego miesiąca wymaga pokwitowania z datą - ale draft nie wyjaśnia, czy pracownik/zleceniobiorca musi faktycznie odebrać pieniądze w tym dniu, czy wystarczy, że były dostępne (np. w kasie).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących kwestię 'postawienia do dyspozycji' w kontekście wypłaty gotówkowej (art. 11 ust. 1 ustawy PIT nie jest cytowany w dostarczonych rekordach). Draft w edge_cases wspomina o wymaganym pokwitowaniu/KW z datą 31.01.2026, ale faktycznie nie wyjaśnia różnicy między 'faktycznym odbiorem' a 'dostępnością środków w kasie'. Flaga wskazuje na realną lukę merytoryczną, jednak KB nie dostarcza twardego dowodu potwierdzającego ani obalającego tę obserwację.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać do edge_case wyjaśnienie, że zgodnie z art. 11 ust. 1 ustawy PIT 'postawienie do dyspozycji' oznacza, że środki były faktycznie dostępne dla zleceniobiorcy (np. gotówka w kasie z możliwością odbioru), nawet jeśli fizycznie ich nie odebrał - i że samo wystawienie KW z datą 31.01 bez realnej dostępności środków nie wystarczy. Należy też wskazać, że ciężar dowodu spoczywa na płatniku.",
+        "verified_at": "2026-04-18T12:37:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Odniesienie do 'uchwały NSA II FPS 5/14' jako 'kluczowej' w kontekście daty wypłaty dla PIT-11 - brak pełnego cytowania i weryfikacji, czy ta uchwała rzeczywiście dotyczy tego zagadnienia w obecnym stanie prawnym (2026)."
+        "description": "Odniesienie do 'uchwały NSA II FPS 5/14' jako 'kluczowej' w kontekście daty wypłaty dla PIT-11 - brak pełnego cytowania i weryfikacji, czy ta uchwała rzeczywiście dotyczy tego zagadnienia w obecnym stanie prawnym (2026).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących uchwały NSA II FPS 5/14 ani zagadnienia daty wypłaty dla PIT-11. Dostępne rekordy dotyczą innych kwestii (przychody z innych źródeł, amortyzacja, egzekucja). Nie można ani potwierdzić, ani obalić, że uchwała II FPS 5/14 dotyczy kwestii daty wypłaty dla PIT-11 - flaga wskazuje na ryzyko błędnego cytowania lub nieaktualności tej uchwały w kontekście 2026 r., co jest uzasadnioną wątpliwością, ale KB nie dostarcza dowodów w żadną stronę.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Należy zweryfikować treść uchwały NSA II FPS 5/14 bezpośrednio w bazie orzeczeń NSA oraz sprawdzić, czy jej tezy pozostają aktualne po ewentualnych zmianach legislacyjnych. Jeśli uchwała jest cytowana jako 'kluczowa', warto podać jej pełną tezę lub zastąpić odwołaniem do konkretnego przepisu ustawy PIT.",
+        "verified_at": "2026-04-18T12:37:14Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie wspomina o procedurze postępowania w przypadku, gdy pracownik/zleceniobiorca odmówi podpisania pokwitowania lub będzie niedostępny w dniu postawienia do dyspozycji - jak udokumentować datę uzyskania przychodu."
+        "description": "Draft nie wspomina o procedurze postępowania w przypadku, gdy pracownik/zleceniobiorca odmówi podpisania pokwitowania lub będzie niedostępny w dniu postawienia do dyspozycji - jak udokumentować datę uzyskania przychodu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących procedurę dokumentowania daty postawienia wynagrodzenia do dyspozycji w przypadku odmowy podpisania pokwitowania lub niedostępności pracownika. Flaga dotyczy kwestii praktyczno-dokumentacyjnej, która nie jest wprost uregulowana w przywołanych rekordach KB. Sam draft skupia się na zasadach kasowych i terminach, nie omawiając procedur awaryjnych.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:37:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Krok 5 wspomina o 'kodzie tytułu' w RCA - ta terminologia może być nieaktualna, jeśli ZUS zmienił strukturę deklaracji DRA/RCA po 2026 roku."
+        "description": "Krok 5 wspomina o 'kodzie tytułu' w RCA - ta terminologia może być nieaktualna, jeśli ZUS zmienił strukturę deklaracji DRA/RCA po 2026 roku.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą kontroli ZUS (art. 87), ubezpieczeń z tytułu opieki nad dzieckiem (art. 6a) oraz numerów rachunków składkowych (art. 43b) - żaden z nich nie odnosi się do struktury deklaracji DRA/RCA ani terminologii 'kodu tytułu'. KB nie pokrywa tematu wystarczająco, by potwierdzić lub obalić flagę dotyczącą aktualności tej terminologii.",
+        "verifier_confidence": 0.6,
+        "verified_at": "2026-04-18T12:37:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

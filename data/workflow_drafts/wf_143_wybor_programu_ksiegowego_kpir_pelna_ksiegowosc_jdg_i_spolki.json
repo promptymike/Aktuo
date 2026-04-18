@@ -106,67 +106,158 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do przepisów (art. 106ga ustawy o VAT, art. 2 ust. 1 UoR, art. 32 RODO, § 10 rozporządzenia MF z 15.10.2019, art. 9 ust. 1c ustawy o CIT, art. 30 ust. 2 UoR). Brak sformalizowanych anchor-pointów uniemożliwia weryfikację aktualności tych przepisów dla 2026."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do przepisów (art. 106ga ustawy o VAT, art. 2 ust. 1 UoR, art. 32 RODO, § 10 rozporządzenia MF z 15.10.2019, art. 9 ust. 1c ustawy o CIT, art. 30 ust. 2 UoR). Brak sformalizowanych anchor-pointów uniemożliwia weryfikację aktualności tych przepisów dla 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy braku sformalizowanych legal_anchor-pointów w metadanych draftu oraz potencjalnej nieaktualności cytowanych przepisów (art. 106ga ustawy o VAT, art. 9 ust. 1c ustawy o CIT, § 10 rozporządzenia MF z 15.10.2019, art. 2 ust. 1 i art. 30 ust. 2 UoR). Dostarczone rekordy KB dotyczą wyłącznie art. 32 i art. 10 UoR w kontekście amortyzacji i dokumentacji zasad rachunkowości — nie pokrywają żadnego z kluczowych przepisów wskazanych w drafcie. Nie można ani potwierdzić, ani obalić aktualności cytowanych artykułów na podstawie dostępnych danych.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Należy uzupełnić pole 'legal_anchors' o sformalizowane wpisy dla każdego cytowanego przepisu (art. 106ga ustawy o VAT, art. 9 ust. 1c ustawy o CIT, § 10 rozporządzenia MF z 15.10.2019, art. 2 ust. 1 i art. 30 ust. 2 UoR) oraz zweryfikować ich aktualność w oficjalnych źródłach (ISAP) pod kątem stanu prawnego na 2026 rok, szczególnie w zakresie przepisów o KSeF i JPK_CIT.",
+        "verified_at": "2026-04-18T12:14:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne daty wdrożenia KSeF (1.02.2026, 1.04.2026) i progi przychodu (200 mln zł, 2 500 000 EUR za 2025 r.), ale brak źródła weryfikacji tych dat dla 2026 — mogły ulec zmianie w stosunku do momentu generowania (18.04.2026). Wymaga potwierdzenia aktualności u MF/KIS."
+        "description": "Draft zawiera konkretne daty wdrożenia KSeF (1.02.2026, 1.04.2026) i progi przychodu (200 mln zł, 2 500 000 EUR za 2025 r.), ale brak źródła weryfikacji tych dat dla 2026 — mogły ulec zmianie w stosunku do momentu generowania (18.04.2026). Wymaga potwierdzenia aktualności u MF/KIS.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają treści art. 106ga ustawy o VAT ani przepisów przejściowych dotyczących harmonogramu wdrożenia KSeF (dat 1.02.2026 i 1.04.2026 oraz progu 200 mln zł). KB nie pozwala potwierdzić ani obalić aktualności tych dat. Flaga jest merytorycznie zasadna jako ostrzeżenie procesowe — draft generowany 18.04.2026 cytuje daty, które już mogły minąć lub ulec nowelizacji, co wymaga weryfikacji u MF/KIS.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodaj przypis lub zastrzeżenie w drafcie: 'Daty i progi obowiązywania KSeF należy zweryfikować na stronie MF lub w Krajowej Informacji Skarbowej przed podjęciem decyzji zakupowej, gdyż harmonogram był wielokrotnie zmieniany.' Rozważ też aktualizację źródła do konkretnej ustawy nowelizującej z datą publikacji w Dz.U.",
+        "verified_at": "2026-04-18T12:14:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Krok 4 zawiera konkretną wycenę WFirma dla BR (~1100 zł/mc przy 50 klientach, ~13 200 zł/rok) — ta kwota może być nieaktualna dla 2026 bez potwierdzenia u dostawcy. Cenniki programów księgowych zmieniają się co 6–12 miesięcy."
+        "description": "Krok 4 zawiera konkretną wycenę WFirma dla BR (~1100 zł/mc przy 50 klientach, ~13 200 zł/rok) — ta kwota może być nieaktualna dla 2026 bez potwierdzenia u dostawcy. Cenniki programów księgowych zmieniają się co 6–12 miesięcy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy aktualności cennika WFirma dla biur rachunkowych (~1100 zł/mc przy 50 klientach). Rekordy KB zawierają wyłącznie przepisy ustawy o VAT (art. 100, 106e, 28p) i nie zawierają żadnych informacji o cennikach oprogramowania księgowego. Nie można ani potwierdzić, ani obalić tej flagi na podstawie dostępnych danych KB. Sama obserwacja w fladze jest merytorycznie zasadna — cenniki SaaS zmieniają się regularnie i podana kwota może być nieaktualna.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Dodaj zastrzeżenie w drafcie przy wycenie WFirma: 'cena orientacyjna wg cennika z [data weryfikacji] — przed zakupem zweryfikuj aktualny cennik na wfirma.pl/biuro-rachunkowe', aby użytkownik wiedział, że kwota wymaga potwierdzenia u dostawcy.",
+        "verified_at": "2026-04-18T12:14:28Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 zaleca 'wybierz jednego dostawcę z obydwoma modułami' (KPiR + pełne księgi), ale krok 4 porównuje WFirmę (głównie KPiR/ryczałt) z Comarch Optima i Enova365 (pełna księgowość) — nie wyjaśnia, czy WFirma ma moduł pełnej księgowości, czy to sprzeczność."
+        "description": "Krok 3 zaleca 'wybierz jednego dostawcę z obydwoma modułami' (KPiR + pełne księgi), ale krok 4 porównuje WFirmę (głównie KPiR/ryczałt) z Comarch Optima i Enova365 (pełna księgowość) — nie wyjaśnia, czy WFirma ma moduł pełnej księgowości, czy to sprzeczność.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy kwestii merytorycznej dotyczącej oferty produktowej WFirma (czy posiada moduł pełnej księgowości), a nie przepisów prawa. Rekordy z KB dotyczą wyłącznie ustawy o zryczałtowanym podatku dochodowym i nie zawierają żadnych informacji o oprogramowaniu księgowym. Nie można na podstawie dostępnych rekordów potwierdzić ani obalić, czy WFirma oferuje moduł pełnej księgowości (Księga Handlowa). Flaga wskazuje na potencjalną niespójność logiczną w drafcie, ale jej weryfikacja wymaga wiedzy o ofercie produktowej dostawcy, a nie przepisów prawa.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 4 warto explicite zaznaczyć, że WFirma obsługuje wyłącznie KPiR/ryczałt i nie posiada modułu pełnej księgowości (Księgi Handlowej), a zatem dla biur obsługujących oba typy klientów rekomendacja z kroku 3 ('wybierz jednego dostawcę z obydwoma modułami') wskazuje na Comarch Optima lub Enova365 — nie WFirmę.",
+        "verified_at": "2026-04-18T12:14:37Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 2 wymaga 'obsługi trybu offline24' w KSeF, ale nie wyjaśnia, czy to wymóg obowiązkowy czy opcjonalny dla biur rachunkowych — brak warunku, kiedy offline24 jest krytyczny (np. dla klientów bez internetu)."
+        "description": "Krok 2 wymaga 'obsługi trybu offline24' w KSeF, ale nie wyjaśnia, czy to wymóg obowiązkowy czy opcjonalny dla biur rachunkowych — brak warunku, kiedy offline24 jest krytyczny (np. dla klientów bez internetu).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących trybu offline24 w KSeF ani art. 106ga ustawy o VAT regulującego szczegóły techniczne wdrożenia KSeF. Flaga dotyczy kwestii techniczno-operacyjnej (kiedy tryb offline24 jest krytyczny), a nie stricte prawnej — KB nie pokrywa tego zagadnienia. Sama flaga wskazuje na brak wyjaśnienia warunku stosowania offline24, co może być zasadną uwagą redakcyjną, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać w kroku 2 warunek: tryb offline24 jest krytyczny dla klientów działających w miejscach z niestabilnym łączem internetowym lub dla biur obsługujących klientów z sektorów regulowanych wymagających ciągłości operacyjnej — w takich przypadkach weryfikacja dostępności offline24 w programie powinna być wymogiem obligatoryjnym, nie opcjonalnym.",
+        "verified_at": "2026-04-18T12:14:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 6 wspomina 'JPK_KR_PD od 1.01.2025 dla największych CIT-owców i od 1.01.2026 dla pozostałych' — brak wyjaśnienia, czy biuro musi obsługiwać JPK_KR_PD czy tylko klient (rozgraniczenie odpowiedzialności)."
+        "description": "Krok 6 wspomina 'JPK_KR_PD od 1.01.2025 dla największych CIT-owców i od 1.01.2026 dla pozostałych' — brak wyjaśnienia, czy biuro musi obsługiwać JPK_KR_PD czy tylko klient (rozgraniczenie odpowiedzialności).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych rekordów dotyczących JPK_KR_PD ani art. 9 ust. 1c ustawy o CIT w kontekście obowiązków biura rachunkowego vs. klienta. Dostępne rekordy dotyczą cen transferowych i amortyzacji, co jest irrelevantne dla weryfikacji tej flagi. Flaga dotyczy kwestii merytorycznej (rozgraniczenie odpowiedzialności biuro vs. klient w zakresie JPK_KR_PD), której nie można ocenić na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto dodać w kroku 6 wyjaśnienie: JPK_KR_PD jest obowiązkiem podatnika (klienta CIT), ale biuro rachunkowe jako podmiot prowadzący księgi jest faktycznie odpowiedzialne za techniczną generację i wysyłkę pliku — należy wskazać, że program biura musi obsługiwać generowanie JPK_KR_PD w imieniu klientów CIT spełniających kryteria.",
+        "verified_at": "2026-04-18T12:14:52Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 3 wymienia 'Mała Księgowość Rzeczpospolitej' jako program do KPiR/ryczałtu — nazwa brzmi generycznie i nie jest potwierdzana w branży; wymaga weryfikacji, czy to rzeczywisty produkt czy wygenerowana nazwa."
+        "description": "Krok 3 wymienia 'Mała Księgowość Rzeczpospolitej' jako program do KPiR/ryczałtu — nazwa brzmi generycznie i nie jest potwierdzana w branży; wymaga weryfikacji, czy to rzeczywisty produkt czy wygenerowana nazwa.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji potwierdzających ani zaprzeczających istnieniu produktu 'Mała Księgowość Rzeczpospolitej'. Rekordy dotyczą ustaw podatkowych i ubezpieczeniowych, a nie rynku oprogramowania księgowego. Flaga jest potencjalnie zasadna — nazwa brzmi generycznie i może być halucynacją modelu, jednak weryfikacja wymaga zewnętrznych źródeł (np. strony producenta, rejestru produktów).",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zweryfikować istnienie produktu 'Mała Księgowość Rzeczpospolitej' w zewnętrznych źródłach (strona Rzeczpospolitej, rejestry oprogramowania). Jeśli produkt nie istnieje lub jest nieaktualny, zastąpić go potwierdzonym odpowiednikiem, np. 'Mała Księgowość' firmy Rzeczpospolita (jeśli istnieje) lub innym weryfikowalnym programem dla KPiR/ryczałtu.",
+        "verified_at": "2026-04-18T12:14:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 3 wspomina 'Fakt Zero/Fakt Optima' — nie jest jasne, czy to dwa oddzielne produkty czy warianty tego samego programu; wymaga uściślenia nomenklatury."
+        "description": "Krok 3 wspomina 'Fakt Zero/Fakt Optima' — nie jest jasne, czy to dwa oddzielne produkty czy warianty tego samego programu; wymaga uściślenia nomenklatury.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy nomenklatury produktów komercyjnych ('Fakt Zero' i 'Fakt Optima'), a nie przepisów prawnych. KB zawiera wyłącznie rekordy ustaw podatkowych i nie zawiera informacji o produktach księgowych. Nie można potwierdzić ani obalić, czy 'Fakt Zero' i 'Fakt Optima' to oddzielne produkty czy warianty — wymaga to weryfikacji w źródłach producenta oprogramowania.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto uściślić zapis jako 'Fakt (warianty: Zero i Optima)' lub podać pełne nazwy produktów z odniesieniem do oferty producenta, aby uniknąć niejednoznaczności dla czytelnika.",
+        "verified_at": "2026-04-18T12:15:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 5 wspomina 'Comarch Optima w Chmurze Standard' — brak potwierdzenia, czy to oficjalna nazwa produktu czy wygenerowana nazwa wariantu."
+        "description": "Krok 5 wspomina 'Comarch Optima w Chmurze Standard' — brak potwierdzenia, czy to oficjalna nazwa produktu czy wygenerowana nazwa wariantu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących produktów Comarch ani nazewnictwa ich wariantów chmurowych. Flaga dotyczy kwestii marketingowo-produktowej (oficjalna nazwa produktu Comarch), której nie można zweryfikować na podstawie polskich ustaw podatkowych i rachunkowych. Wymaga to weryfikacji w materiałach handlowych Comarch SA.",
+        "verifier_confidence": 0.7,
+        "corrective_suggestion": "Zaleca się zastąpienie 'Comarch Optima w Chmurze Standard' ogólniejszym sformułowaniem 'Comarch Optima w wariancie chmurowym' lub dodanie przypisu wskazującego na konieczność weryfikacji aktualnej oferty Comarch SA, gdyż nazwy wariantów produktowych mogą się zmieniać.",
+        "verified_at": "2026-04-18T12:15:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'JDG na ryczałcie' sugeruje, że e-Mikrofirma + moduł KSeF wystarczają, ale nie wyjaśnia, czy e-Mikrofirma obsługuje KSeF w pełni (wysyłka, pobieranie, offline24) czy tylko wystawianie — może być niedostateczna dla biura prowadzącego księgowość ryczałtu."
+        "description": "Edge case 'JDG na ryczałcie' sugeruje, że e-Mikrofirma + moduł KSeF wystarczają, ale nie wyjaśnia, czy e-Mikrofirma obsługuje KSeF w pełni (wysyłka, pobieranie, offline24) czy tylko wystawianie — może być niedostateczna dla biura prowadzącego księgowość ryczałtu.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera informacji dotyczących funkcjonalności aplikacji e-Mikrofirma MF ani zakresu obsługi KSeF (wysyłka, pobieranie, tryb offline24) w tej aplikacji. Flaga dotyczy kwestii techniczno-produktowej (zakres funkcji oprogramowania), a nie przepisów prawa, więc KB oparta na ustawach nie może jej potwierdzić ani obalić. Sama flaga jest merytorycznie zasadna jako pytanie — e-Mikrofirma może mieć ograniczenia funkcjonalne względem pełnego KSeF.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto doprecyzować w edge case 'JDG na ryczałcie', że e-Mikrofirma MF obsługuje wyłącznie wystawianie faktur ustrukturyzowanych (wysyłkę do KSeF), natomiast pobieranie faktur zakupowych z KSeF oraz tryb offline24 mogą wymagać dodatkowych narzędzi lub weryfikacji aktualnych możliwości aplikacji na stronie MF.",
+        "verified_at": "2026-04-18T12:15:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case 'Spółka transportowa' wymienia 'rozrachunki walutowe wg art. 30 ust. 2 UoR' — brak wyjaśnienia, czy to wymóg dla transportu międzynarodowego czy dla wszystkich spółek transportowych (zbyt wąskie lub zbyt szerokie)."
+        "description": "Edge case 'Spółka transportowa' wymienia 'rozrachunki walutowe wg art. 30 ust. 2 UoR' — brak wyjaśnienia, czy to wymóg dla transportu międzynarodowego czy dla wszystkich spółek transportowych (zbyt wąskie lub zbyt szerokie).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Art. 30 ust. 2 UoR dotyczy wyceny rozrachunków w walutach obcych i ma zastosowanie do wszystkich jednostek prowadzących pełne księgi, które dokonują transakcji walutowych — nie jest to przepis specyficzny dla transportu. KB potwierdza istnienie i treść art. 30 ust. 2 UoR, ale nie rozstrzyga kwestii, czy spółki transportowe krajowe (bez transakcji walutowych) podlegają temu przepisowi. Flaga wskazuje na brak doprecyzowania zakresu stosowania, co jest zasadną uwagą redakcyjną, jednak KB nie dostarcza dowodu, że sformułowanie w drafcie jest błędne merytorycznie.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Doprecyzować edge case: 'Spółka transportowa prowadząca transport międzynarodowy (rozrachunki w walutach obcych)' — art. 30 ust. 2 UoR dotyczy wszystkich jednostek z transakcjami walutowymi, nie tylko transportu, więc warunek stosowania powinien być powiązany z faktem występowania walut obcych, a nie z branżą transportową jako taką.",
+        "verified_at": "2026-04-18T12:15:27Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 wymaga testu 'korekty faktury z dziedziczeniem GTU/TP/MPP' — brak wyjaśnienia, czy program powinien automatycznie dziedziczyć czy użytkownik musi ręcznie potwierdzić (wymóg funkcjonalny vs. procedurowy)."
+        "description": "Krok 7 wymaga testu 'korekty faktury z dziedziczeniem GTU/TP/MPP' — brak wyjaśnienia, czy program powinien automatycznie dziedziczyć czy użytkownik musi ręcznie potwierdzić (wymóg funkcjonalny vs. procedurowy).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy wymogu funkcjonalnego/proceduralnego dotyczącego dziedziczenia oznaczeń GTU/TP/MPP w korektach faktur w JPK_V7. KB zawiera jedynie przepisy o fakturach korygujących (art. 106j ustawy o VAT) i systemie ubezpieczeń, ale nie zawiera rozporządzenia MF z 15.10.2019 ws. JPK_VAT z deklaracją (§ 10), które reguluje oznaczenia GTU/TP/MPP. Nie można więc zweryfikować ani potwierdzić, czy przepisy nakładają konkretny wymóg automatycznego vs. ręcznego dziedziczenia oznaczeń. Flaga wskazuje na brak wyjaśnienia w drafcie kwestii proceduralnej, co jest obserwacją merytoryczną niezależną od KB.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "W kroku 7 warto doprecyzować: 'Sprawdź, czy program automatycznie przenosi oznaczenia GTU/TP/MPP z faktury pierwotnej na korektę (tryb automatyczny) czy wymaga ręcznego potwierdzenia przez użytkownika — oba podejścia są dopuszczalne, jednak automatyczne dziedziczenie zmniejsza ryzyko błędu w JPK_V7.'",
+        "verified_at": "2026-04-18T12:15:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie zawiera warunku dla biur jednoosobowych (solo-praktykanci) — czy procedura dotyczy tylko biur wieloosobowych czy też solo-praktyków?"
+        "description": "Draft nie zawiera warunku dla biur jednoosobowych (solo-praktykanci) — czy procedura dotyczy tylko biur wieloosobowych czy też solo-praktyków?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą zupełnie innych zagadnień (zwrot VAT, korekty zeznań, faktury marży) i nie zawierają żadnych przepisów regulujących wymogi dla biur rachunkowych jednoosobowych vs. wieloosobowych. Flaga dotyczy kwestii praktycznej/proceduralnej w drafcie poradnikowym, a nie bezpośrednio przepisów prawa. KB nie pokrywa tego tematu.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta domenowego, warto dodać w step 3 lub jako osobny krok uwagę: 'Dla biur jednoosobowych (solo-praktykant obsługujący do ~15-20 klientów) wystarczające mogą być rozwiązania uproszczone (np. WFirma Solo, inFakt dla biur) bez modułów wielostanowiskowych — zweryfikuj czy licencja biurowa dostawcy wymaga minimalnej liczby użytkowników.'",
+        "verified_at": "2026-04-18T12:15:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

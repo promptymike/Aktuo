@@ -108,57 +108,133 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 61 ust. 1 ustawy zasiłkowej, art. 92 KP, art. 36 ust. 1, art. 8, art. 13, art. 67 ust. 1, art. 4779 KPC, art. 18 ust. 9, art. 4 ust. 1 pkt 2, art. 7). Flaga 'requires_manual_legal_anchor: true' sugeruje, że artykuły nie zostały zweryfikowane — brakuje potwierdzenia, czy wszystkie numery są aktualne dla 2026."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft zawiera liczne odniesienia do artykułów (art. 61 ust. 1 ustawy zasiłkowej, art. 92 KP, art. 36 ust. 1, art. 8, art. 13, art. 67 ust. 1, art. 4779 KPC, art. 18 ust. 9, art. 4 ust. 1 pkt 2, art. 7). Flaga 'requires_manual_legal_anchor: true' sugeruje, że artykuły nie zostały zweryfikowane — brakuje potwierdzenia, czy wszystkie numery są aktualne dla 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie rekord potwierdzający art. 92 § 1 KP (wynagrodzenie chorobowe 80%/100% przez 33 dni), co jest zgodne z draftem. Pozostałe artykuły wymienione w fladze (art. 61 ust. 1 ustawy zasiłkowej, art. 67 ust. 1, art. 4779 KPC, art. 36 ust. 1, art. 8, art. 13, art. 18 ust. 9, art. 4 ust. 1 pkt 2, art. 7) nie są pokryte przez dostępne rekordy KB, więc nie można potwierdzić ani obalić ich aktualności na 2026. Flaga wskazuje na brak weryfikacji numerów artykułów — co jest realnym ryzykiem, ale KB nie dostarcza dowodów pozwalających na jednoznaczny werdykt.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy ręcznie zweryfikować wszystkie cytowane artykuły w aktualnych tekstach ustaw (ustawa zasiłkowa, KP, KPC) na dzień 2026, szczególnie art. 61 ust. 1, art. 67 ust. 1 ustawy zasiłkowej oraz art. 4779 KPC, które mogły ulec zmianie numeracji lub treści.",
+        "verified_at": "2026-04-18T12:09:56Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Limit 20 ubezpieczonych (art. 61 ust. 1 ustawy zasiłkowej) i próg 50 lat dla 14 dni wynagrodzenia chorobowego mogą ulec zmianie do 2026; draft nie zawiera wariantu awaryjnego ani daty ostatniej weryfikacji przepisów (pole 'last_verified_at' to 2026-04-18, ale to przyszłość względem daty generacji)."
+        "description": "Limit 20 ubezpieczonych (art. 61 ust. 1 ustawy zasiłkowej) i próg 50 lat dla 14 dni wynagrodzenia chorobowego mogą ulec zmianie do 2026; draft nie zawiera wariantu awaryjnego ani daty ostatniej weryfikacji przepisów (pole 'last_verified_at' to 2026-04-18, ale to przyszłość względem daty generacji).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 61 ust. 1 ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (ustawy zasiłkowej) — dostępne rekordy dotyczą art. 61 Ordynacji podatkowej, ustawy o SUS i ustawy o rachunkowości. Nie można więc ani potwierdzić, ani obalić aktualności limitu 20 ubezpieczonych. Sama obserwacja o 'last_verified_at: 2026-04-18' jako dacie przyszłej względem generacji jest technicznie trafna i wskazuje na potencjalny błąd metadanych, ale nie dowodzi nieaktualności merytorycznej przepisów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Dodać w drafcie adnotację z datą ostatniej weryfikacji przepisów (np. 'stan prawny na dzień X') oraz zastrzeżenie, że limit 20 ubezpieczonych i próg 14/33 dni należy zweryfikować przed zastosowaniem, gdyż parametry te mogą ulec zmianie ustawowej. Poprawić metadane 'last_verified_at' na faktyczną datę weryfikacji.",
+        "verified_at": "2026-04-18T12:10:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 4 mówi 'każde kolejne zaświadczenie wymaga odrębnego wniosku (ZAS-53 lub Z-3 kontynuacja)', ale krok 5 stwierdza 'po ustaniu składa się raz, nie przy każdym kolejnym L4' — brakuje jasnego warunku rozgraniczającego, kiedy składać raz, a kiedy wielokrotnie."
+        "description": "Krok 4 mówi 'każde kolejne zaświadczenie wymaga odrębnego wniosku (ZAS-53 lub Z-3 kontynuacja)', ale krok 5 stwierdza 'po ustaniu składa się raz, nie przy każdym kolejnym L4' — brakuje jasnego warunku rozgraniczającego, kiedy składać raz, a kiedy wielokrotnie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących ustawy zasiłkowej ani procedur składania Z-3/ZAS-53, więc nie można zweryfikować na podstawie przepisów czy flaga jest słuszna. Merytorycznie jednak flaga wskazuje na realną niejednoznaczność w drafcie: krok 4 dotyczy sytuacji ciągłości niezdolności w trakcie zatrudnienia (kolejne L4 u tego samego pracodawcy), a krok 5 dotyczy sytuacji po ustaniu zatrudnienia — są to dwa różne scenariusze, ale draft nie artykułuje tego rozgraniczenia wystarczająco wyraźnie.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Dodać w kroku 4 i 5 wyraźne oznaczenie kontekstu: krok 4 = 'dotyczy wyłącznie sytuacji gdy zatrudnienie trwa', krok 5 = 'dotyczy wyłącznie sytuacji gdy umowa wygasła w trakcie niezdolności — wtedy Z-3 składa się jednorazowo za cały okres po ustaniu, bez konieczności ponownego składania przy każdym kolejnym L4 po ustaniu zatrudnienia'.",
+        "verified_at": "2026-04-18T12:10:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, jak postępować, gdy pracownik ma przerwę między L4 (np. 18.11–30.11, potem przerwa, potem nowe L4) — czy licznik 33 dni resetuje się, czy nie? Krok 4 wspomina 'jeśli nie ma przerwy', ale nie definiuje długości przerwy kwalifikującej jako przerwę."
+        "description": "Draft nie wyjaśnia, jak postępować, gdy pracownik ma przerwę między L4 (np. 18.11–30.11, potem przerwa, potem nowe L4) — czy licznik 33 dni resetuje się, czy nie? Krok 4 wspomina 'jeśli nie ma przerwy', ale nie definiuje długości przerwy kwalifikującej jako przerwę.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych rekordów z ustawy zasiłkowej (ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa), które regulują kwestię ciągłości niezdolności do pracy i zasady liczenia okresu zasiłkowego. Flaga wskazuje na realną lukę merytoryczną w drafcie — art. 9 ustawy zasiłkowej definiuje, że do okresu zasiłkowego wlicza się okresy poprzedniej niezdolności, jeśli przerwa między nimi była krótsza niż 60 dni i dotyczyła tej samej choroby, jednak KB nie pozwala mi tego potwierdzić ani zaprzeczyć na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 4 należy dodać wyjaśnienie: jeśli przerwa między zwolnieniami wynosi mniej niż 60 dni i niezdolność spowodowana jest tą samą chorobą, okresy sumują się do limitu 33/14 dni (art. 9 ust. 2 ustawy zasiłkowej); jeśli przerwa wynosi co najmniej 60 dni lub niezdolność wynika z innej choroby — licznik 33/14 dni resetuje się.",
+        "verified_at": "2026-04-18T12:10:22Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Formularz 'ZAS-53 (wniosek o zasiłek chorobowy)' jest wymieniony w kroku 4, ale nie ma potwierdzenia, czy ZAS-53 to rzeczywisty druk ZUS czy może chodzi o inny dokument; draft nie rozróżnia między Z-3 a ZAS-53 w kontekście kolejnych L4."
+        "description": "Formularz 'ZAS-53 (wniosek o zasiłek chorobowy)' jest wymieniony w kroku 4, ale nie ma potwierdzenia, czy ZAS-53 to rzeczywisty druk ZUS czy może chodzi o inny dokument; draft nie rozróżnia między Z-3 a ZAS-53 w kontekście kolejnych L4.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają informacji o formularzach ZUS (Z-3, ZAS-53, Z-3b) ani o ustawie zasiłkowej, więc nie można potwierdzić ani obalić istnienia druku ZAS-53. Flaga wskazuje na realne ryzyko: ZAS-53 nie jest powszechnie rozpoznawanym formularzem ZUS w kontekście zasiłku chorobowego dla pracownika — standardowym dokumentem jest Z-3 składany przez płatnika, a ZAS-53 może być mylony z innymi drukami lub nie istnieć pod tą nazwą.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Zweryfikować w oficjalnym katalogu formularzy ZUS (zus.pl) czy druk ZAS-53 istnieje i dotyczy zasiłku chorobowego. Jeśli nie — zastąpić go właściwym formularzem (np. Z-3 z adnotacją 'kontynuacja') i usunąć odniesienie do ZAS-53 lub zastąpić go prawidłową nazwą druku.",
+        "verified_at": "2026-04-18T12:10:29Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 3 wspomina 'zakładka Płatnik → Dokumenty i wiadomości → Dokumenty robocze → nowy Z-3' w PUE ZUS — ścieżka interfejsu może się zmienić; brak potwierdzenia, czy ta struktura menu jest aktualna dla 2026."
+        "description": "Krok 3 wspomina 'zakładka Płatnik → Dokumenty i wiadomości → Dokumenty robocze → nowy Z-3' w PUE ZUS — ścieżka interfejsu może się zmienić; brak potwierdzenia, czy ta struktura menu jest aktualna dla 2026.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji dotyczących interfejsu PUE ZUS ani struktury menu systemu. Flaga dotyczy aktualności ścieżki nawigacyjnej w aplikacji webowej ZUS, co jest kwestią techniczną/interfejsową, a nie prawną — KB obejmuje wyłącznie przepisy ustaw. Nie można ani potwierdzić, ani obalić poprawności opisanej ścieżki 'Płatnik → Dokumenty i wiadomości → Dokumenty robocze → nowy Z-3'.",
+        "verifier_confidence": 0.8,
+        "corrective_suggestion": "Jeśli flaga zostanie uznana za istotną, warto dodać zastrzeżenie w drafcie: 'Ścieżka menu może ulec zmianie — w razie wątpliwości skorzystaj z wyszukiwarki dokumentów w PUE ZUS lub aktualnej instrukcji ZUS dostępnej na zus.pl'.",
+        "verified_at": "2026-04-18T12:10:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'Wyczerpanie 33/14 dni u poprzedniego pracodawcy' zakłada, że świadectwo pracy zawsze wskaże wykorzystane dni — w praktyce może to być niejasne lub brakować; draft nie opisuje procedury weryfikacji, jeśli pracownik nie ma świadectwa lub liczby się nie zgadzają."
+        "description": "Edge case 'Wyczerpanie 33/14 dni u poprzedniego pracodawcy' zakłada, że świadectwo pracy zawsze wskaże wykorzystane dni — w praktyce może to być niejasne lub brakować; draft nie opisuje procedury weryfikacji, jeśli pracownik nie ma świadectwa lub liczby się nie zgadzają.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów ustawy zasiłkowej ani Kodeksu pracy art. 92 dotyczących dokumentowania wykorzystanych dni wynagrodzenia chorobowego w świadectwie pracy. Flaga dotyczy praktycznej luki proceduralnej (brak świadectwa lub niezgodność danych) — jest to realny problem operacyjny, ale KB nie dostarcza ani potwierdzenia, ani zaprzeczenia, że draft powinien tę procedurę opisywać.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta domenowego, warto dodać do edge case'u wskazówkę: w razie braku świadectwa pracy lub niejasności co do liczby wykorzystanych dni — pracodawca może zweryfikować dane w ZUS (platforma PUE, historia ubezpieczonego) lub poprosić pracownika o oświadczenie pisemne, a w razie wątpliwości złożyć Z-3 od pierwszego dnia i poinformować ZUS o niepewności co do limitu.",
+        "verified_at": "2026-04-18T12:10:45Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 2 wspomina 'program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze)', ale nie wyjaśnia, jak obsługiwać sytuacje, gdy pracownik ma zmienną pensję lub urlop w okresie obliczeniowym — brakuje procedury dla obliczenia podstawy."
+        "description": "Krok 2 wspomina 'program wyliczy 80% podstawy (100% dla ciąży/wypadku w drodze)', ale nie wyjaśnia, jak obsługiwać sytuacje, gdy pracownik ma zmienną pensję lub urlop w okresie obliczeniowym — brakuje procedury dla obliczenia podstawy.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących obliczania podstawy wymiaru zasiłku chorobowego (ustawa zasiłkowa, art. 36-47). Flaga wskazuje na brak procedury dla zmiennego wynagrodzenia i urlopu w okresie obliczeniowym — jest to rzeczywiście złożona kwestia regulowana ustawą o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa, ale nie można potwierdzić ani obalić flagi na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto dodać do kroku 2 notę: 'Przy zmiennym wynagrodzeniu podstawę stanowi średnia z 12 miesięcy poprzedzających miesiąc zachorowania (art. 36 ustawy zasiłkowej); miesiące z urlopem bezpłatnym lub niepełnym wymiarem czasu pracy podlegają wyłączeniu lub uzupełnieniu zgodnie z art. 38-40 ustawy zasiłkowej.'",
+        "verified_at": "2026-04-18T12:10:53Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Przykłady programów (Comarch Optima, Symfonia) mogą być nieaktualne do 2026; draft nie zawiera instrukcji dla nowszych systemów lub rozwiązań chmurowych."
+        "description": "Przykłady programów (Comarch Optima, Symfonia) mogą być nieaktualne do 2026; draft nie zawiera instrukcji dla nowszych systemów lub rozwiązań chmurowych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy potencjalnej nieaktualności przykładów oprogramowania (Comarch Optima, Symfonia) i braku instrukcji dla rozwiązań chmurowych. KB nie zawiera żadnych rekordów dotyczących aktualności tych systemów ani wymagań prawnych co do konkretnych programów kadrowo-płacowych. Rekordy z KB odnoszą się do VAT i PIT, nie do systemów obsługi zasiłków chorobowych. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto dodać zastrzeżenie w drafcie: 'Ścieżki menu mogą różnić się w zależności od wersji oprogramowania — w przypadku systemów chmurowych (np. Comarch ERP XT, Symfonia Online) należy skonsultować się z dokumentacją dostawcy lub działem IT.'",
+        "verified_at": "2026-04-18T12:11:01Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 6 stwierdza 'dla przedsiębiorcy nie ma 33 dni wynagrodzenia chorobowego', ale krok 2 opisuje wynagrodzenie chorobowe jako ogólną procedurę — brakuje wcześniejszego warunkowego wariantu dla przedsiębiorcy."
+        "description": "Krok 6 stwierdza 'dla przedsiębiorcy nie ma 33 dni wynagrodzenia chorobowego', ale krok 2 opisuje wynagrodzenie chorobowe jako ogólną procedurę — brakuje wcześniejszego warunkowego wariantu dla przedsiębiorcy.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Flaga wskazuje na brak wcześniejszego warunkowego wariantu dla przedsiębiorcy w kroku 2, jednak krok 6 jest wyraźnie oznaczony warunkiem 'if niezdolność dotyczy przedsiębiorcy, a nie pracownika', co stanowi poprawną strukturę warunkową. Krok 2 opisuje procedurę dla pracodawcy wypłacającego wynagrodzenie chorobowe pracownikom, a krok 6 obsługuje odrębny przypadek przedsiębiorcy — to nie jest sprzeczność, lecz rozgałęzienie workflow. KB nie dostarcza dowodów potwierdzających faktyczną sprzeczność merytoryczną.",
+        "verifier_confidence": 0.75,
+        "verified_at": "2026-04-18T12:11:08Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie wyjaśnia, jak postępować, gdy pracownik przechodzi z umowy UoP na umowę zlecenia w trakcie L4 — czy zmienia się druk z Z-3 na Z-3a i od kiedy?"
+        "description": "Draft nie wyjaśnia, jak postępować, gdy pracownik przechodzi z umowy UoP na umowę zlecenia w trakcie L4 — czy zmienia się druk z Z-3 na Z-3a i od kiedy?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów ustawy zasiłkowej dotyczących druku Z-3a ani zasad zmiany druku przy przejściu z UoP na umowę zlecenia w trakcie L4. Rekordy z KB dotyczą definicji pracownika (art. 8 ustawy systemowej) i zbiegu tytułów ubezpieczenia (art. 9), co jest powiązane tematycznie, ale nie pozwala jednoznacznie potwierdzić ani obalić zasadności flagi. Flaga wskazuje na lukę informacyjną w drafcie, która może być istotna w praktyce, ale KB nie dostarcza twardego dowodu.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł: warto dodać krok lub adnotację wyjaśniającą, że przy zmianie tytułu ubezpieczenia z UoP na umowę zlecenia w trakcie L4 należy złożyć Z-3a (dla zleceniobiorcy) zamiast Z-3, a zmiana druku następuje od dnia zmiany tytułu ubezpieczenia, z jednoczesnym rozliczeniem okresu na UoP na Z-3.",
+        "verified_at": "2026-04-18T12:11:15Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

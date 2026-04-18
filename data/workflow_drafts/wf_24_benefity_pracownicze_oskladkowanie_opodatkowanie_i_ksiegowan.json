@@ -108,67 +108,157 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole `legal_anchors` jest puste, a draft zawiera liczne odwołania do konkretnych przepisów (§ 2 ust. 1 pkt 19 rozporządzenia składkowego z 18.12.1998, art. 21 ust. 1 pkt 67 ustawy o PIT, art. 26 ust. 1 ustawy o PPK, art. 43 ust. 1 pkt 18–19 ustawy o VAT). Brak strukturalnego mapowania tych artykułów do kroków procedury utrudnia weryfikację aktualności i poprawności cytowań."
+        "description": "Pole `legal_anchors` jest puste, a draft zawiera liczne odwołania do konkretnych przepisów (§ 2 ust. 1 pkt 19 rozporządzenia składkowego z 18.12.1998, art. 21 ust. 1 pkt 67 ustawy o PIT, art. 26 ust. 1 ustawy o PPK, art. 43 ust. 1 pkt 18–19 ustawy o VAT). Brak strukturalnego mapowania tych artykułów do kroków procedury utrudnia weryfikację aktualności i poprawności cytowań.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie rekordy dotyczące art. 26 ust. 1 pkt 2 ustawy o PIT (odliczenia składek od dochodu), natomiast draft odwołuje się do art. 26 ust. 1 ustawy o PPK (podstawa naliczenia wpłat PPK) – to zupełnie inny akt prawny. KB nie pokrywa § 2 ust. 1 pkt 19 i pkt 26 rozporządzenia składkowego z 18.12.1998, art. 21 ust. 1 pkt 67 ustawy o PIT ani art. 43 ust. 1 pkt 18–19 ustawy o VAT. Nie można więc ani potwierdzić, ani obalić poprawności cytowań w drafcie na podstawie dostępnych rekordów. Sama flaga wskazuje na brak strukturalnego mapowania (pusty legal_anchors), co jest problemem proceduralnym niezależnym od treści KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Uzupełnić pole legal_anchors o mapowanie każdego kroku do konkretnych przepisów: step 1 → § 2 ust. 1 pkt 19 rozp. składkowego; step 2 → § 2 ust. 1 pkt 26 rozp. składkowego; step 3 → art. 21 ust. 1 pkt 67 ustawy o PIT; step 4 → art. 26 ust. 1 ustawy o PPK; step 6 → art. 43 ust. 1 pkt 18–19 ustawy o VAT. Następnie zweryfikować aktualność każdego z tych przepisów w dedykowanych źródłach.",
+        "verified_at": "2026-04-18T12:19:09Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zawiera konkretne kwoty (limit ZFŚS 2 000 zł rocznie, KUP 250/300 zł, kwota zmniejszająca 3 600 zł rocznie, stawki VAT 23%/8%) z datą weryfikacji 2026-04-18, ale brak informacji czy te limity są rzeczywiście obowiązujące w 2026 r. czy skopiowane z wcześniejszych lat. Szczególnie limity ZFŚS i KUP wymagają corocznej aktualizacji."
+        "description": "Draft zawiera konkretne kwoty (limit ZFŚS 2 000 zł rocznie, KUP 250/300 zł, kwota zmniejszająca 3 600 zł rocznie, stawki VAT 23%/8%) z datą weryfikacji 2026-04-18, ale brak informacji czy te limity są rzeczywiście obowiązujące w 2026 r. czy skopiowane z wcześniejszych lat. Szczególnie limity ZFŚS i KUP wymagają corocznej aktualizacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza stawki VAT 23%/8% na podstawie art. 146ef ust. 1 ustawy o VAT, co jest zgodne z draftem. Jednak KB nie zawiera żadnych informacji o limitach ZFŚS, KUP (250/300 zł miesięcznie) ani kwocie zmniejszającej zaliczkę (3 600 zł rocznie) na rok 2026, co uniemożliwia weryfikację tych konkretnych kwot. Limity KUP i ZFŚS są faktycznie aktualizowane i wymagają corocznego sprawdzenia, więc flaga wskazuje na realny obszar ryzyka, ale KB nie dostarcza dowodu potwierdzającego ani obalającego.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Należy dodać do draftu explicite informację o roku obowiązywania podanych limitów (np. 'wartości obowiązujące w 2025 r., do weryfikacji na 2026 r.') oraz odesłanie do aktualnych obwieszczeń/rozporządzeń: dla KUP – art. 22 ust. 2 ustawy o PIT, dla ZFŚS – obwieszczenie Prezesa GUS w sprawie przeciętnego wynagrodzenia, dla kwoty zmniejszającej – art. 32 ust. 3 ustawy o PIT.",
+        "verified_at": "2026-04-18T12:19:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 (Scenariusz B) mówi o braku ZUS przy współfinansowaniu + poprawnym zapisie w regulaminie, ale Krok 2 wymaga, aby pracownik ponosił 'choćby częściową odpłatność (min. 1 gr)' — brak jasnego wyjaśnienia czy 1 gr wystarczy, czy musi to być znacząca kwota, co mogłoby prowadzić do różnych interpretacji w praktyce."
+        "description": "Krok 3 (Scenariusz B) mówi o braku ZUS przy współfinansowaniu + poprawnym zapisie w regulaminie, ale Krok 2 wymaga, aby pracownik ponosił 'choćby częściową odpłatność (min. 1 gr)' — brak jasnego wyjaśnienia czy 1 gr wystarczy, czy musi to być znacząca kwota, co mogłoby prowadzić do różnych interpretacji w praktyce.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści § 2 ust. 1 pkt 26 rozporządzenia składkowego z 18.12.1998, które jest kluczowym przepisem dla oceny tej flagi. Flaga dotyczy interpretacji warunku 'częściowej odpłatności pracownika' (czy 1 gr wystarczy) w kontekście zwolnienia ze składek ZUS — tego zagadnienia nie można zweryfikować na podstawie dostępnych rekordów. Sama flaga wskazuje na realną niejednoznaczność w drafcie (brak wyjaśnienia czy symboliczna kwota 1 gr spełnia wymóg 'ceny niższej niż detaliczna'), jednak bez dostępu do treści rozporządzenia składkowego i orzecznictwa ZUS nie można jednoznacznie potwierdzić ani odrzucić problemu.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 2 warto dodać wyjaśnienie, że zgodnie z interpretacjami ZUS i orzecznictwem sądowym warunek 'ceny niższej niż detaliczna' jest spełniony nawet przy symbolicznej dopłacie pracownika (np. 1 gr), o ile regulamin wyraźnie przewiduje taką odpłatność — jednak zaleca się konsultację z ZUS lub doradcą w przypadku wątpliwości co do akceptowalności symbolicznych kwot.",
+        "verified_at": "2026-04-18T12:19:27Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Krok 5 odwołuje się do konkretnych ścieżek w systemach (Comarch Optima, Enova, Symfonia) z nazwami menu, ale brak informacji jak postępować w innych powszechnie używanych systemach (np. Sage, Teta, Paycor) — procedura może być niepełna dla znacznej części użytkowników."
+        "description": "Krok 5 odwołuje się do konkretnych ścieżek w systemach (Comarch Optima, Enova, Symfonia) z nazwami menu, ale brak informacji jak postępować w innych powszechnie używanych systemach (np. Sage, Teta, Paycor) — procedura może być niepełna dla znacznej części użytkowników.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy kompletności procedury w zakresie obsługi różnych systemów kadrowo-płacowych (Sage, Teta, Paycor), co jest kwestią merytoryczną/praktyczną, a nie prawną. Rekordy z KB dotyczą przepisów podatkowych (VAT, PIT) i nie zawierają żadnych informacji o systemach kadrowo-płacowych ani wymaganiach co do ich obsługi w procedurach. Nie można na podstawie KB potwierdzić ani obalić tej flagi.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Jeśli celem jest kompletność procedury, można dodać ogólny opis kroków niezależny od systemu (np. 'utwórz składnik przychodowy i potrąceniowy') oraz notę, że ścieżki menu mogą się różnić w zależności od używanego oprogramowania, odsyłając do dokumentacji danego systemu.",
+        "verified_at": "2026-04-18T12:19:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 6 wspomina 'refakturę' i 'fakturę wewnętrzną' jako sposób rozliczenia VAT od części pracownika, ale nie wyjaśnia czy refaktura wymaga wystawienia dokumentu VAT czy czy jest to tylko zapis księgowy — brak jasności co do formalnych wymogów."
+        "description": "Krok 6 wspomina 'refakturę' i 'fakturę wewnętrzną' jako sposób rozliczenia VAT od części pracownika, ale nie wyjaśnia czy refaktura wymaga wystawienia dokumentu VAT czy czy jest to tylko zapis księgowy — brak jasności co do formalnych wymogów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą technicznych aspektów KSeF i daty obowiązku VAT przy refakturach mediów, ale nie odnoszą się bezpośrednio do kwestii formalnych wymogów wystawiania refaktury przy rozliczeniu benefitów pracowniczych. Flaga wskazuje na brak wyjaśnienia czy refaktura w kontekście benefitów pracowniczych wymaga wystawienia dokumentu VAT (faktury) czy jest tylko zapisem księgowym — KB nie dostarcza jednoznacznego dowodu ani potwierdzającego, ani obalającego tę wątpliwość.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "W kroku 6 warto doprecyzować, że refaktura części kosztów na pracownika (gdy pracownik jest podatnikiem VAT lub gdy pracodawca odsprzedaje usługę) wymaga wystawienia faktury VAT zgodnie z art. 106b ustawy o VAT, natomiast jeśli pracownik jest osobą fizyczną nieprowadzącą działalności, rozliczenie może nastąpić przez notę obciążeniową lub potrącenie z wynagrodzenia bez konieczności wystawiania faktury VAT — należy wskazać, który przypadek dotyczy typowego scenariusza pracowniczego.",
+        "verified_at": "2026-04-18T12:19:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 5 zawiera odwołanie do flagi 'nie wliczaj do wypłaty' / 'świadczenie w naturze' w systemach kadrowo-płacowych — ta terminologia może być nieaktualna lub różna w zależności od wersji oprogramowania, a draft nie podaje konkretnych numerów wersji lub dat aktualizacji systemów."
+        "description": "Krok 5 zawiera odwołanie do flagi 'nie wliczaj do wypłaty' / 'świadczenie w naturze' w systemach kadrowo-płacowych — ta terminologia może być nieaktualna lub różna w zależności od wersji oprogramowania, a draft nie podaje konkretnych numerów wersji lub dat aktualizacji systemów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy terminologii stosowanej w konkretnych systemach kadrowo-płacowych (Comarch Optima, Enova, Symfonia) i ich wersjach oprogramowania. KB zawiera wyłącznie przepisy prawne (Ordynacja podatkowa, ustawa o systemie ubezpieczeń społecznych) i nie zawiera żadnych informacji o interfejsach ani terminologii tych systemów. Nie można ani potwierdzić, ani obalić zarzutu o nieaktualność terminologii na podstawie dostępnych rekordów.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft ma być precyzyjny, warto dodać zastrzeżenie że nazwy ścieżek menu i terminologia składników mogą różnić się w zależności od wersji oprogramowania, oraz zalecić weryfikację w aktualnej dokumentacji producenta lub z administratorem systemu.",
+        "verified_at": "2026-04-18T12:19:49Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Edge case o systemach kafeteryjnych MyBenefit wspomina 'interpretację KIS' i 'częścią interpretacji', ale nie podaje konkretnego numeru interpretacji indywidualnej ani daty — trudne do weryfikacji czy taka interpretacja rzeczywiście istnieje."
+        "description": "Edge case o systemach kafeteryjnych MyBenefit wspomina 'interpretację KIS' i 'częścią interpretacji', ale nie podaje konkretnego numeru interpretacji indywidualnej ani daty — trudne do weryfikacji czy taka interpretacja rzeczywiście istnieje.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących konkretnych interpretacji indywidualnych KIS w zakresie systemów kafeteryjnych MyBenefit ani zwolnień składkowych z § 2 ust. 1 pkt 26 rozporządzenia składkowego. Rekordy z KB dotyczą jedynie procedur wydawania interpretacji (art. 14d i 14r Ordynacji podatkowej) oraz technicznych aspektów ZUS, co nie pozwala ani potwierdzić, ani obalić istnienia konkretnej interpretacji KIS wspomnianej w drafcie. Flaga jest merytorycznie zasadna jako ryzyko — brak numeru i daty interpretacji utrudnia weryfikację — ale KB nie dostarcza twardego dowodu potwierdzającego lub obalającego jej istnienie.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft powołuje się na interpretację KIS dotyczącą systemów kafeteryjnych MyBenefit, należy podać konkretny numer interpretacji indywidualnej (np. 0113-KDIPT2-3.4011.XXX.20XX.X.XX) oraz datę jej wydania, lub usunąć odwołanie do interpretacji i zastąpić je bezpośrednim odwołaniem do przepisu (§ 2 ust. 1 pkt 26 rozporządzenia składkowego z 18.12.1998).",
+        "verified_at": "2026-04-18T12:19:58Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case o nieodpłatnym udostępnieniu lokalu mieszkalnego mówi o 'wartości rynkowej najmu, jeżeli wyższa' — brak wyjaśnienia jak pracownik/pracodawca powinni ustalić tę wartość rynkową (wycena niezależna? średnia z rynku?) i czy ZUS akceptuje takie szacunki."
+        "description": "Edge case o nieodpłatnym udostępnieniu lokalu mieszkalnego mówi o 'wartości rynkowej najmu, jeżeli wyższa' — brak wyjaśnienia jak pracownik/pracodawca powinni ustalić tę wartość rynkową (wycena niezależna? średnia z rynku?) i czy ZUS akceptuje takie szacunki.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących ustalania wartości rynkowej najmu dla celów ZUS/PIT przy nieodpłatnym udostępnieniu lokalu mieszkalnego. Rekordy z KB dotyczą zupełnie innych kwestii (konta ubezpieczonych, raporty informacyjne). Flaga wskazuje na lukę merytoryczną w edge case — brak wskazówek jak ustalić wartość rynkową najmu — co jest realnym problemem praktycznym, ale nie można go zweryfikować na podstawie dostępnych danych z KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto rozszerzyć edge case o wskazówkę: wartość rynkową najmu ustala się na podstawie cen rynkowych podobnych lokali w danej lokalizacji (np. ogłoszenia, operaty szacunkowe), a ZUS w razie wątpliwości może zakwestionować zaniżoną wartość — rekomendowane jest posiadanie dokumentacji potwierdzającej przyjętą wartość (np. wydruki z portali nieruchomości lub operat rzeczoznawcy).",
+        "verified_at": "2026-04-18T12:20:06Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case o kartach przedpłaconych (Pluxee, Edenred, Sodexo) stwierdza że 'zawsze' są traktowane jak ekwiwalent pieniężny — brak wyjątków czy sytuacji przejściowych (np. czy dotyczy to również kart z limitami wydatkowania na konkretne kategorie)."
+        "description": "Edge case o kartach przedpłaconych (Pluxee, Edenred, Sodexo) stwierdza że 'zawsze' są traktowane jak ekwiwalent pieniężny — brak wyjątków czy sytuacji przejściowych (np. czy dotyczy to również kart z limitami wydatkowania na konkretne kategorie).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących kwalifikacji kart przedpłaconych (Pluxee, Edenred, Sodexo) jako ekwiwalentu pieniężnego na gruncie prawa podatkowego lub składkowego. Dostarczone rekordy dotyczą KP art. 172¹ (urlopy), Ordynacji podatkowej i ustawy VAT — żaden nie odnosi się do rozporządzenia składkowego z 18.12.1998 ani do interpretacji KIS w zakresie kart przedpłaconych. Flaga wskazuje na brak wyjątków (np. karty z limitami kategorii wydatków), co jest potencjalnie zasadnym edge case'em, ale nie można go zweryfikować na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Jeśli chcemy zachować ostrożność, warto dodać zastrzeżenie: 'Dotyczy kart zasilanych środkami pieniężnymi bez ograniczeń kategorii wydatków; karty z limitami na konkretne kategorie (np. wyłącznie posiłki) mogą być przedmiotem odmiennych interpretacji — rekomendowane wystąpienie z wnioskiem o interpretację indywidualną.'",
+        "verified_at": "2026-04-18T12:20:15Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 o ubruttawianiu premii netto zawiera odwołanie do 'stawki krańcowej (12% lub 32% PIT + składki ZUS pracownika 13,71% + 9% zdrowotnej)' — brak wyjaśnienia czy te stawki są aktualne dla 2026 r. i czy 13,71% + 9% to prawidłowa suma (powinno być 13,71% emerytalna + 9% zdrowotna = 22,71%, a nie 13,71% + 9%)."
+        "description": "Krok 7 o ubruttawianiu premii netto zawiera odwołanie do 'stawki krańcowej (12% lub 32% PIT + składki ZUS pracownika 13,71% + 9% zdrowotnej)' — brak wyjaśnienia czy te stawki są aktualne dla 2026 r. i czy 13,71% + 9% to prawidłowa suma (powinno być 13,71% emerytalna + 9% zdrowotna = 22,71%, a nie 13,71% + 9%).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają przepisów dotyczących stawek PIT (12%/32%), składek ZUS pracownika ani składki zdrowotnej, które pozwoliłyby zweryfikować poprawność liczb podanych w drafcie. Flaga podnosi dwa odrębne problemy: (1) aktualność stawek na 2026 r. oraz (2) interpretację zapisu '13,71% + 9%' — czy chodzi o składki emerytalno-rentowe łącznie (9,76% + 1,5% + 2,45% = 13,71%) plus zdrowotną 9%, co daje łącznie 22,71%. Bez dostępu do aktualnych przepisów o systemie ubezpieczeń społecznych i ustawy zdrowotnej nie można jednoznacznie potwierdzić ani odrzucić flagi.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy w kroku 7 doprecyzować: '13,71% to suma składek emerytalno-rentowych i chorobowej po stronie pracownika (9,76% + 1,5% + 2,45%), a 9% to składka zdrowotna — łącznie 22,71% po stronie pracownika' oraz dodać zastrzeżenie o aktualności stawek dla roku podatkowego 2026.",
+        "verified_at": "2026-04-18T12:20:24Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Draft wielokrotnie odwołuje się do 'rozporządzenia składkowego z 18.12.1998' bez pełnego tytułu — brak pewności czy to prawidłowe oznaczenie (Rozporządzenie Ministra Pracy i Polityki Społecznej z 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia społeczne)."
+        "description": "Draft wielokrotnie odwołuje się do 'rozporządzenia składkowego z 18.12.1998' bez pełnego tytułu — brak pewności czy to prawidłowe oznaczenie (Rozporządzenie Ministra Pracy i Polityki Społecznej z 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia społeczne).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści rozporządzenia Ministra Pracy i Polityki Społecznej z 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia społeczne, ani żadnego rekordu dotyczącego tego aktu. Dostępne rekordy dotyczą ustawy o systemie ubezpieczeń społecznych i ustawy o VAT, co nie pozwala zweryfikować poprawności oznaczenia rozporządzenia ani istnienia § 2 ust. 1 pkt 19 i pkt 26. Flaga wskazuje na brak pełnego tytułu rozporządzenia w drafcie — co jest zasadną uwagą redakcyjną, ale nie można potwierdzić ani obalić merytorycznej poprawności odwołania.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto rozważyć podanie pełnego tytułu rozporządzenia przy pierwszym odwołaniu: 'Rozporządzenie Ministra Pracy i Polityki Społecznej z dnia 18 grudnia 1998 r. w sprawie szczegółowych zasad ustalania podstawy wymiaru składek na ubezpieczenia emerytalne i rentowe (Dz.U. z 1998 r. Nr 161, poz. 1106 ze zm.)' — uwaga: pełny tytuł dotyczy składek emerytalno-rentowych, nie 'społecznych' ogólnie, co warto sprawdzić.",
+        "verified_at": "2026-04-18T12:20:32Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 6 wspomina VAT 8% dla Multisportu 'jako usługi rekreacyjne' — brak wyjaśnienia czy ta stawka dotyczy wszystkich dostawców (Benefit Systems, Medicover itp.) czy tylko niektórych, i czy zmienia się w zależności od zakresu usług."
+        "description": "Krok 6 wspomina VAT 8% dla Multisportu 'jako usługi rekreacyjne' — brak wyjaśnienia czy ta stawka dotyczy wszystkich dostawców (Benefit Systems, Medicover itp.) czy tylko niektórych, i czy zmienia się w zależności od zakresu usług.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą zupełnie innych zagadnień VAT (ewidencja płatności transgranicznych, metoda kasowa, eksport towarów) i nie zawierają informacji o stawce VAT na usługi rekreacyjne/sportowe (Multisport, pakiety medyczne). Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Flaga sama w sobie jest merytorycznie zasadna — stawka VAT 8% na usługi rekreacyjne wynika z załącznika nr 3 do ustawy o VAT (poz. 179), ale jej zastosowanie do konkretnych produktów (Multisport, Medicover Sport) może zależeć od zakresu usług i klasyfikacji PKWiU, co draft pomija.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "W kroku 6 warto doprecyzować, że stawka 8% VAT na usługi rekreacyjne (np. Multisport) wynika z załącznika nr 3 poz. 179 do ustawy o VAT i dotyczy usług sklasyfikowanych w PKWiU 93.1 (usługi związane ze sportem). Należy zaznaczyć, że faktyczna stawka zależy od klasyfikacji usługi przez dostawcę i może się różnić w zależności od zakresu pakietu (np. pakiety łączone z usługami medycznymi mogą podlegać innej stawce lub zwolnieniu).",
+        "verified_at": "2026-04-18T12:20:41Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 4 mówi że jeśli benefit jest zwolniony z ZUS (scenariusz B lub C) to NIE wchodzi do podstawy PPK, ale Krok 3 Scenariusz B mówi o 'tylko PIT od części finansowanej przez pracodawcę, BEZ ZUS' — brak wyjaśnienia czy część finansowana przez pracownika wchodzi do PPK czy nie."
+        "description": "Krok 4 mówi że jeśli benefit jest zwolniony z ZUS (scenariusz B lub C) to NIE wchodzi do podstawy PPK, ale Krok 3 Scenariusz B mówi o 'tylko PIT od części finansowanej przez pracodawcę, BEZ ZUS' — brak wyjaśnienia czy część finansowana przez pracownika wchodzi do PPK czy nie.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących ustawy o PPK (art. 26 ust. 1) ani rozporządzenia składkowego z 18.12.1998, które byłyby niezbędne do weryfikacji czy część finansowana przez pracownika w scenariuszu B wchodzi do podstawy PPK. Flaga wskazuje na lukę w wyjaśnieniu drafta (brak opisu traktowania części pracowniczej w PPK przy scenariuszu B), co jest potencjalnie zasadną obserwacją redakcyjną, ale nie można jej potwierdzić ani obalić na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:20:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

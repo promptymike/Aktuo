@@ -124,52 +124,121 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 113 ust. 13 ustawy o VAT jest cytowany jako katalog wyłączeń przedmiotowych, ale draft nie precyzuje, czy lista jest zamknięta czy otwarta, ani nie wskazuje, czy przepis rzeczywiście zawiera wszystkie wymienione kategorie (usługi prawnicze, doradztwo, jubilerskie, ściąganie długów, nowe środki transportu, części samochodowe online, wyroby z metali szlachetnych)."
+        "description": "Art. 113 ust. 13 ustawy o VAT jest cytowany jako katalog wyłączeń przedmiotowych, ale draft nie precyzuje, czy lista jest zamknięta czy otwarta, ani nie wskazuje, czy przepis rzeczywiście zawiera wszystkie wymienione kategorie (usługi prawnicze, doradztwo, jubilerskie, ściąganie długów, nowe środki transportu, części samochodowe online, wyroby z metali szlachetnych).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB potwierdzają istnienie art. 113 ust. 13 pkt 2 lit. b (wyłączenie usług doradztwa) oraz ogólnie art. 113 ust. 13, ale nie zawierają pełnego brzmienia tego przepisu, które pozwoliłoby zweryfikować, czy wszystkie kategorie wymienione w drafcie (usługi prawnicze, jubilerskie, ściąganie długów, nowe środki transportu, części samochodowe online, wyroby z metali szlachetnych) rzeczywiście tam figurują i czy lista jest zamknięta. KB nie pokrywa wystarczająco treści art. 113 ust. 13, by jednoznacznie potwierdzić lub odrzucić flagę.",
+        "verifier_confidence": 0.45,
+        "corrective_suggestion": "Warto w drafcie dodać zastrzeżenie, że art. 113 ust. 13 zawiera katalog zamknięty wyłączeń przedmiotowych (lista enumeratywna) i przytoczyć konkretne punkty/litery przepisu dla każdej wymienionej kategorii, np. 'art. 113 ust. 13 pkt 1 lit. a (nowe środki transportu)', 'pkt 2 lit. b (doradztwo)' itp., zamiast ogólnego odesłania do całego ustępu.",
+        "verified_at": "2026-04-18T12:45:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "high",
-        "description": "Draft zakłada, że limit 240 000 zł obowiązuje od 1.01.2026 r., ale data weryfikacji to 18.04.2026 — brak potwierdzenia, czy limit nie zmienił się w międzyczasie lub czy przepisy przejściowe nie uległy modyfikacji w pierwszych miesiącach 2026 r."
+        "description": "Draft zakłada, że limit 240 000 zł obowiązuje od 1.01.2026 r., ale data weryfikacji to 18.04.2026 — brak potwierdzenia, czy limit nie zmienił się w międzyczasie lub czy przepisy przejściowe nie uległy modyfikacji w pierwszych miesiącach 2026 r.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekord KB dla art. 113 ust. 1 potwierdza istnienie limitu 240 000 zł, ale nie zawiera pełnej treści przepisu ani informacji o dacie wejścia w życie tej kwoty. KB nie zawiera przepisów przejściowych ani nowelizacji z 2025/2026 r., które podnosiły limit z 200 000 zł do 240 000 zł, więc nie można jednoznacznie potwierdzić ani obalić ryzyka zmiany limitu po 1.01.2026 r. Flaga jest merytorycznie zasadna jako ostrzeżenie o ryzyku nieaktualności danych, ale KB nie dostarcza twardego dowodu ani za jej potwierdzeniem, ani za odrzuceniem.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zaleca się weryfikację aktualnego brzmienia art. 113 ust. 1 ustawy o VAT w oficjalnym źródle (ISAP/Dziennik Ustaw) na dzień 18.04.2026 r. oraz sprawdzenie, czy nie zostały opublikowane przepisy zmieniające limit lub przepisy przejściowe po 1.01.2026 r.",
+        "verified_at": "2026-04-18T12:45:27Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 mówi o wyjątku przejściowym dla osób, które przekroczyły 200 tys. zł ale nie 240 tys. zł w 2025 r., jednak krok 6 opisuje scenariusz przekroczenia limitu w trakcie roku bez jasnego rozgraniczenia, czy dotyczy to również wyjątku przejściowego czy tylko standardowych rejestracji VAT."
+        "description": "Krok 3 mówi o wyjątku przejściowym dla osób, które przekroczyły 200 tys. zł ale nie 240 tys. zł w 2025 r., jednak krok 6 opisuje scenariusz przekroczenia limitu w trakcie roku bez jasnego rozgraniczenia, czy dotyczy to również wyjątku przejściowego czy tylko standardowych rejestracji VAT.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 113 ust. 5 ani ust. 11 ustawy o VAT, które są kluczowe dla weryfikacji sprzeczności między krokiem 3 (wyjątek przejściowy 200 001–240 000 zł) a krokiem 6 (przekroczenie limitu w trakcie roku). Flaga wskazuje na potencjalną niejednoznaczność — krok 6 opisuje mechanizm utraty zwolnienia przez przekroczenie limitu w trakcie roku, ale nie precyzuje, czy dotyczy to wyłącznie standardowych przypadków, czy też obejmuje podatników korzystających z wyjątku przejściowego z kroku 3. Bez dostępu do treści art. 113 ust. 5 i 11 w KB nie można jednoznacznie potwierdzić ani odrzucić tej sprzeczności.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie w kroku 6 explicite zastrzeżenia, że mechanizm przekroczenia limitu w trakcie roku (art. 113 ust. 5) dotyczy podatników aktywnie korzystających ze zwolnienia, natomiast wyjątek przejściowy z kroku 3 odnosi się wyłącznie do możliwości powrotu do zwolnienia — i że oba scenariusze są rozłączne (wyjątek przejściowy dotyczy powrotu do zwolnienia, a nie jego utraty w trakcie roku).",
+        "verified_at": "2026-04-18T12:45:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Draft nie wyjaśnia, jak liczyć limit 240 000 zł dla podatników, którzy w 2025 r. byli już zarejestrowani jako VAT czynni (czy liczy się cała sprzedaż 2025 czy tylko od momentu rejestracji) — to kluczowe dla ustalenia, czy wyjątek przejściowy w ogóle się stosuje."
+        "description": "Draft nie wyjaśnia, jak liczyć limit 240 000 zł dla podatników, którzy w 2025 r. byli już zarejestrowani jako VAT czynni (czy liczy się cała sprzedaż 2025 czy tylko od momentu rejestracji) — to kluczowe dla ustalenia, czy wyjątek przejściowy w ogóle się stosuje.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB nie zawierają przepisów przejściowych dotyczących podwyższenia limitu do 240 000 zł od 1.01.2026 r. ani szczegółowych zasad liczenia sprzedaży dla podatników już zarejestrowanych jako VAT czynni w 2025 r. Art. 168 ustawy o VAT dotyczy przepisów przejściowych z 2004 r. i nie jest analogią wystarczającą do weryfikacji. Flaga wskazuje na potencjalnie istotną lukę informacyjną (jak liczyć limit 240 000 zł dla podatników VAT czynnych w 2025 r.), ale KB nie dostarcza materiału do jednoznacznego potwierdzenia ani obalenia tego zarzutu.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli przepisy przejściowe do nowelizacji podwyższającej limit do 240 000 zł zawierają szczegółowe zasady liczenia sprzedaży dla podatników już zarejestrowanych jako VAT czynni, draft powinien to wyjaśnić w kroku 3 — wskazując wprost, czy do porównania z limitem 240 000 zł bierze się całą sprzedaż 2025 r. (od 1 stycznia), czy tylko sprzedaż od momentu rejestracji jako VAT czynny.",
+        "verified_at": "2026-04-18T12:45:44Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 5 wspomina o korektach VAT naliczonego (art. 91 ust. 7 i 7a), ale nie precyzuje, czy korekta dotyczy wszystkich towarów/materiałów czy tylko tych o określonym okresie użytkowania, ani nie wyjaśnia, jak praktycznie wygląda rozliczenie w systemach (wymienione są konkretne moduły, ale bez procedury krok po kroku)."
+        "description": "Krok 5 wspomina o korektach VAT naliczonego (art. 91 ust. 7 i 7a), ale nie precyzuje, czy korekta dotyczy wszystkich towarów/materiałów czy tylko tych o określonym okresie użytkowania, ani nie wyjaśnia, jak praktycznie wygląda rozliczenie w systemach (wymienione są konkretne moduły, ale bez procedury krok po kroku).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie art. 91 ust. 1 i 1a dotyczące korekty proporcji rocznej, natomiast nie zawiera treści art. 91 ust. 7 i 7a, które są kluczowe dla weryfikacji flagi. Art. 91 ust. 7 i 7a dotyczą korekty VAT naliczonego przy zmianie przeznaczenia towarów (w tym powrocie do zwolnienia), a ich zakres (czy obejmuje wszystkie towary/materiały czy tylko te o określonym okresie użytkowania) nie może być zweryfikowany na podstawie dostępnych rekordów KB. Flaga wskazuje na brak precyzji w drafcie, co może być zasadne, ale nie można tego potwierdzić bez treści wskazanych przepisów.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:45:50Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Draft powołuje się na 'interpretacje MF i KIS' dotyczące wyjątku przejściowego dla limitu 240 tys. zł, ale nie podaje konkretnych numerów interpretacji lub dat — edge case wskazuje na 'sprzeczne stanowiska różnych US', co sugeruje, że interpretacja może nie być ujednolicona lub może nie istnieć w formie oficjalnego stanowiska."
+        "description": "Draft powołuje się na 'interpretacje MF i KIS' dotyczące wyjątku przejściowego dla limitu 240 tys. zł, ale nie podaje konkretnych numerów interpretacji lub dat — edge case wskazuje na 'sprzeczne stanowiska różnych US', co sugeruje, że interpretacja może nie być ujednolicona lub może nie istnieć w formie oficjalnego stanowiska.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 113 ust. 11 ustawy o VAT ani przepisów przejściowych związanych z podniesieniem limitu zwolnienia do 240 000 zł od 1.01.2026 r. Flaga wskazuje na brak konkretnych numerów interpretacji MF/KIS dotyczących wyjątku przejściowego dla podatników z sprzedażą 200 001–240 000 zł w 2025 r. — nie można ani potwierdzić, ani obalić istnienia takich interpretacji na podstawie dostępnych danych w KB. Ryzyko hallucynacji jest realne, jeśli draft sugeruje istnienie ujednoliconego stanowiska organów podatkowych bez podania konkretnych sygnatur.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft powołuje się na 'interpretacje MF i KIS', należy albo podać konkretne sygnatury i daty tych interpretacji, albo zmienić sformułowanie na 'brak jednolitego stanowiska organów podatkowych — zalecana indywidualna interpretacja podatkowa' oraz wyraźnie zaznaczyć, że wyjątek przejściowy wynika z przepisów przejściowych ustawy nowelizującej (podać numer Dz.U.), a nie z interpretacji.",
+        "verified_at": "2026-04-18T12:45:59Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 5 wspomina o 'Białej Liście MF' w kontekście weryfikacji statusu podatnika — termin jest używany w Polsce, ale draft nie precyzuje, czy chodzi o rejestr VAT-owców czy inny system, ani nie potwierdza, że weryfikacja trwa 'kilka–kilkanaście dni roboczych'."
+        "description": "Krok 5 wspomina o 'Białej Liście MF' w kontekście weryfikacji statusu podatnika — termin jest używany w Polsce, ale draft nie precyzuje, czy chodzi o rejestr VAT-owców czy inny system, ani nie potwierdza, że weryfikacja trwa 'kilka–kilkanaście dni roboczych'.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Fragment drafta w kroku 5 dotyczy rozliczenia ostatnich faktur i remanentu likwidacyjnego — nie zawiera wzmianki o 'Białej Liście MF' ani o terminie 'kilka–kilkanaście dni roboczych'. Flaga może odnosić się do innej części drafta niewidocznej w tym fragmencie. Rekordy KB dotyczą art. 87 ust. 2 i art. 96 ust. 1 ustawy o VAT i nie zawierają informacji o Białej Liście ani terminach weryfikacji statusu podatnika, więc nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli w innej części drafta rzeczywiście pojawia się termin 'Biała Lista MF', należy doprecyzować, że chodzi o wykaz podatników VAT prowadzony przez Szefa KAS na podstawie art. 96b ustawy o VAT, dostępny na stronie podatki.gov.pl, a twierdzenie o czasie weryfikacji 'kilka–kilkanaście dni roboczych' powinno być usunięte lub poparte konkretną podstawą prawną, gdyż ustawa nie określa takiego terminu dla weryfikacji statusu.",
+        "verified_at": "2026-04-18T12:46:07Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case dotyczący dobrowolnej rezystracji (art. 113 ust. 4) mówi, że wyjątek przejściowy nie dotyczy osób, które dobrowolnie zarejestrowały się jako VAT czynni — jednak draft nie wyjaśnia, jak odróżnić w praktyce utratę zwolnienia 'z mocy prawa' od 'dobrowolnej rezygnacji' w dokumentacji podatnika."
+        "description": "Edge case dotyczący dobrowolnej rezystracji (art. 113 ust. 4) mówi, że wyjątek przejściowy nie dotyczy osób, które dobrowolnie zarejestrowały się jako VAT czynni — jednak draft nie wyjaśnia, jak odróżnić w praktyce utratę zwolnienia 'z mocy prawa' od 'dobrowolnej rezygnacji' w dokumentacji podatnika.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB zawiera jedynie ogólne informacje o art. 113 ust. 1 i nie pokrywa szczegółów art. 113 ust. 4 (dobrowolna rejestracja jako VAT czynny) ani przepisów przejściowych dotyczących podniesienia limitu do 240 000 zł. Draft poprawnie sygnalizuje w EDGE_CASES różnicę między utratą zwolnienia z mocy prawa a dobrowolną rezygnacją, jednak faktycznie nie wyjaśnia praktycznych kryteriów dokumentacyjnych pozwalających odróżnić te dwa przypadki. Flaga wskazuje na realną lukę praktyczną, ale KB nie dostarcza twardego dowodu potwierdzającego ani obalającego jej zasadność.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie w EDGE_CASES lub ANSWER_STEPS wskazówki praktycznej: kryterium rozróżnienia to złożony VAT-R z zaznaczeniem dobrowolnej rezygnacji (część C.3 formularza) vs. brak takiego zgłoszenia przy przekroczeniu limitu. Podatnik, który nigdy nie składał VAT-R z zaznaczeniem dobrowolnej rezygnacji i utracił zwolnienie wyłącznie wskutek przekroczenia limitu, może powołać się na wyjątek przejściowy; w razie wątpliwości zalecane jest uzyskanie indywidualnej interpretacji KIS.",
+        "verified_at": "2026-04-18T12:46:16Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, czy podatnik, który przekroczył limit w grudniu 2025 r. i chce wrócić do zwolnienia od 1.01.2026, musi najpierw złożyć VAT-R rejestracyjny (jako VAT czynny) czy może bezpośrednio złożyć VAT-R powrotowy — procedura nie jest jasna dla tego scenariusza."
+        "description": "Draft nie wyjaśnia, czy podatnik, który przekroczył limit w grudniu 2025 r. i chce wrócić do zwolnienia od 1.01.2026, musi najpierw złożyć VAT-R rejestracyjny (jako VAT czynny) czy może bezpośrednio złożyć VAT-R powrotowy — procedura nie jest jasna dla tego scenariusza.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza, że powrót do zwolnienia wymaga 'zawiadomienia naczelnika urzędu skarbowego na piśmie' (art. 113 ust. 11), ale nie precyzuje, czy w scenariuszu przekroczenia limitu w grudniu 2025 r. podatnik musi najpierw zarejestrować się jako VAT czynny (VAT-R rejestracyjny), a następnie złożyć VAT-R aktualizacyjny z powrotem do zwolnienia, czy może złożyć jeden VAT-R. Draft w kroku 4 opisuje jedynie aktualizację VAT-R, nie odnosząc się do sytuacji, gdy podatnik nigdy formalnie nie zarejestrował się jako VAT czynny po przekroczeniu limitu. KB nie zawiera przepisów proceduralnych (np. z ustawy o zasadach ewidencji i identyfikacji podatników) ani wzorów VAT-R, które rozstrzygałyby tę kwestię.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto dodać w kroku 4 wyjaśnienie dla scenariusza, gdy podatnik przekroczył limit i nie zdążył zarejestrować się jako VAT czynny przed planowanym powrotem do zwolnienia — wskazać, że w praktyce należy skonsultować z urzędem skarbowym, czy wymagana jest najpierw rejestracja VAT-R jako czynny podatnik, a następnie aktualizacja do zwolnienia, czy wystarczy jedno zgłoszenie aktualizacyjne.",
+        "verified_at": "2026-04-18T12:46:25Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Krok 7 wspomina o przeprogramowaniu kas fiskalnych na stawki 'zw.', ale nie wyjaśnia, czy dotyczy to wszystkich typów kas (online, offline, hybrydowych) ani nie precyzuje, kto ponosi odpowiedzialność za przeprogramowanie (podatnik czy serwisant)."
+        "description": "Krok 7 wspomina o przeprogramowaniu kas fiskalnych na stawki 'zw.', ale nie wyjaśnia, czy dotyczy to wszystkich typów kas (online, offline, hybrydowych) ani nie precyzuje, kto ponosi odpowiedzialność za przeprogramowanie (podatnik czy serwisant).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących kas fiskalnych (ustawa o kasach rejestrujących, rozporządzenia wykonawcze) ani regulacji dotyczących obowiązków serwisantów przy przeprogramowaniu kas. Flaga dotyczy braku szczegółów technicznych i organizacyjnych w kroku 7, co jest kwestią praktyczną, ale KB nie dostarcza materiału do weryfikacji ani potwierdzenia, ani obalenia tej uwagi.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli draft ma być kompletny, warto dodać w kroku 7 wzmiankę, że przeprogramowanie kasy fiskalnej (niezależnie od typu: online, offline, hybrydowej) wymaga kontaktu z autoryzowanym serwisantem kasy, który dokonuje zmiany stawek i odnotowuje to w książce serwisowej — obowiązek inicjowania tej czynności spoczywa na podatniku.",
+        "verified_at": "2026-04-18T12:46:33Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

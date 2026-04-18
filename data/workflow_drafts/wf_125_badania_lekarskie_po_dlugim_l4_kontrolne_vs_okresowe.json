@@ -107,47 +107,109 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 229 § 2 KP, art. 163 § 3 KP, art. 304 KP, art. 229 § 11 KP i § 3 rozporządzenia MRPiPS z 10.12.2018. Brak formalnego zakotwiczenia tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na art. 229 § 2 KP, art. 163 § 3 KP, art. 304 KP, art. 229 § 11 KP i § 3 rozporządzenia MRPiPS z 10.12.2018. Brak formalnego zakotwiczenia tych przepisów uniemożliwia weryfikację ich aktualności i poprawności cytowania.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 229 KP, art. 163 § 3 KP, art. 304 KP ani § 3 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej. Dostępne rekordy dotyczą zupełnie innych przepisów (art. 86, 92 KP, rozporządzenie o kasach rejestrujących), więc nie można ani potwierdzić, ani obalić poprawności cytowanych przez draft przepisów. Flaga wskazuje na realny problem proceduralny (brak formalnych legal_anchors), ale weryfikacja merytoryczna cytowanych artykułów jest niemożliwa na podstawie dostępnego KB.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "Należy uzupełnić pole 'legal_anchors' o formalne zakotwiczenia: art. 229 § 2 KP, art. 229 § 11 KP, art. 163 § 3 KP, art. 304 KP oraz § 3 rozporządzenia MRPiPS z 10.12.2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369), a następnie zweryfikować aktualność tych przepisów w oficjalnych źródłach (ISAP).",
+        "verified_at": "2026-04-18T12:06:13Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera odniesienia do konkretnych systemów kadrowych (Comarch Optima, Symfonia, WFirma, Enova365) z nazwami ścieżek menu — te interfejsy mogą się zmienić do 2026 r., a instrukcje mogą stać się nieaktualne lub mylące dla użytkowników nowych wersji oprogramowania."
+        "description": "Draft zawiera odniesienia do konkretnych systemów kadrowych (Comarch Optima, Symfonia, WFirma, Enova365) z nazwami ścieżek menu — te interfejsy mogą się zmienić do 2026 r., a instrukcje mogą stać się nieaktualne lub mylące dla użytkowników nowych wersji oprogramowania.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Flaga dotyczy ryzyka dezaktualizacji nazw ścieżek menu w konkretnych systemach kadrowych (Comarch Optima, Symfonia, WFirma, Enova365). KB zawiera wyłącznie przepisy podatkowe (VAT, PIT) i nie zawiera żadnych informacji o interfejsach tych systemów ani ich cyklach aktualizacji. Nie można ani potwierdzić, ani obalić ryzyka na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.5,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać zastrzeżenie w drafcie: 'Ścieżki menu podane są dla wersji aktualnej na dzień opracowania — w przypadku nowszych wersji oprogramowania należy zweryfikować lokalizację funkcji w dokumentacji producenta.'",
+        "verified_at": "2026-04-18T12:06:20Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 5 stwierdza 'skierowanie możesz wystawić jeszcze w trakcie trwania L4', ale krok 3 i 4 mówią o 'dniu planowanego powrotu' i 'dniu powrotu' — brak jasności, czy data wystawienia skierowania powinna być datą w trakcie L4, czy datą powrotu, co może prowadzić do błędów administracyjnych."
+        "description": "Krok 5 stwierdza 'skierowanie możesz wystawić jeszcze w trakcie trwania L4', ale krok 3 i 4 mówią o 'dniu planowanego powrotu' i 'dniu powrotu' — brak jasności, czy data wystawienia skierowania powinna być datą w trakcie L4, czy datą powrotu, co może prowadzić do błędów administracyjnych.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących art. 229 KP ani przepisów o badaniach kontrolnych/profilaktycznych pracowników. Nie można zweryfikować na podstawie dostępnych źródeł, czy opisana sprzeczność między krokami 3/4 (data powrotu) a krokiem 5 (wystawienie w trakcie L4) stanowi rzeczywisty problem prawny czy jedynie kwestię redakcyjną. Flaga wskazuje na potencjalną niejednoznaczność narracyjną, ale bez odpowiednich przepisów w KB nie można ocenić jej zasadności.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto w kroku 5 explicite doprecyzować: 'Skierowanie możesz wystawić w trakcie L4 (data wystawienia = dzień przed planowanym powrotem lub wcześniej), jednak w skierowaniu wskaż planowaną datę powrotu jako datę, od której pracownik ma być dopuszczony do pracy' — eliminując niejednoznaczność co do daty wystawienia vs. daty powrotu.",
+        "verified_at": "2026-04-18T12:06:27Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia, co zrobić, gdy pracownik nie zgłosi się na badania kontrolne w wyznaczonym terminie po powrocie z L4 — brak procedury eskalacji, możliwości zawieszenia pracy czy sankcji pracowniczych, co jest kluczowe dla praktyki HR."
+        "description": "Draft nie wyjaśnia, co zrobić, gdy pracownik nie zgłosi się na badania kontrolne w wyznaczonym terminie po powrocie z L4 — brak procedury eskalacji, możliwości zawieszenia pracy czy sankcji pracowniczych, co jest kluczowe dla praktyki HR.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących konsekwencje niezgłoszenia się pracownika na badania kontrolne po L4 (art. 229 KP i powiązane przepisy nie są w dostarczonych rekordach). Flaga dotyczy luki praktycznej w drafcie — braku procedury eskalacji gdy pracownik nie stawi się na badania — co jest realnym problemem HR, jednak KB nie dostarcza ani potwierdzenia ani zaprzeczenia tej luki. Rekord art. 221f KP dotyczy kontroli trzeźwości, a nie badań kontrolnych po chorobie.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga miałaby być potwierdzona na podstawie wiedzy prawnej (poza KB): draft powinien zawierać krok opisujący, że pracodawca nie może dopuścić pracownika do pracy bez orzeczenia (art. 229 § 4 KP), co de facto stanowi mechanizm 'zawieszenia' — brak badania = brak dopuszczenia do pracy, a nieusprawiedliwiona nieobecność na badaniach może być podstawą do zastosowania sankcji porządkowych (art. 108 KP).",
+        "verified_at": "2026-04-18T12:06:36Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Krok 7 powołuje się na '§ 3 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej' — brak weryfikacji, czy to rozporządzenie rzeczywiście istnieje i czy jego § 3 dotyczy wpinania orzeczeń do części B akt osobowych (może to być wymyślony przepis lub błędnie cytowany)."
+        "description": "Krok 7 powołuje się na '§ 3 rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej' — brak weryfikacji, czy to rozporządzenie rzeczywiście istnieje i czy jego § 3 dotyczy wpinania orzeczeń do części B akt osobowych (może to być wymyślony przepis lub błędnie cytowany).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Baza wiedzy nie zawiera rekordów dotyczących rozporządzenia MRPiPS z 10.12.2018 w sprawie dokumentacji pracowniczej ani jego § 3. Dostępne rekordy dotyczą kas rejestrujących i KSeF, co jest zupełnie inną materią. Nie można ani potwierdzić, ani obalić poprawności cytowania tego rozporządzenia i jego § 3 w kontekście wpinania orzeczeń do części B akt osobowych.",
+        "verifier_confidence": 0.85,
+        "corrective_suggestion": "Należy zweryfikować bezpośrednio treść rozporządzenia Ministra Rodziny, Pracy i Polityki Społecznej z dnia 10 grudnia 2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369) — sprawdzić czy § 3 rzeczywiście reguluje zawartość części B akt osobowych i czy obejmuje orzeczenia lekarskie. Jeśli tak, flaga jest false positive; jeśli § 3 dotyczy innej kwestii, należy wskazać właściwy paragraf (prawdopodobnie § 6 lub załącznik do rozporządzenia).",
+        "verified_at": "2026-04-18T12:06:43Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case dotyczący 'pracownika zatrudnionego w dwóch firmach' jest realistyczny, ale draft nie wyjaśnia, czy pracownik musi wykonać badania kontrolne u OBU pracodawców czy tylko u głównego, co może być źródłem nieporozumień."
+        "description": "Edge case dotyczący 'pracownika zatrudnionego w dwóch firmach' jest realistyczny, ale draft nie wyjaśnia, czy pracownik musi wykonać badania kontrolne u OBU pracodawców czy tylko u głównego, co może być źródłem nieporozumień.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Draft w sekcji EDGE_CASES explicite adresuje sytuację pracownika zatrudnionego w dwóch firmach, wskazując że 'każdy pracodawca kieruje osobno' i że wyjątek z art. 229 § 11 KP dotyczy tylko badań wstępnych. Flaga sugeruje brak wyjaśnienia, ale wyjaśnienie jest obecne w drafcie. KB nie zawiera art. 229 KP, więc nie można zweryfikować poprawności merytorycznej cytowanego przepisu, jednak sama flaga dotyczy 'braku wyjaśnienia' który faktycznie nie zachodzi.",
+        "verifier_confidence": 0.72,
+        "verified_at": "2026-04-18T12:06:48Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie zawiera informacji o tym, czy pracownik może pracować w okresie między zakończeniem L4 a wykonaniem badań kontrolnych/okresowych — czy jest to okres zawieszenia, czy pracownik może świadczyć pracę bez orzeczenia, co jest kluczowe dla zgodności z prawem."
+        "description": "Draft nie zawiera informacji o tym, czy pracownik może pracować w okresie między zakończeniem L4 a wykonaniem badań kontrolnych/okresowych — czy jest to okres zawieszenia, czy pracownik może świadczyć pracę bez orzeczenia, co jest kluczowe dla zgodności z prawem.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych rekordów dotyczących art. 229 KP ani przepisów o badaniach profilaktycznych pracowników. Flaga dotyczy kwestii czy pracownik może świadczyć pracę bez orzeczenia kontrolnego po zakończeniu L4 — draft w step 5 częściowo adresuje ten temat (badanie wykonuje się po zakończeniu L4), ale nie wyjaśnia wprost zakazu dopuszczenia do pracy bez orzeczenia. Bez dostępu do art. 229 KP w KB nie można jednoznacznie potwierdzić ani odrzucić flagi.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Rozważyć dodanie w step 5 lub osobnym kroku wyraźnej informacji: pracodawca NIE może dopuścić pracownika do pracy bez orzeczenia lekarskiego stwierdzającego brak przeciwwskazań (art. 229 § 4 KP) — pracownik nie może świadczyć pracy w dniu powrotu z L4 do czasu uzyskania orzeczenia kontrolnego.",
+        "verified_at": "2026-04-18T12:06:55Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "low",
-        "description": "Krok 6 mówi, że po urlopie macierzyńskim 'badania kontrolne NIE są wymagane', ale wcześniej (krok 1) definiuje się kontrolne jako obowiązkowe po L4 >30 dni — brak wyjaśnienia, czy urlop macierzyński liczony jest jako L4, czy jako odrębna kategoria, co może być mylące."
+        "description": "Krok 6 mówi, że po urlopie macierzyńskim 'badania kontrolne NIE są wymagane', ale wcześniej (krok 1) definiuje się kontrolne jako obowiązkowe po L4 >30 dni — brak wyjaśnienia, czy urlop macierzyński liczony jest jako L4, czy jako odrębna kategoria, co może być mylące.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera art. 229 KP ani przepisów dotyczących badań kontrolnych, więc nie można zweryfikować z twardym dowodem, czy urlop macierzyński jest traktowany odrębnie od L4 w kontekście obowiązku badań kontrolnych. Flaga wskazuje na potencjalną niejasność redakcyjną w drafcie — krok 1 definiuje obowiązek badań kontrolnych dla 'niezdolności do pracy z powodu choroby', a urlop macierzyński jest odrębną kategorią nieobecności (nie jest L4), co faktycznie może być mylące dla czytelnika. Jednak bez dostępu do art. 229 KP nie można jednoznacznie potwierdzić ani obalić, czy draft poprawnie rozstrzyga tę kwestię.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Warto w kroku 6 dodać wyjaśnienie, że urlop macierzyński NIE jest traktowany jako niezdolność do pracy z powodu choroby (L4) w rozumieniu art. 229 § 2 KP, dlatego po samym urlopie macierzyńskim (bez poprzedzającego L4 >30 dni) badania kontrolne nie są wymagane — co rozwieje potencjalne nieporozumienie sygnalizowane przez flagę.",
+        "verified_at": "2026-04-18T12:07:04Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie wyjaśnia, czy pracownik może być kierowany na badania kontrolne/okresowe w trakcie pracy (np. w godzinach pracy) czy musi to robić we własnym czasie, co ma znaczenie dla praktyki i komunikacji z pracownikiem."
+        "description": "Draft nie wyjaśnia, czy pracownik może być kierowany na badania kontrolne/okresowe w trakcie pracy (np. w godzinach pracy) czy musi to robić we własnym czasie, co ma znaczenie dla praktyki i komunikacji z pracownikiem.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych rekordów dotyczących art. 229 KP ani przepisów o czasie wykonywania badań profilaktycznych w godzinach pracy. Kwestia ta jest uregulowana w art. 229 § 3 KP (badania w godzinach pracy, zachowanie prawa do wynagrodzenia), jednak brak tego artykułu w dostarczonych rekordach uniemożliwia jednoznaczną weryfikację. Flaga wskazuje na brakującą informację praktyczną, która faktycznie może być istotna dla użytkownika.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Rozważyć dodanie w drafcie informacji, że zgodnie z art. 229 § 3 KP badania profilaktyczne są wykonywane w miarę możliwości w godzinach pracy, a pracownik zachowuje za ten czas prawo do wynagrodzenia, oraz że pracodawca pokrywa koszty tych badań.",
+        "verified_at": "2026-04-18T12:07:10Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

@@ -121,62 +121,145 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "medium",
-        "description": "Art. 92 § 4 k.p. jest cytowany jako podstawa przejścia z kodu 331 na 313, ale artykuł dotyczy przysługiwania zasiłku po wyczerpaniu wynagrodzenia chorobowego — brakuje odniesienia do art. 92 § 1 k.p. jako podstawy samego limitu 33/14 dni i resetu rocznego, co jest kluczowe dla całego workflow."
+        "description": "Art. 92 § 4 k.p. jest cytowany jako podstawa przejścia z kodu 331 na 313, ale artykuł dotyczy przysługiwania zasiłku po wyczerpaniu wynagrodzenia chorobowego — brakuje odniesienia do art. 92 § 1 k.p. jako podstawy samego limitu 33/14 dni i resetu rocznego, co jest kluczowe dla całego workflow.",
+        "verdict": "false_positive",
+        "verifier_reasoning": "Fragment drafta zawiera art. 92 § 1 pkt 1 k.p. jako pierwszy legal anchor z wyraźnym opisem limitu 33/14 dni i resetu rocznego, a art. 92 § 4 jako drugi anchor dotyczący przejścia na zasiłek. KB potwierdza, że art. 92 § 1 reguluje limit 33/14 dni, a art. 92 § 4 reguluje przejście na zasiłek po wyczerpaniu limitu. Oba artykuły są prawidłowo zacytowane i opisane w LEGAL_ANCHORS — flaga sugeruje brak art. 92 § 1, który faktycznie jest obecny.",
+        "verifier_confidence": 0.9,
+        "verified_at": "2026-04-18T12:11:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera odniesienie do 'uchwały SN III UZP 5/12' (z 2012 r.) jako uzasadnienie dla limitu 33/14 dni łącznego u wszystkich pracodawców — ta uchwała może być nieaktualna lub zastąpiona nowszą linią orzeczniczą do 2026 r., wymaga weryfikacji."
+        "description": "Draft zawiera odniesienie do 'uchwały SN III UZP 5/12' (z 2012 r.) jako uzasadnienie dla limitu 33/14 dni łącznego u wszystkich pracodawców — ta uchwała może być nieaktualna lub zastąpiona nowszą linią orzeczniczą do 2026 r., wymaga weryfikacji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera treści art. 92 § 1 k.p. ani uchwały SN III UZP 5/12, więc nie można potwierdzić ani obalić aktualności tej uchwały na podstawie dostępnych rekordów. Flaga dotyczy orzecznictwa SN z 2012 r. — KB obejmuje ustawy, nie orzecznictwo, więc weryfikacja wymaga zewnętrznych źródeł (bazy orzeczeń SN). Sama zasada łącznego limitu 33/14 dni u wszystkich pracodawców wynika z brzmienia art. 92 § 1 k.p., jednak potwierdzenie aktualności konkretnej uchwały SN wykracza poza możliwości KB.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zaleca się weryfikację uchwały SN III UZP 5/12 w oficjalnej bazie orzeczeń SN lub Lex/Legalis pod kątem ewentualnych późniejszych uchwał lub wyroków zmieniających linię orzeczniczą. Jeśli uchwała pozostaje aktualna, warto dodać adnotację o jej potwierdzeniu; jeśli zastąpiona — zaktualizować powołanie do nowszego orzeczenia.",
+        "verified_at": "2026-04-18T12:11:29Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Step 5 wymaga 'świadectwa pracy — pkt 6 ppkt 9', ale brakuje wyjaśnienia, co zrobić, jeśli pracownik pracował u poprzedniego pracodawcy za granicą lub u pracodawcy, który już nie istnieje — procedura fallback nie jest jasna."
+        "description": "Step 5 wymaga 'świadectwa pracy — pkt 6 ppkt 9', ale brakuje wyjaśnienia, co zrobić, jeśli pracownik pracował u poprzedniego pracodawcy za granicą lub u pracodawcy, który już nie istnieje — procedura fallback nie jest jasna.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów dotyczących art. 92 KP ani przepisów o świadectwach pracy (art. 97 KP) w kontekście dokumentowania dni wynagrodzenia chorobowego u poprzednich pracodawców. Flaga wskazuje na brak procedury fallback dla przypadków zagranicznych pracodawców lub pracodawców, którzy przestali istnieć — jest to realny problem praktyczny, ale KB nie dostarcza ani potwierdzenia ani zaprzeczenia tego braku. Nie można jednoznacznie ocenić czy draft celowo pomija te edge case'y czy jest to rzeczywiste pominięcie krytycznej informacji.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto dodać do step 5 notę: w przypadku braku świadectwa pracy (pracodawca zagraniczny, likwidacja firmy) pracownik może złożyć oświadczenie o liczbie dni wynagrodzenia chorobowego pobranego w danym roku — pracodawca może działać w dobrej wierze na podstawie takiego oświadczenia, a odpowiedzialność za nieprawdziwe dane spoczywa na pracowniku.",
+        "verified_at": "2026-04-18T12:11:38Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Step 3 stwierdza 'od 1.01.2022 do tego samego okresu zasiłkowego zalicza się też niezdolność po przerwie, niezależnie od przyczyny, jeśli przerwa ≤ 60 dni' — ale to zmienia regułę z art. 9 ustawy zasiłkowej (wymóg tej samej/innej choroby), wymaga jasnego wskazania, czy to zmiana legislacyjna czy interpretacja."
+        "description": "Step 3 stwierdza 'od 1.01.2022 do tego samego okresu zasiłkowego zalicza się też niezdolność po przerwie, niezależnie od przyczyny, jeśli przerwa ≤ 60 dni' — ale to zmienia regułę z art. 9 ustawy zasiłkowej (wymóg tej samej/innej choroby), wymaga jasnego wskazania, czy to zmiana legislacyjna czy interpretacja.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera art. 9 ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (ustawy zasiłkowej), który reguluje zasady liczenia okresu zasiłkowego. Dostępne rekordy dotyczą art. 9 Kodeksu pracy (definicja prawa pracy), art. 9 ustawy PIT oraz art. 113 ustawy VAT — żaden nie jest relevantny dla weryfikacji reguły 60-dniowej przerwy i jej ewentualnej zmiany od 1.01.2022. Nie można potwierdzić ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy wprost wskazać w drafcie podstawę prawną zmiany z 1.01.2022 (jeśli taka nastąpiła) — tj. konkretną nowelizację ustawy zasiłkowej lub wyraźnie zaznaczyć, że reguła 60 dni + ta sama choroba wynika z art. 9 ust. 2 ustawy zasiłkowej w brzmieniu obowiązującym, bez sugerowania zmiany legislacyjnej jeśli jej nie było.",
+        "verified_at": "2026-04-18T12:11:48Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "medium",
-        "description": "Step 6 wymienia 'formularz ZAS-12' jako narzędzie do zapytania ZUS o dni wynagrodzenia chorobowego — należy zweryfikować, czy ZAS-12 rzeczywiście służy temu celowi (może być to formularz do innego celu, np. zasiłek macierzyński)."
+        "description": "Step 6 wymienia 'formularz ZAS-12' jako narzędzie do zapytania ZUS o dni wynagrodzenia chorobowego — należy zweryfikować, czy ZAS-12 rzeczywiście służy temu celowi (może być to formularz do innego celu, np. zasiłek macierzyński).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych rekordów dotyczących formularzy ZUS (w tym ZAS-12), więc nie można potwierdzić ani obalić twierdzenia o przeznaczeniu tego formularza. Flaga jest merytorycznie zasadna jako ryzyko — formularz ZAS-12 w rzeczywistości dotyczy zasiłku macierzyńskiego/rodzicielskiego, a nie zapytań o dni wynagrodzenia chorobowego, jednak KB nie dostarcza twardego dowodu do potwierdzenia tej weryfikacji.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona zewnętrznie: usunąć odniesienie do 'formularza ZAS-12' w step 6 lub zastąpić go prawidłowym narzędziem (np. wnioskiem o informację do ZUS w formie pisemnej lub przez PUE ZUS — zakładka 'Informacje o świadczeniach'), ewentualnie wskazać pracodawcy, że powinien poprosić pracownika o zaświadczenie od poprzedniego pracodawcy (druk ZUS Z-3) lub sprawdzić historię w PUE.",
+        "verified_at": "2026-04-18T12:11:56Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "high",
-        "description": "Edge case 'Niezdolność w ciąży lub wypadek w drodze do/z pracy' wspomina kod 314 dla ciąży, ale brakuje wyjaśnienia, czy kod 314 to zasiłek opiekuńczy czy macierzyński — w step 6 kod 314 jest wymieniony jako 'zasiłek opiekuńczy', co może być sprzeczne."
+        "description": "Edge case 'Niezdolność w ciąży lub wypadek w drodze do/z pracy' wspomina kod 314 dla ciąży, ale brakuje wyjaśnienia, czy kod 314 to zasiłek opiekuńczy czy macierzyński — w step 6 kod 314 jest wymieniony jako 'zasiłek opiekuńczy', co może być sprzeczne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera informacji o kodach ZUS (313, 314, 331) ani o klasyfikacji zasiłku opiekuńczego vs macierzyńskiego w kontekście kodów rozliczeniowych ZUS. Fragment drafta w step 6 wymienia kod 314 jako 'zasiłek opiekuńczy', ale flaga wskazuje na potencjalną sprzeczność z edge case dotyczącym ciąży — weryfikacja wymagałaby dostępu do przepisów ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa oraz rozporządzeń ZUS dotyczących kodów świadczeń, których KB nie pokrywa.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Warto sprawdzić w dokumentacji ZUS: kod 314 to zasiłek opiekuńczy (art. 32-35 ustawy zasiłkowej), natomiast niezdolność do pracy w ciąży jest objęta zasiłkiem chorobowym z kodem 313 (ale ze 100% podstawy wymiaru). Jeśli draft błędnie przypisuje kod 314 do ciąży, należy go skorygować na 313 z adnotacją o 100% wynagrodzenia zgodnie z art. 92 § 1 pkt 2 KP.",
+        "verified_at": "2026-04-18T12:12:05Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Draft zawiera odniesienie do 'art. 43 ustawy zasiłkowej' dotyczące przeliczania podstawy wymiaru — ta ustawa mogła być zmieniona do 2026 r., a konkretne progi (1 miesiąc kalendarzowy) mogą być nieaktualne."
+        "description": "Draft zawiera odniesienie do 'art. 43 ustawy zasiłkowej' dotyczące przeliczania podstawy wymiaru — ta ustawa mogła być zmieniona do 2026 r., a konkretne progi (1 miesiąc kalendarzowy) mogą być nieaktualne.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordu dotyczącego art. 43 ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (ustawa zasiłkowa). Dostępne rekordy dotyczą art. 43 Kodeksu pracy, ustawy o VAT i ustawy o ryczałcie — żaden nie odnosi się do przeliczania podstawy wymiaru zasiłku. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zweryfikować aktualną treść art. 43 ustawy z dnia 25 czerwca 1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (Dz.U. 1999 nr 60 poz. 636 ze zm.) — w szczególności czy próg 'krótszy niż 1 miesiąc kalendarzowy' jako warunek nieprzeliczania podstawy wymiaru pozostaje aktualny na 2026 r.",
+        "verified_at": "2026-04-18T12:12:12Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 7 mówi o 'podstawach wymiaru NIE przelicza się przy przejściu z zasiłku na wynagrodzenie chorobowe', ale brakuje wyjaśnienia, jak ustalić podstawę wymiaru dla wynagrodzenia chorobowego w pierwszym miejscu (czy to średnia z 12 miesięcy czy inny okres)."
+        "description": "Step 7 mówi o 'podstawach wymiaru NIE przelicza się przy przejściu z zasiłku na wynagrodzenie chorobowe', ale brakuje wyjaśnienia, jak ustalić podstawę wymiaru dla wynagrodzenia chorobowego w pierwszym miejscu (czy to średnia z 12 miesięcy czy inny okres).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB potwierdza (art. 92 § 2 KP), że wynagrodzenie chorobowe oblicza się według zasad ustalania podstawy wymiaru zasiłku chorobowego, co odsyła do ustawy zasiłkowej (art. 36 i nast. ustawy z 25.06.1999). Flaga wskazuje na brak wyjaśnienia okresu referencyjnego (12 miesięcy), ale draft w step 7 skupia się na przełomie roku i zasadzie nieprzeliczania podstawy z art. 43 ustawy zasiłkowej. KB nie zawiera przepisów ustawy zasiłkowej dotyczących art. 36 (okres 12 miesięcy), więc nie można jednoznacznie ocenić czy brak tego wyjaśnienia w kontekście całego workflow stanowi istotną lukę czy jest celowym uproszczeniem.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli workflow ma być kompletny, warto dodać w step 7 wzmiankę: 'Podstawę wymiaru wynagrodzenia chorobowego ustala się jako średnie miesięczne wynagrodzenie z 12 miesięcy kalendarzowych poprzedzających miesiąc, w którym powstała niezdolność (art. 36 ust. 1 ustawy zasiłkowej), a przy krótszym zatrudnieniu — z faktycznego okresu zatrudnienia.'",
+        "verified_at": "2026-04-18T12:12:21Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "low",
-        "description": "Edge case 'Pracownik po 50. r.ż.' stwierdza, że limit 14 dni stosuje się od 1 stycznia roku NASTĘPUJĄCEGO po roku ukończenia 50 lat — ale brakuje przykładu, co się dzieje w roku przejściowym (np. pracownik kończy 50 lat 15.06.2026 — czy w 2026 ma 33 czy 14 dni)."
+        "description": "Edge case 'Pracownik po 50. r.ż.' stwierdza, że limit 14 dni stosuje się od 1 stycznia roku NASTĘPUJĄCEGO po roku ukończenia 50 lat — ale brakuje przykładu, co się dzieje w roku przejściowym (np. pracownik kończy 50 lat 15.06.2026 — czy w 2026 ma 33 czy 14 dni).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera art. 92 KP ani przepisów ustawy zasiłkowej regulujących limit 14/33 dni wynagrodzenia chorobowego. Nie można zweryfikować na podstawie dostarczonych rekordów, czy draft poprawnie opisuje rok przejściowy. Sama flaga wskazuje na brak przykładu dla roku przejściowego (np. pracownik kończy 50 lat 15.06.2026) — draft stwierdza jedynie, że w roku ukończenia 50 lat obowiązuje limit 33 dni, co jest zgodne z powszechnie przyjętą interpretacją art. 92 § 1 pkt 1 KP, ale KB tego nie potwierdza ani nie zaprzecza.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Rozważyć dodanie do edge case 'Pracownik po 50. r.ż.' konkretnego przykładu: 'Pracownik kończy 50 lat 15.06.2026 — w całym 2026 r. obowiązuje go limit 33 dni; limit 14 dni zacznie obowiązywać dopiero od 1.01.2027.' Zwiększyłoby to klarowność bez zmiany merytorycznej treści.",
+        "verified_at": "2026-04-18T12:12:31Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Step 5 wymaga 'pisemnego wniosku do ZUS (formularz ZAS-12 lub zapytanie przez PUE)' — brakuje informacji, jaki jest czas odpowiedzi ZUS i co zrobić, jeśli odpowiedź nie nadejdzie przed wypłatą wynagrodzenia chorobowego."
+        "description": "Step 5 wymaga 'pisemnego wniosku do ZUS (formularz ZAS-12 lub zapytanie przez PUE)' — brakuje informacji, jaki jest czas odpowiedzi ZUS i co zrobić, jeśli odpowiedź nie nadejdzie przed wypłatą wynagrodzenia chorobowego.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów regulujących terminy odpowiedzi ZUS na zapytania pracodawców dotyczące dni wynagrodzenia chorobowego u poprzednich pracodawców (formularz ZAS-12 / PUE). Rekordy z KB dotyczą zupełnie innych kwestii (zwolnienia ze składek, nabór pracowników ZUS, stopy składek). Flaga wskazuje na lukę praktyczną w drafcie — brak informacji o czasie oczekiwania na odpowiedź ZUS i postępowaniu w przypadku braku odpowiedzi przed terminem wypłaty — co jest realnym problemem operacyjnym, ale nie można go zweryfikować na podstawie dostępnych rekordów KB.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać do step 5 informację: ZUS ma 7 dni roboczych na odpowiedź przez PUE (praktyka), a w przypadku braku odpowiedzi przed terminem wypłaty pracodawca powinien wypłacić wynagrodzenie chorobowe zachowawczo (zakładając pełny limit 33/14 dni) i dokonać korekty po otrzymaniu informacji — z ewentualnym potrąceniem nadpłaty z kolejnego wynagrodzenia za zgodą pracownika (art. 91 k.p.).",
+        "verified_at": "2026-04-18T12:12:39Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Step 6 wymienia 'RCA/RSA' jako systemy do zaksięgowania — należy zweryfikować, czy to rzeczywiste nazwy systemów kadrowo-płacowych dostępnych w Polsce w 2026 r. (mogą to być skróty nieznane lub przestarzałe)."
+        "description": "Step 6 wymienia 'RCA/RSA' jako systemy do zaksięgowania — należy zweryfikować, czy to rzeczywiste nazwy systemów kadrowo-płacowych dostępnych w Polsce w 2026 r. (mogą to być skróty nieznane lub przestarzałe).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera żadnych informacji o systemach kadrowo-płacowych (Comarch Optima, RCA, RSA ani innych). Fragment drafta w step 6 wymienia 'Comarch Optima' jako przykład systemu, ale flaga odnosi się do 'RCA/RSA' — skrótów, które nie pojawiają się w przytoczonym fragmencie drafta. Możliwe, że RCA/RSA to skróty z innej części dokumentu niewidocznej w tym fragmencie. Nie można potwierdzić ani obalić zasadności flagi na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Jeśli RCA/RSA faktycznie pojawia się w drafcie, należy zweryfikować czy są to rzeczywiste, powszechnie używane nazwy systemów kadrowo-płacowych w Polsce, lub zastąpić je konkretnymi, weryfikowalnymi nazwami (np. Comarch Optima, Symfonia, Enova365, SAP HCM) albo użyć ogólnego sformułowania 'program kadrowo-płacowy'.",
+        "verified_at": "2026-04-18T12:12:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Common mistake 'Pomijanie sprawdzenia świadectwa pracy' — brakuje procedury, co zrobić, jeśli pracownik nie dostarczy świadectwa w terminie i pracodawca musi wypłacić wynagrodzenie chorobowe — czy wypłacić pełny limit 33/14 dni czy wstrzymać?"
+        "description": "Common mistake 'Pomijanie sprawdzenia świadectwa pracy' — brakuje procedury, co zrobić, jeśli pracownik nie dostarczy świadectwa w terminie i pracodawca musi wypłacić wynagrodzenie chorobowe — czy wypłacić pełny limit 33/14 dni czy wstrzymać?",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących procedurę wstrzymania/wypłaty wynagrodzenia chorobowego w przypadku niedostarczenia świadectwa pracy przez pracownika (brak art. 92 § 1-3 KP w pełnym brzmieniu oraz przepisów ustawy zasiłkowej dot. dokumentowania). Rekord art. 97¹ KP dotyczy wyłącznie prawa pracownika do żądania wydania świadectwa od pracodawcy, nie odwrotnej sytuacji. Flaga wskazuje na realną lukę praktyczną (step 5 drafta wspomina o konieczności sprawdzenia świadectwa, ale nie opisuje co zrobić przy jego braku), jednak bez odpowiednich przepisów w KB nie można potwierdzić ani odrzucić czy brak tej procedury stanowi błąd merytoryczny.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Rozważyć dodanie w step 5 informacji: pracodawca nie może wstrzymać wypłaty wynagrodzenia chorobowego z powodu niedostarczenia świadectwa pracy — powinien wypłacić pełny limit 33/14 dni, a następnie dochodzić ewentualnych roszczeń regresowych lub korekt po otrzymaniu dokumentu. Wymaga weryfikacji z art. 92 KP i przepisami ustawy zasiłkowej.",
+        "verified_at": "2026-04-18T12:12:56Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }

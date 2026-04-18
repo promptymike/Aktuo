@@ -108,52 +108,121 @@
       {
         "type": "legal_anchor_uncertainty",
         "severity": "high",
-        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na 'art. 34 ustawy zasiłkowej' i 'art. 33 ustawy zasiłkowej' — brakuje pełnych referencji do ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (czy to ustawa z 1998 r., czy nowsza)."
+        "description": "Pole 'legal_anchors' jest puste, mimo że draft wielokrotnie powołuje się na 'art. 34 ustawy zasiłkowej' i 'art. 33 ustawy zasiłkowej' — brakuje pełnych referencji do ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (czy to ustawa z 1998 r., czy nowsza).",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera rekordów dotyczących ustawy o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (ustawa zasiłkowa z 1999 r., Dz.U. 1999 nr 60 poz. 636). Dostępne rekordy dotyczą ustawy o zryczałtowanym podatku dochodowym (art. 33, 34) oraz ustawy o VAT (art. 33) — są to zupełnie inne akty prawne. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych, jednak sam problem opisany w fladze (brak pełnych referencji do ustawy zasiłkowej przy wielokrotnym powoływaniu się na jej artykuły) jest merytorycznie zasadny jako ryzyko redakcyjne.",
+        "verifier_confidence": 0.75,
+        "corrective_suggestion": "W polu 'legal_anchors' należy dodać pełne referencje: ustawa z dnia 25 czerwca 1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (Dz.U. z 2023 r. poz. 2780 t.j.) — art. 33 (limit dni zasiłku opiekuńczego) i art. 34 (zasady ustalania prawa do zasiłku opiekuńczego). Należy zweryfikować aktualny tekst jednolity ustawy.",
+        "verified_at": "2026-04-18T12:46:42Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "high",
-        "description": "Draft powołuje się na formularz 'ZAS-36' jako 'oświadczenie' przy nagłym zamknięciu placówki (krok 6), ale nie ma pewności, czy ten kod formularza ZUS istnieje lub czy jest aktualny dla 2026 — wymaga weryfikacji w oficjalnym rejestrze formularzy ZUS."
+        "description": "Draft powołuje się na formularz 'ZAS-36' jako 'oświadczenie' przy nagłym zamknięciu placówki (krok 6), ale nie ma pewności, czy ten kod formularza ZUS istnieje lub czy jest aktualny dla 2026 — wymaga weryfikacji w oficjalnym rejestrze formularzy ZUS.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB nie zawierają informacji o formularzu ZAS-36 ani o procedurach związanych z zasiłkiem opiekuńczym przy zamknięciu placówki. KB pokrywa jedynie ogólne przepisy o systemie ubezpieczeń społecznych (art. 47, 43a, 83e), które nie odnoszą się do konkretnych wzorów formularzy ZUS. Nie można ani potwierdzić, ani obalić istnienia formularza ZAS-36 na podstawie dostępnych danych.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Należy zweryfikować istnienie i aktualność formularza ZAS-36 bezpośrednio w oficjalnym rejestrze formularzy ZUS (zus.pl). Jeśli formularz nie istnieje lub ma inną nazwę, należy go zastąpić właściwym dokumentem lub opisem 'oświadczenie o zamknięciu placówki' bez podawania konkretnego kodu formularza.",
+        "verified_at": "2026-04-18T12:46:47Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "medium",
-        "description": "Krok 1 odwołuje się do stanu zatrudnienia na '30.11 roku poprzedniego' jako daty granicznej dla statusu płatnika zasiłków — ta reguła mogła ulec zmianie w przepisach ZUS między 2024 a 2026, wymaga potwierdzenia aktualności."
+        "description": "Krok 1 odwołuje się do stanu zatrudnienia na '30.11 roku poprzedniego' jako daty granicznej dla statusu płatnika zasiłków — ta reguła mogła ulec zmianie w przepisach ZUS między 2024 a 2026, wymaga potwierdzenia aktualności.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą ustawy o systemie ubezpieczeń społecznych w zakresie ewidencji składek i zawieszenia działalności gospodarczej — nie zawierają przepisów regulujących próg 20 ubezpieczonych jako kryterium statusu płatnika zasiłków (art. 61 ustawy zasiłkowej). Nie można ani potwierdzić, ani obalić aktualności daty 30.11 roku poprzedniego jako daty granicznej na podstawie dostarczonych rekordów.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Należy zweryfikować art. 61 ustawy z dnia 25 czerwca 1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa (ustawa zasiłkowa) — przepis ten reguluje próg 20 ubezpieczonych i datę graniczną 30 listopada. Jeśli przepis nie uległ zmianie, flaga jest false positive; w przeciwnym razie należy zaktualizować krok 1.",
+        "verified_at": "2026-04-18T12:46:54Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Krok 7 wspomina kody ZUS '320' na eZLA dla zasiłku opiekuńczego, ale nie wyjaśnia, czy kod ten obowiązuje dla wszystkich typów zasiłków opiekuńczych (opieka nad dzieckiem vs. członkiem rodziny) czy tylko dla wybranych — brakuje mapowania kodów."
+        "description": "Krok 7 wspomina kody ZUS '320' na eZLA dla zasiłku opiekuńczego, ale nie wyjaśnia, czy kod ten obowiązuje dla wszystkich typów zasiłków opiekuńczych (opieka nad dzieckiem vs. członkiem rodziny) czy tylko dla wybranych — brakuje mapowania kodów.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy z KB dotyczą ustawy o systemie ubezpieczeń społecznych w zakresie dokumentacji i składek, nie zawierają informacji o kodach ZUS na eZLA (np. kod 320) ani ich mapowaniu na typy zasiłków opiekuńczych. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych materiałów. Flaga dotyczy kwestii techniczno-proceduralnej (kody eZLA), która wymaga weryfikacji w rozporządzeniach ZUS lub dokumentacji systemu eZLA.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona innymi źródłami, warto w kroku 7 doprecyzować, że kod 320 dotyczy zasiłku opiekuńczego ogólnie, lub podać mapowanie: np. kod 320 dla opieki nad dzieckiem, ewentualnie inny kod dla opieki nad chorym członkiem rodziny — zgodnie z aktualną dokumentacją ZUS dotyczącą eZLA.",
+        "verified_at": "2026-04-18T12:47:03Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "step_contradiction",
         "severity": "medium",
-        "description": "Krok 3 stwierdza, że dla dzieci poniżej 2 lat 'ograniczenie innego domownika nie obowiązuje', ale krok 4 podaje limity 60 dni dla opieki nad zdrowym dzieckiem do 8 lat — niejasne, czy limit 60 dni dotyczy również dzieci poniżej 2 lat czy jest inny."
+        "description": "Krok 3 stwierdza, że dla dzieci poniżej 2 lat 'ograniczenie innego domownika nie obowiązuje', ale krok 4 podaje limity 60 dni dla opieki nad zdrowym dzieckiem do 8 lat — niejasne, czy limit 60 dni dotyczy również dzieci poniżej 2 lat czy jest inny.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera relevantnych przepisów dotyczących zasiłku opiekuńczego (ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa). Flaga wskazuje na potencjalną niejasność w drafcie — krok 3 wyłącza warunek 'innego domownika' dla dzieci poniżej 2 lat, ale krok 4 podaje limit 60 dni dla opieki nad zdrowym dzieckiem do 8 lat bez rozróżnienia na wiek poniżej/powyżej 2 lat. Nie można zweryfikować czy limit 60 dni obowiązuje tak samo dla dzieci poniżej 2 lat, gdyż odpowiednie przepisy nie są dostępne w KB.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "W kroku 4 warto dodać wyjaśnienie, że limit 60 dni dotyczy łącznie opieki nad dziećmi do 8 lat (w tym poniżej 2 lat) — wyłączenie z kroku 3 dotyczy jedynie warunku obecności innego domownika, a nie samego limitu dni zasiłkowych.",
+        "verified_at": "2026-04-18T12:47:09Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "edge_case_coverage",
         "severity": "medium",
-        "description": "Edge case 'Drugi rodzic na urlopie macierzyńskim' zawiera sformułowanie 'urlop rodzicielski obejmuje szczególny przypadek (noworodek wymagający wyłącznej opieki matki)' — to sformułowanie jest nieprecyzyjne i potencjalnie wymyślone, brakuje konkretnego odniesienia do przepisów definiujących 'wyłączną opiekę matki'."
+        "description": "Edge case 'Drugi rodzic na urlopie macierzyńskim' zawiera sformułowanie 'urlop rodzicielski obejmuje szczególny przypadek (noworodek wymagający wyłącznej opieki matki)' — to sformułowanie jest nieprecyzyjne i potencjalnie wymyślone, brakuje konkretnego odniesienia do przepisów definiujących 'wyłączną opiekę matki'.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów ustawy zasiłkowej (ustawa z 25.06.1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa) ani rozporządzeń ZUS definiujących 'wyłączną opiekę matki' w kontekście zasiłku opiekuńczego. Flaga jest merytorycznie zasadna — sformułowanie 'noworodek wymagający wyłącznej opieki matki' brzmi jak parafraza art. 34 ustawy zasiłkowej (który mówi o niemożności sprawowania opieki przez drugiego rodzica), ale bez dostępu do tego przepisu w KB nie można jednoznacznie potwierdzić ani obalić, czy sformułowanie w drafcie jest precyzyjne czy wymyślone.",
+        "verifier_confidence": 0.6,
+        "corrective_suggestion": "Zastąpić sformułowanie 'urlop rodzicielski obejmuje szczególny przypadek (noworodek wymagający wyłącznej opieki matki)' odwołaniem do art. 34 ustawy zasiłkowej: 'drugi rodzic nie może sprawować opieki z powodów wskazanych w art. 34 ustawy zasiłkowej (np. stan zdrowia, niemożność sprawowania opieki)' — lub usunąć ten nawias jako nieweryfikowalny.",
+        "verified_at": "2026-04-18T12:47:19Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "medium",
-        "description": "Draft nie wyjaśnia procedury dla pracownika zatrudnionego u pracodawcy do 20 osób — krok 1 mówi, że 'zasiłek wypłaca ZUS', ale nie precyzuje, czy pracownik sam składa Z-15A do ZUS czy przez pracodawcę, i jaki jest termin."
+        "description": "Draft nie wyjaśnia procedury dla pracownika zatrudnionego u pracodawcy do 20 osób — krok 1 mówi, że 'zasiłek wypłaca ZUS', ale nie precyzuje, czy pracownik sam składa Z-15A do ZUS czy przez pracodawcę, i jaki jest termin.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Dostarczone rekordy KB (art. 4, 8, 113c ustawy o SUS) nie zawierają przepisów dotyczących procedury składania Z-15A przez pracownika zatrudnionego u małego pracodawcy (do 20 osób) ani terminów przekazywania dokumentów do ZUS. Flaga wskazuje na realną lukę informacyjną w drafcie — brak wyjaśnienia czy pracownik składa Z-15A bezpośrednio do ZUS czy przez pracodawcę — jednak KB nie dostarcza materiału do potwierdzenia ani obalenia tej obserwacji.",
+        "verifier_confidence": 0.4,
+        "corrective_suggestion": "Jeśli flaga zostanie potwierdzona z innych źródeł (np. ustawa zasiłkowa, rozporządzenie MRPiPS), należy w kroku 1 lub 2 dodać: 'W przypadku pracodawcy do 20 osób pracownik składa Z-15A pracodawcy, który przekazuje dokumenty do ZUS w terminie 7 dni (art. 61 ustawy zasiłkowej); ZUS wypłaca zasiłek bezpośrednio na konto pracownika.'",
+        "verified_at": "2026-04-18T12:47:27Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "hallucination_risk",
         "severity": "low",
-        "description": "Krok 5 wspomina 'dzień odbioru soboty' jako dzień wolny od pracy — to sformułowanie jest archaiczne i odnosi się do starych przepisów o rozkładzie pracy; dla 2026 wymaga weryfikacji, czy ta kategoria jeszcze istnieje w praktyce."
+        "description": "Krok 5 wspomina 'dzień odbioru soboty' jako dzień wolny od pracy — to sformułowanie jest archaiczne i odnosi się do starych przepisów o rozkładzie pracy; dla 2026 wymaga weryfikacji, czy ta kategoria jeszcze istnieje w praktyce.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów bezpośrednio regulujących 'dzień odbioru soboty' w kontekście zasiłku opiekuńczego ani rozkładu czasu pracy. Rekordy dotyczą art. 151¹¹ KP (dzień wolny za pracę w niedzielę) oraz przepisów VAT — żaden nie potwierdza ani nie obala istnienia tej kategorii w 2026 r. Pojęcie 'dnia odbioru soboty' (dzień wolny w zamian za pracę w sobotę) funkcjonuje w praktyce kadrowej jako dzień wolny wynikający z rozkładu czasu pracy, co jest nadal możliwe przy systemach równoważnych, jednak KB nie dostarcza twardego dowodu w żadną stronę.",
+        "verifier_confidence": 0.55,
+        "corrective_suggestion": "Warto zastąpić sformułowanie 'dzień odbioru soboty' bardziej precyzyjnym: 'dzień wolny wynikający z rozkładu czasu pracy (np. dzień wolny udzielony w zamian za pracę w sobotę)' — jest to neutralne i aktualne sformułowanie zgodne z Kodeksem pracy.",
+        "verified_at": "2026-04-18T12:47:35Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "outdated_data_risk",
         "severity": "low",
-        "description": "Krok 7 odwołuje się do konkretnych systemów (Comarch Optima, Symfonia Kadry i Płace) z kodami procedur — te systemy mogły zmienić interfejsy lub kody między 2024 a 2026, wymaga weryfikacji aktualności instrukcji."
+        "description": "Krok 7 odwołuje się do konkretnych systemów (Comarch Optima, Symfonia Kadry i Płace) z kodami procedur — te systemy mogły zmienić interfejsy lub kody między 2024 a 2026, wymaga weryfikacji aktualności instrukcji.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "Rekordy KB dotyczą wyłącznie ustawy o VAT i nie zawierają żadnych informacji o systemach kadrowo-płacowych (Comarch Optima, Symfonia Kadry i Płace) ani ich interfejsach. Nie można ani potwierdzić, ani obalić flagi na podstawie dostępnych danych. Flaga dotyczy ryzyka dezaktualizacji instrukcji obsługi oprogramowania, co z natury rzeczy nie jest regulowane przepisami prawa.",
+        "verifier_confidence": 0.3,
+        "corrective_suggestion": "Dodać zastrzeżenie w kroku 7, że ścieżki menu i kody mogą się różnić w zależności od wersji oprogramowania i należy zweryfikować z aktualną dokumentacją producenta lub działem IT.",
+        "verified_at": "2026-04-18T12:47:41Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       },
       {
         "type": "missing_critical_info",
         "severity": "low",
-        "description": "Draft nie wyjaśnia, jak rozliczyć zasiłek opiekuńczy w przypadku pracownika na urlopie bezpłatnym lub urlopie wychowawczym — czy zasiłek przysługuje i jak się go wylicza bez wynagrodzenia."
+        "description": "Draft nie wyjaśnia, jak rozliczyć zasiłek opiekuńczy w przypadku pracownika na urlopie bezpłatnym lub urlopie wychowawczym — czy zasiłek przysługuje i jak się go wylicza bez wynagrodzenia.",
+        "verdict": "cannot_verify",
+        "verifier_reasoning": "KB nie zawiera przepisów ustawy zasiłkowej (ustawa z 25.06.1999 r. o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa) regulujących prawo do zasiłku opiekuńczego podczas urlopu bezpłatnego lub wychowawczego. Rekord 1 jedynie definiuje płatnika składek w kontekście urlopu wychowawczego, ale nie rozstrzyga kwestii prawa do zasiłku opiekuńczego w tych przypadkach. Nie można więc ani potwierdzić, ani obalić flagi na podstawie dostępnych materiałów.",
+        "verifier_confidence": 0.4,
+        "verified_at": "2026-04-18T12:47:46Z",
+        "verified_by": "claude-sonnet-4-6",
+        "kb_records_used": 3
       }
     ]
   }
