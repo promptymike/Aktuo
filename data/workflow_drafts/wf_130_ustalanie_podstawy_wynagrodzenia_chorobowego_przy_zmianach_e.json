@@ -131,7 +131,16 @@
         "corrective_suggestion": "Dodać przypis lub adnotację wskazującą źródło kwoty minimalnego wynagrodzenia (rozporządzenie Rady Ministrów w sprawie wysokości minimalnego wynagrodzenia za pracę oraz wysokości minimalnej stawki godzinowej w 2026 r.) oraz datę weryfikacji, aby użytkownicy dokumentu mogli potwierdzić aktualność przed zastosowaniem.",
         "verified_at": "2026-04-18T12:08:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Kwota 4 806 zł jako minimalne wynagrodzenie w 2026 r. jest w pełni potwierdzona przez wiele zaufanych źródeł z whitelisty (gofin.pl, ksiegowosc.infor.pl, zus.pl, podatki.biz). Wynika ona z Rozporządzenia Rady Ministrów z 11 września 2025 r. (Dz.U. poz. 1242), obowiązującego od 1 stycznia 2026 r. Wyliczenie minimum podstawy zasiłkowej jako 4 806 zł × (1 − 0,1371) = 4 147,00 zł jest matematycznie poprawne i zgodne z obowiązującymi przepisami. Flaga wskazuje brak źródła, ale sama kwota jest aktualna i prawidłowa — nie stanowi błędu merytorycznego draftu.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://przepisy.gofin.pl/przepisy,4,0,13,8957,,,rozporzadzenie-rady-ministrow-z-dnia-11092025-r-w-sprawie.html",
+        "source_quote": "Od dnia 1 stycznia 2026 r. ustala się minimalne wynagrodzenie",
+        "verified_at_v2": "2026-04-18T12:54:42Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",

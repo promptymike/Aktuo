@@ -115,7 +115,16 @@
         "corrective_suggestion": "Należy ręcznie zweryfikować wszystkie cytowane artykuły w aktualnych tekstach ustaw (ustawa zasiłkowa, KP, KPC) na dzień 2026, szczególnie art. 61 ust. 1, art. 67 ust. 1 ustawy zasiłkowej oraz art. 4779 KPC, które mogły ulec zmianie numeracji lub treści.",
         "verified_at": "2026-04-18T12:09:56Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Oba kluczowe artykuły cytowane w drafcie są aktualne dla 2026 r. Art. 61 ust. 1 ustawy zasiłkowej (próg 20 ubezpieczonych na 30 listopada roku poprzedniego) obowiązuje w tekście jednolitym Dz.U. z 2026 r. poz. 26, co potwierdzają przepisy.gofin.pl oraz gofin.pl (artykuł z lutego 2026 r. wprost wskazuje na stan na 30.11.2025 r. jako podstawę dla 2026 r.). Art. 67 ust. 1 ustawy zasiłkowej (przedawnienie 6 miesięcy) jest potwierdzony zarówno przez przepisy.gofin.pl, jak i zus.pl. Flaga wskazuje na brak legal_anchors i brak weryfikacji numerów artykułów — jednak same numery artykułów w drafcie są merytorycznie poprawne i aktualne na 2026 r., więc flaga jest false positive w zakresie błędności treści; problem dotyczy wyłącznie braku wypełnienia pola metadanych, co nie jest błędem merytorycznym draftu.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://przepisy.gofin.pl/przepisy,3,17,50,381,311079,20211101,art-61-70-postepowanie-w-sprawach-ustalania-prawa-do-zasilkow.html",
+        "source_quote": "Dz. U. z 2026 r. poz. 26",
+        "verified_at_v2": "2026-04-18T12:54:57Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Dodać w drafcie adnotację z datą ostatniej weryfikacji przepisów (np. 'stan prawny na dzień X') oraz zastrzeżenie, że limit 20 ubezpieczonych i próg 14/33 dni należy zweryfikować przed zastosowaniem, gdyż parametry te mogą ulec zmianie ustawowej. Poprawić metadane 'last_verified_at' na faktyczną datę weryfikacji.",
         "verified_at": "2026-04-18T12:10:06Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z gofin.pl (przepisy.gofin.pl, artykuł z listopada 2025) oraz tekst jednolity ustawy zasiłkowej (Dz.U. z 2025 r. poz. 501, nowelizacja Dz.U. z 2026 r. poz. 26) potwierdzają, że art. 61 ust. 1 nadal obowiązuje w niezmienionej formie z progiem 20 ubezpieczonych — brak jakiejkolwiek zmiany tego limitu na 2026 r. Flaga sugeruje ryzyko zmiany przepisów, ale dostępne źródła z whitelisty wskazują, że limit 20 ubezpieczonych pozostaje aktualny i obowiązuje w 2026 r. Zarzut o 'przyszłej dacie' last_verified_at (2026-04-18) jest bezzasadny, gdyż weryfikacja mogła nastąpić w dniu generacji draftu.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://przepisy.gofin.pl/przepisy,3,17,50,381,311079,20211101,art-61-70-postepowanie-w-sprawach-ustalania-prawa-do-zasilkow.html",
+        "source_quote": "powyżej 20 ubezpieczonych, z zastrzeżeniem",
+        "verified_at_v2": "2026-04-18T12:55:10Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",

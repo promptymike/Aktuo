@@ -113,7 +113,16 @@
         "corrective_suggestion": "Należy uzupełnić pole 'legal_anchors' o sformalizowane wpisy dla każdego cytowanego przepisu (art. 106ga ustawy o VAT, art. 9 ust. 1c ustawy o CIT, § 10 rozporządzenia MF z 15.10.2019, art. 2 ust. 1 i art. 30 ust. 2 UoR) oraz zweryfikować ich aktualność w oficjalnych źródłach (ISAP) pod kątem stanu prawnego na 2026 rok, szczególnie w zakresie przepisów o KSeF i JPK_CIT.",
         "verified_at": "2026-04-18T12:14:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Weryfikacja zaufanych źródeł (przepisy.gofin.pl, ksiegowosc.infor.pl, podatki.biz, biznes.gov.pl, isap.sejm.gov.pl) potwierdza aktualność wszystkich kluczowych przepisów przywołanych w drafcie: art. 106ga ustawy o VAT obowiązuje od 1.02.2026 r. i nakłada obowiązek KSeF (gofin.pl, sejm.gov.pl); art. 9 ust. 1c ustawy o CIT jest aktywną podstawą prawną JPK_KR_PD obowiązującą od 2025/2026 r. (podatki.biz, ksiegowosc.infor.pl, gofin.pl). Flaga zarzuca brak 'legal_anchors' jako pola metadanych w drafcie, ale sama treść drafta zawiera poprawne i aktualne odniesienia do przepisów — jest to zatem problem struktury/formatu rekordu workflow, a nie błąd merytoryczny w treści drafta. Przepisy są aktualne dla 2026 r., więc flaga o 'niemożności weryfikacji aktualności' jest nieuzasadniona merytorycznie.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,32,32,670,403590,20260201,art-106ga-ustawa-z-dnia-11032004-r-o-podatku-od-towarow-i.html",
+        "source_quote": "art. 106ga obowiązującym od 1.02.2026 r.",
+        "verified_at_v2": "2026-04-18T12:55:53Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -125,7 +134,16 @@
         "corrective_suggestion": "Dodaj przypis lub zastrzeżenie w drafcie: 'Daty i progi obowiązywania KSeF należy zweryfikować na stronie MF lub w Krajowej Informacji Skarbowej przed podjęciem decyzji zakupowej, gdyż harmonogram był wielokrotnie zmieniany.' Rozważ też aktualizację źródła do konkretnej ustawy nowelizującej z datą publikacji w Dz.U.",
         "verified_at": "2026-04-18T12:14:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło ksef.podatki.gov.pl (ustawa z 5.08.2025, Dz.U. 2025 poz. 1203) potwierdza daty 1.02.2026 i 1.04.2026 jako aktualne na 18.04.2026. Jednak draft zawiera błąd merytoryczny: próg 200 mln zł dotyczy sprzedaży w 2024 r., nie w 2025 r. jak podano w drafcie. Flaga jest zatem uzasadniona — dane wymagały weryfikacji i okazały się częściowo błędne.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/podstawy-prawne-oraz-kluczowe-terminy/",
+        "source_quote": "od 1 lutego 2026 r. dla przedsiębiorców... przekroczyła w 2024",
+        "verified_at_v2": "2026-04-18T12:56:05Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",

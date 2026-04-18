@@ -151,7 +151,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez eksperta merytorycznego, warto dodać do step 5 notę: w przypadku braku świadectwa pracy (pracodawca zagraniczny, likwidacja firmy) pracownik może złożyć oświadczenie o liczbie dni wynagrodzenia chorobowego pobranego w danym roku — pracodawca może działać w dobrej wierze na podstawie takiego oświadczenia, a odpowiedzialność za nieprawdziwe dane spoczywa na pracowniku.",
         "verified_at": "2026-04-18T12:11:38Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Flaga zakłada, że step 5 odwołuje się do 'świadectwa pracy — pkt 6 ppkt 9', jednak z treści drafta wynika jedynie ogólne odwołanie do świadectwa pracy jako źródła informacji o dniach wynagrodzenia chorobowego u poprzedniego pracodawcy. Zgodnie z gofin.pl, właściwym punktem świadectwa pracy zawierającym liczbę dni wynagrodzenia chorobowego w roku ustania zatrudnienia jest ust. 6 pkt 8 (lub pkt 13 w aktualnym wzorze), natomiast pkt 6 ppkt 9 dotyczy wyłącznie historycznych dni bez wynagrodzenia z okresu 2003 r. — co oznacza, że flaga opiera się na błędnym założeniu co do numeracji punktu. Kwestia braku procedury fallback (pracodawca zagraniczny/nieistniejący) jest realnym brakiem merytorycznym w drafcie, ale nie jest tym, co flaga faktycznie opisuje jako główny problem — flaga koncentruje się na błędnej identyfikacji punktu świadectwa, który w drafcie w ogóle nie jest literalnie wskazany jako 'pkt 6 ppkt 9'.",
+        "verifier_confidence_v2": 0.85,
+        "source_url": "https://www.gofin.pl/prawo-pracy/17,2,101,223197,okresy-nieskladkowe-i-dodatkowe-informacje-w-swiadectwie.html",
+        "source_quote": "6 pkt 8 świadectwa pracy podaje się informacje dotyczące liczby",
+        "verified_at_v2": "2026-04-18T12:55:26Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -187,7 +196,16 @@
         "corrective_suggestion": "Warto sprawdzić w dokumentacji ZUS: kod 314 to zasiłek opiekuńczy (art. 32-35 ustawy zasiłkowej), natomiast niezdolność do pracy w ciąży jest objęta zasiłkiem chorobowym z kodem 313 (ale ze 100% podstawy wymiaru). Jeśli draft błędnie przypisuje kod 314 do ciąży, należy go skorygować na 313 z adnotacją o 100% wynagrodzenia zgodnie z art. 92 § 1 pkt 2 KP.",
         "verified_at": "2026-04-18T12:12:05Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Zgodnie z oficjalnym źródłem gofin.pl (rozporządzenie w sprawie wzorów dokumentów ZUS), kod 314 to 'zasiłek chorobowy z ubezpieczenia wypadkowego', a nie zasiłek opiekuńczy (kod 312) ani macierzyński (kod 311). Draft błędnie przypisuje kod 314 do ciąży/zasiłku opiekuńczego — w rzeczywistości kod 314 dotyczy wyłącznie świadczeń z ubezpieczenia wypadkowego (wypadek w drodze do/z pracy lub choroba zawodowa), co jest inną kategorią niż zasiłek opiekuńczy (312). Flaga słusznie wskazuje na sprzeczność i brak wyjaśnienia.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://przepisy.gofin.pl/przepisy,3,17,53,6205,410330,20230927,kody-wykorzystywane-przy-wypelnianiu-dokumentow.html",
+        "source_quote": "314 - zasiłek chorobowy z ubezpieczenia wypadkowego",
+        "verified_at_v2": "2026-04-18T12:55:37Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",

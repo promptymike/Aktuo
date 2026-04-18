@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o sformalizowane wpisy: {art: '11 ust. 1', ustawa: 'PIT'}, {art: '22 ust. 6ba', ustawa: 'PIT'}, {art: '23 ust. 1 pkt 55', ustawa: 'PIT'}, {art: '38 ust. 1', ustawa: 'PIT'}, {art: '22 ust. 6bb', ustawa: 'PIT'}, {ref: 'uchwała NSA II FPS 5/14'}, co umożliwi automatyczną weryfikację cytowań.",
         "verified_at": "2026-04-18T12:36:26Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Flaga dotyczy wyłącznie braku formalnego pola 'legal_anchors' w metadanych drafta, a nie błędności cytowanych przepisów. Wyszukiwanie potwierdziło, że wszystkie przywołane w drafcie artykuły (art. 22 ust. 6ba, art. 23 ust. 1 pkt 55 ustawy PIT) są prawidłowo zidentyfikowane i merytorycznie poprawnie zastosowane – przepisy.gofin.pl oraz ksiegowosc.infor.pl potwierdzają ich treść i kontekst użycia. Brak formalnego mapowania w polu 'legal_anchors' jest problemem struktury rekordu workflow, a nie błędem merytorycznym drafta, co czyni flagę false positive z perspektywy weryfikacji poprawności cytowań.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://przepisy.gofin.pl/przepisyno,700,76802,0,0,20140101,2,0.html",
+        "source_quote": "stanowią koszty uzyskania przychodów w miesiącu, za który są należne",
+        "verified_at_v2": "2026-04-18T13:02:58Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Dodaj wyraźne oznaczenie przy każdym przykładzie z datą, np. '[PRZYKŁAD dla roku 2026 - zastąp aktualnymi datami]' lub wprowadź zmienne symboliczne (np. 'rok X', 'miesiąc M+1') zamiast konkretnych dat, z jednorazowym wyjaśnieniem na początku sekcji, że daty są ilustracyjne.",
         "verified_at": "2026-04-18T12:36:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Flaga dotyczy ryzyka dezaktualizacji dat ilustracyjnych (2026), nie błędu merytorycznego. Przepisy przywołane w drafcie (art. 22 ust. 6bb ustawy PIT, art. 15 ust. 4h CIT, termin do 15. dnia miesiąca dla składek ZUS) są poprawne i obowiązują od 2023 r. bez zmian. Konkretne daty (np. 10.02.2026, 15.03.2026) pełnią funkcję przykładów ilustracyjnych dla mechanizmu ogólnego — sam mechanizm jest prawidłowy. Flaga wskazuje na brak disclaimera 'przykład ilustracyjny', co jest uwagą redakcyjną, a nie błędem merytorycznym w drafcie.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/koszty/kiedy-do-kosztow/5631667,podatki-2023-skladki-zus-w-kosztach-podatkowych-zmiana-momentu-ujecia-skladek-ZUS-w-kosztach-od-2023-roku.html",
+        "source_quote": "stanowią koszty uzyskania przychodów w miesiącu, za który należności",
+        "verified_at_v2": "2026-04-18T13:03:10Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "hallucination_risk",

@@ -109,7 +109,16 @@
         "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o strukturalne wpisy dla każdego cytowanego przepisu: art. 77(5) KP, art. 12 i 13 rozp. 883/2004, art. 32 i art. 27 ust. 8-9 ustawy o PIT, §2 pkt 15 rozp. składkowego MPiPS z 29.01.2013 (Dz.U. 2013 poz. 167), dyrektywa 96/71/WE — wraz z datą ostatniej weryfikacji aktualności każdego z nich.",
         "verified_at": "2026-04-18T12:17:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Wyniki z zaufanych źródeł (gofin.pl, zus.pl, podatki.biz) potwierdzają, że draft cytuje realne i aktualnie obowiązujące przepisy (art. 77⁵ KP, art. 12 rozp. 883/2004, rozp. MPiPS Dz.U. 2013 poz. 167 z dietą 45 zł), jednak pole 'legal_anchors' pozostaje puste. Flaga jest zatem uzasadniona strukturalnie: przepisy istnieją i są poprawnie przywołane w treści drafta, ale brak ich formalnego zmapowania w polu legal_anchors uniemożliwia automatyczną weryfikację aktualności (np. zmian stawek diet czy numeracji artykułów). Dodatkowo draft wskazuje formularz 'ZUS US-1' jako wniosek dla pracownika delegowanego, podczas gdy zus.pl i gofin.pl wskazują, że właściwym formularzem dla pracownika delegowanego (art. 12 ust. 1 rozp. 883/2004) jest ZUS US-3, a ZUS US-1 dotyczy osoby prowadzącej działalność na własny rachunek — co stanowi dodatkowy błąd merytoryczny niewychwycony bez mapowania legal_anchors.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://druki.gofin.pl/dzial/103/druk/697/zus-us-3-wniosek-o-wydanie-zaswiadczenia-a1-dla-pracownika",
+        "source_quote": "ZUS US-3 - Wniosek o wydanie zaświadczenia A1 dla pracownika",
+        "verified_at_v2": "2026-04-18T12:56:45Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -121,7 +130,16 @@
         "corrective_suggestion": "Dodać wyraźne zastrzeżenie przy każdej kwocie (dieta 45 zł, prognozowane wynagrodzenie 9 203 zł, stawka 12,82 EUR/h) z datą źródła i zaleceniem weryfikacji aktualnego rozporządzenia/obwieszczenia MRiPS przed zastosowaniem w 2026 r.",
         "verified_at": "2026-04-18T12:17:18Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Flaga jest uzasadniona w dwóch z trzech kwestionowanych danych: (1) Dieta krajowa 45 zł — choć formalnie nadal obowiązuje (projekt zmiany na 60 zł jeszcze nie wszedł w życie wg stanu na datę weryfikacji), to gofin.pl z marca 2026 potwierdza, że MRiPS przygotował projekt podwyżki do 60 zł, co oznacza realną zmianę w trakcie 2026 r. — draft powinien ostrzegać o tym projekcie, a nie tylko o weryfikacji; (2) Prognozowane przeciętne wynagrodzenie na 2026 r. — draft podaje 9 203 zł, tymczasem zus.pl i ksiegowosc.infor.pl jednoznacznie potwierdzają, że prawidłowa kwota na 2026 r. wynosi 9 420 zł (Obwieszczenie MRiPS z 19.11.2025, M.P. poz. 1206) — to konkretny błąd liczbowy w drafcie. Flaga jest więc słuszna co najmniej w zakresie błędnej kwoty prognozowanego wynagrodzenia.",
+        "verifier_confidence_v2": 0.95,
+        "source_url": "https://www.zus.pl/en/-/nowe-wysoko%C5%9Bci-sk%C5%82adek-na-ubezpieczenia-spo%C5%82eczne-w-2026-r.",
+        "source_quote": "prognozowanego przeciętnego wynagrodzenia w 2026 roku wynosi 9.420 zł",
+        "verified_at_v2": "2026-04-18T12:57:00Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -157,7 +175,16 @@
         "corrective_suggestion": "W kroku 6 warto dodać explicite: nawet gdy pracodawca nie pobiera zaliczki PIT w Polsce (na podstawie art. 32 ust. 9 ustawy o PIT, na pisemny wniosek pracownika), nadal ma obowiązek wykazać przychód w PIT-11 — pracownik rezydent podatkowy w Polsce rozlicza dochód zagraniczny samodzielnie w zeznaniu rocznym, stosując właściwą metodę unikania podwójnego opodatkowania (wyłączenie z progresją lub zaliczenie proporcjonalne) zgodnie z odpowiednią UPO.",
         "verified_at": "2026-04-18T12:17:45Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło ksiegowosc.infor.pl potwierdza, że art. 32 ust. 6 ustawy o PIT reguluje brak poboru zaliczki gdy dochód opodatkowany za granicą, a draft błędnie powołuje ust. 9. Co ważniejsze, gofin.pl wprost formułuje pytanie o obowiązek wykazania dochodów oddelegowanego w PIT-11 jako odrębną, nieoczywistą kwestię — której krok 6 draftu nie adresuje, co potwierdza zasadność flagi o brakującej informacji krytycznej.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/765045,Delegowanie-pracownikow-do-pracy-za-granice-obowiazki-platnika-PIT.html",
+        "source_quote": "zakład pracy nie pobiera zaliczek na podatek dochodowy od dochodów",
+        "verified_at_v2": "2026-04-18T12:57:22Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

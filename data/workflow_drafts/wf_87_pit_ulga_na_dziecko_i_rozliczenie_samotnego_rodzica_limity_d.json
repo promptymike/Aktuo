@@ -123,7 +123,16 @@
         "corrective_suggestion": "Zamiast podawać konkretną kwotę 22 546,92 zł jako stałą, draft powinien odwoływać się do mechanizmu ustawowego: '12-krotność kwoty renty socjalnej obowiązującej w grudniu roku podatkowego' z adnotacją, że kwota zmienia się corocznie i należy ją weryfikować przed złożeniem zeznania.",
         "verified_at": "2026-04-18T12:40:22Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródło ksiegowosc.infor.pl jednoznacznie potwierdza, że kwota 22 546,92 zł (12-krotność renty socjalnej z grudnia 2025) dotyczy wyłącznie rozliczeń za rok 2025. Od 1 marca 2026 r. renta socjalna wzrosła do 1 978,49 zł, co daje nowy limit 23 741,88 zł dla rozliczeń za rok 2026. Draft podaje wyłącznie kwotę 22 546,92 zł bez mechanizmu aktualizacji ani ostrzeżenia o jej rocznej zmienności — flaga jest w pełni uzasadniona.",
+        "verifier_confidence_v2": 0.98,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/ulgi-odliczenia/6523663,ulga-na-pelnoletnie-dziecko-w-pit-limit-dochodow-dziecka-ktore-dochody-wlicza-sie-do-limitu.html",
+        "source_quote": "Limit na 2026 rok wynosi 23 741,88 zł",
+        "verified_at_v2": "2026-04-18T13:04:03Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",

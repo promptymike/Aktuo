@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o sformalizowane referencje: ustawa z 12.03.2022 o pomocy obywatelom Ukrainy (Dz.U. 2022 poz. 583) art. 22; ustawa z 12.12.2013 o cudzoziemcach art. 108, art. 114; Kodeks pracy art. 29 § 2; ustawa z 20.04.2004 o promocji zatrudnienia i instytucjach rynku pracy art. 120; ustawa z 21.11.2008 o pracownikach samorządowych art. 6.",
         "verified_at": "2026-04-18T12:28:18Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wyszukiwanie potwierdziło, że wszystkie kluczowe artykuły cytowane w drafcie istnieją i są merytorycznie poprawne: art. 22 specustawy (powiadomienie PUP w 7 dni, portal praca.gov.pl) potwierdzony przez sejm.gov.pl i biznes.gov.pl; art. 114 ustawy o cudzoziemcach (zezwolenie jednolite na pobyt i pracę) potwierdzony przez przepisy.gofin.pl i biznes.gov.pl. Flaga dotyczy wyłącznie braku formalnej listy 'legal_anchors' w metadanych draftu — jest to kwestia struktury pola workflow, a nie błędu merytorycznego w cytowaniach. Brak sformalizowanej listy referencji to problem organizacyjny/metadanowy, nie prawny, więc flaga jest false positive w sensie oceny poprawności treści draftu.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://www.biznes.gov.pl/pl/portal/00211",
+        "source_quote": "w ciągu 7 dni od daty podjęcia pracy poinformujesz powiatowy",
+        "verified_at_v2": "2026-04-18T13:00:15Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Dodać w drafcie przypis lub adnotację: 'Kwoty minimalne obowiązujące od [data] na podstawie Rozporządzenia Rady Ministrów z dnia [...] (Dz.U. [...]) - należy weryfikować przed zastosowaniem, gdyż mogą ulec zmianie.' oraz wskazać mechanizm aktualizacji (np. link do aktualnego rozporządzenia na isap.sejm.gov.pl).",
         "verified_at": "2026-04-18T12:28:26Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Kwoty podane w drafcie (4 806 zł brutto i 31,40 zł/h) są dokładnie zgodne z Rozporządzeniem Rady Ministrów z 11 września 2025 r. (Dz.U. poz. 1242), które weszło w życie 1 stycznia 2026 r. i obowiązuje przez cały rok 2026. Rozporządzenie ustala jedną stawkę na cały rok (brak drugiej transzy jak w 2024 r.), więc ryzyko dezaktualizacji w trakcie 2026 r. nie istnieje. Flaga jest nieuzasadniona — kwoty są aktualne i potwierdzone przez zus.pl, gofin.pl oraz ksiegowosc.infor.pl.",
+        "verifier_confidence_v2": 0.95,
+        "source_url": "https://przepisy.gofin.pl/przepisy,4,0,13,8957,,,rozporzadzenie-rady-ministrow-z-dnia-11092025-r-w-sprawie.html",
+        "source_quote": "minimalne wynagrodzenie za pracę w wysokości 4.806 zł",
+        "verified_at_v2": "2026-04-18T13:00:28Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -139,7 +157,16 @@
         "corrective_suggestion": "Należy zweryfikować aktualny stan prawny specustawy ukraińskiej i ewentualnych nowelizacji przedłużających ochronę czasową — jeśli data 4.03.2026 jest faktycznie przeszłością względem daty weryfikacji, draft powinien zostać zaktualizowany o aktualnie obowiązujące terminy lub opatrzony zastrzeżeniem o konieczności weryfikacji bieżącego stanu prawnego.",
         "verified_at": "2026-04-18T12:28:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Draft twierdzi, że 'na dzień 18.04.2026 obowiązują przepisy przedłużające ochronę czasową do 4.03.2026' — to błąd. Zgodnie z gofin.pl (aktualizacja 9.04.2026) oraz sejm.gov.pl, od 5 marca 2026 r. weszła w życie ustawa z 23.01.2026 r. o wygaszeniu rozwiązań specustawy, a ochrona czasowa obowiązuje aktualnie do 4 marca 2027 r. na podstawie decyzji Rady UE 2025/1460. Data 4.03.2026 jest już przeszłością i nie jest aktualną datą graniczną ochrony.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://www.gofin.pl/firma/wskazowki-dla-przedsiebiorcy/45881/nowosci-w-legalizacji-pobytu-i-zatrudniania-obywateli-ukrainy",
+        "source_quote": "ochrona czasowa dla obywateli Ukrainy obowiązuje do dnia 4 marca",
+        "verified_at_v2": "2026-04-18T13:00:40Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -162,7 +189,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, należy dodać do step 7 instrukcję: co pracodawca powinien zrobić gdy pracownik NIE złoży wniosku przed upływem ważności dokumentu — w szczególności czy istnieje obowiązek zawiadomienia pracownika, czy możliwe jest rozwiązanie umowy z powodu utraty legalności pobytu/pracy, oraz czy specustawa lub ustawa o cudzoziemcach przewiduje jakikolwiek okres przejściowy lub tolerancji.",
         "verified_at": "2026-04-18T12:28:50Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i przepisy.gofin.pl potwierdzają, że przepisy nie przewidują automatycznego rozwiązania umowy o pracę po wygaśnięciu dokumentu pobytowego/zezwolenia — obowiązek świadczenia pracy jedynie 'wygasa na okres' niespełnienia warunków (art. 25 nowej ustawy), a pracodawca musi aktywnie wypowiedzieć umowę lub zawrzeć porozumienie. Draft w kroku 7 wspomina tylko o monitoringu i złożeniu wniosku przez pracownika, ale nie instruuje pracodawcy co zrobić gdy pracownik NIE złoży wniosku (brak wskazania obowiązku wypowiedzenia umowy, braku automatycznego wygaśnięcia stosunku pracy, ani okresu przejściowego). Flaga jest zatem uzasadniona.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://www.gofin.pl/prawo-pracy/17,1,95,187899,rozwiazanie-umowy-zawartej-z-cudzoziemcem-w-zwiazku-z-uplywem.html",
+        "source_quote": "Przepisy nie przewidują automatycznego rozwiązania umowy o pracę",
+        "verified_at_v2": "2026-04-18T13:00:54Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

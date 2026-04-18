@@ -123,7 +123,16 @@
         "corrective_suggestion": "Rozważyć dodanie do LEGAL_ANCHORS wpisu: {\"law_name\": \"Ustawa z 25.06.1999 o świadczeniach pieniężnych z ubezpieczenia społecznego w razie choroby i macierzyństwa\", \"article_number\": \"art. 41 ust. 1\", \"reason\": \"Kluczowy test: składnik nieobniżany za czas choroby nie wchodzi do podstawy wymiaru zasiłku\"} oraz analogicznego dla art. 42 (premie kwartalne/roczne).",
         "verified_at": "2026-04-18T12:07:20Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Art. 41 ust. 1 ustawy zasiłkowej z 25.06.1999 r. jest kluczowym przepisem regulującym test 'pomniejszania za chorobę' — stanowi wprost, że przy ustalaniu podstawy wymiaru zasiłku chorobowego nie uwzględnia się składników wynagrodzenia, do których pracownik zachowuje prawo w okresie pobierania zasiłku, jeżeli są one wypłacane za ten okres. Draft w ANSWER_STEPS wielokrotnie powołuje się na ten artykuł (kroki 2 i 4), jednak sekcja LEGAL_ANCHORS zawiera wyłącznie odniesienia do Kodeksu pracy (art. 92 § 2 i art. 172), całkowicie pomijając art. 41 ustawy zasiłkowej jako anchor. Flaga jest zatem słuszna — brak tego przepisu w legal_anchors stanowi lukę w dokumentacji prawnej draftu.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,17,50,381,311119,20220101,art-41-ustawa-z-dnia-25061999-r-o-swiadczeniach-pienieznych-z.html",
+        "source_quote": "nie uwzględnia się składników wynagrodzenia, do których pracownik zachowuje prawo",
+        "verified_at_v2": "2026-04-18T12:54:12Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -171,7 +180,16 @@
         "corrective_suggestion": "Jeśli flaga zostanie potwierdzona przez inne źródła, warto dodać krok wyjaśniający, że zgodnie z art. 36 ust. 2 ustawy zasiłkowej miesiące, w których pracownik nie osiągnął wynagrodzenia z powodu urlopu bezpłatnego, są wyłączane z okresu 12 miesięcy i zastępowane wcześniejszymi miesiącami, w których wynagrodzenie było osiągane.",
         "verified_at": "2026-04-18T12:07:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z whitelist (gofin.pl, zus.pl) potwierdzają, że urlop bezpłatny ma istotny wpływ na ustalanie podstawy wymiaru zasiłku — miesiące z urlopem bezpłatnym wymagają uzupełnienia wynagrodzenia (art. 37 ustawy zasiłkowej), a sam urlop bezpłatny jest przerwą w ubezpieczeniu chorobowym. Draft w żadnym kroku nie omawia, jak traktować premie wypłacone w miesiącach objętych urlopem bezpłatnym (czy uzupełniać, czy pomijać miesiąc), co stanowi realną lukę merytoryczną przy wyliczaniu podstawy chorobowego z premii zmiennych.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://gazetapodatkowa.gofin.pl/artykul/21/z-dyskusji-na-www-forum-gofin-pl/128558/podstawa-chorobowego-przy-czestym-urlopie-bezplatnym",
+        "source_quote": "Urlop bezpłatny jest okresem usprawiedliwionej nieobecności w pracy",
+        "verified_at_v2": "2026-04-18T12:54:24Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

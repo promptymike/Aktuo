@@ -125,7 +125,16 @@
         "corrective_suggestion": "Należy zweryfikować aktualny tekst art. 109 ust. 3d ustawy o VAT (np. w Dzienniku Ustaw lub ISAP). Jeśli ust. 3d nie istnieje lub ma inną treść, podstawę prawną dla oznaczenia FP należy poszukać w rozporządzeniu Ministra Finansów w sprawie szczegółowego zakresu danych zawartych w deklaracjach podatkowych i w ewidencji w zakresie podatku VAT (rozporządzenie JPK_VAT). W drafcie warto dodać alternatywną podstawę: 'art. 109 ust. 3d ustawy o VAT lub § X rozporządzenia MF w sprawie JPK_VAT'.",
         "verified_at": "2026-04-18T12:04:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Art. 109 ust. 3d ustawy o VAT istnieje i jest wielokrotnie potwierdzony przez zaufane źródła z whitelist (gofin.pl, ksiegowosc.infor.pl, podatki.gov.pl). Przepis ten wprost reguluje ujmowanie faktur do paragonów (oznaczenie FP) w ewidencji VAT — nie jest to zmiana 2026 r., lecz przepis obowiązujący od wprowadzenia JPK_V7 w 2020 r. Draft cytuje go prawidłowo.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/vat/jpk-vat/7482682,zmiany-w-jpk-vat-dopasowanie-do-ksef-nowe-wzory-jpk-v7m3-jpk-v7k3-nowe-oznaczenia-nrksef-off-bfk-di.html",
+        "source_quote": "Na podstawie art. 109 ust. 3d ustawy o VAT faktury",
+        "verified_at_v2": "2026-04-18T12:53:02Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -137,7 +146,16 @@
         "corrective_suggestion": "Należy zweryfikować istnienie rozporządzenia MFiG z 6 września 2025 r. w bazie ISAP lub Dzienniku Ustaw. Jeśli rozporządzenie nie zostało odnalezione, draft powinien odwołać się do aktualnie obowiązującego rozporządzenia w sprawie PKPiR (np. rozporządzenie Ministra Finansów z 23 grudnia 2019 r.) lub wskazać projekt rozporządzenia z zastrzeżeniem, że wejście w życie wymaga potwierdzenia.",
         "verified_at": "2026-04-18T12:04:40Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiele zaufanych źródeł z whitelist (gofin.pl, podatki.biz, ksiegowosc.infor.pl) jednoznacznie potwierdza istnienie i obowiązywanie Rozporządzenia Ministra Finansów i Gospodarki z dnia 6 września 2025 r. w sprawie prowadzenia PKPiR (Dz.U. z 2025 r. poz. 1299), które weszło w życie 1 stycznia 2026 r. Flaga jest zatem false positive — rozporządzenie istnieje, zostało opublikowane i obowiązuje zgodnie z datą wskazaną w drafcie.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://www.gofin.pl/rachunkowosc/17,2,84,259168,ksiega-podatkowa-na-2026-r-wedlug-nowych-zasad.html",
+        "source_quote": "nowe rozporządzenie Ministra Finansów i Gospodarki z dnia 6 września",
+        "verified_at_v2": "2026-04-18T12:53:15Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -149,7 +167,16 @@
         "corrective_suggestion": "Zweryfikować aktualny limit zwolnienia podmiotowego z VAT w komunikacie Ministerstwa Finansów na 2026 r. Jeśli limit wynosi 300 000 zł (lub inną kwotę), zaktualizować wszystkie wystąpienia wartości 240 000 zł w drafcie oraz w LEGAL_ANCHORS.",
         "verified_at": "2026-04-18T12:04:47Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z whitelisty (biznes.gov.pl, podatki.biz, gofin.pl) jednoznacznie potwierdzają, że od 1 stycznia 2026 r. limit zwolnienia podmiotowego z VAT na podstawie art. 113 ust. 1 ustawy o VAT wynosi dokładnie 240 000 zł (wzrost z 200 000 zł). Draft podaje wartość 240 000 zł jako obowiązującą 'od 2026 r.' — co jest prawidłowe. Flaga błędnie zakładała, że 240 000 zł to limit z 2025 r. (w 2025 r. obowiązywał limit 200 000 zł), a w 2026 r. może być inny — tymczasem to właśnie 240 000 zł jest nowym limitem na 2026 r., ustawowo ustalonym, a nie komunikatem MF.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://www.biznes.gov.pl/pl/portal/00246",
+        "source_quote": "Od 1 stycznia 2026 roku limit sprzedaży wzrósł do 240",
+        "verified_at_v2": "2026-04-18T12:53:25Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -173,7 +200,16 @@
         "corrective_suggestion": "Jeśli draft zawiera wzmiankę o JPK_V7M(3) od 1.02.2026 r., należy zweryfikować tę datę bezpośrednio w komunikatach Ministerstwa Finansów lub rozporządzeniu w sprawie zakresu danych zawartych w deklaracjach podatkowych i w ewidencji w zakresie podatku VAT. Jeśli brak potwierdzenia — usunąć lub oznaczyć jako niepotwierdzone.",
         "verified_at": "2026-04-18T12:05:02Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Zmiana JPK_V7M(3) od 1.02.2026 r. jest w pełni potwierdzona przez oficjalne źródła. Ministerstwo Finansów opublikowało nowe struktury JPK_V7M(3) i JPK_V7K(3) w grudniu 2025 r. (Dz.U. poz. 1800), a podatki.gov.pl wprost wskazuje, że obowiązują od 1 lutego 2026 r. Flaga self_critic jest bezzasadna — data i zmiana nie są wymyślone.",
+        "verifier_confidence_v2": 0.98,
+        "source_url": "https://www.podatki.gov.pl/aktualnosci/nowe-wzory-struktur-jpk_vat-dostepne-na-epuap/",
+        "source_quote": "nowe wersje struktur JPK_V7M(3) oraz JPK_V7K(3), obowiązujące od 1 lutego",
+        "verified_at_v2": "2026-04-18T12:53:35Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "hallucination_risk",

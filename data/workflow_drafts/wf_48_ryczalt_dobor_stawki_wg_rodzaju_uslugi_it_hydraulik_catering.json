@@ -137,7 +137,16 @@
         "corrective_suggestion": "Dodaj w drafcie zastrzeżenie, że stawki i limity należy zweryfikować według stanu prawnego na dzień stosowania (np. 'stawka 12% obowiązuje na podstawie art. 12 ust. 1 pkt 2b ustawy w brzmieniu obowiązującym od 2022 r. — zweryfikuj aktualność przed zastosowaniem w 2026 r.') oraz wskaż źródło weryfikacji (np. tekst jednolity na ISAP lub interpretacje KIS).",
         "verified_at": "2026-04-18T12:26:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z whitelisty (podatki.gov.pl aktualizacja 15.12.2025, gofin.pl luty 2026, wskazniki.gofin.pl) potwierdzają, że stawka 12% dla IT (art. 12 ust. 1 pkt 2b ustawy o ryczałcie) obowiązuje w 2026 r. bez zmian. Limit przychodów dla ryczałtu wynosi 2 mln euro (nie 300 tys. zł — ta kwota dotyczy kwartalnego rozliczania), co wynika z art. 6 ustawy o ryczałcie i nie było zmieniane ustawą budżetową na 2026 r. Draft poprawnie wskazuje stawkę 12% dla IT w 2026 r., a flaga opiera się na błędnym założeniu o limicie 300 tys. zł jako limicie dostępu do ryczałtu.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.podatki.gov.pl/podatki-firmowe/pit/stawki-i-limity/",
+        "source_quote": "stawki: ... 12,5%, 12%, 10%, 8,5%, 5,5% i 3%",
+        "verified_at_v2": "2026-04-18T12:59:41Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -161,7 +170,16 @@
         "corrective_suggestion": "W step 3 należy doprecyzować: (1) WIS wiąże organy podatkowe i zapewnia ochronę podatnikowi stosującemu się do WIS (analogicznie do interpretacji indywidualnej — art. 14k-14m Ordynacji podatkowej stosowane odpowiednio); (2) WIS co do zasady nie ma terminu ważności, ale traci moc przy zmianie przepisów lub klasyfikacji statystycznych; (3) po wygaśnięciu WIS należy złożyć nowy wniosek WIS-W.",
         "verified_at": "2026-04-18T12:27:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Flaga jest uzasadniona: draft nie wyjaśnia kluczowych aspektów WIS. Po pierwsze, WIS (Wiążąca Informacja Stawkowa) to instytucja z ustawy o VAT (art. 42c ust. 1), a nie narzędzie do ustalania stawek ryczałtu PIT – draft błędnie sugeruje jej zastosowanie w kontekście ryczałtu. Po drugie, od 1 stycznia 2021 r. WIS są ważne przez 5 lat od dnia wydania (gofin.pl, ksiegowosc.infor.pl), a draft całkowicie pomija termin ważności. Po trzecie, draft nie wyjaśnia zakresu ochrony: WIS wiąże organy podatkowe wobec podatnika, dla którego została wydana, ale podatnik nie jest nią związany – może stosować inną stawkę na własne ryzyko.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.gofin.pl/podatki/17,2,62,208059,nowe-regulacje-w-zakresie-wis.html",
+        "source_quote": "Od 1 stycznia 2021 r. wydawane WIS są ważne przez",
+        "verified_at_v2": "2026-04-18T13:00:00Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

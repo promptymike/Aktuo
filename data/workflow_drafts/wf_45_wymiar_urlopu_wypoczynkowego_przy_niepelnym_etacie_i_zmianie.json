@@ -179,7 +179,16 @@
         "corrective_suggestion": "Warto dodać w kroku 5 lub osobnym kroku wyjaśnienie dotyczące urlopu zaległego: zgodnie z utrwaloną praktyką i stanowiskiem PIP, urlop zaległy z poprzedniego roku nie podlega przeliczeniu na nowy wymiar etatu — jest udzielany w wymiarze ustalonym dla roku, w którym urlop powstał, niezależnie od późniejszej zmiany etatu. Należy jednak zweryfikować to z aktualnym stanowiskiem PIP lub orzecznictwem i powołać konkretną podstawę prawną lub interpretację.",
         "verified_at": "2026-04-18T12:25:43Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródło gofin.pl (art. 'Wymiar urlopu zaległego po obniżeniu etatu') jednoznacznie rozstrzyga kwestię: urlop zaległy nie podlega przeliczeniu na nowy wymiar etatu i jest udzielany w pełnej nabytej puli dni — pracownik wykorzystuje go według aktualnego rozkładu czasu pracy (godzinowo). Draft w kroku 5 stwierdza 'nie przelicza się go na nowy wymiar etatu', co jest zgodne z tym stanowiskiem. Brak osobnego wyjaśnienia w drafcie nie stanowi błędu merytorycznego, bo zasada udzielania urlopu zaległego w aktualnym wymiarze etatu (godzinowo) wynika z ogólnej reguły art. 154² §1 KP opisanej w kroku 4.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://www.gofin.pl/prawo-pracy/17,1,96,236656,wymiar-urlopu-zaleglego-po-obnizeniu-etatu.html",
+        "source_quote": "Nie ma podstaw do stosowania reguły proporcji do uprawnień nabytych",
+        "verified_at_v2": "2026-04-18T12:59:30Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

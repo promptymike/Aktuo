@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o formalne referencje: ustawa z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych (Dz.U. z 2024 r. poz. 226 ze zm.), art. 21 ust. 1 pkt 154 oraz art. 26 ust. 1 pkt 2 lit. a. Jednocześnie zweryfikować aktualność tych przepisów w obowiązującym tekście ustawy o PIT.",
         "verified_at": "2026-04-18T12:37:33Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wyszukiwanie w zaufanych źródłach (podatki.biz, gofin.pl, przepisy.gofin.pl, podatki.gov.pl, ksiegowosc.infor.pl) jednoznacznie potwierdza istnienie i poprawność obu przywołanych przepisów: art. 21 ust. 1 pkt 154 ustawy o PIT (ulga dla seniora) oraz art. 26 ust. 1 pkt 2 ustawy o PIT (odliczenie składek społecznych). Treść merytoryczna drafta jest zgodna z tymi przepisami. Flaga dotyczy wyłącznie braku formalnego wypełnienia pola 'legal_anchors' w metadanych rekordu workflow — jest to kwestia techniczna/organizacyjna systemu, a nie błąd merytoryczny w drafcie. Brak wpisu w polu metadanych nie czyni treści drafta błędną ani niezgodną z prawem.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://przepisy.gofin.pl/przepisyno,700,172960,0,0,20180101,2,0.html",
+        "source_quote": "odliczenie nie dotyczy składek, których podstawę wymiaru stanowi dochód zwolniony",
+        "verified_at_v2": "2026-04-18T13:03:23Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Jeśli flaga ma być potraktowana jako ostrzeżenie redakcyjne, warto dodać w drafcie przypis wskazujący źródło limitów (np. art. 27 ust. 1 ustawy o PIT dla kwoty wolnej i art. 21 ust. 1 pkt 154 dla limitu 85 528 zł) oraz adnotację, że kwoty obowiązują na rok podatkowy 2026 i powinny być zweryfikowane przed użyciem w kolejnych latach.",
         "verified_at": "2026-04-18T12:37:41Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiarygodne źródła z whitelisty (podatki.gov.pl oraz ksiegowosc.infor.pl) potwierdzają, że limit 85 528 zł i kwota wolna 30 000 zł są aktualne i obowiązują bez zmian w 2026 roku. Źródło infor.pl wprost stwierdza: 'Stan prawny dotyczący tego zwolnienia podatkowego obowiązujący w 2024 roku nie zmienił się w 2025 roku i pozostanie bez zmian w 2026 roku.' Kwoty te wynikają bezpośrednio z art. 21 ust. 1 pkt 154 ustawy o PIT i nie podlegają corocznej waloryzacji, więc ryzyko nieaktualności na dzień 2026-04-18 jest minimalne. Flaga jest zatem false positive — dane w drafcie są poprawne i aktualne.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/zwolnienia/6601603,zwolnienie-z-pit-pracujacych-emerytow-i-rencistow-20252026-limit-zasady-wyjasnienia-fiskusa-i-zusu.html",
+        "source_quote": "pozostanie bez zmian w 2026 roku",
+        "verified_at_v2": "2026-04-18T13:03:37Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

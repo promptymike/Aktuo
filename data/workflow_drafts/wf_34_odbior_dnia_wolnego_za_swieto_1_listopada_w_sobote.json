@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole legal_anchors o cytowane artykuły k.p. i zweryfikować ich aktualne brzmienie w tekście jednolitym Kodeksu pracy obowiązującym w 2026 r., w szczególności art. 130 (wymiar czasu pracy), art. 129 § 1 (normy czasu pracy), art. 81 § 1 (wynagrodzenie za czas niewykonywania pracy), art. 151³ (dzień wolny za święto w sobotę) i art. 151¹¹ (praca w niedziele i święta).",
         "verified_at": "2026-04-18T12:22:21Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wyniki z przepisy.gofin.pl (stan prawny na 1.01.2026, Dz.U. z 2026 r. poz. 25) potwierdzają, że art. 129 § 1 i art. 130 k.p. funkcjonują pod tymi samymi numerami i w niezmienionym brzmieniu w 2026 r. Serwis gofin.pl aktywnie publikuje materiały o wymiarze czasu pracy w 2026 r. odwołując się do tych artykułów, co wskazuje na ich aktualność. Flaga sygnalizuje brak weryfikacji numerów artykułów, jednak dostępne źródła potwierdzają ich poprawność — jest to zatem false positive w zakresie art. 129 § 1 i 130; dla art. 81 § 1, 151³ i 151¹¹ brak bezpośredniego potwierdzenia w snippetach, ale brak też sygnałów o zmianach numeracji.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://przepisy.gofin.pl/przepisy,3,18,33,212,398477,20230731,art-129-131-normy-i-ogolny-wymiar-czasu-pracy.html",
+        "source_quote": "Dz. U. z 2026 r. poz. 25 ... Art. 130.",
+        "verified_at_v2": "2026-04-18T12:58:49Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -150,7 +159,16 @@
         "corrective_suggestion": "Jeśli draft nie wyjaśnia wprost: dla pracownika, któremu sobota jest normalnym dniem pracy w harmonogramie, 1.11 (sobota) jest dniem świątecznym — nie pracuje, a wymiar czasu pracy jest obniżony o 8h na podstawie art. 130 § 2 KP. Nie przysługuje mu dodatkowy dzień wolny 'w zamian', bo święto już obniżyło jego wymiar. Warto dodać tę informację explicite w step 3.",
         "verified_at": "2026-04-18T12:22:42Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z ksiegowosc.infor.pl (wyjaśnienia PIP, 2026) oraz sejm.gov.pl (interpelacja) jednoznacznie potwierdzają, że obowiązek udzielenia dodatkowego dnia wolnego za święto w sobotę dotyczy wyłącznie pracowników, dla których sobota jest dniem wolnym z tytułu 5-dniowego tygodnia pracy. Pracownicy pracujący w systemie 6-dniowym (sobota jest dla nich dniem roboczym) mają inną sytuację: 1.11 jest dla nich dniem wolnym z racji samego święta (nie jako odbiór za 5-dniowy tydzień), a wymiar czasu pracy i tak obniża się o 8h na mocy art. 130 §2 KP — jednak mechanizm 'wyznaczenia dnia wolnego' działa inaczej niż dla systemu pon-pt. Draft w kroku 3 jedynie ogólnikowo wspomina o 'przeciętnie 5-dniowym tygodniu pracy', nie wyjaśniając wprost, co dzieje się z pracownikiem w systemie 6-dniowym (czy 1.11 jest dla niego dniem pracy czy wolnym i czy przysługuje mu odbiór). Flaga jest zatem uzasadniona — brakuje tej kluczowej informacji.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://ksiegowosc.infor.pl/zus-kadry/urlopy/7491543,dodatkowy-dzien-wolny-za-swieto-wypadajace-w-sobote-w-2026-r-wyjasnienia-pip.html",
+        "source_quote": "gdy liczba dni pracy pracownika w tygodniu jest mniejsza niż",
+        "verified_at_v2": "2026-04-18T12:59:05Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

@@ -124,7 +124,16 @@
         "corrective_suggestion": "Uzupełnić LEGAL_ANCHORS o odwołanie do art. 145m ustawy o VAT lub właściwych przepisów przejściowych ustawy nowelizującej jako podstawy dat wdrożenia KSeF (1.02.2026 / 1.04.2026), pozostawiając art. 106ga ust. 1 jako podstawę samego obowiązku wystawiania faktur ustrukturyzowanych.",
         "verified_at": "2026-04-18T12:31:51Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Art. 106ga ust. 1 ustawy o VAT rzeczywiście stanowi ogólną podstawę obowiązku wystawiania faktur ustrukturyzowanych w KSeF, co potwierdzają zarówno gofin.pl, jak i dokument sejmowy (druk nr 1407): 'Z tego przepisu wynika zasada ogólna'. Daty wdrażania (1.02.2026 i 1.04.2026) oraz limit 10 000 zł są zakotwiczone w przepisach przejściowych (art. 145l, 145m, 145n ustawy o VAT — ustawa z 5.08.2025, Dz.U. poz. 1203), ale art. 106ga ust. 1 jako podstawa ogólna obowiązku jest prawidłowym i wystarczającym zakotwiczeniem dla stwierdzenia samego obowiązku. Draft nie twierdzi, że art. 106ga zawiera daty — powołuje go jako 'ogólną podstawę obowiązku', co jest merytorycznie poprawne. Flaga jest zatem false positive.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20250001203/O/D20251203.pdf",
+        "source_quote": "art. 145m. 1. W okresie od dnia 1 kwietnia 2026",
+        "verified_at_v2": "2026-04-18T13:01:36Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -136,7 +145,16 @@
         "corrective_suggestion": "Dodać zastrzeżenie w drafcie: 'Harmonogram KSeF należy zweryfikować według stanu prawnego na dzień stosowania — daty i limity mogły ulec zmianie w drodze nowelizacji ustawy o VAT.' oraz wskazać źródło do weryfikacji (np. aktualny tekst jednolity ustawy o VAT lub komunikaty MF).",
         "verified_at": "2026-04-18T12:31:59Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiele aktualnych źródeł z whitelisty (ksef.podatki.gov.pl, gofin.pl, ksiegowosc.infor.pl) opublikowanych w marcu–kwietniu 2026 r. jednoznacznie potwierdzają, że daty 1.02.2026, 1.04.2026, 31.12.2026, 1.01.2027 oraz limit 10 000 zł są aktualne i obowiązujące. Draft opisuje harmonogram KSeF zgodnie z aktualnym stanem prawnym — flaga jest nieuzasadniona.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://ksef.podatki.gov.pl/wyjasnienia/co-warto-wiedziec-przed-startem-ii-etapu-wdrozenia-krajowego-systemu-e-faktur/",
+        "source_quote": "nie przekracza 10 000 zł, nie powstaje obowiązek wystawiania",
+        "verified_at_v2": "2026-04-18T13:01:46Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",

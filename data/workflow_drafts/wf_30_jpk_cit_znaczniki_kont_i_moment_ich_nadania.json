@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole legal_anchors o: art. 15 ust. 4g-4h ustawy o CIT, art. 16 ust. 1 pkt 57 i 57a ustawy o CIT, art. 10 ust. 1 pkt 3 ustawy o rachunkowości oraz rozporządzenie MF z 16.08.2024 w sprawie JPK_KR_PD. Następnie zweryfikować aktualność tych przepisów w kontekście 2026 roku.",
         "verified_at": "2026-04-18T12:21:03Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Flaga wskazuje na brak legal_anchors jako problem uniemożliwiający weryfikację aktualności przepisów. Jednak treść drafta zawiera konkretne i poprawne odniesienia merytoryczne: rozporządzenie MF z 16.08.2024 (Dz.U. poz. 1314) oraz progi JPK_CIT (podatkowe grupy kapitałowe i podatnicy CIT >50 mln EUR od 2025 r., pozostali od 2026 r.) są potwierdzone przez zaufane źródła (ksiegowosc.infor.pl, podatki.gov.pl, isap.sejm.gov.pl). Brak sformalizowanego pola 'legal_anchors' to kwestia techniczna struktury rekordu, a nie błąd merytoryczny drafta — przepisy przywołane w drafcie są aktualne i prawidłowe na 2026 rok.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/cit/cit/dokumentacja-i-rozliczanie/6719025,jpk-cit-od-2025-r-nowe-obowiazki-podatnikow-jpkkrpd-jpkst.html",
+        "source_quote": "Rozporządzenie ministra finansów z 16 sierpnia 2024 r.",
+        "verified_at_v2": "2026-04-18T12:58:25Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Jeśli flaga ma być rozstrzygnięta, należy dodać do KB treść rozporządzenia MF z 16.08.2024 w sprawie dodatkowych danych, o które należy uzupełnić prowadzone księgi rachunkowe (JPK_KR_PD). W drafcie warto dodać przypis z pełną nazwą rozporządzenia i numerem Dz.U. oraz zastrzeżenie, że daty i progi należy weryfikować przed zastosowaniem, gdyż przepisy mogły ulec zmianie.",
         "verified_at": "2026-04-18T12:21:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wszystkie kluczowe dane z drafta są potwierdzone przez wiarygodne źródła z whitelisty. Próg 50 mln EUR, rozporządzenie MF z 16.08.2024 (Dz.U. 2024 poz. 1314) oraz harmonogram wdrożenia (pierwsza fala od roku podatkowego po 31.12.2024, kolejna po 31.12.2025) są zgodne z informacjami na podatki.gov.pl, ksiegowosc.infor.pl i gofin.pl. Data 31.03.2027 jako termin złożenia JPK_KR_PD za 2026 rok wynika wprost z harmonogramu ustawowego (termin złożenia CIT-8). Flaga o ryzyku dezaktualizacji jest nieuzasadniona — przepisy są stabilne i potwierdzone przez aktualne źródła (w tym interpretacje KIS z 2026 r.).",
+        "verifier_confidence_v2": 0.93,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/cit/cit/dokumentacja-i-rozliczanie/6719025,jpk-cit-od-2025-r-nowe-obowiazki-podatnikow-jpkkrpd-jpkst.html",
+        "source_quote": "Rozporządzenie ministra finansów z 16 sierpnia 2024 r.",
+        "verified_at_v2": "2026-04-18T12:58:37Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",

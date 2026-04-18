@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole 'legal_anchors' o pełne referencje: art. 94 pkt 9b KP, art. 22(1) KP, art. 108 KP, art. 113 KP oraz Rozporządzenie MRPiPS z 10.12.2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369), a następnie zweryfikować brzmienie każdego artykułu względem aktualnego tekstu ustawy.",
         "verified_at": "2026-04-18T12:15:53Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wszystkie kluczowe odwołania prawne w drafcie są poprawne i zweryfikowane przez zaufane źródła. Art. 94 pkt 9b KP (10-letni okres przechowywania) potwierdzony przez przepisy.gofin.pl i isap.sejm.gov.pl. Rozporządzenie MRPiPS z 10.12.2018 r. (Dz.U. poz. 2369) oraz podział akt na 5 części A–E potwierdzony przez biznes.gov.pl i gofin.pl. Flaga dotyczy braku 'legal_anchors' w strukturze metadanych workflow, co jest problemem technicznym formatu rekordu, a nie błędem merytorycznym drafta — same artykuły są przywołane poprawnie w treści kroków.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://przepisy.gofin.pl/przepisy,3,18,33,212,462758,20260101,art-94-1131-obowiazki-pracodawcy-i-pracownika.html",
+        "source_quote": "9b) przechowywać dokumentację pracowniczą... przez okres 10 lat",
+        "verified_at_v2": "2026-04-18T12:56:19Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Jeśli flaga ma być potraktowana jako ostrzeżenie redakcyjne, warto dodać w drafcie adnotację: 'Daty graniczne (1.01.1999, 1.01.2019, 31.12.2018) oraz okresy przechowywania należy zweryfikować przed wdrożeniem procedury pod kątem ewentualnych zmian legislacyjnych.' Wymaga to jednak weryfikacji w aktualnym brzmieniu art. 94 pkt 9b KP i przepisów przejściowych.",
         "verified_at": "2026-04-18T12:16:01Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Daty graniczne 1.01.1999, 1.01.2019 i 31.12.2018 są nadal aktualne i wynikają z ustawy z 10.01.2018 r. o skróceniu okresu przechowywania akt pracowniczych, która weszła w życie 1.01.2019 r. Zarówno ZUS (zus.pl), biznes.gov.pl, jak i ksiegowosc.infor.pl potwierdzają te same progi bez żadnych zmian do 2026 r. Flaga sugeruje ryzyko zmiany tych dat ustawą do 2026 r., jednak brak jakichkolwiek sygnałów legislacyjnych w tym zakresie — przepisy są stabilne i obowiązują bez zmian od 2019 r.",
+        "verifier_confidence_v2": 0.92,
+        "source_url": "https://www.biznes.gov.pl/pl/portal/00101",
+        "source_quote": "10 lat, jeśli pracownik został zatrudniony 1 stycznia 2019",
+        "verified_at_v2": "2026-04-18T12:56:29Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",

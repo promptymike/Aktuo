@@ -150,7 +150,16 @@
         "corrective_suggestion": "Warto dodać zastrzeżenie, że podany próg 0,5–1% sumy bilansowej jest jedynie przykładowy i orientacyjny, a rzeczywisty próg istotności powinien wynikać z polityki rachunkowości jednostki oraz aktualnych wytycznych KIBR/KSR obowiązujących w danym roku. Można też usunąć konkretny zakres procentowy i zastąpić go odwołaniem wyłącznie do polityki rachunkowości jednostki.",
         "verified_at": "2026-04-18T12:30:08Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Źródła z gofin.pl i ksiegowosc.infor.pl potwierdzają, że zakres 0,5–1% sumy bilansowej jest aktualnym, powszechnie stosowanym przykładowym progiem istotności, wprost przywoływanym w kontekście wytycznych biegłych rewidentów (KSB 320, uchwała KRBR nr 3430/52a/2019). Draft prawidłowo zastrzega, że próg jest 'zwykle' przykładowy i powinien wynikać z polityki rachunkowości jednostki — co jest zgodne z obowiązującymi standardami. Flaga jest zatem nieuzasadniona: podane wartości nie są przestarzałe, a brak cytowania konkretnej uchwały KIBR w kroku operacyjnym nie stanowi błędu merytorycznego.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://www.gofin.pl/rachunkowosc/17,1,85,230740,parametry-uwzgledniane-przy-ustalaniu-poziomu-istotnosci.html",
+        "source_quote": "sumę bilansową (0,5%-1%)",
+        "verified_at_v2": "2026-04-18T13:01:10Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",
@@ -185,7 +194,16 @@
         "corrective_suggestion": "Rozważyć dodanie do kroku 2 klauzuli awaryjnej: jeśli zarząd nie udzieli pisemnej odpowiedzi w określonym terminie (np. 7 dni roboczych), biuro księgowe powinno udokumentować brak odpowiedzi, wstrzymać się z korektami istotnymi i poinformować zarząd pisemnie o ryzyku odpowiedzialności za nierzetelność ksiąg (art. 4a UoR), pozostawiając decyzję o dalszym działaniu kierownikowi jednostki.",
         "verified_at": "2026-04-18T12:30:31Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z ksiegowosc.infor.pl jednoznacznie potwierdzają, że biuro rachunkowe ponosi własną odpowiedzialność karną (art. 77 UoR) za nierzetelne prowadzenie ksiąg, niezależnie od odpowiedzialności zarządu. Kluczowy jest art. 7 ust. 25 z infor.pl: 'księgowania, wbrew opinii księgowego, wymagają pisemnego polecenia podatnika czy kierownika jednostki' — brak takiego zastrzeżenia w procedurze naraża biuro na ryzyko. Draft nie określa co biuro ma robić gdy zarząd odmówi pisemnej decyzji, co jest realną luką proceduralną mającą znaczenie dla odpowiedzialności biura rachunkowego z tytułu umowy (art. 471 KC) i art. 77 UoR.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/raport-dnia/122052,Odpowiedzialnosc-karna-ksiegowego.html",
+        "source_quote": "księgowania wbrew opinii księgowego wymagają pisemnego polecenia",
+        "verified_at_v2": "2026-04-18T13:01:21Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

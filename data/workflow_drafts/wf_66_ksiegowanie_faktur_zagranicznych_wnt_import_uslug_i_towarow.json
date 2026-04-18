@@ -155,7 +155,16 @@
         "corrective_suggestion": "W step 4 warto dodać wyjaśnienie: gdy kurier (UPS/FedEx) działa jako przedstawiciel pośredni w odprawie celnej, nabywca nie jest stroną zgłoszenia celnego i nie otrzymuje PZC na swoje dane — zamiast tego kurier wystawia refakturę cła i VAT importowego. W takim przypadku podstawą do odliczenia VAT jest refaktura kuriera (jeśli zawiera kwotę VAT z odprawy) lub uzyskany od kuriera dokument PZC/SAD — należy wskazać, że nabywca powinien zażądać od kuriera kopii dokumentu celnego (PZC) z numerem zgłoszenia, aby prawidłowo wypełnić JPK_V7 z oznaczeniem IMP.",
         "verified_at": "2026-04-18T12:33:56Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z whitelisty (ksiegowosc.infor.pl, biznes.gov.pl) potwierdzają, że w przypadku odprawy celnej dokonywanej przez kuriera (UPS/FedEx) jako przedstawiciela nabywcy, obowiązki celno-podatkowe ciążą na odbiorcy towaru, a nie na kurierze — nabywca powinien otrzymać dokument celny PZC/SAD (nie refakturę od kuriera) jako podstawę do odliczenia VAT. Draft w step 4 wspomina o PZC/SAD, ale nie wyjaśnia tej kluczowej różnicy: kurier działa jako przedstawiciel i przekazuje PZC nabywcy, a refaktura kuriera za usługę transportową to odrębny dokument nieuprawniający do odliczenia VAT importowego. Brak tego wyjaśnienia może prowadzić do błędnego księgowania (odliczenie VAT z refaktury kuriera zamiast z PZC).",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/vat/transakcje-zagraniczne/2843052,Import-towarow-o-niewielkiej-wartosci-w-formie-przesylek-pocztowych-i-kurierskch-VAT-i-clo.html",
+        "source_quote": "obowiązki zapłaty należności publicznoprawnych ciążą na odbiorcy towarów, a nie",
+        "verified_at_v2": "2026-04-18T13:01:59Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -191,7 +200,16 @@
         "corrective_suggestion": "Draft powinien uzupełnić krok dotyczący WNT o procedurę awaryjną: (1) polskiego VAT z WNT rozliczasz niezależnie od faktury zagranicznej, (2) zagranicznego VAT naliczonego przez sprzedawcę z UE NIE można odliczyć w polskim JPK — nie jest to polski VAT naliczony, (3) jeśli sprzedawca odmawia korekty, nabywca może ubiegać się o zwrot zagranicznego VAT w trybie VAT Refund (wniosek przez portal e-Urząd Skarbowy do kraju UE sprzedawcy, na podstawie dyrektywy 2008/9/WE), (4) rozliczenie WNT w Polsce następuje niezależnie od statusu faktury zagranicznej.",
         "verified_at": "2026-04-18T12:34:25Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła z whitelist potwierdzają, że w WNT kontrahent z UE powinien wystawić fakturę bez VAT (biznes.gov.pl: 'Kontrahent z UE wystawia fakturę bez VAT, z adnotacją odwrotne obciążenie'), a nabywca samonalicza VAT. Draft ogranicza się do zalecenia 'żądaj korekty', nie wyjaśniając kluczowej kwestii: czy można odliczyć zagraniczny VAT zawarty na błędnej fakturze (odpowiedź: nie — VAT naliczony przy WNT to kwota podatku należnego samonaliczonego przez nabywcę, nie kwota z faktury zagranicznej, art. 86 ust. 2 pkt 4 ustawy o VAT), ani co zrobić gdy sprzedawca odmówi korekty. Flaga jest zatem uzasadniona — brak tych procedur stanowi istotną lukę informacyjną dla użytkownika.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://www.biznes.gov.pl/pl/portal/00267",
+        "source_quote": "Kontrahent z UE wystawia fakturę bez VAT",
+        "verified_at_v2": "2026-04-18T13:02:13Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "edge_case_coverage",

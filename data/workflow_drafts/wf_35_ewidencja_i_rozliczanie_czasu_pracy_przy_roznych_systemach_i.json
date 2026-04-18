@@ -153,7 +153,16 @@
         "corrective_suggestion": "Zweryfikować ręcznie czy w sekcji related_questions drafta faktycznie pojawia się art. 151¹¹ KP. Jeśli tak, należy sprawdzić aktualny tekst KP - przepisy o pracy w niedzielę i święta reguluje art. 151¹⁰ i art. 151¹¹ KP (dodane nowelizacją), przy czym art. 151a KP dotyczy systemu skróconego tygodnia pracy. Wymaga weryfikacji w aktualnym tekście ujednoliconym KP.",
         "verified_at": "2026-04-18T12:23:55Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Art. 151(11) KP istnieje w Kodeksie pracy i dotyczy właśnie pracy w niedziele i święta. Przepisy.gofin.pl (zaufane źródło) jednoznacznie publikuje treść art. 151(11) KP: 'Pracownikowi wykonującemu pracę w niedziele i święta (...) pracodawca jest obowiązany zapewnić inny dzień wolny od pracy'. Flaga self_critic błędnie twierdzi, że art. 151(11) nie istnieje i myli go z art. 151a — tymczasem art. 151a KP dotyczy systemu weekendowego, a nie rekompensaty za pracę w niedzielę/święto. Art. 151(11) jest artykułem rzeczywiście istniejącym i aktualnie obowiązującym.",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,9,0,212,354689,20220901,art-15111-ustawa-z-dnia-26061974-r-kodeks-pracy1.html",
+        "source_quote": "pracodawca jest obowiązany zapewnić inny dzień wolny",
+        "verified_at_v2": "2026-04-18T12:59:16Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",

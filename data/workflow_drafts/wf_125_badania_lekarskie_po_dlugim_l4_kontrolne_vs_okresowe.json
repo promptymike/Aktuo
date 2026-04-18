@@ -114,7 +114,16 @@
         "corrective_suggestion": "Należy uzupełnić pole 'legal_anchors' o formalne zakotwiczenia: art. 229 § 2 KP, art. 229 § 11 KP, art. 163 § 3 KP, art. 304 KP oraz § 3 rozporządzenia MRPiPS z 10.12.2018 r. w sprawie dokumentacji pracowniczej (Dz.U. 2018 poz. 2369), a następnie zweryfikować aktualność tych przepisów w oficjalnych źródłach (ISAP).",
         "verified_at": "2026-04-18T12:06:13Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Przepisy cytowane w drafcie (art. 229 § 2 KP, rozporządzenie MRPiPS z 10.12.2018) są zidentyfikowane i merytorycznie poprawne – potwierdzone przez przepisy.gofin.pl i isap.sejm.gov.pl. Jednak rozporządzenie z 10.12.2018 było wielokrotnie nowelizowane (Dz.U. 2023 poz. 471, 879; 2024 poz. 535; 2025 poz. 335; 2026 poz. 474), co oznacza, że brak formalnego zakotwiczenia (puste pole legal_anchors) rzeczywiście uniemożliwia automatyczną weryfikację aktualności cytowanych jednostek redakcyjnych – flaga jest uzasadniona.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://przepisy.gofin.pl/przepisy,6,18,34,5070,216683,20181219,3-rozporzadzenie-ministra-rodziny-pracy-i-polityki.html",
+        "source_quote": "§ 3 obowiązującym od 19.12.2018 r. do 20.03.2023 r.",
+        "verified_at_v2": "2026-04-18T12:53:57Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",

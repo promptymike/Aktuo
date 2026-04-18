@@ -109,7 +109,16 @@
         "corrective_suggestion": "Należy zweryfikować istnienie Rozporządzenia RM z 25.02.2026 r. (Dz.U. 2026 poz. 246) bezpośrednio w Dzienniku Ustaw (isap.sejm.gov.pl) lub ISAP. Jeśli rozporządzenie nie istnieje lub numery są błędne, należy usunąć lub skorygować step 4 albo oznaczyć go jako wymagający weryfikacji przed zastosowaniem.",
         "verified_at": "2026-04-18T12:35:10Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wyszukiwanie w isap.sejm.gov.pl zwróciło wpis dla Dz.U. 2026 poz. 246 jako istniejącą pozycję w systemie ISAP, co sugeruje że rozporządzenie faktycznie zostało opublikowane. Flaga wskazywała na ryzyko nieistnienia aktu, jednak ISAP rejestruje ten numer pozycji. Pewność nie jest pełna (0.72) ze względu na brak dostępu do szczegółów dokumentu potwierdzających tytuł i datę.",
+        "verifier_confidence_v2": 0.72,
+        "source_url": "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20260000246",
+        "source_quote": "Dz.U. 2026 poz. 246",
+        "verified_at_v2": "2026-04-18T13:02:32Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 1
       },
       {
         "type": "outdated_data_risk",
@@ -121,7 +130,16 @@
         "corrective_suggestion": "Warto dodać w drafcie wyraźną adnotację: 'W 2026 roku minimalne wynagrodzenie ustalono jednorazowo od 1.01.2026 – brak drugiej podwyżki śródrocznej (zgodnie z Rozporządzeniem RM z 11.09.2025, Dz.U. 2025 poz. 1242). Należy monitorować ewentualne zmiany rozporządzenia w trakcie roku.' Pozwoli to czytelnikowi wiedzieć, że kwestia jednorazowości podwyżki była świadomie zweryfikowana.",
         "verified_at": "2026-04-18T12:35:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Wiele zaufanych źródeł (ZUS, gofin.pl, ksiegowosc.infor.pl, podatki.biz, isap.sejm.gov.pl) jednoznacznie potwierdza, że minimalne wynagrodzenie na rok 2026 wynosi 4 806 zł, a minimalna stawka godzinowa 31,40 zł, ustalone jednorazowo od 1.01.2026 do 31.12.2026 na podstawie Rozporządzenia RM z 11.09.2025 (Dz.U. 2025 poz. 1242). Ustawa o minimalnym wynagrodzeniu za pracę nie przewiduje waloryzacji śródrocznej – kwota jest ustalana raz na rok. Flaga sugerująca ryzyko zmiany w trakcie roku jest nieuzasadniona, a kwoty w drafcie są aktualne i poprawne na dzień weryfikacji (18.04.2026).",
+        "verifier_confidence_v2": 0.97,
+        "source_url": "https://www.zus.pl/en/-/nowe-wysoko%C5%9Bci-sk%C5%82adek-na-ubezpieczenia-spo%C5%82eczne-w-2026-r.",
+        "source_quote": "Od 1 stycznia do 31 grudnia 2026 r. minimalne wynagrodzenie",
+        "verified_at_v2": "2026-04-18T13:02:45Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "legal_anchor_uncertainty",

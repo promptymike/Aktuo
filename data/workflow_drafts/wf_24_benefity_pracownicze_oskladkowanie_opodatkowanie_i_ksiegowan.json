@@ -115,7 +115,16 @@
         "corrective_suggestion": "Uzupełnić pole legal_anchors o mapowanie każdego kroku do konkretnych przepisów: step 1 → § 2 ust. 1 pkt 19 rozp. składkowego; step 2 → § 2 ust. 1 pkt 26 rozp. składkowego; step 3 → art. 21 ust. 1 pkt 67 ustawy o PIT; step 4 → art. 26 ust. 1 ustawy o PPK; step 6 → art. 43 ust. 1 pkt 18–19 ustawy o VAT. Następnie zweryfikować aktualność każdego z tych przepisów w dedykowanych źródłach.",
         "verified_at": "2026-04-18T12:19:09Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Weryfikacja potwierdza, że draft zawiera liczne odwołania do konkretnych przepisów (§ 2 ust. 1 pkt 19 rozporządzenia składkowego – potwierdzone przez gofin.pl i ksiegowosc.infor.pl jako aktualny przepis; art. 26 ust. 1 ustawy o PPK – błędnie wskazany, bo definicja wynagrodzenia PPK jako podstawy wymiaru składek wynika z art. 2 pkt 40 ustawy o PPK, a art. 26 ust. 1 dotyczy wysokości wpłaty pracodawcy). Brak strukturalnego mapowania legal_anchors jest zatem uzasadniony – draft zawiera zarówno poprawne, jak i niedokładne cytowania przepisów bez formalnego powiązania z krokami procedury, co utrudnia weryfikację aktualności i poprawności.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/pit/6379556,do-2000-zl-dla-pracownika-bez-podatku-tylko-do-31-grudnia-2023-r.html",
+        "source_quote": "§ 2 ust. 1 pkt 19 rozporządzenia Ministra Pracy i",
+        "verified_at_v2": "2026-04-18T12:57:45Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "outdated_data_risk",
@@ -127,7 +136,16 @@
         "corrective_suggestion": "Należy dodać do draftu explicite informację o roku obowiązywania podanych limitów (np. 'wartości obowiązujące w 2025 r., do weryfikacji na 2026 r.') oraz odesłanie do aktualnych obwieszczeń/rozporządzeń: dla KUP – art. 22 ust. 2 ustawy o PIT, dla ZFŚS – obwieszczenie Prezesa GUS w sprawie przeciętnego wynagrodzenia, dla kwoty zmniejszającej – art. 32 ust. 3 ustawy o PIT.",
         "verified_at": "2026-04-18T12:19:19Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Kwoty KUP 250 zł / 300 zł miesięcznie oraz kwota zmniejszająca 3 600 zł rocznie (dla dojeżdżających) są potwierdzone jako obowiązujące na podstawie art. 22 ust. 2 ustawy o PIT i nie zmieniły się w 2026 r. (źródło: ksiegowosc.infor.pl, podatki.biz, druki.gofin.pl). Natomiast flaga wskazuje na limit ZFŚS 2 000 zł rocznie — tymczasem draft nie zawiera tej kwoty jako limitu odpisu ZFŚS; odpis podstawowy w 2026 r. wynosi ok. 37,5% z 7 848,60 zł (tj. ~2 943 zł), a nie 2 000 zł. Kwota 2 000 zł nie pojawia się w drafcie jako odpis ZFŚS, lecz flaga mogła mylić ją z limitem zwolnienia PIT ze świadczeń socjalnych (art. 21 ust. 1 pkt 67 updof), który wynosi 2 000 zł rocznie i jest stały ustawowo. Wszystkie kwoty wymienione w drafcie (KUP 250/300 zł, kwota zmniejszająca 3 600 zł) są zgodne z aktualnie obowiązującymi przepisami na 2026 r.",
+        "verifier_confidence_v2": 0.88,
+        "source_url": "https://ksiegowosc.infor.pl/podatki/pit/pit/pracownik/6615414,koszty-uzyskania-przychodow-w-2025-r-pracownicze-podwyzszone-autorskie-zwykle-kwoty-limity-oswiadczenia-praca-zdalna.html",
+        "source_quote": "wynoszą 250 zł miesięcznie... wynoszą 300 zł miesięcznie",
+        "verified_at_v2": "2026-04-18T12:58:00Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 2,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
@@ -151,7 +169,16 @@
         "corrective_suggestion": "Jeśli celem jest kompletność procedury, można dodać ogólny opis kroków niezależny od systemu (np. 'utwórz składnik przychodowy i potrąceniowy') oraz notę, że ścieżki menu mogą się różnić w zależności od używanego oprogramowania, odsyłając do dokumentacji danego systemu.",
         "verified_at": "2026-04-18T12:19:35Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "false_positive",
+        "verifier_reasoning_v2": "Flaga zarzuca brak instrukcji dla systemów takich jak Sage, Teta czy Paycor. Jednak Sage Symfonia to w Polsce ten sam ekosystem co Symfonia (Sage przejął markę Symfonia), więc jest już objęty w drafcie. Paycor i Teta to systemy niszowe lub zagraniczne, rzadko stosowane w polskich biurach rachunkowych. Draft pokrywa trzy dominujące na polskim rynku systemy kadrowo-płacowe (Comarch Optima, Enova, Symfonia), co stanowi wystarczające pokrycie dla typowego użytkownika. Procedura krok 5 ma charakter instruktażowy-przykładowy, a nie wyczerpujący — brak instrukcji dla każdego możliwego systemu nie czyni procedury błędną merytorycznie. Flaga dotyczy kompletności przykładów, nie błędu prawnego/rachunkowego, co nie uzasadnia oceny 'high severity' jako krytycznego braku.",
+        "verifier_confidence_v2": 0.82,
+        "source_url": "https://forum.gofin.pl/1300831/archiwum/sage-symfonia-kadry-i-place",
+        "source_quote": "Sage Symfonia Kadry i płace",
+        "verified_at_v2": "2026-04-18T12:58:13Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "missing_critical_info",

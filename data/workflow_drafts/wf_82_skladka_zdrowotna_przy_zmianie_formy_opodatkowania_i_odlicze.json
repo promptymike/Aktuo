@@ -138,7 +138,16 @@
         "corrective_suggestion": "Jeśli flaga jest zasadna, należy w kroku 6 lub osobnym kroku explicite wyjaśnić: za styczeń 2026 na skali/liniowym stosuje się minimalną podstawę zdrowotną (75% przeciętnego wynagrodzenia z poprzedniego kwartału) niezależnie od dochodu, ponieważ rok składkowy zdrowotny trwa luty–styczeń i rozliczenie roczne następuje dopiero po jego zakończeniu; nowa podstawa wynikająca z dochodu 2026 pojawi się dopiero w DRA za luty 2026 składanej w marcu 2026.",
         "verified_at": "2026-04-18T12:39:12Z",
         "verified_by": "claude-sonnet-4-6",
-        "kb_records_used": 3
+        "kb_records_used": 3,
+        "verdict_v2": "confirmed",
+        "verifier_reasoning_v2": "Źródła ZUS i gofin.pl jednoznacznie potwierdzają, że za styczeń 2026 r. na skali/liniowym obowiązuje STARA minimalna podstawa zdrowotnej (3 499,50 zł = 75% minimalnego wynagrodzenia z 1.02.2025), a nowa podstawa 100% minimalnego (4 806 zł) wchodzi dopiero od 1 lutego 2026 r. (nowy rok składkowy). Draft w kroku 6 wspomina o tym podziale, ale nie wyjaśnia wprost, że za styczeń 2026 przy zmianie formy opodatkowania stosuje się starą podstawę z poprzedniego roku składkowego (3 499,50 zł), co jest kluczową informacją dla podatnika zmieniającego formę na przełomie roku. Flaga jest zatem uzasadniona — brakuje jasnego schematu przejściowego dla stycznia 2026.",
+        "verifier_confidence_v2": 0.93,
+        "source_url": "https://www.zus.pl/en/-/przedsi%C4%99biorcy-opodatkowani-na-zasadach-og%C3%B3lnych-lub-w-formie-karty-podatkowej.-minimalna-sk%C5%82adka-na-ubezpieczenie-zdrowotne-w-2026-r.",
+        "source_quote": "Za styczeń 2026 r. najniższa podstawa wynosi nadal 3 499,50",
+        "verified_at_v2": "2026-04-18T13:03:50Z",
+        "verified_by_v2": "claude-sonnet-4-6",
+        "web_searches_used": 1,
+        "web_fetches_used": 0
       },
       {
         "type": "step_contradiction",
